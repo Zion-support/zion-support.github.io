@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD:app/ai-content-generation/page.tsx
 import { Helmet } from 'react-helmet-async';
 
 export default function AiContentGeneration() {
@@ -21,25 +19,12 @@ export default function AiContentGeneration() {
         </div>
         <div className="text-center">
           <p className="text-gray-300">Coming Soon - AiContentGeneration Solutions</p>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/clean-main-20251013-145848
         </div>
       </div>
     </div>
   );
 }
-=======
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Star, ArrowRight, FileText, Image, Video, Music, Globe, Zap, Brain, Target, Users, Phone, Mail, MapPin } from 'lucide-react';
-=======
-import { CheckCircle, Star, Zap, Globe, Brain, Target, BarChart, MessageSquare, Eye, ArrowRight } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/ai-content-generation/page.tsx
 
 const AIContentGenerationPage: React.FC = () => {
   const features = [
@@ -102,15 +87,12 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
   ];
 
     <>
-<<<<<<< HEAD:app/ai-content-generation/page.tsx
   </>
       <Helmet>
         <title>Ai Content Generation - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai content generation solution for modern businesses." />
         <meta name="keywords" content="AI ai content generation, artificial intelligence, ai content generation, AI solutions, intelligent automation" />
       </Helmet>
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/ai-content-generation/page.tsx
 
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
@@ -239,4 +221,3 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 };
 
 export default AiContentGenerationPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

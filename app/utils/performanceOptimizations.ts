@@ -1,78 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-// Performance optimization utilities;
-// Debounce utility for performance;
-export const debounce = <T extends (...args: any[]) => any>(
-  func: T,
-  wait: number,
-): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {,
-): ((...args: Parameters<T>) => void) => {,
-  wait: number;,}): ((...args: Parameters<T>) => void) => {,}let timeout: NodeJS.Timeout,
-  return (...args: Parameters<T>) => {,}clearTimeout(timeout);
-): ((...args: Parameters<T>) => void) => {}
-  let timeout: NodeJS.Timeout
-  return (...args: Parameters<T>) => {}
-    clearTimeout(timeout)
-    timeout = setTimeout(() => func(...args), wait);}
-  }
-}
-// Throttle utility for performance;
-export const throttle = <T extends (...args: any[]) => any>(
-  func: T,
-  limit: number,
-): ((...args: Parameters<T>) => void) => {
-  let inThrottle: boolean,
-  return (...args: Parameters<T>) => {
-): ((...args: Parameters<T>) => void) => {,
-    let inThrottle: boolean,
-  return (...args: Parameters<T>) => {,
-  limit: number;,}): ((...args: Parameters<T>) => void) => {,}let inThrottle: boolean,
-  return (...args: Parameters<T>) => {,}if (!inThrottle) {}func(...args);
-      inThrottle = true;
-// Intersection Observer hook for lazy loading;
-export const useIntersectionObserver = (
-  callback: (entries: IntersectionObserverEntry[]) => void;
-  options: IntersectionObserverInit = {,}) => {}const observer = useMemo();
-    () =>;
-      typeof window !== 'undefined';
-        ? new IntersectionObserver(callback, {)
-    );
-            rootMargin: '50px'),
-        ? new IntersectionObserver(callback, {</div>
-            threshold: 0.1,
-  );
-  const observe = useCallback(;)
-    (element: Element | null) => {,
-      if (observer && element) {,;
-        observer.observe(element),;
-  const observe = useCallback()}(element: Element | null) => {,}if (observer && element) {}observer.observe(element);
-        observer.observe(element);
-  wai,;
-  t: number;),
-  s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */,}}
-  limi,;
-  t: number;),
-  s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */,}}
-'use client';
-// Performance optimization utilities;
-// Debounce utility for performance;
-  };
-=======
-export const Performanceoptimizations = {
-  init: () => {
-    },
-
-  process: (data: any) => {
-    return data;
-  },
-
-  cleanup: () => {
-    },
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
 };
 // Throttle utility for performance;
   };
@@ -405,4 +331,3 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
 };
 export default {/* TODO: Fix JSX expression */}
 };
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

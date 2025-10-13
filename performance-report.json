@@ -1,32 +1,11 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 "timestamp": "2025-10-13T11:09:39.189Z",
-=======
-  "timestamp": "2025-10-13T11:14:59.344Z",
->>>>>>> origin/cursor/analyze-console-errors-and-fix-issues-9064
   "buildStats": {
     "totalFiles": 85,
     "totalSize": 658760,
     "jsFiles": 82,
     "jsSize": 649870,    "cssFiles": 1,
     "cssSize": 1770,
-=======
-  "timestamp": "2025-10-13T10:08:09.474Z",
-  "buildStats": {
-    "totalFiles": 26,
-    "totalSize": 660839,
-    "jsFiles": 19,
-    "jsSize": 637083,
-    "cssFiles": 1,
-    "cssSize": 1811,
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
     "imageFiles": 0,
     "imageSize": 0
   },
@@ -43,23 +22,10 @@
     "minification": true,
     "compression": true
   },
-=======
-  "timestamp": "2025-10-13T03:52:07.365Z",
-=======
-  "timestamp": "2025-10-13T03:39:21.804Z",
->>>>>>> origin/cursor/analyze-and-resolve-javascript-errors-6208
-=======
   "timestamp": "2025-10-13T02:48:17.970Z",
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
-=======
   "timestamp": "2025-10-13T07:00:40.183Z",
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0792
-=======
   "timestamp": "2025-10-13T05:30:55.112Z",
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0acf
-=======
   "timestamp": "2025-10-12T10:13:22.015Z",
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
   "optimizations": [
     "Icon imports optimized",
     "Bundle splitting improved",
@@ -70,7 +36,6 @@
     "Error boundaries added",
     "Performance monitoring enabled"
   ],
->>>>>>> origin/cursor/analyze-and-fix-application-errors-5651
   "recommendations": [
     "Consider implementing lazy loading for non-critical components",
     "Optimize images to reduce bundle size",

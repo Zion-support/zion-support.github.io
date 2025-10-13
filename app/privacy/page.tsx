@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -33,16 +32,6 @@ export default function Privacy() {
               If you have any questions about this privacy policy, please contact us at privacy@ziontechgroup.com.
             </p>
           </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/clean-main-20251013-145848
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
 'use client';
 import React from 'react';
 
@@ -234,4 +223,3 @@ const PrivacyPage: React.FC = () => {
       </li>
     </li>
   );
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

@@ -1,86 +1,29 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-'use client';
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-=======
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
-=======
-import React, { Component, ErrorInfo, ReactNode } from 'react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
 
 interface Props {
   children: ReactNode;
-<<<<<<< HEAD
   fallback?: ReactNode;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-'use client;
-
-import React, { Component, ErrorInfo, ReactNode } from 'react;
-=======
-import React, { Component, ErrorInfo, ReactNode } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-92c8
-=======
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
-<<<<<<< HEAD
-'use client';
-import React, { Component, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react';
-
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: any;
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 
 import { AlertTriangle, RefreshCw, Home } from lucide-react;
 
 interface Props {}
   children: ReactNode;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
   fallback?: ReactNode;
 
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-92c8
->>>>>>> origin/cursor/ad-creation-and-management-f267
 }
 
 interface State {
   hasError: boolean;
-<<<<<<< HEAD
   error?: Error;
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
   errorInfo?: ErrorInfo;
-=======
-<<<<<<< HEAD
-
-  error: Error | null;
-
-  errorInfo: ErrorInfo | null;
-
->>>>>>> origin/cursor/ad-creation-and-management-f267
 }
 
 export class ErrorBoundary extends Component<Props, State> {
@@ -108,34 +51,9 @@ export class ErrorBoundary extends Component<Props, State> {
       window.gtag('event', 'exception', {
         description: error.message,
         fatal: false
-<<<<<<< HEAD
       });
     }
   }
-=======
-      })    }
-
-    // console.error removed for production
-};
-
-  handleRetry = () => {}
-    this.setState({}
-      hasError: false,
-      error: null,
-      errorInfo: null
-<<<<<<< HEAD
-    })  };
-
-  handleGoHome = () => {
-    window.location.href = /;
-
-=======
-    })
-  };
-  
-  handleGoHome = () => {}
-    window.location.href = '/';
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
   };
 
   render() {}
@@ -163,16 +81,10 @@ export class ErrorBoundary extends Component<Props, State> {
               Were sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
             </p>
 
-<<<<<<< HEAD
             {process.env['NODE_ENV'] === 'development && this.state.error && (
 
               <details className="mb-6 text-left>
                 <summary className="text-red-400 cursor-pointer mb-2>
-=======
-            {process.env['NODE_ENV'] === 'development' && this.state.error && (}
-              <details className="mb-6 text-left">
-                <summary className="text-red-400 cursor-pointer mb-2">
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
                   Error Details (Development)
                 </summary>
                 <div className="bg-red-900/20 p-4 rounded-lg text-sm text-red-300 font-mono overflow-auto>
@@ -180,14 +92,9 @@ export class ErrorBoundary extends Component<Props, State> {
                     <strong>Error:</strong> {this.state.error.message}
 
                   </div>
-<<<<<<< HEAD
                   {this.state.error.stack && (
 
                     <div className="mb-2>
-=======
-                  {this.state.error.stack && (}
-                    <div className="mb-2">
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
                       <strong>Stack:</strong>
                       <pre className="whitespace-pre-wrap mt-1>
                         {this.state.error.stack}
@@ -195,13 +102,9 @@ export class ErrorBoundary extends Component<Props, State> {
                       </pre>
                     </div>
                   )}
-<<<<<<< HEAD
 
                   {this.state.errorInfo && (
 
-=======
-                  {this.state.errorInfo && (}
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
                     <div>
                       <strong>Component Stack:</strong>
                       <pre className="whitespace-pre-wrap mt-1>
@@ -246,7 +149,6 @@ export class ErrorBoundary extends Component<Props, State> {
                 </a>
               </p>
             </div>
-=======
   error?: Error;
 }
 
@@ -261,80 +163,12 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-<<<<<<< HEAD
     console.error('Error caught by boundary:', error, errorInfo);
-=======
-    this.setState({
-      error,
-      errorInfo,
-    });
-
-    // Log error to console in development
-    if (process.env['NODE_ENV'] === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
-
-    // Send error to analytics if available
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-      });
-    }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
   }
 
   render() {
     if (this.state.hasError) {
       return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className="min-h-screen flex items-center justify-center bg-slate-900">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-4">We're sorry, but something unexpected happened.</p>
-=======
-class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null
-    };
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return {
-      hasError: true,
-      error,
-      errorInfo: null
-    };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  handleReload = () => {window.location.reload();}handleGoHome = () => {window.location.href = '/';}render() {if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;}return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">)</div>
-          <div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center">
-            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <AlertTriangle className="w-8 h-8 text-red-400" />
-      return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-lg p-8 text-center border border-white/20">
-            <h2 className="text-2xl font-bold text-white mb-4">Something went wrong</h2>
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
-            </p>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-            <button
-              onClick={() => this.setState({ hasError: false })}
-              className="bg-cyan-500 text-white px-4 py-2 rounded hover:bg-cyan-600 transition-colors"
-            >
-              Try again
-            </button>
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-92c8
-=======
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
           <div className="max-w-md w-full">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
@@ -348,7 +182,6 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
                 </p>
               </div>
 
-<<<<<<< HEAD
               {process.env['NODE_ENV'] === 'development' && this.state.error && (
                 <div className="mb-6 p-4 bg-red-900/20 border border-red-500/30 rounded-lg text-left">
                   <h3 className="text-sm font-semibold text-red-400 mb-2">Error Details:</h3>
@@ -362,24 +195,6 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
                   )}
                 </div>
               )}
-=======
-            <div className="flex flex-col sm:flex-row gap-3">
-              <button
-                onClick={this.handleRetry}
-                className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors"
-              >
-                <RefreshCw className="w-4 h-4 mr-2" />
-                Try Again
-              </button>
-              <button
-                onClick={() => window.location.href = '/'}
-                className="mt-4 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center"
-              >
-                <Home className="w-4 h-4 mr-2" />
-                Go Home
-              </button>
-            </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e
 
               <div className="space-y-3">
                 <button
@@ -410,8 +225,6 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
                 </a>
               </div>
             </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
-=======
         <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
           <div className="max-w-md w-full bg-gray-800 rounded-lg shadow-xl p-6 text-center">
             <div className="text-red-400 text-6xl mb-4">⚠️</div>
@@ -442,11 +255,9 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
                 </pre>
               </details>
             )}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
           </div>
         </div>
       );
->>>>>>> origin/cursor/ad-creation-and-management-f267
 
   render() {
     if (this.state.hasError) {
@@ -458,7 +269,6 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   }
 }
 
-<<<<<<< HEAD
 function DefaultErrorFallback({ error }: { error?: Error }) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-900 via-gray-900 to-red-900 flex items-center justify-center p-4">
@@ -493,72 +303,13 @@ function DefaultErrorFallback({ error }: { error?: Error }) {
 }
 
 export default ErrorBoundary;
-=======
-            <p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Please try refreshing the page or go back to the home page.</p>
-              <div className="mb-6 p-4 bg-red-900/20 rounded-lg text-left">
-                <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
-                <pre className="text-xs text-red-300 whitespace-pre-wrap">
-                  {this.state.error.toString()}
-                </pre>
-                {this.state.errorInfo && (
-                  <pre className="text-xs text-red-300 whitespace-pre-wrap mt-2">
-                    {this.state.errorInfo.componentStack}
-                  </pre>
-                )}
-              </div>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <button
-                onClick={this.handleRefresh}
-                className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-colors"
-              >
-                <RefreshCw className="w-4 h-4 mr-2" />
-                Try Again
-                <pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto">{this.state.error.toString()</p>}{this.state.errorInfo?.componentStack}
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
-              <button;
-                onClick={this.handleReload}className="flex items-center justify-center space-x-2 bg-cyan-600 hover: bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200",
-              <button;
-                onClick={this.handleGoHome}className="flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover: bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200",
-                className="flex items-center justify-center px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-lg transition-colors"
-              >
-                <Home className="w-4 h-4 mr-2" />
-                Go Home
-              </button>
-            </div>
-            
-            <div className="mt-6 pt-6 border-t border-white/20">
-              <p className="text-sm text-gray-400 mb-3">
-                Still having trouble? Contact our support team:
-              </p>
-              <a
-                href="mailto:support@ziontechgroup.com"
-                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-              >
-                <Phone className="w-4 h-4 mr-2" />
-                support@ziontechgroup.com
-              <p className="text-sm text-gray-400 mb-3">
-                Still having trouble? Contact our support team: </p>,
-              <a;
-                href="mailto: kleber@ziontechgroup.com",
-                className="inline-flex items-center text-cyan-400 hover: text-cyan-300 transition-colors">,
-                <Phone className="w-4 h-4 mr-2" />
-                kleber@ziontechgroup.com;
-
 export default ErrorBoundary;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
-export default ErrorBoundary;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw } from 'lucide-react'
-=======
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
 
 interface Props {
   children: ReactNode;
@@ -566,7 +317,6 @@ interface Props {
 }
 
 interface State {
-<<<<<<< HEAD
   hasError: boolean
   error?: Error
 }
@@ -589,48 +339,12 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   public render() {
-=======
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-}
-
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo
-    });
-
-    // Log error to monitoring service
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-    
-    // You can also log the error to an error reporting service here
-    // Example: logErrorToService(error, errorInfo);
-  }
-
-  handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
-
-  render() {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
       return (
-<<<<<<< HEAD
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
             <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
@@ -657,70 +371,6 @@ class ErrorBoundary extends Component<Props, State> {
                 </pre>
               </details>
             )}
-=======
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-red-500/20 rounded-2xl p-8 text-center">
-            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <AlertTriangle className="w-8 h-8 text-red-400" />
-            </div>
-            
-            <h1 className="text-2xl font-bold text-white mb-4">
-              Oops! Something went wrong
-            </h1>
-            
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page or contact support if the problem persists.
-            </p>
-
-            {process.env['NODE_ENV'] === 'development' && this.state.error && (
-              <details className="mb-6 text-left">
-                <summary className="text-sm text-gray-400 cursor-pointer hover:text-gray-300 mb-2">
-                  Error Details (Development)
-                </summary>
-                <div className="bg-slate-900/50 rounded-lg p-4 text-xs text-red-300 font-mono overflow-auto max-h-32">
-                  <div className="mb-2">
-                    <strong>Error:</strong> {this.state.error.message}
-                  </div>
-                  <div>
-                    <strong>Stack:</strong>
-                    <pre className="whitespace-pre-wrap mt-1">
-                      {this.state.error.stack}
-                    </pre>
-                  </div>
-                </div>
-              </details>
-            )}
-
-            <div className="flex flex-col sm:flex-row gap-3">
-              <button
-                onClick={this.handleRetry}
-                className="flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-              >
-                <RefreshCw className="w-4 h-4 mr-2" />
-                Try Again
-              </button>
-              
-              <Link
-                to="/"
-                className="flex items-center justify-center px-6 py-3 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-300"
-              >
-                <Home className="w-4 h-4 mr-2" />
-                Go Home
-              </Link>
-            </div>
-
-            <div className="mt-6 pt-6 border-t border-gray-700/50">
-              <p className="text-sm text-gray-400 mb-2">
-                Still having trouble?
-              </p>
-              <Link
-                to="/contact"
-                className="text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors"
-              >
-                Contact Support
-              </Link>
-            </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
           </div>
         </div>
       );
@@ -730,9 +380,4 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }
 
-<<<<<<< HEAD
-export default ErrorBoundary
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
-=======
 export default ErrorBoundary;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa

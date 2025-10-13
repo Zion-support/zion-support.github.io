@@ -1,59 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Generate sitemap
-const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://ziontechgroup.com/</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/about</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/contact</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/services</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-services</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/micro-saas</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/5g-solutions</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-</urlset>`;
-
-// Write sitemap to dist folder
-const distDir = path.join(__dirname, '..', 'dist');
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
 // Define all the routes
 const routes = [
   // Main pages
@@ -271,27 +218,6 @@ function generateSitemap() {
     });
   });
 
-<<<<<<< HEAD
-// Write sitemap to public directory
-const writeSitemap = () => {
-  const sitemapData2 = generateSitemap();
-  const sitemapPath = path.join(__dirname, '..', 'public', 'sitemap.xml');
-  
-  try {
-    fs.writeFileSync(sitemapPath, sitemapData2, 'utf8');
-    console.log('✅ Sitemap generated successfully at:', sitemapPath);
-  } catch (error) {
-    console.error('❌ Error generating sitemap:', error);
-  }
-};
-=======
-  // Add Micro SAAS pages
-  const microSaasServices = [
-    'zion-ai-analytics-pro', 'zion-security-shield', 'zion-cloud-vault',
-    'zion-ai-crm-pro', 'zion-ai-marketing-automation-pro', 'zion-ai-project-manager-pro',
-    'zion-ai-video-generator', 'zion-ai-invoice-generator', 'zion-ai-customer-insights'
-  ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
 
   microSaasServices.forEach(service => {
     pages.push({
@@ -308,42 +234,3 @@ const writeSitemap = () => {
     '5g-data-analytics', '5g-implementation'
   ];
 
-<<<<<<< HEAD
-// Run the generation
-writeSitemap();
-generateRobotsTxt();
-=======
-  fiveGServices.forEach(service => {
-    pages.push({
-      url: `/5g-solutions/${service}`,
-      priority: '0.8',
-      changefreq: 'weekly'
-    });
-  });
-
-  // Generate XML sitemap
-  let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">`;
-
-  pages.forEach(page => {
-    sitemap += `
-  <url>
-    <loc>${baseUrl}${page.url}</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>
-  </url>`;
-  });
-
-  sitemap += `
-</urlset>`;
-
-  // Write sitemap
-  fs.writeFileSync('/workspace/public/sitemap.xml', sitemap);
-  console.log('✅ Comprehensive sitemap generated');
-}
-
-generateSitemap();
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680

@@ -1,25 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
-const AdvancedAnalyticsPage: React.FC = () => {,
-      description: 'Worldwide deployment and support for international businesses',}}
-  ]
-  ];];];
-const benefits = [
-    'Proven track record of success';
-  ]
-return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
-      <Helmet />
-=======
-export const Advancedanalytics = {
-  init: () => {
-    },
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -53,7 +32,6 @@ export const Advancedanalytics = {
                 <CheckCircle />
                 <p className="text-gray-300 text-lg">{benefit</p>}</p>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         </section>
@@ -77,11 +55,6 @@ export const Advancedanalytics = {
                 <Mail>
                 Email Us;
   );
-=======
-  cleanup: () => {
-    },
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
 };
 
 export default AdvancedAnalyticsPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

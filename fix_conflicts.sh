@@ -5,8 +5,7 @@ fix_file() {
     local file="$1"
     if [ -f "$file" ]; then
         # Remove all merge conflict markers
-        sed -i '/^<<<<<<< /d; /^=======/d; /^>>>>>>> /d' "$file"
-        echo "Fixed: $file"
+        sed -i '/^<<<<<<< /d; /^/d; /^        echo "Fixed: $file"
     fi
 }
 

@@ -1,26 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
-const PagePage: React.FC = () => {,
-      description: 'Worldwide deployment and support for international businesses',}}
-  ]
-  ];];];
-const benefits = [
-    'Proven track record of success'
-  ]
-return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
-      <Helmet />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 
 export default function NetworkInfrastructure() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
       <Helmet>
         <title>NetworkInfrastructure - Zion Tech Group</title>
         <meta name="description" content="Advanced networkinfrastructure solutions" />
@@ -36,16 +19,6 @@ export default function NetworkInfrastructure() {
         </div>
         <div className="text-center">
           <p className="text-gray-300">Coming Soon - NetworkInfrastructure Solutions</p>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/clean-main-20251013-145848
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -133,4 +106,3 @@ export default function NetworkInfrastructure() {
 };
 
 export default PagePage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

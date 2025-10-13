@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -33,16 +32,6 @@ export default function Terms() {
               If you have any questions about these terms, please contact us at legal@ziontechgroup.com.
             </p>
           </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/clean-main-20251013-145848
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
 'use client';
 import React from 'react';
 
@@ -109,4 +98,3 @@ const TermsPage: React.FC = () => {
               </p>
             </div>
           </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

@@ -1,36 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
-import React from "react";
-import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, Star, Mic, Brain, Zap, Shield, Users, Clock, DollarSign, Globe, Smartphone, Headphones, Volume2, MessageSquare, Bot, Cpu, Wifi, Battery, Camera, Video, Phone, Mail, Calendar, FileText, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Settings, Monitor, BarChart3, TrendingUp, Target, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Package, Receipt, Workflow, FileSignature } from "lucide-react";
-import EnhancedSEO from "../components/EnhancedSEO";
-import FuturisticBackground from "../components/FuturisticBackground";
-
-const ZionAIVoiceAssistantPro = () => {
-  const features = [
-    "Natural language processing (NLP)",
-    "Multi-language support (50+ languages)",
-    "Voice recognition and synthesis",
-    "Real-time conversation capabilities",
-    "Integration with business systems",
-    "Custom voice training",
-    "Analytics and reporting",
-    "24/7 availability"
-  ];
-
-  const stats = [
-    { number: "99.9%", label: "Accuracy Rate", icon: <Award className="w-6 h-6" /> },
-    { number: "50+", label: "Languages Supported", icon: <Globe className="w-6 h-6" /> },
-    { number: "24/7", label: "Availability", icon: <Clock className="w-6 h-6" /> },
-    { number: "10x", label: "Efficiency Boost", icon: <TrendingUp className="w-6 h-6" /> }
-  ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
 
 export default function ZionAiVoiceAssistantPro() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>ZionAiVoiceAssistantPro - Zion Tech Group</title>
@@ -47,13 +19,6 @@ export default function ZionAiVoiceAssistantPro() {
         </div>
         <div className="text-center">
           <p className="text-gray-300">Coming Soon - ZionAiVoiceAssistantPro Solutions</p>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/clean-main-20251013-145848
-        </div>
-      </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
         title="Zion AI Voice Assistant Pro - Advanced Voice AI Solution"
@@ -177,7 +142,6 @@ export default function ZionAiVoiceAssistantPro() {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
     </div>
   );
 };

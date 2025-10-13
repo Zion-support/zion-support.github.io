@@ -1,48 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-<<<<<<< HEAD
-'use client;
-
-import React from 'react;
-
-import { Helmet } from 'react-helmet-async;
-
-import { Brain, MessageSquare, Eye, Zap, BarChart, Box, Mic, Shield, TrendingUp, Target, FileText, Search, Phone } from 'lucide-react;
-
-import Navigation from ../components
-import Footer from ../components
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from lucide-react;
-
-;
-
-const AIServicesPagePage: React.FC = () => {const features = [;;;
-
-    {
-      ico,
-    n: Brain,
-      title: 'AI-Powered Intelligence,
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.,
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis]
-=======
-'use client';
-
-import React from 'react';
-<<<<<<< HEAD:app/ai-services/page.tsx
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Brain, MessageSquare, Eye, Zap, BarChart, Box, Mic, Shield, TrendingUp, Target, FileText, Search, Phone } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-;
-=======
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/ai-services/page.tsx
 
 const $1Page: React.FC = () => {}
   const features = [
@@ -51,7 +8,6 @@ const $1Page: React.FC = () => {}
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
     },
     {}
       icon: BarChart,
@@ -84,20 +40,14 @@ const benefits = [;;
     'Scale operations without proportional staff increases,
     Gain competitive advantage with advanced technology
   ];
->>>>>>> origin/cursor/ad-creation-and-management-f267
 
 export default function AIServices() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-=======
-    <>
-  </>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI services by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -128,44 +78,12 @@ export default function AIServices() {
               </p>
             </div>
           </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/clean-main-20251013-145848
         </div>
       </div>
-<<<<<<< HEAD
     </div>
   );
 }
-=======
-      <Footer />
-    </React.Fragment>)
-export default AIServicesPagePage;
-=======
-
-const AiServicesPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="AI services from Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">AI Services</h1>
-          <p className="text-gray-300">Coming soon...</p>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default AiServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-92c8
->>>>>>> origin/cursor/ad-creation-and-management-f267
-=======
 
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -280,16 +198,12 @@ export default AiServicesPage;
       </div>
       <Footer />
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
 import React from 'react';
 import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star, Eye, MessageSquare, BarChart3 } from 'lucide-react';
 import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star } from 'lucide-react';
 import { CheckCircle, ArrowRight, Brain, Zap, Eye, MessageCircle, BarChart, Shield, Users, Clock, DollarSign, Star } from 'lucide-react';
 import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star } from 'lucide-react';
-=======
 import { CheckCircle, Brain, Zap, Eye, MessageSquare, BarChart3, Shield, Cog, ArrowRight } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import React from 'react'
@@ -301,7 +215,6 @@ export default function AIServicesPage() {
   const services = [
     {
       icon: <Brain className="w-8 h-8 text-blue-500" />,
-<<<<<<< HEAD
       title: 'AI Content Generator',
       description: 'Generate high-quality content for blogs, social media, marketing materials, and more using advanced AI models.',
       features: ['Multi-language support', 'SEO optimization', 'Brand voice customization', 'Content templates'],
@@ -373,118 +286,11 @@ export default function AIServicesPage() {
       popular: false
     }
   ]
-=======
-      title: 'AI Content Generation',
-      description: 'Generate high-quality content for blogs, social media, marketing materials, and more using advanced AI models.',
-      features: ['Multi-language support', 'SEO optimization', 'Brand voice customization', 'Content templates'],
-      pricing: 'Starting at $29/month',
-      category: 'Content'
-    },
-    {
-      icon: <MessageSquare className="w-8 h-8 text-purple-500" />,
-      title: 'AI Chatbot Solutions',
-      description: 'Create intelligent chatbots for customer support, lead generation, and sales automation.',
-      features: ['No-code builder', 'Multi-channel deployment', 'Analytics dashboard', 'Custom integrations'],
-      pricing: 'Starting at $49/month',
-      category: 'Automation'
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-green-500" />,
-      title: 'AI Analytics & Insights',
-      description: 'Transform your data into actionable insights with AI-powered analytics and visualization.',
-      features: ['Real-time analytics', 'Predictive modeling', 'Custom reports', 'API integration'],
-      pricing: 'Starting at $79/month',
-      category: 'Analytics'
-    },
-    {
-      icon: <Eye className="w-8 h-8 text-red-500" />,
-      title: 'Computer Vision',
-      description: 'Implement computer vision solutions for image recognition, object detection, and visual analysis.',
-      features: ['Image classification', 'Object detection', 'Facial recognition', 'Custom model training'],
-      pricing: 'Starting at $99/month',
-      category: 'Vision'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-orange-500" />,
-      title: 'AI Security Solutions',
-      description: 'Advanced AI-powered security solutions for threat detection and prevention.',
-      features: ['Threat detection', 'Anomaly detection', 'Fraud prevention', 'Security monitoring'],
-      pricing: 'Starting at $149/month',
-      category: 'Security'
-    },
-    {
-      icon: <Cog className="w-8 h-8 text-cyan-500" />,
-      title: 'AI Process Automation',
-      description: 'Automate complex business processes with intelligent AI workflows and decision making.',
-      features: ['Workflow automation', 'Decision trees', 'Process optimization', 'Custom integrations'],
-      pricing: 'Starting at $199/month',
-      category: 'Automation'
-    }
-  ];
-
-  const categories = ['All', 'Content', 'Automation', 'Analytics', 'Vision', 'Security'];
-
-  const stats = [
-    { number: '1000+', label: 'AI Models Deployed' },
-    { number: '99.5%', label: 'Accuracy Rate' },
-    { number: '50+', label: 'AI Experts' },
-    { number: '24/7', label: 'AI Monitoring' }
-  ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD:app/ai-services/page.tsx
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Advanced AI services including content generation, chatbots, analytics, and automation solutions for modern businesses." />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Services</span>
-=======
-
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Services
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/ai-services/page.tsx
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Transform your business with cutting-edge artificial intelligence solutions
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {aiServices.map((service, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
-              <div className="mb-6 group-hover:scale-110 transition-transform duration-300">
-                {service.icon}
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors">
-                {service.title}
-              </h3>
-              <p className="text-gray-300 mb-6">{service.description}</p>
-              <ul className="space-y-2 mb-6">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-2xl font-bold text-white">{service.pricing}</span>
-                {service.popular && (
-                  <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                    Popular
-                  </span>
-                )}
-=======
         <meta name="description" content="Advanced AI services including content generation, chatbots, analytics, computer vision, and process automation. Transform your business with AI." />
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, content generation, chatbots, analytics, computer vision" />
       </Helmet>
@@ -588,7 +394,6 @@ export default function AIServicesPage() {
                   Get Started
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
               </div>
               <Link
                 to={service.link}
@@ -600,13 +405,6 @@ export default function AIServicesPage() {
             </div>
           ))}
         </div>
-<<<<<<< HEAD
-      </div>
-    </div>
-  )
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
-=======
       </section>
 
       {/* Why Choose Us Section */}
@@ -684,4 +482,3 @@ export default function AIServicesPage() {
 };
 
 export default AIServicesPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440

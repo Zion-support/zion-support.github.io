@@ -33,7 +33,6 @@ export default function CybersecuritySolutions() {
     }
   ];
 
-<<<<<<< HEAD
   const pricingPlans = [
     {
       name: "Essential",
@@ -160,52 +159,6 @@ export default function CybersecuritySolutions() {
                   {plan.cta}
                 </button>
               </div>
-<<<<<<< HEAD
-            ))}
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">Ready to Secure Your Business?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Contact our cybersecurity experts to discuss your security needs and get a customized solution.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-400 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-500 transition-all duration-300">
-              Get Free Consultation
-            </button>
-            <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-              View Case Studies
-            </button>
-          </div>
-=======
-              
-              <ul className="space-y-3 mb-8">
-                {plan.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center text-gray-600">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              
-              <button className={`w-full py-3 rounded-lg font-semibold transition-colors ${
-                plan.popular 
-                  ? 'bg-blue-600 text-white hover:bg-blue-700' 
-                  : 'bg-gray-200 text-gray-900 hover:bg-gray-300'
-              }`}>
-                {plan.cta}
-              </button>
-            </div>
-          ))}
->>>>>>> origin/clean-main-20251013-145848
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
 const CybersecuritySolutionsPage: React.FC = () => {,
   return(<>)
       <Helmet />
@@ -304,4 +257,3 @@ const CybersecuritySolutionsPage: React.FC = () => {,
       </div>
     </>
   );};
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

@@ -1,46 +1,3 @@
-<<<<<<< HEAD
-=======
-'use client';
-import React from 'react';
-<<<<<<< HEAD:app/ai-ecommerce-solutions/page.tsx
-import {Helmet}}from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
-const AiEcommerceSolutionsPage: React.FC = () => {,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-=======
-import { CheckCircle } from 'lucide-react';
-
-const AIEcommerceSolutionsPage: React.FC = () => {
-  const ecommerceServices = [
-    {
-      title: 'AI-Powered E-commerce Platform',
-      description: 'Complete e-commerce solution with AI-driven personalization, inventory management, and automated customer service.',
-      icon: '🛒',
-      price: '$1,999/month',
-      features: [
-        'AI product recommendations',
-        'Dynamic pricing optimization',
-        'Inventory management',
-        'Customer behavior analysis',
-        'Automated customer service',
-        'Multi-channel selling',
-        'Payment processing',
-        'Analytics dashboard'
-      ],
-      benefits: [
-        'Increase conversion by 45%',
-        'Reduce cart abandonment by 60%',
-        'Boost average order value by 35%',
-        'Save 30+ hours per week'
-      ],
-      marketPrice: '$3,000-6,000/month',
-      category: 'E-commerce Platform',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Machine Learning', 'Stripe', 'Shopify API'],
-      useCases: ['Online Retail', 'B2B Commerce', 'Marketplace', 'Subscription Business']
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/ai-ecommerce-solutions/page.tsx
     },
     {
       icon: Zap,
@@ -71,7 +28,6 @@ const AIEcommerceSolutionsPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD:app/ai-ecommerce-solutions/page.tsx
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
     {icon: BarChart,
@@ -88,9 +44,6 @@ const AIEcommerceSolutionsPage: React.FC = () => {
   ]
 return(<>)
       <Helmet />
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/ai-ecommerce-solutions/page.tsx
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -262,4 +215,3 @@ return(<>)
 };
 
 export default PagePage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

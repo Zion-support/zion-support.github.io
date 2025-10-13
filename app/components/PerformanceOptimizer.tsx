@@ -1,19 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
-=======
-<<<<<<< HEAD
-'use client;
-=======
-'use client';
-<<<<<<< HEAD
-import React from 'react';
-'use client';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 
 import React, { useEffect, useState, useCallback } from 'react;
 
@@ -28,7 +15,6 @@ interface PerformanceOptimizerProps {}
 
   enableCodeSplitting?: boolean;
 
->>>>>>> origin/cursor/ad-creation-and-management-f267
 }
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
@@ -85,7 +71,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
           }
         });
       }
-<<<<<<< HEAD
     };
     optimizePerformance();
     return () => {
@@ -93,91 +78,22 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     };
   }, []);
   return <>{children}</>;
-=======
-
-    }
-
-  }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
-
-  return null;
-
-=======
-import React, { useEffect } from 'react';
-=======
-import React, { useEffect, useState, useCallback } from 'react';
-import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-029f
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
-=======
-import React, { useEffect, useState } from 'react'
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
-<<<<<<< HEAD
     // Performance optimization logic
-=======
-import { useEffect } from 'react';
-
-export default function PerformanceOptimizer() {
-  useEffect(() => {
-    // Preload critical resources
-    const preloadCriticalResources = () => {
-      const criticalImages = [
-        '/logo.svg',
-        '/og-image.jpg',
-        '/hero-bg.jpg'
-      ];
-
-      criticalImages.forEach(src => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = src;
-        link.as = 'image';
-        document.head.appendChild(link);
-      });
-
-      // Preload critical fonts
-      const fontLink = document.createElement('link');
-      fontLink.rel = 'preload';
-      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';
-      fontLink.as = 'style';
-      document.head.appendChild(fontLink);
-    };
-
-    // Optimize images
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
       images.forEach((img) => {
         if (!img.hasAttribute('loading')) {
           img.setAttribute('loading', 'lazy');
         }
-<<<<<<< HEAD
-      });
-    };
-
-    const optimizeAnimations = () => {
-      // Reduce motion for users who prefer it
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        document.documentElement.style.setProperty('--animation-duration', '0.01ms');
-      }
-    };
-
-    optimizeImages();
-    optimizeAnimations();
-  }, []);
-
-  return <>{children}</>;
->>>>>>> cursor/fix-errors-and-merge-to-main-92c8
->>>>>>> origin/cursor/ad-creation-and-management-f267
 };
 export default PerformanceOptimizer;
-=======
     // Initial optimization
     optimizeImages();
     
@@ -221,20 +137,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
         '/images/logo.png'
       ]
 
-<<<<<<< HEAD
-      criticalImages.forEach(src => {)
-    // Intersection Observer for lazy loading;
-    if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver' in window) {const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {)
-          if (entry.isIntersecting) {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
         
         // Add decoding="async" for better performance
         if (!img.hasAttribute('decoding')) {
           img.setAttribute('decoding', 'async');
         }
-=======
       criticalResources.forEach(resource => {
         const link = document.createElement('link')
         link.rel = 'preload'
@@ -292,7 +199,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
     }
 
       }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
 
         // Add error handling
         img.addEventListener('error', () => {
@@ -330,4 +236,3 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
 
   return null;
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680

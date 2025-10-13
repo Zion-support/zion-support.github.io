@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-=======
-'use client';
-import React from 'react';
-<<<<<<< HEAD:app-disabled/robotics/page.tsx
-<<<<<<< HEAD:app/robotics/page.tsx
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-=======
-=======
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3:app/robotics/page.tsx
 import { CheckCircle, Star, Bot, Zap, Shield, Cpu, Brain, Target, BarChart, Settings, Cog } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/robotics/page.tsx
 
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
     },
@@ -42,8 +29,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
       <Helmet />
 
   return (
-<<<<<<< HEAD:app-disabled/robotics/page.tsx
-<<<<<<< HEAD:app/robotics/page.tsx
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>Page | Zion Tech Group</title>
@@ -62,12 +47,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
-=======
-    <>
-
-=======
-    <>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3:app/robotics/page.tsx
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-teal-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-teal-600 to-cyan-700 text-white py-20">
@@ -266,7 +245,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
             </h2>
             <p className="text-xl mb-8 text-teal-100">
               Contact our robotics experts for a free consultation and custom automation strategy
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/robotics/page.tsx
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
@@ -357,4 +335,3 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
 };
 
 export default PagePage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

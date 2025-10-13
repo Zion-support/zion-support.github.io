@@ -19,15 +19,9 @@ export default function handler(req, res) {
     // 4. Send confirmation email
     // 5. Add to your email marketing service (Mailchimp, ConvertKit, etc.)
 
-<<<<<<< HEAD
     // console.log removed for production
     console.log('Newsletter subscription:', {
       email: req.body.email,
-=======
-    console.log('Newsletter subscription:', {
-      email,
-      name,
->>>>>>> cursor/fix-errors-and-merge-to-main-92c8
       timestamp: new Date().toISOString()
     });
 

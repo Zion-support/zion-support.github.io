@@ -2,7 +2,6 @@
 import React from 'react';
 import Navigation from './Navigation';
 
-<<<<<<< HEAD
 const Header: React.FC = () => {,
   return(<React.Fragment>)</React.Fragment>
       <Navigation />
@@ -28,8 +27,3 @@ export default Header;
 };
 
 export default Header;
-=======
-  return (
-    <header>
-      <Navigation />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa

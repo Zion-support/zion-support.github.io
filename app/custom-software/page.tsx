@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
 export default function CustomSoftware() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -20,16 +19,6 @@ export default function CustomSoftware() {
         </div>
         <div className="text-center">
           <p className="text-gray-300">Coming Soon - CustomSoftware Solutions</p>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/clean-main-20251013-145848
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
 const CustomSoftwarePage: React.FC = () => {,
   return(<>)
       <Helmet />
@@ -56,4 +45,3 @@ const CustomSoftwarePage: React.FC = () => {,
   );};
 
 export default CustomSoftwarePage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

@@ -1,92 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
-const AiCustomerServicePage: React.FC = () => {,
-      title: 'Intelligent Problem Solving',
-      description: 'AI agents that understand context and provide accurate solutions to complex customer issues.',
-      benefits: ['Context understanding', 'Problem resolution', 'Learning capabilities', 'Escalation management']
-    },
-    {
-      icon: Globe,
-      title: 'Multilingual Support',
-      description: 'Support customers in 50+ languages with natural language processing and translation.',
-      benefits: ['50+ languages', 'Natural language processing', 'Cultural adaptation', 'Real-time translation']
-    },
-    {
-      icon: Zap,
-      title: 'Instant Response',
-      description: 'Immediate responses to customer queries with sub-second response times.',
-      benefits: ['Sub-second response', 'High availability', 'Scalable infrastructure', 'Performance optimization']
-    },
-    {
-      icon: Target,
-      title: 'Personalized Service',
-      description: 'Tailored customer service based on individual preferences and history.',
-      benefits: ['Personalization', 'Customer history', 'Preference learning', 'Customized solutions']
-    },
-    {
-      icon: BarChart,
-      title: 'Analytics & Insights',
-      description: 'Comprehensive analytics and insights to improve customer service performance.',
-      benefits: ['Performance metrics', 'Customer satisfaction', 'Trend analysis', 'ROI tracking']
-    }
-  ];
-
-  const benefits = [
-    'Increase customer satisfaction by 95%',
-    'Reduce response time by 90%',
-    'Lower support costs by 70%',
-    'Handle 10x more inquiries',
-    'Enable 24/7 support',
-    'Improve resolution rates',
-    'Scale support operations',
-    'Enhance customer experience'
-  ];
-
-  const useCases = [
-    {
-      title: 'E-commerce Support',
-      description: 'Handle product inquiries, order issues, and returns with AI assistance',
-      icon: '🛒'
-    },
-    {
-      title: 'Technical Support',
-      description: 'Provide technical assistance and troubleshooting for software and hardware',
-      icon: '🔧'
-    },
-    {
-      title: 'Billing & Payments',
-      description: 'Assist with billing questions, payment issues, and account management',
-      icon: '💳'
-    },
-    {
-      title: 'Product Information',
-      description: 'Answer questions about products, features, and specifications',
-      icon: '📋'
-    },
-    {
-      title: 'Appointment Scheduling',
-      description: 'Help customers schedule appointments and manage bookings',
-      icon: '📅'
-    },
-    {
-      title: 'General Inquiries',
-      description: 'Handle general questions and provide information about services',
-      icon: '❓'
-    }
-  ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 
 export default function AiCustomerService() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AiCustomerService - Zion Tech Group</title>
@@ -103,16 +19,6 @@ export default function AiCustomerService() {
         </div>
         <div className="text-center">
           <p className="text-gray-300">Coming Soon - AiCustomerService Solutions</p>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/clean-main-20251013-145848
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
     <>
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
     {icon: BarChart,
@@ -279,4 +185,3 @@ return(<>)
 };
 
 export default AiCustomerServicePage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

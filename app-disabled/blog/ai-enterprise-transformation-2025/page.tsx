@@ -1,20 +1,13 @@
 import React from 'react';
-<<<<<<< HEAD:app-disabled/blog/ai-enterprise-transformation-2025/page.tsx
 
-=======
-import Link from 'next/link';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3:app/blog/ai-enterprise-transformation-2025/page.tsx
 
 const EnterpriseTransformationPage: React.FC = () => {
 
   return (
 
     <>
-<<<<<<< HEAD:app-disabled/blog/ai-enterprise-transformation-2025/page.tsx
 
 
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3:app/blog/ai-enterprise-transformation-2025/page.tsx
       <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">

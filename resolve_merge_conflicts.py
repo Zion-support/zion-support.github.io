@@ -13,8 +13,7 @@ def resolve_merge_conflicts(file_path):
             content = f.read()
         
         # Pattern to match merge conflict markers
-        conflict_pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n'
-        
+        conflict_pattern = r'\n(.*?)\n\n(.*?)\n        
         def replace_conflict(match):
             head_content = match.group(1)
             return head_content
@@ -23,10 +22,8 @@ def resolve_merge_conflicts(file_path):
         resolved_content = re.sub(conflict_pattern, replace_conflict, content, flags=re.DOTALL)
         
         # Also handle cases where there might be multiple conflict markers in one block
-        # Remove any remaining ======= and >>>>>>> lines
-        resolved_content = re.sub(r'=======.*?\n', '', resolved_content, flags=re.DOTALL)
-        resolved_content = re.sub(r'>>>>>>> [^\n]+\n', '', resolved_content)
-        
+        # Remove any remaining  and         resolved_content = re.sub(r'.*?\n', '', resolved_content, flags=re.DOTALL)
+        resolved_content = re.sub(r'        
         # Write the resolved content back
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(resolved_content)
@@ -60,7 +57,7 @@ def main():
             try:
                 with open(file_path, 'r', encoding='utf-8') as f:
                     content = f.read()
-                    if '<<<<<<< HEAD' in content:
+                    if '' in content:
                         files_with_conflicts.append(file_path)
             except:
                 continue
@@ -80,7 +77,7 @@ def main():
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
                 content = f.read()
-                if '<<<<<<< HEAD' in content:
+                if '' in content:
                     remaining_conflicts += 1
                     print(f"Warning: {file_path} still has unresolved conflicts")
         except:

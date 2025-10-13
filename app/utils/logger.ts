@@ -1,87 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-'use client';
-/**;
- * Advanced Logging System;
- * Provides structured logging with multiple levels and context;
- */;
-export enum LogLevel {DEBUG = 0,;}
-  INFO = 1,;
-  WARN = 2,;
-  ERROR = 3,;
-  FATAL = 4;}}
-export interface LogContext {userId?: string;}
-    userId?: string;
-  sessionId?: string;
-  component?: string;
-  action?: string;
-  [key: string]: unknown;,}}
-class Logger {private logLevel: LogLevel = LogLevel.INFO,}
-  private logs: Array<{,
-    level: LogLevel,
-    message: string,
-    context?: LogContext;
-    metadata?: Record<string>
-    timestamp: number,}}> = []
-  setLogLevel(level: LogLevel): void {,}
-    this.logLevel = level;}}
-getLogLevel(): LogLevel {return this.logLevel;}}}
-debug(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {</string></<<<string>this</string></string>.log(LogLevel.DEBUG, message, context, metadata)}}}
-info(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {</string></<<<string>this</string></string>.log(LogLevel.INFO, message, context, metadata)}}}
-warn(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {</string></<<<string>this</string></string>.log(LogLevel.WARN, message, context, metadata)}}}
-error(message: string,),;
-    errorOrContextOrMetadata?: Error | string | Record<string, unknown>);
-    contextOrMetadata?: string | Record<string, unknown>);
-    metadata?: Record<string>
-  ): void {let error: Error | undefined;,}
-      error = errorOrContextOrMetadata;}context = typeof contextOrMetadata === 'string' ? {action: contextOrMetadata ,}: contextOrMetadata;
-      meta = metadata;
-    } else if (typeof errorOrContextOrMetadata === 'string') {}context = {action: errorOrContextOrMetadata ,}meta = typeof contextOrMetadata === 'object' ? contextOrMetadata : undefined;
-    } else if (typeof errorOrContextOrMetadata === 'object') {context = errorOrContextOrMetadata;
-      meta = contextOrMetadata as Record<string>
- * Enhanced Logger Utility;
- * Provides structured logging with different levels and contexts;
- */}export enum LogLevel {/* TODO: Fix JSX expression */,}}}
-export interface LogContext {/* TODO: Fix JSX expression */,}}}
-export interface LogMetadata {/* TODO: Fix JSX expression */,}}}
-class Logger {/* TODO: Fix JSX expression */,}}}
-  /**;
-   * Set the minimum log level;
-   */;
-  setLogLevel(leve);
-  l: LogLevel): void {/* TODO: Fix JSX expression */,}}}
-  /**;
-   * Get the current log level;
-   */;
-  getLogLevel(): LogLevel {/* TODO: Fix JSX expression */,}}}
-  /**;
-   * Log a debug message;
-   */;
-  debug(messag);
-  e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */,}}}
-  /**;
-   * Log an info message;
-   */;
-  info(messag);
-  e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */,}}}
-  /**;
-   * Log a warning message;
-   */;
-  warn(messag);
-  e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */,}}}
-  /**;
-   * Log an error message;
-   */;
-  error(messag,;)
-  FATAL = 4;
-}
-=======
-export const Logger = {
-  init: () => {
-    },
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
 
 export interface LogContext {
   userId?: string;
@@ -91,7 +8,6 @@ export interface LogContext {
   [key: string]: unknown;
 }
 
-<<<<<<< HEAD
 class Logger {
   private logLevel: LogLevel = LogLevel.INFO;
   private logs: Array<{
@@ -101,11 +17,6 @@ class Logger {
     metadata?: Record<string, unknown>
     timestamp: number,
   }> = []
-=======
-  cleanup: () => {
-    },
-};
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
 
   setLogLevel(level: LogLevel): void {,
     this.logLevel = level;
@@ -303,4 +214,3 @@ export const logger = new Logger();
   }
 }
 export const logger = new Logger();`
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

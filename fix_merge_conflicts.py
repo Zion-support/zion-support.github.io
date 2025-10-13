@@ -4,17 +4,13 @@ import re
 import glob
 
 def fix_merge_conflicts(file_path):
-<<<<<<< HEAD
     """Fix merge conflicts in a file by choosing the HEAD version"""
-=======
-    """Fix merge conflicts in a single file"""
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         # Check if file has merge conflicts
-        if '<<<<<<< HEAD' not in content:
+        if '' not in content:
             return False
         
         # Split content by merge conflict markers
@@ -22,24 +18,14 @@ def fix_merge_conflicts(file_path):
         new_lines = []
         skip_until_end = False
         
-<<<<<<< HEAD
         for i, line in enumerate(lines):
-            if line.startswith('<<<<<<< HEAD'):
+            if line.startswith(''):
                 skip_until_end = False
                 continue
-            elif line.startswith('======='):
+            elif line.startswith(''):
                 skip_until_end = True
                 continue
-=======
-        for line in lines:
-            if line.startswith('<<<<<<< HEAD'):
-                skip_until_end = True
-                continue
-            elif line.startswith('======='):
-                continue
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
-            elif line.startswith('>>>>>>> '):
-                skip_until_end = False
+            elif line.startswith('                skip_until_end = False
                 continue
             elif not skip_until_end:
                 new_lines.append(line)
@@ -55,7 +41,6 @@ def fix_merge_conflicts(file_path):
         return False
 
 def main():
-<<<<<<< HEAD
     # Find all TypeScript/JavaScript files with merge conflicts
     patterns = [
         '**/*.ts',
@@ -76,21 +61,6 @@ def main():
             
             if fix_merge_conflicts(file_path):
                 fixed_count += 1
-=======
-    """Fix merge conflicts in all relevant files"""
-    # Find all TypeScript/JavaScript files with merge conflicts
-    patterns = [
-        'app/**/*.tsx',
-        'app/**/*.ts',
-        'components/**/*.tsx',
-        'components/**/*.ts',
-        '*.tsx',
-        '*.ts'
-    ]
-    
-    fixed_count = 0
-    total_files = 0
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
     
     for pattern in patterns:
         files = glob.glob(pattern, recursive=True)

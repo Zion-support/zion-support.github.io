@@ -1,46 +1,3 @@
-<<<<<<< HEAD
-=======
-'use client';
-import React from 'react';
-<<<<<<< HEAD:app/ai-mobile-app-development/page.tsx
-import {Helmet}}from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
-const AiMobileAppDevelopmentPage: React.FC = () => {,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-=======
-import { CheckCircle } from 'lucide-react';
-
-const AIMobileAppDevelopmentPage: React.FC = () => {
-  const mobileServices = [
-    {
-      title: 'AI-Powered Mobile App Development',
-      description: 'Complete mobile app development with AI integration, machine learning capabilities, and intelligent features.',
-      icon: '📱',
-      price: '$4,999/project',
-      features: [
-        'Native iOS & Android development',
-        'AI/ML integration',
-        'Cross-platform compatibility',
-        'Real-time data processing',
-        'Push notifications',
-        'Offline functionality',
-        'App store optimization',
-        'Maintenance & updates'
-      ],
-      benefits: [
-        'Faster development time',
-        'Lower development costs',
-        'Advanced AI features',
-        'Scalable architecture'
-      ],
-      marketPrice: '$8,000-15,000/project',
-      category: 'Mobile Development',
-      technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'TensorFlow Lite', 'Core ML'],
-      platforms: ['iOS', 'Android', 'Cross-platform']
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/ai-mobile-app-development/page.tsx
     },
     {
       icon: Zap,
@@ -71,7 +28,6 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD:app/ai-mobile-app-development/page.tsx
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
     {icon: BarChart,
@@ -88,9 +44,6 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
   ]
 return(<>)
       <Helmet />
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/ai-mobile-app-development/page.tsx
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -248,4 +201,3 @@ return(<>)
 };
 
 export default PagePage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

@@ -1,96 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function FiveGImplementation() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-'use client';
-import * as React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, BarChart } from 'lucide-react';
-
-      benefits: ['Network planning', 'Coverage optimization', 'Performance tuning']},
-    {icon: Zap,
-      title: 'Ultra-Low Latency',
-      description: 'Ultra-low latency 5G networks for real-time applications and mission-critical operations.',
-      benefits: ['< 1 ms latency', 'Real-time apps', 'Mission critical']},
-    {icon: Clock,
-      title: '24/7 Network Monitoring',
-      description: 'Continuous monitoring of 5G network performance with real-time analytics and alerts.',
-      benefits: ['Network monitoring', 'Performance analytics', 'Proactive maintenance']},
-    {icon: Users,
-      title: 'Scalable Infrastructure',
-      description: 'Scalable 5G infrastructure that grows with your business needs and user demands.',
-      benefits: ['Auto-scaling', 'Capacity planning', 'Future-proof design']},
-    {icon: Shield,
-      title: 'Enhanced Security',
-      description: 'Advanced encryption and security protocols for enterprise-grade protection',
-      benefits: ['End-to-end encryption', 'Security protocols', 'Threat detection']},
-    {icon: BarChart,
-      title: 'Performance Analytics',
-      description: 'Advanced analytics and reporting for 5G network performance and optimization.',
-      benefits: ['Performance insights', 'Usage analytics', 'Optimization recommendations']},
-  ]
-  return(<>)
-      <Helmet />
-      benefits: ['End-to-end encryption', 'Security protocols', 'Compliance standards']
-      benefits: ['Performance insights', 'Usage analytics', 'Optimization recommendations']
-    }
-  ];
-
-  const benefits = [
-    'Ultra-fast 5G connectivity with speeds up to 10 Gbps',
-    'Ultra-low latency for real-time applications',
-    'Massive IoT device connectivity support',
-    'Enhanced mobile broadband experience',
-    'Network slicing for customized services',
-    'Edge computing integration',
-    'Advanced security and encryption',
-    '24/7 network monitoring and support'
-  ];
-
-  const pricing = [
-    {
-      name: 'Starter',
-      description: 'Perfect for small businesses',
-      price: '$299',
-      popular: false,
-      features: [
-        'Basic 5G setup',
-        'Up to 100 devices',
-        'Standard support',
-        'Basic monitoring'
-      ]
-    },
-    {
-      name: 'Professional',
-      description: 'Ideal for growing companies',
-      price: '$599',
-      popular: true,
-      features: [
-        'Advanced 5G configuration',
-        'Up to 500 devices',
-        'Priority support',
-        'Advanced monitoring',
-        'Network optimization'
-      ]
-    },
-    {
-      name: 'Enterprise',
-      description: 'For large organizations',
-      price: '$999',
-      popular: false,
-      features: [
-        'Custom 5G solution',
-        'Unlimited devices',
-        '24/7 dedicated support',
-        'Full monitoring suite',
-        'Custom integrations',
-        'SLA guarantee'
-      ]
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
       <Helmet>
         <title>5gImplementation - Zion Tech Group</title>
         <meta name="description" content="Advanced 5gimplementation solutions" />
@@ -106,17 +19,7 @@ import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin,
         </div>
         <div className="text-center">
           <p className="text-gray-300">Coming Soon - 5gImplementation Solutions</p>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/clean-main-20251013-145848
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -470,4 +373,3 @@ import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin,
 };
 
 export default FiveGImplementationPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

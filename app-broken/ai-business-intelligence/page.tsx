@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -20,16 +19,6 @@ export default function AiBusinessIntelligence() {
         </div>
         <div className="text-center">
           <p className="text-gray-300">Coming Soon - AiBusinessIntelligence Solutions</p>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/clean-main-20251013-145848
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -135,4 +124,3 @@ return(<>)
 };
 
 export default AiBusinessIntelligencePage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

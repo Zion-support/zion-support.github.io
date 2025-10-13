@@ -1,7 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD:app/ai-automation/page.tsx
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 
 export default function AIAutomation() {
   return (
@@ -21,27 +19,12 @@ export default function AIAutomation() {
         </div>
         <div className="text-center">
           <p className="text-gray-300">Coming Soon - AI Automation Solutions</p>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/clean-main-20251013-145848
         </div>
       </div>
     </div>
   );
 }
-=======
-import { Zap, Settings, Shield, Clock, CheckCircle, ArrowRight, Phone, Mail, Star, TrendingUp, Users, Award } from 'lucide-react';
-import Header from '../components/Header';
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Zap, Brain, Target, BarChart, Users, ArrowRight, Sparkles } from 'lucide-react';
-=======
-import { CheckCircle, Star, Zap, Settings, Clock, Shield, Brain, Target } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/ai-automation/page.tsx
 
 const AIAutomationPage: React.FC = () => {
   const features = [
@@ -123,7 +106,6 @@ const AIAutomationPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD:app/ai-automation/page.tsx
   return (</div>
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
     {icon: BarChart,
@@ -132,14 +114,6 @@ const AIAutomationPage: React.FC = () => {
 return(<>)
       <Helmet />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
-=======
-  const categories = [...new Set(aiAutomationServices.map(service => service.category))];
-
-  return (
-    <>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/ai-automation/page.tsx
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
         </section>
@@ -282,4 +256,3 @@ return(<>)
         </div>
       </section>
 export default AIAutomationPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

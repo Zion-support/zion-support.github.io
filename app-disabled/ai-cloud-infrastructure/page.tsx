@@ -1,175 +1,3 @@
-<<<<<<< HEAD
-=======
-'use client';
-import React from 'react';
-<<<<<<< HEAD:app/ai-cloud-infrastructure/page.tsx
-import {Helmet}}from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
-const AiCloudInfrastructurePage: React.FC = () => {,
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
-import { CheckCircle, Zap, Shield, Clock } from 'lucide-react';
-
-const AICloudInfrastructurePage: React.FC = () => {
-  const cloudServices = [
-    {
-      title: 'AI-Powered Cloud Migration',
-      description: 'Intelligent cloud migration service that analyzes your infrastructure and automates the migration process with zero downtime.',
-      icon: '☁️',
-      price: '$2,999/month',
-      features: [
-        'Automated infrastructure analysis',
-        'Zero-downtime migration',
-        'Cost optimization recommendations',
-        'Security compliance',
-        'Performance monitoring',
-        'Disaster recovery setup',
-        '24/7 support',
-        'Migration rollback capability'
-      ],
-      benefits: [
-        'Reduce migration time by 70%',
-        'Lower cloud costs by 40%',
-        'Ensure 99.9% uptime',
-        'Eliminate migration risks'
-      ],
-      marketPrice: '$5,000-10,000/month',
-      category: 'Cloud Migration',
-      technologies: ['AWS', 'Azure', 'GCP', 'Terraform', 'Kubernetes', 'Docker'],
-      compliance: ['SOC 2', 'ISO 27001', 'HIPAA', 'PCI DSS']
-    },
-    {
-      title: 'AI Cloud Cost Optimization',
-      description: 'Intelligent cloud cost management platform that continuously monitors and optimizes your cloud spending using AI algorithms.',
-      icon: '💰',
-      price: '$899/month',
-      features: [
-        'Real-time cost monitoring',
-        'Automated resource scaling',
-        'Waste detection and elimination',
-        'Reserved instance optimization',
-        'Cost forecasting',
-        'Budget alerts',
-        'Multi-cloud support',
-        'ROI tracking'
-      ],
-      benefits: [
-        'Reduce cloud costs by 35%',
-        'Eliminate waste spending',
-        'Improve resource utilization',
-        'Predict future costs'
-      ],
-      marketPrice: '$1,500-3,000/month',
-      category: 'Cost Optimization',
-      technologies: ['AWS Cost Explorer', 'Azure Cost Management', 'Python', 'Machine Learning', 'APIs'],
-      compliance: ['SOC 2', 'ISO 27001']
-    },
-    {
-      title: 'AI DevOps Automation Platform',
-      description: 'Comprehensive DevOps automation with AI-powered CI/CD pipelines, infrastructure as code, and automated testing.',
-      icon: '🔄',
-      price: '$1,499/month',
-      features: [
-        'AI-powered CI/CD pipelines',
-        'Infrastructure as Code',
-        'Automated testing',
-        'Security scanning',
-        'Performance monitoring',
-        'Auto-scaling',
-        'Blue-green deployments',
-        'Rollback automation'
-      ],
-      benefits: [
-        'Deploy 10x faster',
-        'Reduce deployment failures by 90%',
-        'Improve code quality',
-        'Scale automatically'
-      ],
-      marketPrice: '$2,500-5,000/month',
-      category: 'DevOps',
-      technologies: ['Jenkins', 'GitLab CI', 'Docker', 'Kubernetes', 'Terraform', 'Ansible'],
-      compliance: ['SOC 2', 'ISO 27001', 'PCI DSS']
-    },
-    {
-      title: 'AI Cloud Security Management',
-      description: 'Advanced cloud security platform with AI-powered threat detection, compliance monitoring, and automated security responses.',
-      icon: '🔒',
-      price: '$1,799/month',
-      features: [
-        'AI threat detection',
-        'Compliance monitoring',
-        'Security posture management',
-        'Vulnerability scanning',
-        'Access control automation',
-        'Incident response',
-        'Security reporting',
-        'Multi-cloud security'
-      ],
-      benefits: [
-        'Prevent 99% of security breaches',
-        'Ensure compliance automatically',
-        'Reduce security costs by 50%',
-        'Improve security posture'
-      ],
-      marketPrice: '$3,000-6,000/month',
-      category: 'Cloud Security',
-      technologies: ['AWS Security', 'Azure Security', 'GCP Security', 'SIEM', 'Machine Learning'],
-      compliance: ['SOC 2', 'ISO 27001', 'HIPAA', 'PCI DSS', 'FedRAMP']
-    },
-    {
-      title: 'AI Cloud Monitoring & Analytics',
-      description: 'Intelligent cloud monitoring platform with predictive analytics, anomaly detection, and automated alerting.',
-      icon: '📊',
-      price: '$1,299/month',
-      features: [
-        'Real-time monitoring',
-        'Predictive analytics',
-        'Anomaly detection',
-        'Automated alerting',
-        'Performance optimization',
-        'Capacity planning',
-        'Custom dashboards',
-        'Historical analysis'
-      ],
-      benefits: [
-        'Prevent outages proactively',
-        'Optimize performance',
-        'Reduce monitoring costs',
-        'Improve reliability'
-      ],
-      marketPrice: '$2,000-4,000/month',
-      category: 'Monitoring',
-      technologies: ['Prometheus', 'Grafana', 'ELK Stack', 'Machine Learning', 'Python', 'APIs'],
-      compliance: ['SOC 2', 'ISO 27001']
-    },
-    {
-      title: 'AI Multi-Cloud Management',
-      description: 'Unified multi-cloud management platform with AI-powered workload optimization and cross-cloud orchestration.',
-      icon: '🌐',
-      price: '$2,499/month',
-      features: [
-        'Multi-cloud visibility',
-        'Workload optimization',
-        'Cross-cloud orchestration',
-        'Cost optimization',
-        'Security management',
-        'Compliance monitoring',
-        'Disaster recovery',
-        'Vendor management'
-      ],
-      benefits: [
-        'Optimize across all clouds',
-        'Reduce vendor lock-in',
-        'Improve resilience',
-        'Lower total cost of ownership'
-      ],
-      marketPrice: '$4,000-8,000/month',
-      category: 'Multi-Cloud',
-      technologies: ['Kubernetes', 'Terraform', 'Ansible', 'Python', 'Machine Learning', 'APIs'],
-      compliance: ['SOC 2', 'ISO 27001', 'HIPAA', 'PCI DSS']
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/ai-cloud-infrastructure/page.tsx
     }
   ];
 
@@ -215,7 +43,6 @@ const AICloudInfrastructurePage: React.FC = () => {
       description: 'Run AI and machine learning workloads on optimized cloud infrastructure',
       icon: '🤖'
     }
-<<<<<<< HEAD:app/ai-cloud-infrastructure/page.tsx
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
@@ -225,29 +52,6 @@ const AICloudInfrastructurePage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Ai Cloud Infrastructure
-=======
-  ];
-
-  const cloudProviders = [
-    { name: 'Amazon Web Services', logo: 'AWS' },
-    { name: 'Microsoft Azure', logo: 'Azure' },
-    { name: 'Google Cloud Platform', logo: 'GCP' },
-    { name: 'IBM Cloud', logo: 'IBM' },
-    { name: 'Oracle Cloud', logo: 'Oracle' },
-    { name: 'Alibaba Cloud', logo: 'Alibaba' }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI Cloud Infrastructure
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/ai-cloud-infrastructure/page.tsx
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced AI-powered ai cloud infrastructure solution for modern businesses.
@@ -404,4 +208,3 @@ const AICloudInfrastructurePage: React.FC = () => {
           </div>
         </section>
       </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

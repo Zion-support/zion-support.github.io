@@ -1,23 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-'use client';
-import React from 'react';
-<<<<<<< HEAD:app/blockchain-web3/page.tsx
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-=======
-import { CheckCircle } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/blockchain-web3/page.tsx
-
-const PagePage: React.FC = () => {
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, Zap, Globe, Lock, ArrowRight } from 'lucide-react';
 import Layout from '../layout';
 export default function BlockchainWeb3() {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0792
   const features = [
     {
       icon: Brain,
@@ -35,7 +20,6 @@ export default function BlockchainWeb3() {
       description: 'Bank-level security with encryption and compliance standards'
     },
     {
-<<<<<<< HEAD
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
@@ -54,7 +38,6 @@ export default function BlockchainWeb3() {
   ];
 
   return (
-<<<<<<< HEAD:app/blockchain-web3/page.tsx
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page | Zion Tech Group</title>
@@ -73,16 +56,6 @@ export default function BlockchainWeb3() {
       benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access']}]
 return(<>)
       <Helmet />
-=======
-      icon: <Lock className="w-6 h-6 text-green-400" />,
-      title: "Cryptocurrency Solutions",
-      description:
-        "Custom token development and cryptocurrency integration services",
-    },
-  ];
-=======
-    <>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/blockchain-web3/page.tsx
 
   const services = [
     {
@@ -165,7 +138,6 @@ return(<>)
               Transform your business with cutting-edge blockchain technology and Web3 solutions. 
               From smart contracts to DeFi protocols, we build the future of decentralized applications.
             </p>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0792
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
@@ -179,7 +151,6 @@ return(<>)
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -253,132 +224,6 @@ return(<>)
         </div>
       </section>
     </div>
-=======
-        {/* Features Section */}
-        <section id="features" className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-white text-center mb-16">
-              Why Choose Our Blockchain Solutions?
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="text-cyan-400 mb-4">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300">
-                    {feature.description}
-                  </p>                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Services Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-white text-center mb-16">
-              Our Blockchain Services
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl p-6 border border-slate-700">
-                  <h3 className="text-xl font-semibold text-white mb-4">
-                    {service.category}
-                  </h3>
-                  <ul className="space-y-2">
-                    {service.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="text-gray-300 flex items-center">
-                        <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-white text-center mb-16">
-              Blockchain Development Pricing
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
-                <div
-                  key={index}
-                  className={`bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl p-8 border ${
-                    plan.popular ? 'border-cyan-400 ring-2 ring-cyan-400/20' : 'border-slate-700'
-                  } relative`}
-                >
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <div className="text-4xl font-bold text-cyan-400 mb-2">
-                      {plan.price}
-                      <span className="text-lg text-gray-400">{plan.period}</span>
-                    </div>
-                    <p className="text-gray-300">{plan.description}</p>
-                  </div>
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="text-gray-300 flex items-center">
-                        <div className="w-5 h-5 bg-cyan-400 rounded-full mr-3 flex items-center justify-center">
-                          <div className="w-2 h-2 bg-white rounded-full"></div>
-                        </div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    to="/contact"
-                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
-                    }`}
-                  >
-                    Get Started
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 bg-gradient-to-r from-cyan-600 to-purple-600">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Build the Future?
-            </h2>
-            <p className="text-xl text-cyan-100 mb-8">
-              Let's create innovative blockchain solutions that transform your business and 
-              revolutionize your industry with cutting-edge Web3 technology.
-            </p>
-            <Link
-              to="/contact"
-              className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 inline-flex items-center"
-            >
-              Start Your Project
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>          </div>
-        </section>
-      </div>
-    </Layout>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0792
   );
 };
 
@@ -393,4 +238,3 @@ export default PagePage;
 };
 
 export default BlockchainWeb3Page;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

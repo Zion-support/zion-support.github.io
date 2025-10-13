@@ -1,23 +1,7 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-/**
- * API Client Utility
- * Provides a centralized API client with error handling and caching
-/**;
- * API Client Utility;
- * Provides a centralized API client with error handling and caching;
- */
-=======
-export const Apiclient = {
-  init: () => {
-    },
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
 
 import { apiCache } from './apiCache';
 
-<<<<<<< HEAD
 interface RequestConfig {
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
   headers?: Record<string, string>;
@@ -25,11 +9,6 @@ interface RequestConfig {
   cache?: boolean;
   cacheTTL?: number;
 }
-=======
-  cleanup: () => {
-    },
-};
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
 
 interface APIResponse<T = any> {
   data: T;
@@ -348,4 +327,3 @@ const apiClient = new ApiClient({/* TODO: Fix JSX expression */}
 });
 export {apiClient}}export default ApiClient;
 `;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

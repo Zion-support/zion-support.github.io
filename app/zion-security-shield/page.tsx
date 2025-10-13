@@ -19,10 +19,7 @@ export default function ZionSecurityShield() {
         </div>
         <div className="text-center">
           <p className="text-gray-300">Coming Soon - ZionSecurityShield Solutions</p>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/clean-main-20251013-145848
         </div>
       </div>
     </div>

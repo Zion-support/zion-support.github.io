@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-'use client;
-=======
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Server, Shield, Cloud, Database, Network, Code, Monitor, Settings } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 
 import React from 'react;
 
@@ -24,7 +9,6 @@ import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight }
 
 ;
 
-<<<<<<< HEAD
 const ItServicesPage: React.FC = () => {const itServices = [;
     {
       titl,
@@ -56,47 +40,12 @@ const ItServicesPage: React.FC = () => {const itServices = [;
       icon: '🔄,
       price: Starting at $2,000
       features: [CI
-=======
-const $1Page: React.FC = () => {}
-  const itServices = [
-    {}
-      titl,
-    e: 'Cloud Infrastructure Management',
-      description: 'Complete cloud migration, optimization, and management services for AWS, Azure, and Google Cloud.',
-      icon: '☁️',
-      price: 'Starting at $2,500
-      features: ['Cloud migration strategy', 'Cost optimization', 'Security hardening', '24]
-      benefits: ['Reduce cloud costs by 30%', 'Improve performance by 40%', 'Ensure 99.9% uptime'],
-      marketPrice: '$4,000-8,000
-      category: 'Cloud Services',
-      technologies: ['AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Docker']
-    },
-    {}
-      title: 'Cybersecurity Solutions',
-      description: 'Comprehensive security services including threat detection, vulnerability assessment, and incident response.',
-      icon: '🔒',
-      price: 'Starting at $3,000
-      features: ['Security audits', 'Penetration testing', 'Threat monitoring', 'Incident response', 'Compliance management'],
-      benefits: ['Prevent 99% of cyber attacks', 'Reduce security costs by 50%', 'Ensure compliance'],
-      marketPrice: '$5,000-12,000
-      category: 'Security',
-      technologies: ['SIEM', 'EDR', 'Firewall', 'VPN', 'Zero Trust']
-    },
-    {}
-      title: 'DevOps & CI'
-      descriptio,'
-    n: 'Automated deployment pipelines, infrastructure as code, and continuous integration services.',
-      icon: '🔄',
-      price: 'Starting at $2,000
-      features: ['CI]
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
       benefit,
     s: ['Deploy 10x faster', 'Reduce deployment errors by 90%', 'Improve team productivity],
       marketPrice: $3,500-7,000
       category: 'DevOps,
       technologies: ['Jenkins', 'GitLab CI', 'Terraform', 'Ansible', 'Prometheus]
     },
-<<<<<<< HEAD
     {
       title: 'Database Administration,
       description: 'Database design, optimization, backup, and maintenance for SQL and NoSQL databases.,
@@ -126,43 +75,12 @@ const $1Page: React.FC = () => {}
     n: '🛠️,
       price: Starting at $1,200
       features: [24
-=======
-    {}
-      title: 'Database Administration',
-      description: 'Database design, optimization, backup, and maintenance for SQL and NoSQL databases.',
-      icon: '🗄️',
-      price: 'Starting at $1,500
-      features: ['Database design', 'Performance tuning', 'Backup & recovery', 'Security hardening', 'Migration services'],
-      benefits: ['Improve query performance by 60%', 'Ensure data integrity', 'Reduce downtime'],
-      marketPrice: '$2,500-5,000
-      category: 'Database',
-      technologies: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Elasticsearch']
-    },
-    {}
-      title: 'Network Infrastructure',
-      description: 'Network design, implementation, and management for enterprise-grade connectivity.',
-      icon: '🌐',
-      price: 'Starting at $2,200
-      features: ['Network design', 'Router & switch config', 'VPN setup', 'Load balancing', 'Network monitoring'],
-      benefits: ['Improve network performance', 'Reduce latency by 40%', 'Ensure reliability'],
-      marketPrice: '$3,500-6,000
-      category: 'Networking',
-      technologies: ['Cisco', 'Juniper', 'Fortinet', 'SD-WAN', 'MPLS']
-    },
-    {}
-      title: 'IT Support & Helpdesk',
-      description: '24'
-      icon: '🛠️',
-      price: 'Starting at $1,200
-      features: ['24]
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
       benefit,
     s: ['Reduce downtime by 70%', 'Improve user satisfaction', 'Lower support costs],
       marketPrice: $2,000-4,000
       category: 'Support,
       technologies: ['ServiceNow', 'Jira', 'Remote Desktop', 'Active Directory', 'Office 365]
     },
-<<<<<<< HEAD
     {
       title: 'Data Analytics & BI,
       description: 'Data warehouse design, ETL processes, and business intelligence dashboard development.,
@@ -212,57 +130,6 @@ const $1Page: React.FC = () => {}
       description: 'Technology roadmap development, digital transformation planning, and IT strategy consulting.,
       icon: '💡,
       price: Starting at $200
-=======
-    {}
-      title: 'Data Analytics & BI',
-      description: 'Data warehouse design, ETL processes, and business intelligence dashboard development.',
-      icon: '📊',
-      price: 'Starting at $2,800
-      features: ['Data warehouse design', 'ETL development', 'Dashboard creation', 'Report automation', 'Data governance'],
-      benefits: ['Make data-driven decisions', 'Improve business insights', 'Automate reporting'],
-      marketPrice: '$4,500-9,000
-      category: 'Analytics',
-      technologies: ['Tableau', 'Power BI', 'Snowflake', 'Apache Airflow', 'Python']
-    },
-    {}
-      title: 'API Development & Integration',
-      description: 'Custom API development, third-party integrations, and microservices architecture.',
-      icon: '🔌',
-      price: 'Starting at $2,000
-      features: ['RESTful API design', 'GraphQL development', 'Third-party integrations', 'API documentation', 'Rate limiting'],
-      benefits: ['Improve system connectivity', 'Enable rapid development', 'Enhance scalability'],
-      marketPrice: '$3,500-7,500
-      category: 'Integration',
-      technologies: ['Node.js', 'Python', 'GraphQL', 'Kong', 'Postman']
-    },
-    {}
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile application development for iOS and Android.',
-      icon: '📱',
-      price: 'Starting at $3,500
-      features: ['Native iOS/Android apps', 'Cross-platform development', 'UI]
-      benefits: ['Reach mobile users', 'Improve user engagement', 'Increase revenue'],
-      marketPrice: '$6,000-15,000
-      category: 'Mobile',
-      technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Xamarin']
-    },
-    {}
-      title: 'Web Application Development',
-      description: 'Custom web applications, e-commerce solutions, and enterprise web platforms.',
-      icon: '💻',
-      price: 'Starting at $2,500
-      features: ['Custom web apps', 'E-commerce solutions', 'CMS development', 'Responsive design', 'SEO optimization'],
-      benefits: ['Improve online presence', 'Increase conversions', 'Enhance user experience'],
-      marketPrice: '$4,000-10,000
-      category: 'Web Development',
-      technologies: ['React', 'Vue.js', 'Node.js', 'PHP', 'WordPress']
-    },
-    {}
-      title: 'IT Consulting & Strategy',
-      description: 'Technology roadmap development, digital transformation planning, and IT strategy consulting.',
-      icon: '💡',
-      price: 'Starting at $200
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
       feature,
     s: ['Technology assessment', 'Digital transformation', 'IT strategy planning', 'Vendor evaluation', 'ROI analysis],
       benefits: ['Align IT with business goals', 'Optimize technology investments', 'Reduce risks],
@@ -271,7 +138,6 @@ const $1Page: React.FC = () => {}
     y: 'Consulting,
       technologies: ['Strategic Planning', 'Architecture Design', 'Risk Assessment', 'ROI Analysis]
     },
-<<<<<<< HEAD
     {
       title: 'Disaster Recovery & Backup,
       description: 'Comprehensive backup solutions, disaster recovery planning, and business continuity services.,
@@ -379,120 +245,11 @@ const $1Page: React.FC = () => {}
       price: Starting at $4,800
       features: ['GPU cluster setup', 'ML pipeline deployment', 'Model serving', 'Data preprocessing', 'Monitoring],
       benefits: [Enable AI
-=======
-    {}
-      title: 'Disaster Recovery & Backup',
-      description: 'Comprehensive backup solutions, disaster recovery planning, and business continuity services.',
-      icon: '🔄',
-      price: 'Starting at $1,800
-      features: ['Backup strategy', 'Disaster recovery planning', 'Data replication', 'Recovery testing', 'Business continuity'],
-      benefits: ['Minimize downtime', 'Protect critical data', 'Ensure business continuity'],
-      marketPrice: '$3,000-6,000
-      category: 'Backup & Recovery',
-      technologies: ['Veeam', 'Commvault', 'AWS Backup', 'Azure Backup', 'VMware']
-    },
-    {}
-      title: 'Blockchain Infrastructure',
-      description: 'Enterprise blockchain solutions, smart contract development, and decentralized application deployment.',
-      icon: '⛓️',
-      price: 'Starting at $4,500
-      features: ['Blockchain deployment', 'Smart contract development', 'DApp development', 'Node management', 'Security auditing'],
-      benefits: ['Enable decentralized solutions', 'Improve transparency', 'Reduce intermediaries'],
-      marketPrice: '$8,000-25,000
-      category: 'Blockchain',
-      technologies: ['Ethereum', 'Hyperledger', 'Solidity', 'Web3', 'IPFS']
-    },
-    {}
-      title: 'IoT Platform Management',
-      description: 'Comprehensive IoT infrastructure management and device connectivity solutions.',
-      icon: '🌐',
-      price: 'Starting at $3,200
-      features: ['Device management', 'Data collection', 'Real-time monitoring', 'Edge computing', 'Security management'],
-      benefits: ['Enable IoT deployments', 'Improve operational efficiency', 'Reduce manual monitoring'],
-      marketPrice: '$5,500-18,000
-      category: 'IoT',
-      technologies: ['AWS IoT', 'Azure IoT', 'MQTT', 'CoAP', 'Edge Computing']
-    },
-    {}
-      title: 'Edge Computing Infrastructure',
-      description: 'Distributed computing infrastructure for low-latency applications and edge data processing.',
-      icon: '⚡',
-      price: 'Starting at $3,800
-      features: ['Edge node deployment', 'Data processing', 'Content delivery', 'Load balancing', 'Monitoring'],
-      benefits: ['Reduce latency', 'Improve performance', 'Enable real-time applications'],
-      marketPrice: '$6,500-20,000
-      category: 'Edge Computing',
-      technologies: ['Kubernetes', 'Docker', 'CDN', 'Edge Servers', '5G Networks']
-    },
-    {}
-      title: 'Quantum Computing Infrastructure',
-      description: 'Quantum computing platform setup and quantum algorithm development services.',
-      icon: '⚛️',
-      price: 'Starting at $8,000
-      features: ['Quantum hardware setup', 'Algorithm development', 'Quantum simulation', 'Hybrid systems', 'Research support'],
-      benefits: ['Enable quantum computing', 'Solve complex problems', 'Gain competitive advantage'],
-      marketPrice: '$15,000-50,000
-      category: 'Quantum Computing',
-      technologies: ['IBM Qiskit', 'Google Cirq', 'Rigetti', 'IonQ', 'Quantum Simulators']
-    },
-    {}
-      title: '5G Network Implementation',
-      description: '5G network infrastructure deployment and optimization for enterprise applications.',
-      icon: '📡',
-      price: 'Starting at $5,500
-      features: ['5G network design', 'Infrastructure deployment', 'Performance optimization', 'Security implementation', 'Integration services'],
-      benefits: ['Enable high-speed connectivity', 'Support IoT applications', 'Improve mobile experience'],
-      marketPrice: '$10,000-40,000
-      category: '5G Networks',
-      technologies: ['5G Core', 'RAN', 'Network Slicing', 'MEC', 'NFV']
-    },
-    {}
-      title: 'Microservices Architecture',
-      description: 'Modern microservices architecture design and implementation for scalable applications.',
-      icon: '🔧',
-      price: 'Starting at $3,500
-      features: ['Architecture design', 'Service decomposition', 'API gateway setup', 'Service mesh', 'Monitoring'],
-      benefits: ['Improve scalability', 'Enable rapid development', 'Reduce deployment risks'],
-      marketPrice: '$6,000-20,000
-      category: 'Microservices',
-      technologies: ['Kubernetes', 'Docker', 'Istio', 'API Gateway', 'Service Mesh']
-    },
-    {}
-      title: 'Serverless Computing Platform',
-      description: 'Serverless architecture implementation and management for event-driven applications.',
-      icon: '☁️',
-      price: 'Starting at $2,800
-      features: ['Function deployment', 'Event handling', 'Auto-scaling', 'Cost optimization', 'Monitoring'],
-      benefits: ['Reduce infrastructure costs', 'Improve scalability', 'Simplify deployment'],
-      marketPrice: '$4,500-15,000
-      category: 'Serverless',
-      technologies: ['AWS Lambda', 'Azure Functions', 'Google Cloud Functions', 'Serverless Framework']
-    },
-    {}
-      title: 'Data Lake Architecture',
-      description: 'Enterprise data lake design and implementation for big data analytics and storage.',
-      icon: '🏞️',
-      price: 'Starting at $4,200
-      features: ['Data lake design', 'Data ingestion', 'Storage optimization', 'Security implementation', 'Analytics setup'],
-      benefits: ['Centralize data storage', 'Enable advanced analytics', 'Improve data governance'],
-      marketPrice: '$7,000-25,000
-      category: 'Data Architecture',
-      technologies: ['AWS S3', 'Azure Data Lake', 'Hadoop', 'Spark', 'Delta Lake']
-    },
-    {}
-      title: 'AI Infrastructure Setup',
-      description: 'AI'
-      icon: '🤖',
-      price: 'Starting at $4,800
-      features: ['GPU cluster setup', 'ML pipeline deployment', 'Model serving', 'Data preprocessing', 'Monitoring'],
-      benefits: ['Enable AI]
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
       marketPric,
     e: $8,000-30,000
       category: 'AI Infrastructure,
       technologies: ['NVIDIA GPUs', 'Kubernetes', 'TensorFlow', 'PyTorch', 'MLflow]
     },
-<<<<<<< HEAD
     {
       title: 'Hybrid Cloud Management,
       description: 'Multi-cloud and hybrid cloud infrastructure management and optimization.,
@@ -580,95 +337,6 @@ const $1Page: React.FC = () => {}
       marketPrice: $5,000-18,000
       category: 'Streaming,
       technologies: ['Apache Kafka', 'Apache Flink', 'Apache Storm', 'AWS Kinesis', 'Azure Stream Analytics]
-=======
-    {}
-      title: 'Hybrid Cloud Management',
-      description: 'Multi-cloud and hybrid cloud infrastructure management and optimization.',
-      icon: '☁️',
-      price: 'Starting at $3,600
-      features: ['Multi-cloud strategy', 'Cost optimization', 'Security management', 'Migration services', 'Monitoring'],
-      benefits: ['Optimize cloud costs', 'Improve reliability', 'Enable vendor flexibility'],
-      marketPrice: '$6,500-22,000
-      category: 'Cloud Management',
-      technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'CloudFormation']
-    },
-    {}
-      title: 'Zero Trust Security Architecture',
-      description: 'Zero trust security model implementation for enterprise network protection.',
-      icon: '🔒',
-      price: 'Starting at $4,000
-      features: ['Identity verification', 'Network segmentation', 'Access control', 'Threat detection', 'Compliance'],
-      benefits: ['Improve security posture', 'Reduce attack surface', 'Ensure compliance'],
-      marketPrice: '$7,500-25,000
-      category: 'Security Architecture',
-      technologies: ['Zero Trust', 'Identity Management', 'Network Security', 'SIEM', 'EDR']
-    },
-    {}
-      title: 'High-Performance Computing (HPC)',
-      description: 'High-performance computing cluster setup and management for scientific and engineering workloads.',
-      icon: '💻',
-      price: 'Starting at $6,000
-      features: ['HPC cluster design', 'Job scheduling', 'Performance optimization', 'Storage management', 'Monitoring'],
-      benefits: ['Accelerate computations', 'Enable complex simulations', 'Improve research efficiency'],
-      marketPrice: '$12,000-50,000
-      category: 'HPC',
-      technologies: ['Slurm', 'OpenMPI', 'CUDA', 'InfiniBand', 'Parallel File Systems']
-    },
-    {}
-      title: 'Content Delivery Network (CDN)',
-      description: 'Global CDN implementation and optimization for improved content delivery performance.',
-      icon: '🌍',
-      price: 'Starting at $1,500
-      features: ['CDN setup', 'Content optimization', 'Caching strategy', 'Performance monitoring', 'Security'],
-      benefits: ['Improve load times', 'Reduce bandwidth costs', 'Enhance user experience'],
-      marketPrice: '$2,500-10,000
-      category: 'CDN',
-      technologies: ['CloudFlare', 'AWS CloudFront', 'Azure CDN', 'Akamai', 'Fastly']
-    },
-    {}
-      title: 'Database Performance Optimization',
-      description: 'Database performance tuning and optimization for improved application performance.',
-      icon: '🗄️',
-      price: 'Starting at $2,200
-      features: ['Performance analysis', 'Query optimization', 'Index tuning', 'Capacity planning', 'Monitoring'],
-      benefits: ['Improve query performance', 'Reduce response times', 'Optimize resource usage'],
-      marketPrice: '$4,000-15,000
-      category: 'Database Optimization',
-      technologies: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Elasticsearch']
-    },
-    {}
-      title: 'API Gateway Management',
-      description: 'Enterprise API gateway setup and management for secure and scalable API operations.',
-      icon: '🚪',
-      price: 'Starting at $2,500
-      features: ['API gateway setup', 'Rate limiting', 'Authentication', 'Monitoring', 'Documentation'],
-      benefits: ['Centralize API management', 'Improve security', 'Enable API monetization'],
-      marketPrice: '$4,500-18,000
-      category: 'API Management',
-      technologies: ['Kong', 'AWS API Gateway', 'Azure API Management', 'Apigee', 'Zuul']
-    },
-    {}
-      title: 'Container Orchestration',
-      description: 'Kubernetes and container orchestration platform setup and management.',
-      icon: '🐳',
-      price: 'Starting at $3,200
-      features: ['Kubernetes setup', 'Container management', 'Auto-scaling', 'Service mesh', 'Monitoring'],
-      benefits: ['Improve scalability', 'Simplify deployment', 'Enable microservices'],
-      marketPrice: '$5,500-20,000
-      category: 'Containerization',
-      technologies: ['Kubernetes', 'Docker', 'Helm', 'Istio', 'Prometheus']
-    },
-    {}
-      title: 'Real-time Data Streaming',
-      description: 'Real-time data streaming platform setup and management for live data processing.',
-      icon: '📊',
-      price: 'Starting at $2,800
-      features: ['Stream processing', 'Data pipelines', 'Real-time analytics', 'Event handling', 'Monitoring'],
-      benefits: ['Enable real-time insights', 'Improve decision making', 'Support live applications'],
-      marketPrice: '$5,000-18,000
-      category: 'Streaming',
-      technologies: ['Apache Kafka', 'Apache Flink', 'Apache Storm', 'AWS Kinesis', 'Azure Stream Analytics']
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
     }
 
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Seamless Migration },
@@ -720,19 +388,11 @@ const $1Page: React.FC = () => {}
           <
         <
 
-<<<<<<< HEAD
         {/* Key Benefits *
         <section className="py-16 bg-white>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8><
             <div className="text-center mb-12><
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4>
-=======
-        {/* Key Benefits *}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><
-            <div className="text-center mb-12"><
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 Why Choose Our IT Services?
               <
               <p className="text-xl text-gray-600>
@@ -773,7 +433,6 @@ const $1Page: React.FC = () => {}
           <
         <
 
-<<<<<<< HEAD
         {/* Services by Category *
         {categories.map(category => (
 
@@ -782,30 +441,15 @@ const $1Page: React.FC = () => {}
               <div className="text-center mb-12><
                 <h2 className=text-3xl m,
     d:text-4xl font-bold text-gray-900 mb-4>
-=======
-        {/* Services by Category *}
-        {categories.map(category => (}
-          <section key={category} className="py-16 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"><
-              <div className="text-center mb-12"><
-                <h2 className="text-3xl m,
-    d:text-4xl font-bold text-gray-900 mb-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
                   {category} Services
                 <
                 <p className="text-xl text-gray-600>
                   Professional {category.toLowerCase()} solutions tailored to your business needs
                 <
               <
-<<<<<<< HEAD
               <div className=grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-3 gap-8>
                 {itServices
-=======
-              <div className="grid grid-cols-1 md: grid-cols-2 l,
-    g:grid-cols-3 gap-8">
-                {itServices}
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
                   .filter(service => service.category === category)
                   .map((service, index) => (<
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow><
@@ -836,19 +480,11 @@ const $1Page: React.FC = () => {}
                         <
                       <
 
-<<<<<<< HEAD
                       <div className="mb-4><
                         <h4 className="font-semibold text-gray-900 mb-2>Technologies: <
                         <div className="flex flex-wrap gap-2>
                           {service.technologies.map((tech), techIndex) => (<
                             <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded>
-=======
-                      <div className="mb-4"><
-                        <h4 className="font-semibold text-gray-900 mb-2">Technologies: <
-                        <div className="flex flex-wrap gap-2">
-                          {service.technologies.map((tech), techIndex) => (<}
-                            <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
                               {tech}
 
                             <)
@@ -872,17 +508,10 @@ const $1Page: React.FC = () => {}
           <
         ))}
 
-<<<<<<< HEAD
         {/* Contact Section *
         <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white>
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center><
             <h2 className="text-3xl md:text-4xl font-bold mb-4>
-=======
-        {/* Contact Section *}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"><
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
               Ready to Transform Your IT Infrastructure?
             <
             <p className="text-xl mb-8 text-blue-100>
@@ -927,18 +556,11 @@ const $1Page: React.FC = () => {}
           </div>
         </section>
 
-<<<<<<< HEAD
         <section className="py-16 px-4>
           <div className="max-w-7xl mx-auto>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8>
               {itServices.map((service, index) => (
 
-=======
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {itServices.map((service, index) => (}
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 <Link
                   key={index}
 
@@ -961,71 +583,8 @@ const $1Page: React.FC = () => {}
           </div>
         </section>
       </div>
-<<<<<<< HEAD
     </React.Fragment>)
   );};
-=======
-=======
-
-import React, { useState, useMemo } from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { 
-  Cloud, Shield, Settings, Database, Smartphone, Lock, BarChart, Users, 
-  CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Star, Zap, Cpu, 
-  HardDrive, Wifi, Server, Code, Globe, Target, TrendingUp, Search, Filter,
-  Building, Network, Router, Monitor, Laptop, Printer, Key, Eye, AlertTriangle,
-  DollarSign, Award, Headphones, MessageSquare, Calendar, FileText, Download,
-  Upload, Refresh, RotateCcw, Maximize, Minimize, X, Plus, Minus, Activity,
-  PieChart, TrendingDown, ExternalLink, ChevronRight, Crown, Rocket, Wrench,
-  Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass,
-  Navigation as NavIcon, Home, Heart, Stethoscope, GraduationCap, Briefcase,
-  Car, Plane, Ship, Train, Factory, ShoppingCart, CreditCard, Gamepad2,
-  Music, Video, Camera, Palette, Bot, Package, Truck, Box, Archive, Folder,
-  File, Image, Film, Headphones as Headphone, Mic, Speaker, Volume2, VolumeX,
-  Play, Pause, Stop, SkipBack, SkipForward, Repeat, Shuffle, Radio, Tv,
-  Tablet, Watch, Headphones as Headset, Gamepad2 as Gamepad, Joystick,
-  Mouse, Keyboard, Webcam, Wifi as WifiSignal, Bluetooth, Usb, Hdmi,
-  Ethernet, WifiOff, Signal, SignalZero, SignalLow, SignalMedium, SignalHigh,
-  SignalFull, Wifi as WifiIcon, WifiOff as WifiOffIcon, Send, Reply, Forward,
-  Share, Copy, Paste, Cut, Save, Download as DownloadIcon, Upload as UploadIcon,
-  Refresh as RefreshIcon, RotateCcw as RotateCcwIcon, RotateCw, Maximize as MaximizeIcon,
-  Minimize as MinimizeIcon, X as XIcon, Plus as PlusIcon, Minus as MinusIcon,
-  Divide, Equal, Percent, Hash, AtSign, Euro, Pound, Yen, Bitcoin, Wallet,
-  Banknote, Coins, Receipt, Archive as ArchiveIcon, Folder as FolderIcon,
-  File as FileIcon, Image as ImageIcon, Film as FilmIcon, Music as MusicIcon,
-  Headphones as HeadphoneIcon, Mic as Microphone, Speaker as SpeakerIcon,
-  Volume2 as Volume2Icon, VolumeX as VolumeXIcon, Play as PlayIcon,
-  Pause as PauseIcon, Stop as StopIcon, SkipBack as SkipBackIcon,
-  SkipForward as SkipForwardIcon, Repeat as RepeatIcon, Shuffle as ShuffleIcon,
-  Radio as RadioIcon, Tv as TvIcon, Monitor as MonitorIcon, Laptop as LaptopIcon,
-  Smartphone as PhoneIcon, Tablet as TabletIcon, Watch as WatchIcon,
-  Headphones as HeadsetIcon, Gamepad2 as GamepadIcon, Joystick as JoystickIcon,
-  Mouse as MouseIcon, Keyboard as KeyboardIcon, Webcam as WebcamIcon,
-  Wifi as WifiSignalIcon, Bluetooth as BluetoothIcon, Usb as UsbIcon,
-  Hdmi as HdmiIcon, Ethernet as EthernetIcon, WifiOff as WifiOffSignalIcon,
-  Signal as SignalIcon, SignalZero as Signal0Icon, SignalLow as Signal1Icon,
-  SignalMedium as Signal2Icon, SignalHigh as Signal3Icon, SignalFull as Signal4Icon,
-  Wifi as WifiIcon2, WifiOff as WifiOffIcon2
-} from 'lucide-react';
-
-const ITServicesPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popularity');
-
-  const itServices = useMemo(() => [
-    // Core IT Services
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Star, Cloud, Shield, Code, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, FileText, Users, Globe, Cpu, Target, Zap, ArrowRight } from 'lucide-react';
-
-const ITServicesPage: React.FC = () => {
-  const itServices = [
-    // Infrastructure & Cloud Services
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3
     {
       id: 'managed-it-services',
       name: 'Managed IT Services',
@@ -1057,7 +616,6 @@ const ITServicesPage: React.FC = () => {
       name: 'Cloud Migration Services',
       description: 'Seamless migration to cloud platforms with zero downtime and enhanced security.',
       icon: Cloud,
-<<<<<<< HEAD
       category: 'cloud',
       pricing: { starting: 2999, period: 'project' },
       features: [
@@ -1078,21 +636,12 @@ const ITServicesPage: React.FC = () => {
       rating: 4.8,
       users: 1200,
       link: 'https://ziontechgroup.com/cloud-migration'
-=======
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions for modern businesses',
-      category: 'Infrastructure',
-      price: '$299/month',
-      features: ['AWS/Azure/GCP Setup', 'Auto-scaling', 'Load Balancing', 'CDN Configuration'],
-      benefits: ['99.9% Uptime', 'Cost Optimization', 'Global Reach', 'Disaster Recovery']
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3
     },
     {
       id: 'cybersecurity-suite',
       name: 'Cybersecurity Suite',
       description: 'Comprehensive security solutions to protect your business from cyber threats.',
       icon: Shield,
-<<<<<<< HEAD
       category: 'security',
       pricing: { starting: 149, period: 'month' },
       features: [
@@ -1113,14 +662,6 @@ const ITServicesPage: React.FC = () => {
       rating: 4.9,
       users: 3200,
       link: 'https://ziontechgroup.com/cybersecurity-suite'
-=======
-      title: 'Cybersecurity Suite',
-      description: 'Comprehensive security solutions to protect your business',
-      category: 'Security',
-      price: '$199/month',
-      features: ['Firewall Management', 'Intrusion Detection', 'Vulnerability Scanning', 'Security Audits'],
-      benefits: ['Threat Protection', 'Compliance', '24/7 Monitoring', 'Incident Response']
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3
     },
     {
       id: 'network-infrastructure',
@@ -1153,434 +694,16 @@ const ITServicesPage: React.FC = () => {
       name: 'Data Backup & Recovery',
       description: 'Reliable data protection with automated backups and rapid recovery solutions.',
       icon: Database,
-<<<<<<< HEAD
-      category: 'data',
-      pricing: { starting: 99, period: 'month' },
-      features: [
-        'Automated daily backups',
-        'Cloud storage integration',
-        'Point-in-time recovery',
-        'Disaster recovery planning',
-        'Data encryption',
-        'Compliance reporting'
-      ],
-      benefits: [
-        'Protect against data loss',
-        'Recover data in minutes',
-        'Meet compliance requirements',
-        'Reduce downtime'
-      ],
-      popular: true,
-      rating: 4.8,
-      users: 4100,
-      link: 'https://ziontechgroup.com/data-backup-recovery'
-    },
-    {
-      id: 'help-desk-support',
-      name: 'Help Desk Support',
-      description: 'Professional IT support services to resolve technical issues quickly and efficiently.',
-      icon: Headphones,
-      category: 'support',
-      pricing: { starting: 79, period: 'month', perUser: true },
-      features: [
-        '24/7 phone and email support',
-        'Remote assistance',
-        'Ticket management',
-        'Knowledge base access',
-        'Priority support levels',
-        'SLA guarantees'
-      ],
-      benefits: [
-        'Resolve issues 3x faster',
-        'Improve user satisfaction',
-        'Reduce IT workload',
-        'Increase productivity'
-      ],
-      popular: true,
-      rating: 4.6,
-      users: 5600,
-      link: 'https://ziontechgroup.com/help-desk-support'
-    },
-    {
-      id: 'software-licensing',
-      name: 'Software Licensing Management',
-      description: 'Optimize software costs and ensure compliance with comprehensive licensing management.',
-      icon: Key,
-      category: 'software',
-      pricing: { starting: 49, period: 'month' },
-      features: [
-        'License inventory',
-        'Compliance monitoring',
-        'Cost optimization',
-        'Renewal management',
-        'Usage tracking',
-        'Audit support'
-      ],
-      benefits: [
-        'Reduce software costs by 30%',
-        'Ensure compliance',
-        'Avoid penalties',
-        'Optimize usage'
-      ],
-      popular: false,
-      rating: 4.5,
-      users: 2200,
-      link: 'https://ziontechgroup.com/software-licensing'
-    },
-    {
-      id: 'it-consulting',
-      name: 'IT Consulting Services',
-      description: 'Strategic IT consulting to align technology with business objectives and goals.',
-      icon: Target,
-      category: 'consulting',
-      pricing: { starting: 199, period: 'hour' },
-      features: [
-        'IT strategy development',
-        'Technology assessment',
-        'Vendor evaluation',
-        'Project planning',
-        'Change management',
-        'Training programs'
-      ],
-      benefits: [
-        'Align IT with business goals',
-        'Make informed decisions',
-        'Reduce technology risks',
-        'Improve ROI'
-      ],
-      popular: false,
-      rating: 4.8,
-      users: 800,
-      link: 'https://ziontechgroup.com/it-consulting'
-    },
-    {
-      id: 'mobile-device-management',
-      name: 'Mobile Device Management',
-      description: 'Secure and manage mobile devices across your organization with enterprise-grade solutions.',
-      icon: Smartphone,
-      category: 'mobile',
-      pricing: { starting: 29, period: 'month', perDevice: true },
-      features: [
-        'Device enrollment',
-        'Policy enforcement',
-        'App management',
-        'Security controls',
-        'Remote wipe capability',
-        'Compliance reporting'
-      ],
-      benefits: [
-        'Secure mobile devices',
-        'Enforce policies',
-        'Reduce security risks',
-        'Improve productivity'
-      ],
-      popular: true,
-      rating: 4.7,
-      users: 3400,
-      link: 'https://ziontechgroup.com/mobile-device-management'
-    },
-    {
-      id: 'voip-phone-systems',
-      name: 'VoIP Phone Systems',
-      description: 'Modern voice communication solutions with advanced features and cost savings.',
-      icon: Phone,
-      category: 'communication',
-      pricing: { starting: 39, period: 'month', perUser: true },
-      features: [
-        'HD voice quality',
-        'Video conferencing',
-        'Mobile integration',
-        'Call routing',
-        'Voicemail to email',
-        'Analytics and reporting'
-      ],
-      benefits: [
-        'Reduce phone costs by 50%',
-        'Improve communication',
-        'Enhance collaboration',
-        'Scale easily'
-      ],
-      popular: false,
-      rating: 4.6,
-      users: 1900,
-      link: 'https://ziontechgroup.com/voip-phone-systems'
-    },
-    {
-      id: 'server-maintenance',
-      name: 'Server Maintenance',
-      description: 'Proactive server maintenance to ensure optimal performance and prevent failures.',
-      icon: Server,
-      category: 'infrastructure',
-      pricing: { starting: 299, period: 'month' },
-      features: [
-        'Hardware monitoring',
-        'Software updates',
-        'Performance optimization',
-        'Security patches',
-        'Backup verification',
-        'Capacity planning'
-      ],
-      benefits: [
-        'Prevent server failures',
-        'Improve performance',
-        'Extend hardware life',
-        'Reduce downtime'
-      ],
-      popular: true,
-      rating: 4.8,
-      users: 2800,
-      link: 'https://ziontechgroup.com/server-maintenance'
-    },
-    {
-      id: 'it-audit-compliance',
-      name: 'IT Audit & Compliance',
-      description: 'Comprehensive IT audits and compliance assessments to meet regulatory requirements.',
-      icon: FileText,
-      category: 'compliance',
-      pricing: { starting: 2499, period: 'audit' },
-      features: [
-        'Security assessment',
-        'Compliance evaluation',
-        'Risk analysis',
-        'Policy review',
-        'Remediation planning',
-        'Documentation'
-      ],
-      benefits: [
-        'Meet compliance requirements',
-        'Identify security gaps',
-        'Reduce audit risks',
-        'Improve security posture'
-      ],
-      popular: false,
-      rating: 4.9,
-      users: 600,
-      link: 'https://ziontechgroup.com/it-audit-compliance'
-    }
-  ], []);
-
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Globe },
-    { id: 'infrastructure', name: 'Infrastructure', icon: Server },
-    { id: 'cloud', name: 'Cloud Services', icon: Cloud },
-    { id: 'security', name: 'Security', icon: Shield },
-    { id: 'data', name: 'Data Management', icon: Database },
-    { id: 'support', name: 'Support', icon: Headphones },
-    { id: 'software', name: 'Software', icon: Code },
-    { id: 'consulting', name: 'Consulting', icon: Target },
-    { id: 'mobile', name: 'Mobile', icon: Smartphone },
-    { id: 'communication', name: 'Communication', icon: Phone },
-    { id: 'compliance', name: 'Compliance', icon: FileText }
-  ];
-
-  const filteredServices = useMemo(() => {
-    let filtered = itServices;
-
-    if (searchTerm) {
-      filtered = filtered.filter(service =>
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    }
-
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
-    }
-
-    switch (sortBy) {
-      case 'popularity':
-        filtered.sort((a, b) => b.users - a.users);
-        break;
-      case 'rating':
-        filtered.sort((a, b) => b.rating - a.rating);
-        break;
-      case 'price-low':
-        filtered.sort((a, b) => a.pricing.starting - b.pricing.starting);
-        break;
-      case 'price-high':
-        filtered.sort((a, b) => b.pricing.starting - a.pricing.starting);
-        break;
-      default:
-        break;
-    }
-
-    return filtered;
-  }, [searchTerm, selectedCategory, sortBy, itServices]);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 'use client';
 
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Server, Shield, Cloud, Database, Network, Code, Monitor, 
-  Smartphone, Wrench, BarChart3, Eye, CheckCircle, ArrowRight,
-  Sparkles, Layers, Award, Lightbulb, CircuitBoard, Atom, 
-  Satellite, Zap, Target, Users, DollarSign, Phone, Mail, 
-  MapPin, Calendar, Timer, Globe, TrendingUp, Star
-} from 'lucide-react';
-
-export default function ITServicesPage() {
-  const services = [
-    {
-      icon: <Code className="w-8 h-8 text-cyan-400" />,
-      title: 'Web Development',
-      description: 'Custom web applications built with modern technologies and best practices.',
-      features: ['React, Next.js, Vue.js', 'Responsive Design', 'SEO Optimization', 'Performance Tuning'],
-      href: '/web-development'
-    },
-    {
-      icon: <Smartphone className="w-8 h-8 text-purple-400" />,
-      title: 'Mobile Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android.',
-      features: ['React Native, Flutter', 'Native iOS/Android', 'App Store Optimization', 'Push Notifications'],
-      href: '/mobile-development'
-    },
-    {
-      icon: <Cloud className="w-8 h-8 text-blue-400" />,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions with AWS, Azure, and Google Cloud.',
-      features: ['AWS, Azure, GCP', 'Auto-scaling', 'Load Balancing', 'Disaster Recovery'],
-      href: '/cloud-infrastructure'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-red-400" />,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets.',
-      features: ['Security Audits', 'Penetration Testing', 'Compliance', '24/7 Monitoring'],
-      href: '/cybersecurity-solutions'
-    },
-    {
-      icon: <Database className="w-8 h-8 text-green-400" />,
-      title: 'Database Management',
-      description: 'Database design, optimization, and management services.',
-      features: ['SQL, NoSQL', 'Performance Tuning', 'Backup & Recovery', 'Data Migration'],
-      href: '/database-management'
-    },
-    {
-      icon: <Network className="w-8 h-8 text-orange-400" />,
-      title: 'Network Infrastructure',
-      description: 'Network design, implementation, and management solutions.',
-      features: ['Network Design', 'Security Implementation', 'Performance Monitoring', 'Troubleshooting'],
-      href: '/network-infrastructure'
-    },
-    {
-      icon: <Wrench className="w-8 h-8 text-yellow-400" />,
-      title: 'DevOps & CI/CD',
-      description: 'Automated deployment and continuous integration solutions.',
-      features: ['Docker, Kubernetes', 'CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring'],
-      href: '/devops-cicd'
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-indigo-400" />,
-      title: 'Data Analytics & BI',
-      description: 'Business intelligence and data analytics solutions.',
-      features: ['Data Visualization', 'ETL Processes', 'Machine Learning', 'Real-time Analytics'],
-      href: '/data-analytics-bi'
-    }
-  ];
-
-  const process = [
-    {
-      step: '01',
-      title: 'Discovery & Analysis',
-      description: 'We analyze your current infrastructure and identify opportunities for improvement.',
-      icon: <Eye className="w-6 h-6" />
-    },
-    {
-      step: '02',
-      title: 'Strategy & Planning',
-      description: 'Develop a comprehensive strategy tailored to your business needs and goals.',
-      icon: <Target className="w-6 h-6" />
-    },
-    {
-      step: '03',
-      title: 'Implementation',
-      description: 'Execute the solution with minimal disruption to your business operations.',
-      icon: <Code className="w-6 h-6" />
-    },
-    {
-      step: '04',
-      title: 'Support & Maintenance',
-      description: 'Ongoing support and maintenance to ensure optimal performance.',
-      icon: <Wrench className="w-6 h-6" />
-    }
-  ];
-
-  const technologies = [
-    { name: 'AWS', icon: <Cloud className="w-6 h-6" />, category: 'Cloud' },
-    { name: 'Azure', icon: <Cloud className="w-6 h-6" />, category: 'Cloud' },
-    { name: 'Google Cloud', icon: <Cloud className="w-6 h-6" />, category: 'Cloud' },
-    { name: 'Docker', icon: <Layers className="w-6 h-6" />, category: 'DevOps' },
-    { name: 'Kubernetes', icon: <Layers className="w-6 h-6" />, category: 'DevOps' },
-    { name: 'React', icon: <Code className="w-6 h-6" />, category: 'Frontend' },
-    { name: 'Node.js', icon: <Code className="w-6 h-6" />, category: 'Backend' },
-    { name: 'Python', icon: <Code className="w-6 h-6" />, category: 'Backend' },
-    { name: 'PostgreSQL', icon: <Database className="w-6 h-6" />, category: 'Database' },
-    { name: 'MongoDB', icon: <Database className="w-6 h-6" />, category: 'Database' },
-    { name: 'Redis', icon: <Database className="w-6 h-6" />, category: 'Database' },
-    { name: 'Terraform', icon: <CircuitBoard className="w-6 h-6" />, category: 'Infrastructure' }
-  ];
-
-  const benefits = [
-    {
-      icon: <Zap className="w-8 h-8 text-cyan-400" />,
-      title: 'Improved Performance',
-      description: 'Optimize your systems for maximum efficiency and speed.'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-green-400" />,
-      title: 'Enhanced Security',
-      description: 'Protect your data and systems with enterprise-grade security.'
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8 text-purple-400" />,
-      title: 'Scalability',
-      description: 'Scale your infrastructure as your business grows.'
-    },
-    {
-      icon: <DollarSign className="w-8 h-8 text-yellow-400" />,
-      title: 'Cost Optimization',
-      description: 'Reduce operational costs through efficient resource management.'
-    }
-  ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-        <title>IT Services - Zion Tech Group</title>
-        <meta name="description" content="IT services from Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">IT Services</h1>
-          <p className="text-gray-300">Coming soon...</p>
-        </div>
-      </div>
-<<<<<<< HEAD
-    </>
-  );
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-92c8
 
 export default ItServicesPage;
->>>>>>> origin/cursor/ad-creation-and-management-f267
-=======
-    </div>
-  );
-};
-export default ITServicesPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
 import React from 'react'
 import { CheckCircle, ArrowRight, Cloud, Shield, Server, Database, Smartphone, Globe, Code, Cpu, DollarSign, Star, Clock, Users, Network, Settings } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
@@ -1602,7 +725,6 @@ export default function ITServicesPage() {
       duration: '2-4 weeks'
     }
   ]
-=======
 import React from 'react';
 import { CheckCircle, ArrowRight, Server, Shield, Cloud, Database, Network, Settings, Users, Clock, DollarSign } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -1668,13 +790,11 @@ const ItServicesPage: React.FC = () => {
     { number: '50+', label: 'Expert Engineers' },
     { number: '24/7', label: 'Support Available' }
   ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>IT Services - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Comprehensive IT services including cloud migration, cybersecurity, infrastructure management, and digital transformation." />
       </Helmet>
       
@@ -1724,47 +844,11 @@ const ItServicesPage: React.FC = () => {
               <Link
                 to={service.link}
                 className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:scale-105"
-=======
-        <meta name="description" content="Comprehensive IT services including infrastructure management, cybersecurity, cloud migration, and 24/7 support. Expert solutions for modern businesses." />
-        <meta name="keywords" content="IT services, infrastructure management, cybersecurity, cloud migration, database administration, network solutions" />
-      </Helmet>
-      
-      {/* Hero Section */}
-      <section className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Professional IT Services
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Comprehensive IT solutions to keep your business running smoothly, securely, and efficiently.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Get Free Consultation
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link 
-                to="/about" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
               >
                 Learn More
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
-<<<<<<< HEAD
-          ))}
-        </div>
-      </div>
-    </div>
-  )
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
-=======
           </div>
 
           {/* Stats Section */}
@@ -1915,7 +999,6 @@ const ItServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
 
 const ITServicesPage: React.FC = () => {
   return (
@@ -1928,8 +1011,6 @@ const ITServicesPage: React.FC = () => {
           </p>
         </div>
       </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e
-=======
       title: 'Database Management',
       description: 'Optimized database solutions for performance and reliability',
       category: 'Data',
@@ -2099,18 +1180,11 @@ const ITServicesPage: React.FC = () => {
         </section>
       </main>
       <Footer />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3
     </div>
   );
 };
 
-<<<<<<< HEAD
-export default ItServicesPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
-=======
 export default ITServicesPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3
-=======
         <title>IT Services - Zion Tech Group | Comprehensive IT Solutions</title>
         <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, web development, mobile apps, and more. Transform your business with our expert IT solutions." />
         <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, web development, mobile development, DevOps, database management" />
@@ -2333,4 +1407,3 @@ export default ITServicesPage;
     </>
   );
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa

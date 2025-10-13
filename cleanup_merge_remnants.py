@@ -17,8 +17,8 @@ def cleanup_merge_remnants(file_path):
         content = re.sub(r' cursor/fix-errors-and-merge-to-main-e61d', '', content)
         
         # Remove any remaining merge conflict markers
-        content = re.sub(r'<<<<<<< HEAD.*?>>>>>>>.*?\n', '', content, flags=re.DOTALL)
-        content = re.sub(r'=======.*?>>>>>>>.*?\n', '', content, flags=re.DOTALL)
+        content = re.sub(r'.*?>>>>>>>.*?\n', '', content, flags=re.DOTALL)
+        content = re.sub(r'.*?>>>>>>>.*?\n', '', content, flags=re.DOTALL)
         
         # Clean up any orphaned text
         content = re.sub(r'\s+$', '', content, flags=re.MULTILINE)

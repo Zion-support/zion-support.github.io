@@ -4,14 +4,7 @@ import {
   Target,
   CheckCircle,
   AlertTriangle,
-<<<<<<< HEAD
   Cpu
-=======
-  Cpu,
-  Globe,
-MousePointer,
-  Heart
->>>>>>> origin/clean-main-20251013-145848
 } from 'lucide-react';
 
 const ZionAICustomerChurnPredictorProPage: React.FC = () => {
