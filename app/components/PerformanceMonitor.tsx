@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 
 interface PerformanceMetrics {
@@ -85,8 +84,9 @@ const PerformanceMonitor: React.FC = () => {
             </div>
             </div>
           </div>
-      <div className="space-y-2">
-        <div className="flex justify-between">
+        </div>
+        <div className="space-y-2">
+          <div className="flex justify-between">
           <span className="text-gray-300">Load Time:</span>
           <span className={getMetricColor(metrics.loadTime, { good: 2000, needsImprovement: 4000 })}>
             {formatMetric(metrics.loadTime)}
