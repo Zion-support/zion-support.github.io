@@ -46,11 +46,24 @@ export default defineConfig({
         drop_debugger: true,
       },
     },
+    // Fix React scheduler issues
+    commonjsOptions: {
+      include: [/node_modules/],
+      transformMixedEsModules: true,
+    },
+    // Define global variables to fix React scheduler
+    define: {
+      global: 'globalThis',
+    },
     
     
     rollupOptions: {
       output: {
         manualChunks: (id) => {
+          // Scheduler should be in its own chunk
+          if (id.includes('scheduler')) {
+            return 'scheduler'
+          }
           // Core React libraries
           if (id.includes('react') || id.includes('react-dom')) {
             return 'react-vendor'
@@ -128,7 +141,16 @@ export default defineConfig({
       "react-helmet-async",
       "framer-motion",
       "lucide-react",
+      "scheduler",
     ],
+    exclude: ["@vite/client", "@vite/env"],
+  },
+  // Add polyfills for better compatibility
+  esbuild: {
+    target: 'es2020',
+    define: {
+      global: 'globalThis',
+    },
   },
   // CSS optimization
   css: {
