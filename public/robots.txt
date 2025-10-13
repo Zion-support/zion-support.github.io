@@ -9,14 +9,19 @@ Crawl-delay: 1
 
 # Disallow admin and private areas
 Disallow: /admin/
+Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /private/
+Disallow: /static/
 
 # Allow important pages
 Allow: /ai-services/
+Allow: /it-services/
 Allow: /micro-saas/
 Allow: /5g-solutions/
-Allow: /contact/
 Allow: /about/
-Allow: /services/
+Allow: /contact/
+Allow: /blog/
+
+# Host
+Host: https://ziontechgroup.com

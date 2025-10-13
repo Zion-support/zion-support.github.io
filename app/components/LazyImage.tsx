@@ -1,36 +1,33 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { cn } from '../lib/utils';
 
 interface LazyImageProps {
   src: string;
   alt: string;
   className?: string;
-  placeholder?: React.ReactNode;
-  fallback?: React.ReactNode;
+  placeholder?: string;
   onLoad?: () => void;
   onError?: () => void;
-  loading?: 'lazy' | 'eager';
-  sizes?: string;
-  srcSet?: string;
+  priority?: boolean;
 }
 
 const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
-  className = '',
-  placeholder,
-  fallback,
+  className,
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5YTNhZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+',
   onLoad,
   onError,
-  loading = 'lazy',
-  sizes,
-  srcSet,
+  priority = false
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isError, setIsError] = useState(false);
-  const [isInView, setIsInView] = useState(false);
+  const [isInView, setIsInView] = useState(priority);
+  const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
+    if (priority) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -40,7 +37,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
       },
       {
         threshold: 0.1,
-        rootMargin: '50px',
+        rootMargin: '50px'
       }
     );
 
@@ -49,7 +46,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [priority]);
 
   const handleLoad = () => {
     setIsLoaded(true);
@@ -57,36 +54,38 @@ const LazyImage: React.FC<LazyImageProps> = ({
   };
 
   const handleError = () => {
-    setIsError(true);
+    setHasError(true);
     onError?.();
   };
 
-  if (isError && fallback) {
-    return <>{fallback}</>;
-  }
-
   return (
-    <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
-      {!isLoaded && !isError && placeholder && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-200 dark:bg-gray-700">
-          {placeholder}
-        </div>
+    <div ref={imgRef} className={cn('relative overflow-hidden', className)}>
+      {!isLoaded && !hasError && (
+        <img
+          src={placeholder}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover blur-sm"
+          aria-hidden="true"
+        />
       )}
-      
       {isInView && (
         <img
           src={src}
           alt={alt}
-          className={`transition-opacity duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
-          } ${className}`}
-          loading={loading}
-          sizes={sizes}
-          srcSet={srcSet}
           onLoad={handleLoad}
           onError={handleError}
+          className={cn(
+            'w-full h-full object-cover transition-opacity duration-300',
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          )}
+          loading={priority ? 'eager' : 'lazy'}
           decoding="async"
         />
+      )}
+      {hasError && (
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">
+          <span>Failed to load image</span>
+        </div>
       )}
     </div>
   );

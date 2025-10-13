@@ -91,18 +91,35 @@ const Footer = React.memo(() => {
 
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
-      {/* Background Effects */}
+      {/* Enhanced Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent"></div>
+      
+      {/* Animated grid pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="h-full w-full" style={{
+          backgroundImage: `
+            linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '50px 50px'
+        }}></div>
+      </div>
       
       <div className="relative z-10">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
+            <div className="flex items-center space-x-2 group">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative overflow-hidden">
+                <span className="text-white font-bold text-lg relative z-10">Z</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">Zion Tech Group</h3>
+                <p className="text-sm text-gray-400">Advanced AI & IT Solutions</p>
               </div>
             </div>
 
@@ -114,12 +131,13 @@ const Footer = React.memo(() => {
                   <li key={service.name}>
                     <Link
                       to={service.path}
-                      className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors group"
+                      className="group flex items-center text-gray-300 hover:text-cyan-400 transition-all duration-300 relative overflow-hidden rounded-lg px-2 py-1 -mx-2 -my-1"
                     >
-                      <span className="mr-2 group-hover:scale-110 transition-transform duration-300">
+                      <span className="mr-2 group-hover:scale-110 transition-transform duration-300 w-4 h-4">
                         {service.icon}
                       </span>
-                      <span className="text-sm">{service.name}</span>
+                      <span className="text-sm relative z-10">{service.name}</span>
+                      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
                     </Link>
                   </li>
                 ))}
