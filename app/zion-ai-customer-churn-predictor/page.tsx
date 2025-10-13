@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Mic, 
+  TrendingDown, 
   BarChart3, 
   TrendingUp, 
   Eye, 
@@ -28,52 +28,51 @@ import {
   Download,
   Filter,
   Search,
-  Volume2,
-  Headphones,
-  Phone,
-  Video
+  AlertTriangle,
+  Users,
+  DollarSign
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAIVoiceAssistantProPage = () => {
+const ZionAICustomerChurnPredictorPage = () => {
   const features = [
     {
-      title: "Natural Language Processing",
-      description: "Advanced NLP that understands context, intent, and complex commands in 50+ languages",
+      title: "AI-Powered Churn Prediction",
+      description: "Predict customer churn with 95% accuracy using advanced machine learning and behavioral analysis",
       icon: <Brain className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-Channel Integration",
-      description: "Seamlessly integrate with phone, email, chat, and video platforms for unified communication",
-      icon: <Phone className="w-8 h-8" />,
+      title: "Real-time Risk Scoring",
+      description: "Get real-time churn risk scores for all customers with detailed explanations",
+      icon: <AlertTriangle className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Custom Voice Training",
-      description: "Train the AI with your brand voice, terminology, and specific business processes",
-      icon: <Volume2 className="w-8 h-8" />,
+      title: "Behavioral Analysis",
+      description: "Analyze customer behavior patterns to identify early warning signs of churn",
+      icon: <Activity className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Real-time Analytics",
-      description: "Monitor performance, customer satisfaction, and conversation insights in real-time",
-      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Automated Interventions",
+      description: "Automatically trigger retention campaigns and personalized offers for at-risk customers",
+      icon: <Zap className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Automated Workflows",
-      description: "Create complex workflows that handle multi-step processes and escalations automatically",
-      icon: <Zap className="w-8 h-8" />,
+      title: "Retention Recommendations",
+      description: "Get AI-powered recommendations for specific actions to retain at-risk customers",
+      icon: <Target className="w-8 h-8" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "24/7 Availability",
-      description: "Provide round-the-clock customer support with consistent, high-quality interactions",
-      icon: <Clock className="w-8 h-8" />,
+      title: "Cohort Analysis",
+      description: "Analyze customer cohorts to understand churn patterns and trends over time",
+      icon: <PieChart className="w-8 h-8" />,
       color: "from-cyan-500 to-blue-500"
     }
   ];
@@ -83,13 +82,13 @@ const ZionAIVoiceAssistantProPage = () => {
       name: "Starter",
       price: "$99",
       period: "/month",
-      description: "Perfect for small businesses starting with voice AI",
+      description: "Perfect for small businesses starting with churn prediction",
       features: [
-        "1,000 conversations/month",
-        "Basic voice recognition",
+        "1,000 customers",
+        "Basic churn prediction",
+        "Email alerts",
         "Email support",
-        "Standard integrations",
-        "1 voice channel",
+        "Standard reports",
         "1 user account"
       ],
       popular: false,
@@ -99,15 +98,15 @@ const ZionAIVoiceAssistantProPage = () => {
       name: "Professional",
       price: "$299",
       period: "/month",
-      description: "Ideal for growing businesses with complex needs",
+      description: "Ideal for growing businesses with complex customer data",
       features: [
-        "10,000 conversations/month",
-        "Advanced NLP",
+        "10,000 customers",
+        "Advanced prediction models",
+        "Real-time alerts",
         "Priority support",
-        "Custom integrations",
-        "5 voice channels",
+        "Advanced reports",
         "5 user accounts",
-        "Custom voice training",
+        "Automated interventions",
         "API access"
       ],
       popular: true,
@@ -117,18 +116,18 @@ const ZionAIVoiceAssistantProPage = () => {
       name: "Enterprise",
       price: "$799",
       period: "/month",
-      description: "For large organizations with high-volume needs",
+      description: "For large organizations with extensive customer bases",
       features: [
-        "Unlimited conversations",
-        "Full AI capabilities",
+        "Unlimited customers",
+        "Full AI prediction suite",
+        "Custom AI models",
         "24/7 dedicated support",
         "White-label solution",
-        "Unlimited channels",
         "Unlimited users",
-        "Custom AI models",
         "Advanced API access",
         "SLA guarantee",
-        "Data export/import"
+        "On-premise deployment",
+        "Custom integrations"
       ],
       popular: false,
       cta: "Contact Sales"
@@ -137,65 +136,65 @@ const ZionAIVoiceAssistantProPage = () => {
 
   const capabilities = [
     {
-      title: "Customer Support",
-      description: "Handle customer inquiries, complaints, and support requests 24/7",
-      icon: <Headphones className="w-6 h-6" />,
-      metric: "90% resolution rate"
-    },
-    {
-      title: "Sales Assistance",
-      description: "Qualify leads, answer product questions, and guide customers through sales",
-      icon: <Target className="w-6 h-6" />,
-      metric: "40% higher conversion"
-    },
-    {
-      title: "Appointment Scheduling",
-      description: "Automatically schedule and manage appointments across multiple calendars",
-      icon: <Calendar className="w-6 h-6" />,
+      title: "Churn Prediction",
+      description: "Predict customer churn with 95% accuracy",
+      icon: <TrendingDown className="w-6 h-6" />,
       metric: "95% accuracy"
     },
     {
-      title: "Order Processing",
-      description: "Process orders, track shipments, and handle returns via voice",
-      icon: <Package className="w-6 h-6" />,
-      metric: "60% faster processing"
+      title: "Early Warning",
+      description: "Identify at-risk customers 30 days before churn",
+      icon: <AlertTriangle className="w-6 h-6" />,
+      metric: "30 days early"
     },
     {
-      title: "Information Retrieval",
-      description: "Provide instant access to product info, policies, and company data",
-      icon: <Database className="w-6 h-6" />,
-      metric: "Instant responses"
+      title: "Retention Rate",
+      description: "Improve customer retention by up to 40%",
+      icon: <Users className="w-6 h-6" />,
+      metric: "40% improvement"
     },
     {
-      title: "Multi-language Support",
-      description: "Communicate fluently in 50+ languages with native-level understanding",
-      icon: <Globe className="w-6 h-6" />,
-      metric: "50+ languages"
+      title: "Revenue Protection",
+      description: "Protect revenue by preventing customer churn",
+      icon: <DollarSign className="w-6 h-6" />,
+      metric: "25% revenue saved"
+    },
+    {
+      title: "Intervention Success",
+      description: "Successfully retain 80% of at-risk customers",
+      icon: <Target className="w-6 h-6" />,
+      metric: "80% success rate"
+    },
+    {
+      title: "Cost Reduction",
+      description: "Reduce customer acquisition costs through retention",
+      icon: <TrendingUp className="w-6 h-6" />,
+      metric: "50% cost reduction"
     }
   ];
 
   const testimonials = [
     {
-      name: "Sarah Williams",
-      company: "E-commerce Platform",
+      name: "Lisa Chen",
+      company: "SaaS Platform",
       role: "Customer Success Manager",
-      content: "Zion AI Voice Assistant Pro handles 80% of our customer calls with 90% satisfaction. It's like having a superhuman customer service team.",
+      content: "Zion AI Customer Churn Predictor has been a game-changer for our business. We've reduced churn by 40% and increased customer lifetime value by 25%. The early warning system is incredibly accurate.",
       rating: 5,
-      avatar: "SW"
+      avatar: "LC"
     },
     {
       name: "David Park",
-      company: "Healthcare Provider",
-      role: "Operations Director",
-      content: "The appointment scheduling feature is incredible. We've reduced no-shows by 30% and improved patient satisfaction significantly.",
+      company: "E-commerce Platform",
+      role: "VP of Customer Success",
+      content: "The behavioral analysis feature helps us understand why customers churn and take proactive measures. We've successfully retained 80% of at-risk customers through targeted interventions.",
       rating: 5,
       avatar: "DP"
     },
     {
       name: "Maria Santos",
-      company: "Financial Services",
-      role: "Customer Experience Lead",
-      content: "Multi-language support was crucial for our international expansion. The AI understands cultural nuances perfectly.",
+      company: "Subscription Service",
+      role: "Head of Retention",
+      content: "Automated interventions have saved us countless hours while improving our retention rates. The AI recommendations are spot-on and have helped us develop better retention strategies.",
       rating: 5,
       avatar: "MS"
     }
@@ -204,10 +203,10 @@ const ZionAIVoiceAssistantProPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Voice Assistant Pro - Advanced Voice AI for Business | Zion Tech Group"
-        description="Transform your customer experience with Zion AI Voice Assistant Pro. Handle calls, schedule appointments, and provide 24/7 support with advanced voice AI. Start your free trial today!"
-        keywords="voice assistant, voice AI, customer service AI, voice automation, conversational AI, voice recognition, AI phone system, voice chatbot"
-        canonical="https://ziontechgroup.com/zion-ai-voice-assistant-pro"
+        title="Zion AI Customer Churn Predictor - Prevent Customer Churn with AI | Zion Tech Group"
+        description="Reduce customer churn with Zion AI Customer Churn Predictor. Predict churn with 95% accuracy, identify at-risk customers, and automate retention campaigns. Start your free trial today!"
+        keywords="customer churn prediction, churn prevention, customer retention, churn analysis, customer lifetime value, retention campaigns, churn prediction AI"
+        canonical="https://ziontechgroup.com/zion-ai-customer-churn-predictor"
       />
 
       {/* Hero Section */}
@@ -219,21 +218,21 @@ const ZionAIVoiceAssistantProPage = () => {
         
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Mic className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">Advanced Voice AI Technology</span>
+            <TrendingDown className="w-4 h-4 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">AI-Powered Churn Prevention</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              AI Voice Assistant
+              Predict & Prevent
             </span>
             <br />
-            <span className="text-white">That Actually Works</span>
+            <span className="text-white">Customer Churn</span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your customer experience with our advanced voice AI. Handle calls, schedule appointments, 
-            and provide 24/7 support with natural, intelligent conversations that your customers will love.
+            Reduce customer churn by up to 40% with AI-powered prediction and prevention. 
+            Identify at-risk customers early and take proactive measures to retain them.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -241,7 +240,7 @@ const ZionAIVoiceAssistantProPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Mic className="w-5 h-5" />}
+              icon={<TrendingDown className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -249,29 +248,29 @@ const ZionAIVoiceAssistantProPage = () => {
               href="#demo"
               variant="outline"
               size="lg"
-              icon={<Volume2 className="w-5 h-5" />}
+              icon={<Eye className="w-5 h-5" />}
             >
-              Listen to Demo
+              View Demo
             </FuturisticButton>
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">90%</div>
-              <div className="text-gray-300 text-sm">Resolution Rate</div>
+              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">95%</div>
+              <div className="text-gray-300 text-sm">Prediction Accuracy</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">50+</div>
-              <div className="text-gray-300 text-sm">Languages</div>
+              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">40%</div>
+              <div className="text-gray-300 text-sm">Churn Reduction</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">24/7</div>
-              <div className="text-gray-300 text-sm">Availability</div>
+              <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">30</div>
+              <div className="text-gray-300 text-sm">Days Early Warning</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">95%</div>
-              <div className="text-gray-300 text-sm">Accuracy</div>
+              <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">80%</div>
+              <div className="text-gray-300 text-sm">Retention Success</div>
             </div>
           </div>
         </ResponsiveContainer>
@@ -282,10 +281,10 @@ const ZionAIVoiceAssistantProPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Advanced Voice AI Features
+              Advanced Churn Prediction Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Everything you need to provide exceptional voice-based customer service
+              Everything you need to predict and prevent customer churn
             </p>
           </div>
           
@@ -315,10 +314,10 @@ const ZionAIVoiceAssistantProPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Voice Capabilities
+              Powerful Churn Prevention Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Handle complex business processes with intelligent voice interactions
+              Achieve remarkable results with AI-powered churn prediction and prevention
             </p>
           </div>
           
@@ -352,7 +351,7 @@ const ZionAIVoiceAssistantProPage = () => {
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your voice AI needs
+              Choose the plan that fits your churn prediction needs
             </p>
           </div>
           
@@ -412,10 +411,10 @@ const ZionAIVoiceAssistantProPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Customer Service Teams
+              Trusted by Customer Success Teams
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our users say about Zion AI Voice Assistant Pro
+              See what our users say about Zion AI Customer Churn Predictor
             </p>
           </div>
           
@@ -451,17 +450,17 @@ const ZionAIVoiceAssistantProPage = () => {
         <ResponsiveContainer>
           <div className="text-center bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-2xl p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Voice Experience?
+              Ready to Prevent Customer Churn?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of businesses using AI to provide exceptional voice-based customer service.
+              Join thousands of businesses using AI to predict and prevent customer churn, increasing retention and revenue.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <FuturisticButton
                 href="/contact"
                 variant="primary"
                 size="lg"
-                icon={<Mic className="w-5 h-5" />}
+                icon={<TrendingDown className="w-5 h-5" />}
               >
                 Start Free Trial
               </FuturisticButton>
@@ -469,9 +468,9 @@ const ZionAIVoiceAssistantProPage = () => {
                 href="/demo"
                 variant="outline"
                 size="lg"
-                icon={<Volume2 className="w-5 h-5" />}
+                icon={<Eye className="w-5 h-5" />}
               >
-                Listen to Demo
+                View Demo
               </FuturisticButton>
             </div>
           </div>
@@ -481,4 +480,4 @@ const ZionAIVoiceAssistantProPage = () => {
   );
 };
 
-export default ZionAIVoiceAssistantProPage;
+export default ZionAICustomerChurnPredictorPage;

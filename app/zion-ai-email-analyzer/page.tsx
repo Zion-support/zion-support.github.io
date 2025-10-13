@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Mic, 
+  Mail, 
   BarChart3, 
   TrendingUp, 
   Eye, 
@@ -27,106 +27,102 @@ import {
   Send,
   Download,
   Filter,
-  Search,
-  Volume2,
-  Headphones,
-  Phone,
-  Video
+  Search
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAIVoiceAssistantProPage = () => {
+const ZionAIEmailAnalyzerPage = () => {
   const features = [
     {
-      title: "Natural Language Processing",
-      description: "Advanced NLP that understands context, intent, and complex commands in 50+ languages",
+      title: "AI-Powered Email Analysis",
+      description: "Analyze email content, sentiment, and engagement patterns using advanced natural language processing",
       icon: <Brain className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-Channel Integration",
-      description: "Seamlessly integrate with phone, email, chat, and video platforms for unified communication",
-      icon: <Phone className="w-8 h-8" />,
+      title: "Sentiment Tracking",
+      description: "Monitor email sentiment in real-time and get alerts for negative or concerning communications",
+      icon: <MessageSquare className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Custom Voice Training",
-      description: "Train the AI with your brand voice, terminology, and specific business processes",
-      icon: <Volume2 className="w-8 h-8" />,
+      title: "Engagement Optimization",
+      description: "Get AI recommendations to improve email open rates, click-through rates, and response rates",
+      icon: <TrendingUp className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Real-time Analytics",
-      description: "Monitor performance, customer satisfaction, and conversation insights in real-time",
-      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Spam Detection",
+      description: "Advanced AI filters to detect and prevent spam, phishing, and malicious emails",
+      icon: <Shield className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Automated Workflows",
-      description: "Create complex workflows that handle multi-step processes and escalations automatically",
-      icon: <Zap className="w-8 h-8" />,
+      title: "Email Classification",
+      description: "Automatically categorize emails by type, priority, and department for better organization",
+      icon: <Filter className="w-8 h-8" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "24/7 Availability",
-      description: "Provide round-the-clock customer support with consistent, high-quality interactions",
-      icon: <Clock className="w-8 h-8" />,
+      title: "Performance Analytics",
+      description: "Comprehensive analytics on email performance, delivery rates, and communication effectiveness",
+      icon: <BarChart3 className="w-8 h-8" />,
       color: "from-cyan-500 to-blue-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$99",
+      name: "Personal",
+      price: "$29",
       period: "/month",
-      description: "Perfect for small businesses starting with voice AI",
+      description: "Perfect for individuals and small teams",
       features: [
-        "1,000 conversations/month",
-        "Basic voice recognition",
+        "1,000 emails/month",
+        "Basic sentiment analysis",
+        "Email classification",
+        "Spam detection",
         "Email support",
-        "Standard integrations",
-        "1 voice channel",
         "1 user account"
       ],
       popular: false,
       cta: "Start Free Trial"
     },
     {
-      name: "Professional",
-      price: "$299",
+      name: "Business",
+      price: "$99",
       period: "/month",
-      description: "Ideal for growing businesses with complex needs",
+      description: "Ideal for growing businesses and teams",
       features: [
-        "10,000 conversations/month",
-        "Advanced NLP",
+        "10,000 emails/month",
+        "Advanced sentiment analysis",
+        "Engagement optimization",
         "Priority support",
-        "Custom integrations",
-        "5 voice channels",
         "5 user accounts",
-        "Custom voice training",
-        "API access"
+        "Custom filters",
+        "API access",
+        "Advanced analytics"
       ],
       popular: true,
       cta: "Start Free Trial"
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$299",
       period: "/month",
-      description: "For large organizations with high-volume needs",
+      description: "For large organizations with high email volume",
       features: [
-        "Unlimited conversations",
-        "Full AI capabilities",
-        "24/7 dedicated support",
-        "White-label solution",
-        "Unlimited channels",
-        "Unlimited users",
+        "Unlimited emails",
+        "Full AI analysis suite",
         "Custom AI models",
+        "24/7 dedicated support",
+        "Unlimited users",
+        "White-label solution",
         "Advanced API access",
+        "Custom integrations",
         "SLA guarantee",
         "Data export/import"
       ],
@@ -135,79 +131,79 @@ const ZionAIVoiceAssistantProPage = () => {
     }
   ];
 
-  const capabilities = [
+  const analytics = [
     {
-      title: "Customer Support",
-      description: "Handle customer inquiries, complaints, and support requests 24/7",
-      icon: <Headphones className="w-6 h-6" />,
-      metric: "90% resolution rate"
+      title: "Open Rate Analysis",
+      description: "Track and optimize email open rates with AI-powered insights",
+      icon: <Eye className="w-6 h-6" />,
+      metric: "35% improvement"
     },
     {
-      title: "Sales Assistance",
-      description: "Qualify leads, answer product questions, and guide customers through sales",
-      icon: <Target className="w-6 h-6" />,
-      metric: "40% higher conversion"
+      title: "Sentiment Monitoring",
+      description: "Monitor email sentiment across all communications in real-time",
+      icon: <MessageSquare className="w-6 h-6" />,
+      metric: "Real-time alerts"
     },
     {
-      title: "Appointment Scheduling",
-      description: "Automatically schedule and manage appointments across multiple calendars",
-      icon: <Calendar className="w-6 h-6" />,
+      title: "Spam Detection",
+      description: "Advanced AI filters to prevent spam and malicious emails",
+      icon: <Shield className="w-6 h-6" />,
+      metric: "99.9% accuracy"
+    },
+    {
+      title: "Response Time",
+      description: "Optimize response times with AI-powered recommendations",
+      icon: <Clock className="w-6 h-6" />,
+      metric: "50% faster"
+    },
+    {
+      title: "Email Classification",
+      description: "Automatically categorize and prioritize emails",
+      icon: <Filter className="w-6 h-6" />,
       metric: "95% accuracy"
     },
     {
-      title: "Order Processing",
-      description: "Process orders, track shipments, and handle returns via voice",
-      icon: <Package className="w-6 h-6" />,
-      metric: "60% faster processing"
-    },
-    {
-      title: "Information Retrieval",
-      description: "Provide instant access to product info, policies, and company data",
-      icon: <Database className="w-6 h-6" />,
-      metric: "Instant responses"
-    },
-    {
-      title: "Multi-language Support",
-      description: "Communicate fluently in 50+ languages with native-level understanding",
-      icon: <Globe className="w-6 h-6" />,
-      metric: "50+ languages"
+      title: "Engagement Score",
+      description: "Get AI-powered engagement scores for all your emails",
+      icon: <Star className="w-6 h-6" />,
+      metric: "8.5/10 average"
     }
   ];
 
   const testimonials = [
     {
-      name: "Sarah Williams",
+      name: "Jennifer Lee",
+      company: "Marketing Agency",
+      role: "Email Marketing Manager",
+      content: "Zion AI Email Analyzer helped us improve our email open rates by 35% and reduce spam complaints by 60%. Incredible results!",
+      rating: 5,
+      avatar: "JL"
+    },
+    {
+      name: "Robert Kim",
+      company: "Customer Support",
+      role: "Support Manager",
+      content: "The sentiment analysis feature is a game-changer. We can now identify frustrated customers before they escalate.",
+      rating: 5,
+      avatar: "RK"
+    },
+    {
+      name: "Maria Garcia",
       company: "E-commerce Platform",
-      role: "Customer Success Manager",
-      content: "Zion AI Voice Assistant Pro handles 80% of our customer calls with 90% satisfaction. It's like having a superhuman customer service team.",
+      role: "Communications Director",
+      content: "Email classification saves us hours every day. Our team is much more organized and responsive now.",
       rating: 5,
-      avatar: "SW"
-    },
-    {
-      name: "David Park",
-      company: "Healthcare Provider",
-      role: "Operations Director",
-      content: "The appointment scheduling feature is incredible. We've reduced no-shows by 30% and improved patient satisfaction significantly.",
-      rating: 5,
-      avatar: "DP"
-    },
-    {
-      name: "Maria Santos",
-      company: "Financial Services",
-      role: "Customer Experience Lead",
-      content: "Multi-language support was crucial for our international expansion. The AI understands cultural nuances perfectly.",
-      rating: 5,
-      avatar: "MS"
+      avatar: "MG"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Voice Assistant Pro - Advanced Voice AI for Business | Zion Tech Group"
-        description="Transform your customer experience with Zion AI Voice Assistant Pro. Handle calls, schedule appointments, and provide 24/7 support with advanced voice AI. Start your free trial today!"
-        keywords="voice assistant, voice AI, customer service AI, voice automation, conversational AI, voice recognition, AI phone system, voice chatbot"
-        canonical="https://ziontechgroup.com/zion-ai-voice-assistant-pro"
+        title="Zion AI Email Analyzer - Advanced Email Analytics & Optimization | Zion Tech Group"
+        description="Optimize your email communications with Zion AI Email Analyzer. Analyze sentiment, improve engagement, and prevent spam with AI-powered email intelligence. Start your free trial today!"
+        keywords="email analyzer, email analytics, email optimization, sentiment analysis, spam detection, email classification, email performance, email intelligence"
+        canonical="https://ziontechgroup.com/zion-ai-email-analyzer"
       />
 
       {/* Hero Section */}
@@ -219,21 +215,21 @@ const ZionAIVoiceAssistantProPage = () => {
         
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Mic className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">Advanced Voice AI Technology</span>
+            <Mail className="w-4 h-4 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">AI-Powered Email Intelligence</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              AI Voice Assistant
+              Optimize Your Emails
             </span>
             <br />
-            <span className="text-white">That Actually Works</span>
+            <span className="text-white">with AI Intelligence</span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your customer experience with our advanced voice AI. Handle calls, schedule appointments, 
-            and provide 24/7 support with natural, intelligent conversations that your customers will love.
+            Transform your email communications with AI-powered analysis. Improve engagement, 
+            detect sentiment, prevent spam, and optimize performance with advanced email intelligence.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -241,7 +237,7 @@ const ZionAIVoiceAssistantProPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Mic className="w-5 h-5" />}
+              icon={<Mail className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -249,29 +245,29 @@ const ZionAIVoiceAssistantProPage = () => {
               href="#demo"
               variant="outline"
               size="lg"
-              icon={<Volume2 className="w-5 h-5" />}
+              icon={<Eye className="w-5 h-5" />}
             >
-              Listen to Demo
+              View Demo
             </FuturisticButton>
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">90%</div>
-              <div className="text-gray-300 text-sm">Resolution Rate</div>
+              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">35%</div>
+              <div className="text-gray-300 text-sm">Higher Open Rates</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">50+</div>
-              <div className="text-gray-300 text-sm">Languages</div>
+              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">99.9%</div>
+              <div className="text-gray-300 text-sm">Spam Detection</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">24/7</div>
-              <div className="text-gray-300 text-sm">Availability</div>
+              <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">50%</div>
+              <div className="text-gray-300 text-sm">Faster Response</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">95%</div>
-              <div className="text-gray-300 text-sm">Accuracy</div>
+              <div className="text-gray-300 text-sm">Classification Accuracy</div>
             </div>
           </div>
         </ResponsiveContainer>
@@ -282,10 +278,10 @@ const ZionAIVoiceAssistantProPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Advanced Voice AI Features
+              Advanced Email Intelligence
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Everything you need to provide exceptional voice-based customer service
+              Everything you need to optimize your email communications
             </p>
           </div>
           
@@ -310,34 +306,34 @@ const ZionAIVoiceAssistantProPage = () => {
         </ResponsiveContainer>
       </section>
 
-      {/* Capabilities Section */}
+      {/* Analytics Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Voice Capabilities
+              Powerful Email Analytics
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Handle complex business processes with intelligent voice interactions
+              Get actionable insights that improve your email performance
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {capabilities.map((capability, index) => (
+            {analytics.map((analytic, index) => (
               <div
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
-                    {capability.icon}
+                    {analytic.icon}
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-white">{capability.title}</h3>
-                    <div className="text-2xl font-bold text-cyan-400">{capability.metric}</div>
+                    <h3 className="text-lg font-semibold text-white">{analytic.title}</h3>
+                    <div className="text-2xl font-bold text-cyan-400">{analytic.metric}</div>
                   </div>
                 </div>
-                <p className="text-gray-300 text-sm leading-relaxed">{capability.description}</p>
+                <p className="text-gray-300 text-sm leading-relaxed">{analytic.description}</p>
               </div>
             ))}
           </div>
@@ -352,7 +348,7 @@ const ZionAIVoiceAssistantProPage = () => {
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your voice AI needs
+              Choose the plan that fits your email analysis needs
             </p>
           </div>
           
@@ -412,10 +408,10 @@ const ZionAIVoiceAssistantProPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Customer Service Teams
+              Trusted by Email Professionals
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our users say about Zion AI Voice Assistant Pro
+              See what our users say about Zion AI Email Analyzer
             </p>
           </div>
           
@@ -451,17 +447,17 @@ const ZionAIVoiceAssistantProPage = () => {
         <ResponsiveContainer>
           <div className="text-center bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-2xl p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Voice Experience?
+              Ready to Optimize Your Emails?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of businesses using AI to provide exceptional voice-based customer service.
+              Join thousands of professionals using AI to improve their email communications and performance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <FuturisticButton
                 href="/contact"
                 variant="primary"
                 size="lg"
-                icon={<Mic className="w-5 h-5" />}
+                icon={<Mail className="w-5 h-5" />}
               >
                 Start Free Trial
               </FuturisticButton>
@@ -469,9 +465,9 @@ const ZionAIVoiceAssistantProPage = () => {
                 href="/demo"
                 variant="outline"
                 size="lg"
-                icon={<Volume2 className="w-5 h-5" />}
+                icon={<Eye className="w-5 h-5" />}
               >
-                Listen to Demo
+                View Demo
               </FuturisticButton>
             </div>
           </div>
@@ -481,4 +477,4 @@ const ZionAIVoiceAssistantProPage = () => {
   );
 };
 
-export default ZionAIVoiceAssistantProPage;
+export default ZionAIEmailAnalyzerPage;

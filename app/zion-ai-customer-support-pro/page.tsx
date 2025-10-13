@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Mic, 
+  Headphones, 
   BarChart3, 
   TrendingUp, 
   Eye, 
@@ -28,52 +28,61 @@ import {
   Download,
   Filter,
   Search,
-  Volume2,
-  Headphones,
+  AlertTriangle,
+  Users,
+  DollarSign,
+  FileText,
+  Image,
+  Video,
+  Trash2,
+  RefreshCw,
+  Play,
+  Pause,
+  Stop,
   Phone,
-  Video
+  Chat
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAIVoiceAssistantProPage = () => {
+const ZionAICustomerSupportProPage = () => {
   const features = [
     {
-      title: "Natural Language Processing",
-      description: "Advanced NLP that understands context, intent, and complex commands in 50+ languages",
+      title: "AI-Powered Customer Support",
+      description: "Provide 24/7 customer support with intelligent AI that understands context and emotions",
       icon: <Brain className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-Channel Integration",
-      description: "Seamlessly integrate with phone, email, chat, and video platforms for unified communication",
-      icon: <Phone className="w-8 h-8" />,
+      title: "Multi-Channel Support",
+      description: "Handle support across email, chat, phone, and social media seamlessly",
+      icon: <Globe className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Custom Voice Training",
-      description: "Train the AI with your brand voice, terminology, and specific business processes",
-      icon: <Volume2 className="w-8 h-8" />,
+      title: "Intelligent Ticket Routing",
+      description: "Automatically route tickets to the right agent based on expertise and workload",
+      icon: <Target className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Real-time Analytics",
-      description: "Monitor performance, customer satisfaction, and conversation insights in real-time",
-      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Sentiment Analysis",
+      description: "Analyze customer sentiment and prioritize urgent or frustrated customers",
+      icon: <MessageSquare className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Automated Workflows",
-      description: "Create complex workflows that handle multi-step processes and escalations automatically",
-      icon: <Zap className="w-8 h-8" />,
+      title: "Knowledge Base Integration",
+      description: "Access and suggest relevant knowledge base articles automatically",
+      icon: <Database className="w-8 h-8" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "24/7 Availability",
-      description: "Provide round-the-clock customer support with consistent, high-quality interactions",
-      icon: <Clock className="w-8 h-8" />,
+      title: "Performance Analytics",
+      description: "Track support metrics, response times, and customer satisfaction in real-time",
+      icon: <BarChart3 className="w-8 h-8" />,
       color: "from-cyan-500 to-blue-500"
     }
   ];
@@ -83,14 +92,14 @@ const ZionAIVoiceAssistantProPage = () => {
       name: "Starter",
       price: "$99",
       period: "/month",
-      description: "Perfect for small businesses starting with voice AI",
+      description: "Perfect for small businesses starting with AI support",
       features: [
-        "1,000 conversations/month",
-        "Basic voice recognition",
+        "100 tickets/month",
+        "Basic AI support",
         "Email support",
-        "Standard integrations",
-        "1 voice channel",
-        "1 user account"
+        "Standard reports",
+        "1 user account",
+        "Basic automation"
       ],
       popular: false,
       cta: "Start Free Trial"
@@ -99,16 +108,16 @@ const ZionAIVoiceAssistantProPage = () => {
       name: "Professional",
       price: "$299",
       period: "/month",
-      description: "Ideal for growing businesses with complex needs",
+      description: "Ideal for growing businesses with complex support needs",
       features: [
-        "10,000 conversations/month",
-        "Advanced NLP",
+        "1,000 tickets/month",
+        "Advanced AI support",
         "Priority support",
-        "Custom integrations",
-        "5 voice channels",
+        "Advanced reports",
         "5 user accounts",
-        "Custom voice training",
-        "API access"
+        "Smart automation",
+        "API access",
+        "Multi-channel support"
       ],
       popular: true,
       cta: "Start Free Trial"
@@ -117,18 +126,18 @@ const ZionAIVoiceAssistantProPage = () => {
       name: "Enterprise",
       price: "$799",
       period: "/month",
-      description: "For large organizations with high-volume needs",
+      description: "For large organizations with high-volume support",
       features: [
-        "Unlimited conversations",
-        "Full AI capabilities",
-        "24/7 dedicated support",
-        "White-label solution",
-        "Unlimited channels",
-        "Unlimited users",
+        "Unlimited tickets",
+        "Full AI support suite",
         "Custom AI models",
+        "24/7 dedicated support",
+        "Unlimited users",
+        "White-label solution",
         "Advanced API access",
         "SLA guarantee",
-        "Data export/import"
+        "On-premise deployment",
+        "Custom integrations"
       ],
       popular: false,
       cta: "Contact Sales"
@@ -137,77 +146,77 @@ const ZionAIVoiceAssistantProPage = () => {
 
   const capabilities = [
     {
-      title: "Customer Support",
-      description: "Handle customer inquiries, complaints, and support requests 24/7",
-      icon: <Headphones className="w-6 h-6" />,
-      metric: "90% resolution rate"
+      title: "Response Time",
+      description: "Respond to customers in under 30 seconds",
+      icon: <Clock className="w-6 h-6" />,
+      metric: "<30 seconds"
     },
     {
-      title: "Sales Assistance",
-      description: "Qualify leads, answer product questions, and guide customers through sales",
+      title: "Resolution Rate",
+      description: "Resolve 90% of issues automatically",
       icon: <Target className="w-6 h-6" />,
-      metric: "40% higher conversion"
+      metric: "90% auto-resolve"
     },
     {
-      title: "Appointment Scheduling",
-      description: "Automatically schedule and manage appointments across multiple calendars",
-      icon: <Calendar className="w-6 h-6" />,
-      metric: "95% accuracy"
+      title: "Customer Satisfaction",
+      description: "Achieve 95% customer satisfaction",
+      icon: <Star className="w-6 h-6" />,
+      metric: "95% satisfaction"
     },
     {
-      title: "Order Processing",
-      description: "Process orders, track shipments, and handle returns via voice",
-      icon: <Package className="w-6 h-6" />,
-      metric: "60% faster processing"
+      title: "Cost Reduction",
+      description: "Reduce support costs by 60%",
+      icon: <DollarSign className="w-6 h-6" />,
+      metric: "60% savings"
     },
     {
-      title: "Information Retrieval",
-      description: "Provide instant access to product info, policies, and company data",
-      icon: <Database className="w-6 h-6" />,
-      metric: "Instant responses"
+      title: "Availability",
+      description: "Provide 24/7 support coverage",
+      icon: <Shield className="w-6 h-6" />,
+      metric: "24/7 coverage"
     },
     {
-      title: "Multi-language Support",
-      description: "Communicate fluently in 50+ languages with native-level understanding",
-      icon: <Globe className="w-6 h-6" />,
-      metric: "50+ languages"
+      title: "Agent Productivity",
+      description: "Increase agent productivity by 50%",
+      icon: <Users className="w-6 h-6" />,
+      metric: "50% improvement"
     }
   ];
 
   const testimonials = [
     {
-      name: "Sarah Williams",
+      name: "Sarah Johnson",
       company: "E-commerce Platform",
       role: "Customer Success Manager",
-      content: "Zion AI Voice Assistant Pro handles 80% of our customer calls with 90% satisfaction. It's like having a superhuman customer service team.",
+      content: "Zion AI Customer Support Pro has transformed our support operations. We've reduced response times to under 30 seconds and achieved 95% customer satisfaction. The AI is incredibly intelligent.",
       rating: 5,
-      avatar: "SW"
+      avatar: "SJ"
     },
     {
-      name: "David Park",
-      company: "Healthcare Provider",
-      role: "Operations Director",
-      content: "The appointment scheduling feature is incredible. We've reduced no-shows by 30% and improved patient satisfaction significantly.",
+      name: "David Chen",
+      company: "SaaS Company",
+      role: "Support Director",
+      content: "Multi-channel support was a game-changer for our business. We can now handle support across all channels seamlessly and provide consistent experience to our customers.",
       rating: 5,
-      avatar: "DP"
+      avatar: "DC"
     },
     {
-      name: "Maria Santos",
+      name: "Maria Rodriguez",
       company: "Financial Services",
       role: "Customer Experience Lead",
-      content: "Multi-language support was crucial for our international expansion. The AI understands cultural nuances perfectly.",
+      content: "Sentiment analysis helped us identify and prioritize frustrated customers. We've improved customer satisfaction significantly and reduced churn by 25%.",
       rating: 5,
-      avatar: "MS"
+      avatar: "MR"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Voice Assistant Pro - Advanced Voice AI for Business | Zion Tech Group"
-        description="Transform your customer experience with Zion AI Voice Assistant Pro. Handle calls, schedule appointments, and provide 24/7 support with advanced voice AI. Start your free trial today!"
-        keywords="voice assistant, voice AI, customer service AI, voice automation, conversational AI, voice recognition, AI phone system, voice chatbot"
-        canonical="https://ziontechgroup.com/zion-ai-voice-assistant-pro"
+        title="Zion AI Customer Support Pro - Advanced AI Customer Service | Zion Tech Group"
+        description="Transform your customer support with Zion AI Customer Support Pro. Provide 24/7 support, resolve issues automatically, and achieve 95% customer satisfaction. Start your free trial today!"
+        keywords="AI customer support, customer service AI, support automation, customer satisfaction, support analytics, multi-channel support, support AI"
+        canonical="https://ziontechgroup.com/zion-ai-customer-support-pro"
       />
 
       {/* Hero Section */}
@@ -219,21 +228,21 @@ const ZionAIVoiceAssistantProPage = () => {
         
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Mic className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">Advanced Voice AI Technology</span>
+            <Headphones className="w-4 h-4 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">AI-Powered Customer Support</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              AI Voice Assistant
+              Transform Customer Support
             </span>
             <br />
-            <span className="text-white">That Actually Works</span>
+            <span className="text-white">with AI Intelligence</span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your customer experience with our advanced voice AI. Handle calls, schedule appointments, 
-            and provide 24/7 support with natural, intelligent conversations that your customers will love.
+            Provide 24/7 customer support with AI that understands context and emotions. 
+            Resolve issues automatically and achieve 95% customer satisfaction.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -241,7 +250,7 @@ const ZionAIVoiceAssistantProPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Mic className="w-5 h-5" />}
+              icon={<Headphones className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -249,29 +258,29 @@ const ZionAIVoiceAssistantProPage = () => {
               href="#demo"
               variant="outline"
               size="lg"
-              icon={<Volume2 className="w-5 h-5" />}
+              icon={<Eye className="w-5 h-5" />}
             >
-              Listen to Demo
+              View Demo
             </FuturisticButton>
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">90%</div>
-              <div className="text-gray-300 text-sm">Resolution Rate</div>
+              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2"><30s</div>
+              <div className="text-gray-300 text-sm">Response Time</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">50+</div>
-              <div className="text-gray-300 text-sm">Languages</div>
+              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">90%</div>
+              <div className="text-gray-300 text-sm">Auto-Resolve</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">24/7</div>
-              <div className="text-gray-300 text-sm">Availability</div>
+              <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">95%</div>
+              <div className="text-gray-300 text-sm">Satisfaction</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">95%</div>
-              <div className="text-gray-300 text-sm">Accuracy</div>
+              <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">60%</div>
+              <div className="text-gray-300 text-sm">Cost Savings</div>
             </div>
           </div>
         </ResponsiveContainer>
@@ -282,10 +291,10 @@ const ZionAIVoiceAssistantProPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Advanced Voice AI Features
+              Advanced Support Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Everything you need to provide exceptional voice-based customer service
+              Everything you need to provide exceptional customer support
             </p>
           </div>
           
@@ -315,10 +324,10 @@ const ZionAIVoiceAssistantProPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Voice Capabilities
+              Powerful Support Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Handle complex business processes with intelligent voice interactions
+              Achieve remarkable results with AI-powered customer support
             </p>
           </div>
           
@@ -352,7 +361,7 @@ const ZionAIVoiceAssistantProPage = () => {
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your voice AI needs
+              Choose the plan that fits your customer support needs
             </p>
           </div>
           
@@ -412,10 +421,10 @@ const ZionAIVoiceAssistantProPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Customer Service Teams
+              Trusted by Support Teams
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our users say about Zion AI Voice Assistant Pro
+              See what our users say about Zion AI Customer Support Pro
             </p>
           </div>
           
@@ -451,17 +460,17 @@ const ZionAIVoiceAssistantProPage = () => {
         <ResponsiveContainer>
           <div className="text-center bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-2xl p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Voice Experience?
+              Ready to Transform Your Customer Support?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of businesses using AI to provide exceptional voice-based customer service.
+              Join thousands of businesses using AI to provide exceptional customer support and achieve 95% satisfaction.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <FuturisticButton
                 href="/contact"
                 variant="primary"
                 size="lg"
-                icon={<Mic className="w-5 h-5" />}
+                icon={<Headphones className="w-5 h-5" />}
               >
                 Start Free Trial
               </FuturisticButton>
@@ -469,9 +478,9 @@ const ZionAIVoiceAssistantProPage = () => {
                 href="/demo"
                 variant="outline"
                 size="lg"
-                icon={<Volume2 className="w-5 h-5" />}
+                icon={<Eye className="w-5 h-5" />}
               >
-                Listen to Demo
+                View Demo
               </FuturisticButton>
             </div>
           </div>
@@ -481,4 +490,4 @@ const ZionAIVoiceAssistantProPage = () => {
   );
 };
 
-export default ZionAIVoiceAssistantProPage;
+export default ZionAICustomerSupportProPage;

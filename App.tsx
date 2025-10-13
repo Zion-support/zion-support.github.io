@@ -17,6 +17,7 @@ import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
+import EnhancedFuturisticBackground from "./app/components/EnhancedFuturisticBackground";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import LoadingPageEnhanced from "./app/components/EnhancedLoading";
@@ -130,7 +131,7 @@ function App() {
                   <CoreWebVitals>
                     <Router>
                       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                        <FuturisticBackground>
+                        <EnhancedFuturisticBackground variant="cyber" intensity="high">
                           <Navigation onSidebarToggle={toggleSidebar} />
                           <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
                           <Breadcrumb />
@@ -228,7 +229,7 @@ function App() {
                           </main>
                           
                           <Footer />
-                        </FuturisticBackground>
+                        </EnhancedFuturisticBackground>
                       </div>
                     </Router>
                   </CoreWebVitals>
