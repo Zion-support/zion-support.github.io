@@ -49,7 +49,9 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     { name: 'Database Management', path: '/database-management', icon: <Database className="w-4 h-4" /> },
     { name: 'Custom Software', path: '/custom-software', icon: <Code className="w-4 h-4" /> },
     { name: 'Network Infrastructure', path: '/network-infrastructure', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
+    { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'AI-Powered DevOps', path: '/ai-powered-devops', icon: <Zap className="w-4 h-4" />, featured: true },
+    { name: 'Enterprise AI Platform', path: '/enterprise-ai-platform', icon: <Brain className="w-4 h-4" />, featured: true }
   ], [])
 
   const microSaasServices = useMemo(() => [
