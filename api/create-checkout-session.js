@@ -1,3 +1,7 @@
+import { withErrorLogging } from './withErrorLogging.cjs';
+
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
@@ -19,6 +23,15 @@
       userId: userId || null,
       timestamp: new Date().toISOString(),
       status: 'pending'
+    };
+
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      sessionId: 'cs_' + Math.random().toString(36).substr(2, 9),
+      ...sessionData
+    }));
+  } catch (_error) {
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 

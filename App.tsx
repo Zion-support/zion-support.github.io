@@ -6,11 +6,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 // Components
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
-import PerformanceOptimizer from './app/components/PerformanceOptimizer';
-import FuturisticBackground from './app/components/FuturisticBackground';
 import AnalyticsProvider from './app/components/AnalyticsProvider';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import LoadingSpinner from './app/components/LoadingSpinner';
 
 // Page Components

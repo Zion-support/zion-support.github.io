@@ -2,28 +2,40 @@
 
 import fs from 'fs';
 import path from 'path';
+
+// Function to fix merge conflicts in a file
+function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-      return false;
-    }
-    
-    console.log(`Fixing merge conflicts in: ${filePath}`);
-    
+    const lines = content.split('\n');
+    const fixedLines = [];
+    let inConflict = false;
+    let keepSection = false;
     
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-        separatorFound = false;
+        keepSection = true;
         continue;
       }
       
-      } else {
-        result.push(line);
+        inConflict = false;
+        keepSection = false;
+        continue;
+      }
+      
+      if (!inConflict || keepSection) {
+        fixedLines.push(line);
       }
     }
     
+    const fixedContent = fixedLines.join('\n');
+    fs.writeFileSync(filePath, fixedContent, 'utf8');
+    return true;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -39,27 +51,8 @@ function findFilesWithConflicts(dir) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory()) {
-        // Skip node_modules and other irrelevant directories
-        if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
-          scanDirectory(fullPath);
-        }
-      } else if (stat.isFile()) {
-              files.push(fullPath);
-            }
-          } catch (error) {
-            // Skip files that can't be read
-          }
-        }
-      }
-    }
-  }
-  
-  return files;
-}
-
-// Main execution
-    fixedCount++;
-  }
-}
-
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        scanDirectory(fullPath);
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js'))) {
+        try {
+          const content = fs.readFileSync(fullPath, 'utf8');

@@ -1,5 +1,5 @@
-const { withSentry } = require('../withSentry.cjs');
-const { isValidEmail } = require('../emailUtils.cjs');
+import { withSentry } from '../withSentry.cjs';
+import { isValidEmail } from '../emailUtils.cjs';
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -36,7 +36,15 @@ async function handler(req, res) {
     // console.log removed for production
     console.log('Newsletter subscription:', {
       email: req.body.email,
+      timestamp: new Date().toISOString()
+    });
 
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true,
+      message: 'Successfully subscribed to newsletter'
+    }));
   } catch (_error) { // eslint-disable-line no-unused-vars
     // console.error('Newsletter subscription error:', error);
     res.statusCode = 500;
@@ -48,4 +56,4 @@ async function handler(req, res) {
   }
 }
 
-module.exports = withSentry(handler);
+export default withSentry(handler);

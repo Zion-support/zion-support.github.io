@@ -55,7 +55,12 @@ export default [
       'analyze-*.js',
       'check-*.js',
       'clean-*.js',
-      'jest.setup.js'
+      'jest.setup.js',
+      'add-missing-routes.js',
+      'advanced-app-improvements.js',
+      'aggressive-fix.js',
+      'aggressive-*.js',
+      'fix-merge-conflicts.js'
     ]
   },
   js.configs.recommended,
@@ -69,6 +74,19 @@ export default [
         ecmaFeatures: {
           jsx: true
         }
+      },
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+        HTMLElement: 'readonly',
+        Event: 'readonly',
+        KeyboardEvent: 'readonly',
+        MediaQueryListEvent: 'readonly',
+        PerformanceObserver: 'readonly',
+        PerformanceNavigationTiming: 'readonly',
+        performance: 'readonly'
       }
     },
     plugins: {
@@ -82,11 +100,12 @@ export default [
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': 'warn',
-      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-unused-vars': ['warn', { 'argsIgnorePattern': '^_', 'varsIgnorePattern': '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
-      'no-console': 'off'
+      'no-console': 'off',
+      'react/no-unescaped-entities': 'off'
     },
     settings: {
       react: {
