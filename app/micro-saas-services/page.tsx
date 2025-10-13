@@ -386,12 +386,120 @@ export default function MicroSaasServices() {
         "Automated quality assurance",
         "Complete DevOps automation"
       ]
+    },
+    {
+      id: "zion-ai-video-generator-pro",
+      name: "Zion AI Video Generator Pro",
+      description: "Create professional videos with AI-powered script generation, voice synthesis, and automated editing. Transform your content creation process and scale your video marketing.",
+      icon: <Video className="w-8 h-8" />,
+      price: "From $79/month",
+      originalPrice: "$159/month",
+      features: [
+        "AI-Powered Video Script Generation",
+        "Multi-Language Voice Synthesis (50+ languages)",
+        "Professional Video Templates (1000+ templates)",
+        "Auto Video Editing & Optimization",
+        "Brand Voice & Style Consistency",
+        "Social Media Format Optimization",
+        "Real-time Collaboration Tools",
+        "Advanced Analytics & Performance Tracking"
+      ],
+      category: "Content Creation",
+      popular: true,
+      link: "/zion-ai-video-generator-pro",
+      benefits: [
+        "90% reduction in video production time",
+        "300% increase in video content output",
+        "Professional quality at fraction of cost",
+        "Complete video marketing automation"
+      ]
+    },
+    {
+      id: "zion-ai-hr-suite-pro",
+      name: "Zion AI HR Suite Pro",
+      description: "Transform your human resources with AI-powered recruitment, performance management, employee engagement, and compliance monitoring. Streamline your HR operations like never before.",
+      icon: <Users className="w-8 h-8" />,
+      price: "From $149/month",
+      originalPrice: "$299/month",
+      features: [
+        "AI-Powered Resume Screening & Matching",
+        "Intelligent Candidate Ranking & Scoring",
+        "Automated Interview Scheduling & Coordination",
+        "Smart Onboarding Workflow Automation",
+        "Performance Analytics & Predictive Insights",
+        "Employee Sentiment Analysis & Engagement Tracking",
+        "Compliance Monitoring & Risk Assessment",
+        "Payroll Integration & Benefits Management"
+      ],
+      category: "HR Management",
+      popular: true,
+      link: "/zion-ai-hr-suite-pro",
+      benefits: [
+        "75% reduction in hiring time",
+        "60% improvement in candidate quality",
+        "90% automation of HR processes",
+        "Complete compliance management"
+      ]
+    },
+    {
+      id: "zion-ai-cybersecurity-monitor-pro",
+      name: "Zion AI Cybersecurity Monitor Pro",
+      description: "Protect your organization with AI-powered cybersecurity monitoring, threat detection, incident response, and compliance management. Advanced security for the modern digital world.",
+      icon: <Shield className="w-8 h-8" />,
+      price: "From $299/month",
+      originalPrice: "$599/month",
+      features: [
+        "AI-Powered Threat Detection & Analysis",
+        "Real-time Network Monitoring & Intrusion Detection",
+        "Automated Incident Response & Remediation",
+        "Advanced Behavioral Analytics & Anomaly Detection",
+        "Multi-vector Attack Prevention & Blocking",
+        "Compliance Monitoring & Reporting (SOC2, GDPR, HIPAA)",
+        "Vulnerability Assessment & Patch Management",
+        "Security Awareness Training & Phishing Simulation"
+      ],
+      category: "Cybersecurity",
+      popular: true,
+      link: "/zion-ai-cybersecurity-monitor-pro",
+      benefits: [
+        "99.9% threat detection accuracy",
+        "90% reduction in security incidents",
+        "50% faster incident response time",
+        "Complete compliance automation"
+      ]
+    },
+    {
+      id: "zion-ai-financial-analytics-pro",
+      name: "Zion AI Financial Analytics Pro",
+      description: "Transform your financial operations with AI-powered forecasting, investment analytics, risk management, and compliance automation. Make data-driven financial decisions with confidence.",
+      icon: <BarChart3 className="w-8 h-8" />,
+      price: "From $199/month",
+      originalPrice: "$399/month",
+      features: [
+        "AI-Powered Financial Forecasting & Predictive Analytics",
+        "Real-time Financial Dashboard & KPI Monitoring",
+        "Automated Financial Reporting & Compliance",
+        "Advanced Risk Assessment & Portfolio Optimization",
+        "Cash Flow Analysis & Working Capital Management",
+        "Investment Analysis & ROI Optimization",
+        "Fraud Detection & Anomaly Analysis",
+        "Tax Optimization & Compliance Automation"
+      ],
+      category: "Financial Analytics",
+      popular: true,
+      link: "/zion-ai-financial-analytics-pro",
+      benefits: [
+        "40% improvement in financial decision-making",
+        "60% reduction in manual reporting time",
+        "25% increase in investment returns",
+        "Complete financial visibility and control"
+      ]
     }
   ];
 
   const categories = [
     { name: "AI Analytics", icon: <AnalyticsIcon className="w-5 h-5" />, count: 2 },
-    { name: "Cybersecurity", icon: <ProtectionIcon className="w-5 h-5" />, count: 1 },
+    { name: "Cybersecurity", icon: <ProtectionIcon className="w-5 h-5" />, count: 2 },
     { name: "Cloud Storage", icon: <CloudIcon className="w-5 h-5" />, count: 1 },
     { name: "CRM & Sales", icon: <TeamIcon className="w-5 h-5" />, count: 1 },
     { name: "Marketing Automation", icon: <MarketingIcon className="w-5 h-5" />, count: 1 },
@@ -399,13 +507,14 @@ export default function MicroSaasServices() {
     { name: "Email Management", icon: <EmailIcon className="w-5 h-5" />, count: 1 },
     { name: "Inventory Management", icon: <Package className="w-5 h-5" />, count: 1 },
     { name: "Customer Analytics", icon: <Heart className="w-5 h-5" />, count: 1 },
-    { name: "Financial Management", icon: <Receipt className="w-5 h-5" />, count: 1 },
-    { name: "Content Creation", icon: <DocumentIcon className="w-5 h-5" />, count: 1 },
-    { name: "DevOps & Automation", icon: <ConfigIcon className="w-5 h-5" />, count: 1 }
+    { name: "Financial Management", icon: <Receipt className="w-5 h-5" />, count: 2 },
+    { name: "Content Creation", icon: <DocumentIcon className="w-5 h-5" />, count: 2 },
+    { name: "DevOps & Automation", icon: <ConfigIcon className="w-5 h-5" />, count: 1 },
+    { name: "HR Management", icon: <Users className="w-5 h-5" />, count: 1 }
   ];
 
   const stats = [
-    { number: "12+", label: "Micro SAAS Solutions", icon: <Rocket className="w-6 h-6" /> },
+    { number: "17+", label: "Micro SAAS Solutions", icon: <Rocket className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <SupportIcon className="w-6 h-6" /> },
     { number: "50%", label: "Average Cost Savings", icon: <TrendingUp className="w-6 h-6" /> }

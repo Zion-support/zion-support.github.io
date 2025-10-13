@@ -31,7 +31,8 @@ import {
   Target,
   Calendar,
   Clock,
-  FileText
+  FileText,
+  DollarSign
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -158,7 +159,11 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
             { name: 'Zion Cloud Vault Pro', path: '/zion-cloud-vault-pro', icon: <Cloud className="w-4 h-4" /> },
             { name: 'Zion AI CRM Pro', path: '/zion-ai-crm-pro', icon: <Users className="w-4 h-4" /> },
             { name: 'Zion AI Marketing Pro', path: '/zion-ai-marketing-automation-pro', icon: <Target className="w-4 h-4" /> },
-            { name: 'Zion AI Project Manager Pro', path: '/zion-ai-project-manager-pro', icon: <Calendar className="w-4 h-4" /> }
+            { name: 'Zion AI Project Manager Pro', path: '/zion-ai-project-manager-pro', icon: <Calendar className="w-4 h-4" /> },
+            { name: 'Zion AI Video Generator Pro', path: '/zion-ai-video-generator-pro', icon: <Monitor className="w-4 h-4" /> },
+            { name: 'Zion AI HR Suite Pro', path: '/zion-ai-hr-suite-pro', icon: <Users className="w-4 h-4" /> },
+            { name: 'Zion AI Cybersecurity Monitor Pro', path: '/zion-ai-cybersecurity-monitor-pro', icon: <Shield className="w-4 h-4" /> },
+            { name: 'Zion AI Financial Analytics Pro', path: '/zion-ai-financial-analytics-pro', icon: <BarChart3 className="w-4 h-4" /> }
           ]
         },
         {
@@ -177,6 +182,11 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
           ]
         }
       ]
+    },
+    {
+      name: 'Pricing',
+      path: '/pricing',
+      icon: <DollarSign className="w-4 h-4" />
     },
     {
       name: 'Blog',

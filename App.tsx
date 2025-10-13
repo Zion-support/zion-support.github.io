@@ -26,6 +26,7 @@ const ServicesPage = React.lazy(() => import("./app/services/page"));
 const BlogPage = React.lazy(() => import("./app/blog/page"));
 const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
+const PricingPage = React.lazy(() => import("./app/pricing/page"));
 
 // AI Services Pages
 const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
@@ -76,6 +77,12 @@ const AIPoweredEmailAnalyzerPage = React.lazy(() => import("./app/zion-ai-email-
 const SmartInventoryOptimizerPage = React.lazy(() => import("./app/zion-inventory-smart/page"));
 const AICustomerSentimentTrackerPage = React.lazy(() => import("./app/ai-customer-sentiment-tracker/page"));
 const SmartExpenseCategorizerPage = React.lazy(() => import("./app/ai-financial-crime-detection-pro/page"));
+
+// New Advanced Micro SAAS Services
+const ZionAIVideoGeneratorProPage = React.lazy(() => import("./app/zion-ai-video-generator-pro/page"));
+const ZionAIHRSuiteProPage = React.lazy(() => import("./app/zion-ai-hr-suite-pro/page"));
+const ZionAICybersecurityMonitorProPage = React.lazy(() => import("./app/zion-ai-cybersecurity-monitor-pro/page"));
+const ZionAIFinancialAnalyticsProPage = React.lazy(() => import("./app/zion-ai-financial-analytics-pro/page"));
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -121,6 +128,7 @@ function App() {
                                     <Route path="/about" element={<AboutPage />} />
                                     <Route path="/contact" element={<ContactPage />} />
                                     <Route path="/services" element={<ServicesPage />} />
+                                    <Route path="/pricing" element={<PricingPage />} />
                                     <Route path="/blog" element={<BlogPage />} />
                                     <Route path="/privacy" element={<PrivacyPage />} />
                                     <Route path="/terms" element={<TermsPage />} />
@@ -174,6 +182,12 @@ function App() {
                                     <Route path="/smart-inventory-optimizer" element={<SmartInventoryOptimizerPage />} />
                                     <Route path="/ai-customer-sentiment-tracker" element={<AICustomerSentimentTrackerPage />} />
                                     <Route path="/smart-expense-categorizer" element={<SmartExpenseCategorizerPage />} />
+
+                                    {/* New Advanced Micro SAAS Services */}
+                                    <Route path="/zion-ai-video-generator-pro" element={<ZionAIVideoGeneratorProPage />} />
+                                    <Route path="/zion-ai-hr-suite-pro" element={<ZionAIHRSuiteProPage />} />
+                                    <Route path="/zion-ai-cybersecurity-monitor-pro" element={<ZionAICybersecurityMonitorProPage />} />
+                                    <Route path="/zion-ai-financial-analytics-pro" element={<ZionAIFinancialAnalyticsProPage />} />
 
                                     {/* Catch all route */}
                                     <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
