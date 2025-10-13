@@ -10,7 +10,6 @@ import {
   Globe, 
   Mail, 
   Phone, 
-  TrendingUp,
   Database,
   Settings,
   Monitor,
