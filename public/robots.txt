@@ -19,7 +19,4 @@ Allow: /ai-services
 Allow: /micro-saas
 Allow: /5g-solutions
 Allow: /blog
-<<<<<<< HEAD
 Allow: /pricing
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
