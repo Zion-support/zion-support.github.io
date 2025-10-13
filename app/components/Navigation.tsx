@@ -61,7 +61,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 
   const navigationItems = useMemo(() => [
     {
-<<<<<<< HEAD
       name: 'Home',
       path: '/',
       icon: <Globe className="w-4 h-4" />
@@ -165,88 +164,10 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       name: 'Contact',
       path: '/contact',
       icon: <Phone className="w-4 h-4" />
-=======
-      label: 'Home',
-      href: '/',
-      icon: <Star className="w-4 h-4" />
-    },
-    {
-      label: 'AI Services',
-      href: '/ai-services',
-      icon: <Brain className="w-4 h-4" />,
-      dropdown: [
-        { label: 'AI Analytics', href: '/ai-analytics' },
-        { label: 'AI Automation', href: '/ai-automation' },
-        { label: 'AI Business Intelligence', href: '/ai-business-intelligence' },
-        { label: 'AI Content Generation', href: '/ai-content-generation' },
-        { label: 'AI Customer Service', href: '/ai-customer-service' },
-        { label: 'AI Data Analytics', href: '/ai-data-analytics' },
-        { label: 'AI Email Automation', href: '/ai-email-automation' },
-        { label: 'AI Fraud Detection', href: '/ai-fraud-detection' },
-        { label: 'AI Healthcare', href: '/ai-healthcare' },
-        { label: 'AI Marketing', href: '/ai-marketing' },
-        { label: 'AI Predictive Analytics', href: '/ai-predictive-analytics' },
-        { label: 'AI Project Management', href: '/ai-project-management' },
-        { label: 'AI Recommendation Engine', href: '/ai-recommendation-engine' },
-        { label: 'AI Sales Automation', href: '/ai-sales-automation' },
-        { label: 'AI Workflow Automation', href: '/ai-workflow-automation' }
-      ]
-    },
-    {
-      label: 'IT Services',
-      href: '/services',
-      icon: <Shield className="w-4 h-4" />,
-      dropdown: [
-        { label: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
-        { label: 'Cybersecurity Solutions', href: '/cybersecurity-solutions' },
-        { label: 'Web Development', href: '/web-development' },
-        { label: 'Mobile Development', href: '/mobile-development' },
-        { label: 'Database Management', href: '/database-management' },
-        { label: 'Custom Software', href: '/custom-software' },
-        { label: 'Network Infrastructure', href: '/network-infrastructure' }
-      ]
-    },
-    {
-      label: 'Micro SAAS',
-      href: '/micro-saas',
-      icon: <Zap className="w-4 h-4" />,
-      dropdown: [
-        { label: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
-        { label: 'Zion Security Shield', href: '/zion-security-shield' },
-        { label: 'Zion Cloud Vault', href: '/zion-cloud-vault' },
-        { label: 'Zion Content Studio', href: '/zion-content-studio' }
-      ]
-    },
-    {
-      label: '5G Solutions',
-      href: '/5g-solutions',
-      icon: <Globe className="w-4 h-4" />,
-      dropdown: [
-        { label: '5G Data Analytics', href: '/5g-data-analytics' },
-        { label: '5G Edge Computing', href: '/5g-edge-computing' },
-        { label: '5G Implementation', href: '/5g-implementation' },
-        { label: '5G Mobile Applications', href: '/5g-mobile-applications' },
-        { label: '5G Network Infrastructure', href: '/5g-network-infrastructure' },
-        { label: '5G Private Networks', href: '/5g-private-networks' },
-        { label: '5G Smart City Solutions', href: '/5g-smart-city-solutions' },
-        { label: '5G IoT Solutions', href: '/5g-iot-solutions' }
-      ]
-    },
-    {
-      label: 'About',
-      href: '/about',
-      icon: <Users className="w-4 h-4" />
-    },
-    {
-      label: 'Contact',
-      href: '/contact',
-      icon: <Mail className="w-4 h-4" />
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
     }
   ], []);
 
   return (
-<<<<<<< HEAD
     <nav className="relative z-50 bg-black/20 backdrop-blur-md border-b border-cyan-500/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -257,21 +178,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 <Zap className="w-6 h-6 text-white" />
               </div>
               <span className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
-=======
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link
-              to="/"
-              className="flex items-center space-x-2 text-white hover:text-cyan-400 transition-colors"
-            >
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
                 Zion Tech Group
               </span>
             </Link>
