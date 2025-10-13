@@ -173,8 +173,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   };
 
   // Removed unused functions - functionality is handled by updateSetting directly
-
-
   return (
     <>
       {children}
