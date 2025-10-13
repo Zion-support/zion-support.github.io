@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { Sparkles, PenTool, Video, Image, FileText, CheckCircle, ArrowRight, Star, Users, Award, Clock, Globe, Smartphone, Mail } from "lucide-react";
+import { Sparkles, PenTool, Video, Image, FileText, CheckCircle, ArrowRight, Star } from "lucide-react";
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";

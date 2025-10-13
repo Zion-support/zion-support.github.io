@@ -30,18 +30,15 @@ const AdvancedPerformanceMonitor = () => {
   const [isRecording, setIsRecording] = useState(false)
 
   useEffect(() => {
-    }
-
     // Report metrics to analytics
-    const reportMetric = () => {
+    const reportMetric = (name: string, value: number) => {
       // Analytics reporting would go here
+      console.log(`Metric ${name}: ${value}`);
     }
 
-    measureWebVitals()
-    measureMemory()
-    measureLoadTime()
-
-
+    // Measure web vitals
+    const measureWebVitals = () => {
+      try {
         onFCP((metric: any) => {
           setMetrics(prev => ({ ...prev, fcp: metric.value }))
           reportMetric('FCP', metric.value)
@@ -59,54 +56,27 @@ const AdvancedPerformanceMonitor = () => {
       } catch (error) {
         console.error('Failed to measure web vitals:', error);
       }
-
-      // Measure memory usage
-      const measureMemory = () => {
-        if ('memory' in performance) {
-          const memory = (performance as any).memory
-          setMetrics(prev => ({ ...prev, memoryUsage: memory.usedJSHeapSize }))
-        }
-      }
-
-      // Measure load time
-      const measureLoadTime = () => {
-        if (performance.timing) {
-          const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart
-          setMetrics(prev => ({ ...prev, loadTime }))
-        }
-      }
-
-      // Report metrics to analytics
-      const reportMetric = (name: string, value: number) => {
-
-      // Send to Google Analytics
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'web_vitals', {
-          metric_name: name,
-          metric_value: Math.round(value),
-          metric_delta: Math.round(value)
-        })
-      }
-
-      // Send to custom analytics
-      if (typeof window !== 'undefined' && (window as any).analytics) {
-        (window as any).analytics.track('Performance Metric', {
-          name,
-          value: Math.round(value),
-          timestamp: Date.now()
-        })
-      }
-
-      // Log to console in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log(`Performance Metric: ${name} = ${value}`);
-
-      }
-
-      measureWebVitals()
-      measureMemory()
-      measureLoadTime()
     }
+
+    // Measure memory usage
+    const measureMemory = () => {
+      if ('memory' in performance) {
+        const memory = (performance as any).memory
+        setMetrics(prev => ({ ...prev, memoryUsage: memory.usedJSHeapSize }))
+      }
+    }
+
+    // Measure load time
+    const measureLoadTime = () => {
+      if (performance.timing) {
+        const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart
+        setMetrics(prev => ({ ...prev, loadTime }))
+      }
+    }
+
+    measureWebVitals()
+    measureMemory()
+    measureLoadTime()
 
     // Set up performance observer for additional metrics
     if ('PerformanceObserver' in window) {

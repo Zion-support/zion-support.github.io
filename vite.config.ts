@@ -35,13 +35,8 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-<<<<<<< HEAD
-    chunkSizeWarningLimit: 150, // Reduced threshold for better optimization
-    assetsInlineLimit: 2048, // Reduced for better performance
-=======
     chunkSizeWarningLimit: 150, // Reduced threshold for better performance
     assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
->>>>>>> cursor/analyze-improve-and-deploy-application-568e
     // Enable compression
     reportCompressedSize: true,
     // Optimize for production
@@ -88,11 +83,7 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
-<<<<<<< HEAD
-          // Core React libraries - keep together for better caching
-=======
           // Core React libraries - keep smaller
->>>>>>> cursor/analyze-improve-and-deploy-application-568e
           if (id.includes('react') || id.includes('react-dom')) {
             return 'react-vendor'
           }
@@ -100,11 +91,7 @@ export default defineConfig({
           if (id.includes('react-router')) {
             return 'router'
           }
-<<<<<<< HEAD
-          // UI libraries - group animations and icons
-=======
           // UI libraries - split further
->>>>>>> cursor/analyze-improve-and-deploy-application-568e
           if (id.includes('framer-motion')) {
             return 'ui-animations'
           }
@@ -131,9 +118,6 @@ export default defineConfig({
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
-<<<<<<< HEAD
-          // Group all AI service pages into fewer chunks
-=======
           // Components - split by functionality
           if (id.includes('/components/')) {
             if (id.includes('Enhanced') || id.includes('Advanced')) {
@@ -148,7 +132,6 @@ export default defineConfig({
             return 'base-components'
           }
           // AI service pages - group by category with smaller chunks
->>>>>>> cursor/analyze-improve-and-deploy-application-568e
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             return 'ai-services'
           }
@@ -160,11 +143,7 @@ export default defineConfig({
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
             return '5g-services'
           }
-<<<<<<< HEAD
-          // Main pages - group core pages together
-=======
           // Main pages - split further
->>>>>>> cursor/analyze-improve-and-deploy-application-568e
           if (id.includes('/app/') && id.includes('/page.tsx') && 
               !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
             if (id.includes('about') || id.includes('contact') || id.includes('services')) {
