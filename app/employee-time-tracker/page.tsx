@@ -1,21 +1,21 @@
-import { ArrowRight, Headphones, CheckCircle } from "lucide-react";
+import { ArrowRight, Clock, Users, CheckCircle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ITSupportPage() {
+export default function EmployeeTimeTrackerPage() {
   return (
     <>
       <Helmet>
-        <title>IT Support - Zion Tech Group | Technical Support Services</title>
-        <meta name="description" content="Professional IT support services including help desk, technical assistance, and system maintenance for businesses." />
-        <meta name="keywords" content="IT support, technical support, help desk, IT maintenance, computer support" />
+        <title>Employee Time Tracker - Zion Tech Group | Time Management Solution</title>
+        <meta name="description" content="Comprehensive employee time tracking solution for accurate time management, productivity monitoring, and payroll processing." />
+        <meta name="keywords" content="time tracking, employee time management, productivity tracking, time clock" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">IT Support</h1>
+          <h1 className="text-4xl font-bold text-white mb-6">Employee Time Tracker</h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional IT support services coming soon.
+            Professional time tracking solution coming soon.
           </p>
           <Link
             to="/contact"

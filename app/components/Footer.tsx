@@ -45,14 +45,14 @@ const Footer = React.memo(() => {
   ], []);
 
   const services = useMemo(() => [
-    { name: "AI Services", path: "/ai-services", icon: <Brain className="w-4 h-4" /> },
-    { name: "IT Services", path: "/it-services", icon: <Shield className="w-4 h-4" /> },
-    { name: "Micro SAAS", path: "/micro-saas", icon: <Zap className="w-4 h-4" /> },
+    { name: "AI Services", path: "/ai-analytics", icon: <Brain className="w-4 h-4" /> },
+    { name: "IT Services", path: "/services", icon: <Shield className="w-4 h-4" /> },
+    { name: "Micro SAAS", path: "/micro-saas-services", icon: <Zap className="w-4 h-4" /> },
     { name: "5G Solutions", path: "/5g-solutions", icon: <Globe className="w-4 h-4" /> },
-    { name: "Cloud Services", path: "/cloud-services", icon: <Cloud className="w-4 h-4" /> },
-    { name: "Cybersecurity", path: "/cybersecurity", icon: <Shield className="w-4 h-4" /> },
+    { name: "Cloud Migration", path: "/cloud-migration", icon: <Cloud className="w-4 h-4" /> },
+    { name: "Cybersecurity", path: "/ai-cybersecurity", icon: <Shield className="w-4 h-4" /> },
     { name: "Web Development", path: "/web-development", icon: <Code className="w-4 h-4" /> },
-    { name: "Data Analytics", path: "/data-analytics", icon: <BarChart3 className="w-4 h-4" /> }
+    { name: "Data Analytics", path: "/ai-data-analytics", icon: <BarChart3 className="w-4 h-4" /> }
   ], []);
 
   const companyLinks = useMemo(() => [
@@ -184,14 +184,6 @@ const Footer = React.memo(() => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/ai-services"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
-                >
-                  AI Services Overview
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/ai-analytics"
                   className="text-gray-400 hover:text-cyan-400 transition-colors"
                 >
@@ -216,10 +208,10 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/ai-customer-service"
+                  to="/ai-customer-support"
                   className="text-gray-400 hover:text-cyan-400 transition-colors"
                 >
-                  AI Customer Service
+                  AI Customer Support
                 </Link>
               </li>
               <li>
@@ -228,6 +220,14 @@ const Footer = React.memo(() => {
                   className="text-gray-400 hover:text-cyan-400 transition-colors"
                 >
                   AI Cybersecurity
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-voice-assistant"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                >
+                  AI Voice Assistant
                 </Link>
               </li>
             </ul>
@@ -239,18 +239,18 @@ const Footer = React.memo(() => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/cloud-infrastructure"
+                  to="/cloud-migration"
                   className="text-gray-400 hover:text-green-400 transition-colors"
                 >
-                  Cloud Infrastructure
+                  Cloud Migration
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/cybersecurity-solutions"
+                  to="/devops-services"
                   className="text-gray-400 hover:text-green-400 transition-colors"
                 >
-                  Cybersecurity Solutions
+                  DevOps Services
                 </Link>
               </li>
               <li>
@@ -263,26 +263,26 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/mobile-development"
+                  to="/software-development"
                   className="text-gray-400 hover:text-green-400 transition-colors"
                 >
-                  Mobile Development
+                  Software Development
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/database-management"
+                  to="/it-consulting"
                   className="text-gray-400 hover:text-green-400 transition-colors"
                 >
-                  Database Management
+                  IT Consulting
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/custom-software"
+                  to="/network-security"
                   className="text-gray-400 hover:text-green-400 transition-colors"
                 >
-                  Custom Software
+                  Network Security
                 </Link>
               </li>
             </ul>
@@ -294,50 +294,50 @@ const Footer = React.memo(() => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/zion-analytics-pro"
+                  to="/project-management-tool"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
-                  Zion Analytics Pro
+                  Project Management Tool
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/zion-security-shield"
+                  to="/customer-relationship-manager"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
-                  Zion Security Shield
+                  Customer Relationship Manager
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/zion-cloud-vault"
+                  to="/inventory-management-system"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
-                  Zion Cloud Vault
+                  Inventory Management System
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/zion-content-studio"
+                  to="/financial-reporting-tool"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
-                  Zion Content Studio
+                  Financial Reporting Tool
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/zion-data-sync"
+                  to="/ai-powered-email-analyzer"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
-                  Zion Data Sync
+                  AI Email Analyzer
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/zion-project-master"
+                  to="/smart-inventory-optimizer"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
-                  Zion Project Master
+                  Smart Inventory Optimizer
                 </Link>
               </li>
             </ul>

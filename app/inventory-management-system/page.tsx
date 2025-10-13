@@ -1,21 +1,21 @@
-import { ArrowRight, Headphones, CheckCircle } from "lucide-react";
+import { ArrowRight, Package, BarChart3, CheckCircle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ITSupportPage() {
+export default function InventoryManagementSystemPage() {
   return (
     <>
       <Helmet>
-        <title>IT Support - Zion Tech Group | Technical Support Services</title>
-        <meta name="description" content="Professional IT support services including help desk, technical assistance, and system maintenance for businesses." />
-        <meta name="keywords" content="IT support, technical support, help desk, IT maintenance, computer support" />
+        <title>Inventory Management System - Zion Tech Group | Stock Management Solution</title>
+        <meta name="description" content="Comprehensive inventory management system to track stock, manage orders, and optimize warehouse operations." />
+        <meta name="keywords" content="inventory management, stock management, warehouse management, inventory tracking" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">IT Support</h1>
+          <h1 className="text-4xl font-bold text-white mb-6">Inventory Management System</h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional IT support services coming soon.
+            Professional inventory management solution coming soon.
           </p>
           <Link
             to="/contact"

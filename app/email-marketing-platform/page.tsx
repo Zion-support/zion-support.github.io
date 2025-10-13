@@ -1,21 +1,21 @@
-import { ArrowRight, Headphones, CheckCircle } from "lucide-react";
+import { ArrowRight, Mail, BarChart3, CheckCircle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ITSupportPage() {
+export default function EmailMarketingPlatformPage() {
   return (
     <>
       <Helmet>
-        <title>IT Support - Zion Tech Group | Technical Support Services</title>
-        <meta name="description" content="Professional IT support services including help desk, technical assistance, and system maintenance for businesses." />
-        <meta name="keywords" content="IT support, technical support, help desk, IT maintenance, computer support" />
+        <title>Email Marketing Platform - Zion Tech Group | Email Marketing Solution</title>
+        <meta name="description" content="Comprehensive email marketing platform for creating, sending, and tracking email campaigns with advanced analytics." />
+        <meta name="keywords" content="email marketing, email campaigns, email automation, marketing automation" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">IT Support</h1>
+          <h1 className="text-4xl font-bold text-white mb-6">Email Marketing Platform</h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional IT support services coming soon.
+            Professional email marketing solution coming soon.
           </p>
           <Link
             to="/contact"

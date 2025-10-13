@@ -1,21 +1,21 @@
-import { ArrowRight, Headphones, CheckCircle } from "lucide-react";
+import { ArrowRight, Lightbulb, CheckCircle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ITSupportPage() {
+export default function TechnologyConsultingPage() {
   return (
     <>
       <Helmet>
-        <title>IT Support - Zion Tech Group | Technical Support Services</title>
-        <meta name="description" content="Professional IT support services including help desk, technical assistance, and system maintenance for businesses." />
-        <meta name="keywords" content="IT support, technical support, help desk, IT maintenance, computer support" />
+        <title>Technology Consulting - Zion Tech Group | IT Consulting Services</title>
+        <meta name="description" content="Expert technology consulting services to help you make informed decisions about your IT infrastructure and digital transformation." />
+        <meta name="keywords" content="technology consulting, IT consulting, digital transformation, technology strategy" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">IT Support</h1>
+          <h1 className="text-4xl font-bold text-white mb-6">Technology Consulting</h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional IT support services coming soon.
+            Professional technology consulting services coming soon.
           </p>
           <Link
             to="/contact"
