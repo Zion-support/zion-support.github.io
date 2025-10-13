@@ -1,408 +1,477 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, FileText, Download, Send, CheckCircle, Star, Users, Clock, Zap, Receipt, Calculator, CreditCard, DollarSign, TrendingUp, BarChart3, Globe, Smartphone, Monitor, Headphones, Mic, Camera, Edit, Palette, Layers, Filter, RotateCcw, PlayCircle, Pause, Stop, SkipBack, SkipForward, Volume2, VolumeX, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Receipt as ReceiptIcon, ClipboardList, Workflow, Mail, Phone, MapPin, Award, TrendingUp as TrendingUpIcon, Shield, Cloud, Database, Code, Settings, Monitor as MonitorIcon, Laptop, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone as PhoneIcon, Voicemail, Headset, Speaker, Volume2 as Volume2Icon, VolumeX as VolumeXIcon, Play as PlayIcon, Pause as PauseIcon, Stop as StopIcon, SkipBack as SkipBackIcon, SkipForward as SkipForwardIcon, RotateCcw as RotateCcwIcon, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize as MaximizeIcon, Minimize as MinimizeIcon, Square as SquareIcon, Circle as CircleIcon, Triangle as TriangleIcon, Hexagon as HexagonIcon, Octagon as OctagonIcon, Diamond as DiamondIcon, Star as StarIconIcon, Moon as MoonIcon, Sun as SunIcon, Sunrise as SunriseIcon, Sunset as SunsetIcon, CloudRain as CloudRainIcon, CloudSnow as CloudSnowIcon, CloudLightning as CloudLightningIcon, Wind as WindIcon, Droplets as DropletsIcon, Thermometer as ThermometerIcon, Gauge as GaugeIcon, Timer as TimerIcon, Stopwatch as StopwatchIcon, Hourglass as HourglassIcon, Clock3 as Clock3Icon, Clock4 as Clock4Icon, Clock5 as Clock5Icon, Clock6 as Clock6Icon, Clock7 as Clock7Icon, Clock8 as Clock8Icon, Clock9 as Clock9Icon, Clock10 as Clock10Icon, Clock11 as Clock11Icon, Clock12 as Clock12Icon, Calendar as CalendarIconIcon, CalendarDays as CalendarDaysIcon, CalendarCheck as CalendarCheckIcon, CalendarX as CalendarXIcon, CalendarPlus as CalendarPlusIcon, CalendarMinus as CalendarMinusIcon, CalendarRange as CalendarRangeIcon, CalendarSearch as CalendarSearchIcon, CalendarHeart as CalendarHeartIcon, CalendarStar as CalendarStarIcon, CalendarClock as CalendarClockIcon, CalendarUser as CalendarUserIcon, CalendarEdit as CalendarEditIcon, CalendarTrash as CalendarTrashIcon, CalendarSettings as CalendarSettingsIcon, CalendarImport as CalendarImportIcon, CalendarExport as CalendarExportIcon, CalendarShare as CalendarShareIcon, CalendarLock as CalendarLockIcon, CalendarUnlock as CalendarUnlockIcon, CalendarKey as CalendarKeyIcon, CalendarShield as CalendarShieldIcon, CalendarAlert as CalendarAlertIcon, CalendarBell as CalendarBellIcon, CalendarZap as CalendarZapIcon, CalendarSparkles as CalendarSparklesIcon, CalendarGift as CalendarGiftIcon, CalendarAward as CalendarAwardIcon, CalendarTrophy as CalendarTrophyIcon, CalendarMedal as CalendarMedalIcon, CalendarCrown as CalendarCrownIcon, CalendarGem as CalendarGemIcon, CalendarDiamond as CalendarDiamondIcon, CalendarPearl as CalendarPearlIcon, CalendarRuby as CalendarRubyIcon, CalendarSapphire as CalendarSapphireIcon, CalendarEmerald as CalendarEmeraldIcon, CalendarTopaz as CalendarTopazIcon, CalendarAmethyst as CalendarAmethystIcon, CalendarQuartz as CalendarQuartzIcon, CalendarCrystal as CalendarCrystalIcon, CalendarJewel as CalendarJewelIcon, CalendarTreasure as CalendarTreasureIcon, CalendarGold as CalendarGoldIcon, CalendarSilver as CalendarSilverIcon, CalendarBronze as CalendarBronzeIcon, CalendarPlatinum as CalendarPlatinumIcon, CalendarTitanium as CalendarTitaniumIcon, CalendarSteel as CalendarSteelIcon, CalendarIron as CalendarIronIcon, CalendarCopper as CalendarCopperIcon, CalendarAluminum as CalendarAluminumIcon, CalendarZinc as CalendarZincIcon, CalendarTin as CalendarTinIcon, CalendarLead as CalendarLeadIcon, CalendarMercury as CalendarMercuryIcon, CalendarUranium as CalendarUraniumIcon, CalendarPlutonium as CalendarPlutoniumIcon, CalendarRadium as CalendarRadiumIcon, CalendarThorium as CalendarThoriumIcon, CalendarActinium as CalendarActiniumIcon, CalendarProtactinium as CalendarProtactiniumIcon, CalendarNeptunium as CalendarNeptuniumIcon, CalendarAmericium as CalendarAmericiumIcon, CalendarCurium as CalendarCuriumIcon, CalendarBerkelium as CalendarBerkeliumIcon, CalendarCalifornium as CalendarCaliforniumIcon, CalendarEinsteinium as CalendarEinsteiniumIcon, CalendarFermium as CalendarFermiumIcon, CalendarMendelevium as CalendarMendeleviumIcon, CalendarNobelium as CalendarNobeliumIcon, CalendarLawrencium as CalendarLawrenciumIcon, CalendarRutherfordium as CalendarRutherfordiumIcon, CalendarDubnium as CalendarDubniumIcon, CalendarSeaborgium as CalendarSeaborgiumIcon, CalendarBohrium as CalendarBohriumIcon, CalendarHassium as CalendarHassiumIcon, CalendarMeitnerium as CalendarMeitneriumIcon, CalendarDarmstadtium as CalendarDarmstadtiumIcon, CalendarRoentgenium as CalendarRoentgeniumIcon, CalendarCopernicium as CalendarCoperniciumIcon, CalendarNihonium as CalendarNihoniumIcon, CalendarFlerovium as CalendarFleroviumIcon, CalendarMoscovium as CalendarMoscoviumIcon, CalendarLivermorium as CalendarLivermoriumIcon, CalendarTennessine as CalendarTennessineIcon, CalendarOganesson as CalendarOganessonIcon, Package as PackageIcon, Receipt as ReceiptIconIcon, ClipboardList as ClipboardListIcon, Workflow as WorkflowIcon } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React, { useState, useRef } from 'react';
+import { FileText, Download, Send, Plus, Trash2, Edit3, Save, Loader2, CheckCircle, DollarSign, Calendar, User, Building2 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
-import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 
-const ZionAIInvoiceGeneratorPage: React.FC = () => {
-  const features = [
-    {
-      title: "AI-Powered Invoice Creation",
-      description: "Generate professional invoices automatically from project data and client information",
-      icon: <FileText className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
+const ZionAIInvoiceGenerator = () => {
+  const [invoice, setInvoice] = useState({
+    id: `INV-${Date.now()}`,
+    date: new Date().toISOString().split('T')[0],
+    dueDate: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+    client: {
+      name: '',
+      email: '',
+      address: '',
+      phone: ''
     },
-    {
-      title: "Smart Data Extraction",
-      description: "Automatically extract billing information from emails, contracts, and project management tools",
-      icon: <Calculator className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
+    company: {
+      name: 'Zion Tech Group',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008, Middletown DE 19709',
+      phone: '+1 302 464 0950'
     },
-    {
-      title: "Multiple Payment Methods",
-      description: "Accept payments via credit cards, bank transfers, PayPal, and cryptocurrency",
-      icon: <CreditCard className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Automated Follow-ups",
-      description: "Send automatic payment reminders and follow-up emails to clients",
-      icon: <Send className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Tax Compliance",
-      description: "Automatically calculate taxes, VAT, and ensure compliance with local regulations",
-      icon: <Receipt className="w-8 h-8" />,
-      color: "from-indigo-500 to-violet-500"
-    },
-    {
-      title: "Financial Analytics",
-      description: "Track revenue, outstanding payments, and generate financial reports",
-      icon: <BarChart3 className="w-8 h-8" />,
-      color: "from-teal-500 to-cyan-500"
-    }
-  ];
+    items: [
+      { id: 1, description: '', quantity: 1, rate: 0, amount: 0 }
+    ],
+    subtotal: 0,
+    tax: 0,
+    total: 0,
+    notes: ''
+  });
 
-  const pricingPlans = [
-    {
-      name: "Solo",
-      price: "$19",
-      period: "per month",
-      description: "Perfect for freelancers and solo entrepreneurs",
-      features: [
-        "50 invoices per month",
-        "Basic templates",
-        "Payment tracking",
-        "Email support",
-        "PDF export",
-        "Basic analytics"
-      ],
-      popular: false,
-      color: "from-gray-500 to-gray-600"
-    },
-    {
-      name: "Business",
-      price: "$49",
-      period: "per month",
-      description: "Ideal for small to medium businesses",
-      features: [
-        "200 invoices per month",
-        "Premium templates",
-        "Automated follow-ups",
-        "Priority support",
-        "Multiple payment methods",
-        "Advanced analytics",
-        "Tax calculations",
-        "Client portal"
-      ],
-      popular: true,
-      color: "from-cyan-500 to-blue-500"
-    },
-    {
-      name: "Enterprise",
-      price: "$99",
-      period: "per month",
-      description: "For large organizations with high-volume needs",
-      features: [
-        "Unlimited invoices",
-        "Custom templates",
-        "API integration",
-        "24/7 phone support",
-        "White-label solution",
-        "Advanced reporting",
-        "Multi-currency support",
-        "Team collaboration",
-        "Custom workflows"
-      ],
-      popular: false,
-      color: "from-purple-500 to-pink-500"
-    }
-  ];
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [isSaved, setIsSaved] = useState(false);
 
-  const testimonials = [
-    {
-      name: "David Martinez",
-      company: "Freelance Developer",
-      role: "Independent Contractor",
-      content: "Zion AI Invoice Generator has streamlined my billing process completely. I can create professional invoices in seconds and track payments effortlessly.",
-      rating: 5,
-      avatar: "DM"
-    },
-    {
-      name: "Lisa Thompson",
-      company: "Marketing Agency",
-      role: "Operations Manager",
-      content: "The automated follow-up feature is a game-changer. Our payment collection time has improved by 60% since using this tool.",
-      rating: 5,
-      avatar: "LT"
-    },
-    {
-      name: "James Wilson",
-      company: "Consulting Firm",
-      role: "Managing Partner",
-      content: "The tax compliance features save us hours every month. Everything is calculated automatically and stays up-to-date with regulations.",
-      rating: 5,
-      avatar: "JW"
-    }
-  ];
+  const calculateAmounts = (items: any[]) => {
+    const subtotal = items.reduce((sum, item) => sum + (item.quantity * item.rate), 0);
+    const tax = subtotal * 0.1; // 10% tax
+    const total = subtotal + tax;
+    return { subtotal, tax, total };
+  };
 
-  const stats = [
-    { number: "50,000+", label: "Invoices Generated", icon: <FileText className="w-6 h-6" /> },
-    { number: "95%", label: "Faster Payment Collection", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "30+", label: "Countries Supported", icon: <Globe className="w-6 h-6" /> },
-    { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }
-  ];
+  const updateItem = (id: number, field: string, value: any) => {
+    const updatedItems = invoice.items.map(item => {
+      if (item.id === id) {
+        const updatedItem = { ...item, [field]: value };
+        if (field === 'quantity' || field === 'rate') {
+          updatedItem.amount = updatedItem.quantity * updatedItem.rate;
+        }
+        return updatedItem;
+      }
+      return item;
+    });
+    
+    const amounts = calculateAmounts(updatedItems);
+    setInvoice(prev => ({
+      ...prev,
+      items: updatedItems,
+      ...amounts
+    }));
+  };
+
+  const addItem = () => {
+    const newId = Math.max(...invoice.items.map(item => item.id)) + 1;
+    setInvoice(prev => ({
+      ...prev,
+      items: [...prev.items, { id: newId, description: '', quantity: 1, rate: 0, amount: 0 }]
+    }));
+  };
+
+  const removeItem = (id: number) => {
+    if (invoice.items.length > 1) {
+      const updatedItems = invoice.items.filter(item => item.id !== id);
+      const amounts = calculateAmounts(updatedItems);
+      setInvoice(prev => ({
+        ...prev,
+        items: updatedItems,
+        ...amounts
+      }));
+    }
+  };
+
+  const generateInvoice = async () => {
+    setIsGenerating(true);
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    setIsGenerating(false);
+    setIsSaved(true);
+    setTimeout(() => setIsSaved(false), 3000);
+  };
+
+  const downloadPDF = () => {
+    const element = document.createElement('a');
+    const file = new Blob([`Invoice ${invoice.id}\n\nClient: ${invoice.client.name}\nTotal: $${invoice.total.toFixed(2)}`], { type: 'text/plain' });
+    element.href = URL.createObjectURL(file);
+    element.download = `invoice-${invoice.id}.txt`;
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  };
+
+  const sendInvoice = () => {
+    if (invoice.client.email) {
+      alert(`Invoice sent to ${invoice.client.email}`);
+    } else {
+      alert('Please enter client email address');
+    }
+  };
 
   return (
-    <>
-      <Helmet>
-        <title>Zion AI Invoice Generator - Automated Invoice Creation & Payment Processing | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Create professional invoices automatically with Zion AI Invoice Generator. Smart data extraction, automated follow-ups, and payment processing. Start your free trial today!"
-        />
-        <meta
-          name="keywords"
-          content="AI invoice generator, automated invoicing, invoice creation, payment processing, billing automation, financial management"
-        />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-invoice-generator" />
-      </Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-8">
       <EnhancedSEO
-        title="Zion AI Invoice Generator - Automated Invoice Creation & Payment Processing"
-        description="Create professional invoices automatically with Zion AI Invoice Generator. Smart data extraction, automated follow-ups, and payment processing."
-        keywords="AI invoice generator, automated invoicing, invoice creation, payment processing, billing automation"
+        title="Zion AI Invoice Generator - Smart Invoice Creation Tool | Zion Tech Group"
+        description="Create professional invoices instantly with our AI-powered invoice generator. Automated calculations, templates, and professional formatting. Start free trial today!"
+        keywords="AI invoice generator, invoice software, automated invoicing, business invoicing, invoice templates, professional invoices"
         canonical="https://ziontechgroup.com/zion-ai-invoice-generator"
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-        <FuturisticBackground />
-        
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Zap className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">Automate Your Billing Process</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Invoice Generator
-              </span>
-            </h1>
-            
-            <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Create professional invoices automatically with AI-powered data extraction, automated follow-ups, and seamless payment processing. Get paid faster with intelligent billing automation.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <FuturisticButton
-                href="/contact"
-                variant="primary"
-                size="lg"
-                icon={<FileText className="w-5 h-5" />}
-              >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
+            <FileText className="w-5 h-5 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">AI-Powered Invoice Generation</span>
+          </div>
+          
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+              Zion AI Invoice Generator
+            </span>
+          </h1>
+          
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Create professional invoices in seconds with our intelligent AI-powered generator. 
+            Automated calculations, smart templates, and seamless client management.
+          </p>
+
+          {/* Pricing */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 max-w-md mx-auto mb-8">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-white mb-2">$29<span className="text-lg text-gray-400">/month</span></div>
+              <div className="text-gray-300 mb-4">Unlimited invoices • AI-powered features • Professional templates</div>
+              <FuturisticButton variant="primary" size="lg" className="w-full">
                 Start Free Trial
               </FuturisticButton>
-              <FuturisticButton
-                href="/demo"
-                variant="outline"
-                size="lg"
-                icon={<Calculator className="w-5 h-5" />}
-              >
-                Watch Demo
-              </FuturisticButton>
-            </div>
-            
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center group">
-                  <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    {stat.icon}
-                  </div>
-                  <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
-                </div>
-              ))}
             </div>
           </div>
-        </section>
+        </div>
 
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Intelligent Invoice Management
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Transform your billing process with AI-powered automation and smart financial management tools.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <FuturisticCard
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
-                >
-                  <div
-                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}
-                  >
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-300 transition-colors">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300 text-center leading-relaxed">
-                    {feature.description}
-                  </p>
-                </FuturisticCard>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Choose Your Plan
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing options to fit your invoicing needs
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
-                <div
-                  key={index}
-                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${
-                    plan.popular ? 'border-cyan-500/50 shadow-2xl shadow-cyan-500/20' : 'border-white/20'
-                  } hover:bg-white/20 transition-all duration-300 hover:scale-105`}
-                >
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-300 mb-4">{plan.description}</p>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
-                      <span className="text-gray-300 ml-2">{plan.period}</span>
-                    </div>
-                  </div>
-                  
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
+        {/* Main Invoice Form */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Invoice Form */}
+          <div className="lg:col-span-2">
+            <FuturisticCard className="p-6">
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-2xl font-bold text-white">Invoice Details</h2>
+                <div className="flex gap-2">
                   <FuturisticButton
-                    href="/contact"
-                    variant={plan.popular ? "primary" : "outline"}
-                    size="lg"
-                    className="w-full"
-                    icon={<ArrowRight className="w-5 h-5" />}
+                    variant="outline"
+                    size="sm"
+                    onClick={generateInvoice}
+                    disabled={isGenerating}
                   >
-                    Get Started
+                    {isGenerating ? (
+                      <Loader2 className="w-4 h-4 animate-spin mr-2" />
+                    ) : (
+                      <Save className="w-4 h-4 mr-2" />
+                    )}
+                    {isGenerating ? 'Generating...' : 'Save Draft'}
+                  </FuturisticButton>
+                  <FuturisticButton
+                    variant="primary"
+                    size="sm"
+                    onClick={downloadPDF}
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    Download PDF
                   </FuturisticButton>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
+              </div>
 
-        {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Businesses Worldwide
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our users say about Zion AI Invoice Generator
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
-                >
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
+              {/* Invoice Header */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Invoice Number</label>
+                  <input
+                    type="text"
+                    value={invoice.id}
+                    onChange={(e) => setInvoice(prev => ({ ...prev, id: e.target.value }))}
+                    className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Due Date</label>
+                  <input
+                    type="date"
+                    value={invoice.dueDate}
+                    onChange={(e) => setInvoice(prev => ({ ...prev, dueDate: e.target.value }))}
+                    className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                  />
+                </div>
+              </div>
+
+              {/* Client Information */}
+              <div className="mb-8">
+                <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+                  <User className="w-5 h-5 mr-2 text-cyan-400" />
+                  Client Information
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Client Name</label>
+                    <input
+                      type="text"
+                      value={invoice.client.name}
+                      onChange={(e) => setInvoice(prev => ({ 
+                        ...prev, 
+                        client: { ...prev.client, name: e.target.value }
+                      }))}
+                      placeholder="Enter client name"
+                      className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    />
                   </div>
-                  <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
-                  <div className="flex items-center">
-                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
-                      {testimonial.avatar}
-                    </div>
-                    <div>
-                      <div className="font-semibold text-white">{testimonial.name}</div>
-                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                    </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                    <input
+                      type="email"
+                      value={invoice.client.email}
+                      onChange={(e) => setInvoice(prev => ({ 
+                        ...prev, 
+                        client: { ...prev.client, email: e.target.value }
+                      }))}
+                      placeholder="client@example.com"
+                      className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Phone</label>
+                    <input
+                      type="tel"
+                      value={invoice.client.phone}
+                      onChange={(e) => setInvoice(prev => ({ 
+                        ...prev, 
+                        client: { ...prev.client, phone: e.target.value }
+                      }))}
+                      placeholder="+1 (555) 123-4567"
+                      className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Address</label>
+                    <input
+                      type="text"
+                      value={invoice.client.address}
+                      onChange={(e) => setInvoice(prev => ({ 
+                        ...prev, 
+                        client: { ...prev.client, address: e.target.value }
+                      }))}
+                      placeholder="Client address"
+                      className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    />
                   </div>
                 </div>
-              ))}
+              </div>
+
+              {/* Invoice Items */}
+              <div className="mb-8">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-lg font-semibold text-white flex items-center">
+                    <FileText className="w-5 h-5 mr-2 text-cyan-400" />
+                    Invoice Items
+                  </h3>
+                  <FuturisticButton
+                    variant="outline"
+                    size="sm"
+                    onClick={addItem}
+                  >
+                    <Plus className="w-4 h-4 mr-2" />
+                    Add Item
+                  </FuturisticButton>
+                </div>
+
+                <div className="space-y-4">
+                  {invoice.items.map((item, index) => (
+                    <div key={item.id} className="grid grid-cols-12 gap-4 items-center p-4 bg-white/5 rounded-lg border border-white/10">
+                      <div className="col-span-5">
+                        <input
+                          type="text"
+                          value={item.description}
+                          onChange={(e) => updateItem(item.id, 'description', e.target.value)}
+                          placeholder="Item description"
+                          className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                        />
+                      </div>
+                      <div className="col-span-2">
+                        <input
+                          type="number"
+                          value={item.quantity}
+                          onChange={(e) => updateItem(item.id, 'quantity', parseFloat(e.target.value) || 0)}
+                          className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                        />
+                      </div>
+                      <div className="col-span-2">
+                        <input
+                          type="number"
+                          value={item.rate}
+                          onChange={(e) => updateItem(item.id, 'rate', parseFloat(e.target.value) || 0)}
+                          placeholder="Rate"
+                          className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                        />
+                      </div>
+                      <div className="col-span-2 text-right">
+                        <span className="text-white font-medium">${item.amount.toFixed(2)}</span>
+                      </div>
+                      <div className="col-span-1">
+                        {invoice.items.length > 1 && (
+                          <button
+                            onClick={() => removeItem(item.id)}
+                            className="text-red-400 hover:text-red-300 transition-colors"
+                          >
+                            <Trash2 className="w-4 h-4" />
+                          </button>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Notes */}
+              <div className="mb-8">
+                <label className="block text-sm font-medium text-gray-300 mb-2">Notes</label>
+                <textarea
+                  value={invoice.notes}
+                  onChange={(e) => setInvoice(prev => ({ ...prev, notes: e.target.value }))}
+                  placeholder="Additional notes or terms..."
+                  rows={3}
+                  className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                />
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <FuturisticButton
+                  variant="primary"
+                  size="lg"
+                  onClick={generateInvoice}
+                  disabled={isGenerating}
+                  className="flex-1"
+                >
+                  {isGenerating ? (
+                    <Loader2 className="w-5 h-5 animate-spin mr-2" />
+                  ) : (
+                    <FileText className="w-5 h-5 mr-2" />
+                  )}
+                  {isGenerating ? 'Generating Invoice...' : 'Generate Invoice'}
+                </FuturisticButton>
+                <FuturisticButton
+                  variant="outline"
+                  size="lg"
+                  onClick={sendInvoice}
+                  className="flex-1"
+                >
+                  <Send className="w-5 h-5 mr-2" />
+                  Send to Client
+                </FuturisticButton>
+              </div>
+            </FuturisticCard>
+          </div>
+
+          {/* Invoice Summary */}
+          <div className="lg:col-span-1">
+            <FuturisticCard className="p-6 sticky top-8">
+              <h3 className="text-xl font-bold text-white mb-6 flex items-center">
+                <DollarSign className="w-6 h-6 mr-2 text-cyan-400" />
+                Invoice Summary
+              </h3>
+
+              <div className="space-y-4 mb-6">
+                <div className="flex justify-between text-gray-300">
+                  <span>Subtotal:</span>
+                  <span>${invoice.subtotal.toFixed(2)}</span>
+                </div>
+                <div className="flex justify-between text-gray-300">
+                  <span>Tax (10%):</span>
+                  <span>${invoice.tax.toFixed(2)}</span>
+                </div>
+                <div className="border-t border-white/20 pt-4">
+                  <div className="flex justify-between text-xl font-bold text-white">
+                    <span>Total:</span>
+                    <span>${invoice.total.toFixed(2)}</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Company Info */}
+              <div className="border-t border-white/20 pt-6">
+                <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
+                  <Building2 className="w-5 h-5 mr-2 text-cyan-400" />
+                  From
+                </h4>
+                <div className="text-sm text-gray-300 space-y-1">
+                  <div className="font-medium text-white">{invoice.company.name}</div>
+                  <div>{invoice.company.email}</div>
+                  <div>{invoice.company.phone}</div>
+                  <div className="text-xs">{invoice.company.address}</div>
+                </div>
+              </div>
+
+              {/* Status */}
+              {isSaved && (
+                <div className="mt-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                  <span className="text-green-400 text-sm">Invoice saved successfully!</span>
+                </div>
+              )}
+            </FuturisticCard>
+          </div>
+        </div>
+
+        {/* Features Section */}
+        <div className="mt-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Why Choose Zion AI Invoice Generator?
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <FileText className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">AI-Powered Generation</h3>
+              <p className="text-gray-300">Smart templates and automated calculations powered by advanced AI algorithms.</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Download className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Professional PDFs</h3>
+              <p className="text-gray-300">Generate high-quality, professional PDF invoices with custom branding.</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Send className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Automated Delivery</h3>
+              <p className="text-gray-300">Send invoices directly to clients via email with tracking and reminders.</p>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Automate Your Invoicing?
+        <div className="mt-16 text-center">
+          <div className="bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-2xl p-8">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Streamline Your Invoicing?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses using Zion AI Invoice Generator to streamline their billing process and get paid faster.
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses using our AI-powered invoice generator to save time and get paid faster.
             </p>
-            
-            {/* Contact Information */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Mail className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-white font-semibold mb-2">Email</h3>
-                <p className="text-cyan-400">kleber@ziontechgroup.com</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Phone className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-white font-semibold mb-2">Phone</h3>
-                <p className="text-cyan-400">+1 302 464 0950</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <MapPin className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-white font-semibold mb-2">Address</h3>
-                <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </div>
-            </div>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <FuturisticButton
-                href="/contact"
-                variant="primary"
-                size="lg"
-                icon={<ArrowRight className="w-5 h-5" />}
-              >
+              <FuturisticButton variant="primary" size="lg">
                 Start Free Trial
               </FuturisticButton>
-              <FuturisticButton
-                href="/services"
-                variant="outline"
-                size="lg"
-                icon={<DollarSign className="w-5 h-5" />}
-              >
-                View All Services
+              <FuturisticButton variant="outline" size="lg">
+                View Pricing
               </FuturisticButton>
             </div>
           </div>
-        </section>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 
-export default ZionAIInvoiceGeneratorPage;
+export default ZionAIInvoiceGenerator;
