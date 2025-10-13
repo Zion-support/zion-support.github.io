@@ -11,61 +11,14 @@ export default async function handler(req, res) {
     return;
   }
 
-<<<<<<< HEAD
-  const { email, name, interests } = req.body;
-  
-=======
-  const { email, name } = req.body;
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
+const { email, name } = req.body;
   if (!email) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Email is required' }));
     return;
   }
 
-<<<<<<< HEAD
-  try {
-    // Ensure data directory exists
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
-
-    // Read existing data
-    let data = [];
-    if (fs.existsSync(file)) {
-      const fileData = fs.readFileSync(file, 'utf8');
-      data = JSON.parse(fileData);
-    }
-
-    // Check if email already exists
-    const existingSubscriber = data.find(sub => sub.email === email);
-    if (existingSubscriber) {
-      res.setHeader('Content-Type', 'application/json');
-      res.end(JSON.stringify({ 
-        success: false, 
-        message: 'Email already subscribed' 
-      }));
-      return;
-    }
-
-    // Add new subscriber
-    const newSubscriber = {
-      id: Date.now(),
-      email,
-      name: name || '',
-      interests: interests || [],
-      status: 'active',
-      subscribedAt: new Date().toISOString()
-    };
-
-    data.push(newSubscriber);
-    fs.writeFileSync(file, JSON.stringify(data, null, 2));
-
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true, 
-=======
-  let subscribers = [];
+let subscribers = [];
   try {
     const data = fs.readFileSync(file, 'utf8');
     subscribers = JSON.parse(data);
@@ -95,16 +48,11 @@ export default async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true,
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
       message: 'Successfully subscribed to newsletter' 
     }));
   } catch (error) {
     console.error('Error:', error);
     res.setHeader('Content-Type', 'application/json');
-<<<<<<< HEAD
-    res.end(JSON.stringify({ error: 'Failed to process subscription' }));
-=======
-    res.end(JSON.stringify({ error: 'Failed to save subscription' }));
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
+res.end(JSON.stringify({ error: 'Failed to save subscription' }));
   }
 }

@@ -1,12 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 
-<<<<<<< HEAD
-// Shipping rates calculation
-=======
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'shipping-rates.json');
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -16,49 +12,11 @@ export default async function handler(req, res) {
   }
 
   const { destination, weight } = req.body;
-<<<<<<< HEAD
-  
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
   if (!destination || !weight) {
     return res.status(400).json({ error: 'Destination and weight are required' });
   }
 
-<<<<<<< HEAD
-  try {
-    // Ensure data directory exists
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
-
-    // Calculate shipping rates (mock calculation)
-
-    // Calculate shipping rates (mock calculation)
-    const baseRate = 10;
-    const weightMultiplier = parseFloat(weight) * 0.5;
-    const destinationMultiplier = destination === 'international' ? 2 : 1;
-    
-    const rates = [
-      {
-        service: 'Standard',
-        cost: Math.round((baseRate + weightMultiplier) * destinationMultiplier),
-        days: destination === 'international' ? '7-14' : '3-5'
-      },
-      {
-        service: 'Express',
-        cost: Math.round((baseRate + weightMultiplier) * destinationMultiplier * 1.5),
-        days: destination === 'international' ? '3-7' : '1-2'
-      }
-    ];
-
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true, 
-      rates,
-      destination,
-      weight
-=======
-  let rates = [];
+let rates = [];
   try {
     const data = fs.readFileSync(file, 'utf8');
     rates = JSON.parse(data);
@@ -88,15 +46,10 @@ export default async function handler(req, res) {
       success: true,
       rate: rate,
       message: 'Shipping rate calculated successfully' 
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
     }));
   } catch (error) {
     console.error('Error:', error);
     res.setHeader('Content-Type', 'application/json');
-<<<<<<< HEAD
-    res.end(JSON.stringify({ error: 'Failed to calculate shipping rates' }));
-=======
-    res.end(JSON.stringify({ error: 'Failed to save rate' }));
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
+res.end(JSON.stringify({ error: 'Failed to save rate' }));
   }
 }
