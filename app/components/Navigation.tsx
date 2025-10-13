@@ -49,6 +49,48 @@ const Navigation = React.memo(() => {
     { name: 'Contact', path: '/contact' }
   ], [])
 
+  const serviceCategories = useMemo(() => [
+    {
+      name: 'AI Services',
+      path: '/ai-services',
+      icon: <Brain className="w-4 h-4" />,
+      services: [
+        { name: 'AI Analytics', path: '/ai-analytics' },
+        { name: 'AI Automation', path: '/ai-automation' },
+        { name: 'AI Content Generation', path: '/ai-content-generation' },
+        { name: 'AI Customer Support', path: '/ai-customer-support' },
+        { name: 'AI Marketing Automation', path: '/ai-marketing-automation' },
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' }
+      ]
+    },
+    {
+      name: 'IT Services',
+      path: '/it-services',
+      icon: <Shield className="w-4 h-4" />,
+      services: [
+        { name: 'Cloud Services', path: '/cloud-services' },
+        { name: 'Cybersecurity', path: '/cybersecurity' },
+        { name: 'Custom Development', path: '/custom-development' },
+        { name: 'Web Development', path: '/web-development' },
+        { name: 'Mobile Development', path: '/mobile-development' },
+        { name: 'Database Management', path: '/database-management' }
+      ]
+    },
+    {
+      name: '5G Solutions',
+      path: '/5g-solutions',
+      icon: <Globe className="w-4 h-4" />,
+      services: [
+        { name: '5G Implementation', path: '/5g-implementation' },
+        { name: '5G Edge Computing', path: '/5g-edge-computing' },
+        { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
+        { name: '5G Smart Cities', path: '/5g-smart-city-solutions' },
+        { name: '5G Private Networks', path: '/5g-private-networks' },
+        { name: '5G Data Analytics', path: '/5g-data-analytics' }
+      ]
+    }
+  ], [])
+
   return (
     <nav 
       className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white shadow-2xl border-b border-cyan-500/20 backdrop-blur-md"
@@ -77,34 +119,52 @@ const Navigation = React.memo(() => {
               </Link>
             ))}
             
-            {/* AI Services Dropdown */}
+            {/* Services Dropdown */}
             <div className="relative">
               <button
                 onClick={toggleServices}
                 className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group"
               >
-                <span>AI Services</span>
+                <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
               </button>
               
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-cyan-500/20">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-cyan-500/20">
                   <div className="px-4 py-2 border-b border-gray-700 mb-2">
-                    <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider">AI Services</h3>
+                    <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider">Our Services</h3>
                   </div>
-                  {aiServices.map((service) => (
-                    <Link
-                      key={service.name}
-                      to={service.path}
-                      className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 group"
-                      onClick={() => setIsServicesOpen(false)}
-                    >
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition-all duration-300">
-                        {service.icon}
+                  <div className="grid grid-cols-1 gap-4 px-4">
+                    {serviceCategories.map((category) => (
+                      <div key={category.name} className="space-y-2">
+                        <div className="flex items-center space-x-2 text-cyan-300 font-semibold text-sm">
+                          {category.icon}
+                          <span>{category.name}</span>
+                        </div>
+                        <div className="ml-6 space-y-1">
+                          {category.services.slice(0, 3).map((service) => (
+                            <Link
+                              key={service.name}
+                              to={service.path}
+                              className="block text-gray-300 hover:text-cyan-400 transition-colors text-sm py-1"
+                              onClick={() => setIsServicesOpen(false)}
+                            >
+                              {service.name}
+                            </Link>
+                          ))}
+                          {category.services.length > 3 && (
+                            <Link
+                              to={category.path}
+                              className="block text-cyan-400 hover:text-cyan-300 transition-colors text-xs font-medium py-1"
+                              onClick={() => setIsServicesOpen(false)}
+                            >
+                              View All →
+                            </Link>
+                          )}
+                        </div>
                       </div>
-                      <span className="font-medium">{service.name}</span>
-                    </Link>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
@@ -186,31 +246,52 @@ const Navigation = React.memo(() => {
                 </Link>
               ))}
               
-              {/* Mobile AI Services */}
+              {/* Mobile Services */}
               <div>
                 <button
                   onClick={toggleServices}
                   className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 font-medium"
                 >
-                  <span>AI Services</span>
+                  <span>Services</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 
                 {isServicesOpen && (
-                  <div className="ml-4 mt-2 space-y-1">
-                    {aiServices.map((service) => (
-                      <Link
-                        key={service.name}
-                        to={service.path}
-                        className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-cyan-400 transition-colors rounded-lg hover:bg-cyan-500/10"
-                        onClick={() => {
-                          setIsServicesOpen(false)
-                          toggleMenu()
-                        }}
-                      >
-                        {service.icon}
-                        <span>{service.name}</span>
-                      </Link>
+                  <div className="ml-4 mt-2 space-y-4">
+                    {serviceCategories.map((category) => (
+                      <div key={category.name} className="space-y-2">
+                        <div className="flex items-center space-x-2 text-cyan-300 font-semibold text-sm">
+                          {category.icon}
+                          <span>{category.name}</span>
+                        </div>
+                        <div className="ml-4 space-y-1">
+                          {category.services.slice(0, 3).map((service) => (
+                            <Link
+                              key={service.name}
+                              to={service.path}
+                              className="block text-gray-300 hover:text-cyan-400 transition-colors text-sm py-1"
+                              onClick={() => {
+                                setIsServicesOpen(false)
+                                toggleMenu()
+                              }}
+                            >
+                              {service.name}
+                            </Link>
+                          ))}
+                          {category.services.length > 3 && (
+                            <Link
+                              to={category.path}
+                              className="block text-cyan-400 hover:text-cyan-300 transition-colors text-xs font-medium py-1"
+                              onClick={() => {
+                                setIsServicesOpen(false)
+                                toggleMenu()
+                              }}
+                            >
+                              View All →
+                            </Link>
+                          )}
+                        </div>
+                      </div>
                     ))}
                   </div>
                 )}
