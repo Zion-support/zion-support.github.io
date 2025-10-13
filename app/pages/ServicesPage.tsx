@@ -11,102 +11,22 @@ import {
   ArrowRightIcon,
   CheckCircleIcon,
   PhoneIcon,
-  EnvelopeIcon
+  EnvelopeIcon,
+  CurrencyDollarIcon,
+  StarIcon
 } from '@heroicons/react/24/outline';
+import FuturisticBackground from '../components/FuturisticBackground';
+import NeonButton from '../components/NeonButton';
+import AnimatedCard from '../components/AnimatedCard';
+import { services, getServicesByCategory } from '../data/servicesData';
 
 export default function ServicesPage() {
-  const services = [
-    {
-      title: "AI Solutions",
-      description: "Advanced artificial intelligence services including machine learning, natural language processing, and predictive analytics.",
-      icon: CpuChipIcon,
-      features: [
-        "Machine Learning Models",
-        "Natural Language Processing",
-        "Computer Vision",
-        "Predictive Analytics",
-        "AI Chatbots",
-        "Automated Decision Making"
-      ],
-      color: "from-purple-500 to-pink-500",
-      href: "/ai-solutions"
-    },
-    {
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions to protect your digital assets, data, and infrastructure from evolving threats.",
-      icon: ShieldCheckIcon,
-      features: [
-        "Security Audits",
-        "Threat Detection",
-        "Data Encryption",
-        "Access Management",
-        "Incident Response",
-        "Compliance Support"
-      ],
-      color: "from-cyan-500 to-blue-500",
-      href: "/cybersecurity"
-    },
-    {
-      title: "Cloud Infrastructure",
-      description: "Scalable cloud solutions and infrastructure management to optimize performance and reduce operational costs.",
-      icon: CloudIcon,
-      features: [
-        "Cloud Migration",
-        "Infrastructure as Code",
-        "Auto-scaling",
-        "Disaster Recovery",
-        "Cost Optimization",
-        "Multi-cloud Strategy"
-      ],
-      color: "from-green-500 to-emerald-500",
-      href: "/cloud-solutions"
-    },
-    {
-      title: "Digital Transformation",
-      description: "Strategic digital transformation services to modernize your business processes and enhance customer experiences.",
-      icon: ChartBarIcon,
-      features: [
-        "Process Automation",
-        "Legacy System Modernization",
-        "Digital Strategy",
-        "Change Management",
-        "Technology Integration",
-        "Performance Optimization"
-      ],
-      color: "from-yellow-500 to-orange-500",
-      href: "/digital-transformation"
-    },
-    {
-      title: "Micro SaaS",
-      description: "Custom micro SaaS solutions designed to solve specific business challenges with scalable, cost-effective applications.",
-      icon: GlobeAltIcon,
-      features: [
-        "Custom Web Applications",
-        "API Development",
-        "Database Design",
-        "User Management",
-        "Payment Integration",
-        "Analytics Dashboard"
-      ],
-      color: "from-pink-500 to-rose-500",
-      href: "/micro-saas"
-    },
-    {
-      title: "5G Solutions",
-      description: "Next-generation 5G technology solutions for enhanced connectivity, IoT applications, and ultra-low latency services.",
-      icon: RocketLaunchIcon,
-      features: [
-        "5G Network Planning",
-        "IoT Integration",
-        "Edge Computing",
-        "Real-time Applications",
-        "Network Optimization",
-        "Smart City Solutions"
-      ],
-      color: "from-indigo-500 to-purple-500",
-      href: "/5g-solutions"
-    }
-  ];
+  const categories = ['AI', 'SaaS', 'IT', 'Cybersecurity', 'Cloud', '5G', 'Blockchain', 'IoT'];
+  const [selectedCategory, setSelectedCategory] = React.useState<string>('All');
+
+  const filteredServices = selectedCategory === 'All' 
+    ? services 
+    : getServicesByCategory(selectedCategory as any);
 
   return (
     <>
@@ -116,62 +36,107 @@ export default function ServicesPage() {
         <meta name="keywords" content="AI services, cybersecurity, cloud computing, digital transformation, micro SaaS, 5G solutions, IT services" />
       </Helmet>
       
+      <FuturisticBackground />
+      
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+      <section className="relative py-20">
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-5xl mx-auto text-center">
+            <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Our Services
             </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-2xl text-gray-300 mb-8 leading-relaxed">
               Comprehensive technology solutions designed to accelerate your business growth
             </p>
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-400 max-w-4xl mx-auto leading-relaxed">
               From artificial intelligence to cybersecurity, we provide end-to-end technology services 
-              that help businesses thrive in the digital age.
+              that help businesses thrive in the digital age with real, proven results.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {services.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <div 
-                  key={service.title}
-                  className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105"
+      {/* Category Filter */}
+      <section className="py-12 relative">
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-white mb-4">Filter by Category</h2>
+              <p className="text-gray-300">Choose a category to explore specific services</p>
+            </div>
+            
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              <button
+                onClick={() => setSelectedCategory('All')}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  selectedCategory === 'All'
+                    ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white shadow-lg shadow-purple-500/25'
+                    : 'bg-slate-800 text-gray-300 hover:bg-slate-700 border border-slate-600'
+                }`}
+              >
+                All Services
+              </button>
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    selectedCategory === category
+                      ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white shadow-lg shadow-purple-500/25'
+                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700 border border-slate-600'
+                  }`}
                 >
-                  <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                    <Icon className="w-8 h-8 text-white" />
+                  {category}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-20 relative">
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {filteredServices.map((service) => (
+              <AnimatedCard key={service.id} glowColor={service.glowColor} className="group">
+                <div className="text-center mb-6">
+                  <div className="text-6xl mb-4">{service.icon}</div>
+                  <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
+                  <p className="text-gray-300 mb-4 leading-relaxed">{service.shortDescription}</p>
+                  <div className="inline-block px-3 py-1 bg-slate-700 text-purple-300 text-sm rounded-full">
+                    {service.category}
                   </div>
-                  
-                  <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <Link 
-                    to={service.href}
-                    className={`inline-flex items-center gap-2 text-${service.color.split(' ')[1].split('-')[1]}-400 hover:text-${service.color.split(' ')[1].split('-')[1]}-300 font-semibold group-hover:gap-3 transition-all`}
-                  >
-                    Learn More <ArrowRightIcon className="w-4 h-4" />
-                  </Link>
                 </div>
-              );
-            })}
+                
+                <div className="space-y-3 mb-6">
+                  {service.features.slice(0, 4).map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <span className="text-sm">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="mb-6">
+                  <div className="text-center">
+                    <span className="text-3xl font-bold text-white">${service.pricing.basic}</span>
+                    <span className="text-gray-400 text-sm ml-2">/month</span>
+                  </div>
+                  <p className="text-gray-400 text-sm text-center mt-1">Starting from</p>
+                </div>
+                
+                <div className="flex flex-col gap-3">
+                  <NeonButton to={service.href} variant="primary" size="sm">
+                    Learn More
+                    <ArrowRightIcon className="w-4 h-4 ml-2" />
+                  </NeonButton>
+                  <NeonButton to="/contact" variant="secondary" size="sm">
+                    Get Quote
+                  </NeonButton>
+                </div>
+              </AnimatedCard>
+            ))}
           </div>
         </div>
       </section>
