@@ -10,61 +10,7 @@ function findFilesWithConflicts(dir) {
   
   function searchDirectory(currentDir) {
     const items = fs.readdirSync(currentDir);
-    
-<<<<<<< HEAD
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        searchDirectory(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
-        try {
-          const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-            files.push(fullPath);
-          }
-        } catch (error) {
-          // Skip files that can't be read
-        }
-      }
-    }
-  }
-  
-  searchDirectory(dir);
-  return files;
-}
 
-// Function to resolve merge conflicts by keeping the newer version (after =======)
-function resolveMergeConflict(content) {
-  const lines = content.split('\n');
-  const resolvedLines = [];
-  let inConflict = false;
-  let keepLines = false;
-  
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    
-    if (line.includes('<<<<<<< HEAD')) {
-      inConflict = true;
-      keepLines = false;
-      continue;
-    }
-    
-    if (line.includes('=======')) {
-      keepLines = true;
-      continue;
-    }
-=======
-    // Remove all merge conflict markers and keep the latest version
-    content = content.replace(/    content = content.replace(/    content = content.replace(/[\s\S]*?    
-    // Clean up any remaining conflict markers
-    content = content.replace(/    content = content.replace(//g, '');
-    content = content.replace(/    
-    // Remove empty lines that might be left behind
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-    
     if (line.includes('>>>>>>>')) {
       inConflict = false;
       keepLines = false;

@@ -14,12 +14,12 @@ import React from 'react';
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-  </div>
-  );
+return (;
+<div>;
+<h1>Component<//;
+<p>This component is under construction.<//;
+<//;
+);
 }
 =======
 const CACHE_NAME = 'zion-tech-group-v1';';

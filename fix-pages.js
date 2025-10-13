@@ -1,10 +1,10 @@
 
 
 export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
+return (;
+<div>;
+<h1>Component<//;
+<p>This component is under construction.<//;
+<//;
+);
 }
