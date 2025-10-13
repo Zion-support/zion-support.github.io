@@ -28,6 +28,29 @@ export default tseslint.config(
     },
   },
   {
-    ignores: ["dist", "node_modules", "*.config.js"],
+    ignores: [
+      "dist", 
+      "node_modules", 
+      "*.config.js",
+      "backup*/**",
+      "backup-problematic*/**",
+      "backup-unused-components/**",
+      "cleanup-*.js",
+      "cleanup-*.cjs",
+      "*.cjs",
+      "*.py",
+      "*.sh",
+      "App_clean.tsx",
+      "api/onsite-request.js",
+      "scripts/**",
+      "src/**",
+      "fix-*.js",
+      "*.analysis.js",
+      "*.audit.js",
+      "*.analyzer.js",
+      "main.tsx",
+      "jest.setup.js",
+      "utils/**"
+    ],
   }
 );

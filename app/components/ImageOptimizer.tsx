@@ -15,10 +15,12 @@ export default function ImageOptimizer({
   alt,
   className = '',
   lazy = true,
-  quality = 80,
-  format = 'webp',
+  quality: _quality = 80,
+  format: _format = 'webp',
   placeholder
 }: ImageOptimizerProps) {
+  // Note: quality and format parameters are available for future use
+  // when implementing actual image optimization
   return (
     <img
       src={src}
