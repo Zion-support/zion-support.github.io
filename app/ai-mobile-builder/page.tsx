@@ -3,41 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 <<<<<<< HEAD
 =======
-
-<<<<<<< HEAD
-
-export default function PageTsxPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page.Tsx - Zion Tech Group</title>
-        <meta name="description" content="Advanced page.tsx solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page.Tsx</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Advanced page.tsx solutions by Zion Tech Group
-          </p>
-        </div>
-        
-        <div className="max-w-4xl mx-auto">
-          
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-          <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-          <p className="text-gray-300">
-            This page is under development. Please check back later for updates.
-          </p>
-        </div>
-      
-
-
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-82b8
->>>>>>> d86d082fc493e5b136e1baa1e02a40320c4cbc61
+>>>>>>> 0da0de9a40ceae2cf98b043331c5936c6960e4fa
 export default function AiMobileBuilder() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -63,12 +29,31 @@ export default function AiMobileBuilder() {
           </div>
 <<<<<<< HEAD
 =======
-
-
-
-
-
->>>>>>> d86d082fc493e5b136e1baa1e02a40320c4cbc61
+            Create mobile applications using advanced AI technology.
+          </p>
+        </div>
+        <div className="max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
+              <p className="text-gray-600">
+                Create mobile apps quickly with our AI-assisted development tools.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Intelligent Design</h3>
+              <p className="text-gray-600">
+                AI-powered UI/UX design suggestions for optimal user experience.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Performance Optimization</h3>
+              <p className="text-gray-600">
+                Automatic performance optimization and code quality improvements.
+              </p>
+            </div>
+          </div>
+>>>>>>> 0da0de9a40ceae2cf98b043331c5936c6960e4fa
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React from 'react';
-interface FuturistictextProps {
+
+interface FuturisticTextProps {
   className?: string;
   children?: React.ReactNode;
 }
@@ -9,30 +10,10 @@ export default function Futuristictext({ className = '', children, ...props }: F
   return (
     <div className={`futuristic-text ${className}`} {...props}>
 =======
-<<<<<<< HEAD
-
-
-export default function Futuristictext({ className = '', children }: FuturistictextProps) {
-  return (
-    <div className={className}>
-
-
-export default function Futuristictext({ className = '', children, ...props }: FuturistictextProps) {
+export default function FuturisticText({ className = '', children, ...props }: FuturisticTextProps) {
   return (
     <div className={`futuristic-text ${className}`} {...props}>
-
-
-
-export default function Futuristictext({ className = '', children, ...props }: FuturistictextProps) {
-  return (
-    <div className={`futuristic-text ${className}`} {...props}>
-
-=======
-export default function Futuristictext({ className = '', children, ...props }: FuturistictextProps) {
-  return (
-    <div className={`futuristic-text ${className}`} {...props}>
->>>>>>> cursor/fix-errors-and-merge-to-main-82b8
->>>>>>> d86d082fc493e5b136e1baa1e02a40320c4cbc61
+>>>>>>> 0da0de9a40ceae2cf98b043331c5936c6960e4fa
       {children}
     </div>
   );

@@ -1,32 +1,11 @@
 #!/usr/bin/env python3
 """
-Fix final TypeScript errors
+Fix App.tsx TypeScript errors
 """
 import os
 
-def fix_accessibility_enhancer():
-    """Fix accessibilityEnhancer.ts with proper syntax"""
-    content = '''import React from 'react';
-
-export interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-export default function AccessibilityEnhancer({ children, className = '' }: AccessibilityEnhancerProps) {
-  return (
-    <div className={`accessibility-enhancer ${className}`}>
-      {children}
-    </div>
-  );
-}'''
-    
-    with open('/workspace/app/utils/accessibilityEnhancer.ts', 'w', encoding='utf-8') as f:
-        f.write(content)
-    print("Fixed: app/utils/accessibilityEnhancer.ts")
-
 def fix_app_tsx():
-    """Fix App.tsx with proper JSX structure"""
+    """Fix App.tsx with correct imports and component usage"""
     content = '''import React, { useState, useCallback, useEffect, Suspense } from 'react';
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -40,7 +19,7 @@ import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
-import AccessibilityEnhancer from "./app/utils/accessibilityEnhancer";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
@@ -175,14 +154,13 @@ function App() {
                       </div>
                     </Router>
                   </CoreWebVitals>
-                </AccessibilityEnhancer>
-              </EnhancedAccessibility>
-            </WebVitalsTracker>
-          </PerformanceMonitor>
-        </AnalyticsProvider>
-      </HelmetProvider>
-    </EnhancedErrorBoundary>
-  );
+                </EnhancedAccessibility>
+              </WebVitalsTracker>
+            </PerformanceMonitor>
+          </AnalyticsProvider>
+        </HelmetProvider>
+      </EnhancedErrorBoundary>
+    );
 }
 
 export default App;'''
@@ -191,12 +169,31 @@ export default App;'''
         f.write(content)
     print("Fixed: App.tsx")
 
+def fix_accessibility_enhancer():
+    """Fix accessibilityEnhancer.ts"""
+    content = '''export interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export default function AccessibilityEnhancer({ children, className = '' }: AccessibilityEnhancerProps) {
+  return (
+    <div className={`accessibility-enhancer ${className}`}>
+      {children}
+    </div>
+  );
+}'''
+    
+    with open('/workspace/app/utils/accessibilityEnhancer.ts', 'w', encoding='utf-8') as f:
+        f.write(content)
+    print("Fixed: app/utils/accessibilityEnhancer.ts")
+
 def main():
     """Main function"""
-    print("Fixing final errors...")
-    fix_accessibility_enhancer()
+    print("Fixing App.tsx and related files...")
     fix_app_tsx()
-    print("All final fixes completed!")
+    fix_accessibility_enhancer()
+    print("All fixes completed!")
 
 if __name__ == "__main__":
     main()

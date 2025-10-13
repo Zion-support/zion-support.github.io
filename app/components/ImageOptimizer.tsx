@@ -12,8 +12,7 @@ interface ImageOptimizerProps {
 
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
->>>>>>> d86d082fc493e5b136e1baa1e02a40320c4cbc61
+>>>>>>> 0da0de9a40ceae2cf98b043331c5936c6960e4fa
 export default function ImageOptimizer({ 
   src, 
   alt, 
@@ -22,18 +21,15 @@ export default function ImageOptimizer({
   format = 'webp',
 <<<<<<< HEAD
 =======
-=======
-export default function ImageOptimizer({
-  src,
-  alt,
-  className = '',
->>>>>>> cursor/fix-errors-and-merge-to-main-82b8
->>>>>>> d86d082fc493e5b136e1baa1e02a40320c4cbc61
+>>>>>>> 0da0de9a40ceae2cf98b043331c5936c6960e4fa
   lazy = true,
+  quality,
+  format,
   placeholder
 }: ImageOptimizerProps) {
-  // Note: quality and format parameters are reserved for future image optimization features
-  console.log('Image optimization params:', { quality, format });
+  // Note: quality, format, and placeholder are available for future implementation
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const _unused = { quality, format, placeholder };
   
   return (
     <img

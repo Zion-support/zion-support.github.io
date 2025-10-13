@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 
 interface OptimizedImageProps {
   src: string;
@@ -9,69 +9,58 @@ interface OptimizedImageProps {
   priority?: boolean;
   onLoad?: () => void;
   onError?: () => void;
-  children?: React.ReactNode;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
-  className = '',
-  width,
+export default function OptimizedImage({ 
+  src, 
+  alt, 
+  className = '', 
+  width, 
   height,
   priority = false,
   onLoad,
-  onError,
-  children,
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  onError
+}: OptimizedImageProps) {
+  const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    if (imgRef.current?.complete) {
-      setIsLoaded(true);
-    }
-  }, []);
 
   const handleLoad = () => {
-    setIsLoaded(true);
+    setIsLoading(false);
     onLoad?.();
   };
 
   const handleError = () => {
+    setIsLoading(false);
     setHasError(true);
     onError?.();
   };
 
   if (hasError) {
     return (
-      <div className={`${className} flex items-center justify-center bg-gray-200 text-gray-500`}>
-        <span>Failed to load image</span>
+      <div className={`optimized-image-error ${className}`}>
+        <div className="flex items-center justify-center w-full h-full bg-gray-100 text-gray-500">
+          Failed to load image
+        </div>
       </div>
     );
   }
 
   return (
-    <div className={`${className} relative`}>
-      {!isLoaded && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
-          <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
-        </div>
+    <div className={`relative ${className}`}>
+      {isLoading && (
+        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
       )}
       <img
-        ref={imgRef}
         src={src}
         alt={alt}
+        className="optimized-image"
         width={width}
         height={height}
-        loading={priority ? 'eager' : 'lazy'}
+        loading={priority ? "eager" : "lazy"}
         onLoad={handleLoad}
         onError={handleError}
-        className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+        style={{ opacity: isLoading ? 0 : 1 }}
       />
-      {children}
     </div>
   );
-};
-
-export default OptimizedImage;
+}

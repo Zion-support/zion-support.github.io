@@ -1,9 +1,14 @@
-
 export interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
   fps: number;
+}
+
+export interface PerformanceConfig {
+  enabled: boolean;
+  monitoring: boolean;
+  optimization: boolean;
 }
 
 export class PerformanceUtils {
@@ -17,22 +22,18 @@ export class PerformanceUtils {
 <<<<<<< HEAD
   measureLoadTime(): number {
 =======
-  measureLoadTime() {
-<<<<<<< HEAD
+  private config: PerformanceConfig = {
+    enabled: true,
+    monitoring: true,
+    optimization: true
+  };
 
-interface PerformanceConfig {
-  enabled: boolean;
-  monitoring: boolean;
-  optimization: boolean;
-}
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-82b8
->>>>>>> d86d082fc493e5b136e1baa1e02a40320c4cbc61
+  measureLoadTime(): number {
+>>>>>>> 0da0de9a40ceae2cf98b043331c5936c6960e4fa
     if (typeof window !== 'undefined' && window.performance) {
       const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+      return this.metrics.loadTime;
     }
     return this.metrics.loadTime;
   }
@@ -40,14 +41,17 @@ interface PerformanceConfig {
 <<<<<<< HEAD
   measureRenderTime(): number {
 =======
+    return 0;
+  }
 
-  measureRenderTime() {
->>>>>>> d86d082fc493e5b136e1baa1e02a40320c4cbc61
+  measureRenderTime(): number {
+>>>>>>> 0da0de9a40ceae2cf98b043331c5936c6960e4fa
     if (typeof window !== 'undefined' && window.performance) {
       const paintEntries = window.performance.getEntriesByType('paint');
       const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
       if (fcp) {
         this.metrics.renderTime = fcp.startTime;
+        return this.metrics.renderTime;
       }
     }
     return this.metrics.renderTime;
@@ -129,37 +133,15 @@ interface PerformanceConfig {
     
     return Math.max(0, score);
   }
-=======
-  constructor(config: Partial<PerformanceConfig> = {}) {
-    this.config = {
-      enabled: true,
-      monitoring: true,
-      optimization: true,
-      ...config
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('Performance utils initialized');
-    }
-  }
-
-  measurePerformance(name: string, fn: () => void): void {
-    if (this.config.monitoring) {
-      const start = performance.now();
-      fn();
-      const end = performance.now();
-      console.log(`${name} took ${end - start} milliseconds`);
-    } else {
-      fn();
-    }
-  }
-
   optimizeImages(): void {
-    if (this.config.optimization) {
-      console.log('Optimizing images...');
-    }
+    if (!this.config.optimization) return;
+    
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
+      }
+    });
   }
 
 >>>>>>> d86d082fc493e5b136e1baa1e02a40320c4cbc61
