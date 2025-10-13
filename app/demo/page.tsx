@@ -1,28 +1,52 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Play, Right, Circle, Star, } from 'lucide-react';
+<<<<<<< HEAD
+import { Play, Right, Circle, Star } from 'lucide-react';
+=======
+import { Play, Right, Star, BarChart3, Shield } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
 
 const DemoPage: React.FC = () => {
   const features = [
     {
-      icon: title: 'AI-Powered Analytics',
+<<<<<<< HEAD
+      icon: 'Analytics',
+=======
+      icon: BarChart3,
+>>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
+      title: 'AI-Powered Analytics',
       description: 'See how our AI analyzes your data in real-time',
-      demo: 'Live Demo'
+      demo: &apos;Live Demo&apos;
     },
     {
-      icon: title: 'Advanced ',
+<<<<<<< HEAD
+      icon: 'Security',
+=======
+      icon: Shield,
+>>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
+      title: 'Advanced Security',
       description: 'Experience our enterprise-grade security features',
-      demo: 'Demo'
+      demo: &apos;Demo&apos;
     },
     {
-      icon: title: 'Business Intelligence',
+<<<<<<< HEAD
+      icon: 'Intelligence',
+=======
+      icon: BarChart3,
+>>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
+      title: 'Business Intelligence',
       description: 'Explore our comprehensive BI dashboard',
-      demo: 'BI Demo'
+      demo: &apos;BI Demo&apos;
     },
     {
-      icon: title: 'Team Collaboration',
+<<<<<<< HEAD
+      icon: 'Collaboration',
+=======
+      icon: Play,
+>>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
+      title: 'Team Collaboration',
       description: 'See how teams work together seamlessly',
-      demo: 'Collaboration Demo'
+      demo: &apos;Collaboration Demo&apos;
     }
   ];
 

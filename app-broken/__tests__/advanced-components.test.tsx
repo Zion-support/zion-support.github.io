@@ -57,7 +57,7 @@ const AdvancedSEOOptimizer = ({ seoData }: { seoData?: unknown }) => {
     <div data-testid="seo-optimizer">
       <HelmetProvider>
         <Helmet>
-          <title>{seoData?.title || 'Default Title'}</title>
+          <title>{seoData?.title || &apos;Default Title&apos;}</title>
           <meta name="description" content={seoData?.description || 'Default description'} />
         </Helmet>
       </HelmetProvider>
@@ -97,7 +97,7 @@ const AdvancedPerformanceMonitor = ({ enableRealTimeMonitoring, onMetricsUpdate,
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
-    throw new Error('Test error');
+    throw new Error(&apos;Test error&apos;);
   }
   return <div>Test content</div>;
 };
@@ -138,7 +138,7 @@ describe('AdvancedErrorBoundary', () => {
     );
 
     expect(screen.getByText('Unexpected Application Error!')).toBeInTheDocument();
-    // The mock error boundary doesn't actually catch errors, so we just check for the error message
+    // The mock error boundary doesn&apos;t actually catch errors, so we just check for the error message
 
     consoleSpy.mockRestore();
   });
@@ -157,7 +157,7 @@ describe('AdvancedErrorBoundary', () => {
       </MemoryRouter>
     );
 
-    // Since the mock doesn't actually catch errors, we just verify it renders
+    // Since the mock doesn&apos;t actually catch errors, we just verify it renders
     expect(screen.getByText('Test content')).toBeInTheDocument();
     consoleSpy.mockRestore();
   });
@@ -315,8 +315,8 @@ describe('AdvancedPerformanceMonitor', () => {
   });
 
   it('renders nothing in production mode', () => {
-    const originalEnv = process.env['NODE_ENV'];
-    Object.defineProperty(process.env, 'NODE_ENV', { value: 'production', writable: true });
+    const originalEnv = process.env[&apos;NODE_ENV&apos;];
+    Object.defineProperty(process.env, &apos;NODE_ENV&apos;, { value: &apos;production&apos;, writable: true });
 
     const { container } = render(
       <MemoryRouter>
@@ -330,8 +330,8 @@ describe('AdvancedPerformanceMonitor', () => {
   });
 
   it('renders performance monitor in development mode', () => {
-    const originalEnv = process.env['NODE_ENV'];
-    Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
+    const originalEnv = process.env[&apos;NODE_ENV&apos;];
+    Object.defineProperty(process.env, &apos;NODE_ENV&apos;, { value: &apos;development&apos;, writable: true });
 
     render(
       <MemoryRouter>
@@ -346,8 +346,8 @@ describe('AdvancedPerformanceMonitor', () => {
 
   it('calls onMetricsUpdate when metrics change', async () => {
     const onMetricsUpdate = jest.fn();
-    const originalEnv = process.env['NODE_ENV'];
-    Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
+    const originalEnv = process.env[&apos;NODE_ENV&apos;];
+    Object.defineProperty(process.env, &apos;NODE_ENV&apos;, { value: &apos;development&apos;, writable: true });
 
     mockPerformance.getEntriesByName.mockReturnValue([{ startTime: 100 }]);
 
@@ -368,8 +368,8 @@ describe('AdvancedPerformanceMonitor', () => {
   });
 
   it('shows performance recommendations when metrics are poor', () => {
-    const originalEnv = process.env['NODE_ENV'];
-    Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
+    const originalEnv = process.env[&apos;NODE_ENV&apos;];
+    Object.defineProperty(process.env, &apos;NODE_ENV&apos;, { value: &apos;development&apos;, writable: true });
 
     // Mock poor performance metrics
     mockPerformance.getEntriesByName.mockReturnValue([
@@ -383,8 +383,8 @@ describe('AdvancedPerformanceMonitor', () => {
     );
 
     // Should show recommendations for poor performance
-    expect(screen.getByText('Recommendations:')).toBeInTheDocument();
+    expect(screen.getByText(&apos;Recommendations:&apos;)).toBeInTheDocument();
 
-    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
+    Object.defineProperty(process.env, &apos;NODE_ENV&apos;, { value: originalEnv, writable: true });
   });
 });

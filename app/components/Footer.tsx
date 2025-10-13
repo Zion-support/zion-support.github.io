@@ -1,6 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Right, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
+=======
+import { Right, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-0c82
+=======
+import { Right, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
+>>>>>>> origin/main
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -34,7 +46,19 @@ const Footer: React.FC = () => {
   const socialLinks = [
     { name: 'Facebook', href: '#', icon: Facebook },
     { name: 'Twitter', href: '#', icon: Twitter },
+<<<<<<< HEAD
     { name: 'LinkedIn', href: '#', icon: Linkedin },
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    { name: 'LinkedIn', href: '#', icon: Linkedin },
+=======
+      { name: 'LinkedIn', href: '#', icon: Linkedin },
+>>>>>>> cursor/fix-errors-and-merge-to-main-0c82
+=======
+    { name: 'LinkedIn', href: '#', icon: Linkedin },
+>>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
+>>>>>>> origin/main
     { name: 'GitHub', href: '#', icon: Github }
   ];
 
@@ -132,7 +156,7 @@ const Footer: React.FC = () => {
               />
               <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-r-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Subscribe
-                <Right className="w-4 h-4 ml-2" />
+                <ArrowRight className="w-4 h-4 ml-2" />
               </button>
             </div>
           </div>

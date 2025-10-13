@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface FuturisticBackgroundProps {
-  children: .Node;
+  children: React.ReactNode;
   className?: string;
 }
 

@@ -2,11 +2,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 'use client;
 const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
-    name: '',    email: ',
-    company: ',
-    phone: ',
-    service: ',
-    message: ';)
+    name: '',    email: &apos;,
+    company: &apos;,
+    phone: &apos;,
+    service: &apos;,
+    message: &apos;;)
 })const [isSubmitting, setIsSubmitting] = useState(false);
 
 const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>(idle);
@@ -17,7 +17,7 @@ const handleChange = useCallback((e: .ChangeEvent<HTMLInputElement | HTMLTextAre
     message: '';)
 })
 const [isSubmitting, setIsSubmitting] = useState(false);
-const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>(&apos;idle&apos;);
 const handleChange = useCallback((e: .ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {}
     setFormData(prev => ({}
       ...prev,
@@ -32,14 +32,14 @@ const handleSubmit = useCallback(async (e: .FormEvent) => {    setFormData(prev 
       setFormData({
         name: ',
         email: ',
-        company: ',
-        phone: ',
-        service: ',
-message: ']
+        company: &apos;,
+        phone: &apos;,
+        service: &apos;,
+message: &apos;]
     });]
     } catch (error) {
-      setSubmitStatus('error)]
-      setSubmitStatus('error);
+      setSubmitStatus(&apos;error)]
+      setSubmitStatus(&apos;error);
 
     } finally {
       setIsSubmitting(false);
@@ -56,7 +56,7 @@ message: ']
       <{/* Hero Section *
       <section className="relative py-20 px-4 overflow-hidden>)
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse 
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s }}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: &apos;1s }}
 
         <div className="relative max-w-7xl mx-auto text-center>
           <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight>
@@ -176,13 +176,13 @@ message: ']
             <div className=bg-white/5 backdrop-blur-sm border border-white
               <h2 className="text-3xl font-bold text-white mb-6>Send us a message<
               
-              {submitStatus === 'success' && (<div className=mb-6 p-4 bg-green-500/20 border border-green-500
+              {submitStatus === &apos;success&apos; && (<div className=mb-6 p-4 bg-green-500/20 border border-green-500
                   <Circle className="w-5 h-5 text-green-400 mr-2 
                   <span className="text-green-400>Message sent successfully!<
                 <)
               )}
 
-              {submitStatus === 'error' && (<div className=mb-6 p-4 bg-red-500/20 border border-red-500
+              {submitStatus === &apos;error&apos; && (<div className=mb-6 p-4 bg-red-500/20 border border-red-500
                   <span className="text-red-400>Failed to send message. Please try again.<
                   and well get back to you within 24 hours.
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2"></label>
@@ -216,8 +216,8 @@ message: ']
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6">Get in touch<
                 <p className="text-gray-300 mb-8">
-                  We're here to help you succeed. Reach out to us through any of the channels below, 
-                  and we'll get back to you within 24 hours.
+                  We&apos;re here to help you succeed. Reach out to us through any of the channels below, 
+                  and we&apos;ll get back to you within 24 hours.
                 <
               <
 

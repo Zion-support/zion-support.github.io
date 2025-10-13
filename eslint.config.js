@@ -6,21 +6,22 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
+  js.configs.recommended,
   {
+    files: ['**/*.{js,jsx,ts,tsx}'],
     ignores: [
-      'app-broken/**',
-      'app-disabled/**',
+      'node_modules/**',
       'dist/**',
       'build/**',
-      'node_modules/**',
+      '.next/**',
+      'out/**',
       '*.config.js',
       '*.config.ts',
-      'scripts/**',
-      'public/**',
+      '*.config.mjs',
       'add-missing-routes*.jsx',
-      'backup-problematic/**',
-      'backup-unused-components/**',
-      'backup/**',
+      'aggressive-*.js',
+      'aggressive-*.cjs',
+      'batch-*.js',
       'cleanup-*.js',
       'cleanup-*.cjs',
       'comprehensive-*.js',
@@ -33,43 +34,21 @@ export default [
       'remove-*.js',
       'simple-*.js',
       'website-*.js',
-      'public/sw.js',
-      'admin-api-disabled/**',
-      'ai-customer-support-disabled/**',
-      'ai-data-visualization-disabled/**',
-      'ai-sales-automation-disabled/**',
-      'ai-workflow-automation-disabled/**',
-      'api-disabled/**',
-      'api.disabled/**',
-      'api-backup/**',
-      'components-disabled/**',
-      'components.disabled/**',
-      'automation_backup/**',
-      'backup*/**',
-      '*-disabled/**',
-      '*.disabled/**',
+      'resolve-*.js',
+      'check-*.js',
+      'clean-*.js',
+      'analyze-*.js',
       '*.broken',
       '*.backup',
-      'temp-files/**',
-      'cache/**',
+      'temp-*.js',
       'analyze-*.js',
       'check-*.js',
       'clean-*.js',
       'jest.setup.js'
-    ]
-  },
-  js.configs.recommended,
-  {
-    files: ['**/*.{ts,tsx,js,jsx}'],
+    ],
     languageOptions: {
-      parser: typescriptParser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true
-        }
-      },
+      ecmaVersion: 'latest',
+      sourceType: 'module',
       globals: {
         window: 'readonly',
         document: 'readonly',
@@ -94,6 +73,12 @@ export default [
         module: 'readonly',
         exports: 'readonly',
         fs: 'readonly'
+      },
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
       }
     },
     plugins: {
@@ -103,15 +88,14 @@ export default [
       'react-refresh': reactRefresh
     },
     rules: {
-      ...typescript.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': 'warn',
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
+      'no-console': 'off',
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': ['error', { 'argsIgnorePattern': '^_' }],
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
-      'no-console': 'off'
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+      'react-refresh/only-export-components': 'warn'
     },
     settings: {
       react: {

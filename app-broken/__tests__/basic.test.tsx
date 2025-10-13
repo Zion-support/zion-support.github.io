@@ -8,6 +8,6 @@ describe('Basic Tests', () => {
   it('should render a simple component', () => {
     const TestComponent = () => <div>Test</div>;
     render(<TestComponent />);
-    expect(screen.getByText('Test')).toBeInTheDocument();
+    expect(screen.getByText(&apos;Test&apos;)).toBeInTheDocument();
   });
 });
