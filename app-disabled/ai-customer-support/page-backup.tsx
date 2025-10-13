@@ -57,9 +57,8 @@ return(<React.Fragment>)
                 <button>Contact Us;
                 <button>Learn More;
       ))
-      <Footer />
-
-  );
+      <Footer />;
+);
 };
 
 export default PageBackupPage;

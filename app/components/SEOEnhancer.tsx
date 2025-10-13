@@ -24,18 +24,18 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   useEffect(() => {
     // Add structured data to the page
     if (structuredData) {
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify(structuredData);
-      document.head.appendChild(script);
+      const script = document.createElement('script')
+      script.type = 'application/ld+json'}
+      script.text = JSON.stringify(structuredData)
+      document.head.appendChild(script)
       return () => {
         if (document.head.contains(script)) {
-          document.head.removeChild(script);
+          document.head.removeChild(script)
         }
-      };
+      }
     }
-    return undefined;
-  }, [structuredData]);
+    return undefined}
+  }, [structuredData])
 
   // Generate meta tags
   const metaTags = [
@@ -60,15 +60,11 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     { name: 'theme-color', content: '#0066cc' },
     { name: 'msapplication-TileColor', content: '#0066cc' },
     { name: 'apple-mobile-web-app-capable', content: 'yes' },
-    { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
-  ];
-
   return (
     <Helmet>
       <title>{title}</title>
       {metaTags.map((tag, index) => (
-        <meta key={index} {...tag} />
-      ))}
+        <meta key={index} {...tag} />}))}
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
       {/* Favicon */}
@@ -82,9 +78,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       {/* DNS prefetch for performance */}
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-    </Helmet>
-  );
-};
+    </Helmet>})}
 
 // Default structured data for the organization
 export const defaultStructuredData = {
@@ -98,8 +92,8 @@ export const defaultStructuredData = {
     "@type": "ContactPoint",
     "telephone": "+1-555-0123",
     "contactType": "customer service",
-    "availableLanguage": "English"
-  },
+    "availableLanguage": "English"}
+},
   "sameAs": [
     "https://www.linkedin.com/company/zion-tech-group",
     "https://twitter.com/ziontechgroup",
@@ -109,11 +103,8 @@ export const defaultStructuredData = {
     "@type": "PostalAddress",
     "streetAddress": "123 Tech Street",
     "addressLocality": "San Francisco",
-    "addressRegion": "CA",
-    "postalCode": "94105",
-    "addressCountry": "US"
-  }
-};
-
-export default SEOEnhancer;
-
+    "addressRegion": "CA",;
+    "postalCode": "94105",;
+;
+>>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c;
+>>>>>>> origin/main;

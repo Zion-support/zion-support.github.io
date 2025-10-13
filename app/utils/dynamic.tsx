@@ -1,5 +1,5 @@
-'use client';
-import React from 'react';
+'use client'}
+import React from 'react'}
 
 export default function UtilsPage() {
   return (
@@ -10,6 +10,6 @@ export default function UtilsPage() {
           This page is under development.
         </p>
       </div>
-    </div>
-  );
+    </div>}
+)
 }

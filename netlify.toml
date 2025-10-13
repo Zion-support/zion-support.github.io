@@ -1,9 +1,6 @@
-# ==============================================================================
 # IMPORTANT: This is a VITE project, NOT a Next.js project!
-# ==============================================================================
 # Next.js has been removed from dependencies to prevent Netlify auto-detection
 # This project uses Vite for building and React Router for routing
-# ==============================================================================
 
 [build]
   publish = "dist"

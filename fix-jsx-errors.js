@@ -58,3 +58,4 @@ function fixJSXFile(filePath) {
 // Fix all files
 filesToFix.forEach(fixJSXFile);
 console.log('JSX fixes completed');
+</div>

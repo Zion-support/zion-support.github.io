@@ -1,28 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
+import { Github, Twitter, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
+    company: [
+      { name: 'About Us', href: '/about' },
+      { name: 'Our Team', href: '/team' },
+      { name: 'Careers', href: '/careers' },
+      { name: 'Contact', href: '/contact' }
+    ],
     services: [
       { name: 'AI Services', href: '/ai-services' },
       { name: 'IT Services', href: '/it-services' },
       { name: 'Cloud Solutions', href: '/cloud-infrastructure' },
       { name: 'Digital Transformation', href: '/digital-transformation' }
     ],
-    company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Case Studies', href: '/case-studies' },
+    resources: [
       { name: 'Blog', href: '/blog' },
-      { name: 'Careers', href: '/careers' }
-    ],
-    support: [
-      { name: 'Contact', href: '/contact' },
-      { name: 'Support', href: '/support' },
+      { name: 'Case Studies', href: '/case-studies' },
       { name: 'Documentation', href: '/docs' },
-      { name: 'Tutorials', href: '/tutorials' }
+      { name: 'Support', href: '/support' }
     ],
     legal: [
       { name: 'Privacy Policy', href: '/privacy' },
@@ -32,24 +32,19 @@ const Footer: React.FC = () => {
   };
 
   const socialLinks = [
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'GitHub', href: '#', icon: Github }
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin }
   ];
 
   return (
-    <footer className="bg-slate-900 border-t border-slate-700/50">
+    <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* Company Info */}
           <div className="lg:col-span-2">
-            <Link to="/" className="text-2xl font-bold text-white mb-4 block">
-              Zion Tech Group
-            </Link>
+            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
             <p className="text-gray-300 mb-6 max-w-md">
-              Transforming businesses through cutting-edge AI and IT solutions. 
-              We help companies innovate and grow in the digital age.
+              Leading provider of AI and IT solutions, helping businesses transform through innovative technology and digital excellence.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => {
@@ -58,8 +53,9 @@ const Footer: React.FC = () => {
                   <a
                     key={social.name}
                     href={social.href}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors"
-                    aria-label={social.name}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white transition-colors"
                   >
                     <Icon className="w-6 h-6" />
                   </a>
@@ -68,33 +64,12 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Services */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
-              {footerLinks.services.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Company</h3>
+            <h4 className="text-lg font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
+                  <Link to={link.href} className="text-gray-300 hover:text-white transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -102,16 +77,25 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Support */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Support</h3>
+            <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
-              {footerLinks.support.map((link) => (
+              {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
+                  <Link to={link.href} className="text-gray-300 hover:text-white transition-colors">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Resources</h4>
+            <ul className="space-y-2">
+              {footerLinks.resources.map((link) => (
+                <li key={link.name}>
+                  <Link to={link.href} className="text-gray-300 hover:text-white transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -120,43 +104,23 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Newsletter Signup */}
-        <div className="mt-12 pt-8 border-t border-slate-700/50">
-          <div className="max-w-md">
-            <h3 className="text-white font-semibold mb-4">Stay Updated</h3>
-            <p className="text-gray-300 mb-4">
-              Get the latest insights on AI and IT trends delivered to your inbox.
-            </p>
-            <div className="flex">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-slate-800 border border-slate-600 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              />
-              <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-r-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Subscribe
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </button>
+        <div className="border-t border-slate-700 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="text-gray-400 text-sm mb-4 md:mb-0">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </div>
+            <div className="flex space-x-6">
+              {footerLinks.legal.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                >
+                  {link.name}
+                </Link>
+              ))}
             </div>
           </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-slate-700/50 flex flex-col md:flex-row justify-between items-center">
-          <div className="flex flex-wrap gap-6 mb-4 md:mb-0">
-            {footerLinks.legal.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-          <p className="text-gray-400 text-sm">
-            © {currentYear} Zion Tech Group. All rights reserved.
-          </p>
         </div>
       </div>
     </footer>

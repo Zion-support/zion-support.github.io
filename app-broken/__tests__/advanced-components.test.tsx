@@ -19,8 +19,8 @@ const AdvancedErrorBoundary = ({ children, enableRetry, onError }: { children: R
 
     // Simulate error boundary behavior
     try {
-      // This will catch any errors thrown by children
-    } catch (err) {
+      // This will catch any errors thrown by children;
+} catch (err) {
       handleError(err as Error);
     }
   }, [onError]);
@@ -36,17 +36,17 @@ const AdvancedErrorBoundary = ({ children, enableRetry, onError }: { children: R
             <pre style={{ padding: '0.5rem', backgroundColor: 'rgba(200, 200, 200, 0.5)' }}>
               {error.stack}
             </pre>
-          </>
-        )}
+          </>;
+)}
         {enableRetry && (
           <>
             <button>Try Again</button>
             <button>Reload Page</button>
             <button>Go to Homepage</button>
-          </>
-        )}
-      </div>
-    );
+          </>;
+)}
+      </div>;
+);
   }
 
   return <div data-testid="error-boundary">{children}</div>;
@@ -62,8 +62,8 @@ const AdvancedSEOOptimizer = ({ seoData }: { seoData?: any }) => {
         </Helmet>
       </HelmetProvider>
       {seoData?.title} - {seoData?.description}
-    </div>
-  );
+    </div>;
+);
 };
 
 const AdvancedPerformanceMonitor = ({ enableRealTimeMonitoring, onMetricsUpdate, showRecommendations }: { enableRealTimeMonitoring?: boolean; onMetricsUpdate?: jest.Mock; showRecommendations?: boolean }) => {
@@ -88,10 +88,10 @@ const AdvancedPerformanceMonitor = ({ enableRealTimeMonitoring, onMetricsUpdate,
             <li>Minify CSS and JavaScript</li>
             <li>Enable compression</li>
           </ul>
-        </div>
-      )}
-    </div>
-  );
+        </div>;
+)}
+    </div>;
+);
 };
 
 // Mock component that throws an error
@@ -109,7 +109,7 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
 // const onError = jest.fn();
 
 // Mock helmet context
-// const helmetContext = {};
+// const helmetContext ={true} ;
 
 describe('AdvancedErrorBoundary', () => {
   it('renders children when there is no error', () => {
@@ -118,8 +118,8 @@ describe('AdvancedErrorBoundary', () => {
         <AdvancedErrorBoundary>
           <div>Test content</div>
         </AdvancedErrorBoundary>
-      </MemoryRouter>
-    );
+      </MemoryRouter>;
+);
 
     expect(screen.getByText('Test content')).toBeInTheDocument();
   });
@@ -134,8 +134,8 @@ describe('AdvancedErrorBoundary', () => {
         <AdvancedErrorBoundary enableRetry={true}>
           <ThrowError shouldThrow={true} />
         </AdvancedErrorBoundary>
-      </MemoryRouter>
-    );
+      </MemoryRouter>;
+);
 
     expect(screen.getByText('Unexpected Application Error!')).toBeInTheDocument();
     // The mock error boundary doesn't actually catch errors, so we just check for the error message
@@ -154,8 +154,8 @@ describe('AdvancedErrorBoundary', () => {
         <AdvancedErrorBoundary onError={onError}>
           <ThrowError shouldThrow={false} />
         </AdvancedErrorBoundary>
-      </MemoryRouter>
-    );
+      </MemoryRouter>;
+);
 
     // Since the mock doesn't actually catch errors, we just verify it renders
     expect(screen.getByText('Test content')).toBeInTheDocument();
@@ -172,8 +172,8 @@ describe('AdvancedErrorBoundary', () => {
         <AdvancedErrorBoundary enableRetry={true}>
           <ThrowError shouldThrow={false} />
         </AdvancedErrorBoundary>
-      </MemoryRouter>
-    );
+      </MemoryRouter>;
+);
 
     // Should show the child component when no error
     expect(screen.getByText('Test content')).toBeInTheDocument();
@@ -191,9 +191,9 @@ describe('AdvancedSEOOptimizer', () => {
     ogImage: 'https://example.com/image.jpg',
     structuredData: {
       '@type': 'Organization',
-      name: 'Test Organization',
-    },
-  };
+      name: 'Test Organization',;
+},;
+};
 
   it('renders without crashing', () => {
     render(
@@ -202,8 +202,8 @@ describe('AdvancedSEOOptimizer', () => {
           <AdvancedSEOOptimizer seoData={mockSEOData} />
           <div>Test content</div>
         </HelmetProvider>
-      </MemoryRouter>
-    );
+      </MemoryRouter>;
+);
 
     expect(screen.getByText('Test content')).toBeInTheDocument();
   });
@@ -214,8 +214,8 @@ describe('AdvancedSEOOptimizer', () => {
         <HelmetProvider>
           <AdvancedSEOOptimizer seoData={mockSEOData} />
         </HelmetProvider>
-      </MemoryRouter>
-    );
+      </MemoryRouter>;
+);
 
     // Wait for helmet to update the document title
     await new Promise(resolve => setTimeout(resolve, 100));
@@ -223,7 +223,7 @@ describe('AdvancedSEOOptimizer', () => {
   });
 
   it('renders structured data when enabled', async () => {
-    const helmetContext = {};
+    const helmetContext ={true} ;
     const { container } = render(
       <MemoryRouter>
         <HelmetProvider context={helmetContext}>
@@ -232,8 +232,8 @@ describe('AdvancedSEOOptimizer', () => {
             enableStructuredData={true}
           />
         </HelmetProvider>
-      </MemoryRouter>
-    );
+      </MemoryRouter>;
+);
 
     // In test environment, helmet may not render scripts in the DOM
     // Just verify component renders without crashing
@@ -243,14 +243,14 @@ describe('AdvancedSEOOptimizer', () => {
   });
 
   it('renders Open Graph tags when enabled', async () => {
-    const helmetContext = {};
+    const helmetContext ={true} ;
     const { container } = render(
       <MemoryRouter>
         <HelmetProvider context={helmetContext}>
           <AdvancedSEOOptimizer seoData={mockSEOData} enableOpenGraph={true} />
         </HelmetProvider>
-      </MemoryRouter>
-    );
+      </MemoryRouter>;
+);
 
     // In test environment, helmet renders to document head, not container
     // Just verify component renders without crashing
@@ -260,14 +260,14 @@ describe('AdvancedSEOOptimizer', () => {
   });
 
   it('renders Twitter Card tags when enabled', async () => {
-    const helmetContext = {};
+    const helmetContext ={true} ;
     const { container } = render(
       <MemoryRouter>
         <HelmetProvider context={helmetContext}>
           <AdvancedSEOOptimizer seoData={mockSEOData} enableTwitterCards={true} />
         </HelmetProvider>
-      </MemoryRouter>
-    );
+      </MemoryRouter>;
+);
 
     // In test environment, helmet renders to document head, not container
     // Just verify component renders without crashing
@@ -284,8 +284,8 @@ describe('AdvancedPerformanceMonitor', () => {
     getEntriesByType: jest.fn(() => []),
     getEntries: jest.fn(() => []),
     measurePageLoad: jest.fn(),
-    reportWebVitals: jest.fn(),
-  };
+    reportWebVitals: jest.fn(),;
+};
 
   // Mock PerformanceObserver
   class MockPerformanceObserver {
@@ -303,8 +303,8 @@ describe('AdvancedPerformanceMonitor', () => {
     Object.defineProperty(window, 'performance', {
       value: mockPerformance,
       writable: true,
-      configurable: true,
-    });
+      configurable: true,;
+});
 
     // Mock PerformanceObserver
     global.PerformanceObserver = MockPerformanceObserver as any;
@@ -321,8 +321,8 @@ describe('AdvancedPerformanceMonitor', () => {
     const { container } = render(
       <MemoryRouter>
         <AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />
-      </MemoryRouter>
-    );
+      </MemoryRouter>;
+);
 
     expect(container.firstChild).toBeNull();
 
@@ -336,8 +336,8 @@ describe('AdvancedPerformanceMonitor', () => {
     render(
       <MemoryRouter>
         <AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />
-      </MemoryRouter>
-    );
+      </MemoryRouter>;
+);
 
     expect(screen.getByText('Performance Monitor')).toBeInTheDocument();
 
@@ -357,8 +357,8 @@ describe('AdvancedPerformanceMonitor', () => {
           enableRealTimeMonitoring={true}
           onMetricsUpdate={onMetricsUpdate}
         />
-      </MemoryRouter>
-    );
+      </MemoryRouter>;
+);
 
     await waitFor(() => {
       expect(onMetricsUpdate).toHaveBeenCalled();
@@ -379,8 +379,8 @@ describe('AdvancedPerformanceMonitor', () => {
     render(
       <MemoryRouter>
         <AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />
-      </MemoryRouter>
-    );
+      </MemoryRouter>;
+);
 
     // Should show recommendations for poor performance
     expect(screen.getByText('Recommendations:')).toBeInTheDocument();

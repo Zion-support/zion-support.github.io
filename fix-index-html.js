@@ -13,4 +13,4 @@ content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
 
 fs.writeFileSync('index.html', content, 'utf8');
 
-console.log('Fixed index.html merge conflicts');
+console.log('Fixed index.html merge conflicts');)

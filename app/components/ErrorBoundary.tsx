@@ -1,31 +1,31 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react'}
 
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  children: ReactNode}
+  fallback?: ReactNode}
+  onError?: (error: Error, errorInfo: ErrorInfo) => void}
 }
 
 interface State {
-  hasError: boolean;
-  error?: Error;
+  hasError: boolean}
+  error?: Error}
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
+    super(props)
+    this.state = { hasError: false }
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { hasError: true, error }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    console.error('ErrorBoundary caught an error:', error, errorInfo)
     
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+      this.props.onError(error, errorInfo)
     }
   }
 
@@ -45,12 +45,12 @@ class ErrorBoundary extends Component<Props, State> {
               Refresh Page
             </button>
           </div>
-        </div>
-      );
+        </div>}
+)
     }
 
-    return this.props.children;
+    return this.props.children}
   }
 }
 
-export default ErrorBoundary;
+export default ErrorBoundary}

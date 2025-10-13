@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Zap, Globe, Smartphone, Wifi, CheckCircle } from 'lucide-react';
+import React from 'react'}
+import { Helmet } from 'react-helmet-async'}
+import { ArrowRight, Zap, Globe, Smartphone, Wifi, CheckCircle } from 'lucide-react'}
 
 const FiveGSolutionsPage: React.FC = () => {
   const features = [
@@ -9,26 +9,26 @@ const FiveGSolutionsPage: React.FC = () => {
       title: 'Ultra-Fast Speeds',
       description: 'Experience lightning-fast 5G connectivity with speeds up to 10 Gbps',
       benefits: ['10x faster than 4G', 'Low latency', 'High bandwidth', 'Reliable connection']
-    },
+},
     {
       icon: Globe,
       title: 'Global Coverage',
       description: 'Comprehensive 5G network coverage across multiple regions',
       benefits: ['Wide coverage', 'Seamless roaming', 'International support', 'Network redundancy']
-    },
+},
     {
       icon: Smartphone,
       title: 'Mobile Optimization',
       description: 'Optimized 5G solutions for mobile devices and applications',
       benefits: ['Mobile-first design', 'App optimization', 'Battery efficiency', 'Device compatibility']
-    },
+},
     {
       icon: Wifi,
       title: 'IoT Connectivity',
       description: 'Connect thousands of IoT devices with 5G technology',
       benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
-    }
-  ];
+}
+  ]
 
   const solutions = [
     {
@@ -36,20 +36,20 @@ const FiveGSolutionsPage: React.FC = () => {
       description: 'Complete 5G network setup and optimization',
       price: 'Starting at $50,000',
       features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']
-    },
+},
     {
       title: '5G Mobile Applications',
       description: 'Custom mobile apps optimized for 5G networks',
       price: 'Starting at $25,000',
       features: ['App development', '5G optimization', 'Testing & QA', 'Deployment support']
-    },
+},
     {
       title: '5G IoT Solutions',
       description: 'IoT device connectivity and management platform',
       price: 'Starting at $35,000',
       features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']
-    }
-  ];
+}
+  ]
 
   return (
     <>
@@ -93,7 +93,7 @@ const FiveGSolutionsPage: React.FC = () => {
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => {
-                const Icon = feature.icon;
+                const Icon = feature.icon}
                 return (
                   <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mb-4">
@@ -106,11 +106,11 @@ const FiveGSolutionsPage: React.FC = () => {
                         <li key={benefitIndex} className="flex items-center space-x-2 text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                           <span>{benefit}</span>
-                        </li>
-                      ))}
+                        </li>}
+))}
                     </ul>
-                  </div>
-                );
+                  </div>}
+)
               })}
             </div>
           </div>
@@ -133,14 +133,14 @@ const FiveGSolutionsPage: React.FC = () => {
                       <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-400">
                         <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                         <span>{feature}</span>
-                      </li>
-                    ))}
+                      </li>}
+))}
                   </ul>
                   <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
                     Learn More
                   </button>
-                </div>
-              ))}
+                </div>}
+))}
             </div>
           </div>
         </section>
@@ -166,8 +166,8 @@ const FiveGSolutionsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
-};
+    </>}
+)
+}
 
-export default FiveGSolutionsPage;
+export default FiveGSolutionsPage}

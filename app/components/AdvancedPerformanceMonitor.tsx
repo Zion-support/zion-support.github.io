@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'}
 const AdvancedPerformanceMonitor: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">
@@ -8,7 +8,8 @@ const AdvancedPerformanceMonitor: React.FC = () => {
           This component is under development.
         </p>
       </div>
-    </div>
-  );
+    </div>);
 };
-export default AdvancedPerformanceMonitor;
+export default AdvancedPerformanceMonitor};
+=======;
+>>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c;

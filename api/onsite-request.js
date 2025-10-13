@@ -33,8 +33,8 @@ export default function handler(req, res) {
     phone,
     message,
     location,
-    timestamp: new Date().toISOString(),
-    status: 'pending'
+    timestamp: new Date().toISOString(),;
+    status: 'pending';
   };
   existing.push(newRequest);
   try {
@@ -43,11 +43,17 @@ export default function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true,
-      message: 'Onsite request submitted successfully',
 
       message: 'Onsite request submitted successfully',
+>>>>>>> origin/main
       id: newRequest.id
     }));
+=======
+      message: 'Onsite request submitted successfully',
+
+      id: newRequest.id;
+}));
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
   } catch {
     console.error('Error saving onsite request');
     res.statusCode = 500;

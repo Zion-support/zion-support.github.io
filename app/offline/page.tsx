@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'}
 
 export default function OfflinePage() {
   return (
@@ -9,6 +9,6 @@ export default function OfflinePage() {
           This page is under development.
         </p>
       </div>
-    </div>
-  );
+    </div>}
+)
 }

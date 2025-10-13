@@ -41,3 +41,5 @@ return(<>)
                 <button className="border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
+
+</div></div></div></div></div></div></div>

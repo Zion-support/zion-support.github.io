@@ -19,7 +19,7 @@ export default function FiveGImplementation() {
           </p>
         </div>
       </div>
-    </div>
-  );
+    </div>;
+);
 }
 

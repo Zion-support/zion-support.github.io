@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+import React from 'react'}
+import { Helmet } from 'react-helmet-async'}
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react'}
 
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
@@ -16,7 +16,7 @@ const ServicesPage: React.FC = () => {
         { name: 'AI Automation', price: '$1,400/month', description: 'Intelligent process automation with decision-making capabilities', features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'] },
         { name: 'AI Chatbots', price: '$800/month', description: 'Intelligent conversational AI for customer service and support', features: ['24/7 Support', 'Multi-language Support', 'Integration APIs', 'Analytics Dashboard'] }
       ]
-    },
+},
     {
       title: 'IT Infrastructure',
       color: 'text-blue-600',
@@ -27,7 +27,7 @@ const ServicesPage: React.FC = () => {
         { name: 'Database Management', price: '$1,800/month', description: 'Database design, optimization, and maintenance services', features: ['Database Design', 'Performance Tuning', 'Backup Solutions', 'Data Recovery'] },
         { name: 'DevOps & CI/CD', price: '$2,000/month', description: 'Automated deployment and continuous integration solutions', features: ['Pipeline Setup', 'Automated Testing', 'Deployment Automation', 'Monitoring'] }
       ]
-    },
+},
     {
       title: 'Digital Transformation',
       color: 'text-green-600',
@@ -37,32 +37,29 @@ const ServicesPage: React.FC = () => {
         { name: 'Process Automation', price: '$1,600/month', description: 'Business process automation and optimization solutions', features: ['Process Analysis', 'Workflow Design', 'Automation Implementation', 'Performance Monitoring'] },
         { name: 'Data Analytics', price: '$1,900/month', description: 'Advanced data analytics and business intelligence solutions', features: ['Data Visualization', 'Predictive Analytics', 'Dashboard Creation', 'Insights Generation'] }
       ]
-    }
-  ];
+}
+  ]
 
   const testimonials = [
     {
       name: "Sarah Johnson",
       company: "TechCorp Inc.",
       role: "CTO",
-      content: "Zion Tech Group transformed our infrastructure with their AI solutions. We&apos;ve seen a 40% increase in efficiency.",
-      rating: 5
-    },
     {
       name: "Michael Chen",
       company: "DataFlow Systems",
       role: "CEO",
       content: "Their cloud migration service was flawless. Zero downtime and improved performance across all systems.",
-      rating: 5
-    },
+      rating: 5}
+},
     {
       name: "Emily Rodriguez",
       company: "InnovateLabs",
       role: "Head of Operations",
       content: "The AI automation tools have revolutionized our workflows. Highly recommend their services.",
-      rating: 5
-    }
-  ];
+      rating: 5}
+}
+  ]
 
   return (
     <>
@@ -84,7 +81,7 @@ const ServicesPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Comprehensive AI and IT solutions to transform your business. 
-              From machine learning to cloud migration, we&apos;ve got you covered.
+              From machine learning to cloud migration, we&apos}ve got you covered.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
@@ -121,14 +118,14 @@ const ServicesPage: React.FC = () => {
                             <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-400">
                               <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                               <span>{feature}</span>
-                            </li>
-                          ))}
+                            </li>}
+))}
                         </ul>
-                      </div>
-                    ))}
+                      </div>}
+))}
                   </div>
-                </div>
-              ))}
+                </div>}
+))}
             </div>
           </div>
         </section>
@@ -144,16 +141,16 @@ const ServicesPage: React.FC = () => {
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />}
+))}
                   </div>
-                  <p className="text-gray-300 mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>
+                  <p className="text-gray-300 mb-4 italic">&ldquo}{testimonial.content}&rdquo}</p>
                   <div>
                     <p className="text-white font-semibold">{testimonial.name}</p>
                     <p className="text-cyan-400 text-sm">{testimonial.role}, {testimonial.company}</p>
                   </div>
-                </div>
-              ))}
+                </div>}
+))}
             </div>
           </div>
         </section>
@@ -165,7 +162,7 @@ const ServicesPage: React.FC = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let&apos;s discuss how our services can help you achieve your goals.
+              Let&apos}s discuss how our services can help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
@@ -179,8 +176,8 @@ const ServicesPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
-};
+    </>}
+)
+}
 
-export default ServicesPage;
+export default ServicesPage}

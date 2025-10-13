@@ -82,8 +82,8 @@ const Main: React.FC = () => {
           </a>
         </div>
       </section>
-    </div>
-  );
+    </div>;
+);
 };
 
 export default Main;

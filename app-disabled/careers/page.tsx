@@ -9,7 +9,7 @@ interface JobPosition {}
 
 import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react;
 
-const PagePage: React.FC = () => {}
+const PagePage: React.FC = ()  => {};
   title: string;
 
   department: string;
@@ -29,9 +29,9 @@ const PagePage: React.FC = () => {}
   benefits: string[];
 
   featured: boolean;
-
+;
 }
-const CareersPage: React.FC = () => {
+const CareersPage: React.FC = () => {;
   const [selectedDepartment, setSelectedDepartment] = useState('all);
 
   const [selectedLocation, setSelectedLocation] = useState('all);
@@ -88,9 +88,9 @@ const CareersPage: React.FC = () => {
             Join our team and help shape the future of AI and IT solutions.
           </p>
         </div>
-      </div>
-    </div>
-  );
+      </div>;
+    </div>;
+);
 };
 import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart } from 'lucide-react';
     },
@@ -219,9 +219,9 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart } from 'luci
       ],
       posted: '2 days ago,
       featured: true});
-
+;
 },
-      requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']});;)
+      requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']});;);
 }
 
     'Career growth opportunities'
@@ -233,17 +233,17 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart } from 'luci
     {
       stat: '98%,
       label: 'Employee Satisfaction,
-      description: 'Our team loves working here});)
+      description: 'Our team loves working here}););
 },
     {
       stat: '50+,
       label: 'Team Members,
-      description: 'Growing team of experts});)
+      description: 'Growing team of experts}););
 },
     {
       stat: '15+,
       label: 'Countries,
-      description: 'Global remote team});)
+      description: 'Global remote team}););
 },
     {
       stat: '4.9/5,
@@ -367,9 +367,6 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart } from 'luci
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 text-center backdrop-blur-lg border border-white/10">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Don&apos;t See Your Role?
-        </section>
-      )}
 
         {/* All Positions */}
 
@@ -390,10 +387,9 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart } from 'luci
 
                     setSelectedLocation('all);
 
-
                   className={bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
-                    position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : 'border-white/20
-                  } hover:border-purple-400 transition-all duration-300 group}
+                    position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : 'border-white/20;
+} hover:border-purple-400 transition-all duration-300 group}
 
                 >                <div></div>
                   {position.featured && (
@@ -402,5 +398,6 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart } from 'luci
                       {position.requirements.length > 3 && (
 
                         <li className="text-sm text-gray-400>
-            </div>  ));)
+            </div>));)
 export default CareersPage;
+))}}}}}

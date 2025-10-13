@@ -1,21 +1,15 @@
-import React, { useEffect, useState } from 'react';
+
 
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
+  children: React.ReactNode}
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [fontSize, setFontSize] = useState(16);
-  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  const [isHighContrast, setIsHighContrast] = useState(false)
+  const [fontSize, setFontSize] = useState(16)
+  const [isReducedMotion, setIsReducedMotion] = useState(false)
 
   useEffect(() => {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-    
-    setIsReducedMotion(prefersReducedMotion);
-    setIsHighContrast(prefersHighContrast);
-  }, []);
 
   return (
     <div 
@@ -23,8 +17,14 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       style={{ fontSize: `${fontSize}px` }}
     >
       {children}
-    </div>
-  );
-};
 
-export default AccessibilityEnhancer;
+}
+
+export default AccessibilityEnhancer}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
+=======
+    </div>})}
+
+export default AccessibilityEnhancer}}}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3;
+>>>>>>> origin/main;

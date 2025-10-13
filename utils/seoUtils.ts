@@ -2,25 +2,27 @@ interface SEOConfig {
   title: string;
   description: string;
   keywords: string[];
-  canonicalUrl: string;
-  ogImage: string;
-  ogType: string;
-  twitterCard: string;
-  robots: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  ogType?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  robots?: string;
+  viewport?: string;
+  charset?: string;
   author?: string;
+  publisher?: string;
+  language?: string;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6405
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
   tags?: string[];
-  viewport?: string;
-  charset?: string;
-  publisher?: string;
-  language?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
+
   geo?: {
     latitude?: string;
     longitude?: string;
@@ -28,8 +30,7 @@ interface SEOConfig {
     placename?: string;
   };
   alternate?: Array<{
-    href: string;
-    hreflang: string;
+
   }>;
   structuredData?: any;
 }
@@ -66,10 +67,10 @@ export const defaultSEOConfig: SEOConfig = {
   twitterImage: '/images/og-image.jpg',
   geo: {
     latitude: '40.7128',
-    longitude: '-74.0060',
-    region: 'US-NY',
-    placename: 'New York'
-  },
+    longitude: '-74.0060',;
+    region: 'US-NY',;
+    placename: 'New York';
+},
   alternate: [
     { href: 'https://zion.app/en', hreflang: 'en' },
     { href: 'https://zion.app/es', hreflang: 'es' }
@@ -79,8 +80,8 @@ export const defaultSEOConfig: SEOConfig = {
     '@type': 'Organization',
     name: 'Zion Tech Group',
     url: 'https://zion.app',
-    logo: 'https://zion.app/images/logo.png'
-  }
+    logo: 'https://zion.app/images/logo.png';
+}
 };
 
 export const generateSEOMeta = (config: SEOConfig) => {
@@ -104,28 +105,28 @@ export const generateSEOMeta = (config: SEOConfig) => {
     'twitter:description': config.twitterDescription || config.description,
     'twitter:image': config.twitterImage || config.ogImage,
     'geo.region': config.geo?.region,
-    'geo.placename': config.geo?.placename,
-    'geo.position': config.geo?.latitude && config.geo?.longitude 
+    'geo.placename': config.geo?.placename,;
+    'geo.position': config.geo?.latitude && config.geo?.longitude ;
       ? `${config.geo.latitude};${config.geo.longitude}` 
       : undefined,
     'canonical': config.canonicalUrl,
     'alternate': config.alternate?.map(alt => ({
       rel: 'alternate',
       hreflang: alt.hreflang,
-      href: alt.href
-    }))
-  };
+      href: alt.href;
+}));
+};
 };
 
-export const generateStructuredData = (config: SEOConfig) => {
+export const generateStructuredData = (config: SEOConfig) => {;
   return config.structuredData ? JSON.stringify(config.structuredData) : '';
 };
 
-export const generateImageAlt = (imagePath: string, alt: string) => {
+export const generateImageAlt = (imagePath: string, alt: string) => {;
   return alt || `Zion Tech Group - ${imagePath.split('/').pop()?.split('.')[0] || 'image'}`;
 };
 
-export const generateCanonicalUrl = (path: string, baseUrl: string = 'https://zion.app') => {
+export const generateCanonicalUrl = (path: string, baseUrl: string = 'https://zion.app') => {;
   return `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`;
 };
 
@@ -146,8 +147,8 @@ export const generateSitemap = (pages: Array<{ path: string; lastmod?: string; p
 
 export const generateRobotsTxt = (config: SEOConfig) => {
   return `User-agent: *
-Allow: /
-
+Allow: /;
+;
 Sitemap: ${config.canonicalUrl}/sitemap.xml`;
 };
 
@@ -158,5 +159,5 @@ export default {
   generateImageAlt,
   generateCanonicalUrl,
   generateSitemap,
-  generateRobotsTxt
+  generateRobotsTxt;
 };

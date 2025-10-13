@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'}
 
 interface FuturisticBackgroundProps {
-  children: React.ReactNode;
-  className?: string;
+  children: React.ReactNode}
+  className?: string}
 }
 
 export default function FuturisticBackground({ children, className = '' }: FuturisticBackgroundProps) {
@@ -12,6 +12,6 @@ export default function FuturisticBackground({ children, className = '' }: Futur
       <div className="relative z-10">
         {children}
       </div>
-    </div>
-  );
+    </div>}
+)
 }

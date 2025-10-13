@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+'use client'}
+import React from 'react'}
+import { Helmet } from 'react-helmet-async'}
 
 const ErrorBoundaryConfig: React.FC = () => {
   return (
@@ -71,7 +71,7 @@ const ErrorBoundaryConfig: React.FC = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let&apos;s discuss how our error boundary config 
+            Let&apos}s discuss how our error boundary config 
             services can help you achieve your goals.
           </p>
           <a
@@ -82,8 +82,8 @@ const ErrorBoundaryConfig: React.FC = () => {
           </a>
         </div>
       </section>
-    </div>
-  );
-};
+    </div>}
+)
+}
 
-export default ErrorBoundaryConfig;
+export default ErrorBoundaryConfig}

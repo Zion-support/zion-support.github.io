@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+'use client'}
+import React from 'react'}
+import { Helmet } from 'react-helmet-async'}
 
 const CriticalResourcePreloader: React.FC = () => {
   return (
@@ -83,7 +83,7 @@ const CriticalResourcePreloader: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default CriticalResourcePreloader;
+export default CriticalResourcePreloader}

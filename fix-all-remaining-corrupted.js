@@ -66,7 +66,7 @@ console.log(`Found ${corruptedFiles.length} corrupted files`);
 
 // Filter to only .ts files in the app directory
 const tsFiles = corruptedFiles.filter(file => 
-  file.includes('app/') && file.endsWith('.ts') && !file.includes('.d.ts')
+  file.includes('app/') && file.endsWith('.ts') && !file.includes('.d.ts');
 );
 
 console.log(`Found ${tsFiles.length} .ts files to fix`);
@@ -96,4 +96,4 @@ try {
   errorLines.forEach(line => console.log(`  ${line}`));
 }
 
-console.log('\nAll remaining corrupted files fix complete!');
+console.log('\nAll remaining corrupted files fix complete!');)

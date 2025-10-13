@@ -4,7 +4,6 @@ import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
-
 export default [
   {
     ignores: [
@@ -75,13 +74,8 @@ export default [
         document: 'readonly',
         console: 'readonly',
         process: 'readonly',
-        global: 'readonly',
 
-
-
-
-
-
+>>>>>>> origin/main
         HTMLElement: 'readonly',
         Event: 'readonly',
         KeyboardEvent: 'readonly',
@@ -92,42 +86,33 @@ export default [
         HTMLTextAreaElement: 'readonly',
         HTMLSelectElement: 'readonly',
 
-
-
-
-
-
-
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
+>>>>>>> origin/main
         setTimeout: 'readonly',
         clearTimeout: 'readonly',
         setInterval: 'readonly',
         clearInterval: 'readonly',
 
-
-
-
-
+>>>>>>> origin/main
         performance: 'readonly',
         require: 'readonly',
         module: 'readonly',
         exports: 'readonly',
         fs: 'readonly'
-        performance: 'readonly'
 
-
-
-
-
-
-
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
+>>>>>>> origin/main
       }
     },
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
     plugins: {
       '@typescript-eslint': typescript,
       'react': react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh
-    },
+},
     rules: {
       ...typescript.configs.recommended.rules,
       ...react.configs.recommended.rules,

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'}
+import { Helmet } from 'react-helmet-async'}
 
 export default function AiChatbotBuilder() {
   return (
@@ -26,6 +26,6 @@ export default function AiChatbotBuilder() {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>}
+)
 }

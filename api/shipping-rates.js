@@ -1,7 +1,9 @@
 import fs from 'fs';
 import path from 'path';
+
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'shipping-rates.json');
+
 export default function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -25,6 +27,8 @@ export default function handler(req, res) {
     }
   } catch (_error) {
     // console.error('Error reading existing rates:', error);
+
+>>>>>>> origin/main
     existing = [];
   }
   
@@ -37,10 +41,10 @@ export default function handler(req, res) {
     id: Date.now().toString(),
     destination,
     weight,
-    dimensions,
-    rate: totalRate,
-    timestamp: new Date().toISOString()
-  };
+    dimensions,;
+    rate: totalRate,;
+    timestamp: new Date().toISOString();
+};
   existing.push(newRate);
   try {
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
@@ -49,11 +53,13 @@ export default function handler(req, res) {
     res.end(JSON.stringify({ 
       success: true, 
       rate: totalRate,
-      id: newRate.id
-    }));
+      id: newRate.id;
+}));
   } catch (_error) {
+
     // console.error('Error saving shipping rate:', error);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to save rate' }));
-  }
+
+>>>>>>> origin/main

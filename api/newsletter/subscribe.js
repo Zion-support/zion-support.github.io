@@ -1,39 +1,28 @@
 
 // Simple email validation function
-const isValidEmail = (email) => {
+const isValidEmail = (email) => {;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 };
-async function handler(req, res) {
 
-export default async function handler(req, res) {
-
-
-
-export default async function handler(req, res) {
-
-// Simple email validation function (currently unused but kept for future use)
-// const isValidEmail = (email) => {
-//   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-//   return emailRegex.test(email);
-// };
-
-export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
+
   try {
     const { email } = req.body || {};
+
     if (!email) {
       res.statusCode = 400;
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Email is required' }));
       return;
     }
-    // Simple email validation
+
+    // Basic email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       res.statusCode = 400;
@@ -41,36 +30,38 @@ export default async function handler(req, res) {
       res.end(JSON.stringify({ error: 'Invalid email format' }));
       return;
     }
-    // Save subscription logic here
-    // In a real application, you would:
-    // 1. Save to your database
-    // 2. Add to your email marketing service (Mailchimp, ConvertKit, etc.)
-    // 3. Send confirmation email
-    console.log('Newsletter subscription:', {
-      email: req.body.email,
-      timestamp: new Date().toISOString()
-    });
 
+=======
+
+    // Here you would typically save to a database
+    // For now, we'll just log the email
+    console.log('Newsletter subscription:', email);
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e
+>>>>>>> origin/main
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
-      success: true,
-      message: 'Successfully subscribed to newsletter'
+      success: true, 
+      message: 'Successfully subscribed to newsletter' 
     }));
+
   } catch (error) {
     console.error('Newsletter subscription error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      error: 'Failed to subscribe to newsletter',
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined
-    }));
+}
+
+export default handler;
+
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
+=======
+    res.end(JSON.stringify({ error: 'Internal server error' }));
   }
 
-export default handler;
-}
-
-export default handler;
-
-
-}
+>>>>>>> origin/main

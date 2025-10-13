@@ -23,4 +23,4 @@ pageFiles.forEach(filePath => {
   }
 });
 
-console.log('All page files fixed!');
+console.log('All page files fixed!');)

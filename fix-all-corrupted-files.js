@@ -97,8 +97,8 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
+);
 }`;
 }
 
@@ -159,8 +159,8 @@ try {
   // Stage all changes
   execSync('git add .', { stdio: 'inherit' });
   console.log('Staged all changes');
-  
+  ;
 } catch (error) {
   console.error('Error during file fixing:', error.message);
   process.exit(1);
-}
+}))

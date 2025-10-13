@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'}
 
 export default function EcommerceAnalyticsProPage() {
   return (
@@ -9,6 +9,6 @@ export default function EcommerceAnalyticsProPage() {
           This page is under development.
         </p>
       </div>
-    </div>
-  );
+    </div>}
+)
 }

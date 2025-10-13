@@ -1,3 +1,5 @@
+=======
+>>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c
 // Next.js type declarations
 declare module 'next' {
   interface NextApiRequest {
@@ -10,7 +12,9 @@ declare module 'next' {
 }
 
 // Export a utility function
-export const nextUtil = () => {
-  // Implementation
+export const nextUtil = () => {;
+  // Implementation;
   return true;
 };
+
+>>>>>>> origin/main

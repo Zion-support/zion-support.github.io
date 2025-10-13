@@ -22,11 +22,9 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
-          ui: ['@heroicons/react', 'lucide-react'],
         },
       },
     },
-    chunkSizeWarningLimit: 1000,
   },
   server: {
     port: 3000,
@@ -35,8 +33,5 @@ export default defineConfig({
   preview: {
     port: 4173,
     open: true,
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
   },
 });

@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+'use client'}
+import React from 'react'}
+import { Helmet } from 'react-helmet-async'}
 
 const FuturisticCardEnhanced: React.FC = () => {
   return (
@@ -71,7 +71,7 @@ const FuturisticCardEnhanced: React.FC = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let&apos;s discuss how our futuristic card enhanced 
+            Let&apos}s discuss how our futuristic card enhanced 
             services can help you achieve your goals.
           </p>
           <a
@@ -82,8 +82,8 @@ const FuturisticCardEnhanced: React.FC = () => {
           </a>
         </div>
       </section>
-    </div>
-  );
-};
+    </div>}
+)
+}
 
-export default FuturisticCardEnhanced;
+export default FuturisticCardEnhanced}

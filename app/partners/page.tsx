@@ -1,7 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { CheckCircle, ExternalLink, ArrowRight, Building2, Handshake, Award, Users, Zap } from 'lucide-react';
+import React from 'react'}
+import { Helmet } from 'react-helmet-async'}
+import { Link } from 'react-router-dom'}
+import { CheckCircle, ExternalLink, ArrowRight, Building2, Handshake, Award, Users, Zap } from 'lucide-react'}
 
 const PartnersPage: React.FC = () => {
   const partners = [
@@ -41,7 +41,7 @@ const PartnersPage: React.FC = () => {
       description: 'Database and enterprise application solutions',
       category: 'Database'
     }
-  ];
+  ]
 
   const benefits = [
     'Access to cutting-edge technology',
@@ -50,7 +50,7 @@ const PartnersPage: React.FC = () => {
     'Co-marketing and co-selling programs',
     'Priority access to new features',
     'Dedicated partner success manager'
-  ];
+  ]
 
   return (
     <>
@@ -101,8 +101,8 @@ const PartnersPage: React.FC = () => {
                     <p className="text-cyan-400 text-sm mb-3">{partner.category}</p>
                     <p className="text-gray-300 text-sm">{partner.description}</p>
                   </div>
-                </div>
-              ))}
+                </div>}
+))}
             </div>
           </div>
         </section>
@@ -120,8 +120,8 @@ const PartnersPage: React.FC = () => {
                     <CheckCircle className="w-4 h-4 text-white" />
                   </div>
                   <span className="text-gray-300 font-medium">{benefit}</span>
-                </div>
-              ))}
+                </div>}
+))}
             </div>
           </div>
         </section>
@@ -147,8 +147,8 @@ const PartnersPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
-};
+    </>}
+)
+}
 
-export default PartnersPage;
+export default PartnersPage}

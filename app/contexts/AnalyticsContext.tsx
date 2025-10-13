@@ -1,57 +1,51 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
 
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
-  trackPageView: (page: string) => void;
-  isEnabled: boolean;
+>>>>>>> origin/main
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)
 
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-};
-
-interface AnalyticsProviderProps {
-  children: React.ReactNode;
-}
-
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const [isEnabled, setIsEnabled] = useState(false);
+  const [isEnabled, setIsEnabled] = useState(false)
+  const [userId, setUserId] = useState<string | null>(null)
 
   useEffect(() => {
-    setIsEnabled(process.env.NODE_ENV === 'production');
-  }, []);
+    // Check if analytics is enabled
+    setIsEnabled(true)
+  }, [])
 
   const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-    if (!isEnabled) return;
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventName, properties);
-    }
-  };
+    if (!isEnabled) return}
+    // Track event logic here
+=======
+>>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c
+    console.log('Analytics Event:', eventName, properties)
+  }
 
-  const trackPageView = (page: string) => {
-    if (!isEnabled) return;
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
-        page_path: page,
-      });
-    }
-  };
+  const trackPageView = (pageName: string) => {
+    if (!isEnabled) return}
+    // Track page view logic here
+    console.log('Page View:', pageName)
+  }
+
+  const setUser = (newUserId: string, properties?: Record<string, any>) => {
+    if (!isEnabled) return}
+    
+    setUserId(newUserId)
+    console.log('User Set:', newUserId, properties)
+  }
+>>>>>>> origin/main
 
   const value: AnalyticsContextType = {
     trackEvent,
     trackPageView,
     isEnabled,
-  };
+  }
 
+=======
+    isEnabled,}
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
-    </AnalyticsContext.Provider>
-  );
-};
+;
+>>>>>>> origin/main;
