@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Mail, 
+  Package, 
   BarChart3, 
   Brain, 
   CheckCircle, 
@@ -21,95 +21,97 @@ import {
   Smartphone,
   Settings,
   Users,
-  Clock
+  Clock,
+  Truck,
+  AlertTriangle
 } from 'lucide-react';
 
-const ZionAIEmailAnalyzerPage: React.FC = () => {
+const ZionSmartInventoryOptimizerPage: React.FC = () => {
   const features = [
     {
-      title: "AI-Powered Email Analysis",
-      description: "Analyze email content, sentiment, and effectiveness with advanced AI algorithms",
+      title: "AI-Powered Demand Forecasting",
+      description: "Predict future demand with machine learning algorithms and historical data analysis",
       icon: <Brain className="w-6 h-6" />,
-      details: "Machine learning models analyze email performance and provide optimization suggestions"
+      details: "Advanced algorithms analyze patterns to forecast demand with 95% accuracy"
     },
     {
-      title: "Subject Line Optimization",
-      description: "AI-generated subject lines that increase open rates and engagement",
+      title: "Automated Reorder Points",
+      description: "Set intelligent reorder points based on lead times, demand patterns, and seasonality",
       icon: <Target className="w-6 h-6" />,
-      details: "A/B test and optimize subject lines for maximum impact and open rates"
+      details: "Never run out of stock or overstock with AI-optimized reorder points"
     },
     {
-      title: "Content Quality Scoring",
-      description: "Rate email content quality and provide improvement recommendations",
-      icon: <BarChart3 className="w-6 h-6" />,
-      details: "Comprehensive scoring system that evaluates content effectiveness and readability"
-    },
-    {
-      title: "Spam Detection & Prevention",
-      description: "Identify potential spam triggers and improve deliverability",
-      icon: <Shield className="w-6 h-6" />,
-      details: "Advanced algorithms detect spam patterns and suggest improvements"
-    },
-    {
-      title: "Audience Segmentation",
-      description: "Automatically segment your email list based on engagement patterns",
-      icon: <Users className="w-6 h-6" />,
-      details: "AI-powered segmentation for targeted and personalized email campaigns"
-    },
-    {
-      title: "Performance Analytics",
-      description: "Comprehensive analytics dashboard with actionable insights",
+      title: "Real-Time Inventory Tracking",
+      description: "Monitor inventory levels across multiple locations in real-time",
       icon: <Activity className="w-6 h-6" />,
-      details: "Track email performance metrics and identify optimization opportunities"
+      details: "Track inventory movements and levels with live updates and alerts"
+    },
+    {
+      title: "Cost Optimization",
+      description: "Minimize carrying costs while maintaining optimal stock levels",
+      icon: <TrendingUp className="w-6 h-6" />,
+      details: "AI-driven cost analysis to optimize inventory investment and reduce waste"
+    },
+    {
+      title: "Supplier Performance Analytics",
+      description: "Analyze supplier reliability and performance to optimize procurement",
+      icon: <Truck className="w-6 h-6" />,
+      details: "Track supplier metrics and identify the most reliable partners"
+    },
+    {
+      title: "Multi-Location Management",
+      description: "Manage inventory across multiple warehouses and retail locations",
+      icon: <Globe className="w-6 h-6" />,
+      details: "Centralized control of inventory across all your business locations"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$39",
+      price: "$59",
       period: "per month",
-      description: "Perfect for small businesses and individual marketers",
+      description: "Perfect for small businesses with basic inventory needs",
       features: [
-        "Up to 5,000 emails analyzed",
-        "Basic analytics dashboard",
+        "Up to 1,000 SKUs",
+        "Basic demand forecasting",
         "Email support",
-        "Subject line optimization",
-        "Basic spam detection",
+        "Standard reporting",
+        "Single location",
         "30-day data retention"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$99",
+      price: "$149",
       period: "per month",
-      description: "Ideal for growing businesses with active email marketing",
+      description: "Ideal for growing businesses with complex inventory requirements",
       features: [
-        "Up to 50,000 emails analyzed",
-        "Advanced analytics dashboard",
+        "Up to 10,000 SKUs",
+        "Advanced AI forecasting",
         "Priority support",
-        "AI content optimization",
-        "Advanced spam detection",
-        "Audience segmentation",
-        "A/B testing tools",
+        "Custom reporting",
+        "Multi-location support",
+        "Supplier analytics",
+        "Automated reordering",
         "90-day data retention"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$249",
+      price: "$399",
       period: "per month",
-      description: "For large organizations with high-volume email campaigns",
+      description: "For large organizations with extensive inventory operations",
       features: [
-        "Unlimited email analysis",
-        "Custom analytics dashboard",
+        "Unlimited SKUs",
+        "Advanced AI models",
         "24/7 dedicated support",
         "White-label options",
-        "Advanced AI models",
         "Custom integrations",
-        "Real-time analysis",
+        "Real-time analytics",
+        "Advanced automation",
         "Unlimited data retention",
         "Dedicated account manager",
         "Custom training"
@@ -120,41 +122,41 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      company: "Email Marketing Manager, TechCorp",
-      content: "Zion AI Email Analyzer has increased our email open rates by 35%. The subject line optimization feature is incredible.",
+      name: "David Martinez",
+      company: "Operations Manager, RetailChain",
+      content: "Zion Smart Inventory Optimizer reduced our stockouts by 80% and cut carrying costs by 25%. Incredible results!",
       rating: 5,
-      avatar: "SJ"
+      avatar: "DM"
     },
     {
-      name: "Michael Chen",
-      company: "Marketing Director, E-commerce Co",
-      content: "The spam detection feature saved us from several potential deliverability issues. Highly recommended!",
+      name: "Lisa Thompson",
+      company: "CEO, E-commerce Company",
+      content: "The demand forecasting is spot-on. We can now plan our inventory purchases with confidence and avoid overstocking.",
       rating: 5,
-      avatar: "MC"
+      avatar: "LT"
     },
     {
-      name: "Emily Rodriguez",
-      company: "CEO, Digital Agency",
-      content: "The audience segmentation feature has revolutionized our email marketing. We can now send highly targeted campaigns.",
+      name: "James Wilson",
+      company: "Supply Chain Director, Manufacturing Co",
+      content: "The multi-location management feature has streamlined our entire supply chain. Highly recommended for complex operations.",
       rating: 5,
-      avatar: "ER"
+      avatar: "JW"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Email Analyzer - Optimize Email Marketing with AI | Zion Tech Group</title>
+        <title>Zion Smart Inventory Optimizer - AI-Powered Inventory Management | Zion Tech Group</title>
         <meta 
           name="description" 
-          content="Optimize your email marketing with Zion AI Email Analyzer. AI-powered analysis, subject line optimization, and performance insights to boost engagement. Starting at $39/month." 
+          content="Optimize your inventory with Zion Smart Inventory Optimizer. AI-powered demand forecasting, automated reordering, and cost optimization for better inventory management. Starting at $59/month." 
         />
         <meta 
           name="keywords" 
-          content="AI email analyzer, email marketing optimization, subject line optimization, email analytics, spam detection, email performance, marketing automation" 
+          content="AI inventory management, demand forecasting, inventory optimization, supply chain management, automated reordering, inventory analytics, stock management" 
         />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-email-analyzer" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-smart-inventory-optimizer" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -167,18 +169,18 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Zap className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">#1 AI Email Analyzer 2024</span>
+              <span className="text-cyan-400 text-sm font-medium">#1 AI Inventory Optimizer 2024</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Email Analyzer
+                Zion Smart Inventory Optimizer
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your email marketing with AI-powered analysis and optimization. 
-              Increase open rates, improve deliverability, and boost engagement with intelligent insights.
+              Transform your inventory management with AI-powered optimization. 
+              Reduce costs, eliminate stockouts, and maximize efficiency with intelligent demand forecasting.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -186,7 +188,7 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
                 to="/contact"
                 className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Analyzing Emails
+                Optimize Your Inventory
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -201,20 +203,20 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">500K+</div>
-                <div className="text-gray-300 text-sm">Emails Analyzed</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
+                <div className="text-gray-300 text-sm">Reduction in Stockouts</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">35%</div>
-                <div className="text-gray-300 text-sm">Average Open Rate Increase</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">25%</div>
+                <div className="text-gray-300 text-sm">Cost Savings</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">98%</div>
-                <div className="text-gray-300 text-sm">Spam Detection Accuracy</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">95%</div>
+                <div className="text-gray-300 text-sm">Forecasting Accuracy</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
-                <div className="text-gray-300 text-sm">Real-time Analysis</div>
+                <div className="text-gray-300 text-sm">Real-time Monitoring</div>
               </div>
             </div>
           </div>
@@ -225,10 +227,10 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Powerful Email Marketing Intelligence
+                Intelligent Inventory Management Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Leverage AI to optimize every aspect of your email marketing campaigns.
+                Leverage AI to optimize every aspect of your inventory operations.
               </p>
             </div>
             
@@ -261,10 +263,10 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Choose Your Analysis Plan
+                Choose Your Optimization Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Scale your email analysis as your marketing grows. All plans include our core AI features.
+                Scale your inventory optimization as your business grows. All plans include our core AI features.
               </p>
             </div>
             
@@ -325,10 +327,10 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Email Marketing Professionals
+                Trusted by Supply Chain Professionals
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how marketers are using Zion AI Email Analyzer to boost their campaigns
+                See how businesses are using Zion Smart Inventory Optimizer to improve their operations
               </p>
             </div>
             
@@ -366,11 +368,11 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-2xl p-12 border border-cyan-500/20">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Optimize Your Email Marketing?
+                Ready to Optimize Your Inventory?
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join thousands of marketers who are already using Zion AI Email Analyzer 
-                to boost their email performance. Start your free trial today!
+                Join thousands of businesses who are already using Zion Smart Inventory Optimizer 
+                to reduce costs and improve efficiency. Start your free trial today!
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -397,4 +399,4 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
   );
 };
 
-export default ZionAIEmailAnalyzerPage;
+export default ZionSmartInventoryOptimizerPage;

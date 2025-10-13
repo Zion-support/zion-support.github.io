@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Mail, 
+  Link as LinkIcon, 
   BarChart3, 
   Brain, 
   CheckCircle, 
@@ -21,98 +21,100 @@ import {
   Smartphone,
   Settings,
   Users,
-  Clock
+  Clock,
+  Code,
+  Server,
+  Database,
+  Cloud,
+  Lock,
+  Monitor
 } from 'lucide-react';
 
-const ZionAIEmailAnalyzerPage: React.FC = () => {
+const BlockchainSolutionsPage: React.FC = () => {
   const features = [
     {
-      title: "AI-Powered Email Analysis",
-      description: "Analyze email content, sentiment, and effectiveness with advanced AI algorithms",
-      icon: <Brain className="w-6 h-6" />,
-      details: "Machine learning models analyze email performance and provide optimization suggestions"
+      title: "Smart Contract Development",
+      description: "Custom smart contract development and deployment on multiple blockchain platforms",
+      icon: <Code className="w-6 h-6" />,
+      details: "Secure, audited smart contracts for DeFi, NFTs, and enterprise applications"
     },
     {
-      title: "Subject Line Optimization",
-      description: "AI-generated subject lines that increase open rates and engagement",
-      icon: <Target className="w-6 h-6" />,
-      details: "A/B test and optimize subject lines for maximum impact and open rates"
+      title: "Blockchain Integration",
+      description: "Seamless integration of blockchain technology into existing business systems",
+      icon: <LinkIcon className="w-6 h-6" />,
+      details: "API development and middleware for blockchain connectivity"
     },
     {
-      title: "Content Quality Scoring",
-      description: "Rate email content quality and provide improvement recommendations",
+      title: "DeFi Platform Development",
+      description: "Decentralized finance platforms with automated market makers and yield farming",
+      icon: <TrendingUp className="w-6 h-6" />,
+      details: "Complete DeFi ecosystem development with liquidity pools and governance tokens"
+    },
+    {
+      title: "NFT Marketplace Solutions",
+      description: "Custom NFT marketplaces with minting, trading, and auction capabilities",
+      icon: <Award className="w-6 h-6" />,
+      details: "Full-featured NFT platforms with royalty management and metadata handling"
+    },
+    {
+      title: "Blockchain Analytics",
+      description: "Advanced analytics and monitoring for blockchain transactions and smart contracts",
       icon: <BarChart3 className="w-6 h-6" />,
-      details: "Comprehensive scoring system that evaluates content effectiveness and readability"
+      details: "Real-time transaction monitoring and smart contract performance analytics"
     },
     {
-      title: "Spam Detection & Prevention",
-      description: "Identify potential spam triggers and improve deliverability",
+      title: "Security Auditing",
+      description: "Comprehensive security audits for smart contracts and blockchain applications",
       icon: <Shield className="w-6 h-6" />,
-      details: "Advanced algorithms detect spam patterns and suggest improvements"
-    },
-    {
-      title: "Audience Segmentation",
-      description: "Automatically segment your email list based on engagement patterns",
-      icon: <Users className="w-6 h-6" />,
-      details: "AI-powered segmentation for targeted and personalized email campaigns"
-    },
-    {
-      title: "Performance Analytics",
-      description: "Comprehensive analytics dashboard with actionable insights",
-      icon: <Activity className="w-6 h-6" />,
-      details: "Track email performance metrics and identify optimization opportunities"
+      details: "Professional security auditing with detailed vulnerability reports"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$39",
-      period: "per month",
-      description: "Perfect for small businesses and individual marketers",
+      name: "Consultation",
+      price: "$299",
+      period: "per hour",
+      description: "Blockchain strategy and technical consultation",
       features: [
-        "Up to 5,000 emails analyzed",
-        "Basic analytics dashboard",
-        "Email support",
-        "Subject line optimization",
-        "Basic spam detection",
-        "30-day data retention"
+        "Technical consultation",
+        "Strategy planning",
+        "Architecture design",
+        "Technology selection",
+        "Risk assessment",
+        "Implementation roadmap"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$99",
-      period: "per month",
-      description: "Ideal for growing businesses with active email marketing",
+      name: "Development",
+      price: "$15,000",
+      period: "per project",
+      description: "Custom blockchain application development",
       features: [
-        "Up to 50,000 emails analyzed",
-        "Advanced analytics dashboard",
-        "Priority support",
-        "AI content optimization",
-        "Advanced spam detection",
-        "Audience segmentation",
-        "A/B testing tools",
-        "90-day data retention"
+        "Smart contract development",
+        "Frontend development",
+        "Backend integration",
+        "Testing & deployment",
+        "Documentation",
+        "3 months support"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$249",
-      period: "per month",
-      description: "For large organizations with high-volume email campaigns",
+      price: "Custom",
+      period: "pricing",
+      description: "Large-scale blockchain solutions for enterprises",
       features: [
-        "Unlimited email analysis",
-        "Custom analytics dashboard",
-        "24/7 dedicated support",
-        "White-label options",
-        "Advanced AI models",
-        "Custom integrations",
-        "Real-time analysis",
-        "Unlimited data retention",
-        "Dedicated account manager",
-        "Custom training"
+        "Custom blockchain development",
+        "Multi-chain integration",
+        "Security auditing",
+        "Performance optimization",
+        "24/7 support",
+        "Dedicated team",
+        "White-label solutions",
+        "Ongoing maintenance"
       ],
       popular: false
     }
@@ -120,41 +122,41 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      company: "Email Marketing Manager, TechCorp",
-      content: "Zion AI Email Analyzer has increased our email open rates by 35%. The subject line optimization feature is incredible.",
+      name: "David Martinez",
+      company: "CTO, FinTech Startup",
+      content: "Zion's blockchain solutions helped us launch our DeFi platform in record time. The smart contracts are rock solid.",
       rating: 5,
-      avatar: "SJ"
+      avatar: "DM"
     },
     {
-      name: "Michael Chen",
-      company: "Marketing Director, E-commerce Co",
-      content: "The spam detection feature saved us from several potential deliverability issues. Highly recommended!",
+      name: "Lisa Thompson",
+      company: "CEO, NFT Marketplace",
+      content: "The NFT marketplace they built for us has processed over $10M in transactions. Flawless execution.",
       rating: 5,
-      avatar: "MC"
+      avatar: "LT"
     },
     {
-      name: "Emily Rodriguez",
-      company: "CEO, Digital Agency",
-      content: "The audience segmentation feature has revolutionized our email marketing. We can now send highly targeted campaigns.",
+      name: "James Wilson",
+      company: "Blockchain Architect, Enterprise Corp",
+      content: "Their security auditing caught critical vulnerabilities we missed. Saved us from potential disaster.",
       rating: 5,
-      avatar: "ER"
+      avatar: "JW"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Email Analyzer - Optimize Email Marketing with AI | Zion Tech Group</title>
+        <title>Blockchain Solutions - DeFi, NFT & Smart Contract Development | Zion Tech Group</title>
         <meta 
           name="description" 
-          content="Optimize your email marketing with Zion AI Email Analyzer. AI-powered analysis, subject line optimization, and performance insights to boost engagement. Starting at $39/month." 
+          content="Expert blockchain development services including DeFi platforms, NFT marketplaces, smart contracts, and enterprise blockchain solutions. Custom development starting at $15,000." 
         />
         <meta 
           name="keywords" 
-          content="AI email analyzer, email marketing optimization, subject line optimization, email analytics, spam detection, email performance, marketing automation" 
+          content="blockchain development, DeFi platform, NFT marketplace, smart contracts, blockchain consulting, cryptocurrency development, Web3 solutions" 
         />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-email-analyzer" />
+        <link rel="canonical" href="https://ziontechgroup.com/blockchain-solutions" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -167,18 +169,18 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Zap className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">#1 AI Email Analyzer 2024</span>
+              <span className="text-cyan-400 text-sm font-medium">#1 Blockchain Development 2024</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Email Analyzer
+                Blockchain Solutions
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your email marketing with AI-powered analysis and optimization. 
-              Increase open rates, improve deliverability, and boost engagement with intelligent insights.
+              Build the future of Web3 with our expert blockchain development services. 
+              DeFi platforms, NFT marketplaces, smart contracts, and enterprise blockchain solutions.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -186,7 +188,7 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
                 to="/contact"
                 className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Analyzing Emails
+                Start Your Project
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -194,27 +196,27 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 <Eye className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                View Demo
+                View Portfolio
               </Link>
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">500K+</div>
-                <div className="text-gray-300 text-sm">Emails Analyzed</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
+                <div className="text-gray-300 text-sm">Blockchain Projects</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">35%</div>
-                <div className="text-gray-300 text-sm">Average Open Rate Increase</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">$100M+</div>
+                <div className="text-gray-300 text-sm">Value Locked</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">98%</div>
-                <div className="text-gray-300 text-sm">Spam Detection Accuracy</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">99.9%</div>
+                <div className="text-gray-300 text-sm">Uptime SLA</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
-                <div className="text-gray-300 text-sm">Real-time Analysis</div>
+                <div className="text-gray-300 text-sm">Support Available</div>
               </div>
             </div>
           </div>
@@ -225,10 +227,10 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Powerful Email Marketing Intelligence
+                Comprehensive Blockchain Services
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Leverage AI to optimize every aspect of your email marketing campaigns.
+                From concept to deployment, we provide end-to-end blockchain solutions.
               </p>
             </div>
             
@@ -261,10 +263,10 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Choose Your Analysis Plan
+                Flexible Pricing Options
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Scale your email analysis as your marketing grows. All plans include our core AI features.
+                Choose the engagement model that works best for your project needs.
               </p>
             </div>
             
@@ -325,10 +327,10 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Email Marketing Professionals
+                Trusted by Blockchain Innovators
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how marketers are using Zion AI Email Analyzer to boost their campaigns
+                See how companies are using our blockchain solutions to build the future
               </p>
             </div>
             
@@ -366,11 +368,11 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-2xl p-12 border border-cyan-500/20">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Optimize Your Email Marketing?
+                Ready to Build on Blockchain?
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join thousands of marketers who are already using Zion AI Email Analyzer 
-                to boost their email performance. Start your free trial today!
+                Join the Web3 revolution with our expert blockchain development services. 
+                Let's build the future together. Contact us for a free consultation!
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -378,7 +380,7 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
                   to="/contact"
                   className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
                 >
-                  Start Free Trial
+                  Get Free Consultation
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
@@ -386,7 +388,7 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
                 >
                   <Eye className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                  View Demo
+                  View Portfolio
                 </Link>
               </div>
             </div>
@@ -397,4 +399,4 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
   );
 };
 
-export default ZionAIEmailAnalyzerPage;
+export default BlockchainSolutionsPage;

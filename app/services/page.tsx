@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Smartphone as Phone, Laptop, Headphones, CheckCircle, Star, Award, Rocket, Sparkles } from "lucide-react";
+import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Smartphone as Phone, Laptop, Headphones, CheckCircle, Star, Award, Rocket, Sparkles, Link } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -336,6 +336,61 @@ export default function Services() {
       originalPrice: "$299/month",
       features: ["Asset Inventory", "Lifecycle Management", "Cost Tracking", "License Management", "Depreciation Tracking", "Compliance Reporting"],
       category: "Asset Management"
+    },
+    {
+      title: "AI-Powered DevOps Solutions",
+      description: "Intelligent DevOps automation with AI-driven CI/CD pipelines, automated testing, and smart monitoring for faster, more reliable deployments.",
+      icon: <Settings className="w-8 h-8" />,
+      path: "/ai-powered-devops",
+      color: "from-indigo-500 to-blue-500",
+      price: "Starting at $199/month",
+      originalPrice: "$399/month",
+      features: ["AI CI/CD Pipelines", "Automated Testing", "Smart Monitoring", "Infrastructure Automation", "Code Quality Analysis", "Security Automation"],
+      category: "DevOps & Automation",
+      popular: true
+    },
+    {
+      title: "Blockchain Development Services",
+      description: "Expert blockchain solutions including DeFi platforms, NFT marketplaces, smart contracts, and enterprise blockchain integration.",
+      icon: <Link className="w-8 h-8" />,
+      path: "/blockchain-solutions",
+      color: "from-purple-500 to-pink-500",
+      price: "Starting at $15,000/project",
+      features: ["Smart Contract Development", "DeFi Platform Development", "NFT Marketplace", "Blockchain Integration", "Security Auditing", "Custom Solutions"],
+      category: "Blockchain & Web3"
+    },
+    {
+      title: "AI-Powered Data Science Platform",
+      description: "Advanced data science platform with machine learning models, automated insights, and predictive analytics for data-driven decision making.",
+      icon: <Brain className="w-8 h-8" />,
+      path: "/ai-data-science-platform",
+      color: "from-teal-500 to-cyan-500",
+      price: "Starting at $299/month",
+      originalPrice: "$599/month",
+      features: ["ML Model Development", "Automated Insights", "Predictive Analytics", "Data Visualization", "Model Deployment", "A/B Testing"],
+      category: "Data Science & AI"
+    },
+    {
+      title: "Enterprise API Management",
+      description: "Comprehensive API management platform with security, monitoring, and analytics for enterprise-grade API operations.",
+      icon: <Globe className="w-8 h-8" />,
+      path: "/api-management",
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $199/month",
+      originalPrice: "$399/month",
+      features: ["API Gateway", "Rate Limiting", "Security Policies", "Analytics Dashboard", "Developer Portal", "Documentation"],
+      category: "API & Integration"
+    },
+    {
+      title: "IoT Solutions & Integration",
+      description: "Complete IoT solutions including device management, data collection, real-time monitoring, and analytics for connected devices.",
+      icon: <Wifi className="w-8 h-8" />,
+      path: "/iot-solutions",
+      color: "from-orange-500 to-red-500",
+      price: "Starting at $249/month",
+      originalPrice: "$499/month",
+      features: ["Device Management", "Real-time Monitoring", "Data Analytics", "Edge Computing", "Security", "Scalability"],
+      category: "IoT & Edge Computing"
     }
   ];
 

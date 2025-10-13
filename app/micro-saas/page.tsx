@@ -15,19 +15,74 @@ import {
   CheckCircle,
   Star,
   Award,
-  Globe
+  Globe,
+  Video,
+  Receipt,
+  Mail,
+  Package
 } from 'lucide-react';
 
 const MicroSaasPage: React.FC = () => {
   const microSaasProducts = [
+    {
+      title: 'Zion AI Video Generator',
+      description: 'Create professional videos in minutes with AI-powered video generation technology.',
+      icon: <Video className="w-8 h-8" />,
+      path: '/zion-ai-video-generator',
+      features: ['AI video creation', 'Multiple formats', 'Voice synthesis', 'Smart editing'],
+      price: '$29/month',
+      featured: true,
+      category: 'AI Content'
+    },
+    {
+      title: 'Zion AI Invoice Generator',
+      description: 'Automate your billing process with intelligent invoice generation and payment tracking.',
+      icon: <Receipt className="w-8 h-8" />,
+      path: '/zion-ai-invoice-generator',
+      features: ['Automated billing', 'Payment integration', 'Multi-currency', 'Expense tracking'],
+      price: '$19/month',
+      featured: true,
+      category: 'Business Tools'
+    },
+    {
+      title: 'Zion AI Customer Insights',
+      description: 'Unlock deep customer insights with advanced AI analytics and predictive scoring.',
+      icon: <Users className="w-8 h-8" />,
+      path: '/zion-ai-customer-insights',
+      features: ['Customer analytics', 'Journey mapping', 'Predictive scoring', 'Sentiment analysis'],
+      price: '$79/month',
+      featured: true,
+      category: 'AI Analytics'
+    },
+    {
+      title: 'Zion AI Email Analyzer',
+      description: 'Optimize your email marketing with AI-powered analysis and subject line optimization.',
+      icon: <Mail className="w-8 h-8" />,
+      path: '/zion-ai-email-analyzer',
+      features: ['Email analysis', 'Subject optimization', 'Spam detection', 'Performance analytics'],
+      price: '$39/month',
+      featured: true,
+      category: 'Marketing'
+    },
+    {
+      title: 'Zion Smart Inventory Optimizer',
+      description: 'Optimize your inventory with AI-powered demand forecasting and automated reordering.',
+      icon: <Package className="w-8 h-8" />,
+      path: '/zion-smart-inventory-optimizer',
+      features: ['Demand forecasting', 'Automated reordering', 'Cost optimization', 'Multi-location'],
+      price: '$59/month',
+      featured: true,
+      category: 'Operations'
+    },
     {
       title: 'Zion Analytics Pro',
       description: 'Advanced analytics dashboard with real-time insights and customizable reports.',
       icon: <BarChart3 className="w-8 h-8" />,
       path: '/zion-analytics-pro',
       features: ['Real-time dashboards', 'Custom reports', 'Data visualization'],
-      price: '$29/month',
-      featured: true
+      price: '$299/month',
+      featured: false,
+      category: 'Analytics'
     },
     {
       title: 'Zion Security Shield',
@@ -35,8 +90,9 @@ const MicroSaasPage: React.FC = () => {
       icon: <Shield className="w-8 h-8" />,
       path: '/zion-security-shield',
       features: ['Threat detection', 'Security monitoring', 'Incident response'],
-      price: '$49/month',
-      featured: true
+      price: '$499/month',
+      featured: false,
+      category: 'Security'
     },
     {
       title: 'Zion Cloud Vault',
@@ -44,8 +100,9 @@ const MicroSaasPage: React.FC = () => {
       icon: <Cloud className="w-8 h-8" />,
       path: '/zion-cloud-vault',
       features: ['End-to-end encryption', 'Automated backups', 'File sharing'],
-      price: '$19/month',
-      featured: false
+      price: '$99/month',
+      featured: false,
+      category: 'Storage'
     },
     {
       title: 'Zion Content Studio',
@@ -53,8 +110,9 @@ const MicroSaasPage: React.FC = () => {
       icon: <Sparkles className="w-8 h-8" />,
       path: '/zion-content-studio',
       features: ['AI content generation', 'Content calendar', 'Team collaboration'],
-      price: '$39/month',
-      featured: false
+      price: '$149/month',
+      featured: false,
+      category: 'Content'
     }
   ];
 
@@ -115,11 +173,11 @@ const MicroSaasPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {microSaasProducts.map((product, index) => (
                 <div
                   key={index}
-                  className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-cyan-500/30 transition-all duration-300 group ${
+                  className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-cyan-500/30 transition-all duration-300 group hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 ${
                     product.featured ? 'border-cyan-500/30' : 'border-white/10'
                   }`}
                 >
@@ -127,28 +185,38 @@ const MicroSaasPage: React.FC = () => {
                     <div className="text-cyan-400 group-hover:scale-110 transition-transform duration-300">
                       {product.icon}
                     </div>
-                    {product.featured && (
-                      <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full flex items-center">
-                        <Star className="w-3 h-3 mr-1" />
-                        Featured
+                    <div className="flex flex-col items-end space-y-2">
+                      {product.featured && (
+                        <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full flex items-center">
+                          <Star className="w-3 h-3 mr-1" />
+                          Featured
+                        </span>
+                      )}
+                      <span className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">
+                        {product.category}
                       </span>
-                    )}
+                    </div>
                   </div>
                   
-                  <h3 className="text-2xl font-semibold text-white mb-4">
+                  <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-cyan-300 transition-colors">
                     {product.title}
                   </h3>
-                  <p className="text-gray-300 mb-6">
+                  <p className="text-gray-300 mb-6 text-sm leading-relaxed">
                     {product.description}
                   </p>
                   
                   <ul className="space-y-2 mb-6">
-                    {product.features.map((feature, featureIndex) => (
+                    {product.features.slice(0, 3).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-400">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
+                    {product.features.length > 3 && (
+                      <li className="text-xs text-cyan-400 text-center">
+                        +{product.features.length - 3} more features
+                      </li>
+                    )}
                   </ul>
                   
                   <div className="flex items-center justify-between">
@@ -157,7 +225,7 @@ const MicroSaasPage: React.FC = () => {
                     </div>
                     <Link
                       to={product.path}
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-medium group-hover:translate-x-1"
                     >
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-2" />

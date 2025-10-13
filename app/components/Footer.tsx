@@ -19,7 +19,9 @@ import {
   Database,
   Users,
   Award,
-  Star
+  Star,
+  Settings,
+  Link
 } from "lucide-react";
 
 const Footer = React.memo(() => {
@@ -51,7 +53,9 @@ const Footer = React.memo(() => {
     { name: "Cloud Services", path: "/cloud-infrastructure", icon: <Cloud className="w-4 h-4" /> },
     { name: "Cybersecurity", path: "/cybersecurity-solutions", icon: <Shield className="w-4 h-4" /> },
     { name: "Web Development", path: "/web-development", icon: <Code className="w-4 h-4" /> },
-    { name: "Data Analytics", path: "/ai-data-analytics", icon: <BarChart3 className="w-4 h-4" /> }
+    { name: "Data Analytics", path: "/ai-data-analytics", icon: <BarChart3 className="w-4 h-4" /> },
+    { name: "AI DevOps", path: "/ai-powered-devops", icon: <Settings className="w-4 h-4" /> },
+    { name: "Blockchain", path: "/blockchain-solutions", icon: <Link className="w-4 h-4" /> }
   ], []);
 
   const companyLinks = useMemo(() => [
@@ -237,34 +241,50 @@ const Footer = React.memo(() => {
             <ul className="space-y-2">
               <li>
                 <Link
+                  to="/zion-ai-video-generator"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  AI Video Generator
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-invoice-generator"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  AI Invoice Generator
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-customer-insights"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  AI Customer Insights
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-email-analyzer"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  AI Email Analyzer
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-smart-inventory-optimizer"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Smart Inventory Optimizer
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/zion-analytics-pro"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
-                  Zion Analytics Pro
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/zion-security-shield"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion Security Shield
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/zion-cloud-vault"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion Cloud Vault
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/zion-content-studio"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion Content Studio
+                  Analytics Pro
                 </Link>
               </li>
             </ul>
