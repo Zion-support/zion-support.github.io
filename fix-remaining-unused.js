@@ -7,55 +7,11 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Files to fix with their unused imports
+// Files to fix with their unused imports and variables
 const filesToFix = [
-  {
-    file: 'app/about/page.tsx',
-    removeImports: ['Link', 'ArrowRight', 'Brain', 'Shield', 'Users', 'Award', 'Mail', 'Smartphone', 'Globe']
-  },
-  {
-    file: 'app/ai-analytics/page.tsx',
-    removeImports: ['Helmet', 'BarChart3', 'TrendingUp', 'Zap', 'Shield', 'Target', 'Brain', 'Users', 'Globe', 'Mail', 'Phone', 'Database', 'Settings', 'Sparkles', 'Lightbulb', 'CheckCircle', 'TrendingDown', 'Monitor']
-  },
-  {
-    file: 'app/ai-automation-platform/page.tsx',
-    removeImports: ['BarChart3', 'Cloud', 'Users', 'ArrowRight', 'Sparkles', 'CheckCircle', 'TrendingUp', 'Settings', 'Workflow', 'Target', 'Link']
-  },
-  {
-    file: 'app/ai-code-assistant-pro/page.tsx',
-    removeImports: ['Brain', 'CheckCircle', 'ArrowRight', 'Star', 'EnhancedSEO', 'StructuredData', 'FuturisticBackgroundEnhanced', 'FuturisticCardEnhanced', 'FuturisticButtonEnhanced', 'FuturisticTextEnhanced', 'ResponsiveContainer', 'PerformanceOptimizer'],
-    removeVariables: ['features', 'pricingPlans', 'testimonials']
-  },
-  {
-    file: 'app/ai-content-studio/page.tsx',
-    removeImports: ['Sparkles', 'CheckCircle', 'ArrowRight', 'Star', 'EnhancedSEO', 'StructuredData', 'FuturisticBackgroundEnhanced', 'FuturisticCardEnhanced', 'FuturisticButtonEnhanced', 'FuturisticTextEnhanced', 'ResponsiveContainer', 'PerformanceOptimizer'],
-    removeVariables: ['features', 'pricingPlans', 'testimonials']
-  },
-  {
-    file: 'app/ai-customer-sentiment-tracker/page.tsx',
-    removeImports: ['Heart', 'TrendingUp', 'Shield', 'CheckCircle', 'ArrowRight', 'Globe', 'Clock'],
-    removeVariables: ['stats', 'benefits', 'features', 'pricingPlans']
-  },
-  {
-    file: 'app/ai-customer-support-chatbot/page.tsx',
-    removeImports: ['Link', 'MessageSquare', 'Zap', 'Shield', 'CheckCircle', 'ArrowRight', 'Star'],
-    removeVariables: ['mainFeatures', 'testimonials', 'chatbotFeatures', 'pricingPlans', 'features']
-  },
-  {
-    file: 'app/components/AdvancedPerformanceMonitor.tsx',
-    removeImports: ['Monitor']
-  },
   {
     file: 'app/components/Analytics.tsx',
     removeImports: ['useEffect', 'Star']
-  },
-  {
-    file: 'app/components/Breadcrumb.tsx',
-    removeImports: ['Link', 'Home']
-  },
-  {
-    file: 'app/components/CriticalResourcePreloader.tsx',
-    removeImports: ['Link']
   },
   {
     file: 'app/components/EnhancedAccessibility.tsx',
@@ -82,20 +38,12 @@ const filesToFix = [
     removeImports: ['useMemo']
   },
   {
-    file: 'app/components/FuturisticButton.tsx',
-    removeImports: ['Link', 'ArrowRight']
-  },
-  {
     file: 'app/components/ImageOptimizer.tsx',
     removeImports: ['useState', 'useRef', 'useEffect', 'Box']
   },
   {
     file: 'app/components/ImprovedErrorBoundary.tsx',
     removeImports: ['Component', 'ErrorInfo', 'ReactNode', 'Link', 'Home', 'AlertTriangle', 'Mail', 'Hand']
-  },
-  {
-    file: 'app/components/ImprovedFooter.tsx',
-    removeImports: ['Link']
   },
   {
     file: 'app/components/ImprovedImage.tsx',
@@ -119,8 +67,7 @@ const filesToFix = [
   },
   {
     file: 'app/contact/page.tsx',
-    removeImports: ['ArrowRight', 'Globe', 'Send', 'CheckCircle', 'Link'],
-    removeVariables: ['formData', 'isSubmitted', 'handleInputChange', 'handleSubmit', 'contactInfo', 'services']
+    removeVariables: ['formData', 'isSubmitted', 'handleInputChange', 'handleSubmit', 'contactInfo']
   },
   {
     file: 'app/main.tsx',
@@ -128,17 +75,11 @@ const filesToFix = [
   },
   {
     file: 'app/pricing/page.tsx',
-    removeImports: ['Link'],
     removeVariables: ['aiServicesPricing', 'microSaasPricing', 'enterprisePricing', 'faqs']
   },
   {
     file: 'app/services/page.tsx',
-    removeImports: ['ArrowRight', 'Smartphone', 'Mail', 'Link'],
     removeVariables: ['services']
-  },
-  {
-    file: 'app/utils/image.tsx',
-    removeImports: ['Helmet', 'Link', 'ArrowRight']
   },
   {
     file: 'hooks/usePerformanceOptimization.ts',
@@ -222,7 +163,7 @@ function fixFile(filePath, config) {
 }
 
 // Fix all files
-console.log('Fixing unused imports and variables...');
+console.log('Fixing remaining unused imports and variables...');
 filesToFix.forEach(config => {
   fixFile(config.file, config);
 });

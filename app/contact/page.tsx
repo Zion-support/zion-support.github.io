@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { ArrowRight, Mail, Smartphone, Globe, Clock, MapPin, Send, CheckCircle } from "lucide-react";
+import { Mail, Smartphone, Clock, MapPin} from "lucide-react";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -12,10 +11,8 @@ export default function Contact() {
     service: '',
     message: ''
   });
-
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -23,7 +20,6 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
     setIsSubmitted(true);
@@ -58,7 +54,7 @@ export default function Contact() {
       icon: <MapPin className="w-6 h-6" />,
       title: "Address",
       details: "364 E Main St STE 1008",
-      description: "Middletown DE 19709"
+      description: "Middletown, DE 19709"
     },
     {
       icon: <Clock className="w-6 h-6" />,
@@ -68,35 +64,18 @@ export default function Contact() {
     }
   ];
 
-  const services = [
-    "AI Business Intelligence",
-    "AI Customer Support",
-    "AI Content Generation",
-    "AI Cybersecurity",
-    "5G Solutions",
-    "Cloud Infrastructure",
-    "Data Analytics",
-    "Code Assistant",
-    "Marketing Automation",
-    "Document Processing",
-    "CRM Assistant",
-    "Financial Analytics"
-  ];
-
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Contact - Zion Tech Group</title>
         <meta name="description" content="Contact solutions by Zion Tech Group" />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold mb-8">Contact</h1>
         <div className="prose prose-invert max-w-none">
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive contact solutions designed to meet your business needs.
           </p>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
@@ -104,14 +83,12 @@ export default function Contact() {
                 Our team of experts delivers tailored solutions for your specific requirements.
               </p>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
               <p className="text-gray-300">
                 We use the latest technologies and best practices to ensure optimal performance.
               </p>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
               <p className="text-gray-300">

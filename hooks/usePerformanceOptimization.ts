@@ -1,5 +1,3 @@
-import { useEffect, useCallback, useRef } from 'react';
-
 interface PerformanceOptimizationOptions {
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
@@ -7,5 +5,4 @@ interface PerformanceOptimizationOptions {
   enableCodeSplitting?: boolean;
   enableCaching?: boolean;
 }
-
 export default usePerformanceMonitor;
