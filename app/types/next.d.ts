@@ -1,7 +1,13 @@
-// next.d utility
-export const next.d = () => {
-  // Implementation
-  return true;
+// Next.js type definitions
+declare module 'next' {
+  interface NextConfig {
+    // Add any custom Next.js configuration types here
+  }
+}
+
+// Export a default configuration object
+const nextConfig = {
+  // Configuration options
 };
 
-export default next.d;
+export default nextConfig;

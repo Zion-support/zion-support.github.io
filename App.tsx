@@ -6,13 +6,21 @@ import { ErrorBoundary } from 'react-error-boundary';
 // Components
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
-import ErrorBoundary from './app/components/ErrorBoundary';
-import PerformanceOptimizer from './app/components/PerformanceOptimizer';
-import FuturisticBackground from './app/components/FuturisticBackground';
 import AnalyticsProvider from './app/components/AnalyticsProvider';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import EnhancedAccessibility from './app/components/EnhancedAccessibility';
-import LoadingSpinner from './app/components/LoadingSpinner';
+import LoadingStates from './app/components/LoadingStates';
+
+// Pages
+import HomePage from './app/page';
+import AboutPage from './app/about/page';
+import ContactPage from './app/contact/page';
+import ServicesPage from './app/services/page';
+import BlogPage from './app/blog/page';
+import TutorialsPage from './app/tutorials/page';
+import DemoPage from './app/demo/page';
+import SupportPage from './app/support/page';
+import PrivacyPage from './app/privacy/page';
+import TermsPage from './app/terms/page';
+import PricingPage from './app/pricing/page';
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -70,7 +78,7 @@ function App() {
                       <div className="min-h-screen flex items-center justify-center">
                         <div className="text-center">
                           <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
-                          <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
+                          <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
                           <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                             Go Home
                           </a>

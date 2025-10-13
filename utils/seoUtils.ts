@@ -1,3 +1,43 @@
+interface SEOConfig {
+  title: string;
+  description: string;
+  keywords: string[];
+  canonicalUrl: string;
+  ogImage: string;
+  ogType: string;
+  twitterCard: string;
+  robots: string;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+  geo?: {
+    latitude?: string;
+    longitude?: string;
+    region?: string;
+    placename?: string;
+  };
+  alternate?: Array<{
+    hreflang: string;
+    href: string;
+  }>;
+  structuredData?: any;
+  twitterImage?: string;
+  viewport?: string;
+  charset?: string;
+  publisher?: string;
+  language?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogUrl?: string;
+  ogSiteName?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterSite?: string;
+  twitterCreator?: string;
+}
+
 export const defaultSEOConfig: SEOConfig = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of advanced AI and IT solutions for businesses worldwide. Expert services in artificial intelligence, cloud computing, cybersecurity, and digital transformation.',
@@ -85,7 +125,7 @@ export const generateMetaTags = (config: SEOConfig): string => {
 
   // Alternate language tags
   if (config.alternate && config.alternate.length > 0) {
-    config.alternate.forEach(alt => {
+    config.alternate.forEach((alt: { hreflang: string; href: string }) => {
       tags.push(`<link rel="alternate" hreflang="${alt.hreflang}" href="${alt.href}" />`);
     });
   }
