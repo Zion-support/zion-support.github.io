@@ -1,8 +1,9 @@
+import { useEffect, useCallback, useRef } from 'react';
+
 // Performance optimization hook
 export default function usePerformanceOptimization() {
   // Hook implementation would go here
   return {};
-}
 }
 import { useEffect, useCallback, useRef } from 'react';
 

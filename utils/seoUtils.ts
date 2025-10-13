@@ -3,9 +3,11 @@
 
 export interface seoUtilsConfig {
   enabled: boolean;
-// Utility functions;
+}
+
+// Utility functions
 export function utilityFunction() {
-  // Implementation here;
+  // Implementation here
   return null;
 }
 
@@ -160,7 +162,7 @@ export class SEOOptimizer {
   }
 
   // Generate Twitter Card data
-  generateTwitterCard(data: SEOData): object {
+  generateTwitterCard(): object {
     return {
 //       'twitter:card': data.twitterCard || 'summary_large_image',
 //       'twitter:site': '@ziontechgroup',
@@ -203,10 +205,10 @@ export class SEOOptimizer {
 //       numberOfEmployees: '10-50',
       industry: 'Information Technology',
 //       knowsAbout: [
-        'Artificial Intelligence',
+//         'Artificial Intelligence',
 //         'Cybersecurity',
 //         'Cloud Computing',
-        'Digital Transformation',
+//         'Digital Transformation',
 //         'Micro SAAS',
 //         '5G Technology'
 //       ]
@@ -255,7 +257,7 @@ export class SEOOptimizer {
     return {
 //       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
-      itemListElement: breadcrumbs.map((crumb, index) => ({
+      itemListElement: breadcrumbs.map(() => ({
         '@type': 'ListItem',
 //         position: index + 1,
 //         name: crumb.name,
@@ -269,7 +271,7 @@ export class SEOOptimizer {
     return {
 //       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      mainEntity: faqs.map(faq => ({
+      mainEntity: faqs.map(() => ({
         '@type': 'Question',
 //         name: faq.question,
         acceptedAnswer: {
@@ -349,8 +351,8 @@ Disallow: /static/`;
 
   // Generate meta tags for a page
   generateMetaTags(data: SEOData): object {
-    const ogData = this.generateOpenGraph(data);
-    const twitterData = this.generateTwitterCard(data);
+    // const ogData = this.generateOpenGraph(data);
+    // const twitterData = this.generateTwitterCard(data);
 
     return {
       title: this.generateTitle(data.title),
@@ -363,7 +365,7 @@ Disallow: /static/`;
 //         'max-snippet:-1',
 //         'max-image-preview:large',
 //         'max-video-preview:-1'
-      ].join(', '),
+//       ].join(', '),
 //       ...ogData,
 //       ...twitterData
     };

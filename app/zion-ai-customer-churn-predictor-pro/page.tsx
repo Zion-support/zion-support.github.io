@@ -10,16 +10,16 @@ import {
   Star, 
   Clock, 
   Users, 
-  Zap, 
+  // Zap, 
   Sparkles,
   AlertTriangle,
-  Database,
+  // Database,
   Cpu,
   Globe,
   Heart,
-  MessageCircle,
-  ThumbsUp,
-  Eye,
+  // MessageCircle,
+  // ThumbsUp,
+  // Eye,
   MousePointer
 } from 'lucide-react';
 

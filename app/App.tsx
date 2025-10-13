@@ -35,11 +35,11 @@ const FiveGSmartCitySolutionsPage = lazy(() => import("./5g-smart-city-solutions
 const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
 
 // Loading component
-const Loading = () => (
-  <div className="flex items-center justify-center min-h-screen">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500"></div>
-  </div>
-);
+// const Loading = () => (
+//   <div className="flex items-center justify-center min-h-screen">
+//     <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500"></div>
+//   </div>
+// );
 
 // Main App Component
 export default function App() {
