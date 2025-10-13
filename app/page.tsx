@@ -59,6 +59,27 @@ const HomePage = () => {
       price: "From $9/month",
       icon: <Cloud className="w-6 h-6" />,
       link: "/zion-cloud-vault"
+    },
+    {
+      name: "Zion AI Meeting Assistant",
+      description: "Intelligent meeting transcription and analysis",
+      price: "From $19/month",
+      icon: <Users className="w-6 h-6" />,
+      link: "/zion-ai-meeting-assistant"
+    },
+    {
+      name: "Zion AI SEO Optimizer",
+      description: "AI-powered SEO and content optimization",
+      price: "From $29/month",
+      icon: <Star className="w-6 h-6" />,
+      link: "/zion-ai-seo-optimizer"
+    },
+    {
+      name: "Zion AI Video Editor",
+      description: "AI-powered video editing and creation",
+      price: "From $19/month",
+      icon: <Zap className="w-6 h-6" />,
+      link: "/zion-ai-video-editor"
     }
   ];
 
@@ -104,10 +125,12 @@ const HomePage = () => {
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        {/* Animated Background Elements */}
+        {/* Enhanced Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-full blur-2xl animate-pulse delay-500"></div>
+          <div className="absolute bottom-1/3 right-1/4 w-48 h-48 bg-gradient-to-br from-pink-500/10 to-purple-500/10 rounded-full blur-xl animate-pulse delay-700"></div>
         </div>
         
         <div className="max-w-7xl mx-auto text-center relative z-10">
@@ -173,16 +196,16 @@ const HomePage = () => {
               From AI-powered analytics to enterprise security, we have everything you need.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <Link
                 key={index}
                 to={feature.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+                className="group glass-card-enhanced rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900 holographic-card"
                 aria-label={`Learn more about ${feature.title}`}
               >
                 <div
-                  className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                  className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 pulse-glow-enhanced`}
                   aria-hidden="true"
                 >
                   {feature.icon}
@@ -194,7 +217,7 @@ const HomePage = () => {
                   {feature.description}
                 </p>
                 <div className="text-center">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 neon-glow-enhanced">
                     {feature.stats}
                   </span>
                 </div>
@@ -215,22 +238,22 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
                 to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                className="group glass-card-enhanced rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-500 hover:scale-105 hover-lift-enhanced"
               >
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform pulse-glow-enhanced">
                     {saas.icon}
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
                       {saas.name}
                     </h3>
-                    <p className="text-cyan-400 font-medium">{saas.price}</p>
+                    <p className="text-cyan-400 font-medium neon-cyan-enhanced">{saas.price}</p>
                   </div>
                 </div>
                 <p className="text-gray-300 text-sm leading-relaxed">
