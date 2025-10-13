@@ -26,15 +26,7 @@ export default {
       },
     },
   },
-<<<<<<< HEAD
 //   plugins: [],
   };,
     plugins: [];
 };
-<<<<<<< HEAD
-=======
-  plugins: [],
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-a28c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

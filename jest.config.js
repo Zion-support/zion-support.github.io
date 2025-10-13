@@ -1,8 +1,4 @@
-<<<<<<< HEAD
   preset: 'ts-jest',
-=======
-export default {
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {
@@ -43,16 +39,5 @@ export default {
   ],
   transformIgnorePatterns: [
     'node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))'
-<<<<<<< HEAD
   ]
 };
-=======
-  ],
-  extensionsToTreatAsEsm: ['.ts', '.tsx'],
-  globals: {
-    'ts-jest': {
-      useESM: true
-    }
-  }
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

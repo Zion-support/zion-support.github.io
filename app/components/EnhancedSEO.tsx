@@ -1,61 +1,19 @@
-<<<<<<< HEAD
-interface EnhancedSEOProps {
-  title: string;
-  description: string;
-  keywords?: string;
-  canonical?: string;
-  structuredData?: any;
-  keywords = '',
-  canonical = '',
-  structuredData,
-  ogImage = '/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image'
-}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullCanonical = canonical || `https://ziontechgroup.com${typeof window !== 'undefined' ? window.location.pathname : ''}`;
-  ogTitle = title,
-  ogDescription = description,
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  twitterTitle = title,
-  twitterDescription = description,
-  twitterImage = ogImage,
-  structuredData
-    "description": "Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses.",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
-    },
-      {keywords && <meta name="keywords" content={keywords} />}
-      <link rel="canonical" href={fullCanonical} />
-      <meta property="og:url" content={fullCanonical} />
-      <meta property="og:image" content={ogImage} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      {/* Additional SEO Tags */}
-      <meta name="robots" content="index, follow" />"
-      <meta name="author" content="Zion Tech Group" />"
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-export default EnhancedSEO;
-=======
-'use client';
 import React from 'react';
 
-export default function ComponentsPage() {
+interface EnhancedSEOProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function EnhancedSEO({ className = '', children }: EnhancedSEOProps) {
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Components</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
+    <div className={`enhancedseo ${className}`}>
+      {children || (
+        <div className="p-4 text-center">
+          <h3 className="text-lg font-semibold text-white mb-2">EnhancedSEO</h3>
+          <p className="text-gray-300">Component under construction</p>
+        </div>
+      )}
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

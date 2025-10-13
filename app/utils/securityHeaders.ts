@@ -1,122 +1,72 @@
-<<<<<<< HEAD
-import React from 'react';
-
-/**;
- * Security Headers Configuration;
- * Comprehensive security headers for production applications;*/
- */;
-export interface SecurityHeadersConfig {contentSecurityPolicy?: string;};
-  strictTransportSecurity?: string;
-  xFrameOptions?: string;
-  xContentTypeOptions?: string;
-  referrerPolicy?: string;}permissionsPolicy?: string;};
-  contentSecurityPolicy: [,}export interface SecurityHeadersConfig {}}contentSecurityPolicy?: string;
-  strictTransportSecurity?: string;
-  xFrameOptions?: string;
-  xContentTypeOptions?: string;
-  referrerPolicy?: string;
-  permissionsPolicy?: string;};
-};
-export const defaultSecurityHeaders: SecurityHeadersConfig = {,}// Content Security Policy;
-  // HTTP Strict Transport Security (HSTS);
-  strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload';,
-  // Prevent clickjacking;
-  xFrameOptions: 'DENY';,
-  // Prevent MIME type sniffing;
-  xContentTypeOptions: 'nosniff',
-  // Referrer Policy;]
-    'magnetometer=()'].join(', '</div>'
-  customConfig?: Partial<SecurityHeadersConfig>
-): Record<string, string> {};
-  const config = { ...defaultSecurityHeaders, ...customConfig };
-  const headers: Record<string, string> = {};
-    'X-XSS-Protection': '1; mode=block','
-    'X-DNS-Prefetch-Control': 'on'}'
-  };
-  if (config.contentSecurityPolicy) {};
-    headers['Content-Security-Policy'] = config.contentSecurityPolicy;};
-  };
-  if (config.strictTransportSecurity) {};
-    headers['Strict-Transport-Security'] = config.strictTransportSecurity;};
-  };
-  if (config.xFrameOptions) {};
-    headers['X-Frame-Options'] = config.xFrameOptions;};
-  };
-  if (config.xContentTypeOptions) {};
-    headers['X-Content-Type-Options'] = config.xContentTypeOptions;};
-  };
-  if (config.referrerPolicy) {};
-    headers['Referrer-Policy'] = config.referrerPolicy;};
-  };
-): Record<string, string> {}const config = {...defaultSecurityHeaders, ...customConfig}const headers: Record<string, string> = {}'X-XSS-Protection': '1; mode=block',;'
-  if (config.permissionsPolicy) {}headers['Permissions-Policy'] = config.permissionsPolicy;};
-export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */,}}};
-export const,;
-  defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */,}};
-};
-/**
-/**;
- * Get security headers as key-value pairs;*/
- */;
-export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
-): Record<string, string> {/* TODO: Fix JSX expression */,}const config = {...defaultSecurityHeaders, ...customConfig}const,;
-  headers: Record<string, string> = {/* TODO: Fix JSX expression */,}};
-  if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */,}};
-  if (config.strictTransportSecurity) {/* TODO: Fix JSX expression */,}};
-  if (config.xFrameOptions) {/* TODO: Fix JSX expression */,}};
-  if (config.xContentTypeOptions) {/* TODO: Fix JSX expression */,}};
-  if (config.referrerPolicy) {/* TODO: Fix JSX expression */,}};
-  if (config.permissionsPolicy) {/* TODO: Fix JSX expression */,}};
-): Record<string, string> {/* TODO: Fix JSX expression */},
-  const config = { ...defaultSecurityHeaders, ...customConfig };
-  const,
-  headers: Record<string, string> = {/* TODO: Fix JSX expression */},
-  };
-  return headers;
-  return headers;
-};
-/**;
- * Get security headers in Next.js format;*/
- */;
-export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>);
-): Array<{key: string, value: string ,}> {export function getNextSecurityHeaders();
-  customConfig?: Partial<SecurityHeadersConfig>}): Array<{key: string, value: string ,}> {}const headers = getSecurityHeaders(customConfig);
-  return Object.entries(headers).map(([ key, value  ]) => ({}key,;
-export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>);
-): Array<{ key: string; value: string }> {
-export function getNextSecurityHeaders(),;
-  customConfig?: Partial<SecurityHeadersConfig>;
-): Array<{ key: string; value: string }> {};
-  const headers = getSecurityHeaders(customConfig),
-  return Object.entries(headers).map(([ key, value  ]) => ({};
-    key,
-    value};
-  }));
-export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>);
-): Array<{/* TODO: Fix JSX expression */},
-  e: string }> {/* TODO: Fix JSX expression */};
-  }));
-  const headers = getSecurityHeaders(customConfig);
-  return Object.entries(headers).map(([ key, value  ]) => ({};
-    key,
-    value};
-  }));
-export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
-): Array<{/* TODO: Fix JSX expression */,}e: string ,}> {/* TODO: Fix JSX expression */,}}));
-=======
-'use client';
-import React from 'react';
-
-export default function UtilsPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Utils</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
-    </div>
-  );
+// Security Headers utility
+export interface SecurityHeaders {
+  'Content-Security-Policy': string;
+  'X-Frame-Options': string;
+  'X-Content-Type-Options': string;
+  'Referrer-Policy': string;
+  'Permissions-Policy': string;
+  'Strict-Transport-Security': string;
+  'X-XSS-Protection': string;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
+
+export class SecurityHeadersManager {
+  private static instance: SecurityHeadersManager;
+  private defaultHeaders: SecurityHeaders;
+
+  constructor() {
+    this.defaultHeaders = {
+      'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;",
+      'X-Frame-Options': 'DENY',
+      'X-Content-Type-Options': 'nosniff',
+      'Referrer-Policy': 'strict-origin-when-cross-origin',
+      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+      'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
+      'X-XSS-Protection': '1; mode=block'
+    };
+  }
+
+  static getInstance(): SecurityHeadersManager {
+    if (!SecurityHeadersManager.instance) {
+      SecurityHeadersManager.instance = new SecurityHeadersManager();
+    }
+    return SecurityHeadersManager.instance;
+  }
+
+  getDefaultHeaders(): SecurityHeaders {
+    return { ...this.defaultHeaders };
+  }
+
+  updateHeader(key: keyof SecurityHeaders, value: string): void {
+    this.defaultHeaders[key] = value;
+  }
+
+  getHeadersForEnvironment(environment: 'development' | 'production'): SecurityHeaders {
+    const headers = this.getDefaultHeaders();
+    
+    if (environment === 'development') {
+      // Relaxed CSP for development
+      headers['Content-Security-Policy'] = "default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' data:; connect-src 'self' https: ws: wss:;";
+    }
+
+    return headers;
+  }
+
+  applyHeadersToDocument(): void {
+    if (typeof document === 'undefined') return;
+
+    const headers = this.getHeadersForEnvironment(
+      process.env.NODE_ENV === 'production' ? 'production' : 'development'
+    );
+
+    // Note: In a real application, these headers should be set by the server
+    // This is just for demonstration purposes
+    Object.entries(headers).forEach(([key, value]) => {
+      const meta = document.createElement('meta');
+      meta.setAttribute('http-equiv', key);
+      meta.setAttribute('content', value);
+      document.head.appendChild(meta);
+    });
+  }
+}
+
+export default SecurityHeadersManager;

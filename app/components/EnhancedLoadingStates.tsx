@@ -1,51 +1,19 @@
-'use client';
-<<<<<<< HEAD
-import React from 'react'.;
-import {Loader2, Brain, Cloud, Shield, Code}}from 'lucide-react';
-interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg';}'
-  text?: string;}export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ ,
-  size = 'md', 
-  text = 'Loading...'  }) => {const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-<<<<<<< HEAD
-      <Loader2 className={`${sizeClasses[size]}animate-spin text-blue-500`} />
-).
-
-export const ServiceCardSkeleton: React.FC = () => (,
-).
-
-export const StatsSkeleton: React.FC = () => (,
-
-export const ContentSkeleton: React.FC = () => (,
-=======
-    lg: 'w-12 h-12',}return (<div className="flex flex-col items-center justify-center p-8">)</div>";
-      <Loader2 className={`${sizeClasses[size]}animate-spin text-blue-500`} />;
-);
-export const ServiceCardSkeleton: React.FC = () => (,;
-);"
-export const StatsSkeleton: React.FC = () => (,"";
-  <div className="grid grid-cols-2 md: grid-cols-4 gap-8">,</div>;
-  );"
-    {Array.from({ length: 4 ,)  }).map((_, index) => (""
-      <div key={index}className="text-center animate-pulse">"""
-        <div className="h-8 bg-gray-600 rounded mb-2"></div>
-);"
-export const ContentSkeleton: React.FC = () => (,;""`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
-=======
 import React from 'react';
 
-export default function ComponentsPage() {
+interface EnhancedLoadingStatesProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function EnhancedLoadingStates({ className = '', children }: EnhancedLoadingStatesProps) {
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Components</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
+    <div className={`enhancedloadingstates ${className}`}>
+      {children || (
+        <div className="p-4 text-center">
+          <h3 className="text-lg font-semibold text-white mb-2">EnhancedLoadingStates</h3>
+          <p className="text-gray-300">Component under construction</p>
+        </div>
+      )}
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

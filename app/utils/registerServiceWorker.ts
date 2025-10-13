@@ -1,144 +1,79 @@
-<<<<<<< HEAD
-import React from 'react';
-
-/**;
- * Service Worker Registration Utility;*/
- */;
-export interface ServiceWorkerConfig {onSuccess?: (registration: ServiceWorkerRegistration) => void,};
-  onUpdate?: (registration: ServiceWorkerRegistration) => void;,}export interface ServiceWorkerConfig {}}onSuccess?: (registration: ServiceWorkerRegistration) => void;,
-  onUpdate?: (registration: ServiceWorkerRegistration) => void;,
-  onError?: (error: Error) => void,};
-export interface ServiceWorkerConfig {/* TODO: Fix JSX expression */,}}};
-/**;
- * Register service worker with lifecycle callbacks;*/
- */;
-export async function registerServiceWorker(config: ServiceWorkerConfig = {,)});
-): Promise<ServiceWorkerRegistration | undefined> {// Check if service workers are supported;
-  if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {}return;}'
-  };
-  // Only register in production or if explicitly enabled;
-  const isLocalhost = Boolean(window.location.hostname === 'localhost' ||);
-      window.location.hostname === '[::1]' ||);
-export async function registerServiceWorker();
-  config: ServiceWorkerConfig = {,}): Promise<ServiceWorkerRegistration | undefined> {}// Check if service workers are supported;
-  if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {}return;}'
-  };
-  // Only register in production or if explicitly enabled;
-  const isLocalhost = Boolean();
-    window.location.hostname === 'localhost' ||;
-      window.location.hostname === '[::1]' ||;
-      window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/);
-  );
-  // Use isLocalhost for conditional logic if needed;
-  if (isLocalhost) {}};
-  try {// Wait for page to load;};
-    await new Promise<void>((resolve) => {
-      if (document.readyState === 'complete') {}try {}}// Wait for page to load;
-    await new Promise<void>((resolve) => {}if (document.readyState === 'complete') {}resolve();};
-      } else {}}window.addEventListener('load', () => resolve());};
-      };
-    });
-    const registration = await navigator.serviceWorker.register('/service-worker.js', {);
-    )}scope: '/',});
-    });
-    // Handle updates;
-    registration.addEventListener('updatefound', () => {const installingWorker = registration.installing;
-      if (!installingWorker) return;
-      installingWorker.addEventListener('statechange', () => {
-        if (installingWorker.state === 'installed') {
-          if (navigator.serviceWorker.controller) {
-            // New update available;
-            if (config.onUpdate) {}config.onUpdate(registration);};
-            };
-          } else {// Content cached for offline use;};
-            if (config.onSuccess) {}const registration = await navigator.serviceWorker.register('/service-worker.js', {)}scope: '/',}'
-    });
-    // Handle updates;
-    registration.addEventListener('updatefound', () => {}const installingWorker = registration.installing;
-      if (!installingWorker) return;
-      installingWorker.addEventListener('statechange', () => {}if (installingWorker.state === 'installed') {}if (navigator.serviceWorker.controller) {}// New update available;'
-            if (config.onUpdate) {}config.onUpdate(registration);};
-            // Content cached for offline use;
-            if (config.onSuccess) {
-    const registration = await navigator.serviceWorker.register('/service-worker.js', {</div>
-          } else {}}// Content cached for offline use;
-            if (config.onSuccess) {}config.onSuccess(registration);};
-export async function registerServiceWorker(confi,;);
-  g: ServiceWorkerConfig = {,});
-): Promise<ServiceWorkerRegistration | undefined> {/* TODO: Fix JSX expression */,}};
-  // Only register in production or if explicitly enabled;
-  const isLocalhost = Boolean(window.location.hostname === 'localhost' ||;);
-      window.location.hostname === '[::1]' ||);
-      window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/);
-  );
-  // Use isLocalhost for conditional logic if needed;
-  if (isLocalhost) {/* TODO: Fix JSX expression */,}};
-  try {/* TODO: Fix JSX expression */,}}} else {/* TODO: Fix JSX expression */,}}};
-    // Handle updates;
-    registration.addEventListener('updatefound', () => {/* TODO: Fix JSX expression */,}};
-          } else {/* TODO: Fix JSX expression */,}}};
-    return registration;
-  } catch (error) {if (config.onError && error instanceof Error) {
-    return registration;}} catch (error) {}if (config.onError && error instanceof Error) {}config.onError(error);};
-  } catch (error) {/* TODO: Fix JSX expression */,}};
-  };
-};
-/**;
- * Unregister service worker;*/
- */;
-export async function unregisterServiceWorker(): Promise<boolean> {}if (!('serviceWorker' in navigator)) {}return false;};
-  };
-  try {const registration = await navigator.serviceWorker.ready;}}try {}}const registration = await navigator.serviceWorker.ready;
-    const result = await registration.unregister();
-    return result;};
-  } catch (error) {}return false;};
-export async function unregisterServiceWorker(): Promise<boolean> {/* TODO: Fix JSX expression */,}};
-  try {/* TODO: Fix JSX expression */,}}} catch (error) {/* TODO: Fix JSX expression */,}};
-};
-/**;
- * Check for service worker updates;*/
- */;
-export async function checkForUpdates(): Promise<void> {}if (!('serviceWorker' in navigator)) {}return;};
-  };
-  try {const registration = await navigator.serviceWorker.ready;}}try {}}const registration = await navigator.serviceWorker.ready;
-    await registration.update();};
-    } catch (error) {}export async function checkForUpdates(): Promise<void> {/* TODO: Fix JSX expression */,}};
-  try {/* TODO: Fix JSX expression */,}}} catch (error) {/* TODO: Fix JSX expression */,}};
-};
-/**;
- * Skip waiting and activate new service worker;*/
- */;
-export function skipWaiting(): void {}}if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {}return;};
-/**;
- * Clear all caches;*/
- */;
-export function clearCaches(): void {}}if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {}return;};
-/**;
- * Get service worker registration status;*/
- */;
-export async function getServiceWorkerStatus(): Promise<{supported: boolean,;
-  registered: boolean,}active: boolean,};
-}> {if (!('serviceWorker' in navigator)) {
-    return {supported: false,};
-      registered: false,}export async function getServiceWorkerStatus(): Promise<{}supported: boolean;,
-  registered: boolean;,
-  try {}}const registration = await navigator.serviceWorker.getRegistration();
-    return {supported: true,};
-      registered: !!registration;,}active: !!registration?.active,};
-=======
-'use client';
-import React from 'react';
-
-export default function UtilsPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Utils</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
-    </div>
-  );
+// Service Worker Registration utility
+export interface ServiceWorkerConfig {
+  onSuccess?: (registration: ServiceWorkerRegistration) => void;
+  onUpdate?: (registration: ServiceWorkerRegistration) => void;
+  onError?: (error: Error) => void;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
+
+export class ServiceWorkerRegistrar {
+  private static instance: ServiceWorkerRegistrar;
+  private config: ServiceWorkerConfig = {};
+
+  static getInstance(): ServiceWorkerRegistrar {
+    if (!ServiceWorkerRegistrar.instance) {
+      ServiceWorkerRegistrar.instance = new ServiceWorkerRegistrar();
+    }
+    return ServiceWorkerRegistrar.instance;
+  }
+
+  configure(config: ServiceWorkerConfig): void {
+    this.config = { ...this.config, ...config };
+  }
+
+  async register(swPath: string = '/sw.js'): Promise<ServiceWorkerRegistration | null> {
+    if (!('serviceWorker' in navigator)) {
+      console.warn('Service workers are not supported in this browser');
+      return null;
+    }
+
+    try {
+      const registration = await navigator.serviceWorker.register(swPath);
+      
+      if (registration.installing) {
+        console.log('Service worker installing');
+      } else if (registration.waiting) {
+        console.log('Service worker waiting');
+      } else if (registration.active) {
+        console.log('Service worker active');
+        this.config.onSuccess?.(registration);
+      }
+
+      registration.addEventListener('updatefound', () => {
+        const newWorker = registration.installing;
+        if (newWorker) {
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+              console.log('New service worker available');
+              this.config.onUpdate?.(registration);
+            }
+          });
+        }
+      });
+
+      return registration;
+    } catch (error) {
+      console.error('Service worker registration failed:', error);
+      this.config.onError?.(error as Error);
+      return null;
+    }
+  }
+
+  async unregister(): Promise<boolean> {
+    if (!('serviceWorker' in navigator)) {
+      return false;
+    }
+
+    try {
+      const registrations = await navigator.serviceWorker.getRegistrations();
+      for (const registration of registrations) {
+        await registration.unregister();
+      }
+      return true;
+    } catch (error) {
+      console.error('Service worker unregistration failed:', error);
+      return false;
+    }
+  }
+}
+
+export default ServiceWorkerRegistrar;

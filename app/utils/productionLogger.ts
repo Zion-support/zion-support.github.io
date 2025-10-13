@@ -1,89 +1,86 @@
-<<<<<<< HEAD
-/**;
- * Production-ready logger that removes console statements in production;*/
- */;
-type LogLevel = 'debug' | 'info' | 'warn' | 'error';'
-interface LogEntry {}}level: LogLevel,
-  context?: string;
-class ProductionLogger {}}private isDevelopment = process.env['NODE_ENV'] === 'development';'
-  private isProduction = process.env['NODE_ENV'] === 'production';'
-private log(level: LogLevel, message: string, data?: unknown, context?: string): void {const entry: LogEntry = {,};
-      level;}private log(level: LogLevel, message: string, data?: unknown, context?: string): void {}}const entry: LogEntry = {,}level,;
-      message,;
-      data,;
-      context;
-    };
-
-    // Only log in development;
-// Only log in development;
-    if (this.isDevelopment) {switch (level) {
-    // Only log in development;}if (this.isDevelopment) {}switch (level) {}case 'debug':;
-          break;
-        case 'info':;
-          break;
-        case 'warn':;
-          break;
-        case 'error':;
-          break;
-      };
-    };
-// In production, send critical errors to monitoring service;
-    if (this.isProduction && level === 'error') {// In production, send critical errors to monitoring service;}if (this.isProduction && level === 'error') {}this.sendToMonitoring(entry);'
-          break;
-    if (this.isProduction && level === 'error') {};
-      this.sendToMonitoring(entry);
-    };
-      (window as any).gtag('event', 'error_log', {)'
-        error_message: entry.message;);
-        error_context: entry.context),
-      (window as any).gtag('event', 'error_log', {);'
-        error_message: entry.message;),
-        error_context: entry.context),
-        error_timestamp: entry.timestamp),
-        event_category: 'Error',
-,}private sendToMonitoring(entry: LogEntry): void {,}}// Send to analytics/monitoring service;
-    if (typeof window !== 'undefined' && 'gtag' in window) {}(window as any).gtag('event', 'error_log', {)}error_message: entry.message,'
-      (window as any).gtag('event', 'error_log', {</div>'
-        event_category: 'Error'
-
-    };
-  },
-  debug(message: string, data?: unknown, context?: string): void {};
-    this.log('debug', message, data, context);
-  };
-  info(message: string, data?: unknown, context?: string): void {};
-    this.log('info', message, data, context);
-  };
-  warn(message: string, data?: unknown, context?: string): void {};
-    this.log('warn', message, data, context);
-  };
-  error(message: string, data?: unknown, context?: string): void {};
-    this.log('error', message, data, context);
-  };
-};
-export const logger = new ProductionLogger();
-export default logger;
-debug(message: string, data?: unknown, context?: string): void {}}this.log('debug', message, data, context);
-  };
-info(message: string, data?: unknown, context?: string): void {}}this.log('info', message, data, context);
-  };
-warn(message: string, data?: unknown, context?: string): void {}}this.log('warn', message, data, context);
-  };
-error(message: string, data?: unknown, context?: string): void {}}this.log('error', message, data, context);
-=======
-'use client';
-import React from 'react';
-
-export default function UtilsPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Utils</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
-    </div>
-  );
+// Production Logger utility
+export enum LogLevel {
+  DEBUG = 0,
+  INFO = 1,
+  WARN = 2,
+  ERROR = 3
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
+
+export interface LogEntry {
+  level: LogLevel;
+  message: string;
+  timestamp: Date;
+  context?: Record<string, any>;
+}
+
+export class ProductionLogger {
+  private static instance: ProductionLogger;
+  private logs: LogEntry[] = [];
+  private currentLevel: LogLevel = LogLevel.INFO;
+
+  static getInstance(): ProductionLogger {
+    if (!ProductionLogger.instance) {
+      ProductionLogger.instance = new ProductionLogger();
+    }
+    return ProductionLogger.instance;
+  }
+
+  setLevel(level: LogLevel): void {
+    this.currentLevel = level;
+  }
+
+  private shouldLog(level: LogLevel): boolean {
+    return level >= this.currentLevel;
+  }
+
+  private log(level: LogLevel, message: string, context?: Record<string, any>): void {
+    if (!this.shouldLog(level)) {
+      return;
+    }
+
+    const entry: LogEntry = {
+      level,
+      message,
+      timestamp: new Date(),
+      context
+    };
+
+    this.logs.push(entry);
+
+    // In production, you might want to send logs to a remote service
+    if (process.env.NODE_ENV === 'production') {
+      // Send to remote logging service
+      console.log('Production log:', entry);
+    } else {
+      // Local development logging
+      const levelNames = ['DEBUG', 'INFO', 'WARN', 'ERROR'];
+      console.log(`[${levelNames[level]}] ${message}`, context || '');
+    }
+  }
+
+  debug(message: string, context?: Record<string, any>): void {
+    this.log(LogLevel.DEBUG, message, context);
+  }
+
+  info(message: string, context?: Record<string, any>): void {
+    this.log(LogLevel.INFO, message, context);
+  }
+
+  warn(message: string, context?: Record<string, any>): void {
+    this.log(LogLevel.WARN, message, context);
+  }
+
+  error(message: string, context?: Record<string, any>): void {
+    this.log(LogLevel.ERROR, message, context);
+  }
+
+  getLogs(): LogEntry[] {
+    return [...this.logs];
+  }
+
+  clearLogs(): void {
+    this.logs = [];
+  }
+}
+
+export default ProductionLogger;

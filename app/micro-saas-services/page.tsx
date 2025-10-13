@@ -1,52 +1,41 @@
-<<<<<<< HEAD
-export default function MicroSaasServices() {
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>Micro SaaS Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced micro SaaS services by Zion Tech Group" />
-    }
-  ]
-        <title>Micro SAAS Services - Zion Tech Group</title>
-        <meta name="description" content="Discover our powerful micro SAAS applications designed to streamline your business operations with AI-powered tools." />
+        <title>page | Zion Tech Group</title>
+        <meta name="description" content="page - Advanced AI and IT Solutions by Zion Tech Group" />
       </Helmet>
       
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Micro SaaS Services;
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Advanced micro SaaS services for modern businesses;
-          </p>
-        </div>
-
-        <div className="max-w-4xl mx-auto">"
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">"
-            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>"
-            <p className="text-gray-300">
-              Our micro SaaS services page is under development. Please check back later for updates.
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              page
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              This page is under construction. We're working hard to bring you the best AI and IT solutions.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/" 
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+              >
+                Go Home
+              </a>
+              <a 
+                href="/contact" 
+                className="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-bold py-3 px-6 rounded-lg transition-colors"
+              >
+                Contact Us
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
-=======
-'use client';
-import React from 'react';
-
-export default function MicroSaasServicesPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Micro Saas Services</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

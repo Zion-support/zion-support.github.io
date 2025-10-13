@@ -1,153 +1,41 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Home, ArrowLeft, Search, AlertTriangle, RefreshCw } from 'lucide-react';
 
-const NotFoundPage: React.FC = () => {
+export default function NotFound404() {
   return (
-=======
-
-export default function AppPage() {
-  return (
-<<<<<<< HEAD
->>>>>>> origin/main
     <>
       <Helmet>
-        <title>404 - Page Not Found | Zion Tech Group</title>
-        <meta name="description" content="The page you're looking for doesn't exist. Return to Zion Tech Group's homepage or explore our AI and IT solutions." />
-        <meta name="robots" content="noindex, nofollow" />
-        <meta property="og:title" content="404 - Page Not Found | Zion Tech Group" />
-        <meta property="og:description" content="The page you're looking for doesn't exist. Return to our homepage or explore our services." />
-        <meta property="og:type" content="website" />
+        <title>404 | Zion Tech Group</title>
+        <meta name="description" content="404 - Advanced AI and IT Solutions by Zion Tech Group" />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-        <div className="max-w-2xl w-full text-center">
-          {/* 404 Animation */}
-          <div className="relative mb-8">
-            <div className="text-9xl font-bold text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text animate-pulse">
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               404
-            </div>
-            <div className="absolute -top-4 -right-4 w-8 h-8 bg-red-500/20 rounded-full animate-bounce">
-              <AlertTriangle className="w-6 h-6 text-red-400" />
-            </div>
-          </div>
-
-          {/* Error Message */}
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Page Not Found
-          </h1>
-          
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Oops! The page you're looking for seems to have vanished into the digital void. 
-            Don't worry, even our AI can't predict everything!
-          </p>
-
-          {/* Search Suggestion */}
-          <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 mb-8">
-            <div className="flex items-center justify-center mb-4">
-              <Search className="w-6 h-6 text-cyan-400 mr-2" />
-              <h2 className="text-lg font-semibold text-white">What were you looking for?</h2>
-            </div>
-            <p className="text-gray-300 text-sm mb-4">
-              Try searching for one of these popular pages:
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              This page is under construction. We're working hard to bring you the best AI and IT solutions.
             </p>
-            <div className="flex flex-wrap gap-2 justify-center">
-              {[
-                'AI Services',
-                'IT Services', 
-                'About Us',
-                'Contact',
-                'Pricing',
-                'Blog'
-              ].map((item, index) => (
-                <Link
-                  key={index}
-                  to={`/${item.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="px-3 py-1 bg-cyan-500/10 text-cyan-400 rounded-full text-sm hover:bg-cyan-500/20 transition-colors"
-                >
-                  {item}
-                </Link>
-              ))}
-            </div>
-          </div>
-          
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
-              to="/"
-              className="flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-            >
-              <Home className="w-5 h-5 mr-2" />
-              Go Home
-            </Link>
-<<<<<<< HEAD
-            
-=======
->>>>>>> origin/main
-            <button
-              onClick={() => window.history.back()}
-              className="flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
-            >
-              <ArrowLeft className="w-5 h-5 mr-2" />
-              Go Back
-            </button>
-          </div>
-          
-          {/* Help Section */}
-          <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6">
-            <h3 className="text-lg font-semibold text-white mb-3">
-              Still can't find what you need?
-            </h3>
-            <p className="text-gray-300 text-sm mb-4">
-              Our support team is here to help you navigate our services and find exactly what you're looking for.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Link
-                to="/contact"
-                className="flex items-center justify-center px-6 py-3 bg-cyan-500/20 text-cyan-400 rounded-lg font-medium hover:bg-cyan-500/30 transition-colors"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/" 
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
               >
-                <RefreshCw className="w-4 h-4 mr-2" />
-                Contact Support
-              </Link>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="flex items-center justify-center px-6 py-3 border border-cyan-500/30 text-cyan-400 rounded-lg font-medium hover:bg-cyan-500/10 transition-colors"
+                Go Home
+              </a>
+              <a 
+                href="/contact" 
+                className="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-bold py-3 px-6 rounded-lg transition-colors"
               >
-                Send Email
+                Contact Us
               </a>
             </div>
           </div>
-          
-          {/* Fun Fact */}
-          <div className="mt-8 p-4 bg-slate-800/30 rounded-lg">
-            <p className="text-sm text-gray-400">
-<<<<<<< HEAD
-              <span className="text-cyan-400">Fun Fact:</span> Even our AI gets confused sometimes. 
-              That's why we have humans to help when things go wrong! 🤖
-=======
-<<<<<<< HEAD
-              <span className="text-cyan-400">Fun Fact:</span> Even our AI gets confused sometimes. 
-              That's why we have humans to help when things go wrong! 🤖
-=======
-              <span className="text-cyan-400">Fun Fact:</span> Even our AI gets confused sometimes,
-              That&apos;s why we have humans to help when things go wrong! 🤖
->>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
->>>>>>> origin/main
-            </p>
-          </div>
         </div>
-=======
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">App</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
       </div>
-    </div>
+    </>
   );
 }

@@ -1,26 +1,18 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
 import { ErrorBoundary } from 'react-error-boundary';
-import Navigation from "./app/components/Navigation";
-import Footer from "./app/components/Footer";
-import HomePage from "./app/page";
-import LoadingStates from './app/components/LoadingStates';
-import { AnalyticsProvider } from './app/contexts/AnalyticsContext.tsx';
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
 
 // Components
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
-import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceOptimizer from './app/components/PerformanceOptimizer';
 import FuturisticBackground from './app/components/FuturisticBackground';
 import AnalyticsProvider from './app/components/AnalyticsProvider';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import LoadingSpinner from './app/components/LoadingSpinner';
+import LoadingStates from './app/components/LoadingStates';
 
 // Pages
 import HomePage from './app/page';
@@ -39,51 +31,6 @@ import DemoPage from './app/demo/page';
 import SupportPage from './app/support/page';
 import TutorialsPage from './app/tutorials/page';
 
-<<<<<<< HEAD
-function App() {
-  return (
-    <HelmetProvider>
-      <ErrorBoundary>
-        <Router>
-          <AnalyticsProvider>
-            <PerformanceOptimizer>
-              <EnhancedAccessibility>
-                <AccessibilityEnhancer>
-                  <div className="min-h-screen bg-gray-900 text-white">
-                    <FuturisticBackground>
-                      <Navigation />
-                      <main className="relative z-10">
-                        <Suspense fallback={<LoadingSpinner />}>
-                          <Routes>
-                            <Route path="/" element={<HomePage />} />
-                            <Route path="/about" element={<AboutPage />} />
-                            <Route path="/contact" element={<ContactPage />} />
-                            <Route path="/services" element={<ServicesPage />} />
-                            <Route path="/case-studies" element={<CaseStudiesPage />} />
-                            <Route path="/partners" element={<PartnersPage />} />
-                            <Route path="/privacy" element={<PrivacyPage />} />
-                            <Route path="/terms" element={<TermsPage />} />
-                            <Route path="/ai-services" element={<AIServicesPage />} />
-                            <Route path="/micro-saas" element={<MicroSAASPage />} />
-                            <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                            <Route path="/blog" element={<BlogPage />} />
-                            <Route path="/demo" element={<DemoPage />} />
-                            <Route path="/support" element={<SupportPage />} />
-                            <Route path="/tutorials" element={<TutorialsPage />} />
-                          </Routes>
-                        </Suspense>
-                      </main>
-                      <Footer />
-                    </FuturisticBackground>
-                  </div>
-                </AccessibilityEnhancer>
-              </EnhancedAccessibility>
-            </PerformanceOptimizer>
-          </AnalyticsProvider>
-        </Router>
-      </ErrorBoundary>
-    </HelmetProvider>
-=======
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -115,48 +62,57 @@ function App() {
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
       <HelmetProvider>
-        <AnalyticsProvider>
-          <Router>
-            <div className="min-h-screen bg-gray-900">
-              <Navigation />
-              <main className="relative z-10" id="main-content" role="main">
-                <Suspense fallback={<LoadingStates />}>
-                  <Routes>
-                    {/* Main Pages */}
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/about" element={<AboutPage />} />
-                    <Route path="/contact" element={<ContactPage />} />
-                    <Route path="/services" element={<ServicesPage />} />
-                    <Route path="/blog" element={<BlogPage />} />
-                    <Route path="/tutorials" element={<TutorialsPage />} />
-                    <Route path="/demo" element={<DemoPage />} />
-                    <Route path="/support" element={<SupportPage />} />
-                    <Route path="/privacy" element={<PrivacyPage />} />
-                    <Route path="/terms" element={<TermsPage />} />
-                    <Route path="/pricing" element={<PricingPage />} />
-                    
-                    {/* Catch all route */}
-                    <Route path="*" element={
-                      <div className="min-h-screen flex items-center justify-center">
-                        <div className="text-center">
-                          <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
-                          <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
-                          <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                            Go Home
-                          </a>
-                        </div>
-                      </div>
-                    } />
-                  </Routes>
-                </Suspense>
-              </main>
-              <Footer />
-            </div>
-          </Router>
-        </AnalyticsProvider>
+        <Router>
+          <AnalyticsProvider>
+            <PerformanceOptimizer>
+              <EnhancedAccessibility>
+                <AccessibilityEnhancer>
+                  <div className="min-h-screen bg-gray-900 text-white">
+                    <FuturisticBackground>
+                      <Navigation />
+                      <main className="relative z-10" id="main-content" role="main">
+                        <Suspense fallback={<LoadingStates />}>
+                          <Routes>
+                            <Route path="/" element={<HomePage />} />
+                            <Route path="/about" element={<AboutPage />} />
+                            <Route path="/contact" element={<ContactPage />} />
+                            <Route path="/services" element={<ServicesPage />} />
+                            <Route path="/case-studies" element={<CaseStudiesPage />} />
+                            <Route path="/partners" element={<PartnersPage />} />
+                            <Route path="/privacy" element={<PrivacyPage />} />
+                            <Route path="/terms" element={<TermsPage />} />
+                            <Route path="/ai-services" element={<AIServicesPage />} />
+                            <Route path="/micro-saas" element={<MicroSAASPage />} />
+                            <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                            <Route path="/blog" element={<BlogPage />} />
+                            <Route path="/demo" element={<DemoPage />} />
+                            <Route path="/support" element={<SupportPage />} />
+                            <Route path="/tutorials" element={<TutorialsPage />} />
+                            {/* Catch all route */}
+                            <Route path="*" element={
+                              <div className="min-h-screen flex items-center justify-center">
+                                <div className="text-center">
+                                  <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
+                                  <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
+                                  <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                    Go Home
+                                  </a>
+                                </div>
+                              </div>
+                            } />
+                          </Routes>
+                        </Suspense>
+                      </main>
+                      <Footer />
+                    </FuturisticBackground>
+                  </div>
+                </AccessibilityEnhancer>
+              </EnhancedAccessibility>
+            </PerformanceOptimizer>
+          </AnalyticsProvider>
+        </Router>
       </HelmetProvider>
     </ErrorBoundary>
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
   );
 }
 

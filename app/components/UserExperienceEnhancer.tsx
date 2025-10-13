@@ -1,24 +1,19 @@
 import React from 'react';
-<<<<<<< HEAD
-'use client';
-import React, { useEffect, useState } from 'react';
-interface UserExperienceEnhancerProps {children: React.ReactNode;,}}}
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({children ,}) => {}const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({})
-useEffect(() => {// UX enhancement logic;
-    const enhanceUX = (;
-      // Add smooth scrolling;
-=======
 
-export default function ComponentsPage() {
+interface UserExperienceEnhancerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function UserExperienceEnhancer({ className = '', children }: UserExperienceEnhancerProps) {
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Components</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
+    <div className={`userexperienceenhancer ${className}`}>
+      {children || (
+        <div className="p-4 text-center">
+          <h3 className="text-lg font-semibold text-white mb-2">UserExperienceEnhancer</h3>
+          <p className="text-gray-300">Component under construction</p>
+        </div>
+      )}
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

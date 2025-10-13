@@ -1,35 +1,41 @@
 'use client';
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function ZionSmartInventoryOptimizerPage() {
+export default function page() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>ZionSmartInventoryOptimizer - Zion Tech Group</title>
-        <meta name="description" content="Advanced zionsmartinventoryoptimizer solutions" />
+        <title>page | Zion Tech Group</title>
+        <meta name="description" content="page - Advanced AI and IT Solutions by Zion Tech Group" />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">"
-        <div className="text-center mb-16">"
-          <h1 className="text-5xl font-bold text-white mb-6">"
-            Zion Smart Inventory Optimizer <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our comprehensive zionsmartinventoryoptimizer solutions designed to transform your business;
-          </p>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              page
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              This page is under construction. We're working hard to bring you the best AI and IT solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/" 
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+              >
+                Go Home
+              </a>
+              <a 
+                href="/contact" 
+                className="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-bold py-3 px-6 rounded-lg transition-colors"
+              >
+                Contact Us
+              </a>
+            </div>
+          </div>
         </div>
-        <div className="text-center">
-          <p className="text-gray-300">Coming Soon - ZionSmartInventoryOptimizer Solutions</p>
-
-=======
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Zion Smart Inventory Optimizer</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
       </div>
-    </div>
+    </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

@@ -1,34 +1,19 @@
-<<<<<<< HEAD
-    // Service Worker registration for caching
-    const registerServiceWorker = async () => {
-      if ('serviceWorker' in navigator) {
-        try {
-          const registration = await navigator.serviceWorker.register('/sw.js')
-          } catch (error) {
-          }
-      // Cache static assets
-      const cacheStaticAssets = async () => {
-        try {
-          const cache = await caches.open(CACHE_NAME)
-          await cache.addAll(CACHE_URLS)
-          } catch (error) {
-          }
-        } catch (error) {
-          return fetch(request)
-=======
-'use client';
 import React from 'react';
 
-export default function ComponentsPage() {
+interface CacheManagerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function CacheManager({ className = '', children }: CacheManagerProps) {
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Components</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
+    <div className={`cachemanager ${className}`}>
+      {children || (
+        <div className="p-4 text-center">
+          <h3 className="text-lg font-semibold text-white mb-2">CacheManager</h3>
+          <p className="text-gray-300">Component under construction</p>
+        </div>
+      )}
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

@@ -1,106 +1,19 @@
-'use client;
+import React from 'react';
 
-import React, { useEffect } from react;
-
-interface SecurityEnhancerProps {}
-  enableCSP?: boolean;
-
-  enableHSTS?: boolean;
-
-  enableXSSProtection?: boolean;
-
-  enableClickjackingProtection?: boolean;
-
-  enableContentTypeSniffing?: boolean;
-
+interface SecurityEnhancerProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-;
-
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
-  useEffect(() => {
-    if (typeof window === 'undefined) {
-import React from 'react';
-'use client';
-<<<<<<< HEAD
-import React, {useEffect}from 'react';
-interface SecurityEnhancerProps {children: React.ReactNode;,}}}
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({children ,}) => {useEffect(() => {
-    // Security enhancement logic;
-    const enhanceSecurity = (;
-      // Add security headers;
-      const securityHeaders = {
-        'X-Content-Type-Options': 'nosniff',
-        'X-Frame-Options': 'DENY',
-        'X-XSS-Protection': '1; mode=block',) => {
-  return($3;)
-  )}'Referrer-Policy': 'strict-origin-when-cross-origin';}
-      }
-// Add CSP meta tag;
-
-    }
-
-    // Content Security Policy
-    if ($1) { const cspMeta = document.createElement(meta);;
-
-      cspMeta.httpEquiv = Content-Security-Policy;
-
-    if ($1) { const xssMeta = document.createElement(meta);;
-
-      xssMeta.httpEquiv = X-XSS-Protection;
-
-      xssMeta.content = 1; mode=block;
-
-    if ($1) { const frameOptionsMeta = document.createElement(meta);;
-
-      frameOptionsMeta.httpEquiv = X-Frame-Options;
-
-      frameOptionsMeta.content = DENY;
-
-    if ($1) { const contentTypeMeta = document.createElement(meta);;
-
-      contentTypeMeta.httpEquiv = X-Content-Type-Options;
-
-      contentTypeMeta.content = nosniff;
-
-
-const originalFetch = window.fetch;;
-
-    window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {;
-
-const headers = new Headers(init?.headers);;
-
-      // Add security headers
-      headers.set('X-Requested-With', XMLHttpRequest);
-
-      headers.set('X-Content-Type-Options', nosniff);
-
-      return originalFetch(input, {
-
-const sanitizeInput = (input: string): string => {;;
-
-
-const inputs = document.querySelectorAll(input, textarea, select);;
-
-    inputs.forEach(input => {
-      input.addEventListener(input, (e) => {;
-
-const target = e.target as HTMLInputElement;;
-
-        if (target.value !== sanitizeInput(target.value)) {
-=======
-import React from 'react';
-
-export default function ComponentsPage() {
+export default function SecurityEnhancer({ className = '', children }: SecurityEnhancerProps) {
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Components</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
+    <div className={`securityenhancer ${className}`}>
+      {children || (
+        <div className="p-4 text-center">
+          <h3 className="text-lg font-semibold text-white mb-2">SecurityEnhancer</h3>
+          <p className="text-gray-300">Component under construction</p>
+        </div>
+      )}
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

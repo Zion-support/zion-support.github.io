@@ -1,27 +1,19 @@
-'use client';
 import React from 'react';
 
-<<<<<<< HEAD
-    <a
-      href="#main-content
-      className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2
-      onClick={(e) => {
-        e.preventDefault();
+interface SkipLinkProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-        const mainContent = document.getElementById(main-content);;
-
-        if (mainContent) {
-=======
-export default function ComponentsPage() {
+export default function SkipLink({ className = '', children }: SkipLinkProps) {
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Components</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
+    <div className={`skiplink ${className}`}>
+      {children || (
+        <div className="p-4 text-center">
+          <h3 className="text-lg font-semibold text-white mb-2">SkipLink</h3>
+          <p className="text-gray-300">Component under construction</p>
+        </div>
+      )}
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

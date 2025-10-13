@@ -1,24 +1,13 @@
-<<<<<<< HEAD
-export default function ImageOptimizer({ 
-  src, 
-  alt, 
-  className = '', 
-  quality = 80,
-  format = 'webp',
-=======
 'use client';
 import React from 'react';
 
-export default function ComponentsPage() {
+export default function ImageOptimizer() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Components</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-2xl font-bold text-white mb-4">ImageOptimizer</h1>
+        <p className="text-gray-300">This page is under construction.</p>
       </div>
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
