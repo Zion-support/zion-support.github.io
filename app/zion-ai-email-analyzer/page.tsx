@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Mail, Shield, Heart, MessageSquare, Star, CheckCircle, Sparkles, Smartphone, Globe, Settings, Headphones, Play, Share, Zap, Target, Users, BarChart3, TrendingUp } from 'lucide-react';
+import { ArrowRight, Mail, Shield, Heart, MessageSquare, Star, CheckCircle, Sparkles, Smartphone, Globe, Settings, Headphones, Play, Share, Zap, Target, Users, BarChart3, TrendingUp, FileText } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const ZionAIEmailAnalyzerPage = () => {

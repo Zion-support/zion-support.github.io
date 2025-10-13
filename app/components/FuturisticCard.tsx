@@ -4,12 +4,20 @@ interface FuturisticCardProps {
   children: React.ReactNode;
   className?: string;
   variant?: 'default' | 'glow' | 'border';
+  glowColor?: string;
+  hoverEffect?: boolean;
+  animated?: boolean;
+  neon?: boolean;
 }
 
 const FuturisticCard: React.FC<FuturisticCardProps> = ({ 
   children, 
   className = '', 
-  variant = 'default' 
+  variant = 'default',
+  glowColor,
+  hoverEffect = true,
+  animated = false,
+  neon = false
 }) => {
   const baseClasses = 'bg-slate-800/50 backdrop-blur-md rounded-2xl p-6 transition-all duration-300';
   

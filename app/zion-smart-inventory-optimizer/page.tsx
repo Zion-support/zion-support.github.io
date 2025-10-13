@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Package, BarChart3, TrendingUp, Target, Star, CheckCircle, Sparkles, Mail, Smartphone, Globe, Shield, Settings, Headphones, RefreshCw, Minimize, Bell, DollarSign, AlertCircle, Play, Truck, Warehouse, ShoppingCart, Store } from 'lucide-react';
+import { ArrowRight, Package, BarChart3, TrendingUp, Target, Star, CheckCircle, Sparkles, Mail, Smartphone, Globe, Shield, Settings, Headphones, RefreshCw, Bell, DollarSign, AlertCircle, Play, Truck, Warehouse, ShoppingCart, Store, Calendar, Minimize } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const ZionSmartInventoryOptimizerPage = () => {

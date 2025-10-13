@@ -3,9 +3,11 @@ import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {
   children: React.ReactNode;
+  title?: string;
+  description?: string;
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children, title, description }) => {
   useEffect(() => {
     // Add structured data for better SEO
     const addStructuredData = () => {

@@ -4,12 +4,20 @@ interface FuturisticCardEnhancedProps {
   children: React.ReactNode;
   className?: string;
   variant?: 'default' | 'gradient' | 'glass';
+  glowColor?: string;
+  hoverEffect?: boolean;
+  animated?: boolean;
+  neon?: boolean;
 }
 
 const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = ({ 
   children, 
   className = '', 
-  variant = 'default' 
+  variant = 'default',
+  glowColor,
+  hoverEffect = true,
+  animated = false,
+  neon = false
 }) => {
   const baseClasses = "relative rounded-xl overflow-hidden transition-all duration-300";
   

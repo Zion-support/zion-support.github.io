@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, Star, Shield, Cloud, Database, Code, Network, Smartphone, Monitor, Headphones, Clock, Settings, Zap, BarChart3, Award, Target, HardDrive, Minimize, Star as StarIcon } from 'lucide-react';
+import { ArrowRight, Star, Shield, Cloud, Database, Code, Network, Smartphone, Monitor, Headphones, Clock, Settings, Zap, BarChart3, Award, Target, HardDrive, Minimize, Star as StarIcon, Phone } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
