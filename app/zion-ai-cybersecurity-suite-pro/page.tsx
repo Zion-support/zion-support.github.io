@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { AlertTriangle } from 'lucide-react';
 import { Users } from 'lucide-react';
@@ -7,6 +8,9 @@ import { Network } from 'lucide-react';
 import { Lock } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Cloud } from 'lucide-react';
+=======
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 const ZionAICybersecuritySuiteProPage = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
@@ -153,6 +157,7 @@ const ZionAICybersecuritySuiteProPage = () => {
   ];
 
 export default function ZionAiCybersecuritySuiteProPage() {
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -195,4 +200,6 @@ export default function ZionAiCybersecuritySuiteProPage() {
   );
 };
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 }

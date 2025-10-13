@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Search } from 'lucide-react';
 import { Users } from 'lucide-react';
@@ -26,6 +27,9 @@ import { Hand } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
 import { Helmet } from "react-helmet-async";
+=======
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 export default function Services() {
   const services = [
@@ -39,7 +43,7 @@ export default function Services() {
       originalPrice: "$599/month",
       features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration", "Mobile App", "White-label Options"],
       category: "AI Analytics",
-      popular: true
+      popular: true;
     },
     {
       title: "AI Customer Support Automation Suite",
@@ -51,7 +55,7 @@ export default function Services() {
       originalPrice: "$399/month",
       features: ["Multi-language Support", "Sentiment Analysis", "CRM Integration", "Live Chat Handoff", "Voice Recognition", "Custom Training"],
       category: "AI Customer Service",
-      popular: true
+      popular: true;
     },
     {
       title: "AI Content Generation Studio",
@@ -74,7 +78,7 @@ export default function Services() {
       originalPrice: "$799/month",
       features: ["Threat Detection", "Automated Response", "Compliance Reports", "24/7 Monitoring", "Incident Response", "Security Training"],
       category: "Cybersecurity",
-      popular: true
+      popular: true;
     },
     {
       title: "5G Network Infrastructure Solutions",
@@ -217,7 +221,7 @@ export default function Services() {
       originalPrice: "$599/month",
       features: ["Database Optimization", "Backup & Recovery", "Performance Monitoring", "Security Hardening", "Scalability Planning", "Migration Services"],
       category: "Database Services",
-      popular: true
+      popular: true;
     },
     {
       title: "IT Infrastructure Monitoring Suite",
@@ -364,47 +368,6 @@ export default function Services() {
     }
   ];
 
-export default function ServicesPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Services solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Services</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive services solutions designed to meet your business needs.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
 }
 
 }

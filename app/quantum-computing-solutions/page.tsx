@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import { 
   Cpu, 
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
   Zap, 
   Shield, 
   Brain, 
@@ -8,6 +12,7 @@ import {
   Globe,
   Activity,
   Lock,
+<<<<<<< HEAD
   Gauge
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -29,6 +34,10 @@ import { Lock } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { Activity } from 'lucide-react';
+=======
+  Gauge  } from 'lucide-react';
+ } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 const QuantumComputingSolutionsPage = () => {
   const features = [
@@ -72,7 +81,7 @@ const QuantumComputingSolutionsPage = () => {
         "Email support",
         "Quantum simulation"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Quantum Professional",
@@ -89,7 +98,7 @@ const QuantumComputingSolutionsPage = () => {
         "Custom quantum circuits",
         "Quantum machine learning"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Quantum Enterprise",
@@ -108,7 +117,7 @@ const QuantumComputingSolutionsPage = () => {
         "SLA guarantee",
         "Dedicated quantum team"
       ],
-      popular: false
+      popular: false;
     }
   ];
 
@@ -147,6 +156,7 @@ const QuantumComputingSolutionsPage = () => {
   ];
 
 export default function QuantumComputingSolutionsPage() {
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -189,4 +199,6 @@ export default function QuantumComputingSolutionsPage() {
   );
 };
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 }

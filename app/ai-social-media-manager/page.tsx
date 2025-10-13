@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 export default function AiSocialMediaManagerZionTechGroup() {
   return (
@@ -42,3 +43,7 @@ export default function AiSocialMediaManagerZionTechGroup() {
     </div>
   );
 }
+=======
+"use client";
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f

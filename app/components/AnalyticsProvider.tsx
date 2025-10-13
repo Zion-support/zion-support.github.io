@@ -5,9 +5,4 @@ interface AnalyticsproviderProps {
 }
 
 export default function Analyticsprovider({ className = '', children, ...props }: AnalyticsproviderProps) {
-  return (
-    <div className={`analyticsprovider-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
 }

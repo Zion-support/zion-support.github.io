@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Helmet } from 'react-helmet-async';
 import { Code } from 'lucide-react';
@@ -44,3 +45,7 @@ export default function AICodeGenerationZionTechGroup() {
     </div>
   );
 }
+=======
+
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f

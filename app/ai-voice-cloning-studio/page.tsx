@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import { 
   Mic, 
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
   Play, 
   Settings, 
   Users, 
@@ -8,6 +12,7 @@ import {
   Brain,
   Volume2,
   FileAudio,
+<<<<<<< HEAD
   Globe
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -28,6 +33,10 @@ import { Globe } from 'lucide-react';
 import { Play } from 'lucide-react';
 import { Volume2 } from 'lucide-react';
 import { Mic } from 'lucide-react';
+=======
+  Globe  } from 'lucide-react';
+ } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 const AIVoiceCloningStudioPage = () => {
   const features = [
@@ -70,7 +79,7 @@ const AIVoiceCloningStudioPage = () => {
         "Standard quality (24kHz)",
         "Email support"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Professional",
@@ -86,7 +95,7 @@ const AIVoiceCloningStudioPage = () => {
         "API access",
         "Custom voice training"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Enterprise",
@@ -104,7 +113,7 @@ const AIVoiceCloningStudioPage = () => {
         "White-label solution",
         "SLA guarantee"
       ],
-      popular: false
+      popular: false;
     }
   ];
 
@@ -132,6 +141,7 @@ const AIVoiceCloningStudioPage = () => {
   ];
 
 export default function AiVoiceCloningStudioPage() {
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -174,4 +184,6 @@ export default function AiVoiceCloningStudioPage() {
   );
 };
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 }

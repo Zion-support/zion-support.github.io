@@ -5,9 +5,4 @@ interface EnhancederrorboundaryProps {
 }
 
 export default function Enhancederrorboundary({ className = '', children, ...props }: EnhancederrorboundaryProps) {
-  return (
-    <div className={`enhancederrorboundary-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
 }

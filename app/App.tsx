@@ -1,5 +1,9 @@
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+
 "use client";
 
+<<<<<<< HEAD
 import { HelmetProvider } from 'react-helmet-async';
 import { Helmet } from 'react-helmet-async';
 import { Home } from 'lucide-react';
@@ -7,6 +11,9 @@ import { Network } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 
 // Lazy load pages for better performance
+=======
+// Lazy load pages for better performance;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 const HomePage = lazy(() => import("./page"));
 const AboutPage = lazy(() => import("./about/page"));
 const ContactPage = lazy(() => import("./contact/page"));
@@ -20,7 +27,7 @@ const PrivacyPage = lazy(() => import("./privacy/page"));
 const TermsPage = lazy(() => import("./terms/page"));
 const CookiesPage = lazy(() => import("./cookies/page"));
 
-// 5G Solutions Pages
+// 5G Solutions Pages;
 const FiveGDataAnalyticsPage = lazy(() => import("./5g-data-analytics/page"));
 const FiveGEdgeComputingPage = lazy(() => import("./5g-edge-computing/page"));
 const FiveGImplementationPage = lazy(() => import("./5g-implementation/page"));
@@ -39,14 +46,21 @@ const FiveGSmartCitySolutionsPage = lazy(
 );
 const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
 
-// Main App Component
+// Main App Component;
 function App() {
+export default function AppPage() {
   return (
     <HelmetProvider>
       <BrowserRouter>
         <ErrorBoundary>
+<<<<<<< HEAD
           <PerformanceMonitor />
           <AccessibilityEnhancer>
+=======
+          <PerformanceMonitor showDetails={false}>
+            <div>Performance monitoring active</div>
+          </PerformanceMonitor>          <AccessibilityEnhancer>
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
             <CriticalResourcePreloader />
             <CacheManager />
             <AdvancedPerformanceMonitor />
@@ -109,3 +123,4 @@ function App() {
 }
 
 export default App;
+}

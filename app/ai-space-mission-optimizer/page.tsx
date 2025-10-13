@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import { 
   Rocket, 
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
   Satellite, 
   Orbit, 
   Zap, 
@@ -8,6 +12,7 @@ import {
   Globe,
   Activity,
   Navigation,
+<<<<<<< HEAD
   Gauge
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -27,6 +32,10 @@ import { Rocket } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { Activity } from 'lucide-react';
+=======
+  Gauge  } from 'lucide-react';
+ } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 const AISpaceMissionOptimizerPage = () => {
   const features = [
@@ -70,7 +79,7 @@ const AISpaceMissionOptimizerPage = () => {
         "Email support",
         "Mission reports"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Mission Professional",
@@ -87,7 +96,7 @@ const AISpaceMissionOptimizerPage = () => {
         "Custom algorithms",
         "Advanced analytics"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Mission Enterprise",
@@ -106,7 +115,7 @@ const AISpaceMissionOptimizerPage = () => {
         "SLA guarantee",
         "Dedicated mission control"
       ],
-      popular: false
+      popular: false;
     }
   ];
 
@@ -145,6 +154,7 @@ const AISpaceMissionOptimizerPage = () => {
   ];
 
 export default function AiSpaceMissionOptimizerPage() {
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -187,4 +197,6 @@ export default function AiSpaceMissionOptimizerPage() {
   );
 };
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 }

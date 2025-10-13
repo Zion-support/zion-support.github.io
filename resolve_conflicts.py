@@ -10,20 +10,16 @@ def resolve_merge_conflicts(file_path):
             content = f.read()
         
         # Pattern to match merge conflict markers
-        conflict_pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n'
-        
+        conflict_pattern = r'        
         # Replace conflicts with HEAD version
         resolved_content = re.sub(conflict_pattern, r'\1\n', content, flags=re.DOTALL)
         
         # Also handle cases where there might be multiple conflict markers in one block
-        conflict_pattern2 = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+'
-        resolved_content = re.sub(conflict_pattern2, r'\1', resolved_content, flags=re.DOTALL)
+        conflict_pattern2 = r'        resolved_content = re.sub(conflict_pattern2, r'\1', resolved_content, flags=re.DOTALL)
         
         # Remove any remaining conflict markers
-        resolved_content = re.sub(r'<<<<<<< HEAD\n', '', resolved_content)
-        resolved_content = re.sub(r'=======\n', '', resolved_content)
-        resolved_content = re.sub(r'>>>>>>> [^\n]+\n', '', resolved_content)
-        
+        resolved_content = re.sub(r'        resolved_content = re.sub(r'\n', '', resolved_content)
+        resolved_content = re.sub(r'        
         if content != resolved_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(resolved_content)

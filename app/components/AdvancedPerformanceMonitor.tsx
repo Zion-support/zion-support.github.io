@@ -5,9 +5,4 @@ interface AdvancedperformancemonitorProps {
 }
 
 export default function Advancedperformancemonitor({ className = '', children, ...props }: AdvancedperformancemonitorProps) {
-  return (
-    <div className={`advancedperformancemonitor-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
 }

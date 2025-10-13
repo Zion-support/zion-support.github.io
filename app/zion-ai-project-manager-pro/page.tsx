@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Users } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -6,6 +7,8 @@ import { Zap } from 'lucide-react';
 import { Calendar } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 const ZionAIProjectManagerProPage = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
@@ -150,6 +153,7 @@ const ZionAIProjectManagerProPage = () => {
   ];
 
 export default function ZionAiProjectManagerProPage() {
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -192,4 +196,6 @@ export default function ZionAiProjectManagerProPage() {
   );
 };
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 }

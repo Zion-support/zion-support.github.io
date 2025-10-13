@@ -18,13 +18,11 @@ class ErrorHandler extends Component<Props, State>
       error: null,
       errorInfo: null
 
-
   static getDerivedStateFromError(error: Error): State 
     return 
       hasError: true,
       error,
       errorInfo: null
-
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) 
     this.setState(
@@ -39,7 +37,6 @@ class ErrorHandler extends Component<Props, State>
       // You can integrate with services like Sentry, LogRocket, etc.
       this.logErrorToService(error, errorInfo)
 
-
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => 
     // Example: Send to monitoring service
     try 
@@ -52,7 +49,6 @@ class ErrorHandler extends Component<Props, State>
 ;
       // Send to your error reporting service here
  catch (reportingError) 
-
 
   handleRetry = () => 
     this.setState(
@@ -96,7 +92,6 @@ class ErrorHandler extends Component<Props, State>
                       <pre className="whitespace-pre-wrap">{this.state.error.stack}</pre>
                     </div>
 
-                  
                     <div></div>
                       <strong>Component Stack:</strong>
                       <pre className="whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pre>
@@ -126,6 +121,5 @@ class ErrorHandler extends Component<Props, State>
       )
 
     return this.props.children
-
 
 export default ErrorHandler

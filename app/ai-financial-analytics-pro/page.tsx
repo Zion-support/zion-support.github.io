@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Shield } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Monitor } from 'lucide-react';
@@ -223,3 +224,8 @@ export default function AiFinancialAnalyticsProPage() {
     </div>
   );
 }
+=======
+
+export default function Page() {
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f

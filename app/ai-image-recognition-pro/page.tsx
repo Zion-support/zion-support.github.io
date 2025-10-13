@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Users } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 const AIImageRecognitionPro = () => {
   const features = [
@@ -39,6 +42,7 @@ const AIImageRecognitionPro = () => {
   ];
 
 export default function AiImageRecognitionProPage() {
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -81,4 +85,6 @@ export default function AiImageRecognitionProPage() {
   );
 };
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 }

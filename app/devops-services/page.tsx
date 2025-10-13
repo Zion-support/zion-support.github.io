@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
@@ -218,3 +219,8 @@ const DevOpsServicesPage: React.FC = () => {
   );
 };
 
+=======
+
+export default function DevOpsServicesPage() {
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Star } from 'lucide-react';
 import { Database } from 'lucide-react';
@@ -10,6 +11,8 @@ import { FileText } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 const ZionAIAnalyticsProPage = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
 
@@ -68,7 +71,7 @@ const ZionAIAnalyticsProPage = () => {
         'Monthly reports',
         'Mobile app access'
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Professional',
@@ -85,7 +88,7 @@ const ZionAIAnalyticsProPage = () => {
         'Custom integrations',
         'Team collaboration'
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
@@ -104,7 +107,7 @@ const ZionAIAnalyticsProPage = () => {
         'Custom training',
         'SLA guarantee'
       ],
-      popular: false
+      popular: false;
     }
   ];
 
@@ -122,6 +125,7 @@ const ZionAIAnalyticsProPage = () => {
     { name: 'MongoDB', logo: 'MG', category: 'Database' },
     { name: 'AWS', logo: 'AW', category: 'Cloud' }
   ];
+<<<<<<< HEAD
 
 export default function ZionAiAnalyticsProPage() {
   return (
@@ -165,3 +169,6 @@ export default function ZionAiAnalyticsProPage() {
     </div>
   );
 }
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f

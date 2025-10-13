@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { TrendingUp } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { MessageSquare } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 const AISentimentAnalysisPro = () => {
   const features = [
@@ -43,6 +46,7 @@ const AISentimentAnalysisPro = () => {
   ];
 
 export default function AiSentimentAnalysisProPage() {
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -85,4 +89,6 @@ export default function AiSentimentAnalysisProPage() {
   );
 };
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 }

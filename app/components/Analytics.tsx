@@ -12,9 +12,4 @@ interface AnalyticsProps {
 }
 
 export default function Analytics({ className = '', children, ...props }: AnalyticsProps) {
-  return (
-    <div className={`analytics-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
 }

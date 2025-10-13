@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 export default function AiVideoEditorZionTechGroup() {
   return (
@@ -42,3 +43,7 @@ export default function AiVideoEditorZionTechGroup() {
     </div>
   );
 }
+=======
+"use client";
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f

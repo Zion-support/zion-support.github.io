@@ -5,9 +5,4 @@ interface FuturisticbuttonenhancedProps {
 }
 
 export default function Futuristicbuttonenhanced({ className = '', children, ...props }: FuturisticbuttonenhancedProps) {
-  return (
-    <div className={`futuristicbuttonenhanced-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
 }

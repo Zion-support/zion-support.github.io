@@ -1,5 +1,5 @@
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { Shield } from 'lucide-react';
@@ -10,6 +10,10 @@ import { Globe } from 'lucide-react';
 import { Server } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { Cloud } from 'lucide-react';
+=======
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 const DataCenterServicesPage = () => {
   const benefits = [
@@ -47,7 +51,7 @@ const DataCenterServicesPage = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-
+export default function PagePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
@@ -72,7 +76,7 @@ const DataCenterServicesPage = () => {
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Data Center Services
+              Data Center Services;
             </span>
           </h1>
           
@@ -82,18 +86,18 @@ const DataCenterServicesPage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Link
+            <Link;
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
             >
-              Get Started Today
+              Get Started Today;
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link
+            <Link;
               to="/demo"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
-              Watch Demo
+              Watch Demo;
               <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
           </div>
@@ -105,21 +109,21 @@ const DataCenterServicesPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Enterprise Data Center Solutions
+              Enterprise Data Center Solutions;
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Our data center services provide the reliability, security, and performance 
+              Our data center services provide the reliability, security, and performance;
               your business needs to thrive in the digital age.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div
+              <div;
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
-                <div
+                <div;
                   className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                 >
                   {feature.icon}
@@ -144,7 +148,7 @@ const DataCenterServicesPage = () => {
               Why Choose Our Data Centers?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of enterprise-grade data center services
+              Experience the benefits of enterprise-grade data center services;
             </p>
           </div>
           
@@ -171,18 +175,18 @@ const DataCenterServicesPage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <Link;
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
             >
-              Start Your Project
+              Start Your Project;
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link
+            <Link;
               to="/demo"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
-              Schedule Demo
+              Schedule Demo;
               <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
           </div>
@@ -193,3 +197,4 @@ const DataCenterServicesPage = () => {
 };
 
 export default DataCenterServicesPage;
+}

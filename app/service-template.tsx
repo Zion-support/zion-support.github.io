@@ -27,9 +27,4 @@ interface ServiceTemplateProps {
 }
 
 export default function ServiceTemplate({ className = '', children, ...props }: ServiceTemplateProps) {
-  return (
-    <div className={`servicetemplate-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Clock } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -12,6 +13,8 @@ import { Calendar } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 export default function ConsultationPage() {
   const benefits = [
@@ -39,7 +42,7 @@ export default function ConsultationPage() {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value;
     }));
   };
 
@@ -95,6 +98,7 @@ export default function ConsultationPage() {
       features: ["Network Planning", "Use Case Analysis", "Technology Selection", "Implementation Timeline"]
     }
   ];
+<<<<<<< HEAD
 
   return (
     <div>
@@ -448,3 +452,6 @@ export default function ConsultationPage() {
 </div>
   );
 }
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f

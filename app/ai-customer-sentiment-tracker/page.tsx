@@ -1,12 +1,28 @@
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { 
   ArrowRight,
+=======
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+
+  Heart, 
+  Zap, 
+  BarChart3, 
+  TrendingUp, 
+  Zap, 
+  Shield, 
+  Target, 
+  Brain, 
+  Users, 
+  CheckCircle,  ArrowRight,
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
   Users,
   Star,
   CheckCircle,
   Zap,
   Brain,
   Globe,
+<<<<<<< HEAD
   Monitor,
   Target,
   BarChart3,
@@ -16,6 +32,10 @@ import {
 } from 'lucide-react';
 import { ArrowRight } from 'lucide-react';
 import { Heart, Zap, BarChart3, TrendingUp, Shield, Target, Brain, Users, CheckCircle, ArrowRight, Globe, AlertCircle, Clock } from 'lucide-react';
+=======
+  AlertCircle,
+  Clock } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 const AICustomerSentimentTrackerPage = () => {
   const stats = [
@@ -121,7 +141,7 @@ const AICustomerSentimentTrackerPage = () => {
         "Email support",
         "3 team members"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Professional",
@@ -137,7 +157,7 @@ const AICustomerSentimentTrackerPage = () => {
         "10 team members",
         "API access"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Enterprise",
@@ -153,11 +173,44 @@ const AICustomerSentimentTrackerPage = () => {
         "Unlimited team members",
         "Custom integrations"
       ],
-      popular: false
+      popular: false;
     }
   ];
 
+<<<<<<< HEAD
 export default function AiCustomerSentimentTrackerPage() {
+=======
+  const stats = [
+    { number: "95%", label: "Accuracy Rate" },
+    { number: "2.5M+", label: "Mentions Analyzed" },
+    { number: "50+", label: "Languages Supported" },
+    { number: "99.9%", label: "Uptime" }
+  ];
+
+  const benefits = [
+    {
+      icon: <TrendingUp className="w-12 h-12 text-green-400" />,
+      title: "Increase Customer Satisfaction",
+      description: "Proactively identify and resolve issues before they impact customer experience"
+    },
+    {
+      icon: <Target className="w-12 h-12 text-blue-400" />,
+      title: "Improve Response Time",
+      description: "Get instant alerts for negative sentiment and respond within minutes, not hours"
+    },
+    {
+      icon: <BarChart3 className="w-12 h-12 text-purple-400" />,
+      title: "Data-Driven Decisions",
+      description: "Make informed business decisions based on comprehensive sentiment analytics"
+    },
+    {
+      icon: <Users className="w-12 h-12 text-cyan-400" />,
+      title: "Team Collaboration",
+      description: "Enable seamless collaboration across teams with shared insights and task management"
+    }
+  ];
+export default function PagePage() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -198,6 +251,4 @@ export default function AiCustomerSentimentTrackerPage() {
       </div>
     </div>
   );
-}
-
 }

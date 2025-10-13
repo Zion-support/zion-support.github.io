@@ -20,24 +20,21 @@ def resolve_complex_merge_conflicts(file_path):
         return False
     
     # Check if file has merge conflicts
-    if '<<<<<<< HEAD' not in content:
-        print(f"No merge conflicts found in {file_path}")
+    if '        print(f"No merge conflicts found in {file_path}")
         return True
     
     # Use regex to find and replace all merge conflict blocks
     # Pattern to match merge conflict blocks (including nested ones)
-    conflict_pattern = r'<<<<<<< HEAD.*?=======.*?>>>>>>> [^\n]*'
-    
+    conflict_pattern = r'    
     def resolve_conflict(match):
         conflict_text = match.group(0)
         
-        # Split by ======= to get HEAD and other versions
-        parts = conflict_text.split('=======')
+        # Split by to get HEAD and other versions
+        parts = conflict_text.split('')
         if len(parts) != 2:
             return conflict_text  # Return original if malformed
         
-        head_part = parts[0].replace('<<<<<<< HEAD', '').strip()
-        other_part = parts[1].split('>>>>>>>')[0].strip()
+        head_part = parts[0].replace('        other_part = parts[1].split('>>>>>>>')[0].strip()
         
         # Count non-empty lines to determine which version is more complete
         head_lines = [line for line in head_part.split('\n') if line.strip()]

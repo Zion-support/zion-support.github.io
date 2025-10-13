@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function Page() {
   const benefits = [
     "Benefit 1",
@@ -34,13 +35,38 @@ export default function Page() {
       price: '$79/month'
     },
     {
+=======
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+
+  Zap, 
+  BarChart3, 
+  Shield, 
+  Cloud, 
+  Users, 
+  TrendingUp, 
+  Database, 
+  Cpu, 
+  Sparkles,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Award,
+  Globe,
+  Mail,
+  Smartphone,
+  Monitor  } from 'lucide-react';
+} from 'lucide-react';
+
+const MicroSaasPage: React.FC = () => {
+  const microSaasProducts = [    {
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
       title: 'Zion Analytics Pro',
       description: 'Advanced analytics dashboard with real-time insights and customizable reports.',
       icon: <BarChart3 className="w-8 h-8" />,
       path: '/zion-analytics-pro',
       features: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'API integration'],
       price: '$299/month',
-      featured: true
+      featured: true;
     },
     {
       title: 'Zion Security Shield',
@@ -49,7 +75,7 @@ export default function Page() {
       path: '/zion-security-shield',
       features: ['Threat detection', 'Security monitoring', 'Incident response', 'Compliance reporting'],
       price: '$199/month',
-      featured: true
+      featured: true;
     },
     {
       title: 'Zion Cloud Vault',
@@ -58,7 +84,7 @@ export default function Page() {
       path: '/zion-cloud-vault',
       features: ['End-to-end encryption', 'Automated backups', 'File sharing', 'Version control'],
       price: '$99/month',
-      featured: false
+      featured: false;
     },
     {
       title: 'Zion Content Studio',
@@ -67,7 +93,7 @@ export default function Page() {
       path: '/zion-content-studio',
       features: ['AI content generation', 'Content calendar', 'Team collaboration', 'Multi-platform publishing'],
       price: '$149/month',
-      featured: false
+      featured: false;
     },
     {
       title: 'Zion AI CRM Pro',
@@ -76,7 +102,7 @@ export default function Page() {
       path: '/zion-ai-crm-pro',
       features: ['AI lead scoring', 'Automated follow-ups', 'Sales forecasting', 'Customer segmentation'],
       price: '$229/month',
-      featured: true
+      featured: true;
     },
     {
       title: 'Zion AI Marketing Automation Pro',
@@ -85,7 +111,7 @@ export default function Page() {
       path: '/zion-ai-marketing-automation-pro',
       features: ['Email automation', 'Social media scheduling', 'Lead nurturing', 'A/B testing'],
       price: '$199/month',
-      featured: false
+      featured: false;
     },
     {
       title: 'Zion AI Project Manager Pro',
@@ -94,7 +120,7 @@ export default function Page() {
       path: '/zion-ai-project-manager-pro',
       features: ['AI task prioritization', 'Resource optimization', 'Timeline forecasting', 'Team collaboration'],
       price: '$159/month',
-      featured: false
+      featured: false;
     },
     {
       title: 'Zion AI Data Analytics Pro',
@@ -103,7 +129,7 @@ export default function Page() {
       path: '/zion-ai-data-analytics-pro',
       features: ['ML insights', 'Predictive modeling', 'Data visualization', 'Custom dashboards'],
       price: '$279/month',
-      featured: true
+      featured: true;
     },
     {
       title: 'Zion AI Code Assistant Pro',
@@ -112,7 +138,7 @@ export default function Page() {
       path: '/zion-ai-code-assistant-pro',
       features: ['Code generation', 'Bug detection', 'Performance optimization', 'Documentation'],
       price: '$129/month',
-      featured: false
+      featured: false;
     }
   ];
 
@@ -151,6 +177,7 @@ export default function Page() {
   ];
 
 export default function MicroSaasPage() {
+<<<<<<< HEAD
   return (
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
@@ -222,3 +249,6 @@ export default function MicroSaasZionTechGroup() {
 }
 
 }
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f

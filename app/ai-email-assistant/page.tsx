@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Users, Star, Shield, Zap, Brain, Settings, BarChart3, Mail, MessageSquare, Hand, Sparkles, Target } from 'lucide-react';
@@ -275,3 +276,8 @@ export default function AIEmailAssistant() {
     </div>
   );
 }
+=======
+
+"use client";
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f

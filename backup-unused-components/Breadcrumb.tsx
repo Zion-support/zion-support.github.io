@@ -25,7 +25,6 @@ const Breadcrumb: React.FC = () =>
               
                 <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
 
-              
                 <Link
                   to={item.path}
                   className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors"

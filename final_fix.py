@@ -84,13 +84,10 @@ def fix_common_syntax_errors(content):
 def fix_merge_conflicts(content):
     """Fix merge conflict markers"""
     # Remove merge conflict markers and keep the HEAD version
-    content = re.sub(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n', r'\1', content, flags=re.DOTALL)
-    
+    content = re.sub(r'    
     # Remove any remaining conflict markers
-    content = re.sub(r'<<<<<<< [^\n]+\n', '', content)
-    content = re.sub(r'=======\n', '', content)
-    content = re.sub(r'>>>>>>> [^\n]+\n', '', content)
-    
+    content = re.sub(r'    content = re.sub(r'\n', '', content)
+    content = re.sub(r'    
     return content
 
 def process_file(file_path):

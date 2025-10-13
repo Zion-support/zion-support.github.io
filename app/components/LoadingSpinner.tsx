@@ -5,9 +5,4 @@ interface LoadingspinnerProps {
 }
 
 export default function Loadingspinner({ className = '', children, ...props }: LoadingspinnerProps) {
-  return (
-    <div className={`loadingspinner-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
 }

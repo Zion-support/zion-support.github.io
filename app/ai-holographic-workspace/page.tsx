@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Users } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -5,6 +6,8 @@ import { Shield } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Hand } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 const AIHolographicWorkspace = () => {
   const features = [
@@ -63,7 +66,7 @@ const AIHolographicWorkspace = () => {
         "Email support",
         "10GB holographic storage"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Holographic Professional",
@@ -80,7 +83,7 @@ const AIHolographicWorkspace = () => {
         "API access",
         "Custom workspace templates"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Holographic Enterprise",
@@ -97,7 +100,7 @@ const AIHolographicWorkspace = () => {
         "Advanced security protocols",
         "SLA guarantee"
       ],
-      popular: false
+      popular: false;
     }
   ];
 
@@ -136,6 +139,7 @@ const AIHolographicWorkspace = () => {
   ];
 
 export default function AiHolographicWorkspacePage() {
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -178,4 +182,6 @@ export default function AiHolographicWorkspacePage() {
   );
 };
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 }

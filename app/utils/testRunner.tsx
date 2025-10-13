@@ -5,9 +5,4 @@ interface TestrunnerProps {
 }
 
 export default function Testrunner({ className = '', children, ...props }: TestrunnerProps) {
-  return (
-    <div className={`testrunner-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
 }

@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import { 
   Brain, 
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
   TrendingUp, 
   Shield, 
   Zap, 
@@ -10,6 +14,7 @@ import {
   Cpu,
   Globe,
   Activity,
+<<<<<<< HEAD
   PieChart
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -32,6 +37,10 @@ import { Target } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Activity } from 'lucide-react';
 import { DollarSign } from 'lucide-react';
+=======
+  PieChart  } from 'lucide-react';
+ } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 const AIQuantumFinancialOraclePage = () => {
   const features = [
@@ -75,7 +84,7 @@ const AIQuantumFinancialOraclePage = () => {
         "Email support",
         "Basic reporting"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Quantum Professional",
@@ -92,7 +101,7 @@ const AIQuantumFinancialOraclePage = () => {
         "Custom strategies",
         "Advanced reporting"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Quantum Enterprise",
@@ -111,7 +120,7 @@ const AIQuantumFinancialOraclePage = () => {
         "SLA guarantee",
         "Dedicated account manager"
       ],
-      popular: false
+      popular: false;
     }
   ];
 
@@ -150,6 +159,7 @@ const AIQuantumFinancialOraclePage = () => {
   ];
 
 export default function AiQuantumFinancialOraclePage() {
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -192,4 +202,6 @@ export default function AiQuantumFinancialOraclePage() {
   );
 };
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 }

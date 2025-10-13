@@ -5,9 +5,4 @@ interface ResponsivegridProps {
 }
 
 export default function Responsivegrid({ className = '', children, ...props }: ResponsivegridProps) {
-  return (
-    <div className={`responsivegrid-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Home } from 'lucide-react';
 import { Shield } from 'lucide-react';
 import { Zap } from 'lucide-react';
@@ -7,6 +8,9 @@ import { Code } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
+=======
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 const HomePage = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
@@ -101,6 +105,7 @@ const HomePage = () => {
       features: ["Business Intelligence", "Data Visualization", "Predictive Modeling", "Real-time Analytics"]
     }
   ];
+<<<<<<< HEAD
 
 export default function AppPage() {
   return (
@@ -144,3 +149,6 @@ export default function AppPage() {
     </div>
   );
 }
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f

@@ -5,9 +5,4 @@ interface ServicesProps {
 }
 
 export default function Services({ className = '', children, ...props }: ServicesProps) {
-  return (
-    <div className={`services-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
 }

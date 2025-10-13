@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function Implementation5GPage() {
@@ -41,4 +42,8 @@ export default function Implementation5GPage() {
       </div>
     </div>
   );
+=======
+
+export default function FiveGImplementationPage() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 }

@@ -5,9 +5,4 @@ interface EnhancedloadingProps {
 }
 
 export default function Enhancedloading({ className = '', children, ...props }: EnhancedloadingProps) {
-  return (
-    <div className={`enhancedloading-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
 }

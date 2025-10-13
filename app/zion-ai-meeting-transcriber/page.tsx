@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 import { Helmet } from "react-helmet-async";
 import { Helmet } from 'react-helmet-async';
 import { Helmet } from 'react-helmet-async';
 import { Search } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { Mic } from 'lucide-react';
+=======
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 export default function ZionAIMeetingTranscriber() {
   const features = [
@@ -37,7 +41,7 @@ export default function ZionAIMeetingTranscriber() {
       period: "month",
       description: "Perfect for small teams",
       features: ["Up to 10 hours/month", "Basic transcription", "Email support", "1 user", "Standard accuracy"],
-      popular: false
+      popular: false;
     },
     {
       name: "Professional",
@@ -45,7 +49,7 @@ export default function ZionAIMeetingTranscriber() {
       period: "month",
       description: "Ideal for growing businesses",
       features: ["Up to 50 hours/month", "Advanced AI features", "Priority support", "5 users", "Speaker identification", "Action items"],
-      popular: true
+      popular: true;
     },
     {
       name: "Enterprise",
@@ -53,7 +57,7 @@ export default function ZionAIMeetingTranscriber() {
       period: "month",
       description: "For large organizations",
       features: ["Unlimited hours", "Custom integrations", "Dedicated support", "Unlimited users", "Advanced analytics", "White-labeling"],
-      popular: false
+      popular: false;
     }
   ];
 
@@ -63,65 +67,24 @@ export default function ZionAIMeetingTranscriber() {
       company: "TechStart Inc.",
       role: "CEO",
       content: "Zion AI Meeting Transcriber has revolutionized our team meetings. We never miss important details and our productivity has increased dramatically.",
-      rating: 5
+      rating: 5;
     },
     {
       name: "Michael Rodriguez",
       company: "Consulting Firm",
       role: "Partner",
       content: "The speaker identification feature is incredible. It's like having a professional secretary in every meeting.",
-      rating: 5
+      rating: 5;
     },
     {
       name: "Emily Johnson",
       company: "Marketing Agency",
       role: "Director",
       content: "The automatic action item extraction saves us hours of follow-up work. Highly recommended!",
-      rating: 5
+      rating: 5;
     }
   ];
 
-export default function ZionAiMeetingTranscriberPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Zion Ai Meeting Transcriber - Zion Tech Group</title>
-        <meta name="description" content="Zion Ai Meeting Transcriber solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Zion Ai Meeting Transcriber</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive zion ai meeting transcriber solutions designed to meet your business needs.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
 }
 
 }

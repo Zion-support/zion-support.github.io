@@ -5,10 +5,4 @@ interface EnhancedperformancemonitorProps {
 }
 
 export default function Enhancedperformancemonitor({ className = '', children, ...props }: EnhancedperformancemonitorProps) {
-  return (
-    <div className={`enhancedperformancemonitor-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
-};
-
+}

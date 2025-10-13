@@ -1,6 +1,9 @@
 
 'use client'
+<<<<<<< HEAD
 'use client'
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 interface CriticalresourcepreloaderProps {
   className?: string;
@@ -8,9 +11,4 @@ interface CriticalresourcepreloaderProps {
 }
 
 export default function Criticalresourcepreloader({ className = '', children, ...props }: CriticalresourcepreloaderProps) {
-  return (
-    <div className={`criticalresourcepreloader-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
 }

@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Receipt } from 'lucide-react';
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 const SmartExpenseCategorizerPage = () => {
   const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
 
@@ -22,7 +25,7 @@ const SmartExpenseCategorizerPage = () => {
         "Email support",
         "1 user account"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Business",
@@ -38,7 +41,7 @@ const SmartExpenseCategorizerPage = () => {
         "5 user accounts",
         "API access"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Enterprise",
@@ -54,9 +57,10 @@ const SmartExpenseCategorizerPage = () => {
         "Unlimited users",
         "Custom integrations"
       ],
-      popular: false
+      popular: false;
     }
   ];
+<<<<<<< HEAD
 
 export default function SmartExpenseCategorizerPage() {
   return (
@@ -100,3 +104,6 @@ export default function SmartExpenseCategorizerPage() {
     </div>
   );
 }
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f

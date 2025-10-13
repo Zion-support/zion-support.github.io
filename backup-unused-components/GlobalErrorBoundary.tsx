@@ -22,7 +22,6 @@ class GlobalErrorBoundary extends Component<Props, State>
     if (process.env.NODE_ENV === 'production') 
       // Here you would typically send the error to a logging service
 
-
   render() 
     if (this.state.hasError) 
       return (
@@ -50,6 +49,5 @@ class GlobalErrorBoundary extends Component<Props, State>
       );
 
     return this.props.children;
-
 
 export default GlobalErrorBoundary;

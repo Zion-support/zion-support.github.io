@@ -13,8 +13,7 @@ def resolve_merge_conflicts(file_path):
             content = f.read()
         
         # Check if file has merge conflicts
-        if '<<<<<<< HEAD' not in content:
-            return False
+        if '            return False
         
         # Split content into lines
         lines = content.split('\n')
@@ -24,14 +23,11 @@ def resolve_merge_conflicts(file_path):
         while i < len(lines):
             line = lines[i]
             
-            if line.startswith('<<<<<<< HEAD'):
-                # Find the end of this conflict block
+            if line.startswith('                # Find the end of this conflict block
                 conflict_start = i
-                while i < len(lines) and not lines[i].startswith('>>>>>>> '):
-                    i += 1
+                while i < len(lines) and not lines[i].startswith('                    i += 1
                 
-                if i < len(lines) and lines[i].startswith('>>>>>>> '):
-                    # We found the end of the conflict
+                if i < len(lines) and lines[i].startswith('                    # We found the end of the conflict
                     conflict_end = i
                     
                     # Extract the two versions
@@ -41,7 +37,7 @@ def resolve_merge_conflicts(file_path):
                     
                     for j in range(conflict_start + 1, conflict_end):
                         conflict_line = lines[j]
-                        if conflict_line.startswith('======='):
+                        if conflict_line.startswith(''):
                             current_section = 'incoming'
                         elif current_section == 'head':
                             head_lines.append(conflict_line)
@@ -67,8 +63,7 @@ def resolve_merge_conflicts(file_path):
                     # Add the chosen lines
                     new_lines.extend(chosen_lines)
                     
-                    # Skip the >>>>>>> line
-                    i += 1
+                    # Skip the                     i += 1
                 else:
                     # Malformed conflict, skip
                     i += 1

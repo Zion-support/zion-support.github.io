@@ -16,9 +16,7 @@ def cleanup_file(file_path):
         content = re.sub(r'^\s*origin/[^\n]+\n', '', content, flags=re.MULTILINE)
         
         # Remove any remaining merge conflict markers
-        content = re.sub(r'<<<<<<< HEAD.*?=======.*?>>>>>>>.*?', '', content, flags=re.DOTALL)
-        content = re.sub(r'^<<<<<<< HEAD.*?\n', '', content, flags=re.MULTILINE)
-        content = re.sub(r'^=======.*?\n', '', content, flags=re.MULTILINE)
+        content = re.sub(r'        content = re.sub(r'^        content = re.sub(r'^.*?\n', '', content, flags=re.MULTILINE)
         content = re.sub(r'^>>>>>>>.*?\n', '', content, flags=re.MULTILINE)
         
         # Fix JSX structure issues - wrap adjacent elements in fragments

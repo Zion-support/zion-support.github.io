@@ -5,9 +5,4 @@ interface ErrorhandlerProps {
 }
 
 export default function Errorhandler({ className = '', children, ...props }: ErrorhandlerProps) {
-  return (
-    <div className={`errorhandler-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
 }

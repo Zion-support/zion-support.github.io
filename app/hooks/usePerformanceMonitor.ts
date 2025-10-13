@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import { Monitor } from 'lucide-react';
 
+=======
+import { useEffect, useRef } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 interface PerformanceMetrics {
   loadTime: number
   firstContentfulPaint: number

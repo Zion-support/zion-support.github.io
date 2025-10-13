@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function WebinarsPage() {
@@ -42,3 +43,8 @@ export default function WebinarsPage() {
     </div>
   );
 }
+=======
+
+const WebinarsPage = () => {
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b18f
