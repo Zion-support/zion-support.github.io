@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Target, Star, Globe, Shield, CheckCircle } from 'lucide-react';
 
-<<<<<<< HEAD
 import { ArrowRight, TrendingUp, Zap, BarChart3, Clock, CheckCircle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -118,7 +117,6 @@ export default function CaseStudies() {
       services: ["5G Solutions", "IoT Integration", "AI Analytics"],
       image: "/api/placeholder/600/400",
       featured: false
-=======
 interface CaseStudy {
   id: string;
   title: string;
@@ -180,17 +178,14 @@ const CaseStudiesPage = () => {
         'Real-time supply chain visibility'
       ],
       technologies: ['Machine Learning', 'Python', 'Apache Spark', 'Tableau']
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
     }
   ];
 
   const stats = [
-<<<<<<< HEAD
     { number: "50+", label: "Projects Completed", icon: <CheckCircle className="w-6 h-6" /> },
     { number: "95%", label: "Client Satisfaction", icon: <TrendingUp className="w-6 h-6" /> },
     { number: "40%", label: "Average Cost Reduction", icon: <BarChart3 className="w-6 h-6" /> },
     { number: "60%", label: "Average Efficiency Gain", icon: <Zap className="w-6 h-6" /> }
-=======
     { number: "500+", label: "Projects Completed", icon: <Target className="w-6 h-6" /> },
     { number: "99.9%", label: "Client Satisfaction", icon: <Star className="w-6 h-6" /> },
     { number: "50+", label: "Industries Served", icon: <Globe className="w-6 h-6" /> },
@@ -205,7 +200,6 @@ const CaseStudiesPage = () => {
     "Education",
     "Technology",
     "Energy"
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
   ];
 
   return (
@@ -215,7 +209,6 @@ const CaseStudiesPage = () => {
         <meta name="description" content="Explore our successful projects and client transformations across various industries." />
       </Helmet>
 
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
@@ -253,7 +246,6 @@ const CaseStudiesPage = () => {
                 Explore Our Services
               </Link>
             </div>
-=======
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900">
         {/* Hero Section */}
         <section className="flex items-center justify-center py-20 px-4">
@@ -269,12 +261,10 @@ const CaseStudiesPage = () => {
               Start Your Project
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
           </div>
         </section>
 
         {/* Stats Section */}
-<<<<<<< HEAD
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -285,7 +275,6 @@ const CaseStudiesPage = () => {
                   </div>
                   <div className="text-2xl md:text-3xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-300 text-sm">{stat.label}</div>
-=======
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -296,14 +285,12 @@ const CaseStudiesPage = () => {
                   <div className="flex justify-center text-blue-400">
                     {stat.icon}
                   </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Featured Case Study */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -444,7 +431,6 @@ const CaseStudiesPage = () => {
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </Link>
-=======
         {/* Case Studies Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -514,7 +500,6 @@ const CaseStudiesPage = () => {
                         </div>
                       </div>
                     </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
                   </div>
                 </div>
               ))}
@@ -522,7 +507,6 @@ const CaseStudiesPage = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
@@ -536,7 +520,6 @@ const CaseStudiesPage = () => {
               <Link
                 to="/contact"
               </Link>
-=======
         {/* Industries We Serve */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -579,21 +562,17 @@ const CaseStudiesPage = () => {
                   Explore Our Services
                 </Link>
               </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
             </div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
     </>
   );
 }
 
-=======
 
     </div>
   );
 };
 
 export default CaseStudiesPage;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3

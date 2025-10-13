@@ -60,8 +60,6 @@ export default function Partners() {
         />
       </Helmet>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         {/* Hero Section */}
         <section className="py-20 px-4">
@@ -92,9 +90,6 @@ export default function Partners() {
             </div>
           </div>
         </section>
-=======
-<<<<<<< HEAD
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
 
         {/* Partner Types Section */}
         <section className="py-20 px-4">
@@ -106,7 +101,6 @@ export default function Partners() {
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {partnerTypes.map((type, index) => (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
@@ -192,12 +186,6 @@ export default function Partners() {
             </Link>
           </div>
         </section>
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6877
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-f1ad
       </div>
     </>
   );
