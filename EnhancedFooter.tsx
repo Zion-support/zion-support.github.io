@@ -8,7 +8,6 @@ interface EnhancedFooterProps {
   className?: string;
   children?: React.ReactNode;
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 export default function EnhancedFooter() {
   return (
     <footer className="bg-gray-900 text-white py-8">
@@ -85,7 +84,6 @@ const EnhancedFooter: React.FC = () => {
             <ul className="space-y-2">
               <li>
                 <Link to="/ai-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
                   AI Solutions
                 </Link>
               </li>
@@ -97,7 +95,6 @@ const EnhancedFooter: React.FC = () => {
                 >
 =======
                 <Link to="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors">
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
                   IT Services
                 </Link>
               </li>
@@ -109,7 +106,6 @@ const EnhancedFooter: React.FC = () => {
                 >
 =======
                 <Link to="/cloud-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
                   Cloud Solutions
                 </Link>
               </li>
@@ -121,7 +117,6 @@ const EnhancedFooter: React.FC = () => {
                 >
 =======
                 <Link to="/cybersecurity" className="text-gray-300 hover:text-cyan-400 transition-colors">
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
                   Cybersecurity
                 </Link>
               </li>
@@ -221,7 +216,6 @@ const EnhancedFooter: React.FC = () => {
           </div>
         </div>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-400">
             © 2024 Zion Tech Group. All rights reserved.
@@ -399,15 +393,11 @@ export default EnhancedFooter</div></div>;
 </ul></li>
 </li></li>
 </footer>
->>>>>>> cursor/delete-records-a75e
 =======
       </div>
     </footer>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c
 =======
 export default EnhancedFooter;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070

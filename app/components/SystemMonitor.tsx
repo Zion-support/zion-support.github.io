@@ -82,7 +82,6 @@ const benefits = [
   ]
 </span>
 <br></br>
->>>>>>> origin/main
               <span className="text-white">Solutions</span></h1>"
 <p>Transform your business with our advanced systemmonitor solutions.;</p>
               Powered by cutting-edge AI technology and industry expertise.

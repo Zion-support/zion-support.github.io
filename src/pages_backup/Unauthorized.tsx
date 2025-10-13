@@ -120,6 +120,4 @@ const { t } = useTranslation()
             </Link></$1>
 </$1></$1>
 </$1></div>)
->>>>>>> cursor/delete-records-a75e
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

@@ -251,6 +251,4 @@ let fixed = content
 
 // Run the script
 processFiles().catch(console.error)
->>>>>>> cursor/delete-records-a75e
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

@@ -37,7 +37,6 @@ export default async function handler(
     console.error("Error:", error)"
     return res.status(500).json({ error: "Internal server error" })"
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return
     } catch (error) {
   // TODO: Add properties
@@ -99,5 +98,3 @@ const report = await store.generateMonthlyReport(month)
     return res.status(500).json({ error: "Internal server error" })"
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

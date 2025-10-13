@@ -109,7 +109,6 @@ export const logger = new Logger();
 export default logger;
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 // logger utility functions
 
@@ -135,4 +134,3 @@ export class Logger {
 
 // Export default instance
 export const logger = new Logger();
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

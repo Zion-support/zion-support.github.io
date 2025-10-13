@@ -35,4 +35,3 @@ function handler() {
   res.set_header ("Content - Type", "text / plain")"
   res.status (200).send (toSDL ())
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

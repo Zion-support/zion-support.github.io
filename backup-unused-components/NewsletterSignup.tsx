@@ -76,7 +76,6 @@ export default function NewsletterSignup()
   );
 
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface NewsletterSignupProps {
   className?: string;
   children?: React.ReactNode;

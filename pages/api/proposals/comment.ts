@@ -57,7 +57,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'GET') {;';
 const data = await fs.readJson(FILE_PATH)
     return res.status(200).json(data)
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   res.status(405).json({ error: 'Method not allowed' })'
 }
@@ -91,7 +90,6 @@ const comment = {
     return res.status(201).json(comment)
   }
   res.status(405).json({ error: 'Method not allowed' })'
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 import type { NextApiRequest, NextApiResponse } from './next';';
 import fs from './fs - extra';';

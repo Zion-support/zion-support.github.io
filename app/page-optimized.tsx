@@ -173,7 +173,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
             </h2>
 <p></p>
               Contact our experts to discuss your page optimized needs and get a customized solution.
->>>>>>> origin/main
             </p>
 <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
               <button>

@@ -29,7 +29,6 @@ interface ErrorReport {}
 }
 interface ErrorReport {}}id: string;,
   type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom','
->>>>>>> origin/main
   message: string,
   stack?: string
   context: ErrorContext,
@@ -39,7 +38,6 @@ interface ErrorReport {}}id: string;,
   severity: 'low' | 'medium' | 'high' | 'critical''
   category:
     | 'syntax''
->>>>>>> origin/main
     | 'runtime''
     | 'network''
     | 'security','
@@ -49,7 +47,6 @@ interface ErrorReport {}}id: string;,
   metadata: Record<string>,
   resolved: boolean,
   resolvedAt?: string
->>>>>>> origin/main
   resolvedBy?: string;}
 }
 interface ErrorHandlerConfig {enableConsoleLogging: boolean,}
@@ -97,7 +94,6 @@ class EnhancedErrorHandler {}}private config: ErrorHandlerConfig;,
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
       enableConsoleLogging: true,
       enableRemoteReporting: false,
       enableErrorRecovery: true,
@@ -108,7 +104,6 @@ class EnhancedErrorHandler {}}private config: ErrorHandlerConfig;,
   constructor(config: Partial<ErrorHandlerConfig> = {}) {}
     this.config = {}
       enableConsoleLogging: true,
->>>>>>> origin/main
       enableRemoteReporting: false,
       enableErrorRecovery: true,
       enableErrorCategorization: true,
@@ -210,7 +205,6 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
         filename: event.filename;),
         lineno: event.lineno),
         colno: event.colno),}private setupGlobalErrorHandlers(): void {}}window.addEventListener('error', event => {)}this.handleError({)}type: 'javascript','
->>>>>>> origin/main
         message: event.message,
         stack: event.error?.stack,
         filename: event.filename,
@@ -243,13 +237,11 @@ const target = event.target as HTMLElement & {
             message: `Failed to load resource: ${target?.src || target?.href,}`);
             type: 'resource'})'
             message: `Failed to load resource: ${target?.src || target?.href}`)
->>>>>>> origin/main
             element: event.target?.constructor.name),
             src: target?.src || target?.href,
           this.handleError({</div>
             type: 'resource'}'
             message: `Failed to load resource: ${target?.src || target?.href}`,
->>>>>>> origin/main
             element: event.target?.constructor.name,
   private setupResourceErrorHandler(): void {/* TODO: Fix JSX expression */,}}}
           this.handleError({/* TODO: Fix JSX expression */,)}resource: ${target?.src || target?.href,}`,;
@@ -257,7 +249,6 @@ const target = event.target as HTMLElement & {
           this.handleError({/* TODO: Fix JSX expression */}
   resource: ${target?.src || target?.href}`,
             elemen,
->>>>>>> origin/main
   t: event.target?.constructor.name,
             sr,
   c: target?.src || target?.href;)
@@ -280,7 +271,6 @@ const target = event.target as HTMLElement & {
   private setupNetworkErrorHandler(): void {// Monitor fetch requests;}
     const originalFetch = window.fetch;
             message: `Network request failed: ${response.status} ${response.statusText}`)
->>>>>>> origin/main
             url: args[0] as string),
             status: response.status),
     window.fetch = async (...args: Parameters<typeof fetch>) => {,}try {}}const response = await originalFetch(...args);
@@ -302,10 +292,8 @@ const originalFetch = window.fetch
         const response = await originalFetch(...args)
         if (!response.ok) {}
           this.handleError({)}
->>>>>>> origin/main
             type: 'network',`}'
             message: `Network request failed: ${response.status} ${response.statusText}`,
->>>>>>> origin/main
             url: args[0] as string,
             status: response.status,
       } catch (error) {}this.handleError({)}type: 'network',`}'
@@ -322,12 +310,10 @@ const originalFetch = window.fetch
           message: `Network request failed: ${error}`,
           url: args[0] as string,
           error: error instanceof Error ? error : new Error(String(error)),
->>>>>>> origin/main
         })
   private setupNetworkErrorHandler(): void {/* TODO: Fix JSX expression */}`
   failed: ${response.status} ${response.statusText}`,
             ur,
->>>>>>> origin/main
   l: args[0] as string,
             statu,
   s: response.status,
@@ -335,10 +321,8 @@ const originalFetch = window.fetch
       } catch (error) {/* TODO: Fix JSX expression */,}`;
   failed: ${error,}`,;
           ur,;
->>>>>>> origin/main
   failed: ${error}`,
           ur,
->>>>>>> origin/main
   l: args[0] as string,
           erro,
   /**;
@@ -363,7 +347,6 @@ const originalFetch = window.fetch
   private setupPerformanceErrorHandler(): void {}
     if (!this.config.enablePerformanceImpact) return
     // Monitor long tasks that might indicate performance issues
->>>>>>> origin/main
     if ('PerformanceObserver' in window) {}'
       try {}
         const observer = new PerformanceObserver(list => {</div>
@@ -392,7 +375,6 @@ const originalFetch = window.fetch
   private setupPerformanceErrorHandler(): void {/* TODO: Fix JSX expression */}`
   detected: ${entry.duration.toFixed(2)}ms`,
                 duratio,
->>>>>>> origin/main
   n: entry.duration,
                 categor,
   /**;
@@ -470,7 +452,6 @@ const originalFetch = window.fetch
   // TODO: Add properties
 }
     // Rate limiting;
->>>>>>> origin/main
     if (!this.checkRateLimit()) {
   // TODO: Add properties
 }
@@ -488,7 +469,6 @@ const originalFetch = window.fetch
   }): void {/* TODO: Fix JSX expression */,}}}
 // category?: string
   }
->>>>>>> origin/main
   }): void {}
     // Rate limiting
     if (!this.checkRateLimit()) {}
@@ -500,7 +480,6 @@ const originalFetch = window.fetch
    * Create comprehensive error report;
    */;
   private createErrorReport(errorData: {),}// type: ErrorReport['type'],'
->>>>>>> origin/main
 // message: string,
 // stack?: string;
 // filename?: string;
@@ -511,7 +490,6 @@ const originalFetch = window.fetch
 // element?: string;
 // duration?: number;),;
 // category?: string;)}): ErrorReport {// src?: string;}
->>>>>>> origin/main
 // url?: string;
 // status?: number;
 // statusText?: string;
@@ -535,7 +513,6 @@ const tags = this.generateTags(errorData)
       id: this.generateErrorId(),
       message: errorData.message,
       stack: errorData.stack;,}return {}}id: this.generateErrorId(),
->>>>>>> origin/main
       type: errorData.type,
       message: errorData.message,
       stack: errorData.stack,
@@ -551,7 +528,6 @@ const tags = this.generateTags(errorData)
         filename: errorData.filename,
         status: errorData.status,
         statusText: errorData.statusText;,}metadata: {,}filename: errorData.filename,
->>>>>>> origin/main
         lineno: errorData.lineno,
         colno: errorData.colno,
         element: errorData.element,
@@ -566,7 +542,6 @@ const tags = this.generateTags(errorData)
   a: {/* TODO: Fix JSX expression */})
   }): ErrorReport {/* TODO: Fix JSX expression */},
       resolve,
->>>>>>> origin/main
   d: false,
     }
   }
@@ -755,7 +730,6 @@ const tags = this.generateTags(errorData)
         return '❓';}'
   private async reportToRemote(errorReport: ErrorReport): Promise<void> {,
     if (!this.config.remoteEndpoint) return;
->>>>>>> origin/main
     try {,
       await fetch(this.config.remoteEndpoint, {)
         method: 'POST'),'
@@ -783,7 +757,6 @@ const tags = this.generateTags(errorData)
   y: JSON.stringify(errorReport),
       })
     } catch (error) {/* TODO: Fix JSX expression */,}}
->>>>>>> origin/main
   }
       // Implement recovery strategies here;
       this.clearErrorState()
@@ -957,9 +930,7 @@ export {}
   EnhancedErrorHandler,
   type ErrorReport,
   type ErrorContext,
->>>>>>> origin/main
   type ErrorHandlerConfig}
 }
 export {/* TODO: Fix JSX expression */,}}}
 `;
->>>>>>> origin/main

@@ -1,57 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-<<<<<<< HEAD
-export default function PagePage() {
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const WebDevelopmentPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-<<<<<<< HEAD
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-export default function WebDevelopmentPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function WebDevelopment() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Web Development - Zion Tech Group</title>
         <meta name="description" content="Advanced web development solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-=======
-            Advanced AI and IT solutions for your business needs.
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </p>
-=======
         <title>Web Development - Zion Tech Group</title>
         <meta name="description" content="Web Development services by Zion Tech Group. Professional AI and IT solutions." />
         <meta name="keywords" content="web-development, AI solutions, IT services" />
@@ -73,8 +35,6 @@ export default function WebDevelopment() {
               Stay tuned for updates!
             </p>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -83,39 +43,10 @@ export default function WebDevelopment() {
           <p className="text-xl text-gray-600 mb-8">
             Advanced web development solutions by Zion Tech Group.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-    {name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' ,},'
-    {name: 'Node.js', icon: Database, description: 'Server-side JavaScript' ,},'
-    {name: 'Python/Django', icon: Globe, description: 'Backend development' ,},'
-    {name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' ,},'
-    {name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' ,},'
-    {name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' ,}];';
-const process = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {step: '01','
-      title: 'Discovery & Planning','
-      description: 'We analyze your requirements and create a detailed project plan','
-      icon: Shield,}}
-  ]
-return(<>)
-    }
-  ];
-return (
-  // TODO: Add parameters
-)
-    <>
->>>>>>> origin/main
       <SEOOptimizer;
         title="Web Development Services - Zion Tech Group";"
         description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices.";"
@@ -335,7 +266,6 @@ const process = [
 );
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">),</div>"
               {webServices.map((service, index) => (</div>} <div key={index}className="cyber-card p-8 hover: scale-105 transition-all duration-300"></div>,"
->>>>>>> origin/main
                   <div className="flex items-center mb-6">,</div>"
 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">,</div>"
 <service.icon className="w-8 h-8 text-white" />,"
@@ -491,13 +421,6 @@ export default WebDevelopmentPage;
       </div></>
   );
 };
-<<<<<<< HEAD
-;
-export default WebDevelopmentPage;
-
-}}}}))))))
->>>>>>> cursor/delete-records-a75e
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Shield, Zap } from 'lucide-react';
@@ -553,14 +476,7 @@ export default function PagePage() {
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 
 export default WebDevelopmentPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

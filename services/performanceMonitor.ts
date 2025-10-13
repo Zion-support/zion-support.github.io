@@ -282,8 +282,6 @@ const response = await fetch(`${this.baseUrl}/performance/history?url=${encodeUR
   // TODO: Add properties
 }
         throw new Error(`Failed to fetch historical data: ${response.statusText}`)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       return await response.json()
     } catch (error) {
@@ -417,8 +415,6 @@ const response = await fetch(`${this.baseUrl}/performance/alerts${params}`, {
   // TODO: Add properties
 }
         throw new Error(`Failed to fetch alerts: ${response.statusText}`)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       return await response.json()
     } catch (error) {
@@ -1502,7 +1498,6 @@ export const PERFORMANCE_MONITOR_PRICING = {
 ]
       'Monitor unlimited URLsReal - time monitoring_all performance metrics_multiple notification channels1 - year data retention_custom dashboards_white - label reporting_priority support','
       'SLA guarantee''
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     ]
   }
 }

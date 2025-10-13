@@ -15,7 +15,6 @@ interface AccessibilityUtilsConfig {
   highContrast: boolean;
   fontSize: 'small' | 'medium' | 'large';
   screenReader: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 interface AccessibilityUtilsConfig {
   enabled: boolean;
@@ -24,7 +23,6 @@ interface AccessibilityUtilsConfig {
   focusManagement?: boolean;
   colorContrast?: boolean;
   keyboardNavigation?: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c
 }
 
 export class AccessibilityUtils {
@@ -43,7 +41,6 @@ export class AccessibilityUtils {
       focusManagement: true,
       colorContrast: true,
       keyboardNavigation: true,
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c
       ...config
     };
   }
@@ -508,11 +505,9 @@ export const initAccessibility = (): void => {/* TODO: Fix JSX expression */}
   })
   document.body.insertBefore(skipLink, document.body.firstChild)
 "`
->>>>>>> cursor/delete-records-a75e
 =======
 export const accessibilityUtils = new AccessibilityUtils();
 export default accessibilityUtils;
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
       this.setupSkipLinks();
       this.setupFocusManagement();
@@ -646,4 +641,3 @@ export default accessibilityUtils;
 
 export const accessibilityUtils = new AccessibilityUtils();
 export default accessibilityUtils;
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c

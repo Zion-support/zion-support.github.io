@@ -25,4 +25,3 @@ const features = [
     {icon: Globe,
       title: 'Global Reach','
   ];
->>>>>>> origin/main

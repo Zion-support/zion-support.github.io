@@ -1,135 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function ArVrPlatformPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function ArVrPlatform() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Ar Vr Platform - Zion Tech Group</title>
         <meta name="description" content="Advanced ar vr platform solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-          </p>
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const ArVrPlatformPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Ar Vr Platform - Zion Tech Group</title>
-        <meta name="description" content="Ar Vr Platform services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="ar-vr-platform, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Ar Vr Platform
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional ar vr platform services by Zion Tech Group.
-          </p>
-          
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced ar vr platform solutions. 
-              Stay tuned for updates!
-            </p>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
-'use client';';
-import React from 'react';';';
-import {Helmet}}from 'react-helmet-async';';';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';';';
-const ARVRPlatformPage: React.FC = () => {,;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Brain,
-      title: 'AI-Powered AR/VR','
-      description: 'Advanced AI technology to create immersive augmented and virtual reality experiences',},'
-    {icon: Zap,
-      title: 'Real-Time Rendering','
-      description: 'Lightning-fast 3D rendering and real-time interaction for optimal user experience',},'
-    {icon: Shield,
-      title: 'Enterprise Security','
-      description: 'Bank-level security with encryption and compliance standards for your AR/VR data',},'
-    {icon: Globe,
-      title: 'Cross-Platform Support','
-  ];];];
-  const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    'Advanced AR/VR technology integration','
-    'Real-time 3D rendering and interaction','
-    'Enterprise-grade security and compliance','
-    'Cross-platform deployment capabilities','
-    '24/7 technical support','
-    'Easy integration with existing systems','
-    'Cost-effective pricing plans','
-    'Proven track record of success''
-  ]
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>"
-<Helmet />
-  return (
-  // TODO: Add parameters
-)
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<Helmet>
->>>>>>> origin/main
         <title>AR/VR Platform | Zion Tech Group</title>
 <meta name="description" content="Professional AR/VR Platform services by Zion Tech Group. Advanced AI and IT solutions for your business." /></Helmet>"
 
@@ -233,16 +117,10 @@ export default ARVRPlatformPage;
 ;
 export default PagePage;
 )
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 };
 
 export default ArVrPlatformPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
             Advanced AI and IT solutions for your business needs.
           </p>
         </div>
@@ -274,7 +152,6 @@ export default ArVrPlatformPage;
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -283,14 +160,8 @@ export default ArVrPlatformPage;
           <p className="text-xl text-gray-600 mb-8">
             Advanced ar vr platform solutions by Zion Tech Group.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

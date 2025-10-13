@@ -1,52 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AiApiManagementPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AiApiManagement() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Ai Api Management - Zion Tech Group</title>
         <meta name="description" content="Advanced ai api management solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-=======
-            Advanced AI and IT solutions for your business needs.
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </p>
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -76,91 +40,15 @@ const AiApiManagementPage: React.FC = () => {
               Stay tuned for updates!
             </p>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';';';
-import {CheckCircle, ArrowRight, Zap, Shield, Users, BarChart3}}from 'lucide-react';';'
-;
-const AIApiManagementPage: React.FC = () => {,;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      benefits: ['Real-time monitoring', 'Anomaly detection', 'Performance analytics', 'Automated alerts']},'
-    {title: 'Smart Rate Limiting','
-      description: 'AI-driven rate limiting that adapts to usage patterns and prevents abuse while maintaining optimal performance.','
-      benefits: ['Adaptive rate limiting', 'Abuse prevention', 'Performance optimization', 'Dynamic scaling']},'
-    {title: 'Automated Documentation','
-      description: 'Generate and maintain comprehensive API documentation automatically with AI-powered analysis.','
-      benefits: ['Auto-generated docs', 'Interactive examples', 'Version management', 'Developer portal']},'
-  ];
-  const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    'Reduced API downtime by 95%','
-    '50% faster API response times','
-    'Automated security scanning','
-    'Real-time performance monitoring','
-    'Intelligent load balancing','
-    'Cost optimization insights''
-  ];
-  const stats = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {icon: <Zap className="w-8 h-8 text-blue-500" />, value: '99.9%', label: 'Uptime' ,},'"
-    {icon: <Shield className="w-8 h-8 text-green-500" />, value: '100%', label: 'Security' ,},'"
-    {icon: <Users className="w-8 h-8 text-purple-500" />, value: '10K+', label: 'APIs Managed' ,},'"
-    {icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '50%', label: 'Cost Reduction' ,}]'"
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">)</div>"
-<Helmet />
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      title: 'Smart Rate Limiting','
-      description: 'AI-driven rate limiting that adapts to usage patterns and prevents abuse while maintaining optimal performance.','
-      benefits: ['Adaptive rate limiting', 'Abuse prevention', 'Performance optimization', 'Dynamic scaling'],'
-    },
-    {];];
-    }
-  ];
-  const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-'Increase efficiency by up to 50%','
-    'Reduce costs by 30% with automation','
-    'Improve decision-making with AI insights','
-    'Scale operations without proportional staff increases','
-    'Gain competitive advantage with advanced technology''
-  ];
->>>>>>> main
   return (
   // TODO: Add parameters
 )
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">"
 <Helmet>
->>>>>>> origin/main
         <title>AI API Management | Zion Tech Group</title>
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden"></section>"
@@ -278,7 +166,6 @@ const features = [
               </button></div>
 </div></div>
 </section>
->>>>>>> origin/main
 
       <Footer/ />
 </div>
@@ -292,7 +179,6 @@ export default AIApiManagementPage;
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
 <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Start Free Trial"
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Contact Sales"
->>>>>>> origin/main
         {/* Features Section */}
         <section className="py-20 px-4"></section>"
 <div className="max-w-7xl mx-auto">"
@@ -364,19 +250,11 @@ export default AIApiManagementPage;
 };
 ;
 export default AiApiManagementPage;
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 };
 
 export default AiApiManagementPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -390,4 +268,3 @@ export default AiApiManagementPage;
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

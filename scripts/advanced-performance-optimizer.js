@@ -208,4 +208,3 @@ console.log('✓ Service worker updated');
 console.log('✓ Performance monitoring added');
 console.log('✓ PWA manifest enhanced');
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

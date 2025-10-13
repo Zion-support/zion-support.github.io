@@ -133,14 +133,10 @@ export default accessibilityChecker;
 };
 ;
 export default AccessibilityCheckerPage;
->>>>>>> origin/main
 
 }
->>>>>>> cursor/delete-records-a75e
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 // Export default instance
 export const accessibilityChecker = new AccessibilityChecker();
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

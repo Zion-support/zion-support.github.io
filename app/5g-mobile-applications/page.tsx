@@ -1,193 +1,111 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Shield, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Smartphone, Zap, Globe, Shield, Users, TrendingUp } from 'lucide-react';
 
-<<<<<<< HEAD
-export default function PagePage() {
-<<<<<<< HEAD
+export default function FiveGMobileApplicationsPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-          </p>
-        </div>
-=======
-  const features = [
-    {
-      title: "Advanced Technology",
-      description: "Cutting-edge solutions powered by the latest technology",
-      icon: <Brain className="w-8 h-8" />
-    },
-    {
-      title: "Secure & Reliable",
-      description: "Enterprise-grade security and reliability for your business",
-      icon: <Shield className="w-8 h-8" />
-    },
-    {
-      title: "Fast Implementation",
-      description: "Quick deployment and implementation for immediate results",
-      icon: <Zap className="w-8 h-8" />
-    }
-  ];
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-
-const FiveGMobileApplicationsPage: React.FC = () => {
-  return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title> - Zion Tech Group</title>
-        <meta name="description" content="Advanced  solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Advanced  solutions by Zion Tech Group
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-6">
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
-    <>
-      <Helmet>
-        <title>5g Mobile Applications - Zion Tech Group</title>
-        <meta name="description" content="5g Mobile Applications services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="5g-mobile-applications, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            5g Mobile Applications
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional 5g mobile applications services by Zion Tech Group.
-          </p>
-          
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced 5g mobile applications solutions. 
-              Stay tuned for updates!
-            </p>
-          </div>
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-      </div>
-    </>
-  );
-<<<<<<< HEAD
-}
-=======
-};
-
-export default FiveGMobileApplicationsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
-export default function FivegMobileApplicationsPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>5g Mobile Applications - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5g mobile applications solutions by Zion Tech Group" />
-      </Helmet>
-
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            5g Mobile Applications
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Advanced AI and IT solutions for your business needs.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
-            <p className="text-gray-600">
-              Comprehensive solution for your business requirements.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
-            <p className="text-gray-600">
-              Advanced technology integration and optimization.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
-            <p className="text-gray-600">
-              Scalable and secure implementation.
-            </p>
-          </div>
-        </div>
-
-        <div className="text-center mt-12">
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-            Get Started
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function FiveGMobileApplications() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
         <title>5G Mobile Applications - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5g mobile applications solutions by Zion Tech Group" />
+        <meta name="description" content="Advanced 5G mobile application development by Zion Tech Group. Ultra-fast, low-latency mobile apps powered by 5G technology." />
       </Helmet>
+
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
             5G Mobile Applications
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Advanced 5g mobile applications solutions by Zion Tech Group.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Build next-generation mobile applications that leverage the power of 5G networks. 
+            Ultra-fast, low-latency, and immersive user experiences.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+            >
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center px-6 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+            >
+              View Demo
+            </Link>
+          </div>
+        </div>
+
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <Smartphone className="w-12 h-12 text-cyan-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Native Performance</h3>
+            <p className="text-gray-300">
+              Build high-performance mobile apps that take full advantage of 5G capabilities.
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <Zap className="w-12 h-12 text-purple-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Ultra-Low Latency</h3>
+            <p className="text-gray-300">
+              Deliver instant responses and real-time interactions with sub-millisecond latency.
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <Globe className="w-12 h-12 text-yellow-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Global Reach</h3>
+            <p className="text-gray-300">
+              Deploy your apps worldwide with consistent 5G performance across all regions.
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <Shield className="w-12 h-12 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Enterprise Security</h3>
+            <p className="text-gray-300">
+              Secure mobile applications with enterprise-grade security and compliance.
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <Users className="w-12 h-12 text-blue-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">User Experience</h3>
+            <p className="text-gray-300">
+              Create immersive and engaging user experiences with 5G-powered features.
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <TrendingUp className="w-12 h-12 text-pink-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Scalable Architecture</h3>
+            <p className="text-gray-300">
+              Build scalable mobile applications that can handle millions of concurrent users.
+            </p>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-2xl p-12 border border-white/20">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Build 5G Mobile Apps?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Contact our experts to start building next-generation mobile applications powered by 5G.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+          >
+            Contact Us Today
+            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </div>
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

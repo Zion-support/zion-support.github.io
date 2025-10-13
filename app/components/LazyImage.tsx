@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-export default function LazyImagePage() {
-=======
-
-interface LazyImageProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function LazyImage({ className = '', children }: LazyImageProps) {
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -33,69 +17,6 @@ export default function LazyImage({ className = '', children }: LazyImageProps) 
       </div>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
-import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'react-helmet-async';';';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';';'
-;
-const LazyImagePage: React.FC = () => {;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Brain,
-      title: 'AI-Powered Solutions','
-      description: 'Advanced AI technology to transform your business operations and improve efficiency''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Zap,
-      title: 'High Performance','
-      description: 'Lightning-fast processing and real-time analytics for optimal results''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Shield,
-      title: 'Enterprise Security','
-      description: 'Bank-level security with encryption and compliance standards''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Globe,
-      title: 'Global Reach','
-      description: 'Worldwide deployment and support for international businesses''
-    }
-  ];
-;
-const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-}
-  ];
-const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
->>>>>>> origin/main
     'Advanced AI technology integration','
     'Real-time processing and analytics','
     'Enterprise-grade security and compliance','
@@ -123,7 +44,6 @@ const benefits = [
 <h1>
 <span>LazyImage;</span>
                 LazyImage
->>>>>>> origin/main
               </span>
 <br></br>
 <span className="text-white">Solutions</span></h1>"
@@ -158,7 +78,6 @@ const benefits = [
     'Cost-effective pricing plans','
     'Proven track record of success''
   ]
->>>>>>> origin/main
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
 <div className="max-w-7xl mx-auto">"
@@ -255,10 +174,5 @@ export default LazyImagePage;
 };
 ;
 export default LazyImagePage;
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

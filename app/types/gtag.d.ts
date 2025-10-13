@@ -4,7 +4,6 @@
   [key: string]: unknown;
 }
 type GtagCommand = 'config' | 'set' | 'event' | 'js''
->>>>>>> origin/main
 interface Window {
   // TODO: Add properties
 }
@@ -12,4 +11,3 @@ interface Window {
 }
   gtag?: (command: GtagCommand, targetId: string, config?: GtagEvent) => void;
 }
->>>>>>> origin/main

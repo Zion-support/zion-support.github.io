@@ -1,183 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function SecurityMonitoringPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function SecurityMonitoring() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Security Monitoring - Zion Tech Group</title>
         <meta name="description" content="Advanced security monitoring solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-          </p>
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const SecurityMonitoringPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Security Monitoring - Zion Tech Group</title>
-        <meta name="description" content="Security Monitoring services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="security-monitoring, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Security Monitoring
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional security monitoring services by Zion Tech Group.
-          </p>
-          
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced security monitoring solutions. 
-              Stay tuned for updates!
-            </p>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
-'use client';';
-import React from 'react';';';
-import {Helmet}}from 'react-helmet-async';';';
-import {Shield,}
-  Eye,
-  AlertTriangle,
-  CheckCircle,
-  BarChart,
-  Clock,
-  Users,
-  Zap,
-  Phone,
-  Mail,
-  MapPin,
-  ArrowRight,
-  Brain,
-  Globe,
-  Lock,
-
-  Activity,
-
-  TrendingUp,
-
-  Settings,
-
-  Database;}} from 'lucide-react';';
-const SecurityMonitoringPage: React.FC = () => {,;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Eye,
-      title: '24/7 Real-time Monitoring','
-      description: 'Continuous surveillance of your entire IT infrastructure with instant threat detection and response.',},'
-    {icon: AlertTriangle,
-      title: 'Advanced Threat Detection','
-      description: 'AI-powered analysis to identify sophisticated cyber threats before they impact your business.',},'
-    {icon: BarChart,
-      title: 'Comprehensive Analytics','
-      description: 'Detailed security reports and insights to help you understand and improve your security posture.',},'
-    {icon: Zap,
-      title: 'Instant Response','
-  ];];];
-const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    '24/7 continuous security monitoring','
-    'AI-powered threat detection and analysis','
-    'Real-time alerts and notifications','
-    'Comprehensive security reporting','
-
-    'Automated incident response','
-
-    'Compliance monitoring and reporting','
-
-    'Expert security team support','
-
-    'Customizable monitoring rules''
-  ]
-return(<>)
-      <Helmet />
-<title>Security Monitoring Services - Zion Tech Group | 24/7 Cybersecurity</title>
-<meta name="description" content="AI-powered solution" />"
-<meta name="keywords" content="AI, artificial intelligence, business solutions" /></Helmet>"
-        {/* Hero Section */} <section className="py-20 px-4">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-<p className="text-xl text-gray-300">Section description</p></div>"
-</div></section>
-<div className="max-w-7xl mx-auto"></div>"
-<div className="text-center mb-16"></div>"
-<h1>Security Monitoring Services;</h1></h1>
-<p>Protect your business with our advanced 24/7 security monitoring solutions.;</p>
-                Real-time threat detection, instant alerts, and expert response to keep your data safe.
-              </p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
-                <button>
-<Shield>
-                  Get Protected Now;
-                </button>
-<button></button>
-<Phone>
-                  Call (302) 464-0950,
-                </button></div>
-</div></div>
-</section>
-        {/* Features Section */} <section className="py-20 px-4">"
->>>>>>> origin/main
           <div className="max-w-7xl mx-auto">"
 <div className="text-center mb-16">"
 <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Security Monitoring Services"
@@ -251,7 +87,6 @@ return(<>)
               </h2>
 <p></p>
                 Contact our security experts to discuss your monitoring needs and get a customized protection plan.
->>>>>>> origin/main
               </p>
 <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
                 <button>
@@ -270,16 +105,10 @@ return(<>)
 };
 ;
 export default SecurityMonitoringPage;
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 };
 
 export default SecurityMonitoringPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
             Advanced AI and IT solutions for your business needs.
           </p>
         </div>
@@ -311,7 +140,6 @@ export default SecurityMonitoringPage;
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -320,14 +148,8 @@ export default SecurityMonitoringPage;
           <p className="text-xl text-gray-600 mb-8">
             Advanced security monitoring solutions by Zion Tech Group.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

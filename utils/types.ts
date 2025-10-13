@@ -25,8 +25,6 @@ export interface Application {
   createdAtIso: string
 }
 export type UserRole = 'admin' | 'user' | 'guest';'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee;
 export type JobStatus = 'New' | 'In Progress' | 'Filled' | 'Closed';';';
 export type Job = {
   // TODO: Add properties

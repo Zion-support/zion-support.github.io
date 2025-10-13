@@ -39,7 +39,6 @@ function removeConsoleLogs(filePath) {
     return false;
   }
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 }
 =======
 #!/usr/bin/env node;
@@ -215,4 +214,3 @@ let modifiedFiles = 0
   } else {/* TODO: Fix JSX expression */}
 export { removeConsoleLogs, processFiles  };
 `
->>>>>>> cursor/delete-records-a75e

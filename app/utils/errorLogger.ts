@@ -5,7 +5,6 @@ export enum ErrorSeverity {}
   LOW = 'low','
   MEDIUM = 'medium','
   HIGH = 'high','
->>>>>>> origin/main
   CRITICAL = 'critical'}'
 }
 export interface ErrorLogEntry {timestamp: string,}
@@ -21,7 +20,6 @@ class ErrorLogger {}
   private maxLogs = 1000
   /**
    * Log an error with context
->>>>>>> origin/main
    */
     context?: Record<string>
   ): void {const entry: ErrorLogEntry = {,}
@@ -152,7 +150,6 @@ class ErrorLogger {/* TODO: Fix JSX expression */,}}}
     )
           ...entry;)
           error: entry.error;),
->>>>>>> origin/main
             ? {),
                 message: entry.error.message),
       await fetch(endpoint, {</div>
@@ -162,7 +159,6 @@ class ErrorLogger {/* TODO: Fix JSX expression */,}}}
         },
         body: JSON.stringify({</div>
           ...entry,
->>>>>>> origin/main
           error: entry.error,
             ? {}message: entry.error.message,
                 name: entry.error.name,
@@ -174,7 +170,6 @@ class ErrorLogger {/* TODO: Fix JSX expression */,}}}
         })
       })
     } catch (error) {/* TODO: Fix JSX expression */,}}
->>>>>>> origin/main
   }
   getRecentLogs(count: number = 10): ErrorLogEntry[] {}
     return this.logs.slice(-count);}

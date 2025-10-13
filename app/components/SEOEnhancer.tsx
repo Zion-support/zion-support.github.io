@@ -7,7 +7,6 @@ const SEOEnhancerPage: React.FC = () => {
 }
   // TODO: Implement
 }
->>>>>>> origin/main;
 const features = [
   // TODO: Add items
 ]

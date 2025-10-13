@@ -1,195 +1,111 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+import { ArrowRight, Wifi, Cpu, Shield, Globe, Zap, Database } from 'lucide-react';
 
-<<<<<<< HEAD
-export default function PagePage() {
+export default function FiveGIoTSolutionsPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-=======
-export default function FivegIotSolutionsPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>5g Iot Solutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5g iot solutions solutions by Zion Tech Group" />
-      </Helmet>
-
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            5g Iot Solutions
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Advanced AI and IT solutions for your business needs.
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-          </p>
-        </div>
-=======
-import { Brain, Shield, Zap } from 'lucide-react';
-
-<<<<<<< HEAD
-export default function PagePage() {
-  const features = [
-    {
-      title: "Advanced Technology",
-      description: "Cutting-edge solutions powered by the latest technology",
-      icon: <Brain className="w-8 h-8" />
-    },
-    {
-      title: "Secure & Reliable",
-      description: "Enterprise-grade security and reliability for your business",
-      icon: <Shield className="w-8 h-8" />
-    },
-    {
-      title: "Fast Implementation",
-      description: "Quick deployment and implementation for immediate results",
-      icon: <Zap className="w-8 h-8" />
-    }
-  ];
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-
-const FiveGIotSolutionsPage: React.FC = () => {
-  return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title> - Zion Tech Group</title>
-        <meta name="description" content="Advanced  solutions by Zion Tech Group" />
+        <title>5G IoT Solutions - Zion Tech Group</title>
+        <meta name="description" content="Advanced 5G IoT solutions by Zion Tech Group. Connect, manage, and optimize IoT devices with ultra-reliable 5G networks." />
       </Helmet>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Advanced  solutions by Zion Tech Group
-          </p>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-6">
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
-    <>
-      <Helmet>
-        <title>5g Iot Solutions - Zion Tech Group</title>
-        <meta name="description" content="5g Iot Solutions services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="5g-iot-solutions, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            5g Iot Solutions
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional 5g iot solutions services by Zion Tech Group.
-          </p>
-          
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced 5g iot solutions solutions. 
-              Stay tuned for updates!
-            </p>
-          </div>
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-      </div>
-    </>
-  );
-<<<<<<< HEAD
-}
-=======
-};
-
-export default FiveGIotSolutionsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
-            <p className="text-gray-600">
-              Comprehensive solution for your business requirements.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
-            <p className="text-gray-600">
-              Advanced technology integration and optimization.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
-            <p className="text-gray-600">
-              Scalable and secure implementation.
-            </p>
-          </div>
-        </div>
-
-        <div className="text-center mt-12">
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-            Get Started
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function FiveGIotSolutions() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>5G Iot Solutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5g iot solutions solutions by Zion Tech Group" />
-      </Helmet>
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            5G Iot Solutions
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            5G IoT Solutions
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Advanced 5g iot solutions solutions by Zion Tech Group.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Connect and manage millions of IoT devices with our advanced 5G IoT solutions. 
+            Ultra-reliable connectivity, real-time monitoring, and intelligent automation.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+            >
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center px-6 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+            >
+              View Demo
+            </Link>
+          </div>
+        </div>
+
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <Wifi className="w-12 h-12 text-cyan-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Ultra-Reliable Connectivity</h3>
+            <p className="text-gray-300">
+              Connect millions of IoT devices with 99.999% reliability and ultra-low latency.
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <Cpu className="w-12 h-12 text-purple-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Edge Processing</h3>
+            <p className="text-gray-300">
+              Process IoT data at the edge for real-time decision making and reduced latency.
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <Shield className="w-12 h-12 text-yellow-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">End-to-End Security</h3>
+            <p className="text-gray-300">
+              Secure your IoT ecosystem with advanced encryption and authentication protocols.
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <Globe className="w-12 h-12 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Global Scale</h3>
+            <p className="text-gray-300">
+              Deploy IoT solutions across multiple regions with consistent performance.
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <Zap className="w-12 h-12 text-blue-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Real-time Analytics</h3>
+            <p className="text-gray-300">
+              Monitor and analyze IoT data streams in real-time for instant insights.
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <Database className="w-12 h-12 text-pink-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Data Management</h3>
+            <p className="text-gray-300">
+              Efficiently store, process, and manage massive volumes of IoT data.
+            </p>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-2xl p-12 border border-white/20">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Connect Your IoT Devices?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Contact our experts to learn how our 5G IoT solutions can transform your connected ecosystem.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+          >
+            Contact Us Today
+            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </div>
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

@@ -119,5 +119,4 @@ const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]');'
 ;
 export default AdvancedSEOOptimizerNew;
   </SEOOptimizerProps>
->>>>>>> origin/main
 ))

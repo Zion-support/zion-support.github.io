@@ -172,12 +172,9 @@ const benefits = [
           <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform" />,"
         </button>
       )}
->>>>>>> origin/main
     </div>
   );
 };
 ;
 export default ServiceCard;
   </ServiceCardProps>
->>>>>>> origin/main
->>>>>>> origin/main

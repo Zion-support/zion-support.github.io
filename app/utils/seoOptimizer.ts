@@ -91,7 +91,6 @@ const directives = []
     return directives.join(', ');'
   }
   /**;
->>>>>>> origin/main
    * Setup structured data;
    */;
   private setupStructuredData(): void {}}this.addStructuredData(structuredData);
@@ -125,7 +124,6 @@ const directives = []
 const structuredData = {}
       '@context': 'https: //schema.org','
       '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage','
->>>>>>> origin/main
       headline: this.generateTitle(),
       description: this.generateDescription(),
       url: this.currentPageData.url || window.location.href,
@@ -134,7 +132,6 @@ const structuredData = {}
         url: this.config.siteUrl}
         name: this.config.siteName,
         url: this.config.siteUrl,}
->>>>>>> origin/main
       }
     }
     // Add article-specific properties;
@@ -154,7 +151,6 @@ const structuredData = {}
 // '@type': 'Person','
 // name: this.currentPageData.author || this.config.siteName
 // name: this.currentPageData.author || this.config.siteName,
->>>>>>> origin/main
         },
         datePublished: this.currentPageData.publishedTime,
         dateModified: this.currentPageData.modifiedTime,
@@ -163,7 +159,6 @@ const structuredData = {}
         datePublishe,;
     if (this.currentPageData.type === 'article') {/* TODO: Fix JSX expression */},'
         datePublishe,
->>>>>>> origin/main
   d: this.currentPageData.publishedTime,
         dateModifie,
   d: this.currentPageData.modifiedTime,
@@ -174,7 +169,6 @@ const structuredData = {}
       })
     }
     // Add article-specific properties
->>>>>>> origin/main
     if (this.currentPageData.type === 'article') {/* TODO: Fix JSX expression */}'
         },
         datePublishe,
@@ -231,11 +225,9 @@ const structuredData = {}
   }
       (window as any).gtag('event', 'seo_metric', {</div>'
         metric_name: metric,
->>>>>>> origin/main
         metric_value: Math.round(value),
   private trackSEOMetric(metri,;)
   private trackSEOMetric(metri,
->>>>>>> origin/main
   c: string, valu);
   e: number): void {/* TODO: Fix JSX expression */,}}})
     }
@@ -326,7 +318,6 @@ const description = document.querySelector('meta[name="description"]')?.getAttri
     return issues;
   }
   /**;
->>>>>>> origin/main
    * Get SEO score;
    */;
   getSEOScore(): number {}}const issues = this.checkSEOIssues();
@@ -355,7 +346,6 @@ const defaultConfig: SEOConfig = {
   }
 const defaultConfig: SEOConfig = {}
   siteName: 'Zion Tech Group','
->>>>>>> origin/main
   siteUrl: 'https://zion.app','
   defaultTitle: 'Advanced AI and IT Solutions','
   defaultDescription: 'Zion Tech Group provides cutting-edge AI and IT solutions for businesses. Transform your operations with our innovative technology and expert consulting services.','
@@ -369,6 +359,5 @@ const defaultConfig: SEOConfig = {}
 }
 // Default configuration;
 };
->>>>>>> origin/main;
 export const seoOptimizer = new SEOOptimizer(defaultConfig);
 export default seoOptimizer;"`;";"

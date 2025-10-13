@@ -1,145 +1,24 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-'use client';';
-import React from 'react';';';
-import {Helmet}}from 'react-helmet-async';';';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';';';
-const CloudMigrationPage: React.FC = () => {,;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      description: 'Safe and secure migration of your applications and data to the cloud',},'
-    {}];
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Shield,
-      title: 'Security & Compliance','
-      description: 'Enterprise-grade security with full compliance during migration','
-      details: ['Data Encryption', 'Access Controls', 'Compliance Audits', 'Security Monitoring']'
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Zap,
-      title: 'Zero-Downtime Migration','
-      description: 'Seamless migration with minimal business disruption','
-      details: ['Live Migration', 'Rollback Plans', 'Testing Environments', 'Monitoring']'
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Database,
-      title: 'Data Migration','
-      description: 'Safe and secure transfer of all your data and applications','
-      details: ['Data Validation', 'Backup Strategies', 'Data Integrity', 'Recovery Plans']'
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Server,
-      title: 'Infrastructure Setup','
-      description: 'Complete cloud infrastructure setup and configuration','
-      details: ['Auto-scaling', 'Load Balancing', 'Monitoring', 'Backup Systems']'
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Globe,
-      title: 'Global Deployment','
-      description: 'Deploy your applications across multiple regions worldwide','
-      details: ['Multi-Region Setup', 'CDN Configuration', 'Latency Optimization', 'Global Monitoring']'
-    }
-  ];];];
-  const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    'Advanced cloud migration technology','
-    'Real-time migration monitoring','
-    'Enterprise-grade security and compliance','
-    'Scalable and flexible migration solutions','
-    '24/7 technical support','
-    'Easy integration with existing systems','
-    'Cost-effective pricing plans','
-  ];
->>>>>>> cursor/delete-records-a75e
 
 export default function PagePage() {
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const CloudMigrationPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-<<<<<<< HEAD
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function CloudMigrationPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function CloudMigration() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Cloud Migration - Zion Tech Group</title>
         <meta name="description" content="Advanced cloud migration solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-=======
-            Advanced AI and IT solutions for your business needs.
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </p>
-=======
         <title>Cloud Migration - Zion Tech Group</title>
         <meta name="description" content="Cloud Migration services by Zion Tech Group. Professional AI and IT solutions." />
         <meta name="keywords" content="cloud-migration, AI solutions, IT services" />
@@ -161,8 +40,6 @@ export default function CloudMigration() {
               Stay tuned for updates!
             </p>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -171,56 +48,10 @@ export default function CloudMigration() {
           <p className="text-xl text-gray-600 mb-8">
             Advanced cloud migration solutions by Zion Tech Group.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-  // TODO: Add parameters
-)
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<Helmet>
-<title>Page | Zion Tech Group</title>
-<meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />"
-<meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" /></Helmet>"
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center">"
-<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
-<span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">"
-                Page
-              </span>
-<br />
-<span className="text-white">Solutions</span></h1>"
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
-              Transform your business with our advanced page solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">"
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" /></button>"
-<button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">"
-                Learn More
-              </button></div>
-</div>
-  return (
-  // TODO: Add parameters
-)
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-<Helmet />
-<title>Cloud Migration | Zion Tech Group</title>
-<meta name="description" content="Professional Cloud Migration services by Zion Tech Group. Advanced AI and IT solutions for your business." />"
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
-            Transform your business with our advanced cloud migration solutions.
->>>>>>> origin/main
             Powered by cutting-edge AI technology and industry expertise.
           </p></div>
 </section>
@@ -252,7 +83,6 @@ export default function CloudMigration() {
 <div key={index}className="flex items-center space-x-3">"
 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />"
 <span className="text-gray-300">{benefit</span>}</span></div>"
->>>>>>> origin/main
             ))}
           </div></div>
 };
@@ -441,19 +271,9 @@ export default CloudMigrationPage</div></div>;
 </h2></h2>
 </h3></section>
 </section>
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 };
 
 export default CloudMigrationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

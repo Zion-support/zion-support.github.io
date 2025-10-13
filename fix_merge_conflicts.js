@@ -67,7 +67,6 @@ export default function Component() {
   </div>
   );
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 }
 
 // Function to find all TypeScript/JavaScript files
@@ -212,6 +211,4 @@ console.log(`\nSummary:`)
 console.log(`- Files processed: ${conflictFiles.length}`)
 console.log(`- Files fixed: ${fixedCount}`)
 console.log(`- Errors: ${errorCount}`)))
->>>>>>> cursor/delete-records-a75e
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

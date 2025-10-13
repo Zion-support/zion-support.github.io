@@ -246,6 +246,5 @@ class WebsiteAnalyzer {
 const analyzer = new WebsiteAnalyzer('https://ziontechgroup.com');
 analyzer.analyzeWebsite().then(report => {
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

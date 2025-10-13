@@ -217,8 +217,6 @@ const sections = getWhitepaperSections (edition as any)
   doc.moveDown(0.5)
   doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });';
 const sections = getWhitepaperSections(edition as any)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   doc.end()
 }
 

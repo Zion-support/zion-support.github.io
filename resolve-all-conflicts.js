@@ -149,6 +149,4 @@ let resolvedCount = 0,
   process.exit(1)
   }
 console.log('🎉 Merge conflict resolution completed!');`'
->>>>>>> cursor/delete-records-a75e
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

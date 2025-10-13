@@ -7,7 +7,6 @@ const benefits = [
 ]
   // TODO: Add items
 ]
->>>>>>> origin/main
     'Advanced AI technology integration','
     'Real-time processing and analytics','
     'Enterprise-grade security and compliance','
@@ -48,7 +47,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
 </div></div>
 </div>
   ),
->>>>>>> origin/main
 }
 export default FuturisticServiceCardPage;
   return (

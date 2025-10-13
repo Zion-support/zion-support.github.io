@@ -409,17 +409,13 @@ export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */},
     pain,
   t: {/* TODO: Fix JSX expression */},
     memor,
->>>>>>> origin/main
   y: getMemoryUsage(),
   }
 }
 export const initializePerformanceEnhancements = () => {/* TODO: Fix JSX expression */,}}
 }`;
->>>>>>> cursor/delete-records-a75e
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 // Export default instance
 export const performanceEnhancer = new PerformanceEnhancer();
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

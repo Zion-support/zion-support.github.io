@@ -247,7 +247,6 @@ const,
   loggin,
   g: {/* TODO: Fix JSX expression */}
   }
->>>>>>> origin/main
 }
 export class ConfigManager {/* TODO: Fix JSX expression */,}}overrides: Partial<AppConfig> = {,}constructor() {/* TODO: Fix JSX expression */,}}
   static getInstance(): ConfigManager {/* TODO: Fix JSX expression */,}}}
@@ -382,7 +381,6 @@ export class ConfigManager {/* TODO: Fix JSX expression */,}}overrides: Partial<
       loggin,
   g: {/* TODO: Fix JSX expression */}
       }
->>>>>>> origin/main
     }
     return defaultValues[key]
   }

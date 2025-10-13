@@ -46,7 +46,6 @@ const { funnel, timeToHireDays, costPerHireUsd } = req.body |{};    const entry 
 }
   }
   if (method === 'POST') {'
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee;
 const updated = updateJsonFile<ReportingData>(
   // TODO: Add parameters
 )

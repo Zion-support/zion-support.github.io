@@ -1,77 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-<<<<<<< HEAD
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-export default function AiSpaceMissionOptimizerPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AiSpaceMissionOptimizer() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Ai Space Mission Optimizer - Zion Tech Group</title>
         <meta name="description" content="Advanced ai space mission optimizer solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-          </p>
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const AiSpaceMissionOptimizerPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Ai Space Mission Optimizer - Zion Tech Group</title>
-        <meta name="description" content="Ai Space Mission Optimizer services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="ai-space-mission-optimizer, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Ai Space Mission Optimizer
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional ai space mission optimizer services by Zion Tech Group.
-          </p>
-          
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced ai space mission optimizer solutions. 
-              Stay tuned for updates!
-            </p>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
             Advanced AI and IT solutions for your business needs.
           </p>
         </div>
@@ -103,52 +41,10 @@ const AiSpaceMissionOptimizerPage: React.FC = () => {
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-'use client';';
-import React, {useState, useEffect}from 'react';';';
-import {Helmet}}from 'react-helmet-async';';';
-import {Rocket, Globe, Target, BarChart, Shield, Clock, Users, ArrowRight, Star, TrendingUp, Lock, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Database, Settings, Calendar, Award, Eye, MessageSquare, CheckSquare, Cpu, Brain, Zap}}from 'lucide-react';';'
-;
-const AISpaceMissionOptimizer: React.FC = () => {,;
-const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
-    setIsVisible(true);}, []);
-;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {icon: Rocket,
-      title: 'Mission Trajectory Optimization','
-      description: 'AI-powered trajectory planning for optimal fuel efficiency and mission success','
-      benefits: ['30% fuel savings', 'Optimal trajectory planning', 'Real-time adjustments']},'
-    {icon: Target,
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Target,
->>>>>>> origin/main
       title: 'Payload Optimization','
       description: 'Intelligent payload configuration and resource allocation for maximum mission value','
       benefits: ['Multi-planetary coordination', 'Deep space navigation', 'Mission timeline optimization']}];'
@@ -417,19 +313,11 @@ const useCases = [
   )
 }
 export default AISpaceMissionOptimizer;
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 };
 
 export default AiSpaceMissionOptimizerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -443,4 +331,3 @@ export default AiSpaceMissionOptimizerPage;
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

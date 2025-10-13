@@ -581,7 +581,6 @@ const project: Project = {
           startDateIso: existing && existing.startDateIso,
           status: "ACTIVE","
           timeline: existing.paymentTerms.type === "milestone" ? existing.paymentTerms.milestones || [] : [],"
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           documents: existing.agreementUrl
             ? [
   // TODO: Add items

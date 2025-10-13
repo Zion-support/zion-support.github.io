@@ -24,7 +24,6 @@ export interface AnalyticsEvent {}
   category: string
   action: string
   label?: string
->>>>>>> origin/main
   value?: number,
   metadata?: Record</string>
 <string>}</strin>
@@ -38,7 +37,6 @@ class EnhancedAnalytics {}
   private isInitialized = false
   private batchSize = 10
   private flushInterval = 30000; // 30 seconds
->>>>>>> origin/main
   private offlineQueue: AnalyticsEvent[] = [],
     this.sessionId = this.generateSessionId();
     this.setupOfflineHandling();
@@ -66,7 +64,6 @@ class EnhancedAnalytics {}
   public initialize(config?: { userId?: string; userType?: string }): void {}
     if (this.isInitialized) return
     this.isInitialized = true
->>>>>>> origin/main
     this.userProperties = {}
       ...this.userProperties,
       sessionId: this.sessionId;
@@ -125,7 +122,6 @@ class EnhancedAnalytics {}
   // TODO: Add properties
 }
       this.flush();}
->>>>>>> origin/main
     }
   }
   private sendToGtag(event: AnalyticsEvent): void {,}
@@ -170,7 +166,6 @@ class EnhancedAnalytics {}
         event_category: event.category,
         event_category: event.category;),
         event_label: event.label),}value: event.value)).gtag('event', event.action, {)}event_category: event.category,'
->>>>>>> origin/main
         event_label: event.label,
         value: event.value,
         ...event.metadata}
@@ -249,7 +244,6 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */,}}userProperties: UserPr
   }
   public trackError(error: Error, context?: Record<string, unknown>): void {this.trackEvent({);}
     this.trackEvent({)
->>>>>>> origin/main
       category: 'Error'),'
       action: 'Error Occurred'),'
       label: error.message),
@@ -268,7 +262,6 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */,}}userProperties: UserPr
   }
   public trackError(error: Error, context?: Record<string, unknown>): void {}}this.trackEvent({)}category: 'Error','
       category: 'Error','
->>>>>>> origin/main
       action: 'Error Occurred','
       label: error.message,
       metadata: {,}stack: error.stack,
@@ -286,7 +279,6 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */,}}userProperties: UserPr
   // TODO: Add properties
 }
     this.trackEvent({)
->>>>>>> origin/main
       category: 'Performance'),'
       action: metric),
       value: Math.round(value),
@@ -314,7 +306,6 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */,}}userProperties: UserPr
     this.trackEvent({</div>
       category: 'Conversion','
       action: conversionType,
->>>>>>> origin/main
       value,
       metadata: {`}
         conversionId: `conv-${Date.now(</div>
@@ -356,7 +347,6 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */,}}userProperties: UserPr
 }
     if (this.queue.length === 0) return
     // Check if online
->>>>>>> origin/main
     if (typeof navigator !== 'undefined' && !navigator.onLine) {'
   public trackCustomEvent()
     category: string,
@@ -415,7 +405,6 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */,}}userProperties: UserPr
     if (this.offlineQueue.length === 0) return
     // Merge offline queue into main queue
     this.queue.push(...this.offlineQueue)
->>>>>>> origin/main
     this.offlineQueue = []
     sessionId: string,}userProperties: UserProperties,}
   } {return {queueSize: this.queue.length;,}
@@ -427,7 +416,6 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */,}}userProperties: UserPr
   } {}return {}}queueSize: this.queue.length,
     return {}
       queueSize: this.queue.length,
->>>>>>> origin/main
       offlineQueueSize: this.offlineQueue.length,
       sessionId: this.sessionId,
       userProperties: this.getUserProperties(</div>
@@ -436,7 +424,6 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */,}}userProperties: UserPr
 }
   public trackCustomEvent(categor,;)
   public trackCustomEvent(categor,
->>>>>>> origin/main
   y: string,
     actio,
   n: string,
@@ -476,4 +463,3 @@ export default analytics;
 export const analytics = new EnhancedAnalytics();
 export default analytics;
 `
->>>>>>> origin/main

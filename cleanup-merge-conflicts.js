@@ -6,7 +6,6 @@ import path from 'path';
 =======
 import fs from 'fs';';';
 import path from 'path';';'
->>>>>>> cursor/delete-records-a75e
 
 // Function to clean merge conflicts from a file
 function cleanMergeConflicts(filePath) {
@@ -182,4 +181,3 @@ for (const file of files) {
 
 console.log(`Cleaned merge conflicts in ${cleanedCount} files`);
 )))
->>>>>>> cursor/delete-records-a75e

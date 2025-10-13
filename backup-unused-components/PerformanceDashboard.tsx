@@ -263,4 +263,3 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ isVisible, 
 export default PerformanceDashboard;
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

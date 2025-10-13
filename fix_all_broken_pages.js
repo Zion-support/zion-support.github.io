@@ -93,4 +93,3 @@ const componentName = config.title.replace(/\s+/g, '');
   } catch (error) {
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

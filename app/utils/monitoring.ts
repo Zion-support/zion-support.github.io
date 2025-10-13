@@ -57,7 +57,6 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
             this.metrics.fid = (entry as any).processingStart - entry.startTime,
             this.reportMetric('fid', this.metrics.fid)}})'
         });
@@ -169,11 +168,8 @@ const navigation = performance.getEntriesByType('navigation')[0] as PerformanceN
 // Singleton instance;
 const monitoring = new MonitoringService();
 export default monitoring;
->>>>>>> cursor/delete-records-a75e
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 // Export default instance
 export const monitoring = new Monitoring();
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

@@ -225,4 +225,3 @@ export default App;
 }
 
 export default App;
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c

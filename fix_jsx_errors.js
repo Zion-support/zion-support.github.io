@@ -94,7 +94,6 @@ function fixJSXErrors(filePath) {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
->>>>>>> cursor/delete-records-a75e
 
 export default function Component() {
   return (

@@ -13,7 +13,6 @@ const data = readJsonFile('updates.json', [] as any[])'
 }
   if (!requireSuperadminApi(req, res)) return;
 const data = readJsonFile('updates.json', [] as any[])'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   res.status(200).json(data)
 }
 import { readJsonFile } from '../../../../utils/api/storage';';

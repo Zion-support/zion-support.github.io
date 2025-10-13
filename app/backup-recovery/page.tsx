@@ -1,119 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function BackupRecoveryPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function BackupRecovery() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Backup Recovery - Zion Tech Group</title>
         <meta name="description" content="Advanced backup recovery solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-          </p>
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const BackupRecoveryPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Backup Recovery - Zion Tech Group</title>
-        <meta name="description" content="Backup Recovery services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="backup-recovery, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Backup Recovery
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional backup recovery services by Zion Tech Group.
-          </p>
-          
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced backup recovery solutions. 
-              Stay tuned for updates!
-            </p>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
-'use client';';
-import React from 'react';';';
-import {Helmet}}from 'react-helmet-async';';';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Database, Clock, ShieldCheck}}from 'lucide-react';';';
-const BackupRecoveryPage: React.FC = () => {,;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-  ];];];
-  const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    'Enterprise-grade security and compliance','
-    'Scalable and flexible backup solutions','
-    '24/7 technical support','
-    'Easy integration with existing systems','
-    'Cost-effective pricing plans','
-    'Proven track record of success''
-  ]
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>"
-<Helmet />
-<title>Backup & Recovery | Zion Tech Group</title>
-<meta name="description" content="Professional Backup & Recovery services by Zion Tech Group. Advanced AI and IT solutions for your business." />"
-<meta name="keywords" content="backup recovery, data protection, IT services, Zion Tech Group, disaster recovery" /></Helmet>"
-<div className="container mx-auto px-4 py-16">"
-<div className="text-center mb-16">"
-<h1 className="text-5xl font-bold text-white mb-6">Backup & Recovery;</h1></"
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced backup and recovery solutions.</p>"
->>>>>>> origin/main
   return (
   // TODO: Add parameters
 )
@@ -146,10 +46,8 @@ const features = [
 </div></div>
 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
             Transform your business with our advanced backup and recovery solutions.
->>>>>>> origin/main
             Powered by cutting-edge AI technology and industry expertise.
           </p>
->>>>>>> origin/main
       </section>
 <div className="text-center mb-16">"
 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
@@ -164,7 +62,6 @@ const features = [
               </div>
 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"></div>"
 <feature.icon className="w-12 h-12 text-purple-400 mb-4" />"
->>>>>>> origin/main
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>"
 <p className="text-gray-300">{feature.description</p>}</p></div>"
 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">"
@@ -192,7 +89,6 @@ const features = [
 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
               Experience the power of our backup and recovery solutions for your business.
->>>>>>> origin/main
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
             {benefits.map((benefit, index) => (
   // TODO: Add parameters
@@ -204,8 +100,6 @@ const features = [
               Email Us;
   </
 
->>>>>>> origin/main
->>>>>>> origin/main
           </div></div>
 <div className="text-center">"
 <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2></h2>"
@@ -254,18 +148,11 @@ export default BackupRecoveryPage</div></div>;
 </h2></h3>
 </section></section>
 </section>
->>>>>>> origin/main
 )
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 };
 
 export default BackupRecoveryPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
             Advanced AI and IT solutions for your business needs.
           </p>
         </div>
@@ -297,7 +184,6 @@ export default BackupRecoveryPage;
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -306,14 +192,8 @@ export default BackupRecoveryPage;
           <p className="text-xl text-gray-600 mb-8">
             Advanced backup recovery solutions by Zion Tech Group.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

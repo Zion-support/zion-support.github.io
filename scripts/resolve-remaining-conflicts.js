@@ -146,10 +146,8 @@ const status = execSync('git status', { encoding: 'utf8', cwd: process.cwd() })'
   }
 
   console.log('\n🎉 Remaining merge conflicts resolution completed!')'
->>>>>>> cursor/delete-records-a75e
 }
 #!/usr/bin/env node;
 // console.log('🔧 Resolving remaining merge conflicts...\n')
 // Function to resolve merge conflicts in a file;
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

@@ -1,53 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-<<<<<<< HEAD
-=======
-export default function PrivacyPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function Privacy() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Privacy - Zion Tech Group</title>
         <meta name="description" content="Advanced privacy solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-=======
-            Advanced AI and IT solutions for your business needs.
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </p>
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="container mx-auto px-4 py-20">
           <h1 className="text-5xl font-bold text-white mb-6">
@@ -64,8 +30,6 @@ export default function Privacy() {
               Stay tuned for updates!
             </p>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -74,135 +38,10 @@ export default function Privacy() {
           <p className="text-xl text-gray-600 mb-8">
             Advanced privacy solutions by Zion Tech Group.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-      description: 'Name, email address, phone number, company information','
-      examples: ['Contact forms', 'Newsletter signups', 'Account creation']'
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      category: 'Usage Data','
-      icon: Database,
-      description: 'Information about how you use our website and services','
-      examples: ['Page views', 'Time spent', 'Features used', 'Device information']'
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      category: 'Technical Data','
-      icon: Server,
-      description: 'IP address, browser type, operating system, cookies','
-      examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels']'
-    }
-  ];
-  const purposes = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      title: 'Service Provision','
-      icon: Globe,
-      description: 'To provide and maintain our services''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      title: 'Communication','
-      icon: Mail,
-      description: 'To communicate with you about our services''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      title: 'Improvement','
-      icon: ArrowRight,
-      description: 'To improve and develop new features''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      title: 'Security','
-      icon: Shield,
-      description: 'To protect against fraud and abuse''
-    }
-  ];
-  const rights = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      title: 'Access','
-      description: 'Request access to your personal data','
-      icon: Eye
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      title: 'Rectification','
-      description: 'Correct inaccurate or incomplete data','
-      icon: CheckCircle
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      title: 'Erasure','
-      description: 'Request deletion of your personal data','
-      icon: Lock
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      title: 'Portability','
-      description: 'Receive your data in a structured format','
-      icon: Database
-    }
-  ];
-;
-const contactInfo = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    email: 'privacy@ziontechgroup.com','
-    phone: '+1 (302) 464-0950','
-    address: '364 E Main St STE 1008, Middletown, DE 19709''
-  }
-
->>>>>>> main
   return (
   // TODO: Add parameters
 )
@@ -338,9 +177,6 @@ const contactInfo = {
 }
 ;
 export default PrivacyPage;
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Shield, Zap } from 'lucide-react';
@@ -396,10 +232,5 @@ export default function PagePage() {
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

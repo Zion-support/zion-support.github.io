@@ -12,7 +12,6 @@ import React from 'react';
 ];
 
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 export default function Component() {
   return (
     <div>
@@ -56,7 +55,6 @@ const urlsToCache = [
 ];
 
 // Install event
->>>>>>> origin/main
 self.addEventListener('install', (event) => {'
   console.log('Service Worker installing...');'
   event.waitUntil(
@@ -128,5 +126,3 @@ async function syncContactForm() {
   // Handle offline form submissions
   console.log('Syncing contact form data');'
 }
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e

@@ -1,47 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-<<<<<<< HEAD
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-=======
-export default function AiCodeAssistantProPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AiCodeAssistantPro() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Ai Code Assistant Pro - Zion Tech Group</title>
         <meta name="description" content="Advanced ai code assistant pro solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Ai Code Assistant Pro
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             This page is under development. Please check back later.
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -49,19 +14,11 @@ export default function AiCodeAssistantPro() {
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced ai code assistant pro solutions by Zion Tech Group.
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
           </p>
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -98,10 +55,5 @@ const AiCodeAssistantProPage: React.FC = () => {
 };
 
 export default AiCodeAssistantProPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

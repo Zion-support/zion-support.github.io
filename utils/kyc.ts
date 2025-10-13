@@ -241,7 +241,6 @@ if ( {) {
     missing
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662;
 export type KycRole = 'client' | 'talent' | 'enterprise';';';
 export type KycStatus =;
   | 'not_started''

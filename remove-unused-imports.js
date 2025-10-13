@@ -177,4 +177,3 @@ files.forEach(file => {/* TODO: Fix JSX expression */}
 `
 console.log(`Fixed ${fixedCount} files`)
 }"`
->>>>>>> cursor/delete-records-a75e

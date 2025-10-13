@@ -5,19 +5,15 @@ import React from 'react';
 <<<<<<< HEAD
 =======
 import { render, screen } from '@testing-library/react';
->>>>>>> cursor/fix-errors-and-merge-to-main-1dc1
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-7beb
 import { render, screen, waitFor, act } from '@testing-library/react';
 import OptimizedImage from '../../app/components/OptimizedImage';
 =======
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c
 
 // Mock component for testing
 const OptimizedImage = ({ className = '', children }: { className?: string; children?: React.ReactNode }) => {
@@ -65,7 +61,6 @@ describe('OptimizedImage Component', () => {
     await act(async () => {
       img.dispatchEvent(new Event('error'));
     });
->>>>>>> cursor/fix-errors-and-merge-to-main-7beb
     
     await act(async () => {
       img.dispatchEvent(new Event('error'));
@@ -77,7 +72,6 @@ describe('OptimizedImage Component', () => {
       img.dispatchEvent(new Event('error'));
     });
 
->>>>>>> cursor/fix-errors-and-merge-to-main-1dc1
     await waitFor(() => {
       expect(screen.getByText('Failed to load image')).toBeInTheDocument();
     });
@@ -95,7 +89,6 @@ describe('OptimizedImage Component', () => {
     await act(async () => {
       img.dispatchEvent(new Event('load'));
     });
->>>>>>> cursor/fix-errors-and-merge-to-main-7beb
     
     await act(async () => {
       img.dispatchEvent(new Event('load'));
@@ -107,7 +100,6 @@ describe('OptimizedImage Component', () => {
       img.dispatchEvent(new Event('load'));
     });
 
->>>>>>> cursor/fix-errors-and-merge-to-main-1dc1
     await waitFor(() => {
       expect(onLoad).toHaveBeenCalled();
     });
@@ -126,6 +118,4 @@ describe('OptimizedImage Component', () => {
   });
 });
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c

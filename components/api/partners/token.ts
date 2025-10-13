@@ -155,7 +155,6 @@ const token = signJwt(
 }
   // TODO: Add properties
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662;
 import type { NextApiRequest, NextApiResponse } from "next";";
 import { findPartnerByApiKey, signJwt } from "../../../utils/api/partnerAuth";";";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

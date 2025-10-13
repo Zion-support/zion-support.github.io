@@ -33,7 +33,6 @@ export default dataValidator;
   // TODO: Add properties
 }
     isValid,
->>>>>>> origin/main
     error: isValid ? undefined : 'Invalid email format',;';
 export function validateURL(ur,;)
   l: string, requireProtoco);
@@ -53,7 +52,6 @@ const parsed = new URL(urlToValidate);
   s: ') :,'
   p: ' || parsed.protocol === 'http)'
   s:') :'
->>>>>>> origin/main
       true,
   return {isValid,;}
   return {
@@ -62,7 +60,6 @@ const parsed = new URL(urlToValidate);
   // TODO: Add properties
 }
     isValid,
->>>>>>> origin/main
     error: isValid ? undefined : 'Invalid phone number format',;';
 export function validateStringLength(valu,;)
   e: string, mi);
@@ -162,7 +159,6 @@ function validateFieldRule(valu,;)
   }
   e: FieldRule): boolean {/* TODO: Fix JSX expression */}
   }
->>>>>>> origin/main
 }
 ): ValidationResult {,}}const errors: Record<string, string[]> = {}for (const field in rules) {const value = data[field];
 const fieldRules = rules[field] || []
@@ -196,7 +192,6 @@ const value = data[field];
   // TODO: Add properties
 }
     category: ErrorCategory.Validation
->>>>>>> origin/main
           severity: ErrorSeverity.Low,
           context: {,
             field
@@ -433,7 +428,6 @@ class DataValidator {
   r: (valu)
   e: T) => boolean, messag,
   e: string): ValidationRule<T> => ({/* TODO: Fix JSX expression */})
->>>>>>> origin/main
   })
 }
   matchesPattern(valu,;)
@@ -585,15 +579,11 @@ export async function validateAsync(validato,;)
   d: boolean, error?: string }> {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}
   r: 'Validation failed' }'
->>>>>>> origin/main
   }
 }
 "`
->>>>>>> cursor/delete-records-a75e
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 // Export default instance
 export const dataValidator = new DataValidator();
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

@@ -7,10 +7,8 @@ import LoadingSpinner from '../app/components/LoadingSpinner';
 import { render, screen } from '@testing-library/react';
 =======
 import '@testing-library/jest-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 import '@testing-library/jest-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c
 
 // Mock component for testing
 const LoadingSpinner = ({ className = '', children }: { className?: string; children?: React.ReactNode }) => {
@@ -42,8 +40,6 @@ describe('Loading Spinner', () => {
   it('should render without crashing', () => {
     expect(true).toBe(true);
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c
   });
 });

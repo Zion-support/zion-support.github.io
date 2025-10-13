@@ -81,7 +81,6 @@ const services = [
 <a>
                 Learn More </a>
 <ArrowRight>
->>>>>>> origin/main
               </a></div>
           ))}
         </div>

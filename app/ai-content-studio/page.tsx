@@ -1,96 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-<<<<<<< HEAD
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-=======
-export default function AiContentStudioPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AiContentStudio() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Ai Content Studio - Zion Tech Group</title>
         <meta name="description" content="Advanced ai content studio solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Ai Content Studio
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             This page is under development. Please check back later.
           </p>
-<<<<<<< HEAD
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const AiContentStudioPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Ai Content Studio - Zion Tech Group</title>
-        <meta name="description" content="Ai Content Studio services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="ai-content-studio, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Ai Content Studio
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional ai content studio services by Zion Tech Group.
-          </p>
-          
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced ai content studio solutions. 
-              Stay tuned for updates!
-            </p>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
-      icon: Palette,
-      title: 'AI Design Studio','
-      description: 'Create stunning visual content with AI-powered design tools and templates.','
-      benefits: ['AI design generation', 'Custom templates', 'Brand consistency', 'High-quality output']'
->>>>>>> origin/main
       title: 'AI-Powered Intelligence','
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.','
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'],'
->>>>>>> origin/main
     },
     {icon: BarChart,
       title: 'Advanced Analytics','
@@ -125,7 +49,6 @@ const useCases = [
       description: 'Create compelling marketing campaigns with AI-powered content generation','
       icon: '📢''
     },
->>>>>>> origin/main
   ]
   return(<React.Fragment>)</React.Fragment>
 <Helmet />
@@ -367,17 +290,10 @@ const useCases = [
 };
 ;
 export default AiContentStudioPage;
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 };
 
 export default AiContentStudioPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -407,7 +323,6 @@ export default AiContentStudioPage;
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -416,14 +331,8 @@ export default AiContentStudioPage;
           <p className="text-xl text-gray-600 mb-8">
             Advanced ai content studio solutions by Zion Tech Group.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

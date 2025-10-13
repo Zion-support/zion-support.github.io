@@ -3,7 +3,6 @@ import { Brain, Cloud, Zap, Shield, Globe, Users, CheckCircle, Star, ArrowRight 
 const DynamicContentShowcase: React.FC = () => {;
 const [currentIndex, setCurrentIndex] = useState(0);
 
->>>>>>> origin/main;
 import React, { useState, useEffect } from 'react';';';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award } from 'lucide-react';';'
 ;
@@ -23,8 +22,6 @@ const features: Feature[] = [
 }
       color: 'from-purple-500 to-pink-600',},'
     {id: 2,
->>>>>>> origin/main
->>>>>>> origin/main
     },
     {
   // TODO: Add properties
@@ -32,7 +29,6 @@ const features: Feature[] = [
   // TODO: Add properties
 }
       id: 2,
->>>>>>> origin/main
       title: 'Cloud Infrastructure','
       description: 'Scalable and secure cloud solutions that grow with your business needs.','
       icon: Cloud,
@@ -53,8 +49,6 @@ const features: Feature[] = [
       icon: Globe,
       color: 'from-teal-500 to-cyan-600',}];'
 
->>>>>>> origin/main
->>>>>>> origin/main
     },
     {
   // TODO: Add properties
@@ -65,8 +59,6 @@ const features: Feature[] = [
       title: 'Cybersecurity Solutions','
       description: 'Protect your business with comprehensive AI-powered security solutions.','
       icon: Shield,
->>>>>>> origin/main
->>>>>>> origin/main
     },
     {
   // TODO: Add properties
@@ -95,11 +87,9 @@ const features: Feature[] = [
         { value: '15+', label: 'Languages' },'
         { value: '24/7', label: 'Support' }'
       ]
->>>>>>> origin/main
     }
   ];
 
->>>>>>> origin/main;
 const benefits = [
   // TODO: Add items
 ]
@@ -129,7 +119,6 @@ const benefits = [
     'Cost-effective pricing plans','
     'Proven track record of success''
   ];
->>>>>>> origin/main
     {
   // TODO: Add properties
 }
@@ -150,9 +139,6 @@ const benefits = [
       company: 'DataFlow Systems','
       role: 'CEO','
       content: 'Outstanding performance and reliability. Our team productivity increased by 300% and we\'ve seen a 50% reduction in operational costs.','
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
       rating: 5
     },
     {
@@ -164,7 +150,6 @@ const benefits = [
       company: 'CloudFirst Solutions','
       role: 'VP Engineering','
       content: 'The best investment we made. Seamless integration and exceptional support.','
->>>>>>> origin/main
       rating: 5
     }
   ]
@@ -342,7 +327,6 @@ export default DynamicContentShowcasePage;
 <div>
 <p className="text-white font-semibold">{testimonial.name</p>}</p>"
 <p className="text-gray-400 text-sm">{testimonial.role</p>}, {testimonial.company}</p></div>"
->>>>>>> origin/main
               </div>
             ))}
           </div></div>
@@ -374,7 +358,6 @@ export default DynamicContentShowcasePage;
 <button className="bg-green-500 hover: bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">,</button>"
                 Scan Now;
               </button></div>
->>>>>>> origin/main
           </div>
         ))}
       </div>
@@ -390,6 +373,3 @@ export default DynamicContentShowcasePage;
 });
 ;
 export default DynamicContentShowcase;
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main

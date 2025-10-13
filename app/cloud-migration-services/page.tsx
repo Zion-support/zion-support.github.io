@@ -1,117 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function CloudMigrationServicesPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function CloudMigrationServices() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Cloud Migration Services - Zion Tech Group</title>
         <meta name="description" content="Advanced cloud migration services solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-          </p>
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const CloudMigrationServicesPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Cloud Migration Services - Zion Tech Group</title>
-        <meta name="description" content="Cloud Migration Services services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="cloud-migration-services, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Cloud Migration Services
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional cloud migration services services by Zion Tech Group.
-          </p>
-          
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced cloud migration services solutions. 
-              Stay tuned for updates!
-            </p>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
-import { Helmet } from 'react-helmet-async';';'
-;
-const PagePage: React.FC = () => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
-    }
-  ];
-const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    '24/7 technical support','
-    'Easy integration with existing systems','
-    'Cost-effective pricing plans','
-    'Proven track record of success''
-  ]
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>"
-<Helmet />
-  return (
-  // TODO: Add parameters
-)
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<Helmet>
->>>>>>> origin/main
         <title>Cloud Migration Services | Zion Tech Group</title>
 <meta name="description" content="Professional Cloud Migration Services by Zion Tech Group. Advanced AI and IT solutions for your business." /></Helmet>"
 <div className="container mx-auto px-4 py-16">"
@@ -156,7 +58,6 @@ const benefits = [
 <div className="grid md:grid-cols-2 gap-6" /></div>"
             {benefits.map((benefit, index) => ()
             ))}
->>>>>>> origin/main
           </div></div>
 <div className="text-center">"
 <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2></h2>"
@@ -249,17 +150,10 @@ export default CloudMigrationServicesPage</div></div>;
 </h2></h2>
 </h2></h3>
 </section></section>
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 };
 
 export default CloudMigrationServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
             Advanced AI and IT solutions for your business needs.
           </p>
         </div>
@@ -291,7 +185,6 @@ export default CloudMigrationServicesPage;
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -300,14 +193,8 @@ export default CloudMigrationServicesPage;
           <p className="text-xl text-gray-600 mb-8">
             Advanced cloud migration services solutions by Zion Tech Group.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

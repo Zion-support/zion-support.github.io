@@ -52,7 +52,6 @@ const stat = fs.statSync(fullPath)
   }
 
   return files
->>>>>>> cursor/delete-records-a75e
 }
 #!/usr/bin/env node;
 import fs from 'fs';
@@ -139,7 +138,6 @@ const fixes = [
             return match
           }
           return match
->>>>>>> cursor/delete-records-a75e
         }
 
         // Add the chosen lines;
@@ -249,7 +247,6 @@ const newContent = content.replace(fix.pattern, fix.replacement)
 }
     console.error(`Error processing ${filePath}:`, error.message)
     return false
->>>>>>> cursor/delete-records-a75e
   }
 
   scanDirectory(dir);
@@ -431,6 +428,4 @@ try {
 }
   console.log('Linting completed with some remaining issues to fix manually')'
 }
->>>>>>> cursor/delete-records-a75e
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

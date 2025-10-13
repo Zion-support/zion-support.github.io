@@ -329,7 +329,6 @@ export default function ContactForm({ className = '', children }: ContactFormPro
             type="email"
             type="tel"
             type="text"
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
           <option value="">Select a service</option>
           <option value="ai-solutions">AI Solutions</option>
           <option value="it-services">IT Services</option>
@@ -398,7 +397,6 @@ export default function ContactForm({ className = '', children }: ContactFormPro
           id="message"
   name="message"
           value={formData.message}
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
         {isSubmitting ? "Sending..." : "Send Message"}
 </button>
     </form>

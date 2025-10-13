@@ -37,4 +37,3 @@ const animateClasses = animate ? 'animate-pulse' : ';''
 };
 ;
 export default LoadingSkeletonPage;
->>>>>>> origin/main

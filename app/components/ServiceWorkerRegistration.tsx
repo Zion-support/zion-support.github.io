@@ -11,7 +11,6 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
 }
   // TODO: Implement
 }
->>>>>>> origin/main;
 const features = [
   // TODO: Add items
 ]
@@ -182,7 +181,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
             </h2>
 <p></p>
               Contact our experts to discuss your serviceworkerregistration needs and get a customized solution.
->>>>>>> origin/main
             </p>
 <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
               <button>

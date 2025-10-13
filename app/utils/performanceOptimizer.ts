@@ -118,7 +118,6 @@ const logger = {/* TODO: Fix JSX expression */},
   a: Record</OptimizationConfig>
 <string, unknown>, context?: string) => {/* TODO: Fix JSX expression */},
   erro,
->>>>>>> origin/main
   r: (messag,
   e: string, erro);
   r: Error) => {/* TODO: Fix JSX expression */,}}
@@ -380,7 +379,6 @@ images.forEach((img) => imageObserver.observe(img))
       {/* TODO: Fix JSX expression */}
   s: 'style' }]'
     criticalResources.forEach(resource => {/* TODO: Fix JSX expression */})
->>>>>>> origin/main
     })
     logger.info('Critical resource hints added', 'PerformanceOptimizer')'
   }
@@ -442,11 +440,8 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
 export const performanceOptimizer = new PerformanceOptimizer();
 export default PerformanceOptimizer;
 export {PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig}}`;
->>>>>>> cursor/delete-records-a75e
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 // Export default instance
 export const performanceOptimizer = new PerformanceOptimizer();
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

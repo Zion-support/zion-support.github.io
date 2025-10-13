@@ -34,6 +34,5 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
 return (
     <div className={`${className}`}>
       {children}
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

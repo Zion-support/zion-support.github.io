@@ -52,7 +52,6 @@ function fixUnusedImports(filePath) {
     fs.writeFileSync(filePath, content);
     }
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 }
 =======
 import fs from 'fs';';
@@ -265,4 +264,3 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO:
 console.log(`Fixed ${fixedCount} files`)
 "`"
 }}}}}}}}}}}}}}}}}}}}}
->>>>>>> cursor/delete-records-a75e

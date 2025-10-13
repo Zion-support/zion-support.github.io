@@ -3,7 +3,6 @@
 <<<<<<< HEAD
 =======
 import { useState, useEffect } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 
 export function usePerformanceMonitor() {
 <<<<<<< HEAD
@@ -12,7 +11,6 @@ export function usePerformanceMonitor() {
 =======
   const [state, setState] = useState(null);
 
->>>>>>> cursor/fix-errors-and-merge-to-main-1dc1
   useEffect(() => {
     // Implementation here
     setState('initialized');
@@ -49,10 +47,8 @@ export default usePerformanceMonitor;
   };
 };
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 
 export default usePerformanceMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-1dc1
 =======
 import { useEffect } from 'react';';';
 export const usePerformanceMonitor = () => {
@@ -77,7 +73,6 @@ export const usePerformanceMonitor = () => {
     console.log('Performance monitor initialized')'
   }, [])
 }
->>>>>>> cursor/delete-records-a75e
 =======
 import { useEffect, useState } from 'react';
 
@@ -143,4 +138,3 @@ export const usePerformanceMonitor = () => {
 
   return { performanceData };
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-a070

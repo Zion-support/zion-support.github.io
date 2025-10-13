@@ -1,16 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-export default function CoreWebVitalsPage() {
-=======
-interface CoreWebVitalsProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function CoreWebVitals({ className = '', children }: CoreWebVitalsProps) {
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>

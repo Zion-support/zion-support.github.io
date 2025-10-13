@@ -112,4 +112,3 @@ export const makeElementFocusable = (element: HTMLElement, tabIndex: number = 0)
     element.setAttribute('tabindex', tabIndex.toString())}}';
 export const removeElementFocus = (element: HTMLElement): void => {,
     element.setAttribute('tabindex', '-1')}}'
->>>>>>> origin/main

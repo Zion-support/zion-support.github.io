@@ -1,77 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-<<<<<<< HEAD
-export default function ErrorHandlerPage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>ErrorHandler - Zion Tech Group</title>
-        <meta name="description" content="Advanced ErrorHandler solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-export default function errorHandlerPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>ErrorHandler - Zion Tech Group</title>
-        <meta name="description" content="Advanced errorhandler solutions by Zion Tech Group" />
-      </Helmet>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             ErrorHandler
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
-'use client';'
-/**;
- * Advanced Error Handler;
- * Comprehensive error handling utilities for React applications;
- */;
-import React, {ErrorInfo, useCallback}from 'react';';'
-// Error types;
-export enum ErrorType {// Error types;}}export enum ErrorType {}}RUNTIME = 'RUNTIME','
-  NETWORK = 'NETWORK','
-  VALIDATION = 'VALIDATION','
-  AUTHENTICATION = 'AUTHENTICATION','
-  AUTHORIZATION = 'AUTHORIZATION','
-
-  NOT_FOUND = 'NOT_FOUND','
-
-  SERVER = 'SERVER','
-
-  CLIENT = 'CLIENT','
-
-  UNKNOWN = 'UNKNOWN''
-}
-// Error severity levels;
-export enum ErrorSeverity {// Error severity levels;}}export enum ErrorSeverity {}}LOW = 'LOW','
-  MEDIUM = 'MEDIUM','
-  HIGH = 'HIGH','
-  CRITICAL = 'CRITICAL''
-}
-export interface AppError {id: string,,;}
-export interface AppError {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    id: string,,
->>>>>>> origin/main
     type: ErrorType,
   severity: ErrorSeverity,,
     message: string,
@@ -96,7 +28,6 @@ export interface ErrorHandlerConfig {
   // TODO: Add properties
 }
     enableLogging: boolean,,
->>>>>>> origin/main
     enableReporting: boolean,
   enableRetry: boolean,,
     maxRetries: number,
@@ -212,7 +143,6 @@ const appError: AppError = {,
       severity: this.determineNetworkErrorSeverity(status),
       message: error.message;,
       stack: error.stack,
->>>>>>> origin/main
       timestamp: new Date(),
       url: typeof window !== 'undefined' ? window.location.href : undefined,'
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined;,}context: {networkUrl: url, statusCode: status ,},'
@@ -259,7 +189,6 @@ const appError: AppError = {,
   r: Error, ur)
   l: string, status?: number): AppError {/* TODO: Fix JSX expression */}
   e: status },
->>>>>>> origin/main
       resolve,
   d: false,
       retryCoun,
@@ -373,7 +302,6 @@ const appError: AppError = {,
   }
           'Content-Type': 'application/json')})'
         body: JSON.stringify()
->>>>>>> origin/main
     ),
           ...error),
           timestamp: error.timestamp.toISOString(),}body: JSON.stringify({),}...error,
@@ -393,7 +321,6 @@ const appError: AppError = {,
     background: ${this.getNotificationColor(error.severity)}
       color: white,,
     padding: 15 px
->>>>>>> origin/main
       border-radius: 5 px,
       box-shadow: 0 2 px 10 px rgba(0,0,0,0.2)
       z-index: 10000,
@@ -476,7 +403,6 @@ const appError: AppError = {,
   y: JSON.stringify(error),
       })
     } catch (err) {/* TODO: Fix JSX expression */,}}
->>>>>>> origin/main
   }
   r: AppError) {/* TODO: Fix JSX expression */}
         },
@@ -491,11 +417,9 @@ const appError: AppError = {,
         })
       })
     } catch (err) {/* TODO: Fix JSX expression */,}}
->>>>>>> origin/main
   }
   d: ${this.getNotificationColor(error.severity)};
       colo,
->>>>>>> origin/main
   r: white,
       paddin,
   g: 15px,
@@ -559,7 +483,6 @@ const appError: AppError = {,
       case ErrorSeverity.LOW: return '#28a745',,'
     default:
       case ErrorSeverity.LOW:
->>>>>>> origin/main
         return '#28a745','
       default:,
         return '#6c757d';'
@@ -825,7 +748,6 @@ export class ErrorBoundary extends React.Component<;
   }
   render() {/* TODO: Fix JSX expression */,}n: 'center' ,}}>'
 </div>
->>>>>>> origin/main
             <h2>Something went wrong</h2>
 <p>We're sorry, but something unexpected happened.</p>'
   r: undefined }</div>
@@ -836,7 +758,6 @@ export class ErrorBoundary extends React.Component<;
               Try again</button>
             >
               Try again
->>>>>>> origin/main
             </button></div>
         )
       );
@@ -896,17 +817,11 @@ export const useErrorHandler = () => {/* TODO: Fix JSX expression */,},
     [errorHandler]
   );
   return {/* TODO: Fix JSX expression */,}}}
->>>>>>> origin/main
 };
 ;
 export default ErrorHandler;
 "`"
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
             Advanced AI and IT solutions for your business needs.
           </p>
         </div>
@@ -943,4 +858,3 @@ export default ErrorHandler;
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

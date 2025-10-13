@@ -7,7 +7,6 @@
   ip: string
 }
 const feedbackData: FeedbackRecord[] = []
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee;
 const DATA_DIR = path && path.join(process && process.cwd(), 'data', 'runtime');';
 const DB_PATH = path && path.join(DATA_DIR, 'feedback && feedback.json')'
 function ensureDataFile(): void {

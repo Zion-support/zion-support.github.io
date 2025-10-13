@@ -15,7 +15,6 @@ class APIInterceptor {private requestInterceptors: Array<(config: any) => any> =
       this.requestInterceptors.splice(index, 1)
   }
     }
->>>>>>> origin/main
   }
     if (index > -1) {,;
       this.responseInterceptors.splice(index, 1)}}
@@ -23,7 +22,6 @@ class APIInterceptor {private requestInterceptors: Array<(config: any) => any> =
       this.responseInterceptors.splice(index, 1)
   }
     }
->>>>>>> origin/main
   }
     if (index > -1) {,;
       this.errorInterceptors.splice(index, 1)}}
@@ -31,7 +29,6 @@ class APIInterceptor {private requestInterceptors: Array<(config: any) => any> =
       this.errorInterceptors.splice(index, 1)
   }
     }
->>>>>>> origin/main
   }
 // Apply request interceptors;
   applyRequestInterceptors(config: any): any {,}
@@ -255,7 +252,6 @@ export interface APIConfig {/* TODO: Fix JSX expression */,}}}
   g: RequestConfig): RequestConfig {/* TODO: Fix JSX expression */,}},
       timeou,;
       timeou,
->>>>>>> origin/main
   t: config.timeout || this.config.timeout,
       retryAttempt,
   s: config.retryAttempts ?? this.config.retryAttempts,

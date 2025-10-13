@@ -45,7 +45,6 @@ ${pages.map(page => `  <url>
 const sitemapPath = path.join(__dirname, '..', 'public', 'sitemap.xml')'
   fs.writeFileSync(sitemapPath, sitemap)
   console.log('Sitemap generated successfully')'
->>>>>>> cursor/delete-records-a75e
 }
 import fs from 'fs';
 import path from 'path';
@@ -91,4 +90,3 @@ const publicDir = path.join(__dirname, '../public')
   // console.log(`Found ${routes.length} routes`);
 generateSitemap();
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

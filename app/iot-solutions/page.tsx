@@ -1,47 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-<<<<<<< HEAD
-export default function PagePage() {
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const IotSolutionsPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
   return (
     <div className="min-h-screen bg-gray-50">
-=======
 export default function IotSolutionsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <Helmet>
-<<<<<<< HEAD
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-<<<<<<< HEAD
-            Page
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-=======
-            Iot Solutions
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Advanced AI and IT solutions for your business needs.
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </p>
-=======
         <title>Iot Solutions - Zion Tech Group</title>
         <meta name="description" content="Iot Solutions services by Zion Tech Group. Professional AI and IT solutions." />
         <meta name="keywords" content="iot-solutions, AI solutions, IT services" />
@@ -63,29 +26,15 @@ export default function IotSolutionsPage() {
               Stay tuned for updates!
             </p>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
-<<<<<<< HEAD
-      </div>
-    </div>
-  );
-<<<<<<< HEAD
-}
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 };
 
 export default IotSolutionsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
 
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -104,14 +53,8 @@ export default function IotSolutions() {
           <p className="text-xl text-gray-600 mb-8">
             Advanced iot solutions solutions by Zion Tech Group.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

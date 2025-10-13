@@ -269,8 +269,6 @@ export default defineConfig({
     to_console: true
   }
 })
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           launchOptions.args.push('--disable-ipv6')'
         }
         return launchOptions

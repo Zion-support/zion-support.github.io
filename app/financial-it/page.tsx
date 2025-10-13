@@ -1,98 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function FinancialItPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function FinancialIt() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Financial It - Zion Tech Group</title>
         <meta name="description" content="Advanced financial it solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-          </p>
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const FinancialItPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Financial It - Zion Tech Group</title>
-        <meta name="description" content="Financial It services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="financial-it, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Financial It
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional financial it services by Zion Tech Group.
-          </p>
-          
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced financial it solutions. 
-              Stay tuned for updates!
-            </p>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
-import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';';'
-;
-const FinancialITPage: React.FC = () => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
->>>>>>> origin/main;
 const features = [
   // TODO: Add items
 ]
@@ -115,7 +36,6 @@ const features = [
   // TODO: Add properties
 }
     icon: Zap,
->>>>>>> origin/main
       title: 'Financial Data Security','
       description: 'Bank-level security for financial data with encryption, access controls, and monitoring.','
       benefits: ['Real-time reporting', 'Predictive analytics', 'Risk assessment']}];';
@@ -171,7 +91,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-9
             <button>Get Started Today;</button>
 <ArrowRight></button>
 <button>Schedule Demo,</button>
->>>>>>> origin/main
             </button></div>
 </div></section>
       {/* Features Section */} <section className="py-20 px-4">"
@@ -213,7 +132,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-9
 <div className="text-center mb-16">"
 <h2 className="text-4xl font-bold text-white mb-4">Financial IT Solutions"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive IT solutions designed specifically for financial services industry"
->>>>>>> origin/main
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
             {features.map((feature, index) => (
   // TODO: Add parameters
@@ -237,7 +155,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-9
 < className="$2 /></div>"
 <div className="text-center mb-16"></div>"
 <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
->>>>>>> origin/main
               <p className="text-xl text-gray-300">Section description</p></div>"
 </div>
 
@@ -328,7 +245,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-9
 <CheckCircle />
 <h3 className="text-lg font-semibold text-white">{benefit}</h3></div>"
             ))}
->>>>>>> origin/main
           </div>
         ))
       </section></section>
@@ -336,7 +252,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-9
 <p className="text-xl text-gray-300">Section description</p></div>"
 </div></section>
 <div className="max-w-4xl mx-auto text-center" / /></div>"
->>>>>>> origin/main
           <h2 className="text-4xl font-bold text-white mb-6">Ready for Financial IT Excellence?</h2>"
 <p>Join leading financial institutions using our specialized IT solutions for compliance and security;</p></p>
 <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
@@ -383,17 +298,10 @@ export default FinancialITPage</div></div>;
 </section></section>
 </section></section>
 </section>
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 };
 
 export default FinancialItPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
             Advanced AI and IT solutions for your business needs.
           </p>
         </div>
@@ -425,7 +333,6 @@ export default FinancialItPage;
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -434,14 +341,8 @@ export default FinancialItPage;
           <p className="text-xl text-gray-600 mb-8">
             Advanced financial it solutions by Zion Tech Group.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

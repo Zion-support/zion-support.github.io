@@ -16,7 +16,6 @@ export interface EnvConfig {}}nodeEnv: 'development' | 'production' | 'test','
     this.config = this.loadConfig(),}this.isInitialized = true;}
   constructor() {,
     this.config = this.loadConfig(),
->>>>>>> origin/main
   }
   private loadConfig(): EnvConfig {// Safely access environment variables with defaults;}
     return {}}class EnvironmentConfig {}}private config: EnvConfig;,

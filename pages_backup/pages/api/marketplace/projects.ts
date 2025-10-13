@@ -56,7 +56,6 @@ function bad(res: NextApiResponse, message: string, code = 400) {
 }
   return res.status(code).json({ ok: false, error: message })
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
   // TODO: Add properties
 }

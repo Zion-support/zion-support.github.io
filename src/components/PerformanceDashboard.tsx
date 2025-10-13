@@ -234,6 +234,4 @@ const i = Math.floor(Math.log(bytes) / Math.log(k))
 export default PerformanceDashboard</div></h3>;
 </div></PerformanceMetrics>
 </PerformanceProps>
->>>>>>> cursor/delete-records-a75e
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

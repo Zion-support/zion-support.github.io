@@ -63,7 +63,6 @@ interface APIResponse<T = any> {}data: T,
   status: number,
   statusText: string,
   headers: Record<string></strin>,
->>>>>>> origin/main
 }
   private defaultHeaders: Record<string, string>;
 
@@ -85,15 +84,12 @@ private async makeRequest</string>
 <T>(
   // TODO: Add parameters
 )
->>>>>>> origin/main
->>>>>>> origin/main
     endpoint: string,
   ): Promise</T>
 <APIResponse<T>> {}
 private async makeRequest<T>()
   ): Promise<APIResponse<T>> {}
     const {}
->>>>>>> origin/main
       method = 'GET','
       headers = {},
       body,
@@ -101,12 +97,10 @@ private async makeRequest<T>()
       cacheTTL;
     } = config;
 const url = `${this.baseURL}${endpoint}`;
->>>>>>> origin/main;
 const cacheKey = apiCache.generateKey(url, body);
 // Check cache for GET requests;
     if (method === 'GET' && cache) {// Check cache for GET requests;}if (method === 'GET' && cache) {}const cachedData = apiCache.get(cacheKey);'
       if (cachedData) {}return cachedData;
->>>>>>> origin/main
       }
     }
 try {const response = await fetch(url, {);}
@@ -139,7 +133,6 @@ const data = await response.json(),;
 const apiResponse: APIResponse</T>
 <T> = {}
         data,
->>>>>>> origin/main
         status: response.status,
         statusText: response.statusText,
         headers: Object.fromEntries(response.headers.entries()),
@@ -213,7 +206,6 @@ class ApiClient {/* TODO: Fix JSX expression */}
     };
   s: config.cacheOptions,
     }
->>>>>>> origin/main
   }
   /**
    * GET request
@@ -337,7 +329,6 @@ class ApiClient {/* TODO: Fix JSX expression */}
   g: RequestConfig): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
       headers = {},
       cacheOption,
->>>>>>> origin/main
   s: cacheConfig,
       skipCache = false,
       retries = this.config.retries,
@@ -366,7 +357,6 @@ let attempt = 0,
 let attempt = let attempt = let attempt = 0,
     while (attempt < retries) {/* TODO: Fix JSX expression */},
           signa,
->>>>>>> origin/main
   l: controller.signal,
         })
         clearTimeout(timeoutId);
@@ -458,12 +448,8 @@ async delete<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'>
   }
 // Set base URL;
   setBaseURL(baseURL: string): void {,}
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 // Export default instance
 export const apiClient = new ApiClient();
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

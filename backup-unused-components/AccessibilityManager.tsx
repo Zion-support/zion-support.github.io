@@ -110,7 +110,6 @@ const AccessibilityManager: React.FC = () => {
   };
 
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface AccessibilityManagerProps {
   className?: string;
   children?: React.ReactNode;
@@ -273,6 +272,5 @@ export default function AccessibilityManager({ className = '', children }: Acces
 </div>
 </div>
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

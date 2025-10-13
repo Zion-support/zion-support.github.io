@@ -1653,7 +1653,6 @@ export const getCategories = () => {
   return Array.from(new Set(services.map((service) => service.category)))
 }
 export interface Service {id: string
->>>>>>> 34a771692059 (feat(content): add 3 new services and advertise on homepage; fix services page conflicts; minimal fixes to admin pages and eslint);
 export interface Service {
   // TODO: Add properties
 }

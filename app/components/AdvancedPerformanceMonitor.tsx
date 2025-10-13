@@ -1,47 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-<<<<<<< HEAD
-export default function AdvancedPerformanceMonitorPage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>AdvancedPerformanceMonitor - Zion Tech Group</title>
-        <meta name="description" content="Advanced AdvancedPerformanceMonitor solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            AdvancedPerformanceMonitor
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
-'use client';';
-import React, {useEffect, useState, useCallback}from 'react';';'
-interface PerformanceMetrics {fcp: number | null;,}
-  lcp: number | null;,
-  fid: number | null;,
-  cls: number | null;,
-  ttfb: number | null,
-  memory: number | null;,}interface PerformanceMonitorProps {onMetricsUpdate?: (metrics: PerformanceMetrics) => void,}
-  enableRealTimeMonitoring?: boolean;}const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
-  onMetricsUpdate,
-  enableRealTimeMonitoring = true,}) => {const [metrics, setMetrics] = useState<PerformanceMetrics>({
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
->>>>>>> origin/main
     fcp: null,
     lcp: null,
     fid: null,
@@ -54,7 +10,6 @@ const observers: PerformanceObserver[] = [],
     // Measure First Contentful Paint (FCP);
 const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];';
 const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;
->>>>>>> origin/main
     // Measure Largest Contentful Paint (LCP)
     if ('PerformanceObserver' in window) {;';
 const lcpObserver = new PerformanceObserver(list => {;
@@ -72,7 +27,6 @@ const entries = list.getEntries();
         // eslint-disable-next-line no-console
       }
     }
->>>>>>> origin/main
     // Measure First Input Delay (FID);
 const fidObserver = new PerformanceObserver(list => {;
           const entries = list.getEntries();
@@ -99,7 +53,6 @@ const fidEntry = entry as PerformanceEventTiming;
         // eslint-disable-next-line no-console
       }
     }
->>>>>>> origin/main
     // Measure Cumulative Layout Shift (CLS);
 let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {;
@@ -137,7 +90,6 @@ const clsEntry = entry as LayoutShift
         // eslint-disable-next-line no-console
       }
     }
->>>>>>> origin/main
     // Measure Time to First Byte (TTFB)
         ? navigationEntry.responseStart - navigationEntry.requestStart;
         : null;
@@ -219,7 +171,6 @@ const measureCoreWebVitals = useCallback(() => {
   // TODO: Implement
 }
     if (typeof window === 'undefined') return'
->>>>>>> origin/main
     // Use web-vitals library if available
     try {
   // TODO: Add properties
@@ -358,7 +309,6 @@ const interval = setInterval(() => {
 ]
   // TODO: Add items
 ]
->>>>>>> origin/main
     enableRealTimeMonitoring,
     measureWebVitals,
     measureResourceTiming,
@@ -480,7 +430,6 @@ const _recommendations = getPerformanceRecommendations();
 <div></div>
             Memory:{' '},'
     {metrics.memory
->>>>>>> origin/main
               ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
               : 'N/A'}'
           </div></div>
@@ -505,13 +454,8 @@ const _recommendations = getPerformanceRecommendations();
 };
 ;
 export default AdvancedPerformanceMonitor;
->>>>>>> cursor/delete-records-a75e
-=======
 import React from 'react';
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
 interface AdvancedPerformanceMonitorProps {
   className?: string;
   children?: React.ReactNode;
@@ -523,15 +467,8 @@ export default function AdvancedPerformanceMonitor({ className = '', children }:
       {children}
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
 // interface AdvancedPerformanceMonitorProps {
 //   className?: string;
 //   children?: React.ReactNode;
 // }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

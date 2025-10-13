@@ -44,7 +44,6 @@ export const generateMetaTags = (dat,;
     {/* TODO: Fix JSX expression */,}t: data.twitterTitle || data.title ,},;
     {/* TODO: Fix JSX expression */,},
     {/* TODO: Fix JSX expression */,}}]
->>>>>>> origin/main
 }) => {}
   const tags = [
   // TODO: Add items
@@ -107,7 +106,6 @@ export const generateMetaTags = (dat,
     }];
   return tags;
 }
->>>>>>> origin/main
 // SEO Config interface;
 interface SEOConfig {title: string,}
   canonicalUrl: string,
@@ -117,7 +115,6 @@ interface SEOConfig {title: string,}
   twitterSite: string,
   twitterCreator: string,
   structuredData: Record<string>,
->>>>>>> origin/main
   robots: string,
   language: string,
   locale: string,
@@ -149,7 +146,6 @@ const defaultSEOConfig: SEOConfig = {
   }
 const defaultSEOConfig: SEOConfig = {}
   title: 'Zion Holdings','
->>>>>>> origin/main
   description: 'Leading provider of AI-powered business solutions','
   keywords: [],
   canonicalUrl: 'https://zion.app','
@@ -186,14 +182,12 @@ export const generateStructuredData = (;) => {
     return ()
   )
   }
->>>>>>> origin/main;
 const baseStructure = {}
     '@context': 'https: //schema.org'}) => {}';
 const baseStructure = {}
     '@context': 'https: //schema.org','
     '@type': data.type,'
     name: data.name
->>>>>>> origin/main
     description: data.description,
     url: data.url || '','
     logo: data.logo || '','
@@ -227,7 +221,6 @@ let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkEleme
   updateTitle(title: string) {}
     if (typeof document !== 'undefined') {}'
       document.title = title;}
->>>>>>> origin/main
     }
   }
       document.head.appendChild(canonical);}
@@ -354,14 +347,12 @@ const existingScript = document.querySelector('script[type="application/ld+json"
 interface SEOConfig {/* TODO: Fix JSX expression */}
 }
 // Default SEO config
->>>>>>> origin/main
 const,
   defaultSEOConfig: SEOConfig = {/* TODO: Fix JSX expression */}
   a: {},
   robot,
   s: 'index, follow','
   languag,
->>>>>>> origin/main
   e: 'en','
   local,
   e: 'en_US','
@@ -423,7 +414,6 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
   // Update canonical URL;
   updateCanonicalUrl(ur);
   l: string) {/* TODO: Fix JSX expression */,}}
->>>>>>> origin/main
     canonical.href = url;
   }
   // Update Open Graph tags;
@@ -433,7 +423,6 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
   t: config.title || this.config.title },
   // Update Open Graph tags
   updateOpenGraph(confi)
->>>>>>> origin/main
   g: Partial<SEOConfig>) {/* TODO: Fix JSX expression */}
   t: config.title || this.config.title },
       {/* TODO: Fix JSX expression */}
@@ -479,7 +468,6 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
   t: config.twitterCard || this.config.twitterCard },
   // Update Twitter Card tags
   updateTwitterCard(confi)
->>>>>>> origin/main
   g: Partial<SEOConfig>) {/* TODO: Fix JSX expression */}
   t: config.twitterCard || this.config.twitterCard },
       {/* TODO: Fix JSX expression */}
@@ -539,7 +527,6 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
     ,
     if (typeof document !== 'undefined') {,}document.documentElement.lang = language;}'
     }
@@ -663,14 +650,12 @@ export const generateAdvancedStructuredData = (;) => {
     return ()
   )
   }
->>>>>>> origin/main;
 const baseStructure = {}
     '@context': 'https: //schema.org'}) => {}';
 const baseStructure = {}
     '@context': 'https: //schema.org','
     '@type': data.type,'
     name: data.name
->>>>>>> origin/main
     description: data.description,
     url: data.url || '','
     logo: data.logo || '','
@@ -707,7 +692,6 @@ const baseStructure = {}
   }
       contactPoint: {}
         '@type': 'ContactPoint','
->>>>>>> origin/main
         telephone: '+1-555-0123','
   generateSitemap(page,;)
   s: Array<{/* TODO: Fix JSX expression */,}y: string ,}>);
@@ -775,7 +759,6 @@ export const generateAdvancedStructuredData = (dat,;
   }
   // Add type-specific properties
   if (data.type === 'Organization') {/* TODO: Fix JSX expression */},'
->>>>>>> origin/main
       contactPoin,
   t: {/* TODO: Fix JSX expression */}
       }
@@ -809,7 +792,6 @@ export const generateAdvancedStructuredData = (dat,;
       author: {,
     ,
         '@type': 'Organization',}name: 'Zion Holdings',},'
->>>>>>> origin/main
       publisher: {,
     ,
         '@type': 'Organization','
@@ -833,7 +815,6 @@ export const generateAdvancedStructuredData = (dat,;
       dateModified: new Date().toISOString(),}
   }
   return baseStructure
->>>>>>> origin/main
 }
 export const generateSitemapData = useCallback((...args) => {return {urlset: {,}
     return {
@@ -899,9 +880,7 @@ export const validateSEOData = (data: {// title: string; description: string, ur
       publishe,
   r: {/* TODO: Fix JSX expression */}
         },
->>>>>>> origin/main
       datePublishe,
->>>>>>> origin/main
   d: new Date().toISOString(),
       dateModifie,
 // Generate sitemap data;
@@ -914,7 +893,6 @@ export const validateSEOData = (data: {// title: string; description: string, ur
     }
   }
 }
->>>>>>> origin/main
 // Generate robots.txt content;
 export const generateRobotsTxt = (sitemapUr,
   l: string, disallowPath);
@@ -972,7 +950,6 @@ export const validateSEOData = (data: {// title: string; description: string; ur
 // SEO validation;}
 export const validateSEOData = (data: {// title: string; description: string, url: string}) => {}
   const issues: string[] = []
->>>>>>> origin/main
   // Check title length,
   if (data.title.length < 30) {}issues.push('Title is too short (recommended: 30-60 characters)'),}'
   } else if (data.title.length > 60) {}issues.push('Title is too long (recommended: 30-60 characters)'),}'
@@ -1013,7 +990,6 @@ export const generateBreadcrumbData = useCallback((...args) => {}
       name: crumb.name,
       item: crumb.url,}
     }));
->>>>>>> origin/main
   }
 }
 // Initialize SEO enhancements;
@@ -1032,7 +1008,6 @@ export const initializeSEOEnhancements = useCallback((...args) => {}
   // Add structured data for organization;
 const organizationData = generateStructuredData({</div>
     type: 'Organization','
->>>>>>> origin/main
     name: 'Zion Holdings','
     description: 'Leading provider of AI-powered business solutions','
     url: 'https://zion.app','
@@ -1064,7 +1039,6 @@ export const initializeSEOEnhancements = () => {/* TODO: Fix JSX expression */}
 }
 // Initialize SEO enhancements;
 export const initializeSEOEnhancements = () => {/* TODO: Fix JSX expression */,}})
->>>>>>> origin/main;
 const script = document.createElement('script');'
   script.type = 'application/ld+json';'
   script.textContent = JSON.stringify(organizationData);
@@ -1073,4 +1047,3 @@ const script = document.createElement('script');'
 "`"
 }
 "`</$1></p>"
->>>>>>> origin/main

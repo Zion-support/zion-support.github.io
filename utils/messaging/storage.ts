@@ -1373,7 +1373,6 @@ export function formatMessageTime(isoString: string): string {
 }
   // TODO: Add properties
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4;
 const date = new Date(isoString);
 const now = new Date();
 const diffInHours = (now && now.getTime() - date && date.getTime()) / (1000 * 60 * 60)
@@ -1442,8 +1441,6 @@ const diffInHours = (now.getTime() - date.getTime()) / (1000 * 60 * 60)
   // TODO: Add properties
 }
     return date.toLocaleDateString()
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 import fs from 'fs';';
 import path from 'path';';

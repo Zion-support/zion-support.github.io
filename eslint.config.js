@@ -18,7 +18,6 @@ import reactHooks from 'eslint-plugin-react-hooks';';
 import reactRefresh from 'eslint-plugin-react-refresh';';
 export default [;
   // Global ignores
->>>>>>> cursor/delete-records-a75e
   {
 <<<<<<< HEAD
   // TODO: Add properties
@@ -30,7 +29,6 @@ export default [;
 =======
   {
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c
     ignores: [
       "dist/**", 
       "node_modules/**", 
@@ -38,7 +36,6 @@ export default [;
       "*.config.cjs",
 <<<<<<< HEAD
       "add-missing-routes*.jsx",
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
       "backup-problematic/**",
       "backup-unused-components/**",
       "backup/**",
@@ -92,7 +89,6 @@ export default [;
       '*.cjs','
       '*.js.broken','
       'jest.setup.js'
->>>>>>> cursor/delete-records-a75e
     ],
 =======
       "fix_all_*.js",
@@ -107,7 +103,6 @@ export default [;
       "fix_remaining_*.js",
       "fix_syntax_*.js"
     ]
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
       "backup/**",
       "backup-problematic/**",
@@ -129,14 +124,12 @@ export default [;
       "check-*.js",
       "auto-*.js"
     ]
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c
   },
   {
 <<<<<<< HEAD
 =======
   { ignores: ['dist'] },
   {
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
@@ -240,13 +233,11 @@ export default [;
     }
   }
 ];
->>>>>>> cursor/delete-records-a75e
 =======
       "@typescript-eslint/no-explicit-any": "warn"
     }
   }
 );
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
   { 
     ignores: [
@@ -289,4 +280,3 @@ export default [;
     },
   },
 );
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

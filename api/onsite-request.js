@@ -8,7 +8,6 @@ import path from 'path';
 // Simple wrapper function to replace withSentry
 <<<<<<< HEAD
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 export default function handler(req, res) {
   if (req.method !== "POST") {
 =======
@@ -21,7 +20,6 @@ const file = path.join(dir, 'onsite-requests.json');
 
 function handler(req, res) {
   if (req.method !== 'POST') {
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
     res.statusCode = 405;
     res.setHeader("Content-Type", "application/json");
     res.end(JSON.stringify({ error: "Method not allowed" }));
@@ -51,7 +49,6 @@ function handler(req, res) {
     existing = [];
 =======
     console.error('Error reading existing requests:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
   }
 
   const newRequest = {
@@ -66,7 +63,6 @@ function handler(req, res) {
 <<<<<<< HEAD
 =======
     status: 'pending'
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
   };
 
   existing.push(newRequest);
@@ -107,10 +103,8 @@ async function handler(req, res) {
 
 module.exports = handler;
 
->>>>>>> origin/main
 
 }
->>>>>>> cursor/delete-records-a75e
 =======
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
@@ -130,4 +124,3 @@ module.exports = handler;
 }
 
 module.exports = withSentry(handler);
->>>>>>> cursor/fix-errors-and-merge-to-main-a070

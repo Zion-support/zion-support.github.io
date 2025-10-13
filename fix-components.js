@@ -18,7 +18,6 @@ const componentsToFix = [
 };
 
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 import fs from 'fs';
 import path from 'path';
 
@@ -58,7 +57,6 @@ export default function ${componentName}({
       <p>This component is under construction.</p>
   </div>
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }`;
 

@@ -101,7 +101,6 @@ export async function trackEvent(payload: TrackEventPayload) {
     return res.status(500).json({ error: "Internal server error" })"
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export async function trackEvent(payload: TrackEventPayload) {
   // TODO: Add properties

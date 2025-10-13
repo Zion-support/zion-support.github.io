@@ -298,8 +298,6 @@ const _verified = Boolean(match && match.certificationStatus === "completed")"
 }
 }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (!(await enforceRateLimit(auth.apiKey))) {
   // TODO: Add properties
 }

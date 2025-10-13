@@ -1,52 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AccessibilityPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function Accessibility() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Accessibility - Zion Tech Group</title>
         <meta name="description" content="Advanced accessibility solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-=======
-            Advanced AI and IT solutions for your business needs.
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </p>
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -76,29 +40,10 @@ const AccessibilityPage: React.FC = () => {
               Stay tuned for updates!
             </p>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-import Navigation from '../components/Navigation';';';
-import Footer from '../components/Footer';';';
-import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap } from 'lucide-react';';'
-;
-const AccessibilityPage: React.FC = () => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
->>>>>>> origin/main;
 const features = [
   // TODO: Add items
 ]
@@ -121,7 +66,6 @@ const features = [
   // TODO: Add properties
 }
       icon: MousePointer,
->>>>>>> origin/main
       title: 'Motor Accessibility','
       description: 'Keyboard navigation and alternative input methods for users with motor impairments.','
       benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards']},'
@@ -142,7 +86,6 @@ const standards = [
       status: 'Fully Compliant',},'
     {name: 'EN 301 549','
       description: 'European accessibility standard for ICT products and services','
->>>>>>> origin/main
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
 <Navigation />
 
@@ -150,7 +93,6 @@ const standards = [
       <section className="relative py-20 px-4 overflow-hidden">"
 <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>"
 <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>'"
->>>>>>> origin/main
         <div className="relative max-w-7xl mx-auto text-center">"
 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">"
             Accessibility
@@ -162,7 +104,6 @@ const standards = [
             your applications are usable by people of all abilities and comply with international standards.
           </p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>"
->>>>>>> origin/main
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">"
               Get Accessibility Audit
             </button>
@@ -175,7 +116,6 @@ const standards = [
       <section className="py-20 px-4">"
 <div className="max-w-7xl mx-auto"></div>"
 <div className="text-center mb-16"></div>"
->>>>>>> origin/main
             <h2 className="text-4xl font-bold text-white mb-4">"
               Comprehensive Accessibility Features
             </h2>
@@ -194,7 +134,6 @@ const standards = [
 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span></h1>"
 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" /></p>"
               Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities and comply with international standards.
->>>>>>> origin/main
             </p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>"
 <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">"
@@ -202,7 +141,6 @@ const standards = [
               </button>
 <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300" /></button>"
                 Learn More
->>>>>>> origin/main
               </button></div>
 </div>
         {/* Features Section */} <section className="py-20 px-4">"
@@ -232,7 +170,6 @@ const standards = [
                         {benefit} </li>
                     ))}
                   </ul>
->>>>>>> origin/main
                 </div>
               ))}
             </div></div>
@@ -270,7 +207,6 @@ const standards = [
 <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300">,</button>"
                   Contact Us;
                 </button>
->>>>>>> origin/main
               </div>
             ))}
           </div></div>
@@ -307,7 +243,6 @@ const standards = [
       {/* CTA Section */}
       <section className="py-20 px-4">"
 <div className="max-w-4xl mx-auto text-center">"
->>>>>>> origin/main
           <h2 className="text-4xl font-bold text-white mb-6">"
             Ready to Make Your App Accessible?
           </h2>
@@ -315,7 +250,6 @@ const standards = [
             Contact our accessibility experts to audit your application and implement inclusive design solutions.
           </p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>"
->>>>>>> origin/main
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">"
               Start Accessibility Audit
             </button>
@@ -328,19 +262,11 @@ const standards = [
 };
 ;
 export default AccessibilityPage;
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 };
 
 export default AccessibilityPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -354,4 +280,3 @@ export default AccessibilityPage;
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

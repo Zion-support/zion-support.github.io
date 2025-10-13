@@ -92,6 +92,5 @@ export default function CookieConsent({ className = '', children }: CookieConsen
 </div>
 </div>
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

@@ -265,7 +265,6 @@ const label = flags.size > 0 ? 'SUSPICIOUS' : 'SAFE''
     reasons,
     severity,
 // Fraud detection heuristics utilities
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   return {
   // TODO: Add properties
@@ -276,6 +275,5 @@ const label = flags.size > 0 ? 'SUSPICIOUS' : 'SAFE''
     reasons
     severity}
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 }}}}}}

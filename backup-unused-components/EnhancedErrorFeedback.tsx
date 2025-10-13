@@ -45,4 +45,3 @@ class GlobalErrorBoundary extends Component<Props, State> {
   }
 =======
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

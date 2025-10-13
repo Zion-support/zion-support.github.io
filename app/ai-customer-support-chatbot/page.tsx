@@ -1,57 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-<<<<<<< HEAD
-export default function PagePage() {
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const AiCustomerSupportChatbotPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-<<<<<<< HEAD
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-=======
-export default function AiCustomerSupportChatbotPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AiCustomerSupportChatbot() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Ai Customer Support Chatbot - Zion Tech Group</title>
         <meta name="description" content="Advanced ai customer support chatbot solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Ai Customer Support Chatbot
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             This page is under development. Please check back later.
           </p>
-=======
         <title>Ai Customer Support Chatbot - Zion Tech Group</title>
         <meta name="description" content="Ai Customer Support Chatbot services by Zion Tech Group. Professional AI and IT solutions." />
         <meta name="keywords" content="ai-customer-support-chatbot, AI solutions, IT services" />
@@ -73,9 +32,6 @@ export default function AiCustomerSupportChatbot() {
               Stay tuned for updates!
             </p>
           </div>
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
 
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
@@ -96,8 +52,6 @@ export default function AiCustomerSupportChatbot() {
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -106,45 +60,10 @@ export default function AiCustomerSupportChatbot() {
           <p className="text-xl text-gray-600 mb-8">
             Advanced ai customer support chatbot solutions by Zion Tech Group.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-'use client';';
-import React from 'react';';';
-import {Helmet}}from 'react-helmet-async';';';
-import Navigation from '../components/Navigation';';';
-import Footer from '../components/Footer';';';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';';';
-const AiCustomerSupportChatbotPage: React.FC = () => {,;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Brain,
-      title: 'AI-Powered Intelligence','
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.','
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},'
-    {icon: BarChart,
-  },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    icon: BarChart,
->>>>>>> origin/main
       title: 'Advanced Analytics','
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]'
     {
@@ -168,7 +87,6 @@ const features = [
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],'
   }
     ]
->>>>>>> origin/main;
 const benefits = [
   // TODO: Add items
 ]
@@ -180,7 +98,6 @@ const benefits = [
     'Scale operations without proportional staff increases','
   </>
 <Helmet>
->>>>>>> origin/main
         <title>Ai Customer Support Chatbot - Zion Tech Group</title>
 <meta name="description" content="AI-powered solution" />"
 <meta name="keywords" content="AI, artificial intelligence, business solutions" /></Helmet>"
@@ -201,7 +118,6 @@ const benefits = [
 <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>'"
 <div className="relative max-w-7xl mx-auto text-center"></div>"
 <h1>Ai Customer Support Chatbot;</h1>
->>>>>>> origin/main
             </h1>
 <p>Advanced AI-powered ai customer support chatbot solution for modern businesses.</p></p>
 <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
@@ -210,7 +126,6 @@ const benefits = [
 </div></div>
 </section>
         {/* Features Section */} <section className="py-20 px-4">"
->>>>>>> origin/main
           <div className="max-w-7xl mx-auto">"
 <div className="text-center mb-16">"
 <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
@@ -312,7 +227,6 @@ const benefits = [
                 </button>
 <button></button>
                   Learn More
->>>>>>> origin/main
                 </button></div>
 </div>
           ))
@@ -323,17 +237,7 @@ const benefits = [
 };
 ;
 export default AiCustomerSupportChatbotPage;
->>>>>>> cursor/delete-records-a75e
-=======
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 export default AiCustomerSupportChatbotPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

@@ -100,4 +100,3 @@ async function fixComplexJSXStructure() {
 fixComplexJSXStructure().catch(console.error);
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

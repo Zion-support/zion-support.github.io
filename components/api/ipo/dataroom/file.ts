@@ -134,7 +134,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 const section = String(req.query.section || 'General');';
 const file = String(req.query.file || '')'
   if (!file) return res.status(400).json({ error: 'Missing file' })'
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
 }

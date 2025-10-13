@@ -2,7 +2,6 @@ export default {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
   moduleNameMapper: {
@@ -50,7 +49,6 @@ export default {
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
     '^.+\\.(ts|tsx|js|jsx)$': ['babel-jest', {'
       presets: [
   // TODO: Add items
@@ -63,8 +61,6 @@ export default {
       ]
     }]
 
->>>>>>> origin/main
->>>>>>> origin/main
   },
   testMatch: [
   // TODO: Add items
@@ -96,9 +92,7 @@ export default {
     '<rootDir>/dist/','
     '<rootDir>/.next/','
     '<rootDir>/out/''
->>>>>>> cursor/delete-records-a75e
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   ],
   testPathIgnorePatterns: ["<rootDir>/out/", "<rootDir>/node_modules/"],
   transformIgnorePatterns: [
@@ -123,8 +117,6 @@ export default {
       useESM: true
     }
   }
->>>>>>> cursor/delete-records-a75e
 };
 =======
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

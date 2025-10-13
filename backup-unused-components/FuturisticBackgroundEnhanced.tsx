@@ -258,7 +258,6 @@ const FuturisticBackgroundEnhanced = ({ children }: { children: React.ReactNode 
   }, [mousePosition]);
 
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface FuturisticBackgroundEnhancedProps {
   className?: string;
   children?: React.ReactNode;
@@ -305,6 +304,5 @@ export default function FuturisticBackgroundEnhanced({ className = '', children 
 </div>
 </div>
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

@@ -518,12 +518,8 @@ export const preloadImages = (srcs: string[]): Promise<void[]> => {
 }
   return Promise.all(srcs.map(preloadImage));}
 }
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 // Export default instance
 export const performanceUtils = new PerformanceUtils();
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

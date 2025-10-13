@@ -96,6 +96,5 @@ className?: string;
 
 export default function NeonButton({ className = '', children }: NeonButtonProps) {
   return (
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

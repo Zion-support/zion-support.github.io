@@ -196,9 +196,7 @@ class Logger {/* TODO: Fix JSX expression */}
   /**
    * Log an error message
    */
->>>>>>> origin/main
   error(messag,
->>>>>>> origin/main
   e: string,
     errorOrContextOrMetadata?: Error | string | Record<string, unknown>,
     contextOrMetadata?: string | Record<string, unknown>,
@@ -222,7 +220,6 @@ private log(level: LogLevel,),;
       message,;
       context,;
       metadata,}timestamp: Date.now(),}
->>>>>>> origin/main
   ): void {
   // TODO: Add properties
 }
@@ -239,7 +236,6 @@ const logEntry = {
       context,
       metadata,
 this.logs.push(logEntry);
->>>>>>> origin/main
     // Keep only last 1000 logs;
     if (this.logs.length > 1000) {this.logs = this.logs.slice(-1000)}}
 // Console output;
@@ -258,7 +254,6 @@ getLogs(level?: LogLevel): Array<{level: LogLevel,
     message: string,
   private log(leve,;)
   private log(leve,
->>>>>>> origin/main
   l: LogLevel,
     messag,
   e: string,
@@ -305,7 +300,6 @@ getLogs(level?: LogLevel): Array<{level: LogLevel,
   e: string,
     context?: LogContext,
     metadata?: Record<string, unknown></string>)
->>>>>>> origin/main
   ): void {/* TODO: Fix JSX expression */}
     }
     const,
@@ -476,11 +470,8 @@ export const logger = new Logger();
    */;
   private getLevelString(leve);
   l: LogLevel): string {/* TODO: Fix JSX expression */,}}}
->>>>>>> cursor/delete-records-a75e
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 // Export default instance
 export const logger = new Logger();
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

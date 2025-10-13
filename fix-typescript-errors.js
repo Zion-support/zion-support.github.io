@@ -294,7 +294,6 @@ const reservedWordPattern = /:\s*(false|true|null|undefined)\s*([}])/g
 }
     console.error(`Error fixing ${filePath}:`, error.message)
     return false
->>>>>>> cursor/delete-records-a75e
   }
 import React from 'react';
 
@@ -437,7 +436,6 @@ async function main() {
   // TODO: Add properties
 }
     console.log(`File not found: ${filePath}`)
->>>>>>> cursor/delete-records-a75e
   }
 
   // Fix missing variable declarations
@@ -473,7 +471,6 @@ const EnhancedServicesShowcase`,
     fs.writeFileSync(filePath, content);
     }
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 }
 
 // Function to find all TypeScript/JSX files;

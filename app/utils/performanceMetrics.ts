@@ -127,7 +127,6 @@ const navObserver = new PerformanceObserver(list => {</div>
 const navEntry = entry as PerformanceNavigationTiming
               this.recordMetric({</div>
                 name: 'pageLoadTime','
->>>>>>> origin/main
                 value: navEntry.loadEventEnd - navEntry.fetchStart,
                 unit: 'ms','
                 timestamp: new Date(),
@@ -163,7 +162,6 @@ const paintObserver = new PerformanceObserver(list => {</div>
               this.webVitals.FCP = entry.startTime
               this.recordMetric({</div>
                 name: 'FCP','
->>>>>>> origin/main
                 value: entry.startTime,
                 unit: 'ms','
                 timestamp: new Date(),
@@ -196,7 +194,6 @@ const lastEntry = entries[entries.length - 1]
             this.webVitals.LCP = lastEntry.startTime
             this.recordMetric({</div>
               name: 'LCP','
->>>>>>> origin/main
               value: lastEntry.startTime,
               unit: 'ms','
               timestamp: new Date(),
@@ -340,7 +337,6 @@ const perfData = window.performance.timing;
     })
   }
   /**;
->>>>>>> origin/main
    * Record memory usage;
    */;
   recordMemoryUsage(): void {if (typeof window === 'undefined') return;}'
@@ -351,14 +347,12 @@ const perfData = window.performance.timing;
       value: memory.usedJSHeapSize)
       unit: 'bytes')'
       unit: 'bytes'),'
->>>>>>> origin/main
       timestamp: new Date(),
       category: 'memory','
       metadata: {,
         total: memory.totalJSHeapSize,
     this.recordMetric({</div>
       name: 'memoryUsage','
->>>>>>> origin/main
       value: memory.usedJSHeapSize,
       unit: 'bytes','
       timestamp: new Date(),
@@ -383,7 +377,6 @@ const perfData = window.performance.timing;
   n: () => T): T {/* TODO: Fix JSX expression */}
   n:${name}`,
       valu,
->>>>>>> origin/main
   e: endTime - startTime,
       uni,
   t: 'ms','
@@ -410,7 +403,6 @@ const perfData = window.performance.timing;
   n: () => Promise<T>): Promise<T> {/* TODO: Fix JSX expression */}`
   c:${name}`,
       valu,
->>>>>>> origin/main
   e: endTime - startTime,
       uni,
   t: 'ms','
@@ -591,11 +583,8 @@ interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */,}
 export const performanceMetrics = PerformanceMetrics.getInstance();
 export default PerformanceMetrics;
 `;
->>>>>>> cursor/delete-records-a75e
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 // Export default instance
 export const performanceMetrics = new PerformanceMetrics();
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

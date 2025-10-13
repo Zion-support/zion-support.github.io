@@ -1,54 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function PageBroken2Page() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page-broken2 - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page-broken2 solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page-broken2
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
-'use client';';
-import React from 'react';';'
-'use client';';
-import React, {useState, useCallback}from 'react';';';
-import {Helmet}}from 'react-helmet-async';';';
-import {Phone,}
-  Mail,
-  MapPin,
-  Clock,
-  Send,
-  CheckCircle
-} from 'lucide-react';'
-
-  MapPin,
-
-  Clock,
-
-  Send,;
-const handleSubmit = async (e: React.FormEvent) => {,
->>>>>>> origin/main
     e.preventDefault();
     setIsSubmitting(true)
     setSubmitStatus('idle')'
@@ -99,7 +53,6 @@ try {// Simulate form submission,}
     setIsSubmitting(false)
   }
     }
->>>>>>> origin/main
   }
 const services = [
   // TODO: Add items
@@ -138,7 +91,6 @@ const contactInfo = [
 <span>{' '</span>}Touch;'
               </span></h1>
 <p>Ready to transform your business? Let's discuss your project and explore;</p>'
->>>>>>> origin/main
               how our AI and IT solutions can help you achieve your goals.
             </p></div>
 </section></div>})}
@@ -380,7 +332,6 @@ const contactInfo = [
                         {info.description}
 
                       </p>
->>>>>>> origin/main
                     </div></div>
 <div className="flex items-center">"
 <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4">"
@@ -390,7 +341,6 @@ const contactInfo = [
 <p className="text-gray-300">info@ziontechgroup.com</p></div>"
 </div>
 <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>,"
->>>>>>> origin/main
                     </div></div>
 </div></div>
             ))
@@ -401,11 +351,7 @@ const contactInfo = [
 };
 ;
 export default ContactPage;
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Page Broken2 - Zion Tech Group</title>
@@ -454,4 +400,3 @@ export default ContactPage;
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

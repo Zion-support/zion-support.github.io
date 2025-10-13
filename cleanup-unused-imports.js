@@ -113,4 +113,3 @@ for (const file of files) {/* TODO: Fix JSX expression */}`
 }
 `
 console.log(`\n✅ Cleanup complete! Processed ${processed} files.`);"`
->>>>>>> cursor/delete-records-a75e

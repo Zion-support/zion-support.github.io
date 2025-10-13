@@ -2082,8 +2082,6 @@ const violationsByReason = violations.reduce ((acc, violation) => {
         total: violations.length,
         byReason: violationsByReason,
         recent: violations.slice(0, 10)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     }
   }
@@ -2168,8 +2166,6 @@ export const API_RATE_LIMITER_PRICING = {
       'Unlimited rate limit rules_enterprise - grade rate limiting_advanced security features_multiple notification channels1 - year data retention_custom integrations_white - label options_priority support','
       'SLA guarantee''
     ]
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
       activeRules: number

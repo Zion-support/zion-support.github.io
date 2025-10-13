@@ -111,7 +111,6 @@ function writeGrant(record: GrantApplication) {
   );  return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication'
 }
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties

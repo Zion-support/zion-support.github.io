@@ -198,7 +198,6 @@ const handleClose = () => {
                 <$2 />
                   key={tag}
                   className="bg-white/10 text-white px-3 py-1 rounded-full text-sm border border-white/20""
->>>>>>> cursor/delete-records-a75e
                   {tag}
               ))}
             {/* CTA Buttons */}
@@ -237,7 +236,6 @@ const handleClose = () => {
   // TODO: Add properties
 }
                   index === currentSlide ? 'bg-cyan-400' : 'bg-white/30''
->>>>>>> cursor/delete-records-a75e
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
             ))}
@@ -380,6 +378,4 @@ export default UltimateBusinessIntelligence2025Banner;"";"
 </span></span>
 </span></a>
 </p></h1>))))))
->>>>>>> cursor/delete-records-a75e
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

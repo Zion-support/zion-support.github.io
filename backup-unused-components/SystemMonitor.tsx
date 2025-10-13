@@ -34,6 +34,5 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
 return (
     <div className={`${className}`}>
       {children}
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

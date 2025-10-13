@@ -135,7 +135,6 @@ function DefaultErrorFallback({ error, resetError }: { error: Error, resetError:
 }
     // TODO: Add content
   }
->>>>>>> cursor/delete-records-a75e
 }
 
 export default function errorBoundaryConfig({ className = '', children }: errorBoundaryConfigProps) {
@@ -454,6 +453,4 @@ export function formatErrorForLogging(error: Error): Record,
 </button></p>
 </p></h2>
 </a></a>
->>>>>>> cursor/delete-records-a75e
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

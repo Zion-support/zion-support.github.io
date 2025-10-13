@@ -87,7 +87,6 @@ const json = JSON.parse(fs.readFileSync(localPath, 'utf8'))'
   // TODO: Add properties
 }
     return res.status(500).json({ error: e.message || 'Internal error' })'
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   }
   try {;
@@ -146,7 +145,5 @@ const local_path = path.join (process.cwd (), "data", "homepage.json")"
   return res.status (200).json (null)
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 }

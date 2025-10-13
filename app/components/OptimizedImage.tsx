@@ -1,45 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-export default function OptimizedImagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>OptimizedImage - Zion Tech Group</title>
-        <meta name="description" content="Advanced OptimizedImage solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            OptimizedImage
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center">"
-<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
-<span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">"
-<p className="text-xl text-gray-300">Section description</p></div>"
-</div></section>
-<div className="max-w-7xl mx-auto"></div>"
-<div className="text-center"></div>"
-<h1>
-<span>OptimizedImage;</span>
-                OptimizedImage
->>>>>>> origin/main
               </span>
 <br>
 <span className="text-white">Solutions</span></h1>"
@@ -76,7 +34,6 @@ export default function OptimizedImagePage() {
 import React from 'react';';
 import { Helmet } from 'react-helmet-async';';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';'
->>>>>>> origin/main
   return (
   // TODO: Add parameters
 )
@@ -167,7 +124,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
             </h2>
 <p></p>
               Contact our experts to discuss your optimizedimage needs and get a customized solution.
->>>>>>> origin/main
             </p>
 <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
               <button>
@@ -201,68 +157,22 @@ export default OptimizedImagePage;
 ;
 export default OptimizedImagePage;
 )
->>>>>>> cursor/delete-records-a75e
-=======
 import React from 'react';
 
-=======
 import React, { useState, useCallback } from 'react';
 // @ts-expect-error - Missing type definitions
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c
 interface OptimizedImageProps {
   src: string;
   alt: string;
   className?: string;
-<<<<<<< HEAD
-  width?: number;
-  height?: number;
-  loading?: 'lazy' | 'eager';
-}
-
-export default function OptimizedImage({
-=======
-  width?: number | string;
-  height?: number | string;
-  quality?: number;
-  format?: 'webp' | 'jpeg' | 'png' | 'avif';
-  priority?: boolean;
-  placeholder?: string;
-  effect?: 'blur' | 'opacity' | 'black-and-white';
-  threshold?: number;
-  onLoad?: () => void;
-  onError?: () => void;
-}
-
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c
   src,
   alt,
   className = '',
   width,
   height,
-<<<<<<< HEAD
-  loading = 'lazy'
-}: OptimizedImageProps) {
-  return (
-    <img
-      src={src}
-      alt={alt}
-      className={className}
-      width={width}
-      height={height}
-      loading={loading}
-      style={{
-        maxWidth: '100%',
-        height: 'auto'
-      }}
-    />
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
   quality = 80,
   format = 'webp',
   priority = false,
@@ -334,8 +244,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 };
 
 export default OptimizedImage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c
-=======
 
 interface OptimizedImageProps {
   className?: string;
@@ -349,4 +257,3 @@ export default function OptimizedImage({ className = '', children }: OptimizedIm
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

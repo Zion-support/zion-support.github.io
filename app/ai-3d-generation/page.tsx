@@ -1,52 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function Ai3dGenerationPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function Ai3dGeneration() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Ai 3d Generation - Zion Tech Group</title>
         <meta name="description" content="Advanced ai 3d generation solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-=======
-            Advanced AI and IT solutions for your business needs.
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </p>
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -76,118 +40,12 @@ const Ai3dGenerationPage: React.FC = () => {
               Stay tuned for updates!
             </p>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
-import { Helmet } from 'react-helmet-async';';';
-import Navigation from '../components/Navigation';';';
-import Footer from '../components/Footer';';';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';';';
-const Ai3dGenerationPage: React.FC = () => {,;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      title: '3D Printing','
-      description: 'Create printable 3D models for manufacturing','
-      icon: '🖨️''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      title: 'VR/AR Content','
-      description: 'Generate immersive 3D content for virtual and augmented reality','
-      icon: '🥽''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      title: 'Marketing & Advertising','
-      description: 'Create compelling 3D visuals for marketing campaigns','
-      icon: '📢''
-},
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      title: 'VR/AR','
-      description: 'Create immersive experiences and virtual environments','
-      icon: '🥽''
-    }
-  ];
-;
-const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    'Reduce 3D content creation time by 90%','
-    'Lower production costs by 80%','
-    'Create unlimited unique 3D assets','
-    'Accelerate game and app development','
-    'Enable rapid prototyping','
-    'Improve visual quality and consistency','
-    'Scale content production instantly','
-    'Reduce dependency on 3D artists''
-  ];
-
-<<<<<<< HEAD
-  return (
-  // TODO: Add parameters
-)
-    <>
-<Helmet>
-<title>AI 3D Generation - Zion Tech Group</title>
-<meta name="description" content="Transform text into stunning 3D models with our AI-powered 3D generation technology. Create game assets, architectural models, and more in seconds." />"
-      title: 'Advanced Analytics','
-      description: 'Comprehensive analytics dashboard with real-time data visualization.','
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},'
-    {icon: Target,
-      title: 'Precision Targeting','
-      description: 'Target specific goals and objectives with precision and accuracy.','
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']},'
-    {icon: TrendingUp,
-      title: 'Growth Optimization','
-      description: 'Optimize your business growth with data-driven strategies.','
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']},'
-  ]
-];
-const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    'Increase efficiency by up to 50%','
-    'Reduce costs by 30% with automation','
-    'Improve decision-making with AI insights','
-    'Scale operations without proportional staff increases','
-    'Gain competitive advantage with advanced technology';'
-  ];
-return(<>)
-      <Helmet />
-<title>Ai 3d Generation - Zion Tech Group</title>
-<meta name="description" content="Advanced AI-powered 3D generation solution for modern businesses" />"
-<meta name="keywords" content="AI, 3D generation, artificial intelligence, business solutions" />"
->>>>>>> origin/main
       </Helmet>
 <Navigation />
->>>>>>> origin/main
       <section className="relative py-20 px-4 overflow-hidden">"
 <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />"
 <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />'"
@@ -272,7 +130,6 @@ return(<>)
               </button>
 <button className="border border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300" /></button>"
                 View Demo
->>>>>>> origin/main
               </button></div>
 </div></section>
         {/* Features Section */} <section className="py-20 px-4">"
@@ -341,23 +198,13 @@ return(<>)
         </section></div>
 <Footer />
 
->>>>>>> origin/main
   );
 };
 ;
 export default AI3DGenerationPage;
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 export default Ai3dGenerationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -371,4 +218,3 @@ export default Ai3dGenerationPage;
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

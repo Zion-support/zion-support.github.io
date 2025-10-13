@@ -67,7 +67,6 @@ const stat = fs.statSync(fullPath)
   // TODO: Add properties
 }
       files.push(fullPath)
->>>>>>> cursor/delete-records-a75e
     }
 
     const content = fs.readFileSync(filePath, 'utf8');
@@ -127,7 +126,6 @@ const stat = fs.statSync(fullPath)
 =======
 
   return files
->>>>>>> cursor/delete-records-a75e
 }
 
 // Function to recursively find all TypeScript files;
@@ -425,7 +423,6 @@ const newContent = content.replace(fix.pattern, fix.replacement)
 }
           content = newContent
           modified = true
->>>>>>> cursor/delete-records-a75e
         }
       }
     }
@@ -534,7 +531,6 @@ const newContent = content.replace(fix.pattern, fix.replacement)
 }
     console.error(`Error fixing syntax errors in ${filePath}:`, error.message)
     return false
->>>>>>> cursor/delete-records-a75e
   }
 }
 
@@ -553,7 +549,6 @@ const appDir = path.join(__dirname, 'app');';
 const files = findFiles(appDir);
 let fixedCount = 0;
 let errorCount = 0
->>>>>>> cursor/delete-records-a75e
 for (const file of files) {
   // TODO: Add properties
 }
@@ -656,7 +651,5 @@ filesToFix.forEach(filePath => {
 })
 console.log('\n✨ Syntax error fixes complete!')'
 ))))))
->>>>>>> cursor/delete-records-a75e
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

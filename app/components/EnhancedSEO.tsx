@@ -1,85 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function EnhancedSEOPage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>EnhancedSEO - Zion Tech Group</title>
-        <meta name="description" content="Advanced EnhancedSEO solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            EnhancedSEO
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-<<<<<<< HEAD
-}
-=======
-import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'react-helmet-async';';';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';';'
-;
-const EnhancedSEOPage: React.FC = () => {;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Brain,
-      title: 'AI-Powered Solutions','
-      description: 'Advanced AI technology to transform your business operations and improve efficiency''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Zap,
-      title: 'High Performance','
-      description: 'Lightning-fast processing and real-time analytics for optimal results''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Shield,
-      title: 'Enterprise Security','
-      description: 'Bank-level security with encryption and compliance standards''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Globe,
-      title: 'Global Reach','
-      description: 'Worldwide deployment and support for international businesses''
-    }
-  ];
-;
-const benefits = [;
-const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
->>>>>>> origin/main
     'Advanced AI technology integration','
     'Real-time processing and analytics','
     'Enterprise-grade security and compliance','
@@ -223,7 +141,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
             </h2>
 <p></p>
               Contact our experts to discuss your enhancedseo needs and get a customized solution.
->>>>>>> origin/main
             </p>
 <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
               <button>
@@ -258,10 +175,5 @@ export default EnhancedSEOPage;
 export default EnhancedSEOPage;
 
 })
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

@@ -17,7 +17,6 @@ export class performanceUtils {
 
 export class PerformanceUtils {
   private config: PerformanceUtilsConfig;
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
   measureCoreWebVitals?: boolean;
   measureResourceTiming?: boolean;
@@ -29,7 +28,6 @@ export class PerformanceUtils {
 export class PerformanceUtils {
   private config: PerformanceUtilsConfig;
   private metrics: Map<string, number> = new Map();
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c
 
   constructor(config: Partial<PerformanceUtilsConfig> = {}) {
     this.config = {
@@ -43,7 +41,6 @@ export class PerformanceUtils {
       measureUserTiming: true,
       measureNavigationTiming: true,
       reportToAnalytics: false,
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c
       ...config
     };
   }
@@ -159,7 +156,6 @@ const _images = document.querySelectorAll('img')'
 export const optimizeImages = () => {/* TODO: Fix JSX expression */}
       }
     })
->>>>>>> cursor/delete-records-a75e
   }
 };
 
@@ -244,7 +240,6 @@ export default performanceOptimizer;
 =======
 export const performanceUtils = new PerformanceUtils();
 export default performanceUtils;
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
       this.setupCoreWebVitals();
       this.setupResourceTiming();
@@ -460,4 +455,3 @@ export default performanceUtils;
 
 export const performanceUtils = new PerformanceUtils();
 export default performanceUtils;
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c

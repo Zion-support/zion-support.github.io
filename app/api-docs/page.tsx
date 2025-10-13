@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -17,40 +9,19 @@ export default function PagePage() {
         <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
       </Helmet>
       
-<<<<<<< HEAD
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function ApiDocsPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function ApiDocs() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Api Docs - Zion Tech Group</title>
         <meta name="description" content="Advanced api docs solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-=======
-            Advanced AI and IT solutions for your business needs.
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </p>
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="container mx-auto px-4 py-20">
           <h1 className="text-5xl font-bold text-white mb-6">
@@ -67,8 +38,6 @@ export default function ApiDocs() {
               Stay tuned for updates!
             </p>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -77,52 +46,10 @@ export default function ApiDocs() {
           <p className="text-xl text-gray-600 mb-8">
             Advanced api docs solutions by Zion Tech Group.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-'use client';';
-import React, {useState}from 'react';';';
-import {Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Shield, Settings, Users, Database, Eye, Sparkles, BookOpen, FileText, Download}}from 'lucide-react';';';
-import Navigation from '../components/Navigation';';';
-import Footer from '../components/Footer';';';
-import SEOOptimizer from '../components/SEOOptimizer';';';
-export default function APIDocsPage() {const [copiedCode, setCopiedCode] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState(');'';
-const copyToClipboard = (code: string, id: string) => {,
-    navigator.clipboard.writeText(code)
-    setCopiedCode(id),
-    setTimeout(() => setCopiedCode(null), 2000)}const apiEndpoints = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {title: 'AI Services','
-      description: 'Artificial Intelligence and Machine Learning APIs','
-      icon: Brain,
-      endpoints: [,
-        {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          name: 'Text Analysis','
-          method: 'POST','
-          path: '/api/ai/text-analysis','
-          description: 'Analyze text sentiment, entities, and key phrases','
-          code: `curl -X POST "https://api.ziontechgroup.com/ai/text-analysis" \\,"
-  -H "Authorization: Bearer YOUR_API_KEY" \\,"
-  -H "Content-Type: application/json" \\,"
-  -d '{'
-    "text": "Your text to analyze","
-    "features": ["sentiment", "entities", "key_phrases"]}'`'"
-  }'`'
->>>>>>> origin/main
         },
         {name: 'Image Recognition','
           method: 'POST','
@@ -289,7 +216,6 @@ const copyToClipboard = (code: string, id: string) => {,
 )
                           </div>
                           )}
->>>>>>> origin/main
                         </button></div>
 <p className="text-gray-300 mb-4">{endpoint.description</p>}</p>"
 <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto"></div>"
@@ -360,13 +286,6 @@ const copyToClipboard = (code: string, id: string) => {,
 </h3></h3>
 </section></section>
 </section></section>
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

@@ -286,4 +286,3 @@ for (const file, of, criticalFiles) {
       fixedCount++;
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

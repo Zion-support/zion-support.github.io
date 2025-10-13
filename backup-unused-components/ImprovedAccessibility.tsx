@@ -152,7 +152,6 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
   };
 
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface ImprovedAccessibilityProps {
   className?: string;
   children?: React.ReactNode;
@@ -400,6 +399,5 @@ export default function ImprovedAccessibility({ className = '', children }: Impr
       `}</style>
 //     </>
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

@@ -6,7 +6,6 @@ interface SkipLinkProps;
   className?: string;
 
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface SkipLinkProps {
   className?: string;
   children?: React.ReactNode;

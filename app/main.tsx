@@ -1,55 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-<<<<<<< HEAD
-export default function MainPage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Main - Zion Tech Group</title>
-        <meta name="description" content="Advanced Main solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-export default function mainPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>Main - Zion Tech Group</title>
-        <meta name="description" content="Advanced main solutions by Zion Tech Group" />
-      </Helmet>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Main
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
-import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'react-helmet-async';';';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';';'
-;
-const MainPage: React.FC = () => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
->>>>>>> origin/main;
 const features = [
   // TODO: Add items
 ]
@@ -220,7 +174,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
             </h2>
 <p></p>
               Contact our experts to discuss your main needs and get a customized solution.
->>>>>>> origin/main
             </p>
 <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
               <button>
@@ -255,11 +208,7 @@ export default MainPage;
 export default MainPage;
 
 }})
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
             Advanced AI and IT solutions for your business needs.
           </p>
         </div>
@@ -296,4 +245,3 @@ export default MainPage;
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

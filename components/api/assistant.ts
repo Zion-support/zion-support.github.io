@@ -62,8 +62,6 @@ const message = completion && completion.choices?.[0]?.message || {
   }    return res && res.status(500).json({ error: 'Assistant request failed' })'
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 Frequently asked questions to use as hints (do not claim as absolute truth if uncertain):
 1) What is Zion?  → A marketplace to find and integrate AI models and services.
 2) How do I list my AI model or service?  → Create a vendor account, submit product details, pricing, and docs for review.

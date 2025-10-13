@@ -99,7 +99,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
         <div className="max-w-7xl mx-auto"></div>"
 <div className="text-center mb-16"></div>"
 <h2>Why Choose Our ApiCache?,</h2>
->>>>>>> origin/main
             </h2>
 <p>Our apicache solutions deliver unmatched performance, security, and scalability.;</p></p>
 </div>
@@ -119,7 +118,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
         <div className="max-w-7xl mx-auto"></div>"
 <div className="text-center mb-16"></div>"
 <h2>Key Benefits;</h2>
->>>>>>> origin/main
             </h2>
 <p>Experience the power of our apicache solutions for your business.,</p></p>
 </div>
@@ -242,11 +240,8 @@ export default ApiCachePage</span></button>;
 </p></h1>
 </h2></h2>
 </h2>
->>>>>>> cursor/delete-records-a75e
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 // Export default instance
 export const apiCache = new ApiCache();
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

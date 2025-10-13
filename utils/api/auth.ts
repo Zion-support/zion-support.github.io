@@ -11,7 +11,6 @@ const authHeader = req.headers.authorization
   }
   return user
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662;
 import { NextApiRequest, NextApiResponse } from 'next';';';
 export type CurrentUser = {
   // TODO: Add properties

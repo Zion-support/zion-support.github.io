@@ -1,89 +1,24 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Shield, Zap } from 'lucide-react';
 
-<<<<<<< HEAD
-export default function PagePage() {
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-export default function AiAutomationPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AiAutomation() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Ai Automation - Zion Tech Group</title>
         <meta name="description" content="Advanced ai automation solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-          </p>
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const AiAutomationPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Ai Automation - Zion Tech Group</title>
-        <meta name="description" content="Ai Automation services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="ai-automation, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Ai Automation
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional ai automation services by Zion Tech Group.
-          </p>
-          
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced ai automation solutions. 
-              Stay tuned for updates!
-            </p>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
       </div>
     </>
   );
 }
-=======
 'use client';';
 import React from 'react';';';
 import {Helmet}}from 'react-helmet-async';';';
@@ -222,122 +157,6 @@ const useCases = [
     }
   ];
 
-<<<<<<< HEAD
-  return (</div>
-<>
-<Helmet>
-<title>AI Automation - Zion Tech Group</title>
-<meta name="description" content="Transform your business with AI Automation solutions. Intelligent process automation, workflow optimization, and smart decision-making for better efficiency." />"
-<meta name="keywords" content="AI automation, process automation, workflow optimization, business automation, intelligent automation, RPA" /></Helmet>"
-<Navigation />
-<section className="relative py-20 px-4 overflow-hidden">"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />'"
-<div className="relative max-w-7xl mx-auto text-center">"
-<h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">"
-            AI Automation
-            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">"
-              Solutions
-            </span></h1>
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">"
-            Transform your business with intelligent automation solutions. Streamline processes,
-            reduce manual work, and boost productivity with AI-powered automation.
-          </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">"
-              Get Started
-            </button>
-<button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">"
-              View Demo
-            </button></div>
-</div></section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">"
-              Advanced Automation Features
-            </h2>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">"
-              Our AI automation platform provides comprehensive solutions for business process optimization.
-            </p></div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
-            {features.map((feature, index) => (
-  // TODO: Add parameters
-)
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">"
-<div className="flex items-center mb-4">"
-<feature.icon className="w-8 h-8 text-purple-400 mr-3" />"
-<h3 className="text-xl font-semibold text-white">{feature.title}</h3></div>"
-<p className="text-gray-300 mb-4">{feature.description}</p>"
-<ul className="space-y-2">"
-                  {feature.benefits.map((benefit, idx) => (
-  // TODO: Add parameters
-)
-                    <li key={idx} className="flex items-center text-sm text-gray-400">"
-<CheckCircle className="w-4 h-4 text-green-400 mr-2" />"
-                      {benefit}
-                    </li>
-                  ))}
-                </ul></div>
-          ))
-        </section></div>
-<Footer />
-
-  );
-};
-;
-const AIAutomationPage: React.FC = () => {;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    'Workflow automation','
-    'Process optimization','
-    'Intelligent scheduling','
-    'Data processing','
-    'Task management','
-    'Integration capabilities''
-  ]
-
-  return (
-  // TODO: Add parameters
-)
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<Navigation />
-
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center">"
-<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
-              AI <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Automation</span></h1>"
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
-              Streamline your business processes with intelligent automation solutions.
-            </p></div>
-</div></section>
-
-      {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
-              Automation Features
-            </h2>
-<p className="text-xl text-gray-300">"
-              Automate repetitive tasks and optimize your workflows.
-            </p></div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">"
-            {features.map((feature, index) => (
-  // TODO: Add parameters
-)
-              <div key={index} className="flex items-center text-gray-300">"
-<CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"
-<span>{feature}</span>
->>>>>>> origin/main
->>>>>>> origin/main
               </div>
             ))}
           </div></div>
@@ -402,8 +221,6 @@ const features = [
 }
 ;
 export default AIAutomationPage;
->>>>>>> cursor/delete-records-a75e
-=======
   const features = [
     {
       title: "Advanced Technology",
@@ -436,9 +253,7 @@ export default AIAutomationPage;
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Advanced  solutions by Zion Tech Group
-=======
             Advanced AI and IT solutions for your business needs.
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </p>
         </div>
 
@@ -452,7 +267,6 @@ export default AIAutomationPage;
               <p className="text-gray-300">{feature.description}</p>
             </div>
           ))}
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -461,21 +275,10 @@ export default AIAutomationPage;
           <p className="text-xl text-gray-600 mb-8">
             Advanced ai automation solutions by Zion Tech Group.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 export default AiAutomationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

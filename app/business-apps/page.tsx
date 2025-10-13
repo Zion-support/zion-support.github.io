@@ -1,139 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function BusinessAppsPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function BusinessApps() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Business Apps - Zion Tech Group</title>
         <meta name="description" content="Advanced business apps solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-          </p>
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const BusinessAppsPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Business Apps - Zion Tech Group</title>
-        <meta name="description" content="Business Apps services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="business-apps, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Business Apps
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional business apps services by Zion Tech Group.
-          </p>
-          
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced business apps solutions. 
-              Stay tuned for updates!
-            </p>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
-'use client';';
-import React from 'react';';';
-import {Helmet}}from 'react-helmet-async';';';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Smartphone, Monitor, Cloud}}from 'lucide-react';';';
-const BusinessAppsPage: React.FC = () => {,;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Smartphone,
-      title: 'Mobile Apps','
-      description: 'Custom mobile applications for iOS and Android platforms',},'
-    {icon: Monitor,
-      title: 'Web Applications','
-      description: 'Responsive web applications with modern UI/UX design',},'
-    {icon: Cloud,
-      title: 'Cloud Integration','
-      description: 'Seamless cloud integration and deployment solutions',},'
-    {icon: Brain,
-      description: 'Advanced AI technology to transform your business applications and improve efficiency',},'
-    {icon: Zap,
-      title: 'High Performance','
-      description: 'Lightning-fast processing and real-time analytics for optimal business results',},'
-    {icon: Shield,
-      title: 'Enterprise Security','
-      description: 'Bank-level security with encryption and compliance standards for your business data',},'
-    {icon: Globe,
-      title: 'Global Reach','
-  ];];];
-  const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    '24/7 technical support','
-    'Easy integration with existing systems','
-    'Cost-effective pricing plans','
-    'Proven track record of success''
-  ]
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>"
-<Helmet />
-  return (
-  // TODO: Add parameters
-)
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<Helmet>
->>>>>>> origin/main
         <title>Business Apps | Zion Tech Group</title>
 <meta name="keywords" content="business apps, mobile apps, web apps, AI solutions, IT services, Zion Tech Group" /></Helmet>"
 
@@ -175,7 +55,6 @@ const features = [
               </div>
 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"></div>"
 <feature.icon className="w-12 h-12 text-purple-400 mb-4" />"
->>>>>>> origin/main
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>"
 <p className="text-gray-300">{feature.description</p>}</p></div>"
             ))}
@@ -206,7 +85,6 @@ const features = [
 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
               Experience the power of our business app solutions for your business.
->>>>>>> origin/main
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
             {benefits.map((benefit, index) => (
   // TODO: Add parameters
@@ -233,7 +111,6 @@ const features = [
               Email Us;
   </
 
->>>>>>> origin/main
           </div></div>
 <div className="text-center">"
 <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2></h2>"
@@ -282,17 +159,10 @@ export default BusinessAppsPage</div></div>;
 </h3></section>
 </section></section>
 </section>
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 };
 
 export default BusinessAppsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
             Advanced AI and IT solutions for your business needs.
           </p>
         </div>
@@ -324,7 +194,6 @@ export default BusinessAppsPage;
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -333,14 +202,8 @@ export default BusinessAppsPage;
           <p className="text-xl text-gray-600 mb-8">
             Advanced business apps solutions by Zion Tech Group.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

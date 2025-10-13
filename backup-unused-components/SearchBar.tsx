@@ -34,6 +34,5 @@ const SearchBar: React.FC<SearchBarProps> = ({
 return (
     <div className={`${className}`}>
       {children}
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

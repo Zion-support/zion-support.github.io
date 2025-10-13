@@ -53,7 +53,6 @@ export interface ApplyToJobModalProps {
   onApplySuccess?: (jobId: string) => Promise<void>
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   onClose: () => void
   onApplySuccess?: (jobId: string) => Promise<void>
 }

@@ -1,169 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function BlockchainIntegrationServicesPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function BlockchainIntegrationServices() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Blockchain Integration Services - Zion Tech Group</title>
         <meta name="description" content="Advanced blockchain integration services solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-          </p>
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const BlockchainIntegrationServicesPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Blockchain Integration Services - Zion Tech Group</title>
-        <meta name="description" content="Blockchain Integration Services services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="blockchain-integration-services, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Blockchain Integration Services
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional blockchain integration services services by Zion Tech Group.
-          </p>
-          
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced blockchain integration services solutions. 
-              Stay tuned for updates!
-            </p>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
-'use client';';
-import React from 'react';';';
-import {Helmet}}from 'react-helmet-async';';';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';';';
-const BlockchainIntegrationServicesPage: React.FC = () => {,;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Shield,
-      title: 'Secure Blockchain Integration','
-      description: 'Advanced blockchain technology integration with enterprise-grade security',},'
-    {icon: Zap,
-      title: 'High Performance','
-      description: 'Lightning-fast blockchain transactions and smart contract execution',},'
-    {icon: Brain,
-      title: 'AI-Powered Solutions','
-      description: 'Intelligent blockchain solutions powered by advanced AI technology',},'
-    {icon: Globe,
-      title: 'Multi-Chain Support','
-  ];];];
-  const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    'Advanced blockchain technology integration','
-    'Real-time transaction processing','
-    'Enterprise-grade security and compliance','
-    'Scalable and flexible blockchain solutions','
-    '24/7 technical support','
-    'Easy integration with existing systems','
-    'Cost-effective pricing plans','
-    'Proven track record of success''
-  ]
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>"
-<Helmet />
-<title>Blockchain Integration Services | Zion Tech Group</title>
-<meta name="description" content="Professional Blockchain Integration Services by Zion Tech Group. Advanced AI and IT solutions for your business." />"
-<meta name="keywords" content="blockchain integration, blockchain services, IT services, Zion Tech Group, smart contracts" /></Helmet>"
-<div className="container mx-auto px-4 py-16">"
-<div className="text-center mb-16">"
-<h1 className="text-5xl font-bold text-white mb-6">Blockchain Integration Services;</h1></"
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced blockchain integration solutions.</p>"
-  return (
-  // TODO: Add parameters
-)
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-<Helmet />
-<title>Blockchain Integration Services | Zion Tech Group</title>
-<meta name="description" content="Professional Blockchain Integration Services by Zion Tech Group. Advanced AI and IT solutions for your business." />"
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center">"
-<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
-<span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">"
-                Page
-              </span>
-<br />
-<span className="text-white">Solutions</span></h1>"
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
-              Transform your business with our advanced page solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">"
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" /></button>"
-<button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">"
-                Learn More
-              </button></div>
-</div>
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
-            Transform your business with our advanced blockchain integration solutions.
->>>>>>> origin/main
             Powered by cutting-edge AI technology and industry expertise.
           </p></div>
 </section>
@@ -217,17 +67,10 @@ export default BlockchainIntegrationServicesPage;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
             {benefits.map((benefit, index) => (;
 export default PagePage;
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 };
 
 export default BlockchainIntegrationServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
             Advanced AI and IT solutions for your business needs.
           </p>
         </div>
@@ -259,7 +102,6 @@ export default BlockchainIntegrationServicesPage;
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -268,14 +110,8 @@ export default BlockchainIntegrationServicesPage;
           <p className="text-xl text-gray-600 mb-8">
             Advanced blockchain integration services solutions by Zion Tech Group.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

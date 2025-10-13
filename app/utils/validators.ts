@@ -253,7 +253,6 @@ export function hasMaxLength(value: string, maxLength: number): boolean {
 }
     return value && value.length <= maxLength
   }
->>>>>>> origin/main
 }
 export function hasMaxLength(value: string, maxLength: number): boolean {,}
     return value && value.length <= maxLength;}}
@@ -830,7 +829,6 @@ export function validateFormData(
 <string, (value: unknown) => boolean>
 ): ValidationResult {;
 const errors: string[] = [],
->>>>>>> origin/main
 for (const [field, validator] of Object.entries(rules)) {;
 const value = data[field]
     if (!validator(value)) {}errors.push(`Invalid value for field: ${String(field),}`);
@@ -977,11 +975,8 @@ export function validateRequired(value: unknown, fieldName: string = 'Field'): V
 export async function validateAsync(validator: (val: string) => Promise<ValidationResult>, value: string): Promise<ValidationResult> {,
     try {return await validator(value)}}} catch (error) {}return {isValid: false, errors: ['Validation failed'], error: 'Validation failed' ,}}}'
 }
->>>>>>> cursor/delete-records-a75e
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 // Export default instance
 export const validators = new Validators();
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

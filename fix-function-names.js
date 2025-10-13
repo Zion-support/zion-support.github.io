@@ -221,4 +221,3 @@ filesToFix.forEach(filePath => {
 });
 
 console.log(`\nFixed ${fixedCount} files, ${errorCount} errors`);
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

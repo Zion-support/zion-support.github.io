@@ -17,7 +17,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 //     lg: 'w-12 h-12'
   };
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 
 interface ImprovedLoadingStatesProps {
   className?: string;
@@ -146,4 +145,3 @@ export default LoadingPage;
 =======
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

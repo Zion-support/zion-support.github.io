@@ -94,8 +94,6 @@ const { slug } = req.query as { slug?: string }
     return res.status(200).json({ slug, reviews: [], average: null, count: 0 })
     return res.status(200).json({ slug, reviews: [], average: null, count: 0 })
   if (req.method === 'POST') {'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
 }

@@ -7,9 +7,7 @@ export interface AccessibilityEnhancerConfig {
 <<<<<<< HEAD
 =======
 interface AccessibilityConfig {
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
   enabled: boolean;
   highContrast: boolean;
   fontSize: 'small' | 'medium' | 'large';
@@ -19,7 +17,6 @@ interface AccessibilityConfig {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
 export class AccessibilityEnhancer {
   private config: AccessibilityEnhancerConfig;
 
@@ -30,9 +27,7 @@ class AccessibilityEnhancer {
   private config: AccessibilityConfig;
 
   constructor() {
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
     this.config = {
       enabled: true,
       highContrast: false,
@@ -51,7 +46,6 @@ class AccessibilityEnhancer {
   // Utility methods can be added here
   public isEnabled(): boolean {
     return this.config.enabled;
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
   }
 
   private applyAccessibilitySettings(): void {
@@ -95,7 +89,6 @@ export function enhanceAccessibility(config: Partial<AccessibilityConfig> = {}) 
   // Apply accessibility enhancements based on configuration
   if (mergedConfig.enableHighContrast) {
     document.documentElement.classList.add('high-contrast');
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   }
   
   if (mergedConfig.enableReducedMotion) {
@@ -931,7 +924,6 @@ Recommendations:
   // TODO: Add properties
 }
     // Close any open modals or dropdowns
->>>>>>> origin/main;
 const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');'"
     modals.forEach(modal => {);
 const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;'"
@@ -1072,7 +1064,6 @@ const handleContrastChange = (e: MediaQueryListEvent) => {
         document.body.classList.remove('high-contrast')'
       }
     }
->>>>>>> origin/main
 
     mediaQuery.addEventListener('change', handleContrastChange)'
     handleContrastChange(mediaQuery)
@@ -1231,7 +1222,6 @@ export const accessibilityEnhancer = new AccessibilityEnhancer();
             ))}
           </div></div>
 </section>
->>>>>>> origin/main
 
 // Export utility functions;
 export const announceToScreenReader = (message: string) => {
@@ -1285,15 +1275,11 @@ export const focusLastElement = () => {
 }
   accessibilityEnhancer.focusLast()
 }
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e
 =======
 export default accessibilityEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 // Export default instance
 export const accessibilityEnhancer = new AccessibilityEnhancer();
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
 =======
 export function getAccessibilityClasses(config: AccessibilityConfig) {
   return cn(
@@ -1307,4 +1293,3 @@ export function getAccessibilityClasses(config: AccessibilityConfig) {
     }
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

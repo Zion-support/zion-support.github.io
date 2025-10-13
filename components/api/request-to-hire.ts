@@ -125,7 +125,6 @@ const payload = { timestamp, talentSlug, requesterName, requesterEmail, projectI
 }
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     console.error('Request-to-hire failed', err)'
     return res.status(500).json({ error: 'Internal error' })'
   }

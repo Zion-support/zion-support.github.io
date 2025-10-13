@@ -12,7 +12,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });';
 const { amount } = req.body |{}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   if (!requireSuperadminApi(req, res)) return
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });';
 const { amount } = req.body || {}

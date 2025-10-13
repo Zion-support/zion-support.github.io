@@ -272,4 +272,3 @@ const getNextLikelyPage = (currentPath: string): string | null => {
 export default AdvancedPerformanceOptimizer;
 =======
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

@@ -180,7 +180,6 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   }
 
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface ImprovedPerformanceMonitorProps {
   className?: string;
   children?: React.ReactNode;
@@ -309,6 +308,5 @@ export default function ImprovedPerformanceMonitor({ className = '', children }:
       )}
 </div>
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -17,55 +9,18 @@ export default function PagePage() {
         <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
       </Helmet>
       
-<<<<<<< HEAD
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function PartnersPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function Partners() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Partners - Zion Tech Group</title>
         <meta name="description" content="Advanced partners solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-          </p>
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Partners
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional partners services by Zion Tech Group.
-          </p>
-          
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced partners solutions. 
-              Stay tuned for updates!
-            </p>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -74,41 +29,10 @@ export default function Partners() {
           <p className="text-xl text-gray-600 mb-8">
             Advanced partners solutions by Zion Tech Group.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
-
-const PartnersPage: React.FC = () => {;
-const partners = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-interface Partner {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  name: string;
-  logo: string;
-  description: string;
-  category: string;
-  website?: string;
-  tier: 'strategic' | 'preferred' | 'certified';'
-}
-;
-const PartnersPage: React.FC = () => {;
-const partners: Partner[] = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
->>>>>>> origin/main
     {
   // TODO: Add properties
 }
@@ -131,7 +55,6 @@ const partners: Partner[] = [
       category: 'Cloud & AI','
       website: 'https://microsoft.com','
       tier: 'strategic''
->>>>>>> origin/main
     },
     {
   // TODO: Add properties
@@ -556,7 +479,6 @@ export default PartnersPage;
 <div className="aspect-video bg-white/10 rounded-xl mb-4 flex items-center justify-center">"
 <div className="text-4xl opacity-50">🏢</div></div>"
 <h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3>"
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 </div>
               ))}
             </div></div>
@@ -721,7 +643,6 @@ const getTierIcon = (tier: string) => {,
 <title>Partners - Zion Tech Group | Strategic Partnerships</title>
 <meta name="description" content="Meet our strategic partners and learn about our technology partnerships that enable us to deliver cutting-edge AI and IT solutions." />"
 <meta name="keywords" content="partners, partnerships, strategic partners, technology partners, AI partners, cloud partners" /></Helmet>"
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
 
       {/* Hero Section */} <section className="py-20 px-4">"
 <div className="max-w-7xl mx-auto text-center">"
@@ -785,7 +706,6 @@ const getTierIcon = (tier: string) => {,
                   <div className={`px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${getTierColor(partner.tier)}flex items-center gap-1`}>{getTierIcon(partner.tier)</div>}{partner.tier.charAt(0).toUpperCase() + partner.tier.slice(1)}
                     {getTierIcon(partner.tier)},
     {partner.tier.charAt(0).toUpperCase() + partner.tier.slice(1)}
->>>>>>> origin/main
                   </div></div>
 <h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3>"
 <p className="text-gray-300 text-sm mb-4">{partner.category</p>}</p>"
@@ -808,7 +728,6 @@ const getTierIcon = (tier: string) => {,
             <div className="text-center py-12"></div>"
 <p className="text-gray-400 text-lg">No partners found matching your criteria.</p></div>"
           )} </div></section>
-=======
             Advanced AI and IT solutions for your business needs.
           </p>
         </div>
@@ -820,7 +739,6 @@ const getTierIcon = (tier: string) => {,
               Comprehensive solution for your business requirements.
             </p>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
 
       {/* Partnership Tiers */} <section className="py-16 px-4 bg-white/5">"
 <div className="max-w-7xl mx-auto">"
@@ -889,34 +807,11 @@ const getTierIcon = (tier: string) => {,
 </div></div>
 </section>
 
-<<<<<<< HEAD
-      {/* CTA Section */} <section className="py-20 px-4">"
-<div className="max-w-4xl mx-auto text-center">"
-<div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">"
-<h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,</h2>"
-              Become Our Partner;
-            </h2>
-<p className="text-xl text-gray-300 mb-8">Join our partner ecosystem and help us deliver innovative AI and IT solutions to businesses worldwide.</p></p>"
-<div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>"
-<button className="bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">,</button>"
-                Apply for Partnership;
-                <ArrowRight className="inline-block ml-2 w-5 h-5" /></button>"
-<button className="border border-blue-400 text-blue-400 hover: bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">,</button>"
-                Learn More;
-              </button></div>
-</div></div>
-</section></div>
->>>>>>> origin/main
   );
 };
 ;
 export default PartnersPage;
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -934,7 +829,4 @@ export default PartnersPage;
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

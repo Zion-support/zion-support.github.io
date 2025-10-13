@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-export default function ImprovedImagePage() {
-=======
-
-interface ImprovedImageProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function ImprovedImage({ className = '', children }: ImprovedImageProps) {
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -32,11 +17,4 @@ export default function ImprovedImage({ className = '', children }: ImprovedImag
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

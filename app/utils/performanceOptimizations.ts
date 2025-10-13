@@ -36,7 +36,6 @@ let timeout: NodeJS.Timeout,
       ...args: Parameters</T>
 <T></React.Fragment>
   ) => {,
->>>>>>> origin/main
     clearTimeout(timeout),
   func: T,
 ): ((...args: Parameters<T>) => void) => {}
@@ -70,7 +69,6 @@ export const throttle = </T>;
 ): ((...args: Parameters<T>) => void) => {,;
 let inThrottle: boolean,
   return (...args: Parameters<T>) => {,
->>>>>>> origin/main
     if (!inThrottle) {,
       func(...args),
       inThrottle = true
@@ -131,7 +129,6 @@ let inThrottle: boolean,
     if (!inThrottle) {}
       func(...args)
       inThrottle = true
->>>>>>> origin/main
       setTimeout(() => (inThrottle = false), limit);}
     }
   }
@@ -148,7 +145,6 @@ let inThrottle: boolean,
       typeof window !== 'undefined''
         ? new IntersectionObserver()
     )
->>>>>>> origin/main
             threshold: 0.1),
             rootMargin: '50px'),'
         ? new IntersectionObserver(callback, {</div>
@@ -211,7 +207,6 @@ export const throttle = <T extends (...arg)
   }
 }
 // Intersection Observer hook for lazy loading
->>>>>>> origin/main;
 export const useIntersectionObserver = (callbac,
   k: (entrie)
   s: IntersectionObserverEntry[]) => void,
@@ -236,7 +231,6 @@ const disconnect = useCallback(() => {}
 // Image lazy loading hook;
 export const useLazyImage = useCallback((...args) => {;
 const [imageSrc, setImageSrc] = useState(placeholder || '')'
->>>>>>> origin/main;
 const [isLoaded, setIsLoaded] = useState(false)
   }
   const [isError, setIsError] = useState(false);}
@@ -251,7 +245,6 @@ const [isLoaded, setIsLoaded] = useState(false)
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
           if (entry.isIntersecting && !isLoaded && !isError) {
   // TODO: Add properties
 }
@@ -359,7 +352,6 @@ import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {}'
     }
   }, [])
   return metrics
->>>>>>> origin/main
 }
 export const useMemoryMonitoring = useCallback((...args) => {const [memoryInfo, setMemoryInfo] = useState<{
   // TODO: Add properties
@@ -397,7 +389,6 @@ const updateMemoryInfo = useCallback((...args) => {
           totalJSHeapSize: memory.totalJSHeapSize),
         setMemoryInfo({</div>
           usedJSHeapSize: memory.usedJSHeapSize,
->>>>>>> origin/main
           totalJSHeapSize: memory.totalJSHeapSize,
   );
   return {imageSrc, isLoaded, isError, observe}}}
@@ -426,7 +417,6 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */,}}
 // Memory usage monitoring;
 export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */,}}>({})
   useEffect(() => {/* TODO: Fix JSX expression */,}})
->>>>>>> origin/main
       }
     }
     updateMemoryInfo();
@@ -490,7 +480,6 @@ const size = (resource as PerformanceResourceTiming).transferSize || 0
         totalSize,
         jsSize,
         cssSize,
->>>>>>> origin/main
         imageSize}
       })
     }
@@ -513,9 +502,7 @@ const size = (resource as PerformanceResourceTiming).transferSize || 0
     }
   }, [])
   return bundleSize
->>>>>>> origin/main
 }
->>>>>>> origin/main
   useBundleSizeMonitoring}
 }
 }
@@ -558,12 +545,8 @@ export default {/* TODO: Fix JSX expression */}
 };
 }
 export default {/* TODO: Fix JSX expression */,}}}
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 // Export default instance
 export const performanceOptimizations = new PerformanceOptimizations();
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

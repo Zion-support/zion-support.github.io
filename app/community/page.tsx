@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -17,55 +9,18 @@ export default function PagePage() {
         <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
       </Helmet>
       
-<<<<<<< HEAD
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function CommunityPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function Community() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Community - Zion Tech Group</title>
         <meta name="description" content="Advanced community solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-          </p>
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Community
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional community services by Zion Tech Group.
-          </p>
-          
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced community solutions. 
-              Stay tuned for updates!
-            </p>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
             Advanced AI and IT solutions for your business needs.
           </p>
         </div>
@@ -97,8 +52,6 @@ export default function Community() {
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -107,130 +60,10 @@ export default function Community() {
           <p className="text-xl text-gray-600 mb-8">
             Advanced community solutions by Zion Tech Group.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-'use client';';
-import React, {useState}from 'react';';';
-import {Helmet}}from 'react-helmet-async';';';
-import {Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, Phone, MapPin, Clock, CheckCircle, Award, TrendingUp, Heart}}from 'lucide-react';';'
-;
-const CommunityPage: React.FC = () => {,;
-const [activeTab, setActiveTab] = useState('overview');'
-;
-const communityStats = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-  ];];];
-  const events = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {title: 'AI Development Workshop','
-      date: '2024-02-15','
-      time: '2:00 PM EST','
-      type: 'Workshop','
-      attendees: 150,
-      description: 'Learn advanced AI development techniques and best practices',},'
-    {title: 'Cloud Infrastructure Meetup','
-      date: '2024-02-20','
-      time: '6:00 PM EST','
-      type: 'Meetup','
-      attendees: 75,
-      description: 'Discuss cloud architecture and deployment strategies',},'
-    {title: 'SaaS Business Growth Panel','
-      date: '2024-02-25','
-      time: '3:00 PM EST','
-      type: 'Panel','
-      attendees: 200,
-      description: 'Expert panel on scaling SaaS businesses',}];';
-const forums = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {name: 'AI Services','
-      description: 'Discuss AI development, machine learning, and automation','
-      posts: 1250,
-      members: 1800;,},
-    {name: 'IT Services','
-      description: 'Cloud infrastructure, DevOps, and system administration','
-      posts: 980,
-      members: 1200;,},
-    {name: 'Micro SaaS','
-      description: 'Building and scaling micro SaaS applications','
-      posts: 750,
-      members: 900;,},
-    {name: 'General Discussion','
-      description: 'General tech discussions and community updates','
-      posts: 2100,
-  ];];];
-  const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {icon: Users,
-      title: 'Network with Peers','
-      description: 'Connect with like-minded developers and entrepreneurs',},'
-    {icon: MessageCircle,
-      title: 'Expert Support','
-      description: 'Get help from our team of experts and community members',},'
-    {icon: Calendar,
-      title: 'Exclusive Events','
-      description: 'Access to workshops, webinars, and networking events'},'
-    {icon: Award,
-      title: 'Recognition','
-        <title>Community - Zion Tech Group</title>
-<meta name="description" content="Join the Zion Tech Group community. Connect with developers, entrepreneurs, and tech enthusiasts. Learn, share, and grow together." />"
-<meta name="keywords" content="community, developers, tech community, networking, events, forums, AI community" />"
-<link rel="canonical" href="https: //ziontechgroup.com/community" />,"
-      </Helmet>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<div className="container mx-auto px-4 py-16 pt-24">{/* Header */</div>} <div className="text-center mb-16">"
-<div className="flex items-center justify-center mb-6">"
-<div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">"
-<Users className="w-8 h-8 text-white" /></div>"
-<h1 className="text-4xl md: text-5xl font-bold text-white neon-text-enhanced">,</h1>"
-                Community;
-              </h1></div>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Join our vibrant community of developers, entrepreneurs, and tech enthusiasts.</p>"
-              Connect, learn, and grow together.
-            </p>
-<div className="flex flex-wrap justify-center gap-4">"
-<a;
-                href="#join""
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300","
-              >
-                Join Community;
-              </a>
-<a;
-                href="#events""
-                className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300","
-              >
-                View Events;
-              </a>
-<a;
-                href="#forums""
-                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover: bg-white hover:text-slate-900 transition-all duration-300","
-              >
-                Browse Forums;
-              </a></div>
-</div>
-<div key={index}className="cyber-card-enhanced p-6 text-center">"
-<stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-4" />"
-<div className="text-2xl font-bold text-white mb-2">{stat.value</div>}</div>"
-<div className="text-gray-300">{stat.label</div>}</div>"
->>>>>>> origin/main
               </div>
             ))}
           </div>
@@ -505,14 +338,6 @@ export default CommunityPage</div></div>;
 </p></p>
 </h1></h2>
 </h2></h3>
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

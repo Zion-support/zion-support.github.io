@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -17,40 +9,19 @@ export default function PagePage() {
         <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
       </Helmet>
       
-<<<<<<< HEAD
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function FaqPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function Faq() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Faq - Zion Tech Group</title>
         <meta name="description" content="Advanced faq solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-=======
-            Advanced AI and IT solutions for your business needs.
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </p>
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="container mx-auto px-4 py-20">
           <h1 className="text-5xl font-bold text-white mb-6">
@@ -67,8 +38,6 @@ export default function Faq() {
               Stay tuned for updates!
             </p>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -77,41 +46,10 @@ export default function Faq() {
           <p className="text-xl text-gray-600 mb-8">
             Advanced faq solutions by Zion Tech Group.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-        : [...prev, index]
-    );}const faqs = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {question: "What AI services do you offer?","
-      answer: "We offer comprehensive AI services including marketing automation, customer support, data analytics, content generation, healthcare solutions, financial services, e-commerce solutions, cybersecurity, mobile apps, sales automation, workflow automation, and data visualization."},"
-    {question: "How can AI benefit my business?","
-      answer: "AI can automate repetitive tasks, provide data-driven insights, improve customer experience, enhance security, optimize operations, and drive innovation. Our solutions typically deliver 300% ROI within the first year."},"
-    {question: "Do you provide IT infrastructure services?","
-      answer: "Yes, we offer complete IT infrastructure services including cloud migration, DevOps, database management, cybersecurity, managed IT services, and IT consulting to modernize your technology stack."},"
-    {question: "What is your pricing model?","
-      answer: "We offer flexible pricing models including subscription-based plans starting at $99/month for small businesses, custom enterprise solutions, and project-based pricing. Contact us for a personalized quote."},"
-    {question: "Do you offer 24/7 support?","
-      answer: "Yes, we provide 24/7 technical support for all our services. Our support team is available via phone, email, and live chat to ensure your systems run smoothly around the clock."},"
-    {question: "How long does implementation take?","
-      answer: "Implementation timelines vary based on project complexity. Simple AI solutions can be deployed in 2-4 weeks, while comprehensive digital transformation projects may take 3-6 months. We provide detailed timelines during consultation."},"
-    {question: "Do you work with small businesses?","
-      answer: "Absolutely! We work with businesses of all sizes, from startups to enterprise organizations. Our micro SAAS solutions are specifically designed for small businesses looking to leverage AI technology."},"
-    {question: "What industries do you serve?","
-      answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."}]"
-  return(<React.Fragment>)</React.Fragment>
-<Helmet />
-  }
->>>>>>> origin/main;
 const faqs = [
   // TODO: Add items
 ]
@@ -245,7 +183,6 @@ const faqs = [
 <p className="text-gray-300 leading-relaxed">{faq.answer</p>}</p></div>"
 <p className="text-gray-300 leading-relaxed">{faq.answer}"
                   )}
->>>>>>> origin/main
               ))}
             </div>
 <div className="mt-16 text-center">"
@@ -276,13 +213,6 @@ const faqs = [
 };
 ;
 export default FAQPage;
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

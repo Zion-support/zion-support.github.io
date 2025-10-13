@@ -1,123 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function ErrorBoundaryConfigPage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>ErrorBoundaryConfig - Zion Tech Group</title>
-        <meta name="description" content="Advanced ErrorBoundaryConfig solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function errorBoundaryConfigPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>ErrorBoundaryConfig - Zion Tech Group</title>
-        <meta name="description" content="Advanced errorboundaryconfig solutions by Zion Tech Group" />
-      </Helmet>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             ErrorBoundaryConfig
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
-/**;
- * Error Boundary Configuration;
- * Centralized configuration for error handling across the application;
- */;
-import React from 'react';';';
-export interface ErrorBoundaryConfig {/**;}
-   * Whether to log errors to console;
-   */;
-  logErrors: boolean,
-  /**
-   * Whether to show detailed error messages
-   */
-  showDetails: boolean,
-  /**
-   * Whether to send errors to external service
-   */
-  reportErrors: boolean,
-  /**
-   * Error reporting endpoint
-   */
-  reportingEndpoint?: string
-/**
-   * Whether to show error overlay in development
-   */
-  showErrorOverlay: boolean,
-  /**
-   * Maximum number of errors to store
-   */
-  maxStoredErrors: number,
-  customMessages: Record<string, string>;
-
-  /**
-   * Fallback UI components
-   */
-  fallbackComponents: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    default: React.ComponentType<{ error: Error; resetError: () => void }>;
-    network: React.ComponentType<{ error: Error; resetError: () => void }>;
-    notFound: React.ComponentType<{ error: Error; resetError: () => void }>;
-  };
-/**
-   * Fallback UI components;
-   */,
-  fallbackComponents: {,}default: React.ComponentType<{error: Error, resetError: () => void ,}>;
-    network: React.ComponentType<{error: Error, resetError: () => void ,}>;
-    notFound: React.ComponentType<{error: Error, resetError: () => void ,}>;
-  }
-}
-/**;
- * Default error messages;
- */;
-const DEFAULT_ERROR_MESSAGES = {default: 'Something went wrong. Please try again.','
-  network: 'Network connection issue. Please check your internet connection.','
-  notFound: 'The requested resource was not found.','
-  timeout: 'Request timed out. Please try again.','
-  serverError: 'Server error occurred. Please try again later.','
-  validation: 'Validation error. Please check your input.',}}'
-/**;
- * Get error boundary configuration based on environment;
- */;
-export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {}
-/**
- * Get error boundary configuration based on environment
- */;
-export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    return {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
->>>>>>> origin/main
     logErrors: true,
     showDetails: isDevelopment,
     reportErrors: !isDevelopment,
@@ -370,7 +256,6 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {
   // TODO: Add properties
 }
     message: error.message,
->>>>>>> origin/main
     stack: error.stack,
     name: error.name,
     type: getErrorType(error),
@@ -380,12 +265,7 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {
 };
 ;
 export default getErrorBoundaryConfig;
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
             Advanced AI and IT solutions for your business needs.
           </p>
         </div>
@@ -422,4 +302,3 @@ export default getErrorBoundaryConfig;
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

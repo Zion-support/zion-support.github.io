@@ -51,4 +51,3 @@ export default function sitemap(): MetadataRoute.Sitemap {return [;}
       priority: 0.5,},
   ]
 }
->>>>>>> origin/main

@@ -1,4 +1,3 @@
->>>>>>> origin/main;
 export enum ErrorSeverity {/* TODO: Fix JSX expression */}
 }
 export enum ErrorCategory {
@@ -20,7 +19,6 @@ export interface ErrorMetadata {
   // TODO: Add properties
 }
     category: ErrorCategory,
->>>>>>> origin/main
   severity: ErrorSeverity,
   userId?: string;
   sessionId?: string;
@@ -39,7 +37,6 @@ export interface TrackedError {
   // TODO: Add properties
 }
     id: string,
->>>>>>> origin/main
   message: string,
   metadata: ErrorMetadata,
   occurrences: number,
@@ -101,7 +98,6 @@ trackError(error: Error),
 const oldestError = Array.from(this.errors.values())
           .sort((a, b) => a.firstSeen - b.firstSeen)[0]
         this.errors.delete(oldestError.id)}}
->>>>>>> origin/main
     }
       severity: metadata.severity;
     })
@@ -162,7 +158,6 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
     }
     const existingError = this.errors.get(errorId);
     if (existingError) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}}
->>>>>>> origin/main
       this.errors.set(errorId, trackedError);
       // Notify listeners;
       this.notifyListeners(trackedError);
@@ -247,20 +242,17 @@ private async reportToExternalService(errorId: string): Promise<void> {,
       bySeverity
   }
     }
->>>>>>> origin/main
   }
 }
   d: string): Promise<void> {/* TODO: Fix JSX expression */,}s: {'Content-Type': 'application/json' ,},;'
           bod,;
   s: { 'Content-Type': 'application/json' },'
           bod,
->>>>>>> origin/main
   y: JSON.stringify(error),
 
   private async reportToExternalService(errorId: string): Promise<void> {,
     // In a real implementation, this would send to an external service
     // like Sentry, LogRocket, or a custom error reporting service;}
->>>>>>> origin/main
     logger.info('Error reported to external service', { errorId })'
   }
 
@@ -404,6 +396,5 @@ export const addErrorListener = (listene,
 export const removeErrorListener = (listene,
   r: (erro)
   r: TrackedError) => void) =>
->>>>>>> origin/main
   errorTracking.removeListener(listener)
 `

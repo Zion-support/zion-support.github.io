@@ -64,7 +64,6 @@ export default function Header()
   );
 
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface HeaderProps {
   className?: string;
   children?: React.ReactNode;

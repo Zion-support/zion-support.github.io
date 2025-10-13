@@ -31,7 +31,6 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c
 // Mock test for error boundary
 describe('Error Boundary', () => {
   it('should render without crashing', () => {
@@ -159,7 +158,6 @@ describe('ErrorBoundary', () => {
 });
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 
   it('should have proper test structure', () => {
@@ -168,4 +166,3 @@ describe('ErrorBoundary', () => {
     expect(screen.getByText('Error Boundary Test')).toBeInTheDocument();
   });
 });
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c

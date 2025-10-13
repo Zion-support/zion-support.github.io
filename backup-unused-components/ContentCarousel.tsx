@@ -79,7 +79,6 @@ export default function ContentCarousel({
   };
 
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface ContentCarouselProps {
   className?: string;
   children?: React.ReactNode;
@@ -173,6 +172,5 @@ export default function ContentCarousel({ className = '', children }: ContentCar
 </div>
 </div>
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

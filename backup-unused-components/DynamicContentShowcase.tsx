@@ -85,7 +85,6 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
   const currentItem = items[currentIndex];
 
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface DynamicContentShowcaseProps {
   className?: string;
   children?: React.ReactNode;
@@ -192,6 +191,5 @@ export default function DynamicContentShowcase({ className = '', children }: Dyn
 </div>
 </div>
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

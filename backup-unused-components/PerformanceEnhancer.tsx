@@ -103,7 +103,6 @@ const PerformanceEnhancer: React.FC = () => {
   }
 
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface PerformanceEnhancerProps {
   className?: string;
   children?: React.ReactNode;
@@ -157,6 +156,5 @@ export default function PerformanceEnhancer({ className = '', children }: Perfor
       )}
 </div>
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

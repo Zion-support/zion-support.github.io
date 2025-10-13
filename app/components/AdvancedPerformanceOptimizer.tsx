@@ -203,6 +203,5 @@ const navEntry = entry as PerformanceNavigationTiming
 ;
 export default AdvancedPerformanceOptimizer;
   </PerformanceOptimizerProps>
->>>>>>> origin/main
 
 }}}}}}}}}))

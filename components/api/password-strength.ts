@@ -1,6 +1,5 @@
  password.toLowerCase () .includes (pattern) )
 password.toLowerCase () .includes (pattern) )
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength']'
 // Check condition
 if (strength = 'very - weak') {'
@@ -489,7 +488,6 @@ interface PasswordStrengthResult {
     hasLowercase: boolean
     hasNumbers: boolean
     hasSymbols: boolean
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (!password |typeof password !== 'string') {'
       return res.status(400).json({ error: 'Password is required' })'
     }

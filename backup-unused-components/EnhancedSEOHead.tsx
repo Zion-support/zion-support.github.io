@@ -163,4 +163,3 @@ const SEOHead: React.FC<SEOHeadProps> = (
 =======
 );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

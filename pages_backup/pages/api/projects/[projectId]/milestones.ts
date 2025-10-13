@@ -254,8 +254,6 @@ const { projectId } = req && req.query as { projectId: string }
   res.setHeader('AllowGET, POST')'
   res.status(405).end('Method Not Allowed')'
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
     res.status (404).json ({ error: "Project not found" })"
     return

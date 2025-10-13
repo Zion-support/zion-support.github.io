@@ -72,7 +72,6 @@ const i = Math.floor(Math.log(bytes) / Math.log(k));
               ? 'bg-red-600 text-white hover: bg-red-700','
               : 'bg-green-600 text-white hover: bg-green-700',}`}'
         >{isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'</button>} </button>'
->>>>>>> origin/main
       </div>
       {alerts.length > 0 && (
   // TODO: Add parameters

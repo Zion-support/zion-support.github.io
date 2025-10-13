@@ -219,6 +219,4 @@ console.log(`Total existing pages: ${existingPages.length}`)
 console.log(`Total navigation links: ${navigationPages.length}`)
 // Write missing pages to file
 fs.writeFileSync('missing_pages.txt', missingPages.join('\n'))
->>>>>>> cursor/delete-records-a75e
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

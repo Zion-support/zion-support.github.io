@@ -27,7 +27,6 @@ const features = [
   // TODO: Add properties
 }
       icon: BarChart,
->>>>>>> origin/main
       title: 'Advanced Analytics','
       description: 'Comprehensive analytics dashboard with real-time data visualization.','
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']},'
@@ -41,7 +40,6 @@ const features = [
 )
     <>
 <Helmet>
->>>>>>> origin/main
         <title>Loading - Zion Tech Group</title>
 <meta name="description" content="Loading page." />"
 <meta name="keywords" content="loading, AI solutions, IT services, business transformation" />"
@@ -114,4 +112,3 @@ export default LoadingPage;
   </button></h2>
 </button></button>
 </h1>
->>>>>>> origin/main

@@ -8,8 +8,6 @@ const slides: Slide[] = [
 ]
   // TODO: Add items
 ]
->>>>>>> origin/main
->>>>>>> origin/main
     },
     {
   // TODO: Add properties
@@ -17,7 +15,6 @@ const slides: Slide[] = [
   // TODO: Add properties
 }
       id: 2,
->>>>>>> origin/main
       title: 'Cloud Infrastructure','
       description: 'Scalable and secure cloud solutions that grow with your business needs.','
       features: [,
@@ -40,8 +37,6 @@ const slides: Slide[] = [
       icon: Zap,
       color: 'from-orange-500 to-red-600',},'
     {id: 4,
->>>>>>> origin/main
->>>>>>> origin/main
     },
     {
   // TODO: Add properties
@@ -49,7 +44,6 @@ const slides: Slide[] = [
   // TODO: Add properties
 }
       id: 4,
->>>>>>> origin/main
       title: 'Cybersecurity Solutions','
       description: 'Protect your business with comprehensive AI-powered security solutions.','
       features: [,
@@ -62,7 +56,6 @@ const slides: Slide[] = [
       color: 'from-blue-500 to-indigo-600',}];'
     }
   ];
->>>>>>> main
 
   useEffect(() => {const timer = setInterval(() => {
   // TODO: Implement
@@ -106,7 +99,6 @@ const slides: Slide[] = [
 <div className="w-2 h-2 bg-white rounded-full"></div>"
 <span className="text-sm">{feature}</span></div>"
                   ))}
->>>>>>> origin/main
                 </div></div>
 </div>
           ))}
@@ -199,11 +191,8 @@ export default ContentCarousel;
 <div className="text-gray-300">Countries</div></div>"
 </div></div>
 </div>
->>>>>>> origin/main
     </div>
   );
 };
 ;
 export default ContentCarouselPage;
->>>>>>> origin/main
->>>>>>> origin/main

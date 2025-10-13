@@ -74,7 +74,6 @@ fs.writeFileSync("/workspace/App.tsx", newAppContent);
 //   "... and more",
 );
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 const importStatements = brokenLinks.map(page => {
   const componentName = page.split('-').map(word => 
@@ -109,4 +108,3 @@ fs.writeFileSync('/workspace/App.tsx', appContent);
 
 console.log('Successfully added missing routes to App.tsx');
 console.log(`Added ${brokenLinks.length} routes`);
->>>>>>> cursor/fix-errors-and-merge-to-main-a070

@@ -169,5 +169,3 @@ export default AdvancedAccessibilityEnhancerPage;
 export default AdvancedAccessibilityEnhancer;
   </button></button>
 </button></AccessibilityEnhancerProps>
->>>>>>> origin/main
->>>>>>> origin/main

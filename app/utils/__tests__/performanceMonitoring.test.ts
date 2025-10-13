@@ -6,4 +6,3 @@ describe('Performance Monitoring', () => {'
     expect(true).toBe(true)
   })
 })
->>>>>>> origin/main

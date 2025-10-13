@@ -34,7 +34,6 @@ describe('AdvancedComponents', () => {
     render(<AdvancedComponents>Test content</AdvancedComponents>);
     expect(screen.getByText('Test content')).toBeInTheDocument();
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c
 // Mock test for advanced components
 describe('Advanced Components', () => {
   it('should render without crashing', () => {
@@ -97,10 +96,8 @@ const consoleSpy = jest
     consoleSpy.mockRestore()
   })
 })
->>>>>>> cursor/delete-records-a75e
 =======
 });
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 
   it('should have proper test structure', () => {
@@ -109,7 +106,6 @@ const consoleSpy = jest
     expect(screen.getByText('Test Component')).toBeInTheDocument();
   });
 });
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c
 =======
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
@@ -356,4 +352,3 @@ describe('Advanced Components', () => {
     });
   });
 });
->>>>>>> cursor/fix-errors-and-merge-to-main-a070

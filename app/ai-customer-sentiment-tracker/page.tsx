@@ -1,59 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AiCustomerSentimentTrackerPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AiCustomerSentimentTracker() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Ai Customer Sentiment Tracker - Zion Tech Group</title>
         <meta name="description" content="Advanced ai customer sentiment tracker solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Ai Customer Sentiment Tracker
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             This page is under development. Please check back later.
           </p>
         </div>
-<<<<<<< HEAD
-      </div>
-    </div>
-  );
-}
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
@@ -87,8 +42,6 @@ export default function AiCustomerSentimentTracker() {
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -102,4 +55,3 @@ export default function AiCustomerSentimentTracker() {
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

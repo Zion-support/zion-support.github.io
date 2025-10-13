@@ -402,7 +402,6 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
   }, [title, currentUrl]);
 
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface EnhancedSEOOptimizerProps {
   className?: string;
   children?: React.ReactNode;
@@ -525,6 +524,5 @@ export default function EnhancedSEOOptimizer({ className = '', children }: Enhan
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 //     </Helmet>
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

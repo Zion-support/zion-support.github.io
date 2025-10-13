@@ -16,11 +16,9 @@ const Header: React.FC = () => {
   // TODO: Add parameters
 )
     </>
->>>>>>> origin/main
   );
 };
 ;
 export default Header;
->>>>>>> origin/main
 
 }

@@ -190,8 +190,6 @@ declare global {
 }
       request: (args: { method: string; params?: any[] }) => Promise < any>
       on: (event: string, callback: (accounts: string[]) => void) => void
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 export type WalletProvider = any;

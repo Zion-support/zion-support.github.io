@@ -99,7 +99,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
         <div className="max-w-7xl mx-auto"></div>"
 <div className="text-center mb-16"></div>"
 <h2>Why Choose Our AnalyticsTracker?,</h2>
->>>>>>> origin/main
             </h2>
 <p>Our analyticstracker solutions deliver unmatched performance, security, and scalability.;</p></p>
 </div>
@@ -119,7 +118,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
         <div className="max-w-7xl mx-auto"></div>"
 <div className="text-center mb-16"></div>"
 <h2>Key Benefits;</h2>
->>>>>>> origin/main
             </h2>
 <p>Experience the power of our analyticstracker solutions for your business.,</p></p>
 </div>
@@ -145,11 +143,8 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
 };
 ;
 export default AnalyticsTrackerPage;
->>>>>>> cursor/delete-records-a75e
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 // Export default instance
 export const analyticsTracker = new AnalyticsTracker();
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

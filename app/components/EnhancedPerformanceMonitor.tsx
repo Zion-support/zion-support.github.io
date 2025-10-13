@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-export default function EnhancedPerformanceMonitorPage() {
-=======
-
-interface EnhancedPerformanceMonitorProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function EnhancedPerformanceMonitor({ className = '', children }: EnhancedPerformanceMonitorProps) {
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -33,69 +17,6 @@ export default function EnhancedPerformanceMonitor({ className = '', children }:
       </div>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
-import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'react-helmet-async';';';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';';'
-;
-const EnhancedPerformanceMonitorPage: React.FC = () => {;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Brain,
-      title: 'AI-Powered Solutions','
-      description: 'Advanced AI technology to transform your business operations and improve efficiency''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Zap,
-      title: 'High Performance','
-      description: 'Lightning-fast processing and real-time analytics for optimal results''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Shield,
-      title: 'Enterprise Security','
-      description: 'Bank-level security with encryption and compliance standards''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Globe,
-      title: 'Global Reach','
-      description: 'Worldwide deployment and support for international businesses''
-    }
-  ];
-;
-const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-}
-  ];
-const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
->>>>>>> origin/main
     'Advanced AI technology integration','
     'Real-time processing and analytics','
     'Enterprise-grade security and compliance','
@@ -114,7 +35,6 @@ return (
   // TODO: Add parameters
 )
         </div>
->>>>>>> origin/main
       </section>
       {/* Features Section */} <section className="py-20 px-4">"
 <div className="max-w-7xl mx-auto">"
@@ -139,7 +59,6 @@ return (
   return (
   // TODO: Add parameters
 )
->>>>>>> origin/main
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>"
 <div className="max-w-7xl mx-auto">"
@@ -209,7 +128,6 @@ return (
             </h2>
 <p></p>
               Contact our experts to discuss your enhancedperformancemonitor needs and get a customized solution.
->>>>>>> origin/main
             </p>
 <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
               <button>
@@ -241,10 +159,5 @@ export default EnhancedPerformanceMonitorPage;
 };
 ;
 export default EnhancedPerformanceMonitorPage;
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

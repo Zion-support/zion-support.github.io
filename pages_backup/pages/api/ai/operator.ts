@@ -33,7 +33,6 @@ const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS
   return limited
   ipToRequests[ip] = bucket
   return limited
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
@@ -183,4 +182,3 @@ const text = completion.choices?.[0]?.message?.content ?? '''
 }
 }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

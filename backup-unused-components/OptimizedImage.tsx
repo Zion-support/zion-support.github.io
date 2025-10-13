@@ -63,7 +63,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const imageSrc = isInView ? src : placeholder;
 
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface OptimizedImageProps {
   className?: string;
   children?: React.ReactNode;
@@ -113,6 +112,5 @@ export default function OptimizedImage({ className = '', children }: OptimizedIm
       )}
 </div>
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

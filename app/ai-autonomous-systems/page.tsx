@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';';'
-;
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
 const AiAutonomousSystemsPage: React.FC = () => {
   // TODO: Implement
 }
@@ -23,7 +7,6 @@ const AiAutonomousSystemsPage: React.FC = () => {
 }
   // TODO: Implement
 }
->>>>>>> origin/main;
 const features = [
   // TODO: Add items
 ]
@@ -65,51 +48,22 @@ const features = [
       icon: Building
     }
   ];
->>>>>>> cursor/delete-records-a75e
 
 export default function PagePage() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AiAutonomousSystemsPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AiAutonomousSystems() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Ai Autonomous Systems - Zion Tech Group</title>
         <meta name="description" content="Advanced ai autonomous systems solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-=======
-            Advanced AI and IT solutions for your business needs.
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </p>
-=======
     <>
       <Helmet>
         <title>Ai Autonomous Systems - Zion Tech Group</title>
@@ -133,31 +87,10 @@ export default function AiAutonomousSystems() {
               Stay tuned for updates!
             </p>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
-  // TODO: Add parameters
-)
-    <>
-<Helmet>
-<title>AI Autonomous Systems - Zion Tech Group</title>
-<meta name="description" content="Build intelligent autonomous systems with our AI solutions. Self-driving vehicles, smart manufacturing, and autonomous infrastructure for the future." /></Helmet>"
-<Navigation />
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},'
-    {icon: BarChart,
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: BarChart,
->>>>>>> origin/main
       title: 'Advanced Analytics','
       description: 'Comprehensive analytics dashboard with real-time data visualization.','
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']'
@@ -178,7 +111,6 @@ const benefits = [
 
     },
   ]
->>>>>>> origin/main
   return (
   // TODO: Add parameters
 )
@@ -396,16 +328,8 @@ export default PagePage;
 </button></h2>
 </button></button>
 </h1></main>
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -419,4 +343,3 @@ export default PagePage;
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

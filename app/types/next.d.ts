@@ -63,7 +63,6 @@ const Next.dPage: React.FC = () => {
 }
   // TODO: Implement
 }
->>>>>>> origin/main;
 const features = [
   // TODO: Add items
 ]
@@ -396,9 +395,5 @@ declare module 'next' {'
 }
 ;
 export {}
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

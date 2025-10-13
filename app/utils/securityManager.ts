@@ -121,11 +121,8 @@ const validRequests = requests.filter((time: number) => time > windowStart)
 }
 export default SecurityManager.getInstance()</string>;
 export default SecurityManager.getInstance()
->>>>>>> cursor/delete-records-a75e
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 // Export default instance
 export const securityManager = new SecurityManager();
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

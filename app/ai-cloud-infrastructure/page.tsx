@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';';';
 const AiCloudInfrastructurePage: React.FC = () => {,;
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';';';
@@ -20,7 +12,6 @@ const AiCloudInfrastructurePage: React.FC = () => {
 }
   // TODO: Implement
 }
->>>>>>> main;
 const features = [
   // TODO: Add items
 ]
@@ -116,126 +107,23 @@ const useCases = [
       icon: '🤖''
     }
   ];
->>>>>>> cursor/delete-records-a75e
 
-<<<<<<< HEAD
-export default function PagePage() {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-export default function AiCloudInfrastructurePage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AiCloudInfrastructure() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Ai Cloud Infrastructure - Zion Tech Group</title>
         <meta name="description" content="Advanced ai cloud infrastructure solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-          </p>
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const AiCloudInfrastructurePage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Ai Cloud Infrastructure - Zion Tech Group</title>
-        <meta name="description" content="Ai Cloud Infrastructure services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="ai-cloud-infrastructure, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Ai Cloud Infrastructure
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional ai cloud infrastructure services by Zion Tech Group.
-          </p>
-          
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced ai cloud infrastructure solutions. 
-              Stay tuned for updates!
-            </p>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
-=======
-  // TODO: Add parameters
-)
-    <>
-</>
-<Helmet>
-<title>Ai Cloud Infrastructure - Zion Tech Group</title>
-<meta name="description" content="Advanced AI-powered ai cloud infrastructure solution for modern businesses." />"
-<meta name="keywords" content="AI ai cloud infrastructure, artificial intelligence, ai cloud infrastructure, AI solutions, intelligent automation" /></Helmet>"
-<Navigation />
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">"
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden"></section>"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />'"
-<div className="relative max-w-7xl mx-auto text-center">"
-<h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">"
-              Ai Cloud Infrastructure
-            </h1>
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">"
-              Advanced AI-powered ai cloud infrastructure solution for modern businesses.
-            </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<button className="bg-gradient-to-r from-pink-500 to-blue-600 hover:from-pink-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">"
-                Get Started
-              </button>
-<button className="border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">"
-                View Demo
-              </button></div>
-</div></section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4"></section>"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,</h2>"
-                Powerful AI Features,
-  </
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">Discover how our AI platform can revolutionize your business operations.</p></p>"
-</div>
-<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>"
-              {features.map((feature, index) => (
-  // TODO: Add parameters
-)
->>>>>>> origin/main
->>>>>>> origin/main
                 </div>
               ))}
             </div></div>
@@ -299,19 +187,12 @@ const AiCloudInfrastructurePage: React.FC = () => {
 };
 ;
 export default AiCloudInfrastructurePage;
->>>>>>> origin/main
 
->>>>>>> cursor/delete-records-a75e
 }
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 };
 
 export default AiCloudInfrastructurePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
             Advanced AI and IT solutions for your business needs.
           </p>
         </div>
@@ -343,7 +224,6 @@ export default AiCloudInfrastructurePage;
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -352,14 +232,8 @@ export default AiCloudInfrastructurePage;
           <p className="text-xl text-gray-600 mb-8">
             Advanced ai cloud infrastructure solutions by Zion Tech Group.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

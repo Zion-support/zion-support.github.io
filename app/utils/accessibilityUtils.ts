@@ -150,7 +150,6 @@ const skipLink = createSkipLink('main-content');'
 // Enhance all interactive elements;
   const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');'
   interactiveElements.forEach((element) => {enhanceKeyboardNavigation(element as HTMLElement)}})
->>>>>>> cursor/delete-records-a75e
 }
 
 <<<<<<< HEAD
@@ -158,8 +157,6 @@ export const accessibilityUtils = new AccessibilityUtils();
 export default accessibilityUtils;
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 // Export default instance
 export const accessibilityUtils = new AccessibilityUtils();
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

@@ -279,5 +279,4 @@ const payout_amount =
     return res.status (500).json ({ error: e?.message })
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 )

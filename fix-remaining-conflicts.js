@@ -18,7 +18,6 @@ const basicComponent = `'use client';
 import React from 'react';
 =======
 import fs from "fs";
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -63,7 +62,6 @@ export default function Page() {;
 </span>
 </h1>
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 //               Professional services by Zion Tech Group. Expert solutions tailored to your business needs.
 </p>
@@ -108,7 +106,6 @@ export default function Page() {;
 </div>
 //         </section>
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -164,7 +161,6 @@ export default function Page() {;
 </div>
 //     </>
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }`;
 

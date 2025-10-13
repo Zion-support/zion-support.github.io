@@ -76,7 +76,6 @@ if (entry.isIntersecting && freezeOnceVisible) {
         rootMargin,
 observer.observe(element);
 return () => {observer.disconnect()}}
->>>>>>> origin/main
   }, [threshold, root, rootMargin, freezeOnceVisible]);
 return {ref, isIntersecting, entry}}}
 export default useIntersectionObserver;

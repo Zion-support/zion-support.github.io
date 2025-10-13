@@ -21,7 +21,6 @@ export const waitFor = async(;)
   while (!condition()) {}
     if (Date.now() - startTime > timeout) {}
       throw new Error(`Timeout waiting for condition after ${timeout}ms`)
->>>>>>> origin/main
     }
     await wait(interval)
   }
@@ -43,7 +42,6 @@ export const mockFetch = (
         status,;
         ok: status >= 200 && status < 300,
         status,
->>>>>>> origin/main
         headers: new Headers(headers),
         text: async () => JSON.stringify(response),}
       } as Response);
@@ -148,7 +146,6 @@ export const createMockStorage = (): MockStorage => {}
 /**
  * Mock window object
  */
->>>>>>> origin/main;
 export const mockWindow = (overrides: Partial<Window> = {}): void => {
   // TODO: Add properties
 }
@@ -163,7 +160,6 @@ export const mockWindow = (overrides: Partial<Window> = {}): void => {}
     Object.defineProperty(global, 'window', {</div>'
       value: {}
         ...global.window,
->>>>>>> origin/main
         ...overrides}
       })
       writable: true,
@@ -214,7 +210,6 @@ export const mockFetch = (respons,
  */;
 export const createMockStorage = (): MockStorage => {/* TODO: Fix JSX expression */,}}
 /**;
->>>>>>> origin/main
  * Mock window object;
  */;
 export const mockWindow = (override);
@@ -236,9 +231,7 @@ export const createMockStorage = (): MockStorage => {/* TODO: Fix JSX expression
 export const mockWindow = (override)
   s: Partial<Window> = {}): void => {/* TODO: Fix JSX expression */}
       },
->>>>>>> origin/main
       writabl,
->>>>>>> origin/main
   e: true,
     })
   }
@@ -268,10 +261,8 @@ export const createMockPerformance = (): Performance => {}
     mark: (name: string) => {}
       entries.push({</div>
         name,
->>>>>>> origin/main
         entryType: 'mark','
         startTime: Date.now(),
->>>>>>> origin/main
     },
     measure: (name: string, startMark?: string, endMark?: string) => {
   // TODO: Add properties
@@ -285,7 +276,6 @@ export const createMockPerformance = (): Performance => {}
     measure: (name: string, startMark?: string, endMark?: string) => {}
       entries.push({</div>
         name,
->>>>>>> origin/main
         entryType: 'measure','
         startTime: Date.now(),
     },
@@ -299,7 +289,6 @@ export const createMockPerformance = (): Performance => {}
     },
     getEntriesByName: (name: string) => entries.filter(e => e.name === name),
     getEntriesByType: (type: string) => entries.filter(e => e.entryType === type),
->>>>>>> origin/main
     getEntries: () => entries,
     clearMarks: () => {,
     ,}entries.length = 0;},
@@ -315,7 +304,6 @@ export const createMockPerformance = (): Performance => {}
     toJSON: () => ({}),
     addEventListener: () => {},
     removeEventListener: () => {},
->>>>>>> origin/main
     dispatchEvent: () => true,
     onresourcetimingbufferfull: null,
     timeOrigin: Date.now(),
@@ -326,7 +314,6 @@ export const createMockPerformance = (): Performance => {}
   e: string, startMark?: string, endMark?: string) => {/* TODO: Fix JSX expression */}
   N: () => ({})
       } as PerformanceEntry);
->>>>>>> origin/main
     },
     getEntriesByNam,
   e: (nam)
@@ -352,7 +339,6 @@ export const createMockPerformance = (): Performance => {}
     removeEventListene,
   r: () => {},
     dispatchEven,
->>>>>>> origin/main
   t: () => true,
     onresourcetimingbufferful,
   l: null,
@@ -428,7 +414,6 @@ export const generateTestData = {}
  */;
 export const deepClone = <T>(obj: T): T => {,
     ,}export const deepClone = <T>(obj: T): T => {,}return JSON.parse(JSON.stringify(obj));}
->>>>>>> origin/main
 }
 /**;
  * Compare objects for equality;
@@ -535,7 +520,6 @@ export class ConsoleSpy {
   // TODO: Add properties
 }
     private originalConsole: Console,
->>>>>>> origin/main
   private logs: string[] = [],
   private errors: string[] = [],
   private warnings: string[] = [],
@@ -684,4 +668,3 @@ export default {}
 }
 export const measureExecutionTime = async <T>(f)
 `;
->>>>>>> origin/main

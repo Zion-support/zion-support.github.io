@@ -197,4 +197,3 @@ fixCriticalFiles()
 console.log('🧹 Cleaning problematic files...')'
 cleanProblematicFiles()
 console.log('✅ Critical files fixed!')</main>
->>>>>>> cursor/delete-records-a75e

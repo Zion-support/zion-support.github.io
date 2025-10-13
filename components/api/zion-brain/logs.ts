@@ -29,7 +29,6 @@ const superToken = process && process.env.SUPERADMIN_TOKEN
     by_module[e.module] = (by_module[e.module] || 0) + 1
     by_type[String (e.type)] = (by_type[String (e.type)] || 0) + 1
   }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 import { readLogs } from '@/utils/zionBrain';'
 function isAuthorized(req: NextApiRequest): boolean {;

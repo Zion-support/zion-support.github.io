@@ -98,7 +98,6 @@ const event = {
     originInstanceId: state.config.instanceId
     version
     timestamp: timestamp |Date.now()
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39;
 const version = nextVersionFor(state, milestoneId);
 const event = {
   // TODO: Add properties
@@ -245,5 +244,4 @@ const url = new URL ("/api / sync / publish", peer.base_url).to_string ()"
     return res.status(500).json({ error: "Internal server error" })"
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 )

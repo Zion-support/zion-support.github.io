@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-<<<<<<< HEAD
-export default function WebVitalsTrackerPage() {
-=======
-import React, { useEffect } from 'react';
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
 interface WebVitalsTrackerProps {
   className?: string;
   children?: React.ReactNode;
@@ -20,7 +9,6 @@ export default function WebVitalsTracker({ className = '', children }: WebVitals
     console.log('Web Vitals Tracker initialized');
   }, []);
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>

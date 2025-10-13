@@ -18,7 +18,6 @@ const pages = [
 const template = `import React from 'react';
 =======
 import fs from "fs";
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -73,7 +72,6 @@ export default function {FUNCTION_NAME}() {;
 </div>
 //     </>
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }`;
 
@@ -174,7 +172,6 @@ const pageData = {
 //     description: "Comprehensive 5G technology solutions coming soon.",
   },
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 };
 
 function fixPage(pageName) {

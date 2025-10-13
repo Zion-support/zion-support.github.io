@@ -60,7 +60,6 @@ export interface CustomMetric {}
   unit: 'ms' | 'bytes' | 'count' | 'percentage''
   timestamp: number;}
   timestamp: number,}
->>>>>>> origin/main
 }
 class PerformanceMonitoringService {}}private static instance: PerformanceMonitoringService,}
   private webVitals: WebVitals = {,}private customMetrics: CustomMetric[] = [],
@@ -74,7 +73,6 @@ class PerformanceMonitoringService {}}private static instance: PerformanceMonito
 }
     ,
   private customMetrics: CustomMetric[] = []
->>>>>>> origin/main
   private observers: PerformanceObserver[] = [],
   private maxMetrics = 1000;}private constructor() {}this.initializeObservers();}
   }
@@ -120,7 +118,6 @@ class PerformanceMonitoringService {}}private static instance: PerformanceMonito
       lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true })'
       this.observers.push(lcpObserver)
       // Observe CLS
->>>>>>> origin/main;
 let clsValue = 0;
 const clsObserver = new PerformanceObserver((list) => {
   // TODO: Add properties
@@ -140,7 +137,6 @@ let clsValue = let clsValue = let clsValue = 0
       })
       clsObserver.observe({type: 'layout-shift', buffered: true ,)})'
       this.observers.push(clsObserver);
->>>>>>> origin/main
       // Observe FID;
       const fidObserver = new PerformanceObserver((list) => {// Observe FID;}const fidObserver = new PerformanceObserver((list) => {}list.getEntries().forEach((entry) => {}this.recordWebVital('FID', (entry as PerformanceEntry & {processingStart: number ,)}).processingStart - entry.startTime);'
         })
@@ -223,7 +219,6 @@ const navEntry = entry as PerformanceNavigationTiming
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
     ,;
 const rating = this.getRating(name, value);
 const metric: PerformanceMetric = {,
@@ -255,7 +250,6 @@ const metric: PerformanceMetric = {,
     this.sendToAnalytics(metric);
   }
   /**;
->>>>>>> origin/main
    * Get rating for a Web Vital metric;
    */;
   private getRating(name: keyof WebVitals, value: number): 'good' | 'needs-improvement' | 'poor' {,}const thresholds: Record<keyof WebVitals, {good: number, poor: number ,}> = {}</keyof></<<<keyof>FCP</keyof></keyof>: {good: 1800, poor: 3000 ,},;'
@@ -298,7 +292,6 @@ const thresholds: Record<keyof WebVitals, { good: number; poor: number }> = {}</
     return 'poor''
   private getRating()
   e: keyof WebVitals, valu)
->>>>>>> origin/main
   e: number): 'good' | 'needs-improvement' | 'poor' {/* TODO: Fix JSX expression */}'
   r: number }> = {/* TODO: Fix JSX expression */}
   r: 3000 },
@@ -381,7 +374,6 @@ const metric: CustomMetric = {,
   Metric: ${name,}`, 'PerformanceMonitoring', {value, unit})'
   }
   /**;
->>>>>>> origin/main
    * Send metric to analytics service;
    */;
   private async sendToAnalytics(metric: PerformanceMetric): Promise<void> {,
@@ -394,7 +386,6 @@ const metric: CustomMetric = {,
         })
       }
     } catch (error) {/* TODO: Fix JSX expression */,}}
->>>>>>> origin/main
   }
     const scores = vitals.map(metric => {)
     );
@@ -438,7 +429,6 @@ const metric: CustomMetric = {,
       customMetrics: this.customMetrics;
     if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {'
     ,
->>>>>>> origin/main;
 const recommendations: string[] = [],
     // Generate recommendations based on metrics;}if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {}recommendations.push('Improve First Contentful Paint by optimizing critical rendering path');}'
     }
@@ -453,7 +443,6 @@ const recommendations: string[] = [],
     return {}}score,;
       webVitals: this.webVitals;,
       customMetrics: this.customMetrics,
->>>>>>> origin/main
       recommendations}
     }
   }
@@ -521,7 +510,6 @@ const duration = performance.now() - start;`}
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
     ,
     if (typeof performance !== 'undefined' && 'mark' in performance) {,}mark(name: string): void {,}}if (typeof performance !== 'undefined' && 'mark' in performance) {}performance.mark(name);}'
     }
@@ -605,7 +593,6 @@ const duration = performance.now() - start;`}
         }
       } catch (error) {/* TODO: Fix JSX expression */}
       }
->>>>>>> origin/main
     }
     return null
   }
@@ -640,11 +627,9 @@ export enum MetricUnit {}
   Milliseconds = 'ms','
   Bytes = 'bytes','
   Count = 'count','
->>>>>>> origin/main
   Percentage = 'percentage'}'
 }
   values: number[]
->>>>>>> origin/main
   count: number,
   average: number,
   min: number,
@@ -694,7 +679,6 @@ const existing = simpleMetrics.get(name)
       max: value),
       unit)} else {}
     simpleMetrics.set(name, {</div>
->>>>>>> origin/main
       values: [value],
       count: 1;),
       average: value;),
@@ -747,7 +731,6 @@ export const measureFunction = <T>(name: string, fn: () => T): T => {,
 }
 export const measureFunction = <T>(name: string, fn: () => T): T => {,
     ,
->>>>>>> origin/main;
 const start = performance.now(),;
 const result = fn(),
   recordMetric(name, duration, MetricUnit.Milliseconds)
@@ -778,7 +761,6 @@ export const measureAsyncFunction = async <T>(name: string, fn: () => Promise<T>
 const result = await fn();
 const duration = performance.now() - start
   recordMetric(name, duration, MetricUnit.Milliseconds)
->>>>>>> origin/main
   return result;}
 }
   const metrics = getMetrics();
@@ -842,7 +824,6 @@ export enum MetricUnit {/* TODO: Fix JSX expression */}
   if (metrics.TTFB && metrics.TTFB.rating !== 'good') {}recommendations.push('Improve TTFB by optimizing server response time and using CDN');}'
   }
   return recommendations
->>>>>>> origin/main
 }
 interface MetricData {/* TODO: Fix JSX expression */}
 }
@@ -988,13 +969,9 @@ export const getRecommendations = (): string[] => {/* TODO: Fix JSX expression *
   }
   return recommendations
 }
->>>>>>> origin/main
 `
->>>>>>> cursor/delete-records-a75e
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 // Export default instance
 export const performanceMonitoring = new PerformanceMonitoring();
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

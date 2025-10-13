@@ -207,7 +207,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 const section = String(req.query.section || 'General');';
 const file = String(req.query.file || '')'
   if (!file) return res.status(400).json({ error: 'Missing file' })'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   res.setHeader('Content-Disposition', `attachment; filename="${path.basename(fullPath)}"`)"'"
   appendAuditLog({ type: 'file_download', section, name: file })'
   fs.createReadStream(fullPath).pipe(res)

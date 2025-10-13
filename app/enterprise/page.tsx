@@ -1,117 +1,25 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function EnterprisePage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function Enterprise() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Enterprise - Zion Tech Group</title>
         <meta name="description" content="Advanced enterprise solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-          </p>
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const EnterprisePage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Enterprise - Zion Tech Group</title>
-        <meta name="description" content="Enterprise services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="enterprise, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Enterprise
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional enterprise services by Zion Tech Group.
-          </p>
-          
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced enterprise solutions. 
-              Stay tuned for updates!
-            </p>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
-'use client';';
-import React from 'react';';';
-import Navigation from '../components/Navigation';';';
-import Footer from '../components/Footer';';';
-import SEOOptimizer from '../components/SEOOptimizer';';';
-import {CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles}}from 'lucide-react';';';
-const EnterprisePage: React.FC = () => {,;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Shield,
-      title: 'Enterprise Security','
-      description: 'Comprehensive security solutions designed for large-scale enterprise environments.','
-      benefits: ['Advanced threat protection', 'Compliance management', 'Data encryption', 'Access control']},'
-    {icon: Cloud,
-  },
->>>>>>> origin/main
     {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
     icon: Cloud,
->>>>>>> origin/main
       title: 'Cloud Infrastructure','
       description: 'Scalable cloud solutions that grow with your business needs.','
       benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']}]'
@@ -156,7 +64,6 @@ const features = [
       benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization'],'
   }
     ]
->>>>>>> origin/main;
 const solutions = [
   // TODO: Add items
 ]
@@ -176,7 +83,6 @@ const solutions = [
       description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.','
       icon: Building,
       benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management'],'
->>>>>>> origin/main
   },
     {
   // TODO: Add properties
@@ -184,12 +90,10 @@ const solutions = [
   // TODO: Add properties
 }
     title: 'Customer Relationship Management','
->>>>>>> origin/main
       description: 'Advanced CRM systems for managing customer relationships and sales processes.','
       icon: Users,
       benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']}]'
   ];
->>>>>>> origin/main;
 const benefits = [
   // TODO: Add items
 ]
@@ -220,7 +124,6 @@ return (
   // TODO: Add parameters
 )
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
->>>>>>> origin/main
       <SEOOptimizer>
 <Navigation />
       {/* Hero Section */} <section className="py-20 px-4">"
@@ -324,7 +227,6 @@ return (
 <h2>Enterprise-Grade Features;</h2></h2>
 <p>Built for scale, security, and performance to meet the demands of large organizations.</p>
               Built for scale, security, and performance to meet the demands of large organizations.
->>>>>>> origin/main
             </p></div>
             {features.map((feature, index) => (
   // TODO: Add parameters
@@ -343,7 +245,6 @@ return (
                     </li>
 
                       {benefit} </li>
->>>>>>> origin/main
                   ))}
                 </ul></div>
             ))}
@@ -385,9 +286,7 @@ return (
 <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
 <p className="text-xl text-gray-300">Section description</p></div>"
 </div>
->>>>>>> origin/main
         </section>
->>>>>>> origin/main
                 </button></div>
 </div></div>
 </div></section>
@@ -415,7 +314,6 @@ return (
 <ArrowRight></button>
 <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">"
               Learn More
->>>>>>> origin/main
             </button></div>
 </div></section>
 <Footer/ />
@@ -433,16 +331,10 @@ export default EnterprisePage;
               <ArrowRight className="inline-block ml-2 w-5 h-5" />"
 <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More"
       <Footer />
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 };
 
 export default EnterprisePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
             Advanced AI and IT solutions for your business needs.
           </p>
         </div>
@@ -474,7 +366,6 @@ export default EnterprisePage;
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -483,14 +374,8 @@ export default EnterprisePage;
           <p className="text-xl text-gray-600 mb-8">
             Advanced enterprise solutions by Zion Tech Group.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

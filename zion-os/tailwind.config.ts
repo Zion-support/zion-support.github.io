@@ -4,12 +4,9 @@ const config: Config = {
 }
   // TODO: Add properties
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     &quot;./src / pages/**/*.{js, ts, jsx, tsx, mdx}&quot;,
     &quot;./src / components/**/*.{js, ts, jsx, tsx, mdx}&quot;,
     &quot;./src / app/**/*.{js, ts, jsx, tsx, mdx}&quot;],
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   theme: {
   // TODO: Add properties
 }

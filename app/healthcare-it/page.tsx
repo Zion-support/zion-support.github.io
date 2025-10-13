@@ -1,101 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function HealthcareItPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function HealthcareIt() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Healthcare It - Zion Tech Group</title>
         <meta name="description" content="Advanced healthcare it solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-          </p>
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const HealthcareItPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Healthcare It - Zion Tech Group</title>
-        <meta name="description" content="Healthcare It services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="healthcare-it, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Healthcare It
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional healthcare it services by Zion Tech Group.
-          </p>
-          
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced healthcare it solutions. 
-              Stay tuned for updates!
-            </p>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
-
-export default function HealthcareITPage() {;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Heart,
-icon: Heart,
->>>>>>> origin/main
       title: 'HIPAA Compliance','
       description: 'Full HIPAA compliance solutions with automated controls, monitoring, and reporting capabilities.','
       benefits: ['Automated compliance', 'Audit trails', 'Risk management'],'
@@ -109,7 +27,6 @@ return (
   // TODO: Add parameters
 )
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>"
->>>>>>> origin/main
       <SEOOptimizer>
 <Navigation />
       {/* Hero Section */} <section className="py-20 px-4">"
@@ -247,7 +164,6 @@ const stats = [
 <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">"
 <CheckCircle className="w-8 h-8 text-white" /></div>"
 <h3 className="text-lg font-semibold text-white">{benefit}</h3></div>"
->>>>>>> origin/main
             ))}
 
         <div className="max-w-4xl mx-auto text-center">"
@@ -270,10 +186,8 @@ const stats = [
 <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
 <p className="text-xl text-gray-300">Section description</p></div>"
 </div>
->>>>>>> origin/main
         </section></button>
 <button>View Case Studies;</button>
->>>>>>> origin/main
             </button></div>
 </div></section>
 <Footer/ / />
@@ -296,16 +210,10 @@ const stats = [
 </h3></section>
 </section></section>
 </section>
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 };
 
 export default HealthcareItPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
             Advanced AI and IT solutions for your business needs.
           </p>
         </div>
@@ -337,7 +245,6 @@ export default HealthcareItPage;
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -346,14 +253,8 @@ export default HealthcareItPage;
           <p className="text-xl text-gray-600 mb-8">
             Advanced healthcare it solutions by Zion Tech Group.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

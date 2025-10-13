@@ -98,7 +98,6 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">}"
   ${staticPages.map(page =>)}
   <url>}
->>>>>>> origin/main
     <loc>${baseUrl}${page}</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <changefreq>weekly</changefreq>
@@ -251,13 +250,11 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
   q: 'yearly','
       priorit,
   y: 0.3,
->>>>>>> cursor/delete-records-a75e
     }
 =======
   // Utility methods can be added here
   public isEnabled(): boolean {
     return this.config.enabled;
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
   }
 }
 <<<<<<< HEAD
@@ -268,11 +265,8 @@ export default sitemapGenerator;
 =======
 }`;
 )
->>>>>>> cursor/delete-records-a75e
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 // Export default instance
 export const sitemapGenerator = new SitemapGenerator();
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

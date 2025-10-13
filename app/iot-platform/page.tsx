@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
 import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';';'
 ;
 const IoTPlatformPage: React.FC = () => {;
@@ -155,155 +147,23 @@ const useCases = [
       icon: '🏥''
     }
   ];
->>>>>>> cursor/delete-records-a75e
 
-<<<<<<< HEAD
-export default function PagePage() {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-export default function IotPlatformPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function IotPlatform() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Iot Platform - Zion Tech Group</title>
         <meta name="description" content="Advanced iot platform solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-          </p>
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const IotPlatformPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Iot Platform - Zion Tech Group</title>
-        <meta name="description" content="Iot Platform services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="iot-platform, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Iot Platform
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional iot platform services by Zion Tech Group.
-          </p>
-          
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced iot platform solutions. 
-              Stay tuned for updates!
-            </p>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
-  // TODO: Add parameters
-)
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<Helmet>
-<title>IoT Platform - Zion Tech Group | Internet of Things Solutions</title>
-<meta name="description" content="Build and scale IoT solutions with our comprehensive platform. Connect, manage, and analyze millions of devices with secure, reliable IoT technology." />"
-<meta name="keywords" content="IoT platform, internet of things, device management, IoT analytics, smart devices, edge computing, IoT security" /></Helmet>"
-<Navigation />
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />'"
-<div className="relative max-w-7xl mx-auto text-center">"
-<h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">"
-            IoT Platform
-            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">"
-              Solutions
-            </span></h1>
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">"
-            Build and scale IoT solutions with our comprehensive platform. Connect, manage, and analyze
-            millions of devices with secure, reliable Internet of Things technology.
-          </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">"
-              Get IoT Platform Demo
-            </button>
-<button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">"
-              Learn More
-            </button></div>
-</div></section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">"
-              IoT Platform Features
-            </h2>
-<h2 className="text-4xl font-bold text-white mb-4">IoT Platform Features</h2>"
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">"
-              Our IoT platform provides everything you need to build, deploy, and scale
-              Internet of Things solutions for any industry or use case.
-            </p></div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
-            {features.map((feature, index) => (
-  // TODO: Add parameters
-)
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300">"
-<feature.icon className="w-12 h-12 text-purple-400 mb-4" />"
-<h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
-<p className="text-gray-300 mb-4">{feature.description}</p>"
-<ul className="space-y-2">"
-                  {feature.benefits.map((benefit, idx) => (
-  // TODO: Add parameters
-)
-                    <li key={idx} className="flex items-center text-sm text-gray-300">"
-<CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />"
-                      {benefit}
-                    </li>
-},
-    {icon: Clock,
-      title: '24/7 Monitoring','
-      description: 'Continuous monitoring of IoT devices and systems with intelligent alerting.','
-      benefits: ['Continuous monitoring', 'Smart alerts', 'Predictive maintenance']},'
-    {}}
-  ]
-return(<p>)</p>
-              Our IoT platform provides everything you need to build, deploy, and scale;
-              Internet of Things solutions for any industry or use case.
-            </p></div>
-
->>>>>>> origin/main
                   ))}
                 </ul></div>
             ))}
@@ -353,7 +213,6 @@ return(<p>)</p>
 < className="$2 /></div>"
 <div className="text-center mb-16"></div>"
 <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
->>>>>>> origin/main
               <p className="text-xl text-gray-300">Section description</p></div>"
 </div></section>
 <div className="max-w-7xl mx-auto"></div>"
@@ -384,16 +243,10 @@ return(<p>)</p>
 };
 ;
 export default PagePage;
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 };
 
 export default IotPlatformPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
             Advanced AI and IT solutions for your business needs.
           </p>
         </div>
@@ -425,7 +278,6 @@ export default IotPlatformPage;
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -434,14 +286,8 @@ export default IotPlatformPage;
           <p className="text-xl text-gray-600 mb-8">
             Advanced iot platform solutions by Zion Tech Group.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

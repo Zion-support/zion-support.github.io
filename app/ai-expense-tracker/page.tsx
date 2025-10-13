@@ -1,56 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-<<<<<<< HEAD
-export default function PagePage() {
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const AiExpenseTrackerPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-<<<<<<< HEAD
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-export default function AiExpenseTrackerPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AiExpenseTracker() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Ai Expense Tracker - Zion Tech Group</title>
         <meta name="description" content="Advanced ai expense tracker solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-=======
-            Advanced AI and IT solutions for your business needs.
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -58,73 +20,11 @@ export default function AiExpenseTracker() {
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced ai expense tracker solutions by Zion Tech Group.
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
           </p>
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-import { Helmet } from 'react-helmet-async';';'
-;
-const PagePage: React.FC = () => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
-  return (
-  // TODO: Add parameters
-)
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<Helmet>
-<title>Page | Zion Tech Group</title>
-<meta name="description" content="Professional Page services by Zion Tech Group." /></Helmet>"
-<div className="container mx-auto px-4 py-16">"
-<div className="max-w-4xl mx-auto text-center">"
-<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
-            Page
-          </h1>
-<p className="text-xl text-gray-300 mb-8">"
-            Professional Page services powered by advanced AI and cutting-edge technology.
-          </p>
-<div className="space-y-4">"
-<a
-              href="/contact""
-              className="inline-block bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25""
-            >
-              Get Started Today
-            </a></div>
-</div>;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Brain,
-      title: 'AI-Powered Intelligence','
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.','
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},'
-    {icon: BarChart,
-  },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    icon: BarChart,
->>>>>>> origin/main
       title: 'Advanced Analytics','
       description: 'Comprehensive analytics dashboard with real-time data visualization.','
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}];';
@@ -157,7 +57,6 @@ return(<>)
 <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>'"
 <div className="relative max-w-7xl mx-auto text-center"></div>"
 <h1>Ai Expense Tracker;</h1>
->>>>>>> origin/main
             </h1>
 <p>Advanced AI-powered ai expense tracker solution for modern businesses.</p></p>
 <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
@@ -267,22 +166,15 @@ return(<>)
                 </button>
 <button></button>
                   Learn More
->>>>>>> origin/main
                 </button></div>
 </div>
           ))
         </section>
->>>>>>> origin/main
       </div>;
 export default PagePage;
->>>>>>> origin/main
 
 }}
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
         <title>Ai Expense Tracker - Zion Tech Group</title>
         <meta name="description" content="Ai Expense Tracker services by Zion Tech Group. Professional AI and IT solutions." />
         <meta name="keywords" content="ai-expense-tracker, AI solutions, IT services" />
@@ -311,10 +203,5 @@ export default PagePage;
 };
 
 export default AiExpenseTrackerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

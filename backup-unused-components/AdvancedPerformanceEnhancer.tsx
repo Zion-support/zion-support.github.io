@@ -241,4 +241,3 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
 export default AdvancedPerformanceEnhancer;
 =======
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

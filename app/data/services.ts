@@ -497,7 +497,6 @@ export const services: Service[] = [,;
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
       starting: 299,
       currency: 'USD','
       period: 'month',},'
@@ -544,7 +543,6 @@ export const services: Service[] = [,;
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
       starting: 199,
       currency: 'USD','
       period: 'month',},'
@@ -590,7 +588,6 @@ export const services: Service[] = [,;
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
       starting: 149,
       currency: 'USD','
       period: 'month',},'
@@ -636,7 +633,6 @@ export const services: Service[] = [,;
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
       starting: 499,
       currency: 'USD','
       period: 'month',},'
@@ -682,7 +678,6 @@ export const services: Service[] = [,;
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
       starting: 799,
       currency: 'USD','
       period: 'month',},'
@@ -729,7 +724,6 @@ export const services: Service[] = [,;
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
       starting: 79,
       currency: 'USD','
       period: 'month',},'
@@ -775,7 +769,6 @@ export const services: Service[] = [,;
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
       starting: 99,
       currency: 'USD','
       period: 'month',},'
@@ -821,7 +814,6 @@ export const services: Service[] = [,;
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
       starting: 129,
       currency: 'USD','
       period: 'month',},'
@@ -867,7 +859,6 @@ export const services: Service[] = [,;
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
       starting: 49,
       currency: 'USD','
       period: 'month',},'
@@ -913,7 +904,6 @@ export const services: Service[] = [,;
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
       starting: 39,
       currency: 'USD','
       period: 'month',},'
@@ -960,7 +950,6 @@ export const services: Service[] = [,;
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
       starting: 999,
       currency: 'USD','
       period: 'month',},'
@@ -1006,7 +995,6 @@ export const services: Service[] = [,;
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
       starting: 1299,
       currency: 'USD','
       period: 'month',},'
@@ -1052,7 +1040,6 @@ export const services: Service[] = [,;
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
       starting: 799,
       currency: 'USD','
       period: 'month',},'
@@ -1098,7 +1085,6 @@ export const services: Service[] = [,;
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
       starting: 599,
       currency: 'USD','
       period: 'month',},'
@@ -1145,7 +1131,6 @@ export const services: Service[] = [,;
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
       starting: 5000,
       currency: 'USD','
       period: 'month','
@@ -1193,7 +1178,6 @@ export const services: Service[] = [,;
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
       starting: 2999,
       currency: 'USD','
       period: 'month','
@@ -1241,7 +1225,6 @@ export const services: Service[] = [,;
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
       starting: 1299,
       currency: 'USD','
       period: 'month',},'

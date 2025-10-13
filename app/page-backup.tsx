@@ -29,7 +29,6 @@ const gtag = (window as {gtag: (command: string, action: string, parameters: Rec
 'use client'';
 import React from 'react';'
 'use client''
->>>>>>> origin/main;
 const PageBackupPage: React.FC = () => {;
 const features = [
   // TODO: Add items
@@ -48,7 +47,6 @@ const features = [
   // TODO: Add properties
 }
       icon: Cloud,
->>>>>>> origin/main
       title: 'Cloud Infrastructure','
       description: 'Scalable and secure cloud solutions that grow with your business needs.','
       benefits: ['Strategy Planning', 'Technology Assessment', 'Implementation Support', 'Training']},'
@@ -71,7 +69,6 @@ const features = [
   // TODO: Add properties
 }
       icon: Cloud,
->>>>>>> origin/main
       title: 'IT Services','
       description: 'Complete IT infrastructure and cloud solutions to modernize your business operations.','
       href: '/it-services','
@@ -219,7 +216,6 @@ const features = [
   // TODO: Add properties
 }
       icon: Cloud,
->>>>>>> origin/main
       title: 'Cloud Infrastructure','
       description: 'Scalable and secure cloud solutions that grow with your business needs.','
       benefits: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Training']},'

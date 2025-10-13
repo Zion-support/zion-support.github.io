@@ -127,7 +127,6 @@ if ( {) {
   }
   return user
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39;
 import { NextApiRequest } from "next";"
 type DemoUser = { id: string; role: "client" | "talent"; talentSlug?: string }";
 export function getDemoUser(req: NextApiRequest): DemoUser {

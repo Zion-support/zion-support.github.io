@@ -78,4 +78,3 @@ const stat = fs.statSync(fullPath);
 const processedCount = processDirectory('./app');
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

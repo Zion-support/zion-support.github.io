@@ -1,71 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-<<<<<<< HEAD
-export default function TestRunnerPage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>TestRunner - Zion Tech Group</title>
-        <meta name="description" content="Advanced TestRunner solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-export default function testRunnerPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>TestRunner - Zion Tech Group</title>
-        <meta name="description" content="Advanced testrunner solutions by Zion Tech Group" />
-      </Helmet>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             TestRunner
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
-'use client''
-/**
- * Comprehensive Test Runner and Testing Utilities;
- * Provides advanced testing capabilities, mocking, and test automation;
- */
-  renderTime: number,
-    memoryUsage: number
-  timestamp: string;}
-}
-export interface CoverageMetrics {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  statements: number,
-    branches: number
-  functions: number,
-    lines: number;}
-  renderTime: number,
-  memoryUsage: number,
-  timestamp: string;}
-}
-export interface CoverageMetrics {statements: number,}
-    branches: number,
-  functions: number,}lines: number,}
-  renderTime: number,
-  memoryUsage: number,
-  timestamp: string,}
->>>>>>> origin/main
 }
 export interface CoverageMetrics {statements: number,}
   branches: number,
@@ -121,7 +59,6 @@ export interface PerformanceMetrics {renderTime: number;,}
   accessibilityThreshold: number
   timeout?: number
   verbose?: boolean
->>>>>>> origin/main
   bail?: boolean,
   enableMocking: boolean,
   enableCoverage: boolean,
@@ -202,7 +139,6 @@ interface CoverageResult {statements: number,}
 }
 interface TestSuite {name: string,}
     tests: Test[],}beforeAll: (() => void | Promise<void>)[],</void></<<<void>afterAll</void></void>: (() => void | Promise<void>)[]</void></<<<void>beforeEach</void></void>: (() => void | Promise<void>)[],</void></<<<void>afterEach</void></void>: (() => void | Promise<void>)[]}</void>
->>>>>>> origin/main
 }
 interface Test {</void>}
   name: string,</void>
@@ -232,13 +168,11 @@ interface TestResult {
   status: 'passed' | 'failed' | 'skipped' | 'pending''
   duration: number,
   coverage?: CoverageResult;}
->>>>>>> origin/main
 }
 interface AssertionResult {name: string,}
   status: 'passed' | 'failed','
   actual?: unknown;
   message?: string;}
->>>>>>> origin/main
 }
 interface CoverageResult {statements: number,}
   branches: number,
@@ -342,7 +276,6 @@ const skipped = results.filter(r => r.status === 'skipped').length;';
 const duration = results.reduce((sum, r) => sum + r.duration, 0);
 
     return {total, passed, failed, skipped, duration}}}
->>>>>>> origin/main
 }
 
     </BrowserRouter>;
@@ -732,7 +665,6 @@ const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
     const passed = renderTime < this.config.performanceThreshold;
     this.testResults.push({/* TODO: Fix JSX expression */}
   e: ${testName}`,
->>>>>>> origin/main
       statu,
   s: passed ? 'passed' : 'failed','
       duratio,
@@ -777,7 +709,6 @@ const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
       name,
       fn)
     only: true}
->>>>>>> origin/main
     })
   }
   /**
@@ -845,7 +776,6 @@ const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
   n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */}
     }
     this.currentSuite.afterAll.push(fn)
->>>>>>> origin/main
   }
   /**
    * Setup before each test</void>
@@ -867,7 +797,6 @@ const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
   n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */}
     }
     this.currentSuite.beforeEach.push(fn)
->>>>>>> origin/main
   }
   /**
    * Setup after each test</void>
@@ -889,7 +818,6 @@ const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
   n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */}
     }
     this.currentSuite.afterEach.push(fn)
->>>>>>> origin/main
   }
   /**
    * Run all tests</void>
@@ -904,7 +832,6 @@ const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
     if (this.isRunning) {}public async run(): Promise<TestResult[]> {}if (this.isRunning) {}throw new Error('Test runner is already running');}'
     }
     this.isRunning = true
->>>>>>> origin/main
     this.startTime = Date.now()
     this.results = []
   public async run(): Promise<TestResult[]> {/* TODO: Fix JSX expression */}
@@ -926,7 +853,6 @@ const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
       return this.results
     } finally {}
       this.isRunning = false;}
->>>>>>> origin/main
     }
   }
   /**
@@ -950,7 +876,6 @@ const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
           name: `${suite.name,}- ${test.name}`);
         this.results.push({`})
           name: `${suite.name} - ${test.name}`)
->>>>>>> origin/main
           status: 'skipped'),'
           duration: 0),
           assertions: []})
@@ -965,7 +890,6 @@ const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
     // Run tests;
     for (const test of suite.tests) {/* TODO: Fix JSX expression */}`
   e: `${suite.name} - ${test.name}`,
->>>>>>> origin/main
           statu,
   s: 'skipped','
           duratio,
@@ -1127,7 +1051,6 @@ const testName = `${suite.name} - ${test.name}`;
     } catch (error) {/* TODO: Fix JSX expression */,}})`;
       - startTime}ms)`);
       if (this.config.bail) {/* TODO: Fix JSX expression */,}}
->>>>>>> origin/main
     }
   }
   /**
@@ -1149,7 +1072,6 @@ const testName = `${suite.name} - ${test.name}`;
       await hook();}
     } catch (error) {}
       throw error;}
->>>>>>> origin/main
     }
   }
   /**
@@ -1211,7 +1133,6 @@ const testName = `${suite.name} - ${test.name}`;
     hookNam,
   e: string,
   ): Promise<void> {/* TODO: Fix JSX expression */,}} catch (error) {/* TODO: Fix JSX expression */,}}
->>>>>>> origin/main
   }
   /**
    * Run function with timeout
@@ -1301,7 +1222,6 @@ const skipped = this.results.filter(r => r.status === 'skipped').length;}'
         ${this.results}.map();
           .map()
           .map()
->>>>>>> origin/main
             result => `}</div>
 <p>Status: ${result.status,</p>}</p>);
                 <p>Duration: ${result.duration,</p>}ms</p>);
@@ -1346,7 +1266,6 @@ const images = container.querySelectorAll('img'),'
     images.forEach((img, index) => {// Basic accessibility checks;
     const violations: string[] = [],;
 const violations: string[] = []
->>>>>>> origin/main
     // Check for missing alt text on images,;
 const images = container.querySelectorAll('img')}images.forEach((img, index) => {}if (!img.getAttribute('alt')) {`}violations.push(`Image ${index)}missing alt text`);'
       }
@@ -1470,7 +1389,6 @@ const passed = violations.length === 0;
         name: `Component: ${testName,}`);
       this.testResults.push({`})
         name: `Component: ${testName}`)
->>>>>>> origin/main
         status: 'failed'),'
         duration: 0),
         error: errorMessage,
@@ -1526,7 +1444,6 @@ const passed = violations.length === 0;
   s: string[] }> {/* TODO: Fix JSX expression */}
     const { container } = this.customRender(component)
     // Basic accessibility checks
->>>>>>> origin/main
     const,
   violations: string[] = [],
     // Check for missing alt text on images;
@@ -1554,7 +1471,6 @@ let previousLevel = 0;
   t: ${testName,}`,
     } catch (error) {/* TODO: Fix JSX expression */}`
   t: ${testName}`,
->>>>>>> origin/main
         statu,
   s: 'failed','
         duratio,
@@ -1575,7 +1491,6 @@ let previousLevel = 0;
     <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">"'"
         ${this.results}
           .map()
->>>>>>> origin/main
             result => `}
     <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;"'"
         ${this.results;}.map(result => `)}
@@ -1584,9 +1499,7 @@ let previousLevel = 0;
                 ${result.status === 'skipped' ? '<skipped/>' : '})''
             </testcase>)
           .join(')}''
->>>>>>> origin/main
     </testsuite>
->>>>>>> origin/main
   }
   // Integration test
   async runIntegrationTest()
@@ -1635,13 +1548,11 @@ const result = this.customRender(component)
       this.testResults.push({`}
       this.testResults.push({`})
         name: `Integration: ${testName}`,
->>>>>>> origin/main
         status: 'failed','
       this.testResults.push({`)})
         name: `Integration: ${testName,}`);
       this.testResults.push({`})
         name: `Integration: ${testName}`)
->>>>>>> origin/main
         status: 'failed'),'
         duration: 0),
         error: errorMessage,
@@ -1702,7 +1613,6 @@ const coverage: CoverageMetrics = {,
     // For now, we'll just return a placeholder;';
 const coverage: CoverageMetrics = {}
       statements: 85,
->>>>>>> origin/main
       branches: 80,
       functions: 90,;
 const passed = coverage.statements >= this.config.coverageThreshold;
@@ -1840,7 +1750,6 @@ const coverage: CoverageMetrics = {,
   ): Promise<{/* TODO: Fix JSX expression */}
   d: boolean, error?: string }> {/* TODO: Fix JSX expression */}`
   n: ${testName}`,
->>>>>>> origin/main
         statu,
   s: 'passed','
         duratio,
@@ -1850,7 +1759,6 @@ const coverage: CoverageMetrics = {,
   n: ${testName,}`,
     } catch (error) {/* TODO: Fix JSX expression */}`
   n: ${testName}`,
->>>>>>> origin/main
         statu,
   s: 'failed','
         duratio,
@@ -2087,7 +1995,6 @@ const runTest = useCallback(async ()
   }, [testRunner])
   return {}
     runTest,
->>>>>>> origin/main
     getTestResults: () => testRunner.getTestResults(),
     getTestStatistics: () => testRunner.getTestStatistics(),
     clearTestResults: () => testRunner.clearTestResults(),
@@ -2108,7 +2015,6 @@ export const testUtils = {}// Create mock data;
         id: i + 1,`})
         name: `Mock ${type} ${i + 1}`)
         description: `This is a mock ${type} item`)
->>>>>>> origin/main
         createdAt: new Date().toISOString(),
   // Wait for element to appear;
   waitForElement: (selector: string, timeout: number = 5000) => {,
@@ -2812,12 +2718,7 @@ export { Mock };
 export type {/* TODO: Fix JSX expression */}
 };
 "`"
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
             Advanced AI and IT solutions for your business needs.
           </p>
         </div>
@@ -2854,4 +2755,3 @@ export type {/* TODO: Fix JSX expression */}
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

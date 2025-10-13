@@ -162,6 +162,4 @@ for (const file of filesToFix) {/* TODO: Fix JSX expression */}
 }
 `
 console.log(`Fixed ${fixedCount} files`);"`</div></div>
->>>>>>> cursor/delete-records-a75e
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

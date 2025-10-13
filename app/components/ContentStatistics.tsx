@@ -1,13 +1,11 @@
 import React, {useState, useEffect}from 'react';';';
 import {CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock}}from 'lucide-react';';'
->>>>>>> origin/main;
 const ContentStatistics: React.FC = () => {,;
 const [counters, setCounters] = useState({)
     clients: 0,
     projects: 0,
     satisfaction: 0,
     years: 0;,});
->>>>>>> origin/main
   });
 ;
 import React from 'react';';'
@@ -24,9 +22,7 @@ const targetCounters = {
     years: 15,
     countries: 50,
     uptime: 99
->>>>>>> origin/main
   };
->>>>>>> origin/main;
 const statistics = [
   // TODO: Add items
 ]
@@ -117,8 +113,6 @@ const achievements = [
       icon: Brain,
       title: 'AI Innovation','
       description: 'Leading AI solutions for modern businesses''
->>>>>>> origin/main
->>>>>>> origin/main
     },
     {
   // TODO: Add properties
@@ -245,7 +239,6 @@ const timer = setInterval(() => {
 <achievement.icon className="w-8 h-8 text-white" /></div>"
 <h4 className="text-xl font-bold text-white mb-2">{achievement.title}</h4>"
 <p className="text-gray-300">{achievement.description}</p>"
->>>>>>> origin/main
             </div>
           ))}
         </div></div>
@@ -358,11 +351,8 @@ const timer = setInterval(() => {
               </button></div>
 </div></div>
 </section></div>
->>>>>>> origin/main
     </div>
   );
 };
 ;
 export default ContentStatisticsPage;
->>>>>>> origin/main
->>>>>>> origin/main

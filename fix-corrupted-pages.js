@@ -1,7 +1,6 @@
 <<<<<<< HEAD
 #!/usr/bin/env node;
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 import fs from "fs";
 import path from "path";
 import { Helmet } from 'react-helmet-async';
@@ -47,7 +46,6 @@ export default function {PAGE_NAME}() {;
 </div>
 //     </>
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }`;
 
@@ -261,7 +259,6 @@ const pages = [
     description: "The page you are looking for does not exist.",
   },
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 ];
 
 function fixPage(pageInfo) {

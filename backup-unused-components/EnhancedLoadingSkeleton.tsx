@@ -24,7 +24,6 @@ export default function EnhancedLoadingSkeleton({ className = '', children }: En
       style={style}
 //     />
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }
 <<<<<<< HEAD
@@ -102,4 +101,3 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
   );
 }
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

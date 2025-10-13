@@ -261,4 +261,3 @@ try {
 </div></div>
 </div></div>
 </div>
->>>>>>> cursor/delete-records-a75e

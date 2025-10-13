@@ -383,7 +383,5 @@ const isValid = Object.keys(errors).length === 0 ||
     validateAllFields
   }
 
->>>>>>> cursor/delete-records-a75e
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

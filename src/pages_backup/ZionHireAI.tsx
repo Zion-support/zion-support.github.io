@@ -511,7 +511,6 @@ const { isAuthenticated } = useAuth(),
               Join leading companies using Zion Hire AI to find better talent faster,
               reduce time-to-hire, and improve candidate experience.
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             </p>
 <Button

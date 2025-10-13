@@ -1,53 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-<<<<<<< HEAD
-=======
-export default function ConsultationPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function Consultation() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Consultation - Zion Tech Group</title>
         <meta name="description" content="Advanced consultation solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-=======
-            Advanced AI and IT solutions for your business needs.
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </p>
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="container mx-auto px-4 py-20">
           <h1 className="text-5xl font-bold text-white mb-6">
@@ -64,8 +30,6 @@ export default function Consultation() {
               Stay tuned for updates!
             </p>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -74,53 +38,10 @@ export default function Consultation() {
           <p className="text-xl text-gray-600 mb-8">
             Advanced consultation solutions by Zion Tech Group.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-import React from 'react';';'
-;
-const ConsultationPage: React.FC = () => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
-  return (
-  // TODO: Add parameters
-)
-    <div className="min-h-screen pt-20">"
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">"
-<div className="text-center">"
-<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
-            Free <span className="text-cyan-400">Consultation</span></h1>"
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
-            Get expert advice on how to implement AI and IT solutions for your business.
-          </p></div>
-</div>
-'use client'';
-import React, { useState } from 'react';';
-import Navigation from '../components/Navigation';';
-import Footer from '../components/Footer';';
-import { Calendar, Clock, CheckCircle, ArrowRight, Phone, Mail, MapPin, Users, Brain, Cloud, Shield } from 'lucide-react';';';
-const ConsultationPage: React.FC = () => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
->>>>>>> origin/main;
 const [formData, setFormData] = useState({
   // TODO: Add properties
 }
@@ -313,7 +234,6 @@ const { name, value } = e.target;
 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
               Get expert advice on your AI and IT needs. Schedule a free consultation with our specialists.
             </p>
->>>>>>> origin/main
           </div></div>
 </section>
 
@@ -526,7 +446,6 @@ const { name, value } = e.target;
 </div></div>
 </section></section>
 </div></div>
->>>>>>> origin/main
   );
 };
 ;
@@ -536,15 +455,6 @@ export default ConsultationPage;
 }
 ;
 export default ConsultationPage;
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

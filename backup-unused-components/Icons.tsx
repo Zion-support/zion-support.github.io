@@ -16,7 +16,6 @@ export const Icon = ({
   ...props
 =======
 ...props
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 : ,
     name: string;
   className?: string;
@@ -35,4 +34,3 @@ export default function Icons({ className = '', children }: IconsProps) {
   );
 }
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

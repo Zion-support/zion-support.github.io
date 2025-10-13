@@ -1,76 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Shield, Zap } from 'lucide-react';
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
 
-<<<<<<< HEAD
-export default function PagePage() {
-<<<<<<< HEAD
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-          </p>
-=======
-    <>
-      <Helmet>
-        <title>Ai Analytics - Zion Tech Group</title>
-        <meta name="description" content="Ai Analytics services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="ai-analytics, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Ai Analytics
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional ai analytics services by Zion Tech Group.
-=======
-export default function AiAnalyticsPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AiAnalytics() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Ai Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced ai analytics solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Ai Analytics
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Advanced AI and IT solutions for your business needs.
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </p>
           
           <div className="bg-slate-800 p-8 rounded-lg">
@@ -80,38 +20,10 @@ export default function AiAnalytics() {
               Stay tuned for updates!
             </p>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
-'use client';';
-import React from 'react';';';
-import { Helmet } from 'react-helmet-async';';';
-import Navigation from '../components/Navigation';';';
-import Footer from '../components/Footer';';';
-import { CheckCircle, Brain, BarChart, Target, TrendingUp, Zap, Eye, Users } from 'lucide-react';';'
-;
-const AIAnalyticsPage: React.FC = () => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
-'use client';';
-import React from 'react';';';
-import {Helmet}}from 'react-helmet-async';';';
-import Navigation from '../components/Navigation';';';
-import Footer from '../components/Footer';';';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';';';
-const AiAnalyticsPage: React.FC = () => {,
->>>>>>> origin/main;
 const features = [
   // TODO: Add items
 ]
@@ -195,7 +107,6 @@ const benefits = [
     'Scale operations without proportional staff increases','
     'Gain competitive advantage with advanced technology';'
   ];
->>>>>>> origin/main
 
 return (
   // TODO: Add parameters
@@ -208,7 +119,6 @@ return (
 <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation" />"
 <title>AI Analytics - Zion Tech Group</title>
 <meta name="description" content="Advanced AI-powered analytics solutions for data-driven business decisions. Real-time insights, predictive modeling, and automated reporting." />"
->>>>>>> origin/main
       </Helmet>
 <Navigation />
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">"
@@ -247,7 +157,6 @@ return (
                 AI Analytics;
   </
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Transform your business with intelligent analytics powered by cutting-edge AI technology.</p>"
->>>>>>> origin/main
               </p>
 <section className="py-20 px-4 sm:px-6 lg:px-8">"
 <div className="max-w-4xl mx-auto text-center">"
@@ -268,7 +177,6 @@ return (
 </div></div>
 </section></main>
 
->>>>>>> origin/main
               </div>
             ))}
           </div></div>
@@ -312,14 +220,8 @@ return (
   </
           </div></section>
 </main>
->>>>>>> origin/main
       <Footer /></>;
 export default AiAnalyticsPage;
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e
-=======
   const features = [
     {
       title: "Advanced Technology",
@@ -365,7 +267,6 @@ export default AiAnalyticsPage;
               <p className="text-gray-300">{feature.description}</p>
             </div>
           ))}
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -374,17 +275,9 @@ export default AiAnalyticsPage;
           <p className="text-xl text-gray-600 mb-8">
             Advanced ai analytics solutions by Zion Tech Group.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

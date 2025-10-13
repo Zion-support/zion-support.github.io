@@ -206,10 +206,8 @@ const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
     // Run monitoring after page load;
     if (document.readyState === 'complete') {monitorWebVitals();}else {window.addEventListener('load', monitorWebVitals);}}return () => {window.removeEventListener('load', monitorWebVitals);}}, []);'
 }
->>>>>>> cursor/delete-records-a75e
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 import { useState, useEffect } from 'react';
 
@@ -258,4 +256,3 @@ export function usePerformanceMonitor() {
     fetchData
   };
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

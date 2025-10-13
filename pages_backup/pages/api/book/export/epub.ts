@@ -247,7 +247,6 @@ function escapeHtml(s: string): string {
     .replace(/"/g, '&quot,')'"
     .replace(/'/g, '&#039,')'
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function escapeHtml(s: string): string {
   // TODO: Add properties
 }
@@ -351,7 +350,6 @@ const buf = await fs.read_file (tmp_path)
       'attachment; filename="zion - os - book.epub"','"
     )
     res.status(200).send(buf)
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   } catch (e: any) {
   // TODO: Add properties
 }

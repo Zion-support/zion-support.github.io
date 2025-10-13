@@ -45,7 +45,6 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   }, [end, duration]);
 
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface AnimatedCounterProps {
   className?: string;
   children?: React.ReactNode;
@@ -71,6 +70,5 @@ export default function AnimatedCounter({ className = '', children }: AnimatedCo
       {suffix}
 </span>
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

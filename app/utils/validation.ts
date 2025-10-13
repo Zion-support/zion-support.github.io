@@ -10,7 +10,6 @@ return {
   }
   return {/* TODO: Fix JSX expression */}
   }
->>>>>>> origin/main
 }
 /**;
  * URL validation;
@@ -184,7 +183,6 @@ for (let i = cleaned.length - 1; i >= 0; i--) {let digit = parseInt(cleaned[i], 
   }
   return {/* TODO: Fix JSX expression */}
   }
->>>>>>> origin/main
 }
 /**;
  * JSON validation;

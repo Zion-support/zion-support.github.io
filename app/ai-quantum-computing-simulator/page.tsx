@@ -1,123 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AiQuantumComputingSimulatorPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AiQuantumComputingSimulator() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Ai Quantum Computing Simulator - Zion Tech Group</title>
         <meta name="description" content="Advanced ai quantum computing simulator solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-          </p>
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const AiQuantumComputingSimulatorPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Ai Quantum Computing Simulator - Zion Tech Group</title>
-        <meta name="description" content="Ai Quantum Computing Simulator services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="ai-quantum-computing-simulator, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Ai Quantum Computing Simulator
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional ai quantum computing simulator services by Zion Tech Group.
-          </p>
-          
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced ai quantum computing simulator solutions. 
-              Stay tuned for updates!
-            </p>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
-'use client';';
-import React, {useState, useEffect}from 'react';';';
-import {Helmet}}from 'react-helmet-async';';';
-import {Cpu, Zap, Brain, Target, BarChart, Shield, Clock, Users, ArrowRight, Star, TrendingUp, Lock, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Globe, Database, Settings, Calendar, Award, Rocket, Eye, MessageSquare, CheckSquare}}from 'lucide-react';';'
-;
-const AIQuantumComputingSimulator: React.FC = () => {,;
-const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
-    setIsVisible(true);}, []);
-;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {icon: Cpu,
-      title: 'Quantum Circuit Simulation','
-      description: 'Advanced quantum circuit simulation with up to 50 qubits using state-of-the-art algorithms','
-      benefits: ['Up to 50 qubit simulation', 'Real-time circuit optimization', 'Multiple quantum gates support']},'
-    {icon: Brain,
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Brain,
->>>>>>> origin/main
       title: 'AI-Powered Optimization','
       description: 'Machine learning algorithms optimize quantum circuits for maximum efficiency and accuracy','
       benefits: ['Noise modeling', 'Error correction codes', 'Fidelity analysis']}];'
@@ -386,16 +282,10 @@ const useCases = [
   )
 }
 export default AIQuantumComputingSimulator;
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 };
 
 export default AiQuantumComputingSimulatorPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
             Advanced AI and IT solutions for your business needs.
           </p>
         </div>
@@ -427,7 +317,6 @@ export default AiQuantumComputingSimulatorPage;
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -436,14 +325,8 @@ export default AiQuantumComputingSimulatorPage;
           <p className="text-xl text-gray-600 mb-8">
             Advanced ai quantum computing simulator solutions by Zion Tech Group.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

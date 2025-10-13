@@ -39,16 +39,13 @@ interface StructuredData {
   '@context': string;
   '@type': string;
   [key: string]: any;
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c
 }
 
 export class SEOUtils {
   private config: SEOUtilsConfig;
 <<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
   private currentPage: string = '';
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c
 
   constructor(config: Partial<SEOUtilsConfig> = {}) {
     this.config = {
@@ -62,7 +59,6 @@ export class SEOUtils {
       generateMetaTags: true,
       generateStructuredData: true,
       trackPageViews: true,
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c
       ...config
     };
   }
@@ -438,7 +434,6 @@ export class SEOOptimizer {
     provider: string;
     areaServed: string;
     serviceType: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c
     offers?: {
       price: string;
       priceCurrency: string;
@@ -520,7 +515,6 @@ export class SEOOptimizer {
         name: crumb.name,
         item: crumb.url,
       })),
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c
     };
   }
 
@@ -729,7 +723,6 @@ export const updatePageTitle = (titl)
 }
 "`"
 </li>
->>>>>>> cursor/delete-records-a75e
 =======
   generateMetaTags(title: string, description: string): void {
     if (this.config.enabled) {
@@ -807,14 +800,11 @@ export const updatePageTitle = (titl)
   // Get current page
   getCurrentPage(): string {
     return this.currentPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c
   }
 }
 
 export const seoUtils = new SEOUtils();
 <<<<<<< HEAD
 export default seoUtils;
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 export default seoUtils;
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c

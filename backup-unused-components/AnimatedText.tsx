@@ -46,4 +46,3 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
 export default AnimatedText;
 =======
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

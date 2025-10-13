@@ -6,7 +6,6 @@ export const metadata = () => {
   return null;
 };
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
 // Metadata utility functions
 
 export const siteMetadata = {
@@ -93,7 +92,5 @@ export const metadata = {
 };
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 export default siteMetadata;
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

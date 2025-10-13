@@ -27,7 +27,6 @@ const features = [
   // TODO: Add properties
 }
     icon: BarChart,
->>>>>>> origin/main
       title: 'Advanced Analytics','
       description: 'Comprehensive analytics dashboard with real-time data visualization.','
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]'
@@ -134,7 +133,6 @@ return(<>)
                 </button>
 <button></button>
                   Learn More
->>>>>>> origin/main
                 </button></div>
 </div></div>
 </section>

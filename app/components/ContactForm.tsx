@@ -1,4 +1,3 @@
->>>>>>> origin/main
   email: string,
   company: string,
   phone: string,
@@ -18,14 +17,12 @@ const ContactForm: React.FC = () => {
 }
   // TODO: Implement
 }
->>>>>>> origin/main;
 const [formData, setFormData] = useState<FormData>({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
     name: '','
->>>>>>> origin/main
     email: '','
     company: '','
     phone: '','
@@ -38,7 +35,6 @@ const {name, value}}= e.target;
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
       ...prev,;
 const handleSubmit = async (e: React.FormEvent) => {,
     e.preventDefault();
@@ -96,7 +92,6 @@ const handleSubmit = async (e: React.FormEvent) => {,
               /></div>
 <div></div>
 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">"
->>>>>>> origin/main
                 Email Address *
               </label>
 <input;

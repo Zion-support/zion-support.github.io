@@ -99,7 +99,6 @@ const latencyMs = Date && Date.now() - started
   return res && res.status(405).json({ error: 'Method not allowed' })'
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4;
 import { appendLog, evaluateReflexes, readState, writeState } from '@/utils/zionBrain';'
 function isAuthorized(req: NextApiRequest): boolean {;
 const token = req.headers['x-admin-token'] || req.query.token;';

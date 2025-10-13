@@ -1,85 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function BlockchainPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function Blockchain() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Blockchain - Zion Tech Group</title>
         <meta name="description" content="Advanced blockchain solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-          </p>
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const BlockchainPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Blockchain - Zion Tech Group</title>
-        <meta name="description" content="Blockchain services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="blockchain, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Blockchain
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional blockchain services by Zion Tech Group.
-          </p>
-          
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced blockchain solutions. 
-              Stay tuned for updates!
-            </p>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
       </div>
     </>
   );
 }
-=======
 'use client';';
 import React from 'react';';';
 import {Helmet}}from 'react-helmet-async';';';
@@ -125,7 +60,6 @@ const features = [
 <title>Blockchain Solutions | Zion Tech Group</title>
 <meta name="description" content="Professional Blockchain Solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />"
 <meta name="keywords" content="blockchain solutions, blockchain technology, IT services, Zion Tech Group, smart contracts" />"
->>>>>>> origin/main
       </Helmet>
 <div className="container mx-auto px-4 py-16">"
 <div className="text-center mb-16">"
@@ -162,7 +96,6 @@ const features = [
                   Schedule Blockchain Consultation
                 </button>
               ))
->>>>>>> origin/main
             </div>
           ))}
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">"
@@ -230,7 +163,6 @@ const features = [
                           Save up to 50% vs market rates</div>
 <section key={category} className="py-16 bg-gray-50">"
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
->>>>>>> origin/main
               <div className="text-center mb-12">"
 <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,</h2>"
                   {category}Services;
@@ -274,7 +206,6 @@ const features = [
                 Our Blockchain Capabilities;
   </
               <p className="text-xl text-gray-600">Comprehensive blockchain technologies and methodologies for modern business applications,</p></"
->>>>>>> origin/main
             </div>
 <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,</div>"
 <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">"
@@ -319,7 +250,6 @@ const features = [
 <p className="text-gray-600">Decentralized applications with user-friendly interfaces</p></div>"
 <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg"></div>"
 <BarChart className="w-12 h-12 text-indigo-600 mx-auto mb-4" />"
->>>>>>> origin/main
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Blockchain Analytics</h3>"
 <p className="text-gray-600">Comprehensive data analysis and visualization tools</p></div>"
 </div></div>
@@ -341,23 +271,6 @@ const features = [
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-colors">,"
               Contact our blockchain experts for a free consultation and custom blockchain strategy development
 
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>"
-<$2 />
-                href="tel:+13024640950""
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center""
-              >
-                📞 +1 302 464 0950
-              </a>
-<a
-                href="mailto:kleber@ziontechgroup.com""
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors""
-              >
-                ✉️ kleber@ziontechgroup.com
-              </a>
-                ✉️ kleber@ziontechgroup.com,
-
->>>>>>> origin/main
             </div>
 <div className="mt-8 text-sm text-blue-200"></div>"
 <p>📍 364 E Main St STE 1008, Middletown DE 19709</p></div>
@@ -434,14 +347,8 @@ export default BlockchainPage</div></div>;
 </section></section>
 </section></section>
 </Link></Link>
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 export default BlockchainPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
             Advanced AI and IT solutions for your business needs.
           </p>
         </div>
@@ -473,7 +380,6 @@ export default BlockchainPage;
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -482,14 +388,8 @@ export default BlockchainPage;
           <p className="text-xl text-gray-600 mb-8">
             Advanced blockchain solutions by Zion Tech Group.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

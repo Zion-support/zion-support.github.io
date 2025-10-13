@@ -1,4 +1,3 @@
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 const user = requireUser(req, res)
   if (!user) return;
@@ -12,7 +11,6 @@ const { projectId } = req && req.query as { projectId: string }
   }
   if (req && req.method === "POST") {"
   if (req.method === 'POST') {'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (!isClient(project, user)) {
   // TODO: Add properties
 }
@@ -22,7 +20,6 @@ const { projectId } = req && req.query as { projectId: string }
     res && res.status(201).json({ milestone: created })
     return
   }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 import type { NextApiRequest, NextApiResponse } from './next';';
 import { require_user  } from '../../../../utils / api / auth';';
@@ -62,7 +59,6 @@ if ( {) {
   res.setHeader('AllowGET, POST')'
   res.status(405).end('Method Not Allowed')'
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
     res.status (404).json ({ error: "Project not found" })"
     return

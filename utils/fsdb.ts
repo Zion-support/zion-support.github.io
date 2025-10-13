@@ -57,7 +57,6 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
 const dir = getDisputeUploadDir(caseId)
   await mkdir(dir, { recursive: true })
   return dir
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   } catch (error) {
   // TODO: Add properties
 }
@@ -77,7 +76,6 @@ const dir = path && path.dirname(filePath),
     return res.status(500).json({ error: "Internal server error" })"
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch (error) {
   // TODO: Add properties
 }
@@ -212,7 +210,4 @@ const dir = getDisputeUploadDir(caseId)
   return dir
 }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }

@@ -80,7 +80,6 @@ const trackedError: TrackedError = {,}message: error.message,
     ,
         fatal: false)).gtag('event', 'exception', {</div>'
         description: error.message,
->>>>>>> origin/main
         fatal: false,
         component: error.context.component,}
       })
@@ -109,7 +108,6 @@ const component = error.context.component || 'Unknown''
       total: this.errors.length,
       byComponent,
       recent: this.errors.slice(-10</div>
->>>>>>> origin/main
     }
   }
 }
@@ -134,7 +132,6 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */,}}}
       timestam,;
   t: ErrorContext = {}): void {/* TODO: Fix JSX expression */},
       timestam,
->>>>>>> origin/main
   p: new Date().toISOString(),
       userAgen,
   t: navigator.userAgent,

@@ -145,7 +145,6 @@ const handlePhoneClick = useCallback(() => {
 <Analytics />
 <SecurityEnhancer />
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain"></div>"
->>>>>>> origin/main
         {/* Navigation */}</div>
         {/* Skip to main content for accessibility */}
         <a
@@ -226,7 +225,6 @@ const handlePhoneClick = useCallback(() => {
 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Services</h3>"
 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">"
                   Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
->>>>>>> origin/main
                 </p>
 <div className="text-center"></div>"
 <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2 neon-text">Starting at $1,500/month</div>"
@@ -245,7 +243,6 @@ const handlePhoneClick = useCallback(() => {
 <a href="/ai-marketing" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">"
                     Learn More →
                     Learn More →,
->>>>>>> origin/main
                   </a></div>
 </article></Suspense>
 <article className="quantum-card p-4 sm:p-6 energy-pulse">"
@@ -259,7 +256,6 @@ const handlePhoneClick = useCallback(() => {
 <a href="/ai-automation" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">"
                     Learn More →
                     Learn More →,
->>>>>>> origin/main
                   </a></div>
 </article></Suspense>
 </div>
@@ -270,7 +266,6 @@ const handlePhoneClick = useCallback(() => {
 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Healthcare</h3>"
 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">"
                   Cutting-edge AI solutions for medical imaging, drug discovery, and personalized medicine.
->>>>>>> origin/main
                 </p>
 <div className="text-center"></div>"
 <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2">Starting at $1,999/month</div>"
@@ -283,7 +278,6 @@ const handlePhoneClick = useCallback(() => {
 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Fintech</h3>"
 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">"
                   Revolutionary AI-powered financial services including trading, fraud detection, and risk management.
->>>>>>> origin/main
                 </p>
 <div className="text-center"></div>"
 <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2">Starting at $1,499/month</div>"
@@ -302,7 +296,6 @@ const handlePhoneClick = useCallback(() => {
 <a href="/quantum-computing" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base">"
                     Learn More →
                     Learn More →,
->>>>>>> origin/main
                   </a></div>
 </article></Suspense>
 </div>
@@ -323,7 +316,6 @@ const handlePhoneClick = useCallback(() => {
 <a href="/ai-crm" className="text-orange-400 hover:text-orange-300 font-medium text-sm sm:text-base">"
                       Learn More →
                       Learn More →,
->>>>>>> origin/main
                     </a></div>
 </article></Suspense>
 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">"
@@ -337,7 +329,6 @@ const handlePhoneClick = useCallback(() => {
 <a href="/ai-analytics" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base">"
                       Learn More →
                       Learn More →,
->>>>>>> origin/main
                     </a></div>
 </article></Suspense>
 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">"
@@ -351,7 +342,6 @@ const handlePhoneClick = useCallback(() => {
 <a href="/ai-content-studio" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base">"
                       Learn More →
                       Learn More →,
->>>>>>> origin/main
                     </a></div>
 </article></Suspense>
 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">"
@@ -365,7 +355,6 @@ const handlePhoneClick = useCallback(() => {
 <a href="/ai-chatbot-builder" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base">"
                       Learn More →
                       Learn More →,
->>>>>>> origin/main
                     </a></div>
 </article></Suspense>
 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">"
@@ -379,7 +368,6 @@ const handlePhoneClick = useCallback(() => {
 <a href="/ai-email-marketing" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base">"
                       Learn More →
                       Learn More →,
->>>>>>> origin/main
                     </a></div>
 </article></Suspense>
 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">"
@@ -393,7 +381,6 @@ const handlePhoneClick = useCallback(() => {
 <a href="/ai-mobile-builder" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base">"
                       Learn More →
                       Learn More →,
->>>>>>> origin/main
                     </a></div>
 </article></Suspense>
 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">"
@@ -407,7 +394,6 @@ const handlePhoneClick = useCallback(() => {
 <a href="/ai-seo-optimizer" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm sm:text-base">"
                       Learn More →
                       Learn More →,
->>>>>>> origin/main
                     </a></div>
 </article></Suspense>
 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">"
@@ -421,7 +407,6 @@ const handlePhoneClick = useCallback(() => {
 <a href="/ai-invoice-generator" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base">"
                       Learn More →
                       Learn More →,
->>>>>>> origin/main
                     </a></div>
 </article></Suspense>
 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">"
@@ -435,7 +420,6 @@ const handlePhoneClick = useCallback(() => {
 <a href="/ai-lead-scoring" className="text-red-400 hover:text-red-300 font-medium text-sm sm:text-base">"
                       Learn More →
                       Learn More →,
->>>>>>> origin/main
                     </a></div>
 </article></Suspense>
 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">"
@@ -449,7 +433,6 @@ const handlePhoneClick = useCallback(() => {
 <a href="/ai-social-media-manager" className="text-teal-400 hover:text-teal-300 font-medium text-sm sm:text-base">"
                       Learn More →
                       Learn More →,
->>>>>>> origin/main
                     </a></div>
 </article></Suspense>
 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">"
@@ -463,7 +446,6 @@ const handlePhoneClick = useCallback(() => {
 <a href="/ai-ecommerce-assistant" className="text-violet-400 hover:text-violet-300 font-medium text-sm sm:text-base">"
                       Learn More →
                       Learn More →,
->>>>>>> origin/main
                     </a></div>
 </article></Suspense>
 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">"
@@ -477,7 +459,6 @@ const handlePhoneClick = useCallback(() => {
 <a href="/ai-document-processor" className="text-amber-400 hover:text-amber-300 font-medium text-sm sm:text-base">"
                       Learn More →
                       Learn More →,
->>>>>>> origin/main
                     </a></div>
 </article></Suspense>
 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">"
@@ -491,7 +472,6 @@ const handlePhoneClick = useCallback(() => {
 <a href="/ai-design-studio" className="text-rose-400 hover:text-rose-300 font-medium text-sm sm:text-base">"
                       Learn More →
                       Learn More →,
->>>>>>> origin/main
                     </a></div>
 </article></Suspense>
 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">"
@@ -505,7 +485,6 @@ const handlePhoneClick = useCallback(() => {
 <a href="/ai-security-monitor" className="text-emerald-400 hover:text-emerald-300 font-medium text-sm sm:text-base">"
                       Learn More →
                       Learn More →,
->>>>>>> origin/main
                     </a></div>
 </article></Suspense>
 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">"
@@ -519,7 +498,6 @@ const handlePhoneClick = useCallback(() => {
 <a href="/ai-financial-planner" className="text-sky-400 hover:text-sky-300 font-medium text-sm sm:text-base">"
                       Learn More →
                       Learn More →,
->>>>>>> origin/main
                     </a></div>
 </article></Suspense>
 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">"
@@ -533,7 +511,6 @@ const handlePhoneClick = useCallback(() => {
 <a href="/ai-health-tracker" className="text-lime-400 hover:text-lime-300 font-medium text-sm sm:text-base">"
                       Learn More →
                       Learn More →,
->>>>>>> origin/main
                     </a></div>
 </article></Suspense>
 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">"
@@ -547,7 +524,6 @@ const handlePhoneClick = useCallback(() => {
 <a href="/ai-learning-platform" className="text-fuchsia-400 hover:text-fuchsia-300 font-medium text-sm sm:text-base">"
                       Learn More →
                       Learn More →,
->>>>>>> origin/main
                     </a></div>
 </article></Suspense>
 </div></div>
@@ -561,7 +537,6 @@ const handlePhoneClick = useCallback(() => {
 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Cloud Migration</h3>"
 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">"
                   Seamless cloud migration with AWS, Azure, and GCP. 99.9% uptime guarantee and 24/7 expert support.
->>>>>>> origin/main
                 </p>
 <div className="text-center"></div>"
 <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2">$1,299/month</div>"
@@ -606,7 +581,6 @@ const handlePhoneClick = useCallback(() => {
 <div className="text-center"></div>"
 <div className="text-lg sm: text-2xl font-bold text-indigo-400 mb-2">$699/month</div>,"
                   <a>
->>>>>>> origin/main
                     Learn More →
                   </a></div>
 </article>
@@ -617,7 +591,6 @@ const handlePhoneClick = useCallback(() => {
 <div className="text-center" / /></div>"
 <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2">$1,999/month</div>"
 <a></a>
->>>>>>> origin/main
                     Learn More →
                   </a></div>
 </article>
@@ -656,7 +629,6 @@ const handlePhoneClick = useCallback(() => {
                 <h3 className="text-lg sm: text-2xl font-semibold text-white mb-3 sm:mb-4">IT Infrastructure Design</h3>,"
                 <p>Custom IT infrastructure design, architecture planning, and technology stack optimization.</p>
                   Custom IT infrastructure design, architecture planning, and technology stack optimization.
->>>>>>> origin/main
                 </p>
 <div className="text-center"></div>"
 <div className="text-lg sm:text-2xl font-bold text-emerald-400 mb-2">$1,499/month</div>"
@@ -681,7 +653,6 @@ const handlePhoneClick = useCallback(() => {
 <div className="text-center"></div>"
 <div className="text-lg sm: text-2xl font-bold text-violet-400 mb-2">$399/month</div>,"
                   <a>
->>>>>>> origin/main
                     Learn More →
                   </a></div>
 </article>
@@ -700,7 +671,6 @@ const handlePhoneClick = useCallback(() => {
                 <h3 className="text-lg sm: text-2xl font-semibold text-white mb-3 sm:mb-4">Enterprise Solutions</h3>,"
                 <p>Large-scale enterprise IT solutions, ERP integration, and digital transformation services.</p>
                   Large-scale enterprise IT solutions, ERP integration, and digital transformation services.
->>>>>>> origin/main
                 </p>
 <div className="text-center"></div>"
 <div className="text-lg sm:text-2xl font-bold text-sky-400 mb-2">$2,999/month</div>"
@@ -716,7 +686,6 @@ const handlePhoneClick = useCallback(() => {
 <div className="text-lg sm: text-2xl font-bold text-lime-400 mb-2">$299/month</div>,"
                   <a>
                     Learn More →,
->>>>>>> origin/main
                   </a></div>
 </article></div>
 </div>
@@ -978,7 +947,6 @@ const handlePhoneClick = useCallback(() => {
 <div className="text-lg sm: text-2xl font-bold text-emerald-400 mb-2">Starting at $199/month</div>,"
                   <a>
                     Learn More →,
->>>>>>> origin/main
                   </a></div>
 </article></div>
 </div>
@@ -992,7 +960,6 @@ const handlePhoneClick = useCallback(() => {
 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Robotics</h3>"
 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">"
                   Intelligent robotic solutions for manufacturing, healthcare, and service industries.
->>>>>>> origin/main
                 </p>
 <div className="text-center"></div>"
 <div className="text-lg font-bold text-cyan-400 mb-2">Custom Pricing</div>"
@@ -1005,14 +972,12 @@ const handlePhoneClick = useCallback(() => {
                 <h3 className="text-lg sm: text-xl font-semibold text-white mb-3 sm:mb-4">IoT & Edge</h3>,"
                 <p>Connected devices and edge computing solutions for smart cities and industrial automation.</p>
                   Connected devices and edge computing solutions for smart cities and industrial automation.
->>>>>>> origin/main
                 </p>
 <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
                 <div className="text-3xl sm: text-4xl mb-3 sm:mb-4">🔗</div>,"
                 <h3 className="text-lg sm: text-xl font-semibold text-white mb-3 sm:mb-4">Blockchain & Web3</h3>,"
                 <p>Decentralized solutions, smart contracts, and Web3 applications for the future of business.</p>
                   Decentralized solutions, smart contracts, and Web3 applications for the future of business.
->>>>>>> origin/main
                 </p>
 <div className="text-center"></div>"
 <div className="text-lg font-bold text-yellow-400 mb-2">Starting at $699/month</div>"
@@ -1025,7 +990,6 @@ const handlePhoneClick = useCallback(() => {
                 <h3 className="text-lg sm: text-xl font-semibold text-white mb-3 sm:mb-4">Business Intelligence</h3>,"
                 <p>Data-driven insights and predictive analytics to optimize business performance and decision-making.</p>
                   Data-driven insights and predictive analytics to optimize business performance and decision-making.
->>>>>>> origin/main
                 </p>
 <div className="text-center"></div>"
 <div className="text-lg font-bold text-pink-400 mb-2">Starting at $399/month</div>"
@@ -1044,7 +1008,6 @@ const handlePhoneClick = useCallback(() => {
 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">DevOps & CI/CD</h3>"
 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">"
                   Streamline development workflows with automated testing, deployment, and monitoring solutions.
->>>>>>> origin/main
                 </p>
 <div className="text-center"></div>"
 <div className="text-lg font-bold text-blue-400 mb-2">Starting at $299/month</div>"
@@ -1059,7 +1022,6 @@ const handlePhoneClick = useCallback(() => {
 <div className="text-center" / /></div>"
 <div className="text-lg font-bold text-indigo-400 mb-2">Starting at $1,299/month</div>"
 <a></a>
->>>>>>> origin/main
                     Learn More →
                   </a></div>
 </article>
@@ -1068,7 +1030,6 @@ const handlePhoneClick = useCallback(() => {
                 <h3 className="text-lg sm: text-xl font-semibold text-white mb-3 sm:mb-4">Database Services</h3>,"
                 <p>Database design, optimization, migration, and management with AI-powered performance tuning.</p>
                   Database design, optimization, migration, and management with AI-powered performance tuning.
->>>>>>> origin/main
                 </p>
 <div className="text-center"></div>"
 <div className="text-lg font-bold text-teal-400 mb-2">Starting at $199/month</div>"
@@ -1652,7 +1613,6 @@ const handlePhoneClick = useCallback(() => {
 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Writing Assistant</h3>"
 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">"
                   Advanced AI writing tool for blogs, emails, reports, and content creation with 50+ templates.
->>>>>>> origin/main
                 </p>
 <div className="text-center"></div>"
 <div className="text-lg font-bold text-blue-400 mb-2">$29/month</div>"
@@ -1665,7 +1625,6 @@ const handlePhoneClick = useCallback(() => {
                 <h3 className="text-lg sm: text-xl font-semibold text-white mb-3 sm:mb-4">Smart Analytics</h3>,"
                 <p>Real-time business analytics with AI insights, automated reports, and predictive forecasting.</p>
                   Real-time business analytics with AI insights, automated reports, and predictive forecasting.
->>>>>>> origin/main
                 </p>
 <div className="text-center"></div>"
 <div className="text-lg font-bold text-green-400 mb-2">$49/month</div>"
@@ -1678,7 +1637,6 @@ const handlePhoneClick = useCallback(() => {
                 <h3 className="text-lg sm: text-xl font-semibold text-white mb-3 sm:mb-4">AI Scheduler</h3>,"
                 <p>Intelligent scheduling with calendar optimization, meeting coordination, and time management.</p>
                   Intelligent scheduling with calendar optimization, meeting coordination, and time management.
->>>>>>> origin/main
                 </p>
 <div className="text-center"></div>"
 <div className="text-lg font-bold text-purple-400 mb-2">$19/month</div>"
@@ -1691,7 +1649,6 @@ const handlePhoneClick = useCallback(() => {
                 <h3 className="text-lg sm: text-xl font-semibold text-white mb-3 sm:mb-4">Expense Tracker</h3>,"
                 <p>AI-powered expense management with receipt scanning, categorization, and budget insights.</p>
                   AI-powered expense management with receipt scanning, categorization, and budget insights.
->>>>>>> origin/main
                 </p>
 <div className="text-center"></div>"
 <div className="text-lg font-bold text-yellow-400 mb-2">$15/month</div>"
@@ -1704,7 +1661,6 @@ const handlePhoneClick = useCallback(() => {
                 <h3 className="text-lg sm: text-xl font-semibold text-white mb-3 sm:mb-4">Task Manager Pro</h3>,"
                 <p>Advanced task management with AI prioritization, team collaboration, and progress tracking.</p>
                   Advanced task management with AI prioritization, team collaboration, and progress tracking.
->>>>>>> origin/main
                 </p>
 <div className="text-center"></div>"
 <div className="text-lg font-bold text-indigo-400 mb-2">$39/month</div>"
@@ -1717,7 +1673,6 @@ const handlePhoneClick = useCallback(() => {
                 <h3 className="text-lg sm: text-xl font-semibold text-white mb-3 sm:mb-4">CRM Lite</h3>,"
                 <p>Lightweight CRM with AI lead scoring, contact management, and sales pipeline automation.</p>
                   Lightweight CRM with AI lead scoring, contact management, and sales pipeline automation.
->>>>>>> origin/main
                 </p>
 <div className="text-center"></div>"
 <div className="text-lg font-bold text-pink-400 mb-2">$59/month</div>"
@@ -1730,7 +1685,6 @@ const handlePhoneClick = useCallback(() => {
                 <h3 className="text-lg sm: text-xl font-semibold text-white mb-3 sm:mb-4">Email Optimizer</h3>,"
                 <p>AI-powered email optimization with subject line suggestions, send time optimization, and A/B testing.</p>
                   AI-powered email optimization with subject line suggestions, send time optimization, and A/B testing.
->>>>>>> origin/main
                 </p>
 <div className="text-center"></div>"
 <div className="text-lg font-bold text-cyan-400 mb-2">$25/month</div>"
@@ -1743,7 +1697,6 @@ const handlePhoneClick = useCallback(() => {
                 <h3 className="text-lg sm: text-xl font-semibold text-white mb-3 sm:mb-4">Social Media Manager</h3>,"
                 <p>AI-driven social media management with content creation, scheduling, and performance analytics.</p>
                   AI-driven social media management with content creation, scheduling, and performance analytics.
->>>>>>> origin/main
                 </p>
 <div className="text-center"></div>"
 <div className="text-lg font-bold text-orange-400 mb-2">$45/month</div>"
@@ -1759,7 +1712,6 @@ const handlePhoneClick = useCallback(() => {
 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Design Studio</h3>"
 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">"
                   Create stunning graphics, logos, and marketing materials with AI-powered design tools.
->>>>>>> origin/main
                 </p>
 <div className="text-center"></div>"
 <div className="text-lg font-bold text-pink-400 mb-2">$35/month</div>"
@@ -1772,7 +1724,6 @@ const handlePhoneClick = useCallback(() => {
                 <h3 className="text-lg sm: text-xl font-semibold text-white mb-3 sm:mb-4">Landing Page Builder</h3>,"
                 <p>Build high-converting landing pages with AI optimization and A/B testing capabilities.</p>
                   Build high-converting landing pages with AI optimization and A/B testing capabilities.
->>>>>>> origin/main
                 </p>
 <div className="text-center"></div>"
 <div className="text-lg font-bold text-blue-400 mb-2">$29/month</div>"
@@ -1785,14 +1736,12 @@ const handlePhoneClick = useCallback(() => {
                 <h3 className="text-lg sm: text-xl font-semibold text-white mb-3 sm:mb-4">SEO Optimizer</h3>,"
                 <p>AI-powered SEO analysis and optimization with keyword research and content suggestions.</p>
                   AI-powered SEO analysis and optimization with keyword research and content suggestions.
->>>>>>> origin/main
                 </p>
 <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
                 <div className="text-3xl sm: text-4xl mb-3 sm:mb-4">📈</div>,"
                 <h3 className="text-lg sm: text-xl font-semibold text-white mb-3 sm:mb-4">Ad Campaign Manager</h3>,"
                 <p>Automated ad campaign management with AI optimization across Google, Facebook, and LinkedIn.</p>
                   Automated ad campaign management with AI optimization across Google, Facebook, and LinkedIn.
->>>>>>> origin/main
                 </p>
 <div className="text-center"></div>"
 <div className="text-lg font-bold text-yellow-400 mb-2">$79/month</div>"
@@ -1808,7 +1757,6 @@ const handlePhoneClick = useCallback(() => {
 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Code Assistant</h3>"
 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">"
                   AI-powered code completion, debugging, and optimization for multiple programming languages.
->>>>>>> origin/main
                 </p>
 <div className="text-center"></div>"
 <div className="text-lg font-bold text-cyan-400 mb-2">$39/month</div>"
@@ -1821,7 +1769,6 @@ const handlePhoneClick = useCallback(() => {
                 <h3 className="text-lg sm: text-xl font-semibold text-white mb-3 sm:mb-4">API Builder</h3>,"
                 <p>Create and manage APIs with AI assistance, documentation generation, and testing tools.</p>
                   Create and manage APIs with AI assistance, documentation generation, and testing tools.
->>>>>>> origin/main
                 </p>
 <div className="text-center"></div>"
 <div className="text-lg font-bold text-indigo-400 mb-2">$59/month</div>"
@@ -1834,7 +1781,6 @@ const handlePhoneClick = useCallback(() => {
                 <h3 className="text-lg sm: text-xl font-semibold text-white mb-3 sm:mb-4">Bug Tracker Pro</h3>,"
                 <p>Advanced bug tracking with AI-powered issue detection, prioritization, and resolution suggestions.</p>
                   Advanced bug tracking with AI-powered issue detection, prioritization, and resolution suggestions.
->>>>>>> origin/main
                 </p>
 <div className="text-center"></div>"
 <div className="text-lg font-bold text-red-400 mb-2">$25/month</div>"
@@ -1847,7 +1793,6 @@ const handlePhoneClick = useCallback(() => {
                 <h3 className="text-lg sm: text-xl font-semibold text-white mb-3 sm:mb-4">Doc Generator</h3>,"
                 <p>Automatically generate technical documentation, API docs, and user guides from code.</p>
                   Automatically generate technical documentation, API docs, and user guides from code.
->>>>>>> origin/main
                 </p>
 <div className="text-center"></div>"
 <div className="text-lg font-bold text-purple-400 mb-2">$19/month</div>"
@@ -1908,24 +1853,20 @@ const handlePhoneClick = useCallback(() => {
 <a>
                         +1 (302) 464-0950;
                         +1 (302) 464-0950
->>>>>>> origin/main
                       </a></div>
 </div>
 <a>
                         kleber@ziontechgroup.com;
                         kleber@ziontechgroup.com
->>>>>>> origin/main
                       </a></div>
 </div>
                         364 E Main St STE 1008<br>
                         Middletown, DE 19709;
                         Middletown, DE 19709
->>>>>>> origin/main
                       </p></div>
 </div>
                         Monday - Friday: 9:00 AM - 6:00 PM EST<br>,
                         24/7 Emergency Support Available,
->>>>>>> origin/main
                       </p></div>
 </div></div>
 </div>
@@ -1940,7 +1881,6 @@ const handlePhoneClick = useCallback(() => {
 <div />
 <label>
                       Full Name;
->>>>>>> origin/main
                     </label>
 <input />
 <div />
@@ -2018,7 +1958,6 @@ const handlePhoneClick = useCallback(() => {
                     className="w-full cyber-button text-center py-4""
                   >
                     Send Message
->>>>>>> origin/main
                   </button></form>
 </div></div>
 </div></section>

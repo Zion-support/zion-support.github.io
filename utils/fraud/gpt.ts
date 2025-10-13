@@ -136,9 +136,6 @@ const suspicious = data.description && data.description.toLowerCase().includes('
   }
 }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39;
 import { GptClassification, MonitoredSource } from './types';';';
 export async function classifyWithGPT(text: string, source: MonitoredSource): Promise<GptClassification> {;
 const apiKey = process.env.OPENAI_API_KEY

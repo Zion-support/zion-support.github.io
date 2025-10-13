@@ -18,7 +18,6 @@ export default usePerformanceMonitoring;
   );
 =======
 );
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 }
 =======
 
@@ -225,4 +224,3 @@ const navigation = performance.getEntriesByType()
   }
 }
 export default usePerformanceMonitoring;
->>>>>>> cursor/delete-records-a75e

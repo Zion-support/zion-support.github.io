@@ -20,7 +20,6 @@ export default useErrorMonitoring;
   );
 =======
 );
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 }
 =======
 ;
@@ -115,4 +114,3 @@ const handleReactError = (erro,
   }
 }
 export default useErrorMonitoring;
->>>>>>> cursor/delete-records-a75e

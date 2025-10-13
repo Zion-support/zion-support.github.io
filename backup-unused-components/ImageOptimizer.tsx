@@ -106,7 +106,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   }
 
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface ImageOptimizerProps {
   className?: string;
   children?: React.ReactNode;
@@ -142,6 +141,5 @@ export default function ImageOptimizer({ className = '', children }: ImageOptimi
       decoding="async"
 //     />
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

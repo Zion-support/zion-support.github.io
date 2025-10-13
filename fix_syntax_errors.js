@@ -160,4 +160,3 @@ console.log(`\nSummary:`)
 console.log(`- Files processed: ${tsFiles.length}`)
 console.log(`- Files fixed: ${fixedCount}`)
 console.log(`- Errors: ${errorCount}`)
->>>>>>> cursor/delete-records-a75e

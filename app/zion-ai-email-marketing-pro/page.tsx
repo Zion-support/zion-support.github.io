@@ -1,38 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { 
-  Mail, 
-  BarChart3, 
-  Target, 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Clock, 
-  Zap, 
-  Sparkles,
-<<<<<<< HEAD
-=======
-  TrendingUp,
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   Cpu,
   Send,
   Heart,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  MousePointer
-=======
-  MousePointer,
-  Shield
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
   MessageCircle,
   ThumbsUp,
   Eye,
   MousePointer,
   Shield
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
 } from 'lucide-react';
 
 const ZionAIEmailMarketingProPage: React.FC = () => {
@@ -160,8 +135,6 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
       avatar: "SW",
     }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
 
 export default function ZionAiEmailMarketingPro() {
   return (

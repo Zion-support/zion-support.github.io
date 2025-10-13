@@ -13,7 +13,6 @@ const installingWorker = registration.installing
             // New update available
             if (config.onUpdate) {}
               config.onUpdate(registration);}
->>>>>>> origin/main
             }
   // Only register in production or if explicitly enabled;
   const isLocalhost = Boolean(window.location.hostname === 'localhost' ||;)'

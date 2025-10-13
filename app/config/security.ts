@@ -11,7 +11,6 @@ export const securityHeaders = {// Content Security Policy;
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
       defaultSrc: ["'self'"],"'"
       scriptSrc: [,
         "'self'","'"
@@ -53,7 +52,6 @@ export const corsConfig = {
     origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http: //localhost:3000'],'
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],'
   allowedHeaders: ['Content-Type', 'Authorization'],'
->>>>>>> origin/main
   credentials: true,
   maxAge: 86400, // 24 hours;}}
 /**;
@@ -72,7 +70,6 @@ export const validationPatterns = {}
   email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
   phone: /^\+?[1-9]\d{1,14}$/,
   url: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,
->>>>>>> origin/main
   alphanumeric: /^[a-zA-Z0-9]+$/,
   noSpecialChars: /^[a-zA-Z0-9\s]+$/,
 }

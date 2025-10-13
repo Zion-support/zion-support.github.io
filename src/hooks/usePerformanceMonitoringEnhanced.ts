@@ -75,4 +75,3 @@ const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression 
   return { reportWebVitals }
 }
 
->>>>>>> cursor/delete-records-a75e

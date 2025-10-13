@@ -128,7 +128,6 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
   }
 
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface AdvancedAccessibilityEnhancerProps {
   className?: string;
   children?: React.ReactNode;
@@ -217,6 +216,5 @@ export default function AdvancedAccessibilityEnhancer({ className = '', children
 </div>
 </div>
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

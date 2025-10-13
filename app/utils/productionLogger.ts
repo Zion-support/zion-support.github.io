@@ -21,7 +21,6 @@ const entry: LogEntry = {,
       level,
       message,
       data,
->>>>>>> origin/main
       timestamp: new Date().toISOString(),
 // Only log in development;
     if (this.isDevelopment) {switch (level) {
@@ -74,7 +73,6 @@ const entry: LogEntry = {,
   }
     if (this.isProduction && level === 'error') {}'
       this.sendToMonitoring(entry)
->>>>>>> origin/main
     }
   }
 private sendToMonitoring(entry: LogEntry): void {,}
@@ -97,7 +95,6 @@ private sendToMonitoring(entry: LogEntry): void {,}
     if (typeof window !== 'undefined' && 'gtag' in window) {}'
       (window as any).gtag('event', 'error_log', {</div>'
         error_message: entry.message,
->>>>>>> origin/main
         error_context: entry.context,
         error_timestamp: entry.timestamp,
 debug(message: string, data?: unknown, context?: string): void {}}this.log('debug', message, data, context);'
@@ -111,4 +108,3 @@ error(message: string, data?: unknown, context?: string): void {}}this.log('erro
 }
 export const logger = new ProductionLogger();
 export default logger;
->>>>>>> origin/main

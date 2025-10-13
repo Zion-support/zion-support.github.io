@@ -1,56 +1,21 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function PagePage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AiBlockchainAnalyticsPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AiBlockchainAnalytics() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Ai Blockchain Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced ai blockchain analytics solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-=======
-            Advanced AI and IT solutions for your business needs.
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </p>
-=======
     <>
       <Helmet>
         <title>Ai Blockchain Analytics - Zion Tech Group</title>
@@ -74,26 +39,10 @@ export default function AiBlockchainAnalytics() {
               Stay tuned for updates!
             </p>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';';'
-;
-const AiBlockchainAnalyticsPage: React.FC = () => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
->>>>>>> origin/main;
 const features = [
   // TODO: Add items
 ]
@@ -116,7 +65,6 @@ const features = [
   // TODO: Add properties
 }
       icon: BarChart,
->>>>>>> origin/main
       title: 'Advanced Analytics','
       description: 'Comprehensive analytics dashboard with real-time data visualization.','
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
@@ -262,7 +210,6 @@ export default AiBlockchainAnalyticsPage;
 }
         {/* Features Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">"
->>>>>>> origin/main
           <div className="max-w-7xl mx-auto">"
 <div className="text-center mb-16">"
 <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,</h2>"
@@ -352,15 +299,8 @@ export default AiBlockchainAnalyticsPage;
 <Footer/ />
 </div>
   ),
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -374,4 +314,3 @@ export default AiBlockchainAnalyticsPage;
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

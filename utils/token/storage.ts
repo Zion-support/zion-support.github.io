@@ -124,8 +124,6 @@ const parsed = JSON.parse(raw) as TokenStoreData
     return this && this.data
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 function writeToDisk(data: TokenStoreData): void {
   // TODO: Add properties

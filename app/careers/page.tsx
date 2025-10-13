@@ -1,56 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-=======
-export default function CareersPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
       </Helmet>
       
-<<<<<<< HEAD
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-          </p>
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Careers
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional careers services by Zion Tech Group.
-          </p>
-          
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced careers solutions. 
-              Stay tuned for updates!
-            </p>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
             Advanced AI and IT solutions for your business needs.
           </p>
         </div>
@@ -82,8 +37,6 @@ export default function CareersPage() {
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -102,33 +55,10 @@ export default function Careers() {
           <p className="text-xl text-gray-600 mb-8">
             Advanced careers solutions by Zion Tech Group.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-const CareersPage: React.FC = () => {;
-const openPositions = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-'use client'';
-import React from 'react';';
-import Navigation from '../components/Navigation';';
-import Footer from '../components/Footer';';
-import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart, Zap } from 'lucide-react';';';
-const CareersPage: React.FC = () => {;
-const jobOpenings = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
->>>>>>> origin/main
     {
   // TODO: Add properties
 }
@@ -256,7 +186,6 @@ const jobOpenings = [
       ],
       posted: '4 days ago','
       featured: false
->>>>>>> origin/main
     }
   ];
 ;
@@ -509,7 +438,6 @@ const featuredPositions = openPositions.filter(position => position.featured);
               <div key={index} className="flex items-center text-gray-300">"
 <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"
 <span>{benefit}</span>
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
               </div></div>
 </div></section>
       )}
@@ -552,7 +480,6 @@ const featuredPositions = openPositions.filter(position => position.featured);
                           </li>
                         ))}
                       </ul></div>
->>>>>>> origin/main
                   </div></div>
 </div></section>
       ))
@@ -563,7 +490,6 @@ const featuredPositions = openPositions.filter(position => position.featured);
 export default CareersPage;
           </div></div>
 </section>
->>>>>>> origin/main
 
               <a
                 href="/contact""
@@ -599,17 +525,8 @@ export default CareersPage;
 }
 ;
 export default CareersPage;
->>>>>>> origin/main
->>>>>>> origin/main
 
->>>>>>> cursor/delete-records-a75e
 }
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

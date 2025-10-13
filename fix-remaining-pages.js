@@ -82,7 +82,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
         (line.trim() === '},' && i > 0 && lines[i - 1].includes('metadata')) ||'
         (line.trim() === '};' && i > 0 && lines[i - 1].includes('metadata'))'
       ) {/* TODO: Fix JSX expression */}
->>>>>>> cursor/delete-records-a75e
       }
       
       const title = fileName.split('-').map(word => 
@@ -203,4 +202,3 @@ filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
 })
 //
 }`
->>>>>>> cursor/delete-records-a75e

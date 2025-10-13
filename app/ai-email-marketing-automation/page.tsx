@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
 import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'react-helmet-async';';';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';';'
 ;
@@ -18,7 +10,6 @@ const features = [
 ]
   // TODO: Add items
 ]
->>>>>>> origin/main
     {
   // TODO: Add properties
 }
@@ -73,47 +64,19 @@ const benefits = [
     'Cost-effective pricing plans','
     'Proven track record of success''
   ];
->>>>>>> cursor/delete-records-a75e
 
-<<<<<<< HEAD
-export default function PagePage() {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
-export default function AiEmailMarketingAutomationPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AiEmailMarketingAutomation() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Ai Email Marketing Automation - Zion Tech Group</title>
         <meta name="description" content="Advanced ai email marketing automation solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-=======
-            Advanced AI and IT solutions for your business needs.
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -121,35 +84,11 @@ export default function AiEmailMarketingAutomation() {
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced ai email marketing automation solutions by Zion Tech Group.
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
           </p>
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  // TODO: Add parameters
-)
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-      title: 'Advanced Analytics','
-      description: 'Comprehensive analytics dashboard with real-time data visualization.','
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}];';
-const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    'Increase efficiency by up to 50%','
-    'Reduce costs by 30% with automation','
-    'Improve decision-making with AI insights','
-    'Scale operations without proportional staff increases','
-  ]
-return(<>)
-      <Helmet />
-<Helmet>
->>>>>>> origin/main
         <title>Ai Email Marketing Automation - Zion Tech Group</title>
 <meta name="description" content="AI-powered solution" />"
 <meta name="keywords" content="AI, artificial intelligence, business solutions" /></Helmet>"
@@ -165,8 +104,6 @@ return(<>)
 <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>'"
 <div className="relative max-w-7xl mx-auto text-center"></div>"
 <h1>Ai Email Marketing Automation;</h1>
->>>>>>> origin/main
->>>>>>> origin/main
             </h1>
 <p>Advanced AI-powered ai email marketing automation solution for modern businesses.</p></p>
 <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
@@ -185,7 +122,6 @@ return(<>)
 < className="$2 /></div>"
 <div className="text-center mb-16"></div>"
 <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
->>>>>>> origin/main
               <p className="text-xl text-gray-300">Section description</p></div>"
 </div></section>
 <div className="max-w-7xl mx-auto"></div>"
@@ -284,20 +220,14 @@ return(<>)
                 </button>
 <button></button>
                   Learn More
->>>>>>> origin/main
                 </button></div>
 </div>
           ))
         </section></div>;
 export default PagePage;
->>>>>>> origin/main
 
->>>>>>> cursor/delete-records-a75e
 }
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -334,10 +264,5 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
 };
 
 export default AiEmailMarketingAutomationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

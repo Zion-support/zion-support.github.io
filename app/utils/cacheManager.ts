@@ -19,7 +19,6 @@ export interface CacheStats {}}hits: number,
 }
 export class CacheManager<T = unknown> {}private cache: Map<string, CacheEntry<T>> = new Map();
   private stats: CacheStats = {,
->>>>>>> origin/main
     hits: 0,
     misses: 0,
     hitRate: 0,
@@ -54,7 +53,6 @@ const entry: CacheEntry</CacheConfig>
     const entry: CacheEntry</T>
 <T> = {}
       value,
->>>>>>> origin/main
       timestamp: Date.now(),
       ttl: ttl || this.config.defaultTTL,
     }
@@ -210,7 +208,6 @@ export class CacheManager {/* TODO: Fix JSX expression */}
     // Clean localStorage
     if (typeof window !== 'undefined' && window.localStorage) {/* TODO: Fix JSX expression */}'
               }
->>>>>>> origin/main
             }
           } catch {/* TODO: Fix JSX expression */,}}}
         }
@@ -227,7 +224,6 @@ export class CacheManager {/* TODO: Fix JSX expression */}
   private getStorageKey(ke)
   y: string): string {/* TODO: Fix JSX expression */}
     return `cache_${key}`;
->>>>>>> origin/main
   }
   /**
    * Set cache entry
@@ -405,7 +401,6 @@ this.stats.hits++
   /**
    * Check if a key exists in the cache;
    */
->>>>>>> origin/main
   has(key: string): boolean {}
     const entry = this.cache.get(key)
 ,
@@ -488,7 +483,6 @@ return true
   /**
    * Get or set with function (handles both sync and async)
    */
->>>>>>> origin/main;
 const start = performance.now();
     const value = fn();
     const duration = performance.now() - start;`;
@@ -572,7 +566,6 @@ try {}}const storage = this.getStorage();
         }
       }
       if (window.sessionStorage) {/* TODO: Fix JSX expression */,}}
->>>>>>> origin/main
         }
       }
   }
@@ -582,7 +575,6 @@ try {}}const storage = this.getStorage();
       }
       }
     } catch (error) {}}
->>>>>>> origin/main
   }
 /**;
    * Get the appropriate storage object;

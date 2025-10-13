@@ -29,4 +29,3 @@ export default ServiceWorkerRegistration;
 </ServiceWorkerRegistrationProps>
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

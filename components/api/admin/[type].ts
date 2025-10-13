@@ -348,7 +348,6 @@ const pageItems = filtered && filtered.slice(start, end)
   }
       }
       }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (req.method === 'PATCH') {;';
 const { id, updates } = req.body as {
   // TODO: Add properties
@@ -603,7 +602,6 @@ return res.status (405).json ({ error: 'Method not allowed' })'
   }
   if (req.method === 'PATCH') {'
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       return res.status(200).json({ ok: true })
     } else {;
 const list = MOCK_DATA[type] || [];

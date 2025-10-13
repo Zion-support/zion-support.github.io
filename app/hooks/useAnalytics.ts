@@ -46,7 +46,6 @@ return {
     trackConversion,
   }
   }
->>>>>>> origin/main
 }
 =======
 import { useContext } from 'react';
@@ -59,4 +58,3 @@ export const useAnalytics = () => {
   }
   return context;
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

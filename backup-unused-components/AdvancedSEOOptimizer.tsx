@@ -205,7 +205,6 @@ const AdvancedSEOOptimizer: React.FC = () => {
   }
 
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface AdvancedSEOOptimizerProps {
   className?: string;
   children?: React.ReactNode;
@@ -341,6 +340,5 @@ export default function AdvancedSEOOptimizer({ className = '', children }: Advan
 </div>
 </div>
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

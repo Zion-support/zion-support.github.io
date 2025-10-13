@@ -246,7 +246,6 @@ const _main = document.querySelector('main') || document.querySelector('#main-co
           aria-label={`${isReducedMotion ? 'Disable' : 'Enable'} reduced motion`}'
         >
           {isReducedMotion ? '🏃' : '🚶'} Motion'
->>>>>>> cursor/delete-records-a75e
       {children}
     </div>
     <div>
@@ -277,6 +276,4 @@ export default AccessibilityEnhancer;
   </AccessibilityEnhancerProps></AccessibilityEnhancerProps>
 </div></div>
 </button></button>
->>>>>>> cursor/delete-records-a75e
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

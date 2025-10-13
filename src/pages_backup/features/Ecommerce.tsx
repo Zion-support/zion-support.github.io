@@ -266,6 +266,4 @@ const schema = {
 </div></div>
 </div></main>
 }})
->>>>>>> cursor/delete-records-a75e
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

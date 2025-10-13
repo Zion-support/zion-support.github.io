@@ -1,4 +1,3 @@
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
 }
@@ -114,4 +113,3 @@ const tx = earnTokens(userId, Math.floor(amount), reason, metadata)
 }
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

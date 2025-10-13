@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
 import { ArrowRight, CheckCircle, Star, Building, Target, Award, TrendingUp, Users, Clock, DollarSign } from 'lucide-react';';';
 import Navigation from '../components/Navigation';';';
 import Footer from '../components/Footer';';';
@@ -103,194 +95,19 @@ id: 1,
       image: '/images/case-studies/healthcare-mobile.webp''
     }
   ];
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
 
-<<<<<<< HEAD
-return (
-  // TODO: Add parameters
-)
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<Helmet>
-<title>Case Studies - Zion Tech Group | Success Stories</title>
-<meta name="description" content="Explore our success stories and case studies showcasing how we've helped businesses transform with AI and technology solutions." />"'"
-<meta name="keywords" content="case studies, success stories, AI solutions, business transformation, Zion Tech Group" /></Helmet>"
-
-{/* Stats Section */}
-      <section className="py-20 px-4">"
-<div className="max-w-7xl mx-auto">"
-<div className="grid grid-cols-2 md:grid-cols-4 gap-8">"
-            {stats.map((stat, index) => (
-  // TODO: Add parameters
-)
-              <div key={index} className="text-center">"
-<div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mb-4">"
-<stat.icon className="w-8 h-8 text-white" /></div>"
-<div className="text-3xl font-bold text-white mb-2">{stat.number}</div>"
-<div className="text-gray-400">{stat.label}</div></div>"
-            ))}
-'use client'';
-import React from 'react';';
-import Navigation from '../components/Navigation';';
-import Footer from '../components/Footer';';
-import { ArrowRight, CheckCircle, Star, Users, TrendingUp, Clock } from 'lucide-react';';';
-const CaseStudiesPage: React.FC = () => {;
-const caseStudies = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      title: 'TechCorp AI Transformation','
-      description: 'How we helped TechCorp implement AI solutions that increased efficiency by 300%','
-      industry: 'Technology','
-      duration: '6 months','
-      results: [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-        '300% increase in operational efficiency','
-        '50% reduction in manual processes','
-        '$2M in cost savings annually','
-        '95% customer satisfaction rate''
-      ],
-      challenge: 'TechCorp was struggling with manual processes and needed to scale their operations while maintaining quality.','
-      solution: 'We implemented a comprehensive AI solution including automated workflows, predictive analytics, and intelligent customer support.','
-      testimonial: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        quote: 'Zion Tech Group transformed our entire operation. The AI solutions they implemented exceeded our expectations.','
-        author: 'Sarah Johnson','
-        role: 'CTO, TechCorp''
-      }
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      title: 'FinanceFlow Cloud Migration','
-      description: 'Seamless migration to cloud infrastructure resulting in 99.9% uptime and 60% cost reduction','
-      industry: 'Finance','
-      duration: '4 months','
-      results: [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-        '99.9% uptime achieved','
-        '60% reduction in infrastructure costs','
-        '3x faster application performance','
-        'Zero downtime during migration''
-      ],
-      challenge: 'FinanceFlow needed to migrate their legacy systems to the cloud while maintaining compliance and security.','
-      solution: 'We designed and executed a comprehensive cloud migration strategy using AWS, ensuring zero downtime and full compliance.','
-      testimonial: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        quote: 'The migration was flawless. We achieved better performance at a fraction of the cost.','
-        author: 'Michael Chen','
-        role: 'VP Engineering, FinanceFlow''
-      }
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      title: 'RetailMax Data Analytics','
-      description: 'Advanced analytics implementation that improved decision-making and increased revenue by 40%','
-      industry: 'Retail','
-      duration: '3 months','
-      results: [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-        '40% increase in revenue','
-        '85% improvement in decision-making speed','
-        'Real-time analytics dashboard','
-        'Predictive inventory management''
-      ],
-      challenge: 'RetailMax needed better insights into customer behavior and inventory management to optimize their operations.','
-      solution: 'We built a comprehensive data analytics platform with real-time dashboards and predictive analytics capabilities.','
-      testimonial: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        quote: 'The analytics platform gave us insights we never had before. Revenue increased significantly.','
-        author: 'Emily Rodriguez','
-        role: 'CEO, RetailMax''
-      }
-    }
-  ];
-const stats = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    { value: '500+', label: 'Projects Completed', icon: <CheckCircle className="w-8 h-8 text-green-400" /> },"'"
-    { value: '99.9%', label: 'Client Satisfaction', icon: <Star className="w-8 h-8 text-yellow-400" /> },"'"
-    { value: '300%', label: 'Average ROI', icon: <TrendingUp className="w-8 h-8 text-blue-400" /> },"'"
-    { value: '24/7', label: 'Support Available', icon: <Clock className="w-8 h-8 text-purple-400" /> }"'"
-  ]
->>>>>>> cursor/delete-records-a75e
 
 export default function PagePage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-<<<<<<< HEAD
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-=======
-export default function CaseStudiesPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function CaseStudies() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Case Studies - Zion Tech Group</title>
         <meta name="description" content="Advanced case studies solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Case Studies
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Advanced AI and IT solutions for your business needs.
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -298,49 +115,11 @@ export default function CaseStudies() {
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced case studies solutions by Zion Tech Group.
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
           </p>
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-  // TODO: Add parameters
-)
-    <div className="min-h-screen bg-gray-50">"
-<Helmet>
-<title>Case Studies - Zion Tech Group | Success Stories</title>
-<meta name="description" content="Explore our successful technology implementations and digital transformation projects across various industries." />"
-<meta name="keywords" content="case studies, success stories, technology implementation, digital transformation, AI solutions" /></Helmet>"
-
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">"
-<div className="container mx-auto px-4">"
-<div className="max-w-4xl mx-auto text-center">"
-<h1 className="text-4xl md:text-6xl font-bold mb-6">"
-              Success Stories
-            </h1>
-<p className="text-xl md:text-2xl mb-8 text-blue-100">"
-              Discover how we've helped businesses transform their operations and achieve remarkable results through innovative technology solutions.'
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Case Studies
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional case studies services by Zion Tech Group.
-          </p>
-          
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced case studies solutions. 
-              Stay tuned for updates!
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
             </p>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
 <Navigation />
@@ -354,7 +133,6 @@ export default function CaseStudies() {
 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
               Discover how we've helped businesses transform their operations with AI and IT solutions.'
             </p>
->>>>>>> origin/main
           </div></div>
 </section>
 
@@ -647,38 +425,6 @@ export default function CaseStudies() {
 <p className="text-gray-600">We continuously monitor and optimize the solution to ensure maximum performance.</p></div>"
             ))}
           </div>
-<<<<<<< HEAD
-
-          {/* CTA Section */}
-          <div className="mt-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 text-center backdrop-blur-lg border border-white/10">"
-<h2 className="text-4xl font-bold text-white mb-4">"
-              Ready to Create Your Success Story?
-            </h2>
-<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">"
-              Let's discuss how we can help you achieve similar results for your business.'
-            </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<a
-                href="/consultation""
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2""
-              >
-<span>Start Your Project</span>
-<ArrowRight className="w-5 h-5" /></a>"
-<a
-                href="/contact""
-                className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300""
-              >
-                Contact Us
-              </a></div>
-</div></div>
-</section></section>
-</div>
-
-=======
-        </div>
-      </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
   );
 };
       {/* CTA Section */}
@@ -700,22 +446,12 @@ export default function CaseStudies() {
               Schedule Consultation
             </button></div>
 </div></section>
->>>>>>> origin/main
->>>>>>> origin/main
 
       <Footer /></div>
   )
 }
 ;
 export default CaseStudiesPage;
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

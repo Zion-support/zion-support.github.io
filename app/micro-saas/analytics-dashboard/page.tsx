@@ -1,89 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-<<<<<<< HEAD
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-          </p>
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const AnalyticsDashboardPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Analytics Dashboard - Zion Tech Group</title>
-        <meta name="description" content="Analytics Dashboard services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="analytics-dashboard, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Analytics Dashboard
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional analytics dashboard services by Zion Tech Group.
-          </p>
-          
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced analytics dashboard solutions. 
-              Stay tuned for updates!
-            </p>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
-import React from 'react';';';
-import {Helmet}}from 'react-helmet-async';';';
-import {BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield}}from 'lucide-react';';';
-const AIAnalyticsDashboardPage: React.FC = () => {,;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: BarChart,
-      title: 'Real-time Analytics','
-  ];];];
-const benefits = [;
-const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
->>>>>>> origin/main
     'Real-time data visualization and reporting','
     'AI-powered predictive analytics','
 
@@ -260,7 +178,6 @@ return (
 <span className="text-gray-300">"Improved decision making speed by 3x"</span></div>"
 </div></div>
 </div></div>
->>>>>>> origin/main
         </section>
 <section className="py-16 px-4"></section>"
 <div className="max-w-4xl mx-auto text-center"></div>"
@@ -291,7 +208,6 @@ return (
 <ArrowRight></button>
 <button>Schedule Demo;</button>
                   Schedule Demo
->>>>>>> origin/main
                 </button></li>
 </li></li>
 </section></li>
@@ -300,75 +216,21 @@ return (
 };
 ;
 export default AIAnalyticsDashboardPage;
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 };
 
 export default AnalyticsDashboardPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
 export default function AnalyticsDashboardPage() {
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function AnalyticsDashboard() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Analytics Dashboard - Zion Tech Group</title>
         <meta name="description" content="Advanced analytics dashboard solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Analytics Dashboard
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Advanced AI and IT solutions for your business needs.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
-            <p className="text-gray-600">
-              Comprehensive solution for your business requirements.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
-            <p className="text-gray-600">
-              Advanced technology integration and optimization.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
-            <p className="text-gray-600">
-              Scalable and secure implementation.
-            </p>
-          </div>
-        </div>
-
-        <div className="text-center mt-12">
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-            Get Started
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -382,4 +244,3 @@ export default function AnalyticsDashboard() {
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443

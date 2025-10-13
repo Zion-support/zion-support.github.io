@@ -70,7 +70,6 @@ const merged = {
 }
   if (req && req.method !== 'POST') {'
     res && res.status(405).json({ error: 'Method Not Allowed' })'
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     return
   }
   if (!isInternalAgentRequest(req)) {

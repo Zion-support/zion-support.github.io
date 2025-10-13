@@ -115,4 +115,3 @@ export default GlobalErrorBoundary;
 export default GlobalErrorBoundary;
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

@@ -32,7 +32,6 @@ const updated = { ...posts[idx], ...req && req.body, id }
       writePosts(posts)
       return res.status(200).json(updated)
     }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4;
 import type { NextApiRequest, NextApiResponse } from 'next';';
 import { readPosts, writePosts } from '@/utils/data/blogStore';';
 import { requireAdmin } from '@/utils/api/auth';';';

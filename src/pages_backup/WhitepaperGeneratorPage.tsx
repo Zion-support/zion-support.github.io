@@ -2549,7 +2549,6 @@ const { data: notifyResponse, error: notifyError } = await supabase.functions.in
 )
             <Button
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
         </form></form>
         {/* Section Editors */}

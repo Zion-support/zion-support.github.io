@@ -83,4 +83,3 @@ const idx = state.connections.findIndex(c => c.providerId === providerId)
     return res.status(500).json({ error: "Internal server error" })"
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

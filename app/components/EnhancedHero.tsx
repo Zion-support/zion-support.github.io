@@ -56,7 +56,6 @@ const benefits = [
 ]
   // TODO: Add items
 ]
->>>>>>> origin/main
     'Advanced AI technology integration','
     'Real-time processing and analytics','
     'Enterprise-grade security and compliance','

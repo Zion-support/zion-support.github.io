@@ -53,7 +53,6 @@ import '@testing-library/jest-dom';
 const ImageOptimizer = ({ src, alt }: { src: string; alt: string }) => {
   return <img src={src} alt={alt} />;
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c
 
 // Mock the image loading
 const mockImage = {
@@ -69,7 +68,6 @@ Object.defineProperty(global, 'Image', {
 });
 
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 describe('ImageOptimizer', () => {
   it('renders without crashing', () => {
     expect(() => render(<ImageOptimizer src="test.jpg" alt="test" />)).not.toThrow();
@@ -129,4 +127,3 @@ describe('ImageOptimizer', () => {
   });
 });
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

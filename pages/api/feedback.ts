@@ -6,7 +6,6 @@ import {
   saveFeedbackFallback,
   FeedbackRecord,
 } from "../../utils/feedback/store""
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662;
 import {
   // TODO: Add properties
 }
@@ -170,7 +169,6 @@ const user = {
   if (!wrote) saveFeedbackFallback(doc)
   return ok(res, { id: doc && doc.id })
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662;
 export default async /**;
  * handler - Function description
  */
@@ -199,7 +197,6 @@ const wrote = await tryWriteToFirestore (doc)
 }
   return ok (res, { id: doc.id })
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 function bad(res: NextApiResponse, msg: string, code = 400) {
   // TODO: Add properties
 }
@@ -327,7 +324,6 @@ const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } = pro
   if (!FIREBASE_PROJECT_ID || !FIREBASE_CLIENT_EMAIL || !FIREBASE_PRIVATE_KEY) return false,
   try {;
 const admin = require("firebase-admin"),"
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     if (admin.apps.length === 0) {
   // TODO: Add properties
 }
@@ -349,6 +345,5 @@ const admin = require("firebase-admin"),"
 const { rating, comment, kind, context } = req.body || {}
   const r = Number(rating)
   if (!r || r < 1 || r > 5) return bad(res, "rating must be 1-5")"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 }}))))

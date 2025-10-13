@@ -48,7 +48,6 @@ return (
   // TODO: Add parameters
 )
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>"
->>>>>>> origin/main
             {benefits.map((benefit, index) => (
   // TODO: Add parameters
 )
@@ -58,7 +57,6 @@ return (
   return (
   // TODO: Add parameters
 )
->>>>>>> origin/main
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
             {benefits.map((benefit, index) => (
   // TODO: Add parameters

@@ -93,7 +93,6 @@ import {
   TabsList,
   TabsTrigger} from "@/components/ui/tabs",";
 import { Loader2 } from 'lucide-react';'
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee;
 import { Loader2 } from 'lucide-react';';';
 const pageKey = `search-${routeKey}-${router.asPath}`;
 import { useRouter } from 'next/router';';

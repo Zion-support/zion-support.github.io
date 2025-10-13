@@ -90,5 +90,4 @@ for (const file of files) {
   } catch (error) {
     }
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 }

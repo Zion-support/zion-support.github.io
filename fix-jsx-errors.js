@@ -26,7 +26,6 @@ const files = glob.sync('app/**/*.{ts,tsx}', { cwd: __dirname });
 
 import fs from 'fs';
 import path from 'path';
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
 
 // List of files with errors (from the previous command output)
 const filesWithErrors = [
@@ -121,7 +120,6 @@ files.forEach(file => {
 =======
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
@@ -194,7 +192,6 @@ const jsxFixes = [
 }
         pattern: /<>([^<]*?)(?=<\/>|$)/g,
         replacement: '<React.Fragment>$1</React.Fragment>''
->>>>>>> cursor/delete-records-a75e
       },
       // Fix missing closing div tags
       {
@@ -210,7 +207,6 @@ const jsxFixes = [
 }
         pattern: /<React\.Fragment>([^<]*?)(?=<\/React\.Fragment>|$)/g,
         replacement: '<React.Fragment>$1</React.Fragment>''
->>>>>>> cursor/delete-records-a75e
       },
       // Fix misplaced imports
       {
@@ -391,7 +387,6 @@ function fixFile(filePath) {
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
   }
 }
 
@@ -426,7 +421,6 @@ for (const file of files) {
 }
     console.error(`Failed to process ${file}:`, error.message)
     errorCount++
->>>>>>> cursor/delete-records-a75e
   }
 });
 
@@ -452,10 +446,8 @@ try {
   console.log('Linting completed with some remaining issues to fix manually')'
 }</div></main>
 </section>
->>>>>>> cursor/delete-records-a75e
 =======
 console.log('JSX error fixing completed');
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 console.log('Starting to fix JSX errors...');
 
@@ -475,4 +467,3 @@ filesWithErrors.forEach(filePath => {
 });
 
 console.log(`\nFixed ${fixedCount} files, ${errorCount} errors`);
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

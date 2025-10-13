@@ -255,7 +255,5 @@ if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}'
   return {measurePerformance}
     optimizeImages,
     preloadCriticalResources
->>>>>>> cursor/delete-records-a75e
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

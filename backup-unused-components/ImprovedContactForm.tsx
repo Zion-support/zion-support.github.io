@@ -184,7 +184,6 @@ const ImprovedContactForm: React.FC = () => {
   }
 
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface ImprovedContactFormProps {
   className?: string;
   children?: React.ReactNode;
@@ -441,6 +440,5 @@ export default function ImprovedContactForm({ className = '', children }: Improv
       </form>
 </div>
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

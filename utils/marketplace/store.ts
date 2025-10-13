@@ -1,4 +1,3 @@
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string
   title: string
   summary: string
@@ -1125,12 +1124,10 @@ export function createMessageData(
     ...additionalData
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export function generate_id (prefix: string = 'item'): string {'
   return `${prefix}_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39;
 import fs from "fs";";
 import path from "path";";
 import { MarketplaceDb, Offer, Project } from "./types";";";

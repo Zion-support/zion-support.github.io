@@ -1,101 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
 
 export default function AnalyticsPage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced Analytics solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Analytics
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
-'use client';';
-import React, {Suspense, lazy}from 'react';';'
-interface AnalyticsProps {enableGoogleAnalytics?: boolean;}
-  enablePerformanceMonitoring?: boolean;
-  enableErrorTracking?: boolean;
-  enableUserBehaviorTracking?: boolean;}}
-const Analytics: React.FC<AnalyticsProps> = ({,
-    enableGoogleAnalytics = true,
-  enablePerformanceMonitoring = true,
-  enableErrorTracking = true,
-  enableUserBehaviorTracking = true;}}) => {useEffect(() => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
-    if (enableGoogleAnalytics) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      initializeGoogleAnalytics()}}
-if (enablePerformanceMonitoring) {initializePerformanceMonitoring()}}
-if (enableErrorTracking) {initializeErrorTracking()}}
-if (enableUserBehaviorTracking) {initializeUserBehaviorTracking()}}
-  }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
-const initializeGoogleAnalytics = (;
-    // Load Google Analytics;
-;
-const script = document.createElement('script');'
-    script.async = true;
-    script.src = 'https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';,'
-    document.head.appendChild(script)
-// Initialize gtag;
-    (window as any).dataLayer = (window as any).dataLayer || [],
-    function gtag(...args: any[]) {,
-    ) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          if (entry.entryType === 'largest-contentful-paint') {) => {'
-  return($3;)
-  )}trackEvent('web_vitals', 'LCP', Math.round(entry.startTime));}'
-          } else if (entry.entryType === 'first-input') {const fid = (entry as any).processingStart - entry.startTime;'
-            trackEvent('web_vitals', 'FID', Math.round(fid))}} else if (entry.entryType === 'layout-shift') {if (!(entry as any).hadRecentInput) {'
-              trackEvent('web_vitals', 'CLS', (entry as any).value)}}'
-  )
-  }
-            trackEvent('web_vitals', 'LCP', Math.round(entry.startTime));}'
-          } else if (entry.entryType === 'first-input') {;';
-const fid = (entry as any).processingStart - entry.startTime
-            trackEvent('web_vitals', 'FID', Math.round(fid))'
-  }
-          } else if (entry.entryType === 'layout-shift') {'
-    if (!(entry as any).hadRecentInput) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-              trackEvent('web_vitals', 'CLS', (entry as any).value)'
-  }
-            }
->>>>>>> origin/main
           }
         }
       })
@@ -206,17 +111,11 @@ return null
       {children}
 
     </>
->>>>>>> origin/main
   );
 }
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
     <div className={`${className}`}>
       {children}
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

@@ -868,8 +868,6 @@ const geoString = this.generateGeoString(data)
   // TODO: Add properties
 }
     return this.ERROR_CORRECTION_LEVELS
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   private validateOptions(options: QRCodeOptions): void {
   // TODO: Add properties
@@ -1166,7 +1164,6 @@ let smsString = `sms:${data.phone}`,
 }
   // TODO: Add properties
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     return smsString
   }
@@ -1187,8 +1184,6 @@ let geoString = `geo:${data.latitude},${data.longitude}`,
   // TODO: Add properties
 }
       geoString += `,${data.altitude}`
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     if (data.name) {
   // TODO: Add properties
@@ -1234,8 +1229,6 @@ const maxCapacity = Math.floor(level.capacity * 177 * 177), // Approximate capac
       canFit: textLength <= maxCapacity,
       recommendedLevel: textLength > maxCapacity ? 'H' : errorCorrectionLevel,'
       maxCapacity
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
   getQRCodeHistory(): QRCodeResult[] {

@@ -163,7 +163,6 @@ const issue = await octokit.issues.create({ owner, repo, title, body, labels: ['
 }
   // TODO: Add properties
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     } catch (e) {
   // TODO: Add properties
 }
@@ -171,7 +170,6 @@ const issue = await octokit.issues.create({ owner, repo, title, body, labels: ['
 }
       // ignore if missing
     }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
 

@@ -1,51 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AppPage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>App - Zion Tech Group</title>
-        <meta name="description" content="Advanced App solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            App
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
-            <PerformanceMonitor />
-<AccessibilityEnhancer />
-<Suspense fallback={<AppLoadingSpinner />}>
-<Routes>
-                {/* Main Pages */}
-                <Route path="/" element={<HomePage />} />"
-<Route path="/about" element={<AboutPage />} />"
-<Route path="/contact" element={<ContactPage />} />"
-<Route path="/services" element={<ServicesPage />} />"
-<Route path="/pricing" element={<PricingPage />} />"
-<Route path="/case-studies" element={<CaseStudiesPage />} />"
-<Route path="/blog" element={<BlogPage />} />"
-<Route path="/team" element={<TeamPage />} />"
-<Route path="/careers" element={<CareersPage />} />"
-<Route path="/privacy" element={<PrivacyPage />} />"
-<Route path="/terms" element={<TermsPage />} />"
-<Route path="/cookies" element={<CookiesPage />} />"
-
->>>>>>> origin/main
                 {/* AI Services */}
                 <Route path="/ai-services" element={<AiServicesPage />} />"
 <Route path="/ai-marketing" element={<AiMarketingPage />} />"
@@ -60,7 +12,6 @@ export default function AppPage() {
 <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />"
 <Route path="/ai-data-visualization" element={<AiDataVisualizationPage />} />"
 
->>>>>>> origin/main
                 {/* IT Services */}
                 <Route path="/it-services" element={<ItServicesPage />} />"
 <Route path="/it-infrastructure" element={<ItInfrastructurePage />} />"
@@ -68,7 +19,6 @@ export default function AppPage() {
 <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />"
 <Route path="/cybersecurity" element={<CybersecurityPage />} />"
 
->>>>>>> origin/main
                 {/* Emerging Technologies */}
                 <Route path="/blockchain" element={<BlockchainPage />} />"
 <Route path="/quantum-computing" element={<QuantumComputingPage />} />"
@@ -96,8 +46,6 @@ export default function AppPage() {
 <Route path="/enterprise" element={<EnterprisePage />} />"
 <Route path="/digital-transformation" element={<DigitalTransformationPage />} />"
 <Route path="/edge-computing" element={<EdgeComputingPage />} />"
->>>>>>> origin/main
->>>>>>> origin/main
               </Routes></Suspense>
 </div></BrowserRouter>
 </HelmetProvider></ErrorBoundary>
@@ -107,11 +55,7 @@ export default App;
   )
 }
 export default App</div>;
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 'use client';
 
 import { Suspense, lazy } from 'react';
@@ -247,8 +191,6 @@ function App() {
 }
 
 export default App;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -336,4 +278,3 @@ export default function App() {
     </HelmetProvider>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

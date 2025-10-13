@@ -56,7 +56,6 @@ const missingPages = [
 //   'cloud-cost-optimization', 'security-automation', 'data-visualization',
 //   'workflow-automation', 'cloud-native-security', 'team', 'partners', 'status',
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   'faq', 'docs', 'api-docs', 'community', 'compliance';
 ];
 // Template for page components;
@@ -400,4 +399,3 @@ console.log('All navigation links should now work properly.')</div></div>'
 </p></p>
 </h1></section>
 </section>
->>>>>>> cursor/delete-records-a75e

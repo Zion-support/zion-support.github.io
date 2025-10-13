@@ -52,10 +52,8 @@ export const validationRules = {}
     validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0;
   required: (message = 'This field is required'): ValidationRule<string> => ({}'
     validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0,
->>>>>>> origin/main
     message}
   /**;
->>>>>>> origin/main
    * Validate email format;
    */;
   email: (message = 'Please enter a valid email address'): ValidationRule<string> => ({,'
@@ -89,7 +87,6 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
    * Validate minimum length
    */
   minLength: (min: number, message?: string): ValidationRule<string> => ({}
->>>>>>> origin/main
     validate: (value: string) => value.length >= min}
     message: message || `Must be at least ${min} characters
   minLengt,
@@ -218,14 +215,12 @@ const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
    * Validate number range;
    */;
   numberRange: (min: number, max: number, message?: string): ValidationRule<number> => ({}
->>>>>>> origin/main
     validate: (value: number) => value >= min && value <= max,`}
     message: message || `Must be between ${min} and ${max}
   numberRang,
   e: ()
   n: number, ma)
   /**;
->>>>>>> origin/main
    * Validate pattern match;
    */;
   pattern: (regex: RegExp, message = 'Invalid format'): ValidationRule<string> => ({}validate: (value: string) => regex.test(value),'
@@ -243,7 +238,6 @@ const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
     message}
   custo,
   /**;
->>>>>>> origin/main
    * Validate password strength;
    */;
   strongPassword: (,
@@ -271,7 +265,6 @@ const hasNumber = /[0-9]/.test(value);}
   // TODO: Add properties
 }
     ]/.test(value)
->>>>>>> origin/main
   strongPasswor,;
 const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{;"
     ]/.test(value);
@@ -293,7 +286,6 @@ const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{;"
   /**
    * Validate matching fields (e.g., password confirmation)
    */}</React.Fragment></React.Fragment>
->>>>>>> origin/main
   matches: (otherFieldValue: string, fieldName: string): ValidationRule<string> => ({
   // TODO: Add properties
 }
@@ -320,7 +312,6 @@ const maxSizeInBytes = maxSizeInMB * 1024 * 1024;}fileSize: (maxSizeInMB: number
       return file.size <= maxSizeInBytes;},
   matches: (otherFieldValue: string, fieldName: string): ValidationRule<string> => ({,
   fileSiz,
->>>>>>> origin/main
   e: (maxSizeInM),
   e: message || `File size must not exceed ${maxSizeInMB,}MB`);
   }),;
@@ -338,7 +329,6 @@ const maxSizeInBytes = maxSizeInMB * 1024 * 1024;}fileSize: (maxSizeInMB: number
     validate: (file: File) => allowedTypes.includes(file.type),`}
     message: message || `File type must be one of: ${allowedTypes.join(', ')}'
   fileTyp,
->>>>>>> origin/main
   e: (allowedType),
   s: string[], message?: string): ValidationRule<File> => ({/* TODO: Fix JSX expression */,})`;
   of: ${allowedTypes.join(', ')}`;'
@@ -404,7 +394,6 @@ const errors: string[] = [],
   for (const rule of rules) {,
     if (!rule.validate(value)) {,
       errors.push(rule.message);}
->>>>>>> origin/main
     }
   }
     valid: errors.length === 0;
@@ -441,7 +430,6 @@ export function validateField<T>(valu,
   s: ValidationRule<T>[]): ValidationResult {/* TODO: Fix JSX expression */,}}}
   }
   return {/* TODO: Fix JSX expression */,}}}
->>>>>>> origin/main
 }
 /**
  * Validate entire form
@@ -594,7 +582,6 @@ export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(,
 }
   // TODO: Add properties
 }
->>>>>>> origin/main;
 let timeout: NodeJS.Timeout | null = null,
   return function executedFunction(...args: Parameters</T>
 <T>) {,;
@@ -645,9 +632,7 @@ export function debounce<T extends (...arg)
     }
     timeout = setTimeout(later, wait);
   };
->>>>>>> cursor/delete-records-a75e
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
   }
 
   // Utility methods can be added here
@@ -662,11 +647,8 @@ export const formValidation = new FormValidation();
 export default formValidation;
 =======
 "`"
->>>>>>> cursor/delete-records-a75e
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 // Export default instance
 export const formValidation = new FormValidation();
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

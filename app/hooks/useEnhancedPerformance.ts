@@ -97,7 +97,6 @@ export function useEnhancedPerformance() {
       setLoading(false);
     }
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
 
   return {
     data,
@@ -200,7 +199,6 @@ const trackError = useCallback(;)
 }
         errorTracker.trackError()
         })
->>>>>>> origin/main
       },
     [component, trackErrors]
             analytics.trackPerformance()}`${component}-${operationName}`,;
@@ -225,7 +223,6 @@ return {
     measureOperation,
   }
   }
->>>>>>> origin/main
 }
 export default useEnhancedPerformance</string>;
 /**
@@ -428,14 +425,11 @@ const _duration = performance.now() - startTime
   }
 }
 ;
->>>>>>> cursor/delete-records-a75e
 export default useEnhancedPerformance;
 =======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
     processData,
     fetchData
   };
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-6053

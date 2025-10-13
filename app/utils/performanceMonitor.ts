@@ -15,12 +15,10 @@ interface PerformanceMetrics {}
   ttfb?: number; // Time to First Byte
   fmp?: number; // First Meaningful Paint
   customMetrics: Record<string, number>;</strin>
->>>>>>> origin/main
 }
   };
   private,
   observers: PerformanceObserver[] = []
->>>>>>> origin/main
   private isInitialized = false,
   init(): void {/* TODO: Fix JSX expression */}
   }
@@ -56,7 +54,6 @@ const lastEntry = entries[entries.length - 1];)
         // First Input Delay;
         this.observeEntry('first-input', entries => {);';
 const firstInput = entries[0];)
->>>>>>> origin/main
           if (firstInput && (firstInput as any).processingStart !== undefined) {
   // TODO: Add properties
 }
@@ -122,7 +119,6 @@ if (clsValue > 0) {}this.recordMetric('CLS', clsValue);'
           if (clsValue > 0) {/* TODO: Fix JSX expression */,}}
 }
     } catch (error) {}logger.error('Failed to initialize performance observers', error as Error);'
->>>>>>> origin/main
     }
   }
             this.logMetric(metricKey as string, entry.startTime);
@@ -139,7 +135,6 @@ if (clsValue > 0) {}this.recordMetric('CLS', clsValue);'
 observer.observe({entryTypes: ['paint'] ,)})'
       this.observers.push(observer);
     } catch (error) {}}
->>>>>>> origin/main
   }
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
@@ -289,7 +284,6 @@ observer.observe({entryTypes: ['resource'] ,)})'
   addCustomMetric(name: string, value: number): void {,}
     ,
     if (process.env.NODE_ENV === 'development') {}ms`);'
->>>>>>> origin/main
     }
     // Send to analytics if available;
     if (typeof window !== 'undefined' && (window as any).gtag) {(window as any).gtag('event', 'performance_metric', {);'
@@ -452,4 +446,3 @@ Metrics: ${JSON.stringify(metrics, null, 2</div>
   }
 
   }
->>>>>>> origin/main

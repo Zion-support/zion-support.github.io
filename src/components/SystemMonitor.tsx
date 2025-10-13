@@ -642,7 +642,6 @@ const getSeverityColor = (severity: string) => {
   // TODO: Add parameters
 )
         <p className="text-sm text-gray-500 mb-4">"
->>>>>>> cursor/delete-records-a75e
           Last updated: {lastUpdate.toLocaleTimeString()}
       )}
       {/* Performance Metrics */}
@@ -784,7 +783,6 @@ const getSeverityColor = (severity: string) => {
                 <div className="flex items-center justify-between text-xs text-gray-500">"
 <span>{error.type}
                   <span>{new Date(error.timestamp).toLocaleTimeString()}
->>>>>>> cursor/delete-records-a75e
             ))}
       )}
       {/* Error Distribution */}
@@ -1081,6 +1079,4 @@ export default SystemMonitor</div></div>;
 </h3></h4>
 </h4></h4>
 </h4></h4>))))
->>>>>>> cursor/delete-records-a75e
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

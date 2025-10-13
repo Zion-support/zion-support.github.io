@@ -252,7 +252,6 @@ const handleSubmit = async (e: React.FormEvent) => {,
           >
             Subscribe another email
           </button>
->>>>>>> origin/main
         </div>
 <h3 className="text-2xl font-bold text-white mb-2">Thank You!</h3>"
 <p className="text-white/90 mb-4">You've successfully subscribed to our newsletter. Check your email for confirmation.</p></p>'"
@@ -372,7 +371,5 @@ export default ContentNewsletterSignupPage;
 });
 ;
 export default ContentNewsletterSignup;
->>>>>>> origin/main
->>>>>>> origin/main
 
 }}

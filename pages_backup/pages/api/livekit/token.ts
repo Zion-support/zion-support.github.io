@@ -319,7 +319,6 @@ const token = await at && at.toJwt()
 }
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
     console.error ("Token error", err)"

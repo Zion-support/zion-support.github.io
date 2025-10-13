@@ -220,4 +220,3 @@ const uniqueCommits = execSync(`git log --oneline main..${branch}`, { encoding: 
     console.error('❌ Error during merge process:', error.message)'
   process.exit(1)
   }
->>>>>>> cursor/delete-records-a75e

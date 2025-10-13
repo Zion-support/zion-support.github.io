@@ -82,7 +82,6 @@ const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNa
             value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart),})
         }
       })
->>>>>>> origin/main
     }
   }
         <meta name="description" content={description}/>"
@@ -115,7 +114,6 @@ const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNa
 <meta name="twitter:title" content={title} />"
 <meta name="twitter:description" content={description} />"
 <meta name="twitter:image" content={ogImage} />"
->>>>>>> origin/main
 
         {/* Structured Data */} <script type="application/ld+json">"
           {JSON.stringify(generateStructuredData())} </script></Helmet>
@@ -156,7 +154,6 @@ const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNa
                   <li key={index}>{rec}
                 ))}
           )}
->>>>>>> origin/main
         </div>
 <meta name="twitter:card" content="summary_large_image" />"
 <meta name="twitter:title" content={title} />"
@@ -164,7 +161,6 @@ const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNa
 <meta name="twitter:image" content={ogImage} />"
 <meta name="twitter:site" content="@ziontechgroup" />"
 <meta name="twitter:creator" content="@ziontechgroup" />"
->>>>>>> origin/main
 
       {/* Additional SEO Meta Tags */} <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview: -1" />,"
       <meta name="googlebot" content="index, follow" />"
@@ -190,12 +186,10 @@ const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNa
       <script type="application/ld+json" /></script>"
         {JSON.stringify(generateStructuredData())}
       </script>
->>>>>>> origin/main
     </Helmet>
     {children} </>
   );
 };
 ;
 export default AdvancedSEOOptimizerPage;
->>>>>>> origin/main
 )

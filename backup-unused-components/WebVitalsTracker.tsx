@@ -16,6 +16,5 @@ export default function WebVitalsTracker({ className = '', children }: WebVitals
       <p>This component is under construction.</p>
   </div>
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

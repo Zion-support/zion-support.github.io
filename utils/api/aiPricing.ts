@@ -53,7 +53,6 @@ export const calculateAICost = async (usage: any) => {
 }
 }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Stub AI pricing utility - placeholder for missing functionality;
 export const getAIPricing = async (service: string) => {
   // TODO: Add properties

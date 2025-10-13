@@ -28,7 +28,6 @@ const fontPreloads = [
     link.rel = 'preload';';
 const link = document.createElement('link')'
     link.rel = 'preload''
->>>>>>> origin/main
     link.as = 'style','
     link.href = href
     link.crossOrigin = 'anonymous','
@@ -79,18 +78,15 @@ const routeResources = {}
 export const preloadRoute = useCallback((...args) => {}
   if (typeof window === 'undefined') return'
   // Preload route-specific resources
->>>>>>> origin/main;
 const routeResources = {}
     '/blog': ['/api/blog/posts', '/images/blog-hero.webp'],'
     '/services': ['/api/services', '/images/services-hero.webp'],'
->>>>>>> origin/main
     '/contact': ['/api/contact', '/images/contact-hero.webp']}'
   }
   const resources = routeResources[route as keyof typeof routeResources]
       link.href = resource;
       document.head.appendChild(link</div>
       document.head.appendChild(link)}
->>>>>>> origin/main
     })
   }
 }

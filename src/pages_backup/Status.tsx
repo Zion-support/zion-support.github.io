@@ -21,7 +21,6 @@ class ErrorBoundary extends React.Component {
 }
     super(props)
     this.state = { hasError: false }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee;
 const FALLBACK_SERVICES: ServiceStatus[] = [
   // TODO: Add items
 ]

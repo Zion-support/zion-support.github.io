@@ -185,7 +185,6 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */,}}g: Partial<LoggerC
   public error(message: string,),
   public error(messag,;)
   public error(messag,
->>>>>>> origin/main
   e: string,
     data?: Record</string>
 <string, unknown>,
@@ -413,7 +412,6 @@ const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`;
   y: JSON.stringify({/* TODO: Fix JSX expression */,)})
         bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
->>>>>>> origin/main
         })
       })
     } catch (error) {/* TODO: Fix JSX expression */,}})

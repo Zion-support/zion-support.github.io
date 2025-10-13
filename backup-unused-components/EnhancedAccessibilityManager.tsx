@@ -404,6 +404,5 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
 </div>
 </div>
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

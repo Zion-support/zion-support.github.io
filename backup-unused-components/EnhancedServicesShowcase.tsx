@@ -259,4 +259,3 @@ const EnhancedServicesShowcase: React.FC = () => {
 =======
 );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

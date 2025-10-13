@@ -10,7 +10,6 @@ const GlobalErrorPage: React.FC = () => {
 }
   // TODO: Implement
 }
->>>>>>> origin/main;
 const features = [
   // TODO: Add items
 ]
@@ -31,7 +30,6 @@ const features = [
   // TODO: Add properties
 }
       icon: BarChart,
->>>>>>> origin/main
       title: 'Advanced Analytics','
       description: 'Comprehensive analytics dashboard with real-time data visualization.','
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']},'
@@ -128,7 +126,6 @@ const features = [
                   Learn More,
 
               </div>
->>>>>>> origin/main
             </div></div>
 </section>
         {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>"

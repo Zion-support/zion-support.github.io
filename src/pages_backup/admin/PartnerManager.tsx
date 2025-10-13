@@ -16,7 +16,6 @@ import { toast  } from '@/hooks / use - toast';';
 import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'import { supabase  } from '@/integrations / supabase / client';';
 import { logErrorToProduction } from '@/utils / production_logger';';
 import { EmptyState  } from '@/components / ui / empty - state';'
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 interface PartnerProfile {
   // TODO: Add properties

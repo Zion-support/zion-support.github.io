@@ -57,7 +57,6 @@ const raw = fs.readFileSync(coursesPath, 'utf8')'
       courses = JSON.parse(raw)
     }
     const existingIndex = courses.findIndex((c: any) => c.id === body.id)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     if (existingIndex >= 0) {
   // TODO: Add properties
 }

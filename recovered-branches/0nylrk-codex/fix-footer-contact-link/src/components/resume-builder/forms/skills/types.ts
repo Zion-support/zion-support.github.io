@@ -5,7 +5,6 @@ export interface SkillsFormProps {
   // TODO: Add properties
 }
   resumeId: string
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   skills: Skill[]
   onComplete: () => void
   onBack: () => void

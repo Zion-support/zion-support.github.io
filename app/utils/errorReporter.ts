@@ -35,7 +35,6 @@ export interface ErrorReporterConfig {}
   remoteEndpoint?: string
   maxErrorsInMemory: number,
     captureContext: boolean;}
->>>>>>> origin/main
 }
 const defaultConfig: ErrorReporterConfig = {,
     ,}export interface ErrorReport {}}message: string;,
@@ -71,7 +70,6 @@ export class ErrorReporter {private static instance: ErrorReporter,}
 export interface ErrorReporterConfig {/* TODO: Fix JSX expression */,}}}
 const,;
   defaultConfig: ErrorReporterConfig = {/* TODO: Fix JSX expression */,}}
->>>>>>> origin/main
     this.config = { ...defaultConfig, ...config }
 export interface ErrorReport {/* TODO: Fix JSX expression */}
 }
@@ -80,7 +78,6 @@ export interface ErrorReporterConfig {/* TODO: Fix JSX expression */}
 const,
   defaultConfig: ErrorReporterConfig = {/* TODO: Fix JSX expression */}
 /**;
->>>>>>> origin/main
  * ErrorReporter class for comprehensive error handling;
  */;
 export class ErrorReporter {/* TODO: Fix JSX expression */,}}g: Partial<ErrorReporterConfig> = {,}) {/* TODO: Fix JSX expression */,}this.config = {...defaultConfig, ...config}}
@@ -107,7 +104,6 @@ export class ErrorReporter {/* TODO: Fix JSX expression */,}}g: Partial<ErrorRep
   ): void {}
     const errorReport: ErrorReport = {}
       message: error.message,
->>>>>>> origin/main
       stack: error.stack,
       timestamp: new Date().toISOString(),
       userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown','
@@ -158,11 +154,9 @@ export class ErrorReporter {/* TODO: Fix JSX expression */,}}g: Partial<ErrorRep
       this.logToConsole(errorReport);}
     }
     // Remote logging
->>>>>>> origin/main
     if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {}
       this.sendToRemote(errorReport);}
   reportError(erro,
->>>>>>> origin/main
   r: Error,
     severit,
   y: ErrorReport['severity'] = 'medium','
@@ -309,7 +303,6 @@ const report = ErrorReporter.getInstance(),
   report.reportError(error, 'high', {</div>'
     componentName,
     componentStack: errorInfo.componentStack}
->>>>>>> origin/main
   })
 }
 export default ErrorReporter;
@@ -327,5 +320,4 @@ export const captureComponentError = (erro,
 ): void => {/* TODO: Fix JSX expression */,}})
 }
 export default ErrorReporter;
->>>>>>> origin/main
 `

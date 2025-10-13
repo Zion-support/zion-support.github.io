@@ -78,7 +78,6 @@ export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */}
 export const,;
   defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */}
 /**;
->>>>>>> origin/main
  * Get security headers as key-value pairs;
  */;
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
@@ -92,7 +91,6 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig 
   const,
   headers: Record<string, string> = {/* TODO: Fix JSX expression */}
   }
->>>>>>> origin/main
   if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */}
   }
   if (config.strictTransportSecurity) {/* TODO: Fix JSX expression */}
@@ -144,6 +142,5 @@ export function getNextSecurityHeaders()
   }));
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
 ): Array<{/* TODO: Fix JSX expression */,}e: string ,}> {/* TODO: Fix JSX expression */,}}));
->>>>>>> origin/main
 }
 export default defaultSecurityHeaders;

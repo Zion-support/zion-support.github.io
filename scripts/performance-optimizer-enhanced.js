@@ -137,7 +137,6 @@ const minified = styles
         /(\w+)\.displayName = '\w+';/g'
         '$1.displayName = \'$1\',\n});''
       )
->>>>>>> cursor/delete-records-a75e
     }
     
     console.log('✅ HTML optimized');
@@ -263,7 +262,6 @@ const preloadHints = `
       content = content.replace('<head>', `<head>${preloadHints}`)'
     }
     return content
->>>>>>> cursor/delete-records-a75e
   }
 };
 
@@ -413,4 +411,3 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 export { processFile, optimizations  };
 </li></li>
 </li>
->>>>>>> cursor/delete-records-a75e

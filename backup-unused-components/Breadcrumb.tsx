@@ -83,6 +83,5 @@ export default function Breadcrumb({ className = '', children }: BreadcrumbProps
 =======
 
   return (
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

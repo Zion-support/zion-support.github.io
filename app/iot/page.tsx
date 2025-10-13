@@ -1,98 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-<<<<<<< HEAD
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-          </p>
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const IotPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Iot - Zion Tech Group</title>
-        <meta name="description" content="Iot services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="iot, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Iot
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional iot services by Zion Tech Group.
-          </p>
-          
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced iot solutions. 
-              Stay tuned for updates!
-            </p>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
-import React from 'react';';';
-import {Helmet}}from 'react-helmet-async';';';
-import {CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles}}from 'lucide-react';';';
-const IoTPage: React.FC = () => {,;
-const iotServices = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      title: 'IoT Device Management Platform','
-      description: 'Comprehensive IoT device management and monitoring platform for connected devices.','
-      icon: '📱','
-      price: 'Starting at $2,500/month','
-      features: ['Device provisioning', 'Remote monitoring', 'Firmware updates', 'Device analytics', 'Alert management'],'
-      benefits: ['Reduce device downtime by 60%', 'Improve operational efficiency', 'Lower maintenance costs'],'
-      marketPrice: '$4,000-15,000/month','
-      category: 'Device Management','
-      technologies: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'MQTT', 'CoAP']},'
-    {title: 'Smart City Solutions','
-  },
->>>>>>> origin/main
     {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
     title: 'Smart City Solutions','
->>>>>>> origin/main
       description: 'Comprehensive smart city infrastructure including traffic management, environmental monitoring, and citizen services.','
       icon: '🏙️','
       price: 'Starting at $15,000/month','
@@ -108,7 +23,6 @@ const iotServices = [
   // TODO: Add properties
 }
     title: 'Industrial IoT (IIoT)','
->>>>>>> origin/main
       description: 'Industrial IoT solutions for manufacturing, energy, and logistics with predictive maintenance and optimization.','
       icon: '🏭','
       price: 'Starting at $8,000/month','
@@ -124,7 +38,6 @@ const iotServices = [
   // TODO: Add properties
 }
     title: 'Smart Agriculture Platform','
->>>>>>> origin/main
       description: 'IoT-powered agricultural monitoring and optimization for crop management and livestock tracking.','
       icon: '🌾','
       price: 'Starting at $3,500/month','
@@ -140,7 +53,6 @@ const iotServices = [
   // TODO: Add properties
 }
     title: 'Smart Home Automation','
->>>>>>> origin/main
       description: 'Complete smart home solutions with energy management, security, and comfort automation.','
       icon: '🏠','
       price: 'Starting at $1,500/month','
@@ -156,7 +68,6 @@ const iotServices = [
   // TODO: Add properties
 }
     title: 'Healthcare IoT Solutions','
->>>>>>> origin/main
       description: 'Medical IoT devices and platforms for patient monitoring, telemedicine, and health analytics.','
       icon: '🏥','
       price: 'Starting at $5,000/month','
@@ -172,7 +83,6 @@ const iotServices = [
   // TODO: Add properties
 }
     title: 'Fleet Management IoT','
->>>>>>> origin/main
       description: 'Comprehensive fleet tracking and management solutions for vehicles, drones, and logistics.','
       icon: '🚛','
       price: 'Starting at $2,000/month','
@@ -188,7 +98,6 @@ const iotServices = [
   // TODO: Add properties
 }
     title: 'Environmental Monitoring','
->>>>>>> origin/main
       description: 'IoT-based environmental monitoring for air quality, water quality, and climate data collection.','
       icon: '🌍','
       price: 'Starting at $3,000/month','
@@ -204,7 +113,6 @@ const iotServices = [
   // TODO: Add properties
 }
     title: 'Retail IoT Solutions','
->>>>>>> origin/main
       description: 'Smart retail solutions including inventory management, customer analytics, and automated checkout.','
       icon: '🛒','
       price: 'Starting at $4,000/month','
@@ -220,7 +128,6 @@ const iotServices = [
   // TODO: Add properties
 }
     title: 'Energy Management IoT','
->>>>>>> origin/main
       description: 'Smart energy management solutions for buildings, grids, and renewable energy systems.','
       icon: '⚡','
       price: 'Starting at $3,500/month','
@@ -236,7 +143,6 @@ const iotServices = [
   // TODO: Add properties
 }
     title: 'IoT Security Solutions','
->>>>>>> origin/main
       description: 'Comprehensive IoT security including device authentication, data encryption, and threat monitoring.','
       icon: '🔒','
       price: 'Starting at $2,800/month','
@@ -252,7 +158,6 @@ const iotServices = [
   // TODO: Add properties
 }
     title: 'IoT Data Analytics Platform','
->>>>>>> origin/main
       description: 'Advanced analytics platform for IoT data processing, visualization, and insights generation.','
       icon: '📊','
       price: 'Starting at $4,500/month','
@@ -295,7 +200,6 @@ return (
 <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
                 <button>Explore IoT Solutions;</button></button>
 <button>Schedule IoT Consultation,</button>
->>>>>>> origin/main
                 </button>
               ))
             </div></div>
@@ -324,7 +228,6 @@ return (
               <div className="text-center"></div>"
 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
 <Wifi />
->>>>>>> origin/main
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Connectivity Experts</h3>"
 <p className="text-gray-600">Multi-protocol IoT connectivity solutions</p></div>"
 <div className="text-center"></div>"
@@ -372,7 +275,6 @@ return (
   // TODO: Add parameters
 )
   }
->>>>>>> origin/main
           <section className="py-20 px-4"></section>"
 < className="$2 /></div>"
 <div className="text-center mb-16"></div>"
@@ -396,7 +298,6 @@ return (
 <div className="flex items-center justify-between mb-2"></div>"
 <span className="text-2xl font-bold text-green-600">{service.price</span>}</span>"
 <span className="text-sm text-gray-500">Market: {service.marketPrice,</span>}</span>"
->>>>>>> origin/main
                         </div>
 <div className="text-sm text-green-600 font-semibold">"
                           Save up to 40% vs market rates</div></div>
@@ -416,7 +317,6 @@ return (
                           {service.technologies.map((tech, techIndex) => (</div>} <span>{tech</span>} </span>
                           ))}
 
->>>>>>> origin/main
                         </div></div>
 <div className="mb-6"></div>"
 <h4 className="font-semibold text-gray-900 mb-2">Business Benefits: </h4>,"
@@ -429,7 +329,6 @@ return (
 
                       <button>Get IoT Quote;</button>
                         Get IoT Quote
->>>>>>> origin/main
                       </button></div>
 
                   ))}
@@ -471,7 +370,6 @@ return (
 <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg"></div>"
 <BarChart />
 <h3 className="text-xl font-semibold text-gray-900 mb-2">Data Visualization</h3>"
->>>>>>> origin/main
                 <p className="text-gray-600">Real-time dashboards and analytics for IoT data insights</p></div>"
 </div></div>
 </section>
@@ -497,7 +395,6 @@ return (
               <a>
                 📞 +1 302 464 0950;
                 📞 +1 302 464 0950
->>>>>>> origin/main
               </a>
 <a
                 href="mailto:kleber@ziontechgroup.com""
@@ -515,75 +412,21 @@ return (
 ;
 export default IoTPage;
 ))
->>>>>>> cursor/delete-records-a75e
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
 };
 
 export default IotPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a070
-=======
 export default function IotPage() {
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function Iot() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Iot - Zion Tech Group</title>
         <meta name="description" content="Advanced iot solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Iot
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Advanced AI and IT solutions for your business needs.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
-            <p className="text-gray-600">
-              Comprehensive solution for your business requirements.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
-            <p className="text-gray-600">
-              Advanced technology integration and optimization.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
-            <p className="text-gray-600">
-              Scalable and secure implementation.
-            </p>
-          </div>
-        </div>
-
-        <div className="text-center mt-12">
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-            Get Started
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6053
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -597,4 +440,3 @@ export default function Iot() {
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-5443
