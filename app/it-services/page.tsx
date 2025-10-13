@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, Star, Shield, Cloud, Database, Code, Network, Smartphone, Monitor, Headphones, Clock, Settings, Zap, BarChart3, Award, Target, HardDrive, Minimize, Star as StarIcon } from 'lucide-react';
+import { ArrowRight, Star, Shield, Cloud, Database, Code, Network, Smartphone, Monitor, Headphones, Clock, Settings, Zap, BarChart3, Award, Target, HardDrive, Star as } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
@@ -56,7 +56,7 @@ export default function ITServices() {
         "Protect against 99.9% of threats",
         "Reduce security incidents by 95%",
         "Ensure regulatory compliance",
-        "Minimize business disruption"
+        "business disruption"
       ],
       category: "Security",
       rating: 4.8,
@@ -314,7 +314,7 @@ export default function ITServices() {
         "Emergency response"
       ],
       benefits: [
-        "Minimize data loss risks",
+        "data loss risks",
         "Ensure business continuity",
         "Meet compliance requirements",
         "Reduce recovery time"
@@ -356,7 +356,7 @@ export default function ITServices() {
     }
   ];
 
-  const categories = [
+  const = [
     { name: "All", count: itServices.length, active: true },
     { name: "Infrastructure", count: itServices.filter(s => s.category === "Infrastructure").length, active: false },
     { name: "Security", count: itServices.filter(s => s.category === "Security").length, active: false },
@@ -371,14 +371,14 @@ export default function ITServices() {
     { name: "Managed Services", count: itServices.filter(s => s.category === "Managed Services").length, active: false }
   ];
 
-  const stats = [
+  const = [
     { number: "500+", label: "Projects Completed", icon: <Award className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> },
     { number: "15+", label: "Years Experience", icon: <Clock className="w-6 h-6" /> }
   ];
 
-  const testimonials = [
+  const = [
     {
       name: "David Thompson",
       company: "Global Manufacturing Corp",
@@ -441,7 +441,9 @@ export default function ITServices() {
         <link rel="canonical" href="https://ziontechgroup.com/it-services" />
       </Helmet>
       
-      <SEOOptimizer />
+      <SEOOptimizer>
+        <div>IT Services Page Content</div>
+      </SEOOptimizer>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}

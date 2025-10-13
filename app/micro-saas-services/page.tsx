@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Cloud, Globe, Calendar, Phone, CheckCircle, Award, Rocket, Sparkles, TrendingUp, Heart, Receipt, Package, Code, Globe as WebIcon, Calendar as ScheduleIcon, Cloud as CloudIcon, Shield as ProtectionIcon } from 'lucide-react';
+import { ArrowRight, Globe, Phone, CheckCircle, Award, Rocket, Sparkles, TrendingUp, Heart, Receipt, Package, Globe as as ScheduleIcon, as CloudIcon, as ProtectionIcon, BarChart3 as AnalyticsIcon, Users as TeamIcon, Megaphone as MarketingIcon, Mail as EmailIcon, FileText as DocumentIcon, Settings as ConfigIcon, Headphones as SupportIcon } from 'lucide-react';
 
 export default function MicroSaasServices() {
   const microSaasServices = [
@@ -33,7 +33,7 @@ export default function MicroSaasServices() {
     },
     {
       id: "zion-security-shield-pro",
-      name: "Zion Security Shield Pro",
+      name: "Zion Security Pro",
       description: "Advanced cybersecurity protection with AI-powered threat detection, automated response, and 24/7 monitoring. Protect your business with enterprise-grade security.",
       icon: <ProtectionIcon className="w-8 h-8" />,
       price: "From $499/month",
@@ -60,7 +60,7 @@ export default function MicroSaasServices() {
     },
     {
       id: "zion-cloud-vault-pro",
-      name: "Zion Cloud Vault Pro",
+      name: "Zion Vault Pro",
       description: "Secure cloud storage solution with end-to-end encryption, unlimited scalability, and advanced backup capabilities. Your data, secured and accessible anywhere.",
       icon: <CloudIcon className="w-8 h-8" />,
       price: "From $99/month",
@@ -75,7 +75,7 @@ export default function MicroSaasServices() {
         "Advanced Access Controls",
         "99.99% Uptime Guarantee"
       ],
-      category: "Cloud Storage",
+      category: "Storage",
       popular: true,
       link: "/zion-cloud-vault-pro",
       benefits: [
@@ -286,7 +286,7 @@ export default function MicroSaasServices() {
         "Brand Voice Training & Consistency",
         "SEO Optimization & Analysis",
         "Plagiarism Detection & Prevention",
-        "Content Calendar Management",
+        "Content Management",
         "Team Collaboration Tools",
         "Performance Analytics",
         "Integration with Publishing Platforms"
@@ -312,7 +312,7 @@ export default function MicroSaasServices() {
         "AI-Powered Deployment Optimization",
         "Automated Testing & Quality Assurance",
         "Performance Monitoring & Alerts",
-        "Infrastructure as Code Management",
+        "Infrastructure as Management",
         "Continuous Integration/Deployment",
         "Security Scanning & Compliance",
         "Resource Optimization",
@@ -333,7 +333,7 @@ export default function MicroSaasServices() {
   const categories = [
     { name: "AI Analytics", icon: <AnalyticsIcon className="w-5 h-5" />, count: 2 },
     { name: "Cybersecurity", icon: <ProtectionIcon className="w-5 h-5" />, count: 1 },
-    { name: "Cloud Storage", icon: <CloudIcon className="w-5 h-5" />, count: 1 },
+    { name: "Storage", icon: <CloudIcon className="w-5 h-5" />, count: 1 },
     { name: "CRM & Sales", icon: <TeamIcon className="w-5 h-5" />, count: 1 },
     { name: "Marketing Automation", icon: <MarketingIcon className="w-5 h-5" />, count: 1 },
     { name: "Project Management", icon: <ScheduleIcon className="w-5 h-5" />, count: 1 },

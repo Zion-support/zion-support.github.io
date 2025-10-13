@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, Shield, Globe, ArrowRight, CheckCircle, Star, Users, Award, Clock, Smartphone, Mail, FileText, BarChart3, Target, Video, Grid } from 'lucide-react';
+import { Brain, Shield, Globe, ArrowRight, CheckCircle, Users, Mail, FileText, BarChart3, Target, Video} from 'lucide-react';
 
 const MicroSaasPage: React.FC = () => {
   const microSaasProducts = [
@@ -154,7 +154,7 @@ const MicroSaasPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Products Grid */}
+      {/* Products */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">

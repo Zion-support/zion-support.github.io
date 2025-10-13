@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Package, BarChart3, TrendingUp, Target, Star, CheckCircle, Sparkles, Mail, Smartphone, Globe, Shield, Settings, Headphones, RefreshCw, Minimize, Bell, DollarSign, AlertCircle, Play, Truck, Warehouse, ShoppingCart, Store } from 'lucide-react';
+import { ArrowRight, Package, BarChart3, TrendingUp, Target, Star, CheckCircle, Sparkles, Mail, Smartphone, Globe, Shield, Settings, Headphones, RefreshCw, Bell, DollarSign, AlertCircle, Play, Truck, Warehouse, ShoppingCart, Store, Calendar } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const ZionSmartInventoryOptimizerPage = () => {
-  const [selectedPlan, setSelectedPlan] = useState('pro');
+  const [] = useState('pro');
 
   const features = [
     {
@@ -21,7 +21,7 @@ const ZionSmartInventoryOptimizerPage = () => {
     },
     {
       title: 'Cost Optimization',
-      description: 'Minimize inventory costs while maintaining optimal stock levels',
+      description: 'inventory costs while maintaining optimal stock levels',
       icon: <DollarSign className="w-6 h-6" />,
       included: true
     },

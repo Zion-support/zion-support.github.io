@@ -6,7 +6,7 @@ interface NavigationProps {
   onSidebarToggle?: () => void;
 }
 
-export default function Navigation({ onSidebarToggle }: NavigationProps) {
+export default function Navigation({ }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const location = useLocation();

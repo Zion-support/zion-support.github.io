@@ -1,4 +1,4 @@
-import { Brain, Code, Zap, Shield, CheckCircle, ArrowRight, Star } from "lucide-react";
+import { Brain, Code, Zap, Shield, CheckCircle, ArrowRight, Star, Globe } from "lucide-react";
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
@@ -226,10 +226,6 @@ const AICodeAssistantProZionTechGroup = () => {
                   {features.map((feature, index) => (
                     <FuturisticCardEnhanced
                       key={index}
-                      glowColor={index % 2 === 0 ? 'blue' : 'purple'}
-                      hoverEffect={true}
-                      animated={true}
-                      neon={true}
                       className="text-center"
                     >
                       <div
@@ -265,10 +261,6 @@ const AICodeAssistantProZionTechGroup = () => {
                   {pricingPlans.map((plan, index) => (
                     <FuturisticCardEnhanced
                       key={index}
-                      glowColor={plan.popular ? 'blue' : 'purple'}
-                      hoverEffect={true}
-                      animated={true}
-                      neon={true}
                       className={`relative ${plan.popular ? 'ring-2 ring-blue-500' : ''}`}
                     >
                       {plan.popular && (

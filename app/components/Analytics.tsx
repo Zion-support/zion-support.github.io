@@ -84,7 +84,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
           if (entry.entryType === 'first-input') {
             window.gtag('event', 'web_vitals', {
               name: 'FID',
-              value: Math.round(entry.processingStart - entry.startTime),
+              value: Math.round(entry.duration),
               event_category: 'Web Vitals',
               event_label: 'First Input Delay',
             });

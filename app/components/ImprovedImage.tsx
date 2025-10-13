@@ -25,7 +25,7 @@ const ImprovedImage: React.FC<ImprovedImageProps> = ({
   placeholder,
   lazy = true,
   priority = false,
-  quality = 75,
+  = 75,
   sizes,
   onLoad,
   onError
@@ -69,7 +69,7 @@ const ImprovedImage: React.FC<ImprovedImageProps> = ({
     onError?.();
   };
 
-  // Generate optimized src with quality parameter
+  // Generate optimized src with parameter
   const getOptimizedSrc = (originalSrc: string) => {
     // If it's an external URL, return as is
     if (originalSrc.startsWith('http')) {

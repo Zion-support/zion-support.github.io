@@ -228,10 +228,6 @@ const AIContentStudioZionTechGroup = () => {
                   {features.map((feature, index) => (
                     <FuturisticCardEnhanced
                       key={index}
-                      glowColor={index % 2 === 0 ? 'purple' : 'pink'}
-                      hoverEffect={true}
-                      animated={true}
-                      neon={true}
                       className="text-center"
                     >
                       <div
@@ -267,10 +263,6 @@ const AIContentStudioZionTechGroup = () => {
                   {pricingPlans.map((plan, index) => (
                     <FuturisticCardEnhanced
                       key={index}
-                      glowColor={plan.popular ? 'purple' : 'pink'}
-                      hoverEffect={true}
-                      animated={true}
-                      neon={true}
                       className={`relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}
                     >
                       {plan.popular && (

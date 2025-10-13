@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Award, Users, Shield, Zap, Brain, Cloud, CheckCircle } from 'lucide-react';
+import { ArrowRight, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Award, Users, Shield, Zap, Brain, CheckCircle } from 'lucide-react';
 
 const ImprovedFooter = () => {
   const currentYear = new Date().getFullYear();
@@ -43,7 +43,7 @@ const ImprovedFooter = () => {
       icon: <Shield className="w-5 h-5" />,
       color: 'from-green-500 to-emerald-500',
       links: [
-        { label: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
+        { label: 'Infrastructure', href: '/cloud-infrastructure' },
         { label: 'Blockchain Development', href: '/blockchain-development' },
         { label: 'IoT Solutions', href: '/iot-solutions' },
         { label: 'AR/VR Development', href: '/ar-vr-development' },
@@ -66,7 +66,7 @@ const ImprovedFooter = () => {
       links: [
         { label: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
         { label: 'Zion Security Shield', href: '/zion-security-shield' },
-        { label: 'Zion Cloud Vault', href: '/zion-cloud-vault' },
+        { label: 'Zion Vault', href: '/zion-cloud-vault' },
         { label: 'Zion AI Inventory Manager', href: '/zion-ai-inventory-manager' },
         { label: 'Zion HR Assistant Pro', href: '/zion-hr-assistant-pro' },
         { label: 'Zion AI Accounting Suite', href: '/zion-ai-accounting-suite' },

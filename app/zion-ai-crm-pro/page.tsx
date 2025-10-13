@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Users, ArrowRight, Sparkles, CheckCircle, Star, Target, TrendingUp, Zap, BarChart3, Mail, Phone, MapPin, Play, Watch, Video } from 'lucide-react';
+import { Users, ArrowRight, Sparkles, CheckCircle, Star, Target, TrendingUp, Zap, BarChart3, Mail, Phone, MapPin, Play} from 'lucide-react';
 
 const ZionAICRMProPage = () => {
   const features = [
@@ -132,7 +132,7 @@ const ZionAICRMProPage = () => {
     { name: 'Outlook', logo: 'OL', category: 'Email' },
     { name: 'Slack', logo: 'SL', category: 'Communication' },
     { name: 'Microsoft Teams', logo: 'MT', category: 'Communication' },
-    { name: 'Zoom', logo: 'ZM', category: 'Video' },
+    { name: 'Zoom', logo: 'ZM', category: '' },
     { name: 'Calendly', logo: 'CL', category: 'Scheduling' },
     { name: 'Stripe', logo: 'ST', category: 'Payments' },
     { name: 'PayPal', logo: 'PP', category: 'Payments' },
@@ -175,7 +175,7 @@ const ZionAICRMProPage = () => {
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </button>
             <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105">
-              Watch Demo
+              Demo
               <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
             </button>
           </div>

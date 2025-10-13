@@ -4,7 +4,7 @@ import { ArrowRight, FileText, Download, Settings, Sparkles, CheckCircle, Star, 
 import { Helmet } from 'react-helmet-async';
 
 const ZionAIInvoiceGeneratorPage = () => {
-  const [selectedPlan, setSelectedPlan] = useState('pro');
+  const [] = useState('pro');
 
   const features = [
     {

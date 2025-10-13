@@ -1,7 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, Star, Mic, DollarSign, Headphones, Video, FileText, Monitor, TrendingUp, Star as StarIcon } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Mic, DollarSign, Headphones, Video, FileText, Monitor, TrendingUp, Star as Code } from 'lucide-react';
+import SEOOptimizer from "../components/SEOOptimizer";
 
 export default function ZionAIVoiceAssistantPro() {
   const features = [
@@ -155,10 +156,9 @@ export default function ZionAIVoiceAssistantPro() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/zion-ai-voice-assistant-pro" />
       </Helmet>
-      <SEOOptimizer
-        title="Zion AI Voice Assistant Pro - Advanced Voice AI Solution | Zion Tech Group"
-        description="Transform your business with Zion AI Voice Assistant Pro. Advanced voice AI with natural language processing, multi-language support, and seamless integrations. Start your free trial today!"
-      />
+      <SEOOptimizer>
+        <div>Zion AI Voice Assistant Pro Content</div>
+      </SEOOptimizer>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}

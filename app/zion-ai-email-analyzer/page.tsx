@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Mail, Shield, Heart, MessageSquare, Star, CheckCircle, Sparkles, Smartphone, Globe, Settings, Headphones, Play, Share, Zap, Target, Users, BarChart3, TrendingUp } from 'lucide-react';
+import { ArrowRight, Mail, Shield, Heart, MessageSquare, Star, CheckCircle, Sparkles, Smartphone, Globe, Settings, Headphones, Play, Zap, Target, Users, BarChart3, TrendingUp, FileText } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const ZionAIEmailAnalyzerPage = () => {
-  const [selectedPlan, setSelectedPlan] = useState('pro');
+  const [] = useState('pro');
 
   const features = [
     {
@@ -39,7 +39,7 @@ const ZionAIEmailAnalyzerPage = () => {
     },
     {
       title: 'Team Collaboration',
-      description: 'Share insights and collaborate with team members on email analysis',
+      description: 'insights and collaborate with team members on email analysis',
       icon: <Users className="w-6 h-6" />,
       included: true
     },

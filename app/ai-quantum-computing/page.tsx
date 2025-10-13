@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, CheckCircle, Star, Cpu, Brain, Atom, Users, Award, Globe, Lock, TrendingUp, Monitor, MessageSquare, Phone } from 'lucide-react';
 import { Link } from "react-router-dom";
-import SEOOptimizer from "../../components/SEOOptimizer";
+import SEOOptimizer from "../components/SEOOptimizer";
 
 export default function AiQuantumComputing() {
   const features = [
@@ -148,10 +148,9 @@ export default function AiQuantumComputing() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/ai-quantum-computing" />
       </Helmet>
-      <SEOOptimizer
-        title="AI Quantum Computing - Revolutionary Quantum Solutions | Zion Tech Group"
-        description="Harness the power of quantum computing with AI. Zion's quantum platform offers quantum machine learning, simulation, and optimization for breakthrough discoveries and solutions."
-      />
+      <SEOOptimizer>
+        <div>AI Quantum Computing Content</div>
+      </SEOOptimizer>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}

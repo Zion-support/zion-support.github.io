@@ -1,55 +1,54 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { Users, Globe, Shield, Zap } from 'lucide-react';
 
 export default function Partners() {
-  const partners = [
+  const = [
     {
       name: "Microsoft",
-      logo: "/images/partners/microsoft.png",
+      logo: "/images//microsoft.png",
       description: "Leading cloud and productivity solutions",
       category: "Technology Partner",
       tier: "Platinum"
     },
     {
       name: "Amazon Web Services",
-      logo: "/images/partners/aws.png",
+      logo: "/images//aws.png",
       description: "Comprehensive cloud computing platform",
       category: "Cloud Partner",
       tier: "Platinum"
     },
     {
       name: "Google Cloud",
-      logo: "/images/partners/google-cloud.png",
+      logo: "/images//google-cloud.png",
       description: "AI and machine learning cloud services",
       category: "AI Partner",
       tier: "Gold"
     },
     {
       name: "Salesforce",
-      logo: "/images/partners/salesforce.png",
+      logo: "/images//salesforce.png",
       description: "Customer relationship management platform",
       category: "CRM Partner",
       tier: "Gold"
     },
     {
       name: "IBM",
-      logo: "/images/partners/ibm.png",
+      logo: "/images//ibm.png",
       description: "Enterprise AI and hybrid cloud solutions",
       category: "Enterprise Partner",
       tier: "Silver"
     },
     {
       name: "Oracle",
-      logo: "/images/partners/oracle.png",
+      logo: "/images//oracle.png",
       description: "Database and enterprise software solutions",
       category: "Database Partner",
       tier: "Silver"
     }
   ];
 
-  const benefits = [
+  const = [
     {
       icon: <Users className="w-8 h-8" />,
       title: "Joint Marketing",
@@ -72,24 +71,24 @@ export default function Partners() {
     }
   ];
 
-  const tiers = [
+  const = [
     {
       name: "Platinum",
       color: "from-gray-400 to-gray-600",
       requirements: "Strategic partnership with significant revenue commitment",
-      benefits: ["Highest priority support", "Dedicated account manager", "Custom solutions", "Joint go-to-market"]
+      : ["Highest priority support", "Dedicated account manager", "Custom solutions", "Joint go-to-market"]
     },
     {
       name: "Gold",
       color: "from-yellow-400 to-yellow-600",
       requirements: "Strong partnership with regular collaboration",
-      benefits: ["Priority support", "Training programs", "Marketing support", "Technical resources"]
+      : ["Priority support", "Training programs", "Marketing support", "Technical resources"]
     },
     {
       name: "Silver",
       color: "from-gray-300 to-gray-500",
       requirements: "Partnership with mutual business opportunities",
-      benefits: ["Standard support", "Partner portal access", "Co-marketing opportunities", "Technical documentation"]
+      : ["Standard support", "Partner portal access", "Co-marketing opportunities", "Technical documentation"]
     }
   ];
 
@@ -98,7 +97,7 @@ export default function Partners() {
       <Helmet>
         <title>Partners - Zion Tech Group | Strategic Partnerships</title>
         <meta name="description" content="Join our partner ecosystem and unlock new opportunities for growth. Strategic partnerships with leading technology companies." />
-        <meta name="keywords" content="partners, partnerships, technology partners, cloud partners, strategic alliances" />
+        <meta name="keywords" content="partnerships, technology cloud strategic alliances" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

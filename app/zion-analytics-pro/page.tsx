@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, BarChart3, DollarSign, Star as StarIcon } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, BarChart3, DollarSign, Star as } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
@@ -20,7 +20,7 @@ export default function ZionAnalyticsPro() {
     "Custom metrics & KPIs"
   ];
 
-  const benefits = [
+  const = [
     "Increase revenue by 25%",
     "Reduce reporting time by 80%",
     "Make data-driven decisions",
@@ -97,10 +97,9 @@ export default function ZionAnalyticsPro() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/zion-analytics-pro" />
       </Helmet>
-      <SEOOptimizer
-        title="Zion Analytics Pro - AI-Powered Business Intelligence | Zion Tech Group"
-        description="Transform your business with Zion Analytics Pro - AI-powered business intelligence platform with real-time analytics, predictive insights, and automated reporting. Start your free trial today!"
-      />
+      <SEOOptimizer>
+        <div>Zion Analytics Pro Content</div>
+      </SEOOptimizer>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}

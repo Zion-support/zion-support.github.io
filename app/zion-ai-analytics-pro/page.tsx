@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { BarChart3, ArrowRight, Sparkles, CheckCircle, Star, Users, Brain, Target, Mail, Phone, MapPin, Play, Settings, Database, Cloud, Watch, FileText } from 'lucide-react';
+import { BarChart3, ArrowRight, Sparkles, CheckCircle, Star, Brain, Target, Mail, Phone, MapPin, Play, Settings, Database, FileText } from 'lucide-react';
 
 const ZionAIAnalyticsProPage = () => {
   const features = [
@@ -139,7 +139,7 @@ const ZionAIAnalyticsProPage = () => {
     { name: 'MySQL', logo: 'MY', category: 'Database' },
     { name: 'PostgreSQL', logo: 'PG', category: 'Database' },
     { name: 'MongoDB', logo: 'MG', category: 'Database' },
-    { name: 'AWS', logo: 'AW', category: 'Cloud' }
+    { name: 'AWS', logo: 'AW', category: '' }
   ];
 
   return (
@@ -175,7 +175,7 @@ const ZionAIAnalyticsProPage = () => {
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </button>
             <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105">
-              Watch Demo
+              Demo
               <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
             </button>
           </div>
@@ -192,7 +192,7 @@ const ZionAIAnalyticsProPage = () => {
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-cyan-400 mb-2">2,500+</div>
-              <div className="text-gray-300 text-sm">Active Users</div>
+              <div className="text-gray-300 text-sm">Active </div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>

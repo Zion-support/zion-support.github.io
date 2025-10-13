@@ -1,4 +1,4 @@
-import { ArrowRight, Target, Brain, BarChart3, CheckCircle, Star, Zap, Mail, MessageSquare, Users, TrendingUp, Globe, Play, Star as StarIcon, Zap as ZapIcon, Star as StarIcon2, Growth, Success, Address } from 'lucide-react';
+import { ArrowRight, Target, Brain, BarChart3, CheckCircle, Star, Zap, Mail, MessageSquare, Users, TrendingUp, Globe, Play, Star as Zap as Star as TrendingUp as CheckCircle as MapPin as Phone } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -115,7 +115,7 @@ export default function ZionAiMarketingAutomationPro() {
     {
       name: "Maria Santos",
       company: "SaaS Platform",
-      role: "VP of Growth",
+      role: "VP of ",
       content: "The multi-channel orchestration has streamlined our entire marketing operation. Our team productivity increased by 80%.",
       rating: 5,
       avatar: "MS"
@@ -125,7 +125,7 @@ export default function ZionAiMarketingAutomationPro() {
   const stats = [
     { number: "25,000+", label: "Active Marketers", icon: <Users className="w-6 h-6" /> },
     { number: "67%", label: "Average ROI Increase", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "95%", label: "Campaign Success Rate", icon: <Target className="w-6 h-6" /> },
+    { number: "95%", label: "Campaign Rate", icon: <Target className="w-6 h-6" /> },
     { number: "10x", label: "Content Generation Speed", icon: <Zap className="w-6 h-6" /> }
   ];
 
@@ -421,7 +421,7 @@ export default function ZionAiMarketingAutomationPro() {
                   <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Globe className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-white font-semibold mb-2">Address</h3>
+                  <h3 className="text-white font-semibold mb-2"></h3>
                   <p className="text-pink-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
               </div>

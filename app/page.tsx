@@ -4,17 +4,17 @@ import EnhancedSEO from "./components/EnhancedSEO";
 import StructuredData from "./components/StructuredData";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
-import FuturisticButton from "./components/FuturisticButton";
-import FuturisticText from "./components/FuturisticText";
-import FuturisticBackgroundEnhanced from "./components/FuturisticBackgroundEnhanced";
-import FuturisticCardEnhanced from "./components/FuturisticCardEnhanced";
+import from "./components/";
+import from "./components/";
+import from "./components/";
+import from "./components/";
 import FuturisticButtonEnhanced from "./components/FuturisticButtonEnhanced";
 import FuturisticTextEnhanced from "./components/FuturisticTextEnhanced";
 import ResponsiveContainer from "./components/ResponsiveContainer";
-import ResponsiveGrid from "./components/ResponsiveGrid";
-import ResponsiveText from "./components/ResponsiveText";
-import LazyImage from "./components/LazyImage";
-import EnhancedLoadingSpinner from "./components/EnhancedLoadingSpinner";
+import from "./components/";
+import from "./components/";
+import from "./components/";
+import from "./components/";
 import EnhancedAccessibility from "./components/EnhancedAccessibility";
 import PerformanceOptimizer from "./components/PerformanceOptimizer";
 
@@ -353,10 +353,6 @@ const HomePage = () => {
             {features.map((feature, index) => (
               <FuturisticCard
                 key={index}
-                glowColor={index % 2 === 0 ? 'cyan' : 'purple'}
-                hoverEffect={true}
-                animated={true}
-                neon={true}
                 className="cursor-pointer"
               >
                 <Link
@@ -403,10 +399,6 @@ const HomePage = () => {
             {microSaasHighlights.map((saas, index) => (
               <FuturisticCard
                 key={index}
-                glowColor={index % 3 === 0 ? 'cyan' : index % 3 === 1 ? 'purple' : 'pink'}
-                hoverEffect={true}
-                animated={true}
-                neon={true}
                 className="relative overflow-hidden"
               >
                 <Link
