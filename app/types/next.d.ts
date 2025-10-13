@@ -1,7 +1,7 @@
 // next.d utility
-export const next.d = () => {
+export const nextUtil = () => {
   // Implementation
   return true;
 };
 
-export default next.d;
+export default nextUtil;
