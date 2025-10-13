@@ -162,12 +162,15 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 >>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     return () => {
 <<<<<<< HEAD
       focusableElements.forEach(element => {
         element.removeEventListener('focus', handleFocus);
         element.removeEventListener('blur', handleBlur);
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
       const nav = document.querySelector('nav');
       if (nav && !nav.getAttribute('role')) {
         nav.setAttribute('role', 'navigation');
@@ -186,7 +189,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         if (!img.getAttribute('alt')) {
           img.setAttribute('alt', `Image ${index + 1}`);
         }
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
+
       });
 =======
       document.removeEventListener('focusin', handleFocusIn);

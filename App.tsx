@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { Suspense } from 'react';
+=======
+import React, { Suspense, lazy } from 'react';
+>>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -10,6 +14,7 @@ import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 <<<<<<< HEAD
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
 =======
@@ -20,31 +25,35 @@ import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 >>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
+=======
+import EnhancedAccessibility from './app/components/EnhancedAccessibility';
+import LoadingSpinner from './app/components/LoadingSpinner';
+>>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
 
-// Page Components
-import HomePage from './app/page';
-import AboutPage from './app/pages/AboutPage';
-import ContactPage from './app/pages/ContactPage';
-import ServicesPage from './app/pages/ServicesPage';
-import BlogPage from './app/pages/BlogPage';
-import TutorialsPage from './app/pages/TutorialsPage';
-import DemoPage from './app/pages/DemoPage';
-import SupportPage from './app/pages/SupportPage';
-import PrivacyPage from './app/pages/PrivacyPage';
-import TermsPage from './app/pages/TermsPage';
-import PricingPage from './app/pages/PricingPage';
-import SolutionsPage from './app/pages/SolutionsPage';
-import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
-import AISolutionsPage from './app/ai-solutions/page';
-import ITSolutionsPage from './app/it-solutions/page';
+// Lazy load page components for better performance
+const HomePage = lazy(() => import('./app/page'));
+const AboutPage = lazy(() => import('./app/pages/AboutPage'));
+const ContactPage = lazy(() => import('./app/pages/ContactPage'));
+const ServicesPage = lazy(() => import('./app/pages/ServicesPage'));
+const BlogPage = lazy(() => import('./app/pages/BlogPage'));
+const TutorialsPage = lazy(() => import('./app/pages/TutorialsPage'));
+const DemoPage = lazy(() => import('./app/pages/DemoPage'));
+const SupportPage = lazy(() => import('./app/pages/SupportPage'));
+const PrivacyPage = lazy(() => import('./app/pages/PrivacyPage'));
+const TermsPage = lazy(() => import('./app/pages/TermsPage'));
+const PricingPage = lazy(() => import('./app/pages/PricingPage'));
+const SolutionsPage = lazy(() => import('./app/pages/SolutionsPage'));
+const MicroSaaSSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page'));
+const AISolutionsPage = lazy(() => import('./app/ai-solutions/page'));
+const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));
 
 // Service Pages
-import AIServicesPage from './app/pages/AIServicesPage';
-import ITServicesPage from './app/pages/ITServicesPage';
-import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
-import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
-import CaseStudiesPage from './app/pages/CaseStudiesPage';
-import CareersPage from './app/pages/CareersPage';
+const AIServicesPage = lazy(() => import('./app/pages/AIServicesPage'));
+const ITServicesPage = lazy(() => import('./app/pages/ITServicesPage'));
+const CloudInfrastructurePage = lazy(() => import('./app/pages/CloudInfrastructurePage'));
+const DigitalTransformationPage = lazy(() => import('./app/pages/DigitalTransformationPage'));
+const CaseStudiesPage = lazy(() => import('./app/pages/CaseStudiesPage'));
+const CareersPage = lazy(() => import('./app/pages/CareersPage'));
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -75,6 +84,7 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
 
 function App() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <HelmetProvider>
@@ -160,6 +170,8 @@ function App() {
 >>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
     </HelmetProvider>
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
     <ErrorBoundary>
       <HelmetProvider>
         <Router>
@@ -167,44 +179,57 @@ function App() {
             <Navigation />
             <main className="relative z-10" id="main-content" role="main">
               <ErrorBoundary>
-                <Routes>
-                  {/* Main Pages */}
-                  <Route path="/" element={<HomePage />} />
-                  <Route path="/about" element={<AboutPage />} />
-                  <Route path="/contact" element={<ContactPage />} />
-                  <Route path="/services" element={<ServicesPage />} />
-                  <Route path="/blog" element={<BlogPage />} />
-                  <Route path="/tutorials" element={<TutorialsPage />} />
-                  <Route path="/demo" element={<DemoPage />} />
-                  <Route path="/support" element={<SupportPage />} />
-                  <Route path="/privacy" element={<PrivacyPage />} />
-                  <Route path="/terms" element={<TermsPage />} />
-                  <Route path="/pricing" element={<PricingPage />} />
-                  <Route path="/solutions" element={<SolutionsPage />} />
-                  
-                  {/* Catch all route */}
-                  <Route path="*" element={
-                    <div className="min-h-screen flex items-center justify-center bg-slate-900">
-                      <div className="text-center">
-                        <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
-                        <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
-                        <a href="/" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">
-                          Go Home
-                        </a>
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Routes>
+                    {/* Main Pages */}
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/services" element={<ServicesPage />} />
+                    <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
+                    <Route path="/ai-solutions" element={<AISolutionsPage />} />
+                    <Route path="/it-solutions" element={<ITSolutionsPage />} />
+                    <Route path="/blog" element={<BlogPage />} />
+                    <Route path="/tutorials" element={<TutorialsPage />} />
+                    <Route path="/demo" element={<DemoPage />} />
+                    <Route path="/support" element={<SupportPage />} />
+                    <Route path="/privacy" element={<PrivacyPage />} />
+                    <Route path="/terms" element={<TermsPage />} />
+                    <Route path="/pricing" element={<PricingPage />} />
+                    <Route path="/solutions" element={<SolutionsPage />} />
+                    
+                    {/* Service Pages */}
+                    <Route path="/ai-services" element={<AIServicesPage />} />
+                    <Route path="/it-services" element={<ITServicesPage />} />
+                    <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                    <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                    <Route path="/case-studies" element={<CaseStudiesPage />} />
+                    <Route path="/careers" element={<CareersPage />} />
+                    
+                    {/* Catch all route */}
+                    <Route path="*" element={
+                      <div className="min-h-screen flex items-center justify-center bg-slate-900">
+                        <div className="text-center">
+                          <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
+                          <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
+                          <a href="/" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">
+                            Go Home
+                          </a>
+                        </div>
                       </div>
-                    </div>
-                  } />
-                </Routes>
+                    } />
+                  </Routes>
+                </Suspense>
               </ErrorBoundary>
             </main>
             <Footer />
             <PerformanceMonitor />
             <AccessibilityEnhancer />
+            <EnhancedAccessibility />
           </div>
         </Router>
       </HelmetProvider>
     </ErrorBoundary>
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
   );
 }
 

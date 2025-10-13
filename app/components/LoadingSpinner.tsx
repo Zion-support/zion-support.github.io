@@ -1,9 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-c97f
+=======
+
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
 import React from 'react';
 import { Loader2 } from 'lucide-react';
 

@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-=======
+
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';

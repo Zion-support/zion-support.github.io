@@ -51,18 +51,14 @@ const PerformanceMonitor: React.FC = () => {
     onLCP(handleMetric);
     onTTFB(handleMetric);
   }, []);
-<<<<<<< HEAD
-  // Only show in development
-  if (process.env.NODE_ENV !== 'development') {
-=======
 
   // Don't render anything in production
   if (process.env.NODE_ENV === 'production') {
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
     return null;
   }
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
       <h3 className="font-bold mb-2">Performance Metrics</h3>
@@ -407,6 +403,8 @@ const PerformanceMonitor: React.FC = () => {
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
       </div>
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
     <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg text-xs font-mono z-50">
       <div className="font-bold mb-2">Performance Metrics</div>
       <div>CLS: {metrics.cls?.toFixed(3) || 'N/A'}</div>
@@ -414,7 +412,6 @@ const PerformanceMonitor: React.FC = () => {
       <div>FCP: {metrics.fcp?.toFixed(1) || 'N/A'}ms</div>
       <div>LCP: {metrics.lcp?.toFixed(1) || 'N/A'}ms</div>
       <div>TTFB: {metrics.ttfb?.toFixed(1) || 'N/A'}ms</div>
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
     </div>
   );
 };

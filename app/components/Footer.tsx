@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
 =======
@@ -31,6 +32,9 @@ import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
   ArrowRightIcon
 } from '@heroicons/react/24/outline';
 >>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
+=======
+import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
+>>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -79,6 +83,7 @@ const Footer: React.FC = () => {
 >>>>>>> cursor/website-audit-and-update-with-deployment-936a
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
   const services = [
@@ -92,6 +97,8 @@ const Footer: React.FC = () => {
   ];
 
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
   const company = [
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/team' },
@@ -119,12 +126,18 @@ const Footer: React.FC = () => {
     { name: 'Compliance', href: '/compliance' },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+  ];
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
   const socialLinks = [
     { name: 'Facebook', href: '#', icon: Facebook },
     { name: 'Twitter', href: '#', icon: Twitter },
     { name: 'LinkedIn', href: '#', icon: Linkedin },
     { name: 'GitHub', href: '#', icon: Github }
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-c97f
 =======
   ];
@@ -144,6 +157,8 @@ const Footer: React.FC = () => {
     { name: 'LinkedIn', href: '#', icon: 'LinkedIn' },
     { name: 'GitHub', href: '#', icon: 'GitHub' }
 >>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
   ];
 
   return (

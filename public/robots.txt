@@ -3,15 +3,21 @@ Allow: /
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Sitemap
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
 Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
 
 # Disallow admin and private areas
 Disallow: /admin/
-Disallow: /private/
 Disallow: /api/
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 # Allow all other content
@@ -54,3 +60,7 @@ Disallow: /*.xml$
 Disallow: /scripts/
 Disallow: /node_modules/
 >>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
+=======
+Disallow: /_next/
+Disallow: /static/
+>>>>>>> cursor/analyze-improve-and-deploy-application-3b5b

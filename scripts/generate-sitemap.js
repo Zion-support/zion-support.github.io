@@ -1,30 +1,40 @@
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 const baseUrl = 'https://ziontechgroup.com';
+<<<<<<< HEAD
 =======
 // List of all pages in the application
 >>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
+=======
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
 const pages = [
   { url: '/', priority: '1.0', changefreq: 'daily' },
   { url: '/about', priority: '0.8', changefreq: 'monthly' },
   { url: '/services', priority: '0.9', changefreq: 'weekly' },
-  { url: '/contact', priority: '0.8', changefreq: 'monthly' },
-  { url: '/blog', priority: '0.7', changefreq: 'weekly' },
-  { url: '/tutorials', priority: '0.7', changefreq: 'weekly' },
-  { url: '/demo', priority: '0.6', changefreq: 'monthly' },
+  { url: '/ai-solutions', priority: '0.9', changefreq: 'weekly' },
+  { url: '/it-solutions', priority: '0.9', changefreq: 'weekly' },
+  { url: '/micro-saas-solutions', priority: '0.8', changefreq: 'weekly' },
+  { url: '/5g-solutions', priority: '0.8', changefreq: 'weekly' },
+  { url: '/pricing', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog', priority: '0.6', changefreq: 'weekly' },
+  { url: '/tutorials', priority: '0.6', changefreq: 'weekly' },
+  { url: '/demo', priority: '0.7', changefreq: 'monthly' },
   { url: '/support', priority: '0.6', changefreq: 'monthly' },
+  { url: '/contact', priority: '0.8', changefreq: 'monthly' },
   { url: '/privacy', priority: '0.3', changefreq: 'yearly' },
   { url: '/terms', priority: '0.3', changefreq: 'yearly' },
+<<<<<<< HEAD
   { url: '/pricing', priority: '0.8', changefreq: 'monthly' },
 <<<<<<< HEAD
   { url: '/solutions', priority: '0.8', changefreq: 'monthly' }
+=======
+  { url: '/careers', priority: '0.5', changefreq: 'weekly' },
+  { url: '/case-studies', priority: '0.6', changefreq: 'monthly' },
+>>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
 ];
 
 const generateSitemap = () => {
@@ -121,6 +131,7 @@ ${pages.map(page => `  <url>
 </urlset>`;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const publicDir = path.join(__dirname, '..', 'public');
   if (!fs.existsSync(publicDir)) {
     fs.mkdirSync(publicDir, { recursive: true });
@@ -166,10 +177,20 @@ const generateSitemap = () => {
 const generateRobotsTxt = () => {
   return `User-agent: *
 >>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
+=======
+  const sitemapPath = path.join(process.cwd(), 'public', 'sitemap.xml');
+  fs.writeFileSync(sitemapPath, sitemap);
+  console.log('✅ Sitemap generated successfully at', sitemapPath);
+};
+
+const generateRobotsTxt = () => {
+  const robotsTxt = `User-agent: *
+>>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
 Allow: /
 
 Sitemap: ${baseUrl}/sitemap.xml
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 # Disallow admin and private areas
 Disallow: /admin/
@@ -199,11 +220,14 @@ console.log(`📄 Generated sitemap with ${pages.length} pages`);
 console.log(`🤖 Generated robots.txt`);
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
 
 # Disallow admin and private areas
 Disallow: /admin/
+<<<<<<< HEAD
 Disallow: /private/
 Disallow: /api/
 Disallow: /*.json$
@@ -228,3 +252,17 @@ console.log('✅ Robots.txt generated successfully at:', robotsPath);
 console.log(`📊 Generated sitemap with ${pages.length} pages`);
 console.log('🚀 SEO files are ready for deployment!');
 >>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
+=======
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/`;
+
+  const robotsPath = path.join(process.cwd(), 'public', 'robots.txt');
+  fs.writeFileSync(robotsPath, robotsTxt);
+  console.log('✅ Robots.txt generated successfully at', robotsPath);
+};
+
+// Generate both files
+generateSitemap();
+generateRobotsTxt();
+>>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
