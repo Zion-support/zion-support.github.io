@@ -1,18 +1,11 @@
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
-<<<<<<< HEAD
 import StructuredData from "./components/StructuredData";
-import FuturisticBackground from "./components/FuturisticBackground";
-import FuturisticCard from "./components/FuturisticCard";
-import FuturisticButton from "./components/FuturisticButton";
-import FuturisticText from "./components/FuturisticText";
-=======
 import FuturisticBackgroundEnhanced from "./components/FuturisticBackgroundEnhanced";
 import FuturisticCardEnhanced from "./components/FuturisticCardEnhanced";
 import FuturisticButtonEnhanced from "./components/FuturisticButtonEnhanced";
 import FuturisticTextEnhanced from "./components/FuturisticTextEnhanced";
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
 import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
 import ResponsiveText from "./components/ResponsiveText";
@@ -498,17 +491,8 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      </main>
-<<<<<<< HEAD
-      </div>
-=======
           </main>
-        </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
-=======
         </FuturisticBackgroundEnhanced>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
       </EnhancedAccessibility>
     </PerformanceOptimizer>
   );

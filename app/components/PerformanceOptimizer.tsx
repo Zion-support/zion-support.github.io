@@ -1,19 +1,10 @@
-<<<<<<< HEAD
-import React, { useEffect, useState, useCallback } from 'react';
-=======
 import React, { useEffect, useCallback } from 'react';
->>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-<<<<<<< HEAD
-  const [isOptimized, setIsOptimized] = useState(false);
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
   // Preload critical resources
   useEffect(() => {
     const preloadCriticalResources = () => {
@@ -39,7 +30,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       });
     };
 
-<<<<<<< HEAD
     // Optimize images
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
@@ -98,9 +88,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     const timer = setTimeout(initializeOptimizations, 100);
 
     return () => clearTimeout(timer);
-=======
-    preloadCriticalResources();
->>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
   }, []);
 
   // Optimize scroll performance
@@ -144,10 +131,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     return () => window.removeEventListener('resize', handleResize);
   }, [handleResize]);
 
-<<<<<<< HEAD
   // Intersection Observer for lazy loading
   useEffect(() => {
-    if (!isOptimized) return;
 
     const observerOptions = {
       root: null,
@@ -267,9 +252,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       `}</style>
     </>
   );
-=======
-  return <>{children}</>;
->>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
 };
 
 export default PerformanceOptimizer;
