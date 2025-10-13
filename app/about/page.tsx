@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone } from 'lucide-react';
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe } from 'lucide-react';
 
 export default function AboutPage() {
 
@@ -25,6 +25,13 @@ export default function AboutPage() {
       title: "Excellence",
       description: "We strive for excellence in every project, ensuring the highest quality deliverables."
     }
+  ];
+
+  const stats = [
+    { label: "Projects Completed", number: "500+" },
+    { label: "Happy Clients", number: "200+" },
+    { label: "Years Experience", number: "10+" },
+    { label: "Team Members", number: "50+" }
   ];
 
   return (

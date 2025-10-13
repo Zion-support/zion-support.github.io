@@ -11,7 +11,8 @@ import {
   Brain,
   Target,
   Globe,
-  AlertCircle
+  AlertCircle,
+  Clock
 } from 'lucide-react';
 
 const AICustomerSentimentTrackerPage = () => {
@@ -45,6 +46,46 @@ const AICustomerSentimentTrackerPage = () => {
       icon: <Users className="w-8 h-8 text-blue-400" />,
       title: "Team Collaboration",
       description: "Share insights across teams, assign tasks, and track resolution progress for better customer experience."
+    }
+  ];
+
+  const stats = [
+    { number: "95%", label: "Accuracy Rate" },
+    { number: "2.5s", label: "Response Time" },
+    { number: "50+", label: "Languages" },
+    { number: "24/7", label: "Monitoring" }
+  ];
+
+  const benefits = [
+    {
+      icon: <Target className="w-8 h-8 text-green-400" />,
+      title: "Increase customer satisfaction by 40%",
+      description: "Our AI-powered sentiment analysis helps you understand and improve customer satisfaction levels."
+    },
+    {
+      icon: <Clock className="w-8 h-8 text-blue-400" />,
+      title: "Reduce response time by 60%",
+      description: "Get instant insights and automated responses to customer feedback and concerns."
+    },
+    {
+      icon: <AlertCircle className="w-8 h-8 text-yellow-400" />,
+      title: "Identify issues before they escalate",
+      description: "Proactive monitoring helps you catch and resolve issues before they become major problems."
+    },
+    {
+      icon: <Heart className="w-8 h-8 text-red-400" />,
+      title: "Improve brand reputation",
+      description: "Monitor and manage your brand reputation across all channels with real-time insights."
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
+      title: "Make data-driven decisions",
+      description: "Comprehensive analytics and reporting help you make informed business decisions."
+    },
+    {
+      icon: <Users className="w-8 h-8 text-cyan-400" />,
+      title: "Scale customer support efficiently",
+      description: "Handle more customer interactions with the same resources through intelligent automation."
     }
   ];
 

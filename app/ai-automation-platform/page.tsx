@@ -5,7 +5,13 @@ import {
   BarChart3, 
   Cloud, 
   Workflow,
-  Target
+  Target,
+  TrendingUp,
+  Settings,
+  Users,
+  Sparkles,
+  ArrowRight,
+  CheckCircle
 } from 'lucide-react';
 
 const AIAutomationPlatformPage = () => {
@@ -34,6 +40,15 @@ const AIAutomationPlatformPage = () => {
       icon: <Settings className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
+  ];
+
+  const benefits = [
+    "Reduce manual work by 80%",
+    "Increase productivity by 300%",
+    "Eliminate human errors",
+    "24/7 automated operations",
+    "Real-time monitoring",
+    "Scalable solutions"
   ];
 
   const useCases = [
