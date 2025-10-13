@@ -98,12 +98,53 @@ const HomePage = () => {
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
-        keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
+        keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology, artificial intelligence, machine learning, cloud computing, data analytics, business intelligence, automation, digital transformation, technology consulting, enterprise solutions, software development, mobile applications, web development, blockchain, IoT, edge computing, smart cities, quantum computing, robotics, autonomous systems"
         canonical="https://ziontechgroup.com"
+        ogImage="https://ziontechgroup.com/og-image.svg"
+        ogType="website"
+        twitterCard="summary_large_image"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "url": "https://ziontechgroup.com",
+          "logo": "https://ziontechgroup.com/favicon.svg",
+          "description": "Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "364 E Main St STE 1008",
+            "addressLocality": "Middletown",
+            "addressRegion": "DE",
+            "postalCode": "19709",
+            "addressCountry": "US"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-302-464-0950",
+            "contactType": "customer service",
+            "email": "kleber@ziontechgroup.com"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/company/ziontechgroup",
+            "https://twitter.com/ziontechgroup"
+          ],
+          "foundingDate": "2020",
+          "numberOfEmployees": "50-100",
+          "industry": "Technology",
+          "services": [
+            "AI Solutions",
+            "IT Services",
+            "Micro SAAS",
+            "Digital Transformation",
+            "Cloud Computing",
+            "Cybersecurity",
+            "5G Solutions"
+          ]
+        }}
       />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden" role="banner" aria-label="Hero section">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -162,7 +203,7 @@ const HomePage = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8" role="main" aria-label="Core services">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">

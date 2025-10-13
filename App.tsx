@@ -218,8 +218,38 @@ function App() {
     enableCaching: true,
   });
 
+<<<<<<< HEAD
   const toggleSidebar = React.useCallback(() => {
     setIsSidebarOpen(prev => !prev);
+=======
+  // Preload critical resources
+  React.useEffect(() => {
+    const preloadCriticalResources = () => {
+      const criticalResources = [
+        '/fonts/inter.woff2',
+        '/images/hero-bg.jpg',
+        '/images/logo.svg',
+      ];
+
+      criticalResources.forEach((resource) => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = resource;
+        
+        if (resource.endsWith('.woff2')) {
+          link.as = 'font';
+          link.type = 'font/woff2';
+          link.crossOrigin = 'anonymous';
+        } else if (resource.endsWith('.jpg') || resource.endsWith('.png')) {
+          link.as = 'image';
+        }
+        
+        document.head.appendChild(link);
+      });
+    };
+
+    preloadCriticalResources();
+>>>>>>> cursor/analyze-improve-and-deploy-application-e0b7
   }, []);
 
   return (
