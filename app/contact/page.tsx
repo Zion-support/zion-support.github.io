@@ -109,7 +109,6 @@ export default function Contact() {
           </div>
         </section>
 
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
@@ -298,22 +297,6 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-=======
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/consultation"
-              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Schedule Consultation
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-            <Link
-              to="/demo"
-              className="inline-flex items-center px-6 py-3 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
-            >
-              Request Demo
-            </Link>
->>>>>>> origin/main
           </div>
         </div>
       </div>
