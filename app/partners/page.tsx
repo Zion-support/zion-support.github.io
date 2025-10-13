@@ -1,16 +1,16 @@
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
-
-import { Link } from 'react-router-dom;
-
-import { CheckCircle, ExternalLink, ArrowRight, Building2, Handshake, Award, Users, Zap } from 'lucide-react;
+import { Helmet } from 'react-helmet-async';
 
 import { Link } from 'react-router-dom;
 
-import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react;
+import { CheckCircle, ExternalLink, ArrowRight, Building2, Handshake, Award, Users, Zap } from 'lucide-react';
 
-import { CheckCircle, Handshake, Users, Award } from 'lucide-react;
+import { Link } from 'react-router-dom;
+
+import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
+
+import { CheckCircle, Handshake, Users, Award } from 'lucide-react';
 
 const PartnersPage = () => {;
   const partners = [;
@@ -21,7 +21,7 @@ const PartnersPage = () => {;
     {
       name: 'Amazon Web Services,
       logo: '/api/placeholder/200/100,
-import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react;
+import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react';
     {
       name: 'Microsoft,
       logo: '/images/partners/microsoft.png,

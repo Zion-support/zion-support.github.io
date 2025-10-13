@@ -1,15 +1,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { Play, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart, Users } from 'lucide-react;
+import { Play, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart, Users } from 'lucide-react';
 
 import Navigation from ../components
-import Footer from ../components
+import Footer from ../components;
 ;
 
 const DemoPage: React.FC = () => {const demos = [;

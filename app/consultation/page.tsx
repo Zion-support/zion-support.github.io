@@ -1,10 +1,10 @@
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { Calendar, Clock, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Star } from 'lucide-react;
+import { Calendar, Clock, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Star } from 'lucide-react';
 
-import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react;
+import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 
 interface ConsultationType {}
   id: number;

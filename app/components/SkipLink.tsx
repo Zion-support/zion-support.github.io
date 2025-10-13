@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
     <a
       href="#main-content

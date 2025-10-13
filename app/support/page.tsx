@@ -2,15 +2,15 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function Support() {
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 import { Link } from 'react-router-dom;
 
-import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react;
+import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 
-import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, HelpCircle, BookOpen, Users, Zap } from 'lucide-react;
+import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, HelpCircle, BookOpen, Users, Zap } from 'lucide-react';
 
 interface FAQ {}
   question: string;
@@ -20,12 +20,12 @@ interface FAQ {}
   category: string});)
 }
 
-import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search } from 'lucide-react;
+import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search } from 'lucide-react';
 
 import Navigation from ../components
 import Footer from ../components
 
-const SupportPage: React.FC = () => {
+const SupportPage: React.FC = () => {;
   const [searchTerm, setSearchTerm] = useState(');
 
   const [selectedCategory, setSelectedCategory] = useState('all);

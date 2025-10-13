@@ -1,100 +1,32 @@
 import React, { useEffect, useState } from 'react';
-export default function PerformanceMonitor() {
+import { Activity, TrendingUp, Clock, Zap } from 'lucide-react';
+
+interface PerformanceMetrics {
+  lcp?: number | null;
+  fid?: number | null;
+  cls?: number | null;
+  fcp?: number | null;
+  ttfb?: number | null;
+}
+
+interface PerformanceMonitorProps {
+  showInProduction?: boolean;
+}
+
+export default function PerformanceMonitor({ showInProduction = false }: PerformanceMonitorProps) {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    fps: 0
+    lcp: null,
+    fid: null,
+    cls: null,
+    fcp: null,
+    ttfb: null
+  });
 
   const [isVisible, setIsVisible] = useState(false);
-    // Only run in development
-    if (process.env['NODE_ENV'] !== 'development') return;
 
-    const measurePerformance = () => {
-      // Measure load time
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
-
-      // Measure render time (FCP)
-      const paintEntries = performance.getEntriesByType('paint');
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-      const renderTime = fcp ? fcp.startTime : 0;
-          requestAnimationFrame(measureFrame);
-        };
-        
-        requestAnimationFrame(measureFrame);
-    if (typeof window === 'undefined') return;
-
-    // Only show in development or when performance monitoring is enabled
-    const shouldMonitor = process.env['NODE_ENV'] === 'development' ||
-                         localStorage.getItem('performance-monitoring') === 'true';
-
-    if (!shouldMonitor) return;
-
-    const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {
-      setMetrics(prev => ({ ...prev, ...newMetrics }));
-    };
-
-    // Monitor Core Web Vitals
-    const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
-        if (entry.entryType === 'largest-contentful-paint') {
-          updateMetrics({ lcp: entry.startTime });
-        }
-        if (entry.entryType === 'first-input') {
-          updateMetrics({ fid: entry.processingStart - entry.startTime });
-        }
-        if (entry.entryType === 'layout-shift') {
-          updateMetrics({ cls: (entry as any).value });
-        }
-        if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
-          updateMetrics({ fcp: entry.startTime });
-        }
-      }
-
-      setMetrics({
-        loadTime: Math.round(loadTime),
-        renderTime: Math.round(renderTime),
-        memoryUsage: Math.round(memoryUsage * 100),
-        fps
-      });
-    // Monitor resource loading
-    const monitorResources = () => {
-      const resources = performance.getEntriesByType('resource');
-      const slowResources = resources.filter((resource: any) => resource.duration > 1000);
-      
-      if (slowResources.length > 0) {
-        console.warn('Slow resources detected:', slowResources.map((r: any) => ({
-          name: r.name,
-          duration: Math.round(r.duration) + 'ms'
-        })));
-    // Initial measurement
-    measurePerformance();
-
-    // Show/hide with Ctrl+Shift+P
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-        e.preventDefault();
-        setIsVisible(prev => !prev);
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  if (!isVisible) return null;
-
-  return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg font-mono text-sm z-50">
-      <div className="mb-2 font-bold">Performance Monitor</div>
-      <div>Load Time: {metrics.loadTime}ms</div>
-      <div>Render Time: {metrics.renderTime}ms</div>
-      <div>Memory: {metrics.memoryUsage}%</div>
-      <div>FPS: {metrics.fps}</div>
-      <div className="text-xs text-gray-400 mt-2">
-}
-    // Show performance panel after 3 seconds;
-const timer = setTimeout(() => setIsVisible(true), 3000);
-      observer.disconnect();
   useEffect(() => {
     // Only show in development or if explicitly enabled
-    if (process.env['NODE_ENV'] !== 'development' && !showInProduction) {
+    if (process.env.NODE_ENV !== 'development' && !showInProduction) {
       return;
     }
 
@@ -220,3 +152,7 @@ const timer = setTimeout(() => setIsVisible(true), 3000);
             <span>Poor</span>
           </div>
         </div>
+      </div>
+    </div>
+  );
+}

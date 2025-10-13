@@ -1,14 +1,14 @@
-'use client;
+'use client';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Server, Shield, Cloud, Database, Network, Code, Monitor, Settings } from 'lucide-react';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 import { Link } from 'react-router-dom;
 
-import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react;
+import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react';
 
 ;
 

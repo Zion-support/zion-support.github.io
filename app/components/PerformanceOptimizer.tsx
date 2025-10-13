@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
-'use client;
+'use client';
 import React from 'react';
 'use client';
 
-import React, { useEffect, useState, useCallback } from 'react;
+import React, { useEffect, useState, useCallback } from 'react';
 
-import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react;
+import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
 
 interface PerformanceOptimizerProps {}
   enableImageOptimization?: boolean;

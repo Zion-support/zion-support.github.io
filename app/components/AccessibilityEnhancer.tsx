@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-'use client;
+'use client';
 
-import React, { useEffect } from 'react;
+import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {}
   enableKeyboardNavigation?: boolean;

@@ -4,7 +4,7 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
-import React, { useState, useEffect, Suspense, memo } from 'react;
+import React, { useState, useEffect, Suspense, memo } from 'react';
 
 import { Navigation } from './components/Navigation;
 
@@ -241,7 +241,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer'
               Watch Demo
             </FuturisticButton>
 }
-      </div>
+      </div>;
   );
 };
 

@@ -1,9 +1,10 @@
-import React, {Suspense, lazy}from 'react';
-import {BrowserRouter, Routes, Route}}from 'react-router-dom';
-import {HelmetProvider}}from 'react-helmet-async';
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
-// AI Services;
+
+// AI Services
 const AiServicesPage = lazy(() => import('./ai-services/page'));
 const AiMarketingPage = lazy(() => import('./ai-marketing/page'));
 const AiAutomationPage = lazy(() => import('./ai-automation/page'));
@@ -16,17 +17,18 @@ const AiWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/pag
 const AiCustomerSupportPage = lazy(() => import('./ai-customer-support/page'));
 const AiSalesAutomationPage = lazy(() => import('./ai-sales-automation/page'));
 const AiDataVisualizationPage = lazy(() => import('./ai-data-visualization/page'));
-const App: React.FC = () => {,
-    return(<ErrorBoundary>)
-      <HelmetProvider />
+
+const App: React.FC = () => {
+  return (
+    <ErrorBoundary>
+      <HelmetProvider>
         <BrowserRouter>
           <div className="App">
             <PerformanceMonitor />
-            <AccessibilityEnhancer />
-            <Suspense fallback={<AppLoadingSpinner />}>
+            <Suspense fallback={<div>Loading...</div>}>
               <Routes>
                 {/* Main Pages */}
-                <Route path="/" element={<HomePage />} />
+                <Route path="/" element={<div>Home Page</div>} />
 
     <HelmetProvider>
       <BrowserRouter>
