@@ -1,78 +1,24 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface mainProps {
-
-import React from "react";
-import "./index.css";
-import React from "react";
-
-interface MainProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-import React from 'react';
-import "./index.css";
-
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement,
-);
-
-export default function main({ className = '', children }: mainProps) {
+export default function MainPage() {
   return (
-    <div className={`${className}`}>
-      {children}
+    <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Main - Zion Tech Group</title>
+        <meta name="description" content="Advanced Main solutions by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Main
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            This page is under development. Please check back later.
+          </p>
+        </div>
+      </div>
     </div>
   );
-}
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
-import "./index.css";
-
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
-import "./index.css";
-
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement,
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import './index.css';
-
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
-import "./index.css";
-
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement,
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
-import "./index.css";
-
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement,
-);
-
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-);
-);
-);
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import App from "./App";
-);
-
-export default function Main({ className = '', children, ...props }: MainProps) {
 }

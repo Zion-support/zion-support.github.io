@@ -124,32 +124,23 @@ export default function CybersecuritySolutionsPage() {
       title: "Real-time Monitoring",
       description: "24/7 security monitoring and incident response",
       icon: <CheckCircle className="w-8 h-8" />
-      description: "Advanced AI algorithms detect and prevent sophisticated cyber threats before they cause damage",
-      icon: <Brain className="w-6 h-6" />,
-      stats: "99.9% threat detection",
     },
     {
       title: "Zero Trust Architecture",
       description: "Implement zero trust security model with continuous verification and least privilege access",
-      icon: <Lock className="w-6 h-6" />,
-      stats: "100% coverage",
+      icon: <Lock className="w-6 h-6" />
     },
     {
       title: "24/7 Monitoring",
       description: "Round-the-clock security monitoring and incident response to protect your business",
-      icon: <Activity className="w-6 h-6" />,
-      stats: "Sub-minute response",
+      icon: <Activity className="w-6 h-6" />
     },
     {
       title: "Compliance Ready",
       description: "Meet industry compliance requirements including GDPR, HIPAA, SOX, and PCI DSS",
-      icon: <FileText className="w-6 h-6" />,
-      stats: "50+ frameworks",
+      icon: <FileText className="w-6 h-6" />
     }
   ];
-}
-
-}}
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       <Helmet>

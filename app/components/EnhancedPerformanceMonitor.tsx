@@ -1,30 +1,24 @@
 import React from 'react';
-import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-import React from 'react';
-
-interface EnhancedPerformanceMonitorProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function EnhancedPerformanceMonitor({ className = '', children }: EnhancedPerformanceMonitorProps) {
+export default function EnhancedPerformanceMonitorPage() {
   return (
-    <div className={`${className}`}>
-      {children}
+    <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>EnhancedPerformanceMonitor - Zion Tech Group</title>
+        <meta name="description" content="Advanced EnhancedPerformanceMonitor solutions by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            EnhancedPerformanceMonitor
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            This page is under development. Please check back later.
+          </p>
+        </div>
+      </div>
     </div>
   );
-}
-export default function EnhancedPerformanceMonitor({ className = '', children, ...props }: EnhancedPerformanceMonitorProps) {
-    return (
-        <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-
-}
-
-export default function Enhancedperformancemonitor({ className = '', children, ...props }: EnhancedperformancemonitorProps) {
 }

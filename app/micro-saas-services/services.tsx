@@ -1,38 +1,24 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface servicesProps {
-interface ServicesProps {
-  className?: string;
-}
-
-export default function services({ className = '', children }: servicesProps) {
+export default function ServicesPage() {
   return (
-    <div className={`${className}`}>
-      {children}
+    <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Advanced Services solutions by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Services
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            This page is under development. Please check back later.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-    </div>
-  );
-}
-const Services: React.FC<ServicesProps> = ({ className = "" }) => {
-  return (
-    <div className={className}>
-      <h2>Services</h2>
-    </div>
-  );
-};
-
-import React from 'react';
-
-export default Services;
-  );
-}
-
-export default function Services({ className = '', children, ...props }: ServicesProps) {
-}
-export default $1;

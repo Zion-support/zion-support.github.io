@@ -1,80 +1,24 @@
-
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface AnalyticsProviderProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function AnalyticsProvider({ className = '', children }: AnalyticsProviderProps) {
+export default function AnalyticsProviderPage() {
   return (
-    <div className={`${className}`}>
-export default function AnalyticsProvider({ className = '', children, ...props }: AnalyticsProviderProps) {
-  return (
-    <div className={`analytics-provider-component ${className}`} {...props}>
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
-  trackPageView: (pageName: string, properties?: Record<string, any>) => void;
-}
-
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-};
-
-interface AnalyticsProviderProps {
-  children: ReactNode;
-}
-
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  useEffect(() => {
-    // Initialize analytics
-    console.log('Analytics initialized');
-  }, []);
-
-  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-    console.log('Analytics Event:', eventName, properties);
-    // Add your analytics tracking logic here
-  };
-
-  const trackPageView = (pageName: string, properties?: Record<string, any>) => {
-    console.log('Page View:', pageName, properties);
-    // Add your page view tracking logic here
-  };
-
-  const value = {
-    trackEvent,
-    trackPageView,
-  };
-export default function Analyticsprovider({ className = '', children, ...props }: AnalyticsproviderProps) {
-
-  return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
-  );
-}
-export default function AnalyticsProvider({ className = '', children, ...props }: AnalyticsProviderProps) {
-    return (
-        <div className="component" {...props}>
-          {children}
+    <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>AnalyticsProvider - Zion Tech Group</title>
+        <meta name="description" content="Advanced AnalyticsProvider solutions by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            AnalyticsProvider
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            This page is under development. Please check back later.
+          </p>
         </div>
-      );
-}
-};
-
-export default AnalyticsProvider;
+      </div>
+    </div>
   );
 }
-
-}
-
-export default AnalyticsProvider;
-export default function Analyticsprovider({ className = '', children, ...props }: AnalyticsproviderProps) {
-}
-export default AnalyticsProvider;

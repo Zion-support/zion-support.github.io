@@ -1,63 +1,24 @@
 import React from 'react';
-
-interface EnhancedAnalyticsProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function EnhancedAnalytics({ className = '', children }: EnhancedAnalyticsProps) {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-}
-export default function EnhancedAnalytics({ className = '', children, ...props }: EnhancedAnalyticsProps) {
-    return (
-        <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
-import { useState, useEffect } from 'react';
-interface EnhancedAnalyticsProps {
-  children: React.ReactNode;
-}
-
-    // Track page views
-    const trackPageView = () => {
-      if (typeof window !== 'undefined') {
-        // Page view tracking would go here
-        console.log('Page view tracked:', window.location.pathname);
-      }
-    };
-
-    initializeAnalytics();
-    trackPageView();
-  }, []);
-
-  return <>{children}</>;
-};
-
-export default EnhancedAnalytics;
-import React from 'react';
-
-interface EnhancedanalyticsProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Enhancedanalytics({ className = '', children, ...props }: EnhancedanalyticsProps) {
-  return (
-    <div className={`enhancedanalytics-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
-}
-
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 
+export default function EnhancedAnalyticsPage() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>EnhancedAnalytics - Zion Tech Group</title>
+        <meta name="description" content="Advanced EnhancedAnalytics solutions by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            EnhancedAnalytics
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            This page is under development. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 }

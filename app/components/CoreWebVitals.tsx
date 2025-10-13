@@ -1,25 +1,24 @@
-
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface CoreWebVitalsProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function CoreWebVitals({ className = '', children }: CoreWebVitalsProps) {
+export default function CoreWebVitalsPage() {
   return (
-    <div className={`${className}`}>
-      {children}
+    <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>CoreWebVitals - Zion Tech Group</title>
+        <meta name="description" content="Advanced CoreWebVitals solutions by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            CoreWebVitals
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            This page is under development. Please check back later.
+          </p>
+        </div>
+      </div>
     </div>
   );
-}
-export default function CoreWebVitals({ className = '', children, ...props }: CoreWebVitalsProps) {
-    return (
-        <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
-
-export default function Corewebvitals({ className = '', children, ...props }: CorewebvitalsProps) {
 }

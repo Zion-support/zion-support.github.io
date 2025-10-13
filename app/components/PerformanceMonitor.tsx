@@ -1,39 +1,18 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface PerformanceMonitorProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function PerformanceMonitor({ className = '', children }: PerformanceMonitorProps) {
+export default function PerformanceMonitorPage() {
   return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-}
-export default function PerformanceMonitor({ className = '', children, ...props }: PerformanceMonitorProps) {
-    return (
-        <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
-const PerformanceMonitor: React.FC = () => {
-  return null;
-};
-
-export default PerformanceMonitor;
-
-import React from 'react';
-
-export default function Performancemonitor() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>PerformanceMonitor - Zion Tech Group</title>
+        <meta name="description" content="Advanced PerformanceMonitor solutions by Zion Tech Group" />
+      </Helmet>
+      
       <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Performancemonitor
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            PerformanceMonitor
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             This page is under development. Please check back later.
@@ -42,7 +21,4 @@ export default function Performancemonitor() {
       </div>
     </div>
   );
-}
-
-export default function Performancemonitor({ className = '', children, ...props }: PerformancemonitorProps) {
 }

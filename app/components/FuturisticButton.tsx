@@ -1,10 +1,5 @@
 import React from 'react';
-
-interface FuturisticButtonProps {
-import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink } from 'lucide-react';
-
-import { ExternalLink } from 'lucide-react';
 
 interface FuturisticButtonProps {
   href?: string;
@@ -12,15 +7,12 @@ interface FuturisticButtonProps {
   variant?: 'primary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   icon?: React.ReactNode;
-  children: React.ReactNode;
-  icon?: React.ReactNode;,
-    children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
   onClick?: () => void;
   external?: boolean;
 }
 
-export default function FuturisticButton({ className = '', children }: FuturisticButtonProps) {
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   href,
   to,
@@ -34,16 +26,16 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
 }) => {
   const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500';
 
-  const variantClasses = {,
+  const variantClasses = {
     primary: 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg hover:shadow-cyan-500/25',
-      outline: 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900',
-      ghost: 'text-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-300'
+    outline: 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900',
+    ghost: 'text-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-300'
   };
 
-  const sizeClasses = {,
+  const sizeClasses = {
     sm: 'px-4 py-2 text-sm',
-      md: 'px-6 py-3 text-base',
-      lg: 'px-8 py-4 text-lg'
+    md: 'px-6 py-3 text-base',
+    lg: 'px-8 py-4 text-lg'
   };
 
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
@@ -52,57 +44,10 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     <>
       {icon && <span className="mr-2">{icon}</span>}
       {children}
-      {external && <span className="w-4 h-4 ml-2">↗</span>}
-    </>
-  );
-
-  if (href) {
-    return (
-      <a
-        href={href}>
-  className={classes}>
-  onClick={onClick}>
-  target={external ? '_blank' : undefined}>
-  rel={external ? 'noopener noreferrer' : undefined}
-      >
-        {content}
-      </a>
-    );
-  }
-
-  if (to) {
-    return (
-      <a>
-  href={to}>
-  className={classes}>
-  onClick={onClick}
-      >
-        {content}
-      </a>
-    );
-  }
-
-  return (
-    <div className={`${className}`}>
-
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
-
-  const content = (
-    <div>
-      {icon && <span className="mr-2">{icon}</span>}
-      {children}
       {external && <ExternalLink className="w-4 h-4 ml-2" />}
       {!external && !icon && <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />}
-</div>
+    </>
   );
-}
-export default function FuturisticButton({ className = '', children, ...props }: FuturisticButtonProps) {
-    return (
-        <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
 
   if (href) {
     return (
@@ -120,20 +65,20 @@ export default function FuturisticButton({ className = '', children, ...props }:
 
   if (to) {
     return (
-      <Link
-        to={to}
+      <a
+        href={to}
         className={classes}
         onClick={onClick}
       >
         {content}
-      </Link>
+      </a>
     );
   }
 
   return (
-    <button>
-  className={classes}>
-  onClick={onClick}
+    <button
+      className={classes}
+      onClick={onClick}
     >
       {content}
     </button>
@@ -141,7 +86,3 @@ export default function FuturisticButton({ className = '', children, ...props }:
 };
 
 export default FuturisticButton;
-  );
-}
-}
-export default $1;
