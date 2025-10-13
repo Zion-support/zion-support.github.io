@@ -1,8 +1,4 @@
 import React from 'react';
-import React from "react";
-interface ServiceWorkerProps;
-  children?: React.ReactNode;
-  className?: string;
 
 interface ServiceWorkerProps {
   className?: string;
@@ -16,13 +12,3 @@ export default function ServiceWorker({ className = '', children }: ServiceWorke
     </div>
   );
 }
-const ServiceWorker: React.FC<ServiceWorkerProps> = (
-  children,
-const ServiceWorker: React.FC<ServiceWorkerProps> = ({
-//   children,
-  className = "",
-) =>
-  return <div className="{className}">{children}</div>;
-;
-export default ServiceWorker;
-</ServiceWorkerProps>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface CoreWebVitalsProps {
@@ -12,14 +11,4 @@ export default function CoreWebVitals({ className = '', children }: CoreWebVital
       {children}
     </div>
   );
-}
-export default function CoreWebVitals({ className = '', children, ...props }: CoreWebVitalsProps) {
-    return (
-        <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
-
-export default function Corewebvitals({ className = '', children, ...props }: CorewebvitalsProps) {
 }

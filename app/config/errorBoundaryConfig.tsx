@@ -1,54 +1,14 @@
 import React from 'react';
 
-interface errorBoundaryConfigProps {
+interface ErrorBoundaryConfigProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function errorBoundaryConfig({ className = '', children }: errorBoundaryConfigProps) {
+export default function ErrorBoundaryConfig({ className = '', children }: ErrorBoundaryConfigProps) {
   return (
     <div className={`${className}`}>
       {children}
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-const ErrorboundaryconfigPage = () => {
-export default function ErrorboundaryconfigPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional services coming soon." />
-      </Helmet>
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">
-          Coming Soon
-        </h1>
-        <p className="text-lg text-gray-300 mb-8">
-          Professional services coming soon.
-        </p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Link>
-      </div>
     </div>
   );
-}
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-    </div>
-  );
-}
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
 }
