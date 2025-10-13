@@ -133,6 +133,13 @@ export default defineConfig({
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
+          // Split large vendor libraries
+          if (id.includes('node_modules')) {
+            if (id.includes('axios')) return 'http-client'
+            if (id.includes('gray-matter')) return 'content-parser'
+            if (id.includes('jsdom')) return 'dom-utils'
+            return 'vendor'
+          }
           // AI service pages - group by category
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/ai-')[1]?.split('/')[0];

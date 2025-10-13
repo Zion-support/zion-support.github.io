@@ -101,12 +101,15 @@ const AIWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-auto
 
 // IT Services Pages
 const CloudMigrationPage = React.lazy(() => import("./app/cloud-migration/page"));
-const DevOpsServicesPage = React.lazy(() => import("./app/devops-services/page"));
 const ITConsultingPage = React.lazy(() => import("./app/it-consulting/page"));
 const NetworkSecurityPage = React.lazy(() => import("./app/network-security/page"));
-const SoftwareDevelopmentPage = React.lazy(() => import("./app/software-development/page"));
 const SystemIntegrationPage = React.lazy(() => import("./app/system-integration/page"));
 const WebDevelopmentPage = React.lazy(() => import("./app/web-development/page"));
+const ITServicesPage = React.lazy(() => import("./app/it-services/page"));
+const ITSecurityServicesPage = React.lazy(() => import("./app/it-security-services/page"));
+const ITProjectManagementPage = React.lazy(() => import("./app/it-project-management/page"));
+const ITInfrastructurePage = React.lazy(() => import("./app/it-infrastructure/page"));
+const ITSupportPage = React.lazy(() => import("./app/it-support/page"));
 
 // 5G Services Pages
 const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
@@ -121,15 +124,11 @@ const FiveGImplementationPage = React.lazy(() => import("./app/5g-implementation
 
 // Micro SAAS Services Pages
 const MicroSaaSServicesPage = React.lazy(() => import("./app/micro-saas-services/page"));
-const ProjectManagementToolPage = React.lazy(() => import("./app/project-management-tool/page"));
-const CustomerRelationshipManagerPage = React.lazy(() => import("./app/customer-relationship-manager/page"));
-const InventoryManagementSystemPage = React.lazy(() => import("./app/inventory-management-system/page"));
-const FinancialReportingToolPage = React.lazy(() => import("./app/financial-reporting-tool/page"));
-const EmployeeTimeTrackerPage = React.lazy(() => import("./app/employee-time-tracker/page"));
-const SocialMediaSchedulerPage = React.lazy(() => import("./app/social-media-scheduler/page"));
-const EmailMarketingPlatformPage = React.lazy(() => import("./app/email-marketing-platform/page"));
-const WebsiteAnalyticsToolPage = React.lazy(() => import("./app/website-analytics-tool/page"));
-const TaskAutomationWorkflowPage = React.lazy(() => import("./app/task-automation-workflow/page"));
+const MicroSaaSPage = React.lazy(() => import("./app/micro-saas/page"));
+const AIAnalyticsDashboardPage = React.lazy(() => import("./app/micro-saas-services/ai-analytics-dashboard/page"));
+const AILeadGenerationPage = React.lazy(() => import("./app/micro-saas-services/ai-lead-generation/page"));
+const AIContentGeneratorPage = React.lazy(() => import("./app/micro-saas-services/ai-content-generator/page"));
+const AIEmailAssistantPage = React.lazy(() => import("./app/micro-saas-services/ai-email-assistant/page"));
 
 // New Innovative Micro SAAS Services
 const AIPoweredEmailAnalyzerPage = React.lazy(() => import("./app/ai-powered-email-analyzer/page"));
@@ -137,6 +136,7 @@ const SmartInventoryOptimizerPage = React.lazy(() => import("./app/smart-invento
 const AICustomerSentimentTrackerPage = React.lazy(() => import("./app/ai-customer-sentiment-tracker/page"));
 const SmartExpenseCategorizerPage = React.lazy(() => import("./app/smart-expense-categorizer/page"));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -198,6 +198,8 @@ const FiveG5gIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/
 // Main App Component
 >>>>>>> cursor/analyze-improve-and-deploy-application-2b18
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-a546
 // Additional AI Services Pages
 const AIChatbotBuilderPage = React.lazy(() => import("./app/ai-chatbot-builder/page"));
 const AICodeAssistantPage = React.lazy(() => import("./app/ai-code-assistant/page"));
@@ -212,6 +214,7 @@ const AIDataVisualizationPage = React.lazy(() => import("./app/ai-data-visualiza
 const AIDevOpsAutomationPage = React.lazy(() => import("./app/ai-devops-automation/page"));
 const AIDocumentIntelligencePage = React.lazy(() => import("./app/ai-document-intelligence/page"));
 
+<<<<<<< HEAD
 // Additional IT Services Pages
 const CloudConsultingPage = React.lazy(() => import("./app/cloud-consulting/page"));
 const DataCenterSolutionsPage = React.lazy(() => import("./app/data-center-solutions/page"));
@@ -224,6 +227,16 @@ const TechnologyConsultingPage = React.lazy(() => import("./app/technology-consu
 // Additional 5G Services Pages (these are already defined above, but adding for completeness)
 
 >>>>>>> cursor/analyze-improve-and-deploy-application-0571
+=======
+// Additional IT Services Pages - These pages don't exist yet, so we'll comment them out
+// const CloudConsultingPage = React.lazy(() => import("./app/cloud-consulting/page"));
+// const DataCenterSolutionsPage = React.lazy(() => import("./app/data-center-solutions/page"));
+// const DisasterRecoveryPage = React.lazy(() => import("./app/disaster-recovery/page"));
+// const ManagedServicesPage = React.lazy(() => import("./app/managed-services/page"));
+// const SecurityAuditPage = React.lazy(() => import("./app/security-audit/page"));
+// const TechnologyConsultingPage = React.lazy(() => import("./app/technology-consulting/page"));
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-a546
 function App() {
 <<<<<<< HEAD
   useEffect(() => {
@@ -277,12 +290,15 @@ function App() {
 
                               {/* IT Services */}
                               <Route path="/cloud-migration" element={<CloudMigrationPage />} />
-                              <Route path="/devops-services" element={<DevOpsServicesPage />} />
                               <Route path="/it-consulting" element={<ITConsultingPage />} />
                               <Route path="/network-security" element={<NetworkSecurityPage />} />
-                              <Route path="/software-development" element={<SoftwareDevelopmentPage />} />
                               <Route path="/system-integration" element={<SystemIntegrationPage />} />
                               <Route path="/web-development" element={<WebDevelopmentPage />} />
+                              <Route path="/it-services" element={<ITServicesPage />} />
+                              <Route path="/it-security-services" element={<ITSecurityServicesPage />} />
+                              <Route path="/it-project-management" element={<ITProjectManagementPage />} />
+                              <Route path="/it-infrastructure" element={<ITInfrastructurePage />} />
+                              <Route path="/it-support" element={<ITSupportPage />} />
 
                               {/* 5G Services */}
                               <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
@@ -297,15 +313,12 @@ function App() {
 
                               {/* Micro SAAS Services */}
                               <Route path="/micro-saas-services" element={<MicroSaaSServicesPage />} />
-                              <Route path="/project-management-tool" element={<ProjectManagementToolPage />} />
-                              <Route path="/customer-relationship-manager" element={<CustomerRelationshipManagerPage />} />
-                              <Route path="/inventory-management-system" element={<InventoryManagementSystemPage />} />
-                              <Route path="/financial-reporting-tool" element={<FinancialReportingToolPage />} />
-                              <Route path="/employee-time-tracker" element={<EmployeeTimeTrackerPage />} />
-                              <Route path="/social-media-scheduler" element={<SocialMediaSchedulerPage />} />
-                              <Route path="/email-marketing-platform" element={<EmailMarketingPlatformPage />} />
-                              <Route path="/website-analytics-tool" element={<WebsiteAnalyticsToolPage />} />
-                              <Route path="/task-automation-workflow" element={<TaskAutomationWorkflowPage />} />
+                              <Route path="/micro-saas" element={<MicroSaaSPage />} />
+                              <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
+                              <Route path="/ai-analytics-dashboard" element={<AIAnalyticsDashboardPage />} />
+                              <Route path="/ai-lead-generation" element={<AILeadGenerationPage />} />
+                              <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
+                              <Route path="/ai-email-assistant" element={<AIEmailAssistantPage />} />
 
                               {/* New Innovative Micro SAAS Services */}
                               <Route path="/ai-powered-email-analyzer" element={<AIPoweredEmailAnalyzerPage />} />
@@ -314,7 +327,10 @@ function App() {
                               <Route path="/smart-expense-categorizer" element={<SmartExpenseCategorizerPage />} />
 
                               {/* Additional AI Services Routes */}
+<<<<<<< HEAD
                               <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-a546
                               <Route path="/ai-code-assistant" element={<AICodeAssistantPage />} />
                               <Route path="/ai-design-studio" element={<AIDesignStudioPage />} />
                               <Route path="/ai-business-intelligence" element={<AIBusinessIntelligencePage />} />
@@ -327,6 +343,7 @@ function App() {
                               <Route path="/ai-devops-automation" element={<AIDevOpsAutomationPage />} />
                               <Route path="/ai-document-intelligence" element={<AIDocumentIntelligencePage />} />
 
+<<<<<<< HEAD
                               {/* Additional IT Services Routes */}
                               <Route path="/cloud-consulting" element={<CloudConsultingPage />} />
                               <Route path="/data-center-solutions" element={<DataCenterSolutionsPage />} />
@@ -335,6 +352,15 @@ function App() {
                               <Route path="/managed-services" element={<ManagedServicesPage />} />
                               <Route path="/security-audit" element={<SecurityAuditPage />} />
                               <Route path="/technology-consulting" element={<TechnologyConsultingPage />} />
+=======
+                              {/* Additional IT Services Routes - Commented out until pages are created */}
+                              {/* <Route path="/cloud-consulting" element={<CloudConsultingPage />} /> */}
+                              {/* <Route path="/data-center-solutions" element={<DataCenterSolutionsPage />} /> */}
+                              {/* <Route path="/disaster-recovery" element={<DisasterRecoveryPage />} /> */}
+                              {/* <Route path="/managed-services" element={<ManagedServicesPage />} /> */}
+                              {/* <Route path="/security-audit" element={<SecurityAuditPage />} /> */}
+                              {/* <Route path="/technology-consulting" element={<TechnologyConsultingPage />} /> */}
+>>>>>>> cursor/analyze-improve-and-deploy-application-a546
 
                               {/* Additional 5G Services Routes */}
                               <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
