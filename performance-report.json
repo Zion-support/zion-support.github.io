@@ -1,58 +1,10 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "buildStats": {
-    "totalFiles": 18,
-    "totalSize": 621614,
-    "jsFiles": 14,
-    "jsSize": 600029,
-=======
-    "jsSize": 564892,
->>>>>>> cursor/analyze-improve-and-deploy-application-6099
-=======
-    "jsSize": 557304,
->>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
-=======
-  "timestamp": "2025-10-13T09:36:31.239Z",
-  "buildStats": {
-    "totalFiles": 18,
-    "totalSize": 696556,
-    "jsFiles": 15,
-    "jsSize": 687513,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
-=======
-  "timestamp": "2025-10-13T09:29:22.844Z",
+  "timestamp": "2025-10-13T10:36:32.987Z",
   "buildStats": {
     "totalFiles": 16,
-    "totalSize": 584669,
-    "jsFiles": 12,
-    "jsSize": 561322,
->>>>>>> cursor/analyze-improve-and-deploy-application-ad0b
-=======
-  "timestamp": "2025-10-13T09:50:05.974Z",
-  "buildStats": {
-    "totalFiles": 17,
-    "totalSize": 700569,
-    "jsFiles": 14,
-    "jsSize": 691687,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4257
-=======
-  "timestamp": "2025-10-13T09:53:06.905Z",
-  "buildStats": {
-    "totalFiles": 24,
-    "totalSize": 649073,
-    "jsFiles": 19,
-    "jsSize": 623785,
->>>>>>> cursor/analyze-improve-and-deploy-application-568e
-=======
-  "timestamp": "2025-10-13T09:59:07.415Z",
-  "buildStats": {
-    "totalFiles": 18,
-    "totalSize": 764231,
-    "jsFiles": 15,
-    "jsSize": 755268,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c22b
+    "totalSize": 825630,
+    "jsFiles": 13,
+    "jsSize": 816250,
     "cssFiles": 1,
     "cssSize": 1811,
     "imageFiles": 0,
