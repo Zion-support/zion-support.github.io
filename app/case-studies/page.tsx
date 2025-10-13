@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function CaseStudies() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -11,11 +12,27 @@ export default function CaseStudies() {
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Success Stories
+=======
+import React from 'react';
+
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Page
+>>>>>>> origin/main
           </h1>
-          <p className="text-xl text-gray-300 mb-8">
-            See how we've helped businesses transform with technology
+          <p className="text-xl text-gray-600 mb-8">
+            This page is under development. Please check back later.
           </p>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 }
+=======
+  );
+}
+>>>>>>> origin/main

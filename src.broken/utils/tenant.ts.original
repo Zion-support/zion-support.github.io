@@ -57,12 +57,10 @@ export function createTenant(branding: TenantBranding): Tenant {
     branding,
     members: [],
     createdAt: now,
-<<<<<<< HEAD
-    updatedAt: now};
-=======
+
     updatedAt: now,
   };
->>>>>>> origin/auto/autonomy-17186719616
+
   updateJsonFile<TenantsFile>(FILE, (curr) => ({ tenants: [...(curr.tenants || []), tenant] }), FALLBACK);
   return tenant;
 }

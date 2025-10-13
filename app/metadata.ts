@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Metadata configuration for Zion Tech Group
 export const siteMetadata = {
   title: "Zion Tech Group - Advanced AI and IT Solutions",
@@ -27,3 +28,9 @@ export const defaultMetadata = {
     description: siteMetadata.description,
     image: siteMetadata.image,
   },
+=======
+export const metadata = {
+  title: 'Zion - AI-Powered Technology Solutions',
+  description: 'Leading provider of AI-powered technology solutions',
+};
+>>>>>>> origin/main

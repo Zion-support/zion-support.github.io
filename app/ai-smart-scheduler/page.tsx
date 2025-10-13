@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const testimonials = [
   {
     name: "Sarah Johnson",
@@ -250,22 +251,29 @@ export default function AISmartScheduler() {
           <p className="text-gray-200 text-lg mb-8">
             Join thousands of teams already using AI Smart Scheduler to optimize
             their productivity
+=======
+import React from 'react';
+
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            This page is under development. Please check back later.
+>>>>>>> origin/main
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
-            >
-              Start Your Free Trial
-            </Link>
-            <Link
-              to="/about"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-            >
-              Learn More
-            </Link>
-          </div>
         </div>
+<<<<<<< HEAD
       </section>
     </Layout>
 }
+=======
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/main

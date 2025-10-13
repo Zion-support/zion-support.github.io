@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   Mic, 
   Play, 
   Pause, 
@@ -282,13 +283,22 @@ const AIVoiceCloningStudioPage = () => {
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-pink-900/30">
+=======
+import React from 'react';
+
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+>>>>>>> origin/main
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Clone Your Voice?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Start creating realistic voice clones today. No technical expertise required.
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            This page is under development. Please check back later.
           </p>
+<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FuturisticButton
               href="/contact"
@@ -310,3 +320,10 @@ const AIVoiceCloningStudioPage = () => {
         </div>
       </section>
     </div>
+=======
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/main

@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 // Lazy load pages for better performance
+=======
+import React, { lazy, Suspense } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+>>>>>>> origin/main
 const HomePage = lazy(() => import("./page"));
 const AboutPage = lazy(() => import("./about/page"));
 const ContactPage = lazy(() => import("./contact/page"));
@@ -25,18 +31,23 @@ const FiveGPrivateNetworksPage = lazy(
 const FiveGSmartCitySolutionsPage = lazy(
   () => import("./5g-smart-city-solutions/page"),
 const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
+<<<<<<< HEAD
+=======
+
+// Loading component
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500"></div>
+  </div>
+);
+
+>>>>>>> origin/main
 // Main App Component
-function App() {
+export default function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
-        <ErrorBoundary>
-          <PerformanceMonitor />
-          <AccessibilityEnhancer>
-            <CriticalResourcePreloader />
-            <CacheManager />
-            <AdvancedPerformanceMonitor />
-            <Suspense fallback={<LoadingSpinner />}>
+        <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
@@ -85,9 +96,12 @@ function App() {
               />
               <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
             </Routes>
-            </Suspense>
-          </AccessibilityEnhancer>
-        </ErrorBoundary>
+        </Suspense>
       </BrowserRouter>
     </HelmetProvider>
+<<<<<<< HEAD
 }
+=======
+  );
+}
+>>>>>>> origin/main

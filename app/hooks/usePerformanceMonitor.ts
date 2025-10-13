@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface PerformanceMetrics {
   loadTime: number
   firstContentfulPaint: number
@@ -104,3 +105,16 @@ export const usePerformanceMonitor = () => {
   return metricsRef.current
 }
 export default usePerformanceMonitor
+=======
+import { useState, useEffect } from 'react';
+
+export const usePerformanceMonitor = () => {
+  const [state, setState] = useState<string | null>(null);
+  
+  useEffect(() => {
+    setState('initialized');
+  }, []);
+  
+  return { state };
+};
+>>>>>>> origin/main

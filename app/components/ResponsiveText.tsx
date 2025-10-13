@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface ResponsiveTextProps {
   size?: {
 }
@@ -25,7 +26,23 @@ const ResponsiveText: React.FC<ResponsiveTextProps> = ({
     size.sm ? `sm:text-${size.sm}` : ''
   } ${size.md ? `md:text-${size.md}` : ''} ${
     size.lg ? `lg:text-${size.lg}` : ''
+=======
+import React from 'react';
+
+interface ResponsivetextProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Responsivetext({ className = '', children, ...props }: ResponsivetextProps) {
+>>>>>>> origin/main
   return (
-    <span className={`${sizeClasses} ${weightClasses[weight]} ${colorClasses[color]} ${className}`}>
+    <div className={`responsivetext-component ${className}`} {...props}>
       {children}
+<<<<<<< HEAD
     </span>
+=======
+    </div>
+  );
+}
+>>>>>>> origin/main

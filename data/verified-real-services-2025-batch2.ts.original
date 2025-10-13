@@ -14,10 +14,7 @@ export interface VerifiedRealService2025Batch2 {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
   {
     id: "ai-quality-assurance",

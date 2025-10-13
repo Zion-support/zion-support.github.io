@@ -1,8 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 export interface Innovative2026AIServiceV4 {
   id: string;
   name: string;
@@ -43,10 +40,7 @@ export interface Innovative2026AIServiceV4 {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
   // AI Consciousness Simulation Platform
   {
@@ -100,10 +94,7 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
     rating: 4.9,
     reviews: 67
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // Autonomous AI Agents Platform 2026
   {
     id: 'autonomous-ai-agents-platform-2026',
@@ -156,10 +147,7 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
     rating: 4.8,
     reviews: 289
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // AI Healthcare Companion 2026
   {
     id: 'ai-healthcare-companion-2026',
@@ -212,10 +200,7 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
     rating: 4.9,
     reviews: 456
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // AI Content Creation Revolution
   {
     id: 'ai-content-creation-revolution',
@@ -268,10 +253,7 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
     rating: 4.8,
     reviews: 892
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // AI Emotional Intelligence Platform
   {
     id: 'ai-emotional-intelligence-platform',

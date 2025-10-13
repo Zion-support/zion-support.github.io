@@ -15,13 +15,7 @@ function fixMergeConflicts(filePath) {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      if (line.startsWith('<<<<<<< HEAD')) {
-        inConflict = true;
-        conflictStart = i;
-        continue;
-      }
-      
-      if (line.startsWith('=======')) {
+      if (line.startsWith('')) {
         continue;
       }
       

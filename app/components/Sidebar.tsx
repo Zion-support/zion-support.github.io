@@ -1,7 +1,8 @@
 interface SidebarProps {
-  isOpen: boolean
-  onClose: () => void
+  className?: string;
+  children?: React.ReactNode;
 }
+<<<<<<< HEAD
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const location = useLocation()
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set())
@@ -249,3 +250,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   )
 }
 export default Sidebar
+=======
+
+export default function Sidebar({ className = '', children, ...props }: SidebarProps) {
+  return (
+    <div className={`sidebar-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> origin/main

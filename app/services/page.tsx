@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Laptop, Headphones } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+
+>>>>>>> origin/main
 export default function Services() {
   const services = [
     {
@@ -334,18 +342,12 @@ export default function Services() {
       category: "Asset Management"
     }
   return (
-    <>
+    <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
-        <title>Services - Zion Tech Group | AI & IT Solutions</title>
-        <meta
-          name="description"
-          content="Comprehensive AI and IT services including business intelligence, customer support automation, content generation, cybersecurity, 5G solutions, and cloud infrastructure. Transform your business with cutting-edge technology."
-        />
-        <meta
-          name="keywords"
-          content="AI services, business intelligence, customer support automation, content generation, cybersecurity, 5G solutions, cloud infrastructure, data analytics, code assistant, marketing automation, document processing, CRM, financial analytics"
-        />
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Services solutions by Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
@@ -516,9 +518,44 @@ export default function Services() {
                   Free Consultation
                 </Link>
               </div>
+=======
+      
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold mb-8">Services</h1>
+        <div className="prose prose-invert max-w-none">
+          <p className="text-xl text-gray-300 mb-8">
+            Discover our comprehensive services solutions designed to meet your business needs.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
+              <p className="text-gray-300">
+                Our team of experts delivers tailored solutions for your specific requirements.
+              </p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
+              <p className="text-gray-300">
+                We use the latest technologies and best practices to ensure optimal performance.
+              </p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-300">
+                Get round-the-clock support from our dedicated team of professionals.
+              </p>
+>>>>>>> origin/main
             </div>
           </div>
-        </section>
+        </div>
       </div>
+<<<<<<< HEAD
     </>
+=======
+    </div>
+  );
+>>>>>>> origin/main
 }

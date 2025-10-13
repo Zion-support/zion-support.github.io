@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useRef, useEffect, ReactNode } from 'react';
 
 const FuturisticBackground = ({ children }: { children: ReactNode }) => {
@@ -23,18 +24,25 @@ const FuturisticBackground = ({ children }: { children: ReactNode }) => {
     };
   }, []);
   
+=======
+import React from 'react';
+
+interface FuturisticbackgroundProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Futuristicbackground({ className = '', children, ...props }: FuturisticbackgroundProps) {
+>>>>>>> origin/main
   return (
-    <div className="relative">
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full pointer-events-none"
-        style={{ zIndex: 1 }}
-      />
-      <div className="relative" style={{ zIndex: 2 }}>
-        {children}
-      </div>
+    <div className={`futuristicbackground-component ${className}`} {...props}>
+      {children}
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default FuturisticBackground;
+=======
+}
+>>>>>>> origin/main

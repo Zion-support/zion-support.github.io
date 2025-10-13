@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Validators utility functions
 export const Validators = {
   init: () => {
@@ -6,3 +7,12 @@ export const Validators = {
   },
   cleanup: () => {
     },
+=======
+// validators utility
+export const validators = {
+  // Utility implementation
+  init: () => {
+    console.log('validators initialized');
+  }
+};
+>>>>>>> origin/main

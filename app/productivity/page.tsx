@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const ProductivityPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -14,25 +15,27 @@ const ProductivityPage = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
               Productivity
             </span>
+=======
+import React from 'react';
+
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Page
+>>>>>>> origin/main
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Boost your team productivity with our innovative solutions
+          <p className="text-xl text-gray-600 mb-8">
+            This page is under development. Please check back later.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-            >
-              Get Started
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
-              to="/contact"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
-              Learn More
-            </Link>
-          </div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>
+=======
+    </div>
+  );
+}
+>>>>>>> origin/main

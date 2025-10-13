@@ -1,4 +1,5 @@
 'use client'
+<<<<<<< HEAD
 const CriticalResourcePreloader = () => {
   useEffect(() => {
     const preloadCriticalResources = () => {
@@ -123,3 +124,18 @@ const CriticalResourcePreloader = () => {
   return null
 }
 export default CriticalResourcePreloader
+=======
+
+interface CriticalresourcepreloaderProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Criticalresourcepreloader({ className = '', children, ...props }: CriticalresourcepreloaderProps) {
+  return (
+    <div className={`criticalresourcepreloader-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> origin/main

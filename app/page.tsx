@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const HomePage = () => {
   const features = [
     {
@@ -115,8 +116,13 @@ const HomePage = () => {
       rating: 5
     }
   ];
+=======
+import React from 'react';
+>>>>>>> origin/main
 
+export default function Page() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
         title="Zion Tech Group - Advanced AI & IT Solutions | Transform Your Business"
@@ -315,14 +321,18 @@ const HomePage = () => {
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+>>>>>>> origin/main
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of businesses already using our solutions to drive growth and innovation. 
-            Start your digital transformation journey today.
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            This page is under development. Please check back later.
           </p>
+<<<<<<< HEAD
           {/* Contact Information */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="text-center">
@@ -363,10 +373,16 @@ const HomePage = () => {
               <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
           </div>
+=======
+>>>>>>> origin/main
         </div>
-      </section>
+      </div>
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default HomePage;
+=======
+}
+>>>>>>> origin/main

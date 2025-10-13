@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const ZionAINeuralInterface = () => {
   const features = [
     {
@@ -333,14 +334,22 @@ const ZionAINeuralInterface = () => {
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
+=======
+import React from 'react';
+
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+>>>>>>> origin/main
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Experience the Future?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join the neural revolution and transform how you interact with technology. 
-            Start your journey with the Zion AI Neural Interface today.
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            This page is under development. Please check back later.
           </p>
+<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
@@ -360,3 +369,10 @@ const ZionAINeuralInterface = () => {
         </div>
       </section>
     </div>
+=======
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/main

@@ -1,19 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-
-interface LazyWrapperProps {
+interface LazyWrapperProps 
   children: React.ReactNode;
   className?: string;
-}
 
-export default function LazyWrapper({
+export default function LazyWrapper(
   children,
   className = "",
-}: LazyWrapperProps) {
+: LazyWrapperProps) 
   return (
     <>
-      <div className={`lazy-wrapper ${className}`}>
+      <div className="{`lazy-wrapper" ${className}`}></div>
         {children}
         <Link
           to="/contact"
@@ -25,4 +23,3 @@ export default function LazyWrapper({
       </div>
     </>
   );
-}

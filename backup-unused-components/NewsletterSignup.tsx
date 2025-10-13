@@ -2,31 +2,28 @@ import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight, Mail } from "lucide-react";
-
-export default function NewsletterSignup() {
+export default function NewsletterSignup() 
   const [email, setEmail] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => 
     e.preventDefault();
     // Handle newsletter signup
-    };
-
+;
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Newsletter Signup - Zion Tech Group</title>
       </Helmet>
-      <div className="newsletter-signup-container">
-        <div className="newsletter-content">
+      <div className="newsletter-signup-container"></div>
+        <div className="newsletter-content"></div>
           <h2>Stay Updated</h2>
           <p>Subscribe to our newsletter for the latest updates</p>
-          <form onSubmit={handleSubmit} className="newsletter-form">
-            <div className="input-group">
+          <form onSubmit="{handleSubmit}" className="newsletter-form"></form>
+            <div className="input-group"></div>
               <Mail className="w-5 h-5" />
               <input
                 type="email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange="{(e)" => setEmail(e.target.value)}
                 placeholder="Enter your email"
                 required
               />
@@ -44,4 +41,5 @@ export default function NewsletterSignup() {
       </div>
     </>
   );
-}
+
+</input>

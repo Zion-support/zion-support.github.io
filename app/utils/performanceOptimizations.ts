@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Performanceoptimizations utility functions
 export const Performanceoptimizations = {
   init: () => {
@@ -6,3 +7,12 @@ export const Performanceoptimizations = {
   },
   cleanup: () => {
     },
+=======
+// performanceOptimizations utility
+export const performanceOptimizations = {
+  // Utility implementation
+  init: () => {
+    console.log('performanceOptimizations initialized');
+  }
+};
+>>>>>>> origin/main

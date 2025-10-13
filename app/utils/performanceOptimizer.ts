@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Performanceoptimizer utility functions
 export const Performanceoptimizer = {
   init: () => {
@@ -6,3 +7,12 @@ export const Performanceoptimizer = {
   },
   cleanup: () => {
     },
+=======
+// performanceOptimizer utility
+export const performanceOptimizer = {
+  // Utility implementation
+  init: () => {
+    console.log('performanceOptimizer initialized');
+  }
+};
+>>>>>>> origin/main

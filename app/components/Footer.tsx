@@ -19,6 +19,7 @@ import {
   Clock 
 } from 'lucide-react';
 
+<<<<<<< HEAD
 const Footer = React.memo(() => {
   const currentYear = new Date().getFullYear();
   const socialLinks = useMemo(() => [
@@ -83,8 +84,16 @@ const Footer = React.memo(() => {
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-5 h-5" /> },
     { number: "24/7", label: "Support", icon: <Clock className="w-5 h-5" /> }
   ], []);
+=======
+interface FooterProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+>>>>>>> origin/main
 
+export default function Footer({ className = '', children, ...props }: FooterProps) {
   return (
+<<<<<<< HEAD
     <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
@@ -253,3 +262,10 @@ const Footer = React.memo(() => {
 Footer.displayName = "Footer";
 
 export default Footer;
+=======
+    <div className={`footer-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> origin/main

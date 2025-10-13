@@ -1,6 +1,8 @@
 interface NavigationProps {
-  onSidebarToggle: () => void;
+  className?: string;
+  children?: React.ReactNode;
 }
+<<<<<<< HEAD
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -243,3 +245,13 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 };
 
 export default Navigation;
+=======
+
+export default function Navigation({ className = '', children, ...props }: NavigationProps) {
+  return (
+    <div className={`navigation-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> origin/main

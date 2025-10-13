@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Accessibilityutils utility functions
 export const Accessibilityutils = {
   init: () => {
@@ -6,3 +7,12 @@ export const Accessibilityutils = {
   },
   cleanup: () => {
     },
+=======
+// accessibilityUtils utility
+export const accessibilityUtils = {
+  // Utility implementation
+  init: () => {
+    console.log('accessibilityUtils initialized');
+  }
+};
+>>>>>>> origin/main

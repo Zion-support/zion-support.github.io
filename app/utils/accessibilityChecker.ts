@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Accessibilitychecker utility functions
 export const Accessibilitychecker = {
   init: () => {
@@ -6,3 +7,12 @@ export const Accessibilitychecker = {
   },
   cleanup: () => {
     },
+=======
+// accessibilityChecker utility
+export const accessibilityChecker = {
+  // Utility implementation
+  init: () => {
+    console.log('accessibilityChecker initialized');
+  }
+};
+>>>>>>> origin/main

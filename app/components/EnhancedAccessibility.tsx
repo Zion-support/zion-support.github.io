@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, ReactNode } from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -105,9 +106,19 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
       >
         High Contrast
       </button>
-      {children}
-    </>
-  );
-};
+=======
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+interface EnhancedaccessibilityProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-export default EnhancedAccessibility;
+export default function Enhancedaccessibility({ className = '', children, ...props }: EnhancedaccessibilityProps) {
+  return (
+    <div className={`enhancedaccessibility-component ${className}`} {...props}>
+>>>>>>> origin/main
+      {children}
+    </div>
+  );
+}

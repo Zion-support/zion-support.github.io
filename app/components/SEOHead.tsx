@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface SEOHeadProps {
 }
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -32,3 +33,19 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
     </Helmet>
+=======
+import React from 'react';
+
+interface SeoheadProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Seohead({ className = '', children, ...props }: SeoheadProps) {
+  return (
+    <div className={`seohead-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> origin/main

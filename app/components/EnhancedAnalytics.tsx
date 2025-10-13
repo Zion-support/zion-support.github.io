@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface EnhancedAnalyticsProps {
 }
 const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ children }) => {
@@ -13,3 +14,19 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ children }) => {
       if (typeof window !== 'undefined') {
         // Page view tracking would go here
       }
+=======
+import React from 'react';
+
+interface EnhancedanalyticsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Enhancedanalytics({ className = '', children, ...props }: EnhancedanalyticsProps) {
+  return (
+    <div className={`enhancedanalytics-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> origin/main

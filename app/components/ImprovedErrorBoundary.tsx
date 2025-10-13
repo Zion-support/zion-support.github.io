@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface Props {
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
@@ -100,3 +101,24 @@ export const withErrorBoundary = <P extends object>(
 export const useErrorHandler = () => {
   return (error: Error, errorInfo?: ErrorInfo) => {
     // In production, you might want to send this to an error reporting service
+=======
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { Link } from 'react-router-dom';
+import { Home } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Hand } from 'lucide-react';
+
+interface ImprovederrorboundaryProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Improvederrorboundary({ className = '', children, ...props }: ImprovederrorboundaryProps) {
+  return (
+    <div className={`improvederrorboundary-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> origin/main

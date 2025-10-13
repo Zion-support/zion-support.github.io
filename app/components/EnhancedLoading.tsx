@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface EnhancedLoadingProps {
 }
 const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
@@ -54,3 +55,19 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
         </p>
       </div>
     </div>
+=======
+import React from 'react';
+
+interface EnhancedloadingProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Enhancedloading({ className = '', children, ...props }: EnhancedloadingProps) {
+  return (
+    <div className={`enhancedloading-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> origin/main

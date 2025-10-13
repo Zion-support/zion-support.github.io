@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Advancedanalytics utility functions
 export const Advancedanalytics = {
   init: () => {
@@ -6,3 +7,12 @@ export const Advancedanalytics = {
   },
   cleanup: () => {
     },
+=======
+// advancedAnalytics utility
+export const advancedAnalytics = {
+  // Utility implementation
+  init: () => {
+    console.log('advancedAnalytics initialized');
+  }
+};
+>>>>>>> origin/main

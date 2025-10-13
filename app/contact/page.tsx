@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+=======
+import React, { useState } from "react";
+import { ArrowRight, Mail, Smartphone, Globe, Clock, MapPin, Send, CheckCircle } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+>>>>>>> origin/main
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -72,18 +79,12 @@ export default function Contact() {
     "CRM Assistant",
     "Financial Analytics"
   return (
-    <>
+    <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
-        <title>Contact - Zion Tech Group | AI & IT Solutions</title>
-        <meta
-          name="description"
-          content="Contact Zion Tech Group for AI and IT solutions. Get in touch for consultations, demos, and professional services. Email: kleber@ziontechgroup.com, Phone: +1 302 464 0950"
-        />
-        <meta
-          name="keywords"
-          content="contact Zion Tech Group, AI consulting, IT services contact, technology consultation, business automation contact"
-        />
+        <title>Contact - Zion Tech Group</title>
+        <meta name="description" content="Contact solutions by Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
@@ -332,4 +333,40 @@ export default function Contact() {
         </section>
       </div>
     </>
+=======
+      
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold mb-8">Contact</h1>
+        <div className="prose prose-invert max-w-none">
+          <p className="text-xl text-gray-300 mb-8">
+            Discover our comprehensive contact solutions designed to meet your business needs.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
+              <p className="text-gray-300">
+                Our team of experts delivers tailored solutions for your specific requirements.
+              </p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
+              <p className="text-gray-300">
+                We use the latest technologies and best practices to ensure optimal performance.
+              </p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-300">
+                Get round-the-clock support from our dedicated team of professionals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+>>>>>>> origin/main
 }

@@ -1,9 +1,15 @@
+<<<<<<< HEAD
+=======
+import React, { useEffect } from 'react';
+import { Star } from 'lucide-react';
+>>>>>>> origin/main
 declare global {
   interface Window {
     gtag: (...args: any[]) => void;
   }
 }
 interface AnalyticsProps {
+<<<<<<< HEAD
 }
 const Analytics: React.FC<AnalyticsProps> = ({
   measurementId = 'G-XXXXXXXXXX', // Replace with actual GA4 measurement ID
@@ -120,3 +126,16 @@ const Analytics: React.FC<AnalyticsProps> = ({
       }
     return () => window.removeEventListener('scroll', trackScroll);
   return null; // This component doesn't render anything
+=======
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Analytics({ className = '', children, ...props }: AnalyticsProps) {
+  return (
+    <div className={`analytics-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> origin/main

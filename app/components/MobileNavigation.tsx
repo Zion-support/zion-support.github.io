@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const MobileNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => {
@@ -107,3 +108,20 @@ const MobileNavigation: React.FC = () => {
         </div>
       )}
     </>
+=======
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+interface MobilenavigationProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Mobilenavigation({ className = '', children, ...props }: MobilenavigationProps) {
+  return (
+    <div className={`mobilenavigation-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> origin/main

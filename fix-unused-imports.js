@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+
 import { execSync } from 'child_process';
 
 // Function to remove unused imports from a file
@@ -47,10 +48,12 @@ function removeUnusedImports(filePath) {
         fs.writeFileSync(filePath, newLines.join('\n'));
         console.log(`Manually fixed unused imports in: ${filePath}`);
       }
+
     }
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
   }
+
 }
 
 // Function to recursively find all TypeScript/JavaScript files
@@ -75,6 +78,7 @@ function findFiles(dir, fileList = []) {
 console.log('Starting to fix unused imports...');
 
 const files = findFiles('/workspace/app');
+
 files.forEach(file => {
   removeUnusedImports(file);
 });

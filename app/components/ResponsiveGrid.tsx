@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface ResponsiveGridProps {
   cols?: {
 }
@@ -16,7 +17,23 @@ const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({
     cols.sm ? `sm:grid-cols-${cols.sm}` : ''
   } ${cols.md ? `md:grid-cols-${cols.md}` : ''} ${
     cols.lg ? `lg:grid-cols-${cols.lg}` : ''
+=======
+import React from 'react';
+
+interface ResponsivegridProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Responsivegrid({ className = '', children, ...props }: ResponsivegridProps) {
+>>>>>>> origin/main
   return (
-    <div className={`grid ${gridCols} ${gapClasses[gap]} ${className}`}>
+    <div className={`responsivegrid-component ${className}`} {...props}>
       {children}
+<<<<<<< HEAD
     </div>
+=======
+    </div>
+  );
+}
+>>>>>>> origin/main

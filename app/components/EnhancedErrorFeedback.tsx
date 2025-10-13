@@ -1,4 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
@@ -93,6 +94,11 @@ export class GlobalErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
+      );
     }
+
+    return this.props.children;
   }
 }
+
+export default GlobalErrorBoundary;

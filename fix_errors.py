@@ -28,11 +28,7 @@ def resolve_merge_conflicts(content):
     keep_lines = True
     
     for line in lines:
-        if line.strip().startswith('<<<<<<< HEAD'):
-            in_conflict = True
-            keep_lines = True
-            continue
-        elif line.strip().startswith('======='):
+        if line.strip().startswith(''):
             keep_lines = False
             continue
         elif line.strip().startswith('>>>>>>>'):

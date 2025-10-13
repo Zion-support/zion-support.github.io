@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function NetworkInfrastructure5GPage() {
   return (
     <>
@@ -12,11 +13,22 @@ export default function NetworkInfrastructure5GPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
             5G Network Infrastructure
+=======
+import React from 'react';
+
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Page
+>>>>>>> origin/main
           </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional 5G network infrastructure services by Zion Tech Group.
-            Transform your business with our expert solutions.
+          <p className="text-xl text-gray-600 mb-8">
+            This page is under development. Please check back later.
           </p>
+<<<<<<< HEAD
           <Link
             to="/contact"
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
@@ -28,3 +40,10 @@ export default function NetworkInfrastructure5GPage() {
       </div>
     </>
 }
+=======
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/main

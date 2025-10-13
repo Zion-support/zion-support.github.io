@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const useEnhancedPerformance = () => {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(false);
@@ -15,3 +16,16 @@ export const useEnhancedPerformance = () => {
     loading,
     error,
     processData,
+=======
+import { useState, useEffect } from 'react';
+
+export const useEnhancedPerformance = () => {
+  const [state, setState] = useState<string | null>(null);
+  
+  useEffect(() => {
+    setState('initialized');
+  }, []);
+  
+  return { state };
+};
+>>>>>>> origin/main

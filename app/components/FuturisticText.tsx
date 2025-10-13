@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface FuturisticTextProps {
 }
 const FuturisticText: React.FC<FuturisticTextProps> = ({
@@ -16,3 +17,19 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({
     gradient: "text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 font-semibold"
   const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;
   return <Component className={classes}>{children}</Component>;
+=======
+import React from 'react';
+
+interface FuturistictextProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Futuristictext({ className = '', children, ...props }: FuturistictextProps) {
+  return (
+    <div className={`futuristictext-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> origin/main

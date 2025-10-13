@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Performanceenhancer utility functions
 export const Performanceenhancer = {
   init: () => {
@@ -6,3 +7,12 @@ export const Performanceenhancer = {
   },
   cleanup: () => {
     },
+=======
+// performanceEnhancer utility
+export const performanceEnhancer = {
+  // Utility implementation
+  init: () => {
+    console.log('performanceEnhancer initialized');
+  }
+};
+>>>>>>> origin/main

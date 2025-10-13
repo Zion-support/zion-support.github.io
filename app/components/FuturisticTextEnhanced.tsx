@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface FuturisticTextEnhancedProps {
 }
 const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
@@ -101,7 +102,23 @@ const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
         {children}
       </motion.div>
   }
+=======
+import React from 'react';
+
+interface FuturistictextenhancedProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Futuristictextenhanced({ className = '', children, ...props }: FuturistictextenhancedProps) {
+>>>>>>> origin/main
   return (
-    <div className={textClasses}>
+    <div className={`futuristictextenhanced-component ${className}`} {...props}>
       {children}
+<<<<<<< HEAD
     </div>
+=======
+    </div>
+  );
+}
+>>>>>>> origin/main

@@ -1,4 +1,5 @@
 interface ServiceTemplateProps {
+<<<<<<< HEAD
   features: Array<{
 }
 const ServiceTemplate: React.FC<ServiceTemplateProps> = ({
@@ -57,3 +58,16 @@ const ServiceTemplate: React.FC<ServiceTemplateProps> = ({
         </div>
       </div>
     </div>
+=======
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function ServiceTemplate({ className = '', children, ...props }: ServiceTemplateProps) {
+  return (
+    <div className={`servicetemplate-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> origin/main

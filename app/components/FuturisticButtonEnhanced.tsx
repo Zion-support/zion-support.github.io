@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface FuturisticButtonEnhancedProps {
   onClick?: () => void;
 }
@@ -123,3 +124,19 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
     >
       {content}
     </motion.button>
+=======
+import React from 'react';
+
+interface FuturisticbuttonenhancedProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Futuristicbuttonenhanced({ className = '', children, ...props }: FuturisticbuttonenhancedProps) {
+  return (
+    <div className={`futuristicbuttonenhanced-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> origin/main

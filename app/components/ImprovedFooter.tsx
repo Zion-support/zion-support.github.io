@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const ImprovedFooter = () => {
   const currentYear = new Date().getFullYear();
   const serviceCategories = [
@@ -343,3 +344,20 @@ const ImprovedFooter = () => {
         </div>
       </div>
     </footer>
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+interface ImprovedfooterProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Improvedfooter({ className = '', children, ...props }: ImprovedfooterProps) {
+  return (
+    <div className={`improvedfooter-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> origin/main

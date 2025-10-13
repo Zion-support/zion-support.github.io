@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface PerformanceOptimizerProps {
 }
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
@@ -60,11 +61,19 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     return () => clearTimeout(timer);
   }, []);
 
+=======
+import React from 'react';
+
+interface PerformanceoptimizerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Performanceoptimizer({ className = '', children, ...props }: PerformanceoptimizerProps) {
+>>>>>>> origin/main
   return (
-    <div className="performance-optimizer">
+    <div className={`performanceoptimizer-component ${className}`} {...props}>
       {children}
     </div>
   );
-};
-
-export default PerformanceOptimizer;
+}
