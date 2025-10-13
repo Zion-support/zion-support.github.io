@@ -1,58 +1,24 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
 // Type definitions for browser APIs
 declare global {
   interface PerformanceObserver {
     observe(options: { entryTypes: string[] }): void;
     disconnect(): void;
   }
-=======
-
-
-import React, { useEffect, useState } from 'react';
-
-// Extend the global PerformanceEntry interface
-declare global {
-  interface PerformanceEntry {
-    // This extends the built-in PerformanceEntry
-  }
-}
-
-// Type definitions for browser APIs
-declare global {
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-  interface PerformanceNavigationTiming extends PerformanceEntry {
-    requestStart: number;
-    responseStart: number;
-  }
-<<<<<<< HEAD
-  const PerformanceObserver: {
-    new (callback: (list: { getEntries(): PerformanceEntry[] }) => void): PerformanceObserver;
-  };
-  const performance: {
-    getEntriesByType(type: string): PerformanceEntry[];
-  };
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-}
-import React, { useEffect, useState } from 'react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
-=======
+  
   interface PerformanceEntry {
     name: string;
     entryType: string;
     startTime: number;
     duration: number;
   }
+  
+  interface PerformanceNavigationTiming extends PerformanceEntry {
+    requestStart: number;
+    responseStart: number;
+  }
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -81,33 +47,9 @@ const PerformanceMonitor: React.FC = () => {
             setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
           } else if (entry.entryType === 'first-input') {
             const inputEntry = entry as any;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             if (inputEntry.processingStart && inputEntry.startTime) {
               setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
             }
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
-
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
-
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
           } else if (entry.entryType === 'layout-shift') {
             setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
           }
@@ -141,7 +83,3 @@ const PerformanceMonitor: React.FC = () => {
   );
 };
 export default PerformanceMonitor;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
