@@ -28,8 +28,6 @@ const TermsPage = React.lazy(() => import("./app/terms/page"));
 const CookiesPage = React.lazy(() => import("./app/cookies/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
 
-<<<<<<< HEAD
-=======
 // AI Service Pages
 const AiAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
 const AiAutomationPage = React.lazy(() => import("./app/ai-automation/page"));
@@ -46,6 +44,8 @@ const AiProjectManagementPage = React.lazy(() => import("./app/ai-project-manage
 const AiRecommendationEnginePage = React.lazy(() => import("./app/ai-recommendation-engine/page"));
 const AiSalesAutomationPage = React.lazy(() => import("./app/ai-sales-automation/page"));
 const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
+const AiVoiceCloningStudioPage = React.lazy(() => import("./app/ai-voice-cloning-studio/page"));
+const AiQuantumFinancialOraclePage = React.lazy(() => import("./app/ai-quantum-financial-oracle/page"));
 
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(
@@ -122,6 +122,7 @@ const IotSolutionsPage = React.lazy(() => import("./app/iot-solutions/page"));
 const DevopsSolutionsPage = React.lazy(() => import("./app/devops-solutions/page"));
 const MachineLearningPage = React.lazy(() => import("./app/machine-learning/page"));
 const QuantumComputingPage = React.lazy(() => import("./app/quantum-computing/page"));
+const QuantumComputingSolutionsPage = React.lazy(() => import("./app/quantum-computing-solutions/page"));
 const RoboticsPage = React.lazy(() => import("./app/robotics/page"));
 
 // Micro SAAS Pages
@@ -164,6 +165,15 @@ const ZionComplianceManagerPage = React.lazy(
 );
 const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
+);
+const ZionAiMeetingTranscriberPage = React.lazy(
+  () => import("./app/zion-ai-meeting-transcriber/page"),
+);
+const ZionAiExpenseTrackerProPage = React.lazy(
+  () => import("./app/zion-ai-expense-tracker-pro/page"),
+);
+const ZionAiSocialMediaManagerProPage = React.lazy(
+  () => import("./app/zion-ai-social-media-manager-pro/page"),
 );
 
 // 5G Solutions Pages
@@ -318,7 +328,6 @@ const AiProjectManagerPage = React.lazy(() => import("./app/ai-project-manager/p
 const AiQualityAssurancePage = React.lazy(() => import("./app/ai-quality-assurance/page"));
 const AiQuantumComputingPage = React.lazy(() => import("./app/ai-quantum-computing/page"));
 const AiQuantumComputingSimulatorPage = React.lazy(() => import("./app/ai-quantum-computing-simulator/page"));
-const AiQuantumFinancialOraclePage = React.lazy(() => import("./app/ai-quantum-financial-oracle/page"));
 const AiQuantumOptimizationPage = React.lazy(() => import("./app/ai-quantum-optimization/page"));
 const AiQuantumTaskOptimizerPage = React.lazy(() => import("./app/ai-quantum-task-optimizer/page"));
 const AiRealEstatePage = React.lazy(() => import("./app/ai-real-estate/page"));
@@ -373,7 +382,6 @@ const AiVideoGeneratorPage = React.lazy(() => import("./app/ai-video-generator/p
 const AiVisionPage = React.lazy(() => import("./app/ai-vision/page"));
 const AiVoiceAssistantPage = React.lazy(() => import("./app/ai-voice-assistant/page"));
 const AiVoiceCloningPage = React.lazy(() => import("./app/ai-voice-cloning/page"));
-const AiVoiceCloningStudioPage = React.lazy(() => import("./app/ai-voice-cloning-studio/page"));
 const AiVoiceProcessingPage = React.lazy(() => import("./app/ai-voice-processing/page"));
 const AiVoiceSolutionsPage = React.lazy(() => import("./app/ai-voice-solutions/page"));
 const AiVoiceSynthesisPage = React.lazy(() => import("./app/ai-voice-synthesis/page"));
@@ -505,7 +513,6 @@ const ProcessAutomationPage = React.lazy(() => import("./app/process-automation/
 const ProductivityPage = React.lazy(() => import("./app/productivity/page"));
 const ProjectManagementProPage = React.lazy(() => import("./app/project-management-pro/page"));
 const QuantumAiPage = React.lazy(() => import("./app/quantum-ai/page"));
-const QuantumComputingSolutionsPage = React.lazy(() => import("./app/quantum-computing-solutions/page"));
 const ResourcesPage = React.lazy(() => import("./app/resources/page"));
 const RoboticsIntegrationPage = React.lazy(() => import("./app/robotics-integration/page"));
 const SearchPage = React.lazy(() => import("./app/search/page"));
@@ -555,8 +562,6 @@ const ZionChatAiPage = React.lazy(() => import("./app/zion-chat-ai/page"));
 const ZionCrmIntelligencePage = React.lazy(() => import("./app/zion-crm-intelligence/page"));
 const ZionCustomerInsightsPage = React.lazy(() => import("./app/zion-customer-insights/page"));
 
-
->>>>>>> cursor/website-audit-and-update-with-deployment-f1ad
 // Main App Component
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
@@ -569,7 +574,6 @@ function App() {
     <GlobalErrorBoundary>
       <EnhancedErrorBoundary>
         <HelmetProvider>
-<<<<<<< HEAD
           <Router>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
               <FuturisticBackground>
@@ -747,6 +751,7 @@ function App() {
                   <Route path="/blockchain-development" element={<BlockchainDevelopmentPage />} />
                   <Route path="/machine-learning" element={<MachineLearningPage />} />
                   <Route path="/quantum-computing" element={<QuantumComputingPage />} />
+                  <Route path="/quantum-computing-solutions" element={<QuantumComputingSolutionsPage />} />
                   <Route path="/robotics" element={<RoboticsPage />} />
 
                   {/* Additional Service Routes */}
@@ -810,6 +815,18 @@ function App() {
                   <Route
                     path="/zion-performance-monitor"
                     element={<ZionPerformanceMonitorPage />}
+                  />
+                  <Route
+                    path="/zion-ai-meeting-transcriber"
+                    element={<ZionAiMeetingTranscriberPage />}
+                  />
+                  <Route
+                    path="/zion-ai-expense-tracker-pro"
+                    element={<ZionAiExpenseTrackerProPage />}
+                  />
+                  <Route
+                    path="/zion-ai-social-media-manager-pro"
+                    element={<ZionAiSocialMediaManagerProPage />}
                   />
 
                   {/* 5G Solutions Routes */}
@@ -1031,6 +1048,7 @@ function App() {
                   <Route path="/ai-voice-assistant" element={<AiVoiceAssistantPage />} />
                   <Route path="/ai-voice-cloning" element={<AiVoiceCloningPage />} />
                   <Route path="/ai-voice-cloning-studio" element={<AiVoiceCloningStudioPage />} />
+                  <Route path="/ai-quantum-financial-oracle" element={<AiQuantumFinancialOraclePage />} />
                   <Route path="/ai-voice-processing" element={<AiVoiceProcessingPage />} />
                   <Route path="/ai-voice-solutions" element={<AiVoiceSolutionsPage />} />
                   <Route path="/ai-voice-synthesis" element={<AiVoiceSynthesisPage />} />
@@ -1216,7 +1234,6 @@ function App() {
                   </main>
                   <Footer />
                   <EnhancedPerformanceOptimizer />
->>>>>>> cursor/website-audit-and-update-with-deployment-f1ad
                   <EnhancedAccessibility>
                     <div></div>
                   </EnhancedAccessibility>

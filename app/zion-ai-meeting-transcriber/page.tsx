@@ -1,94 +1,67 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, CheckCircle, Star, Cpu, Brain, TrendingUp, Shield, Zap, Globe, BarChart3, Award, Mail, Phone, MapPin, Users, Clock, DollarSign, Target, PieChart } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Mic, Clock, Users, FileText, Download, Share, Play, Pause, Volume2, Calendar, Zap, Shield, Globe, BarChart3, Brain, Settings, Award, TrendingUp, Target, DollarSign, Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
 
-export default function AIQuantumFinancialOracle() {
+export default function ZionAIMeetingTranscriber() {
   const features = [
-    "Quantum-enhanced financial modeling",
-    "Real-time market prediction algorithms",
-    "Portfolio optimization with quantum computing",
-    "Risk assessment with quantum accuracy",
-    "Cryptocurrency market analysis",
-    "High-frequency trading optimization",
-    "Fraud detection with quantum precision",
-    "Regulatory compliance automation",
-    "Multi-asset portfolio management",
-    "Quantum-secured transactions"
+    "Real-time meeting transcription",
+    "Multi-language support (50+ languages)",
+    "Speaker identification & separation",
+    "AI-powered action item extraction",
+    "Meeting summary generation",
+    "Searchable transcript database",
+    "Integration with calendar apps",
+    "Cloud storage & backup",
+    "Custom vocabulary training",
+    "Export to multiple formats"
   ];
 
   const benefits = [
-    "Increase portfolio returns by 40%",
-    "Reduce financial risks by 85%",
-    "Process complex calculations 1000x faster",
-    "Achieve quantum-level accuracy in predictions"
-  ];
-
-  const useCases = [
-    {
-      title: "Investment Banking",
-      description: "Quantum-powered trading algorithms and risk management",
-      icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Hedge Funds",
-      description: "Advanced portfolio optimization and market prediction",
-      icon: <PieChart className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Cryptocurrency",
-      description: "Quantum-secured blockchain and DeFi solutions",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Insurance",
-      description: "Quantum risk modeling and fraud detection",
-      icon: <Target className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    }
+    "Save 90% of meeting documentation time",
+    "Never miss important details again",
+    "Improve team productivity by 40%",
+    "Create searchable knowledge base"
   ];
 
   const pricing = [
     {
-      name: "Quantum Starter",
-      price: "$2,999",
+      name: "Starter",
+      price: "$29",
       period: "/month",
-      description: "Perfect for small financial firms",
+      description: "Perfect for small teams",
       features: [
-        "Basic quantum algorithms",
-        "Up to 10 portfolios",
-        "Standard market data",
+        "Up to 10 hours transcription/month",
+        "Basic speaker identification",
+        "Standard export formats",
         "Email support"
       ],
       popular: false
     },
     {
-      name: "Quantum Professional",
-      price: "$7,999",
+      name: "Professional",
+      price: "$79",
       period: "/month",
-      description: "Ideal for growing financial institutions",
+      description: "Ideal for growing businesses",
       features: [
-        "Advanced quantum computing",
-        "Up to 100 portfolios",
-        "Real-time market data",
-        "API access",
+        "Up to 50 hours transcription/month",
+        "Advanced AI features",
+        "All export formats",
+        "Calendar integration",
         "Priority support"
       ],
       popular: true
     },
     {
-      name: "Quantum Enterprise",
-      price: "$19,999",
+      name: "Enterprise",
+      price: "$199",
       period: "/month",
-      description: "For large financial organizations",
+      description: "For large organizations",
       features: [
-        "Full quantum computing power",
-        "Unlimited portfolios",
-        "Custom algorithms",
+        "Unlimited transcription",
+        "Custom AI training",
+        "API access",
         "White-label options",
         "Dedicated support"
       ],
@@ -98,47 +71,47 @@ export default function AIQuantumFinancialOracle() {
 
   const testimonials = [
     {
-      name: "Dr. Michael Chen",
-      company: "Quantum Capital Group",
-      role: "Chief Investment Officer",
-      content: "The AI Quantum Financial Oracle has revolutionized our trading strategies. We've achieved 45% better returns with 60% less risk. It's like having a crystal ball for finance.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
       name: "Sarah Johnson",
-      company: "Crypto Investment Fund",
-      role: "Portfolio Manager",
-      content: "The quantum algorithms are incredibly sophisticated. We can now process complex market data in real-time and make split-second decisions that were impossible before.",
+      company: "TechStart Inc.",
+      role: "CEO",
+      content: "Zion AI Meeting Transcriber has revolutionized our meeting documentation. We save 2 hours per day and never miss important details.",
       rating: 5,
       avatar: "SJ"
     },
     {
-      name: "Robert Kim",
-      company: "Global Banking Corp",
-      role: "Risk Management Director",
-      content: "The fraud detection capabilities are unmatched. We've prevented millions in losses and the quantum security features give us complete confidence in our transactions.",
+      name: "Michael Chen",
+      company: "Consulting Group",
+      role: "Project Manager",
+      content: "The AI-powered action item extraction is incredible. It automatically identifies tasks and assigns them to team members.",
       rating: 5,
-      avatar: "RK"
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      company: "Marketing Agency",
+      role: "Operations Director",
+      content: "Multi-language support is a game-changer for our international clients. The accuracy is outstanding.",
+      rating: 5,
+      avatar: "ER"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Quantum Financial Oracle - Quantum-Enhanced Financial Intelligence | Zion Tech Group</title>
+        <title>Zion AI Meeting Transcriber - Advanced Meeting Transcription & Analysis | Zion Tech Group</title>
         <meta
           name="description"
-          content="Revolutionary quantum-enhanced financial platform with real-time market prediction, portfolio optimization, and quantum-secured transactions. Increase returns by 40% with quantum accuracy."
+          content="Transform your meetings with AI-powered transcription, real-time analysis, and intelligent action item extraction. Support for 50+ languages with 99% accuracy."
         />
         <meta
           name="keywords"
-          content="quantum finance, AI financial oracle, quantum computing finance, portfolio optimization, quantum trading, financial AI, quantum algorithms, cryptocurrency quantum, quantum risk management"
+          content="AI meeting transcription, meeting recorder, voice to text, meeting analysis, action items, speaker identification, meeting summary, productivity tools"
         />
       </Helmet>
       <SEOOptimizer
-        title="AI Quantum Financial Oracle - Quantum-Enhanced Financial Intelligence"
-        description="Revolutionary quantum-enhanced financial platform with real-time market prediction, portfolio optimization, and quantum-secured transactions. Increase returns by 40% with quantum accuracy."
+        title="Zion AI Meeting Transcriber - Advanced Meeting Transcription & Analysis"
+        description="Transform your meetings with AI-powered transcription, real-time analysis, and intelligent action item extraction. Support for 50+ languages with 99% accuracy."
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -150,36 +123,36 @@ export default function AIQuantumFinancialOracle() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-                <Cpu className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">Quantum-Enhanced Financial Intelligence</span>
+                <Zap className="w-4 h-4 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 text-sm font-medium">AI-Powered Meeting Intelligence</span>
               </div>
               
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  AI Quantum Financial Oracle
+                  Zion AI Meeting Transcriber
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Revolutionary quantum-enhanced financial platform with real-time market prediction, portfolio optimization, 
-                and quantum-secured transactions. Experience the future of finance with quantum computing power.
+                Transform your meetings with AI-powered transcription, real-time analysis, and intelligent action item extraction. 
+                Never miss important details again with 99% accuracy and support for 50+ languages.
               </p>
               
               <div className="flex flex-wrap justify-center gap-4 mb-12">
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">40% better returns</span>
+                  <span className="text-sm">99% accuracy</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">1000x faster processing</span>
+                  <span className="text-sm">50+ languages</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">Quantum security</span>
+                  <span className="text-sm">Real-time transcription</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">85% risk reduction</span>
+                  <span className="text-sm">AI action items</span>
                 </div>
               </div>
 
@@ -188,48 +161,17 @@ export default function AIQuantumFinancialOracle() {
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
-                  Request Quantum Demo
+                  Start Free Trial
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
                 <Link
                   to="/demo"
                   className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
                 >
-                  <Cpu className="mr-2 h-5 w-5" />
-                  Explore Quantum Power
+                  <Play className="mr-2 h-5 w-5" />
+                  Watch Demo
                 </Link>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Use Cases Section */}
-        <div className="py-16 bg-black/20 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Quantum Financial Applications
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Discover how quantum computing is revolutionizing financial services
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
-                <div
-                  key={index}
-                  className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105 text-center"
-                >
-                  <div className={`w-16 h-16 mx-auto mb-4 rounded-lg bg-gradient-to-r ${useCase.color} flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>
-                    {useCase.icon}
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
-                  <p className="text-gray-300 text-sm">{useCase.description}</p>
-                </div>
-              ))}
             </div>
           </div>
         </div>
@@ -240,11 +182,11 @@ export default function AIQuantumFinancialOracle() {
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Quantum-Powered Features
+                  Powerful Features
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Harness the power of quantum computing for financial intelligence
+                Everything you need to transform your meetings into actionable insights
               </p>
             </div>
 
@@ -272,7 +214,7 @@ export default function AIQuantumFinancialOracle() {
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Why Choose AI Quantum Financial Oracle?
+                  Why Choose Zion AI Meeting Transcriber?
                 </span>
               </h2>
             </div>
@@ -281,7 +223,7 @@ export default function AIQuantumFinancialOracle() {
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center group">
                   <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Award className="w-8 h-8 text-cyan-400" />
+                    <TrendingUp className="w-8 h-8 text-cyan-400" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit}</h3>
                 </div>
@@ -296,11 +238,11 @@ export default function AIQuantumFinancialOracle() {
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Quantum Computing Pricing
+                  Simple, Transparent Pricing
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Access quantum computing power for your financial operations
+                Choose the plan that fits your team's needs. All plans include a 14-day free trial.
               </p>
             </div>
 
@@ -348,7 +290,7 @@ export default function AIQuantumFinancialOracle() {
                         : "border border-white/20 text-white hover:bg-white/10"
                     }`}
                   >
-                    Request Demo
+                    Start Free Trial
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </div>
@@ -363,7 +305,7 @@ export default function AIQuantumFinancialOracle() {
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Trusted by Financial Leaders
+                  Trusted by Teams Worldwide
                 </span>
               </h2>
             </div>
@@ -401,10 +343,10 @@ export default function AIQuantumFinancialOracle() {
         <div className="py-16 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Experience Quantum Finance?
+              Ready to Transform Your Meetings?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the quantum revolution in financial services. Request a demo and see the future of finance.
+              Start your free trial today and experience the future of meeting documentation.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -412,7 +354,7 @@ export default function AIQuantumFinancialOracle() {
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                Request Quantum Demo
+                Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link

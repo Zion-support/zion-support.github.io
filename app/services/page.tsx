@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail } from "lucide-react";
+import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Cpu, Mic } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -111,6 +111,33 @@ export default function Services() {
       color: "from-amber-500 to-yellow-500",
       price: "Starting at $349/month",
       features: ["Risk Assessment", "Fraud Detection", "Investment Analysis", "Compliance Reporting"]
+    },
+    {
+      title: "Quantum Computing Solutions",
+      description: "Revolutionary quantum computing services including algorithm development, quantum machine learning, and optimization solutions.",
+      icon: <Cpu className="w-8 h-8" />,
+      path: "/quantum-computing-solutions",
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $5,999/month",
+      features: ["Quantum Algorithms", "Quantum ML", "Quantum Security", "Quantum Optimization"]
+    },
+    {
+      title: "AI Voice Cloning Studio",
+      description: "Create realistic voice clones with AI-powered voice synthesis. High-fidelity voice cloning and real-time synthesis.",
+      icon: <Mic className="w-8 h-8" />,
+      path: "/ai-voice-cloning-studio",
+      color: "from-purple-500 to-pink-500",
+      price: "Starting at $99/month",
+      features: ["Voice Cloning", "Real-time Synthesis", "Multi-language", "Commercial Rights"]
+    },
+    {
+      title: "AI Quantum Financial Oracle",
+      description: "Quantum-enhanced financial platform with real-time market prediction, portfolio optimization, and quantum-secured transactions.",
+      icon: <Cpu className="w-8 h-8" />,
+      path: "/ai-quantum-financial-oracle",
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $2,999/month",
+      features: ["Quantum Modeling", "Market Prediction", "Portfolio Optimization", "Quantum Security"]
     }
   ];
 

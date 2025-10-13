@@ -353,6 +353,64 @@ export default function AIServices() {
       reviews: 432,
       link: "/ai-supply-chain-optimizer",
       featured: false
+    },
+    {
+      id: "ai-voice-cloning-studio",
+      name: "AI Voice Cloning Studio",
+      description: "Create realistic voice clones with AI-powered voice synthesis. High-fidelity voice cloning, real-time synthesis, and multi-language support",
+      price: "From $99/month",
+      icon: <Volume2 className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      features: [
+        "High-fidelity voice cloning",
+        "Real-time voice synthesis",
+        "Multi-language support (50+ languages)",
+        "Emotion and tone control",
+        "Custom voice training",
+        "Batch processing capabilities",
+        "API integration",
+        "Commercial usage rights"
+      ],
+      benefits: [
+        "Create realistic voice clones in minutes",
+        "Reduce voice production costs by 90%",
+        "Scale voice content production 10x",
+        "Maintain brand voice consistency"
+      ],
+      category: "Voice & Audio",
+      rating: 4.9,
+      reviews: 856,
+      link: "/ai-voice-cloning-studio",
+      featured: true
+    },
+    {
+      id: "ai-quantum-financial-oracle",
+      name: "AI Quantum Financial Oracle",
+      description: "Revolutionary quantum-enhanced financial platform with real-time market prediction, portfolio optimization, and quantum-secured transactions",
+      price: "From $2,999/month",
+      icon: <Cpu className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500",
+      features: [
+        "Quantum-enhanced financial modeling",
+        "Real-time market prediction algorithms",
+        "Portfolio optimization with quantum computing",
+        "Risk assessment with quantum accuracy",
+        "Cryptocurrency market analysis",
+        "High-frequency trading optimization",
+        "Fraud detection with quantum precision",
+        "Quantum-secured transactions"
+      ],
+      benefits: [
+        "Increase portfolio returns by 40%",
+        "Reduce financial risks by 85%",
+        "Process complex calculations 1000x faster",
+        "Achieve quantum-level accuracy in predictions"
+      ],
+      category: "Quantum Finance",
+      rating: 4.9,
+      reviews: 234,
+      link: "/ai-quantum-financial-oracle",
+      featured: true
     }
   ];
 
@@ -369,12 +427,14 @@ export default function AIServices() {
     { name: "Marketing", count: aiServices.filter(s => s.category === "Marketing").length, active: false },
     { name: "HR & Recruitment", count: aiServices.filter(s => s.category === "HR & Recruitment").length, active: false },
     { name: "Finance", count: aiServices.filter(s => s.category === "Finance").length, active: false },
-    { name: "Supply Chain", count: aiServices.filter(s => s.category === "Supply Chain").length, active: false }
+    { name: "Supply Chain", count: aiServices.filter(s => s.category === "Supply Chain").length, active: false },
+    { name: "Voice & Audio", count: aiServices.filter(s => s.category === "Voice & Audio").length, active: false },
+    { name: "Quantum Finance", count: aiServices.filter(s => s.category === "Quantum Finance").length, active: false }
   ];
 
   const stats = [
-    { number: "25+", label: "AI Services", icon: <Brain className="w-6 h-6" /> },
-    { number: "15,000+", label: "AI Models Trained", icon: <Cpu className="w-6 h-6" /> },
+    { number: "30+", label: "AI Services", icon: <Brain className="w-6 h-6" /> },
+    { number: "20,000+", label: "AI Models Trained", icon: <Cpu className="w-6 h-6" /> },
     { number: "99.9%", label: "Accuracy Rate", icon: <Award className="w-6 h-6" /> },
     { number: "24/7", label: "AI Monitoring", icon: <Monitor className="w-6 h-6" /> }
   ];

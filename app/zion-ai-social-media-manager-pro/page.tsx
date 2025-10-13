@@ -1,95 +1,78 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, CheckCircle, Star, Cpu, Brain, TrendingUp, Shield, Zap, Globe, BarChart3, Award, Mail, Phone, MapPin, Users, Clock, DollarSign, Target, PieChart } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Share2, Calendar, BarChart3, Zap, Brain, Target, Users, TrendingUp, Award, Mail, Phone, MapPin, Instagram, Twitter, Facebook, Linkedin, Youtube, Video } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
 
-export default function AIQuantumFinancialOracle() {
+export default function ZionAISocialMediaManagerPro() {
   const features = [
-    "Quantum-enhanced financial modeling",
-    "Real-time market prediction algorithms",
-    "Portfolio optimization with quantum computing",
-    "Risk assessment with quantum accuracy",
-    "Cryptocurrency market analysis",
-    "High-frequency trading optimization",
-    "Fraud detection with quantum precision",
-    "Regulatory compliance automation",
-    "Multi-asset portfolio management",
-    "Quantum-secured transactions"
+    "AI-powered content generation",
+    "Multi-platform scheduling (10+ platforms)",
+    "Smart hashtag optimization",
+    "Engagement analytics & insights",
+    "Automated posting & reposting",
+    "Content calendar management",
+    "Brand voice consistency",
+    "Competitor analysis",
+    "Influencer collaboration tools",
+    "ROI tracking & reporting"
   ];
 
   const benefits = [
-    "Increase portfolio returns by 40%",
-    "Reduce financial risks by 85%",
-    "Process complex calculations 1000x faster",
-    "Achieve quantum-level accuracy in predictions"
+    "Increase engagement by 300%",
+    "Save 20+ hours per week",
+    "Grow followers by 150%",
+    "Improve brand consistency"
   ];
 
-  const useCases = [
-    {
-      title: "Investment Banking",
-      description: "Quantum-powered trading algorithms and risk management",
-      icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Hedge Funds",
-      description: "Advanced portfolio optimization and market prediction",
-      icon: <PieChart className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Cryptocurrency",
-      description: "Quantum-secured blockchain and DeFi solutions",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Insurance",
-      description: "Quantum risk modeling and fraud detection",
-      icon: <Target className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    }
+  const platforms = [
+    { name: "Instagram", icon: <Instagram className="w-6 h-6" />, color: "from-pink-500 to-purple-500" },
+    { name: "Twitter", icon: <Twitter className="w-6 h-6" />, color: "from-blue-400 to-blue-600" },
+    { name: "Facebook", icon: <Facebook className="w-6 h-6" />, color: "from-blue-600 to-blue-800" },
+    { name: "LinkedIn", icon: <Linkedin className="w-6 h-6" />, color: "from-blue-700 to-blue-900" },
+    { name: "YouTube", icon: <Youtube className="w-6 h-6" />, color: "from-red-500 to-red-700" },
+    { name: "TikTok", icon: <Video className="w-6 h-6" />, color: "from-gray-800 to-gray-900" }
   ];
 
   const pricing = [
     {
-      name: "Quantum Starter",
-      price: "$2,999",
+      name: "Starter",
+      price: "$39",
       period: "/month",
-      description: "Perfect for small financial firms",
+      description: "Perfect for small businesses",
       features: [
-        "Basic quantum algorithms",
-        "Up to 10 portfolios",
-        "Standard market data",
+        "Up to 3 social accounts",
+        "Basic AI content generation",
+        "Standard scheduling",
+        "Basic analytics",
         "Email support"
       ],
       popular: false
     },
     {
-      name: "Quantum Professional",
-      price: "$7,999",
+      name: "Professional",
+      price: "$79",
       period: "/month",
-      description: "Ideal for growing financial institutions",
+      description: "Ideal for growing businesses",
       features: [
-        "Advanced quantum computing",
-        "Up to 100 portfolios",
-        "Real-time market data",
-        "API access",
+        "Up to 10 social accounts",
+        "Advanced AI features",
+        "Content calendar",
+        "Advanced analytics",
         "Priority support"
       ],
       popular: true
     },
     {
-      name: "Quantum Enterprise",
-      price: "$19,999",
+      name: "Enterprise",
+      price: "$149",
       period: "/month",
-      description: "For large financial organizations",
+      description: "For large organizations",
       features: [
-        "Full quantum computing power",
-        "Unlimited portfolios",
-        "Custom algorithms",
+        "Unlimited accounts",
+        "Custom AI training",
         "White-label options",
+        "API access",
         "Dedicated support"
       ],
       popular: false
@@ -98,47 +81,47 @@ export default function AIQuantumFinancialOracle() {
 
   const testimonials = [
     {
-      name: "Dr. Michael Chen",
-      company: "Quantum Capital Group",
-      role: "Chief Investment Officer",
-      content: "The AI Quantum Financial Oracle has revolutionized our trading strategies. We've achieved 45% better returns with 60% less risk. It's like having a crystal ball for finance.",
+      name: "Jessica Chen",
+      company: "E-commerce Brand",
+      role: "Marketing Director",
+      content: "Zion AI Social Media Manager Pro has transformed our social presence. We've increased engagement by 400% and saved 25 hours per week.",
       rating: 5,
-      avatar: "MC"
+      avatar: "JC"
     },
     {
-      name: "Sarah Johnson",
-      company: "Crypto Investment Fund",
-      role: "Portfolio Manager",
-      content: "The quantum algorithms are incredibly sophisticated. We can now process complex market data in real-time and make split-second decisions that were impossible before.",
+      name: "Marcus Thompson",
+      company: "Digital Agency",
+      role: "Social Media Manager",
+      content: "The AI content generation is incredible. It creates engaging posts that match our brand voice perfectly. Our clients love the results.",
       rating: 5,
-      avatar: "SJ"
+      avatar: "MT"
     },
     {
-      name: "Robert Kim",
-      company: "Global Banking Corp",
-      role: "Risk Management Director",
-      content: "The fraud detection capabilities are unmatched. We've prevented millions in losses and the quantum security features give us complete confidence in our transactions.",
+      name: "Sarah Williams",
+      company: "Tech Startup",
+      role: "CEO",
+      content: "Finally, a social media tool that actually works. The analytics insights help us make data-driven decisions and grow our audience.",
       rating: 5,
-      avatar: "RK"
+      avatar: "SW"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Quantum Financial Oracle - Quantum-Enhanced Financial Intelligence | Zion Tech Group</title>
+        <title>Zion AI Social Media Manager Pro - AI-Powered Social Media Management | Zion Tech Group</title>
         <meta
           name="description"
-          content="Revolutionary quantum-enhanced financial platform with real-time market prediction, portfolio optimization, and quantum-secured transactions. Increase returns by 40% with quantum accuracy."
+          content="Transform your social media presence with AI-powered content generation, multi-platform scheduling, and advanced analytics. Increase engagement by 300% and save 20+ hours per week."
         />
         <meta
           name="keywords"
-          content="quantum finance, AI financial oracle, quantum computing finance, portfolio optimization, quantum trading, financial AI, quantum algorithms, cryptocurrency quantum, quantum risk management"
+          content="AI social media manager, social media automation, content generation, social media scheduling, social media analytics, Instagram automation, Twitter automation, Facebook automation"
         />
       </Helmet>
       <SEOOptimizer
-        title="AI Quantum Financial Oracle - Quantum-Enhanced Financial Intelligence"
-        description="Revolutionary quantum-enhanced financial platform with real-time market prediction, portfolio optimization, and quantum-secured transactions. Increase returns by 40% with quantum accuracy."
+        title="Zion AI Social Media Manager Pro - AI-Powered Social Media Management"
+        description="Transform your social media presence with AI-powered content generation, multi-platform scheduling, and advanced analytics. Increase engagement by 300% and save 20+ hours per week."
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -150,36 +133,36 @@ export default function AIQuantumFinancialOracle() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-                <Cpu className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">Quantum-Enhanced Financial Intelligence</span>
+                <Zap className="w-4 h-4 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 text-sm font-medium">AI-Powered Social Media Intelligence</span>
               </div>
               
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  AI Quantum Financial Oracle
+                  Zion AI Social Media Manager Pro
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Revolutionary quantum-enhanced financial platform with real-time market prediction, portfolio optimization, 
-                and quantum-secured transactions. Experience the future of finance with quantum computing power.
+                Transform your social media presence with AI-powered content generation, multi-platform scheduling, and advanced analytics. 
+                Increase engagement by 300% and save 20+ hours per week on social media management.
               </p>
               
               <div className="flex flex-wrap justify-center gap-4 mb-12">
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">40% better returns</span>
+                  <span className="text-sm">300% engagement increase</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">1000x faster processing</span>
+                  <span className="text-sm">10+ platforms supported</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">Quantum security</span>
+                  <span className="text-sm">AI content generation</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">85% risk reduction</span>
+                  <span className="text-sm">20+ hours saved weekly</span>
                 </div>
               </div>
 
@@ -188,46 +171,45 @@ export default function AIQuantumFinancialOracle() {
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
-                  Request Quantum Demo
+                  Start Free Trial
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
                 <Link
                   to="/demo"
                   className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
                 >
-                  <Cpu className="mr-2 h-5 w-5" />
-                  Explore Quantum Power
+                  <Share2 className="mr-2 h-5 w-5" />
+                  Watch Demo
                 </Link>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Use Cases Section */}
+        {/* Supported Platforms */}
         <div className="py-16 bg-black/20 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Quantum Financial Applications
+                  Supported Platforms
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Discover how quantum computing is revolutionizing financial services
+                Manage all your social media accounts from one powerful dashboard
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {platforms.map((platform, index) => (
                 <div
                   key={index}
-                  className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105 text-center"
+                  className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105 text-center"
                 >
-                  <div className={`w-16 h-16 mx-auto mb-4 rounded-lg bg-gradient-to-r ${useCase.color} flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>
-                    {useCase.icon}
+                  <div className={`w-12 h-12 mx-auto mb-3 rounded-lg bg-gradient-to-r ${platform.color} flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>
+                    {platform.icon}
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
-                  <p className="text-gray-300 text-sm">{useCase.description}</p>
+                  <h3 className="text-sm font-semibold text-white">{platform.name}</h3>
                 </div>
               ))}
             </div>
@@ -240,11 +222,11 @@ export default function AIQuantumFinancialOracle() {
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Quantum-Powered Features
+                  Powerful Features
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Harness the power of quantum computing for financial intelligence
+                Everything you need to dominate social media and grow your audience
               </p>
             </div>
 
@@ -272,7 +254,7 @@ export default function AIQuantumFinancialOracle() {
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Why Choose AI Quantum Financial Oracle?
+                  Why Choose Zion AI Social Media Manager Pro?
                 </span>
               </h2>
             </div>
@@ -281,7 +263,7 @@ export default function AIQuantumFinancialOracle() {
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center group">
                   <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Award className="w-8 h-8 text-cyan-400" />
+                    <TrendingUp className="w-8 h-8 text-cyan-400" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit}</h3>
                 </div>
@@ -296,11 +278,11 @@ export default function AIQuantumFinancialOracle() {
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Quantum Computing Pricing
+                  Simple, Transparent Pricing
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Access quantum computing power for your financial operations
+                Choose the plan that fits your social media needs. All plans include a 14-day free trial.
               </p>
             </div>
 
@@ -348,7 +330,7 @@ export default function AIQuantumFinancialOracle() {
                         : "border border-white/20 text-white hover:bg-white/10"
                     }`}
                   >
-                    Request Demo
+                    Start Free Trial
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </div>
@@ -363,7 +345,7 @@ export default function AIQuantumFinancialOracle() {
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Trusted by Financial Leaders
+                  Trusted by Social Media Professionals
                 </span>
               </h2>
             </div>
@@ -401,10 +383,10 @@ export default function AIQuantumFinancialOracle() {
         <div className="py-16 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Experience Quantum Finance?
+              Ready to Transform Your Social Media Presence?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the quantum revolution in financial services. Request a demo and see the future of finance.
+              Start your free trial today and experience the future of social media management.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -412,14 +394,14 @@ export default function AIQuantumFinancialOracle() {
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                Request Quantum Demo
+                Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/pricing"
                 className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
               >
-                <DollarSign className="mr-2 h-5 w-5" />
+                <BarChart3 className="mr-2 h-5 w-5" />
                 View Pricing
               </Link>
             </div>
