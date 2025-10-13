@@ -4,160 +4,99 @@ import { LucideIcon } from 'lucide-react';
 
 interface FuturisticButtonEnhancedProps {
   children: React.ReactNode;
-  onClick?: () => void;
   href?: string;
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  onClick?: () => void;
+  variant?: 'primary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg' | 'xl';
-  glowColor?: 'cyan' | 'purple' | 'pink' | 'green' | 'blue' | 'orange';
   icon?: LucideIcon;
   iconPosition?: 'left' | 'right';
-  disabled?: boolean;
-  loading?: boolean;
-  className?: string;
-  animated?: boolean;
+  glowColor?: 'cyan' | 'purple' | 'pink' | 'blue' | 'green' | 'yellow' | 'red';
   neon?: boolean;
+  animated?: boolean;
+  className?: string;
+  disabled?: boolean;
 }
 
 const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
   children,
-  onClick,
   href,
+  onClick,
   variant = 'primary',
   size = 'md',
-  glowColor = 'cyan',
   icon: Icon,
-  iconPosition = 'right',
-  disabled = false,
-  loading = false,
-  className = '',
+  iconPosition = 'left',
+  glowColor = 'cyan',
+  neon = true,
   animated = true,
-  neon = true
+  className = '',
+  disabled = false,
 }) => {
-  const baseClasses = `
-    relative inline-flex items-center justify-center font-semibold rounded-lg
-    transition-all duration-300 overflow-hidden group
-    ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
-  `;
-
+  const baseClasses = "relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900 disabled:opacity-50 disabled:cursor-not-allowed";
+  
   const sizeClasses = {
-    sm: 'px-3 py-1.5 text-sm',
-    md: 'px-4 py-2 text-base',
-    lg: 'px-6 py-3 text-lg',
-    xl: 'px-8 py-4 text-xl'
+    sm: "px-3 py-1.5 text-sm",
+    md: "px-4 py-2 text-base",
+    lg: "px-6 py-3 text-lg",
+    xl: "px-8 py-4 text-xl",
   };
 
   const variantClasses = {
-    primary: `
-      bg-gradient-to-r from-cyan-500 to-purple-600 text-white
-      hover:from-cyan-600 hover:to-purple-700
-      ${neon ? 'shadow-lg shadow-cyan-500/25 hover:shadow-2xl hover:shadow-cyan-500/40' : ''}
-    `,
-    secondary: `
-      bg-gradient-to-r from-slate-700 to-slate-800 text-white
-      hover:from-slate-600 hover:to-slate-700
-      ${neon ? 'shadow-lg shadow-slate-500/25 hover:shadow-2xl hover:shadow-slate-500/40' : ''}
-    `,
-    outline: `
-      border-2 border-cyan-400 text-cyan-400 bg-transparent
-      hover:bg-cyan-400 hover:text-slate-900
-      ${neon ? 'shadow-lg shadow-cyan-500/25 hover:shadow-2xl hover:shadow-cyan-500/40' : ''}
-    `,
-    ghost: `
-      text-cyan-400 bg-transparent
-      hover:bg-cyan-400/10 hover:text-cyan-300
-    `
+    primary: "bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 focus:ring-cyan-500",
+    outline: "border-2 border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 hover:border-cyan-400 focus:ring-cyan-500",
+    ghost: "text-cyan-400 hover:bg-cyan-500/10 focus:ring-cyan-500",
   };
 
   const glowColors = {
-    cyan: 'shadow-cyan-500/25',
-    purple: 'shadow-purple-500/25',
-    pink: 'shadow-pink-500/25',
-    green: 'shadow-green-500/25',
-    blue: 'shadow-blue-500/25',
-    orange: 'shadow-orange-500/25'
+    cyan: "shadow-cyan-500/25 hover:shadow-cyan-500/50",
+    purple: "shadow-purple-500/25 hover:shadow-purple-500/50",
+    pink: "shadow-pink-500/25 hover:shadow-pink-500/50",
+    blue: "shadow-blue-500/25 hover:shadow-blue-500/50",
+    green: "shadow-green-500/25 hover:shadow-green-500/50",
+    yellow: "shadow-yellow-500/25 hover:shadow-yellow-500/50",
+    red: "shadow-red-500/25 hover:shadow-red-500/50",
   };
 
-  const buttonVariants = {
-    initial: { 
-      scale: 1,
-      boxShadow: '0 0 0 rgba(6, 182, 212, 0)'
-    },
-    hover: { 
-      scale: 1.05,
-      boxShadow: '0 10px 30px rgba(6, 182, 212, 0.4)',
-      transition: { duration: 0.2 }
-    },
-    tap: { 
-      scale: 0.95,
-      transition: { duration: 0.1 }
-    }
-  };
+  const neonGlow = neon ? "before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-cyan-500/20 before:to-purple-500/20 before:blur-lg before:-z-10" : "";
 
-  const rippleVariants = {
-    initial: { scale: 0, opacity: 1 },
-    animate: { 
-      scale: 4, 
-      opacity: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
-    }
-  };
+  const buttonClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${glowColors[glowColor]} ${neonGlow} ${className}`;
 
   const content = (
     <>
-      {/* Animated background */}
+      {Icon && iconPosition === 'left' && (
+        <Icon className="w-4 h-4 mr-2" />
+      )}
+      {children}
+      {Icon && iconPosition === 'right' && (
+        <Icon className="w-4 h-4 ml-2" />
+      )}
+      
+      {/* Animated Border */}
       {animated && (
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <motion.div
+          className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100"
+          animate={{
+            backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
       )}
-      
-      {/* Neon glow effect */}
-      {neon && (
-        <div className={`
-          absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300
-          bg-gradient-to-r from-${glowColor}-500/20 to-${glowColor}-500/10
-        `} />
-      )}
-      
-      {/* Loading spinner */}
-      {loading && (
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-        </div>
-      )}
-      
-      {/* Content */}
-      <div className={`relative z-10 flex items-center ${loading ? 'opacity-0' : 'opacity-100'}`}>
-        {Icon && iconPosition === 'left' && (
-          <Icon className={`w-4 h-4 ${size === 'sm' ? 'w-3 h-3' : size === 'lg' ? 'w-5 h-5' : size === 'xl' ? 'w-6 h-6' : 'w-4 h-4'} mr-2 group-hover:scale-110 transition-transform duration-200`} />
-        )}
-        {children}
-        {Icon && iconPosition === 'right' && (
-          <Icon className={`w-4 h-4 ${size === 'sm' ? 'w-3 h-3' : size === 'lg' ? 'w-5 h-5' : size === 'xl' ? 'w-6 h-6' : 'w-4 h-4'} ml-2 group-hover:scale-110 transition-transform duration-200`} />
-        )}
-      </div>
-      
-      {/* Corner accents */}
-      <div className="absolute top-1 right-1 w-1 h-1 bg-cyan-400 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
-      <div className="absolute bottom-1 left-1 w-1 h-1 bg-purple-400 rounded-full opacity-40 group-hover:opacity-80 transition-opacity duration-300" />
     </>
   );
-
-  const buttonClasses = `
-    ${baseClasses}
-    ${sizeClasses[size]}
-    ${variantClasses[variant]}
-    ${className}
-  `;
 
   if (href) {
     return (
       <motion.a
         href={href}
-        className={buttonClasses}
-        variants={animated ? buttonVariants : undefined}
-        initial="initial"
-        whileHover={!disabled ? "hover" : undefined}
-        whileTap={!disabled ? "tap" : undefined}
-        onClick={onClick}
+        className={`group ${buttonClasses}`}
+        whileHover={animated ? { scale: 1.05 } : {}}
+        whileTap={animated ? { scale: 0.95 } : {}}
+        initial={animated ? { opacity: 0, y: 10 } : {}}
+        animate={animated ? { opacity: 1, y: 0 } : {}}
+        transition={animated ? { duration: 0.3 } : {}}
       >
         {content}
       </motion.a>
@@ -166,13 +105,14 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
 
   return (
     <motion.button
-      className={buttonClasses}
-      variants={animated ? buttonVariants : undefined}
-      initial="initial"
-      whileHover={!disabled ? "hover" : undefined}
-      whileTap={!disabled ? "tap" : undefined}
       onClick={onClick}
-      disabled={disabled || loading}
+      disabled={disabled}
+      className={`group ${buttonClasses}`}
+      whileHover={animated ? { scale: 1.05 } : {}}
+      whileTap={animated ? { scale: 0.95 } : {}}
+      initial={animated ? { opacity: 0, y: 10 } : {}}
+      animate={animated ? { opacity: 1, y: 0 } : {}}
+      transition={animated ? { duration: 0.3 } : {}}
     >
       {content}
     </motion.button>

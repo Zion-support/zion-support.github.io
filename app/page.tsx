@@ -1,18 +1,11 @@
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
-<<<<<<< HEAD
 import StructuredData from "./components/StructuredData";
-import FuturisticBackground from "./components/FuturisticBackground";
-import FuturisticCard from "./components/FuturisticCard";
-import FuturisticButton from "./components/FuturisticButton";
-import FuturisticText from "./components/FuturisticText";
-=======
 import FuturisticBackgroundEnhanced from "./components/FuturisticBackgroundEnhanced";
 import FuturisticCardEnhanced from "./components/FuturisticCardEnhanced";
 import FuturisticButtonEnhanced from "./components/FuturisticButtonEnhanced";
 import FuturisticTextEnhanced from "./components/FuturisticTextEnhanced";
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
 import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
 import ResponsiveText from "./components/ResponsiveText";
@@ -147,6 +140,30 @@ const HomePage = () => {
       price: "From $99/month",
       icon: <Calendar className="w-6 h-6" />,
       link: "/zion-ai-project-manager-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Accounting Assistant",
+      description: "AI-powered accounting software that automates bookkeeping, expense tracking, and financial reporting",
+      price: "From $29/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/zion-ai-accounting-assistant",
+      featured: true
+    },
+    {
+      name: "Zion AI 3D Generator",
+      description: "Create stunning 3D models from text descriptions and images using advanced AI technology",
+      price: "From $29/month",
+      icon: <Target className="w-6 h-6" />,
+      link: "/zion-ai-3d-generator",
+      featured: true
+    },
+    {
+      name: "Zion AI Blockchain Analytics",
+      description: "Advanced AI-powered blockchain analytics platform for cryptocurrency and DeFi monitoring",
+      price: "From $99/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/zion-ai-blockchain-analytics",
       featured: true
     }
   ];
@@ -498,17 +515,8 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       </main>
-<<<<<<< HEAD
-      </div>
-=======
-          </main>
-        </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
-=======
         </FuturisticBackgroundEnhanced>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
       </EnhancedAccessibility>
     </PerformanceOptimizer>
   );

@@ -1,8 +1,8 @@
 import React, { useState, useEffect, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import Navigation from "./app/components/Navigation";
-import Sidebar from "./app/components/Sidebar";
+import NavigationEnhanced from "./app/components/NavigationEnhanced";
+import SidebarEnhanced from "./app/components/SidebarEnhanced";
 import Footer from "./app/components/Footer";
 import LoadingPage from "./app/components/Loading";
 import HomePage from "./app/page";
@@ -101,6 +101,11 @@ const ZionAIDataCleanerPage = React.lazy(() => import("./app/zion-ai-data-cleane
 const ZionAITaskSchedulerPage = React.lazy(() => import("./app/zion-ai-task-scheduler/page"));
 const ZionAICustomerSupportProPage = React.lazy(() => import("./app/zion-ai-customer-support-pro/page"));
 
+// New Innovative Micro SAAS Services
+const ZionAIAccountingAssistantPage = React.lazy(() => import("./app/zion-ai-accounting-assistant/page"));
+const ZionAI3DGeneratorPage = React.lazy(() => import("./app/zion-ai-3d-generator/page"));
+const ZionAIBlockchainAnalyticsPage = React.lazy(() => import("./app/zion-ai-blockchain-analytics/page"));
+
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -136,8 +141,8 @@ function App() {
                         </a>
                         
                         <FuturisticBackground>
-                          <Navigation onSidebarToggle={toggleSidebar} />
-                          <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
+                          <NavigationEnhanced onSidebarToggle={toggleSidebar} />
+                          <SidebarEnhanced isOpen={isSidebarOpen} onClose={closeSidebar} />
                           <Breadcrumb />
                           
                           <main id="main-content" role="main" className="relative z-10">
@@ -225,6 +230,11 @@ function App() {
                             <Route path="/zion-ai-data-cleaner" element={<ZionAIDataCleanerPage />} />
                             <Route path="/zion-ai-task-scheduler" element={<ZionAITaskSchedulerPage />} />
                             <Route path="/zion-ai-customer-support-pro" element={<ZionAICustomerSupportProPage />} />
+
+                            {/* New Innovative Micro SAAS Services Routes */}
+                            <Route path="/zion-ai-accounting-assistant" element={<ZionAIAccountingAssistantPage />} />
+                            <Route path="/zion-ai-3d-generator" element={<ZionAI3DGeneratorPage />} />
+                            <Route path="/zion-ai-blockchain-analytics" element={<ZionAIBlockchainAnalyticsPage />} />
                             
                             {/* 404 Route - Must be last */}
                             <Route path="*" element={<NotFoundPage />} />

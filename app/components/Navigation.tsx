@@ -7,19 +7,8 @@ import {
   Shield, 
   Zap, 
   Globe, 
-<<<<<<< HEAD
-  ChevronDown
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
-=======
   ChevronDown,
   ChevronUp
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-6099
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -99,7 +88,10 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
         { name: 'Smart Expense Categorizer', path: '/zion-smart-expense-categorizer' },
         { name: 'AI Voice Assistant Pro', path: '/zion-ai-voice-assistant-pro' },
         { name: 'AI Code Reviewer', path: '/zion-ai-code-reviewer' },
-        { name: 'AI Social Media Manager', path: '/zion-ai-social-media-manager' }
+        { name: 'AI Social Media Manager', path: '/zion-ai-social-media-manager' },
+        { name: 'AI Accounting Assistant', path: '/zion-ai-accounting-assistant' },
+        { name: 'AI 3D Generator', path: '/zion-ai-3d-generator' },
+        { name: 'AI Blockchain Analytics', path: '/zion-ai-blockchain-analytics' }
       ]
     },
     {
@@ -188,7 +180,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                   )}
                 </Link>
                 
-<<<<<<< HEAD
                 {/* Services Dropdown */}
                 {item.hasDropdown && (
                   <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
@@ -227,23 +218,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                           View All Services →
                         </Link>
                       </div>
-=======
-                {/* Dropdown Menu */}
-                {item.hasDropdown && item.dropdownItems && (
-                  <div className="absolute top-full left-0 mt-1 w-64 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    <div className="py-2">
-                      {item.dropdownItems.map((dropdownItem, index) => (
-                        <Link
-                          key={index}
-                          to={dropdownItem.path}
-                          className={`block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors ${
-                            isActive(dropdownItem.path) ? 'text-cyan-400 bg-cyan-500/10' : ''
-                          }`}
-                        >
-                          {dropdownItem.name}
-                        </Link>
-                      ))}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
                     </div>
                   </div>
                 )}

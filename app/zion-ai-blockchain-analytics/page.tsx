@@ -1,68 +1,68 @@
 import React from 'react';
-import { Brain, Calculator, FileText, TrendingUp, Shield, Clock, CheckCircle, Star, ArrowRight, DollarSign, BarChart3, PieChart, Receipt, CreditCard, Banknote, Target, Users, Zap } from 'lucide-react';
+import { Brain, Shield, TrendingUp, BarChart3, Zap, Star, ArrowRight, Target, Users, Clock, CheckCircle, Database, Lock, Eye, Activity, DollarSign, PieChart, LineChart } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticBackgroundEnhanced from '../components/FuturisticBackgroundEnhanced';
 import FuturisticCardEnhanced from '../components/FuturisticCardEnhanced';
 import FuturisticButtonEnhanced from '../components/FuturisticButtonEnhanced';
 import FuturisticTextEnhanced from '../components/FuturisticTextEnhanced';
 
-const ZionAIAccountingAssistantPage = () => {
+const ZionAIBlockchainAnalyticsPage = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "Zion AI Accounting Assistant",
-    "description": "AI-powered accounting software that automates bookkeeping, expense tracking, and financial reporting for small to medium businesses.",
-    "url": "https://ziontechgroup.com/zion-ai-accounting-assistant",
+    "name": "Zion AI Blockchain Analytics",
+    "description": "Advanced AI-powered blockchain analytics platform that provides real-time insights, transaction monitoring, and risk assessment for cryptocurrency and DeFi protocols.",
+    "url": "https://ziontechgroup.com/zion-ai-blockchain-analytics",
     "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web, iOS, Android",
+    "operatingSystem": "Web, API",
     "offers": {
       "@type": "Offer",
-      "price": "99",
+      "price": "199",
       "priceCurrency": "USD",
       "priceValidUntil": "2025-12-31"
     },
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "1247"
+      "ratingValue": "4.7",
+      "reviewCount": "892"
     }
   };
 
   const features = [
     {
-      title: "AI-Powered Expense Categorization",
-      description: "Automatically categorize and classify expenses using machine learning algorithms",
-      icon: <Brain className="w-8 h-8" />,
+      title: "Real-time Transaction Monitoring",
+      description: "Track and analyze blockchain transactions across multiple networks in real-time",
+      icon: <Activity className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Real-time Financial Reporting",
-      description: "Generate comprehensive financial reports and insights in real-time",
-      icon: <BarChart3 className="w-8 h-8" />,
+      title: "AI-Powered Risk Assessment",
+      description: "Identify suspicious activities and potential security threats using machine learning",
+      icon: <Shield className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Automated Invoice Processing",
-      description: "Scan, process, and manage invoices automatically with OCR technology",
-      icon: <Receipt className="w-8 h-8" />,
+      title: "DeFi Protocol Analysis",
+      description: "Monitor liquidity pools, yield farming, and DeFi protocol health metrics",
+      icon: <TrendingUp className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Tax Preparation Support",
-      description: "Prepare for tax season with automated tax calculations and compliance checks",
-      icon: <FileText className="w-8 h-8" />,
+      title: "Portfolio Tracking",
+      description: "Track cryptocurrency portfolios across multiple wallets and exchanges",
+      icon: <PieChart className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Multi-Currency Support",
-      description: "Handle transactions in multiple currencies with real-time exchange rates",
-      icon: <DollarSign className="w-8 h-8" />,
+      title: "Market Intelligence",
+      description: "Get AI-generated insights on market trends and trading opportunities",
+      icon: <BarChart3 className="w-8 h-8" />,
       color: "from-yellow-500 to-amber-500"
     },
     {
-      title: "Bank Integration",
-      description: "Connect with 10,000+ banks and financial institutions worldwide",
-      icon: <CreditCard className="w-8 h-8" />,
+      title: "Compliance Reporting",
+      description: "Generate automated compliance reports for regulatory requirements",
+      icon: <Database className="w-8 h-8" />,
       color: "from-indigo-500 to-blue-500"
     }
   ];
@@ -70,93 +70,104 @@ const ZionAIAccountingAssistantPage = () => {
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$29",
+      price: "$99",
       period: "/month",
-      description: "Perfect for freelancers and small businesses",
+      description: "Perfect for individual traders and small portfolios",
       features: [
-        "Up to 100 transactions/month",
-        "Basic expense categorization",
-        "Simple financial reports",
+        "Up to 5 wallet addresses",
+        "Basic transaction monitoring",
+        "Standard risk alerts",
         "Email support",
-        "Mobile app access"
+        "7-day data retention"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$99",
+      price: "$199",
       period: "/month",
-      description: "Ideal for growing businesses",
+      description: "Ideal for crypto businesses and DeFi protocols",
       features: [
-        "Up to 1,000 transactions/month",
-        "AI-powered categorization",
-        "Advanced financial reports",
-        "Invoice processing",
-        "Multi-currency support",
+        "Up to 50 wallet addresses",
+        "Advanced AI analytics",
+        "Real-time risk assessment",
+        "DeFi protocol monitoring",
         "Priority support",
+        "30-day data retention",
         "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$299",
+      price: "$499",
       period: "/month",
-      description: "For large organizations",
+      description: "For large institutions and exchanges",
       features: [
-        "Unlimited transactions",
-        "Advanced AI features",
-        "Custom reporting",
-        "White-label options",
-        "Dedicated account manager",
-        "24/7 phone support",
+        "Unlimited wallet addresses",
+        "Full AI suite",
+        "Custom risk models",
+        "White-label dashboard",
+        "Dedicated support",
+        "Unlimited data retention",
         "Custom integrations"
       ],
       popular: false
     }
   ];
 
+  const supportedChains = [
+    { name: "Ethereum", icon: "ETH", color: "from-blue-500 to-blue-600" },
+    { name: "Bitcoin", icon: "BTC", color: "from-orange-500 to-orange-600" },
+    { name: "Binance Smart Chain", icon: "BNB", color: "from-yellow-500 to-yellow-600" },
+    { name: "Polygon", icon: "MATIC", color: "from-purple-500 to-purple-600" },
+    { name: "Avalanche", icon: "AVAX", color: "from-red-500 to-red-600" },
+    { name: "Solana", icon: "SOL", color: "from-green-500 to-green-600" },
+    { name: "Cardano", icon: "ADA", color: "from-blue-600 to-blue-700" },
+    { name: "Polkadot", icon: "DOT", color: "from-pink-500 to-pink-600" }
+  ];
+
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      company: "Johnson & Associates",
-      role: "CPA",
-      content: "Zion AI Accounting Assistant has revolutionized how we handle client bookkeeping. The AI categorization is incredibly accurate, saving us 15+ hours per week.",
+      name: "James Wilson",
+      company: "Crypto Investment Fund",
+      role: "Portfolio Manager",
+      content: "Zion AI Blockchain Analytics has transformed how we monitor our investments. The AI risk assessment has prevented several potential losses.",
       rating: 5,
-      avatar: "SJ"
+      avatar: "JW"
+    },
+    {
+      name: "Sarah Kim",
+      company: "DeFi Protocol",
+      role: "Security Lead",
+      content: "The real-time monitoring capabilities are incredible. We can now detect and respond to threats before they become major issues.",
+      rating: 5,
+      avatar: "SK"
     },
     {
       name: "Michael Chen",
-      company: "TechStart Solutions",
-      role: "Founder",
-      content: "As a non-accountant, this tool made financial management accessible. The real-time reports help me make better business decisions.",
+      company: "Crypto Exchange",
+      role: "Compliance Officer",
+      content: "The compliance reporting features have made our regulatory requirements much easier to manage. Highly recommended!",
       rating: 5,
       avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Creative Agency Co.",
-      role: "Operations Manager",
-      content: "The automated invoice processing is a game-changer. We've reduced our accounting overhead by 60% while improving accuracy.",
-      rating: 5,
-      avatar: "ER"
     }
   ];
 
   const stats = [
-    { number: "50,000+", label: "Businesses Trust Us", icon: <Users className="w-6 h-6" /> },
-    { number: "99.9%", label: "Accuracy Rate", icon: <Target className="w-6 h-6" /> },
-    { number: "15hrs", label: "Saved Per Week", icon: <Clock className="w-6 h-6" /> },
-    { number: "24/7", label: "AI Support", icon: <Zap className="w-6 h-6" /> }
+    { number: "50+", label: "Blockchain Networks", icon: <Database className="w-6 h-6" /> },
+    { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
+    { number: "1M+", label: "Transactions Analyzed", icon: <Activity className="w-6 h-6" /> },
+    { number: "24/7", label: "AI Monitoring", icon: <Brain className="w-6 h-6" /> }
   ];
 
   return (
     <FuturisticBackgroundEnhanced>
       <EnhancedSEO
-        title="Zion AI Accounting Assistant - Automated Bookkeeping & Financial Management"
-        description="Revolutionary AI-powered accounting software that automates bookkeeping, expense tracking, and financial reporting. Save 15+ hours per week with intelligent categorization and real-time insights."
-        keywords="AI accounting software, automated bookkeeping, expense tracking, financial reporting, small business accounting, AI bookkeeper, accounting automation"
-        canonical="https://ziontechgroup.com/zion-ai-accounting-assistant"
+        title="Zion AI Blockchain Analytics - Advanced Crypto & DeFi Intelligence Platform"
+        description="AI-powered blockchain analytics platform providing real-time insights, risk assessment, and compliance reporting for cryptocurrency and DeFi protocols. Monitor 50+ blockchain networks."
+        keywords="blockchain analytics, crypto analytics, DeFi monitoring, cryptocurrency intelligence, blockchain security, crypto risk assessment, DeFi protocol analysis"
+        canonical="https://ziontechgroup.com/zion-ai-blockchain-analytics"
         structuredData={structuredData}
       />
 
@@ -167,7 +178,7 @@ const ZionAIAccountingAssistantPage = () => {
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
                 <Brain className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">AI-Powered Accounting Solution</span>
+                <span className="text-cyan-400 text-sm font-medium">AI-Powered Blockchain Intelligence</span>
               </div>
               
               <FuturisticTextEnhanced
@@ -179,13 +190,13 @@ const ZionAIAccountingAssistantPage = () => {
                 neon={true}
                 className="mb-6"
               >
-                Zion AI Accounting Assistant
+                Zion AI Blockchain Analytics
               </FuturisticTextEnhanced>
               
               <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Transform your accounting workflow with AI-powered automation. Automatically categorize expenses, 
-                generate financial reports, and streamline your bookkeeping process. Save 15+ hours per week 
-                while improving accuracy and compliance.
+                Advanced AI-powered blockchain analytics platform that provides real-time insights, 
+                risk assessment, and compliance reporting for cryptocurrency and DeFi protocols. 
+                Monitor 50+ blockchain networks with intelligent threat detection.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -193,7 +204,7 @@ const ZionAIAccountingAssistantPage = () => {
                   href="#pricing"
                   variant="primary"
                   size="lg"
-                  icon={Calculator}
+                  icon={BarChart3}
                   iconPosition="left"
                   glowColor="cyan"
                   neon={true}
@@ -211,7 +222,7 @@ const ZionAIAccountingAssistantPage = () => {
                   neon={true}
                   animated={true}
                 >
-                  Watch Demo
+                  View Demo
                 </FuturisticButtonEnhanced>
               </div>
               
@@ -236,11 +247,11 @@ const ZionAIAccountingAssistantPage = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Powerful AI Features
+                Advanced AI Analytics
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leverage cutting-edge artificial intelligence to automate your accounting tasks 
-                and gain valuable financial insights.
+                Leverage cutting-edge artificial intelligence to gain deep insights into blockchain 
+                activities, detect threats, and optimize your crypto operations.
               </p>
             </div>
             
@@ -269,15 +280,50 @@ const ZionAIAccountingAssistantPage = () => {
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        {/* Supported Chains Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Simple, Transparent Pricing
+                Support for 50+ Blockchain Networks
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your business needs. All plans include our core AI features 
+                Monitor and analyze transactions across all major blockchain networks 
+                and DeFi protocols from a single dashboard.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+              {supportedChains.map((chain, index) => (
+                <FuturisticCardEnhanced
+                  key={index}
+                  glowColor="cyan"
+                  hoverEffect={true}
+                  animated={true}
+                  neon={true}
+                  className="text-center p-4"
+                >
+                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${chain.color} flex items-center justify-center mx-auto mb-3 text-white font-bold`}>
+                    {chain.icon}
+                  </div>
+                  <h3 className="text-sm font-semibold text-white">
+                    {chain.name}
+                  </h3>
+                </FuturisticCardEnhanced>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Choose Your Analytics Plan
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Start monitoring your blockchain activities today. All plans include our core AI features 
                 and 30-day money-back guarantee.
               </p>
             </div>
@@ -336,14 +382,14 @@ const ZionAIAccountingAssistantPage = () => {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Trusted by 50,000+ Businesses
+                Trusted by Crypto Professionals
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Accounting Assistant
+                See what our users say about Zion AI Blockchain Analytics
               </p>
             </div>
             
@@ -384,11 +430,11 @@ const ZionAIAccountingAssistantPage = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Accounting?
+              Ready to Master Blockchain Analytics?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses already saving time and money with AI-powered accounting. 
-              Start your free trial today - no credit card required.
+              Join thousands of crypto professionals already using AI to gain insights and 
+              protect their investments. Start your free trial today.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -408,13 +454,13 @@ const ZionAIAccountingAssistantPage = () => {
                 href="/demo"
                 variant="outline"
                 size="lg"
-                icon={Calculator}
+                icon={BarChart3}
                 iconPosition="left"
                 glowColor="purple"
                 neon={true}
                 animated={true}
               >
-                Schedule Demo
+                View Demo
               </FuturisticButtonEnhanced>
             </div>
           </div>
@@ -424,4 +470,4 @@ const ZionAIAccountingAssistantPage = () => {
   );
 };
 
-export default ZionAIAccountingAssistantPage;
+export default ZionAIBlockchainAnalyticsPage;
