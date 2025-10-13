@@ -1,15 +1,21 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight } from 'lucide-react'
+import Sidebar from './Sidebar'
 
 const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false)
   
   const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen)
   }, [isOpen])
+
+  const toggleSidebar = useCallback(() => {
+    setIsSidebarOpen(!isSidebarOpen)
+  }, [isSidebarOpen])
 
   const toggleServices = useCallback(() => {
     setIsServicesOpen(!isServicesOpen)
@@ -161,7 +167,14 @@ const Navigation = React.memo(() => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden">
+          <div className="lg:hidden flex items-center space-x-2">
+            <button
+              onClick={toggleSidebar}
+              className="text-white hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10"
+              title="Open sidebar"
+            >
+              <Menu className="w-6 h-6" />
+            </button>
             <button
               onClick={toggleMenu}
               className="text-white hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10"
@@ -259,6 +272,9 @@ const Navigation = React.memo(() => {
           </div>
         )}
       </div>
+      
+      {/* Sidebar */}
+      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
     </nav>
   )
 })

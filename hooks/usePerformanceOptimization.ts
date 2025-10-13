@@ -13,13 +13,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     enableLazyLoading = true,
     enablePreloading = true,
     enableImageOptimization = true,
-<<<<<<< HEAD
-
-
-=======
-    // enableCodeSplitting = true,
->>>>>>> cursor/fix-errors-and-merge-to-main-6877
-    enableCaching = true,
+    // enableCodeSplitting = true,    enableCaching = true,
   } = options;
 
   const observerRef = useRef<IntersectionObserver | null>(null);
