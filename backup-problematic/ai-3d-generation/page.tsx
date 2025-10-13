@@ -13,8 +13,8 @@ export default function Page() {
         <h1 className="text-4xl font-bold mb-8"></h1>
         <div className="prose prose-invert max-w-none">
           <p>This page is under construction. Please check back later for  solutions.</p>
-        </div>
-      </div>
-    </div>
+  </div>
+  </div>
+  </div>
   );
 }

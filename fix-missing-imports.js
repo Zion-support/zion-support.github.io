@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-// Common imports that are frequently missing
+// Common imports that are frequently missing;
 const commonImports = {
   'Helmet': "import { Helmet } from 'react-helmet-async';",
   'Link': "import { Link } from 'react-router-dom';",
@@ -75,7 +75,7 @@ const commonImports = {
   'GlobeIcon': "import { Globe as GlobeIcon } from 'lucide-react';"
 };
 
-// Function to fix missing imports in a file
+// Function to fix missing imports in a file;
 function fixMissingImports(filePath) {
   try {
     if (!fs.existsSync(filePath) || (!filePath.endsWith('.tsx') && !filePath.endsWith('.ts'))) {
@@ -85,10 +85,10 @@ function fixMissingImports(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     const lines = content.split('\n');
     
-    // Find all missing imports by checking for undefined variables
+    // Find all missing imports by checking for undefined variables;
     const missingImports = new Set();
     
-    // Check for common patterns
+    // Check for common patterns;
     Object.keys(commonImports).forEach(importName => {
       if (content.includes(importName) && !content.includes(`import { ${importName}`) && !content.includes(`import ${importName}`)) {
         missingImports.add(importName);
@@ -99,7 +99,7 @@ function fixMissingImports(filePath) {
       return;
     }
     
-    // Find the last import statement
+    // Find the last import statement;
     let lastImportIndex = -1;
     for (let i = 0; i < lines.length; i++) {
       if (lines[i].trim().startsWith('import ')) {
@@ -107,14 +107,14 @@ function fixMissingImports(filePath) {
       }
     }
     
-    // Add missing imports
+    // Add missing imports;
     const newImports = Array.from(missingImports).map(importName => commonImports[importName]);
     
     if (lastImportIndex >= 0) {
-      // Insert after the last import
+      // Insert after the last import;
       lines.splice(lastImportIndex + 1, 0, ...newImports);
     } else {
-      // Insert at the beginning
+      // Insert at the beginning;
       lines.unshift(...newImports, '');
     }
     
@@ -127,7 +127,7 @@ function fixMissingImports(filePath) {
   }
 }
 
-// Function to recursively find all TypeScript files
+// Function to recursively find all TypeScript files;
 function findFiles(dir, fileList = []) {
   const files = fs.readdirSync(dir);
   
@@ -145,7 +145,7 @@ function findFiles(dir, fileList = []) {
   return fileList;
 }
 
-// Main execution
+// Main execution;
 console.log('Starting to fix missing imports...');
 
 const files = findFiles('/workspace/app');

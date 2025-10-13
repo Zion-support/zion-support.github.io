@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
 const Breadcrumb: React.FC = () => 
   const location = useLocation();
-  const pathSegments = location.pathname
+  const pathSegments = location.pathname;
     .split('/')
     .filter(segment => segment !== '');
   if (pathSegments.length === 0) 
@@ -25,8 +25,7 @@ const Breadcrumb: React.FC = () =>
               
                 <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
 
-              
-                <Link
+                <Link;
                   to={item.path}
                   className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors"
                 >
@@ -38,7 +37,7 @@ const Breadcrumb: React.FC = () =>
                   {item.name}
                 </span>
               ) : (
-                <Link
+                <Link;
                   to={item.path}
                   className="text-gray-300 hover:text-cyan-400 transition-colors"
                 >
@@ -48,7 +47,7 @@ const Breadcrumb: React.FC = () =>
             </li>
 
         </ol>
-      </div>
+  </div>
     </nav>
   );
 ;

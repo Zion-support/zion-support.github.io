@@ -1,11 +1,14 @@
+import React from 'react';
 
-interface AnalyticsproviderProps {
+interface AnalyticsProviderProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-  return (
-    <div className={`analyticsprovider-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
+export default function AnalyticsProvider({ className = '', children, ...props }: AnalyticsProviderProps) {
+    return (
+        <div className="component" {...props}>
+          {children}
+        </div>
+      );
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
-interface NeonButtonProps 
+interface NeonButtonProps;
   children?: React.ReactNode;
   className?: string;
   title?: string;

@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-interface SEOHeadProps 
+interface SEOHeadProps;
   title?: string;
   description?: string;
   keywords?: string;
@@ -53,7 +53,7 @@ const SEOHead: React.FC<SEOHeadProps> = (
       <meta property="og:description" content="{description}" />
       <meta property="og:image" content="{ogImage}" />
       <meta property="og:type" content="{ogType}" />
-      <meta
+      <meta;
         property="og:url"
         content="{canonical" || "https://ziontechgroup.com"}
       />
@@ -70,7 +70,7 @@ const SEOHead: React.FC<SEOHeadProps> = (
         {JSON.stringify(finalStructuredData)}
       </script>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link
+      <link;
         rel="preconnect"
         href="https://fonts.gstatic.com"
         crossOrigin="anonymous"

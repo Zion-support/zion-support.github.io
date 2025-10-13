@@ -1,6 +1,14 @@
+import React from 'react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
 interface NavigationProps {
-  onSidebarToggle?: () => void;
+  className?: string;
+  children?: React.ReactNode;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
+
+export default function Navigation({ className = '', children, ...props }: NavigationProps) {
+    return (
+        <div className="component" {...props}>
+          {children}
+        </div>
+      );
+}

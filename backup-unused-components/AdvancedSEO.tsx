@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-interface AdvancedSEOProps 
+interface AdvancedSEOProps;
   title: string;
   description: string;
   keywords?: string;
@@ -48,7 +48,7 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = (
   modifiedTime,
   section = 'Technology',
   tags = [],
-  readingTime
+  readingTime;
 ) => 
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullOgTitle = ogTitle || fullTitle;
@@ -59,7 +59,7 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = (
   const fullTwitterImage = twitterImage || fullOgImage;
   const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : '');
   const currentDate = new Date().toISOString();
-  // Default structured data for organization
+  // Default structured data for organization;
   const defaultStructuredData = 
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -109,7 +109,7 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = (
 
     ]
 ;
-  // Article structured data if publishedTime is provided
+  // Article structured data if publishedTime is provided;
   const articleStructuredData = publishedTime ? 
     "@context": "https://schema.org",
     "@type": "Article",
@@ -133,11 +133,11 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = (
     "dateModified": modifiedTime || publishedTime,
     "mainEntityOfPage": 
       "@type": "WebPage",
-      "@id": fullCanonical
+      "@id": fullCanonical;
 ,
     "articleSection": section,
     "keywords": tags.join(', '),
-    "wordCount": readingTime ? readingTime * 200 : undefined
+    "wordCount": readingTime ? readingTime * 200 : undefined;
  : null;
   return (
     <Helmet></Helmet>
@@ -230,8 +230,7 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = (
               "@type": "ListItem",
               "position": 2,
               "name": title,
-              "item": fullCanonical
-
+              "item": fullCanonical;
           ]
 
       </script>

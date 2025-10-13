@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-interface ImprovedSEOProps 
+interface ImprovedSEOProps;
   title?: string;
   description?: string;
   keywords?: string;
@@ -32,7 +32,7 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = (
   twitterImage,
   structuredData,
   noindex = false,
-  nofollow = false
+  nofollow = false;
 ) => 
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullOgTitle = ogTitle || fullTitle;

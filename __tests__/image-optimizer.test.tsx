@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import ImageOptimizer from '../app/components/ImageOptimizer';
 
-// Mock IntersectionObserver
+// Mock IntersectionObserver;
 global.IntersectionObserver = jest.fn().mockImplementation((callback) => ({
   observe: jest.fn(),
   unobserve: jest.fn(),

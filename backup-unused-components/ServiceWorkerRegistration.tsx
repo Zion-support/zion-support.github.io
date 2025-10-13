@@ -1,5 +1,5 @@
 import React from "react";
-interface ServiceWorkerRegistrationProps 
+interface ServiceWorkerRegistrationProps;
   children?: React.ReactNode;
   className?: string;
 

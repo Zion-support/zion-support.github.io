@@ -1,15 +1,14 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 
-// Function to fix common TypeScript/JSX errors
+// Function to fix common TypeScript/JSX errors;
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Fix unclosed JSX elements by adding proper closing tags
+    // Fix unclosed JSX elements by adding proper closing tags;
     const lines = content.split('\n');
     const fixedLines = [];
     let openTags = [];
@@ -18,13 +17,13 @@ function fixFile(filePath) {
       const line = lines[i];
       const trimmedLine = line.trim();
       
-      // Track opening tags
+      // Track opening tags;
       const openTagMatch = trimmedLine.match(/<(\w+)(?:\s[^>]*)?(?:>|$)/);
       if (openTagMatch && !trimmedLine.includes('/>')) {
         openTags.push(openTagMatch[1]);
       }
       
-      // Track closing tags
+      // Track closing tags;
       const closeTagMatch = trimmedLine.match(/<\/(\w+)>/);
       if (closeTagMatch) {
         const tagName = closeTagMatch[1];
@@ -37,17 +36,17 @@ function fixFile(filePath) {
       fixedLines.push(line);
     }
     
-    // Add missing closing tags at the end
+    // Add missing closing tags at the end;
     while (openTags.length > 0) {
       const tag = openTags.pop();
       fixedLines.push(`</${tag}>`);
       modified = true;
     }
     
-    // Fix common syntax issues
+    // Fix common syntax issues;
     let fixedContent = fixedLines.join('\n');
     
-    // Fix missing closing braces
+    // Fix missing closing braces;
     const openBraces = (fixedContent.match(/\{/g) || []).length;
     const closeBraces = (fixedContent.match(/\}/g) || []).length;
     if (openBraces > closeBraces) {
@@ -58,7 +57,7 @@ function fixFile(filePath) {
       modified = true;
     }
     
-    // Fix missing closing parentheses
+    // Fix missing closing parentheses;
     const openParens = (fixedContent.match(/\(/g) || []).length;
     const closeParens = (fixedContent.match(/\)/g) || []).length;
     if (openParens > closeParens) {
@@ -69,11 +68,11 @@ function fixFile(filePath) {
       modified = true;
     }
     
-    // Fix function name mismatches
+    // Fix function name mismatches;
     const exportMatch = fixedContent.match(/export default function (\w+)/);
     if (exportMatch) {
       const functionName = exportMatch[1];
-      // Check if there's a mismatch in the function declaration
+      // Check if there's a mismatch in the function declaration;
       const functionDeclMatch = fixedContent.match(/function (\w+)\(/);
       if (functionDeclMatch && functionDeclMatch[1] !== functionName) {
         fixedContent = fixedContent.replace(
@@ -97,7 +96,7 @@ function fixFile(filePath) {
   }
 }
 
-// Function to find all TypeScript/JSX files
+// Function to find all TypeScript/JSX files;
 function findFiles(dir) {
   const files = [];
   
@@ -125,7 +124,7 @@ function findFiles(dir) {
   return files;
 }
 
-// Main execution
+// Main execution;
 console.log('🔧 Fixing TypeScript errors...');
 
 const allFiles = findFiles('.');

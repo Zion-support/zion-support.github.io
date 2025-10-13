@@ -12,7 +12,7 @@ export default function CareersPage() {
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold mb-8">Careers</h1>
         <p className="text-gray-300">Join our team and help shape the future of technology.</p>
-      </div>
-    </div>
+  </div>
+  </div>
   );
 }

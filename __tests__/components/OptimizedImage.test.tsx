@@ -2,16 +2,16 @@ import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 import OptimizedImage from '../../app/components/OptimizedImage';
 
-// Mock framer-motion
+// Mock framer-motion;
 jest.mock('framer-motion', () => ({
   motion: {
     img: ({ children, ...props }: any) => <img {...props}>{children}</img>,
   },
 }));
 
-// Mock IntersectionObserver
+// Mock IntersectionObserver;
 global.IntersectionObserver = jest.fn().mockImplementation((callback) => {
-  // Trigger the callback immediately to simulate intersection
+  // Trigger the callback immediately to simulate intersection;
   setTimeout(() => callback([{ isIntersecting: true }]), 0);
   return {
     observe: jest.fn(),
@@ -24,7 +24,7 @@ describe('OptimizedImage', () => {
   const defaultProps = {
     src: 'https://example.com/image.jpg',
     alt: 'Test image',
-    priority: true, // Always render immediately in tests
+    priority: true, // Always render immediately in tests;
   };
 
   it('renders with basic props', () => {
@@ -83,7 +83,7 @@ describe('OptimizedImage', () => {
 
   it('renders with lazy loading by default', async () => {
     render(<OptimizedImage {...defaultProps} priority={false} />);
-    // Wait for the IntersectionObserver to trigger
+    // Wait for the IntersectionObserver to trigger;
     await waitFor(() => {
       expect(screen.getByAltText('Test image')).toBeInTheDocument();
     });

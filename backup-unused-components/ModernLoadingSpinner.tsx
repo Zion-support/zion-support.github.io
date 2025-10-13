@@ -1,5 +1,5 @@
 import React from 'react';
-interface LoadingSpinnerProps 
+interface LoadingSpinnerProps;
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'white';
   text?: string;
@@ -26,28 +26,25 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = (
     <div className="flex flex-col items-center justify-center space-y-4"></div>
       <div className="relative"></div>
         {/* Outer ring */}
-        <div
+        <div;
           className="{`${sizeClasses[size]}" ${colorClasses[color]} animate-spin rounded-full border-2 border-transparent border-t-current`}
           style={}
             animation: 'spin 1s linear infinite',
           {}
         />
         {/* Inner ring */}
-        <div
+        <div;
           className="{`absolute" top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${sizeClasses[size === 'xl' ? 'lg' : size === 'lg' ? 'md' : 'sm']} ${colorClasses[color]} animate-spin rounded-full border-2 border-transparent border-b-current`}
           style={}
             animation: 'spin 1.5s linear infinite reverse',
           {}
         />
-      </div>
-      
+  </div>
         <div className="text-center"></div>
           <p className="{`text-sm" font-medium ${colorClasses[color]} animate-pulse`}></p>
             {text}
           </p>
-        </div>
-
-    </div>
+  </div>  </div>
   );
   if (fullScreen) 
     return (
@@ -57,9 +54,9 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = (
           <div className="mt-8"></div>
             <h2 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h2>
             <p className="text-gray-300">Loading amazing experiences...</p>
-          </div>
-        </div>
-      </div>
+  </div>
+  </div>
+  </div>
     );
 
   return spinner;

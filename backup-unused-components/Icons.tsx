@@ -1,7 +1,7 @@
 export const Icon = (
   name,
   className = "",
-  ...props
+  ...props;
 : 
   name: string;
   className?: string;

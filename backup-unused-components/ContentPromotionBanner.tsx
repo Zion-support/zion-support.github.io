@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Star, Zap } from "lucide-react";
-interface ContentPromotionBannerProps 
+interface ContentPromotionBannerProps;
   title?: string;
   description?: string;
   ctaText?: string;
@@ -42,7 +42,7 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = (
 
 ;
   return (
-    <div
+    <div;
       className="{`relative" overflow-hidden rounded-lg p-8 text-white ${getVariantStyles()} ${className}`}
     >
       <div className="relative z-10"></div>
@@ -52,19 +52,19 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = (
           {description}
         </p>
         <div className="text-center"></div>
-          <Link
+          <Link;
             to={ctaLink}
             className="inline-flex items-center bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
           >
             {ctaText}
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
-        </div>
-      </div>
+  </div>
+  </div>
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
       <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
-    </div>
+  </div>
   );
 ;
 export default ContentPromotionBanner;

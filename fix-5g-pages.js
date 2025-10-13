@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from "fs";
 import path from "path";
 
@@ -30,15 +29,15 @@ export default function {FUNCTION_NAME}() {;
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">{TITLE}</h1>
           <p className="text-lg text-gray-300 mb-8">{DESCRIPTION}</p>
-          <Link 
+          <Link;
             to="/contact" 
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
           >
-            Contact Us
+            Contact Us;
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
-        </div>
-      </div>
+  </div>
+  </div>
     </>
   );
 }`;
@@ -97,7 +96,7 @@ function fixPage(pageName) {
   if (!data) return;
 
   const filePath = `./app/${pageName}/page.tsx`;
-  const content = template
+  const content = template;
     .replace(/{FUNCTION_NAME}/g, data.functionName)
     .replace(/{TITLE}/g, data.title)
     .replace(/{DESCRIPTION}/g, data.description);

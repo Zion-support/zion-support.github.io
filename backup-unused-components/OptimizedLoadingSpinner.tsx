@@ -2,7 +2,7 @@ import React, { memo, useMemo } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-interface OptimizedLoadingSpinnerProps 
+interface OptimizedLoadingSpinnerProps;
   size?: "xs" | "sm" | "md" | "lg" | "xl";
   variant?: "dots" | "pulse" | "spinner" | "skeleton" | "bars";
   text?: string;
@@ -55,7 +55,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(</O
           return (
             <div className="flex space-x-1"></div>
               
-                <div
+                <div;
                   key={i}
                   className="{`${sizeClasses[size]}" ${colorClasses[color]} rounded-full animate-pulse`}
                   style={}
@@ -63,18 +63,17 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(</O
                     animationDuration: "1s",
                   {}
                 />
-
-            </div>
+  </div>
           );
         case "pulse":
           return (
-            <div
+            <div;
               className="{`${sizeClasses[size]}" ${colorClasses[color]} rounded-full animate-pulse`}
             />
           );
         case "spinner":
           return (
-            <div
+            <div;
               className="{`${sizeClasses[size]}" ${colorClasses[color]} border-2 border-current border-t-transparent rounded-full animate-spin`}
             />
           );
@@ -83,13 +82,13 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(</O
             <div className="space-y-2"></div>
               <div className="{`h-4" bg-gray-300 rounded animate-pulse`} />
               <div className="{`h-4" bg-gray-300 rounded animate-pulse w-3/4`} />
-            </div>
+  </div>
           );
         case "bars":
           return (
             <div className="flex space-x-1"></div>
               
-                <div
+                <div;
                   key={i}
                   className="{`w-1" ${colorClasses[color]} animate-pulse`}
                   style={}
@@ -98,18 +97,17 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(</O
                     animationDuration: "0.8s",
                   {}
                 />
-
-            </div>
+  </div>
           );
         default:
           return (
-            <div
+            <div;
               className="{`${sizeClasses[size]}" ${colorClasses[color]} border-2 border-current border-t-transparent rounded-full animate-spin`}
             />
           );
 
 ;
-    const containerClasses = fullScreen
+    const containerClasses = fullScreen;
       ? "fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
       : "flex flex-col items-center justify-center space-y-4";
     return (
@@ -120,20 +118,20 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(</O
         <div className="{`${containerClasses}" ${className}`}></div>
           {renderSpinner()}
           
-            <p
+            <p;
               className="{`${textSizeClasses[size]}" ${colorClasses[color]} mt-2`}
             >
               {text}
             </p>
 
-          <Link
+          <Link;
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
           >
-            Contact Us
+            Contact Us;
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
-        </div>
+  </div>
       </>
     );
 ,
@@ -141,4 +139,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(</O
 OptimizedLoadingSpinner.displayName = "OptimizedLoadingSpinner";
 export default OptimizedLoadingSpinner;
 </OptimizedLoadingSpinnerProps>
-</div>
+  </div>
+  </div>
+  </div>

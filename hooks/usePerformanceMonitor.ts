@@ -4,7 +4,7 @@ export function usePerformanceMonitor() {
   const [state, setState] = useState(null);
   
   useEffect(() => {
-    // Implementation here
+    // Implementation here;
     setState('initialized');
   }, []);
   

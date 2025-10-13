@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-interface FuturisticCardEnhancedProps 
+interface FuturisticCardEnhancedProps;
   children: React.ReactNode;
   className?: string;
   glowColor?: 'cyan' | 'purple' | 'pink' | 'green' | 'blue' | 'orange';
@@ -14,7 +14,7 @@ const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = (
   glowColor = 'cyan',
   hoverEffect = true,
   animated = true,
-  neon = true
+  neon = true;
 ) => 
   const glowColors = 
     cyan: 'shadow-cyan-500/25',
@@ -58,12 +58,11 @@ const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = (
         repeat: Infinity,
         ease: "easeInOut"
 
-
 ;
   return (
-    <motion.div
+    <motion.div;
       className=
-        relative bg-white/10 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300
+        relative bg-white/10 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300;
         ${borderColor}
         ${hoverEffect ? 'hover:bg-white/20' : ''}
         ${glowEffect ? `hover:shadow-2xl hover:${glowEffect}` : ''}
@@ -78,23 +77,22 @@ const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = (
       {/* Neon border effect */}
       
         <div className=
-          absolute inset-0 rounded-xl pointer-events-none
-          bg-gradient-to-r from-transparent via-${glowColor}-500/20 to-transparent
-          opacity-0 group-hover:opacity-100 transition-opacity duration-300
+          absolute inset-0 rounded-xl pointer-events-none;
+          bg-gradient-to-r from-transparent via-${glowColor}-500/20 to-transparent;
+          opacity-0 group-hover:opacity-100 transition-opacity duration-300;
  />
-
       {/* Animated background pattern */}
       <div className="absolute inset-0 rounded-xl overflow-hidden pointer-events-none"></div>
         <div className=
-          absolute -top-1/2 -left-1/2 w-full h-full
-          bg-gradient-to-br from-${glowColor}-500/5 via-transparent to-${glowColor}-500/5
-          animate-spin
+          absolute -top-1/2 -left-1/2 w-full h-full;
+          bg-gradient-to-br from-${glowColor}-500/5 via-transparent to-${glowColor}-500/5;
+          animate-spin;
  style="{}" animationDuration: '20s' {} />
-      </div>
+  </div>
       {/* Content */}
       <div className="relative z-10"></div>
         {children}
-      </div>
+  </div>
       {/* Corner accents */}
       <div className="absolute top-2 right-2 w-2 h-2 bg-cyan-400 rounded-full opacity-60 animate-pulse" />
       <div className="absolute bottom-2 left-2 w-1 h-1 bg-purple-400 rounded-full opacity-40 animate-pulse delay-1000" />
@@ -103,3 +101,5 @@ const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = (
 ;
 export default FuturisticCardEnhanced;
 </FuturisticCardEnhancedProps>
+  </div>
+  </div>

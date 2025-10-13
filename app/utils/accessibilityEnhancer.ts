@@ -1,6 +1,6 @@
-// accessibilityEnhancer utility
+// accessibilityEnhancer utility;
 export const accessibilityEnhancer = {
-  // Utility implementation
+  // Utility implementation;
   init: () => {
     console.log('accessibilityEnhancer initialized');
   }

@@ -1,16 +1,14 @@
-import React, { useEffect, useState } from 'react';
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
 
-interface EnhancedperformancemonitorProps {
+interface EnhancedPerformanceMonitorProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function Enhancedperformancemonitor({ className = '', children, ...props }: EnhancedperformancemonitorProps) {
-  return (
-    <div className={`enhancedperformancemonitor-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
+export default function EnhancedPerformanceMonitor({ className = '', children, ...props }: EnhancedPerformanceMonitorProps) {
+    return (
+        <div className="component" {...props}>
+          {children}
+        </div>
+      );
+}

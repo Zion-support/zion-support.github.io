@@ -1,22 +1,21 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 
-// Function to resolve merge conflicts in a file
+// Function to resolve merge conflicts in a file;
 function resolveMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Check if file has merge conflict markers
+    // Check if file has merge conflict markers;
     if (!content.includes('')) {
         conflictType = 'separator';
         continue;
       } else if (line.startsWith('>>>>>>>')) {
-        // End of conflict - resolve it
+        // End of conflict - resolve it;
         inConflict = false;
         
-        // Choose the longer/more complete version, or prefer HEAD if similar length
+        // Choose the longer/more complete version, or prefer HEAD if similar length;
         let chosenLines;
         if (headLines.length >= branchLines.length) {
           chosenLines = headLines;
@@ -24,10 +23,10 @@ function resolveMergeConflicts(filePath) {
           chosenLines = branchLines;
         }
         
-        // Add the chosen lines
+        // Add the chosen lines;
         resolvedLines.push(...chosenLines);
         
-        // Reset
+        // Reset;
         headLines = [];
         separatorLines = [];
         branchLines = [];
@@ -48,18 +47,18 @@ function resolveMergeConflicts(filePath) {
       }
     }
     
-    // Write the resolved content
+    // Write the resolved content;
     const resolvedContent = resolvedLines.join('\n');
     fs.writeFileSync(filePath, resolvedContent, 'utf8');
     
-    return true; // Conflicts were resolved
+    return true; // Conflicts were resolved;
   } catch (error) {
     console.error(`Error resolving conflicts in ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to find all files with merge conflicts
+// Function to find all files with merge conflicts;
 function findFilesWithConflicts(dir) {
   const files = [];
   
@@ -71,7 +70,7 @@ function findFilesWithConflicts(dir) {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-        // Skip node_modules and other irrelevant directories
+        // Skip node_modules and other irrelevant directories;
         if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {
           scanDirectory(fullPath);
         }
@@ -88,7 +87,7 @@ function findFilesWithConflicts(dir) {
   return files;
 }
 
-// Main execution
+// Main execution;
 console.log('🔍 Scanning for files with merge conflicts...');
 const allFiles = findFilesWithConflicts('.');
 const filesWithConflicts = allFiles.filter(file => {

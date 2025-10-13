@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-// Function to fix syntax errors in a file
+// Function to fix syntax errors in a file;
 function fixSyntaxErrors(filePath) {
   try {
     if (!fs.existsSync(filePath) || (!filePath.endsWith('.tsx') && !filePath.endsWith('.ts'))) {
@@ -11,38 +11,38 @@ function fixSyntaxErrors(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     const lines = content.split('\n');
     
-    // Fix common syntax errors
+    // Fix common syntax errors;
     let fixed = false;
     const newLines = [];
     
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      // Fix malformed import statements
+      // Fix malformed import statements;
       if (line.trim() === 'import { ' && i + 1 < lines.length) {
         const nextLine = lines[i + 1];
         if (nextLine.trim().startsWith('import { ')) {
-          // Skip the malformed line and use the next one
+          // Skip the malformed line and use the next one;
           continue;
         }
       }
       
-      // Fix duplicate import statements
+      // Fix duplicate import statements;
       if (line.trim().startsWith('import { ') && i + 1 < lines.length) {
         const nextLine = lines[i + 1];
         if (nextLine.trim().startsWith('import { ') && line.trim() === nextLine.trim()) {
-          // Skip duplicate
+          // Skip duplicate;
           continue;
         }
       }
       
-      // Fix incomplete import statements
+      // Fix incomplete import statements;
       if (line.trim() === 'import { ' && i + 1 < lines.length) {
         const nextLine = lines[i + 1];
         if (nextLine.trim().startsWith('} from ')) {
-          // Merge the lines
+          // Merge the lines;
           newLines.push('import { ' + nextLine.trim().substring(1));
-          i++; // Skip the next line
+          i++; // Skip the next line;
           continue;
         }
       }
@@ -63,7 +63,7 @@ function fixSyntaxErrors(filePath) {
   }
 }
 
-// Function to recursively find all TypeScript files
+// Function to recursively find all TypeScript files;
 function findFiles(dir, fileList = []) {
   const files = fs.readdirSync(dir);
   
@@ -81,7 +81,7 @@ function findFiles(dir, fileList = []) {
   return fileList;
 }
 
-// Main execution
+// Main execution;
 console.log('Starting to fix syntax errors...');
 
 const files = findFiles('/workspace/app');

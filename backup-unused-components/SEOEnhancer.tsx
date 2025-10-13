@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-interface SEOEnhancerProps 
+interface SEOEnhancerProps;
   title?: string;
   description?: string;
   keywords?: string;
@@ -22,7 +22,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = (
   twitterCard = "summary_large_image",
   structuredData,
   noIndex = false,
-  noFollow = false
+  noFollow = false;
 ) => 
   const defaultStructuredData = 
     "@context": "https://schema.org",

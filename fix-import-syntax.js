@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-// Function to fix malformed import statements
+// Function to fix malformed import statements;
 function fixImportSyntax(filePath) {
   try {
     if (!fs.existsSync(filePath) || (!filePath.endsWith('.tsx') && !filePath.endsWith('.ts'))) {
@@ -21,9 +21,9 @@ function fixImportSyntax(filePath) {
       if (line.trim() === 'import { ' && i + 1 < lines.length) {
         const nextLine = lines[i + 1];
         if (nextLine.trim().startsWith('import { ')) {
-          // Skip the malformed line and use the next one
+          // Skip the malformed line and use the next one;
           newLines.push(nextLine);
-          i++; // Skip the next line since we already added it
+          i++; // Skip the next line since we already added it;
           fixed = true;
           continue;
         }
@@ -43,7 +43,7 @@ function fixImportSyntax(filePath) {
   }
 }
 
-// Function to recursively find all TypeScript files
+// Function to recursively find all TypeScript files;
 function findFiles(dir, fileList = []) {
   const files = fs.readdirSync(dir);
   
@@ -61,7 +61,7 @@ function findFiles(dir, fileList = []) {
   return fileList;
 }
 
-// Main execution
+// Main execution;
 console.log('Starting to fix import syntax...');
 
 const files = findFiles('/workspace/app');
