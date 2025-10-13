@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -50,6 +51,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   // TODO: Add properties
 }
   }, [settings.keyboardNavigation]);
+=======
+'use client';
+import { useEffect } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070
 
   useEffect(() => {
   // TODO: Implement
@@ -83,6 +88,7 @@ const handleMouseDown = () => {
         document.body.classList.remove('keyboard-navigation');'
       };
 
+<<<<<<< HEAD
       document.addEventListener('keydown', handleKeyDown);'
       document.addEventListener('mousedown', handleMouseDown);'
 
@@ -176,11 +182,22 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
             if (document.activeElement === lastFocusable) {
               firstFocusable?.focus();
               e.preventDefault();
+=======
+        // Skip to navigation with Alt + N
+        if (e.altKey && e.key === 'n') {
+          e.preventDefault();
+          const navigation = document.querySelector('nav');
+          if (navigation) {
+            const firstLink = navigation.querySelector('a') as HTMLElement;
+            if (firstLink) {
+              firstLink.focus();
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070
             }
           }
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
         }
       });
+<<<<<<< HEAD
 const links = document.querySelectorAll('a:not([aria-label])')'
       links.forEach(link => {
   // TODO: Add properties
@@ -207,9 +224,36 @@ const enhanceFocusManagement = () => {
       document.addEventListener('keydown', (e) => {'
         if (e.key === 'Tab') {'
           document.body.classList.add('keyboard-navigation')'
+=======
+    };
+
+    // Add focus indicators
+    const addFocusIndicators = () => {
+      const style = document.createElement('style');
+      style.textContent = `
+        *:focus {
+          outline: 2px solid #06b6d4;
+          outline-offset: 2px;
+        }
+        
+        .skip-link {
+          position: absolute;
+          top: -40px;
+          left: 6px;
+          background: #000;
+          color: #fff;
+          padding: 8px;
+          text-decoration: none;
+          z-index: 1000;
+        }
+        
+        .skip-link:focus {
+          top: 6px;
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070
         }
       })
 
+<<<<<<< HEAD
       document.addEventListener('mousedown', () => {'
         document.body.classList.remove('keyboard-navigation')'
       })
@@ -261,16 +305,45 @@ const observer = new MutationObserver(() => {
 export default AccessibilityEnhancer;
 >>>>>>> cursor/delete-records-a75e
 =======
+=======
+    // Add skip links
+    const addSkipLinks = () => {
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.className = 'skip-link';
+      skipLink.textContent = 'Skip to main content';
+      document.body.insertBefore(skipLink, document.body.firstChild);
+    };
+
+    // Initialize accessibility features
+    addKeyboardNavigation();
+    addFocusIndicators();
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070
     addSkipLinks();
     enhanceFocusManagement();
 
+<<<<<<< HEAD
+=======
+    // Cleanup function
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070
     return () => {
-      // Cleanup if needed
+      // Remove event listeners and added elements
+      const skipLink = document.querySelector('.skip-link');
+      if (skipLink) {
+        skipLink.remove();
+      }
     };
   }, []);
 
+<<<<<<< HEAD
   return <>{children}</>;
 };
 
 export default AccessibilityEnhancer;
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+  return null; // This component doesn't render anything
+};
+
+export default AccessibilityEnhancer;
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070

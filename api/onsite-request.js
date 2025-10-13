@@ -6,10 +6,22 @@ import fs from 'fs';
 import path from 'path';
 
 // Simple wrapper function to replace withSentry
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 export default function handler(req, res) {
   if (req.method !== "POST") {
+=======
+function withSentry(handler) {
+  return handler;
+}
+
+const dir = path.join(process.cwd(), 'data');
+const file = path.join(dir, 'onsite-requests.json');
+
+function handler(req, res) {
+  if (req.method !== 'POST') {
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070
     res.statusCode = 405;
     res.setHeader("Content-Type", "application/json");
     res.end(JSON.stringify({ error: "Method not allowed" }));
@@ -34,8 +46,12 @@ export default function handler(req, res) {
     }
   } catch (error) {
     // Log error for debugging in development
+<<<<<<< HEAD
     console.error("Error reading existing requests:", error);
     existing = [];
+=======
+    console.error('Error reading existing requests:', error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070
   }
 
   const newRequest = {
@@ -47,6 +63,10 @@ export default function handler(req, res) {
     message,
     location,
     timestamp: new Date().toISOString(),
+<<<<<<< HEAD
+=======
+    status: 'pending'
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070
   };
 
   existing.push(newRequest);
@@ -54,6 +74,7 @@ export default function handler(req, res) {
   try {
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode = 200;
+<<<<<<< HEAD
     res.setHeader("Content-Type", "application/json");
     res.end(
       JSON.stringify({
@@ -90,3 +111,23 @@ module.exports = handler;
 
 }
 >>>>>>> cursor/delete-records-a75e
+=======
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true, 
+      message: 'Request submitted successfully',
+      id: newRequest.id 
+    }));
+  } catch (error) {
+    console.error('Error saving request:', error);
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: false, 
+      error: 'Failed to save request' 
+    }));
+  }
+}
+
+module.exports = withSentry(handler);
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070

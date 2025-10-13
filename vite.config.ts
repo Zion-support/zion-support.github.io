@@ -132,6 +132,7 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
+<<<<<<< HEAD
           // Core React libraries - keep together for better caching
           if (id.includes('react') || id.includes('react-dom')) {
             return 'react-vendor'
@@ -141,13 +142,28 @@ export default defineConfig({
             return 'router'
           }
           // UI libraries - group by functionality
+=======
+          // Core React libraries
+          if (id.includes('react') || id.includes('react-dom')) {
+            return 'react-vendor'
+          }
+          // Router
+          if (id.includes('react-router')) {
+            return 'router'
+          }
+          // UI libraries
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070
           if (id.includes('framer-motion')) {
             return 'animations'
           }
           if (id.includes('lucide-react')) {
             return 'icons'
           }
+<<<<<<< HEAD
           // SEO and meta - lightweight
+=======
+          // SEO and meta
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070
           if (id.includes('react-helmet')) {
             return 'seo'
           }
@@ -159,6 +175,7 @@ export default defineConfig({
           if (id.includes('clsx') || id.includes('tailwind-merge')) {
             return 'utils'
           }
+<<<<<<< HEAD
           // Performance monitoring - separate for lazy loading
           if (id.includes('web-vitals')) {
             return 'performance'
@@ -232,10 +249,40 @@ export default defineConfig({
     },
     // Enable tree shaking
     treeshake: true,
+=======
+          // Performance monitoring
+          if (id.includes('web-vitals')) {
+            return 'performance'
+          }
+          // AI service pages
+          if (id.includes('/app/ai-') && id.includes('/page.tsx')) {
+            return 'ai-pages'
+          }
+          // IT service pages
+          if (id.includes('/app/') && (id.includes('cloud-') || id.includes('cybersecurity-') || id.includes('web-development') || id.includes('mobile-development')) && id.includes('/page.tsx')) {
+            return 'it-pages'
+          }
+          // Micro SAAS pages
+          if (id.includes('/app/zion-') && id.includes('/page.tsx')) {
+            return 'micro-saas-pages'
+          }
+          // 5G Solutions pages
+          if (id.includes('/app/5g-') && id.includes('/page.tsx')) {
+            return '5g-pages'
+          }
+          // Default chunk for other pages
+          if (id.includes('/app/') && id.includes('/page.tsx')) {
+            return 'pages'
+          }
+        }
+      }
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070
   },
   server: {
     port: 3000,
     open: true,
+<<<<<<< HEAD
     host: true,
     // Enable HMR
     hmr: {
@@ -244,10 +291,14 @@ export default defineConfig({
 >>>>>>> cursor/fix-errors-and-merge-to-main-1dc1
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+    cors: true,
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070
   },
   preview: {
     port: 4173,
     open: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   },
@@ -255,10 +306,12 @@ export default defineConfig({
     include: ['react', 'react-dom', 'react-router-dom'],
 =======
     host: true,
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070
   },
-  // Optimize dependencies
   optimizeDeps: {
     include: [
+<<<<<<< HEAD
       "react",
       "react-dom",
       "react-router-dom",
@@ -519,3 +572,18 @@ const ext = assetInfo.name?.split('.').pop()'
   },
 });
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+      'react',
+      'react-dom',
+      'react-router-dom',
+      'framer-motion',
+      'lucide-react',
+      'react-helmet-async',
+      'recharts',
+      'clsx',
+      'tailwind-merge',
+      'web-vitals'
+    ]
+  }
+})
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070

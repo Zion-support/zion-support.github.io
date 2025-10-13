@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Shield, Zap } from 'lucide-react';
@@ -38,8 +39,15 @@ export default function PagePage() {
       icon: <Zap className="w-8 h-8" />
     }
   ];
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070
 
+const FiveGMobileApplicationsPage: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title> - Zion Tech Group</title>
@@ -68,7 +76,39 @@ export default function PagePage() {
           ))}
         </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+    <>
+      <Helmet>
+        <title>5g Mobile Applications - Zion Tech Group</title>
+        <meta name="description" content="5g Mobile Applications services by Zion Tech Group. Professional AI and IT solutions." />
+        <meta name="keywords" content="5g-mobile-applications, AI solutions, IT services" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            5g Mobile Applications
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
+            Professional 5g mobile applications services by Zion Tech Group.
+          </p>
+          
+          <div className="bg-slate-800 p-8 rounded-lg">
+            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300">
+              We are working on bringing you the most advanced 5g mobile applications solutions. 
+              Stay tuned for updates!
+            </p>
+          </div>
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070
       </div>
-    </div>
+    </>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default FiveGMobileApplicationsPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070

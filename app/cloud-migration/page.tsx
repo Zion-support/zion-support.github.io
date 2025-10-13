@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 =======
@@ -88,10 +89,18 @@ const features = [
 >>>>>>> cursor/delete-records-a75e
 
 export default function PagePage() {
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const CloudMigrationPage: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       <Helmet>
+<<<<<<< HEAD
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
       </Helmet>
@@ -104,10 +113,34 @@ export default function PagePage() {
           <p className="text-xl text-gray-600 mb-8">
             This page is under development. Please check back later.
           </p>
+=======
+        <title>Cloud Migration - Zion Tech Group</title>
+        <meta name="description" content="Cloud Migration services by Zion Tech Group. Professional AI and IT solutions." />
+        <meta name="keywords" content="cloud-migration, AI solutions, IT services" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Cloud Migration
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
+            Professional cloud migration services by Zion Tech Group.
+          </p>
+          
+          <div className="bg-slate-800 p-8 rounded-lg">
+            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300">
+              We are working on bringing you the most advanced cloud migration solutions. 
+              Stay tuned for updates!
+            </p>
+          </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 =======
   // TODO: Add parameters
@@ -375,3 +408,8 @@ export default CloudMigrationPage</div></div>;
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+};
+
+export default CloudMigrationPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070

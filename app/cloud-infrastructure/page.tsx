@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 =======
@@ -26,6 +27,11 @@ export default function PagePage() {
       icon: <Zap className="w-8 h-8" />
     }
   ];
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -35,6 +41,7 @@ export default function PagePage() {
         <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
       </Helmet>
       
+<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -69,6 +76,24 @@ export default function PagePage() {
             </div>
           ))}
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Cloud Infrastructure
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
+            Professional cloud infrastructure services by Zion Tech Group.
+          </p>
+          
+          <div className="bg-slate-800 p-8 rounded-lg">
+            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300">
+              We are working on bringing you the most advanced cloud infrastructure solutions. 
+              Stay tuned for updates!
+            </p>
+          </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
       </div>
     </div>

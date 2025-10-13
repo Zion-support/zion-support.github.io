@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -19,10 +20,42 @@ export default function PagePage() {
           <p className="text-xl text-gray-600 mb-8">
             This page is under development. Please check back later.
           </p>
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const AiProjectManagerPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Ai Project Manager - Zion Tech Group</title>
+        <meta name="description" content="Ai Project Manager services by Zion Tech Group. Professional AI and IT solutions." />
+        <meta name="keywords" content="ai-project-manager, AI solutions, IT services" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Ai Project Manager
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
+            Professional ai project manager services by Zion Tech Group.
+          </p>
+          
+          <div className="bg-slate-800 p-8 rounded-lg">
+            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300">
+              We are working on bringing you the most advanced ai project manager solutions. 
+              Stay tuned for updates!
+            </p>
+          </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
       </div>
-    </div>
+    </>
   );
+<<<<<<< HEAD
 }
 =======
 import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'react-helmet-async';';';
@@ -214,3 +247,8 @@ export default PagePage;
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+};
+
+export default AiProjectManagerPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070

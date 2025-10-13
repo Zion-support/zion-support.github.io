@@ -7,6 +7,7 @@ import tseslint from "typescript-eslint";
 
 export default tseslint.config(
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import globals from 'globals';';
 import js from '@eslint/js';';
@@ -131,6 +132,10 @@ export default [;
   },
   {
 <<<<<<< HEAD
+=======
+  { ignores: ['dist'] },
+  {
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],
     languageOptions: {

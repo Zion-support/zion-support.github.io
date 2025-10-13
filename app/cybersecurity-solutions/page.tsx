@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { 
   ArrowRight, 
   Home, 
@@ -21,6 +22,11 @@ import {
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070
 
 const CybersecuritySolutions = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
@@ -202,6 +208,7 @@ export default function CybersecuritySolutionsPage() {
           </div>
 =======
       
+<<<<<<< HEAD
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -474,6 +481,27 @@ export default function CybersecuritySolutionsPage() {
         </ResponsiveContainer>
       </section>
     </div>
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Cybersecurity Solutions
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
+            Professional cybersecurity solutions services by Zion Tech Group.
+          </p>
+          
+          <div className="bg-slate-800 p-8 rounded-lg">
+            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300">
+              We are working on bringing you the most advanced cybersecurity solutions solutions. 
+              Stay tuned for updates!
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+>>>>>>> cursor/fix-errors-and-merge-to-main-a070
   );
 };
 
