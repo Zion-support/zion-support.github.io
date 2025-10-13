@@ -7,7 +7,7 @@ interface AnalyticsContextType {
   isEnabled: boolean;
 }
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-const  ({ children }) => {
+const AnalyticsProvider = ({ children }: { children: React.ReactNode }) => {
   const [isEnabled, setIsEnabled] = useState(false);
   const [userId, setUserId] = useState<string | null>(null);
   useEffect(() => {
