@@ -1,18 +1,7 @@
-<<<<<<< HEAD
-import { useState } from "react";
-import { ArrowRight, Calendar, User } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
-
-
-=======
 import React, { useState } from "react";
 import { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-
->>>>>>> cursor/fix-errors-and-merge-to-main-102c
 export default function Blog() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");

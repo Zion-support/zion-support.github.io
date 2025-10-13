@@ -217,9 +217,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     };
   }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
 
+  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
+    const root = document.documentElement;
 
-<<<<<<< HEAD
-=======
     // Large text mode
     if (newSettings.largeText) {
       root.classList.add('large-text');
@@ -262,10 +262,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     setSettings(defaultSettings);
     applyAccessibilitySettings(defaultSettings);
   };
-
-  // Removed unused functions - functionality is handled by updateSetting directly
-
->>>>>>> cursor/fix-errors-and-merge-to-main-102c
   return (
     <>
       {children}
