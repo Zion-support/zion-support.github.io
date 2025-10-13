@@ -1,93 +1,88 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Cpu, Zap, Brain, Atom, Globe, Shield, BarChart3, Users, Award, Clock, DollarSign, Smartphone, Monitor, Mail, Phone, MapPin, Target, Settings, Database, Code, Share, Bell, Search, Filter, Download, Upload, BookOpen, Lightbulb, Puzzle, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Users, BarChart3, Brain, Target, TrendingUp, Zap, Globe, Smartphone, Monitor, Mail, Phone, MapPin, Eye, Heart, MessageSquare, PieChart, Activity, Award, Clock, DollarSign, Shield, Settings, Database, Code, Share, Bell, Search, Filter, Download, Upload, BookOpen, Lightbulb, Puzzle, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AIQuantumComputing() {
+export default function ZionAiCustomerInsights() {
   const features = [
-    "Quantum machine learning algorithms",
-    "Quantum optimization for complex problems",
-    "Quantum cryptography and security",
-    "Quantum simulation of molecular systems",
-    "Quantum neural networks",
-    "Quantum annealing for optimization",
-    "Quantum error correction",
-    "Quantum cloud computing access",
-    "Hybrid classical-quantum algorithms",
-    "Quantum algorithm development tools",
-    "Quantum circuit optimization",
-    "Quantum state tomography",
-    "Quantum entanglement analysis",
-    "Quantum interference patterns",
-    "Quantum decoherence modeling",
-    "Quantum gate operations",
-    "Quantum measurement protocols",
-    "Quantum teleportation simulation",
-    "Quantum key distribution",
-    "Quantum random number generation"
+    "AI-powered customer behavior analysis",
+    "Real-time sentiment analysis across all channels",
+    "Predictive customer lifetime value modeling",
+    "Automated customer segmentation (RFM analysis)",
+    "Churn prediction with 95% accuracy",
+    "Cross-channel customer journey mapping",
+    "Personalized recommendation engine",
+    "Customer satisfaction scoring (CSAT, NPS, CES)",
+    "Social media sentiment monitoring",
+    "Email and chat sentiment analysis",
+    "Customer health scoring dashboard",
+    "Automated insight reports and alerts",
+    "Integration with 100+ CRM and marketing tools",
+    "Custom AI model training for your data",
+    "White-label reporting and dashboards",
+    "API access for custom integrations"
   ];
 
   const pricingPlans = [
     {
-      name: "Quantum Explorer",
-      price: "$2,999",
+      name: "Starter",
+      price: "$29",
       period: "/month",
-      originalPrice: "$5,999",
-      discount: "50% OFF",
-      description: "Perfect for research institutions and universities",
+      originalPrice: "$59",
+      discount: "51% OFF",
+      description: "Perfect for small businesses and startups",
       features: [
-        "10 quantum computing hours/month",
-        "Basic quantum algorithms library",
-        "Quantum simulation tools",
-        "Academic support",
-        "Standard quantum gates",
-        "Basic quantum error correction",
+        "Up to 1,000 customers",
+        "Basic sentiment analysis",
+        "Customer segmentation",
+        "Churn prediction",
         "Email support",
-        "Documentation access"
+        "Standard dashboards",
+        "5 integrations"
       ],
       popular: false
     },
     {
-      name: "Quantum Professional",
-      price: "$7,999",
+      name: "Professional",
+      price: "$79",
       period: "/month",
-      originalPrice: "$15,999",
+      originalPrice: "$159",
       discount: "50% OFF",
-      description: "Ideal for enterprises and advanced research",
+      description: "Ideal for growing businesses and marketing teams",
       features: [
-        "50 quantum computing hours/month",
-        "Advanced quantum algorithms",
-        "Custom quantum circuit design",
-        "Priority quantum access",
-        "Advanced error correction",
-        "Quantum optimization tools",
-        "Dedicated support",
+        "Up to 10,000 customers",
+        "Advanced sentiment analysis",
+        "Predictive analytics",
+        "Customer journey mapping",
+        "Priority support",
+        "Custom dashboards",
+        "20 integrations",
         "API access",
-        "Custom quantum models",
-        "Performance analytics"
+        "Automated reports",
+        "A/B testing insights"
       ],
       popular: true
     },
     {
-      name: "Quantum Enterprise",
-      price: "$19,999",
+      name: "Enterprise",
+      price: "$199",
       period: "/month",
-      originalPrice: "$39,999",
+      originalPrice: "$399",
       discount: "50% OFF",
-      description: "For large organizations and quantum research labs",
+      description: "For large organizations and agencies",
       features: [
-        "Unlimited quantum computing hours",
-        "Full quantum algorithm suite",
-        "Custom quantum hardware access",
+        "Unlimited customers",
+        "Advanced AI models",
+        "Custom model training",
+        "White-label options",
         "24/7 dedicated support",
-        "Advanced quantum security",
-        "White-label quantum solutions",
         "Custom integrations",
-        "Quantum consulting services",
-        "On-premise quantum deployment",
-        "Quantum team training",
-        "Research collaboration",
-        "Patent support"
+        "Advanced analytics",
+        "Team collaboration",
+        "Data export/import",
+        "Compliance reporting",
+        "Multi-brand support",
+        "Custom AI algorithms"
       ],
       popular: false
     }
@@ -95,90 +90,90 @@ export default function AIQuantumComputing() {
 
   const testimonials = [
     {
-      name: "Dr. Sarah Chen",
-      company: "MIT Quantum Lab",
-      role: "Quantum Research Director",
-      content: "Zion's quantum computing platform has accelerated our research by 10x. The quantum machine learning algorithms are incredibly powerful for molecular simulation and drug discovery.",
+      name: "Jennifer Martinez",
+      company: "E-commerce Giant",
+      role: "VP of Customer Experience",
+      content: "Zion AI Customer Insights has transformed how we understand our customers. We've increased customer retention by 35% and improved our NPS score by 20 points in just 3 months.",
       rating: 5,
-      avatar: "SC"
+      avatar: "JM"
     },
     {
-      name: "Michael Rodriguez",
-      company: "QuantumTech Solutions",
-      role: "CTO",
-      content: "The quantum optimization capabilities have revolutionized our logistics and supply chain operations. We've achieved 40% better optimization results compared to classical methods.",
+      name: "David Kim",
+      company: "SaaS Platform",
+      role: "Head of Marketing",
+      content: "The predictive analytics are incredibly accurate. We can now identify at-risk customers before they churn and take proactive measures. Our customer success team is 3x more effective.",
       rating: 5,
-      avatar: "MR"
+      avatar: "DK"
     },
     {
-      name: "Dr. Emily Watson",
-      company: "Financial Quantum Institute",
-      role: "Quantum Finance Director",
-      content: "The quantum cryptography and security features are state-of-the-art. We've implemented quantum key distribution across our entire financial network with zero security breaches.",
+      name: "Lisa Thompson",
+      company: "Retail Chain",
+      role: "Customer Analytics Director",
+      content: "The real-time sentiment analysis across all channels gives us instant insights into customer satisfaction. We've reduced customer complaints by 50% and increased satisfaction scores significantly.",
       rating: 5,
-      avatar: "EW"
+      avatar: "LT"
     }
   ];
 
   const stats = [
-    { number: "1000+", label: "Quantum Algorithms", icon: <Cpu className="w-6 h-6" /> },
-    { number: "50+", label: "Quantum Gates", icon: <Zap className="w-6 h-6" /> },
-    { number: "99.9%", label: "Quantum Accuracy", icon: <Award className="w-6 h-6" /> },
-    { number: "24/7", label: "Quantum Access", icon: <Clock className="w-6 h-6" /> }
+    { number: "500K+", label: "Customers Analyzed", icon: <Users className="w-6 h-6" /> },
+    { number: "95%", label: "Churn Prediction Accuracy", icon: <Target className="w-6 h-6" /> },
+    { number: "35%", label: "Average Retention Increase", icon: <TrendingUp className="w-6 h-6" /> },
+    { number: "24/7", label: "Real-time Monitoring", icon: <Clock className="w-6 h-6" /> }
   ];
 
-  const applications = [
+  const insights = [
     {
-      title: "Drug Discovery",
-      description: "Simulate molecular interactions and drug compounds with quantum precision for pharmaceutical research",
-      icon: <Atom className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Financial Modeling",
-      description: "Quantum algorithms for portfolio optimization, risk analysis, and high-frequency trading",
-      icon: <DollarSign className="w-8 h-8" />,
+      title: "Customer Segmentation",
+      description: "Automatically segment customers based on behavior, value, and engagement using advanced AI algorithms",
+      icon: <PieChart className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Cryptography",
-      description: "Quantum-resistant encryption and quantum key distribution for ultra-secure communications",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-red-500 to-pink-500"
+      title: "Sentiment Analysis",
+      description: "Monitor customer sentiment across all touchpoints including social media, reviews, and support tickets",
+      icon: <Heart className="w-8 h-8" />,
+      color: "from-pink-500 to-rose-500"
     },
     {
-      title: "Optimization",
-      description: "Solve complex optimization problems in logistics, manufacturing, and resource allocation",
+      title: "Churn Prediction",
+      description: "Identify customers at risk of churning with 95% accuracy and take proactive retention actions",
       icon: <Target className="w-8 h-8" />,
+      color: "from-red-500 to-orange-500"
+    },
+    {
+      title: "Lifetime Value",
+      description: "Predict customer lifetime value and optimize marketing spend for maximum ROI",
+      icon: <DollarSign className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Journey Mapping",
+      description: "Visualize complete customer journeys across all channels and touchpoints",
+      icon: <Globe className="w-8 h-8" />,
       color: "from-purple-500 to-violet-500"
     },
     {
-      title: "Machine Learning",
-      description: "Quantum machine learning for pattern recognition and data analysis at unprecedented speeds",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-orange-500 to-yellow-500"
-    },
-    {
-      title: "Climate Modeling",
-      description: "Quantum simulation of complex climate systems and environmental modeling",
-      icon: <Globe className="w-8 h-8" />,
-      color: "from-teal-500 to-cyan-500"
+      title: "Recommendation Engine",
+      description: "AI-powered product and content recommendations to increase engagement and sales",
+      icon: <Lightbulb className="w-8 h-8" />,
+      color: "from-yellow-500 to-amber-500"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Quantum Computing - Advanced Quantum Solutions | Zion Tech Group</title>
+        <title>Zion AI Customer Insights - Advanced Customer Analytics Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Revolutionary AI-powered quantum computing solutions. Quantum machine learning, optimization, cryptography, and simulation. Transform your research and business with quantum technology."
+          content="Transform customer data into actionable insights with AI. Predict churn, analyze sentiment, segment customers, and optimize lifetime value. Start your free trial today!"
         />
         <meta
           name="keywords"
-          content="quantum computing, quantum AI, quantum machine learning, quantum optimization, quantum cryptography, quantum simulation, quantum algorithms, quantum cloud"
+          content="customer insights, customer analytics, churn prediction, sentiment analysis, customer segmentation, lifetime value, customer journey mapping, AI analytics"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-quantum-computing" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-customer-insights" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -189,20 +184,20 @@ export default function AIQuantumComputing() {
           
           <div className="max-w-7xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Atom className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">Next-Generation Quantum Computing</span>
+              <Brain className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Customer Analytics</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              AI
+              Zion AI
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Quantum Computing
+                {" "}Customer Insights
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Harness the power of quantum computing with AI. Solve complex problems, optimize algorithms, 
-              and unlock new possibilities in drug discovery, cryptography, and machine learning.
+              Transform customer data into actionable insights with AI. Predict churn, analyze sentiment, 
+              segment customers, and optimize lifetime value. Make data-driven decisions that drive growth.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -210,15 +205,15 @@ export default function AIQuantumComputing() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Explore Quantum Solutions
+                Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                Quantum Demo
-                <Cpu className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                Watch Demo
+                <Monitor className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
             
@@ -242,11 +237,11 @@ export default function AIQuantumComputing() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Revolutionary Quantum Capabilities
+                Advanced Customer Intelligence Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Experience the future of computing with our advanced quantum solutions. From quantum machine learning 
-                to optimization algorithms, unlock unprecedented computational power.
+                Everything you need to understand your customers better. From sentiment analysis to churn prediction, 
+                our AI-powered platform provides deep insights into customer behavior.
               </p>
             </div>
             
@@ -268,35 +263,34 @@ export default function AIQuantumComputing() {
           </div>
         </section>
 
-        {/* Applications */}
+        {/* Insights Types */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Quantum Computing Applications
+                Comprehensive Customer Intelligence
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform industries with quantum computing. From drug discovery to financial modeling, 
-                quantum technology opens new possibilities.
+                Get a complete view of your customers with our AI-powered analytics across all touchpoints and channels.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {applications.map((application, index) => (
+              {insights.map((insight, index) => (
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
                 >
                   <div
-                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${application.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${insight.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                   >
-                    {application.icon}
+                    {insight.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-                    {application.title}
+                    {insight.title}
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
-                    {application.description}
+                    {insight.description}
                   </p>
                 </div>
               ))}
@@ -309,11 +303,10 @@ export default function AIQuantumComputing() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Quantum Computing Plans
+                Choose Your Analytics Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Access quantum computing power with our flexible plans. From research to enterprise, 
-                we have the right quantum solution for you.
+                Start with our free trial and scale as your business grows. All plans include our core AI features.
               </p>
             </div>
             
@@ -380,10 +373,10 @@ export default function AIQuantumComputing() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Quantum Researchers
+                Trusted by Leading Companies
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leading researchers and organizations rely on our quantum computing solutions for breakthrough discoveries.
+                See how our customers are using Zion AI Customer Insights to drive growth and improve customer experience.
               </p>
             </div>
             
@@ -418,11 +411,11 @@ export default function AIQuantumComputing() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Explore Quantum Computing?
+              Ready to Transform Your Customer Understanding?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join the quantum revolution with our advanced AI-powered quantum computing solutions. 
-              Transform your research and business with unprecedented computational power.
+              Join thousands of businesses using Zion AI Customer Insights to make data-driven decisions 
+              and improve customer experience. Start your free trial today.
             </p>
             
             {/* Contact Information */}
@@ -455,15 +448,15 @@ export default function AIQuantumComputing() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Explore Quantum Solutions
+                Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                Quantum Demo
-                <Cpu className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                Watch Demo
+                <Monitor className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
           </div>
