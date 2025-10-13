@@ -52,7 +52,7 @@ const ImageOptimizer = React.memo<ImageOptimizerProps>(({
   //       <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="#9ca3af" font-family="Arial, sans-serif" font-size="14">
   //         Loading...
   //       </text>
-  //     </svg>
+  //     </rect>
   //   `)}`;
   // }, [placeholder, width, height]);
 
@@ -63,7 +63,6 @@ const ImageOptimizer = React.memo<ImageOptimizerProps>(({
         style={{ width, height }}
       >
         <ImageIcon className="w-8 h-8 text-gray-400" />
-      </div>
     );
   }
 
@@ -72,7 +71,7 @@ const ImageOptimizer = React.memo<ImageOptimizerProps>(({
       {isLoading && (
         <div className="absolute inset-0 flex items-center justify-center bg-gray-200">
           <Loader2 className="w-6 h-6 animate-spin text-gray-400" />
-        </div>
+        </Loader2>
       )}
       
       <img
@@ -91,7 +90,7 @@ const ImageOptimizer = React.memo<ImageOptimizerProps>(({
           height: height ? `${height}px` : 'auto',
         }}
       />
-    </div>
+    </img>
   );
 });
 

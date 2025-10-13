@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Shield, Zap, Globe, Lock, ArrowRight } from "lucide-react";
 import Layout from "../layout";
 
-export default function BlockchainWeb3() {
+const BlockchainWeb3 = () => {
   const features = [
     {
       icon: <Shield className="w-6 h-6 text-cyan-400" />,
@@ -90,7 +90,7 @@ export default function BlockchainWeb3() {
                 <h3 className="text-xl font-semibold text-white mb-2 mt-4">
                   {feature.title}
                 </h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <p className="text-gray-300">{feature.description}</div>
               </div>
             ))}
           </div>
@@ -113,10 +113,9 @@ export default function BlockchainWeb3() {
                       >
                         <ArrowRight className="w-4 h-4 text-purple-400 mr-2" />
                         {item}
-                      </li>
                     ))}
-                  </ul>
-                </div>
+                  </li>
+                </ul>
               ))}
             </div>
           </div>
@@ -134,17 +133,14 @@ export default function BlockchainWeb3() {
                 className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 Get Started
-              </Link>
               <Link
                 to="/services"
                 className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 View All Services
-              </Link>
             </div>
           </div>
         </div>
       </div>
-    </Layout>
   );
 }

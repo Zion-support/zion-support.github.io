@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-export default function NetworkInfrastructure5GPage() {
+const NetworkInfrastructure5GPage = () => {
   return (
     <>
       <Helmet>
@@ -11,7 +11,7 @@ export default function NetworkInfrastructure5GPage() {
           name="description"
           content="Professional 5G network infrastructure services"
         />
-      </Helmet>
+      </meta>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
         <div className="max-w-4xl mx-auto px-4 text-center">
@@ -29,8 +29,6 @@ export default function NetworkInfrastructure5GPage() {
           >
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
       </div>
     </>
   );

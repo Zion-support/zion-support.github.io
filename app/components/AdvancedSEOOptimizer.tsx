@@ -198,7 +198,6 @@ const AdvancedSEOOptimizer: React.FC = () => {
         aria-label="Open SEO optimizer"
       >
         <Search className="w-6 h-6" />
-      </button>
     );
   }
 
@@ -208,7 +207,6 @@ const AdvancedSEOOptimizer: React.FC = () => {
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center">
           <Search className="w-5 h-5 mr-2" />
           SEO Optimizer
-        </h3>
         <button
           onClick={() => setIsVisible(false)}
           className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
@@ -216,47 +214,45 @@ const AdvancedSEOOptimizer: React.FC = () => {
         >
           ×
         </button>
-      </div>
+      </h3>
       
       {/* SEO Metrics */}
       <div className="mb-6 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
         <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
           <Eye className="w-4 h-4 mr-2" />
           SEO Analysis
-        </h4>
         <div className="space-y-2 text-xs">
           <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">Title Length:</span>
+            <span className="text-gray-600 dark:text-gray-400">Title Length:</div>
             <span className={getScoreColor(metrics.titleLength, { good: 60, poor: 70 })}>
               {metrics.titleLength ? `${metrics.titleLength}/60` : 'N/A'}
             </span>
           </div>
           <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">Description Length:</span>
+            <span className="text-gray-600 dark:text-gray-400">Description Length:</div>
             <span className={getScoreColor(metrics.descriptionLength, { good: 160, poor: 200 })}>
               {metrics.descriptionLength ? `${metrics.descriptionLength}/160` : 'N/A'}
             </span>
-          </div>
+          </h4>
           <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">Images with Alt:</span>
+            <span className="text-gray-600 dark:text-gray-400">Images with Alt:</div>
             <span className="text-gray-900 dark:text-white">
               {metrics.imageAltTexts || 'N/A'}
             </span>
           </div>
           <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">Internal Links:</span>
+            <span className="text-gray-600 dark:text-gray-400">Internal Links:</div>
             <span className="text-gray-900 dark:text-white">
               {metrics.internalLinks || 'N/A'}
             </span>
           </div>
           <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">External Links:</span>
+            <span className="text-gray-600 dark:text-gray-400">External Links:</div>
             <span className="text-gray-900 dark:text-white">
               {metrics.externalLinks || 'N/A'}
             </span>
           </div>
-        </div>
-      </div>
+        </button>
       
       {/* SEO Settings */}
       <div className="space-y-4">
@@ -292,8 +288,8 @@ const AdvancedSEOOptimizer: React.FC = () => {
                   settings[feature.key] ? 'translate-x-5' : 'translate-x-1'
                 }`}
               />
-            </button>
-          </div>
+            </span>
+          </button>
         ))}
       </div>
       
@@ -306,7 +302,7 @@ const AdvancedSEOOptimizer: React.FC = () => {
         >
           {isOptimizing ? (
             <>
-              <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+              <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></button>
               Optimizing...
             </>
           ) : (
@@ -315,7 +311,6 @@ const AdvancedSEOOptimizer: React.FC = () => {
               Optimize SEO
             </>
           )}
-        </button>
       </div>
     </div>
   );

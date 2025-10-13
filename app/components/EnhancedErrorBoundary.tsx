@@ -47,7 +47,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
           <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center border border-white/20">
             <div className="flex justify-center mb-6">
               <AlertTriangle className="w-16 h-16 text-red-400" />
-            </div>
 
             <h1 className="text-2xl font-bold text-white mb-4">
               Oops! Something went wrong
@@ -81,7 +80,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               >
                 <RefreshCw className="w-5 h-5 mr-2" />
                 Try Again
-              </button>
 
               <Link
                 to="/"
@@ -89,9 +87,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               >
                 <Home className="w-5 h-5 mr-2" />
                 Go Home
-              </Link>
-            </div>
-          </div>
+          </button>
         </div>
       );
     }

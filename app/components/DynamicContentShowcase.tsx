@@ -122,7 +122,7 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
                     Featured
                   </div>
                 )}
-              </div>
+              </img>
             </div>
           </div>
         </div>
@@ -136,7 +136,6 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
             className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
           >
             <ChevronLeft className="w-5 h-5" />
-          </button>
           <button
             onClick={togglePlayPause}
             className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
@@ -146,14 +145,12 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
             ) : (
               <Play className="w-5 h-5" />
             )}
-          </button>
           <button
             onClick={goToNext}
             className="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors"
           >
             <ChevronRight className="w-5 h-5" />
-          </button>
-        </div>
+        </button>
 
         {/* Dots indicator */}
         <div className="flex space-x-2">
@@ -166,9 +163,8 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
               }`}
             />
           ))}
-        </div>
+        </button>
       </div>
-    </div>
   );
 };
 

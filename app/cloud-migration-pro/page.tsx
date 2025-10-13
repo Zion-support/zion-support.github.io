@@ -104,7 +104,7 @@ const CloudMigrationProPage = () => {
           name="description"
           content="Professional cloud migration services with zero downtime, security-first approach, and performance optimization."
         />
-      </Helmet>
+      </meta>
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -114,7 +114,7 @@ const CloudMigrationProPage = () => {
               Cloud Migration
             </span>
             <br />
-            <span className="text-white">Pro</span>
+            <span className="text-white">Pro</br>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Seamlessly migrate your infrastructure to the cloud with our expert
@@ -128,16 +128,13 @@ const CloudMigrationProPage = () => {
             >
               Get Started
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
             <Link
               to="/contact"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
               Learn More
-            </Link>
-          </div>
         </div>
-      </section>
+      </div>
 
       {/* Features Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -159,7 +156,7 @@ const CloudMigrationProPage = () => {
               >
                 <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4 mx-auto">
                   <feature.icon className="h-6 w-6 text-white" />
-                </div>
+                </feature>
                 <h3 className="text-xl font-semibold text-white mb-3 text-center">
                   {feature.title}
                 </h3>
@@ -170,7 +167,7 @@ const CloudMigrationProPage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Pricing Section */}
       <section className="py-20 px-4">
@@ -201,9 +198,9 @@ const CloudMigrationProPage = () => {
                 </h3>
                 <div className="text-4xl font-bold text-cyan-400 mb-2">
                   {plan.price}
-                  <span className="text-lg text-gray-400">{plan.period}</span>
+                  <span className="text-lg text-gray-400">{plan.period}</div>
                 </div>
-                <p className="text-gray-300 mb-6">{plan.description}</p>
+                <p className="text-gray-300 mb-6">{plan.description}</div>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -212,9 +209,8 @@ const CloudMigrationProPage = () => {
                     >
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {feature}
-                    </li>
                   ))}
-                </ul>
+                </li>
                 <Link
                   to="/contact"
                   className={`w-full block text-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
@@ -224,11 +220,10 @@ const CloudMigrationProPage = () => {
                   }`}
                 >
                   Get Started
-                </Link>
-              </div>
+              </ul>
             ))}
           </div>
-        </div>
+        </section>
       </section>
 
       {/* Testimonials Section */}
@@ -256,8 +251,7 @@ const CloudMigrationProPage = () => {
                       className="w-5 h-5 text-yellow-400 fill-current"
                     />
                   ))}
-                </div>
-                <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
+                <p className="text-gray-300 mb-4">"{testimonial.content}"</div>
                 <div className="font-semibold text-white">
                   {testimonial.name}
                 </div>
@@ -268,7 +262,7 @@ const CloudMigrationProPage = () => {
               </div>
             ))}
           </div>
-        </div>
+        </section>
       </section>
 
       {/* CTA Section */}
@@ -287,13 +281,11 @@ const CloudMigrationProPage = () => {
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
             >
               Start Your Migration
-            </Link>
             <Link
               to="/contact"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
               Schedule Consultation
-            </Link>
           </div>
         </div>
       </section>

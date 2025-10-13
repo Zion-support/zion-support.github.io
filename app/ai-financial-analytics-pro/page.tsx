@@ -10,7 +10,7 @@ import {
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AiFinancialAnalyticsProPage() {
+const AiFinancialAnalyticsProPage = () => {
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
@@ -190,15 +190,15 @@ export default function AiFinancialAnalyticsProPage() {
           name="description"
           content="Advanced AI-powered financial analytics platform for comprehensive business intelligence and predictive insights."
         />
-      </Helmet>
+      </meta>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         {/* Hero Section */}
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-white mb-6">
-              AI Financial Analytics <span className="text-blue-600">Pro</span>
-            </h1>
+              AI Financial Analytics <span className="text-blue-600">Pro</h1>
+            </div>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Advanced AI-powered financial analytics platform for comprehensive
               business intelligence, predictive insights, and data-driven
@@ -210,13 +210,11 @@ export default function AiFinancialAnalyticsProPage() {
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
               >
                 Get Started
-              </Link>
               <Link
                 to="/contact"
                 className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
               >
                 Learn More
-              </Link>
             </div>
           </div>
 
@@ -231,7 +229,7 @@ export default function AiFinancialAnalyticsProPage() {
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <p className="text-gray-300 mb-4">{feature.description}</div>
                 <ul className="space-y-1">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li
@@ -240,10 +238,9 @@ export default function AiFinancialAnalyticsProPage() {
                     >
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
-                    </li>
                   ))}
-                </ul>
-              </div>
+                </li>
+              </ul>
             ))}
           </div>
 
@@ -269,10 +266,9 @@ export default function AiFinancialAnalyticsProPage() {
                       >
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {item}
-                      </li>
                     ))}
-                  </ul>
-                </div>
+                  </li>
+                </ul>
               ))}
             </div>
           </div>
@@ -305,7 +301,7 @@ export default function AiFinancialAnalyticsProPage() {
                         {plan.period}
                       </span>
                     </div>
-                    <p className="text-gray-300">{plan.description}</p>
+                    <p className="text-gray-300">{plan.description}</div>
                   </div>
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
@@ -315,9 +311,8 @@ export default function AiFinancialAnalyticsProPage() {
                       >
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
-                      </li>
                     ))}
-                  </ul>
+                  </li>
                   <Link
                     to="/contact"
                     className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
@@ -327,8 +322,7 @@ export default function AiFinancialAnalyticsProPage() {
                     }`}
                   >
                     Get Started
-                  </Link>
-                </div>
+                </ul>
               ))}
             </div>
           </div>
@@ -351,7 +345,6 @@ export default function AiFinancialAnalyticsProPage() {
                         key={i}
                       />
                     ))}
-                  </div>
                   <p className="text-gray-300 mb-4 italic">
                     "{testimonial.content}"
                   </p>
@@ -384,13 +377,11 @@ export default function AiFinancialAnalyticsProPage() {
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
                 Contact Us
-              </Link>
               <Link
                 to="/services"
                 className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
               >
                 View All Services
-              </Link>
             </div>
           </div>
         </div>
@@ -398,3 +389,5 @@ export default function AiFinancialAnalyticsProPage() {
     </>
   );
 }
+
+</BarChart3>

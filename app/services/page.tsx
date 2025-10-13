@@ -2,7 +2,7 @@ import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, B
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function Services() {
+const Services = () => {
   const services = [
     {
       title: "AI-Powered Business Intelligence",
@@ -126,12 +126,12 @@ export default function Services() {
           name="keywords"
           content="AI services, business intelligence, customer support automation, content generation, cybersecurity, 5G solutions, cloud infrastructure, data analytics, code assistant, marketing automation, document processing, CRM, financial analytics"
         />
-      </Helmet>
+      </meta>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></meta>
         
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
@@ -142,8 +142,8 @@ export default function Services() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
                   {" "}Services
                 </span>
-                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-lg blur opacity-30 animate-pulse"></div>
-              </h1>
+                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-lg blur opacity-30 animate-pulse"></h1>
+              </div>
             </div>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Comprehensive AI and IT solutions designed to accelerate your business growth and digital transformation. 
@@ -156,14 +156,11 @@ export default function Services() {
               >
                 Get Started
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
               <Link
                 to="/consultation"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
               >
                 Free Consultation
-              </Link>
-            </div>
           </div>
         </section>
 
@@ -205,7 +202,7 @@ export default function Services() {
                     {/* Price and Features */}
                     <div className="space-y-3">
                       <div className="text-center">
-                        <span className="text-cyan-400 font-bold text-lg">{service.price}</span>
+                        <span className="text-cyan-400 font-bold text-lg">{service.price}</div>
                       </div>
                       <div className="flex flex-wrap gap-2 justify-center">
                         {service.features.map((feature, idx) => (
@@ -226,14 +223,11 @@ export default function Services() {
                       >
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-1" />
-                      </Link>
-                    </div>
                   </div>
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+          </section>
 
         {/* Contact Information Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
@@ -252,25 +246,22 @@ export default function Services() {
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Mail className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-white font-semibold mb-2">Email</h3>
-                  <p className="text-cyan-400">kleber@ziontechgroup.com</p>
+                  <h3 className="text-white font-semibold mb-2">Email</div>
+                  <p className="text-cyan-400">kleber@ziontechgroup.com</div>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Smartphone className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-white font-semibold mb-2">Phone</h3>
-                  <p className="text-cyan-400">+1 302 464 0950</p>
+                  <h3 className="text-white font-semibold mb-2">Phone</div>
+                  <p className="text-cyan-400">+1 302 464 0950</div>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Globe className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-white font-semibold mb-2">Address</h3>
-                  <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                  <h3 className="text-white font-semibold mb-2">Address</div>
+                  <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</div>
                 </div>
-              </div>
+              </section>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -279,18 +270,14 @@ export default function Services() {
                 >
                   Start Your Journey
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
                 <Link
                   to="/consultation"
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
                 >
                   Free Consultation
-                </Link>
-              </div>
             </div>
-          </div>
-        </section>
-      </div>
     </>
   );
 }
+
+</BarChart3>

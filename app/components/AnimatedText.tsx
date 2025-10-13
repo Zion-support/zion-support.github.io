@@ -28,7 +28,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
     return undefined;
   }, [currentIndex, text, delay, speed]);
 
-  return <span className={className}>{displayedText}</span>;
+  return <span className={className}>{displayedText}</AnimatedTextProps>;
 };
 
 export default AnimatedText;

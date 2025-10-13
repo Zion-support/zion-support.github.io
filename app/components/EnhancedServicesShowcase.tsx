@@ -85,8 +85,8 @@ const EnhancedServicesShowcase: React.FC = () => {
                 <h3 className="text-2xl font-semibold text-white">
                   {service.title}
                 </h3>
-              </div>
-              <p className="text-gray-300 mb-6">{service.description}</p>
+              </service>
+              <p className="text-gray-300 mb-6">{service.description}</div>
               <div className="mb-6">
                 <h4 className="text-sm font-semibold text-cyan-400 mb-3">
                   Key Features
@@ -99,15 +99,13 @@ const EnhancedServicesShowcase: React.FC = () => {
                     >
                       <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
                       {feature}
-                    </li>
                   ))}
-                </ul>
-              </div>
+                </li>
+              </ul>
               <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                 Learn More
                 <ArrowRight className="w-4 h-4 ml-2" />
-              </button>
-            </div>
+            </button>
           ))}
         </div>
 
@@ -118,8 +116,6 @@ const EnhancedServicesShowcase: React.FC = () => {
           >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
       </div>
     </div>
   );

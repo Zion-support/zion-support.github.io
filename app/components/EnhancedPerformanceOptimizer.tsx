@@ -11,7 +11,7 @@ import logger from "../../utils/logger";
 //   ttfb?: number;
 // }
 
-export default function EnhancedPerformanceOptimizer() {
+const EnhancedPerformanceOptimizer = () => {
   const preloadCriticalResources = useCallback(() => {
     const criticalResources = [
       { href: "/fonts/inter-var.woff2", as: "font", type: "font/woff2", crossorigin: "anonymous" },

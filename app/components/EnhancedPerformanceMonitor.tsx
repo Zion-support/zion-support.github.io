@@ -136,14 +136,13 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         onClick={() => setIsVisible(!isVisible)}
         className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2"
       >
-        <div className={`w-2 h-2 rounded-full ${isLoading ? 'bg-yellow-400 animate-pulse' : 'bg-green-400'}`}></div>
+        <div className={`w-2 h-2 rounded-full ${isLoading ? 'bg-yellow-400 animate-pulse' : 'bg-green-400'}`}></button>
         <span>Performance</span>
-      </button>
       
       {isVisible && (
         <div className="absolute bottom-14 right-0 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-xl shadow-2xl p-6 w-80 max-h-96 overflow-y-auto">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="font-bold text-gray-900 text-lg">Core Web Vitals</h3>
+            <h3 className="font-bold text-gray-900 text-lg">Core Web Vitals</div>
             <button
               onClick={() => setIsVisible(false)}
               className="text-gray-400 hover:text-gray-600 transition-colors"
@@ -156,7 +155,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             {/* LCP */}
             <div className="space-y-1">
               <div className="flex justify-between items-center">
-                <span className="text-gray-600 font-medium">LCP (Largest Contentful Paint)</span>
+                <span className="text-gray-600 font-medium">LCP (Largest Contentful Paint)</div>
                 <span className={`font-mono font-bold ${getScoreColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}`}>
                   {metrics.largestContentfulPaint.toFixed(0)}ms
                 </span>
@@ -169,7 +168,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             {/* FID */}
             <div className="space-y-1">
               <div className="flex justify-between items-center">
-                <span className="text-gray-600 font-medium">FID (First Input Delay)</span>
+                <span className="text-gray-600 font-medium">FID (First Input Delay)</div>
                 <span className={`font-mono font-bold ${getScoreColor(metrics.firstInputDelay, { good: 100, needsImprovement: 300 })}`}>
                   {metrics.firstInputDelay.toFixed(0)}ms
                 </span>
@@ -177,12 +176,11 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               <div className="text-xs text-gray-500">
                 {getScoreText(metrics.firstInputDelay, { good: 100, needsImprovement: 300 })}
               </div>
-            </div>
 
             {/* CLS */}
             <div className="space-y-1">
               <div className="flex justify-between items-center">
-                <span className="text-gray-600 font-medium">CLS (Cumulative Layout Shift)</span>
+                <span className="text-gray-600 font-medium">CLS (Cumulative Layout Shift)</div>
                 <span className={`font-mono font-bold ${getScoreColor(metrics.cumulativeLayoutShift, { good: 0.1, needsImprovement: 0.25 })}`}>
                   {metrics.cumulativeLayoutShift.toFixed(3)}
                 </span>
@@ -190,12 +188,11 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               <div className="text-xs text-gray-500">
                 {getScoreText(metrics.cumulativeLayoutShift, { good: 0.1, needsImprovement: 0.25 })}
               </div>
-            </div>
 
             {/* FCP */}
             <div className="space-y-1">
               <div className="flex justify-between items-center">
-                <span className="text-gray-600 font-medium">FCP (First Contentful Paint)</span>
+                <span className="text-gray-600 font-medium">FCP (First Contentful Paint)</div>
                 <span className={`font-mono font-bold ${getScoreColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}`}>
                   {metrics.firstContentfulPaint.toFixed(0)}ms
                 </span>
@@ -208,7 +205,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             {/* TTFB */}
             <div className="space-y-1">
               <div className="flex justify-between items-center">
-                <span className="text-gray-600 font-medium">TTFB (Time to First Byte)</span>
+                <span className="text-gray-600 font-medium">TTFB (Time to First Byte)</div>
                 <span className={`font-mono font-bold ${getScoreColor(metrics.timeToFirstByte, { good: 800, needsImprovement: 1800 })}`}>
                   {metrics.timeToFirstByte.toFixed(0)}ms
                 </span>
@@ -221,11 +218,11 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             {/* Additional Metrics */}
             <div className="border-t pt-3 space-y-2">
               <div className="flex justify-between">
-                <span className="text-gray-600">Load Time:</span>
-                <span className="font-mono">{metrics.loadTime.toFixed(0)}ms</span>
+                <span className="text-gray-600">Load Time:</div>
+                <span className="font-mono">{metrics.loadTime.toFixed(0)}ms</div>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-600">Total Blocking Time:</span>
+                <span className="text-gray-600">Total Blocking Time:</div>
                 <span className="font-mono">{metrics.totalBlockingTime.toFixed(0)}ms</span>
               </div>
             </div>

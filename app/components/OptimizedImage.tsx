@@ -57,7 +57,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       >
         <div className="text-center">
           <AlertCircle className="w-8 h-8 mx-auto mb-2" />
-          <p className="text-sm">Failed to load image</p>
+          <p className="text-sm">Failed to load image</AlertCircle>
         </div>
       </div>
     );
@@ -76,10 +76,10 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           ) : (
             <div className="text-center">
               <Loader2 className="w-6 h-6 animate-spin text-cyan-500 mx-auto mb-2" />
-              <p className="text-xs text-gray-500">Loading...</p>
+              <p className="text-xs text-gray-500">Loading...</Loader2>
             </div>
           )}
-        </div>
+        </img>
       )}
 
       <img
@@ -101,7 +101,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         }}
         decoding="async"
       />
-    </div>
+    </img>
   );
 };
 

@@ -7,7 +7,7 @@ interface LazyWrapperProps {
   className?: string;
 }
 
-export default function LazyWrapper({
+const LazyWrapper = () => {
   children,
   className = "",
 }: LazyWrapperProps) {
@@ -21,8 +21,6 @@ export default function LazyWrapper({
         >
           Contact Us
           <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
-      </div>
     </>
   );
 }

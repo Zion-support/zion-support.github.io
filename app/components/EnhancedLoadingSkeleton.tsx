@@ -51,12 +51,9 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
               <Skeleton width="100%" height={12} />
               <Skeleton width="90%" height={12} />
               <Skeleton width="75%" height={12} />
-            </div>
             <div className="flex gap-2 mt-6">
               <Skeleton width={80} height={32} rounded />
               <Skeleton width={100} height={32} rounded />
-            </div>
-          </div>
         );
 
       case "list":
@@ -68,8 +65,6 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
                 <div className="flex-1 space-y-2">
                   <Skeleton width="60%" height={16} />
                   <Skeleton width="40%" height={12} />
-                </div>
-              </div>
             ))}
           </div>
         );
@@ -82,7 +77,6 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
             <Skeleton width="90%" height={16} />
             <Skeleton width="85%" height={16} />
             <Skeleton width="80%" height={16} />
-          </div>
         );
 
       case "image":

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Brain, Users, Zap, Globe, Clock, CheckCircle } from "lucide-react";
 import Layout from "../layout";
 
-export default function AISmartScheduler() {
+const AISmartScheduler = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
@@ -120,13 +120,11 @@ export default function AISmartScheduler() {
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
                 Start Free Trial
-              </Link>
               <Link
                 to="#demo"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
                 Watch Demo
-              </Link>
             </div>
           </div>
         </div>
@@ -152,12 +150,11 @@ export default function AISmartScheduler() {
                     {feature.title}
                   </h3>
                 </div>
-                <p className="text-gray-300">{feature.description}</p>
+                <p className="text-gray-300">{feature.description}</div>
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Pricing Section */}
       <section className="py-20 bg-gray-800">
@@ -186,12 +183,12 @@ export default function AISmartScheduler() {
                 <h3 className="text-2xl font-bold text-white mb-2">
                   {plan.name}
                 </h3>
-                <p className="text-gray-300 mb-6">{plan.description}</p>
+                <p className="text-gray-300 mb-6">{plan.description}</div>
                 <div className="mb-6">
                   <span className="text-4xl font-bold text-white">
                     {plan.price}
                   </span>
-                  <span className="text-gray-400">{plan.period}</span>
+                  <span className="text-gray-400">{plan.period}</div>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
@@ -201,9 +198,8 @@ export default function AISmartScheduler() {
                     >
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                       {feature}
-                    </li>
                   ))}
-                </ul>
+                </li>
                 <Link
                   to="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
@@ -213,12 +209,10 @@ export default function AISmartScheduler() {
                   }`}
                 >
                   Get Started
-                </Link>
-              </div>
+              </ul>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Testimonials */}
       <section className="py-20 bg-gray-900">
@@ -238,8 +232,7 @@ export default function AISmartScheduler() {
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Clock key={i} className="w-5 h-5 text-yellow-400" />
                   ))}
-                </div>
-                <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
+                <p className="text-gray-300 mb-4">"{testimonial.content}"</div>
                 <div className="font-semibold text-white">
                   {testimonial.name}
                 </div>
@@ -268,16 +261,13 @@ export default function AISmartScheduler() {
               className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
             >
               Start Your Free Trial
-            </Link>
             <Link
               to="/about"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
               Learn More
-            </Link>
           </div>
         </div>
       </section>
-    </Layout>
   );
 }

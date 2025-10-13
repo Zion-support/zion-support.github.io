@@ -42,7 +42,7 @@ const EnhancedLoading: React.FC<LoadingProps> = ({
           {text}
         </p>
       )}
-    </div>
+    </Loader2>
   );
 
   if (fullScreen) {

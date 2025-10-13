@@ -99,7 +99,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         })}
       </script>
       <meta httpEquiv="X-Frame-Options" content="DENY" />
-    </Helmet>
+    </meta>
   );
 };
 

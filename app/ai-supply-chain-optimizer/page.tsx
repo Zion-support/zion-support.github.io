@@ -51,7 +51,7 @@ const AISupplyChainOptimizerPage = () => {
           name="description"
           content="Transform your supply chain with AI-powered optimization solutions. Real-time analytics, risk management, and global visibility."
         />
-      </Helmet>
+      </meta>
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -61,7 +61,7 @@ const AISupplyChainOptimizerPage = () => {
               AI Supply Chain
             </span>
             <br />
-            <span className="text-white">Optimizer</span>
+            <span className="text-white">Optimizer</br>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your supply chain with cutting-edge AI technology.
@@ -75,16 +75,13 @@ const AISupplyChainOptimizerPage = () => {
             >
               Get Started
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
             <Link
               to="/contact"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
               Learn More
-            </Link>
-          </div>
         </div>
-      </section>
+      </div>
 
       {/* Features Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -106,7 +103,7 @@ const AISupplyChainOptimizerPage = () => {
               >
                 <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4 mx-auto">
                   <feature.icon className="h-6 w-6 text-white" />
-                </div>
+                </feature>
                 <h3 className="text-xl font-semibold text-white mb-3 text-center">
                   {feature.title}
                 </h3>
@@ -117,7 +114,7 @@ const AISupplyChainOptimizerPage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Testimonials Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -144,8 +141,7 @@ const AISupplyChainOptimizerPage = () => {
                       className="w-5 h-5 text-yellow-400 fill-current"
                     />
                   ))}
-                </div>
-                <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
+                <p className="text-gray-300 mb-4">"{testimonial.content}"</div>
                 <div className="font-semibold text-white">
                   {testimonial.name}
                 </div>
@@ -156,7 +152,7 @@ const AISupplyChainOptimizerPage = () => {
               </div>
             ))}
           </div>
-        </div>
+        </section>
       </section>
 
       {/* CTA Section */}
@@ -175,17 +171,15 @@ const AISupplyChainOptimizerPage = () => {
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
             >
               Start Your Free Trial
-            </Link>
             <Link
               to="/contact"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
               Schedule Demo
-            </Link>
           </div>
         </div>
       </section>
-    </div>
+    </section>
   );
 };
 

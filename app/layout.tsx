@@ -32,12 +32,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 name="keywords"
                 content="AI solutions, IT services, digital transformation, business automation, technology consulting"
               />
-            </Helmet>
+            </meta>
 
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
               {/* Animated Background */}
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>
-              <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
+              <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></meta>
               
               <header className="bg-black/20 backdrop-blur-sm border-b border-white/10 relative z-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,30 +46,29 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                       <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:from-cyan-300 group-hover:to-purple-300 transition-all duration-300">
                         Zion Tech Group
                       </span>
-                    </Link>
                     <nav className="hidden md:flex space-x-8">
                       <Link
                         to="/about"
                         className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
                       >
                         About
-                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
-                      </Link>
+                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></Link>
+                      </nav>
                       <Link
                         to="/services"
                         className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
                       >
                         Services
-                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
-                      </Link>
+                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></Link>
+                      </div>
                       <Link
                         to="/contact"
                         className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
                       >
                         Contact
-                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
-                      </Link>
-                    </nav>
+                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></Link>
+                      </div>
+                    </header>
                     <div className="flex items-center space-x-4">
                       <Link
                         to="/contact"
@@ -77,12 +76,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                       >
                         Contact Us
                         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                      </Link>
                       <MobileNavigation />
-                    </div>
-                  </div>
                 </div>
-              </header>
 
               <main>{children}</main>
 
@@ -101,70 +96,60 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                       </p>
                       <div className="flex space-x-4">
                         <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                          <span className="text-white text-xs font-bold">Z</span>
+                          <span className="text-white text-xs font-bold">Z</div>
                         </div>
                       </div>
                     </div>
 
                     {/* Quick Links */}
                     <div className="space-y-4">
-                      <h4 className="text-lg font-semibold text-white">Quick Links</h4>
+                      <h4 className="text-lg font-semibold text-white">Quick Links</div>
                       <div className="space-y-2">
                         <Link to="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
                           About Us
-                        </Link>
                         <Link to="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
                           Our Services
-                        </Link>
                         <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
                           Contact
-                        </Link>
                         <Link to="/consultation" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
                           Free Consultation
-                        </Link>
                       </div>
                     </div>
 
                     {/* Services */}
                     <div className="space-y-4">
-                      <h4 className="text-lg font-semibold text-white">Services</h4>
+                      <h4 className="text-lg font-semibold text-white">Services</div>
                       <div className="space-y-2">
                         <Link to="/ai-business-intelligence" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                           AI Business Intelligence
-                        </Link>
                         <Link to="/ai-customer-support" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                           AI Customer Support
-                        </Link>
                         <Link to="/ai-content-generation" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                           AI Content Generation
-                        </Link>
                         <Link to="/ai-cybersecurity" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                           AI Cybersecurity
-                        </Link>
                       </div>
-                    </div>
+                    </footer>
 
                     {/* Contact Info */}
                     <div className="space-y-4">
-                      <h4 className="text-lg font-semibold text-white">Contact Info</h4>
+                      <h4 className="text-lg font-semibold text-white">Contact Info</div>
                       <div className="space-y-3">
                         <div className="flex items-center space-x-3">
                           <div className="w-5 h-5 bg-gradient-to-r from-cyan-500 to-purple-600 rounded flex items-center justify-center">
-                            <span className="text-white text-xs">@</span>
+                            <span className="text-white text-xs">@</div>
                           </div>
-                          <span className="text-gray-300 text-sm">kleber@ziontechgroup.com</span>
-                        </div>
+                          <span className="text-gray-300 text-sm">kleber@ziontechgroup.com</div>
                         <div className="flex items-center space-x-3">
                           <div className="w-5 h-5 bg-gradient-to-r from-cyan-500 to-purple-600 rounded flex items-center justify-center">
-                            <span className="text-white text-xs">📞</span>
+                            <span className="text-white text-xs">📞</div>
                           </div>
-                          <span className="text-gray-300 text-sm">+1 302 464 0950</span>
-                        </div>
+                          <span className="text-gray-300 text-sm">+1 302 464 0950</HelmetProvider>
                         <div className="flex items-start space-x-3">
                           <div className="w-5 h-5 bg-gradient-to-r from-cyan-500 to-purple-600 rounded flex items-center justify-center mt-0.5">
-                            <span className="text-white text-xs">📍</span>
+                            <span className="text-white text-xs">📍</div>
                           </div>
-                          <span className="text-gray-300 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</span>
+                          <span className="text-gray-300 text-sm">364 E Main St STE 1008<br />Middletown DE 19709
                         </div>
                       </div>
                     </div>
@@ -179,20 +164,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                       <div className="flex space-x-6">
                         <Link to="/privacy" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                           Privacy Policy
-                        </Link>
                         <Link to="/terms" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                           Terms of Service
-                        </Link>
                       </div>
                     </div>
                   </div>
                 </div>
               </footer>
             </div>
-          </AnalyticsProvider>
-        </BrowserRouter>
-      </HelmetProvider>
-    </ErrorBoundary>
   );
 };
 

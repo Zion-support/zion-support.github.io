@@ -51,11 +51,7 @@ const ContactForm: React.FC = () => {
         service: "",
       });
     } catch (error) {
-<<<<<<< HEAD
       console.error('Failed to submit contact form:', error);
-=======
-      console.error('Form submission error:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-3db5
     } finally {
       setIsSubmitting(false);
     }
@@ -65,7 +61,7 @@ const ContactForm: React.FC = () => {
     return (
       <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg text-center">
         <MessageSquare className="w-8 h-8 mx-auto mb-2" />
-        <h3 className="text-lg font-semibold mb-2">Thank you!</h3>
+        <h3 className="text-lg font-semibold mb-2">Thank you!</MessageSquare>
         <p>
           Your message has been sent successfully. We'll get back to you soon.
         </p>
@@ -92,7 +88,7 @@ const ContactForm: React.FC = () => {
             required
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
-        </div>
+        </input>
 
         <div>
           <label
@@ -110,7 +106,7 @@ const ContactForm: React.FC = () => {
             required
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
-        </div>
+        </input>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -129,7 +125,7 @@ const ContactForm: React.FC = () => {
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
-        </div>
+        </input>
 
         <div>
           <label
@@ -146,7 +142,7 @@ const ContactForm: React.FC = () => {
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
-        </div>
+        </input>
       </div>
 
       <div>
@@ -163,14 +159,13 @@ const ContactForm: React.FC = () => {
           onChange={handleChange}
           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
         >
-          <option value="">Select a service</option>
-          <option value="ai-solutions">AI Solutions</option>
-          <option value="it-services">IT Services</option>
-          <option value="micro-saas">Micro SAAS</option>
-          <option value="consulting">Consulting</option>
-          <option value="other">Other</option>
-        </select>
-      </div>
+          <option value="">Select a service</select>
+          <option value="ai-solutions">AI Solutions</div>
+          <option value="it-services">IT Services</div>
+          <option value="micro-saas">Micro SAAS</div>
+          <option value="consulting">Consulting</div>
+          <option value="other">Other</div>
+        </form>
 
       <div>
         <label
@@ -189,7 +184,7 @@ const ContactForm: React.FC = () => {
           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           placeholder="Tell us about your project or requirements..."
         />
-      </div>
+      </textarea>
 
       <button
         type="submit"
@@ -198,7 +193,7 @@ const ContactForm: React.FC = () => {
       >
         {isSubmitting ? "Sending..." : "Send Message"}
       </button>
-    </form>
+    </div>
   );
 };
 

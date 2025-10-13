@@ -88,7 +88,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
           decoding="async"
         />
       )}
-    </div>
+    </img>
   );
 };
 

@@ -260,9 +260,9 @@ const Navigation = React.memo(() => {
         )}
       </div>
     </nav>
-  )
-})
+  );
+});
 
-Navigation.displayName = 'Navigation'
+Navigation.displayName = 'Navigation';
 
-export default Navigation
+export default Navigation;

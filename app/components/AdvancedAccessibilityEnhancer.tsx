@@ -121,7 +121,6 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
         aria-label="Open accessibility settings"
       >
         <Eye className="w-6 h-6" />
-      </button>
     );
   }
 
@@ -155,7 +154,6 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
                     {feature.description}
                   </div>
                 </div>
-              </div>
               <button
                 onClick={() => toggleSetting(feature.key)}
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
@@ -170,8 +168,8 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
                     settings[feature.key] ? 'translate-x-6' : 'translate-x-1'
                   }`}
                 />
-              </button>
-            </div>
+              </span>
+            </button>
           );
         })}
       </div>

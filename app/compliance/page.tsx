@@ -1,18 +1,17 @@
-<<<<<<< HEAD
+'use client';
 import { ArrowRight } from "lucide-react";
 
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ComplianceZionTechGroup() {
+const ComplianceZionTechGroup = () => {
   return (
     <>
       <Helmet>
         <title>Compliance - Zion Tech Group</title>
-      </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Compliance</h1>
+          <h1 className="text-4xl font-bold text-white mb-6">Compliance</div>
           <p className="text-lg text-gray-300 mb-8">
             Professional compliance services coming soon.
           </p>
@@ -22,14 +21,10 @@ export default function ComplianceZionTechGroup() {
           >
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
       </div>
     </>
   );
 }
-=======
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -97,7 +92,7 @@ const CompliancePage: React.FC = () => {
         <title>Compliance & Security | Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group's compliance certifications and security measures. SOC 2, ISO 27001, GDPR, and HIPAA compliant." />
         <meta name="keywords" content="compliance, security, SOC 2, ISO 27001, GDPR, HIPAA, data protection, privacy" />
-      </Helmet>
+      </meta>
 
       <Navigation />
 
@@ -112,7 +107,7 @@ const CompliancePage: React.FC = () => {
               Compliance
             </span>
             <br />
-            <span className="text-white">& Security</span>
+            <span className="text-white">& Security</br>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Your data security and compliance are our top priorities. We maintain the highest standards 
@@ -122,13 +117,12 @@ const CompliancePage: React.FC = () => {
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center">
               View Certifications
               <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
             <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
               Download Report
             </button>
-          </div>
+          </button>
         </div>
-      </section>
+      </div>
 
       {/* Certifications Section */}
       <section className="py-16 px-4">
@@ -147,7 +141,7 @@ const CompliancePage: React.FC = () => {
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-400 transition-all duration-300 group text-center">
                 <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg p-4 w-fit mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <cert.icon className="w-8 h-8 text-blue-400" />
-                </div>
+                </cert>
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
                   {cert.name}
                 </h3>
@@ -157,12 +151,11 @@ const CompliancePage: React.FC = () => {
                 <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-500/20 text-green-400 border border-green-500/30">
                   <CheckCircle className="w-4 h-4 mr-1" />
                   {cert.status}
-                </span>
-              </div>
+              </span>
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Compliance Features Section */}
       <section className="py-16 px-4 bg-white/5">
@@ -181,8 +174,7 @@ const CompliancePage: React.FC = () => {
               <div key={index} className="flex items-start space-x-4">
                 <div className="bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-lg p-3 flex-shrink-0">
                   <CheckCircle className="w-6 h-6 text-green-400" />
-                </div>
-                <p className="text-gray-300 text-lg">{feature}</p>
+                <p className="text-gray-300 text-lg">{feature}</div>
               </div>
             ))}
           </div>
@@ -206,7 +198,6 @@ const CompliancePage: React.FC = () => {
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
                 <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-lg p-4 w-fit mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Shield className="w-8 h-8 text-purple-400" />
-                </div>
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
                   {framework.name}
                 </h3>
@@ -214,19 +205,18 @@ const CompliancePage: React.FC = () => {
                   {framework.description}
                 </p>
                 <div className="space-y-2">
-                  <h4 className="text-white font-semibold text-sm mb-2">Key Requirements:</h4>
+                  <h4 className="text-white font-semibold text-sm mb-2">Key Requirements:</div>
                   {framework.requirements.map((requirement, reqIndex) => (
                     <div key={reqIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {requirement}
-                    </div>
                   ))}
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
       {/* CTA Section */}
       <section className="py-16 px-4">
@@ -251,9 +241,7 @@ const CompliancePage: React.FC = () => {
       </section>
 
       <Footer />
-    </div>
   );
 };
 
 export default CompliancePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7

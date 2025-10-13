@@ -1,10 +1,8 @@
-<<<<<<< HEAD
+'use client';
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 import { Link } from "react-router-dom";
-=======
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -47,18 +45,15 @@ const CloudServicesPage: React.FC = () => {
     'Faster deployment and time-to-market',
     'Disaster recovery and business continuity'
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
 
-export default function GDataAnalyticsZionTechGroupPage() {
+const GDataAnalyticsZionTechGroupPage = () => {
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
-      </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Cloud Services</h1>
+          <h1 className="text-4xl font-bold text-white mb-6">Cloud Services</div>
           <p className="text-lg text-gray-300 mb-8">
             Professional cloud services services coming soon.
           </p>
@@ -68,19 +63,16 @@ export default function GDataAnalyticsZionTechGroupPage() {
           >
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
       </div>
     </>
   );
 }
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>Cloud Services | Zion Tech Group</title>
         <meta name="description" content="Professional cloud services by Zion Tech Group. Advanced cloud migration, infrastructure, and security solutions for your business." />
         <meta name="keywords" content="cloud services, cloud migration, cloud infrastructure, cloud security, AWS, Azure, GCP, Zion Tech Group" />
-      </Helmet>
+      </meta>
 
       <Navigation />
 
@@ -95,7 +87,7 @@ export default function GDataAnalyticsZionTechGroupPage() {
               Cloud Services
             </span>
             <br />
-            <span className="text-white">That Scale</span>
+            <span className="text-white">That Scale</br>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our comprehensive cloud solutions. From migration to management, 
@@ -105,13 +97,12 @@ export default function GDataAnalyticsZionTechGroupPage() {
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center">
               Get Started
               <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
             <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
               Learn More
             </button>
-          </div>
+          </button>
         </div>
-      </section>
+      </div>
 
       {/* Services Section */}
       <section className="py-16 px-4">
@@ -130,7 +121,7 @@ export default function GDataAnalyticsZionTechGroupPage() {
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-400 transition-all duration-300 group">
                 <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg p-4 w-fit mb-6 group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="w-8 h-8 text-blue-400" />
-                </div>
+                </service>
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
                   {service.title}
                 </h3>
@@ -142,14 +133,13 @@ export default function GDataAnalyticsZionTechGroupPage() {
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {feature}
-                    </li>
                   ))}
-                </ul>
-              </div>
+                </li>
+              </ul>
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-white/5">
@@ -168,8 +158,7 @@ export default function GDataAnalyticsZionTechGroupPage() {
               <div key={index} className="flex items-start space-x-4">
                 <div className="bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-lg p-3 flex-shrink-0">
                   <CheckCircle className="w-6 h-6 text-green-400" />
-                </div>
-                <p className="text-gray-300 text-lg">{benefit}</p>
+                <p className="text-gray-300 text-lg">{benefit}</div>
               </div>
             ))}
           </div>
@@ -199,9 +188,7 @@ export default function GDataAnalyticsZionTechGroupPage() {
       </section>
 
       <Footer />
-    </div>
   );
 };
 
 export default CloudServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7

@@ -148,7 +148,6 @@ const Sidebar: React.FC = () => {
         aria-label="Open sidebar"
       >
         <Menu className="w-6 h-6" />
-      </button>
 
       {/* Sidebar Overlay */}
       {isOpen && (
@@ -168,20 +167,17 @@ const Sidebar: React.FC = () => {
             <Link to="/" className="flex items-center space-x-3" onClick={() => setIsOpen(false)}>
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
                 <Brain className="w-6 h-6 text-white" />
-              </div>
               <div>
-                <h2 className="text-xl font-bold text-white cyber-text">Zion Tech Group</h2>
-                <p className="text-xs text-cyan-400">AI & IT Solutions</p>
-              </div>
-            </Link>
+                <h2 className="text-xl font-bold text-white cyber-text">Zion Tech Group</div>
+                <p className="text-xs text-cyan-400">AI & IT Solutions</div>
+            </div>
             <button
               onClick={() => setIsOpen(false)}
               className="lg:hidden text-gray-400 hover:text-white transition-colors"
               aria-label="Close sidebar"
             >
               <X className="w-6 h-6" />
-            </button>
-          </div>
+          </button>
 
           {/* Navigation */}
           <div className="flex-1 overflow-y-auto py-6">
@@ -198,7 +194,6 @@ const Sidebar: React.FC = () => {
                         <ChevronDown className="w-4 h-4" /> : 
                         <ChevronRight className="w-4 h-4" />
                     )}
-                  </button>
                   {(!section.key || expandedSections.has(section.key)) && (
                     <div className="ml-4 space-y-1">
                       {section.items.map((item, itemIndex) => (
@@ -214,18 +209,16 @@ const Sidebar: React.FC = () => {
                         >
                           <item.icon className="w-4 h-4 flex-shrink-0" />
                           <span>{item.name}</span>
-                        </Link>
                       ))}
                     </div>
                   )}
-                </div>
               ))}
-            </nav>
-          </div>
+            </div>
+          </nav>
 
           {/* Contact Info */}
           <div className="border-t border-slate-700/50 p-6">
-            <h3 className="text-sm font-semibold text-cyan-400 mb-4">Contact Information</h3>
+            <h3 className="text-sm font-semibold text-cyan-400 mb-4">Contact Information</div>
             <div className="space-y-3 text-sm text-gray-300">
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-cyan-400 flex-shrink-0" />
@@ -233,15 +226,15 @@ const Sidebar: React.FC = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                <span className="truncate">{contactInfo.email}</span>
+                <span className="truncate">{contactInfo.email}</Mail>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                <span className="text-xs">{contactInfo.address}</span>
+                <span className="text-xs">{contactInfo.address}</MapPin>
               </div>
               <div className="flex items-center space-x-3">
                 <Clock className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                <span className="text-xs">{contactInfo.hours}</span>
+                <span className="text-xs">{contactInfo.hours}</Clock>
               </div>
             </div>
           </div>

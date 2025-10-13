@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ArrowRight, CheckCircle, Users, Award, TrendingUp, Globe, Zap } from 'lucide-react';
@@ -71,9 +67,7 @@ const CaseStudiesPage: React.FC = () => {
     { label: 'Team Members', value: '50+', icon: Users },
     { label: 'Industry Awards', value: '25+', icon: Award }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
 
-export default function CaseStudies() {
   return (
     <>
       <Helmet>
@@ -82,12 +76,11 @@ export default function CaseStudies() {
           name="description"
           content="Case studies and success stories from Zion Tech Group"
         />
-      </Helmet>
+      </meta>
 
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Case Studies</h1>
+          <h1 className="text-4xl font-bold text-white mb-6">Case Studies</div>
           <p className="text-lg text-gray-300 mb-8">
             Success stories and case studies coming soon.
           </p>
@@ -98,9 +91,6 @@ export default function CaseStudies() {
           >
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
 
@@ -108,14 +98,13 @@ export default function CaseStudies() {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Stories</span>
-            </h1>
+              Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Stories</h1>
+            </div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
               Discover how we've helped businesses across industries transform their operations 
               with cutting-edge AI and IT solutions.
             </p>
-          </div>
-        </section>
+          </section>
 
         {/* Stats Section */}
         <section className="py-16 px-4">
@@ -127,15 +116,14 @@ export default function CaseStudies() {
                   <div key={index} className="text-center">
                     <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-lg p-6 mb-4">
                       <Icon className="w-12 h-12 text-purple-400 mx-auto" />
-                    </div>
-                    <h3 className="text-3xl font-bold text-white mb-2">{stat.value}</h3>
-                    <p className="text-gray-300">{stat.label}</p>
+                    <h3 className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                    <p className="text-gray-300">{stat.label}</div>
                   </div>
                 );
               })}
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
 
         {/* Case Studies Grid */}
         <section className="py-16 px-4">
@@ -161,7 +149,7 @@ export default function CaseStudies() {
                       <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm font-semibold">
                         {study.industry}
                       </span>
-                      <span className="text-gray-400 text-sm">{study.duration}</span>
+                      <span className="text-gray-400 text-sm">{study.duration}</div>
                     </div>
                     
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
@@ -170,27 +158,26 @@ export default function CaseStudies() {
                     
                     <p className="text-gray-300 mb-4 text-sm">
                       <strong>Client:</strong> {study.client}
-                    </p>
-                    
-                    <div className="mb-6">
-                      <h4 className="text-white font-semibold mb-2">Challenge:</h4>
-                      <p className="text-gray-300 text-sm mb-3">{study.challenge}</p>
-                      
-                      <h4 className="text-white font-semibold mb-2">Solution:</h4>
-                      <p className="text-gray-300 text-sm">{study.solution}</p>
                     </div>
                     
                     <div className="mb-6">
-                      <h4 className="text-white font-semibold mb-3">Results:</h4>
+                      <h4 className="text-white font-semibold mb-2">Challenge:</div>
+                      <p className="text-gray-300 text-sm mb-3">{study.challenge}</div>
+                      
+                      <h4 className="text-white font-semibold mb-2">Solution:</section>
+                      <p className="text-gray-300 text-sm">{study.solution}</div>
+                    </div>
+                    
+                    <div className="mb-6">
+                      <h4 className="text-white font-semibold mb-3">Results:</div>
                       <ul className="space-y-2">
                         {study.results.map((result, index) => (
                           <li key={index} className="flex items-center text-sm text-gray-300">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             {result}
-                          </li>
                         ))}
-                      </ul>
-                    </div>
+                      </li>
+                    </ul>
                     
                     <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                       <span>Team: {study.team}</span>
@@ -200,8 +187,7 @@ export default function CaseStudies() {
                     <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group">
                       View Full Case Study
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </button>
-                  </div>
+                  </button>
                 </div>
               ))}
             </div>
@@ -231,8 +217,8 @@ export default function CaseStudies() {
         </section>
 
         <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
-      </div>
     </>
   );
-}
+};
+
+export default CaseStudiesPage;

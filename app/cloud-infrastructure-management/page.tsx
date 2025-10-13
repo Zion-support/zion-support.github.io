@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import Layout from "../layout";
 
-export default function CloudInfrastructureManagement() {
+const CloudInfrastructureManagement = () => {
   const features = [
     {
       icon: <Cloud className="w-6 h-6 text-cyan-400" />,
@@ -121,7 +121,7 @@ export default function CloudInfrastructureManagement() {
                 <h3 className="text-xl font-semibold text-white mb-2 mt-4">
                   {feature.title}
                 </h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <p className="text-gray-300">{feature.description}</div>
               </div>
             ))}
           </div>
@@ -144,10 +144,9 @@ export default function CloudInfrastructureManagement() {
                       >
                         <ArrowRight className="w-4 h-4 text-blue-400 mr-2" />
                         {item}
-                      </li>
                     ))}
-                  </ul>
-                </div>
+                  </li>
+                </ul>
               ))}
             </div>
           </div>
@@ -166,17 +165,16 @@ export default function CloudInfrastructureManagement() {
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 Get Started
-              </Link>
               <Link
                 to="/services"
                 className="border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 View All Services
-              </Link>
             </div>
           </div>
         </div>
       </div>
-    </Layout>
   );
 }
+
+</BarChart3>

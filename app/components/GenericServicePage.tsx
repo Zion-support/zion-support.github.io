@@ -40,7 +40,7 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
           name="keywords"
           content={`${title.toLowerCase()}, AI solutions, IT services, ${category.toLowerCase()}`}
         />
-      </Helmet>
+      </meta>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
@@ -50,9 +50,8 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                 className={`p-4 rounded-full bg-gradient-to-r ${categoryColor} shadow-lg`}
               >
                 <Icon className="w-12 h-12 text-white" />
-              </div>
             </div>
-            <h1 className="text-5xl font-bold text-white mb-6">{title}</h1>
+            <h1 className="text-5xl font-bold text-white mb-6">{title}</div>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               {description}
             </p>
@@ -68,16 +67,14 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               >
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </a>
               <a
                 className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
                 href="tel:+13024640950"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call (302) 464-0950
-              </a>
-            </div>
-          </section>
+            </a>
+          </a>
 
           {/* Features Section */}
           <section className="py-16">
@@ -101,11 +98,10 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                     <h3 className="text-lg font-semibold text-white">
                       {feature}
                     </h3>
-                  </div>
                 </div>
               ))}
             </div>
-          </section>
+          </div>
 
           {/* Benefits Section */}
           <section className="py-16">
@@ -123,7 +119,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                 <div key={index} className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
                     <Star className="w-6 h-6 text-yellow-400" />
-                  </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       {benefit}
@@ -136,7 +131,7 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                 </div>
               ))}
             </div>
-          </section>
+          </div>
 
           {/* Stats Section */}
           <section className="py-16">
@@ -159,14 +154,14 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                     24/7
                   </div>
                   <div className="text-gray-300">Support</div>
-                </div>
+                </section>
                 <div className="text-center">
                   <div className="text-4xl font-bold text-cyan-400 mb-2">
                     10+
                   </div>
                   <div className="text-gray-300">Years Experience</div>
-                </div>
-              </div>
+                </section>
+              </section>
             </div>
           </section>
 
@@ -186,18 +181,16 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               >
                 Get Free Consultation
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </a>
               <a
                 className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
                 href="mailto:kleber@ziontechgroup.com"
               >
                 <Mail className="w-5 h-5 mr-2" />
                 Email Us
-              </a>
-            </div>
-          </section>
-        </main>
-      </div>
+            </a>
+          </a>
+        </div>
+      </section>
     </>
   );
 };

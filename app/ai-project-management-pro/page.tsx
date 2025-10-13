@@ -10,7 +10,7 @@ import {
   BarChart3,
 } from "lucide-react";
 
-export default function AIProjectManagementPro() {
+const AIProjectManagementPro = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
@@ -166,15 +166,15 @@ export default function AIProjectManagementPro() {
           name="description"
           content="Professional AI project management services with intelligent planning, smart scheduling, and comprehensive analytics."
         />
-      </Helmet>
+      </meta>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         {/* Hero Section */}
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-white mb-6">
-              AI Project Management <span className="text-blue-600">Pro</span>
-            </h1>
+              AI Project Management <span className="text-blue-600">Pro</h1>
+            </div>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Professional AI project management services with intelligent
               planning, smart scheduling, and comprehensive analytics for
@@ -186,13 +186,11 @@ export default function AIProjectManagementPro() {
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
               >
                 Get Started
-              </Link>
               <Link
                 to="/contact"
                 className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
               >
                 Learn More
-              </Link>
             </div>
           </div>
 
@@ -207,10 +205,10 @@ export default function AIProjectManagementPro() {
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <p className="text-gray-300">{feature.description}</div>
               </div>
             ))}
-          </div>
+          </BarChart3>
 
           {/* Project Features Section */}
           <div className="mb-16">
@@ -234,10 +232,9 @@ export default function AIProjectManagementPro() {
                       >
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {item}
-                      </li>
                     ))}
-                  </ul>
-                </div>
+                  </li>
+                </ul>
               ))}
             </div>
           </div>
@@ -270,7 +267,7 @@ export default function AIProjectManagementPro() {
                         {plan.period}
                       </span>
                     </div>
-                    <p className="text-gray-300">{plan.description}</p>
+                    <p className="text-gray-300">{plan.description}</div>
                   </div>
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
@@ -280,9 +277,8 @@ export default function AIProjectManagementPro() {
                       >
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
-                      </li>
                     ))}
-                  </ul>
+                  </li>
                   <Link
                     to="/contact"
                     className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
@@ -292,8 +288,7 @@ export default function AIProjectManagementPro() {
                     }`}
                   >
                     Get Started
-                  </Link>
-                </div>
+                </ul>
               ))}
             </div>
           </div>
@@ -316,7 +311,6 @@ export default function AIProjectManagementPro() {
                         key={i}
                       />
                     ))}
-                  </div>
                   <p className="text-gray-300 mb-4 italic">
                     "{testimonial.content}"
                   </p>
@@ -348,13 +342,11 @@ export default function AIProjectManagementPro() {
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
                 Contact Us
-              </Link>
               <Link
                 to="/services"
                 className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
               >
                 View All Services
-              </Link>
             </div>
           </div>
         </div>

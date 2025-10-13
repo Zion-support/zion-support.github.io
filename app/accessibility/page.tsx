@@ -2,15 +2,14 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-export default function AccessibilityZionTechGroup() {
+const AccessibilityZionTechGroup = () => {
   return (
     <>
       <Helmet>
         <title>Accessibility - Zion Tech Group</title>
-      </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Accessibility</h1>
+          <h1 className="text-4xl font-bold text-white mb-6">Accessibility</div>
           <p className="text-lg text-gray-300 mb-8">
             Learn about our commitment to accessibility and inclusive design.
           </p>
@@ -20,8 +19,6 @@ export default function AccessibilityZionTechGroup() {
           >
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
       </div>
     </>
   );

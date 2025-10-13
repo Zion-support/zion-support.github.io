@@ -101,7 +101,7 @@ const AITranslationServicePage = () => {
           name="description"
           content="Professional AI-powered translation services with 100+ language support and enterprise-grade security."
         />
-      </Helmet>
+      </meta>
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -111,7 +111,7 @@ const AITranslationServicePage = () => {
               AI Translation
             </span>
             <br />
-            <span className="text-white">Service</span>
+            <span className="text-white">Service</br>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Break language barriers with our advanced AI translation technology.
@@ -124,16 +124,13 @@ const AITranslationServicePage = () => {
             >
               Get Started
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
             <Link
               to="/contact"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
               Learn More
-            </Link>
-          </div>
         </div>
-      </section>
+      </div>
 
       {/* Features Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -155,7 +152,7 @@ const AITranslationServicePage = () => {
               >
                 <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4 mx-auto">
                   <feature.icon className="h-6 w-6 text-white" />
-                </div>
+                </feature>
                 <h3 className="text-xl font-semibold text-white mb-3 text-center">
                   {feature.title}
                 </h3>
@@ -166,7 +163,7 @@ const AITranslationServicePage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Pricing Section */}
       <section className="py-20 px-4">
@@ -197,9 +194,9 @@ const AITranslationServicePage = () => {
                 </h3>
                 <div className="text-4xl font-bold text-cyan-400 mb-2">
                   {plan.price}
-                  <span className="text-lg text-gray-400">{plan.period}</span>
+                  <span className="text-lg text-gray-400">{plan.period}</div>
                 </div>
-                <p className="text-gray-300 mb-6">{plan.description}</p>
+                <p className="text-gray-300 mb-6">{plan.description}</div>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -208,9 +205,8 @@ const AITranslationServicePage = () => {
                     >
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {feature}
-                    </li>
                   ))}
-                </ul>
+                </li>
                 <Link
                   to="/contact"
                   className={`w-full block text-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
@@ -220,11 +216,10 @@ const AITranslationServicePage = () => {
                   }`}
                 >
                   Get Started
-                </Link>
-              </div>
+              </ul>
             ))}
           </div>
-        </div>
+        </section>
       </section>
 
       {/* Testimonials Section */}
@@ -252,8 +247,7 @@ const AITranslationServicePage = () => {
                       className="w-5 h-5 text-yellow-400 fill-current"
                     />
                   ))}
-                </div>
-                <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
+                <p className="text-gray-300 mb-4">"{testimonial.content}"</div>
                 <div className="font-semibold text-white">
                   {testimonial.name}
                 </div>
@@ -264,7 +258,7 @@ const AITranslationServicePage = () => {
               </div>
             ))}
           </div>
-        </div>
+        </section>
       </section>
 
       {/* CTA Section */}
@@ -282,13 +276,11 @@ const AITranslationServicePage = () => {
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
             >
               Start Your Free Trial
-            </Link>
             <Link
               to="/contact"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
               Schedule Demo
-            </Link>
           </div>
         </div>
       </section>

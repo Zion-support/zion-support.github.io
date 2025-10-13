@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe as GlobeIcon } from "lucide-react";
 
-export default function AboutPage() {
+const AboutPage = () => {
   const stats = [
     { number: "500+", label: "Projects Completed" },
     { number: "100+", label: "Happy Clients" },
@@ -45,12 +45,12 @@ export default function AboutPage() {
           name="keywords"
           content="about Zion Tech Group, AI company, IT solutions, technology consulting, digital transformation, business automation"
         />
-      </Helmet>
+      </meta>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></meta>
         
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
@@ -61,8 +61,8 @@ export default function AboutPage() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
                   {" "}Zion Tech Group
                 </span>
-                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-lg blur opacity-30 animate-pulse"></div>
-              </h1>
+                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-lg blur opacity-30 animate-pulse"></h1>
+              </div>
             </div>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               We are a leading technology company dedicated to transforming
@@ -75,14 +75,11 @@ export default function AboutPage() {
               >
                 Work With Us
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
               <Link
                 to="/services"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
               >
                 Our Services
-              </Link>
-            </div>
           </div>
         </section>
 
@@ -127,37 +124,32 @@ export default function AboutPage() {
                   >
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
               </div>
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us?</h3>
+                <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us?</div>
                 <ul className="space-y-4">
                   <li className="flex items-start space-x-3">
                     <div className="w-6 h-6 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mt-0.5">
-                      <span className="text-white text-xs">✓</span>
-                    </div>
-                    <span className="text-gray-300">Expert team with 10+ years of experience</span>
-                  </li>
+                      <span className="text-white text-xs">✓</div>
+                    </li>
+                    <span className="text-gray-300">Expert team with 10+ years of experience</ul>
+                  </div>
                   <li className="flex items-start space-x-3">
                     <div className="w-6 h-6 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mt-0.5">
-                      <span className="text-white text-xs">✓</span>
-                    </div>
-                    <span className="text-gray-300">Cutting-edge AI and machine learning solutions</span>
-                  </li>
+                      <span className="text-white text-xs">✓</div>
+                    </li>
+                    <span className="text-gray-300">Cutting-edge AI and machine learning solutions</div>
+                  </div>
                   <li className="flex items-start space-x-3">
                     <div className="w-6 h-6 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mt-0.5">
-                      <span className="text-white text-xs">✓</span>
-                    </div>
-                    <span className="text-gray-300">24/7 support and maintenance</span>
-                  </li>
+                      <span className="text-white text-xs">✓</div>
+                    </li>
+                    <span className="text-gray-300">24/7 support and maintenance</section>
                   <li className="flex items-start space-x-3">
                     <div className="w-6 h-6 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mt-0.5">
-                      <span className="text-white text-xs">✓</span>
-                    </div>
-                    <span className="text-gray-300">Proven track record of successful projects</span>
-                  </li>
-                </ul>
+                      <span className="text-white text-xs">✓</div>
+                    </li>
+                    <span className="text-gray-300">Proven track record of successful projects</Users>
               </div>
             </div>
           </div>
@@ -197,7 +189,7 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
-          </div>
+          </section>
         </section>
 
         {/* Contact CTA */}
@@ -216,25 +208,22 @@ export default function AboutPage() {
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Mail className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-white font-semibold mb-2">Email</h3>
-                  <p className="text-cyan-400">kleber@ziontechgroup.com</p>
+                  <h3 className="text-white font-semibold mb-2">Email</div>
+                  <p className="text-cyan-400">kleber@ziontechgroup.com</div>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Smartphone className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-white font-semibold mb-2">Phone</h3>
-                  <p className="text-cyan-400">+1 302 464 0950</p>
+                  <h3 className="text-white font-semibold mb-2">Phone</div>
+                  <p className="text-cyan-400">+1 302 464 0950</div>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <GlobeIcon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-white font-semibold mb-2">Address</h3>
-                  <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                  <h3 className="text-white font-semibold mb-2">Address</div>
+                  <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</div>
                 </div>
-              </div>
+              </section>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -243,14 +232,11 @@ export default function AboutPage() {
                 >
                   Contact Us Today
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
                 <Link
                   to="/consultation"
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
                 >
                   Free Consultation
-                </Link>
-              </div>
             </div>
           </div>
         </section>

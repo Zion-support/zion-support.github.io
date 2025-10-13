@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function Terms() {
+const Terms = () => {
   return (
     <>
       <Helmet>
@@ -11,7 +11,7 @@ export default function Terms() {
           name="description"
           content="Terms of service for Zion Tech Group"
         />
-      </Helmet>
+      </meta>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
         <div className="max-w-4xl mx-auto px-4 text-center">
@@ -28,8 +28,6 @@ export default function Terms() {
           >
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
       </div>
     </>
   );

@@ -68,7 +68,6 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = ({
           ))}
         </div>
       </div>
-    </div>
   );
 };
 

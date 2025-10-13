@@ -77,7 +77,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
-    </Helmet>
+    </meta>
   );
 };
 

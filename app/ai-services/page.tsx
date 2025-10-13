@@ -2,7 +2,7 @@ import { ArrowRight, Zap, Shield, Globe, Database, Code, Smartphone } from "luci
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AiServices() {
+const AiServices = () => {
   const aiServices = [
     {
       title: "AI Analytics",
@@ -60,7 +60,7 @@ export default function AiServices() {
           name="keywords"
           content="AI services, artificial intelligence, machine learning, automation, analytics, content generation, customer service, marketing AI"
         />
-      </Helmet>
+      </meta>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -80,16 +80,13 @@ export default function AiServices() {
               >
                 Get Started
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
               <Link
                 to="/consultation"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 Free Consultation
-              </Link>
-            </div>
           </div>
-        </section>
+        </div>
 
         {/* Services Grid */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -120,7 +117,6 @@ export default function AiServices() {
                   <p className="text-gray-300">
                     {service.description}
                   </p>
-                </Link>
               ))}
             </div>
           </div>
@@ -142,17 +138,14 @@ export default function AiServices() {
               >
                 Start Your AI Journey
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
               <Link
                 to="/case-studies"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 View Case Studies
-              </Link>
-            </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </>
   );
 }

@@ -89,7 +89,7 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
               <p className="text-xl text-cyan-400 mb-4 font-semibold">
                 {subtitle}
               </p>
-              <p className="text-lg text-gray-300 mb-8">{description}</p>
+              <p className="text-lg text-gray-300 mb-8">{description}</div>
             </div>
 
             {/* CTA Buttons */}
@@ -100,21 +100,18 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
               >
                 {primaryCta.text}
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
               <Link
                 to={secondaryCta.href}
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 {secondaryCta.text}
-              </Link>
-            </div>
 
             {/* Benefits */}
             <div className="grid sm:grid-cols-2 gap-4">
               {benefits.slice(0, 4).map((benefit, index) => (
                 <div key={index} className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-sm">{benefit}</span>
+                  <span className="text-sm">{benefit}</CheckCircle>
                 </div>
               ))}
             </div>
@@ -131,10 +128,10 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
                   <div key={index} className="flex items-start space-x-4">
                     <div className="flex-shrink-0">
                       <info.icon className="w-6 h-6 text-cyan-400" />
-                    </div>
+                    </info>
                     <div>
-                      <h4 className="text-white font-medium">{info.title}</h4>
-                      <p className="text-gray-300">{info.details}</p>
+                      <h4 className="text-white font-medium">{info.title}</div>
+                      <p className="text-gray-300">{info.details}</div>
                       <p className="text-gray-400 text-sm">
                         {info.description}
                       </p>
@@ -157,7 +154,6 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
               <div className="text-center">
                 <div className="text-2xl font-bold text-white">24/7</div>
                 <div className="text-gray-400 text-sm">Support</div>
-              </div>
             </div>
           </div>
         </div>

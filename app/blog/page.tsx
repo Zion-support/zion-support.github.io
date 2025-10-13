@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-=======
 'use client';
-
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -103,23 +97,21 @@ const BlogPage: React.FC = () => {
 
     setFilteredPosts(filtered);
   }, [searchTerm, selectedCategory]);
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
 
-export default function Blog() {
+const Blog = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Blog - Zion Tech Group</title>
         <meta
           name="description"
           content="Latest news and insights from Zion Tech Group"
         />
-      </Helmet>
+      </meta>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Blog</h1>
+          <h1 className="text-4xl font-bold text-white mb-6">Blog</div>
           <p className="text-lg text-gray-300 mb-8">
             Latest news and insights coming soon.
           </p>
@@ -130,25 +122,22 @@ export default function Blog() {
           >
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
       </div>
     </>
   );
 }
-=======
         <title>Blog - Zion Tech Group | AI & IT Insights</title>
         <meta name="description" content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and IT solutions from our expert team." />
         <meta name="keywords" content="AI blog, IT insights, technology trends, cloud computing, cybersecurity, software development" />
-      </Helmet>
+      </meta>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Tech <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Insights</span>
-            </h1>
+              Tech <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Insights</h1>
+            </div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Stay ahead with expert insights on AI, cloud computing, cybersecurity, and the latest technology trends.
             </p>
@@ -163,9 +152,8 @@ export default function Blog() {
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
-            </div>
-          </div>
-        </section>
+            </input>
+        </div>
 
         {/* Category Filter */}
         <section className="py-8 px-4">
@@ -192,20 +180,20 @@ export default function Blog() {
         {selectedCategory === 'all' && (
           <section className="py-16 px-4">
             <div className="max-w-7xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured Articles</h2>
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured Articles</div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {blogPosts.filter(post => post.featured).map((post) => (
                   <article key={post.id} className="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:border-purple-400 transition-all duration-300 group">
-                    <div className="aspect-video bg-gradient-to-br from-purple-500 to-blue-500"></div>
+                    <div className="aspect-video bg-gradient-to-br from-purple-500 to-blue-500"></article>
                     <div className="p-8">
                       <div className="flex items-center gap-2 mb-4">
                         <Tag className="w-4 h-4 text-purple-400" />
-                        <span className="text-purple-400 text-sm font-semibold">{post.category}</span>
+                        <span className="text-purple-400 text-sm font-semibold">{post.category}</Tag>
                       </div>
                       <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
                         {post.title}
                       </h3>
-                      <p className="text-gray-300 mb-6">{post.excerpt}</p>
+                      <p className="text-gray-300 mb-6">{post.excerpt}</div>
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-4 text-sm text-gray-400">
                           <div className="flex items-center space-x-1">
@@ -227,29 +215,27 @@ export default function Blog() {
                         >
                           Read More
                           <ArrowRight className="w-4 h-4" />
-                        </Link>
-                      </div>
                     </div>
-                  </article>
+                  </div>
                 ))}
-              </div>
-            </div>
-          </section>
+              </section>
+            </section>
+          </div>
         )}
 
         {/* Blog Posts Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Latest Articles</h2>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Latest Articles</div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredPosts.map((post) => (
                 <article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group">
                   <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg h-48 flex items-center justify-center mb-6">
                     <div className="text-4xl">📝</div>
-                  </div>
+                  </article>
                   <div className="flex items-center space-x-2 mb-4">
                     <Tag className="w-4 h-4 text-cyan-400" />
-                    <span className="text-cyan-400 text-sm font-medium">{post.category}</span>
+                    <span className="text-cyan-400 text-sm font-medium">{post.category}</Tag>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                     {post.title}
@@ -277,16 +263,15 @@ export default function Blog() {
                     >
                       <span>Read</span>
                       <ArrowRight className="w-4 h-4" />
-                    </Link>
                   </div>
-                </article>
+                </div>
               ))}
-            </div>
+            </section>
             
             {filteredPosts.length === 0 && searchTerm && (
               <div className="text-center py-12">
-                <p className="text-gray-400 text-lg">No articles found matching your search criteria.</p>
-              </div>
+                <p className="text-gray-400 text-lg">No articles found matching your search criteria.</div>
+              </meta>
             )}
           </div>
         </section>
@@ -309,13 +294,12 @@ export default function Blog() {
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300">
                 Subscribe
               </button>
-            </div>
+            </input>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </>
   );
 };
 
 export default BlogPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7

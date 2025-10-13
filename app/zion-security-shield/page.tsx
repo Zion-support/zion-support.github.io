@@ -2,7 +2,7 @@ import { ArrowRight, Shield, Lock, Eye, AlertTriangle, CheckCircle, Star, Zap, B
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ZionSecurityShield() {
+const ZionSecurityShield = () => {
   const features = [
     {
       icon: <Shield className="w-6 h-6" />,
@@ -138,7 +138,7 @@ export default function ZionSecurityShield() {
           name="keywords"
           content="cybersecurity, threat detection, security monitoring, AI security, zero trust, compliance, SOC 2, GDPR, security platform"
         />
-      </Helmet>
+      </meta>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
         {/* Hero Section */}
@@ -146,7 +146,7 @@ export default function ZionSecurityShield() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 mb-6">
               <Shield className="w-4 h-4 text-red-400 mr-2" />
-              <span className="text-red-400 text-sm font-medium">Enterprise-Grade Security</span>
+              <span className="text-red-400 text-sm font-medium">Enterprise-Grade Security</Shield>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">
@@ -164,14 +164,11 @@ export default function ZionSecurityShield() {
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
               <Link
                 to="/demo"
                 className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300"
               >
                 Watch Demo
-              </Link>
-            </div>
             
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -182,14 +179,11 @@ export default function ZionSecurityShield() {
               <div className="text-center">
                 <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
                 <div className="text-gray-300">Security Monitoring</div>
-              </div>
+              </section>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-2">5,000+</div>
                 <div className="text-gray-300">Protected Organizations</div>
-              </div>
-            </div>
-          </div>
-        </section>
+              </meta>
 
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -241,7 +235,7 @@ export default function ZionSecurityShield() {
                   className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
                 >
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{feature}</span>
+                  <span className="text-gray-300">{feature}</CheckCircle>
                 </div>
               ))}
             </div>
@@ -277,18 +271,18 @@ export default function ZionSecurityShield() {
                     </div>
                   )}
                   <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-300 mb-4">{plan.description}</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</div>
+                    <p className="text-gray-300 mb-4">{plan.description}</div>
                     <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
-                      <span className="text-gray-300 ml-1">{plan.period}</span>
+                      <span className="text-4xl font-bold text-white">{plan.price}</div>
+                      <span className="text-gray-300 ml-1">{plan.period}</div>
                     </div>
-                  </div>
+                  </section>
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
+                        <span className="text-gray-300">{feature}</CheckCircle>
                       </li>
                     ))}
                   </ul>
@@ -301,11 +295,7 @@ export default function ZionSecurityShield() {
                     }`}
                   >
                     Start Free Trial
-                  </Link>
-                </div>
               ))}
-            </div>
-          </div>
         </section>
 
         {/* Testimonials Section */}
@@ -329,15 +319,14 @@ export default function ZionSecurityShield() {
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
-                  </div>
-                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</div>
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                   </div>
                 </div>
               ))}
-            </div>
+            </section>
           </div>
         </section>
 
@@ -357,17 +346,14 @@ export default function ZionSecurityShield() {
               >
                 Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
               <Link
                 to="/demo"
                 className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300"
               >
                 Schedule Security Demo
-              </Link>
-            </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </>
   );
 }

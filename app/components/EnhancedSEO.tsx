@@ -162,8 +162,8 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
             "query-input": "required name=search_term_string"
           }
         })}
-      </script>
-    </Helmet>
+        </script>
+      </Helmet>
   );
 };
 

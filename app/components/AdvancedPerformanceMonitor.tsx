@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 'use client'
 import { useEffect, useState } from 'react'
-=======
 'use client';
 import React, { useState, useEffect, useCallback } from 'react';
 import { Activity, Zap, AlertTriangle, CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
 
 interface PerformanceMetrics {
   fcp: number | null
@@ -17,9 +14,7 @@ interface PerformanceMetrics {
   loadTime: number | null
 }
 
-<<<<<<< HEAD
 const AdvancedPerformanceMonitor = () => {
-=======
 interface PerformanceRecommendation {
   type: 'warning' | 'error' | 'info';
   message: string;
@@ -27,14 +22,12 @@ interface PerformanceRecommendation {
 }
 
 const AdvancedPerformanceMonitor: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
     fid: null,
     cls: null,
     ttfb: null,
-<<<<<<< HEAD
     memoryUsage: null,
     loadTime: null
   })
@@ -70,11 +63,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
           reportMetric('TTFB', metric.value)
         })
       } catch (error) {
-<<<<<<< HEAD
         console.error('Failed to measure web vitals:', error);
-=======
-        console.warn('Performance monitoring error:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-3db5
       }
     }
 
@@ -119,11 +108,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
 
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
         console.log(`Performance Metric: ${name} = ${value}`);
-=======
-        console.log('Performance metric:', { name, value, timestamp: Date.now() });
->>>>>>> cursor/fix-errors-and-merge-to-main-3db5
       }
     }
 
@@ -226,7 +211,6 @@ const AdvancedPerformanceMonitor: React.FC = () => {
 }
 
 export default AdvancedPerformanceMonitor
-=======
     memory: null
   });
 
@@ -420,7 +404,6 @@ export default AdvancedPerformanceMonitor
         aria-label="Open performance monitor"
       >
         <Zap className="w-6 h-6" />
-      </button>
     );
   }
 
@@ -434,7 +417,6 @@ export default AdvancedPerformanceMonitor
         <h3 className="font-semibold text-sm text-gray-900 dark:text-white flex items-center">
           <Activity className="w-4 h-4 mr-2" />
           Performance Monitor
-        </h3>
         {process.env.NODE_ENV === 'development' && (
           <button
             onClick={() => setIsVisible(false)}
@@ -444,11 +426,11 @@ export default AdvancedPerformanceMonitor
             ×
           </button>
         )}
-      </div>
+      </h3>
       
       <div className="text-xs space-y-2">
         <div className="flex items-center justify-between">
-          <span className="text-gray-600 dark:text-gray-400">FCP:</span>
+          <span className="text-gray-600 dark:text-gray-400">FCP:</div>
           <div className="flex items-center">
             {getScoreIcon(metrics.fcp, { good: 1800, poor: 3000 })}
             <span className={`ml-1 ${getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}`}>
@@ -458,7 +440,7 @@ export default AdvancedPerformanceMonitor
         </div>
         
         <div className="flex items-center justify-between">
-          <span className="text-gray-600 dark:text-gray-400">LCP:</span>
+          <span className="text-gray-600 dark:text-gray-400">LCP:</div>
           <div className="flex items-center">
             {getScoreIcon(metrics.lcp, { good: 2500, poor: 4000 })}
             <span className={`ml-1 ${getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}`}>
@@ -468,7 +450,7 @@ export default AdvancedPerformanceMonitor
         </div>
         
         <div className="flex items-center justify-between">
-          <span className="text-gray-600 dark:text-gray-400">FID:</span>
+          <span className="text-gray-600 dark:text-gray-400">FID:</div>
           <div className="flex items-center">
             {getScoreIcon(metrics.fid, { good: 100, poor: 300 })}
             <span className={`ml-1 ${getScoreColor(metrics.fid, { good: 100, poor: 300 })}`}>
@@ -478,32 +460,29 @@ export default AdvancedPerformanceMonitor
         </div>
         
         <div className="flex items-center justify-between">
-          <span className="text-gray-600 dark:text-gray-400">CLS:</span>
+          <span className="text-gray-600 dark:text-gray-400">CLS:</div>
           <div className="flex items-center">
             {getScoreIcon(metrics.cls, { good: 0.1, poor: 0.25 })}
             <span className={`ml-1 ${getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}`}>
               {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
             </span>
           </div>
-        </div>
+        </button>
         
         <div className="flex items-center justify-between">
-          <span className="text-gray-600 dark:text-gray-400">TTFB:</span>
+          <span className="text-gray-600 dark:text-gray-400">TTFB:</div>
           <div className="flex items-center">
             {getScoreIcon(metrics.ttfb, { good: 600, poor: 1500 })}
             <span className={`ml-1 ${getScoreColor(metrics.ttfb, { good: 600, poor: 1500 })}`}>
               {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
             </span>
           </div>
-        </div>
         
         <div className="flex items-center justify-between">
-          <span className="text-gray-600 dark:text-gray-400">Memory:</span>
+          <span className="text-gray-600 dark:text-gray-400">Memory:</div>
           <span className="text-gray-600 dark:text-gray-400">
             {metrics.memory ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB` : 'N/A'}
           </span>
-        </div>
-      </div>
       
       {recommendations.length > 0 && (
         <div className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-700">
@@ -513,16 +492,13 @@ export default AdvancedPerformanceMonitor
           <ul className="text-xs text-red-600 dark:text-red-400 space-y-1">
             {recommendations.map((rec, index) => (
               <li key={index} className="flex items-start">
-                <span className="mr-1">•</span>
+                <span className="mr-1">•</li>
                 <span>{rec.message}</span>
-              </li>
+              </div>
             ))}
-          </ul>
-        </div>
       )}
     </div>
   );
 };
 
 export default AdvancedPerformanceMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7

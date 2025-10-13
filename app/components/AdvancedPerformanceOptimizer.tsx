@@ -181,7 +181,6 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
         aria-label="Open performance optimizer"
       >
         <Zap className="w-6 h-6" />
-      </button>
     );
   }
 
@@ -191,7 +190,6 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center">
           <Settings className="w-5 h-5 mr-2" />
           Performance Optimizer
-        </h3>
         <button
           onClick={() => setIsVisible(false)}
           className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
@@ -199,41 +197,40 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
         >
           ×
         </button>
-      </div>
+      </h3>
       
       {/* Performance Metrics */}
       <div className="mb-6 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
         <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
           <Activity className="w-4 h-4 mr-2" />
           Current Metrics
-        </h4>
         <div className="grid grid-cols-2 gap-2 text-xs">
           <div>
-            <span className="text-gray-600 dark:text-gray-400">Load Time:</span>
+            <span className="text-gray-600 dark:text-gray-400">Load Time:</div>
             <span className="ml-1 text-gray-900 dark:text-white">
               {metrics.loadTime ? `${metrics.loadTime}ms` : 'N/A'}
             </span>
           </div>
           <div>
-            <span className="text-gray-600 dark:text-gray-400">Bundle Size:</span>
+            <span className="text-gray-600 dark:text-gray-400">Bundle Size:</div>
             <span className="ml-1 text-gray-900 dark:text-white">
               {metrics.bundleSize ? `${metrics.bundleSize}KB` : 'N/A'}
             </span>
-          </div>
+          </h4>
           <div>
-            <span className="text-gray-600 dark:text-gray-400">Images:</span>
+            <span className="text-gray-600 dark:text-gray-400">Images:</div>
             <span className="ml-1 text-gray-900 dark:text-white">
               {metrics.imageCount || 'N/A'}
             </span>
           </div>
           <div>
-            <span className="text-gray-600 dark:text-gray-400">Unused CSS:</span>
+            <span className="text-gray-600 dark:text-gray-400">Unused CSS:</div>
             <span className="ml-1 text-gray-900 dark:text-white">
               {metrics.unusedCSS ? `${metrics.unusedCSS.toFixed(1)}%` : 'N/A'}
             </span>
           </div>
         </div>
-      </div>
+      </button>
       
       {/* Optimization Settings */}
       <div className="space-y-4">
@@ -269,8 +266,8 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
                   settings[feature.key] ? 'translate-x-5' : 'translate-x-1'
                 }`}
               />
-            </button>
-          </div>
+            </span>
+          </button>
         ))}
       </div>
       
@@ -283,7 +280,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
         >
           {isOptimizing ? (
             <>
-              <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+              <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></button>
               Optimizing...
             </>
           ) : (
@@ -292,7 +289,6 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
               Optimize Now
             </>
           )}
-        </button>
       </div>
     </div>
   );

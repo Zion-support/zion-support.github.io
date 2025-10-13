@@ -51,31 +51,30 @@ const CookieConsent: React.FC = () => {
                   </h4>
                   <div className="space-y-3">
                     <label className="flex items-center justify-between">
-                      <span className="text-gray-300">Essential Cookies</span>
+                      <span className="text-gray-300">Essential Cookies</label>
                       <input
                         type="checkbox"
                         defaultChecked
                         disabled
                         className="rounded"
                       />
-                    </label>
+                    </input>
                     <label className="flex items-center justify-between">
-                      <span className="text-gray-300">Analytics Cookies</span>
+                      <span className="text-gray-300">Analytics Cookies</label>
                       <input
                         type="checkbox"
                         defaultChecked
                         className="rounded"
                       />
-                    </label>
+                    </input>
                     <label className="flex items-center justify-between">
-                      <span className="text-gray-300">Marketing Cookies</span>
+                      <span className="text-gray-300">Marketing Cookies</label>
                       <input type="checkbox" className="rounded" />
-                    </label>
+                    </input>
                   </div>
                 </div>
               )}
             </div>
-          </div>
 
           <div className="flex flex-col sm:flex-row gap-2 ml-4">
             <button
@@ -84,7 +83,6 @@ const CookieConsent: React.FC = () => {
             >
               <Settings className="w-4 h-4 mr-2" />
               Settings
-            </button>
             <button
               onClick={handleReject}
               className="px-4 py-2 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-800 transition-colors"
@@ -97,7 +95,7 @@ const CookieConsent: React.FC = () => {
             >
               Accept All
             </button>
-          </div>
+          </button>
         </div>
       </div>
     </div>

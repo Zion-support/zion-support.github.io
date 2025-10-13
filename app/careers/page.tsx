@@ -1,9 +1,7 @@
-<<<<<<< HEAD
+'use client';
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-=======
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -101,20 +99,18 @@ const CareersPage: React.FC = () => {
     'Team building events and company retreats',
     'Mentorship and career growth opportunities'
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
 
-export default function Careers() {
+const Careers = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Careers - Zion Tech Group</title>
         <meta name="description" content="Join our team at Zion Tech Group" />
-      </Helmet>
+      </meta>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Careers</h1>
+          <h1 className="text-4xl font-bold text-white mb-6">Careers</div>
           <p className="text-lg text-gray-300 mb-8">
             Join our team and build the future with us.
           </p>
@@ -125,13 +121,10 @@ export default function Careers() {
           >
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-=======
         <title>Careers | Zion Tech Group</title>
         <meta name="description" content="Join our team of innovators at Zion Tech Group. Explore career opportunities in AI, cloud computing, and IT solutions." />
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, software developer, tech jobs" />
-      </Helmet>
+      </meta>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <Navigation />
@@ -143,8 +136,8 @@ export default function Careers() {
           
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Join Our <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Team</span>
-            </h1>
+              Join Our <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Team</h1>
+            </div>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Be part of a team that's shaping the future of AI and IT solutions. 
               Work on challenging projects and make a real impact.
@@ -153,13 +146,12 @@ export default function Careers() {
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center">
                 View Open Positions
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
               <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn About Us
               </button>
-            </div>
+            </button>
           </div>
-        </section>
+        </div>
 
         {/* Values Section */}
         <section className="py-16 px-4">
@@ -178,14 +170,14 @@ export default function Careers() {
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <value.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
-                  <p className="text-gray-300">{value.description}</p>
+                  </value>
+                  <h3 className="text-xl font-bold text-white mb-3">{value.title}</div>
+                  <p className="text-gray-300">{value.description}</div>
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
 
         {/* Open Positions Section */}
         <section className="py-16 px-4 bg-white/5">
@@ -206,7 +198,7 @@ export default function Careers() {
                     <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm font-semibold">
                       {position.department}
                     </span>
-                    <span className="text-gray-400 text-sm">{position.type}</span>
+                    <span className="text-gray-400 text-sm">{position.type}</div>
                   </div>
 
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
@@ -235,8 +227,7 @@ export default function Careers() {
                   <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group">
                     Apply Now
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </button>
-                </div>
+                </button>
               ))}
             </div>
           </div>
@@ -258,7 +249,7 @@ export default function Careers() {
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
+                  <span className="text-gray-300 text-lg">{benefit}</CheckCircle>
                 </div>
               ))}
             </div>
@@ -288,8 +279,6 @@ export default function Careers() {
         </section>
 
         <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
-      </div>
     </>
   );
 }

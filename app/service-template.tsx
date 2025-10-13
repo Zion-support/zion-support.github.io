@@ -22,7 +22,7 @@ const ServiceTemplate: React.FC<ServiceTemplateProps> = ({
       <Helmet>
         <title>{title} | Zion Tech Group</title>
         <meta name="description" content={description} />
-      </Helmet>
+      </meta>
 
       <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -41,14 +41,11 @@ const ServiceTemplate: React.FC<ServiceTemplateProps> = ({
             >
               Get Started
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
             <Link
               to="/contact"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
               Learn More
-            </Link>
-          </div>
         </div>
       </div>
 
@@ -63,7 +60,7 @@ const ServiceTemplate: React.FC<ServiceTemplateProps> = ({
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <p className="text-gray-300">{feature.description}</div>
               </div>
             ))}
           </div>

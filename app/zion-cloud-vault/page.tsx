@@ -2,7 +2,7 @@ import { ArrowRight, Cloud, Lock, Shield, Zap, Globe, CheckCircle, Star, Databas
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ZionCloudVault() {
+const ZionCloudVault = () => {
   const features = [
     {
       icon: <Cloud className="w-6 h-6" />,
@@ -137,7 +137,7 @@ export default function ZionCloudVault() {
           name="keywords"
           content="cloud storage, secure file sharing, data encryption, cloud backup, file synchronization, enterprise storage, data security"
         />
-      </Helmet>
+      </meta>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         {/* Hero Section */}
@@ -145,7 +145,7 @@ export default function ZionCloudVault() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
               <Cloud className="w-4 h-4 text-blue-400 mr-2" />
-              <span className="text-blue-400 text-sm font-medium">Enterprise Cloud Storage</span>
+              <span className="text-blue-400 text-sm font-medium">Enterprise Cloud Storage</Cloud>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
@@ -163,14 +163,11 @@ export default function ZionCloudVault() {
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
               <Link
                 to="/demo"
                 className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
               >
                 Watch Demo
-              </Link>
-            </div>
             
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -181,14 +178,11 @@ export default function ZionCloudVault() {
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400 mb-2">AES-256</div>
                 <div className="text-gray-300">Encryption Standard</div>
-              </div>
+              </section>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-2">50,000+</div>
                 <div className="text-gray-300">Businesses Trust Us</div>
-              </div>
-            </div>
-          </div>
-        </section>
+              </meta>
 
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -240,7 +234,7 @@ export default function ZionCloudVault() {
                   className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
                 >
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{feature}</span>
+                  <span className="text-gray-300">{feature}</CheckCircle>
                 </div>
               ))}
             </div>
@@ -276,18 +270,18 @@ export default function ZionCloudVault() {
                     </div>
                   )}
                   <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-300 mb-4">{plan.description}</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</div>
+                    <p className="text-gray-300 mb-4">{plan.description}</div>
                     <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
-                      <span className="text-gray-300 ml-1">{plan.period}</span>
+                      <span className="text-4xl font-bold text-white">{plan.price}</div>
+                      <span className="text-gray-300 ml-1">{plan.period}</div>
                     </div>
-                  </div>
+                  </section>
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
+                        <span className="text-gray-300">{feature}</CheckCircle>
                       </li>
                     ))}
                   </ul>
@@ -300,11 +294,7 @@ export default function ZionCloudVault() {
                     }`}
                   >
                     Start Free Trial
-                  </Link>
-                </div>
               ))}
-            </div>
-          </div>
         </section>
 
         {/* Testimonials Section */}
@@ -328,15 +318,14 @@ export default function ZionCloudVault() {
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
-                  </div>
-                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</div>
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                   </div>
                 </div>
               ))}
-            </div>
+            </section>
           </div>
         </section>
 
@@ -356,17 +345,14 @@ export default function ZionCloudVault() {
               >
                 Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
               <Link
                 to="/demo"
                 className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
               >
                 Schedule Demo
-              </Link>
-            </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </>
   );
 }

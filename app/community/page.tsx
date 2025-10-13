@@ -1,18 +1,17 @@
-<<<<<<< HEAD
+'use client';
 import { ArrowRight } from "lucide-react";
 
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function CommunityZionTechGroup() {
+const CommunityZionTechGroup = () => {
   return (
     <>
       <Helmet>
         <title>Community - Zion Tech Group</title>
-      </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Community</h1>
+          <h1 className="text-4xl font-bold text-white mb-6">Community</div>
           <p className="text-lg text-gray-300 mb-8">
             Professional community services coming soon.
           </p>
@@ -22,14 +21,10 @@ export default function CommunityZionTechGroup() {
           >
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
       </div>
     </>
   );
 }
-=======
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -88,7 +83,7 @@ const CommunityPage: React.FC = () => {
         <title>Community | Zion Tech Group</title>
         <meta name="description" content="Join the Zion Tech community. Connect with industry experts, attend events, and grow your network in AI and IT." />
         <meta name="keywords" content="tech community, AI community, IT networking, tech events, professional development" />
-      </Helmet>
+      </meta>
 
       <Navigation />
 
@@ -99,8 +94,8 @@ const CommunityPage: React.FC = () => {
         
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Join Our <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Community</span>
-          </h1>
+            Join Our <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Community</h1>
+          </div>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Connect with like-minded professionals, learn from industry experts, and grow your network 
             in the world of AI and IT solutions.
@@ -109,13 +104,12 @@ const CommunityPage: React.FC = () => {
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
               Join Now
               <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
             <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
               View Events
             </button>
-          </div>
+          </button>
         </div>
-      </section>
+      </div>
 
       {/* Stats Section */}
       <section className="py-16 px-4">
@@ -124,34 +118,29 @@ const CommunityPage: React.FC = () => {
             <div className="text-center">
               <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-lg p-6 mb-4">
                 <Users className="w-12 h-12 text-purple-400 mx-auto" />
-              </div>
-              <h3 className="text-3xl font-bold text-white mb-2">10,000+</h3>
-              <p className="text-gray-300">Active Members</p>
+              <h3 className="text-3xl font-bold text-white mb-2">10,000+</div>
+              <p className="text-gray-300">Active Members</div>
             </div>
             <div className="text-center">
               <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg p-6 mb-4">
                 <Calendar className="w-12 h-12 text-blue-400 mx-auto" />
-              </div>
-              <h3 className="text-3xl font-bold text-white mb-2">50+</h3>
-              <p className="text-gray-300">Events Annually</p>
+              <h3 className="text-3xl font-bold text-white mb-2">50+</div>
+              <p className="text-gray-300">Events Annually</div>
             </div>
             <div className="text-center">
               <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-lg p-6 mb-4">
                 <Award className="w-12 h-12 text-green-400 mx-auto" />
-              </div>
-              <h3 className="text-3xl font-bold text-white mb-2">95%</h3>
-              <p className="text-gray-300">Satisfaction Rate</p>
-            </div>
+              <h3 className="text-3xl font-bold text-white mb-2">95%</div>
+              <p className="text-gray-300">Satisfaction Rate</div>
+            </section>
             <div className="text-center">
               <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-lg p-6 mb-4">
                 <Globe className="w-12 h-12 text-orange-400 mx-auto" />
-              </div>
-              <h3 className="text-3xl font-bold text-white mb-2">25+</h3>
-              <p className="text-gray-300">Countries</p>
+              <h3 className="text-3xl font-bold text-white mb-2">25+</div>
+              <p className="text-gray-300">Countries</div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
+      </meta>
 
       {/* Events Section */}
       <section className="py-16 px-4 bg-white/5">
@@ -171,18 +160,17 @@ const CommunityPage: React.FC = () => {
                 <div className="flex items-center justify-between mb-4">
                   <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-lg p-3">
                     <Calendar className="w-6 h-6 text-purple-400" />
-                  </div>
-                  <span className="text-sm text-gray-400">{event.attendees} attendees</span>
+                  <span className="text-sm text-gray-400">{event.attendees} attendees</div>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                   {event.title}
                 </h3>
-                <p className="text-gray-300 mb-4">{event.description}</p>
+                <p className="text-gray-300 mb-4">{event.description}</div>
                 <div className="flex items-center justify-between text-sm text-gray-400">
                   <span>{event.date}</span>
                   <span>{event.location}</span>
                 </div>
-              </div>
+              </section>
             ))}
           </div>
         </div>
@@ -207,21 +195,19 @@ const CommunityPage: React.FC = () => {
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
-                </div>
-                <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
+                <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</div>
                 <div className="flex items-center">
                   <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-full p-3 mr-4">
                     <Heart className="w-6 h-6 text-purple-400" />
-                  </div>
                   <div>
-                    <h4 className="text-white font-semibold">{testimonial.name}</h4>
-                    <p className="text-gray-400 text-sm">{testimonial.role}</p>
+                    <h4 className="text-white font-semibold">{testimonial.name}</div>
+                    <p className="text-gray-400 text-sm">{testimonial.role}</div>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-        </div>
+        </section>
       </section>
 
       {/* CTA Section */}
@@ -247,9 +233,7 @@ const CommunityPage: React.FC = () => {
       </section>
 
       <Footer />
-    </div>
   );
 };
 
 export default CommunityPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7

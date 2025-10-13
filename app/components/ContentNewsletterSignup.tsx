@@ -22,11 +22,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
       setIsSubscribed(true);
       setEmail("");
     } catch (error) {
-<<<<<<< HEAD
       console.error('Failed to subscribe to newsletter:', error);
-=======
-      console.error('Newsletter signup error:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-3db5
     } finally {
       setIsLoading(false);
     }
@@ -52,7 +48,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
     >
       <div className="text-center mb-6">
         <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-        <h3 className="text-2xl font-bold text-white mb-2">Stay Updated</h3>
+        <h3 className="text-2xl font-bold text-white mb-2">Stay Updated</Mail>
         <p className="text-gray-300">
           Get the latest AI and tech insights delivered to your inbox.
         </p>
@@ -68,7 +64,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
             required
             className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
-        </div>
+        </input>
 
         <button
           type="submit"
@@ -77,12 +73,12 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
         >
           {isLoading ? "Subscribing..." : "Subscribe Now"}
         </button>
-      </form>
+      </div>
 
       <p className="text-xs text-gray-400 text-center mt-4">
         We respect your privacy. Unsubscribe at any time.
       </p>
-    </div>
+    </form>
   );
 };
 

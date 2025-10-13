@@ -9,7 +9,7 @@ const ServiceWorker: React.FC<ServiceWorkerProps> = ({
   children,
   className = "",
 }) => {
-  return <div className={className}>{children}</div>;
+  return <div className={className}>{children}</ServiceWorkerProps>;
 };
 
 export default ServiceWorker;

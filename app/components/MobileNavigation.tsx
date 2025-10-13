@@ -23,7 +23,6 @@ const MobileNavigation: React.FC = () => {
         aria-expanded={isOpen}
       >
         {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-      </button>
 
       {/* Mobile menu overlay */}
       {isOpen && (
@@ -48,8 +47,7 @@ const MobileNavigation: React.FC = () => {
                   aria-label="Close menu"
                 >
                   <X className="w-6 h-6" />
-                </button>
-              </div>
+              </button>
 
               {/* Navigation links */}
               <nav className="space-y-4 mb-8">
@@ -58,27 +56,24 @@ const MobileNavigation: React.FC = () => {
                   onClick={closeMenu}
                   className="flex items-center justify-between p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-all duration-300 group"
                 >
-                  <span className="font-medium">About Us</span>
+                  <span className="font-medium">About Us</Link>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
                 
                 <Link
                   to="/services"
                   onClick={closeMenu}
                   className="flex items-center justify-between p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-all duration-300 group"
                 >
-                  <span className="font-medium">Our Services</span>
+                  <span className="font-medium">Our Services</Link>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
                 
                 <Link
                   to="/contact"
                   onClick={closeMenu}
                   className="flex items-center justify-between p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-all duration-300 group"
                 >
-                  <span className="font-medium">Contact</span>
+                  <span className="font-medium">Contact</Link>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
               </nav>
 
               {/* Quick services */}
@@ -93,21 +88,18 @@ const MobileNavigation: React.FC = () => {
                     className="block p-2 rounded-lg text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/5 transition-colors duration-300"
                   >
                     AI Business Intelligence
-                  </Link>
                   <Link
                     to="/ai-customer-support"
                     onClick={closeMenu}
                     className="block p-2 rounded-lg text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/5 transition-colors duration-300"
                   >
                     AI Customer Support
-                  </Link>
                   <Link
                     to="/ai-cybersecurity"
                     onClick={closeMenu}
                     className="block p-2 rounded-lg text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/5 transition-colors duration-300"
                   >
                     AI Cybersecurity
-                  </Link>
                 </div>
               </div>
 
@@ -119,8 +111,6 @@ const MobileNavigation: React.FC = () => {
               >
                 Get Started Today
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
           </div>
         </div>
       )}

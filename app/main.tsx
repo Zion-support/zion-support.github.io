@@ -14,7 +14,5 @@ root.render(
     <HelmetProvider>
       <BrowserRouter>
         <App />
-      </BrowserRouter>
-    </HelmetProvider>
   </React.StrictMode>,
 );

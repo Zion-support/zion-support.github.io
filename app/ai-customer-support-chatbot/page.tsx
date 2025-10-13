@@ -3,7 +3,7 @@ import { Brain, Clock, Target, BarChart3 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AICustomerSupportChatbot() {
+const AICustomerSupportChatbot = () => {
   const chatbotFeatures = [
     {
       category: "Core Features",
@@ -114,7 +114,7 @@ export default function AICustomerSupportChatbot() {
           name="description"
           content="Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs."
         />
-      </Helmet>
+      </meta>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         {/* Hero Section */}
@@ -133,13 +133,11 @@ export default function AICustomerSupportChatbot() {
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
               >
                 Get Started
-              </Link>
               <Link
                 to="/contact"
                 className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
               >
                 Learn More
-              </Link>
             </div>
           </div>
 
@@ -154,7 +152,7 @@ export default function AICustomerSupportChatbot() {
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <p className="text-gray-300">{feature.description}</div>
               </div>
             ))}
           </div>
@@ -179,15 +177,15 @@ export default function AICustomerSupportChatbot() {
                         key={itemIndex}
                         className="text-gray-300 flex items-center"
                       >
-                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
+                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></li>
                         {item}
-                      </li>
+                      </ul>
                     ))}
-                  </ul>
+                  </div>
                 </div>
               ))}
             </div>
-          </div>
+          </BarChart3>
 
           {/* Pricing Section */}
           <div className="mb-16">
@@ -210,12 +208,12 @@ export default function AICustomerSupportChatbot() {
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {plan.name}
                   </h3>
-                  <p className="text-gray-300 mb-6">{plan.description}</p>
+                  <p className="text-gray-300 mb-6">{plan.description}</div>
                   <div className="mb-6">
                     <span className="text-4xl font-bold text-white">
                       {plan.price}
                     </span>
-                    <span className="text-gray-400">{plan.period}</span>
+                    <span className="text-gray-400">{plan.period}</div>
                   </div>
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
@@ -223,11 +221,11 @@ export default function AICustomerSupportChatbot() {
                         key={featureIndex}
                         className="text-gray-300 flex items-center"
                       >
-                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
+                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></li>
                         {feature}
-                      </li>
+                      </ul>
                     ))}
-                  </ul>
+                  </div>
                   <Link
                     to="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors ${
@@ -237,11 +235,7 @@ export default function AICustomerSupportChatbot() {
                     }`}
                   >
                     Get Started
-                  </Link>
-                </div>
               ))}
-            </div>
-          </div>
 
           {/* Testimonials Section */}
           <div className="mb-16">
@@ -261,7 +255,7 @@ export default function AICustomerSupportChatbot() {
                       </span>
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
+                  <p className="text-gray-300 mb-4">"{testimonial.content}"</div>
                   <div>
                     <p className="font-semibold text-white">
                       {testimonial.name}
@@ -290,13 +284,11 @@ export default function AICustomerSupportChatbot() {
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
                 Contact Us
-              </Link>
               <Link
                 to="/services"
                 className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
               >
                 View All Services
-              </Link>
             </div>
           </div>
         </div>

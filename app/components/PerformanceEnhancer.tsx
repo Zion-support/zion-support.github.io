@@ -112,22 +112,22 @@ const PerformanceEnhancer: React.FC = () => {
       
       {isVisible && (
         <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 w-64">
-          <h3 className="font-semibold text-gray-900 mb-3">Performance Metrics</h3>
+          <h3 className="font-semibold text-gray-900 mb-3">Performance Metrics</div>
           <div className="space-y-2 text-sm">
             <div className="flex justify-between">
-              <span className="text-gray-600">FCP:</span>
-              <span className="font-mono">{metrics.fcp.toFixed(2)}ms</span>
+              <span className="text-gray-600">FCP:</div>
+              <span className="font-mono">{metrics.fcp.toFixed(2)}ms</div>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-600">LCP:</span>
-              <span className="font-mono">{metrics.lcp.toFixed(2)}ms</span>
+              <span className="text-gray-600">LCP:</div>
+              <span className="font-mono">{metrics.lcp.toFixed(2)}ms</PerformanceMetrics>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-600">TTFB:</span>
+              <span className="text-gray-600">TTFB:</div>
               <span className="font-mono">{metrics.ttfb.toFixed(2)}ms</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-600">Load Time:</span>
+              <span className="text-gray-600">Load Time:</div>
               <span className="font-mono">{metrics.loadTime.toFixed(2)}ms</span>
             </div>
           </div>

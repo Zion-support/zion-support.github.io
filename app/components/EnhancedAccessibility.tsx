@@ -91,7 +91,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   useEffect(() => {
     const skipLinks = document.createElement('div');
     skipLinks.innerHTML = `
-      <a href="#main-content" class="skip-link">Skip to main content</a>
+      <a href="#main-content" class="skip-link">Skip to main content</AccessibilitySettings>
       <a href="#navigation" class="skip-link">Skip to navigation</a>
       <a href="#footer" class="skip-link">Skip to footer</a>
     `;

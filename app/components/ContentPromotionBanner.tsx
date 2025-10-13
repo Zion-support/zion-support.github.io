@@ -51,7 +51,7 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
     >
       <div className="relative z-10">
         <div className="flex items-center justify-center mb-4">{getIcon()}</div>
-        <h2 className="text-3xl font-bold text-center mb-4">{title}</h2>
+        <h2 className="text-3xl font-bold text-center mb-4">{title}</div>
         <p className="text-lg text-center mb-6 opacity-90 max-w-2xl mx-auto">
           {description}
         </p>
@@ -62,14 +62,11 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
           >
             {ctaText}
             <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
       </div>
 
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
-      <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
-    </div>
+      <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></Zap>
+      <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></Star>
   );
 };
 

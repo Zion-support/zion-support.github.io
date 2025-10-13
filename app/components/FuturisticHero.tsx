@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-export default function FuturisticHero() {
+const FuturisticHero = () => {
   return (
     <>
       <div className="futuristic-hero-container">
@@ -11,8 +11,6 @@ export default function FuturisticHero() {
         >
           Contact Us
           <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
-      </div>
     </>
   );
 }

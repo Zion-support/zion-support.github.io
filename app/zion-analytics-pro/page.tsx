@@ -2,7 +2,7 @@ import { ArrowRight, BarChart3, TrendingUp, Shield, Zap, Globe, CheckCircle, Sta
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ZionAnalyticsPro() {
+const ZionAnalyticsPro = () => {
   const features = [
     {
       icon: <BarChart3 className="w-6 h-6" />,
@@ -122,7 +122,7 @@ export default function ZionAnalyticsPro() {
           name="keywords"
           content="business analytics, data visualization, predictive analytics, business intelligence, AI insights, real-time dashboard"
         />
-      </Helmet>
+      </meta>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -130,7 +130,7 @@ export default function ZionAnalyticsPro() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Star className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">#1 Analytics Platform 2024</span>
+              <span className="text-cyan-400 text-sm font-medium">#1 Analytics Platform 2024</Star>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
@@ -148,14 +148,11 @@ export default function ZionAnalyticsPro() {
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
               <Link
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 Watch Demo
-              </Link>
-            </div>
             
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -166,14 +163,11 @@ export default function ZionAnalyticsPro() {
               <div className="text-center">
                 <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
                 <div className="text-gray-300">Uptime SLA</div>
-              </div>
+              </section>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-2">50+</div>
                 <div className="text-gray-300">Data Sources</div>
-              </div>
-            </div>
-          </div>
-        </section>
+              </meta>
 
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -236,18 +230,18 @@ export default function ZionAnalyticsPro() {
                     </div>
                   )}
                   <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-300 mb-4">{plan.description}</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</div>
+                    <p className="text-gray-300 mb-4">{plan.description}</div>
                     <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
-                      <span className="text-gray-300 ml-1">{plan.period}</span>
+                      <span className="text-4xl font-bold text-white">{plan.price}</div>
+                      <span className="text-gray-300 ml-1">{plan.period}</div>
                     </div>
-                  </div>
+                  </section>
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
+                        <span className="text-gray-300">{feature}</CheckCircle>
                       </li>
                     ))}
                   </ul>
@@ -260,11 +254,8 @@ export default function ZionAnalyticsPro() {
                     }`}
                   >
                     Start Free Trial
-                  </Link>
-                </div>
               ))}
-            </div>
-          </div>
+          </BarChart3>
         </section>
 
         {/* Testimonials Section */}
@@ -288,15 +279,14 @@ export default function ZionAnalyticsPro() {
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
-                  </div>
-                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</div>
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                   </div>
                 </div>
               ))}
-            </div>
+            </section>
           </div>
         </section>
 
@@ -316,17 +306,14 @@ export default function ZionAnalyticsPro() {
               >
                 Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
               <Link
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 Schedule Demo
-              </Link>
-            </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </>
   );
 }

@@ -104,12 +104,6 @@ function App() {
                 element={<FiveGSmartCitySolutionsPage />}
               />
               <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-            </Routes>
-            </Suspense>
-          </AccessibilityEnhancer>
-        </ErrorBoundary>
-      </BrowserRouter>
-    </HelmetProvider>
   );
 }
 

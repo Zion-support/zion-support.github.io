@@ -123,7 +123,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
       <>
         <Helmet>
           <title>Loading - Zion Tech Group</title>
-        </Helmet>
+        </div>
         <div className={`${containerClasses} ${className}`}>
           {renderSpinner()}
           {text && (
@@ -139,8 +139,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
           >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
       </>
     );
   },

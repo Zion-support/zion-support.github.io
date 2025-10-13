@@ -34,9 +34,7 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({
         >
           <RefreshCw className="w-4 h-4 mr-2" />
           Try Again
-        </button>
-      </div>
-    </div>
+      </button>
   );
 };
 

@@ -6,7 +6,7 @@ interface SkipLinkProps {
 }
 
 const SkipLink: React.FC<SkipLinkProps> = ({ children, className = "" }) => {
-  return <div className={className}>{children}</div>;
+  return <div className={className}>{children}</SkipLinkProps>;
 };
 
 export default SkipLink;

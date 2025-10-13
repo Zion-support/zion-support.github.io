@@ -46,7 +46,7 @@ const defaultSlides: Slide[] = [
   },
 ];
 
-export default function ContentCarousel({
+const ContentCarousel = () => {
   slides = defaultSlides,
   autoPlay = true,
   interval = 5000,
@@ -92,18 +92,18 @@ export default function ContentCarousel({
                     <h3 className="text-2xl font-bold text-white mb-4">
                       {slide.title}
                     </h3>
-                    <p className="text-gray-300 mb-6">{slide.description}</p>
+                    <p className="text-gray-300 mb-6">{slide.description}</div>
                     <ul className="space-y-2">
                       {slide.features.map((feature, index) => (
                         <li
                           key={index}
                           className="flex items-center text-gray-300"
                         >
-                          <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
+                          <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></li>
                           {feature}
-                        </li>
+                        </ul>
                       ))}
-                    </ul>
+                    </div>
                   </div>
                   <div className="flex justify-center">
                     <img
@@ -111,7 +111,7 @@ export default function ContentCarousel({
                       alt={slide.title}
                       className="w-full max-w-md h-64 object-cover rounded-lg"
                     />
-                  </div>
+                  </img>
                 </div>
               </div>
             </div>
@@ -126,7 +126,6 @@ export default function ContentCarousel({
         aria-label="Previous slide"
       >
         <ChevronLeft className="w-6 h-6" />
-      </button>
 
       <button
         onClick={goToNext}
@@ -134,7 +133,6 @@ export default function ContentCarousel({
         aria-label="Next slide"
       >
         <ChevronRight className="w-6 h-6" />
-      </button>
 
       {/* Dots Indicator */}
       <div className="flex justify-center mt-6 space-x-2">
@@ -148,7 +146,7 @@ export default function ContentCarousel({
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
-      </div>
+      </button>
     </div>
   );
 }

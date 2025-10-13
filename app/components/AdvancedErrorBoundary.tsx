@@ -62,13 +62,10 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       url: window.location.href,
     };
 
-<<<<<<< HEAD
     // Log the error data for debugging
     console.error('Error data:', errorData);
-=======
     // Log to console for now (can be replaced with external service)
     console.error('Production error:', errorData);
->>>>>>> cursor/fix-errors-and-merge-to-main-3db5
 
     // Example: Send to your error reporting service
     // You could send this to your backend:
@@ -111,7 +108,6 @@ class AdvancedErrorBoundary extends Component<Props, State> {
           <div className="max-w-2xl w-full bg-white rounded-lg shadow-lg p-8 text-center">
             <div className="flex justify-center mb-6">
               <AlertTriangle className="h-20 w-20 text-red-500" />
-            </div>
             
             <h1 className="text-3xl font-bold text-gray-900 mb-4">
               Oops! Something went wrong
@@ -125,7 +121,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
               <div className="bg-gray-100 p-4 rounded-lg mb-6">
                 <p className="text-sm text-gray-600">
                   <strong>Error ID:</strong> {this.state.errorId}
-                </p>
+                </div>
                 <p className="text-xs text-gray-500 mt-1">
                   Please include this ID when contacting support
                 </p>
@@ -147,10 +143,10 @@ class AdvancedErrorBoundary extends Component<Props, State> {
                       <pre className="whitespace-pre-wrap mt-1">
                         {this.state.errorInfo.componentStack}
                       </pre>
-                    </div>
+                    </details>
                   )}
                 </div>
-              </details>
+              </div>
             )}
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -160,7 +156,6 @@ class AdvancedErrorBoundary extends Component<Props, State> {
               >
                 <RefreshCw className="h-4 w-4 mr-2" />
                 Try Again
-              </button>
               
               <button
                 onClick={() => window.location.href = '/'}
@@ -168,7 +163,6 @@ class AdvancedErrorBoundary extends Component<Props, State> {
               >
                 <Home className="h-4 w-4 mr-2" />
                 Go Home
-              </button>
 
               <button
                 onClick={this.handleReportError}
@@ -176,8 +170,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
               >
                 <Mail className="h-4 w-4 mr-2" />
                 Report Issue
-              </button>
-            </div>
+            </button>
 
             <div className="mt-8 pt-6 border-t border-gray-200">
               <p className="text-sm text-gray-500">
@@ -190,8 +183,8 @@ class AdvancedErrorBoundary extends Component<Props, State> {
                 </a>
               </p>
             </div>
-          </div>
-        </div>
+          </button>
+        </button>
       );
     }
 
