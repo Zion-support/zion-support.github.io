@@ -67,12 +67,18 @@ const Footer: React.FC = () => {
   ];
 
   const microSaasServices = [
-    { name: "Zion Analytics Pro", path: "/zion-analytics-pro" },
-    { name: "Zion Security Shield", path: "/zion-security-shield-pro" },
-    { name: "Zion AI CRM Pro", path: "/zion-ai-crm-pro" },
-    { name: "Zion Cloud Vault", path: "/zion-cloud-vault-pro" },
-    { name: "Zion AI Marketing", path: "/zion-ai-marketing-automation" },
     { name: "Zion AI Video Generator", path: "/zion-ai-video-generator" },
+    { name: "Zion AI CRM Pro", path: "/zion-ai-crm-pro" },
+    { name: "Zion AI Invoice Generator", path: "/zion-ai-invoice-generator" },
+    { name: "Zion AI Customer Insights", path: "/zion-ai-customer-insights" },
+    { name: "Zion AI Email Analyzer", path: "/zion-ai-email-analyzer" },
+    { name: "Zion Smart Inventory Optimizer", path: "/zion-smart-inventory-optimizer" },
+    { name: "Zion AI Customer Sentiment Tracker", path: "/zion-ai-customer-sentiment-tracker" },
+    { name: "Zion Smart Expense Categorizer", path: "/zion-smart-expense-categorizer" },
+    { name: "Zion AI Voice Assistant Pro", path: "/zion-ai-voice-assistant-pro" },
+    { name: "Zion AI Code Reviewer", path: "/zion-ai-code-reviewer" },
+    { name: "Zion AI Social Media Manager", path: "/zion-ai-social-media-manager" },
+    { name: "Zion AI Contract Analyzer", path: "/zion-ai-contract-analyzer" },
   ];
 
   const fiveGServices = [
