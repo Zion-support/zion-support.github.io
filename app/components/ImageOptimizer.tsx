@@ -1,100 +1,99 @@
-import React, { useState, useCallback, useMemo } from 'react';
-import { ImageIcon, Loader2 } from 'lucide-react';
+import React, { useState, useRef, useEffect } from 'react';
 
 interface ImageOptimizerProps {
   src: string;
   alt: string;
+  className?: string;
   width?: number;
   height?: number;
-  className?: string;
-  // placeholder?: string; // Available for future use
-  lazy?: boolean;
+  priority?: boolean;
+  placeholder?: string;
 }
 
-const ImageOptimizer = React.memo<ImageOptimizerProps>(({
+const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   src,
   alt,
+  className = '',
   width,
   height,
-  className = '',
-  lazy = true
+  priority = false,
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+'
 }) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
 
-  const handleLoad = useCallback(() => {
-    setIsLoading(false);
-  }, []);
+  useEffect(() => {
+    if (priority) return;
 
-  const handleError = useCallback(() => {
-    setIsLoading(false);
-    setHasError(true);
-  }, []);
-
-  const optimizedSrc = useMemo(() => {
-    // Add WebP format support and quality optimization
-    if (src.includes('?')) {
-      return `${src}&format=webp&quality=80`;
-    }
-    return `${src}?format=webp&quality=80`;
-  }, [src]);
-
-  // Placeholder generation logic (currently unused but kept for future use)
-  // const placeholderSrc = useMemo(() => {
-  //   if (placeholder) return placeholder;
-  //   
-  //   // Generate a simple placeholder based on dimensions
-  //   const w = width || 300;
-  //   const h = height || 200;
-  //   return `data:image/svg+xml;base64,${btoa(`
-  //     <svg width="${w}" height="${h}" xmlns="http://www.w3.org/2000/svg">
-  //       <rect width="100%" height="100%" fill="#f3f4f6"/>
-  //       <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="#9ca3af" font-family="Arial, sans-serif" font-size="14">
-  //         Loading...
-  //       </text>
-  //     </svg>
-  //   `)}`;
-  // }, [placeholder, width, height]);
-
-  if (hasError) {
-    return (
-      <div 
-        className={`flex items-center justify-center bg-gray-200 ${className}`}
-        style={{ width, height }}
-      >
-        <ImageIcon className="w-8 h-8 text-gray-400" />
-      </div>
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1, rootMargin: '50px' }
     );
-  }
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [priority]);
+
+  const handleLoad = () => {
+    setIsLoaded(true);
+  };
+
+  const handleError = () => {
+    setHasError(true);
+  };
+
+  const optimizedSrc = React.useMemo(() => {
+    if (hasError) return placeholder;
+    
+    // Add WebP format support and quality optimization
+    const url = new URL(src, window.location.origin);
+    if (width) url.searchParams.set('w', width.toString());
+    if (height) url.searchParams.set('h', height.toString());
+    url.searchParams.set('q', '85'); // 85% quality
+    url.searchParams.set('f', 'webp'); // WebP format
+    
+    return url.toString();
+  }, [src, width, height, hasError, placeholder]);
 
   return (
-    <div className={`relative ${className}`} style={{ width, height }}>
-      {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-200">
-          <Loader2 className="w-6 h-6 animate-spin text-gray-400" />
+    <div 
+      ref={imgRef}
+      className={`relative overflow-hidden ${className}`}
+      style={{ width, height }}
+    >
+      {!isLoaded && (
+        <div 
+          className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"
+          style={{ width, height }}
+        >
+          <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin" />
         </div>
       )}
       
-      <img
-        src={optimizedSrc}
-        alt={alt}
-        width={width}
-        height={height}
-        loading={lazy ? 'lazy' : 'eager'}
-        onLoad={handleLoad}
-        onError={handleError}
-        className={`transition-opacity duration-300 ${
-          isLoading ? 'opacity-0' : 'opacity-100'
-        }`}
-        style={{
-          width: width ? `${width}px` : '100%',
-          height: height ? `${height}px` : 'auto',
-        }}
-      />
+      {isInView && (
+        <img
+          src={optimizedSrc}
+          alt={alt}
+          onLoad={handleLoad}
+          onError={handleError}
+          className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+          loading={priority ? 'eager' : 'lazy'}
+          decoding="async"
+          style={{ width, height }}
+        />
+      )}
     </div>
   );
-});
-
-ImageOptimizer.displayName = 'ImageOptimizer';
+};
 
 export default ImageOptimizer;

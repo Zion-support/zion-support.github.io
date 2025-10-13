@@ -12,18 +12,8 @@ import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import FuturisticBackground from "./app/components/FuturisticBackground";
-<<<<<<< HEAD
-import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
-import AnalyticsProvider from "./app/components/AnalyticsProvider";
-import PerformanceMonitor from "./app/components/PerformanceMonitor";
-import WebVitalsTracker from "./app/components/WebVitalsTracker";
-import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
-import SEOOptimizer from "./app/components/SEOOptimizer";
-import EnhancedSEO from "./app/components/EnhancedSEO";
-import EnhancedSEOOptimizer from "./app/components/EnhancedSEOOptimizer";
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-102c
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
+import PerformanceMonitor from "./app/components/PerformanceMonitor";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -109,22 +99,7 @@ function App() {
                   </main>
                   <Footer />
                 </FuturisticBackground>
-<<<<<<< HEAD
-                <EnhancedAccessibility>
-                  <div></div>
-                </EnhancedAccessibility>
-                <AnalyticsProvider>
-                  <div>
-                    <PerformanceMonitor />
-                    <WebVitalsTracker />
-                    <PerformanceEnhancer />
-                    <SEOOptimizer />
-                    <EnhancedSEO title="Zion Tech Group" description="Advanced AI and IT Solutions" />
-                    <EnhancedSEOOptimizer />
-                  </div>
-                </AnalyticsProvider>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-102c
+                <PerformanceMonitor />
               </div>
             </Router>
           </AccessibilityEnhancer>

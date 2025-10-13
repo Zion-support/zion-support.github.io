@@ -24,7 +24,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
 
     } catch (error) {
       console.error('Failed to subscribe to newsletter:', error);
-<<<<<<< HEAD
 
 
 
