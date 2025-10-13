@@ -17,6 +17,15 @@ import {
 } from 'lucide-react';
 
 const AssetManagementPage = () => {
+  const benefits = [
+    "Increase asset utilization by 40%",
+    "Reduce maintenance costs by 30%",
+    "Improve asset visibility by 100%",
+    "Automate 80% of tracking tasks",
+    "Prevent asset loss and theft",
+    "Optimize asset lifecycle management"
+  ];
+
   const features = [
     {
       title: "IT Asset Tracking",

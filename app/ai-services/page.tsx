@@ -4,6 +4,24 @@ import { Link } from 'react-router-dom';
 import { Zap, Shield, BarChart3, Code, Database, Users, ArrowRight, Sparkles } from 'lucide-react';
 
 const AIServicesPage = () => {
+  const benefits = [
+    {
+      icon: <Zap className="w-8 h-8 text-cyan-400" />,
+      title: "Lightning Fast",
+      description: "Process data and generate insights in real-time"
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-green-400" />,
+      title: "Secure & Reliable",
+      description: "Enterprise-grade security and 99.9% uptime"
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
+      title: "Data-Driven",
+      description: "Make decisions based on accurate AI insights"
+    }
+  ];
+
   const aiServices = [
     {
       title: "AI Analytics",

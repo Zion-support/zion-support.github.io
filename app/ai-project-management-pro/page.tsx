@@ -11,6 +11,33 @@ import {
 } from "lucide-react";
 
 export default function AIProjectManagementPro() {
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      company: "TechFlow Solutions",
+      role: "Project Director",
+      content: "AI Project Management Pro has transformed how we handle complex projects. The AI predictions are incredibly accurate and help us stay on track.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      company: "Digital Agency Pro",
+      role: "Operations Manager",
+      content: "The automated resource allocation and risk prediction features have saved us countless hours and prevented multiple project delays.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      company: "Enterprise Solutions",
+      role: "Program Manager",
+      content: "Our team productivity has increased by 40% since implementing this AI-powered project management system. Highly recommended!",
+      rating: 5,
+      avatar: "ER"
+    }
+  ];
+
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,

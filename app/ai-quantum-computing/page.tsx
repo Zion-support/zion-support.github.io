@@ -5,6 +5,33 @@ import { Link } from "react-router-dom";
 import SEOOptimizer from "../../components/SEOOptimizer";
 
 export default function AiQuantumComputing() {
+  const testimonials = [
+    {
+      name: "Dr. Sarah Chen",
+      company: "Quantum Research Labs",
+      role: "Chief Quantum Scientist",
+      content: "Zion's quantum computing platform has revolutionized our research. The quantum machine learning algorithms have accelerated our drug discovery process by 10x.",
+      rating: 5,
+      avatar: "SC"
+    },
+    {
+      name: "Prof. Michael Rodriguez",
+      company: "Advanced Materials Institute",
+      role: "Research Director",
+      content: "The quantum simulation capabilities are extraordinary. We've been able to model complex materials that were impossible to simulate classically.",
+      rating: 5,
+      avatar: "MR"
+    },
+    {
+      name: "Dr. Emily Watson",
+      company: "Financial Analytics Corp",
+      role: "Head of Research",
+      content: "Quantum optimization has transformed our portfolio management. We're achieving results that were mathematically impossible with classical computers.",
+      rating: 5,
+      avatar: "EW"
+    }
+  ];
+
   const features = [
     "Quantum machine learning algorithms for complex optimization",
     "Quantum simulation for drug discovery and materials science",
@@ -120,12 +147,8 @@ export default function AiQuantumComputing() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/ai-quantum-computing" />
       </Helmet>
-      <SEOOptimizer
-        title="AI Quantum Computing - Revolutionary Quantum Solutions | Zion Tech Group"
-        description="Harness the power of quantum computing with AI. Zion's quantum platform offers quantum machine learning, simulation, and optimization for breakthrough discoveries and solutions."
-      />
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEOOptimizer>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
@@ -422,6 +445,7 @@ export default function AiQuantumComputing() {
           </div>
         </section>
       </div>
+      </SEOOptimizer>
     </>
   );
 }

@@ -1,9 +1,18 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { TrendingUp, ArrowRight, Sparkles, CheckCircle, PieChart, Shield } from 'lucide-react';
+import { TrendingUp, ArrowRight, Sparkles, CheckCircle, PieChart, Shield, Activity } from 'lucide-react';
 
 const AIFinancialAnalysisPage = () => {
+  const benefits = [
+    "Increase investment returns by 25%",
+    "Reduce financial risk by 60%",
+    "Automate 90% of analysis tasks",
+    "Real-time market monitoring",
+    "Advanced fraud detection",
+    "Comprehensive compliance reporting"
+  ];
+
   const features = [
     {
       title: "Predictive Financial Modeling",

@@ -5,6 +5,33 @@ import { Link } from "react-router-dom";
 import SEOOptimizer from "../../components/SEOOptimizer";
 
 export default function AiPoweredDevops() {
+  const testimonials = [
+    {
+      name: "David Kim",
+      company: "TechFlow Systems",
+      role: "DevOps Director",
+      content: "Zion's AI-powered DevOps platform has transformed our deployment pipeline. We've reduced deployment time by 70% and eliminated 95% of production issues.",
+      rating: 5,
+      avatar: "DK"
+    },
+    {
+      name: "Lisa Wang",
+      company: "CloudScale Inc",
+      role: "Engineering Manager",
+      content: "The predictive scaling and intelligent monitoring have been game-changers. Our infrastructure now scales automatically and we've never been more stable.",
+      rating: 5,
+      avatar: "LW"
+    },
+    {
+      name: "Marcus Johnson",
+      company: "DataFlow Solutions",
+      role: "CTO",
+      content: "The AI-driven testing and quality assurance have improved our code quality significantly. We're deploying with confidence every time.",
+      rating: 5,
+      avatar: "MJ"
+    }
+  ];
+
   const features = [
     "AI-powered automated testing and quality assurance",
     "Intelligent deployment orchestration and rollback",
@@ -120,12 +147,8 @@ export default function AiPoweredDevops() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/ai-powered-devops" />
       </Helmet>
-      <SEOOptimizer
-        title="AI-Powered DevOps - Intelligent Development Operations | Zion Tech Group"
-        description="Revolutionize your DevOps with AI. Automated testing, intelligent deployment, predictive scaling, and smart monitoring. Transform your development operations with Zion's AI-powered DevOps platform."
-      />
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEOOptimizer>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
@@ -421,6 +444,7 @@ export default function AiPoweredDevops() {
           </div>
         </section>
       </div>
+      </SEOOptimizer>
     </>
   );
 }

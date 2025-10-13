@@ -19,6 +19,33 @@ import {
 } from "lucide-react";
 
 export default function AiAnalytics() {
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      company: "TechCorp Solutions",
+      role: "Data Science Director",
+      content: "AI Analytics has revolutionized how we process and understand our data. The real-time insights have helped us make better decisions faster.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      company: "Global Finance Inc",
+      role: "Analytics Manager",
+      content: "The predictive analytics capabilities are outstanding. We've been able to forecast market trends with 95% accuracy.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      company: "Healthcare Plus",
+      role: "Operations Director",
+      content: "The automated insights generation has saved us countless hours. The AI recommendations are spot-on and actionable.",
+      rating: 5,
+      avatar: "ER"
+    }
+  ];
+
   const features = [
     {
       title: "Real-time Data Processing",

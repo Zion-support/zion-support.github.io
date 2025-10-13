@@ -26,6 +26,40 @@ import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
 const CloudInfrastructure = () => {
+  const stats = [
+    { number: "99.99%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
+    { number: "40%", label: "Cost Reduction", icon: <BarChart3 className="w-6 h-6" /> },
+    { number: "24/7", label: "Monitoring", icon: <Activity className="w-6 h-6" /> },
+    { number: "100+", label: "Cloud Services", icon: <Cloud className="w-6 h-6" /> }
+  ];
+
+  const testimonials = [
+    {
+      name: "David Kim",
+      company: "TechFlow Systems",
+      role: "CTO",
+      content: "Zion's cloud infrastructure has transformed our scalability. We can now handle 10x more traffic with better performance and lower costs.",
+      rating: 5,
+      avatar: "DK"
+    },
+    {
+      name: "Sarah Johnson",
+      company: "CloudScale Inc",
+      role: "Infrastructure Director",
+      content: "The migration was seamless and the ongoing support is exceptional. Our uptime has improved to 99.99% and costs are down 40%.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      company: "DataFlow Solutions",
+      role: "VP Engineering",
+      content: "The multi-cloud strategy has given us the flexibility we needed. We're now more resilient and can scale on demand.",
+      rating: 5,
+      avatar: "MC"
+    }
+  ];
+
   const services = [
     {
       title: "Cloud Migration",

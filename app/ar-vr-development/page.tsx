@@ -4,6 +4,15 @@ import { Link } from 'react-router-dom';
 import { Eye, Box, ArrowRight, Sparkles, CheckCircle, Brain, Globe } from 'lucide-react';
 
 const ARVRDevelopmentPage = () => {
+  const benefits = [
+    "Increase engagement by 300%",
+    "Reduce training costs by 70%",
+    "Improve learning retention by 80%",
+    "Enable remote collaboration",
+    "Create memorable experiences",
+    "Future-proof your business"
+  ];
+
   const features = [
     {
       title: "Immersive AR Experiences",

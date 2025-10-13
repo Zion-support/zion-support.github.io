@@ -1,4 +1,4 @@
-import { Brain, Code, Zap, Shield, CheckCircle, ArrowRight, Star } from "lucide-react";
+import { Brain, Code, Zap, Shield, CheckCircle, ArrowRight, Star, Globe } from "lucide-react";
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
@@ -10,6 +10,33 @@ import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
 
 const AICodeAssistantProZionTechGroup = () => {
+  const testimonials = [
+    {
+      name: "Alex Thompson",
+      company: "TechStart Inc",
+      role: "Lead Developer",
+      content: "Zion's AI Code Assistant has revolutionized our development process. It's like having a senior developer available 24/7.",
+      rating: 5,
+      avatar: "AT"
+    },
+    {
+      name: "Maria Garcia",
+      company: "CloudScale Solutions",
+      role: "CTO",
+      content: "The code generation quality is exceptional. It understands context and produces production-ready code consistently.",
+      rating: 5,
+      avatar: "MG"
+    },
+    {
+      name: "David Kim",
+      company: "DataFlow Systems",
+      role: "Senior Engineer",
+      content: "The debugging capabilities are incredible. It finds issues I would have spent hours tracking down manually.",
+      rating: 5,
+      avatar: "DK"
+    }
+  ];
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",

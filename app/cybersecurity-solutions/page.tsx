@@ -26,6 +26,40 @@ import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
 const CybersecuritySolutions = () => {
+  const stats = [
+    { number: "99.9%", label: "Threat Detection", icon: <Shield className="w-6 h-6" /> },
+    { number: "24/7", label: "Monitoring", icon: <Eye className="w-6 h-6" /> },
+    { number: "50+", label: "Compliance Frameworks", icon: <CheckCircle className="w-6 h-6" /> },
+    { number: "100%", label: "Zero Trust Coverage", icon: <Lock className="w-6 h-6" /> }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      company: "Financial Services Inc",
+      role: "CISO",
+      content: "Zion's cybersecurity solutions have transformed our security posture. We've eliminated 99% of threats and achieved full compliance.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      company: "Healthcare Plus",
+      role: "Security Director",
+      content: "The AI-powered threat detection is incredible. It caught sophisticated attacks that traditional systems missed completely.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "David Kim",
+      company: "E-commerce Solutions",
+      role: "CTO",
+      content: "Zero trust implementation was seamless. Our security is now bulletproof and we sleep better at night knowing we're protected.",
+      rating: 5,
+      avatar: "DK"
+    }
+  ];
+
   const services = [
     {
       title: "Security Assessment",

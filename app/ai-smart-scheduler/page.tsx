@@ -3,6 +3,33 @@ import { Brain, Users, Zap, Globe, Clock, CheckCircle } from "lucide-react";
 import Layout from "../layout";
 
 export default function AISmartScheduler() {
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      company: "TechFlow Solutions",
+      role: "Operations Manager",
+      content: "AI Smart Scheduler has revolutionized our team coordination. It automatically finds the best meeting times and eliminates scheduling conflicts.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      company: "Global Consulting",
+      role: "Project Director",
+      content: "The AI understands our team's preferences and automatically schedules meetings that work for everyone. It's like having a personal assistant.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      company: "Remote Teams Inc",
+      role: "Team Lead",
+      content: "Managing a distributed team across time zones is now effortless. The AI handles all the complexity and finds optimal meeting times.",
+      rating: 5,
+      avatar: "ER"
+    }
+  ];
+
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,

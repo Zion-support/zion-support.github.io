@@ -15,6 +15,13 @@ import {
 } from 'lucide-react';
 
 const AIPoweredEmailAnalyzerPage = () => {
+  const stats = [
+    { number: "99.9%", label: "Accuracy Rate" },
+    { number: "1M+", label: "Emails Analyzed Daily" },
+    { number: "50+", label: "Languages Supported" },
+    { number: "24/7", label: "Real-time Processing" }
+  ];
+
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,

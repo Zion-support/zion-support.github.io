@@ -4,6 +4,29 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, CheckCircle, FileText, Lock, Users, Globe, Award, Clock } from 'lucide-react';
 
 export default function Compliance() {
+  const benefits = [
+    {
+      icon: <Shield className="w-8 h-8 text-cyan-400" />,
+      title: "Risk Mitigation",
+      description: "Reduce compliance risks by 90%"
+    },
+    {
+      icon: <CheckCircle className="w-8 h-8 text-green-400" />,
+      title: "Audit Ready",
+      description: "Always prepared for audits"
+    },
+    {
+      icon: <FileText className="w-8 h-8 text-purple-400" />,
+      title: "Documentation",
+      description: "Comprehensive compliance docs"
+    },
+    {
+      icon: <Clock className="w-8 h-8 text-yellow-400" />,
+      title: "Time Saving",
+      description: "Save 80% on compliance tasks"
+    }
+  ];
+
   const complianceFrameworks = [
     {
       name: "SOC 2 Type II",

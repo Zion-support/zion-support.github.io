@@ -1,9 +1,18 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { TrendingUp, ArrowRight, Sparkles, CheckCircle, PieChart } from 'lucide-react';
+import { TrendingUp, ArrowRight, Sparkles, CheckCircle, PieChart, Zap, Brain } from 'lucide-react';
 
 const AIDataAnalyticsProPage = () => {
+  const benefits = [
+    "Reduce data processing time by 90%",
+    "Increase prediction accuracy by 40%",
+    "Automate 80% of reporting tasks",
+    "Scale to handle unlimited data volumes",
+    "Real-time insights and alerts",
+    "Seamless integration with existing systems"
+  ];
+
   const features = [
     {
       title: "Advanced Predictive Analytics",
