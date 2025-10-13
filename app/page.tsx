@@ -29,6 +29,14 @@ const HomePage = () => {
       link: "/micro-saas"
     },
     {
+      title: "IT Services",
+      description: "Comprehensive technology solutions including cloud infrastructure, cybersecurity, network design, and DevOps",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-indigo-500 to-purple-500",
+      stats: "15+ years experience",
+      link: "/it-services"
+    },
+    {
       title: "5G Solutions",
       description: "Next-generation connectivity and infrastructure services for IoT, edge computing, and smart city implementations",
       icon: <Globe className="w-8 h-8" />,
@@ -173,7 +181,7 @@ const HomePage = () => {
               From AI-powered analytics to enterprise security, we have everything you need.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Link
                 key={index}
