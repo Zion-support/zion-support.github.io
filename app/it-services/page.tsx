@@ -966,6 +966,11 @@ export default function ItServices() {
                   </div>
                   
                   <p className="text-gray-300 italic">"{testimonial.content}"</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

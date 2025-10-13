@@ -52,3 +52,31 @@ export default function CloudInfrastructureManagement() {
 
   const managementFeatures = [
     {
+      title: "Infrastructure Monitoring",
+      description: "Real-time monitoring and alerting for all cloud resources"
+    },
+    {
+      title: "Cost Optimization",
+      description: "Automated cost analysis and optimization recommendations"
+    },
+    {
+      title: "Security Management",
+      description: "Comprehensive security monitoring and compliance management"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Cloud Infrastructure Management
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Comprehensive cloud infrastructure management solutions
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
