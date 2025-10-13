@@ -6,38 +6,8 @@ import {
   Brain, 
   Shield, 
   Zap, 
-  Globe, 
-<<<<<<< HEAD
-=======
-  ArrowRight, 
-  Star, 
-  Users, 
-  Award, 
-  BarChart3, 
-  Cloud, 
-  Sparkles, 
-  Mail, 
-  Smartphone, 
-  Monitor,
-  Phone,
-  MapPin,
-  Code,
-  Database,
-  ChevronDown,
-  Menu,
-  X,
-  SidebarIcon,
-  Package,
-  Heart,
-  Receipt,
-  TrendingUp,
-  Cpu,
-  Network,
-  Target,
-  Calendar,
-  Clock,
-  FileText
->>>>>>> cursor/analyze-improve-and-deploy-application-0f46
+  Globe,
+  ChevronDown
 } from 'lucide-react';
 
 interface NavigationProps {
