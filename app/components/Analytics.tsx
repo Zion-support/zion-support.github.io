@@ -1,4 +1,5 @@
 import { useLocation } from 'react-router-dom';
+import { useEffect, useCallback } from 'react';
 
 declare global {
   interface Window {
@@ -121,11 +122,11 @@ const Analytics: React.FC<AnalyticsProps> = ({
   }, [enabled]);
 
   // Track custom events
-  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
+  const trackEvent = useCallback((eventName: string, parameters?: Record<string, any>) => {
     if (!enabled || typeof window === 'undefined' || !window.gtag) return;
     
     window.gtag('event', eventName, parameters);
-  };
+  }, [enabled]);
 
   // Track button clicks
   useEffect(() => {
