@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-16fc
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3f37
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c5cd
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -41,13 +30,9 @@ const PerformanceMonitor: React.FC = () => {
             setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
           } else if (entry.entryType === 'first-input') {
             const inputEntry = entry as any;
-<<<<<<< HEAD
-            setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-=======
             if (inputEntry.processingStart && inputEntry.startTime) {
               setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
             }
->>>>>>> cursor/fix-errors-and-merge-to-main-3f37
           } else if (entry.entryType === 'layout-shift') {
             setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
           }
@@ -87,13 +72,3 @@ const PerformanceMonitor: React.FC = () => {
 };
 
 export default PerformanceMonitor;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-0bb0
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-16fc
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3f37
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c5cd

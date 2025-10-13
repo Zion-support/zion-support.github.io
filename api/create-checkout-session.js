@@ -1,24 +1,5 @@
-<<<<<<< HEAD
-const withErrorLogging = (handler) => {
-  return async (req, res) => {
-    try {
-      await handler(req, res);
-    } catch (error) {
-      console.error('API Error:', error);
-      res.statusCode = 500;
-      res.setHeader('Content-Type', 'application/json');
-      res.end(JSON.stringify({ error: 'Internal server error' }));
-    }
-  };
-};
-
-const handler = async (req, res) => {
-  if (req.method !== 'POST') {
-    res.statusCode = 405;
-=======
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
->>>>>>> cursor/fix-errors-and-merge-to-main-c5cd
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
@@ -58,4 +39,4 @@ export default async function handler(req, res) {
   }
 };
 
-export default withErrorLogging(handler);
+export default handler;
