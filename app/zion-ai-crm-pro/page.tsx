@@ -1,69 +1,69 @@
-import { ArrowRight, Mic, Brain, Zap, Users, CheckCircle, Star, MessageSquare, Clock, Globe, Shield, BarChart3 } from "lucide-react";
+import { ArrowRight, Users, Brain, BarChart3, Zap, Shield, CheckCircle, Star, MessageSquare, Target, TrendingUp, Clock } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AiVoiceAssistant() {
+export default function ZionAiCrmPro() {
   const features = [
     {
-      icon: <Mic className="w-6 h-6" />,
-      title: "Natural Voice Recognition",
-      description: "Advanced speech-to-text with 99.5% accuracy in 50+ languages and dialects"
-    },
-    {
       icon: <Brain className="w-6 h-6" />,
-      title: "Contextual Understanding",
-      description: "AI-powered conversation context awareness for natural, human-like interactions"
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Real-time Processing",
-      description: "Ultra-low latency voice processing with sub-200ms response times"
+      title: "AI-Powered Lead Scoring",
+      description: "Machine learning algorithms automatically score and prioritize leads based on conversion probability"
     },
     {
       icon: <MessageSquare className="w-6 h-6" />,
-      title: "Multi-modal Conversations",
-      description: "Seamless integration of voice, text, and visual interactions"
+      title: "Intelligent Chat Assistant",
+      description: "AI chatbot that handles customer inquiries 24/7 with natural language processing"
     },
     {
-      icon: <Users className="w-6 h-6" />,
-      title: "Custom Voice Training",
-      description: "Train the assistant with your brand voice and specific terminology"
+      icon: <Target className="w-6 h-6" />,
+      title: "Predictive Analytics",
+      description: "Forecast sales trends, customer behavior, and revenue with 95% accuracy"
+    },
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: "Automated Workflows",
+      description: "Smart automation for follow-ups, email sequences, and task management"
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Real-time Analytics",
+      description: "Comprehensive dashboards with live sales metrics and performance insights"
     },
     {
       icon: <Shield className="w-6 h-6" />,
       title: "Enterprise Security",
-      description: "End-to-end encryption and compliance with GDPR, HIPAA, and SOC 2"
+      description: "SOC 2 compliant with end-to-end encryption and advanced access controls"
     }
   ];
 
-  const capabilities = [
-    "Voice Command Processing",
-    "Natural Language Understanding",
-    "Multi-language Support (50+ languages)",
-    "Custom Voice Synthesis",
-    "Conversation Memory",
-    "Task Automation",
-    "Calendar Integration",
-    "Email & Messaging",
-    "Document Processing",
-    "API Integrations",
-    "Real-time Translation",
-    "Voice Analytics & Insights"
+  const crmFeatures = [
+    "Contact & Lead Management",
+    "Deal Pipeline Tracking",
+    "Email Integration (Gmail, Outlook)",
+    "Calendar Synchronization",
+    "Document Management",
+    "Custom Fields & Tags",
+    "Team Collaboration Tools",
+    "Mobile App (iOS & Android)",
+    "API & Webhook Support",
+    "Custom Reporting",
+    "Data Import/Export",
+    "Third-party Integrations (100+ apps)"
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$29",
+      price: "$39",
       period: "/month",
       description: "Perfect for small teams",
       features: [
-        "Up to 1,000 voice minutes",
-        "Basic voice recognition",
-        "5 custom commands",
+        "Up to 5 users",
+        "1,000 contacts",
+        "Basic AI features",
         "Email support",
-        "Standard integrations",
-        "Basic analytics"
+        "Mobile app",
+        "Standard integrations"
       ],
       popular: false
     },
@@ -73,13 +73,13 @@ export default function AiVoiceAssistant() {
       period: "/month",
       description: "Most popular for growing businesses",
       features: [
-        "Up to 10,000 voice minutes",
+        "Up to 25 users",
+        "10,000 contacts",
         "Advanced AI features",
-        "Unlimited custom commands",
         "Priority support",
-        "Custom integrations",
+        "Custom workflows",
         "Advanced analytics",
-        "Multi-language support"
+        "API access"
       ],
       popular: true
     },
@@ -89,12 +89,12 @@ export default function AiVoiceAssistant() {
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited voice minutes",
+        "Unlimited users",
+        "Unlimited contacts",
         "Full AI suite",
-        "Custom voice training",
         "24/7 phone support",
+        "Custom integrations",
         "White-label solution",
-        "Advanced security",
         "Dedicated account manager"
       ],
       popular: false
@@ -103,24 +103,24 @@ export default function AiVoiceAssistant() {
 
   const testimonials = [
     {
-      name: "Alex Thompson",
-      company: "Customer Service Co.",
-      role: "Operations Director",
-      content: "Zion AI Voice Assistant reduced our call handling time by 60% and improved customer satisfaction by 40%. The natural conversation flow is incredible.",
+      name: "Sarah Mitchell",
+      company: "SalesForce Solutions",
+      role: "VP of Sales",
+      content: "Zion AI CRM Pro increased our sales conversion rate by 45%. The AI lead scoring is incredibly accurate and saves us hours every day.",
       rating: 5
     },
     {
-      name: "Maria Santos",
-      company: "Healthcare Provider",
-      role: "IT Director",
-      content: "The multi-language support is perfect for our diverse patient base. The voice assistant handles complex medical terminology flawlessly.",
+      name: "David Chen",
+      company: "TechStart Inc.",
+      role: "Sales Director",
+      content: "The automated workflows are a game-changer. We've reduced manual tasks by 70% and our team can focus on closing deals.",
       rating: 5
     },
     {
-      name: "James Wilson",
-      company: "E-commerce Platform",
-      role: "Customer Experience Manager",
-      content: "The real-time processing is amazing. Customers get instant responses and the voice quality is crystal clear. Highly recommended.",
+      name: "Lisa Rodriguez",
+      company: "Marketing Agency",
+      role: "Account Manager",
+      content: "The predictive analytics helped us identify our best prospects. Revenue increased by 60% in just 6 months.",
       rating: 5
     }
   ];
@@ -128,14 +128,14 @@ export default function AiVoiceAssistant() {
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Intelligent Voice AI Platform | Zion Tech Group</title>
+        <title>Zion AI CRM Pro - Intelligent Customer Relationship Management | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform customer interactions with Zion AI Voice Assistant - the ultimate voice AI platform. Natural conversations, multi-language support, and enterprise-grade security."
+          content="Transform your sales with Zion AI CRM Pro - the ultimate AI-powered CRM platform. Lead scoring, predictive analytics, and automated workflows for modern sales teams."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, voice AI, speech recognition, natural language processing, voice automation, conversational AI, voice analytics"
+          content="AI CRM, customer relationship management, lead scoring, sales automation, predictive analytics, sales CRM, business intelligence"
         />
       </Helmet>
 
@@ -144,17 +144,17 @@ export default function AiVoiceAssistant() {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 mb-6">
-              <Mic className="w-4 h-4 text-indigo-400 mr-2" />
-              <span className="text-indigo-400 text-sm font-medium">AI-Powered Voice Platform</span>
+              <Brain className="w-4 h-4 text-indigo-400 mr-2" />
+              <span className="text-indigo-400 text-sm font-medium">AI-Powered CRM Platform</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
-                AI Voice Assistant
+                Zion AI CRM Pro
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize customer interactions with the world's most intelligent voice AI platform. 
-              Natural conversations, multi-language support, and enterprise-grade security for modern businesses.
+              Revolutionize your sales process with the world's most intelligent CRM platform. 
+              AI-powered lead scoring, predictive analytics, and automated workflows for modern sales teams.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
@@ -175,16 +175,16 @@ export default function AiVoiceAssistant() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-indigo-400 mb-2">99.5%</div>
-                <div className="text-gray-300">Voice Recognition Accuracy</div>
+                <div className="text-3xl font-bold text-indigo-400 mb-2">45%</div>
+                <div className="text-gray-300">Higher Conversion Rate</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
-                <div className="text-gray-300">Languages Supported</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">70%</div>
+                <div className="text-gray-300">Time Saved on Tasks</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">200ms</div>
-                <div className="text-gray-300">Response Time</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">95%</div>
+                <div className="text-gray-300">AI Accuracy Rate</div>
               </div>
             </div>
           </div>
@@ -195,10 +195,10 @@ export default function AiVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Voice AI Features
+                Intelligent CRM Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to create natural, intelligent voice interactions.
+                Everything you need to manage customer relationships and boost sales performance.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -222,25 +222,25 @@ export default function AiVoiceAssistant() {
           </div>
         </section>
 
-        {/* Capabilities List */}
+        {/* CRM Features List */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Complete Voice AI Suite
+                Complete CRM Solution
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                All the capabilities you need to build intelligent voice experiences.
+                All the tools you need to manage your sales pipeline and customer relationships.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {capabilities.map((capability, index) => (
+              {crmFeatures.map((feature, index) => (
                 <div
                   key={index}
                   className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
                 >
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{capability}</span>
+                  <span className="text-gray-300">{feature}</span>
                 </div>
               ))}
             </div>
@@ -255,7 +255,7 @@ export default function AiVoiceAssistant() {
                 Flexible Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your voice AI needs. All plans include 14-day free trial.
+                Choose the plan that fits your team size and business needs. All plans include 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -312,10 +312,10 @@ export default function AiVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Industry Leaders
+                Trusted by Sales Teams
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Voice Assistant
+                See what sales professionals say about Zion AI CRM Pro
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -344,10 +344,10 @@ export default function AiVoiceAssistant() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Voice Interactions?
+              Ready to Transform Your Sales?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses using Zion AI Voice Assistant to enhance customer experiences.
+              Join thousands of sales teams using Zion AI CRM Pro to close more deals and grow revenue.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

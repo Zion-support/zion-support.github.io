@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, Shield, Globe, Database, Code, Smartphone } from "lucide-react";
+import { ArrowRight, Brain, Shield, Globe, Database, Code, Smartphone, Zap } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -10,6 +10,13 @@ export default function Services() {
       icon: <Brain className="w-8 h-8" />,
       path: "/ai-services",
       color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Micro SAAS Solutions",
+      description: "Ready-to-use software solutions for immediate deployment and business growth.",
+      icon: <Zap className="w-8 h-8" />,
+      path: "/micro-saas",
+      color: "from-purple-500 to-pink-500"
     },
     {
       title: "Cybersecurity Solutions",

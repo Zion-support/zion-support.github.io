@@ -1,101 +1,101 @@
-import { ArrowRight, Mic, Brain, Zap, Users, CheckCircle, Star, MessageSquare, Clock, Globe, Shield, BarChart3 } from "lucide-react";
+import { ArrowRight, Cpu, Zap, Globe, CheckCircle, Star, Cloud, Shield, BarChart3, Clock, Users, Database } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AiVoiceAssistant() {
+export default function EdgeComputingSolutions() {
   const features = [
     {
-      icon: <Mic className="w-6 h-6" />,
-      title: "Natural Voice Recognition",
-      description: "Advanced speech-to-text with 99.5% accuracy in 50+ languages and dialects"
+      icon: <Cpu className="w-6 h-6" />,
+      title: "Ultra-Low Latency",
+      description: "Process data at the edge with sub-10ms latency for real-time applications and IoT devices"
     },
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "Contextual Understanding",
-      description: "AI-powered conversation context awareness for natural, human-like interactions"
+      icon: <Globe className="w-6 h-6" />,
+      title: "Global Edge Network",
+      description: "Deploy applications across 200+ edge locations worldwide for optimal performance"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Real-time Processing",
-      description: "Ultra-low latency voice processing with sub-200ms response times"
-    },
-    {
-      icon: <MessageSquare className="w-6 h-6" />,
-      title: "Multi-modal Conversations",
-      description: "Seamless integration of voice, text, and visual interactions"
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Custom Voice Training",
-      description: "Train the assistant with your brand voice and specific terminology"
+      title: "Intelligent Routing",
+      description: "AI-powered traffic routing to automatically direct users to the nearest edge location"
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Enterprise Security",
-      description: "End-to-end encryption and compliance with GDPR, HIPAA, and SOC 2"
+      title: "Edge Security",
+      description: "Comprehensive security at the edge with encryption, authentication, and threat detection"
+    },
+    {
+      icon: <Cloud className="w-6 h-6" />,
+      title: "Hybrid Cloud Integration",
+      description: "Seamless integration between edge computing and cloud infrastructure"
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Real-time Analytics",
+      description: "Process and analyze data at the edge for instant insights and decision making"
     }
   ];
 
   const capabilities = [
-    "Voice Command Processing",
-    "Natural Language Understanding",
-    "Multi-language Support (50+ languages)",
-    "Custom Voice Synthesis",
-    "Conversation Memory",
-    "Task Automation",
-    "Calendar Integration",
-    "Email & Messaging",
-    "Document Processing",
-    "API Integrations",
-    "Real-time Translation",
-    "Voice Analytics & Insights"
+    "IoT Data Processing",
+    "Real-time Video Analytics",
+    "Autonomous Vehicle Support",
+    "Smart City Infrastructure",
+    "Industrial IoT (IIoT)",
+    "Content Delivery Networks (CDN)",
+    "Edge AI/ML Inference",
+    "5G Network Optimization",
+    "Edge Storage Solutions",
+    "Edge Security Services",
+    "Multi-cloud Edge Management",
+    "Edge Application Development"
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$29",
+      name: "Edge Starter",
+      price: "$299",
       period: "/month",
-      description: "Perfect for small teams",
+      description: "Perfect for small applications",
       features: [
-        "Up to 1,000 voice minutes",
-        "Basic voice recognition",
-        "5 custom commands",
+        "Up to 5 edge locations",
+        "100GB data transfer",
+        "Basic monitoring",
         "Email support",
-        "Standard integrations",
+        "Standard security",
         "Basic analytics"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$99",
+      name: "Edge Professional",
+      price: "$999",
       period: "/month",
       description: "Most popular for growing businesses",
       features: [
-        "Up to 10,000 voice minutes",
-        "Advanced AI features",
-        "Unlimited custom commands",
+        "Up to 25 edge locations",
+        "1TB data transfer",
+        "Advanced monitoring",
         "Priority support",
-        "Custom integrations",
-        "Advanced analytics",
-        "Multi-language support"
+        "Advanced security",
+        "Real-time analytics",
+        "Custom integrations"
       ],
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$299",
+      name: "Edge Enterprise",
+      price: "$2,999",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited voice minutes",
-        "Full AI suite",
-        "Custom voice training",
+        "Unlimited edge locations",
+        "Unlimited data transfer",
+        "Custom monitoring",
         "24/7 phone support",
         "White-label solution",
-        "Advanced security",
-        "Dedicated account manager"
+        "Advanced compliance",
+        "Dedicated edge engineer"
       ],
       popular: false
     }
@@ -103,24 +103,24 @@ export default function AiVoiceAssistant() {
 
   const testimonials = [
     {
-      name: "Alex Thompson",
-      company: "Customer Service Co.",
-      role: "Operations Director",
-      content: "Zion AI Voice Assistant reduced our call handling time by 60% and improved customer satisfaction by 40%. The natural conversation flow is incredible.",
+      name: "Jennifer Liu",
+      company: "IoT Solutions Inc.",
+      role: "CTO",
+      content: "Zion Edge Computing reduced our data processing latency by 95% and enabled real-time decision making for our IoT devices. Game-changing technology.",
       rating: 5
     },
     {
-      name: "Maria Santos",
-      company: "Healthcare Provider",
-      role: "IT Director",
-      content: "The multi-language support is perfect for our diverse patient base. The voice assistant handles complex medical terminology flawlessly.",
+      name: "Robert Garcia",
+      company: "Smart City Initiative",
+      role: "Technology Director",
+      content: "The global edge network allows us to deploy smart city applications worldwide with consistent performance. The intelligent routing is incredibly effective.",
       rating: 5
     },
     {
-      name: "James Wilson",
-      company: "E-commerce Platform",
-      role: "Customer Experience Manager",
-      content: "The real-time processing is amazing. Customers get instant responses and the voice quality is crystal clear. Highly recommended.",
+      name: "Maria Rodriguez",
+      company: "Autonomous Vehicle Co.",
+      role: "VP of Engineering",
+      content: "Edge computing is critical for our autonomous vehicles. The ultra-low latency and real-time analytics capabilities are exactly what we needed.",
       rating: 5
     }
   ];
@@ -128,45 +128,45 @@ export default function AiVoiceAssistant() {
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Intelligent Voice AI Platform | Zion Tech Group</title>
+        <title>Edge Computing Solutions - Global Edge Infrastructure | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform customer interactions with Zion AI Voice Assistant - the ultimate voice AI platform. Natural conversations, multi-language support, and enterprise-grade security."
+          content="Transform your applications with Zion Edge Computing Solutions - the ultimate edge infrastructure platform. Ultra-low latency, global network, and real-time processing for modern applications."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, voice AI, speech recognition, natural language processing, voice automation, conversational AI, voice analytics"
+          content="edge computing, edge infrastructure, IoT processing, real-time analytics, global CDN, edge AI, 5G edge, smart city solutions"
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 mb-6">
-              <Mic className="w-4 h-4 text-indigo-400 mr-2" />
-              <span className="text-indigo-400 text-sm font-medium">AI-Powered Voice Platform</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 mb-6">
+              <Cpu className="w-4 h-4 text-orange-400 mr-2" />
+              <span className="text-orange-400 text-sm font-medium">Global Edge Infrastructure</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
-                AI Voice Assistant
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
+                Edge Computing Solutions
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize customer interactions with the world's most intelligent voice AI platform. 
-              Natural conversations, multi-language support, and enterprise-grade security for modern businesses.
+              Transform your applications with the world's most advanced edge computing platform. 
+              Ultra-low latency, global network, and real-time processing for modern applications and IoT devices.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
+                className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 flex items-center justify-center group"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-orange-400 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-400 hover:text-slate-900 transition-all duration-300"
               >
                 Watch Demo
               </Link>
@@ -175,16 +175,16 @@ export default function AiVoiceAssistant() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-indigo-400 mb-2">99.5%</div>
-                <div className="text-gray-300">Voice Recognition Accuracy</div>
+                <div className="text-3xl font-bold text-orange-400 mb-2">10ms</div>
+                <div className="text-gray-300">Ultra-Low Latency</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
-                <div className="text-gray-300">Languages Supported</div>
+                <div className="text-3xl font-bold text-red-400 mb-2">200+</div>
+                <div className="text-gray-300">Edge Locations</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">200ms</div>
-                <div className="text-gray-300">Response Time</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">99.99%</div>
+                <div className="text-gray-300">Uptime SLA</div>
               </div>
             </div>
           </div>
@@ -195,10 +195,10 @@ export default function AiVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Voice AI Features
+                Advanced Edge Computing Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to create natural, intelligent voice interactions.
+                Everything you need to deploy and manage applications at the edge.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -207,7 +207,7 @@ export default function AiVoiceAssistant() {
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-orange-500 to-red-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
@@ -227,10 +227,10 @@ export default function AiVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Complete Voice AI Suite
+                Complete Edge Computing Suite
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                All the capabilities you need to build intelligent voice experiences.
+                All the tools you need to build and deploy edge applications.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -255,7 +255,7 @@ export default function AiVoiceAssistant() {
                 Flexible Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your voice AI needs. All plans include 14-day free trial.
+                Choose the plan that fits your edge computing needs. All plans include 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -264,13 +264,13 @@ export default function AiVoiceAssistant() {
                   key={index}
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                     plan.popular
-                      ? 'border-indigo-400 bg-gradient-to-br from-indigo-500/10 to-purple-500/10'
-                      : 'border-white/20 hover:border-indigo-400'
+                      ? 'border-orange-400 bg-gradient-to-br from-orange-500/10 to-red-500/10'
+                      : 'border-white/20 hover:border-orange-400'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -295,8 +295,8 @@ export default function AiVoiceAssistant() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700'
-                        : 'border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-slate-900'
+                        ? 'bg-gradient-to-r from-orange-500 to-red-600 text-white hover:from-orange-600 hover:to-red-700'
+                        : 'border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-slate-900'
                     }`}
                   >
                     Start Free Trial
@@ -315,7 +315,7 @@ export default function AiVoiceAssistant() {
                 Trusted by Industry Leaders
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Voice Assistant
+                See what our customers say about Zion Edge Computing Solutions
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -344,22 +344,22 @@ export default function AiVoiceAssistant() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Voice Interactions?
+              Ready to Deploy at the Edge?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses using Zion AI Voice Assistant to enhance customer experiences.
+              Join thousands of organizations using Zion Edge Computing to deliver ultra-fast applications.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-orange-400 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-400 hover:text-slate-900 transition-all duration-300"
               >
                 Schedule Demo
               </Link>

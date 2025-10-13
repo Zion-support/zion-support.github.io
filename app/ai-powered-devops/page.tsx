@@ -1,101 +1,101 @@
-import { ArrowRight, Mic, Brain, Zap, Users, CheckCircle, Star, MessageSquare, Clock, Globe, Shield, BarChart3 } from "lucide-react";
+import { ArrowRight, Cpu, Zap, Shield, CheckCircle, Star, GitBranch, Cloud, BarChart3, Clock, Users, Globe } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AiVoiceAssistant() {
+export default function AiPoweredDevops() {
   const features = [
     {
-      icon: <Mic className="w-6 h-6" />,
-      title: "Natural Voice Recognition",
-      description: "Advanced speech-to-text with 99.5% accuracy in 50+ languages and dialects"
-    },
-    {
-      icon: <Brain className="w-6 h-6" />,
-      title: "Contextual Understanding",
-      description: "AI-powered conversation context awareness for natural, human-like interactions"
+      icon: <Cpu className="w-6 h-6" />,
+      title: "AI-Powered Automation",
+      description: "Intelligent CI/CD pipelines with self-healing capabilities and predictive deployment optimization"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Real-time Processing",
-      description: "Ultra-low latency voice processing with sub-200ms response times"
-    },
-    {
-      icon: <MessageSquare className="w-6 h-6" />,
-      title: "Multi-modal Conversations",
-      description: "Seamless integration of voice, text, and visual interactions"
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Custom Voice Training",
-      description: "Train the assistant with your brand voice and specific terminology"
+      title: "Smart Infrastructure",
+      description: "Auto-scaling infrastructure that adapts to traffic patterns and optimizes resource allocation"
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Enterprise Security",
-      description: "End-to-end encryption and compliance with GDPR, HIPAA, and SOC 2"
+      title: "Security-First DevOps",
+      description: "Built-in security scanning, vulnerability assessment, and compliance monitoring"
+    },
+    {
+      icon: <GitBranch className="w-6 h-6" />,
+      title: "GitOps Workflow",
+      description: "Declarative infrastructure management with Git-based deployment and rollback capabilities"
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Performance Analytics",
+      description: "Real-time monitoring with AI-driven insights and predictive performance optimization"
+    },
+    {
+      icon: <Cloud className="w-6 h-6" />,
+      title: "Multi-Cloud Support",
+      description: "Seamless deployment across AWS, Azure, GCP, and hybrid cloud environments"
     }
   ];
 
   const capabilities = [
-    "Voice Command Processing",
-    "Natural Language Understanding",
-    "Multi-language Support (50+ languages)",
-    "Custom Voice Synthesis",
-    "Conversation Memory",
-    "Task Automation",
-    "Calendar Integration",
-    "Email & Messaging",
-    "Document Processing",
-    "API Integrations",
-    "Real-time Translation",
-    "Voice Analytics & Insights"
+    "Continuous Integration/Deployment",
+    "Infrastructure as Code (IaC)",
+    "Container Orchestration (Kubernetes)",
+    "Microservices Architecture",
+    "API Gateway Management",
+    "Database Automation",
+    "Monitoring & Alerting",
+    "Log Aggregation & Analysis",
+    "Security Scanning & Compliance",
+    "Cost Optimization",
+    "Disaster Recovery",
+    "Performance Testing"
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$29",
+      price: "$199",
       period: "/month",
       description: "Perfect for small teams",
       features: [
-        "Up to 1,000 voice minutes",
-        "Basic voice recognition",
-        "5 custom commands",
+        "Up to 5 applications",
+        "Basic CI/CD pipelines",
+        "Standard monitoring",
         "Email support",
-        "Standard integrations",
-        "Basic analytics"
+        "Single cloud provider",
+        "Basic security scanning"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$99",
+      price: "$599",
       period: "/month",
-      description: "Most popular for growing businesses",
+      description: "Most popular for growing teams",
       features: [
-        "Up to 10,000 voice minutes",
-        "Advanced AI features",
-        "Unlimited custom commands",
+        "Up to 25 applications",
+        "Advanced AI automation",
+        "Comprehensive monitoring",
         "Priority support",
-        "Custom integrations",
-        "Advanced analytics",
-        "Multi-language support"
+        "Multi-cloud support",
+        "Advanced security features",
+        "Custom integrations"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$299",
+      price: "$1,999",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited voice minutes",
+        "Unlimited applications",
         "Full AI suite",
-        "Custom voice training",
+        "Custom monitoring",
         "24/7 phone support",
         "White-label solution",
-        "Advanced security",
-        "Dedicated account manager"
+        "Advanced compliance",
+        "Dedicated DevOps engineer"
       ],
       popular: false
     }
@@ -103,24 +103,24 @@ export default function AiVoiceAssistant() {
 
   const testimonials = [
     {
-      name: "Alex Thompson",
-      company: "Customer Service Co.",
-      role: "Operations Director",
-      content: "Zion AI Voice Assistant reduced our call handling time by 60% and improved customer satisfaction by 40%. The natural conversation flow is incredible.",
+      name: "David Kim",
+      company: "Tech Startup",
+      role: "CTO",
+      content: "Zion AI-Powered DevOps reduced our deployment time by 80% and eliminated 90% of production issues. The AI automation is incredible.",
       rating: 5
     },
     {
-      name: "Maria Santos",
-      company: "Healthcare Provider",
-      role: "IT Director",
-      content: "The multi-language support is perfect for our diverse patient base. The voice assistant handles complex medical terminology flawlessly.",
-      rating: 5
-    },
-    {
-      name: "James Wilson",
+      name: "Sarah Martinez",
       company: "E-commerce Platform",
-      role: "Customer Experience Manager",
-      content: "The real-time processing is amazing. Customers get instant responses and the voice quality is crystal clear. Highly recommended.",
+      role: "DevOps Lead",
+      content: "The predictive scaling feature has saved us thousands in cloud costs. The system automatically adjusts resources based on traffic patterns.",
+      rating: 5
+    },
+    {
+      name: "Michael Chen",
+      company: "Financial Services",
+      role: "Infrastructure Director",
+      content: "The security-first approach gives us confidence in our deployments. Compliance monitoring is automated and comprehensive.",
       rating: 5
     }
   ];
@@ -128,45 +128,45 @@ export default function AiVoiceAssistant() {
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Intelligent Voice AI Platform | Zion Tech Group</title>
+        <title>AI-Powered DevOps - Intelligent DevOps Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform customer interactions with Zion AI Voice Assistant - the ultimate voice AI platform. Natural conversations, multi-language support, and enterprise-grade security."
+          content="Transform your DevOps with Zion AI-Powered DevOps - the ultimate intelligent DevOps platform. AI automation, smart infrastructure, and security-first approach for modern teams."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, voice AI, speech recognition, natural language processing, voice automation, conversational AI, voice analytics"
+          content="AI DevOps, intelligent automation, CI/CD, infrastructure as code, container orchestration, cloud deployment, DevOps automation"
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 mb-6">
-              <Mic className="w-4 h-4 text-indigo-400 mr-2" />
-              <span className="text-indigo-400 text-sm font-medium">AI-Powered Voice Platform</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-teal-500/20 to-cyan-500/20 border border-teal-500/30 mb-6">
+              <Cpu className="w-4 h-4 text-teal-400 mr-2" />
+              <span className="text-teal-400 text-sm font-medium">AI-Powered DevOps Platform</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
-                AI Voice Assistant
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">
+                AI-Powered DevOps
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize customer interactions with the world's most intelligent voice AI platform. 
-              Natural conversations, multi-language support, and enterprise-grade security for modern businesses.
+              Revolutionize your DevOps with the world's most intelligent automation platform. 
+              AI-powered CI/CD, smart infrastructure, and security-first approach for modern development teams.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
+                className="bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-teal-400 text-teal-400 px-8 py-4 rounded-lg font-semibold hover:bg-teal-400 hover:text-slate-900 transition-all duration-300"
               >
                 Watch Demo
               </Link>
@@ -175,16 +175,16 @@ export default function AiVoiceAssistant() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-indigo-400 mb-2">99.5%</div>
-                <div className="text-gray-300">Voice Recognition Accuracy</div>
+                <div className="text-3xl font-bold text-teal-400 mb-2">80%</div>
+                <div className="text-gray-300">Faster Deployments</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
-                <div className="text-gray-300">Languages Supported</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">90%</div>
+                <div className="text-gray-300">Fewer Issues</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">200ms</div>
-                <div className="text-gray-300">Response Time</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">50%</div>
+                <div className="text-gray-300">Cost Reduction</div>
               </div>
             </div>
           </div>
@@ -195,10 +195,10 @@ export default function AiVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Voice AI Features
+                Intelligent DevOps Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to create natural, intelligent voice interactions.
+                Everything you need to automate, monitor, and optimize your development workflows.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -207,7 +207,7 @@ export default function AiVoiceAssistant() {
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-teal-500 to-cyan-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
@@ -227,10 +227,10 @@ export default function AiVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Complete Voice AI Suite
+                Complete DevOps Suite
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                All the capabilities you need to build intelligent voice experiences.
+                All the tools you need to build, deploy, and maintain modern applications.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -255,7 +255,7 @@ export default function AiVoiceAssistant() {
                 Flexible Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your voice AI needs. All plans include 14-day free trial.
+                Choose the plan that fits your team size and infrastructure needs. All plans include 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -264,13 +264,13 @@ export default function AiVoiceAssistant() {
                   key={index}
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                     plan.popular
-                      ? 'border-indigo-400 bg-gradient-to-br from-indigo-500/10 to-purple-500/10'
-                      : 'border-white/20 hover:border-indigo-400'
+                      ? 'border-teal-400 bg-gradient-to-br from-teal-500/10 to-cyan-500/10'
+                      : 'border-white/20 hover:border-teal-400'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -295,8 +295,8 @@ export default function AiVoiceAssistant() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700'
-                        : 'border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-slate-900'
+                        ? 'bg-gradient-to-r from-teal-500 to-cyan-600 text-white hover:from-teal-600 hover:to-cyan-700'
+                        : 'border border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-slate-900'
                     }`}
                   >
                     Start Free Trial
@@ -312,10 +312,10 @@ export default function AiVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Industry Leaders
+                Trusted by DevOps Teams
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Voice Assistant
+                See what DevOps professionals say about Zion AI-Powered DevOps
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -344,22 +344,22 @@ export default function AiVoiceAssistant() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Voice Interactions?
+              Ready to Transform Your DevOps?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses using Zion AI Voice Assistant to enhance customer experiences.
+              Join thousands of teams using Zion AI-Powered DevOps to accelerate their development cycles.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-teal-400 text-teal-400 px-8 py-4 rounded-lg font-semibold hover:bg-teal-400 hover:text-slate-900 transition-all duration-300"
               >
                 Schedule Demo
               </Link>

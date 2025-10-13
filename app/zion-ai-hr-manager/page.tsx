@@ -1,69 +1,69 @@
-import { ArrowRight, Mic, Brain, Zap, Users, CheckCircle, Star, MessageSquare, Clock, Globe, Shield, BarChart3 } from "lucide-react";
+import { ArrowRight, Users, Brain, BarChart3, Zap, Shield, CheckCircle, Star, UserCheck, Clock, Target, TrendingUp } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AiVoiceAssistant() {
+export default function ZionAiHrManager() {
   const features = [
     {
-      icon: <Mic className="w-6 h-6" />,
-      title: "Natural Voice Recognition",
-      description: "Advanced speech-to-text with 99.5% accuracy in 50+ languages and dialects"
+      icon: <Brain className="w-6 h-6" />,
+      title: "AI-Powered Recruitment",
+      description: "Intelligent candidate screening and matching with 90% accuracy using machine learning algorithms"
     },
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "Contextual Understanding",
-      description: "AI-powered conversation context awareness for natural, human-like interactions"
+      icon: <UserCheck className="w-6 h-6" />,
+      title: "Performance Analytics",
+      description: "Advanced employee performance tracking with predictive insights and improvement recommendations"
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Workforce Analytics",
+      description: "Comprehensive HR analytics with predictive modeling for retention and productivity optimization"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Real-time Processing",
-      description: "Ultra-low latency voice processing with sub-200ms response times"
+      title: "Automated Workflows",
+      description: "Smart automation for onboarding, performance reviews, and employee lifecycle management"
     },
     {
-      icon: <MessageSquare className="w-6 h-6" />,
-      title: "Multi-modal Conversations",
-      description: "Seamless integration of voice, text, and visual interactions"
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Custom Voice Training",
-      description: "Train the assistant with your brand voice and specific terminology"
+      icon: <Clock className="w-6 h-6" />,
+      title: "Time & Attendance",
+      description: "AI-powered time tracking with automatic overtime detection and schedule optimization"
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Enterprise Security",
-      description: "End-to-end encryption and compliance with GDPR, HIPAA, and SOC 2"
+      title: "Compliance Management",
+      description: "Automated compliance tracking for labor laws, benefits, and workplace safety regulations"
     }
   ];
 
-  const capabilities = [
-    "Voice Command Processing",
-    "Natural Language Understanding",
-    "Multi-language Support (50+ languages)",
-    "Custom Voice Synthesis",
-    "Conversation Memory",
-    "Task Automation",
-    "Calendar Integration",
-    "Email & Messaging",
-    "Document Processing",
-    "API Integrations",
-    "Real-time Translation",
-    "Voice Analytics & Insights"
+  const hrFeatures = [
+    "Employee Database Management",
+    "Recruitment & Applicant Tracking",
+    "Performance Review Automation",
+    "Payroll Integration",
+    "Benefits Administration",
+    "Time & Attendance Tracking",
+    "Employee Self-Service Portal",
+    "Training & Development Tracking",
+    "Exit Interview Management",
+    "HR Reporting & Analytics",
+    "Document Management",
+    "Multi-location Support"
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
+      name: "Small Team",
       price: "$29",
       period: "/month",
-      description: "Perfect for small teams",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 1,000 voice minutes",
-        "Basic voice recognition",
-        "5 custom commands",
+        "Up to 25 employees",
+        "Basic AI features",
+        "Core HR functions",
         "Email support",
-        "Standard integrations",
-        "Basic analytics"
+        "Mobile app",
+        "Standard reports"
       ],
       popular: false
     },
@@ -71,15 +71,15 @@ export default function AiVoiceAssistant() {
       name: "Professional",
       price: "$99",
       period: "/month",
-      description: "Most popular for growing businesses",
+      description: "Most popular for growing companies",
       features: [
-        "Up to 10,000 voice minutes",
+        "Up to 100 employees",
         "Advanced AI features",
-        "Unlimited custom commands",
+        "Full HR suite",
         "Priority support",
-        "Custom integrations",
+        "Custom workflows",
         "Advanced analytics",
-        "Multi-language support"
+        "API access"
       ],
       popular: true
     },
@@ -89,12 +89,12 @@ export default function AiVoiceAssistant() {
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited voice minutes",
+        "Unlimited employees",
         "Full AI suite",
-        "Custom voice training",
+        "Custom integrations",
         "24/7 phone support",
         "White-label solution",
-        "Advanced security",
+        "Advanced compliance",
         "Dedicated account manager"
       ],
       popular: false
@@ -103,24 +103,24 @@ export default function AiVoiceAssistant() {
 
   const testimonials = [
     {
-      name: "Alex Thompson",
-      company: "Customer Service Co.",
-      role: "Operations Director",
-      content: "Zion AI Voice Assistant reduced our call handling time by 60% and improved customer satisfaction by 40%. The natural conversation flow is incredible.",
+      name: "Jennifer Martinez",
+      company: "Tech Startup",
+      role: "HR Director",
+      content: "Zion AI HR Manager reduced our hiring time by 50% and improved candidate quality significantly. The AI screening is incredibly accurate.",
       rating: 5
     },
     {
-      name: "Maria Santos",
-      company: "Healthcare Provider",
-      role: "IT Director",
-      content: "The multi-language support is perfect for our diverse patient base. The voice assistant handles complex medical terminology flawlessly.",
+      name: "Michael Thompson",
+      company: "Manufacturing Co.",
+      role: "VP of Operations",
+      content: "The performance analytics helped us identify top performers and create targeted development programs. Employee satisfaction increased by 40%.",
       rating: 5
     },
     {
-      name: "James Wilson",
-      company: "E-commerce Platform",
-      role: "Customer Experience Manager",
-      content: "The real-time processing is amazing. Customers get instant responses and the voice quality is crystal clear. Highly recommended.",
+      name: "Sarah Wilson",
+      company: "Consulting Firm",
+      role: "People Operations Manager",
+      content: "The automated workflows save us 20 hours per week. We can focus on strategic HR initiatives while the AI handles routine tasks.",
       rating: 5
     }
   ];
@@ -128,45 +128,45 @@ export default function AiVoiceAssistant() {
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Intelligent Voice AI Platform | Zion Tech Group</title>
+        <title>Zion AI HR Manager - Intelligent Human Resources Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform customer interactions with Zion AI Voice Assistant - the ultimate voice AI platform. Natural conversations, multi-language support, and enterprise-grade security."
+          content="Transform your HR with Zion AI HR Manager - the ultimate AI-powered human resources platform. Automated recruitment, performance analytics, and workforce optimization."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, voice AI, speech recognition, natural language processing, voice automation, conversational AI, voice analytics"
+          content="AI HR, human resources management, recruitment automation, performance analytics, workforce management, employee engagement, HR software"
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 mb-6">
-              <Mic className="w-4 h-4 text-indigo-400 mr-2" />
-              <span className="text-indigo-400 text-sm font-medium">AI-Powered Voice Platform</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
+              <Users className="w-4 h-4 text-blue-400 mr-2" />
+              <span className="text-blue-400 text-sm font-medium">AI-Powered HR Platform</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
-                AI Voice Assistant
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                Zion AI HR Manager
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize customer interactions with the world's most intelligent voice AI platform. 
-              Natural conversations, multi-language support, and enterprise-grade security for modern businesses.
+              Revolutionize your human resources with the world's most intelligent HR platform. 
+              AI-powered recruitment, performance analytics, and workforce optimization for modern organizations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
+                className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
               >
                 Watch Demo
               </Link>
@@ -175,16 +175,16 @@ export default function AiVoiceAssistant() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-indigo-400 mb-2">99.5%</div>
-                <div className="text-gray-300">Voice Recognition Accuracy</div>
+                <div className="text-3xl font-bold text-blue-400 mb-2">50%</div>
+                <div className="text-gray-300">Faster Hiring</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
-                <div className="text-gray-300">Languages Supported</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">40%</div>
+                <div className="text-gray-300">Higher Satisfaction</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">200ms</div>
-                <div className="text-gray-300">Response Time</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">90%</div>
+                <div className="text-gray-300">AI Accuracy</div>
               </div>
             </div>
           </div>
@@ -195,10 +195,10 @@ export default function AiVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Voice AI Features
+                Intelligent HR Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to create natural, intelligent voice interactions.
+                Everything you need to manage, develop, and optimize your workforce.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -207,7 +207,7 @@ export default function AiVoiceAssistant() {
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
@@ -222,25 +222,25 @@ export default function AiVoiceAssistant() {
           </div>
         </section>
 
-        {/* Capabilities List */}
+        {/* HR Features List */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Complete Voice AI Suite
+                Complete HR Solution
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                All the capabilities you need to build intelligent voice experiences.
+                All the tools you need to manage your human resources effectively and efficiently.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {capabilities.map((capability, index) => (
+              {hrFeatures.map((feature, index) => (
                 <div
                   key={index}
                   className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
                 >
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{capability}</span>
+                  <span className="text-gray-300">{feature}</span>
                 </div>
               ))}
             </div>
@@ -255,7 +255,7 @@ export default function AiVoiceAssistant() {
                 Flexible Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your voice AI needs. All plans include 14-day free trial.
+                Choose the plan that fits your organization size. All plans include 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -264,13 +264,13 @@ export default function AiVoiceAssistant() {
                   key={index}
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                     plan.popular
-                      ? 'border-indigo-400 bg-gradient-to-br from-indigo-500/10 to-purple-500/10'
-                      : 'border-white/20 hover:border-indigo-400'
+                      ? 'border-blue-400 bg-gradient-to-br from-blue-500/10 to-cyan-500/10'
+                      : 'border-white/20 hover:border-blue-400'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -295,8 +295,8 @@ export default function AiVoiceAssistant() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700'
-                        : 'border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-slate-900'
+                        ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700'
+                        : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900'
                     }`}
                   >
                     Start Free Trial
@@ -312,10 +312,10 @@ export default function AiVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Industry Leaders
+                Trusted by HR Professionals
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Voice Assistant
+                See what HR professionals say about Zion AI HR Manager
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -344,22 +344,22 @@ export default function AiVoiceAssistant() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Voice Interactions?
+              Ready to Transform Your HR?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses using Zion AI Voice Assistant to enhance customer experiences.
+              Join thousands of organizations using Zion AI HR Manager to optimize their workforce.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
               >
                 Schedule Demo
               </Link>
