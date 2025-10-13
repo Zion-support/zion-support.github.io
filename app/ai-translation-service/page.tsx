@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 export default function AiTranslationServicePage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -42,4 +41,6 @@ export default function AiTranslationServicePage() {
       </div>
     </div>
   );
+}
+}
 }

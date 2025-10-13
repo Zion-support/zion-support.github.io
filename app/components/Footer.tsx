@@ -17,7 +17,12 @@ import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
+<<<<<<< HEAD
 
+=======
+import React from 'react';
+import { 
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 const services = [
     {
       title: "Cloud Migration",
@@ -45,11 +50,6 @@ const microSaasServices = [
     { name: "Cloud Solutions", href: "/cloud-services" },
     { name: "DevOps", href: "/devops" }
   ];
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { 
   Brain, 
   Mail, 
   Phone, 
@@ -65,7 +65,10 @@ import {
   Award,
   Users
 } from "lucide-react";
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
@@ -84,7 +87,6 @@ const Footer: React.FC = () => {
       name: "GitHub",
       href: "https://github.com/ziontechgroup",
       icon: <Github className="w-5 h-5" />
-    }
   ];
 
   const serviceCategories = [
@@ -105,7 +107,6 @@ const Footer: React.FC = () => {
         { name: "5G Implementation", href: "/5g-implementation" },
         { name: "5G Private Networks", href: "/5g-private-networks" }
       ]
-    }
   ];
 
   const quickLinks = [
@@ -132,6 +133,9 @@ const Footer: React.FC = () => {
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-5 h-5" /> },
     { number: "24/7", label: "Support", icon: <Clock className="w-5 h-5" /> }
   ];
+
+  return null;
+};
 
 export default function Footer({ className = '', children, ...props }: FooterProps) {
   return (

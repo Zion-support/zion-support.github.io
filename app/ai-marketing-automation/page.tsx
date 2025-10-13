@@ -12,6 +12,7 @@ import { Mail } from 'lucide-react';
 import { Share2 } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
+<<<<<<< HEAD
 
 
 export default function AIMarketingAutomation() {
@@ -97,53 +98,21 @@ export default function Page() {
       benefits: ["Trigger-based Actions", "Multi-channel Workflows", "Conditional Logic", "Performance Monitoring"]
     }
   ];
+=======
+export default function AIMarketingAutomation() {
+  return null;
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
-  const pricing = [
-    {
-      name: "Starter",
-      price: "$199",
-      period: "/month",
-      description: "Perfect for small businesses getting started with marketing automation",
-      features: [
-        "Up to 1,000 contacts",
-        "Email automation",
-        "Basic analytics",
-        "Social media posting",
-        "Email support"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$399",
-      period: "/month",
-      description: "Ideal for growing businesses with advanced automation needs",
-      features: [
-        "Up to 10,000 contacts",
-        "Advanced email automation",
-        "Lead scoring",
-        "A/B testing",
-        "Advanced analytics",
-        "Priority support"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$799",
-      period: "/month",
-      description: "Complete solution for large organizations with complex requirements",
-      features: [
-        "Unlimited contacts",
-        "Custom workflows",
-        "Advanced segmentation",
-        "API access",
-        "Custom integrations",
-        "Dedicated support"
-      ],
-      popular: false
-    }
-  ];
+  return null;
+};
+
+export default function Page() {
+  return null;
+};
+
+  return null;
+};
 
 export default function AiMarketingAutomationPage() {
   return (
@@ -187,5 +156,6 @@ export default function AiMarketingAutomationPage() {
     </div>
   );
 }
-
+}
+}
 }

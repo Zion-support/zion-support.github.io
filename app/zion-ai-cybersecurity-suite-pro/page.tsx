@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import React from 'react';
 =======
 import React from 'react';
+=======
+import React from 'react';import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import { Shield, Brain, Lock, Zap, ArrowRight, CheckCircle, Star, Award, BarChart3, Clock, Target, Sparkles, TrendingUp, Globe, Smartphone, Monitor, AlertTriangle, Eye, Search, Database, Network, Shield as FileShield, Key, Bug, Activity, Server, Wifi, HardDrive, Cloud, Settings, Users, Bell, FileText, Download, Upload } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
@@ -24,7 +28,6 @@ import { Monitor } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-
 const ZionAICybersecuritySuiteProPage = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
 
@@ -88,7 +91,6 @@ const ZionAICybersecuritySuiteProPage = () => {
       ],
       popular: false,
       color: "from-purple-500 to-pink-500"
-    }
   ];
 
   const securityModules = [
@@ -127,7 +129,6 @@ const ZionAICybersecuritySuiteProPage = () => {
       description: "Comprehensive cloud security monitoring and protection for AWS, Azure, and Google Cloud",
       icon: <Cloud className="w-6 h-6" />,
       color: "from-cyan-500 to-blue-500"
-    }
   ];
 
   const threatTypes = [
@@ -166,10 +167,13 @@ const ZionAICybersecuritySuiteProPage = () => {
       description: "Comprehensive monitoring and analysis of third-party vendors and supply chain security risks",
       icon: <Globe className="w-8 h-8" />,
       color: "from-cyan-500 to-blue-500"
-    }
   ];
 
+  return null;
+};
+
 export default function ZionAiCybersecuritySuiteProPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -210,7 +214,6 @@ export default function ZionAiCybersecuritySuiteProPage() {
       </div>
     </div>
   );
+}
 };
-
-
 }

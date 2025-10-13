@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 import React from "react";
 =======
 import React from 'react';
+=======
+import React from "react";import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import { Helmet } from 'react-helmet-async';
-
 export default function AIServices() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -44,4 +47,6 @@ export default function AIServices() {
       </div>
     </div>
   );
+}
+}
 }

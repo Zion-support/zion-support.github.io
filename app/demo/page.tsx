@@ -11,13 +11,18 @@ import { Monitor } from 'lucide-react';
 import { Play } from 'lucide-react';
 import { Hand } from 'lucide-react';
 import { Cloud } from 'lucide-react';
+<<<<<<< HEAD
 
-import { useState } from 'react';
 =======
-import { ArrowRight } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
+import { useState } from 'react';
 import { Play, Pause, SkipForward, SkipBack, Maximize, ArrowRight, CheckCircle, Star, Calendar, Users, Award } from 'lucide-react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function Page() {
+
   const [currentDemo, setCurrentDemo] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -48,7 +53,6 @@ export default function Page() {
       icon: <BarChart3 className="w-8 h-8 text-yellow-400" />,
       title: "Data-Driven",
       description: "Make informed decisions with data"
-    }
   ];
 
   const demos = [
@@ -111,24 +115,36 @@ export default function Page() {
       features: ['Auto-scaling', 'Disaster Recovery', 'Cost Optimization', 'Multi-cloud Support'],
       thumbnail: '/api/placeholder/800/450',
       videoUrl: '#'
-    }
   ];
+
+  return null;
+};
 
   const handlePlayPause = () => {
     setIsPlaying(!isPlaying);
   };
+
+  return null;
+};
 
   const handleNextDemo = () => {
     setCurrentDemo((prev) => (prev + 1) % demos.length);
     setIsPlaying(false);
   };
 
+  return null;
+};
+
   const handlePrevDemo = () => {
     setCurrentDemo((prev) => (prev - 1 + demos.length) % demos.length);
     setIsPlaying(false);
   };
 
+  return null;
+};
+
 export default function DemoPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -170,5 +186,5 @@ export default function DemoPage() {
     </div>
   );
 }
-
+}
 }

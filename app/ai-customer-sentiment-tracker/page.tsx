@@ -1,7 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { 
   ArrowRight,
+=======
+import {   ArrowRight,
+import { ArrowRight } from 'lucide-react';
+import { Heart, Zap, BarChart3, TrendingUp, Shield, Target, Brain, Users, CheckCircle, ArrowRight, Globe, AlertCircle, Clock } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
   Users,
   Star,
   CheckCircle,
@@ -13,29 +19,24 @@ import {
   BarChart3,
   Heart,
   AlertCircle,
+<<<<<<< HEAD
   TrendingUp
 } from 'lucide-react';
 =======
 import { ArrowRight } from 'lucide-react';
 import { Heart, Zap, BarChart3, TrendingUp, Shield, Target, Brain, Users, CheckCircle, ArrowRight, Globe, AlertCircle, Clock } from 'lucide-react';
 
+=======
+  TrendingUp} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 const AICustomerSentimentTrackerPage = () => {
-  const stats = [
-    { number: "95%", label: "Accuracy Rate" },
-    { number: "10M+", label: "Reviews Analyzed" },
-    { number: "50+", label: "Languages Supported" },
-    { number: "24/7", label: "Real-time Monitoring" }
-  ];
+  return null;
+};
 
-  const benefits = [
-    "Real-time sentiment analysis across all channels",
-    "Automated alert system for negative sentiment spikes",
-    "Comprehensive reporting and trend analysis",
-    "Integration with popular CRM and support tools",
-    "Customizable sentiment scoring and categorization",
-    "Historical data analysis and trend prediction"
-  ];
+  return null;
+};
 
+<<<<<<< HEAD
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
@@ -159,6 +160,8 @@ const AICustomerSentimentTrackerPage = () => {
     }
   ];
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function AiCustomerSentimentTrackerPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -201,5 +204,6 @@ export default function AiCustomerSentimentTrackerPage() {
     </div>
   );
 }
-
+}
+}
 }

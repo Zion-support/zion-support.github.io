@@ -11,11 +11,14 @@ import { Globe } from 'lucide-react';
 import { Lock } from 'lucide-react';
 import { Filter } from 'lucide-react';
 import { Cloud } from 'lucide-react';
+<<<<<<< HEAD
 
 
 =======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 const features = [
     {
       title: "Predictive Analytics",
@@ -55,6 +58,7 @@ const testimonials = [
     }
   ];
 export default function ZionCloudVault() {
+
   const features = [
     {
       icon: <Cloud className="w-6 h-6" />,
@@ -85,7 +89,6 @@ export default function ZionCloudVault() {
       icon: <Database className="w-6 h-6" />,
       title: "Unlimited Storage",
       description: "Scale from GB to PB with no storage limits and automatic scaling"
-    }
   ];
 
   const storageFeatures = [
@@ -150,10 +153,13 @@ export default function ZionCloudVault() {
         "Dedicated account manager"
       ],
       popular: false
-    }
   ];
 
+  return null;
+};
+
 export default function ZionCloudVaultPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -195,5 +201,5 @@ export default function ZionCloudVaultPage() {
     </div>
   );
 }
-
+}
 }

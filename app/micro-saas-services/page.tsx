@@ -14,16 +14,22 @@ import { Cloud } from 'lucide-react';
 import { Package } from 'lucide-react';
 import { Heart } from 'lucide-react';
 import { Receipt } from 'lucide-react';
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import { ArrowRight, Shield, Cloud, Globe, Calendar, Phone, CheckCircle, Sparkles, Heart, Receipt, Package, Code } from 'lucide-react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function Page() {
+
   const stats = [
     { label: "Stat 1", value: "100%" }
   ];
@@ -351,10 +357,13 @@ export default function Page() {
         "Automated quality assurance",
         "Complete DevOps automation"
       ]
-    }
   ];
 
+  return null;
+};
+
 export default function MicroSaasServicesPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -396,5 +405,5 @@ export default function MicroSaasServicesPage() {
     </div>
   );
 }
-
+}
 }

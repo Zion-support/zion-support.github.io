@@ -29,15 +29,19 @@ import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 import { Package } from 'lucide-react';
 import { Heart } from 'lucide-react';
+<<<<<<< HEAD
 import { Receipt } from 'lucide-react';
 =======
 import { Link } from 'react-router-dom';
 import { Menu, X, Brain, Shield, Zap, Globe, ChevronDown, ChevronUp } from 'lucide-react';
 
+=======
+import { Receipt } from 'lucide-react';import { Link } from 'react-router-dom';
+import { Menu, X, Brain, Shield, Zap, Globe, ChevronDown, ChevronUp } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 interface NavigationProps {
   onSidebarToggle?: () => void;
 }
-
 export default function Navigation({ onSidebarToggle }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -95,7 +99,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
       name: 'Contact',
       path: '/contact',
       icon: <Globe className="w-4 h-4" />
-    }
   ];
 
   const serviceDropdownItems = [
@@ -116,8 +119,10 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
         { name: '5G Implementation', path: '/5g-implementation' },
         { name: '5G Private Networks', path: '/5g-private-networks' }
       ]
-    }
   ];
+
+  return null;
+};
 
 export default function Navigation({ className = '', children, ...props }: NavigationProps) {
   return (

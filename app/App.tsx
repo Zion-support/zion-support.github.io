@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client";
 
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-ddba
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+=======
+import React, { lazy, Suspense } from 'react';import { BrowserRouter, Routes, Route } from 'react-router-dom';
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from "./components/ErrorBoundary";
 import PerformanceMonitor from "./components/PerformanceMonitor";
@@ -17,7 +21,7 @@ import { Helmet } from 'react-helmet-async';
 import { Home } from 'lucide-react';
 import { Network } from 'lucide-react';
 import { Monitor } from 'lucide-react';
-
+"use client";
 // Lazy load pages for better performance
 const HomePage = lazy(() => import("./page"));
 const AboutPage = lazy(() => import("./about/page"));
@@ -31,7 +35,6 @@ const CareersPage = lazy(() => import("./careers/page"));
 const PrivacyPage = lazy(() => import("./privacy/page"));
 const TermsPage = lazy(() => import("./terms/page"));
 const CookiesPage = lazy(() => import("./cookies/page"));
-
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = lazy(() => import("./5g-data-analytics/page"));
 const FiveGEdgeComputingPage = lazy(() => import("./5g-edge-computing/page"));
@@ -50,6 +53,7 @@ const FiveGSmartCitySolutionsPage = lazy(
   () => import("./5g-smart-city-solutions/page"),
 );
 const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
+<<<<<<< HEAD
 
 // Loading component
 const LoadingSpinner = () => (
@@ -58,18 +62,26 @@ const LoadingSpinner = () => (
   </div>
 );
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 // Main App Component
 export default function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <ErrorBoundary>
           <PerformanceMonitor />
           <AccessibilityEnhancer>
+=======
+        <ErrorBoundary>
+          <PerformanceMonitor />          <AccessibilityEnhancer>
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
             <CriticalResourcePreloader />
             <CacheManager />
             <AdvancedPerformanceMonitor />
+}
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
               <Route path="/" element={<HomePage />} />
@@ -84,7 +96,6 @@ export default function App() {
               <Route path="/privacy" element={<PrivacyPage />} />
               <Route path="/terms" element={<TermsPage />} />
               <Route path="/cookies" element={<CookiesPage />} />
-
               {/* 5G Solutions Routes */}
               <Route
                 path="/5g-data-analytics"
@@ -181,7 +192,11 @@ export default function App() {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default App;
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-ddba
+=======
+export default App;
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa

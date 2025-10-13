@@ -14,7 +14,10 @@ import { Mail } from 'lucide-react';
 import { Play } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Mic } from 'lucide-react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 const ZionAICRMProPage = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
 
@@ -56,7 +59,6 @@ const ZionAICRMProPage = () => {
       description: 'AI-powered customer segmentation for targeted marketing and personalized experiences.',
       icon: <Users className="w-6 h-6" />,
       benefits: ['AI segmentation', 'Behavioral grouping', 'Custom segments', 'Dynamic updates']
-    }
   ];
 
   const pricingPlans = [
@@ -110,7 +112,6 @@ const ZionAICRMProPage = () => {
         'SLA guarantee'
       ],
       popular: false
-    }
   ];
 
   const integrations = [
@@ -127,9 +128,16 @@ const ZionAICRMProPage = () => {
     { name: 'Zapier', logo: 'ZP', category: 'Automation' },
     { name: 'Salesforce', logo: 'SF', category: 'CRM' }
   ];
+<<<<<<< HEAD
+=======
 =======
 
+  return null;
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
+
 export default function ZionAiCrmProPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -170,4 +178,5 @@ export default function ZionAiCrmProPage() {
       </div>
     </div>
   );
+}
 }

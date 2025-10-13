@@ -1,10 +1,16 @@
 import React from 'react';
+<<<<<<< HEAD
 
-import EnhancedSEO from '../components/EnhancedSEO';
 =======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
+import EnhancedSEO from '../components/EnhancedSEO';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function CareersPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -45,4 +51,5 @@ export default function CareersPage() {
       </div>
     </div>
   );
+}
 }

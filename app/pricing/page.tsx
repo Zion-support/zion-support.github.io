@@ -15,13 +15,19 @@ import { Smartphone } from 'lucide-react';
 import { Hand } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
+<<<<<<< HEAD
 
 
 export default function Pricing() {
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+export default function Pricing() {
+
+
+  return null;
+};
 
 export default function Pricing() {
   const features = [
@@ -44,7 +50,6 @@ export default function Pricing() {
       title: "Automated Reporting",
       description: "Generate detailed reports automatically",
       icon: "FileText"
-    }
   ];
 const services = [
     {
@@ -61,8 +66,19 @@ const services = [
       title: "Performance Optimization",
       description: "Optimize your cloud performance",
       icon: "Zap"
-    }
   ];
+<<<<<<< HEAD
+=======
+  return null;
+};
+
+export default function Page() {
+
+  const features = [
+    { title: "Feature 1", description: "Description 1" },
+    { title: "Feature 2", description: "Description 2" }
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
   const aiServicesPricing = [
     {
       name: "AI Analytics Dashboard",
@@ -111,7 +127,6 @@ const services = [
       ],
       popular: false,
       color: "from-purple-500 to-pink-500"
-    }
   ];
 
   const microSaasPricing = [
@@ -162,7 +177,6 @@ const services = [
       ],
       popular: false,
       color: "from-blue-500 to-cyan-500"
-    }
   ];
 
   const enterprisePricing = [
@@ -201,7 +215,6 @@ const services = [
       ],
       popular: true,
       color: "from-indigo-500 to-purple-500"
-    }
   ];
 
   const faqs = [
@@ -228,9 +241,16 @@ const services = [
     {
       question: "What happens if I exceed my plan limits?",
       answer: "We'll notify you before you reach your limits and offer options to upgrade or purchase additional capacity."
-    }
   ];
 
+<<<<<<< HEAD
+=======
+  return null;
+};
+
+export default function PricingPage() {
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -428,4 +448,5 @@ const services = [
       </div>
     </div>
   );
+}
 }

@@ -1,5 +1,4 @@
 // Next.js type definitions
-
 declare module 'next' {
   interface NextConfig {
     experimental?: {
@@ -7,5 +6,4 @@ declare module 'next' {
     };
   }
 }
-
 export {};

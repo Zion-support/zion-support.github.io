@@ -8,7 +8,6 @@ import { Sparkles } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Box } from 'lucide-react';
 import { Mic } from 'lucide-react';
-
 const ARVRDevelopmentPage = () => {
   const features = [
     {
@@ -34,10 +33,16 @@ const ARVRDevelopmentPage = () => {
       description: "Deploy across all major AR/VR platforms including Meta, Apple, and Microsoft",
       icon: <Globe className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
-    }
   ];
+<<<<<<< HEAD
+=======
+
+  return null;
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 export default function Page() {
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <Helmet>
@@ -61,4 +66,5 @@ export default function Page() {
       </div>
     </div>
   );
+}
 }

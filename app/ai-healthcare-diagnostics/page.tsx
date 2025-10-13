@@ -12,43 +12,20 @@ import { BarChart3 } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
+<<<<<<< HEAD
 
 
-export default function AIHealthcareDiagnostics() {
 =======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-const benefits = [
-    "Advanced AI algorithms for accurate predictions",
-    "Real-time risk assessment and monitoring",
-    "Automated report generation and insights",
-    "Seamless integration with existing systems",
-    "24/7 monitoring and alert system",
-    "Scalable cloud-based infrastructure"
-  ];
-const features = [
-    {
-      title: "Predictive Analytics",
-      description: "Advanced machine learning models for accurate financial forecasting",
-      icon: "Brain"
-    },
-    {
-      title: "Risk Assessment",
-      description: "Comprehensive risk analysis and mitigation strategies",
-      icon: "Shield"
-    },
-    {
-      title: "Real-time Monitoring",
-      description: "Continuous monitoring of financial metrics and KPIs",
-      icon: "Activity"
-    },
-    {
-      title: "Automated Reporting",
-      description: "Generate detailed reports automatically",
-      icon: "FileText"
-    }
-  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
+export default function AIHealthcareDiagnostics() {
+  return null;
+};
+
+  return null;
+};
+
 export default function Page() {
+<<<<<<< HEAD
   const benefits = [
     "Benefit 1",
     "Benefit 2"
@@ -79,53 +56,13 @@ export default function Page() {
       benefits: ["Prognosis Prediction", "Treatment Optimization", "Risk Assessment", "Resource Planning"]
     }
   ];
+=======
+  return null;
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
-  const useCases = [
-    {
-      title: "Radiology Departments",
-      description: "Accelerate image analysis and improve diagnostic accuracy in radiology departments",
-      impact: "40% faster diagnosis, 30% reduction in misdiagnosis"
-    },
-    {
-      title: "Emergency Rooms",
-      description: "Rapid triage and critical condition identification in emergency settings",
-      impact: "50% faster triage, 25% improvement in critical case detection"
-    },
-    {
-      title: "Primary Care",
-      description: "Support general practitioners with comprehensive diagnostic assistance",
-      impact: "60% more accurate initial diagnoses, 35% reduction in referrals"
-    },
-    {
-      title: "Specialist Clinics",
-      description: "Enhance specialist care with AI-powered diagnostic support and monitoring",
-      impact: "45% improvement in treatment outcomes, 20% cost reduction"
-    }
-  ];
-
-  const pricing = [
-    {
-      plan: "Starter",
-      price: "$499/month",
-      description: "Perfect for small clinics and private practices",
-      features: ["Up to 100 patients/month", "Basic imaging analysis", "Symptom assessment", "Email support"],
-      popular: false
-    },
-    {
-      plan: "Professional",
-      price: "$999/month",
-      description: "Ideal for medium-sized hospitals and medical centers",
-      features: ["Up to 500 patients/month", "Advanced imaging analysis", "Drug interaction checking", "Predictive analytics", "Priority support"],
-      popular: true
-    },
-    {
-      plan: "Enterprise",
-      price: "Custom Pricing",
-      description: "Comprehensive solution for large healthcare systems",
-      features: ["Unlimited patients", "Full AI suite", "Custom integrations", "Dedicated support", "Training & consultation"],
-      popular: false
-    }
-  ];
+  return null;
+};
 
 export default function AiHealthcareDiagnosticsPage() {
   return (
@@ -169,5 +106,6 @@ export default function AiHealthcareDiagnosticsPage() {
     </div>
   );
 }
-
+}
+}
 }

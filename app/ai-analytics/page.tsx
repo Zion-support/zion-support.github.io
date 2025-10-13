@@ -1,7 +1,24 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { 
   BarChart3, 
+=======
+import {   BarChart3, 
+import { ArrowRight } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Database } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Phone } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
   TrendingUp, 
   Zap, 
   Shield, 
@@ -19,6 +36,7 @@ import {
   TrendingDown,
   Monitor
 } from "lucide-react";
+<<<<<<< HEAD
 =======
 import { ArrowRight } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -34,19 +52,26 @@ import { BarChart3 } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function AIAnalyticsPage() {
   return (
     <div>
       <h1>Page Content</h1>
     </div>
+<<<<<<< HEAD
   );
   const analyticsStats = [
+=======
+  );  const analyticsStats = [
+}
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
     { number: "40%", label: "Faster Decision Making", icon: <Zap className="w-6 h-6" /> },
     { number: "85%", label: "Prediction Accuracy", icon: <Brain className="w-6 h-6" /> },
     { number: "60%", label: "Cost Reduction", icon: <TrendingDown className="w-6 h-6" /> },
     { number: "24/7", label: "Automated Monitoring", icon: <Monitor className="w-6 h-6" /> }
   ];
-
   const testimonials = [
     {
       name: "Sarah Johnson",
@@ -65,7 +90,6 @@ export default function AIAnalyticsPage() {
       avatar: "/api/placeholder/64/64"
     }
   ];
-
   const features = [
     {
       title: "Real-time Analytics",
@@ -74,5 +98,8 @@ export default function AIAnalyticsPage() {
       benefits: ["Interactive charts", "Custom dashboards", "Mobile-responsive", "Export capabilities"]
     }
   ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 }

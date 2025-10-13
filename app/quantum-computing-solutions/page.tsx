@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { 
   Cpu, 
@@ -12,7 +13,10 @@ import {
   Gauge
 } from 'lucide-react';
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import React from 'react';
+import {   Cpu, 
 import { Helmet } from 'react-helmet-async';
 import { Cpu, Zap, Shield, Brain, Target, CheckCircle, Globe, Activity, Lock, Gauge } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
@@ -36,7 +40,16 @@ import { Lock } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { Activity } from 'lucide-react';
-
+  Zap, 
+  Shield, 
+  Brain, 
+  Target, 
+  CheckCircle, 
+  Globe,
+  Activity,
+  Lock,
+  Gauge
+} from 'lucide-react';
 const QuantumComputingSolutionsPage = () => {
   const features = [
     {
@@ -62,7 +75,6 @@ const QuantumComputingSolutionsPage = () => {
       description: "Solve complex optimization problems with quantum algorithms",
       icon: <Target className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
-    }
   ];
 
   const pricingPlans = [
@@ -116,7 +128,6 @@ const QuantumComputingSolutionsPage = () => {
         "Dedicated quantum team"
       ],
       popular: false
-    }
   ];
 
   const capabilities = [
@@ -143,7 +154,6 @@ const QuantumComputingSolutionsPage = () => {
       description: "Maintain quantum states for extended computation periods",
       coherence: "99.7%",
       icon: <Activity className="w-6 h-6" />
-    }
   ];
 
   const stats = [
@@ -153,7 +163,11 @@ const QuantumComputingSolutionsPage = () => {
     { number: "24/7", label: "Quantum Monitoring", icon: <Globe className="w-6 h-6" /> }
   ];
 
+  return null;
+};
+
 export default function QuantumComputingSolutionsPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -194,7 +208,6 @@ export default function QuantumComputingSolutionsPage() {
       </div>
     </div>
   );
+}
 };
-
-
 }

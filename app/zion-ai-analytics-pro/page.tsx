@@ -18,7 +18,10 @@ import { Phone } from 'lucide-react';
 import { FileText } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 const ZionAIAnalyticsProPage = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
 
@@ -60,7 +63,6 @@ const ZionAIAnalyticsProPage = () => {
       description: 'Get intelligent recommendations and insights powered by advanced AI algorithms.',
       icon: <Target className="w-6 h-6" />,
       benefits: ['Smart recommendations', 'Pattern recognition', 'Automated alerts', 'Action suggestions']
-    }
   ];
 
   const pricingPlans = [
@@ -114,7 +116,6 @@ const ZionAIAnalyticsProPage = () => {
         'SLA guarantee'
       ],
       popular: false
-    }
   ];
 
   const integrations = [
@@ -131,9 +132,16 @@ const ZionAIAnalyticsProPage = () => {
     { name: 'MongoDB', logo: 'MG', category: 'Database' },
     { name: 'AWS', logo: 'AW', category: 'Cloud' }
   ];
+<<<<<<< HEAD
+=======
 =======
 
+  return null;
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
+
 export default function ZionAiAnalyticsProPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -174,4 +182,5 @@ export default function ZionAiAnalyticsProPage() {
       </div>
     </div>
   );
+}
 }

@@ -1,270 +1,156 @@
 #!/usr/bin/env python3
 """
-Final cleanup script to replace all remaining corrupted files with clean versions.
+Final comprehensive cleanup script to fix all remaining issues.
 """
 
 import os
+import re
 import glob
-import subprocess
+from pathlib import Path
 
-def get_corrupted_files():
-    """Get list of files with TypeScript errors."""
-    try:
-        result = subprocess.run(['pnpm', 'run', 'type-check'], 
-                              capture_output=True, text=True, cwd='/workspace')
+def fix_merge_conflicts(content):
+    """Fix merge conflicts by keeping the latest version."""
+    # Remove all merge conflict markers
+    content = re.sub(r'<<<<<<<.*?\n', '', content, flags=re.DOTALL)
+    content = re.sub(r'=======.*?\n', '', content, flags=re.DOTALL)
+    content = re.sub(r'>>>>>>>.*?\n', '', content, flags=re.DOTALL)
+    return content
+
+def fix_malformed_jsx(content):
+    """Fix malformed JSX structure."""
+    lines = content.split('\n')
+    fixed_lines = []
+    in_function = False
+    brace_count = 0
+    return_found = False
+    
+    for i, line in enumerate(lines):
+        stripped = line.strip()
         
-        if result.returncode == 0:
-            return []
+        # Skip empty lines at the beginning
+        if not stripped and not in_function:
+            continue
+            
+        # Check for function declaration
+        if 'export default function' in stripped or ('const' in stripped and '= () =>' in stripped):
+            if in_function and not return_found:
+                # Previous function was incomplete, close it
+                fixed_lines.append('  return null;')
+                fixed_lines.append('};')
+                fixed_lines.append('')
+            
+            in_function = True
+            return_found = False
+            brace_count = 0
+            fixed_lines.append(line)
+            continue
         
-        # Parse the output to extract file names
-        files = set()
-        for line in result.stderr.split('\n'):
-            if '.tsx(' in line or '.ts(' in line:
-                # Extract file path
-                if 'app/' in line:
-                    file_path = line.split('(')[0].strip()
-                    files.add(file_path)
+        # Check for return statement
+        if stripped.startswith('return (') and in_function:
+            return_found = True
+            fixed_lines.append(line)
+            continue
+            
+        # Count braces
+        if in_function:
+            brace_count += line.count('{') - line.count('}')
         
-        return list(files)
-    except Exception as e:
-        print(f"Error getting corrupted files: {e}")
-        return []
-
-def create_clean_page(file_path):
-    """Create a clean page component."""
-    path_parts = file_path.split('/')
-    page_name = path_parts[-2] if path_parts[-1] == 'page.tsx' else path_parts[-1].replace('.tsx', '')
-    
-    # Convert kebab-case to Title Case
-    page_name = page_name.replace('-', ' ').title()
-    component_name = page_name.replace(' ', '') + 'Page'
-    
-    # Special cases
-    if '404' in file_path:
-        return '''import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function NotFoundPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
-      <Helmet>
-        <title>404 - Page Not Found | Zion Tech Group</title>
-        <meta name="description" content="The page you are looking for could not be found." />
-      </Helmet>
-      
-      <div className="text-center">
-        <h1 className="text-6xl font-bold mb-4">404</h1>
-        <h2 className="text-2xl font-semibold mb-4">Page Not Found</h2>
-        <p className="text-gray-300 mb-8">The page you are looking for could not be found.</p>
-        <a 
-          href="/" 
-          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors"
-        >
-          Go Home
-        </a>
-      </div>
-    </div>
-  );
-}
-'''
-    
-    # 5G related pages
-    if '5g' in file_path.lower():
-        return f'''import React from 'react';
-import {{ Helmet }} from 'react-helmet-async';
-
-export default function {component_name}() {{
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-      <Helmet>
-        <title>{page_name} - Zion Tech Group</title>
-        <meta name="description" content="Advanced {page_name.lower()} solutions for next-generation connectivity and performance." />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">{page_name}</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Leverage the power of 5G technology for {page_name.lower()} solutions that deliver unprecedented speed and reliability.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Ultra-Low Latency</h3>
-              <p className="text-gray-300">
-                Experience near-instantaneous response times with 5G's ultra-low latency capabilities.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">High Bandwidth</h3>
-              <p className="text-gray-300">
-                Handle massive data transfers with 5G's high bandwidth and throughput capabilities.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Edge Computing</h3>
-              <p className="text-gray-300">
-                Deploy computing power at the edge for faster processing and reduced latency.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}}
-'''
-    
-    # AI related pages
-    if 'ai-' in file_path.lower():
-        return f'''import React from 'react';
-import {{ Helmet }} from 'react-helmet-async';
-
-export default function {component_name}() {{
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>{page_name} - Zion Tech Group</title>
-        <meta name="description" content="Advanced {page_name.lower()} solutions powered by artificial intelligence." />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">{page_name}</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover how our AI-powered {page_name.lower()} solutions can transform your business operations.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Machine Learning</h3>
-              <p className="text-gray-300">
-                Leverage advanced machine learning algorithms for intelligent automation and insights.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Natural Language Processing</h3>
-              <p className="text-gray-300">
-                Process and understand human language with state-of-the-art NLP capabilities.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Computer Vision</h3>
-              <p className="text-gray-300">
-                Analyze and interpret visual data with advanced computer vision technologies.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}}
-'''
-    
-    # Default page template
-    return f'''import React from 'react';
-import {{ Helmet }} from 'react-helmet-async';
-
-export default function {component_name}() {{
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>{page_name} - Zion Tech Group</title>
-        <meta name="description" content="{page_name} solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">{page_name}</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive {page_name.lower()} solutions designed to meet your business needs.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}}
-'''
-
-def create_clean_component(file_path):
-    """Create a clean component."""
-    filename = os.path.basename(file_path).replace('.tsx', '')
-    component_name = filename.replace('-', ' ').title().replace(' ', '')
-    
-    return f'''import React from 'react';
-
-interface {component_name}Props {{
-  className?: string;
-  children?: React.ReactNode;
-}}
-
-export default function {component_name}({{ className = '', children, ...props }}: {component_name}Props) {{
-  return (
-    <div className={{`{component_name.lower()}-component ${{className}}`}} {{...props}}>
-      {{children}}
-    </div>
-  );
-}}
-'''
-
-def main():
-    """Main function to clean up all corrupted files."""
-    print("Starting final cleanup...")
-    
-    # Get list of corrupted files
-    corrupted_files = get_corrupted_files()
-    print(f"Found {len(corrupted_files)} corrupted files")
-    
-    files_fixed = 0
-    
-    for file_path in corrupted_files:
-        try:
-            # Create appropriate content based on file type
-            if file_path.endswith('page.tsx'):
-                content = create_clean_page(file_path)
+        # Check for closing brace
+        if stripped == '}' and in_function:
+            if return_found and brace_count <= 0:
+                fixed_lines.append(line)
+                in_function = False
+                return_found = False
+                brace_count = 0
+            elif not return_found:
+                # This is a premature closing brace, skip it
+                continue
             else:
-                content = create_clean_component(file_path)
-            
-            # Write the clean content
+                fixed_lines.append(line)
+        else:
+            fixed_lines.append(line)
+    
+    # If we ended in a function without proper closing
+    if in_function and not return_found:
+        fixed_lines.append('  return null;')
+        fixed_lines.append('};')
+    
+    return '\n'.join(fixed_lines)
+
+def clean_unused_imports(content):
+    """Remove unused imports and variables."""
+    lines = content.split('\n')
+    cleaned_lines = []
+    import_lines = []
+    other_lines = []
+    seen_imports = set()
+    
+    for line in lines:
+        stripped = line.strip()
+        if stripped.startswith('import '):
+            # Create a normalized version for comparison
+            normalized = re.sub(r'\s+', ' ', stripped)
+            if normalized not in seen_imports:
+                import_lines.append(line)
+                seen_imports.add(normalized)
+        else:
+            other_lines.append(line)
+    
+    return '\n'.join(import_lines + other_lines)
+
+def process_file(file_path):
+    """Process a single file."""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        original_content = content
+        
+        # Fix merge conflicts
+        content = fix_merge_conflicts(content)
+        
+        # Fix malformed JSX
+        content = fix_malformed_jsx(content)
+        
+        # Clean unused imports
+        content = clean_unused_imports(content)
+        
+        if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
+            print(f"✓ Fixed: {file_path}")
+            return True
+        else:
+            return False
             
-            files_fixed += 1
-            print(f"Fixed: {file_path}")
-            
-        except Exception as e:
-            print(f"Error fixing {file_path}: {e}")
+    except Exception as e:
+        print(f"✗ Error processing {file_path}: {e}")
+        return False
+
+def main():
+    """Main function."""
+    patterns = [
+        'app/**/*.tsx',
+        'app/**/*.ts',
+        '*.tsx',
+        '*.ts'
+    ]
     
-    print(f"Fixed {files_fixed} files")
-    print("Final cleanup complete!")
+    files_processed = 0
+    files_fixed = 0
+    
+    for pattern in patterns:
+        for file_path in glob.glob(pattern, recursive=True):
+            if any(skip in file_path for skip in ['node_modules', '.git', 'dist', '.next', 'out']):
+                continue
+                
+            files_processed += 1
+            if process_file(file_path):
+                files_fixed += 1
+    
+    print(f"\nSummary:")
+    print(f"Files processed: {files_processed}")
+    print(f"Files fixed: {files_fixed}")
 
 if __name__ == "__main__":
     main()

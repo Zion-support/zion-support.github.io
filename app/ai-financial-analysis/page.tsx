@@ -8,17 +8,15 @@ import { CheckCircle } from 'lucide-react';
 import { TrendingUp } from 'lucide-react';
 import { Sparkles } from 'lucide-react';
 import { Activity } from 'lucide-react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 const AIFinancialAnalysisPage = () => {
-  const benefits = [
-    "Increase investment returns by 25%",
-    "Reduce financial risk by 60%",
-    "Automate 90% of analysis tasks",
-    "Real-time market monitoring",
-    "Advanced fraud detection",
-    "Comprehensive compliance reporting"
-  ];
+  return null;
+};
 
+<<<<<<< HEAD
   const features = [
     {
       icon: <BarChart3 className="w-8 h-8" />,
@@ -61,6 +59,10 @@ const AIFinancialAnalysisPage = () => {
     "Advanced fraud detection and prevention"
   ];
 =======
+=======
+  return null;
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 export default function AiFinancialAnalysisPage() {
   return (
@@ -103,4 +105,6 @@ export default function AiFinancialAnalysisPage() {
       </div>
     </div>
   );
+}
+}
 }

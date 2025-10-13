@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Calendar, Brain, Users, Zap, CheckCircle, Star, Award, BarChart3, Target, Sparkles, TrendingUp, Monitor, FileText, MessageSquare, Workflow, Shield, Lightbulb, GitBranch, Timer } from 'lucide-react';
 =======
 import React from 'react';
+=======
+import React from 'react';import { Calendar, Brain, Users, Zap, CheckCircle, Star, Award, BarChart3, Target, Sparkles, TrendingUp, Monitor, FileText, MessageSquare, Workflow, Shield, Lightbulb, GitBranch, Timer } from 'lucide-react';
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -22,7 +27,6 @@ import { Target } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { MessageSquare } from 'lucide-react';
 import { FileText } from 'lucide-react';
-
 const ZionAIProjectManagerProPage = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
 
@@ -84,7 +88,6 @@ const ZionAIProjectManagerProPage = () => {
       ],
       popular: false,
       color: "from-purple-500 to-pink-500"
-    }
   ];
 
   const useCases = [
@@ -123,7 +126,6 @@ const ZionAIProjectManagerProPage = () => {
       description: "Deliver exceptional client projects with AI-optimized resource planning and automated progress reporting",
       icon: <Users className="w-6 h-6" />,
       color: "from-cyan-500 to-blue-500"
-    }
   ];
 
   const aiCapabilities = [
@@ -162,10 +164,13 @@ const ZionAIProjectManagerProPage = () => {
       description: "Automate repetitive tasks, approvals, and notifications to streamline project management processes",
       icon: <Zap className="w-8 h-8" />,
       color: "from-cyan-500 to-blue-500"
-    }
   ];
 
+  return null;
+};
+
 export default function ZionAiProjectManagerProPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -206,7 +211,6 @@ export default function ZionAiProjectManagerProPage() {
       </div>
     </div>
   );
+}
 };
-
-
 }

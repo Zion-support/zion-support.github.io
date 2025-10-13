@@ -12,7 +12,10 @@ import { Monitor } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
 import { Package } from 'lucide-react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 const ZionAIInventoryManager = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
 
@@ -69,7 +72,6 @@ const ZionAIInventoryManager = () => {
         "Dedicated account manager"
       ],
       popular: false
-    }
   ];
 
   return (

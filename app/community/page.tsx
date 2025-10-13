@@ -7,8 +7,12 @@ import { Globe } from 'lucide-react';
 import { Calendar } from 'lucide-react';
 import { Hand } from 'lucide-react';
 import { Cloud } from 'lucide-react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function Community() {
+
   const stats = [
     { number: "10K+", label: "Active Members", icon: <Users className="w-8 h-8" /> },
     { number: "500+", label: "Events Hosted", icon: <Calendar className="w-8 h-8" /> },
@@ -40,7 +44,6 @@ export default function Community() {
       location: "Zion Tech Office",
       description: "Hands-on workshop covering advanced React patterns and TypeScript best practices.",
       attendees: 25
-    }
   ];
 
   const initiatives = [
@@ -67,11 +70,17 @@ export default function Community() {
       title: "Open Source Projects",
       description: "Contribute to our open source initiatives and make a global impact.",
       participants: "100+ contributors"
-    }
   ];
+<<<<<<< HEAD
+=======
 =======
 
+  return null;
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
+
 export default function CommunityPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -112,4 +121,5 @@ export default function CommunityPage() {
       </div>
     </div>
   );
+}
 }

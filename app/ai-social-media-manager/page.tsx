@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 
 =======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 export default function AiSocialMediaManagerZionTechGroup() {
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';export default function AiSocialMediaManagerZionTechGroup() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -43,4 +48,6 @@ export default function AiSocialMediaManagerZionTechGroup() {
       </div>
     </div>
   );
+}
+}
 }

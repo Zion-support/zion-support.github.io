@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+=======
+import React from 'react';import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function ZionAiEmailAnalyzerPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -42,4 +47,5 @@ export default function ZionAiEmailAnalyzerPage() {
       </div>
     </div>
   );
+}
 }

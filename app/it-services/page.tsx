@@ -16,8 +16,12 @@ import { BarChart3 } from 'lucide-react';
 import { Headphones } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
 import { Cloud } from 'lucide-react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function ITServices() {
+
   const itServices = [
     {
       id: "cloud-infrastructure",
@@ -366,7 +370,6 @@ export default function ITServices() {
       reviews: 1789,
       link: "/managed-it-services",
       featured: false
-    }
   ];
 
   const processSteps = [
@@ -393,7 +396,6 @@ export default function ITServices() {
       title: "Monitoring & Support",
       description: "Provide ongoing monitoring, maintenance, and support to ensure optimal performance and security.",
       icon: <Monitor className="w-8 h-8" />
-    }
   ];
 
   return (

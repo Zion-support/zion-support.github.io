@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';
+=======
+import React from 'react';import EnhancedSEO from '../components/EnhancedSEO';
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
@@ -11,7 +15,8 @@ import { Brain } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { Hand } from 'lucide-react';
-
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 const ZionAINeuralInterface = () => {
   const features = [
     {
@@ -37,7 +42,6 @@ const ZionAINeuralInterface = () => {
       description: "Ultra-low latency processing ensures instant response to your neural commands and thoughts.",
       icon: <Zap className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
-    }
   ];
 
   const capabilities = [
@@ -100,7 +104,6 @@ const ZionAINeuralInterface = () => {
         "SLA guarantee"
       ],
       popular: false
-    }
   ];
 
   const testimonials = [
@@ -127,7 +130,6 @@ const ZionAINeuralInterface = () => {
       content: "The neural pattern recognition capabilities are outstanding. We've seen remarkable improvements in cognitive performance across all test subjects.",
       rating: 5,
       avatar: "EW"
-    }
   ];
 
   const stats = [
@@ -136,11 +138,18 @@ const ZionAINeuralInterface = () => {
     { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "50+", label: "Languages Supported", icon: <Globe className="w-6 h-6" /> }
   ];
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+
+  return null;
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 export default function ZionAiNeuralInterfacePage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -181,4 +190,5 @@ export default function ZionAiNeuralInterfacePage() {
       </div>
     </div>
   );
+}
 }

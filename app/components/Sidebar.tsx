@@ -15,19 +15,23 @@ import { BarChart3 } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Mic } from 'lucide-react';
+<<<<<<< HEAD
 import { Cloud } from 'lucide-react';
 =======
 import React, { useMemo, useCallback, useState } from 'react';
+=======
+import { Cloud } from 'lucide-react';import React, { useMemo, useCallback, useState } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import { Link, useLocation } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import { X, ChevronDown, ChevronRight, Home, Users, Settings, BarChart3, Shield, Cloud, Code, Brain, Zap, Database, Star, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   const location = useLocation();
   const [expandedItems, setExpandedItems] = useState<string[]>([]);
@@ -90,7 +94,6 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       path: '/contact',
       icon: <Phone className="w-5 h-5" />,
       children: []
-    }
   ], []);
 
   if (!isOpen) return null;

@@ -1,12 +1,15 @@
+<<<<<<< HEAD
 import React from 'react';
 =======
 import { Link } from 'react-router-dom';
+=======
+import React from 'react';import { Link } from 'react-router-dom';
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import { Shield, ArrowRight, CheckCircle, Lock, Award, Globe, Eye, Key } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Award } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -15,7 +18,6 @@ import { CheckCircle } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Lock } from 'lucide-react';
 import { Mic } from 'lucide-react';
-
 const QuantumDataEncryptionVault = () => {
   const features = [
     {
@@ -41,7 +43,6 @@ const QuantumDataEncryptionVault = () => {
       description: "Built-in compliance with GDPR, HIPAA, SOX, and other major regulatory frameworks worldwide.",
       icon: <Award className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
-    }
   ];
 
   const capabilities = [
@@ -108,7 +109,6 @@ const QuantumDataEncryptionVault = () => {
         "SLA guarantee"
       ],
       popular: false
-    }
   ];
 
   const testimonials = [
@@ -135,7 +135,6 @@ const QuantumDataEncryptionVault = () => {
       content: "The zero-knowledge architecture gives us complete confidence in our data security. Even the service provider cannot access our sensitive healthcare data.",
       rating: 5,
       avatar: "RC"
-    }
   ];
 
   const stats = [
@@ -145,7 +144,11 @@ const QuantumDataEncryptionVault = () => {
     { number: "50+", label: "Compliance Standards", icon: <Award className="w-6 h-6" /> }
   ];
 
+  return null;
+};
+
 export default function QuantumDataEncryptionVaultPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -186,7 +189,6 @@ export default function QuantumDataEncryptionVaultPage() {
       </div>
     </div>
   );
+}
 };
-
-
 }

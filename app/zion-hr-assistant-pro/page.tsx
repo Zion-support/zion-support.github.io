@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';
+=======
+import React from 'react';import EnhancedSEO from '../components/EnhancedSEO';
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Clock } from 'lucide-react';
@@ -13,7 +17,8 @@ import { Calendar } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { FileText } from 'lucide-react';
 import { Heart } from 'lucide-react';
-
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 const ZionHRAssistantPro = () => {
   const features = [
     {
@@ -51,7 +56,6 @@ const ZionHRAssistantPro = () => {
       description: "Monitor employee satisfaction and engagement through AI-powered sentiment analysis",
       icon: <Brain className="w-6 h-6" />,
       benefit: "Proactive engagement"
-    }
   ];
 
   const pricingPlans = [
@@ -104,7 +108,6 @@ const ZionHRAssistantPro = () => {
         "Advanced security"
       ],
       popular: false
-    }
   ];
 
   const hrProcesses = [
@@ -131,13 +134,19 @@ const ZionHRAssistantPro = () => {
       description: "Automated compliance tracking, reporting, and predictive analytics",
       icon: <Shield className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
-    }
   ];
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+
+  return null;
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 export default function ZionHrAssistantProPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -178,4 +187,5 @@ export default function ZionHrAssistantProPage() {
       </div>
     </div>
   );
+}
 }

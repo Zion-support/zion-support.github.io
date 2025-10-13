@@ -1,6 +1,9 @@
 import { Star } from 'lucide-react';
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import { ArrowRight } from 'lucide-react';
 const features = [
     {
@@ -28,7 +31,6 @@ interface ServiceTemplateProps {
   className?: string;
   children?: React.ReactNode;
 }
-
 export default function ServiceTemplate({ className = '', children, ...props }: ServiceTemplateProps) {
   return (
     <div className={`servicetemplate-component ${className}`} {...props}>

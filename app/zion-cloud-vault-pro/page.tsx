@@ -17,9 +17,8 @@ import { Headphones } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-
-
 export default function ZionCloudVaultPro() {
+
   const features = [
     {
       title: "End-to-End Encryption",
@@ -56,7 +55,6 @@ export default function ZionCloudVaultPro() {
       description: "Share files securely with team members and collaborate in real-time with advanced permission controls.",
       icon: <Users className="w-8 h-8" />,
       benefits: ["Secure sharing", "Permission controls", "Real-time collaboration", "Activity tracking"]
-    }
   ];
 
   const storageStats = [
@@ -115,10 +113,16 @@ export default function ZionCloudVaultPro() {
         "On-premise deployment"
       ],
       popular: false
-    }
   ];
+<<<<<<< HEAD
+=======
+
+  return null;
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 export default function Page() {
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <Helmet>
@@ -142,4 +146,5 @@ export default function Page() {
       </div>
     </div>
   );
+}
 }

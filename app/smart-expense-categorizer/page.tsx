@@ -11,7 +11,10 @@ import { Globe } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Receipt } from 'lucide-react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 const SmartExpenseCategorizerPage = () => {
   const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
 
@@ -66,11 +69,17 @@ const SmartExpenseCategorizerPage = () => {
         "Custom integrations"
       ],
       popular: false
-    }
   ];
+<<<<<<< HEAD
+=======
 =======
 
+  return null;
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
+
 export default function SmartExpenseCategorizerPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -111,4 +120,5 @@ export default function SmartExpenseCategorizerPage() {
       </div>
     </div>
   );
+}
 }

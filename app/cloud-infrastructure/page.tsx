@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -157,13 +158,22 @@ const CloudInfrastructure = () => {
     }
   ];
 =======
-import React from 'react';
+=======
+import React from 'react';import FuturisticCard from '../components/FuturisticCard';
+import FuturisticButton from '../components/FuturisticButton';
+import ResponsiveContainer from '../components/ResponsiveContainer';
 import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { ArrowRight, Activity, BarChart3, CheckCircle } from 'lucide-react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function CloudInfrastructurePage() {
+
   const stats = [
     { label: "Uptime", value: "99.9%", icon: <Activity className="w-6 h-6" /> },
     { label: "Cost Savings", value: "40%", icon: <BarChart3 className="w-6 h-6" /> },
@@ -183,7 +193,6 @@ export default function CloudInfrastructurePage() {
       role: "CTO", 
       company: "TechCorp", 
       content: "Zion's cloud infrastructure transformed our business operations." 
-    }
   ];
 
   return (

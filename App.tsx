@@ -20,7 +20,6 @@ import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import EnhancedSEO from "./app/components/EnhancedSEO";
 import ImprovedErrorBoundary from "./app/components/ImprovedErrorBoundary";
-
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
 const ContactPage = React.lazy(() => import("./app/contact/page"));
@@ -34,7 +33,6 @@ const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
 const DemoPage = React.lazy(() => import("./app/demo/page"));
 const SupportPage = React.lazy(() => import("./app/support/page"));
-
 // AI Services Pages
 const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
 const AIContentGenerationPage = React.lazy(() => import("./app/ai-content-generation/page"));
@@ -46,7 +44,6 @@ const AIMarketingAutomationPage = React.lazy(() => import("./app/ai-marketing-au
 const AIPredictiveAnalyticsPage = React.lazy(() => import("./app/ai-predictive-analytics/page"));
 const AIVoiceAssistantPage = React.lazy(() => import("./app/ai-voice-assistant/page"));
 const AIWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
-
 // IT Services Pages
 const CloudMigrationPage = React.lazy(() => import("./app/cloud-migration/page"));
 const DevOpsServicesPage = React.lazy(() => import("./app/devops/page"));
@@ -55,7 +52,6 @@ const NetworkSecurityPage = React.lazy(() => import("./app/network-security/page
 const SoftwareDevelopmentPage = React.lazy(() => import("./app/custom-software/page"));
 const SystemIntegrationPage = React.lazy(() => import("./app/system-integration/page"));
 const WebDevelopmentPage = React.lazy(() => import("./app/web-development/page"));
-
 // 5G Services Pages
 const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network-infrastructure/page"));
 const FiveGEdgeComputingPage = React.lazy(() => import("./app/5g-edge-computing/page"));
@@ -65,7 +61,6 @@ const FiveGPrivateNetworksPage = React.lazy(() => import("./app/5g-private-netwo
 const FiveGMobileApplicationsPage = React.lazy(() => import("./app/5g-mobile-applications/page"));
 const FiveGDataAnalyticsPage = React.lazy(() => import("./app/5g-data-analytics/page"));
 const FiveGImplementationPage = React.lazy(() => import("./app/5g-implementation/page"));
-
 // Micro SAAS Services Pages
 const MicroSaaSServicesPage = React.lazy(() => import("./app/zion-content-studio/page"));
 const ProjectManagementToolPage = React.lazy(() => import("./app/project-management-pro/page"));
@@ -77,7 +72,6 @@ const SocialMediaSchedulerPage = React.lazy(() => import("./app/zion-ai-marketin
 const EmailMarketingPlatformPage = React.lazy(() => import("./app/zion-email-automation/page"));
 const WebsiteAnalyticsToolPage = React.lazy(() => import("./app/data-analytics/page"));
 const TaskAutomationWorkflowPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
-
 // New Innovative Micro SAAS Services
 const ZionAIVideoGeneratorPage = React.lazy(() => import("./app/zion-ai-video-generator/page"));
 const ZionAIInvoiceGeneratorPage = React.lazy(() => import("./app/zion-ai-invoice-generator/page"));
@@ -99,13 +93,14 @@ const ZionAITranslatorProPage = React.lazy(() => import("./app/zion-ai-translato
 const ZionAIDataCleanerPage = React.lazy(() => import("./app/zion-ai-data-cleaner/page"));
 const ZionAITaskSchedulerPage = React.lazy(() => import("./app/zion-ai-task-scheduler/page"));
 const ZionAICustomerSupportProPage = React.lazy(() => import("./app/zion-ai-customer-support-pro/page"));
-
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+
+  return null;
+};
 
   const closeSidebar = () => {
     setIsSidebarOpen(false);
@@ -115,7 +110,6 @@ function App() {
     // Initialize performance monitoring
     if (typeof window !== 'undefined') {
       console.log('Zion Tech Group App initialized');
-    }
   }, []);
 
   return (
@@ -241,5 +235,4 @@ function App() {
       </HelmetProvider>
     );
 }
-
 export default App;

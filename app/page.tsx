@@ -25,7 +25,10 @@ import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 const HomePage = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
 
@@ -71,7 +74,6 @@ const HomePage = () => {
         "@type": "Offer",
         "name": "Cloud Infrastructure",
         "description": "Cloud migration and infrastructure management services"
-      }
     ]
   };
 
@@ -117,11 +119,17 @@ const HomePage = () => {
       description: "Unlock insights from your data with our advanced analytics and business intelligence solutions.",
       link: "/data-analytics",
       features: ["Business Intelligence", "Data Visualization", "Predictive Modeling", "Real-time Analytics"]
-    }
   ];
+<<<<<<< HEAD
+=======
 =======
 
+  return null;
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
+
 export default function AppPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -162,4 +170,5 @@ export default function AppPage() {
       </div>
     </div>
   );
+}
 }

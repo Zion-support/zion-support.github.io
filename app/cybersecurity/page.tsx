@@ -13,12 +13,13 @@ import { Monitor } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
+<<<<<<< HEAD
 
 
-export default function Cybersecurity() {
 =======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
+export default function Cybersecurity() {
+
 const features = [
     {
       title: "Predictive Analytics",
@@ -39,7 +40,6 @@ const features = [
       title: "Automated Reporting",
       description: "Generate detailed reports automatically",
       icon: "FileText"
-    }
   ];
 const capabilities = [
     "Machine Learning Models",
@@ -64,9 +64,12 @@ const services = [
       title: "Performance Optimization",
       description: "Optimize your cloud performance",
       icon: "Zap"
-    }
   ];
+  return null;
+};
+
 export default function Page() {
+
   const features = [
     { title: "Feature 1", description: "Description 1" },
     { title: "Feature 2", description: "Description 2" }
@@ -125,10 +128,13 @@ export default function Page() {
       color: "from-teal-500 to-cyan-500",
       price: "Starting at $179/month",
       features: ["Vulnerability Scanning", "Patch Management", "Policy Enforcement", "Compliance Automation"]
-    }
   ];
 
+  return null;
+};
+
 export default function CybersecurityPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -170,5 +176,5 @@ export default function CybersecurityPage() {
     </div>
   );
 }
-
+}
 }

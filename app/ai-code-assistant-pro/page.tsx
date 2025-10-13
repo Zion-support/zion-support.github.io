@@ -9,7 +9,6 @@ import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
-import { ArrowRight } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { Shield } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
@@ -17,8 +16,8 @@ import { Zap } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Code } from 'lucide-react';
-
 const AICodeAssistantProZionTechGroup = () => {
+<<<<<<< HEAD
 
   const features = [
     {
@@ -122,6 +121,13 @@ const AICodeAssistantProZionTechGroup = () => {
       avatar: "EJ"
     }
   ];
+=======
+  return null;
+};
+
+  return null;
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 export default function AiCodeAssistantProPage() {
   return (
@@ -165,5 +171,6 @@ export default function AiCodeAssistantProPage() {
     </div>
   );
 }
-
+}
+}
 }

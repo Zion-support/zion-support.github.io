@@ -1,9 +1,13 @@
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function Socialmediascheduler() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -44,4 +48,5 @@ export default function Socialmediascheduler() {
       </div>
     </div>
   );
+}
 }

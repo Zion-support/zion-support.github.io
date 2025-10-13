@@ -1,7 +1,48 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
+=======
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Search } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { Target } from 'lucide-react';
+const CybersecurityAuditPage = () => {
+  const features = [
+    {
+      title: "Comprehensive Security Assessment",
+      description: "Thorough evaluation of your entire security infrastructure and policies",
+      icon: <Search className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Vulnerability Scanning",
+      description: "Advanced scanning tools to identify security weaknesses and potential threats",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Penetration Testing",
+      description: "Simulated cyber attacks to test your defenses and identify real vulnerabilities",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Compliance Verification",
+      description: "Ensure adherence to industry standards like GDPR, HIPAA, and SOC 2",
+      icon: <CheckCircle className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500"
+  ];
+
+  return null;
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 export default function CybersecurityAuditPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -42,4 +83,5 @@ export default function CybersecurityAuditPage() {
       </div>
     </div>
   );
+}
 }

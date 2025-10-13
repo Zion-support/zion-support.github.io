@@ -13,8 +13,14 @@ import { Calendar } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
+<<<<<<< HEAD
 
+=======
+import { Link } from 'react-router-dom';
+import { Calendar, Clock, CheckCircle, Brain, Shield, Zap, Globe, Mail, Smartphone, MapPin, Star } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function ConsultationPage() {
+
   const benefits = [
     "Benefit 1",
     "Benefit 2"
@@ -94,7 +100,6 @@ export default function ConsultationPage() {
       price: "Free",
       icon: <Globe className="w-6 h-6" />,
       features: ["Network Planning", "Use Case Analysis", "Technology Selection", "Implementation Timeline"]
-    }
   ];
 
   return (
@@ -448,7 +453,11 @@ export default function ConsultationPage() {
       </div>
 </div>
   );
+<<<<<<< HEAD
 }
 =======
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, CheckCircle, Brain, Shield, Zap, Globe, Mail, Smartphone, MapPin, Star } from 'lucide-react';
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa

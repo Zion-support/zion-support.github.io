@@ -1,15 +1,21 @@
 import React from "react";
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { Code } from 'lucide-react';
 =======
 import React from "react";
+=======
+import { Code } from 'lucide-react';import React from "react";
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import { ArrowRight } from "lucide-react";
-
-import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function ZionAiCodeReviewerPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -50,4 +56,5 @@ export default function ZionAiCodeReviewerPage() {
       </div>
     </div>
   );
+}
 }

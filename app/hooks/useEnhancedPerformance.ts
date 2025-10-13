@@ -1,12 +1,20 @@
+<<<<<<< HEAD
 
+=======
+import { useState, useEffect } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export const useEnhancedPerformance = () => {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
 =======
 import { useState, useEffect } from 'react';
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export function useEnhancedPerformance() {
+
   const [state, setState] = useState<string | null>(null);
   
   useEffect(() => {
@@ -15,6 +23,8 @@ export function useEnhancedPerformance() {
   }, []);
   
   return state;
-}
 
 export default useEnhancedPerformance;
+
+  return null;
+};

@@ -10,8 +10,12 @@ import { Globe } from 'lucide-react';
 import { Lock } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { FileText } from 'lucide-react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function page() {
+
   const features = [
     { title: "Feature 1", description: "Description 1" },
     { title: "Feature 2", description: "Description 2" }
@@ -52,7 +56,6 @@ export default function page() {
       description: "California Consumer Privacy Act compliance",
       status: "Compliant",
       icon: <Users className="w-8 h-8" />
-    }
   ];
 
   const services = [
@@ -75,11 +78,17 @@ export default function page() {
       title: "Ongoing Monitoring",
       description: "Continuous monitoring and maintenance of compliance programs",
       features: ["Regular Assessments", "Policy Updates", "Training Programs", "Incident Response"]
-    }
   ];
+<<<<<<< HEAD
+=======
 =======
 
+  return null;
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
+
 export default function CompliancePage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -120,4 +129,5 @@ export default function CompliancePage() {
       </div>
     </div>
   );
+}
 }

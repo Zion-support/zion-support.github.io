@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
-
+import React from 'react';
+import { Server, Clock, Award, ArrowRight, CheckCircle, BarChart3, Database, Lock, Users, Settings, Zap, Globe } from 'lucide-react';
 export default function DevopsServicesZionTechGroup() {
+
   return (
     <>
       <Helmet>
@@ -24,6 +25,7 @@ export default function DevopsServicesZionTechGroup() {
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
+<<<<<<< HEAD
         </div>
       </div>
 =======
@@ -31,6 +33,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Server, Clock, Award, ArrowRight, CheckCircle, BarChart3, Database, Lock, Users, Settings, Zap, Globe } from 'lucide-react';
+=======
+        </div>      </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 const DevOpsServicesPage: React.FC = () => {
   const services = [
@@ -69,7 +74,6 @@ const DevOpsServicesPage: React.FC = () => {
       description: "Streamline database operations with automated migrations, backups, and performance optimization.",
       icon: <Database className="w-6 h-6" />,
       features: ["Database migrations", "Automated backups", "Performance tuning", "Schema management"]
-    }
   ];
 
   const benefits = [
@@ -92,7 +96,6 @@ const DevOpsServicesPage: React.FC = () => {
       title: "Cost Optimization",
       description: "Optimize infrastructure costs with automated scaling and resource management",
       icon: <Settings className="w-8 h-8" />
-    }
   ];
 
   return (

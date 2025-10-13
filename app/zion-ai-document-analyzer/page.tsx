@@ -1,9 +1,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 
 
-export default function ZionAIDocumentAnalyzer() {
 =======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
+export default function ZionAIDocumentAnalyzer() {
+
+
+  return null;
+};
 
 export default function ZionAiDocumentAnalyzerPage() {
   return (
@@ -46,4 +52,5 @@ export default function ZionAiDocumentAnalyzerPage() {
       </div>
     </div>
   );
+}
 }

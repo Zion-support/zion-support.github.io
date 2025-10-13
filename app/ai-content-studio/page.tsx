@@ -9,13 +9,12 @@ import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
-import { ArrowRight } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { Sparkles } from 'lucide-react';
 import { FileText } from 'lucide-react';
-
 const AIContentStudioZionTechGroup = () => {
+<<<<<<< HEAD
 
   const features = [
     {
@@ -122,6 +121,13 @@ const AIContentStudioZionTechGroup = () => {
       avatar: "MG"
     }
   ];
+=======
+  return null;
+};
+
+  return null;
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 export default function AiContentStudioPage() {
   return (
@@ -165,5 +171,6 @@ export default function AiContentStudioPage() {
     </div>
   );
 }
-
+}
+}
 }

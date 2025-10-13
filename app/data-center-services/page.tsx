@@ -10,7 +10,10 @@ import { Globe } from 'lucide-react';
 import { Server } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { Cloud } from 'lucide-react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 const DataCenterServicesPage = () => {
   const benefits = [
     "99.99% uptime guarantee",
@@ -45,7 +48,6 @@ const DataCenterServicesPage = () => {
       description: "Round-the-clock monitoring and support to ensure optimal performance",
       icon: <Settings className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
-    }
   ];
 
   return (

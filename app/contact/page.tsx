@@ -10,14 +10,21 @@ import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
 import { Cloud } from 'lucide-react';
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import React, { useState } from "react";
 import { ArrowRight, Mail, Smartphone, Globe, Clock, MapPin, Send, CheckCircle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function Contact() {
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -79,7 +86,6 @@ export default function Contact() {
       title: "Business Hours",
       details: "Mon - Fri: 9:00 AM - 6:00 PM",
       description: "EST Time Zone"
-    }
   ];
 
   const services = [
@@ -97,6 +103,14 @@ export default function Contact() {
     "Financial Analytics"
   ];
 
+<<<<<<< HEAD
+=======
+  return null;
+};
+
+export default function ContactPage() {
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -287,4 +301,5 @@ export default function Contact() {
       </div>
     </div>
   );
+}
 }

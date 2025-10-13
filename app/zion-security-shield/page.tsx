@@ -10,11 +10,14 @@ import { Brain } from 'lucide-react';
 import { Lock } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { Cloud } from 'lucide-react';
+<<<<<<< HEAD
 
 
 =======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 const features = [
     {
       title: "Predictive Analytics",
@@ -54,6 +57,7 @@ const testimonials = [
     }
   ];
 export default function ZionSecurityShield() {
+
   const features = [
     {
       icon: <Shield className="w-6 h-6" />,
@@ -84,7 +88,6 @@ export default function ZionSecurityShield() {
       icon: <Brain className="w-6 h-6" />,
       title: "Behavioral Analytics",
       description: "Advanced user behavior analysis to detect insider threats and anomalies"
-    }
   ];
 
   const securityFeatures = [
@@ -150,10 +153,13 @@ export default function ZionSecurityShield() {
         "Custom integrations"
       ],
       popular: false
-    }
   ];
 
+  return null;
+};
+
 export default function ZionSecurityShieldPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -195,5 +201,5 @@ export default function ZionSecurityShieldPage() {
     </div>
   );
 }
-
+}
 }

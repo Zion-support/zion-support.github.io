@@ -2,9 +2,12 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Monitor } from 'lucide-react';
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function GDataAnalyticsZionTechGroupPage() {
   return (
     <div>
@@ -30,4 +33,6 @@ export default function GDataAnalyticsZionTechGroupPage() {
       </div>
 </div>
   );
+}
+}
 }

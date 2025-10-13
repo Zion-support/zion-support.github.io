@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import React from "react";
 =======
 import React from "react";
+=======
+import React from "react";import React from "react";
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import { ArrowRight, CheckCircle, TrendingUp, Video, Calendar } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -8,15 +12,12 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import SEOOptimizer from "../components/SEOOptimizer";
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { TrendingUp } from 'lucide-react';
 import { Calendar } from 'lucide-react';
-
 export default function ZionAISalesPredictor() {
+
   const features = [
     "AI-powered sales forecasting with 95% accuracy",
     "Predict customer behavior and buying patterns",
@@ -65,7 +66,6 @@ export default function ZionAISalesPredictor() {
       description: "For large sales organizations",
       features: ["Unlimited leads", "Custom AI training", "Dedicated support", "Unlimited users", "Advanced analytics", "White-labeling"],
       popular: false
-    }
   ];
 
   const testimonials = [
@@ -89,10 +89,13 @@ export default function ZionAISalesPredictor() {
       role: "CEO",
       content: "This tool has revolutionized our sales forecasting. We can now predict quarterly revenue with 95% accuracy, which has been a game-changer for our business planning.",
       rating: 5
-    }
   ];
 
+  return null;
+};
+
 export default function ZionAiSalesPredictorPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -134,5 +137,5 @@ export default function ZionAiSalesPredictorPage() {
     </div>
   );
 }
-
+}
 }
