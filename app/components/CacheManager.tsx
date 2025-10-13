@@ -12,8 +12,6 @@ const CacheManager = () => {
         } catch (error) {
           console.error('Service Worker registration failed:', error);
         }
-
-        }
       }
     }
 
@@ -38,8 +36,6 @@ const CacheManager = () => {
         } catch (error) {
           console.error('Failed to cache static assets:', error);
         }
-
-        }
       }
 
       // Cache API responses
@@ -53,8 +49,8 @@ const CacheManager = () => {
           }
           
           return response
-        } catch {
-
+        } catch (error) {
+          console.error('Failed to cache API response:', error);
           return fetch(request);
         }
       }
@@ -133,7 +129,7 @@ const CacheManager = () => {
     // Cleanup function
     return () => {
       // Cleanup any intervals or observers
-      }
+    }
   }, [])
 
   return null
