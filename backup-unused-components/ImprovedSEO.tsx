@@ -42,11 +42,6 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = (
   const fullTwitterImage = twitterImage || ogImage;
   const fullOgUrl = ogUrl || canonicalUrl;
   return (
-<<<<<<< HEAD
-    <Helmet></Helmet>
-=======
-//     <Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content="{description}" />
@@ -98,24 +93,6 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = (
       
         <script type="application/ld+json"></script>
           {JSON.stringify(structuredData)}
-<<<<<<< HEAD
-        </script>
-
-      {/* Default Organization Structured Data */}
-      
-        <script type="application/ld+json"></script>
-          
-            "@context": "https://schema.org",
-=======
-//         </script>
-      )}
-      
-      {/* Default Organization Structured Data */}
-      {!structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify({
-//             "@context": "https://schema.org",
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
             "@type": "Organization",
 //             "name": "Zion Tech Group",
 //             "url": "https://ziontechgroup.com",
@@ -125,45 +102,6 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = (
               "@type": "PostalAddress",
 //               "streetAddress": "364 E Main St STE 1008",
               "addressLocality": "Middletown",
-<<<<<<< HEAD
-              "addressRegion": "DE",
-              "postalCode": "19709",
-              "addressCountry": "US"
-,
-            "contactPoint": 
-              "@type": "ContactPoint",
-              "telephone": "+1-302-464-0950",
-              "contactType": "customer service",
-              "email": "kleber@ziontechgroup.com"
-,
-            "sameAs": [
-              "https://twitter.com/ziontechgroup",
-              "https://linkedin.com/company/ziontechgroup"
-            ]
-
-        </script>
-
-    </Helmet>
-=======
-//               "addressRegion": "DE",
-//               "postalCode": "19709",
-//               "addressCountry": "US"
-            },
-            "contactPoint": {
-              "@type": "ContactPoint",
-//               "telephone": "+1-302-464-0950",
-//               "contactType": "customer service",
-//               "email": "kleber@ziontechgroup.com"
-            },
-//             "sameAs": [
-//               "https://twitter.com/ziontechgroup",
-//               "https://linkedin.com/company/ziontechgroup"
-//             ]
-          })}
-//         </script>
-      )}
-//     </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 ;
 export default ImprovedSEO;

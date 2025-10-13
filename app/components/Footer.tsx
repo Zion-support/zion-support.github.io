@@ -1,259 +1,173 @@
-<<<<<<< HEAD
+'use client';
+
 import React from 'react';
+import { Metadata } from 'next';
+import { 
+  ArrowRightIcon, 
+  CheckIcon, 
+  StarIcon,
+  ShieldCheckIcon,
+  CpuChipIcon,
+  CloudIcon,
+  ChartBarIcon,
+  CogIcon,
+  GlobeAltIcon,
+  UserGroupIcon,
+  LightBulbIcon,
+  RocketLaunchIcon,
+  SparklesIcon,
+  AcademicCapIcon,
+  BeakerIcon,
+  BuildingOfficeIcon,
+  CurrencyDollarIcon,
+  DocumentTextIcon,
+  EyeIcon,
+  FingerPrintIcon,
+  HeartIcon,
+  HomeIcon,
+  IdentificationIcon,
+  KeyIcon,
+  LockClosedIcon,
+  MagnifyingGlassIcon,
+  PaintBrushIcon,
+  PhoneIcon,
+  PresentationChartLineIcon,
+  PuzzlePieceIcon,
+  ServerIcon,
+  ShoppingCartIcon,
+  TagIcon,
+  TruckIcon,
+  WrenchScrewdriverIcon,
+  XMarkIcon,
+  ChevronRightIcon,
+  ChevronDownIcon,
+  Bars3Icon,
+  XMarkIcon as XMarkIconSolid
+} from '@heroicons/react/24/outline';
+import { 
+  CheckIcon as CheckIconSolid,
+  StarIcon as StarIconSolid,
+  ArrowRightIcon as ArrowRightIconSolid
+} from '@heroicons/react/24/solid';
+import Link from 'next/link';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
-interface FooterProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-=======
-import React, { useMemo } from "react";
-import { Link } from "react-router-dom";
-import { Linkedin, Twitter, Github, Mail, Phone, MapPin, Clock, ArrowRight, Brain, Shield, Zap, Globe, BarChart3, Cloud, Code, Database, Users, Award, Star, Mic } from 'lucide-react';
 
-const Footer = React.memo(() => {
-  const currentYear = new Date().getFullYear();
+export const metadata: Metadata = {
+  title: 'Footer | Zion Tech Group',
+  description: 'Professional Footer solutions powered by AI and cutting-edge technology.',
+  keywords: ['AI', 'Technology', 'Solutions', 'Footer'],
+  openGraph: {
+    title: 'Footer | Zion Tech Group',
+    description: 'Professional Footer solutions powered by AI and cutting-edge technology.',
+    type: 'website',
+  },
+};
 
-  const socialLinks = useMemo(() => [
-    {
-//       name: "Twitter",
-//       url: "https://twitter.com/ziontechgroup",
-      icon: <Twitter className="w-5 h-5" />,
-    },
-    {
-//       name: "LinkedIn",
-//       url: "https://linkedin.com/company/ziontechgroup",
-      icon: <Linkedin className="w-5 h-5" />,
-    },
-    {
-//       name: "GitHub",
-//       url: "https://github.com/ziontechgroup",
-      icon: <Github className="w-5 h-5" />,
-    },
-  ], []);
-
-  const services = useMemo(() => [
-    { name: "AI Services", path: "/ai-services", icon: <Brain className="w-4 h-4" /> },
-    { name: "IT Services", path: "/services", icon: <Shield className="w-4 h-4" /> },
-    { name: "Micro SAAS", path: "/micro-saas", icon: <Zap className="w-4 h-4" /> },
-    { name: "5G Solutions", path: "/5g-solutions", icon: <Globe className="w-4 h-4" /> },
-    { name: "Cloud Services", path: "/cloud-infrastructure", icon: <Cloud className="w-4 h-4" /> },
-    { name: "Cybersecurity", path: "/cybersecurity-solutions", icon: <Shield className="w-4 h-4" /> },
-    { name: "Web Development", path: "/web-development", icon: <Code className="w-4 h-4" /> },
-    { name: "Data Analytics", path: "/ai-data-analytics", icon: <BarChart3 className="w-4 h-4" /> }
-  ], []);
-
-  const companyLinks = useMemo(() => [
-    { name: "About Us", path: "/about" },
-    { name: "Case Studies", path: "/case-studies" },
-    { name: "Careers", path: "/careers" },
-    { name: "Blog", path: "/blog" },
-    { name: "Press", path: "/press" },
-    { name: "Partners", path: "/partners" }
-  ], []);
-
-  const supportLinks = useMemo(() => [
-    { name: "Contact", path: "/contact" },
-    { name: "Support", path: "/support" },
-    { name: "Documentation", path: "/docs" },
-    { name: "Tutorials", path: "/tutorials" },
-    { name: "Demo", path: "/demo" },
-    { name: "Pricing", path: "/pricing" }
-  ], []);
-
-  const legalLinks = useMemo(() => [
-    { name: "Privacy Policy", path: "/privacy" },
-    { name: "Terms of Service", path: "/terms" },
-    { name: "Cookie Policy", path: "/cookies" },
-    { name: "GDPR Compliance", path: "/gdpr" },
-    { name: "Security", path: "/security" },
-    { name: "Sitemap", path: "/sitemap" }
-  ], []);
-
-  const stats = useMemo(() => [
-    { number: "500+", label: "Projects Completed", icon: <Award className="w-5 h-5" /> },
-    { number: "10,000+", label: "Happy Clients", icon: <Users className="w-5 h-5" /> },
-    { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-5 h-5" /> },
-    { number: "24/7", label: "Support", icon: <Clock className="w-5 h-5" /> }
-  ], []);
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
-
-export default function Footer({ className = '', children, ...props }: FooterProps) {
+export default function FooterPage() {
   return (
-<<<<<<< HEAD
-    <div className={`footer-component ${className}`} {...props}>
-      {children}
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Footer
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Professional Footer solutions powered by AI and cutting-edge technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRightIcon className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our Footer?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We provide cutting-edge solutions that drive real business results.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <CpuChipIcon className="h-6 w-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Advanced Technology
+              </h3>
+              <p className="text-gray-600">
+                Leveraging the latest AI and machine learning technologies.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                <ShieldCheckIcon className="h-6 w-6 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Secure & Reliable
+              </h3>
+              <p className="text-gray-600">
+                Enterprise-grade security and 99.9% uptime guarantee.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                <RocketLaunchIcon className="h-6 w-6 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Fast Implementation
+              </h3>
+              <p className="text-gray-600">
+                Quick setup and deployment with minimal disruption.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-blue-600 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Contact us today to learn more about our Footer solutions.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors"
+          >
+            Get Started Now
+            <ArrowRightIcon className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </section>
     </div>
-=======
-    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
-      
-      <div className="relative z-10">
-        {/* Main Footer Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-12">
-            {/* Company Info */}
-            <div className="lg:col-span-2 space-y-4">
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                  <Brain className="w-5 h-5 text-white" />
-</div>
-                <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-//                   Zion Tech Group
-</span>
-</div>
-              <p className="text-gray-300 mb-6 max-w-md">
-                Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses.
-</p>
-              <div className="space-y-2">
-                <div className="flex items-center space-x-2 text-gray-300">
-                  <Mail className="w-4 h-4" />
-<span>kleber@ziontechgroup.com</span>
-</div>
-                <div className="flex items-center space-x-2 text-gray-300">
-                  <Phone className="w-4 h-4" />
-                  <span>+1 (302) 464-0950</span>
-</div>
-                <div className="flex items-center space-x-2 text-gray-300">
-                  <MapPin className="w-4 h-4" />
-                  <span>364 E Main St STE 1008, Middletown, DE 19709</span>
-</div>
-</div>
-</div>
-
-            {/* Services */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
-              <ul className="space-y-3">
-                {services.map((service) => (
-                  <li key={service.name}>
-//                     <Link
-                      to={service.path}
-                      className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors group"
-//                     >
-                      <span className="mr-2 group-hover:scale-110 transition-transform duration-300">
-                        {service.icon}
-</span>
-                      <span className="text-sm">{service.name}</span>
-</Link>
-//                   </li>
-                ))}
-//               </ul>
-</div>
-
-            {/* Company */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-white mb-4">Company</h3>
-              <ul className="space-y-3">
-                {companyLinks.map((link) => (
-                  <li key={link.name}>
-//                     <Link
-                      to={link.path}
-                      className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
-//                     >
-                      {link.name}
-</Link>
-//                   </li>
-                ))}
-//               </ul>
-</div>
-
-            {/* Support */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-white mb-4">Support</h3>
-              <ul className="space-y-3">
-                {supportLinks.map((link) => (
-                  <li key={link.name}>
-//                     <Link
-                      to={link.path}
-                      className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
-//                     >
-                      {link.name}
-</Link>
-//                   </li>
-                ))}
-//               </ul>
-</div>
-
-            {/* Legal */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-white mb-4">Legal</h3>
-              <ul className="space-y-3">
-                {legalLinks.map((link) => (
-                  <li key={link.name}>
-//                     <Link
-                      to={link.path}
-                      className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
-//                     >
-                      {link.name}
-</Link>
-//                   </li>
-                ))}
-//               </ul>
-</div>
-</div>
-
-          {/* Stats Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  {stat.icon}
-</div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
-</div>
-            ))}
-</div>
-
-          {/* Social Links */}
-          <div className="flex justify-center space-x-6 mb-8">
-            {socialLinks.map((social) => (
-//               <a
-                key={social.name}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 hover:scale-110"
-                aria-label={social.name}
-//               >
-                {social.icon}
-</a>
-            ))}
-</div>
-
-          {/* Bottom Footer */}
-          <div className="border-t border-gray-800 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-gray-400 text-sm">
-                © {currentYear} Zion Tech Group. All rights reserved.
-</p>
-              <div className="flex space-x-6 mt-4 md:mt-0">
-//                 <Link
-                  to="/privacy"
-                  className="text-gray-400 hover:text-white transition-colors text-sm"
-//                 >
-//                   Privacy Policy
-</Link>
-//                 <Link
-                  to="/terms"
-                  className="text-gray-400 hover:text-white transition-colors text-sm"
-//                 >
-//                   Terms of Service
-</Link>
-//                 <Link
-                  to="/cookies"
-                  className="text-gray-400 hover:text-white transition-colors text-sm"
-//                 >
-//                   Cookie Policy
-</Link>
-</div>
-</div>
-</div>
-</div>
-</div>
-//     </footer>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }

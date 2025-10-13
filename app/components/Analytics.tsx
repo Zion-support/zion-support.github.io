@@ -1,218 +1,173 @@
-<<<<<<< HEAD
+'use client';
+
 import React from 'react';
-=======
-import React, { useEffect } from 'react';
-import { Star } from 'lucide-react';
-import { useLocation } from 'react-router-dom';
+import { Metadata } from 'next';
+import { 
+  ArrowRightIcon, 
+  CheckIcon, 
+  StarIcon,
+  ShieldCheckIcon,
+  CpuChipIcon,
+  CloudIcon,
+  ChartBarIcon,
+  CogIcon,
+  GlobeAltIcon,
+  UserGroupIcon,
+  LightBulbIcon,
+  RocketLaunchIcon,
+  SparklesIcon,
+  AcademicCapIcon,
+  BeakerIcon,
+  BuildingOfficeIcon,
+  CurrencyDollarIcon,
+  DocumentTextIcon,
+  EyeIcon,
+  FingerPrintIcon,
+  HeartIcon,
+  HomeIcon,
+  IdentificationIcon,
+  KeyIcon,
+  LockClosedIcon,
+  MagnifyingGlassIcon,
+  PaintBrushIcon,
+  PhoneIcon,
+  PresentationChartLineIcon,
+  PuzzlePieceIcon,
+  ServerIcon,
+  ShoppingCartIcon,
+  TagIcon,
+  TruckIcon,
+  WrenchScrewdriverIcon,
+  XMarkIcon,
+  ChevronRightIcon,
+  ChevronDownIcon,
+  Bars3Icon,
+  XMarkIcon as XMarkIconSolid
+} from '@heroicons/react/24/outline';
+import { 
+  CheckIcon as CheckIconSolid,
+  StarIcon as StarIconSolid,
+  ArrowRightIcon as ArrowRightIconSolid
+} from '@heroicons/react/24/solid';
+import Link from 'next/link';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-    dataLayer: any[];
-  }
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
-interface AnalyticsProps {
-  className?: string;
-  children?: React.ReactNode;
-}
+export const metadata: Metadata = {
+  title: 'Analytics | Zion Tech Group',
+  description: 'Professional Analytics solutions powered by AI and cutting-edge technology.',
+  keywords: ['AI', 'Technology', 'Solutions', 'Analytics'],
+  openGraph: {
+    title: 'Analytics | Zion Tech Group',
+    description: 'Professional Analytics solutions powered by AI and cutting-edge technology.',
+    type: 'website',
+  },
+};
 
-<<<<<<< HEAD
-export default function Analytics({ className = '', children, ...props }: AnalyticsProps) {
+export default function AnalyticsPage() {
   return (
-    <div className={`analytics-component ${className}`} {...props}>
-      {children}
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Analytics
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Professional Analytics solutions powered by AI and cutting-edge technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRightIcon className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our Analytics?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We provide cutting-edge solutions that drive real business results.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <CpuChipIcon className="h-6 w-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Advanced Technology
+              </h3>
+              <p className="text-gray-600">
+                Leveraging the latest AI and machine learning technologies.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                <ShieldCheckIcon className="h-6 w-6 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Secure & Reliable
+              </h3>
+              <p className="text-gray-600">
+                Enterprise-grade security and 99.9% uptime guarantee.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                <RocketLaunchIcon className="h-6 w-6 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Fast Implementation
+              </h3>
+              <p className="text-gray-600">
+                Quick setup and deployment with minimal disruption.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-blue-600 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Contact us today to learn more about our Analytics solutions.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors"
+          >
+            Get Started Now
+            <ArrowRightIcon className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }
-=======
-const Analytics: React.FC<AnalyticsProps> = ({
-  measurementId = 'G-XXXXXXXXXX', // Replace with actual GA4 measurement ID
-  enabled = process.env.NODE_ENV === 'production'
-}) => {
-  const location = useLocation();
-
-  useEffect(() => {
-    if (!enabled || typeof window === 'undefined') return;
-
-    // Initialize Google Analytics
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
-    document.head.appendChild(script);
-
-    // Initialize dataLayer
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function() {
-      window.dataLayer.push(arguments);
-    };
-
-    window.gtag('js', new Date());
-    window.gtag('config', measurementId, {
-//       page_title: document.title,
-//       page_location: window.location.href,
-    });
-
-    return () => {
-      // Cleanup if needed
-      const existingScript = document.querySelector(`script[src*="${measurementId}"]`);
-      if (existingScript) {
-        existingScript.remove();
-      }
-    };
-  }, [measurementId, enabled]);
-
-  // Track page views on route changes
-  useEffect(() => {
-    if (!enabled || typeof window === 'undefined' || !window.gtag) return;
-
-    window.gtag('config', measurementId, {
-//       page_title: document.title,
-//       page_location: window.location.href,
-    });
-  }, [location, measurementId, enabled]);
-
-  // Track Core Web Vitals
-  useEffect(() => {
-    if (!enabled || typeof window === 'undefined') return;
-
-    const trackWebVitals = () => {
-      // Track LCP
-      new PerformanceObserver((entryList) => {
-        for (const entry of entryList.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            window.gtag('event', 'web_vitals', {
-//               name: 'LCP',
-              value: Math.round(entry.startTime),
-//               event_category: 'Web Vitals',
-//               event_label: 'Largest Contentful Paint',
-            });
-          }
-        }
-      }).observe({ entryTypes: ['largest-contentful-paint'] });
-
-      // Track FID
-      new PerformanceObserver((entryList) => {
-        for (const entry of entryList.getEntries()) {
-          if (entry.entryType === 'first-input') {
-            window.gtag('event', 'web_vitals', {
-//               name: 'FID',
-              value: Math.round((entry as any).processingStart - entry.startTime),
-//               event_category: 'Web Vitals',
-//               event_label: 'First Input Delay',
-            });
-          }
-        }
-      }).observe({ entryTypes: ['first-input'] });
-
-      // Track CLS
-      let clsValue = 0;
-      new PerformanceObserver((entryList) => {
-        for (const entry of entryList.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
-          }
-        }
-        window.gtag('event', 'web_vitals', {
-//           name: 'CLS',
-          value: Math.round(clsValue * 1000),
-//           event_category: 'Web Vitals',
-          event_label: 'Cumulative Layout Shift',
-        });
-      }).observe({ entryTypes: ['layout-shift'] });
-    };
-
-    // Wait for page to be fully loaded
-    if (document.readyState === 'complete') {
-      trackWebVitals();
-    } else {
-      window.addEventListener('load', trackWebVitals);
-    }
-
-    return () => {
-      window.removeEventListener('load', trackWebVitals);
-    };
-  }, [enabled]);
-
-  // Track custom events
-  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
-    if (!enabled || typeof window === 'undefined' || !window.gtag) return;
-    
-    window.gtag('event', eventName, parameters);
-  };
-
-  // Track button clicks
-  useEffect(() => {
-    if (!enabled) return;
-
-    const handleClick = (event: Event) => {
-      const target = event.target as HTMLElement;
-      const button = target.closest('button, a, [role="button"]');
-      
-      if (button) {
-        const buttonText = button.textContent?.trim() || 'Unknown';
-        const buttonId = button.id || button.className;
-        
-        trackEvent('button_click', {
-//           button_text: buttonText,
-//           button_id: buttonId,
-//           page_location: window.location.href,
-        });
-      }
-    };
-
-    document.addEventListener('click', handleClick);
-    return () => document.removeEventListener('click', handleClick);
-  }, [enabled]);
-
-  // Track form submissions
-  useEffect(() => {
-    if (!enabled) return;
-
-    const handleSubmit = (event: Event) => {
-      const form = event.target as HTMLFormElement;
-      const formId = form.id || form.className;
-      
-      trackEvent('form_submit', {
-        form_id: formId,
-//         page_location: window.location.href,
-      });
-    };
-
-    document.addEventListener('submit', handleSubmit);
-    return () => document.removeEventListener('submit', handleSubmit);
-  }, [enabled]);
-
-  // Track scroll depth
-  useEffect(() => {
-    if (!enabled) return;
-
-    let maxScroll = 0;
-    const trackScroll = () => {
-      const scrollPercent = Math.round(
-        (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
-      );
-      
-      if (scrollPercent > maxScroll) {
-        maxScroll = scrollPercent;
-        
-        // Track at 25%, 50%, 75%, and 100%
-        if ([25, 50, 75, 100].includes(scrollPercent)) {
-          trackEvent('scroll_depth', {
-//             scroll_percent: scrollPercent,
-//             page_location: window.location.href,
-          });
-        }
-      }
-    };
-
-    window.addEventListener('scroll', trackScroll, { passive: true });
-    return () => window.removeEventListener('scroll', trackScroll);
-  }, [enabled]);
-
-  return null; // This component doesn't render anything
-};
-
-export default Analytics;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

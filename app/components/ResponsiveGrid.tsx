@@ -1,36 +1,25 @@
+'use client';
+
 import React from 'react';
 
-interface ResponsivegridProps {
+interface ResponsiveGridProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-export default function Responsivegrid({ className = '', children, ...props }: ResponsivegridProps) {
-=======
-const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({
-//   children,
-  className = '',
-  cols = { default: 1, sm: 2, md: 3, lg: 4 },
-  gap = 'md'
-}) => {
-  const gapClasses = {
-//     sm: 'gap-2',
-//     md: 'gap-6',
-//     lg: 'gap-8',
-//     xl: 'gap-12'
-  };
-
-  const gridCols = `grid-cols-${cols.default || 1} ${
-    cols.sm ? `sm:grid-cols-${cols.sm}` : ''
-  } ${cols.md ? `md:grid-cols-${cols.md}` : ''} ${
-    cols.lg ? `lg:grid-cols-${cols.lg}` : ''
-  } ${cols.xl ? `xl:grid-cols-${cols.xl}` : ''}`;
-
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+export default function ResponsiveGrid({ className = '', children, ...props }: ResponsiveGridProps) {
   return (
     <div className={`responsivegrid-component ${className}`} {...props}>
-      {children}
-</div>
+      {children || (
+        <div className="p-8 text-center">
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">
+            ResponsiveGrid
+          </h1>
+          <p className="text-gray-600">
+            This component is under development.
+          </p>
+        </div>
+      )}
+    </div>
   );
 }

@@ -1,140 +1,102 @@
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-=======
-import { Star } from 'lucide-react';
+'use client';
 
+import { useState, useEffect, useCallback } from 'react';
 
-interface PerformanceMetrics {
-//   loadTime: number
-//   firstContentfulPaint: number
-//   largestContentfulPaint: number
-//   firstInputDelay: number
-  cumulativeLayoutShift: number
-//   timeToInteractive: number
+interface PerformanceData {
+  timestamp: number;
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  networkLatency: number;
 }
 
-export const usePerformanceMonitor = () => {
-  const metricsRef = useRef<PerformanceMetrics>({
-//     loadTime: 0,
-//     firstContentfulPaint: 0,
-//     largestContentfulPaint: 0,
-//     firstInputDelay: 0,
-    cumulativeLayoutShift: 0,
-//     timeToInteractive: 0
-  })
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+interface MonitorConfig {
+  enabled: boolean;
+  interval: number;
+  maxSamples: number;
+}
 
-export function usePerformanceMonitor() {
-  const [state, setState] = useState<string | null>(null);
-  
-  useEffect(() => {
-<<<<<<< HEAD
-    // Implementation here
-    setState('initialized');
-  }, []);
-  
-  return state;
-=======
-    const measurePerformance = () => {
-      if (typeof window === 'undefined' || !window.performance) return
+export const usePerformanceMonitor = (config: MonitorConfig = {
+  enabled: true,
+  interval: 1000,
+  maxSamples: 100
+}) => {
+  const [data, setData] = useState<PerformanceData[]>([]);
+  const [isActive, setIsActive] = useState(false);
 
-      // Measure page load time
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-      if (navigation) {
-        metricsRef.current.loadTime = navigation.loadEventEnd - navigation.loadEventStart
-      }
+  const collectMetrics = useCallback(() => {
+    const now = performance.now();
+    const timing = performance.timing;
+    
+    const metrics: PerformanceData = {
+      timestamp: Date.now(),
+      loadTime: timing ? timing.loadEventEnd - timing.navigationStart : 0,
+      renderTime: now,
+      memoryUsage: (performance as any).memory?.usedJSHeapSize || 0,
+      networkLatency: timing ? timing.responseEnd - timing.requestStart : 0
+    };
 
-      // Measure Core Web Vitals
-      const measureWebVitals = () => {
-        // First Contentful Paint (FCP)
-        const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0]
-        if (fcpEntry) {
-          metricsRef.current.firstContentfulPaint = fcpEntry.startTime
-        }
+    setData(prev => {
+      const newData = [...prev, metrics];
+      return newData.slice(-config.maxSamples);
+    });
+  }, [config.maxSamples]);
 
-        // Largest Contentful Paint (LCP)
-        const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          const lastEntry = entries[entries.length - 1]
-          metricsRef.current.largestContentfulPaint = lastEntry.startTime
-        })
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
-
-        // First Input Delay (FID)
-        const fidObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          entries.forEach((entry: any) => {
-            metricsRef.current.firstInputDelay = entry.processingStart - entry.startTime
-          })
-        })
-        fidObserver.observe({ entryTypes: ['first-input'] })
-
-        // Cumulative Layout Shift (CLS)
-        let clsValue = 0
-        const clsObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          entries.forEach((entry: any) => {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value
-            }
-          })
-          metricsRef.current.cumulativeLayoutShift = clsValue
-        })
-        clsObserver.observe({ entryTypes: ['layout-shift'] })
-
-        // Time to Interactive (TTI) - approximation
-        const ttiObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          const lastEntry = entries[entries.length - 1]
-          metricsRef.current.timeToInteractive = lastEntry.startTime
-        })
-        ttiObserver.observe({ entryTypes: ['measure'] })
-
-        // Cleanup observers after 10 seconds
-        setTimeout(() => {
-          lcpObserver.disconnect()
-          fidObserver.disconnect()
-          clsObserver.disconnect()
-          ttiObserver.disconnect()
-        }, 10000)
-      }
-
-      // Log performance metrics
-      const logMetrics = () => {
-        // Send to analytics service
-        if (typeof window !== 'undefined' && (window as any).gtag) {
-          (window as any).gtag('event', 'performance_metrics', {
-//             load_time: metricsRef.current.loadTime,
-//             first_contentful_paint: metricsRef.current.firstContentfulPaint,
-//             largest_contentful_paint: metricsRef.current.largestContentfulPaint,
-//             first_input_delay: metricsRef.current.firstInputDelay,
-            cumulative_layout_shift: metricsRef.current.cumulativeLayoutShift,
-//             time_to_interactive: metricsRef.current.timeToInteractive
-          })
-        }
-      }
-
-      // Start measuring after page load
-      if (document.readyState === 'complete') {
-        measureWebVitals()
-      } else {
-        window.addEventListener('load', measureWebVitals)
-      }
-
-      // Log metrics after 5 seconds
-      setTimeout(logMetrics, 5000)
-    }
-
-    measurePerformance()
-
-    // Cleanup
+  const startMonitoring = useCallback(() => {
+    if (!config.enabled) return;
+    
+    setIsActive(true);
+    collectMetrics();
+    
+    const interval = setInterval(collectMetrics, config.interval);
+    
     return () => {
-      // Cleanup is handled by the setTimeout in measureWebVitals
+      clearInterval(interval);
+      setIsActive(false);
+    };
+  }, [config.enabled, config.interval, collectMetrics]);
+
+  const stopMonitoring = useCallback(() => {
+    setIsActive(false);
+  }, []);
+
+  const clearData = useCallback(() => {
+    setData([]);
+  }, []);
+
+  const getAverageMetrics = useCallback(() => {
+    if (data.length === 0) return null;
+    
+    const totals = data.reduce((acc, curr) => ({
+      loadTime: acc.loadTime + curr.loadTime,
+      renderTime: acc.renderTime + curr.renderTime,
+      memoryUsage: acc.memoryUsage + curr.memoryUsage,
+      networkLatency: acc.networkLatency + curr.networkLatency
+    }), { loadTime: 0, renderTime: 0, memoryUsage: 0, networkLatency: 0 });
+
+    const count = data.length;
+    
+    return {
+      loadTime: totals.loadTime / count,
+      renderTime: totals.renderTime / count,
+      memoryUsage: totals.memoryUsage / count,
+      networkLatency: totals.networkLatency / count
+    };
+  }, [data]);
+
+  useEffect(() => {
+    if (config.enabled) {
+      const cleanup = startMonitoring();
+      return cleanup;
     }
-  }, [])
+  }, [config.enabled, startMonitoring]);
 
-  return metricsRef.current
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
-}
-
-export default usePerformanceMonitor;
+  return {
+    data,
+    isActive,
+    startMonitoring,
+    stopMonitoring,
+    clearData,
+    getAverageMetrics
+  };
+};

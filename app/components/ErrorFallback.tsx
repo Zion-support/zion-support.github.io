@@ -1,153 +1,173 @@
-<<<<<<< HEAD
+'use client';
+
 import React from 'react';
-=======
-import React, { useEffect } from "react";
-import { Link } from 'react-router-dom';
-import { Home } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+import { Metadata } from 'next';
+import { 
+  ArrowRightIcon, 
+  CheckIcon, 
+  StarIcon,
+  ShieldCheckIcon,
+  CpuChipIcon,
+  CloudIcon,
+  ChartBarIcon,
+  CogIcon,
+  GlobeAltIcon,
+  UserGroupIcon,
+  LightBulbIcon,
+  RocketLaunchIcon,
+  SparklesIcon,
+  AcademicCapIcon,
+  BeakerIcon,
+  BuildingOfficeIcon,
+  CurrencyDollarIcon,
+  DocumentTextIcon,
+  EyeIcon,
+  FingerPrintIcon,
+  HeartIcon,
+  HomeIcon,
+  IdentificationIcon,
+  KeyIcon,
+  LockClosedIcon,
+  MagnifyingGlassIcon,
+  PaintBrushIcon,
+  PhoneIcon,
+  PresentationChartLineIcon,
+  PuzzlePieceIcon,
+  ServerIcon,
+  ShoppingCartIcon,
+  TagIcon,
+  TruckIcon,
+  WrenchScrewdriverIcon,
+  XMarkIcon,
+  ChevronRightIcon,
+  ChevronDownIcon,
+  Bars3Icon,
+  XMarkIcon as XMarkIconSolid
+} from '@heroicons/react/24/outline';
+import { 
+  CheckIcon as CheckIconSolid,
+  StarIcon as StarIconSolid,
+  ArrowRightIcon as ArrowRightIconSolid
+} from '@heroicons/react/24/solid';
+import Link from 'next/link';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
-interface ErrorfallbackProps {
-  className?: string;
-  children?: React.ReactNode;
-}
 
-<<<<<<< HEAD
-export default function Errorfallback({ className = '', children, ...props }: ErrorfallbackProps) {
+export const metadata: Metadata = {
+  title: 'ErrorFallback | Zion Tech Group',
+  description: 'Professional ErrorFallback solutions powered by AI and cutting-edge technology.',
+  keywords: ['AI', 'Technology', 'Solutions', 'ErrorFallback'],
+  openGraph: {
+    title: 'ErrorFallback | Zion Tech Group',
+    description: 'Professional ErrorFallback solutions powered by AI and cutting-edge technology.',
+    type: 'website',
+  },
+};
+
+export default function ErrorFallbackPage() {
   return (
-    <div className={`errorfallback-component ${className}`} {...props}>
-      {children}
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              ErrorFallback
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Professional ErrorFallback solutions powered by AI and cutting-edge technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRightIcon className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our ErrorFallback?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We provide cutting-edge solutions that drive real business results.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <CpuChipIcon className="h-6 w-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Advanced Technology
+              </h3>
+              <p className="text-gray-600">
+                Leveraging the latest AI and machine learning technologies.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                <ShieldCheckIcon className="h-6 w-6 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Secure & Reliable
+              </h3>
+              <p className="text-gray-600">
+                Enterprise-grade security and 99.9% uptime guarantee.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                <RocketLaunchIcon className="h-6 w-6 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Fast Implementation
+              </h3>
+              <p className="text-gray-600">
+                Quick setup and deployment with minimal disruption.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-blue-600 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Contact us today to learn more about our ErrorFallback solutions.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors"
+          >
+            Get Started Now
+            <ArrowRightIcon className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </section>
     </div>
-=======
-const ErrorFallback: React.FC<ErrorFallbackProps> = ({
-//   error,
-//   resetErrorBoundary,
-//   errorInfo,
-}) => {
-  useEffect(() => {
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error);
-      if (errorInfo) {
-        console.error('Error info:', errorInfo);
-      }
-    }
-
-    // Send error to analytics in production
-    if (process.env.NODE_ENV === 'production' && window.gtag) {
-      window.gtag('event', 'exception', {
-//         description: error.message,
-//         fatal: false,
-        custom_map: {
-//           'error_stack': error.stack || '',
-//           'error_component_stack': errorInfo?.componentStack || ''
-        }
-      });
-    }
-  }, [error, errorInfo]);
-
-  const handleReportError = () => {
-    const errorReport = {
-//       message: error.message,
-//       stack: error.stack,
-//       componentStack: errorInfo?.componentStack,
-      timestamp: new Date().toISOString(),
-//       userAgent: navigator.userAgent,
-//       url: window.location.href
-    };
-
-    // In a real app, you would send this to your error reporting service
-    console.log('Error report:', errorReport);
-    
-    // For now, we'll just copy to clipboard
-    navigator.clipboard.writeText(JSON.stringify(errorReport, null, 2));
-    alert('Error details copied to clipboard. Please send this to our support team.');
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
-      <div className="max-w-2xl w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-        <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
-        <h1 className="text-3xl font-bold text-white mb-4">
-//           Oops! Something went wrong
-</h1>
-        <p className="text-gray-300 mb-6 text-lg">
-          We're sorry, but something unexpected happened. Our team has been notified and we're working to fix it.
-</p>
-        
-        {/* Error Details */}
-        <details className="text-left mb-6 bg-black/20 rounded-lg p-4">
-          <summary className="text-cyan-400 cursor-pointer mb-2 font-semibold flex items-center">
-            <Bug className="w-4 h-4 mr-2" />
-//             Technical Details
-//           </summary>
-          <div className="mt-3 space-y-2">
-//             <div>
-              <strong className="text-red-400">Error:</strong>
-              <pre className="text-xs text-gray-400 bg-black/30 p-2 rounded mt-1 overflow-auto">
-                {error.message}
-//               </pre>
-</div>
-            {error.stack && (
-//               <div>
-                <strong className="text-red-400">Stack Trace:</strong>
-                <pre className="text-xs text-gray-400 bg-black/30 p-2 rounded mt-1 overflow-auto max-h-32">
-                  {error.stack}
-//                 </pre>
-</div>
-            )}
-</div>
-//         </details>
-
-        {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-//           <button
-            onClick={resetErrorBoundary}
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
-//           >
-            <RefreshCw className="w-4 h-4 mr-2 group-hover:rotate-180 transition-transform" />
-//             Try Again
-</button>
-          
-//           <Link
-            to="/"
-            className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center group border border-white/20"
-//           >
-            <Home className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
-//             Go Home
-</Link>
-          
-//           <button
-            onClick={handleReportError}
-            className="bg-red-500/20 text-red-400 px-6 py-3 rounded-lg font-semibold hover:bg-red-500/30 transition-all duration-300 flex items-center justify-center group border border-red-500/30"
-//           >
-            <Mail className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
-//             Report Error
-</button>
-</div>
-
-        {/* Contact Information */}
-        <div className="mt-8 pt-6 border-t border-white/10">
-          <p className="text-gray-400 text-sm mb-2">
-//             Need immediate assistance?
-</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
-//             <a 
-              href="mailto:kleber@ziontechgroup.com"
-              className="text-cyan-400 hover:text-cyan-300 transition-colors flex items-center justify-center"
-//             >
-              <Mail className="w-4 h-4 mr-1" />
-//               kleber@ziontechgroup.com
-</a>
-//             <a 
-              href="tel:+13024640950"
-              className="text-cyan-400 hover:text-cyan-300 transition-colors"
-//             >
-              +1 (302) 464-0950
-</a>
-</div>
-</div>
-</div>
-</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }

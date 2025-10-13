@@ -7,14 +7,17 @@ interface ServicesProps {
 
 export default function Services({ className = '', children, ...props }: ServicesProps) {
   return (
-<<<<<<< HEAD
     <div className={`services-component ${className}`} {...props}>
-      {children}
+      {children || (
+        <div className="p-8 text-center">
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">
+            Micro SAAS Services
+          </h1>
+          <p className="text-gray-600">
+            Professional micro SAAS solutions powered by AI and cutting-edge technology.
+          </p>
+        </div>
+      )}
     </div>
-=======
-    <div className={className}>
-<h2>Services</h2>
-</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }

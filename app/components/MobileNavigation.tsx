@@ -1,134 +1,173 @@
-<<<<<<< HEAD
+'use client';
+
 import React from 'react';
-=======
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X, ArrowRight, Star } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+import { Metadata } from 'next';
+import { 
+  ArrowRightIcon, 
+  CheckIcon, 
+  StarIcon,
+  ShieldCheckIcon,
+  CpuChipIcon,
+  CloudIcon,
+  ChartBarIcon,
+  CogIcon,
+  GlobeAltIcon,
+  UserGroupIcon,
+  LightBulbIcon,
+  RocketLaunchIcon,
+  SparklesIcon,
+  AcademicCapIcon,
+  BeakerIcon,
+  BuildingOfficeIcon,
+  CurrencyDollarIcon,
+  DocumentTextIcon,
+  EyeIcon,
+  FingerPrintIcon,
+  HeartIcon,
+  HomeIcon,
+  IdentificationIcon,
+  KeyIcon,
+  LockClosedIcon,
+  MagnifyingGlassIcon,
+  PaintBrushIcon,
+  PhoneIcon,
+  PresentationChartLineIcon,
+  PuzzlePieceIcon,
+  ServerIcon,
+  ShoppingCartIcon,
+  TagIcon,
+  TruckIcon,
+  WrenchScrewdriverIcon,
+  XMarkIcon,
+  ChevronRightIcon,
+  ChevronDownIcon,
+  Bars3Icon,
+  XMarkIcon as XMarkIconSolid
+} from '@heroicons/react/24/outline';
+import { 
+  CheckIcon as CheckIconSolid,
+  StarIcon as StarIconSolid,
+  ArrowRightIcon as ArrowRightIconSolid
+} from '@heroicons/react/24/solid';
+import Link from 'next/link';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
-interface MobilenavigationProps {
-  className?: string;
-  children?: React.ReactNode;
-}
 
-export default function Mobilenavigation({ className = '', children, ...props }: MobilenavigationProps) {
+export const metadata: Metadata = {
+  title: 'MobileNavigation | Zion Tech Group',
+  description: 'Professional MobileNavigation solutions powered by AI and cutting-edge technology.',
+  keywords: ['AI', 'Technology', 'Solutions', 'MobileNavigation'],
+  openGraph: {
+    title: 'MobileNavigation | Zion Tech Group',
+    description: 'Professional MobileNavigation solutions powered by AI and cutting-edge technology.',
+    type: 'website',
+  },
+};
+
+export default function MobileNavigationPage() {
   return (
-<<<<<<< HEAD
-    <div className={`mobilenavigation-component ${className}`} {...props}>
-      {children}
-    </div>
-=======
-//     <>
-      {/* Mobile menu button */}
-//       <button
-        onClick={toggleMenu}
-        className="md:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-300"
-        aria-label="Toggle mobile menu"
-        aria-expanded={isOpen}
-//       >
-        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-</button>
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              MobileNavigation
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Professional MobileNavigation solutions powered by AI and cutting-edge technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRightIcon className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      {/* Mobile menu overlay */}
-      {isOpen && (
-        <div className="fixed inset-0 z-50 md:hidden">
-          {/* Backdrop */}
-//           <div 
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-            onClick={closeMenu}
-//           />
+      {/* Features Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our MobileNavigation?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We provide cutting-edge solutions that drive real business results.
+            </p>
+          </div>
           
-          {/* Menu panel */}
-          <div className="absolute top-0 right-0 h-full w-80 max-w-[85vw] bg-slate-900/95 backdrop-blur-sm border-l border-white/20 shadow-2xl">
-            <div className="p-6">
-              {/* Header */}
-              <div className="flex items-center justify-between mb-8">
-                <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-//                   Zion Tech Group
-</span>
-//                 <button
-                  onClick={closeMenu}
-                  className="p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-300"
-                  aria-label="Close menu"
-//                 >
-                  <X className="w-6 h-6" />
-</button>
-</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <CpuChipIcon className="h-6 w-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Advanced Technology
+              </h3>
+              <p className="text-gray-600">
+                Leveraging the latest AI and machine learning technologies.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                <ShieldCheckIcon className="h-6 w-6 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Secure & Reliable
+              </h3>
+              <p className="text-gray-600">
+                Enterprise-grade security and 99.9% uptime guarantee.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                <RocketLaunchIcon className="h-6 w-6 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Fast Implementation
+              </h3>
+              <p className="text-gray-600">
+                Quick setup and deployment with minimal disruption.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-              {/* Navigation links */}
-              <nav className="space-y-4 mb-8">
-//                 <Link
-                  to="/about"
-                  onClick={closeMenu}
-                  className="flex items-center justify-between p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-all duration-300 group"
-//                 >
-                  <span className="font-medium">About Us</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-</Link>
-                
-//                 <Link
-                  to="/services"
-                  onClick={closeMenu}
-                  className="flex items-center justify-between p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-all duration-300 group"
-//                 >
-                  <span className="font-medium">Our Services</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-</Link>
-                
-//                 <Link
-                  to="/contact"
-                  onClick={closeMenu}
-                  className="flex items-center justify-between p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-all duration-300 group"
-//                 >
-                  <span className="font-medium">Contact</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-</Link>
-//               </nav>
-
-              {/* Quick services */}
-              <div className="mb-8">
-                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
-//                   Popular Services
-</h3>
-                <div className="space-y-2">
-//                   <Link
-                    to="/ai-business-intelligence"
-                    onClick={closeMenu}
-                    className="block p-2 rounded-lg text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/5 transition-colors duration-300"
-//                   >
-//                     AI Business Intelligence
-</Link>
-//                   <Link
-                    to="/ai-customer-support"
-                    onClick={closeMenu}
-                    className="block p-2 rounded-lg text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/5 transition-colors duration-300"
-//                   >
-//                     AI Customer Support
-</Link>
-//                   <Link
-                    to="/ai-cybersecurity"
-                    onClick={closeMenu}
-                    className="block p-2 rounded-lg text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/5 transition-colors duration-300"
-//                   >
-//                     AI Cybersecurity
-</Link>
-</div>
-</div>
-
-              {/* CTA Button */}
-//               <Link
-                to="/contact"
-                onClick={closeMenu}
-                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25"
-//               >
-//                 Get Started Today
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-</Link>
-</div>
-</div>
-</div>
-      )}
-//     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+      {/* CTA Section */}
+      <section className="bg-blue-600 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Contact us today to learn more about our MobileNavigation solutions.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors"
+          >
+            Get Started Now
+            <ArrowRightIcon className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </section>
+    </div>
   );
 }

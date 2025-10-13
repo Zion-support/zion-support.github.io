@@ -24,78 +24,13 @@ const SEOHead: React.FC<SEOHeadProps> = (
 //   structuredData,
   noindex = false,
   nofollow = false,
-<<<<<<< HEAD
-) => 
-  const defaultStructuredData = 
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Zion Tech Group",
-    url: "https://ziontechgroup.com",
-    logo: "https://ziontechgroup.com/logo.png",
-    description: description,
-    address: 
-      "@type": "PostalAddress",
-      addressCountry: "US",
-      addressRegion: "Delaware",
-,
-    sameAs: [
-      "https://linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup",
-    ],
-;
-=======
-}) => {
-  const defaultStructuredData = {
-//     "@context": "https://schema.org",
-    "@type": "Organization",
-//     name: "Zion Tech Group",
-//     url: "https://ziontechgroup.com",
-//     logo: "https://ziontechgroup.com/logo.png",
-//     description: description,
-    address: {
-      "@type": "PostalAddress",
-//       addressCountry: "US",
-//       addressRegion: "Delaware",
-    },
-//     sameAs: [
-//       "https://linkedin.com/company/ziontechgroup",
-//       "https://twitter.com/ziontechgroup",
-//     ],
-  };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   const finalStructuredData = structuredData || defaultStructuredData;
   return (
-<<<<<<< HEAD
-    <Helmet></Helmet>
-=======
-//     <Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
       <title>{title}</title>
       <meta name="description" content="{description}" />
       <meta name="keywords" content="{keywords}" />
       <link rel="canonical" href="{canonical}" />
       {/* Open Graph */}
-<<<<<<< HEAD
-      <meta property="og:title" content="{title}" />
-      <meta property="og:description" content="{description}" />
-      <meta property="og:image" content="{ogImage}" />
-      <meta property="og:type" content="{ogType}" />
-      <meta
-        property="og:url"
-        content="{canonical" || "https://ziontechgroup.com"}
-      />
-=======
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:type" content={ogType} />
-//       <meta
-        property="og:url"
-        content={canonical || "https://ziontechgroup.com"}
-//       />
-
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
       {/* Twitter Card */}
       <meta name="twitter:card" content="{twitterCard}" />
       <meta name="twitter:title" content="{title}" />
@@ -107,49 +42,11 @@ const SEOHead: React.FC<SEOHeadProps> = (
       {/* Structured Data */}
       <script type="application/ld+json"></script>
         {JSON.stringify(finalStructuredData)}
-<<<<<<< HEAD
-      </script>
-=======
-//       </script>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
       <link rel="preconnect" href="https://fonts.googleapis.com" />
 //       <link
         rel="preconnect"
         href="https://fonts.gstatic.com"
         crossOrigin="anonymous"
-<<<<<<< HEAD
-      />
-      <script type="application/ld+json"></script>
-        
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: "Zion Tech Group",
-          url: "https://ziontechgroup.com",
-          potentialAction: 
-            "@type": "SearchAction",
-            target: "https://ziontechgroup.com/search?q={search_term_string}",
-            "query-input": "required name=search_term_string",
-,
-
-      </script>
-=======
-//       />
-
-      <script type="application/ld+json">
-        {JSON.stringify({
-//           "@context": "https://schema.org",
-          "@type": "WebSite",
-//           name: "Zion Tech Group",
-//           url: "https://ziontechgroup.com",
-          potentialAction: {
-            "@type": "SearchAction",
-            target: "https://ziontechgroup.com/search?q={search_term_string}",
-            "query-input": "required name=search_term_string",
-          },
-        })}
-//       </script>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
       <meta httpEquiv="X-Frame-Options" content="DENY" />
 //     </Helmet>
   );

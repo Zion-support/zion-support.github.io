@@ -1,63 +1,173 @@
-<<<<<<< HEAD
+'use client';
+
 import React from 'react';
-=======
-import React, { useState } from "react";
-import { Helmet } from 'react-helmet-async';
-import { Monitor } from 'lucide-react';
-// import LoadingSpinner from "./components/LoadingSpinner"; // Removed unused import
+import { Metadata } from 'next';
+import { 
+  ArrowRightIcon, 
+  CheckIcon, 
+  StarIcon,
+  ShieldCheckIcon,
+  CpuChipIcon,
+  CloudIcon,
+  ChartBarIcon,
+  CogIcon,
+  GlobeAltIcon,
+  UserGroupIcon,
+  LightBulbIcon,
+  RocketLaunchIcon,
+  SparklesIcon,
+  AcademicCapIcon,
+  BeakerIcon,
+  BuildingOfficeIcon,
+  CurrencyDollarIcon,
+  DocumentTextIcon,
+  EyeIcon,
+  FingerPrintIcon,
+  HeartIcon,
+  HomeIcon,
+  IdentificationIcon,
+  KeyIcon,
+  LockClosedIcon,
+  MagnifyingGlassIcon,
+  PaintBrushIcon,
+  PhoneIcon,
+  PresentationChartLineIcon,
+  PuzzlePieceIcon,
+  ServerIcon,
+  ShoppingCartIcon,
+  TagIcon,
+  TruckIcon,
+  WrenchScrewdriverIcon,
+  XMarkIcon,
+  ChevronRightIcon,
+  ChevronDownIcon,
+  Bars3Icon,
+  XMarkIcon as XMarkIconSolid
+} from '@heroicons/react/24/outline';
+import { 
+  CheckIcon as CheckIconSolid,
+  StarIcon as StarIconSolid,
+  ArrowRightIcon as ArrowRightIconSolid
+} from '@heroicons/react/24/solid';
+import Link from 'next/link';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
-interface LayoutProps {
-  className?: string;
-  children?: React.ReactNode;
-}
+export const metadata: Metadata = {
+  title: 'Layout | Zion Tech Group',
+  description: 'Professional Layout solutions powered by AI and cutting-edge technology.',
+  keywords: ['AI', 'Technology', 'Solutions', 'layout'],
+  openGraph: {
+    title: 'Layout | Zion Tech Group',
+    description: 'Professional Layout solutions powered by AI and cutting-edge technology.',
+    type: 'website',
+  },
+};
 
-export default function Layout({ className = '', children, ...props }: LayoutProps) {
+export default function layoutPage() {
   return (
-<<<<<<< HEAD
-    <div className={`layout-component ${className}`} {...props}>
-      {children}
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Layout
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Professional Layout solutions powered by AI and cutting-edge technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRightIcon className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our Layout?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We provide cutting-edge solutions that drive real business results.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <CpuChipIcon className="h-6 w-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Advanced Technology
+              </h3>
+              <p className="text-gray-600">
+                Leveraging the latest AI and machine learning technologies.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                <ShieldCheckIcon className="h-6 w-6 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Secure & Reliable
+              </h3>
+              <p className="text-gray-600">
+                Enterprise-grade security and 99.9% uptime guarantee.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                <RocketLaunchIcon className="h-6 w-6 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Fast Implementation
+              </h3>
+              <p className="text-gray-600">
+                Quick setup and deployment with minimal disruption.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-blue-600 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Contact us today to learn more about our Layout solutions.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors"
+          >
+            Get Started Now
+            <ArrowRightIcon className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </section>
     </div>
-=======
-    <ErrorBoundary FallbackComponent={ErrorFallback}>
-//       <HelmetProvider>
-//         <BrowserRouter>
-//           <AnalyticsProvider>
-            <EnhancedPerformanceMonitor showInProduction={false} />
-//             <Helmet>
-//               <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-//               <meta
-                name="description"
-                content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses."
-//               />
-//               <meta
-                name="keywords"
-                content="AI solutions, IT services, digital transformation, business automation, technology consulting"
-//               />
-//             </Helmet>
-
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-              {/* Animated Background */}
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>
-              <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
-              
-//               <ImprovedNavigation />
-
-              <main>{children}</main>
-
-//               <ImprovedFooter />
-              
-              {/* Sidebar */}
-//               <ImprovedSidebar 
-                isOpen={isSidebarOpen} 
-                onClose={() => setIsSidebarOpen(false)} 
-//               />
-</div>
-//           </AnalyticsProvider>
-//         </BrowserRouter>
-//       </HelmetProvider>
-//     </ErrorBoundary>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }

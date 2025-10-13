@@ -1,56 +1,74 @@
-import React from 'react';
+'use client';
 
-interface AnalyticsproviderProps {
-  className?: string;
-  children?: React.ReactNode;
+import React, { createContext, useContext, useEffect, useState } from 'react';
+
+interface AnalyticsContextType {
+  trackEvent: (event: string, properties?: Record<string, any>) => void;
+  trackPageView: (page: string) => void;
+  isEnabled: boolean;
 }
 
-<<<<<<< HEAD
-export default function Analyticsprovider({ className = '', children, ...props }: AnalyticsproviderProps) {
-=======
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+
+interface AnalyticsProviderProps {
+  children: React.ReactNode;
+  enabled?: boolean;
+}
+
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ 
+  children, 
+  enabled = true 
+}) => {
+  const [isEnabled, setIsEnabled] = useState(enabled);
+
+  const trackEvent = (event: string, properties?: Record<string, any>) => {
+    if (!isEnabled) return;
+    
+    // Track event logic here
+    console.log('Analytics Event:', event, properties);
+    
+    // You can integrate with Google Analytics, Mixpanel, etc.
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', event, properties);
+    }
+  };
+
+  const trackPageView = (page: string) => {
+    if (!isEnabled) return;
+    
+    console.log('Page View:', page);
+    
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+        page_path: page,
+      });
+    }
+  };
+
+  useEffect(() => {
+    // Initialize analytics
+    if (enabled) {
+      setIsEnabled(true);
+    }
+  }, [enabled]);
+
+  const value: AnalyticsContextType = {
+    trackEvent,
+    trackPageView,
+    isEnabled
+  };
+
+  return (
+    <AnalyticsContext.Provider value={value}>
+      {children}
+    </AnalyticsContext.Provider>
+  );
+};
 
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
-  if (!context) {
+  if (context === undefined) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
   return context;
 };
-
-interface AnalyticsProviderProps {
-  children: ReactNode;
-}
-
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  useEffect(() => {
-    // Initialize analytics
-    console.log('Analytics initialized');
-  }, []);
-
-  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-    console.log('Analytics Event:', eventName, properties);
-    // Add your analytics tracking logic here
-  };
-
-  const trackPageView = (pageName: string, properties?: Record<string, any>) => {
-    console.log('Page View:', pageName, properties);
-    // Add your page view tracking logic here
-  };
-
-  const value = {
-//     trackEvent,
-//     trackPageView,
-  };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
-  return (
-    <div className={`analyticsprovider-component ${className}`} {...props}>
-      {children}
-<<<<<<< HEAD
-    </div>
-=======
-//     </AnalyticsContext.Provider>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
-  );
-}

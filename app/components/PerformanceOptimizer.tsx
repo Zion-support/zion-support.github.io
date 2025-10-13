@@ -1,89 +1,25 @@
+'use client';
+
 import React from 'react';
 
-interface PerformanceoptimizerProps {
+interface PerformanceOptimizerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-export default function Performanceoptimizer({ className = '', children, ...props }: PerformanceoptimizerProps) {
-=======
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-  const [isOptimized, setIsOptimized] = useState(false);
-
-  useEffect(() => {
-    // Performance optimization logic
-    const optimizePerformance = () => {
-      // Preload critical resources
-      const criticalResources = [
-        '/fonts/inter-var.woff2',
-//         '/images/hero-bg.jpg',
-//         '/images/logo.svg',
-//         '/icons/sprite.svg'
-      ];
-
-      criticalResources.forEach(resource => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = resource;
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-        if (resource.endsWith('.woff2')) {
-          link.crossOrigin = 'anonymous';
-        }
-        document.head.appendChild(link);
-      });
-
-      // Optimize images
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        if (!img.loading) {
-          img.loading = 'lazy';
-        }
-        if (!img.decoding) {
-          img.decoding = 'async';
-        }
-      });
-
-      // Preconnect to external domains
-      const externalDomains = [
-//         'https://fonts.googleapis.com',
-//         'https://fonts.gstatic.com',
-//         'https://cdnjs.cloudflare.com'
-      ];
-
-      externalDomains.forEach(domain => {
-        const link = document.createElement('link');
-        link.rel = 'preconnect';
-        link.href = domain;
-        document.head.appendChild(link);
-      });
-
-      // Enable resource hints
-      const resourceHints = [
-        { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
-        { rel: 'dns-prefetch', href: '//fonts.gstatic.com' },
-        { rel: 'dns-prefetch', href: '//cdnjs.cloudflare.com' }
-      ];
-
-      resourceHints.forEach(hint => {
-        const link = document.createElement('link');
-        link.rel = hint.rel;
-        link.href = hint.href;
-        document.head.appendChild(link);
-      });
-
-      setIsOptimized(true);
-    };
-
-    // Run optimization after component mounts
-    const timer = setTimeout(optimizePerformance, 100);
-    return () => clearTimeout(timer);
-  }, []);
-
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+export default function PerformanceOptimizer({ className = '', children, ...props }: PerformanceOptimizerProps) {
   return (
     <div className={`performanceoptimizer-component ${className}`} {...props}>
-      {children}
-</div>
+      {children || (
+        <div className="p-8 text-center">
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">
+            PerformanceOptimizer
+          </h1>
+          <p className="text-gray-600">
+            This component is under development.
+          </p>
+        </div>
+      )}
+    </div>
   );
 }

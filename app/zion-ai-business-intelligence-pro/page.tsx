@@ -1,495 +1,173 @@
-import { TrendingUp, Users, ArrowRight, CheckCircle, Star, Globe, Zap, Brain, BarChart3, Database, Plus, Activity } from 'lucide-react';
-import FuturisticCard from "../components/FuturisticCard";
-import FuturisticButton from "../components/FuturisticButton";
-import ResponsiveContainer from "../components/ResponsiveContainer";
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
+'use client';
 
-const ZionAiBusinessIntelligencePro = () => {
-  const testimonials = [
-    {
-//       name: "John Smith",
-//       role: "CEO, TechCorp",
-      content: "Zion Tech Group transformed our business with their AI solutions.",
-//       avatar: "/images/testimonials/john-smith.jpg"
-    },
-    {
-//       name: "Sarah Johnson",
-//       role: "CTO, InnovateLabs",
-//       content: "The team's expertise in AI and automation is unmatched.",
-//       avatar: "/images/testimonials/sarah-johnson.jpg"
-    },
-    {
-//       name: "Mike Chen",
-//       role: "Founder, StartupXYZ",
-//       content: "We saw immediate results after implementing their solutions.",
-//       avatar: "/images/testimonials/mike-chen.jpg"
-    }
-  ];
+import React from 'react';
+import { Metadata } from 'next';
+import { 
+  ArrowRightIcon, 
+  CheckIcon, 
+  StarIcon,
+  ShieldCheckIcon,
+  CpuChipIcon,
+  CloudIcon,
+  ChartBarIcon,
+  CogIcon,
+  GlobeAltIcon,
+  UserGroupIcon,
+  LightBulbIcon,
+  RocketLaunchIcon,
+  SparklesIcon,
+  AcademicCapIcon,
+  BeakerIcon,
+  BuildingOfficeIcon,
+  CurrencyDollarIcon,
+  DocumentTextIcon,
+  EyeIcon,
+  FingerPrintIcon,
+  HeartIcon,
+  HomeIcon,
+  IdentificationIcon,
+  KeyIcon,
+  LockClosedIcon,
+  MagnifyingGlassIcon,
+  PaintBrushIcon,
+  PhoneIcon,
+  PresentationChartLineIcon,
+  PuzzlePieceIcon,
+  ServerIcon,
+  ShoppingCartIcon,
+  TagIcon,
+  TruckIcon,
+  WrenchScrewdriverIcon,
+  XMarkIcon,
+  ChevronRightIcon,
+  ChevronDownIcon,
+  Bars3Icon,
+  XMarkIcon as XMarkIconSolid
+} from '@heroicons/react/24/outline';
+import { 
+  CheckIcon as CheckIconSolid,
+  StarIcon as StarIconSolid,
+  ArrowRightIcon as ArrowRightIconSolid
+} from '@heroicons/react/24/solid';
+import Link from 'next/link';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
-  const stats = [
-    { label: "Projects Completed", value: "500+" },
-    { label: "Happy Clients", value: "200+" },
-    { label: "Years Experience", value: "5+" },
-    { label: "Team Members", value: "50+" }
-  ];
 
-  const features = [
-    {
-//       title: "AI-Powered Insights",
-//       description: "Automatically generate actionable business insights using advanced machine learning and natural language processing",
-      icon: <Brain className="w-6 h-6" />,
-//       stats: "95% accuracy"
-    },
-    {
-//       title: "Real-Time Analytics",
-      description: "Monitor key performance indicators and business metrics in real-time with instant updates and alerts",
-      icon: <Activity className="w-6 h-6" />,
-//       stats: "Sub-second response"
-    },
-    {
-//       title: "Predictive Analytics",
-//       description: "Forecast future trends, customer behavior, and business outcomes with AI-powered predictive models",
-      icon: <TrendingUp className="w-6 h-6" />,
-//       stats: "85% prediction accuracy"
-    },
-    {
-//       title: "Natural Language Queries",
-//       description: "Ask questions about your data in plain English and get instant answers with visualizations",
-      icon: <Zap className="w-6 h-6" />,
-//       stats: "50+ languages"
-    }
-  ];
+export const metadata: Metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Professional Page solutions powered by AI and cutting-edge technology.',
+  keywords: ['AI', 'Technology', 'Solutions', 'page'],
+  openGraph: {
+    title: 'Page | Zion Tech Group',
+    description: 'Professional Page solutions powered by AI and cutting-edge technology.',
+    type: 'website',
+  },
+};
 
-  const pricingPlans = [
-    {
-//       name: "Professional",
-//       price: "$199",
-//       period: "/month",
-      description: "Perfect for growing businesses with advanced analytics needs",
-//       features: [
-//         "Up to 10 data sources",
-//         "AI-powered insights",
-//         "Real-time dashboards",
-//         "Basic predictive analytics",
-//         "Standard visualizations",
-//         "Email support",
-//         "5 user licenses",
-//         "30-day data retention"
-//       ],
-//       popular: false,
-//       cta: "Start Free Trial"
-    },
-    {
-//       name: "Enterprise",
-//       price: "$499",
-//       period: "/month",
-      description: "Comprehensive BI solution for large organizations",
-//       features: [
-//         "Up to 50 data sources",
-//         "Advanced AI analytics",
-//         "Custom dashboards",
-//         "Full predictive analytics",
-//         "Advanced visualizations",
-//         "Priority support",
-//         "25 user licenses",
-//         "90-day data retention",
-//         "API access",
-//         "Custom integrations",
-//         "Dedicated analyst"
-//       ],
-//       popular: true,
-//       cta: "Start Free Trial"
-    },
-    {
-//       name: "Enterprise Plus",
-//       price: "$1,299",
-//       period: "/month",
-      description: "Maximum analytics power for enterprise organizations",
-//       features: [
-//         "Unlimited data sources",
-//         "AI-powered insights engine",
-//         "White-label dashboards",
-//         "Custom AI models",
-//         "Unlimited visualizations",
-//         "24/7 phone support",
-//         "Unlimited user licenses",
-//         "Unlimited data retention",
-//         "Full API access",
-//         "On-premise deployment",
-//         "Dedicated account manager"
-//       ],
-//       popular: false,
-//       cta: "Contact Sales"
-    }
-  ];
-
-  const capabilities = [
-    {
-//       title: "Data Integration",
-//       description: "Connect and integrate data from 100+ sources including databases, cloud services, and APIs",
-      icon: <Database className="w-8 h-8" />,
-      features: ["100+ connectors", "Real-time sync", "Data transformation", "Quality monitoring"]
-    },
-    {
-//       title: "Advanced Visualizations",
-//       description: "Create stunning, interactive dashboards and reports with drag-and-drop simplicity",
-      icon: <BarChart3 className="w-8 h-8" />,
-      features: ["50+ chart types", "Interactive dashboards", "Mobile responsive", "Custom themes"]
-    },
-    {
-//       title: "AI-Powered Forecasting",
-//       description: "Predict future trends and outcomes using machine learning and statistical models",
-      icon: <TrendingUp className="w-8 h-8" />,
-      features: ["Time series forecasting", "Anomaly detection", "Scenario planning", "Confidence intervals"]
-    },
-    {
-//       title: "Natural Language Processing",
-//       description: "Ask questions about your data in plain English and get instant, intelligent answers",
-      icon: <Brain className="w-8 h-8" />,
-//       features: ["Voice queries", "Smart suggestions", "Auto-generated insights", "Multi-language support"]
-    },
-    {
-//       title: "Collaborative Analytics",
-//       description: "Share insights and collaborate with team members through comments, annotations, and alerts",
-      icon: <Users className="w-8 h-8" />,
-//       features: ["Team collaboration", "Comment system", "Alert management", "Role-based access"]
-    },
-    {
-//       title: "Mobile Analytics",
-      description: "Access your analytics anywhere with native mobile apps and responsive web interface",
-      icon: <Globe className="w-8 h-8" />,
-      features: ["Native mobile apps", "Offline access", "Push notifications", "Touch-optimized"]
-    }
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
-
-export default function ZionAiBusinessIntelligenceProPage() {
+export default function pagePage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Zion Ai Business Intelligence Pro - Zion Tech Group</title>
-        <meta name="description" content="Zion Ai Business Intelligence Pro solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Zion Ai Business Intelligence Pro</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive zion ai business intelligence pro solutions designed to meet your business needs.
-          </p>
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Page
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Professional Page solutions powered by AI and cutting-edge technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRightIcon className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our Page?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We provide cutting-edge solutions that drive real business results.
+            </p>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <CpuChipIcon className="h-6 w-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Advanced Technology
+              </h3>
+              <p className="text-gray-600">
+                Leveraging the latest AI and machine learning technologies.
               </p>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                <ShieldCheckIcon className="h-6 w-6 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Secure & Reliable
+              </h3>
+              <p className="text-gray-600">
+                Enterprise-grade security and 99.9% uptime guarantee.
               </p>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                <RocketLaunchIcon className="h-6 w-6 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Fast Implementation
+              </h3>
+              <p className="text-gray-600">
+                Quick setup and deployment with minimal disruption.
               </p>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-//       <Helmet>
-        <title>Zion AI Business Intelligence Pro - AI-Powered Analytics Platform | Zion Tech Group</title>
-        <meta name="description" content="Transform your data into actionable insights with Zion AI Business Intelligence Pro. AI-powered analytics, predictive modeling, and real-time dashboards for enterprise organizations." />
-        <meta name="keywords" content="business intelligence, AI analytics, data visualization, predictive analytics, business intelligence platform, data insights, enterprise analytics" />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-business-intelligence-pro" />
-//       </Helmet>
-
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-</div>
-        
-        <ResponsiveContainer className="text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
-            <BarChart3 className="w-4 h-4 text-blue-400 mr-2" />
-            <span className="text-blue-400 text-sm font-medium">AI-Powered Business Intelligence</span>
-</div>
-          
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400">
-//               Zion AI Business Intelligence Pro
-</span>
-</h1>
-          
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your data into actionable insights with AI-powered analytics, predictive modeling, and real-time dashboards. 
-//             Make smarter decisions faster with enterprise-grade business intelligence.
-</p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-//             <FuturisticButton
-              href="#pricing"
-              variant="primary"
-              size="lg"
-              icon={<BarChart3 className="w-5 h-5" />}
-//             >
-//               Start Free Trial
-//             </FuturisticButton>
-//             <FuturisticButton
-              href="#demo"
-              variant="outline"
-              size="lg"
-              icon={<Eye className="w-5 h-5" />}
-//             >
-//               View Demo
-//             </FuturisticButton>
-</div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  {stat.icon}
-</div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
-</div>
-            ))}
-</div>
-//         </ResponsiveContainer>
-//       </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-//         <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-//               Advanced AI Analytics Features
-</h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Our AI-powered platform provides comprehensive business intelligence capabilities that adapt to your data and business needs
-</p>
-</div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-//               <FuturisticCard
-                key={index}
-                className="group hover:scale-105 transition-all duration-300"
-//               >
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  {feature.icon}
-</div>
-                <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-blue-400 transition-colors">
-                  {feature.title}
-</h3>
-                <p className="text-gray-300 text-center mb-4 leading-relaxed">
-                  {feature.description}
-</p>
-                <div className="text-center">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-400">
-                    {feature.stats}
-</span>
-</div>
-//               </FuturisticCard>
-            ))}
-</div>
-//         </ResponsiveContainer>
-//       </section>
-
-      {/* Capabilities Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
-//         <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-//               Comprehensive Analytics Capabilities
-</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to transform raw data into actionable business insights
-</p>
-</div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {capabilities.map((capability, index) => (
-//               <FuturisticCard
-                key={index}
-                className="group hover:scale-105 transition-all duration-300"
-//               >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  {capability.icon}
-</div>
-                <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-blue-400 transition-colors">
-                  {capability.title}
-</h3>
-                <p className="text-gray-300 text-center mb-6 leading-relaxed">
-                  {capability.description}
-</p>
-                <div className="space-y-2">
-                  {capability.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
-</div>
-                  ))}
-</div>
-//               </FuturisticCard>
-            ))}
-</div>
-//         </ResponsiveContainer>
-//       </section>
-
-      {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
-//         <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-//               Enterprise Analytics Plans
-</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-//               Choose the analytics plan that scales with your business intelligence needs
-</p>
-</div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-//               <FuturisticCard
-                key={index}
-                className={`relative group hover:scale-105 transition-all duration-300 ${
-//                   plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''
-                }`}
-//               >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-//                       Most Popular
-</span>
-</div>
-                )}
-                
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-300 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
-</div>
-</div>
-                
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
-//                     </li>
-                  ))}
-//                 </ul>
-                
-//                 <FuturisticButton
-                  href={plan.cta === "Contact Sales" ? "/contact" : "#signup"}
-                  variant={plan.popular ? "primary" : "outline"}
-                  size="lg"
-                  className="w-full"
-//                 >
-                  {plan.cta}
-//                 </FuturisticButton>
-//               </FuturisticCard>
-            ))}
-</div>
-//         </ResponsiveContainer>
-//       </section>
-
-      {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
-//         <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-//               Trusted by Data Leaders
-</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-//               See how organizations are using Zion AI Business Intelligence Pro to drive data-driven decisions
-</p>
-</div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-//               <FuturisticCard
-                key={index}
-                className="group hover:scale-105 transition-all duration-300"
-//               >
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-</div>
-                <p className="text-gray-300 mb-6 italic leading-relaxed">
-                  "{testimonial.content}"
-</p>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
-                    {testimonial.avatar}
-</div>
-//                   <div>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-</div>
-</div>
-//               </FuturisticCard>
-            ))}
-</div>
-//         </ResponsiveContainer>
-//       </section>
+      </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
-//         <ResponsiveContainer>
-          <div className="text-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Transform Your Data Into Insights
-</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-//               Join hundreds of organizations using AI-powered business intelligence to make smarter, faster decisions that drive growth.
-</p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-//               <FuturisticButton
-                href="#signup"
-                variant="primary"
-                size="lg"
-                icon={<BarChart3 className="w-5 h-5" />}
-//               >
-//                 Start Free Trial
-//               </FuturisticButton>
-//               <FuturisticButton
-                href="/contact"
-                variant="outline"
-                size="lg"
-                icon={<ArrowRight className="w-5 h-5" />}
-//               >
-//                 Contact Sales
-//               </FuturisticButton>
-</div>
-            
-            <div className="mt-8 text-sm text-gray-400">
-<p>14-day free trial • No credit card required • Cancel anytime</p>
-</div>
-</div>
-//         </ResponsiveContainer>
-//       </section>
-</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+      <section className="bg-blue-600 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Contact us today to learn more about our Page solutions.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors"
+          >
+            Get Started Now
+            <ArrowRightIcon className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </section>
+    </div>
   );
 }

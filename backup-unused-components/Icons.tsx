@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-export const Icon = (
-  name,
-  className = "",
-  ...props
-: 
-=======
-export const Icon = ({
-//   name,
-  className = "",
-//   ...props
-}: {
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   name: string;
   className?: string;
   [key: string]: any;

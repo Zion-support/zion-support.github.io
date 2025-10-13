@@ -1,160 +1,173 @@
-<<<<<<< HEAD
+'use client';
+
 import React from 'react';
+import { Metadata } from 'next';
+import { 
+  ArrowRightIcon, 
+  CheckIcon, 
+  StarIcon,
+  ShieldCheckIcon,
+  CpuChipIcon,
+  CloudIcon,
+  ChartBarIcon,
+  CogIcon,
+  GlobeAltIcon,
+  UserGroupIcon,
+  LightBulbIcon,
+  RocketLaunchIcon,
+  SparklesIcon,
+  AcademicCapIcon,
+  BeakerIcon,
+  BuildingOfficeIcon,
+  CurrencyDollarIcon,
+  DocumentTextIcon,
+  EyeIcon,
+  FingerPrintIcon,
+  HeartIcon,
+  HomeIcon,
+  IdentificationIcon,
+  KeyIcon,
+  LockClosedIcon,
+  MagnifyingGlassIcon,
+  PaintBrushIcon,
+  PhoneIcon,
+  PresentationChartLineIcon,
+  PuzzlePieceIcon,
+  ServerIcon,
+  ShoppingCartIcon,
+  TagIcon,
+  TruckIcon,
+  WrenchScrewdriverIcon,
+  XMarkIcon,
+  ChevronRightIcon,
+  ChevronDownIcon,
+  Bars3Icon,
+  XMarkIcon as XMarkIconSolid
+} from '@heroicons/react/24/outline';
+import { 
+  CheckIcon as CheckIconSolid,
+  StarIcon as StarIconSolid,
+  ArrowRightIcon as ArrowRightIconSolid
+} from '@heroicons/react/24/solid';
+import Link from 'next/link';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
-interface CriticalresourcepreloaderProps {
-  className?: string;
-  children?: React.ReactNode;
-=======
-import { Link } from 'react-router-dom';
 
-// 'use client'
+export const metadata: Metadata = {
+  title: 'CriticalResourcePreloader | Zion Tech Group',
+  description: 'Professional CriticalResourcePreloader solutions powered by AI and cutting-edge technology.',
+  keywords: ['AI', 'Technology', 'Solutions', 'CriticalResourcePreloader'],
+  openGraph: {
+    title: 'CriticalResourcePreloader | Zion Tech Group',
+    description: 'Professional CriticalResourcePreloader solutions powered by AI and cutting-edge technology.',
+    type: 'website',
+  },
+};
 
-const CriticalResourcePreloader = () => {
-  useEffect(() => {
-    const preloadCriticalResources = () => {
-      // Critical fonts
-      const criticalFonts = [
-        {
-          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap',
-//           as: 'style',
-//           crossorigin: 'anonymous'
-        },
-        {
-//           href: 'https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2',
-//           as: 'font',
-          type: 'font/woff2',
-//           crossorigin: 'anonymous'
-        }
-//       ]
-
-      // Critical CSS
-      const criticalCSS = [
-//         '/styles/critical.css',
-//         '/styles/animations.css'
-//       ]
-
-      // Critical JavaScript
-      const criticalJS = [
-        '/scripts/performance.js',
-//         '/scripts/analytics.js'
-//       ]
-
-      // Critical images
-      const criticalImages = [
-//         '/images/logo.svg',
-//         '/images/hero-bg.webp',
-//         '/images/cta-bg.webp'
-//       ]
-
-      // Preload fonts
-      criticalFonts.forEach(font => {
-        const link = document.createElement('link')
-        link.rel = 'preload'
-        link.href = font.href
-        link.as = font.as
-        if (font.type) link.type = font.type
-        if (font.crossorigin) link.crossOrigin = font.crossorigin
-        document.head.appendChild(link)
-      })
-
-      // Preload CSS
-      criticalCSS.forEach(css => {
-        const link = document.createElement('link')
-        link.rel = 'preload'
-        link.href = css
-        link.as = 'style'
-        document.head.appendChild(link)
-      })
-
-      // Preload JavaScript
-      criticalJS.forEach(js => {
-        const link = document.createElement('link')
-        link.rel = 'preload'
-        link.href = js
-        link.as = 'script'
-        document.head.appendChild(link)
-      })
-
-      // Preload images
-      criticalImages.forEach(img => {
-        const link = document.createElement('link')
-        link.rel = 'preload'
-        link.href = img
-        link.as = 'image'
-        document.head.appendChild(link)
-      })
-    }
-
-    // Preconnect to external domains
-    const preconnectDomains = () => {
-      const domains = [
-//         'https://fonts.googleapis.com',
-//         'https://fonts.gstatic.com',
-//         'https://www.google-analytics.com',
-        'https://www.googletagmanager.com',
-//         'https://cdn.jsdelivr.net'
-//       ]
-
-      domains.forEach(domain => {
-        const link = document.createElement('link')
-        link.rel = 'preconnect'
-        link.href = domain
-        link.crossOrigin = 'anonymous'
-        document.head.appendChild(link)
-      })
-    }
-
-    // DNS prefetch for additional domains
-    const dnsPrefetchDomains = () => {
-      const domains = [
-//         'https://api.ziontechgroup.com',
-//         'https://cdn.ziontechgroup.com',
-//         'https://analytics.ziontechgroup.com'
-//       ]
-
-      domains.forEach(domain => {
-        const link = document.createElement('link')
-        link.rel = 'dns-prefetch'
-        link.href = domain
-        document.head.appendChild(link)
-      })
-    }
-
-    // Initialize preloading
-    preloadCriticalResources()
-    preconnectDomains()
-    dnsPrefetchDomains()
-
-    // Preload next page resources on hover
-    const preloadOnHover = () => {
-      const links = document.querySelectorAll('a[href^="/"]')
-      
-      links.forEach(link => {
-        link.addEventListener('mouseenter', () => {
-          const href = link.getAttribute('href')
-          if (href && !document.querySelector(`link[href="${href}"]`)) {
-            const preloadLink = document.createElement('link')
-            preloadLink.rel = 'prefetch'
-            preloadLink.href = href
-            document.head.appendChild(preloadLink)
-          }
-        })
-      })
-    }
-
-    // Initialize hover preloading after a delay
-    setTimeout(preloadOnHover, 2000)
-
-  }, [])
-
-  return null
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
-}
-
-export default function Criticalresourcepreloader({ className = '', children, ...props }: CriticalresourcepreloaderProps) {
+export default function CriticalResourcePreloaderPage() {
   return (
-    <div className={`criticalresourcepreloader-component ${className}`} {...props}>
-      {children}
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              CriticalResourcePreloader
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Professional CriticalResourcePreloader solutions powered by AI and cutting-edge technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRightIcon className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our CriticalResourcePreloader?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We provide cutting-edge solutions that drive real business results.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <CpuChipIcon className="h-6 w-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Advanced Technology
+              </h3>
+              <p className="text-gray-600">
+                Leveraging the latest AI and machine learning technologies.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                <ShieldCheckIcon className="h-6 w-6 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Secure & Reliable
+              </h3>
+              <p className="text-gray-600">
+                Enterprise-grade security and 99.9% uptime guarantee.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                <RocketLaunchIcon className="h-6 w-6 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Fast Implementation
+              </h3>
+              <p className="text-gray-600">
+                Quick setup and deployment with minimal disruption.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-blue-600 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Contact us today to learn more about our CriticalResourcePreloader solutions.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors"
+          >
+            Get Started Now
+            <ArrowRightIcon className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }

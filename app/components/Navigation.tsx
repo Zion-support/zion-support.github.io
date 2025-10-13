@@ -1,146 +1,173 @@
-<<<<<<< HEAD
+'use client';
+
 import React from 'react';
-=======
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X, Brain, Zap, Globe, Shield, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, TrendingUp, Mic, Phone, Code, Database, Package, Heart, Receipt, Cpu, Network, FileText, Clock, MapPin } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+import { Metadata } from 'next';
+import { 
+  ArrowRightIcon, 
+  CheckIcon, 
+  StarIcon,
+  ShieldCheckIcon,
+  CpuChipIcon,
+  CloudIcon,
+  ChartBarIcon,
+  CogIcon,
+  GlobeAltIcon,
+  UserGroupIcon,
+  LightBulbIcon,
+  RocketLaunchIcon,
+  SparklesIcon,
+  AcademicCapIcon,
+  BeakerIcon,
+  BuildingOfficeIcon,
+  CurrencyDollarIcon,
+  DocumentTextIcon,
+  EyeIcon,
+  FingerPrintIcon,
+  HeartIcon,
+  HomeIcon,
+  IdentificationIcon,
+  KeyIcon,
+  LockClosedIcon,
+  MagnifyingGlassIcon,
+  PaintBrushIcon,
+  PhoneIcon,
+  PresentationChartLineIcon,
+  PuzzlePieceIcon,
+  ServerIcon,
+  ShoppingCartIcon,
+  TagIcon,
+  TruckIcon,
+  WrenchScrewdriverIcon,
+  XMarkIcon,
+  ChevronRightIcon,
+  ChevronDownIcon,
+  Bars3Icon,
+  XMarkIcon as XMarkIconSolid
+} from '@heroicons/react/24/outline';
+import { 
+  CheckIcon as CheckIconSolid,
+  StarIcon as StarIconSolid,
+  ArrowRightIcon as ArrowRightIconSolid
+} from '@heroicons/react/24/solid';
+import Link from 'next/link';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
-interface NavigationProps {
-  className?: string;
-  children?: React.ReactNode;
-}
 
-<<<<<<< HEAD
-export default function Navigation({ className = '', children, ...props }: NavigationProps) {
+export const metadata: Metadata = {
+  title: 'Navigation | Zion Tech Group',
+  description: 'Professional Navigation solutions powered by AI and cutting-edge technology.',
+  keywords: ['AI', 'Technology', 'Solutions', 'Navigation'],
+  openGraph: {
+    title: 'Navigation | Zion Tech Group',
+    description: 'Professional Navigation solutions powered by AI and cutting-edge technology.',
+    type: 'website',
+  },
+};
+
+export default function NavigationPage() {
   return (
-    <div className={`navigation-component ${className}`} {...props}>
-      {children}
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Navigation
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Professional Navigation solutions powered by AI and cutting-edge technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRightIcon className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our Navigation?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We provide cutting-edge solutions that drive real business results.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <CpuChipIcon className="h-6 w-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Advanced Technology
+              </h3>
+              <p className="text-gray-600">
+                Leveraging the latest AI and machine learning technologies.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                <ShieldCheckIcon className="h-6 w-6 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Secure & Reliable
+              </h3>
+              <p className="text-gray-600">
+                Enterprise-grade security and 99.9% uptime guarantee.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                <RocketLaunchIcon className="h-6 w-6 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Fast Implementation
+              </h3>
+              <p className="text-gray-600">
+                Quick setup and deployment with minimal disruption.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-blue-600 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Contact us today to learn more about our Navigation solutions.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors"
+          >
+            Get Started Now
+            <ArrowRightIcon className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }
-=======
-const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const navigationItems = [
-    {
-//       label: 'Home',
-//       href: '/',
-      icon: <Brain className="w-4 h-4" />,
-    },
-    {
-//       label: 'AI Services',
-//       href: '/ai-services',
-      icon: <Brain className="w-4 h-4" />,
-//       dropdown: [
-        { label: 'AI Analytics', href: '/ai-analytics' },
-        { label: 'AI Automation', href: '/ai-automation' },
-        { label: 'AI Business Intelligence', href: '/ai-business-intelligence' },
-        { label: 'AI Content Generation', href: '/ai-content-generation' },
-        { label: 'AI Customer Service', href: '/ai-customer-service' },
-        { label: 'AI Data Analytics', href: '/ai-data-analytics' },
-        { label: 'AI Email Automation', href: '/ai-email-automation' },
-        { label: 'AI Fraud Detection', href: '/ai-fraud-detection' },
-        { label: 'AI Healthcare', href: '/ai-healthcare' },
-        { label: 'AI Marketing', href: '/ai-marketing' },
-        { label: 'AI Cybersecurity', href: '/ai-cybersecurity' },
-//       ],
-    },
-    {
-//       label: 'Micro SAAS',
-//       href: '/micro-saas',
-      icon: <Zap className="w-4 h-4" />,
-    },
-    {
-//       label: '5G Solutions',
-//       href: '/5g-solutions',
-      icon: <Globe className="w-4 h-4" />,
-    },
-    {
-//       label: 'IT Services',
-//       href: '/services',
-      icon: <Shield className="w-4 h-4" />,
-    },
-    {
-//       label: 'About',
-//       href: '/about',
-      icon: <Users className="w-4 h-4" />,
-    },
-    {
-//       label: 'Contact',
-//       href: '/contact',
-      icon: <Mail className="w-4 h-4" />,
-    },
-  ];
-
-  return (
-    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-cyan-500/20 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-white">Zion Tech Group</span>
-            </Link>
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              {navigationItems.map((item, index) => (
-                <div key={index} className="relative group">
-                  <Link
-                    to={item.href}
-                    className="text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 flex items-center space-x-1"
-                  >
-                    {item.icon}
-                    <span>{item.label}</span>
-                  </Link>
-                  
-                  {/* Dropdown for AI Services */}
-                  {item.dropdown && (
-                    <div className="absolute left-0 mt-2 w-64 bg-slate-800 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                      <div className="py-1">
-                        {item.dropdown.map((dropdownItem, dropdownIndex) => (
-                          <Link
-                            key={dropdownIndex}
-                            to={dropdownItem.href}
-                            className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700 transition-colors duration-200"
-                          >
-                            {dropdownItem.label}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={onSidebarToggle}
-              className="text-gray-300 hover:text-cyan-400 p-2 rounded-md transition-colors duration-200"
-              aria-label="Toggle menu"
-            >
-              <Menu className="w-6 h-6" />
-            </button>
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
-};
-
-export default Navigation;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

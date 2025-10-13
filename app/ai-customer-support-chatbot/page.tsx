@@ -1,335 +1,173 @@
-<<<<<<< HEAD
+'use client';
+
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Clock } from 'lucide-react';
+import { Metadata } from 'next';
+import { 
+  ArrowRightIcon, 
+  CheckIcon, 
+  StarIcon,
+  ShieldCheckIcon,
+  CpuChipIcon,
+  CloudIcon,
+  ChartBarIcon,
+  CogIcon,
+  GlobeAltIcon,
+  UserGroupIcon,
+  LightBulbIcon,
+  RocketLaunchIcon,
+  SparklesIcon,
+  AcademicCapIcon,
+  BeakerIcon,
+  BuildingOfficeIcon,
+  CurrencyDollarIcon,
+  DocumentTextIcon,
+  EyeIcon,
+  FingerPrintIcon,
+  HeartIcon,
+  HomeIcon,
+  IdentificationIcon,
+  KeyIcon,
+  LockClosedIcon,
+  MagnifyingGlassIcon,
+  PaintBrushIcon,
+  PhoneIcon,
+  PresentationChartLineIcon,
+  PuzzlePieceIcon,
+  ServerIcon,
+  ShoppingCartIcon,
+  TagIcon,
+  TruckIcon,
+  WrenchScrewdriverIcon,
+  XMarkIcon,
+  ChevronRightIcon,
+  ChevronDownIcon,
+  Bars3Icon,
+  XMarkIcon as XMarkIconSolid
+} from '@heroicons/react/24/outline';
+import { 
+  CheckIcon as CheckIconSolid,
+  StarIcon as StarIconSolid,
+  ArrowRightIcon as ArrowRightIconSolid
+} from '@heroicons/react/24/solid';
+import Link from 'next/link';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
-"use client";
 
-export default function AICustomerSupportChatbot() {
-  const chatbotFeatures = [
-    {
-//       category: "Core Features",
-//       items: [
-//         "Natural Language Processing",
-//         "Multi-language Support",
-//         "Context Awareness",
-//         "Real-time Responses",
-//       ],
-    },
-    {
-//       category: "Integration",
-//       items: [
-//         "API Integration",
-//         "CRM Integration",
-//         "Database Connectivity",
-//         "Third-party Tools",
-//       ],
-    },
-    {
-//       category: "Analytics",
-//       items: [
-//         "Conversation Analytics",
-        "Performance Metrics",
-//         "User Insights",
-//         "Custom Reports",
-//       ],
-    },
-  ];
+export const metadata: Metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Professional Page solutions powered by AI and cutting-edge technology.',
+  keywords: ['AI', 'Technology', 'Solutions', 'page'],
+  openGraph: {
+    title: 'Page | Zion Tech Group',
+    description: 'Professional Page solutions powered by AI and cutting-edge technology.',
+    type: 'website',
+  },
+};
 
-  const pricingPlans = [
-    {
-//       name: "Starter",
-//       price: "$299",
-//       features: ["Basic chatbot", "Email support", "Standard templates"],
-      description: "Perfect for small businesses getting started",
-//       period: "/month",
-//       popular: false,
-    },
-    {
-//       name: "Professional",
-//       price: "$799",
-//       features: ["Advanced AI", "Priority support", "Custom integrations"],
-      description: "Ideal for growing businesses with complex needs",
-//       period: "/month",
-//       popular: true,
-    },
-    {
-//       name: "Enterprise",
-//       price: "$1999",
-//       features: ["Full customization", "24/7 support", "Dedicated manager"],
-      description: "Complete solution for large organizations",
-//       period: "/month",
-//       popular: false,
-    },
-  ];
-  const features = [
-    {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
-//       title: "Natural Language Processing",
-//       description:
-//         "Advanced AI understands context, intent, and provides human-like responses",
-    },
-    {
-      icon: <Clock className="w-6 h-6 text-purple-400" />,
-//       title: "24/7 Availability",
-//       description:
-//         "Provide instant support around the clock without additional staffing costs",
-    },
-    {
-      icon: <Target className="w-6 h-6 text-yellow-400" />,
-//       title: "Intelligent Routing",
-//       description:
-//         "Automatically route complex queries to the right human agents when needed",
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6 text-green-400" />,
-//       title: "Analytics & Insights",
-//       description:
-        "Track customer satisfaction, response times, and identify improvement opportunities",
-    },
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
-
-export default function AiCustomerSupportChatbotPage() {
+export default function pagePage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Ai Customer Support Chatbot - Zion Tech Group</title>
-        <meta name="description" content="Ai Customer Support Chatbot solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Ai Customer Support Chatbot</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive ai customer support chatbot solutions designed to meet your business needs.
-          </p>
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Page
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Professional Page solutions powered by AI and cutting-edge technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRightIcon className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our Page?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We provide cutting-edge solutions that drive real business results.
+            </p>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <CpuChipIcon className="h-6 w-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Advanced Technology
+              </h3>
+              <p className="text-gray-600">
+                Leveraging the latest AI and machine learning technologies.
               </p>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                <ShieldCheckIcon className="h-6 w-6 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Secure & Reliable
+              </h3>
+              <p className="text-gray-600">
+                Enterprise-grade security and 99.9% uptime guarantee.
               </p>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                <RocketLaunchIcon className="h-6 w-6 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Fast Implementation
+              </h3>
+              <p className="text-gray-600">
+                Quick setup and deployment with minimal disruption.
               </p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-blue-600 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Contact us today to learn more about our Page solutions.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors"
+          >
+            Get Started Now
+            <ArrowRightIcon className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </section>
     </div>
-=======
-//     <>
-//       <Helmet>
-//         <title>AI Customer Support Chatbot - Zion Tech Group</title>
-//         <meta
-          name="description"
-          content="Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs."
-//         />
-//       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-        {/* Hero Section */}
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-//               AI Customer Support Chatbot
-</h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-//               Professional AI customer support chatbot services by Zion Tech
-//               Group. Expert solutions tailored to your business needs.
-</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-//               <Link
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-//               >
-//                 Get Started
-</Link>
-//               <Link
-                to="/contact"
-                className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
-//               >
-//                 Learn More
-</Link>
-</div>
-</div>
-
-          {/* Features Section */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {features.map((feature, index) => (
-//               <div
-                key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center"
-//               >
-                <div className="flex justify-center mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  {feature.title}
-</h3>
-                <p className="text-gray-300">{feature.description}</p>
-</div>
-            ))}
-</div>
-
-          {/* Chatbot Features Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
-//               Comprehensive Chatbot Features
-</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {chatbotFeatures.map((category, index) => (
-//                 <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
-//                 >
-                  <h3 className="text-xl font-semibold text-white mb-4">
-                    {category.category}
-</h3>
-                  <ul className="space-y-2">
-                    {category.items.map((item, itemIndex) => (
-//                       <li
-                        key={itemIndex}
-                        className="text-gray-300 flex items-center"
-//                       >
-                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
-                        {item}
-//                       </li>
-                    ))}
-//                   </ul>
-</div>
-              ))}
-</div>
-</div>
-
-          {/* Pricing Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
-//               Simple, Transparent Pricing
-</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
-//                 <div
-                  key={index}
-                  className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 ${plan.popular ? "ring-2 ring-cyan-400" : ""}`}
-//                 >
-                  {plan.popular && (
-                    <div className="text-center mb-4">
-                      <span className="bg-cyan-400 text-white px-4 py-2 rounded-full text-sm font-medium">
-//                         Most Popular
-</span>
-</div>
-                  )}
-                  <h3 className="text-2xl font-bold text-white mb-2">
-                    {plan.name}
-</h3>
-                  <p className="text-gray-300 mb-6">{plan.description}</p>
-                  <div className="mb-6">
-                    <span className="text-4xl font-bold text-white">
-                      {plan.price}
-</span>
-                    <span className="text-gray-400">{plan.period}</span>
-</div>
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-//                       <li
-                        key={featureIndex}
-                        className="text-gray-300 flex items-center"
-//                       >
-                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
-                        {feature}
-//                       </li>
-                    ))}
-//                   </ul>
-//                   <Link
-                    to="/contact"
-                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors ${
-//                       plan.popular
-//                         ? "bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600"
-//                         : "bg-white/20 text-white hover:bg-white/30"
-                    }`}
-//                   >
-//                     Get Started
-</Link>
-</div>
-              ))}
-</div>
-</div>
-
-          {/* Testimonials Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
-//               What Our Customers Say
-</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-//                 <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
-//                 >
-                  <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <span key={i} className="text-yellow-400">
-//                         ★
-</span>
-                    ))}
-</div>
-                  <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
-//                   <div>
-                    <p className="font-semibold text-white">
-                      {testimonial.name}
-</p>
-                    <p className="text-gray-400 text-sm">
-                      {testimonial.company}
-</p>
-</div>
-</div>
-              ))}
-</div>
-</div>
-
-          {/* CTA Section */}
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
-//               Ready to Get Started?
-</h2>
-            <p className="text-lg text-gray-300 mb-8">
-//               Contact us to learn more about our solutions and how we can help
-//               your business.
-</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-//               <Link
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-//               >
-//                 Contact Us
-</Link>
-//               <Link
-                to="/services"
-                className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
-//               >
-//                 View All Services
-</Link>
-</div>
-</div>
-</div>
-</div>
-//     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }

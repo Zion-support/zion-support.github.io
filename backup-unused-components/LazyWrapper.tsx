@@ -5,23 +5,9 @@ interface LazyWrapperProps
   children: React.ReactNode;
   className?: string;
 
-<<<<<<< HEAD
-export default function LazyWrapper(
-  children,
-=======
-export default function LazyWrapper({
-//   children,
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   className = "",
 : LazyWrapperProps) 
   return (
-<<<<<<< HEAD
-    <>
-      <div className="{`lazy-wrapper" ${className}`}></div>
-=======
-//     <>
-      <div className={`lazy-wrapper ${className}`}>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
         {children}
 //         <Link
           to="/contact"

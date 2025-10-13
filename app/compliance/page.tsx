@@ -1,259 +1,173 @@
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
-import { Link } from 'react-router-dom';
-import { ArrowRight, Shield, CheckCircle, FileText, Lock, Users, Globe, Award, Clock, Star } from 'lucide-react';
+'use client';
 
-export default function Compliance() {
-  const complianceFrameworks = [
-    {
-//       name: "SOC 2 Type II",
-      description: "Security, availability, and confidentiality controls for service organizations",
-      status: "Certified",
-      icon: <Shield className="w-8 h-8" />
-    },
-    {
-//       name: "ISO 27001",
-      description: "Information security management system certification",
-      status: "Certified",
-      icon: <Lock className="w-8 h-8" />
-    },
-    {
-//       name: "GDPR",
-      description: "General Data Protection Regulation compliance for EU data",
-//       status: "Compliant",
-      icon: <Globe className="w-8 h-8" />
-    },
-    {
-//       name: "HIPAA",
-//       description: "Health Insurance Portability and Accountability Act compliance",
-//       status: "Compliant",
-      icon: <FileText className="w-8 h-8" />
-    },
-    {
-//       name: "PCI DSS",
-//       description: "Payment Card Industry Data Security Standard compliance",
-//       status: "Compliant",
-      icon: <Award className="w-8 h-8" />
-    },
-    {
-//       name: "CCPA",
-      description: "California Consumer Privacy Act compliance",
-//       status: "Compliant",
-      icon: <Users className="w-8 h-8" />
-    }
-  ];
+import React from 'react';
+import { Metadata } from 'next';
+import { 
+  ArrowRightIcon, 
+  CheckIcon, 
+  StarIcon,
+  ShieldCheckIcon,
+  CpuChipIcon,
+  CloudIcon,
+  ChartBarIcon,
+  CogIcon,
+  GlobeAltIcon,
+  UserGroupIcon,
+  LightBulbIcon,
+  RocketLaunchIcon,
+  SparklesIcon,
+  AcademicCapIcon,
+  BeakerIcon,
+  BuildingOfficeIcon,
+  CurrencyDollarIcon,
+  DocumentTextIcon,
+  EyeIcon,
+  FingerPrintIcon,
+  HeartIcon,
+  HomeIcon,
+  IdentificationIcon,
+  KeyIcon,
+  LockClosedIcon,
+  MagnifyingGlassIcon,
+  PaintBrushIcon,
+  PhoneIcon,
+  PresentationChartLineIcon,
+  PuzzlePieceIcon,
+  ServerIcon,
+  ShoppingCartIcon,
+  TagIcon,
+  TruckIcon,
+  WrenchScrewdriverIcon,
+  XMarkIcon,
+  ChevronRightIcon,
+  ChevronDownIcon,
+  Bars3Icon,
+  XMarkIcon as XMarkIconSolid
+} from '@heroicons/react/24/outline';
+import { 
+  CheckIcon as CheckIconSolid,
+  StarIcon as StarIconSolid,
+  ArrowRightIcon as ArrowRightIconSolid
+} from '@heroicons/react/24/solid';
+import Link from 'next/link';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
-  const services = [
-    {
-//       title: "Compliance Assessment",
-//       description: "Comprehensive evaluation of your current compliance posture and gap analysis",
-//       features: ["Risk Assessment", "Gap Analysis", "Remediation Planning", "Documentation Review"]
-    },
-    {
-//       title: "Policy Development",
-//       description: "Custom policies and procedures tailored to your industry and regulatory requirements",
-//       features: ["Policy Creation", "Procedure Documentation", "Training Materials", "Implementation Support"]
-    },
-    {
-//       title: "Audit Support",
-//       description: "Expert guidance and support throughout the audit process",
-//       features: ["Pre-Audit Preparation", "Audit Management", "Evidence Collection", "Remediation Support"]
-    },
-    {
-//       title: "Ongoing Monitoring",
-//       description: "Continuous monitoring and maintenance of compliance programs",
-//       features: ["Regular Assessments", "Policy Updates", "Training Programs", "Incident Response"]
-    }
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
-export default function CompliancePage() {
+export const metadata: Metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Professional Page solutions powered by AI and cutting-edge technology.',
+  keywords: ['AI', 'Technology', 'Solutions', 'page'],
+  openGraph: {
+    title: 'Page | Zion Tech Group',
+    description: 'Professional Page solutions powered by AI and cutting-edge technology.',
+    type: 'website',
+  },
+};
+
+export default function pagePage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Compliance - Zion Tech Group</title>
-        <meta name="description" content="Compliance solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Compliance</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive compliance solutions designed to meet your business needs.
-          </p>
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Page
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Professional Page solutions powered by AI and cutting-edge technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRightIcon className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our Page?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We provide cutting-edge solutions that drive real business results.
+            </p>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <CpuChipIcon className="h-6 w-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Advanced Technology
+              </h3>
+              <p className="text-gray-600">
+                Leveraging the latest AI and machine learning technologies.
               </p>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                <ShieldCheckIcon className="h-6 w-6 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Secure & Reliable
+              </h3>
+              <p className="text-gray-600">
+                Enterprise-grade security and 99.9% uptime guarantee.
               </p>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                <RocketLaunchIcon className="h-6 w-6 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Fast Implementation
+              </h3>
+              <p className="text-gray-600">
+                Quick setup and deployment with minimal disruption.
               </p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-blue-600 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Contact us today to learn more about our Page solutions.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors"
+          >
+            Get Started Now
+            <ArrowRightIcon className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </section>
     </div>
-=======
-//     <>
-//       <Helmet>
-//         <title>Compliance Services - Zion Tech Group | Regulatory Compliance & Security</title>
-//         <meta
-          name="description"
-          content="Ensure regulatory compliance with our comprehensive compliance services. SOC 2, ISO 27001, GDPR, HIPAA, and more. Expert guidance for your compliance journey."
-//         />
-//         <meta
-          name="keywords"
-          content="compliance services, SOC 2, ISO 27001, GDPR, HIPAA, PCI DSS, regulatory compliance, security compliance, audit support"
-//         />
-//       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-        {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-//                 Compliance Services
-</span>
-</h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-//               Navigate complex regulatory requirements with confidence. Our compliance experts help you 
-              achieve and maintain certification across multiple frameworks.
-</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-//               <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-//               >
-//                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-</Link>
-//               <Link
-                to="/consultation"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
-//               >
-//                 Free Assessment
-</Link>
-</div>
-</div>
-//         </section>
-
-        {/* Compliance Frameworks Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4">Our Compliance Certifications</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-//                 We maintain the highest standards of compliance and security across multiple frameworks
-</p>
-</div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {complianceFrameworks.map((framework, index) => (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-cyan-400">
-                      {framework.icon}
-</div>
-                    <span className="px-3 py-1 bg-green-500/20 text-green-400 text-sm rounded-full">
-                      {framework.status}
-</span>
-</div>
-                  <h3 className="text-xl font-semibold mb-3">{framework.name}</h3>
-                  <p className="text-gray-300">{framework.description}</p>
-</div>
-              ))}
-</div>
-</div>
-//         </section>
-
-        {/* Services Section */}
-        <section className="py-20 px-4 bg-gray-800/30">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4">Our Compliance Services</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-//                 Comprehensive compliance solutions tailored to your industry and regulatory requirements
-</p>
-</div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
-                  <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {feature}
-//                       </li>
-                    ))}
-//                   </ul>
-</div>
-              ))}
-</div>
-</div>
-//         </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4">Why Choose Our Compliance Services?</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-//                 Partner with experts who understand the complexities of regulatory compliance
-</p>
-</div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-4">
-                    {benefit.icon}
-</div>
-                  <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-                  <p className="text-gray-300">{benefit.description}</p>
-</div>
-              ))}
-</div>
-</div>
-//         </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 bg-gray-800/30">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">Ready to Achieve Compliance?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let our compliance experts guide you through the certification process and help you maintain ongoing compliance.
-</p>
-//             <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-//             >
-//               Start Your Compliance Journey
-              <ArrowRight className="ml-2 h-5 w-5" />
-</Link>
-</div>
-//         </section>
-</div>
-//     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }

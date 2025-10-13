@@ -26,27 +26,6 @@ interface AdvancedSEOProps
   tags?: string[];
   readingTime?: number;
 
-<<<<<<< HEAD
-const AdvancedSEO: React.FC<AdvancedSEOProps> = (
-  title,
-  description,
-  keywords,
-  canonical,
-  ogTitle,
-  ogDescription,
-  ogImage,
-  ogUrl,
-=======
-const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
-//   title,
-//   description,
-//   keywords,
-//   canonical,
-//   ogTitle,
-//   ogDescription,
-//   ogImage,
-//   ogUrl,
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   ogType = 'website',
   twitterCard = 'summary_large_image',
 //   twitterTitle,
@@ -61,13 +40,6 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
   modifiedTime,
   section = 'Technology',
   tags = [],
-<<<<<<< HEAD
-  readingTime
-) => 
-=======
-//   readingTime
-}) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullOgTitle = ogTitle || fullTitle;
   const fullOgDescription = ogDescription || description;
@@ -78,172 +50,27 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
   const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : '');
   const currentDate = new Date().toISOString();
   // Default structured data for organization
-<<<<<<< HEAD
-  const defaultStructuredData = 
-    "@context": "https://schema.org",
-=======
-  const defaultStructuredData = {
-//     "@context": "https://schema.org",
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
     "@type": "Organization",
 //     "name": "Zion Tech Group",
 //     "url": "https://ziontechgroup.com",
 //     "logo": "https://ziontechgroup.com/logo.svg",
     "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
-<<<<<<< HEAD
-    "foundingDate": "2020",
-    "address": 
-=======
-//     "foundingDate": "2020",
-    "address": {
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
       "@type": "PostalAddress",
 //       "streetAddress": "364 E Main St STE 1008",
       "addressLocality": "Middletown",
-<<<<<<< HEAD
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
-,
-    "contactPoint": 
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com",
-      "availableLanguage": ["English"]
-,
-    "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup",
-      "https://github.com/ziontechgroup"
-    ],
-    "offers": [
-      
-=======
-//       "addressRegion": "DE",
-//       "postalCode": "19709",
-//       "addressCountry": "US"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-//       "telephone": "+1-302-464-0950",
-//       "contactType": "customer service",
-//       "email": "kleber@ziontechgroup.com",
-//       "availableLanguage": ["English"]
-    },
-//     "sameAs": [
-//       "https://twitter.com/ziontechgroup",
-//       "https://linkedin.com/company/ziontechgroup",
-//       "https://github.com/ziontechgroup"
-//     ],
-//     "offers": [
-      {
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
         "@type": "Offer",
 //         "name": "AI Solutions",
         "description": "Artificial intelligence and machine learning services",
-<<<<<<< HEAD
-        "category": "Technology Services"
-,
-      
-=======
-//         "category": "Technology Services"
-      },
-      {
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
         "@type": "Offer",
 //         "name": "IT Services",
         "description": "Information technology consulting and implementation",
-<<<<<<< HEAD
-        "category": "Technology Services"
-,
-      
-        "@type": "Offer",
-        "name": "Micro SAAS",
-        "description": "Ready-to-use software solutions",
-        "category": "Software"
-=======
-//         "category": "Technology Services"
-      },
-      {
-        "@type": "Offer",
-//         "name": "Micro SAAS",
-//         "description": "Ready-to-use software solutions",
-//         "category": "Software"
-      }
-//     ]
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
     ]
 ;
   // Article structured data if publishedTime is provided
-<<<<<<< HEAD
-  const articleStructuredData = publishedTime ? 
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": fullTitle,
-    "description": description,
-    "image": fullOgImage,
-    "author": 
-      "@type": "Organization",
-      "name": author,
-      "url": "https://ziontechgroup.com"
-,
-    "publisher": 
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "logo": 
-        "@type": "ImageObject",
-        "url": "https://ziontechgroup.com/logo.svg"
-
-,
-    "datePublished": publishedTime,
-=======
-  const articleStructuredData = publishedTime ? {
-//     "@context": "https://schema.org",
-    "@type": "Article",
-//     "headline": fullTitle,
-//     "description": description,
-//     "image": fullOgImage,
-    "author": {
-      "@type": "Organization",
-//       "name": author,
-//       "url": "https://ziontechgroup.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-//       "name": "Zion Tech Group",
-      "logo": {
-        "@type": "ImageObject",
-//         "url": "https://ziontechgroup.com/logo.svg"
-      }
-    },
-//     "datePublished": publishedTime,
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
     "dateModified": modifiedTime || publishedTime,
     "mainEntityOfPage": 
       "@type": "WebPage",
-<<<<<<< HEAD
-      "@id": fullCanonical
-,
-    "articleSection": section,
-    "keywords": tags.join(', '),
-    "wordCount": readingTime ? readingTime * 200 : undefined
- : null;
-  return (
-    <Helmet></Helmet>
-=======
-//       "@id": fullCanonical
-    },
-//     "articleSection": section,
-    "keywords": tags.join(', '),
-//     "wordCount": readingTime ? readingTime * 200 : undefined
-  } : null;
-
-  return (
-//     <Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content="{description}" />
@@ -310,68 +137,10 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
       {/* Structured Data */}
       <script type="application/ld+json"></script>
         {JSON.stringify(structuredData || defaultStructuredData)}
-<<<<<<< HEAD
-      </script>
-=======
-//       </script>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
       {/* Article structured data if applicable */}
       
         <script type="application/ld+json"></script>
           {JSON.stringify(articleStructuredData)}
-<<<<<<< HEAD
-        </script>
-
-      {/* Breadcrumb structured data */}
-      <script type="application/ld+json"></script>
-        
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://ziontechgroup.com"
-,
-            
-              "@type": "ListItem",
-              "position": 2,
-              "name": title,
-              "item": fullCanonical
-
-          ]
-
-      </script>
-    </Helmet>
-=======
-//         </script>
-      )}
-
-      {/* Breadcrumb structured data */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-//           "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-//           "itemListElement": [
-            {
-              "@type": "ListItem",
-//               "position": 1,
-//               "name": "Home",
-//               "item": "https://ziontechgroup.com"
-            },
-            {
-              "@type": "ListItem",
-//               "position": 2,
-//               "name": title,
-//               "item": fullCanonical
-            }
-//           ]
-        })}
-//       </script>
-//     </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 ;
 export default AdvancedSEO;

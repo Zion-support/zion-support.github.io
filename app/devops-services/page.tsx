@@ -1,228 +1,173 @@
-import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
+'use client';
 
-export default function DevopsServicesPage() {
+import React from 'react';
+import { Metadata } from 'next';
+import { 
+  ArrowRightIcon, 
+  CheckIcon, 
+  StarIcon,
+  ShieldCheckIcon,
+  CpuChipIcon,
+  CloudIcon,
+  ChartBarIcon,
+  CogIcon,
+  GlobeAltIcon,
+  UserGroupIcon,
+  LightBulbIcon,
+  RocketLaunchIcon,
+  SparklesIcon,
+  AcademicCapIcon,
+  BeakerIcon,
+  BuildingOfficeIcon,
+  CurrencyDollarIcon,
+  DocumentTextIcon,
+  EyeIcon,
+  FingerPrintIcon,
+  HeartIcon,
+  HomeIcon,
+  IdentificationIcon,
+  KeyIcon,
+  LockClosedIcon,
+  MagnifyingGlassIcon,
+  PaintBrushIcon,
+  PhoneIcon,
+  PresentationChartLineIcon,
+  PuzzlePieceIcon,
+  ServerIcon,
+  ShoppingCartIcon,
+  TagIcon,
+  TruckIcon,
+  WrenchScrewdriverIcon,
+  XMarkIcon,
+  ChevronRightIcon,
+  ChevronDownIcon,
+  Bars3Icon,
+  XMarkIcon as XMarkIconSolid
+} from '@heroicons/react/24/outline';
+import { 
+  CheckIcon as CheckIconSolid,
+  StarIcon as StarIconSolid,
+  ArrowRightIcon as ArrowRightIconSolid
+} from '@heroicons/react/24/solid';
+import Link from 'next/link';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+
+
+export const metadata: Metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Professional Page solutions powered by AI and cutting-edge technology.',
+  keywords: ['AI', 'Technology', 'Solutions', 'page'],
+  openGraph: {
+    title: 'Page | Zion Tech Group',
+    description: 'Professional Page solutions powered by AI and cutting-edge technology.',
+    type: 'website',
+  },
+};
+
+export default function pagePage() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Devops Services - Zion Tech Group</title>
-        <meta name="description" content="Devops Services solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Devops Services</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive devops services solutions designed to meet your business needs.
-          </p>
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Page
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Professional Page solutions powered by AI and cutting-edge technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRightIcon className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our Page?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We provide cutting-edge solutions that drive real business results.
+            </p>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <CpuChipIcon className="h-6 w-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Advanced Technology
+              </h3>
+              <p className="text-gray-600">
+                Leveraging the latest AI and machine learning technologies.
               </p>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                <ShieldCheckIcon className="h-6 w-6 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Secure & Reliable
+              </h3>
+              <p className="text-gray-600">
+                Enterprise-grade security and 99.9% uptime guarantee.
               </p>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                <RocketLaunchIcon className="h-6 w-6 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Fast Implementation
+              </h3>
+              <p className="text-gray-600">
+                Quick setup and deployment with minimal disruption.
               </p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-blue-600 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Contact us today to learn more about our Page solutions.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors"
+          >
+            Get Started Now
+            <ArrowRightIcon className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }
-=======
-import { Link } from 'react-router-dom';
-import { Settings, Zap, Shield, BarChart3, ArrowRight, CheckCircle, Clock, Award, Users, Database, Cloud, Code, Star } from 'lucide-react';
-
-const DevOpsServicesPage: React.FC = () => {
-  const services = [
-    {
-//       title: "CI/CD Pipeline Setup",
-//       description: "Automate your development workflow with continuous integration and deployment pipelines.",
-      icon: <Settings className="w-6 h-6" />
-    },
-    {
-//       title: "Infrastructure as Code",
-      description: "Manage your infrastructure using code with tools like Terraform and CloudFormation.",
-      icon: <Code className="w-6 h-6" />
-    },
-    {
-//       title: "Container Orchestration",
-//       description: "Deploy and manage containerized applications with Kubernetes and Docker.",
-      icon: <Cloud className="w-6 h-6" />
-    },
-    {
-//       title: "Monitoring & Logging",
-      description: "Comprehensive monitoring solutions for applications and infrastructure performance.",
-      icon: <BarChart3 className="w-6 h-6" />
-    },
-    {
-//       title: "Security Automation",
-//       description: "Automate security testing and compliance checks in your development pipeline.",
-      icon: <Shield className="w-6 h-6" />
-    },
-    {
-//       title: "Database Management",
-      description: "Automated database migrations, backups, and performance optimization.",
-      icon: <Database className="w-6 h-6" />
-    }
-  ];
-
-  const benefits = [
-    {
-//       title: "Faster Deployments",
-//       description: "Reduce deployment time from hours to minutes with automated pipelines.",
-      icon: <Zap className="w-8 h-8" />
-    },
-    {
-//       title: "Improved Reliability",
-//       description: "Automated testing and rollback capabilities ensure stable releases.",
-      icon: <Shield className="w-8 h-8" />
-    },
-    {
-//       title: "Cost Optimization",
-//       description: "Optimize resource usage and reduce infrastructure costs through automation.",
-      icon: <BarChart3 className="w-8 h-8" />
-    },
-    {
-//       title: "24/7 Support",
-      description: "Round-the-clock monitoring and support for your DevOps infrastructure.",
-      icon: <Users className="w-8 h-8" />
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-//             DevOps Services
-</h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Accelerate your development lifecycle with our comprehensive DevOps solutions. 
-//             From CI/CD to infrastructure automation, we help you deliver faster and more reliably.
-</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-//             <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-//             >
-//               Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2" />
-</Link>
-//             <Link
-              to="/demo"
-              className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-300"
-//             >
-//               View Demo
-</Link>
-</div>
-</div>
-//       </section>
-
-      {/* Services Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-//               Our DevOps Services
-</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-//               We provide end-to-end DevOps solutions that streamline your development process and improve delivery speed.
-</p>
-</div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
-                  {service.icon}
-</div>
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                  {service.title}
-</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  {service.description}
-</p>
-</div>
-            ))}
-</div>
-</div>
-//       </section>
-
-      {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">
-//               Why Choose Our DevOps Services?
-</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-//               Experience the benefits of modern DevOps practices with our expert guidance and support.
-</p>
-</div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  {benefit.icon}
-</div>
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  {benefit.title}
-</h3>
-                <p className="text-gray-300">
-                  {benefit.description}
-</p>
-</div>
-            ))}
-</div>
-</div>
-//       </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Transform Your DevOps?
-</h2>
-          <p className="text-xl text-gray-300 mb-8">
-//             Let our DevOps experts help you build, deploy, and scale your applications with confidence.
-</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-//             <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-//             >
-//               Start Your DevOps Journey
-</Link>
-//             <Link
-              to="/consultation"
-              className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-300"
-//             >
-//               Free Consultation
-</Link>
-</div>
-</div>
-//       </section>
-</div>
-  );
-};
-
-export default DevOpsServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
