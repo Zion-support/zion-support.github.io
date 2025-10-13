@@ -1,30 +1,17 @@
-// Message handler to prevent async response errors
-
-// Chrome extension types
-interface ChromeMessage {
-  type: string;
-  [key: string]: unknown;
-}
-
-interface ChromeSender {
-  id?: string;
-  tab?: {
-    id: number;
-    url?: string;
-  };
-}
-
+// Chrome extension API types
 interface ChromeRuntime {
   onMessage: {
-    addListener: (callback: (message: ChromeMessage, sender: ChromeSender, sendResponse: (response?: unknown) => void) => boolean) => void;
+    addListener: (callback: (message: unknown, sender: unknown, sendResponse: (response?: unknown) => void) => void) => void;
   };
 }
 
-interface Chrome {
+interface ChromeAPI {
   runtime?: ChromeRuntime;
 }
 
-declare const chrome: Chrome;
+interface WindowWithChrome extends Window {
+  chrome?: ChromeAPI;
+}
 
 export class MessageHandler {
   private static instance: MessageHandler;
@@ -51,8 +38,9 @@ export class MessageHandler {
     });
 
     // Listen for chrome extension messages
-    if (typeof chrome !== 'undefined' && chrome.runtime) {
-      chrome.runtime.onMessage.addListener((message: ChromeMessage, sender: ChromeSender, sendResponse: (response?: unknown) => void) => {
+    if (typeof window !== 'undefined' && (window as WindowWithChrome).chrome?.runtime) {
+      const chrome = (window as WindowWithChrome).chrome;
+      chrome.runtime.onMessage.addListener((message: unknown, sender: unknown, sendResponse: (response?: unknown) => void) => {
         // Always send a response to prevent async response errors
         try {
           this.handleChromeMessage(message, sender, sendResponse);
@@ -82,9 +70,10 @@ export class MessageHandler {
     }
   }
 
-  private handleChromeMessage(message: ChromeMessage, sender: ChromeSender, sendResponse: (response?: unknown) => void): void {
+  private handleChromeMessage(message: unknown, sender: unknown, sendResponse: (response?: unknown) => void): void {
     // Handle different message types
-    switch (message.type) {
+    const messageData = message as { type?: string };
+    switch (messageData.type) {
       case 'PING':
         sendResponse({ status: 'pong' });
         break;
