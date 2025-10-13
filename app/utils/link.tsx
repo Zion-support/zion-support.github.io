@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const : React.FC = () => {
+const LinkUtility: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>

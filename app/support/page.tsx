@@ -1,30 +1,34 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { } from 'react-router-dom';
-import { Right, Circle, } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Right, Circle, MessageCircle, Phone, Mail, FileText } from 'lucide-react';
 
 const SupportPage: React.FC = () => {
   const supportOptions = [
     {
-      icon: title: 'Live Chat',
+      icon: MessageCircle,
+      title: 'Live Chat',
       description: 'Get instant help from our support team',
       action: 'Start Chat',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: title: 'Support',
+      icon: Phone,
+      title: 'Phone Support',
       description: 'Call us for immediate assistance',
       action: 'Call Now',
       color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: title: 'Email Support',
+      icon: Mail,
+      title: 'Email Support',
       description: 'Send us a detailed message',
       action: 'Send Email',
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: title: 'Documentation',
+      icon: FileText,
+      title: 'Documentation',
       description: 'Browse our comprehensive guides',
       action: 'View Docs',
       color: 'from-orange-500 to-red-500'
@@ -54,7 +58,7 @@ const SupportPage: React.FC = () => {
     <>
       <Helmet>
         <title>Support - Get Help | Zion Tech Group</title>
-        <meta name="description" content="Get help and support for Zion Tech Group's AI and IT solutions. Live chat, phone support, documentation, and more." />
+        <meta name="description" content="Get help and support for Zion Tech Group&apos;s AI and IT solutions. Live chat, phone support, documentation, and more." />
         <meta name="keywords" content="support, help, customer service, technical support, documentation, FAQ" />
       </Helmet>
 

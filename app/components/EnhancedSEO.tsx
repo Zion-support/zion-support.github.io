@@ -5,7 +5,7 @@ interface EnhancedSEOProps {
   description?: string;
   keywords?: string;
   canonical?: string;
-  children?: .Node;
+  children?: React.ReactNode;
 }
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   title,

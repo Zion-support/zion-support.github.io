@@ -1,21 +1,24 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Right, Wifi, Circle } from 'lucide-react';
+import { Right, Wifi, Circle, Zap, Globe, Smartphone } from 'lucide-react';
 
 const FiveGSolutionsPage: React.FC = () => {
   const features = [
     {
-      icon: title: 'Ultra-Fast Speeds',
+      icon: Zap,
+      title: 'Ultra-Fast Speeds',
       description: 'Experience lightning-fast 5G connectivity with speeds up to 10 Gbps',
       benefits: ['10x faster than 4G', 'Low latency', 'High bandwidth', 'Reliable connection']
     },
     {
-      icon: title: 'Global Coverage',
+      icon: Globe,
+      title: 'Global Coverage',
       description: 'Comprehensive 5G network coverage across multiple regions',
       benefits: ['Wide coverage', 'Seamless roaming', 'International support', 'Network redundancy']
     },
     {
-      icon: title: 'Mobile Optimization',
+      icon: Smartphone,
+      title: 'Mobile Optimization',
       description: 'Optimized 5G solutions for mobile devices and applications',
       benefits: ['Mobile-first design', 'App optimization', 'Battery efficiency', 'Device compatibility']
     },
