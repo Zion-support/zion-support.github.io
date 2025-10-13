@@ -184,6 +184,18 @@ const ZionComplianceManagerPage = React.lazy(
 const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
 );
+const ZionAiMeetingTranscriberPage = React.lazy(
+  () => import("./app/zion-ai-meeting-transcriber/page"),
+);
+const ZionAiExpenseTrackerProPage = React.lazy(
+  () => import("./app/zion-ai-expense-tracker-pro/page"),
+);
+const ZionAiSocialSchedulerProPage = React.lazy(
+  () => import("./app/zion-ai-social-scheduler-pro/page"),
+);
+const ZionAiInventoryManagerProPage = React.lazy(
+  () => import("./app/zion-ai-inventory-manager-pro/page"),
+);
 
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(
@@ -615,6 +627,12 @@ function App() {
                         <Route path="/terms" element={<TermsPage />} />
                         <Route path="/cookies" element={<CookiesPage />} />
                         <Route path="/sitemap" element={<SitemapPage />} />
+                        
+                        {/* New Micro SAAS Services */}
+                        <Route path="/zion-ai-meeting-transcriber" element={<ZionAiMeetingTranscriberPage />} />
+                        <Route path="/zion-ai-expense-tracker-pro" element={<ZionAiExpenseTrackerProPage />} />
+                        <Route path="/zion-ai-social-scheduler-pro" element={<ZionAiSocialSchedulerProPage />} />
+                        <Route path="/zion-ai-inventory-manager-pro" element={<ZionAiInventoryManagerProPage />} />
                       </Routes>
                     </Suspense>
                   </main>

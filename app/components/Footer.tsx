@@ -403,6 +403,38 @@ const Footer = React.memo(() => {
                   Zion Project Master
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/zion-ai-meeting-transcriber"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
+                >
+                  Zion AI Meeting Transcriber
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-expense-tracker-pro"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
+                >
+                  Zion AI Expense Tracker Pro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-social-scheduler-pro"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
+                >
+                  Zion AI Social Scheduler Pro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-inventory-manager-pro"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
+                >
+                  Zion AI Inventory Manager Pro
+                </Link>
+              </li>
             </ul>
           </div>
 

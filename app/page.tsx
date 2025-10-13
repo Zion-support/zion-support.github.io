@@ -95,6 +95,34 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
+      name: "Zion AI Meeting Transcriber",
+      description: "AI-powered real-time meeting transcription with 99.5% accuracy",
+      price: "From $29/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/zion-ai-meeting-transcriber"
+    },
+    {
+      name: "Zion AI Expense Tracker Pro",
+      description: "Intelligent expense management with smart receipt scanning",
+      price: "From $19/month",
+      icon: <Receipt className="w-6 h-6" />,
+      link: "/zion-ai-expense-tracker-pro"
+    },
+    {
+      name: "Zion AI Social Scheduler Pro",
+      description: "AI-powered social media management across all platforms",
+      price: "From $39/month",
+      icon: <Share2 className="w-6 h-6" />,
+      link: "/zion-ai-social-scheduler-pro"
+    },
+    {
+      name: "Zion AI Inventory Manager Pro",
+      description: "Smart inventory management with AI demand forecasting",
+      price: "From $79/month",
+      icon: <Package className="w-6 h-6" />,
+      link: "/zion-ai-inventory-manager-pro"
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform",
       price: "From $299/month",
@@ -107,13 +135,6 @@ const HomePage = () => {
       price: "From $499/month",
       icon: <Shield className="w-6 h-6" />,
       link: "/zion-security-shield"
-    },
-    {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution",
-      price: "From $99/month",
-      icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault"
     }
   ];
 
@@ -297,7 +318,7 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
