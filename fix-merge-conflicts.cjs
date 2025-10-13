@@ -3,41 +3,54 @@
 const fs = require('fs');
 const path = require('path');
 
-// List of files with merge conflicts
-const filesWithConflicts = [
-  './app/cloud-infrastructure/page.tsx',
-  './app/components/AccessibilityEnhancer.tsx',
-  './app/components/EnhancedSEO.tsx',
-  './app/components/ErrorFallback.tsx',
-  './app/components/FuturisticBackgroundEnhanced.tsx',
-  './app/components/PerformanceMonitor.tsx',
-  './app/components/SEOEnhancer.tsx',
-  './app/contact/page.tsx',
-  './app/contexts/AnalyticsContext.tsx',
-  './app/zion-ai-email-analyzer/page.tsx',
-  './app/zion-ai-inventory-manager/page.tsx',
-  './app/zion-ai-performance-optimizer/page.tsx',
-  './app/zion-ai-social-media-manager/page.tsx',
-  './app/zion-ai-voice-assistant-pro/page.tsx',
-  './app/zion-smart-expense-categorizer/page.tsx',
-  './app/zion-smart-inventory-optimizer/page.tsx',
-  './SidebarNavigation.tsx',
-  './App_minimal.tsx',
-  './api/newsletter/subscribe.js',
-  './api/quotes.js',
-  './api/error-report.js',
-  './api/create-payment-intent.js',
-  './api/wallet.js',
-  './api/onsite-request.js',
-  './api/subscribe.js',
-  './api/create-checkout-session.js',
-  './api/shipping-rates.js',
-  './scripts/generate-sitemap.cjs',
-  './performance-report.json',
-  './fix-syntax-errors.cjs'
-];
+// Function to fix common merge conflict issues
+function fixMergeConflicts(content) {
+  // Remove merge conflict markers
+  content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+  content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+  
+  // Fix common syntax issues
+  content = content.replace(/\}\s*\)\s*}/g, '})}'); // Fix })}
+  content = content.replace(/\}\s*\)\s*\)/g, '}))'); // Fix }))
+  content = content.replace(/\}\s*\)\s*\)\s*\)/g, '})))'); // Fix })))
+  content = content.replace(/\}\s*\)\s*\)\s*\)\s*\)/g, '}))))'); // Fix }))))
+  
+  // Fix missing semicolons after imports
+  content = content.replace(/import[^;]+from[^;]+(?=\n)/g, (match) => {
+    if (!match.endsWith(';')) {
+      return match + ';';
+    }
+    return match;
+  });
+  
+  // Fix missing semicolons after variable declarations
+  content = content.replace(/(const|let|var)\s+[^=]+=[^;]+(?=\n)/g, (match) => {
+    if (!match.endsWith(';')) {
+      return match + ';';
+    }
+    return match;
+  });
+  
+  // Fix JSX closing tags
+  content = content.replace(/>\s*}/g, '>}');
+  content = content.replace(/>\s*\)/g, '>)');
+  
+  // Fix function declarations
+  content = content.replace(/function\s+[^{]+{\s*}/g, (match) => {
+    return match.replace(/\s*}/, ' {}');
+  });
+  
+  // Fix arrow functions
+  content = content.replace(/=>\s*{\s*}/g, ' => {}');
+  
+  // Remove extra whitespace
+  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+  
+  return content;
+}
 
-function fixMergeConflicts(filePath) {
+// Function to process a file
+function processFile(filePath) {
   try {
     if (!fs.existsSync(filePath)) {
       console.log(`File not found: ${filePath}`);
@@ -70,6 +83,7 @@ function fixMergeConflicts(filePath) {
   }
 }
 
+// Main execution
 console.log('Starting merge conflict resolution...');
 
 filesWithConflicts.forEach(filePath => {

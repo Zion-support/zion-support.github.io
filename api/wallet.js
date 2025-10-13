@@ -30,7 +30,6 @@ export default function handler(req, res) {
     // console.error('Error reading existing wallets:', error);
     existing = [];
   }
-  
   // Check if wallet address already exists
   const existingWallet = existing.find(wallet => wallet.address === address);
   if (existingWallet) {

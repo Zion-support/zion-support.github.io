@@ -219,7 +219,7 @@ message: ']
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6">Get in touch<
                 <p className="text-gray-300 mb-8">
-                  We&apos;re here to help you succeed. Reach out to us through any of the channels below, 
+                  We're here to help you succeed. Reach out to us through any of the channels below, 
                   and we'll get back to you within 24 hours.
                 <
               <

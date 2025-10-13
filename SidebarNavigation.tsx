@@ -1,18 +1,19 @@
 import React from 'react';
 import { Home, User, Settings, HelpCircle, X } from 'lucide-react';
+
 interface SidebarNavigationProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {
-  const navigationItems = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'About', href: '/about', icon: User },
-    { name: 'Services', href: '/services', icon: Settings },
-    { name: 'Contact', href: '/contact', icon: HelpCircle }
-  ];
+const navigationItems = [
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Profile', href: '/profile', icon: User },
+  { name: 'Settings', href: '/settings', icon: Settings },
+  { name: 'Help', href: '/help', icon: HelpCircle },
+];
 
+const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {
   return (
     <div className={`fixed inset-0 z-50 ${isOpen ? 'block' : 'hidden'}`}>
       <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose} />
@@ -39,4 +40,5 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
     </div>
   );
 };
+
 export default SidebarNavigation;

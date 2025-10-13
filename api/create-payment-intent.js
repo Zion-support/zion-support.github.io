@@ -40,10 +40,13 @@ export default function handler(req, res) {
       status: 'requires_payment_method',
       created: Math.floor(Date.now() / 1000)
     };
-    
+
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ paymentIntent }));
+    res.end(JSON.stringify({ 
+      success: true,
+      paymentIntent
+    }));
   } catch (error) {
     console.error('Payment intent creation error:', error);
     res.statusCode = 500;

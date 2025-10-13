@@ -30,7 +30,6 @@ export default function handler(req, res) {
     console.error('Error reading existing subscribers:', error);
     existing = [];
   }
-  
   // Check if email already exists
   const existingSubscriber = existing.find(sub => sub.email === email);
   if (existingSubscriber) {

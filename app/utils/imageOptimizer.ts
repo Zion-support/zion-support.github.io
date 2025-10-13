@@ -1,8 +1,3 @@
-// Type declaration for URLSearchParams
-declare const URLSearchParams: {
-  new (init?: string[][] | Record<string, string> | string | URLSearchParams): URLSearchParams;
-};
-
 export interface ImageOptimizationOptions {
   width?: number;
   height?: number;

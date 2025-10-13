@@ -1,11 +1,10 @@
 // Next.js type declarations
 declare module 'next' {
   interface NextApiRequest {
-    user?: Record<string, unknown>;
+    user?: any;
   }
   interface NextConfig {
     // Add any Next.js specific types here
-    [key: string]: unknown;
   }
 }
 // Export a utility function

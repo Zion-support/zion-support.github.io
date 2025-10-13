@@ -8,8 +8,6 @@ export default function handler(req, res) {
 
 export default async function handler(req, res) {
 
-
-
 export default async function handler(req, res) {
 
   if (req.method !== 'POST') {
@@ -18,14 +16,17 @@ export default async function handler(req, res) {
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
+  
   try {
     const { email } = req.body || {};
+    
     if (!email) {
       res.statusCode = 400;
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Email is required' }));
       return;
     }
+    
     // Simple email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
@@ -34,6 +35,7 @@ export default async function handler(req, res) {
       res.end(JSON.stringify({ error: 'Invalid email format' }));
       return;
     }
+    
     // Save subscription logic here
     // In a real application, you would:
     // 1. Save to your database
@@ -65,5 +67,4 @@ export default async function handler(req, res) {
 }
 
 export default handler;
-
 

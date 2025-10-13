@@ -27,7 +27,6 @@ export default function handler(req, res) {
     console.error('Error reading existing rates:', error);
     existing = [];
   }
-  
   // Calculate shipping rates based on destination and weight
   const baseRate = 10;
   const weightMultiplier = weight * 0.5;
