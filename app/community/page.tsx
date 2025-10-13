@@ -332,6 +332,7 @@ export default function Community() {
         </section>
       </div>
     </>
+<<<<<<< HEAD
   )
 }
 <<<<<<< HEAD
@@ -340,3 +341,7 @@ export default function Community() {
 
 export default CommunityPage
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+  );
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2

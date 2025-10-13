@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     // Service Worker registration for caching
     const registerServiceWorker = async () => {
       if ('serviceWorker' in navigator) {
@@ -108,6 +109,61 @@
               imageObserver.unobserve(img)
             }
           }
+=======
+'use client'
+import { useEffect, useState } from 'react'
+
+interface CacheStats {
+  hits: number
+  misses: number
+  size: number
+  maxSize: number
+}
+
+const CacheManager = () => {
+  const [stats, setStats] = useState<CacheStats>({
+    hits: 0,
+    misses: 0,
+    size: 0,
+    maxSize: 50 * 1024 * 1024 // 50MB
+  })
+
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    // Only run in development
+    if (process.env['NODE_ENV'] !== 'development') return
+
+    const updateStats = () => {
+      if ('caches' in window) {
+        caches.keys().then(cacheNames => {
+          let totalSize = 0
+          Promise.all(
+            cacheNames.map(cacheName =>
+              caches.open(cacheName).then(cache =>
+                cache.keys().then(requests =>
+                  Promise.all(
+                    requests.map(request =>
+                      cache.match(request).then(response => {
+                        if (response) {
+                          const contentLength = response.headers.get('content-length')
+                          if (contentLength) {
+                            totalSize += parseInt(contentLength, 10)
+                          }
+                        }
+                      })
+                    )
+                  )
+                )
+              )
+            )
+          ).then(() => {
+            setStats(prev => ({
+              ...prev,
+              size: totalSize
+            }))
+          })
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
         })
       }, {
         rootMargin: '50px 0px',

@@ -204,6 +204,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Brain, Shield, Zap, Globe, ArrowRight, CheckCircle, Star, Users, Award } from "lucide-react";
 import ImageOptimizer from "./components/ImageOptimizer";
 =======
@@ -344,6 +345,9 @@ import { ArrowRight, Star, Brain, Zap, Globe } from "lucide-react";
 =======
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+=======
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
@@ -474,6 +478,10 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+<<<<<<< HEAD
+=======
+      <FuturisticBackground />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
       <EnhancedSEO
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."

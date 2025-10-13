@@ -19,10 +19,13 @@ import FuturisticButton from './FuturisticButton';
 =======
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
+<<<<<<< HEAD
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Sidebar as SidebarIcon } from 'lucide-react'
 =======
 import React, { useState, useCallback, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
 import { 
   Menu, 
   X, 
@@ -32,9 +35,34 @@ import {
   Mail, 
   Brain, 
   Shield, 
+<<<<<<< HEAD
   Zap,
   ChevronDown
 } from 'lucide-react';
+=======
+  Zap, 
+  Globe, 
+  ArrowRight, 
+  Star, 
+  Users, 
+  Award, 
+  BarChart3, 
+  Cloud, 
+  Sparkles, 
+  Mail, 
+  Smartphone, 
+  Monitor,
+  Phone,
+  MapPin,
+  Code,
+  Database,
+  ChevronDown,
+  Menu,
+  X,
+  SidebarIcon
+} from 'lucide-react'
+import FuturisticButton from './FuturisticButton'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
 
 interface NavigationItem {
   name: string;
@@ -363,6 +391,7 @@ export default function Navigation() {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const itServices = [
     { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
     { name: 'API Development', href: '/api-development', icon: Code, description: 'API development & management' },
@@ -476,6 +505,18 @@ export default function Navigation() {
   const toggleAIServices = useCallback(() => {
     setIsAIServicesOpen(!isAIServicesOpen);
   }, [isAIServicesOpen]);
+=======
+  const itServices = useMemo(() => [
+    { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },
+    { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions', icon: <Shield className="w-4 h-4" /> },
+    { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> },
+    { name: 'Mobile Development', path: '/mobile-development', icon: <Code className="w-4 h-4" /> },
+    { name: 'Database Management', path: '/database-management', icon: <Database className="w-4 h-4" /> },
+    { name: 'Custom Software', path: '/custom-software', icon: <Code className="w-4 h-4" /> },
+    { name: 'Network Infrastructure', path: '/network-infrastructure', icon: <Cloud className="w-4 h-4" /> },
+    { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
+  ], [])
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
 
   const toggleITServices = useCallback(() => {
     setIsITServicesOpen(!isITServicesOpen);

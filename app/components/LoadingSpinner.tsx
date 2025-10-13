@@ -7,6 +7,7 @@ import { Zap } from 'lucide-react'
 =======
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
 interface LoadingSpinnerProps {
@@ -81,8 +82,12 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     white: 'text-white'
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
   };
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
 
+const LoadingSpinner: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className={`flex flex-col items-center justify-center ${className}`}>
 <<<<<<< HEAD
       <Loader2 className={`${sizeClasses[size]} text-purple-600 animate-spin`} />
@@ -136,6 +141,21 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           {text}
         </p>
       )}
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <div className="text-center">
+        <div className="relative">
+          <div className="w-16 h-16 border-4 border-cyan-500/20 border-t-cyan-500 rounded-full animate-spin mx-auto mb-4"></div>
+          <div className="absolute inset-0 w-16 h-16 border-4 border-purple-500/20 border-t-purple-500 rounded-full animate-spin mx-auto" style={{ animationDelay: '0.5s' }}></div>
+        </div>
+        <h2 className="text-2xl font-bold text-white mb-2">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+            Zion Tech Group
+          </span>
+        </h2>
+        <p className="text-gray-300">Loading amazing technology solutions...</p>
+      </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
     </div>
   )
 

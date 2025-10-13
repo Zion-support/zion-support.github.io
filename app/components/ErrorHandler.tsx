@@ -73,6 +73,7 @@ class ErrorHandler extends Component<Props, State> {
         url: window.location.href,
       };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       // Send to your error reporting service here
     } catch (reportingError) {
@@ -90,6 +91,15 @@ class ErrorHandler extends Component<Props, State> {
       // });
     } catch (logError) {
       console.error('Failed to log error:', logError);
+=======
+      console.log('Error logged:', errorData);
+      // Send to your error reporting service here
+
+      console.log('Error data prepared for reporting:', errorData);
+    } catch (reportingError) {
+      console.error('Failed to prepare error data for reporting:', reportingError);
+>>>>>>> cursor/website-audit-and-update-with-deployment-3531
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
     }
   };
 

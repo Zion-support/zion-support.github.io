@@ -349,6 +349,7 @@ import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from '
         <link rel="canonical" href="https://ziontechgroup.com/partners" />
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
       </Helmet>
+<<<<<<< HEAD
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
         {/* Hero Section */}
@@ -1602,6 +1603,8 @@ const PartnersPage: React.FC = () => {
               </p>
             </div>
           </div>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
         </div>
       </section>
 

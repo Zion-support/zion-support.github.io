@@ -1,6 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react;
+=======
+import { ArrowRight, Calendar, CheckCircle, Zap, Mail, Smartphone, Globe } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
 
 import { Helmet } from 'react-helmet-async;
 
@@ -311,6 +318,7 @@ const ConsultationPage: React.FC = () => {
     console.log('Form submitted:', formData);
   };
 
+<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -392,11 +400,70 @@ const ConsultationPage: React.FC = () => {
       price: 'Starting at $3,500',
       duration: '2-3 weeks',
       icon: Shield
+=======
+  const consultationTypes = [
+    {
+      title: "AI Strategy",
+      description: "Strategic planning for AI implementation and digital transformation.",
+      price: "Free",
+      duration: "30 min",
+      color: "from-blue-500 to-cyan-500",
+      icon: <Zap className="w-8 h-8 text-white" />,
+      features: [
+        "AI readiness assessment",
+        "Technology roadmap",
+        "ROI analysis",
+        "Implementation timeline"
+      ]
+    },
+    {
+      title: "Cloud Migration",
+      description: "Expert guidance on cloud infrastructure and migration strategies.",
+      price: "Free",
+      duration: "45 min",
+      color: "from-purple-500 to-pink-500",
+      icon: <Globe className="w-8 h-8 text-white" />,
+      features: [
+        "Infrastructure audit",
+        "Migration strategy",
+        "Cost optimization",
+        "Security assessment"
+      ]
+    },
+    {
+      title: "Cybersecurity",
+      description: "Comprehensive security audit and protection strategy.",
+      price: "Free",
+      duration: "60 min",
+      color: "from-red-500 to-orange-500",
+      icon: <CheckCircle className="w-8 h-8 text-white" />,
+      features: [
+        "Security assessment",
+        "Vulnerability analysis",
+        "Compliance review",
+        "Protection strategy"
+      ]
+    },
+    {
+      title: "Digital Transformation",
+      description: "Complete digital strategy and modernization planning.",
+      price: "Free",
+      duration: "90 min",
+      color: "from-green-500 to-teal-500",
+      icon: <Calendar className="w-8 h-8 text-white" />,
+      features: [
+        "Digital audit",
+        "Technology stack review",
+        "Process optimization",
+        "Change management"
+      ]
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
     }
   ];
 
   const benefits = [
     {
+<<<<<<< HEAD
       icon: CheckCircle,
       title: 'Expert Guidance',
       description: 'Work with certified AI and IT professionals'
@@ -1807,6 +1874,40 @@ const ConsultationPage: React.FC = () => {
           </div>
         </div>
         <Footer />
+=======
+      title: "Expert Guidance",
+      description: "Get insights from certified technology professionals with years of experience.",
+      icon: <CheckCircle className="w-8 h-8 text-cyan-400" />
+    },
+    {
+      title: "No Obligation",
+      description: "Completely free consultation with no strings attached or hidden costs.",
+      icon: <Zap className="w-8 h-8 text-purple-400" />
+    },
+    {
+      title: "Actionable Insights",
+      description: "Receive practical recommendations you can implement immediately.",
+      icon: <ArrowRight className="w-8 h-8 text-green-400" />
+    },
+    {
+      title: "Customized Solutions",
+      description: "Tailored advice based on your specific business needs and challenges.",
+      icon: <Globe className="w-8 h-8 text-blue-400" />
+    }
+  ];
+
+  const industries = [
+    "Technology", "Healthcare", "Finance", "Manufacturing", "Retail", "Education", "Government", "Other"
+  ];
+
+  const projectSizes = [
+    "Small (1-10 employees)", "Medium (11-100 employees)", "Large (101-1000 employees)", "Enterprise (1000+ employees)"
+  ];
+
+  const timelines = [
+    "Immediate (1-3 months)", "Short-term (3-6 months)", "Medium-term (6-12 months)", "Long-term (12+ months)"
+  ];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
       </div>
     </>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009

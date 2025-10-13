@@ -4,6 +4,7 @@ const path = require('path');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Generate sitemap
 const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -59,12 +60,16 @@ const distDir = path.join(__dirname, '..', 'dist');
 =======
 // Define all the routes in your application
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+=======
+// Define all routes for the sitemap
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
 const routes = [
   // Main pages
   { url: '/', priority: '1.0', changefreq: 'daily' },
   { url: '/about', priority: '0.8', changefreq: 'monthly' },
   { url: '/contact', priority: '0.9', changefreq: 'monthly' },
   { url: '/services', priority: '0.9', changefreq: 'weekly' },
+<<<<<<< HEAD
   { url: '/blog', priority: '0.7', changefreq: 'weekly' },
   { url: '/privacy', priority: '0.3', changefreq: 'yearly' },
   { url: '/terms', priority: '0.3', changefreq: 'yearly' },
@@ -167,6 +172,27 @@ const routes = [
   { url: '/data-analytics', priority: '0.7', changefreq: 'weekly' },
   { url: '/ai-workflow-automation', priority: '0.7', changefreq: 'weekly' },
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+=======
+  { url: '/pricing', priority: '0.8', changefreq: 'monthly' },
+  { url: '/careers', priority: '0.7', changefreq: 'weekly' },
+  { url: '/blog', priority: '0.6', changefreq: 'weekly' },
+  { url: '/team', priority: '0.6', changefreq: 'monthly' },
+  { url: '/case-studies', priority: '0.7', changefreq: 'monthly' },
+  { url: '/privacy', priority: '0.3', changefreq: 'yearly' },
+  { url: '/terms', priority: '0.3', changefreq: 'yearly' },
+  { url: '/cookies', priority: '0.3', changefreq: 'yearly' },
+  
+  // 5G Solutions
+  { url: '/5g-solutions', priority: '0.8', changefreq: 'monthly' },
+  { url: '/5g-data-analytics', priority: '0.7', changefreq: 'monthly' },
+  { url: '/5g-edge-computing', priority: '0.7', changefreq: 'monthly' },
+  { url: '/5g-implementation', priority: '0.7', changefreq: 'monthly' },
+  { url: '/5g-iot-solutions', priority: '0.7', changefreq: 'monthly' },
+  { url: '/5g-mobile-applications', priority: '0.7', changefreq: 'monthly' },
+  { url: '/5g-network-infrastructure', priority: '0.7', changefreq: 'monthly' },
+  { url: '/5g-private-networks', priority: '0.7', changefreq: 'monthly' },
+  { url: '/5g-smart-city-solutions', priority: '0.7', changefreq: 'monthly' },
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
 ];
 
 // Generate sitemap XML
@@ -184,6 +210,7 @@ function generateSitemap() {
     sitemap += `    <changefreq>${route.changefreq}</changefreq>\n`;
     sitemap += `    <priority>${route.priority}</priority>\n`;
     sitemap += '  </url>\n';
+<<<<<<< HEAD
   });
   
   sitemap += '</urlset>';
@@ -412,6 +439,28 @@ function writeSitemap() {
   fs.writeFileSync(outputPath, sitemap, 'utf8');
   console.log(`Sitemap generated successfully at ${outputPath}`);
   console.log(`Generated ${routes.length} URLs`);
+=======
+  });
+  
+  sitemap += '</urlset>';
+  
+  return sitemap;
+}
+
+// Write sitemap to file
+function writeSitemap() {
+  const sitemap = generateSitemap();
+  const outputPath = path.join(__dirname, '..', 'dist', 'sitemap.xml');
+  
+  // Ensure dist directory exists
+  const distDir = path.dirname(outputPath);
+  if (!fs.existsSync(distDir)) {
+    fs.mkdirSync(distDir, { recursive: true });
+  }
+  
+  fs.writeFileSync(outputPath, sitemap);
+  console.log('Sitemap generated successfully at:', outputPath);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
 }
 
 // Generate robots.txt
@@ -420,6 +469,7 @@ function generateRobotsTxt() {
 Allow: /
 
 Sitemap: https://ziontechgroup.com/sitemap.xml
+<<<<<<< HEAD
 
 # Disallow admin and private areas
 Disallow: /admin/
@@ -441,3 +491,15 @@ if (require.main === module) {
 
 module.exports = { generateSitemap, writeSitemap, generateRobotsTxt };
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+=======
+`;
+  
+  const outputPath = path.join(__dirname, '..', 'dist', 'robots.txt');
+  fs.writeFileSync(outputPath, robotsTxt);
+  console.log('Robots.txt generated successfully at:', outputPath);
+}
+
+// Run the generation
+writeSitemap();
+generateRobotsTxt();
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2

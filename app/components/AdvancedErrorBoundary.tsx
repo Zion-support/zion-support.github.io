@@ -136,7 +136,13 @@ class AdvancedErrorBoundary extends Component<
       url: window.location.href,
     };
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-3531
+    // Log the error data for debugging
+    console.error('Error data:', errorData);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
     // Example: Send to your error reporting service
     // You could send this to your backend:
     // fetch('/api/error-report', {

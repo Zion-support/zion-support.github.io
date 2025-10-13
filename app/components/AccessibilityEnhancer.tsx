@@ -531,6 +531,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       }
     };
 
+<<<<<<< HEAD
     // Add ARIA live region for dynamic content
     const addLiveRegion = () => {
       if (!document.getElementById('aria-live-region')) {
@@ -612,11 +613,18 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         const closeButton = modal.querySelector('[aria-label*="close" i], [aria-label*="dismiss" i]');
         if (closeButton) {
           (closeButton as HTMLElement).click();
+=======
+        // Tab key enhancements
+        if (e.key === 'Tab') {
+          // Add visible focus indicators
+          document.body.classList.add('keyboard-navigation');
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
         }
       });
     }
   }, []);
 
+<<<<<<< HEAD
   useEffect(() => {
     if (!enableKeyboardNav) return;
 
@@ -1246,6 +1254,134 @@ AccessibilityEnhancer.displayName = 'AccessibilityEnhancer';
   }, []);
 
   return null;
+=======
+      document.addEventListener('keydown', handleKeyDown);
+      return () => document.removeEventListener('keydown', handleKeyDown);
+    };
+
+    // Screen reader enhancements
+    const enhanceScreenReader = () => {
+      if (!enableScreenReader) return;
+
+      // Add ARIA landmarks
+      const main = document.querySelector('main');
+      if (main && !main.getAttribute('role')) {
+        main.setAttribute('role', 'main');
+        main.id = 'main-content';
+      }
+
+      // Add navigation landmarks
+      const nav = document.querySelector('nav');
+      if (nav && !nav.getAttribute('role')) {
+        nav.setAttribute('role', 'navigation');
+        nav.setAttribute('aria-label', 'Main navigation');
+      }
+
+      // Add heading hierarchy
+      const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+      headings.forEach((heading, index) => {
+        if (!heading.id) {
+          heading.id = `heading-${index}`;
+        }
+      });
+    };
+
+    // High contrast mode
+    const enhanceHighContrast = () => {
+      if (!enableHighContrast) return;
+
+      // Add high contrast styles
+      const style = document.createElement('style');
+      style.textContent = `
+        .high-contrast {
+          filter: contrast(150%) brightness(120%);
+        }
+        .high-contrast * {
+          border-color: currentColor !important;
+        }
+      `;
+      document.head.appendChild(style);
+
+      // Toggle high contrast mode
+      const toggleHighContrast = () => {
+        document.body.classList.toggle('high-contrast');
+      };
+
+      // Add keyboard shortcut (Ctrl+Shift+H)
+      const handleKeyDown = (e: KeyboardEvent) => {
+        if (e.ctrlKey && e.shiftKey && e.key === 'H') {
+          e.preventDefault();
+          toggleHighContrast();
+        }
+      };
+
+      document.addEventListener('keydown', handleKeyDown);
+      return () => document.removeEventListener('keydown', handleKeyDown);
+    };
+
+    // Focus management
+    const enhanceFocusManagement = () => {
+      if (!enableFocusManagement) return;
+
+      // Trap focus in modals
+      const trapFocus = (element: HTMLElement) => {
+        const focusableElements = element.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        const firstElement = focusableElements[0] as HTMLElement;
+        const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+        const handleTabKey = (e: KeyboardEvent) => {
+          if (e.key === 'Tab') {
+            if (e.shiftKey) {
+              if (document.activeElement === firstElement) {
+                lastElement.focus();
+                e.preventDefault();
+              }
+            } else {
+              if (document.activeElement === lastElement) {
+                firstElement.focus();
+                e.preventDefault();
+              }
+            }
+          }
+        };
+
+        element.addEventListener('keydown', handleTabKey);
+        firstElement?.focus();
+
+        return () => element.removeEventListener('keydown', handleTabKey);
+      };
+
+      // Apply focus trap to modals
+      const modals = document.querySelectorAll('[role="dialog"], .modal');
+      modals.forEach(modal => {
+        if (modal instanceof HTMLElement) {
+          trapFocus(modal);
+        }
+      });
+    };
+
+    // Initialize all enhancements
+    addSkipLink();
+    const cleanupKeyboard = enhanceKeyboardNavigation();
+    enhanceScreenReader();
+    const cleanupHighContrast = enhanceHighContrast();
+    enhanceFocusManagement();
+
+    // Cleanup function
+    return () => {
+      if (cleanupKeyboard) cleanupKeyboard();
+      if (cleanupHighContrast) cleanupHighContrast();
+    };
+  }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
+
+  return (
+    <div className="accessibility-enhanced">
+      {children}
+    </div>
+  );
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
 };
 
 export default AccessibilityEnhancer;

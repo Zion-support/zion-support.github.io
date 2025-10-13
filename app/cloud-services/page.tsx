@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -38,6 +42,7 @@ const features = [
       description: "Optimized for speed with global CDN and edge computing"
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       icon: <Database className="w-6 h-6" />,
       title: "Data Management",
@@ -147,6 +152,8 @@ const features = [
                   <p className="text-gray-300 leading-relaxed">
                     {service.description}
                   </p>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
                 </div>
               ))}
             </div>
@@ -312,6 +319,7 @@ const features = [
                   View Demo
                   <ArrowRight className="w-5 h-5" />
                 </Link>
+<<<<<<< HEAD
 =======
       </section>
 
@@ -879,6 +887,9 @@ const benefits = [
                 <ArrowRight className="w-5 h-5" />
               </Link>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+=======
+              </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
             </div>
 =======
         <section className="py-20 px-4">

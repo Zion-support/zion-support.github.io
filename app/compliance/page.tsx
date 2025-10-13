@@ -319,6 +319,7 @@ export default function Compliance() {
 <<<<<<< HEAD
       </div>
     </>
+<<<<<<< HEAD
 =======
         {/* Security Features */}
         <section className="mb-16">
@@ -372,3 +373,7 @@ export default CompliancePage
   </button>
   </h1>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+  );
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2

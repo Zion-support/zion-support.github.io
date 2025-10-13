@@ -82,6 +82,14 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
       await new Promise((resolve) => setTimeout(resolve, 1000));
       setIsSubscribed(true);
       setEmail("");
+<<<<<<< HEAD
+=======
+
+    } catch (error) {
+      console.error('Failed to subscribe to newsletter:', error);
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-3531
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
     } finally {
       setIsLoading(false);
 =======

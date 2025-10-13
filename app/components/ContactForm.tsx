@@ -122,6 +122,14 @@ const ContactForm: React.FC = () => {
         message: "",
         service: "",
       });
+<<<<<<< HEAD
+=======
+
+    } catch (error) {
+      console.error('Failed to submit contact form:', error);
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-3531
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
     } finally {
       setIsSubmitting(false);
 =======
