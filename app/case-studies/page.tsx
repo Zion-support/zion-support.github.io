@@ -1,7 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Target, Star, Globe, Shield, CheckCircle, TrendingUp, Zap, BarChart3, Clock } from 'lucide-react';
+import { CheckCircle, TrendingUp, Zap, BarChart3 } from "lucide-react";
 import EnhancedSEO from '../components/EnhancedSEO';
 
 export default function CaseStudies() {
@@ -22,7 +20,6 @@ export default function CaseStudies() {
       image: "/images/case-studies/ecommerce-ai.jpg",
       duration: "6 months",
       services: ["AI Analytics", "AI Customer Support", "Data Analytics"],
-      image: "/api/placeholder/600/400",
       featured: true
     },
     {

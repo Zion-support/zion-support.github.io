@@ -25,8 +25,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       });
 
       // Optimize images
-      }
-
+      
       setIsOptimized(true);
     };
 
@@ -38,6 +37,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     <div className="performance-optimizer">
       {children}
       {isOptimized && (
+        <div className="optimization-indicator">
+          Performance optimized
         </div>
       )}
     </div>
