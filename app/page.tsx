@@ -90,6 +90,22 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
+      name: "Zion AI Meeting Transcriber",
+      description: "Real-time meeting transcription with 99.5% accuracy, speaker identification, and automatic action item extraction",
+      price: "From $19/month",
+      icon: <Mail className="w-6 h-6" />,
+      link: "/zion-ai-meeting-transcriber",
+      featured: true
+    },
+    {
+      name: "Zion AI Sales Predictor",
+      description: "AI-powered sales forecasting with 95% accuracy, lead scoring, and customer behavior prediction",
+      price: "From $39/month",
+      icon: <TrendingUp className="w-6 h-6" />,
+      link: "/zion-ai-sales-predictor",
+      featured: true
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
       price: "From $299/month",
@@ -120,29 +136,13 @@ const HomePage = () => {
       icon: <Users className="w-6 h-6" />,
       link: "/zion-ai-crm-pro",
       featured: true
-    },
-    {
-      name: "Zion AI Marketing Automation Pro",
-      description: "AI-powered marketing automation with predictive content generation and multi-channel orchestration",
-      price: "From $149/month",
-      icon: <Target className="w-6 h-6" />,
-      link: "/zion-ai-marketing-automation-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Project Manager Pro",
-      description: "AI-powered project management with intelligent task prioritization and resource allocation",
-      price: "From $99/month",
-      icon: <Calendar className="w-6 h-6" />,
-      link: "/zion-ai-project-manager-pro",
-      featured: true
     }
   ];
 
   const stats = [
-    { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "15,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "60+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "50+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
   ];
 
@@ -172,18 +172,10 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-<<<<<<< HEAD
-      <FuturisticBackground />
       <EnhancedSEO
         title="Zion Tech Group - Advanced AI & IT Solutions | Transform Your Business"
         description="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation. Expert technology consulting for modern businesses. Get started today!"
         keywords="AI solutions, cybersecurity, cloud computing, digital transformation, business automation, technology consulting, micro SAAS, 5G technology, IT services, machine learning"
-=======
-      <EnhancedSEO
-        title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
-        description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
-        keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
         canonical="https://ziontechgroup.com"
       />
       <FuturisticBackground />
