@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Home, Link as LinkIcon } from 'lucide-react'
 
 const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)
@@ -25,7 +25,12 @@ const Navigation = React.memo(() => {
     { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> },
     { name: 'AI Customer Support', path: '/ai-customer-support-chatbot', icon: <Zap className="w-4 h-4" /> },
     { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> },
-    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> }
+    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> },
+    { name: 'AI Quantum Computing', path: '/ai-quantum-computing', icon: <Zap className="w-4 h-4" />, featured: true },
+    { name: 'AI Space Technology', path: '/ai-space-technology', icon: <Globe className="w-4 h-4" />, featured: true },
+    { name: 'AI Neural Interface', path: '/ai-neural-interface', icon: <Brain className="w-4 h-4" />, featured: true },
+    { name: 'AI Robotics Automation', path: '/ai-robotics-automation', icon: <Zap className="w-4 h-4" />, featured: true },
+    { name: 'AI Blockchain Solutions', path: '/ai-blockchain-solutions', icon: <LinkIcon className="w-4 h-4" />, featured: true }
   ], [])
 
   const microSaasServices = useMemo(() => [
@@ -36,7 +41,10 @@ const Navigation = React.memo(() => {
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
     { name: 'Zion Project Master', path: '/zion-project-master', icon: <Code className="w-4 h-4" /> },
-    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> }
+    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion AI Writer Pro', path: '/zion-ai-writer-pro', icon: <Brain className="w-4 h-4" />, featured: true },
+    { name: 'Zion Crypto Analyzer Pro', path: '/zion-crypto-analyzer-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
+    { name: 'Zion Smart Home Pro', path: '/zion-smart-home-pro', icon: <Home className="w-4 h-4" />, featured: true }
   ], [])
 
   const mainNavItems = useMemo(() => [

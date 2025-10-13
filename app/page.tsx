@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Home } from "lucide-react";
 import SEOOptimizer from "./components/SEOOptimizer";
 
 const HomePage = () => {
@@ -47,6 +47,20 @@ const HomePage = () => {
       link: "/zion-analytics-pro"
     },
     {
+      name: "Zion AI Writer Pro",
+      description: "Advanced AI content generation platform",
+      price: "From $19/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/zion-ai-writer-pro"
+    },
+    {
+      name: "Zion Crypto Analyzer Pro",
+      description: "AI-powered cryptocurrency analysis",
+      price: "From $39/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/zion-crypto-analyzer-pro"
+    },
+    {
       name: "Zion Security Shield",
       description: "Advanced cybersecurity protection",
       price: "From $49/month",
@@ -59,6 +73,13 @@ const HomePage = () => {
       price: "From $9/month",
       icon: <Cloud className="w-6 h-6" />,
       link: "/zion-cloud-vault"
+    },
+    {
+      name: "Zion Smart Home Pro",
+      description: "AI-powered home automation platform",
+      price: "From $29/month",
+      icon: <Home className="w-6 h-6" />,
+      link: "/zion-smart-home-pro"
     }
   ];
 
@@ -215,7 +236,7 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}

@@ -1,136 +1,136 @@
-import { ArrowRight, Atom, Cpu, Zap, Shield, Brain, CheckCircle, Star, Globe, Database } from "lucide-react";
+import { ArrowRight, Bot, Cpu, Zap, Shield, CheckCircle, Star, Brain, Database, Globe } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AIQuantumComputing() {
+export default function AIRoboticsAutomation() {
   const features = [
     {
-      icon: <Atom className="w-6 h-6" />,
-      title: "Quantum Machine Learning",
-      description: "Leverage quantum algorithms for exponentially faster machine learning computations and pattern recognition"
+      icon: <Bot className="w-6 h-6" />,
+      title: "Autonomous Robot Control",
+      description: "AI-powered autonomous robots that can navigate, learn, and adapt to complex environments without human intervention"
     },
     {
       icon: <Cpu className="w-6 h-6" />,
-      title: "Quantum Optimization",
-      description: "Solve complex optimization problems in seconds that would take classical computers years to complete"
+      title: "Machine Learning Integration",
+      description: "Advanced ML algorithms that enable robots to learn from experience and improve performance over time"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Quantum Cryptography",
-      description: "Unbreakable encryption using quantum key distribution for ultimate data security"
+      title: "Industrial Automation",
+      description: "Complete automation solutions for manufacturing, logistics, and industrial processes with robotic systems"
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Quantum Security Suite",
-      description: "Advanced threat detection and prevention using quantum computing principles"
+      title: "Safety & Compliance",
+      description: "Built-in safety protocols and compliance monitoring to ensure safe operation in human-robot collaborative environments"
     },
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "Quantum Neural Networks",
-      description: "Next-generation AI models that process information in quantum superposition states"
+      title: "Computer Vision",
+      description: "Advanced computer vision systems that enable robots to see, recognize, and interact with objects and environments"
     },
     {
       icon: <Globe className="w-6 h-6" />,
-      title: "Quantum Cloud Platform",
-      description: "Access quantum computing resources through our secure cloud infrastructure"
+      title: "Remote Monitoring",
+      description: "Cloud-based monitoring and control systems for managing robotic fleets across multiple locations"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Quantum Starter",
+      name: "Robotics Starter",
       price: "$2,999",
       period: "/month",
-      description: "Perfect for research and development",
+      description: "Perfect for small-scale automation",
       features: [
-        "Up to 10 quantum computing hours",
-        "Basic quantum algorithms library",
-        "Standard quantum security",
+        "Up to 5 robot units",
+        "Basic AI control system",
+        "Standard safety protocols",
         "Email support",
-        "1TB quantum data storage",
-        "Basic quantum simulation tools"
+        "Basic monitoring dashboard",
+        "1 location deployment"
       ],
       popular: false
     },
     {
-      name: "Quantum Professional",
+      name: "Robotics Professional",
       price: "$7,999",
       period: "/month",
-      description: "Most popular for enterprise applications",
+      description: "Most popular for manufacturing",
       features: [
-        "Up to 50 quantum computing hours",
-        "Advanced quantum algorithms library",
-        "Quantum machine learning models",
+        "Up to 25 robot units",
+        "Advanced AI control system",
+        "Machine learning capabilities",
         "Priority support",
-        "10TB quantum data storage",
-        "Quantum optimization tools",
-        "API access",
-        "Custom quantum circuits"
+        "Advanced monitoring dashboard",
+        "Up to 5 location deployments",
+        "Custom automation workflows",
+        "24/7 monitoring"
       ],
       popular: true
     },
     {
-      name: "Quantum Enterprise",
+      name: "Robotics Enterprise",
       price: "$19,999",
       period: "/month",
-      description: "For large-scale quantum operations",
+      description: "For large-scale industrial automation",
       features: [
-        "Unlimited quantum computing hours",
-        "Full quantum algorithms suite",
-        "Custom quantum neural networks",
+        "Unlimited robot units",
+        "Premium AI control system",
+        "Custom ML model training",
         "24/7 dedicated support",
-        "Unlimited quantum data storage",
-        "Quantum cryptography suite",
+        "Enterprise monitoring suite",
+        "Unlimited location deployments",
         "White-label solutions",
-        "On-premise quantum hardware"
+        "On-premise deployment"
       ],
       popular: false
     }
   ];
 
-  const useCases = [
+  const applications = [
     {
-      title: "Financial Modeling",
-      description: "Quantum algorithms for portfolio optimization, risk analysis, and fraud detection",
+      title: "Manufacturing Automation",
+      description: "Complete robotic automation for assembly lines, quality control, and material handling",
+      icon: <Bot className="w-6 h-6" />
+    },
+    {
+      title: "Warehouse Robotics",
+      description: "Autonomous robots for inventory management, picking, packing, and logistics optimization",
       icon: <Database className="w-6 h-6" />
     },
     {
-      title: "Drug Discovery",
-      description: "Molecular simulation and protein folding using quantum computing",
-      icon: <Atom className="w-6 h-6" />
+      title: "Service Robotics",
+      description: "AI-powered service robots for hospitality, healthcare, and customer service applications",
+      icon: <Brain className="w-6 h-6" />
     },
     {
-      title: "Climate Modeling",
-      description: "Complex climate simulations and weather prediction with quantum accuracy",
+      title: "Agricultural Automation",
+      description: "Robotic systems for precision farming, crop monitoring, and automated harvesting",
       icon: <Globe className="w-6 h-6" />
-    },
-    {
-      title: "Supply Chain Optimization",
-      description: "Multi-variable optimization for logistics and supply chain management",
-      icon: <Zap className="w-6 h-6" />
     }
   ];
 
   const testimonials = [
     {
       name: "Dr. Sarah Chen",
-      company: "Quantum Research Labs",
-      role: "Chief Quantum Officer",
-      content: "Zion's quantum computing platform revolutionized our research. We achieved breakthrough results 1000x faster than classical methods.",
+      company: "Advanced Manufacturing Corp",
+      role: "Automation Director",
+      content: "Zion's robotics automation increased our production efficiency by 200% while reducing labor costs by 60%. Revolutionary technology.",
       rating: 5
     },
     {
       name: "Michael Rodriguez",
-      company: "FinTech Innovations",
-      role: "CTO",
-      content: "The quantum optimization algorithms helped us reduce trading risks by 85% while increasing returns by 40%.",
+      company: "Logistics Solutions Inc",
+      role: "Operations Manager",
+      content: "The warehouse automation robots have transformed our operations. We can now handle 5x more orders with the same workforce.",
       rating: 5
     },
     {
       name: "Dr. Emily Watson",
-      company: "BioTech Solutions",
+      company: "Healthcare Robotics Lab",
       role: "Research Director",
-      content: "Quantum machine learning accelerated our drug discovery process by 500%. This is the future of computational biology.",
+      content: "The AI-powered service robots are incredibly sophisticated. They've improved patient care while reducing staff workload significantly.",
       rating: 5
     }
   ];
@@ -138,14 +138,14 @@ export default function AIQuantumComputing() {
   return (
     <>
       <Helmet>
-        <title>AI Quantum Computing Solutions - Next-Gen Computing | Zion Tech Group</title>
+        <title>AI Robotics Automation - Industrial Robot Solutions | Zion Tech Group</title>
         <meta
           name="description"
-          content="Revolutionary AI quantum computing solutions for enterprise. Quantum machine learning, optimization, and cryptography services for the future of computing."
+          content="Advanced AI-powered robotics automation solutions for manufacturing, logistics, and industrial processes. Autonomous robots with machine learning capabilities."
         />
         <meta
           name="keywords"
-          content="quantum computing, quantum AI, quantum machine learning, quantum optimization, quantum cryptography, quantum cloud"
+          content="robotics automation, industrial robots, AI robots, manufacturing automation, warehouse robotics, service robots"
         />
       </Helmet>
 
@@ -153,52 +153,52 @@ export default function AIQuantumComputing() {
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 mb-6">
-              <Atom className="w-4 h-4 text-purple-400 mr-2" />
-              <span className="text-purple-400 text-sm font-medium">Next-Generation Computing</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
+              <Bot className="w-4 h-4 text-blue-400 mr-2" />
+              <span className="text-blue-400 text-sm font-medium">Future of Automation</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
-                AI Quantum Computing
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                AI Robotics Automation
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Harness the power of quantum computing combined with artificial intelligence to solve 
-              the world's most complex problems. Experience exponential speed improvements and breakthrough capabilities.
+              Revolutionary AI-powered robotics solutions that transform industries through intelligent automation. 
+              From manufacturing to healthcare, our robots work alongside humans to enhance productivity and efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-purple-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group"
+                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
               >
-                Start Quantum Journey
+                Automate Your Operations
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
               >
-                Watch Quantum Demo
+                Watch Robot Demo
               </Link>
             </div>
             
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">1000x</div>
-                <div className="text-gray-300">Faster Processing</div>
+                <div className="text-3xl font-bold text-blue-400 mb-2">500+</div>
+                <div className="text-gray-300">Robots Deployed</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>
-                <div className="text-gray-300">Quantum Accuracy</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">200%</div>
+                <div className="text-gray-300">Efficiency Increase</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">50+</div>
-                <div className="text-gray-300">Quantum Algorithms</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">99.9%</div>
+                <div className="text-gray-300">Uptime Guarantee</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-yellow-400 mb-2">24/7</div>
-                <div className="text-gray-300">Quantum Support</div>
+                <div className="text-gray-300">Monitoring Support</div>
               </div>
             </div>
           </div>
@@ -209,10 +209,10 @@ export default function AIQuantumComputing() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Revolutionary Quantum AI Features
+                Advanced Robotics Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the future of computing with our cutting-edge quantum AI solutions.
+                Cutting-edge AI technology that makes robots intelligent, autonomous, and highly efficient.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -221,7 +221,7 @@ export default function AIQuantumComputing() {
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
@@ -236,31 +236,31 @@ export default function AIQuantumComputing() {
           </div>
         </section>
 
-        {/* Use Cases Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        {/* Applications Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Quantum Computing Use Cases
+                Robotics Applications
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how quantum computing can transform your industry and solve complex problems.
+                Discover how AI robotics is transforming industries and creating new possibilities.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
+              {applications.map((application, index) => (
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
-                    {useCase.icon}
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
+                    {application.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
-                    {useCase.title}
+                    {application.title}
                   </h3>
                   <p className="text-gray-300">
-                    {useCase.description}
+                    {application.description}
                   </p>
                 </div>
               ))}
@@ -273,10 +273,10 @@ export default function AIQuantumComputing() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Quantum Computing Plans
+                Robotics Automation Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the quantum computing power that matches your needs. All plans include quantum security.
+                Choose the robotics solution that matches your automation needs and scale.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -285,13 +285,13 @@ export default function AIQuantumComputing() {
                   key={index}
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                     plan.popular
-                      ? 'border-purple-400 bg-gradient-to-br from-purple-500/10 to-cyan-500/10'
-                      : 'border-white/20 hover:border-purple-400'
+                      ? 'border-blue-400 bg-gradient-to-br from-blue-500/10 to-purple-500/10'
+                      : 'border-white/20 hover:border-blue-400'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-purple-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -316,11 +316,11 @@ export default function AIQuantumComputing() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-purple-500 to-cyan-600 text-white hover:from-purple-600 hover:to-cyan-700'
-                        : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'
+                        ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
+                        : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900'
                     }`}
                   >
-                    Start Quantum Trial
+                    Start Automation
                   </Link>
                 </div>
               ))}
@@ -333,10 +333,10 @@ export default function AIQuantumComputing() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Quantum Pioneers
+                Trusted by Industry Leaders
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what leading researchers and enterprises say about our quantum solutions
+                See what manufacturing and automation leaders say about our robotics solutions
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -365,24 +365,24 @@ export default function AIQuantumComputing() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready for the Quantum Revolution?
+              Ready to Automate Your Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the quantum computing revolution and solve problems that were previously impossible.
+              Join the robotics revolution and transform your operations with intelligent automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-purple-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
-                Start Quantum Journey
+                Automate Your Operations
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
               >
-                Schedule Quantum Demo
+                Watch Robot Demo
               </Link>
             </div>
           </div>

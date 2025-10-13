@@ -1,88 +1,88 @@
-import { ArrowRight, Atom, Cpu, Zap, Shield, Brain, CheckCircle, Star, Globe, Database } from "lucide-react";
+import { ArrowRight, PenTool, Brain, Zap, CheckCircle, Star, FileText, Users, Globe, Shield } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AIQuantumComputing() {
+export default function ZionAIWriterPro() {
   const features = [
     {
-      icon: <Atom className="w-6 h-6" />,
-      title: "Quantum Machine Learning",
-      description: "Leverage quantum algorithms for exponentially faster machine learning computations and pattern recognition"
-    },
-    {
-      icon: <Cpu className="w-6 h-6" />,
-      title: "Quantum Optimization",
-      description: "Solve complex optimization problems in seconds that would take classical computers years to complete"
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Quantum Cryptography",
-      description: "Unbreakable encryption using quantum key distribution for ultimate data security"
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Quantum Security Suite",
-      description: "Advanced threat detection and prevention using quantum computing principles"
+      icon: <PenTool className="w-6 h-6" />,
+      title: "AI Content Generation",
+      description: "Generate high-quality articles, blogs, marketing copy, and technical documentation in seconds"
     },
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "Quantum Neural Networks",
-      description: "Next-generation AI models that process information in quantum superposition states"
+      title: "Smart Writing Assistant",
+      description: "AI-powered writing suggestions, grammar correction, and style optimization for professional content"
+    },
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: "Multi-Language Support",
+      description: "Write and translate content in 50+ languages with native-level accuracy and cultural context"
+    },
+    {
+      icon: <FileText className="w-6 h-6" />,
+      title: "Content Templates",
+      description: "500+ professionally designed templates for blogs, emails, social media, and business documents"
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Team Collaboration",
+      description: "Real-time collaboration tools with version control, comments, and approval workflows"
     },
     {
       icon: <Globe className="w-6 h-6" />,
-      title: "Quantum Cloud Platform",
-      description: "Access quantum computing resources through our secure cloud infrastructure"
+      title: "SEO Optimization",
+      description: "Built-in SEO analysis and optimization suggestions to improve search engine rankings"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Quantum Starter",
-      price: "$2,999",
+      name: "Writer Starter",
+      price: "$19",
       period: "/month",
-      description: "Perfect for research and development",
+      description: "Perfect for individual writers and bloggers",
       features: [
-        "Up to 10 quantum computing hours",
-        "Basic quantum algorithms library",
-        "Standard quantum security",
+        "Up to 50,000 words/month",
+        "Basic AI writing assistant",
+        "10 content templates",
         "Email support",
-        "1TB quantum data storage",
-        "Basic quantum simulation tools"
+        "Basic SEO analysis",
+        "1 user account"
       ],
       popular: false
     },
     {
-      name: "Quantum Professional",
-      price: "$7,999",
+      name: "Writer Professional",
+      price: "$49",
       period: "/month",
-      description: "Most popular for enterprise applications",
+      description: "Most popular for content teams",
       features: [
-        "Up to 50 quantum computing hours",
-        "Advanced quantum algorithms library",
-        "Quantum machine learning models",
+        "Up to 200,000 words/month",
+        "Advanced AI writing assistant",
+        "All 500+ content templates",
         "Priority support",
-        "10TB quantum data storage",
-        "Quantum optimization tools",
-        "API access",
-        "Custom quantum circuits"
+        "Advanced SEO optimization",
+        "Up to 5 user accounts",
+        "Team collaboration tools",
+        "Content calendar integration"
       ],
       popular: true
     },
     {
-      name: "Quantum Enterprise",
-      price: "$19,999",
+      name: "Writer Enterprise",
+      price: "$99",
       period: "/month",
-      description: "For large-scale quantum operations",
+      description: "For large content teams and agencies",
       features: [
-        "Unlimited quantum computing hours",
-        "Full quantum algorithms suite",
-        "Custom quantum neural networks",
+        "Unlimited words/month",
+        "Premium AI writing assistant",
+        "Custom content templates",
         "24/7 dedicated support",
-        "Unlimited quantum data storage",
-        "Quantum cryptography suite",
-        "White-label solutions",
-        "On-premise quantum hardware"
+        "Advanced analytics & reporting",
+        "Unlimited user accounts",
+        "White-label solution",
+        "API access & integrations"
       ],
       popular: false
     }
@@ -90,47 +90,47 @@ export default function AIQuantumComputing() {
 
   const useCases = [
     {
-      title: "Financial Modeling",
-      description: "Quantum algorithms for portfolio optimization, risk analysis, and fraud detection",
-      icon: <Database className="w-6 h-6" />
+      title: "Blog Writing",
+      description: "Create engaging blog posts with AI assistance, SEO optimization, and audience targeting",
+      icon: <FileText className="w-6 h-6" />
     },
     {
-      title: "Drug Discovery",
-      description: "Molecular simulation and protein folding using quantum computing",
-      icon: <Atom className="w-6 h-6" />
-    },
-    {
-      title: "Climate Modeling",
-      description: "Complex climate simulations and weather prediction with quantum accuracy",
-      icon: <Globe className="w-6 h-6" />
-    },
-    {
-      title: "Supply Chain Optimization",
-      description: "Multi-variable optimization for logistics and supply chain management",
+      title: "Marketing Copy",
+      description: "Generate compelling ad copy, email campaigns, and social media content that converts",
       icon: <Zap className="w-6 h-6" />
+    },
+    {
+      title: "Technical Documentation",
+      description: "Create comprehensive technical docs, user manuals, and API documentation",
+      icon: <Brain className="w-6 h-6" />
+    },
+    {
+      title: "Content Strategy",
+      description: "Plan and execute content strategies with AI-powered insights and recommendations",
+      icon: <Globe className="w-6 h-6" />
     }
   ];
 
   const testimonials = [
     {
-      name: "Dr. Sarah Chen",
-      company: "Quantum Research Labs",
-      role: "Chief Quantum Officer",
-      content: "Zion's quantum computing platform revolutionized our research. We achieved breakthrough results 1000x faster than classical methods.",
+      name: "Sarah Johnson",
+      company: "Content Marketing Agency",
+      role: "Content Director",
+      content: "Zion AI Writer Pro increased our content production by 300% while maintaining quality. It's a game-changer for our agency.",
       rating: 5
     },
     {
-      name: "Michael Rodriguez",
-      company: "FinTech Innovations",
-      role: "CTO",
-      content: "The quantum optimization algorithms helped us reduce trading risks by 85% while increasing returns by 40%.",
+      name: "Michael Chen",
+      company: "Tech Startup",
+      role: "Marketing Manager",
+      content: "The AI writing assistant is incredible. It understands our brand voice and creates content that resonates with our audience.",
       rating: 5
     },
     {
-      name: "Dr. Emily Watson",
-      company: "BioTech Solutions",
-      role: "Research Director",
-      content: "Quantum machine learning accelerated our drug discovery process by 500%. This is the future of computational biology.",
+      name: "Emily Rodriguez",
+      company: "E-commerce Store",
+      role: "Content Creator",
+      content: "I've saved 20 hours per week on content creation. The SEO optimization features have improved our search rankings significantly.",
       rating: 5
     }
   ];
@@ -138,14 +138,14 @@ export default function AIQuantumComputing() {
   return (
     <>
       <Helmet>
-        <title>AI Quantum Computing Solutions - Next-Gen Computing | Zion Tech Group</title>
+        <title>Zion AI Writer Pro - AI Content Generation Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Revolutionary AI quantum computing solutions for enterprise. Quantum machine learning, optimization, and cryptography services for the future of computing."
+          content="Transform your content creation with Zion AI Writer Pro. AI-powered writing assistant, content generation, and SEO optimization for modern content teams."
         />
         <meta
           name="keywords"
-          content="quantum computing, quantum AI, quantum machine learning, quantum optimization, quantum cryptography, quantum cloud"
+          content="AI writing, content generation, writing assistant, content marketing, SEO writing, blog writing, content creation"
         />
       </Helmet>
 
@@ -154,51 +154,51 @@ export default function AIQuantumComputing() {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 mb-6">
-              <Atom className="w-4 h-4 text-purple-400 mr-2" />
-              <span className="text-purple-400 text-sm font-medium">Next-Generation Computing</span>
+              <PenTool className="w-4 h-4 text-purple-400 mr-2" />
+              <span className="text-purple-400 text-sm font-medium">#1 AI Writing Platform</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
-                AI Quantum Computing
+                Zion AI Writer Pro
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Harness the power of quantum computing combined with artificial intelligence to solve 
-              the world's most complex problems. Experience exponential speed improvements and breakthrough capabilities.
+              The ultimate AI-powered writing platform for content creators, marketers, and businesses. 
+              Generate high-quality content, optimize for SEO, and scale your content production like never before.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-purple-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group"
               >
-                Start Quantum Journey
+                Start Writing with AI
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
                 className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
               >
-                Watch Quantum Demo
+                Watch Writing Demo
               </Link>
             </div>
             
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">1000x</div>
-                <div className="text-gray-300">Faster Processing</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">1M+</div>
+                <div className="text-gray-300">Words Generated</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>
-                <div className="text-gray-300">Quantum Accuracy</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
+                <div className="text-gray-300">Languages Supported</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">50+</div>
-                <div className="text-gray-300">Quantum Algorithms</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">500+</div>
+                <div className="text-gray-300">Content Templates</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400 mb-2">24/7</div>
-                <div className="text-gray-300">Quantum Support</div>
+                <div className="text-3xl font-bold text-yellow-400 mb-2">99.9%</div>
+                <div className="text-gray-300">Accuracy Rate</div>
               </div>
             </div>
           </div>
@@ -209,10 +209,10 @@ export default function AIQuantumComputing() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Revolutionary Quantum AI Features
+                Powerful AI Writing Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the future of computing with our cutting-edge quantum AI solutions.
+                Everything you need to create, optimize, and scale your content production with AI assistance.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -241,10 +241,10 @@ export default function AIQuantumComputing() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Quantum Computing Use Cases
+                AI Writing Use Cases
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how quantum computing can transform your industry and solve complex problems.
+                Discover how AI writing can transform your content strategy and boost productivity.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -273,10 +273,10 @@ export default function AIQuantumComputing() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Quantum Computing Plans
+                Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the quantum computing power that matches your needs. All plans include quantum security.
+                Choose the plan that fits your content needs. All plans include 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -320,7 +320,7 @@ export default function AIQuantumComputing() {
                         : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'
                     }`}
                   >
-                    Start Quantum Trial
+                    Start Free Trial
                   </Link>
                 </div>
               ))}
@@ -333,10 +333,10 @@ export default function AIQuantumComputing() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Quantum Pioneers
+                Trusted by Content Creators
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what leading researchers and enterprises say about our quantum solutions
+                See what content creators and marketers say about Zion AI Writer Pro
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -365,24 +365,24 @@ export default function AIQuantumComputing() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready for the Quantum Revolution?
+              Ready to Transform Your Content?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the quantum computing revolution and solve problems that were previously impossible.
+              Join thousands of content creators using AI to write better, faster, and more effectively.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-purple-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center"
               >
-                Start Quantum Journey
+                Start Writing with AI
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/demo"
                 className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
               >
-                Schedule Quantum Demo
+                Watch Writing Demo
               </Link>
             </div>
           </div>
