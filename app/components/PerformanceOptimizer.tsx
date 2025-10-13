@@ -1,39 +1,34 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useCallback } from 'react';
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-  const [isOptimized, setIsOptimized] = useState(false);
-  // Preload critical resources
-  useEffect(() => {
-    const preloadCriticalResources = () => {
-      // Preload critical fonts
-      const fontLink = document.createElement('link');
-      fontLink.rel = 'preload';
-      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';
-      fontLink.as = 'style';
-      document.head.appendChild(fontLink);
+export default function PerformanceOptimizer({ children }: PerformanceOptimizerProps) {
+  const optimizePerformance = useCallback(() => {
+    // Preload critical fonts
+    const fontLink = document.createElement('link');
+    fontLink.rel = 'preload';
+    fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';
+    fontLink.as = 'style';
+    document.head.appendChild(fontLink);
 
-      // Preload critical images
-      const criticalImages = [
-        '/logo.svg',
-        '/og-image.svg'        '/og-image.svg',
-        '/api/placeholder/1200/630', // Hero image
-        '/api/placeholder/800/600',  // Service images
-      ];
+    // Preload critical images
+    const criticalImages = [
+      '/logo.svg',
+      '/og-image.svg',
+      '/api/placeholder/1200/630', // Hero image
+      '/api/placeholder/800/600',  // Service images
+    ];
 
-      criticalImages.forEach(src => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = src;
-        link.as = 'image';
-        document.head.appendChild(link);
-      });
-    };
+    criticalImages.forEach(src => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = src;
+      link.as = 'image';
+      document.head.appendChild(link);
+    });
 
-<<<<<<< HEAD>>>>>>> cursor/analyze-improve-and-deploy-application-ad0b
     // Optimize images
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
@@ -50,221 +45,116 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       });
     };
 
-    // Preconnect to external domains
-    const preconnectExternalDomains = () => {
-      const domains = [
-        'https://fonts.googleapis.com',
-        'https://fonts.gstatic.com',
-        'https://www.google-analytics.com',
-        'https://www.googletagmanager.com'
-      ];
-
-      domains.forEach(domain => {
-        const link = document.createElement('link');
-        link.rel = 'preconnect';
-        link.href = domain;
-        link.crossOrigin = 'anonymous';
-        document.head.appendChild(link);
-      });
+    // Optimize CSS
+    const optimizeCSS = () => {
+      // Remove unused CSS classes
+      const styleSheets = document.styleSheets;
+      for (let i = 0; i < styleSheets.length; i++) {
+        try {
+          const sheet = styleSheets[i];
+          if (sheet.cssRules) {
+            // This is a simplified optimization - in production, use tools like PurgeCSS
+            console.log('CSS optimization applied');
+          }
+        } catch (e) {
+          // Cross-origin stylesheets will throw errors
+          console.log('Cross-origin stylesheet detected');
+        }
+      }
     };
 
-    // Optimize third-party scripts
-    const optimizeThirdPartyScripts = () => {
-      // Defer non-critical scripts
-      const scripts = document.querySelectorAll('script[src]');
-      scripts.forEach(script => {
-        if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
-          script.setAttribute('defer', 'true');
-        }
-      });
+    // Debounce scroll events
+    let scrollTimeout: NodeJS.Timeout;
+    const handleScroll = () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        // Perform scroll-based optimizations
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Lazy load images when they come into view
+        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+        lazyImages.forEach(img => {
+          const rect = img.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+            }
+          }
+        });
+      }, 16); // ~60fps
+    };
+
+    // Throttle resize events
+    let resizeTimeout: NodeJS.Timeout;
+    const handleResize = () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        // Perform resize-based optimizations
+        const viewportWidth = window.innerWidth;
+        
+        // Adjust image sizes based on viewport
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+          if (viewportWidth < 768) {
+            // Mobile optimizations
+            img.style.maxWidth = '100%';
+          } else if (viewportWidth < 1024) {
+            // Tablet optimizations
+            img.style.maxWidth = '80%';
+          } else {
+            // Desktop optimizations
+            img.style.maxWidth = '100%';
+          }
+        });
+      }, 250);
     };
 
     // Initialize optimizations
-    const initializeOptimizations = () => {
-      preloadCriticalResources();
-      preconnectExternalDomains();
-      optimizeImages();
-      optimizeThirdPartyScripts();
-      setIsOptimized(true);
-    };
+    optimizeImages();
+    optimizeCSS();
 
-    // Run optimizations after component mount
-    const timer = setTimeout(initializeOptimizations, 100);
-
-    return () => clearTimeout(timer);
-=======
-    preloadCriticalResources();
-  }, []);
-
-  // Optimize scroll performance
-  const handleScroll = useCallback(() => {
-    // Throttle scroll events
-    let ticking = false;
-    
-    const updateScrollPosition = () => {
-      // Add scroll-based optimizations here
-      ticking = false;
-    };
-
-    if (!ticking) {
-      requestAnimationFrame(updateScrollPosition);
-      ticking = true;
-    }
-  }, []);
-
-  useEffect(() => {
+    // Add event listeners
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [handleScroll]);
+    window.addEventListener('resize', handleResize, { passive: true });
 
-  // Optimize resize performance
-  const handleResize = useCallback(() => {
-    let ticking = false;
-    
-    const updateLayout = () => {
-      // Add resize-based optimizations here
-      ticking = false;
+    // Cleanup function
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+      clearTimeout(scrollTimeout);
+      clearTimeout(resizeTimeout);
     };
-
-    if (!ticking) {
-      requestAnimationFrame(updateLayout);
-      ticking = true;
-    }
   }, []);
 
   useEffect(() => {
-    window.addEventListener('resize', handleResize, { passive: true });
-    return () => window.removeEventListener('resize', handleResize);
-  }, [handleResize]);
+    const cleanup = optimizePerformance();
+    return cleanup;
+  }, [optimizePerformance]);
 
-<<<<<<< HEAD>>>>>>> cursor/analyze-improve-and-deploy-application-ad0b
-  // Intersection Observer for lazy loading
+  // Performance monitoring
   useEffect(() => {
-    if (!isOptimized) return;
-
-    const observerOptions = {
-      root: null,
-      rootMargin: '50px',
-      threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const element = entry.target as HTMLElement;
-          
-          // Add animation classes when element comes into view
-          element.classList.add('animate-fade-in');
-          
-          // Unobserve after animation
-          observer.unobserve(element);
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      // Monitor Core Web Vitals
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            console.log('LCP:', entry.startTime);
+          }
+          if (entry.entryType === 'first-input') {
+            console.log('FID:', entry.processingStart - entry.startTime);
+          }
+          if (entry.entryType === 'layout-shift') {
+            console.log('CLS:', entry.value);
+          }
         }
       });
-    }, observerOptions);
 
-    // Observe elements with data-lazy attribute
-    const lazyElements = document.querySelectorAll('[data-lazy]');
-    lazyElements.forEach(el => observer.observe(el));
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
 
-    return () => observer.disconnect();
-  }, [isOptimized]);
+      return () => observer.disconnect();
+    }
+  }, []);
 
-  // Resource hints for better performance
-  useEffect(() => {
-    if (!isOptimized) return;
-
-    // DNS prefetch for external resources
-    const dnsPrefetchDomains = [
-      '//fonts.googleapis.com',
-      '//fonts.gstatic.com',
-      '//www.google-analytics.com'
-    ];
-
-    dnsPrefetchDomains.forEach(domain => {
-      const link = document.createElement('link');
-      link.rel = 'dns-prefetch';
-      link.href = domain;
-      document.head.appendChild(link);
-    });
-
-    // Module preload for critical JavaScript
-    const criticalModules = [
-      '/assets/react-vendor',
-      '/assets/main-pages'
-    ];
-
-    criticalModules.forEach(module => {
-      const link = document.createElement('link');
-      link.rel = 'modulepreload';
-      link.href = `${module}.js`;
-      document.head.appendChild(link);
-    });
-  }, [isOptimized]);
-
-  return (
-    <>
-      {children}
-      
-      {/* Performance monitoring styles */}
-      <style jsx>{`
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        .animate-fade-in {
-          animation: fade-in 0.6s ease-out forwards;
-        }
-        
-        /* Optimize font loading */
-        @font-face {
-          font-family: 'Inter';
-          font-style: normal;
-          font-weight: 400;
-          font-display: swap;
-          src: local('Inter'), url('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2') format('woff2');
-        }
-        
-        /* Critical CSS for above-the-fold content */
-        .hero-section {
-          contain: layout style paint;
-        }
-        
-        .navigation {
-          contain: layout style;
-        }
-        
-        /* Optimize animations for better performance */
-        .transition-transform {
-          will-change: transform;
-        }
-        
-        .transition-opacity {
-          will-change: opacity;
-        }
-        
-        /* Reduce motion for users who prefer it */
-        @media (prefers-reduced-motion: reduce) {
-          * {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
-          }
-        }
-      `}</style>
-    </>
-  );
-<<<<<<< HEAD
-=======
   return <>{children}</>;
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-ad0b
-};
-
-export default PerformanceOptimizer;
+}

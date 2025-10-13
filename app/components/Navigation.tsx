@@ -8,7 +8,16 @@ import {
   Zap, 
   Globe,
   ChevronDown,
-  ChevronUp
+  ChevronUp,
+  Users,
+  BarChart3,
+  Settings,
+  HelpCircle,
+  BookOpen,
+  Play,
+  Phone,
+  Mail,
+  Search
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -18,6 +27,7 @@ interface NavigationProps {
 export default function Navigation({ onSidebarToggle }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
   const location = useLocation();
 
   const toggleMenu = useCallback(() => {
@@ -41,7 +51,7 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
     {
       name: 'About',
       path: '/about',
-      icon: <Brain className="w-4 h-4" />
+      icon: <Users className="w-4 h-4" />
     },
     {
       name: 'Services',
@@ -79,16 +89,14 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
       icon: <Zap className="w-4 h-4" />,
       hasDropdown: true,
       dropdownItems: [
-        { name: 'AI Video Generator', path: '/zion-ai-video-generator' },
-        { name: 'AI Invoice Generator', path: '/zion-ai-invoice-generator' },
-        { name: 'AI Customer Insights', path: '/zion-ai-customer-insights' },
-        { name: 'AI Email Analyzer', path: '/zion-ai-email-analyzer' },
-        { name: 'Smart Inventory Optimizer', path: '/zion-smart-inventory-optimizer' },
-        { name: 'AI Customer Sentiment Tracker', path: '/zion-ai-customer-sentiment-tracker' },
-        { name: 'Smart Expense Categorizer', path: '/zion-smart-expense-categorizer' },
-        { name: 'AI Voice Assistant Pro', path: '/zion-ai-voice-assistant-pro' },
-        { name: 'AI Code Reviewer', path: '/zion-ai-code-reviewer' },
-        { name: 'AI Social Media Manager', path: '/zion-ai-social-media-manager' }
+        { name: 'Zion Analytics Pro', path: '/zion-analytics-pro' },
+        { name: 'Zion Security Shield', path: '/zion-security-shield' },
+        { name: 'Zion Cloud Vault', path: '/zion-cloud-vault' },
+        { name: 'Zion AI CRM Pro', path: '/zion-ai-crm-pro' },
+        { name: 'Zion E-commerce Suite', path: '/zion-ecommerce-suite' },
+        { name: 'Zion AI Video Generator', path: '/zion-ai-video-generator' },
+        { name: 'Zion AI Marketing Automation', path: '/zion-ai-marketing-automation' },
+        { name: 'Zion AI Project Manager Pro', path: '/zion-ai-project-manager-pro' }
       ]
     },
     {
@@ -110,7 +118,7 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
     {
       name: 'Contact',
       path: '/contact',
-      icon: <Globe className="w-4 h-4" />
+      icon: <Mail className="w-4 h-4" />
     }
   ];
 
@@ -138,7 +146,7 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
     {
       category: 'Micro SAAS',
       items: [
-        { name: 'Zion Analytics Pro', path: '/zion-ai-analytics-pro', description: 'Business intelligence platform' },
+        { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', description: 'Business intelligence platform' },
         { name: 'Zion Security Shield', path: '/zion-security-shield', description: 'Advanced cybersecurity' },
         { name: 'Zion AI Marketing', path: '/zion-ai-marketing-automation', description: 'Marketing automation' },
         { name: 'Zion E-commerce Suite', path: '/zion-ecommerce-suite', description: 'Complete e-commerce platform' }
@@ -146,20 +154,41 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
     }
   ];
 
+  const quickLinks = [
+    { name: 'Demo', path: '/demo', icon: <Play className="w-4 h-4" /> },
+    { name: 'Tutorials', path: '/tutorials', icon: <BookOpen className="w-4 h-4" /> },
+    { name: 'Support', path: '/support', icon: <HelpCircle className="w-4 h-4" /> },
+    { name: 'Consultation', path: '/consultation', icon: <Phone className="w-4 h-4" /> }
+  ];
+
   return (
     <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-cyan-500/20 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+          <Link to="/" className="flex items-center space-x-2 group">
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
               <Brain className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-white">Zion Tech Group</span>
+            <span className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">Zion Tech Group</span>
           </Link>
 
+          {/* Search Bar - Desktop */}
+          <div className="hidden lg:flex flex-1 max-w-md mx-8">
+            <div className="relative w-full">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+              <input
+                type="text"
+                placeholder="Search services..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-4 py-2 bg-slate-800/50 border border-cyan-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-300"
+              />
+            </div>
+          </div>
+
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navigationItems.map((item) => (
               <div key={item.name} className="relative group">
                 <Link
@@ -214,25 +243,26 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                         >
                           View All Services →
                         </Link>
-                      </div>                {/* Dropdown Menu */}
-                {item.hasDropdown && item.dropdownItems && (
-                  <div className="absolute top-full left-0 mt-1 w-64 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    <div className="py-2">
-                      {item.dropdownItems.map((dropdownItem, index) => (
-                        <Link
-                          key={index}
-                          to={dropdownItem.path}
-                          className={`block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors ${
-                            isActive(dropdownItem.path) ? 'text-cyan-400 bg-cyan-500/10' : ''
-                          }`}
-                        >
-                          {dropdownItem.name}
-                        </Link>
-                      ))}
+                      </div>
                     </div>
                   </div>
                 )}
               </div>
+            ))}
+          </div>
+
+          {/* Quick Links - Desktop */}
+          <div className="hidden lg:flex items-center space-x-4">
+            {quickLinks.map((link) => (
+              <Link
+                key={link.name}
+                to={link.path}
+                className="flex items-center space-x-1 px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-md transition-colors"
+                title={link.name}
+              >
+                {link.icon}
+                <span className="hidden xl:inline">{link.name}</span>
+              </Link>
             ))}
           </div>
 
@@ -252,6 +282,21 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-sm rounded-lg mt-2">
+              {/* Mobile Search */}
+              <div className="px-3 py-2">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                  <input
+                    type="text"
+                    placeholder="Search services..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-10 pr-4 py-2 bg-slate-700/50 border border-cyan-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-300"
+                  />
+                </div>
+              </div>
+
+              {/* Mobile Navigation Items */}
               {navigationItems.map((item) => (
                 <div key={item.name}>
                   <Link
@@ -289,6 +334,26 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                   )}
                 </div>
               ))}
+
+              {/* Mobile Quick Links */}
+              <div className="pt-4 border-t border-cyan-500/20">
+                <div className="px-3 py-2">
+                  <h4 className="text-cyan-400 font-medium mb-3 text-sm uppercase tracking-wide">Quick Links</h4>
+                  <div className="space-y-2">
+                    {quickLinks.map((link) => (
+                      <Link
+                        key={link.name}
+                        to={link.path}
+                        className="flex items-center space-x-2 px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-md transition-colors"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {link.icon}
+                        <span>{link.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         )}

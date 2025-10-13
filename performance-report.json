@@ -1,35 +1,14 @@
 {
+  "timestamp": "2025-10-13T10:08:23.655Z",
   "buildStats": {
-    "totalFiles": 18,
-    "totalSize": 621614,
-    "jsFiles": 14,
-    "jsSize": 600029,
-=======
-    "jsSize": 564892,
->>>>>>> cursor/analyze-improve-and-deploy-application-6099
-=======
-    "jsSize": 557304,
->>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
-=======
-  "timestamp": "2025-10-13T09:36:31.239Z",
-  "buildStats": {
-    "totalFiles": 18,
-    "totalSize": 696556,
-    "jsFiles": 15,
-    "jsSize": 687513,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
-=======
-  "timestamp": "2025-10-13T09:29:22.844Z",
-  "buildStats": {
-    "totalFiles": 16,
-    "totalSize": 584669,
-    "jsFiles": 12,
-    "jsSize": 561322,
->>>>>>> cursor/analyze-improve-and-deploy-application-ad0b
+    "totalFiles": 17,
+    "totalSize": 718146,
+    "jsFiles": 13,
+    "jsSize": 694803,
     "cssFiles": 1,
     "cssSize": 1811,
-    "imageFiles": 1,
-    "imageSize": 392
+    "imageFiles": 0,
+    "imageSize": 0
   },
   "recommendations": [
     {

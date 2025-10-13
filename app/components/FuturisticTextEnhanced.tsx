@@ -1,45 +1,38 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { cn } from '@/utils/cn';
 
 interface FuturisticTextEnhancedProps {
   children: React.ReactNode;
-  variant?: 'heading' | 'subheading' | 'body' | 'caption' | 'display';
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl';
-  color?: 'primary' | 'secondary' | 'accent' | 'muted' | 'white' | 'cyan' | 'purple' | 'pink';
+  variant?: 'display' | 'heading' | 'body' | 'caption';
+  size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl';
   gradient?: boolean;
   animated?: boolean;
   glow?: boolean;
   neon?: boolean;
   className?: string;
-  delay?: number;
-  duration?: number;
 }
 
-const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
+export default function FuturisticTextEnhanced({
   children,
   variant = 'body',
-  size = 'md',
-  color = 'white',
+  size = 'base',
   gradient = false,
-  animated = true,
+  animated = false,
   glow = false,
   neon = false,
-  className = '',
-  delay = 0,
-  duration = 0.6
-}) => {
+  className = ''
+}: FuturisticTextEnhancedProps) {
   const variantClasses = {
-    heading: 'font-bold',
-    subheading: 'font-semibold',
+    display: 'font-bold tracking-tight',
+    heading: 'font-semibold',
     body: 'font-normal',
-    caption: 'font-light',
-    display: 'font-black'
+    caption: 'font-medium text-sm'
   };
 
   const sizeClasses = {
     xs: 'text-xs',
     sm: 'text-sm',
-    md: 'text-base',
+    base: 'text-base',
     lg: 'text-lg',
     xl: 'text-xl',
     '2xl': 'text-2xl',
@@ -49,108 +42,24 @@ const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
     '6xl': 'text-6xl'
   };
 
-  const colorClasses = {
-    primary: 'text-white',
-    secondary: 'text-gray-300',
-    accent: 'text-cyan-400',
-    muted: 'text-gray-400',
-    white: 'text-white',
-    cyan: 'text-cyan-400',
-    purple: 'text-purple-400',
-    pink: 'text-pink-400'
-  };
-
-  const gradientClasses = {
-    primary: 'text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400',
-    cyan: 'text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-600',
-    purple: 'text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600',
-    pink: 'text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-600'
-  };
-
-  const glowClasses = {
-    cyan: 'drop-shadow-[0_0_10px_rgba(6,182,212,0.5)]',
-    purple: 'drop-shadow-[0_0_10px_rgba(139,92,246,0.5)]',
-    pink: 'drop-shadow-[0_0_10px_rgba(236,72,153,0.5)]'
-  };
-
-  const neonClasses = {
-    cyan: 'text-shadow-[0_0_20px_rgba(6,182,212,0.8)]',
-    purple: 'text-shadow-[0_0_20px_rgba(139,92,246,0.8)]',
-    pink: 'text-shadow-[0_0_20px_rgba(236,72,153,0.8)]'
-  };
-
-  const textVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: 20,
-      scale: 0.95
-    },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: duration,
-        delay: delay,
-        ease: "easeOut"
-      }
-    },
-    hover: {
-      scale: 1.05,
-      transition: { duration: 0.2 }
-    }
-  };
-
-  const getTextColor = () => {
-    if (gradient) {
-      return gradientClasses[color as keyof typeof gradientClasses] || gradientClasses.primary;
-    }
-    return colorClasses[color];
-  };
-
-  const getGlowEffect = () => {
-    if (glow) {
-      return glowClasses[color as keyof typeof glowClasses] || glowClasses.cyan;
-    }
-    return '';
-  };
-
-  const getNeonEffect = () => {
-    if (neon) {
-      return neonClasses[color as keyof typeof neonClasses] || neonClasses.cyan;
-    }
-    return '';
-  };
-
-  const textClasses = `
-    ${variantClasses[variant]}
-    ${sizeClasses[size]}
-    ${getTextColor()}
-    ${getGlowEffect()}
-    ${getNeonEffect()}
-    ${className}
-  `;
-
-  if (animated) {
-    return (
-      <motion.div
-        className={textClasses}
-        variants={textVariants}
-        initial="hidden"
-        whileInView="visible"
-        whileHover="hover"
-        viewport={{ once: true, margin: "-100px" }}
-      >
-        {children}
-      </motion.div>
-    );
-  }
+  const gradientClasses = gradient ? 'bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent' : '';
+  const glowClasses = glow ? 'drop-shadow-lg drop-shadow-cyan-500/50' : '';
+  const neonClasses = neon ? 'text-cyan-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]' : '';
+  const animatedClasses = animated ? 'animate-pulse' : '';
 
   return (
-    <div className={textClasses}>
+    <span
+      className={cn(
+        variantClasses[variant],
+        sizeClasses[size],
+        gradientClasses,
+        glowClasses,
+        neonClasses,
+        animatedClasses,
+        className
+      )}
+    >
       {children}
-    </div>
+    </span>
   );
-};
-
-export default FuturisticTextEnhanced;
+}

@@ -100,6 +100,7 @@ const ZionAITranslatorProPage = React.lazy(() => import("./app/zion-ai-translato
 const ZionAIDataCleanerPage = React.lazy(() => import("./app/zion-ai-data-cleaner/page"));
 const ZionAITaskSchedulerPage = React.lazy(() => import("./app/zion-ai-task-scheduler/page"));
 const ZionAICustomerSupportProPage = React.lazy(() => import("./app/zion-ai-customer-support-pro/page"));
+const ZionEcommerceSuitePage = React.lazy(() => import("./app/zion-ecommerce-suite/page"));
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -225,6 +226,7 @@ function App() {
                             <Route path="/zion-ai-data-cleaner" element={<ZionAIDataCleanerPage />} />
                             <Route path="/zion-ai-task-scheduler" element={<ZionAITaskSchedulerPage />} />
                             <Route path="/zion-ai-customer-support-pro" element={<ZionAICustomerSupportProPage />} />
+                            <Route path="/zion-ecommerce-suite" element={<ZionEcommerceSuitePage />} />
                             
                             {/* 404 Route - Must be last */}
                             <Route path="*" element={<NotFoundPage />} />
