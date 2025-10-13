@@ -3,11 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-<<<<<<< HEAD
 import Navigation from './app/components/Navigation';
-=======
-import Header from './app/components/Header';
->>>>>>> cursor/website-audit-and-update-with-deployment-7db2
 import Footer from './app/components/Footer';
 
 // Page Components
@@ -34,6 +30,13 @@ import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
 import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
 import CaseStudiesPage from './app/pages/CaseStudiesPage';
 import CareersPage from './app/pages/CareersPage';
+
+// New AI Services
+import AISmartContractAuditorPage from './app/ai-smart-contract-auditor/page';
+import AICyberThreatHunterPage from './app/ai-cyber-threat-hunter/page';
+import AIQuantumComputingSimulatorPage from './app/ai-quantum-computing-simulator/page';
+import AIEdgeComputingPlatformPage from './app/ai-edge-computing-platform/page';
+import AINeuralInterfacePage from './app/ai-neural-interface/page';
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -66,13 +69,8 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
-<<<<<<< HEAD
         <div className="min-h-screen bg-slate-900">
           <Navigation />
-=======
-        <div className="min-h-screen bg-gray-900">
-          <Header />
->>>>>>> cursor/website-audit-and-update-with-deployment-7db2
           <main className="relative z-10" id="main-content" role="main">
             <Routes>
               {/* Main Pages */}
@@ -99,6 +97,13 @@ function App() {
               <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
               <Route path="/case-studies" element={<CaseStudiesPage />} />
               <Route path="/careers" element={<CareersPage />} />
+              
+              {/* New AI Services */}
+              <Route path="/ai-smart-contract-auditor" element={<AISmartContractAuditorPage />} />
+              <Route path="/ai-cyber-threat-hunter" element={<AICyberThreatHunterPage />} />
+              <Route path="/ai-quantum-computing-simulator" element={<AIQuantumComputingSimulatorPage />} />
+              <Route path="/ai-edge-computing-platform" element={<AIEdgeComputingPlatformPage />} />
+              <Route path="/ai-neural-interface" element={<AINeuralInterfacePage />} />
               
               {/* Catch all route */}
               <Route path="*" element={

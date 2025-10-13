@@ -39,7 +39,8 @@ export default function HomePage() {
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
               Empowering businesses with cutting-edge artificial intelligence, cybersecurity solutions, 
-              cloud infrastructure, and digital transformation services to drive innovation and growth.
+              cloud infrastructure, quantum computing, neural interfaces, and digital transformation services 
+              to drive innovation and growth in the modern digital landscape.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -79,7 +80,7 @@ export default function HomePage() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {/* AI Solutions */}
             <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -166,6 +167,36 @@ export default function HomePage() {
                 IoT applications, and ultra-low latency services.
               </p>
               <Link to="/5g-solutions" className="text-indigo-400 hover:text-indigo-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                Learn More <ArrowRightIcon className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* Quantum Computing */}
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <CpuChipIcon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Quantum Computing</h3>
+              <p className="text-gray-300 mb-6">
+                Advanced quantum computing simulation and algorithm optimization 
+                for research, cryptography, and complex problem solving.
+              </p>
+              <Link to="/ai-quantum-computing-simulator" className="text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                Learn More <ArrowRightIcon className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* Neural Interfaces */}
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-pink-500 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <CpuChipIcon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Neural Interfaces</h3>
+              <p className="text-gray-300 mb-6">
+                Cutting-edge brain-computer interface technology for medical 
+                applications, assistive technology, and research.
+              </p>
+              <Link to="/ai-neural-interface" className="text-pink-400 hover:text-pink-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </div>

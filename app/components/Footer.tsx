@@ -1,67 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Right, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
-=======
 import { 
   PhoneIcon, 
   EnvelopeIcon, 
   MapPinIcon,
   ArrowRightIcon
 } from '@heroicons/react/24/outline';
->>>>>>> cursor/fix-errors-and-merge-to-main-3299
-=======
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-7db2
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-<<<<<<< HEAD
-  const footerLinks = {
-    services: [
-      { name: 'AI Services', href: '/ai-services' },
-      { name: 'IT Services', href: '/it-services' },
-      { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
-      { name: 'Digital Transformation', href: '/digital-transformation' }
-    ],
-    company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Case Studies', href: '/case-studies' },
-      { name: 'Blog', href: '/blog' },
-      { name: 'Careers', href: '/careers' }
-    ],
-    support: [
-      { name: 'Contact', href: '/contact' },
-      { name: 'Support', href: '/support' },
-      { name: 'Documentation', href: '/docs' },
-      { name: 'Tutorials', href: '/tutorials' }
-    ],
-    legal: [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Cookie Policy', href: '/cookies' }
-    ]
-  };
-
-  const socialLinks = [
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'GitHub', href: '#', icon: Github }
-=======
   const services = [
-    { name: 'AI Solutions', href: '/ai-services' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
+    { name: 'AI Solutions', href: '/ai-solutions' },
+    { name: 'IT Services', href: '/it-services' },
+    { name: 'Micro SaaS', href: '/micro-saas-solutions' },
     { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
     { name: 'Digital Transformation', href: '/digital-transformation' },
-    { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
     { name: '5G Solutions', href: '/5g-solutions' },
-    { name: 'AI Analytics', href: '/ai-analytics' },
-    { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
-    { name: 'IoT Edge Computing', href: '/iot-edge-computing' },
-    { name: 'AI Content Generation', href: '/ai-content-generation' },
+    { name: 'Quantum Computing', href: '/ai-quantum-computing-simulator' },
+    { name: 'Neural Interfaces', href: '/ai-neural-interface' },
   ];
 
   const company = [
@@ -89,7 +46,13 @@ const Footer: React.FC = () => {
     { name: 'GDPR', href: '/gdpr' },
     { name: 'Security', href: '/security' },
     { name: 'Compliance', href: '/compliance' },
->>>>>>> cursor/fix-errors-and-merge-to-main-3299
+  ];
+
+  const socialLinks = [
+    { name: 'Facebook', href: '#', icon: 'Facebook' },
+    { name: 'Twitter', href: '#', icon: 'Twitter' },
+    { name: 'LinkedIn', href: '#', icon: 'LinkedIn' },
+    { name: 'GitHub', href: '#', icon: 'GitHub' }
   ];
 
   return (
@@ -98,56 +61,55 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <Link to="/" className="text-2xl font-bold text-white mb-4 block">
-              Zion Tech Group
-=======
             <Link to="/" className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">Z</span>
               </div>
               <span className="text-white font-bold text-2xl">Zion Tech Group</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3299
-=======
-            <Link to="/" className="text-2xl font-bold text-white mb-4 block">
-              Zion Tech Group
->>>>>>> cursor/website-audit-and-update-with-deployment-7db2
             </Link>
             <p className="text-gray-300 mb-6 max-w-md">
               Transforming businesses through cutting-edge AI and IT solutions. 
-              We help companies innovate and grow in the digital age.
+              We help companies innovate and grow in the digital age with advanced 
+              technology solutions including AI, quantum computing, neural interfaces, 
+              and edge computing.
             </p>
+            
+            {/* Contact Information */}
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center space-x-3 text-gray-300">
+                <PhoneIcon className="w-5 h-5 text-purple-400" />
+                <a href="tel:+13024640950" className="hover:text-purple-400 transition-colors">
+                  +1 302 464 0950
+                </a>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-300">
+                <EnvelopeIcon className="w-5 h-5 text-purple-400" />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-400 transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-300">
+                <MapPinIcon className="w-5 h-5 text-purple-400" />
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              </div>
+            </div>
+
             <div className="flex space-x-4">
-              {socialLinks.map((social) => {
-                const Icon = social.icon;
-                return (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors"
-                    aria-label={social.name}
-                  >
-                    <Icon className="w-6 h-6" />
-                  </a>
-                );
-              })}
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                  aria-label={social.name}
+                >
+                  <span className="text-lg font-bold">{social.icon[0]}</span>
+                </a>
+              ))}
             </div>
           </div>
 
           {/* Services */}
           <div>
-<<<<<<< HEAD
-            <h3 className="text-white font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
-              {footerLinks.services.map((link) => (
-                <li key={link.name}>
-<<<<<<< HEAD
-                  <Link to={link.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    {link.name}
-=======
             <h3 className="text-white font-semibold text-lg mb-6">Services</h3>
             <ul className="space-y-3">
               {services.map((service) => (
@@ -158,14 +120,6 @@ const Footer: React.FC = () => {
                   >
                     <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {service.name}
->>>>>>> cursor/fix-errors-and-merge-to-main-3299
-=======
-                  <Link
-                    to={link.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    {link.name}
->>>>>>> cursor/website-audit-and-update-with-deployment-7db2
                   </Link>
                 </li>
               ))}
@@ -174,17 +128,6 @@ const Footer: React.FC = () => {
 
           {/* Company */}
           <div>
-<<<<<<< HEAD
-            <h3 className="text-white font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
-              {footerLinks.company.map((link) => (
-                <li key={link.name}>
-<<<<<<< HEAD
-                  <Link to={link.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    {link.name}
-=======
             <h3 className="text-white font-semibold text-lg mb-6">Company</h3>
             <ul className="space-y-3">
               {company.map((item) => (
@@ -195,33 +138,14 @@ const Footer: React.FC = () => {
                   >
                     <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {item.name}
->>>>>>> cursor/fix-errors-and-merge-to-main-3299
-=======
-                  <Link
-                    to={link.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    {link.name}
->>>>>>> cursor/website-audit-and-update-with-deployment-7db2
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Support */}
+          {/* Resources & Legal */}
           <div>
-<<<<<<< HEAD
-            <h3 className="text-white font-semibold mb-4">Support</h3>
-            <ul className="space-y-2">
-              {footerLinks.support.map((link) => (
-                <li key={link.name}>
-<<<<<<< HEAD
-                  <Link to={link.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    {link.name}
-=======
             <h3 className="text-white font-semibold text-lg mb-6">Resources</h3>
             <ul className="space-y-3 mb-8">
               {resources.map((resource) => (
@@ -247,14 +171,6 @@ const Footer: React.FC = () => {
                   >
                     <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {item.name}
->>>>>>> cursor/fix-errors-and-merge-to-main-3299
-=======
-                  <Link
-                    to={link.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    {link.name}
->>>>>>> cursor/website-audit-and-update-with-deployment-7db2
                   </Link>
                 </li>
               ))}
@@ -267,35 +183,30 @@ const Footer: React.FC = () => {
           <div className="max-w-md">
             <h3 className="text-white font-semibold mb-4">Stay Updated</h3>
             <p className="text-gray-300 mb-4">
-              Get the latest insights on AI and IT trends delivered to your inbox.
+              Get the latest insights on AI, quantum computing, and IT trends delivered to your inbox.
             </p>
             <div className="flex">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-slate-800 border border-slate-600 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                className="flex-1 px-4 py-2 bg-slate-800 border border-slate-600 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
-              <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-r-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+              <button className="px-6 py-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-r-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 flex items-center">
                 Subscribe
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <ArrowRightIcon className="w-4 h-4 ml-2" />
               </button>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-slate-700/50 flex flex-col md:flex-row justify-between items-center">
           <div className="flex flex-wrap gap-6 mb-4 md:mb-0">
-            {footerLinks.legal.map((link) => (
-<<<<<<< HEAD
-              <Link key={link.name}
-=======
+            {legal.map((link) => (
               <Link
                 key={link.name}
->>>>>>> cursor/website-audit-and-update-with-deployment-7db2
                 to={link.href}
-                className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
+                className="text-gray-400 hover:text-purple-400 transition-colors text-sm"
               >
                 {link.name}
               </Link>
@@ -305,8 +216,6 @@ const Footer: React.FC = () => {
             © {currentYear} Zion Tech Group. All rights reserved.
           </p>
         </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3299
       </div>
     </footer>
   );

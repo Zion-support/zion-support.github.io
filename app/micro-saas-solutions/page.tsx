@@ -247,6 +247,101 @@ export default function MicroSaaSSolutionsPage() {
       benefits: ["40% open rates", "Personalized content", "Optimized timing"],
       useCases: ["Email campaigns", "Newsletter management", "Lead nurturing"],
       href: "/ai-email-marketing"
+    },
+    {
+      title: "AI Smart Contract Auditor",
+      description: "Advanced AI-powered smart contract auditing with automated vulnerability detection, gas optimization, and security analysis.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Automated vulnerability detection",
+        "Gas optimization analysis",
+        "Code quality assessment",
+        "Security pattern recognition",
+        "Compliance checking",
+        "Real-time monitoring"
+      ],
+      color: "from-purple-500 to-pink-500",
+      price: "$2,999/audit",
+      setupFee: "Included",
+      benefits: ["99.9% vulnerability detection", "50% gas cost reduction", "Automated compliance"],
+      useCases: ["DeFi protocol audits", "NFT marketplace security", "Token contract verification"],
+      href: "/ai-smart-contract-auditor"
+    },
+    {
+      title: "AI Cyber Threat Hunter",
+      description: "Advanced AI-powered cyber threat hunting with real-time detection, behavioral analysis, and automated response.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Real-time threat detection",
+        "AI-powered threat hunting",
+        "Behavioral analysis",
+        "Threat intelligence integration",
+        "Automated response",
+        "Zero-day detection"
+      ],
+      color: "from-red-500 to-orange-500",
+      price: "$1,999/month",
+      setupFee: "$2,000",
+      benefits: ["99.7% threat detection", "60% faster response", "24/7 monitoring"],
+      useCases: ["Enterprise security", "Critical infrastructure", "Financial services"],
+      href: "/ai-cyber-threat-hunter"
+    },
+    {
+      title: "AI Quantum Computing Simulator",
+      description: "Advanced AI-powered quantum computing simulator with real-time visualization and algorithm optimization.",
+      icon: CpuChipIcon,
+      features: [
+        "Quantum circuit simulation",
+        "AI-optimized algorithms",
+        "Real-time visualization",
+        "Multi-qubit operations",
+        "Error correction modeling",
+        "Performance benchmarking"
+      ],
+      color: "from-indigo-500 to-purple-500",
+      price: "$499/month",
+      setupFee: "$1,000",
+      benefits: ["1000x faster simulation", "99.9% accuracy", "Real-time results"],
+      useCases: ["Quantum algorithm development", "Research and education", "Cryptography research"],
+      href: "/ai-quantum-computing-simulator"
+    },
+    {
+      title: "AI Edge Computing Platform",
+      description: "Advanced AI-powered edge computing platform with real-time processing and device management for IoT applications.",
+      icon: CloudIcon,
+      features: [
+        "Real-time data processing",
+        "AI model deployment",
+        "Edge device management",
+        "Low-latency computing",
+        "Automatic scaling",
+        "Security monitoring"
+      ],
+      color: "from-cyan-500 to-blue-500",
+      price: "$799/month",
+      setupFee: "$1,500",
+      benefits: ["90% latency reduction", "60% bandwidth savings", "99.9% uptime"],
+      useCases: ["IoT device management", "Autonomous vehicles", "Smart manufacturing"],
+      href: "/ai-edge-computing-platform"
+    },
+    {
+      title: "AI Neural Interface",
+      description: "Advanced AI-powered neural interface technology with brain-computer interface and medical applications.",
+      icon: CpuChipIcon,
+      features: [
+        "Brain-computer interface",
+        "Neural signal processing",
+        "Real-time analysis",
+        "Machine learning integration",
+        "Biometric authentication",
+        "Medical applications"
+      ],
+      color: "from-purple-500 to-pink-500",
+      price: "$7,999/month",
+      setupFee: "$5,000",
+      benefits: ["99.9% accuracy", "Real-time processing", "Medical grade precision"],
+      useCases: ["Medical rehabilitation", "Assistive technology", "Research applications"],
+      href: "/ai-neural-interface"
     }
   ];
 
