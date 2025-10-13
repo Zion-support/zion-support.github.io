@@ -1,18 +1,16 @@
+import { useState, useEffect } from 'react';
 
-export const useEnhancedPerformance = () => {
+export function useEnhancedPerformance() {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-export function useEnhancedPerformance() {
-  const [state, setState] = useState<string | null>(null);
-  
   useEffect(() => {
     // Implementation here
-    setState('initialized');
+    setData('initialized');
   }, []);
   
-  return state;
+  return { data, loading, error, setData, setLoading, setError };
 }
 
 export default useEnhancedPerformance;
