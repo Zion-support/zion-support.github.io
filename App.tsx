@@ -8,7 +8,9 @@ import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
+import { ImprovedLoadingPage } from "./app/components/ImprovedLoadingStates";
 import ErrorBoundary from "./app/components/ErrorBoundary";
+import ImprovedErrorBoundary from "./app/components/ImprovedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import EnhancedPerformanceOptimizer from "./app/components/EnhancedPerformanceOptimizer";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
@@ -16,6 +18,7 @@ import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import EnhancedSEO from "./app/components/EnhancedSEO";
 import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
+import ImprovedPerformanceMonitor from "./app/components/ImprovedPerformanceMonitor";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
@@ -210,7 +213,7 @@ function App() {
             <FuturisticBackground>
               <Navigation />
               <Breadcrumb />
-              <Suspense fallback={<LoadingPage />}>
+              <Suspense fallback={<ImprovedLoadingPage showProgress={true} />}>
                 <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
@@ -453,6 +456,7 @@ function App() {
             <AnalyticsProvider>
               <div>
                 <PerformanceMonitor />
+                <ImprovedPerformanceMonitor />
                 <PerformanceEnhancer />
                 <SEOOptimizer />
                 <EnhancedSEO />

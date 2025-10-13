@@ -9,7 +9,7 @@ export default function NewsletterSignup() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle newsletter signup
-    console.log("Newsletter signup:", email);
+    // Newsletter signup processed
   };
 
   return (

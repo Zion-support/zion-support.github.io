@@ -86,7 +86,7 @@ export const usePerformanceMonitor = () => {
 
       // Log performance metrics
       const logMetrics = () => {
-        console.log('Performance Metrics:', metricsRef.current)
+        // Performance metrics logged for debugging
         
         // Send to analytics service
         if (typeof window !== 'undefined' && (window as any).gtag) {

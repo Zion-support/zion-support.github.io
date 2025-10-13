@@ -221,7 +221,7 @@ const AccessibilityEnhancer: React.FC = () => {
       )}
 
       {/* CSS for accessibility features */}
-      <style jsx global>{`
+      <style>{`
         .high-contrast {
           --tw-bg-opacity: 1;
           --tw-text-opacity: 1;

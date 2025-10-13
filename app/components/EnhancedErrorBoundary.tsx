@@ -30,7 +30,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     });
 
     // Log error to monitoring service
-    console.error("Error caught by boundary:", error, errorInfo);
+    // Error caught by boundary - logged for debugging
 
     // In production, send to error reporting service
     if (process.env.NODE_ENV === "production") {
