@@ -1,4 +1,4 @@
-import { ArrowRight, Home, Search, AlertTriangle, Brain, Bot, FileText, Shield, Wifi, Cloud, BarChart3, Code, Target, Users, TrendingUp, Globe, Zap, Database, Monitor, Lock, Server, Settings, HardDrive, Phone, Laptop, Headphones, Network, Cpu } from 'lucide-react';
+import { Brain, Bot, FileText, Shield, Wifi, Cloud, BarChart3, Code, Target, Users, TrendingUp, Globe, Zap, Database, Monitor, Lock, Server, Settings, HardDrive, Phone, Laptop, Headphones, Network, Cpu } from 'lucide-react';
 
 export default function Services() {
   const services = [
@@ -337,4 +337,55 @@ export default function Services() {
     }
   ];
 
+  return (
+    <div className="min-h-screen pt-16">
+      <div className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Services</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive AI and IT solutions designed to transform your business and drive growth
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="group bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
+              >
+                <div className="text-blue-400 mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-gray-300 mb-4 leading-relaxed">
+                  {service.description}
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-lg font-bold text-blue-400">{service.price}</span>
+                  {service.originalPrice && (
+                    <span className="text-sm text-gray-400 line-through">{service.originalPrice}</span>
+                  )}
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full">
+                    {service.category}
+                  </span>
+                  {service.popular && (
+                    <span className="text-xs text-yellow-400 bg-yellow-400/20 px-2 py-1 rounded-full">
+                      Popular
+                    </span>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }

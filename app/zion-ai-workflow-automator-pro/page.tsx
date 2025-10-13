@@ -2,20 +2,16 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Zap, 
   Workflow, 
   Bot, 
   ArrowRight, 
   CheckCircle, 
   Star, 
   Clock, 
-  Users, 
   BarChart3, 
   Shield,
   Sparkles,
   Target,
-  TrendingUp,
-  Database,
   Cpu,
   Globe
 } from 'lucide-react';
