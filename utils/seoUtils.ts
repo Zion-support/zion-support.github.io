@@ -1,18 +1,16 @@
-export interface SEOConfig {
+interface SEOConfig {
   title: string;
   description: string;
   keywords: string[];
   canonicalUrl?: string;
   ogImage?: string;
   ogType?: string;
-  twitterCard?: string;
-  canonical?: string;
   ogTitle?: string;
   ogDescription?: string;
+  twitterCard?: string;
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
-  structuredData?: any;
   robots?: string;
   viewport?: string;
   charset?: string;
@@ -20,8 +18,8 @@ export interface SEOConfig {
   publisher?: string;
   language?: string;
   geo?: {
-    latitude?: number;
-    longitude?: number;
+    latitude?: string;
+    longitude?: string;
     region?: string;
     placename?: string;
   };
@@ -29,11 +27,7 @@ export interface SEOConfig {
     hreflang: string;
     href: string;
   }>;
-}
-
-export interface PageSEOProps {
-  config: SEOConfig;
-  children?: React.ReactNode;
+  structuredData?: any;
 }
 
 export const defaultSEOConfig: SEOConfig = {

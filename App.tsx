@@ -1,7 +1,8 @@
 import React, { Suspense } from 'react';
-import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { ErrorBoundary } from 'react-error-boundary';
+<<<<<<< HEAD
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import HomePage from "./app/page";
@@ -10,18 +11,31 @@ import { AnalyticsProvider } from './app/contexts/AnalyticsContext';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import SEOEnhancer, { defaultStructuredData } from './app/components/SEOEnhancer';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-100c
 
-// Lazy load pages for better performance
-const AboutPage = React.lazy(() => import("./app/about/page"));
-const ContactPage = React.lazy(() => import("./app/contact/page"));
-const ServicesPage = React.lazy(() => import("./app/services/page"));
-const BlogPage = React.lazy(() => import("./app/blog/page"));
-const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
-const DemoPage = React.lazy(() => import("./app/demo/page"));
-const SupportPage = React.lazy(() => import("./app/support/page"));
-const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
-const TermsPage = React.lazy(() => import("./app/terms/page"));
-const PricingPage = React.lazy(() => import("./app/pricing/page"));
+// Components
+import Navigation from './app/components/Navigation';
+import Footer from './app/components/Footer';
+import PerformanceOptimizer from './app/components/PerformanceOptimizer';
+import FuturisticBackground from './app/components/FuturisticBackground';
+import AnalyticsProvider from './app/components/AnalyticsProvider';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import EnhancedAccessibility from './app/components/EnhancedAccessibility';
+import LoadingSpinner from './app/components/LoadingSpinner';
+
+// Page Components
+import HomePage from './app/pages/HomePage';
+import AboutPage from './app/pages/AboutPage';
+import ContactPage from './app/pages/ContactPage';
+import ServicesPage from './app/pages/ServicesPage';
+import BlogPage from './app/pages/BlogPage';
+import TutorialsPage from './app/pages/TutorialsPage';
+import DemoPage from './app/pages/DemoPage';
+import SupportPage from './app/pages/SupportPage';
+import PrivacyPage from './app/pages/PrivacyPage';
+import TermsPage from './app/pages/TermsPage';
+import PricingPage from './app/pages/PricingPage';
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -55,6 +69,7 @@ function App() {
     <ErrorBoundary FallbackComponent={ErrorFallback}>
       <HelmetProvider>
         <AnalyticsProvider>
+<<<<<<< HEAD
           <AccessibilityEnhancer>
             <SEOEnhancer structuredData={defaultStructuredData} />
             <Router>
@@ -86,6 +101,36 @@ function App() {
                               Go Home
                             </a>
                           </div>
+=======
+          <Router>
+            <div className="min-h-screen bg-gray-900">
+              <Navigation />
+              <main className="relative z-10" id="main-content" role="main">
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Routes>
+                    {/* Main Pages */}
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/services" element={<ServicesPage />} />
+                    <Route path="/blog" element={<BlogPage />} />
+                    <Route path="/tutorials" element={<TutorialsPage />} />
+                    <Route path="/demo" element={<DemoPage />} />
+                    <Route path="/support" element={<SupportPage />} />
+                    <Route path="/privacy" element={<PrivacyPage />} />
+                    <Route path="/terms" element={<TermsPage />} />
+                    <Route path="/pricing" element={<PricingPage />} />
+                    
+                    {/* Catch all route */}
+                    <Route path="*" element={
+                      <div className="min-h-screen flex items-center justify-center">
+                        <div className="text-center">
+                          <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
+                          <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
+                          <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                            Go Home
+                          </a>
+>>>>>>> cursor/fix-errors-and-merge-to-main-100c
                         </div>
                       } />
                     </Routes>
