@@ -1,223 +1,296 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Target, ArrowRight, Sparkles, CheckCircle, FileText, TrendingUp, Shield } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Users, Search, Brain, Shield, CheckCircle, ArrowRight, Star } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+import EnhancedSEO from "../components/EnhancedSEO";
+import StructuredData from "../components/StructuredData";
+import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
+import FuturisticCardEnhanced from "../components/FuturisticCardEnhanced";
+import FuturisticButtonEnhanced from "../components/FuturisticButtonEnhanced";
+import FuturisticTextEnhanced from "../components/FuturisticTextEnhanced";
+import ResponsiveContainer from "../components/ResponsiveContainer";
+import EnhancedAccessibility from "../components/EnhancedAccessibility";
+import PerformanceOptimizer from "../components/PerformanceOptimizer";
 
-const AIHRRecruitmentProPage = () => {
-  const benefits = [
-    "Reduce hiring time by 70%",
-    "Increase candidate quality by 50%",
-    "Eliminate bias in screening",
-    "Automate 80% of recruitment tasks",
-    "Improve retention rates by 30%",
-    "Scale recruitment processes efficiently"
-  ];
-
+const AIHRRecruitmentProZionTechGroup = () => {
   const features = [
     {
-      icon: <UserCheck className="w-8 h-8" />,
-      title: "Smart Candidate Matching",
-      description: "AI-powered matching algorithm that finds the perfect candidates for your roles."
+      title: "AI Candidate Screening",
+      description: "Automatically screen and rank candidates using advanced AI algorithms",
+      icon: <Search className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500"
     },
     {
-      icon: <FileText className="w-8 h-8" />,
-      title: "Automated Screening",
-      description: "Intelligent resume screening and initial candidate assessment."
+      title: "Talent Matching",
+      description: "Match candidates to roles using AI-powered compatibility analysis",
+      icon: <Brain className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500"
     },
     {
-      icon: <Calendar className="w-8 h-8" />,
-      title: "Interview Scheduling",
-      description: "Automated interview scheduling and calendar management."
+      title: "Interview Automation",
+      description: "Conduct automated interviews with AI-powered question generation",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500"
     },
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Performance Analytics",
-      description: "Track recruitment metrics and optimize your hiring process."
-    },
-    {
+      title: "Bias Reduction",
+      description: "Reduce unconscious bias with AI-powered fair hiring practices",
       icon: <Shield className="w-8 h-8" />,
-      title: "Compliance Management",
-      description: "Ensure compliance with employment laws and regulations."
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Real-time Updates",
-      description: "Get instant notifications and updates on candidate progress."
+      color: "from-orange-500 to-red-500"
     }
   ];
 
-  const benefits = [
-    "50% faster time-to-hire",
-    "90% reduction in manual screening",
-    "Improved candidate quality",
-    "Automated compliance tracking",
-    "Real-time analytics dashboard",
-    "Seamless integration with existing systems"
+  const pricingPlans = [
+    {
+      name: "Professional",
+      price: "$199",
+      period: "month",
+      description: "For growing companies",
+      features: [
+        "AI candidate screening",
+        "Basic talent matching",
+        "Interview automation",
+        "Email support",
+        "Standard reporting"
+      ],
+      popular: false
+    },
+    {
+      name: "Enterprise",
+      price: "$499",
+      period: "month",
+      description: "For large organizations",
+      features: [
+        "Everything in Professional",
+        "Advanced AI models",
+        "Custom integrations",
+        "Priority support",
+        "Compliance tools",
+        "SLA guarantee"
+      ],
+      popular: true
+    },
+    {
+      name: "Custom",
+      price: "Contact",
+      period: "us",
+      description: "Tailored solutions",
+      features: [
+        "Everything in Enterprise",
+        "Custom development",
+        "Dedicated support",
+        "On-premise deployment",
+        "White-label solution"
+      ],
+      popular: false
+    }
   ];
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Zion AI HR Recruitment Pro",
+    "description": "AI-powered HR recruitment platform with candidate screening, talent matching, and interview automation",
+    "url": "https://ziontechgroup.com/ai-hr-recruitment-pro",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web, Windows, macOS, Linux",
+    "offers": {
+      "@type": "Offer",
+      "price": "499",
+      "priceCurrency": "USD"
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      <Helmet>
-        <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI services with cutting-edge technology and expert solutions." />
-        <meta name="keywords" content="AI services, artificial intelligence, machine learning, automation" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-services" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        </section>
-        </section>
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
-        
-        <div className="max-w-7xl mx-auto text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI-Powered Solutions</span>
-          </div>
+    <PerformanceOptimizer>
+      <EnhancedAccessibility>
+        <FuturisticBackgroundEnhanced>
+          <EnhancedSEO
+            title="AI HR Recruitment Pro - Zion Tech Group"
+            description="AI-powered HR recruitment platform with candidate screening, talent matching, interview automation, and bias reduction for modern hiring processes."
+            keywords="AI HR recruitment, candidate screening, talent matching, interview automation, hiring platform"
+            canonicalUrl="https://ziontechgroup.com/ai-hr-recruitment-pro"
+          />
+          <StructuredData data={structuredData} />
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              AI Services
-            </span>
-          </h1>
-          
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your business with our comprehensive AI services. From machine learning to automation, 
-            we provide cutting-edge solutions tailored to your needs.
-          </p>
+          <Helmet>
+            <title>AI HR Recruitment Pro - Zion Tech Group</title>
+            <meta name="description" content="AI-powered HR recruitment platform with candidate screening, talent matching, and interview automation." />
+            <meta name="keywords" content="AI HR recruitment, candidate screening, talent matching, interview automation" />
+            <link rel="canonical" href="https://ziontechgroup.com/ai-hr-recruitment-pro" />
+          </Helmet>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-            >
-              Get Started
-              <Zap className="w-5 h-5 ml-2" />
-            </Link>
-            <Link 
-              to="/demo" 
-              className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300"
-            >
-              View Demo
-              <Target className="w-5 h-5 ml-2" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
-        </section>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Advanced HR Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Our AI HR platform combines machine learning, natural language processing, 
-              and behavioral analytics to transform your recruitment process.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
-              >
-                <div
-                  className="w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300"
-                >
-                  {feature.icon}
+          <main>
+            {/* Hero Section */}
+            <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+              <div className="absolute inset-0 overflow-hidden">
+                <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+                <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+              </div>
+              
+              <ResponsiveContainer>
+                <div className="text-center relative z-10">
+                  <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
+                    <Users className="w-4 h-4 text-blue-400 mr-2" />
+                    <span className="text-blue-400 text-sm font-medium">AI-Powered Recruitment</span>
+                  </div>
+                  
+                  <FuturisticTextEnhanced
+                    variant="display"
+                    size="5xl"
+                    gradient={true}
+                    glow={true}
+                    className="mb-6">
+                    AI HR Recruitment Pro
+                  </FuturisticTextEnhanced>
+                  
+                  <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+                    Revolutionize your hiring process with our AI-powered recruitment platform. 
+                    Screen candidates, match talent, and conduct interviews with advanced automation.
+                  </p>
+                  
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <FuturisticButtonEnhanced
+                      href="/contact"
+                      variant="primary"
+                      size="lg"
+                      icon={ArrowRight}
+                      iconPosition="right">
+                      Start Free Trial
+                    </FuturisticButtonEnhanced>
+                    <FuturisticButtonEnhanced
+                      href="/demo"
+                      variant="outline"
+                      size="lg"
+                      icon={Users}
+                      iconPosition="right">
+                      View Demo
+                    </FuturisticButtonEnhanced>
+                  </div>
                 </div>
-                <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 text-center leading-relaxed text-sm md:text-base">
-                  {feature.description}
+              </ResponsiveContainer>
+            </section>
+
+            {/* Features Section */}
+            <section className="py-20 px-4 sm:px-6 lg:px-8">
+              <ResponsiveContainer>
+                <div className="text-center mb-16">
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                    Advanced Recruitment Tools
+                  </h2>
+                  <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                    Streamline your hiring process with AI-powered tools that find and match the best talent.
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {features.map((feature, index) => (
+                    <FuturisticCardEnhanced
+                      key={index}
+                      className="text-center">
+                      <div
+                        className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                      >
+                        {feature.icon}
+                      </div>
+                      <h3 className="text-xl font-semibold text-white mb-3">
+                        {feature.title}
+                      </h3>
+                      <p className="text-gray-300 leading-relaxed">
+                        {feature.description}
+                      </p>
+                    </FuturisticCardEnhanced>
+                  ))}
+                </div>
+              </ResponsiveContainer>
+            </section>
+
+            {/* Pricing Section */}
+            <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+              <div className="max-w-7xl mx-auto">
+                <div className="text-center mb-16">
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                    Choose Your Plan
+                  </h2>
+                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Flexible pricing options to fit your recruitment needs
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {pricingPlans.map((plan, index) => (
+                    <FuturisticCardEnhanced
+                      key={index}
+                      className={`relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}>
+                      {plan.popular && (
+                        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                          <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                            Most Popular
+                          </span>
+                        </div>
+                      )}
+                      <div className="text-center mb-6">
+                        <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                        <div className="flex items-baseline justify-center">
+                          <span className="text-4xl font-bold text-white">{plan.price}</span>
+                          <span className="text-gray-400 ml-1">/{plan.period}</span>
+                        </div>
+                        <p className="text-gray-300 mt-2">{plan.description}</p>
+                      </div>
+                      <ul className="space-y-3 mb-8">
+                        {plan.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center">
+                            <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                            <span className="text-gray-300">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <FuturisticButtonEnhanced
+                        href="/contact"
+                        variant={plan.popular ? "primary" : "outline"}
+                        size="lg"
+                        className="w-full">
+                        Get Started
+                      </FuturisticButtonEnhanced>
+                    </FuturisticCardEnhanced>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-pink-900/30">
+              <div className="max-w-4xl mx-auto text-center">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                  Ready to Transform Your Hiring?
+                </h2>
+                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                  Join thousands of companies using Zion AI HR Recruitment Pro to find and hire the best talent. 
+                  Start your free trial today.
                 </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <FuturisticButtonEnhanced
+                    href="/contact"
+                    variant="primary"
+                    size="lg"
+                    icon={ArrowRight}
+                    iconPosition="right">
+                    Start Free Trial
+                  </FuturisticButtonEnhanced>
+                  <FuturisticButtonEnhanced
+                    href="/demo"
+                    variant="outline"
+                    size="lg"
+                    icon={Users}
+                    iconPosition="right">
+                    View Demo
+                  </FuturisticButtonEnhanced>
+                </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-        </section>
-        </section>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our AI Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive AI solutions designed to accelerate your digital transformation
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/20 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
-                <BarChart3 className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Data Analytics</h3>
-              <p className="text-gray-300">
-                Advanced analytics and insights to drive data-driven decision making
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/20 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
-                <Brain className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Machine Learning</h3>
-              <p className="text-gray-300">
-                Custom ML models and algorithms tailored to your specific use cases
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/20 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
-                <Shield className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">AI Security</h3>
-              <p className="text-gray-300">
-                Robust security measures to protect your AI systems and data
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
-        </section>
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Let our AI experts help you implement the perfect solution for your needs
-          </p>
-          <Link 
-            to="/contact" 
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-          >
-            Start Your AI Journey
-            <Zap className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </section>
-    </div>
+            </section>
+          </main>
+        </FuturisticBackgroundEnhanced>
+      </EnhancedAccessibility>
+    </PerformanceOptimizer>
   );
 };
 
-export default Page;
-  );
-}
+export default AIHRRecruitmentProZionTechGroup;
