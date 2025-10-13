@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -41,8 +41,6 @@ import CaseStudiesPage from './app/pages/CaseStudiesPage';
 import CareersPage from './app/pages/CareersPage';
 
 // Additional Pages
-import CybersecurityPage from './app/pages/CybersecurityPage';
-import CloudSolutionsPage from './app/pages/CloudSolutionsPage';
 import MicroSaaSPage from './app/pages/MicroSaaSPage';
 import FiveGSolutionsPage from './app/pages/5GSolutionsPage';
 import TeamPage from './app/pages/TeamPage';
