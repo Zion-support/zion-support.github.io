@@ -55,6 +55,24 @@ const AIServicesPage = () => {
     }
   ];
 
+  const benefits = [
+    {
+      title: "Increased Efficiency",
+      description: "Automate repetitive tasks and optimize workflows",
+      icon: <Zap className="w-8 h-8" />
+    },
+    {
+      title: "Better Decision Making",
+      description: "Get data-driven insights and predictions",
+      icon: <Brain className="w-8 h-8" />
+    },
+    {
+      title: "Cost Reduction",
+      description: "Reduce operational costs and improve ROI",
+      icon: <DollarSign className="w-8 h-8" />
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

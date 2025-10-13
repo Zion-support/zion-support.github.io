@@ -44,6 +44,17 @@ const AssetManagementPage = () => {
     }
   ];
 
+  const benefits = [
+    "Reduce asset costs by up to 30% through optimization",
+    "Improve asset utilization and performance tracking",
+    "Ensure compliance with industry regulations",
+    "Automate asset lifecycle management processes",
+    "Get real-time visibility into asset status",
+    "Integrate with existing business systems",
+    "Scale asset management across multiple locations",
+    "Generate detailed reports and analytics"
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>

@@ -117,6 +117,33 @@ export default function AiAnalytics() {
     }
   ];
 
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CTO",
+      company: "TechCorp",
+      content: "AI Analytics has revolutionized our data processing capabilities. The real-time insights have helped us make faster, more informed decisions.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      role: "Data Director",
+      company: "DataFlow Inc",
+      content: "The predictive analytics features are incredible. We've seen a 40% improvement in our forecasting accuracy since implementing this platform.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "VP of Operations",
+      company: "Global Solutions",
+      content: "The custom AI models have been a game-changer for our business. The platform is intuitive and the results speak for themselves.",
+      rating: 5,
+      avatar: "ER"
+    }
+  ];
+
   return (
     <>
       <Helmet>

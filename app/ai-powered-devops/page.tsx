@@ -106,6 +106,33 @@ export default function AiPoweredDevops() {
     }
   ];
 
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "DevOps Lead",
+      company: "TechCorp",
+      content: "Our deployment success rate increased from 85% to 99.5% with AI-powered DevOps. The automated testing catches issues we never would have found manually.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      role: "CTO",
+      company: "StartupXYZ",
+      content: "The predictive scaling feature has saved us thousands in infrastructure costs. We scale up before traffic spikes and scale down during low periods automatically.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "Engineering Manager",
+      company: "ScaleUp Inc",
+      content: "The intelligent monitoring has prevented 3 major outages in the last month. The AI alerts us to potential issues before they become problems.",
+      rating: 5,
+      avatar: "ER"
+    }
+  ];
+
   return (
     <>
       <Helmet>
@@ -120,12 +147,8 @@ export default function AiPoweredDevops() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/ai-powered-devops" />
       </Helmet>
-      <SEOOptimizer
-        title="AI-Powered DevOps - Intelligent Development Operations | Zion Tech Group"
-        description="Revolutionize your DevOps with AI. Automated testing, intelligent deployment, predictive scaling, and smart monitoring. Transform your development operations with Zion's AI-powered DevOps platform."
-      />
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEOOptimizer>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>

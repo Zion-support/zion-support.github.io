@@ -118,6 +118,33 @@ export default function AIEmailAssistant() {
     },
   ];
 
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "Customer Success Manager",
+      company: "TechCorp",
+      content: "Our email response time has improved by 70% with the AI assistant. It handles routine inquiries perfectly and escalates complex issues seamlessly.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      role: "Operations Director",
+      company: "Service Solutions",
+      content: "The sentiment analysis feature helps us identify unhappy customers before they escalate. Our customer satisfaction scores have increased significantly.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "VP of Customer Experience",
+      company: "Growth Co",
+      content: "The workflow automation has streamlined our entire email process. We're handling 3x more emails with the same team size.",
+      rating: 5,
+      avatar: "ER"
+    }
+  ];
+
   return (
     <>
       <Helmet>

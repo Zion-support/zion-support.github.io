@@ -76,6 +76,33 @@ export default function AISmartScheduler() {
     },
   ];
 
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "Project Manager",
+      company: "TechCorp",
+      content: "The AI scheduler has eliminated all our scheduling conflicts. It finds the perfect meeting times for everyone automatically.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      role: "Operations Director",
+      company: "Service Solutions",
+      content: "Our team productivity has increased by 30% since implementing the smart scheduler. No more back-and-forth emails about meeting times.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "Executive Assistant",
+      company: "Growth Co",
+      content: "The AI optimization is incredible. It considers everyone's preferences, time zones, and workload to find the best meeting times.",
+      rating: 5,
+      avatar: "ER"
+    }
+  ];
+
   return (
     <Layout>
       {/* Hero Section */}

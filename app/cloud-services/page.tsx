@@ -12,7 +12,9 @@ import {
   Lock, 
   Users, 
   Settings, 
-  Monitor 
+  Monitor,
+  DollarSign,
+  TrendingUp
 } from 'lucide-react';
 
 const CloudServicesPage: React.FC = () => {
@@ -46,6 +48,29 @@ const CloudServicesPage: React.FC = () => {
       title: "Database Services",
       description: "Managed database services with automated backups, scaling, and performance optimization.",
       icon: <Database className="w-6 h-6" />
+    }
+  ];
+
+  const benefits = [
+    {
+      title: "Cost Reduction",
+      description: "Reduce IT costs by up to 40% with cloud optimization",
+      icon: <DollarSign className="w-8 h-8" />
+    },
+    {
+      title: "Scalability",
+      description: "Scale your infrastructure up or down based on demand",
+      icon: <TrendingUp className="w-8 h-8" />
+    },
+    {
+      title: "Security",
+      description: "Enterprise-grade security with 24/7 monitoring",
+      icon: <Shield className="w-8 h-8" />
+    },
+    {
+      title: "Reliability",
+      description: "99.99% uptime with automated failover and backup",
+      icon: <CheckCircle className="w-8 h-8" />
     }
   ];
 

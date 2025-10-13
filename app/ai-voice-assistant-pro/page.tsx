@@ -31,6 +31,17 @@ const AIVoiceAssistantProPage = () => {
     }
   ];
 
+  const benefits = [
+    "Reduce customer service costs by 60% with voice automation",
+    "Improve customer satisfaction with 24/7 voice support",
+    "Handle multiple languages and accents seamlessly",
+    "Integrate with existing business systems and workflows",
+    "Scale voice support across all customer touchpoints",
+    "Get detailed analytics on voice interactions",
+    "Customize voice personality and responses",
+    "Deploy across multiple channels and devices"
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>

@@ -158,6 +158,33 @@ export default function AiFinancialAnalyticsProPage() {
     },
   ];
 
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CFO",
+      company: "TechCorp",
+      content: "The AI financial analytics have transformed our decision-making process. We've identified cost savings opportunities worth $2M in just 6 months.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      role: "Investment Director",
+      company: "Capital Partners",
+      content: "The predictive models are incredibly accurate. We've improved our investment returns by 25% using the AI insights and recommendations.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "VP of Finance",
+      company: "Growth Co",
+      content: "The real-time analytics dashboard gives us instant visibility into our financial performance. We can make adjustments immediately when needed.",
+      rating: 5,
+      avatar: "ER"
+    }
+  ];
+
   return (
     <>
       <Helmet>

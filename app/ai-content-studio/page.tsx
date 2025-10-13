@@ -115,6 +115,33 @@ const AIContentStudioZionTechGroup = () => {
     }
   ];
 
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "Content Manager",
+      company: "Digital Marketing Pro",
+      content: "Zion AI Content Studio has transformed our content creation process. We're producing 3x more content with higher quality than ever before.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      role: "Creative Director",
+      company: "Brand Studio",
+      content: "The AI video generation is incredible. We can create professional videos in minutes that would normally take hours to produce.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "Marketing Director",
+      company: "Growth Co",
+      content: "The SEO optimization features have significantly improved our search rankings. Our organic traffic has increased by 150% in just 3 months.",
+      rating: 5,
+      avatar: "ER"
+    }
+  ];
+
   return (
     <PerformanceOptimizer>
       <EnhancedAccessibility>

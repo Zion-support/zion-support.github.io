@@ -31,6 +31,17 @@ const ARVRDevelopmentPage = () => {
     }
   ];
 
+  const benefits = [
+    "Create engaging and interactive user experiences",
+    "Reduce training costs with immersive simulations",
+    "Improve customer engagement and retention",
+    "Deploy across all major AR/VR platforms",
+    "Integrate with existing business systems",
+    "Get detailed analytics on user interactions",
+    "Scale experiences across multiple devices",
+    "Future-proof your business with cutting-edge technology"
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>

@@ -31,6 +31,17 @@ const AIHRRecruitmentProPage = () => {
     }
   ];
 
+  const benefits = [
+    "Reduce time-to-hire by 60% with AI-powered screening",
+    "Improve candidate quality with intelligent matching",
+    "Eliminate bias and ensure diverse hiring practices",
+    "Predict candidate success with 90% accuracy",
+    "Automate repetitive HR tasks and processes",
+    "Scale recruitment across multiple departments",
+    "Integrate with popular ATS and HR systems",
+    "Get real-time analytics and insights"
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>

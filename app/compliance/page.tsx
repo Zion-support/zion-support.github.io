@@ -66,6 +66,29 @@ export default function Compliance() {
     }
   ];
 
+  const benefits = [
+    {
+      title: "Expert Guidance",
+      description: "Work with certified compliance professionals",
+      icon: <Users className="w-8 h-8" />
+    },
+    {
+      title: "Risk Reduction",
+      description: "Minimize compliance risks and penalties",
+      icon: <Shield className="w-8 h-8" />
+    },
+    {
+      title: "Time Savings",
+      description: "Streamline compliance processes and reduce time to certification",
+      icon: <Clock className="w-8 h-8" />
+    },
+    {
+      title: "Ongoing Support",
+      description: "Continuous monitoring and maintenance of compliance programs",
+      icon: <CheckCircle className="w-8 h-8" />
+    }
+  ];
+
   return (
     <>
       <Helmet>

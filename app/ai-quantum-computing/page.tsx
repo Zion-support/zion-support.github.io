@@ -106,6 +106,33 @@ export default function AiQuantumComputing() {
     }
   ];
 
+  const testimonials = [
+    {
+      name: "Dr. Sarah Johnson",
+      role: "Research Director",
+      company: "Quantum Research Labs",
+      content: "Zion's quantum platform has accelerated our drug discovery research by 10x. We've identified promising compounds that would have taken years to find with classical computing.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      role: "Chief Scientist",
+      company: "Advanced Materials Corp",
+      content: "The quantum simulation capabilities are extraordinary. We've discovered new material properties that could revolutionize battery technology.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Dr. Emily Rodriguez",
+      role: "Quantum Computing Lead",
+      company: "Financial Services Inc",
+      content: "Our portfolio optimization algorithms running on quantum hardware have outperformed classical methods by 40%. The results speak for themselves.",
+      rating: 5,
+      avatar: "ER"
+    }
+  ];
+
   return (
     <>
       <Helmet>
@@ -120,10 +147,7 @@ export default function AiQuantumComputing() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/ai-quantum-computing" />
       </Helmet>
-      <SEOOptimizer
-        title="AI Quantum Computing - Revolutionary Quantum Solutions | Zion Tech Group"
-        description="Harness the power of quantum computing with AI. Zion's quantum platform offers quantum machine learning, simulation, and optimization for breakthrough discoveries and solutions."
-      />
+      <SEOOptimizer>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}

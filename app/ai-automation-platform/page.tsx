@@ -8,7 +8,10 @@ import {
   Sparkles,
   CheckCircle,
   Workflow,
-  Target
+  Target,
+  TrendingUp,
+  Settings,
+  Users
 } from 'lucide-react';
 
 const AIAutomationPlatformPage = () => {
@@ -60,6 +63,19 @@ const AIAutomationPlatformPage = () => {
       description: "Quality control, supply chain optimization, and predictive maintenance",
       icon: <Settings className="w-6 h-6" />
     }
+  ];
+
+  const benefits = [
+    "Reduce manual work by up to 80%",
+    "Increase process efficiency by 300%",
+    "Eliminate human errors completely",
+    "Scale operations without additional staff",
+    "24/7 automated monitoring and alerts",
+    "Seamless integration with existing systems",
+    "Real-time performance analytics",
+    "Customizable automation workflows",
+    "Advanced AI learning capabilities",
+    "Enterprise-grade security and compliance"
   ];
 
   return (

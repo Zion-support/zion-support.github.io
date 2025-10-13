@@ -11,7 +11,8 @@ import {
   Brain,
   Target,
   Globe,
-  AlertCircle
+  AlertCircle,
+  Clock
 } from 'lucide-react';
 
 const AICustomerSentimentTrackerPage = () => {
@@ -96,6 +97,24 @@ const AICustomerSentimentTrackerPage = () => {
       ],
       popular: false
     }
+  ];
+
+  const stats = [
+    { number: "95%", label: "Accuracy Rate", icon: <Target className="w-6 h-6" /> },
+    { number: "2.5M+", label: "Mentions Analyzed", icon: <BarChart3 className="w-6 h-6" /> },
+    { number: "500+", label: "Happy Clients", icon: <Users className="w-6 h-6" /> },
+    { number: "24/7", label: "Real-time Monitoring", icon: <Clock className="w-6 h-6" /> }
+  ];
+
+  const benefits = [
+    "Real-time sentiment monitoring across all channels",
+    "Advanced AI-powered emotion detection",
+    "Automated alert system for negative sentiment",
+    "Comprehensive analytics and reporting",
+    "Multi-language support for global businesses",
+    "Integration with popular CRM and marketing tools",
+    "Custom sentiment models for industry-specific needs",
+    "Team collaboration and workflow management"
   ];
 
   return (

@@ -19,7 +19,8 @@ import {
   Lock,
   Cpu,
   HardDrive,
-  Network
+  Network,
+  DollarSign
 } from 'lucide-react';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -137,6 +138,40 @@ const CloudInfrastructure = () => {
       description: "Continuous monitoring and alerting to ensure optimal performance and availability",
       icon: <Activity className="w-6 h-6" />,
       stats: "Sub-second response"
+    }
+  ];
+
+  const stats = [
+    { number: "99.99%", label: "Uptime SLA", icon: <Activity className="w-6 h-6" /> },
+    { number: "500+", label: "Projects Delivered", icon: <CheckCircle className="w-6 h-6" /> },
+    { number: "24/7", label: "Support Available", icon: <Clock className="w-6 h-6" /> },
+    { number: "40%", label: "Cost Reduction", icon: <DollarSign className="w-6 h-6" /> }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CTO",
+      company: "TechCorp",
+      content: "Zion's cloud infrastructure has transformed our operations. We've achieved 99.99% uptime and reduced costs by 35% in just 6 months.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      role: "VP of Engineering",
+      company: "ScaleUp Inc",
+      content: "The auto-scaling capabilities are incredible. We handle traffic spikes seamlessly without any manual intervention or downtime.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "IT Director",
+      company: "Global Solutions",
+      content: "The security implementation is top-notch. We've passed all compliance audits and feel confident about our data protection.",
+      rating: 5,
+      avatar: "ER"
     }
   ];
 

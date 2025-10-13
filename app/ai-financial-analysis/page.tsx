@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { TrendingUp, ArrowRight, Sparkles, CheckCircle, PieChart, Shield } from 'lucide-react';
+import { TrendingUp, ArrowRight, Sparkles, CheckCircle, PieChart, Shield, Activity } from 'lucide-react';
 
 const AIFinancialAnalysisPage = () => {
   const features = [
@@ -29,6 +29,17 @@ const AIFinancialAnalysisPage = () => {
       icon: <PieChart className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
+  ];
+
+  const benefits = [
+    "Make data-driven investment decisions with 95% accuracy",
+    "Reduce financial analysis time from days to minutes",
+    "Identify profitable opportunities before your competitors",
+    "Minimize risk with advanced portfolio optimization",
+    "Get real-time market insights and alerts",
+    "Automate financial reporting and compliance",
+    "Scale analysis across your entire portfolio",
+    "Integrate with 100+ financial data sources"
   ];
 
   return (

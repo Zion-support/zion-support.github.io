@@ -135,6 +135,33 @@ export default function AIEcommerceOptimizerPro() {
     },
   ];
 
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "E-commerce Director",
+      company: "Fashion Forward",
+      content: "Our conversion rate increased by 45% after implementing Zion's AI optimization. The personalized product recommendations are incredibly effective.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      role: "CEO",
+      company: "TechGadgets Pro",
+      content: "The AI-powered pricing optimization has maximized our profit margins while staying competitive. Revenue is up 60% in just 6 months.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "Marketing Manager",
+      company: "Home & Garden Plus",
+      content: "The customer behavior analysis has transformed our marketing strategy. We're now targeting the right customers with the right products at the right time.",
+      rating: 5,
+      avatar: "ER"
+    }
+  ];
+
   return (
     <>
       <Helmet>

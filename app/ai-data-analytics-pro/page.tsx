@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { TrendingUp, ArrowRight, Sparkles, CheckCircle, PieChart } from 'lucide-react';
+import { TrendingUp, ArrowRight, Sparkles, CheckCircle, PieChart, Zap, Brain } from 'lucide-react';
 
 const AIDataAnalyticsProPage = () => {
   const features = [
@@ -29,6 +29,17 @@ const AIDataAnalyticsProPage = () => {
       icon: <PieChart className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
+  ];
+
+  const benefits = [
+    "Make data-driven decisions with 95% accuracy",
+    "Reduce analysis time from days to minutes",
+    "Discover hidden patterns in your data",
+    "Predict future trends and outcomes",
+    "Scale analytics across your entire organization",
+    "Integrate with 100+ data sources",
+    "Real-time insights and alerts",
+    "Custom AI models for your industry"
   ];
 
   return (

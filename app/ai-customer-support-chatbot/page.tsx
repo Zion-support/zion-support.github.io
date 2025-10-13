@@ -87,6 +87,33 @@ export default function AICustomerSupportChatbot() {
     },
   ];
 
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "Customer Success Manager",
+      company: "TechCorp",
+      content: "Our AI chatbot has reduced response time by 80% and improved customer satisfaction significantly. It handles 70% of queries without human intervention.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      role: "Operations Director",
+      company: "E-commerce Plus",
+      content: "The intelligent routing feature is fantastic. Complex issues are seamlessly transferred to our human agents with full context preserved.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "VP of Customer Experience",
+      company: "Service Solutions",
+      content: "The analytics dashboard provides incredible insights into customer behavior. We've optimized our support processes based on the data.",
+      rating: 5,
+      avatar: "ER"
+    }
+  ];
+
   return (
     <>
       <Helmet>

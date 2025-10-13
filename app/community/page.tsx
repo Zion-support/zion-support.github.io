@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, MessageCircle, Calendar, Award, Globe, Star } from 'lucide-react';
+import { ArrowRight, Users, MessageCircle, Calendar, Award, Globe, Star, Code } from 'lucide-react';
 
 export default function Community() {
   const events = [
@@ -56,6 +56,13 @@ export default function Community() {
       description: "Contribute to our open source initiatives and make a global impact.",
       participants: "100+ contributors"
     }
+  ];
+
+  const stats = [
+    { number: "5,000+", label: "Community Members", icon: <Users className="w-8 h-8" /> },
+    { number: "50+", label: "Events Hosted", icon: <Calendar className="w-8 h-8" /> },
+    { number: "200+", label: "Mentorship Matches", icon: <Award className="w-8 h-8" /> },
+    { number: "100+", label: "Open Source Projects", icon: <Code className="w-8 h-8" /> }
   ];
 
   return (

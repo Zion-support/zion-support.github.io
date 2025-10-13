@@ -118,6 +118,33 @@ export default function AIExpenseTracker() {
     },
   ];
 
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "Freelance Consultant",
+      company: "Independent",
+      content: "The AI categorization is incredibly accurate. I save hours every week on expense tracking and the insights help me manage my finances better.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      role: "Small Business Owner",
+      company: "TechStart LLC",
+      content: "The receipt scanning feature is a game-changer. I can just snap a photo and everything is automatically categorized and recorded.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "Finance Manager",
+      company: "Growth Co",
+      content: "The team collaboration features have streamlined our expense management process. Everyone can track expenses in real-time with proper approvals.",
+      rating: 5,
+      avatar: "ER"
+    }
+  ];
+
   return (
     <>
       <Helmet>
