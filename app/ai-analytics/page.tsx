@@ -5,6 +5,7 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function aiAnalytics() {
@@ -685,6 +686,8 @@ export default function Page() {
 import React from 'react';
 // Removed unused imports
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
 export default function AIAnalyticsPage() {
   return (
     <div>

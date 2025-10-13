@@ -6,6 +6,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 =======
 import React from "react";
@@ -113,6 +114,9 @@ import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 
+=======
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
 export default function AiAutomationPlatformPage() {
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

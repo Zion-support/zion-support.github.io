@@ -8,6 +8,7 @@ import { Helmet } from 'react-helmet-async';
 =======
 
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 
 export default function AiCustomerSupportChatbotPage() {
   const features = [
@@ -169,6 +170,10 @@ export default function aiCustomerSupportChatbot() {
 export default function AiCustomerSupportChatbotPage() {
             return (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
+=======
+export default function AiCustomerSupportChatbotPage() {
+            return (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Ai Customer Support Chatbot - Zion Tech Group</title>

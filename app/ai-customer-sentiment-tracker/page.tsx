@@ -9,6 +9,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import { Helmet } from 'react-helmet-async';
@@ -128,6 +129,10 @@ export default function aiCustomerSentimentTracker() {
 export default function AiCustomerSentimentTrackerPage() {
           return (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
+=======
+export default function AiCustomerSentimentTrackerPage() {
+          return (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Ai Customer Sentiment Tracker - Zion Tech Group</title>

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 =======
@@ -132,6 +133,14 @@ export default function Contact() {
 
   return (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
+=======
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+export default function Contact() {
+
+      return (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Contact - Zion Tech Group</title>

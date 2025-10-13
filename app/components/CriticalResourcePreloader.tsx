@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -9,6 +10,8 @@ import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 interface CriticalResourcePreloaderProps {
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
 interface CriticalresourcepreloaderProps {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
   className?: string;

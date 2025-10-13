@@ -9,6 +9,7 @@
 =======
 
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 export default function Pricing() {
@@ -310,6 +311,10 @@ import { Helmet } from 'react-helmet-async';
 export default function Pricing() {
           return (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
+=======
+export default function Pricing() {
+          return (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Pricing - Zion Tech Group</title>

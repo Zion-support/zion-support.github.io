@@ -2,12 +2,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function aiContentStudio() {
   return (
+=======
+
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function AiContentStudioPage() {
+        return (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Ai Content Studio - Zion Tech Group</title>

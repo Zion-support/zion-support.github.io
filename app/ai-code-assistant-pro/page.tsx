@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -171,10 +172,14 @@ import FuturisticButtonEnhanced from "../components/FuturisticButtonEnhanced";
 import FuturisticTextEnhanced from "../components/FuturisticTextEnhanced";
 import ResponsiveContainer from "../components/ResponsiveContainer";
 
+=======
+
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
 import { Helmet } from 'react-helmet-async';
-import PerformanceOptimizer from "../components/PerformanceOptimizer";
 
 export default function AiCodeAssistantProPage() {
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   const features = [
@@ -512,6 +517,9 @@ export default AICodeAssistantProZionTechGroup;
   ];
 
   return (
+=======
+        return (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Ai Code Assistant Pro - Zion Tech Group</title>
