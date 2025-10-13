@@ -1,10 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
-=======
-import { Right, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -38,11 +34,7 @@ const Footer: React.FC = () => {
   const socialLinks = [
     { name: 'Facebook', href: '#', icon: Facebook },
     { name: 'Twitter', href: '#', icon: Twitter },
-<<<<<<< HEAD
     { name: 'LinkedIn', href: '#', icon: Linkedin },
-=======
-      { name: 'LinkedIn', href: '#', icon: Linkedin },
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
     { name: 'GitHub', href: '#', icon: Github }
   ];
 

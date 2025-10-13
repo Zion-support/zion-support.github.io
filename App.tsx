@@ -21,8 +21,6 @@ import PricingPage from './app/pages/PricingPage';
 import SolutionsPage from './app/pages/SolutionsPage';
 
 // Error fallback component
-<<<<<<< HEAD
-=======
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
     <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
@@ -48,7 +46,6 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
     </div>
   </div>
 );
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
 
 function App() {
   return (
