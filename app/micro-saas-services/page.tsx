@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Cloud, Globe, Calendar, Phone, CheckCircle, Award, Rocket, Sparkles, TrendingUp, Heart, Receipt, Package, Code, Globe as WebIcon, Calendar as ScheduleIcon, Cloud as CloudIcon, Shield as ProtectionIcon } from 'lucide-react';
-
+import { ArrowRight, Globe, Phone, CheckCircle, Sparkles, Heart, Receipt, Package } from 'lucide-react';
 export default function MicroSaasServices() {
   const microSaasServices = [
     {
