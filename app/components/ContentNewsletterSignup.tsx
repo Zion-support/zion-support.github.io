@@ -21,17 +21,10 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
       await new Promise((resolve) => setTimeout(resolve, 1000));
       setIsSubscribed(true);
       setEmail("");
-<<<<<<< HEAD
 
     } catch (error) {
       console.error('Failed to subscribe to newsletter:', error);
 
-
-
-=======
-    } catch {
-      // Handle error silently
->>>>>>> cursor/fix-errors-and-merge-to-main-6877
     } finally {
       setIsLoading(false);
     }

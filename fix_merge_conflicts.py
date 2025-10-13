@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Script to fix merge conflicts by keeping the HEAD version and removing conflict markers.
+Script to automatically resolve merge conflicts by keeping the HEAD version
+and removing conflict markers.
 """
 
 import os
@@ -13,24 +14,29 @@ def fix_merge_conflicts(file_path):
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
+        # Check if file has merge conflicts
+        if '<<<<<<< HEAD' not in content:
+            return False
+        
         # Remove merge conflict markers and keep HEAD version
-        # Pattern to match: <<<<<<< HEAD ... ======= ... >>>>>>> branch-name
-        pattern = r'<<<<<<< HEAD\n(.*?)\n=======.*?\n>>>>>>> [^\n]+\n?'
+        # Pattern to match from <<<<<<< HEAD to ======= (keep this part)
+        pattern1 = r'<<<<<<< HEAD\n(.*?)\n=======\n.*?\n>>>>>>> [^\n]+'
+        content = re.sub(pattern1, r'\1', content, flags=re.DOTALL)
         
-        # Replace with just the HEAD content
-        fixed_content = re.sub(pattern, r'\1\n', content, flags=re.DOTALL)
+        # Pattern to match from ======= to >>>>>>> (remove this part)
+        pattern2 = r'=======\n.*?\n>>>>>>> [^\n]+'
+        content = re.sub(pattern2, '', content, flags=re.DOTALL)
         
-        # Also handle cases where there might be multiple conflicts in one file
-        # Remove any remaining conflict markers
-        fixed_content = re.sub(r'<<<<<<< HEAD\n?', '', fixed_content)
-        fixed_content = re.sub(r'=======\n?', '', fixed_content)
-        fixed_content = re.sub(r'>>>>>>> [^\n]+\n?', '', fixed_content)
+        # Clean up any remaining conflict markers
+        content = re.sub(r'<<<<<<< HEAD\n?', '', content)
+        content = re.sub(r'=======\n?', '', content)
+        content = re.sub(r'>>>>>>> [^\n]+\n?', '', content)
         
-        # Clean up any extra newlines
-        fixed_content = re.sub(r'\n\s*\n\s*\n', '\n\n', fixed_content)
+        # Clean up multiple newlines
+        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
         
         with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(fixed_content)
+            f.write(content)
         
         print(f"Fixed merge conflicts in: {file_path}")
         return True
@@ -41,37 +47,30 @@ def fix_merge_conflicts(file_path):
 
 def main():
     """Main function to fix all merge conflicts."""
-    # Get all TypeScript and JavaScript files
+    # Find all TypeScript/JavaScript files with merge conflicts
     patterns = [
-        'app/**/*.tsx',
-        'app/**/*.ts',
-        'hooks/**/*.ts',
-        'hooks/**/*.tsx',
-        '__tests__/**/*.tsx',
-        '__tests__/**/*.ts'
+        '/workspace/app/**/*.tsx',
+        '/workspace/app/**/*.ts',
+        '/workspace/**/*.tsx',
+        '/workspace/**/*.ts',
+        '/workspace/**/*.js',
+        '/workspace/**/*.jsx'
     ]
     
-    files_to_fix = []
+    files_fixed = 0
+    total_files = 0
+    
     for pattern in patterns:
-        files_to_fix.extend(glob.glob(pattern, recursive=True))
-    
-    print(f"Found {len(files_to_fix)} files to check for merge conflicts...")
-    
-    fixed_count = 0
-    for file_path in files_to_fix:
-        if os.path.exists(file_path):
-            try:
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    content = f.read()
+        for file_path in glob.glob(pattern, recursive=True):
+            # Skip node_modules and other directories
+            if any(skip in file_path for skip in ['node_modules', '.git', 'dist', '.next', 'out']):
+                continue
                 
-                # Check if file has merge conflicts
-                if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>> ' in content:
-                    if fix_merge_conflicts(file_path):
-                        fixed_count += 1
-            except Exception as e:
-                print(f"Error reading {file_path}: {e}")
+            total_files += 1
+            if fix_merge_conflicts(file_path):
+                files_fixed += 1
     
-    print(f"Fixed merge conflicts in {fixed_count} files.")
+    print(f"\nFixed merge conflicts in {files_fixed} out of {total_files} files checked.")
 
 if __name__ == "__main__":
     main()

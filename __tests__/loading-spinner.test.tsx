@@ -6,18 +6,11 @@ import LoadingSpinner from '../app/components/LoadingSpinner';
 describe('LoadingSpinner', () => {
   it('renders with default props', () => {
     render(<LoadingSpinner />);
-    
-<<<<<<< HEAD
 
     // Should render the spinner icon but no text by default
     expect(screen.getByTestId('loading-spinner')).toBeInTheDocument();
     expect(screen.queryByText('Loading...')).not.toBeInTheDocument();
 
-=======
-    // Should render the spinner icon but no text by default
-    expect(screen.getByTestId('loading-spinner')).toBeInTheDocument();
-    expect(screen.queryByText('Loading...')).not.toBeInTheDocument();
->>>>>>> cursor/fix-errors-and-merge-to-main-6877
   });
 
   it('renders with custom text', () => {
