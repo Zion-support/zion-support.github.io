@@ -21,8 +21,6 @@ export default defineConfig({
   build: {
     target: "esnext",
     minify: "terser",
-<<<<<<< HEAD
-    target: "es2020",
     cssCodeSplit: true,
     modulePreload: {
       polyfill: false,
@@ -174,47 +172,21 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
-    // Enable tree shaking
-    treeshake: true,
-=======
-    sourcemap: true,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ["react", "react-dom"],
-          router: ["react-router-dom"],
-          ui: ["framer-motion", "lucide-react"],
-        },
-      },
-    },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-      },
-    },
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
   },
   server: {
     port: 3000,
     open: true,
-<<<<<<< HEAD
     host: true,
     // Enable HMR
     hmr: {
       overlay: true,
     },
-=======
     cors: true,
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
   },
   preview: {
     port: 4173,
     open: true,
-<<<<<<< HEAD
     host: true,
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
   },
   optimizeDeps: {
     include: [
@@ -225,13 +197,11 @@ export default defineConfig({
       "lucide-react",
     ],
   },
-<<<<<<< HEAD
   // CSS optimization
   css: {
     devSourcemap: true,
-=======
+  },
   define: {
     __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
   },
 });

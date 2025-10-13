@@ -1,53 +1,9 @@
-<<<<<<< HEAD
-import React, { useState, useRef, useEffect } from 'react';
-=======
 import React, { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
 
 interface OptimizedImageProps {
   src: string;
   alt: string;
-<<<<<<< HEAD
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  onLoad?: () => void;
-  onError?: () => void;
-  children?: React.ReactNode;
-}
-
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  className = '',
-  priority = false,
-  onLoad,
-  onError,
-  children,
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    if (imgRef.current?.complete) {
-      setIsLoaded(true);
-    }
-  }, []);
-
-  const handleLoad = () => {
-    setIsLoaded(true);
-    onLoad?.();
-  };
-
-  const handleError = () => {
-    setHasError(true);
-    onError?.();
-=======
   className?: string;
   width?: number;
   height?: number;
@@ -82,50 +38,20 @@ export default function OptimizedImage({
   const containerStyle: React.CSSProperties = {
     width: width ? `${width}px` : undefined,
     height: height ? `${height}px` : undefined,
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
   };
 
   if (hasError) {
     return (
-<<<<<<< HEAD
-      <div className={`${className} flex items-center justify-center bg-gray-200 text-gray-500`}>
-=======
       <div 
         className={`flex items-center justify-center bg-gray-200 text-gray-500 ${className}`}
         style={containerStyle}
       >
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
         <span>Failed to load image</span>
       </div>
     );
   }
 
   return (
-<<<<<<< HEAD
-    <div className={`${className} relative`}>
-      {!isLoaded && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
-          <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
-        </div>
-      )}
-      <img
-        ref={imgRef}
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-        loading={priority ? 'eager' : 'lazy'}
-        onLoad={handleLoad}
-        onError={handleError}
-        className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
-      />
-      {children}
-    </div>
-  );
-};
-
-export default OptimizedImage;
-=======
     <div className={`relative ${className}`} style={containerStyle}>
       {!isLoaded && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
@@ -146,4 +72,3 @@ export default OptimizedImage;
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
