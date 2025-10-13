@@ -146,6 +146,30 @@ const HomePage = () => {
       featured: true
     },
     {
+      name: "AI Time Travel Simulator",
+      description: "Advanced temporal modeling for historical analysis and future scenario planning with 99.2% accuracy",
+      price: "From $899/month",
+      icon: <Clock className="w-6 h-6" />,
+      link: "/ai-time-travel-simulator",
+      featured: true
+    },
+    {
+      name: "AI Mind Reading Analyzer",
+      description: "Advanced neural pattern analysis for understanding human thoughts and emotions with 97.3% accuracy",
+      price: "From $699/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/ai-mind-reading-analyzer",
+      featured: true
+    },
+    {
+      name: "AI Reality Manipulator",
+      description: "Advanced AR/VR system for creating and manipulating virtual environments with photorealistic quality",
+      price: "From $1299/month",
+      icon: <Monitor className="w-6 h-6" />,
+      link: "/ai-reality-manipulator",
+      featured: true
+    },
+    {
       name: "Quantum Data Encryption Vault",
       description: "Unbreakable quantum encryption for sensitive data with zero-knowledge architecture",
       price: "From $599/month",
@@ -220,25 +244,10 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <FuturisticBackground />
-      <EnhancedSEO
-        title="Zion Tech Group - Advanced AI & IT Solutions | Transform Your Business"
-        description="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation. Expert technology consulting for modern businesses. Get started today!"
-        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, business automation, technology consulting, micro SAAS, 5G technology, IT services, machine learning"
-=======
       <EnhancedSEO
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
         keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
-=======
-      <EnhancedSEO
-        title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
-        description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
-        keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
         canonical="https://ziontechgroup.com"
       />
       <FuturisticBackground />
