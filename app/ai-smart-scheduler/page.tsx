@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
-import { Brain, Users, Zap, Globe, Clock, CheckCircle } from "lucide-react";
+import { Link } from 'react-router-dom';
+import { Brain, Users, Zap, Globe, Clock, CheckCircle } from 'lucide-react';
 import Layout from "../layout";
-
 export default function AISmartScheduler() {
   const features = [
     {
@@ -28,7 +27,6 @@ export default function AISmartScheduler() {
       description: "Works with all major calendar platforms and time zones",
     },
   ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -75,7 +73,6 @@ export default function AISmartScheduler() {
       popular: false,
     },
   ];
-
   return (
     <Layout>
       {/* Hero Section */}
@@ -107,7 +104,6 @@ export default function AISmartScheduler() {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-4">
@@ -134,7 +130,6 @@ export default function AISmartScheduler() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 bg-gray-800">
         <div className="container mx-auto px-4">
@@ -195,7 +190,6 @@ export default function AISmartScheduler() {
           </div>
         </div>
       </section>
-
       {/* Testimonials */}
       <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-4">
@@ -227,7 +221,6 @@ export default function AISmartScheduler() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">

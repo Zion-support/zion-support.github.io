@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
-
 interface EnhancedAnalyticsProps {
   children: React.ReactNode;
 }
-
 const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ children }) => {
   useEffect(() => {
     // Initialize analytics tracking
@@ -14,7 +12,6 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ children }) => {
         console.log('Analytics initialized');
       }
     };
-
     // Track page views
     const trackPageView = () => {
       if (typeof window !== 'undefined') {
@@ -22,12 +19,9 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ children }) => {
         console.log('Page view tracked:', window.location.pathname);
       }
     };
-
     initializeAnalytics();
     trackPageView();
   }, []);
-
   return <>{children}</>;
 };
-
 export default EnhancedAnalytics;

@@ -1,6 +1,5 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 export default function ZionCloudVaultPro() {
   const features = [
     {
@@ -40,14 +39,12 @@ export default function ZionCloudVaultPro() {
       benefits: ["Secure sharing", "Permission controls", "Real-time collaboration", "Activity tracking"]
     }
   ];
-
   const storageStats = [
     { number: "99.99%", label: "Uptime Guarantee", icon: <Award className="w-6 h-6" /> },
     { number: "256-bit", label: "AES Encryption", icon: <Lock className="w-6 h-6" /> },
     { number: "Unlimited", label: "Storage Capacity", icon: <Database className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }
   ];
-
   const pricingPlans = [
     {
       name: "Personal",
@@ -99,7 +96,6 @@ export default function ZionCloudVaultPro() {
       popular: false
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -114,7 +110,6 @@ export default function ZionCloudVaultPro() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/zion-cloud-vault-pro" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-teal-500/10 animate-pulse"></div>
@@ -215,7 +210,6 @@ export default function ZionCloudVaultPro() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -258,7 +252,6 @@ export default function ZionCloudVaultPro() {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
           <div className="max-w-7xl mx-auto">
@@ -325,7 +318,6 @@ export default function ZionCloudVaultPro() {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -366,7 +358,6 @@ export default function ZionCloudVaultPro() {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">

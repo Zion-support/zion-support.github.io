@@ -1,11 +1,9 @@
 import React from 'react';
-
 interface FuturisticCardProps {
   children: React.ReactNode;
   className?: string;
   variant?: 'default' | 'glass' | 'neon' | 'hologram';
 }
-
 const FuturisticCard: React.FC<FuturisticCardProps> = ({ 
   children, 
   className = '', 
@@ -19,12 +17,10 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
     neon: "bg-slate-800/50 border border-cyan-400/50 hover:border-cyan-400 shadow-lg shadow-cyan-500/10",
     hologram: "bg-gradient-to-br from-cyan-500/10 to-purple-500/10 border border-cyan-400/30 hover:from-cyan-500/20 hover:to-purple-500/20"
   };
-
   return (
     <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
       {children}
     </div>
   );
 };
-
 export default FuturisticCard;

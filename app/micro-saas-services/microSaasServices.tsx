@@ -1,9 +1,7 @@
 import React from "react";
-
 interface MicrosaasservicesProps {
   className?: string;
 }
-
 const Microsaasservices: React.FC<MicrosaasservicesProps> = ({
   className = "",
 }) => {
@@ -13,5 +11,4 @@ const Microsaasservices: React.FC<MicrosaasservicesProps> = ({
     </div>
   );
 };
-
 export default Microsaasservices;

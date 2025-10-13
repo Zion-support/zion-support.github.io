@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, ArrowRight, CheckCircle, Star, Zap, Lock, BarChart3, Users, Clock, Award, Target, TrendingUp, Cpu, Database, Globe, Mic, Eye, Hand, Layers, Box, Key } from 'lucide-react';
+import { Shield, ArrowRight, CheckCircle, Star, Lock, Award, Globe, Eye, Key } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
-
 const QuantumDataEncryptionVault = () => {
   const features = [
     {
@@ -30,7 +29,6 @@ const QuantumDataEncryptionVault = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   const capabilities = [
     "Quantum key distribution (QKD) encryption",
     "Post-quantum cryptographic algorithms",
@@ -45,7 +43,6 @@ const QuantumDataEncryptionVault = () => {
     "Quantum-secured data backup",
     "Real-time threat detection and response"
   ];
-
   const pricingPlans = [
     {
       name: "Quantum Vault Basic",
@@ -97,7 +94,6 @@ const QuantumDataEncryptionVault = () => {
       popular: false
     }
   ];
-
   const testimonials = [
     {
       name: "Dr. Michael Zhang",
@@ -124,14 +120,12 @@ const QuantumDataEncryptionVault = () => {
       avatar: "RC"
     }
   ];
-
   const stats = [
     { number: "256-bit", label: "Quantum Key Length", icon: <Key className="w-6 h-6" /> },
     { number: "99.999%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
     { number: "Zero", label: "Data Breaches", icon: <Lock className="w-6 h-6" /> },
     { number: "50+", label: "Compliance Standards", icon: <Award className="w-6 h-6" /> }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -140,7 +134,6 @@ const QuantumDataEncryptionVault = () => {
         keywords="quantum encryption, data security, zero-knowledge architecture, quantum cryptography, data sovereignty, compliance, quantum key distribution"
         canonical="https://ziontechgroup.com/quantum-data-encryption-vault"
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -196,7 +189,6 @@ const QuantumDataEncryptionVault = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -231,7 +223,6 @@ const QuantumDataEncryptionVault = () => {
           </div>
         </div>
       </section>
-
       {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
@@ -264,7 +255,6 @@ const QuantumDataEncryptionVault = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -276,7 +266,6 @@ const QuantumDataEncryptionVault = () => {
               Select the perfect plan for your quantum encryption needs and secure your data.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div
@@ -325,7 +314,6 @@ const QuantumDataEncryptionVault = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-7xl mx-auto">
@@ -366,7 +354,6 @@ const QuantumDataEncryptionVault = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -399,5 +386,4 @@ const QuantumDataEncryptionVault = () => {
     </div>
   );
 };
-
 export default QuantumDataEncryptionVault;

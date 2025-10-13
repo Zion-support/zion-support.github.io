@@ -1,9 +1,8 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, BarChart3, DollarSign, Star as StarIcon } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { ArrowRight, CheckCircle, Star, BarChart3, DollarSign } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import SEOOptimizer from "../components/SEOOptimizer";
-
 export default function ZionAnalyticsPro() {
   const features = [
     "Real-time dashboard analytics",
@@ -19,7 +18,6 @@ export default function ZionAnalyticsPro() {
     "API integration",
     "Custom metrics & KPIs"
   ];
-
   const pricing = [
     {
       name: "Starter",
@@ -46,7 +44,6 @@ export default function ZionAnalyticsPro() {
       popular: false
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -65,7 +62,6 @@ export default function ZionAnalyticsPro() {
         title="Zion Analytics Pro - AI-Powered Business Intelligence | Zion Tech Group"
         description="Transform your business with Zion Analytics Pro - AI-powered business intelligence platform with real-time analytics, predictive insights, and automated reporting. Start your free trial today!"
       />
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
@@ -130,7 +126,6 @@ export default function ZionAnalyticsPro() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -160,7 +155,6 @@ export default function ZionAnalyticsPro() {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
@@ -225,7 +219,6 @@ export default function ZionAnalyticsPro() {
             </div>
           </div>
         </section>
-
         {/* Testimonials */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -266,7 +259,6 @@ export default function ZionAnalyticsPro() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
@@ -294,7 +286,6 @@ export default function ZionAnalyticsPro() {
                 View Pricing
               </Link>
             </div>
-
             <div className="mt-8 text-sm text-gray-400">
               <p>Questions? Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a> or call <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></p>
               <p className="mt-2">Address: 364 E Main St STE 1008, Middletown DE 19709</p>

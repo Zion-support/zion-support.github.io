@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Eye, Box, ArrowRight, Sparkles, CheckCircle, Brain, Globe } from 'lucide-react';
-
 const ARVRDevelopmentPage = () => {
   const features = [
     {
@@ -30,7 +29,6 @@ const ARVRDevelopmentPage = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
@@ -39,7 +37,6 @@ const ARVRDevelopmentPage = () => {
         <meta name="keywords" content="AR development, VR development, mixed reality, immersive experiences, virtual reality, augmented reality" />
         <link rel="canonical" href="https://ziontechgroup.com/ar-vr-development" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -82,7 +79,6 @@ const ARVRDevelopmentPage = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -118,7 +114,6 @@ const ARVRDevelopmentPage = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
@@ -141,7 +136,6 @@ const ARVRDevelopmentPage = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -174,5 +168,4 @@ const ARVRDevelopmentPage = () => {
     </div>
   );
 };
-
 export default ARVRDevelopmentPage;

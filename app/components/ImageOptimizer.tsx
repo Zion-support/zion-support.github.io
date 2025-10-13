@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react';
-
 interface ImageOptimizerProps {
   src: string;
   alt: string;
@@ -11,7 +10,6 @@ interface ImageOptimizerProps {
   format?: 'webp' | 'jpeg' | 'png';
   placeholder?: string;
 }
-
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   src,
   alt,
@@ -27,7 +25,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   const [isInView, setIsInView] = useState(!lazy);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
-
   // Generate optimized src
   const getOptimizedSrc = (originalSrc: string) => {
     if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {
@@ -43,11 +40,9 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     
     return url.toString();
   };
-
   // Intersection Observer for lazy loading
   useEffect(() => {
     if (!lazy || !imgRef.current) return;
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -59,24 +54,18 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       },
       { threshold: 0.1 }
     );
-
     observer.observe(imgRef.current);
-
     return () => observer.disconnect();
   }, [lazy]);
-
   const handleLoad = () => {
     setIsLoaded(true);
     setHasError(false);
   };
-
   const handleError = () => {
     setHasError(true);
     setIsLoaded(false);
   };
-
   const optimizedSrc = getOptimizedSrc(src);
-
   return (
     <div className={`relative overflow-hidden ${className}`}>
       {/* Placeholder */}
@@ -96,7 +85,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
           )}
         </div>
       )}
-
       {/* Error state */}
       {hasError && (
         <div 
@@ -113,7 +101,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
           </div>
         </div>
       )}
-
       {/* Main image */}
       {isInView && (
         <img
@@ -135,5 +122,4 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     </div>
   );
 };
-
 export default ImageOptimizer;

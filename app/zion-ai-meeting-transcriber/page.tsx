@@ -1,9 +1,8 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Mic, FileText, Clock, DollarSign, Globe, Smartphone, Lock, Settings, Target, Users, Award, Shield, Mail, Headphones, Video, Calendar, Zap, Brain, MessageSquare, Download, Share2, Search, Filter, Edit, Trash2, Plus, Minus, Play, Pause, Stop, Volume2, VolumeX, Wifi, WifiOff, Signal, Bluetooth, Battery, BatteryLow, Power, RefreshCw, RotateCcw, RotateCw, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { ArrowRight, CheckCircle, Star, Mic, Video, Calendar } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import SEOOptimizer from "../components/SEOOptimizer";
-
 export default function ZionAIMeetingTranscriber() {
   const features = [
     "Real-time meeting transcription with 99.5% accuracy",
@@ -19,7 +18,6 @@ export default function ZionAIMeetingTranscriber() {
     "AI-powered insights and analytics",
     "Secure cloud storage and backup"
   ];
-
   const benefits = [
     "Save 2+ hours per meeting on note-taking",
     "Never miss important details again",
@@ -28,7 +26,6 @@ export default function ZionAIMeetingTranscriber() {
     "Generate actionable follow-ups automatically",
     "Ensure compliance with meeting records"
   ];
-
   const pricing = [
     {
       name: "Starter",
@@ -55,7 +52,6 @@ export default function ZionAIMeetingTranscriber() {
       popular: false
     }
   ];
-
   const testimonials = [
     {
       name: "Sarah Chen",
@@ -79,7 +75,6 @@ export default function ZionAIMeetingTranscriber() {
       rating: 5
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -89,7 +84,6 @@ export default function ZionAIMeetingTranscriber() {
         <link rel="canonical" href="https://ziontechgroup.com/zion-ai-meeting-transcriber" />
       </Helmet>
       <SEOOptimizer />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -132,7 +126,6 @@ export default function ZionAIMeetingTranscriber() {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -162,7 +155,6 @@ export default function ZionAIMeetingTranscriber() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
@@ -192,7 +184,6 @@ export default function ZionAIMeetingTranscriber() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -257,7 +248,6 @@ export default function ZionAIMeetingTranscriber() {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-7xl mx-auto">
@@ -291,7 +281,6 @@ export default function ZionAIMeetingTranscriber() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">

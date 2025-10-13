@@ -1,29 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Cpu, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Target, 
-  CheckCircle, 
-  ArrowRight,
-  Globe,
-  Clock,
-  Users,
-  Award,
-  Star,
-  Activity,
-  PieChart,
-  Database,
-  Lock,
-  Gauge
-} from 'lucide-react';
+import { Cpu, Zap, Shield, Brain, Target, CheckCircle, Globe, Activity, Lock, Gauge } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
-
 const QuantumComputingSolutionsPage = () => {
   const features = [
     {
@@ -51,7 +31,6 @@ const QuantumComputingSolutionsPage = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   const pricingPlans = [
     {
       name: "Quantum Starter",
@@ -105,7 +84,6 @@ const QuantumComputingSolutionsPage = () => {
       popular: false
     }
   ];
-
   const capabilities = [
     {
       title: "Quantum Speed",
@@ -132,14 +110,12 @@ const QuantumComputingSolutionsPage = () => {
       icon: <Activity className="w-6 h-6" />
     }
   ];
-
   const stats = [
     { number: "10^9x", label: "Processing Speed", icon: <Cpu className="w-6 h-6" /> },
     { number: "100%", label: "Security Level", icon: <Shield className="w-6 h-6" /> },
     { number: "50+", label: "Quantum Algorithms", icon: <Brain className="w-6 h-6" /> },
     { number: "24/7", label: "Quantum Monitoring", icon: <Globe className="w-6 h-6" /> }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -148,7 +124,6 @@ const QuantumComputingSolutionsPage = () => {
         keywords="quantum computing, quantum algorithms, quantum security, quantum optimization, quantum machine learning, quantum technology"
         canonical="https://ziontechgroup.com/quantum-computing-solutions"
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -191,7 +166,6 @@ const QuantumComputingSolutionsPage = () => {
               View Demo
             </FuturisticButton>
           </div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {stats.map((stat, index) => (
@@ -206,7 +180,6 @@ const QuantumComputingSolutionsPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -240,7 +213,6 @@ const QuantumComputingSolutionsPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
@@ -275,7 +247,6 @@ const QuantumComputingSolutionsPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -333,7 +304,6 @@ const QuantumComputingSolutionsPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-indigo-900/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -367,5 +337,4 @@ const QuantumComputingSolutionsPage = () => {
     </div>
   );
 };
-
 export default QuantumComputingSolutionsPage;

@@ -1,10 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight, Brain, Users, Clock, Award, Star, Activity, Database, FileText } from 'lucide-react';
+import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight, Brain, Users, Star, Activity, Database, FileText } from 'lucide-react';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
-
 const CybersecuritySolutions = () => {
   const services = [
     {
@@ -36,7 +35,6 @@ const CybersecuritySolutions = () => {
       price: "From $1,799/month"
     }
   ];
-
   const pricingPlans = [
     {
       name: "Essential",
@@ -92,7 +90,6 @@ const CybersecuritySolutions = () => {
       cta: "Contact Sales"
     }
   ];
-
   const capabilities = [
     {
       title: "AI-Powered Security",
@@ -119,7 +116,6 @@ const CybersecuritySolutions = () => {
       stats: "50+ frameworks"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       <Helmet>
@@ -128,7 +124,6 @@ const CybersecuritySolutions = () => {
         <meta name="keywords" content="cybersecurity, security solutions, threat detection, zero trust, data protection, compliance, security audit, penetration testing" />
         <link rel="canonical" href="https://ziontechgroup.com/cybersecurity-solutions" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -171,7 +166,6 @@ const CybersecuritySolutions = () => {
               Explore Solutions
             </FuturisticButton>
           </div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {stats.map((stat, index) => (
@@ -186,7 +180,6 @@ const CybersecuritySolutions = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -224,7 +217,6 @@ const CybersecuritySolutions = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Services Section */}
       <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-red-800/50">
         <ResponsiveContainer>
@@ -268,7 +260,6 @@ const CybersecuritySolutions = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Pricing Section */}
       <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -328,7 +319,6 @@ const CybersecuritySolutions = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-red-800/50">
         <ResponsiveContainer>
@@ -369,7 +359,6 @@ const CybersecuritySolutions = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-900/30 to-orange-900/30">
         <ResponsiveContainer>
@@ -409,5 +398,4 @@ const CybersecuritySolutions = () => {
     </div>
   );
 };
-
 export default CybersecuritySolutions;

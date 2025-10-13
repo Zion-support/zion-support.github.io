@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Monitor, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Users, Clock, Award, Target, TrendingUp, Cpu, Database, Globe, Mic, Eye, Hand, Layers, Box } from 'lucide-react';
+import { Monitor, ArrowRight, CheckCircle, Star, Shield, BarChart3, Users, Eye, Hand } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
-
 const AIHolographicWorkspace = () => {
   const features = [
     {
@@ -30,7 +29,6 @@ const AIHolographicWorkspace = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   const capabilities = [
     "3D holographic projection technology",
     "Real-time remote collaboration tools",
@@ -45,7 +43,6 @@ const AIHolographicWorkspace = () => {
     "Spatial computing applications",
     "Immersive presentation capabilities"
   ];
-
   const pricingPlans = [
     {
       name: "Holographic Starter",
@@ -97,7 +94,6 @@ const AIHolographicWorkspace = () => {
       popular: false
     }
   ];
-
   const testimonials = [
     {
       name: "Dr. Alex Thompson",
@@ -124,14 +120,12 @@ const AIHolographicWorkspace = () => {
       avatar: "JC"
     }
   ];
-
   const stats = [
     { number: "360°", label: "Field of View", icon: <Eye className="w-6 h-6" /> },
     { number: "4K", label: "Holographic Resolution", icon: <Monitor className="w-6 h-6" /> },
     { number: "50+", label: "Concurrent Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -140,7 +134,6 @@ const AIHolographicWorkspace = () => {
         keywords="holographic workspace, 3D collaboration, immersive technology, remote work, data visualization, gesture control, spatial computing"
         canonical="https://ziontechgroup.com/ai-holographic-workspace"
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -196,7 +189,6 @@ const AIHolographicWorkspace = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -231,7 +223,6 @@ const AIHolographicWorkspace = () => {
           </div>
         </div>
       </section>
-
       {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
@@ -264,7 +255,6 @@ const AIHolographicWorkspace = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -276,7 +266,6 @@ const AIHolographicWorkspace = () => {
               Select the perfect plan for your holographic workspace needs and step into the future.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div
@@ -325,7 +314,6 @@ const AIHolographicWorkspace = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-7xl mx-auto">
@@ -366,7 +354,6 @@ const AIHolographicWorkspace = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -399,5 +386,4 @@ const AIHolographicWorkspace = () => {
     </div>
   );
 };
-
 export default AIHolographicWorkspace;

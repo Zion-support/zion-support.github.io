@@ -1,30 +1,25 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
 }
-
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
 }
-
 export class GlobalErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
   }
-
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error
     };
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
     this.setState({
@@ -32,15 +27,12 @@ export class GlobalErrorBoundary extends Component<Props, State> {
       errorInfo
     });
   }
-
   handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
-
   handleGoHome = () => {
     window.location.href = '/';
   };
-
   render() {
     if (this.state.hasError) {
       return (
@@ -57,7 +49,6 @@ export class GlobalErrorBoundary extends Component<Props, State> {
             <p className="text-gray-300 mb-6 text-lg">
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
-
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4 mb-6 text-left">
                 <h3 className="text-red-400 font-semibold mb-2 flex items-center">
@@ -70,7 +61,6 @@ export class GlobalErrorBoundary extends Component<Props, State> {
                 </pre>
               </div>
             )}
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={this.handleRetry}
@@ -88,7 +78,6 @@ export class GlobalErrorBoundary extends Component<Props, State> {
                 Go Home
               </button>
             </div>
-
             <div className="mt-8 text-sm text-gray-400">
               <p>If this problem persists, please contact our support team.</p>
               <p className="mt-2">
@@ -104,9 +93,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
 export default GlobalErrorBoundary;

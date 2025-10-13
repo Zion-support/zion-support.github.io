@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import { 
   Linkedin, 
   Twitter, 
@@ -18,10 +18,8 @@ import {
   Users,
   Award
 } from "lucide-react";
-
 const Footer = React.memo(() => {
   const currentYear = new Date().getFullYear();
-
   const socialLinks = useMemo(() => [
     {
       name: "Twitter",
@@ -39,7 +37,6 @@ const Footer = React.memo(() => {
       icon: <Github className="w-5 h-5" />,
     },
   ], []);
-
   const services = useMemo(() => [
     { name: "AI Services", path: "/ai-services", icon: <Brain className="w-4 h-4" /> },
     { name: "IT Services", path: "/services", icon: <Shield className="w-4 h-4" /> },
@@ -50,7 +47,6 @@ const Footer = React.memo(() => {
     { name: "Web Development", path: "/web-development", icon: <Code className="w-4 h-4" /> },
     { name: "Data Analytics", path: "/ai-data-analytics", icon: <BarChart3 className="w-4 h-4" /> }
   ], []);
-
   const companyLinks = useMemo(() => [
     { name: "About Us", path: "/about" },
     { name: "Case Studies", path: "/case-studies" },
@@ -59,7 +55,6 @@ const Footer = React.memo(() => {
     { name: "Press", path: "/press" },
     { name: "Partners", path: "/partners" }
   ], []);
-
   const supportLinks = useMemo(() => [
     { name: "Contact", path: "/contact" },
     { name: "Support", path: "/support" },
@@ -68,7 +63,6 @@ const Footer = React.memo(() => {
     { name: "Demo", path: "/demo" },
     { name: "Pricing", path: "/pricing" }
   ], []);
-
   const legalLinks = useMemo(() => [
     { name: "Privacy Policy", path: "/privacy" },
     { name: "Terms of Service", path: "/terms" },
@@ -77,14 +71,12 @@ const Footer = React.memo(() => {
     { name: "Security", path: "/security" },
     { name: "Sitemap", path: "/sitemap" }
   ], []);
-
   const stats = useMemo(() => [
     { number: "500+", label: "Projects Completed", icon: <Award className="w-5 h-5" /> },
     { number: "10,000+", label: "Happy Clients", icon: <Users className="w-5 h-5" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-5 h-5" /> },
     { number: "24/7", label: "Support", icon: <Clock className="w-5 h-5" /> }
   ], []);
-
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
       {/* Background Effects */}
@@ -123,7 +115,6 @@ const Footer = React.memo(() => {
                 </div>
               </div>
             </div>
-
             {/* Services */}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
@@ -143,7 +134,6 @@ const Footer = React.memo(() => {
                 ))}
               </ul>
             </div>
-
             {/* Company */}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-white mb-4">Company</h3>
@@ -160,7 +150,6 @@ const Footer = React.memo(() => {
                 ))}
               </ul>
             </div>
-
             {/* Support */}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-white mb-4">Support</h3>
@@ -177,7 +166,6 @@ const Footer = React.memo(() => {
                 ))}
               </ul>
             </div>
-
             {/* Legal */}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-white mb-4">Legal</h3>
@@ -195,7 +183,6 @@ const Footer = React.memo(() => {
               </ul>
             </div>
           </div>
-
           {/* Stats Section */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
             {stats.map((stat, index) => (
@@ -208,7 +195,6 @@ const Footer = React.memo(() => {
               </div>
             ))}
           </div>
-
           {/* Social Links */}
           <div className="flex justify-center space-x-6 mb-8">
             {socialLinks.map((social) => (
@@ -224,7 +210,6 @@ const Footer = React.memo(() => {
               </a>
             ))}
           </div>
-
           {/* Bottom Footer */}
           <div className="border-t border-gray-800 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
@@ -258,7 +243,5 @@ const Footer = React.memo(() => {
     </footer>
   );
 });
-
 Footer.displayName = "Footer";
-
 export default Footer;

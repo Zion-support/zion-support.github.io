@@ -1,10 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-
 const ZionAICustomerInsightsPage = () => {
-  const [selectedPlan, setSelectedPlan] = useState('pro');
-
   const features = [
     {
       title: 'Behavioral Analytics',
@@ -79,7 +76,6 @@ const ZionAICustomerInsightsPage = () => {
       included: true
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -136,7 +132,6 @@ const ZionAICustomerInsightsPage = () => {
       color: 'from-cyan-500 to-blue-500'
     }
   ];
-
   const useCases = [
     {
       title: 'E-commerce',
@@ -163,7 +158,6 @@ const ZionAICustomerInsightsPage = () => {
       examples: ['Risk assessment', 'Cross-selling opportunities', 'Customer lifetime value', 'Fraud detection']
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -177,7 +171,6 @@ const ZionAICustomerInsightsPage = () => {
           content="AI customer insights, customer analytics, churn prediction, behavioral analytics, customer segmentation, personalized recommendations, customer retention"
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-purple-500/10 animate-pulse"></div>
@@ -233,7 +226,6 @@ const ZionAICustomerInsightsPage = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -273,7 +265,6 @@ const ZionAICustomerInsightsPage = () => {
             </div>
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -316,7 +307,6 @@ const ZionAICustomerInsightsPage = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -383,7 +373,6 @@ const ZionAICustomerInsightsPage = () => {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -422,7 +411,6 @@ const ZionAICustomerInsightsPage = () => {
             </div>
           </div>
         </section>
-
         {/* Contact Information Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -482,5 +470,4 @@ const ZionAICustomerInsightsPage = () => {
     </>
   );
 };
-
 export default ZionAICustomerInsightsPage;

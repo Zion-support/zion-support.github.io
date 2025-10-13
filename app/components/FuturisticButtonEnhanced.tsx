@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { LucideIcon } from 'lucide-react';
-
 interface FuturisticButtonEnhancedProps {
   children: React.ReactNode;
   onClick?: () => void;
@@ -17,7 +16,6 @@ interface FuturisticButtonEnhancedProps {
   animated?: boolean;
   neon?: boolean;
 }
-
 const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
   children,
   onClick,
@@ -38,14 +36,12 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
     transition-all duration-300 overflow-hidden group
     ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
   `;
-
   const sizeClasses = {
     sm: 'px-3 py-1.5 text-sm',
     md: 'px-4 py-2 text-base',
     lg: 'px-6 py-3 text-lg',
     xl: 'px-8 py-4 text-xl'
   };
-
   const variantClasses = {
     primary: `
       bg-gradient-to-r from-cyan-500 to-purple-600 text-white
@@ -67,7 +63,6 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
       hover:bg-cyan-400/10 hover:text-cyan-300
     `
   };
-
   const buttonVariants = {
     initial: { 
       scale: 1,
@@ -83,7 +78,6 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
       transition: { duration: 0.1 }
     }
   };
-
   const content = (
     <>
       {/* Animated background */}
@@ -122,14 +116,12 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
       <div className="absolute bottom-1 left-1 w-1 h-1 bg-purple-400 rounded-full opacity-40 group-hover:opacity-80 transition-opacity duration-300" />
     </>
   );
-
   const buttonClasses = `
     ${baseClasses}
     ${sizeClasses[size]}
     ${variantClasses[variant]}
     ${className}
   `;
-
   if (href) {
     return (
       <motion.a
@@ -145,7 +137,6 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
       </motion.a>
     );
   }
-
   return (
     <motion.button
       className={buttonClasses}
@@ -160,5 +151,4 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
     </motion.button>
   );
 };
-
 export default FuturisticButtonEnhanced;

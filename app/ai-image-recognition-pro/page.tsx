@@ -1,11 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Camera, Brain, Shield, Zap, Globe, Star, Users, Award, CheckCircle, TrendingUp, Clock, Eye, Image, Target, Scan } from 'lucide-react';
+import { ArrowRight, Camera, Users, CheckCircle, Eye, Image, Target, Scan } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
-
 const AIImageRecognitionPro = () => {
   const features = [
     {
@@ -33,7 +31,6 @@ const AIImageRecognitionPro = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   const benefits = [
     "99.2% recognition accuracy",
     "Real-time processing",
@@ -42,7 +39,6 @@ const AIImageRecognitionPro = () => {
     "Scalable infrastructure",
     "Easy integration"
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
@@ -51,7 +47,6 @@ const AIImageRecognitionPro = () => {
         keywords="AI image recognition, computer vision, object detection, facial recognition, OCR, image analysis"
         canonical="https://ziontechgroup.com/ai-image-recognition-pro"
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -96,7 +91,6 @@ const AIImageRecognitionPro = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -130,7 +124,6 @@ const AIImageRecognitionPro = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
@@ -152,7 +145,6 @@ const AIImageRecognitionPro = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -187,5 +179,4 @@ const AIImageRecognitionPro = () => {
     </div>
   );
 };
-
 export default AIImageRecognitionPro;

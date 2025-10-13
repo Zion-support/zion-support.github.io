@@ -1,8 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Users, Globe, Shield, Zap } from 'lucide-react';
-
 export default function Partners() {
   const partners = [
     {
@@ -48,7 +45,6 @@ export default function Partners() {
       tier: "Silver"
     }
   ];
-
   const tiers = [
     {
       name: "Platinum",
@@ -69,7 +65,6 @@ export default function Partners() {
       benefits: ["Standard support", "Partner portal access", "Co-marketing opportunities", "Technical documentation"]
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -79,7 +74,7 @@ export default function Partners() {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="text-center">
+          <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
                 Our Partners
@@ -88,6 +83,38 @@ export default function Partners() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Strategic partnerships that drive innovation and deliver exceptional value to our clients.
             </p>
+          </div>
+          {/* Partners Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {partners.map((partner, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-lg">{partner.name.charAt(0)}</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{partner.name}</h3>
+                  <p className="text-gray-300 text-sm mb-3">{partner.description}</p>
+                  <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">
+                    {partner.category}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+          {/* Partnership Tiers */}
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Partnership Tiers</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {tiers.map((tier, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <div className={`w-12 h-12 bg-gradient-to-r ${tier.color} rounded-lg flex items-center justify-center mx-auto mb-4`}>
+                    <span className="text-white font-bold">{tier.name.charAt(0)}</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{tier.name}</h3>
+                  <p className="text-gray-300 text-sm">{tier.requirements}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

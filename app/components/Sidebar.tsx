@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useMemo } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom';
 import { 
   X, 
   ChevronDown, 
@@ -20,16 +20,13 @@ import {
   Mail,
   MapPin
 } from 'lucide-react'
-
 interface SidebarProps {
   isOpen: boolean
   onClose: () => void
 }
-
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const location = useLocation()
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set())
-
   const toggleSection = useCallback((section: string) => {
     setExpandedSections(prev => {
       const newSet = new Set(prev)
@@ -41,7 +38,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       return newSet
     })
   }, [])
-
   const aiServices = useMemo(() => [
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Brain className="w-4 h-4" /> },
@@ -52,7 +48,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'AI Marketing Automation', path: '/ai-marketing', icon: <Zap className="w-4 h-4" /> },
     { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
   ], [])
-
   const itServices = useMemo(() => [
     { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },
     { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions', icon: <Shield className="w-4 h-4" /> },
@@ -63,7 +58,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Network Infrastructure', path: '/network-infrastructure', icon: <Cloud className="w-4 h-4" /> },
     { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
   ], [])
-
   const microSaasServices = useMemo(() => [
     { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
     { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
@@ -74,7 +68,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Zion Project Master', path: '/zion-project-master', icon: <Code className="w-4 h-4" /> },
     { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> }
   ], [])
-
   const mainNavItems = useMemo(() => [
     { name: 'Home', path: '/', icon: <Home className="w-4 h-4" /> },
     { name: 'About', path: '/about', icon: <Users className="w-4 h-4" /> },
@@ -84,17 +77,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Blog', path: '/blog', icon: <Brain className="w-4 h-4" /> },
     { name: 'Contact', path: '/contact', icon: <Phone className="w-4 h-4" /> }
   ], [])
-
   const contactInfo = useMemo(() => [
     { icon: <Mail className="w-4 h-4" />, text: 'kleber@ziontechgroup.com' },
     { icon: <Phone className="w-4 h-4" />, text: '+1 302 464 0950' },
     { icon: <MapPin className="w-4 h-4" />, text: '364 E Main St STE 1008, Middletown DE 19709' }
   ], [])
-
   const isActive = (path: string) => location.pathname === path
-
   if (!isOpen) return null
-
   return (
     <>
       {/* Overlay */}
@@ -123,7 +112,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <X className="w-5 h-5" />
             </button>
           </div>
-
           {/* Main Navigation */}
           <div className="space-y-2 mb-8">
             {mainNavItems.map((item) => (
@@ -142,7 +130,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </Link>
             ))}
           </div>
-
           {/* AI Services Section */}
           <div className="mb-6">
             <button
@@ -180,7 +167,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </div>
             )}
           </div>
-
           {/* IT Services Section */}
           <div className="mb-6">
             <button
@@ -218,7 +204,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </div>
             )}
           </div>
-
           {/* Micro SAAS Section */}
           <div className="mb-6">
             <button
@@ -261,7 +246,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </div>
             )}
           </div>
-
           {/* Contact Info */}
           <div className="border-t border-white/10 pt-6">
             <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Contact Info</h4>
@@ -274,7 +258,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               ))}
             </div>
           </div>
-
           {/* CTA Button */}
           <div className="mt-6">
             <Link
@@ -291,5 +274,4 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     </>
   )
 }
-
 export default Sidebar

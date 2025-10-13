@@ -1,11 +1,9 @@
 import React from 'react';
-
 interface EnhancedLoadingProps {
   message?: string;
   showProgress?: boolean;
   progress?: number;
 }
-
 const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
   message = "Loading...",
   showProgress = false,
@@ -23,12 +21,10 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
             </div>
           </div>
         </div>
-
         {/* Loading Message */}
         <h2 className="text-2xl font-bold text-white mb-4 animate-pulse">
           {message}
         </h2>
-
         {/* Progress Bar */}
         {showProgress && (
           <div className="w-64 mx-auto mb-4">
@@ -43,7 +39,6 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
             </p>
           </div>
         )}
-
         {/* Loading Animation */}
         <div className="flex justify-center space-x-2">
           {[...Array(3)].map((_, i) => (
@@ -57,7 +52,6 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
             ></div>
           ))}
         </div>
-
         {/* Additional Info */}
         <p className="text-gray-400 text-sm mt-6 max-w-md mx-auto">
           Preparing your experience with cutting-edge technology...
@@ -66,5 +60,4 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
     </div>
   );
 };
-
 export default EnhancedLoading;

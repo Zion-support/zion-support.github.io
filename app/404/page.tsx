@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Home, ArrowLeft, Search, AlertTriangle } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
-
 const NotFoundPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
@@ -24,7 +23,6 @@ const NotFoundPage = () => {
             </div>
           </div>
         </div>
-
         {/* Error Message */}
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
           Oops! Page Not Found
@@ -33,7 +31,6 @@ const NotFoundPage = () => {
           The page you're looking for seems to have vanished into the digital void. 
           Don't worry, our AI solutions can help you find what you need!
         </p>
-
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
           <Link
@@ -51,7 +48,6 @@ const NotFoundPage = () => {
             Go Back
           </button>
         </div>
-
         {/* Popular Links */}
         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
           <h2 className="text-xl font-semibold text-white mb-4">
@@ -88,7 +84,6 @@ const NotFoundPage = () => {
             </Link>
           </div>
         </div>
-
         {/* Help Text */}
         <div className="mt-8 text-gray-400 text-sm">
           <p>
@@ -102,5 +97,4 @@ const NotFoundPage = () => {
     </div>
   );
 };
-
 export default NotFoundPage;

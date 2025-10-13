@@ -1,6 +1,5 @@
 'use client'
-import { useEffect } from 'react'
-
+import { useEffect } from 'react';
 const CriticalResourcePreloader = () => {
   useEffect(() => {
     const preloadCriticalResources = () => {
@@ -18,26 +17,22 @@ const CriticalResourcePreloader = () => {
           crossorigin: 'anonymous'
         }
       ]
-
       // Critical CSS
       const criticalCSS = [
         '/styles/critical.css',
         '/styles/animations.css'
       ]
-
       // Critical JavaScript
       const criticalJS = [
         '/scripts/performance.js',
         '/scripts/analytics.js'
       ]
-
       // Critical images
       const criticalImages = [
         '/images/logo.svg',
         '/images/hero-bg.webp',
         '/images/cta-bg.webp'
       ]
-
       // Preload fonts
       criticalFonts.forEach(font => {
         const link = document.createElement('link')
@@ -48,7 +43,6 @@ const CriticalResourcePreloader = () => {
         if (font.crossorigin) link.crossOrigin = font.crossorigin
         document.head.appendChild(link)
       })
-
       // Preload CSS
       criticalCSS.forEach(css => {
         const link = document.createElement('link')
@@ -57,7 +51,6 @@ const CriticalResourcePreloader = () => {
         link.as = 'style'
         document.head.appendChild(link)
       })
-
       // Preload JavaScript
       criticalJS.forEach(js => {
         const link = document.createElement('link')
@@ -66,7 +59,6 @@ const CriticalResourcePreloader = () => {
         link.as = 'script'
         document.head.appendChild(link)
       })
-
       // Preload images
       criticalImages.forEach(img => {
         const link = document.createElement('link')
@@ -76,7 +68,6 @@ const CriticalResourcePreloader = () => {
         document.head.appendChild(link)
       })
     }
-
     // Preconnect to external domains
     const preconnectDomains = () => {
       const domains = [
@@ -86,7 +77,6 @@ const CriticalResourcePreloader = () => {
         'https://www.googletagmanager.com',
         'https://cdn.jsdelivr.net'
       ]
-
       domains.forEach(domain => {
         const link = document.createElement('link')
         link.rel = 'preconnect'
@@ -95,7 +85,6 @@ const CriticalResourcePreloader = () => {
         document.head.appendChild(link)
       })
     }
-
     // DNS prefetch for additional domains
     const dnsPrefetchDomains = () => {
       const domains = [
@@ -103,7 +92,6 @@ const CriticalResourcePreloader = () => {
         'https://cdn.ziontechgroup.com',
         'https://analytics.ziontechgroup.com'
       ]
-
       domains.forEach(domain => {
         const link = document.createElement('link')
         link.rel = 'dns-prefetch'
@@ -111,12 +99,10 @@ const CriticalResourcePreloader = () => {
         document.head.appendChild(link)
       })
     }
-
     // Initialize preloading
     preloadCriticalResources()
     preconnectDomains()
     dnsPrefetchDomains()
-
     // Preload next page resources on hover
     const preloadOnHover = () => {
       const links = document.querySelectorAll('a[href^="/"]')
@@ -133,13 +119,9 @@ const CriticalResourcePreloader = () => {
         })
       })
     }
-
     // Initialize hover preloading after a delay
     setTimeout(preloadOnHover, 2000)
-
   }, [])
-
   return null
 }
-
 export default CriticalResourcePreloader

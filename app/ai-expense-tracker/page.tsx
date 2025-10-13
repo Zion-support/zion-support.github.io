@@ -1,8 +1,7 @@
 "use client";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { Receipt, Bot, Brain, Shield, CheckCircle, Star, BarChart3, TrendingUp, DollarSign } from 'lucide-react';
-
 export default function AIExpenseTracker() {
   const features = [
     {
@@ -30,7 +29,6 @@ export default function AIExpenseTracker() {
         "Generate detailed reports and visualizations to understand your spending habits.",
     },
   ];
-
   const capabilities = [
     {
       title: "Automatic Categorization",
@@ -57,7 +55,6 @@ export default function AIExpenseTracker() {
       icon: <Brain className="w-8 h-8 text-purple-400" />,
     },
   ];
-
   const pricingPlans = [
     {
       name: "Basic",
@@ -107,7 +104,6 @@ export default function AIExpenseTracker() {
       popular: false,
     },
   ];
-
   return (
     <>
       <Helmet>
@@ -117,7 +113,6 @@ export default function AIExpenseTracker() {
           content="Smart expense tracking with AI-powered categorization, receipt scanning, and financial insights."
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         {/* Hero Section */}
         <div className="container mx-auto px-4 py-20">
@@ -145,7 +140,6 @@ export default function AIExpenseTracker() {
               </Link>
             </div>
           </div>
-
           {/* Features Section */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {features.map((feature, index) => (
@@ -161,7 +155,6 @@ export default function AIExpenseTracker() {
               </div>
             ))}
           </div>
-
           {/* Capabilities Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -184,7 +177,6 @@ export default function AIExpenseTracker() {
               ))}
             </div>
           </div>
-
           {/* Pricing Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -240,7 +232,6 @@ export default function AIExpenseTracker() {
               ))}
             </div>
           </div>
-
           {/* Testimonials Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -275,7 +266,6 @@ export default function AIExpenseTracker() {
               ))}
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-4">

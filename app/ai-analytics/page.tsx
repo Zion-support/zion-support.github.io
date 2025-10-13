@@ -1,5 +1,5 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
   BarChart3, 
@@ -17,7 +17,6 @@ import {
   Lightbulb,
   TrendingDown
 } from "lucide-react";
-
 export default function AiAnalytics() {
   const features = [
     {
@@ -57,14 +56,12 @@ export default function AiAnalytics() {
       benefits: ["Custom model training", "Model deployment", "Performance monitoring", "Continuous learning"]
     }
   ];
-
   const analyticsStats = [
     { number: "40%", label: "Faster Decision Making", icon: <Zap className="w-6 h-6" /> },
     { number: "85%", label: "Prediction Accuracy", icon: <Brain className="w-6 h-6" /> },
     { number: "60%", label: "Cost Reduction", icon: <TrendingDown className="w-6 h-6" /> },
     { number: "24/7", label: "Automated Monitoring", icon: <Monitor className="w-6 h-6" /> }
   ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -116,7 +113,6 @@ export default function AiAnalytics() {
       popular: false
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -131,7 +127,6 @@ export default function AiAnalytics() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/ai-analytics" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-purple-500/10 animate-pulse"></div>
@@ -232,7 +227,6 @@ export default function AiAnalytics() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -275,7 +269,6 @@ export default function AiAnalytics() {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
           <div className="max-w-7xl mx-auto">
@@ -342,7 +335,6 @@ export default function AiAnalytics() {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -383,7 +375,6 @@ export default function AiAnalytics() {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">

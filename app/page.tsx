@@ -1,9 +1,8 @@
-import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
+import { Link } from 'react-router-dom';
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from 'lucide-react';
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import ResponsiveContainer from "./components/ResponsiveContainer";
-
 const HomePage = () => {
   const features = [
     {
@@ -39,7 +38,6 @@ const HomePage = () => {
       link: "/5g-solutions"
     },
   ];
-
   const microSaasHighlights = [
     {
       name: "Zion AI Meeting Transcriber",
@@ -90,14 +88,12 @@ const HomePage = () => {
       featured: true
     }
   ];
-
   const stats = [
     { number: "15,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
     { number: "50+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
   ];
-
   const testimonials = [
     {
       name: "Sarah Johnson",
@@ -121,7 +117,6 @@ const HomePage = () => {
       rating: 5
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
@@ -131,7 +126,6 @@ const HomePage = () => {
         canonical="https://ziontechgroup.com"
       />
       <FuturisticBackground />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         {/* Animated Background Elements */}
@@ -190,7 +184,6 @@ const HomePage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -237,7 +230,6 @@ const HomePage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Micro SAAS Highlights */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
@@ -295,7 +287,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -328,7 +319,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -386,5 +376,4 @@ const HomePage = () => {
     </div>
   );
 };
-
 export default HomePage;

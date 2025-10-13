@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { 
   Brain, 
   TrendingUp, 
@@ -9,13 +8,9 @@ import {
   DollarSign, 
   Target, 
   CheckCircle, 
-  ArrowRight,
   Cpu,
   Globe,
   Clock,
-  Users,
-  Award,
-  Star,
   Activity,
   PieChart
 } from 'lucide-react';
@@ -23,7 +18,6 @@ import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
-
 const AIQuantumFinancialOraclePage = () => {
   const features = [
     {
@@ -51,7 +45,6 @@ const AIQuantumFinancialOraclePage = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   const pricingPlans = [
     {
       name: "Quantum Starter",
@@ -105,7 +98,6 @@ const AIQuantumFinancialOraclePage = () => {
       popular: false
     }
   ];
-
   const capabilities = [
     {
       title: "Market Prediction",
@@ -132,14 +124,12 @@ const AIQuantumFinancialOraclePage = () => {
       icon: <Clock className="w-6 h-6" />
     }
   ];
-
   const stats = [
     { number: "99.7%", label: "Prediction Accuracy", icon: <Brain className="w-6 h-6" /> },
     { number: "50ms", label: "Processing Speed", icon: <Zap className="w-6 h-6" /> },
     { number: "10M+", label: "Data Points Analyzed", icon: <BarChart3 className="w-6 h-6" /> },
     { number: "24/7", label: "Market Monitoring", icon: <Globe className="w-6 h-6" /> }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -148,7 +138,6 @@ const AIQuantumFinancialOraclePage = () => {
         keywords="quantum financial AI, market prediction, portfolio optimization, risk analysis, financial oracle, quantum computing finance"
         canonical="https://ziontechgroup.com/ai-quantum-financial-oracle"
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -191,7 +180,6 @@ const AIQuantumFinancialOraclePage = () => {
               View Demo
             </FuturisticButton>
           </div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {stats.map((stat, index) => (
@@ -206,7 +194,6 @@ const AIQuantumFinancialOraclePage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -240,7 +227,6 @@ const AIQuantumFinancialOraclePage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
@@ -275,7 +261,6 @@ const AIQuantumFinancialOraclePage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -333,7 +318,6 @@ const AIQuantumFinancialOraclePage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-indigo-900/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -367,5 +351,4 @@ const AIQuantumFinancialOraclePage = () => {
     </div>
   );
 };
-
 export default AIQuantumFinancialOraclePage;

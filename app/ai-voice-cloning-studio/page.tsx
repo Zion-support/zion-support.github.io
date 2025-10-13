@@ -1,29 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Mic, 
-  Play, 
-  Pause, 
-  Download, 
-  Upload, 
-  Settings, 
-  Star, 
-  Users, 
-  Zap, 
-  Shield, 
-  CheckCircle, 
-  ArrowRight,
-  Brain,
-  Volume2,
-  FileAudio,
-  Clock,
-  Globe
-} from 'lucide-react';
+import { Mic, Play, Settings, Users, Zap, CheckCircle, Brain, Volume2, FileAudio, Globe } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
-
 const AIVoiceCloningStudioPage = () => {
   const features = [
     {
@@ -51,7 +31,6 @@ const AIVoiceCloningStudioPage = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -102,7 +81,6 @@ const AIVoiceCloningStudioPage = () => {
       popular: false
     }
   ];
-
   const useCases = [
     {
       title: "Content Creation",
@@ -125,7 +103,6 @@ const AIVoiceCloningStudioPage = () => {
       icon: <Brain className="w-6 h-6" />
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -134,7 +111,6 @@ const AIVoiceCloningStudioPage = () => {
         keywords="AI voice cloning, voice synthesis, text to speech, voice generation, AI voice studio, voice cloning software"
         canonical="https://ziontechgroup.com/ai-voice-cloning-studio"
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -179,7 +155,6 @@ const AIVoiceCloningStudioPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -213,7 +188,6 @@ const AIVoiceCloningStudioPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
@@ -271,7 +245,6 @@ const AIVoiceCloningStudioPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -303,7 +276,6 @@ const AIVoiceCloningStudioPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-pink-900/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -337,5 +309,4 @@ const AIVoiceCloningStudioPage = () => {
     </div>
   );
 };
-
 export default AIVoiceCloningStudioPage;

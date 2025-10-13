@@ -1,10 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Award, Users, Shield, Zap, Brain, CheckCircle } from 'lucide-react';
-
 const ImprovedFooter = () => {
   const currentYear = new Date().getFullYear();
-
   const serviceCategories = [
     {
       title: 'AI Services',
@@ -106,7 +104,6 @@ const ImprovedFooter = () => {
       ]
     }
   ];
-
   const companyLinks = [
     { label: 'About Us', href: '/about' },
     { label: 'Our Team', href: '/team' },
@@ -117,7 +114,6 @@ const ImprovedFooter = () => {
     { label: 'Press', href: '/press' },
     { label: 'Partners', href: '/partners' }
   ];
-
   const resourceLinks = [
     { label: 'Pricing', href: '/pricing' },
     { label: 'Demo', href: '/demo' },
@@ -128,7 +124,6 @@ const ImprovedFooter = () => {
     { label: 'Webinars', href: '/webinars' },
     { label: 'Whitepapers', href: '/whitepapers' }
   ];
-
   const legalLinks = [
     { label: 'Privacy Policy', href: '/privacy' },
     { label: 'Terms of Service', href: '/terms' },
@@ -137,7 +132,6 @@ const ImprovedFooter = () => {
     { label: 'Accessibility', href: '/accessibility' },
     { label: 'Security', href: '/security' }
   ];
-
   const socialLinks = [
     { label: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
     { label: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
@@ -146,20 +140,17 @@ const ImprovedFooter = () => {
     { label: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5" /> },
     { label: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: <Youtube className="w-5 h-5" /> }
   ];
-
   const stats = [
     { number: '10,000+', label: 'Active Users', icon: <Users className="w-6 h-6" /> },
     { number: '99.9%', label: 'Uptime SLA', icon: <Award className="w-6 h-6" /> },
     { number: '60+', label: 'Micro SAAS Solutions', icon: <Zap className="w-6 h-6" /> },
     { number: '24/7', label: 'Support Available', icon: <Shield className="w-6 h-6" /> }
   ];
-
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown DE 19709'
   };
-
   return (
     <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 relative z-10">
       {/* Main Footer Content */}
@@ -176,7 +167,6 @@ const ImprovedFooter = () => {
             </div>
           ))}
         </div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-16">
           {serviceCategories.map((category, index) => (
@@ -219,7 +209,6 @@ const ImprovedFooter = () => {
             </div>
           ))}
         </div>
-
         {/* Company Info & Links */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
@@ -254,7 +243,6 @@ const ImprovedFooter = () => {
               </div>
             </div>
           </div>
-
           {/* Company Links */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Company</h4>
@@ -270,7 +258,6 @@ const ImprovedFooter = () => {
               ))}
             </div>
           </div>
-
           {/* Resources */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Resources</h4>
@@ -286,7 +273,6 @@ const ImprovedFooter = () => {
               ))}
             </div>
           </div>
-
           {/* Contact Info */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Contact</h4>
@@ -315,7 +301,6 @@ const ImprovedFooter = () => {
             </div>
           </div>
         </div>
-
         {/* Newsletter Signup */}
         <div className="bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-xl p-8 mb-12">
           <div className="max-w-2xl mx-auto text-center">
@@ -336,7 +321,6 @@ const ImprovedFooter = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
@@ -372,5 +356,4 @@ const ImprovedFooter = () => {
     </footer>
   );
 };
-
 export default ImprovedFooter;

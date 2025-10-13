@@ -1,7 +1,6 @@
-import { ArrowRight, Brain, Shield, Users, BarChart3, CheckCircle, Sparkles, Mail, Smartphone, Globe } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
+import { ArrowRight, Brain, Shield, Users, BarChart3, CheckCircle, Sparkles, Mail, Smartphone, Globe } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 export default function AIHealthcareDiagnostics() {
   const features = [
     {
@@ -29,7 +28,6 @@ export default function AIHealthcareDiagnostics() {
       benefits: ["Prognosis Prediction", "Treatment Optimization", "Risk Assessment", "Resource Planning"]
     }
   ];
-
   const useCases = [
     {
       title: "Radiology Departments",
@@ -52,7 +50,6 @@ export default function AIHealthcareDiagnostics() {
       impact: "45% improvement in treatment outcomes, 20% cost reduction"
     }
   ];
-
   const pricing = [
     {
       plan: "Starter",
@@ -76,7 +73,6 @@ export default function AIHealthcareDiagnostics() {
       popular: false
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -91,14 +87,12 @@ export default function AIHealthcareDiagnostics() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/ai-healthcare-diagnostics" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-rose-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
@@ -137,7 +131,6 @@ export default function AIHealthcareDiagnostics() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -183,7 +176,6 @@ export default function AIHealthcareDiagnostics() {
             </div>
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
@@ -216,7 +208,6 @@ export default function AIHealthcareDiagnostics() {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -280,7 +271,6 @@ export default function AIHealthcareDiagnostics() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-rose-900/30 to-pink-900/30">
           <div className="max-w-4xl mx-auto text-center">

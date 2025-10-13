@@ -1,7 +1,6 @@
-import { ArrowRight, Target, Mail, Share2, BarChart3, Users, Zap, Mail as Email, Smartphone, Globe } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
+import { ArrowRight, Target, Mail, Share2, BarChart3, Users, Zap, Smartphone, Globe } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 export default function AIMarketingAutomation() {
   const features = [
     {
@@ -47,7 +46,6 @@ export default function AIMarketingAutomation() {
       benefits: ["Trigger-based Actions", "Multi-channel Workflows", "Conditional Logic", "Performance Monitoring"]
     }
   ];
-
   const pricing = [
     {
       name: "Starter",
@@ -94,7 +92,6 @@ export default function AIMarketingAutomation() {
       popular: false
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -108,7 +105,6 @@ export default function AIMarketingAutomation() {
           content="AI marketing automation, email marketing, social media automation, lead scoring, marketing analytics, customer segmentation, workflow automation, marketing technology"
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 via-purple-500/10 to-cyan-500/10 animate-pulse"></div>
@@ -147,7 +143,6 @@ export default function AIMarketingAutomation() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -198,7 +193,6 @@ export default function AIMarketingAutomation() {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -264,7 +258,6 @@ export default function AIMarketingAutomation() {
             </div>
           </div>
         </section>
-
         {/* Contact Information Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">

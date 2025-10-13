@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface ResponsiveTextProps {
   children: React.ReactNode;
   className?: string;
@@ -13,7 +12,6 @@ interface ResponsiveTextProps {
   weight?: 'light' | 'normal' | 'medium' | 'semibold' | 'bold';
   color?: 'primary' | 'secondary' | 'accent' | 'muted' | 'white' | 'gray';
 }
-
 const ResponsiveText: React.FC<ResponsiveTextProps> = ({
   children,
   className = '',
@@ -28,7 +26,6 @@ const ResponsiveText: React.FC<ResponsiveTextProps> = ({
     semibold: 'font-semibold',
     bold: 'font-bold'
   };
-
   const colorClasses = {
     primary: 'text-cyan-400',
     secondary: 'text-purple-400',
@@ -37,18 +34,15 @@ const ResponsiveText: React.FC<ResponsiveTextProps> = ({
     white: 'text-white',
     gray: 'text-gray-300'
   };
-
   const sizeClasses = `text-${size.default || 'base'} ${
     size.sm ? `sm:text-${size.sm}` : ''
   } ${size.md ? `md:text-${size.md}` : ''} ${
     size.lg ? `lg:text-${size.lg}` : ''
   } ${size.xl ? `xl:text-${size.xl}` : ''}`;
-
   return (
     <span className={`${sizeClasses} ${weightClasses[weight]} ${colorClasses[color]} ${className}`}>
       {children}
     </span>
   );
 };
-
 export default ResponsiveText;

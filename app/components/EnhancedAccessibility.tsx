@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
-
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
-
 const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   useEffect(() => {
     // Add keyboard navigation enhancements
@@ -16,7 +14,6 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
           mainContent.scrollIntoView({ behavior: 'smooth' });
         }
       }
-
       // Escape key to close modals/dropdowns
       if (event.key === 'Escape') {
         const activeElement = document.activeElement as HTMLElement;
@@ -24,7 +21,6 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
           activeElement.blur();
         }
       }
-
       // Arrow key navigation for custom components
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
         const focusableElements = document.querySelectorAll(
@@ -42,7 +38,6 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
         }
       }
     };
-
     // Add focus management
     const handleFocusIn = (event: FocusEvent) => {
       const target = event.target as HTMLElement;
@@ -50,7 +45,6 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
         target.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
     };
-
     // Add ARIA live region for screen readers
     const addLiveRegion = () => {
       if (!document.getElementById('live-region')) {
@@ -62,7 +56,6 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
         document.body.appendChild(liveRegion);
       }
     };
-
     // Add skip links
     const addSkipLinks = () => {
       if (!document.getElementById('skip-links')) {
@@ -77,19 +70,15 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
         document.body.insertBefore(skipLinks, document.body.firstChild);
       }
     };
-
     addLiveRegion();
     addSkipLinks();
-
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('focusin', handleFocusIn);
-
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('focusin', handleFocusIn);
     };
   }, []);
-
   return (
     <>
       {/* Skip to main content link */}
@@ -110,10 +99,8 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
       >
         High Contrast
       </button>
-
       {children}
     </>
   );
 };
-
 export default EnhancedAccessibility;

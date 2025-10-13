@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-
 export default function DemoPage() {
   const [currentDemo, setCurrentDemo] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-
   const demos = [
     {
       id: 'ai-analytics',
@@ -68,21 +66,17 @@ export default function DemoPage() {
       videoUrl: '#'
     }
   ];
-
   const handlePlayPause = () => {
     setIsPlaying(!isPlaying);
   };
-
   const handleNextDemo = () => {
     setCurrentDemo((prev) => (prev + 1) % demos.length);
     setIsPlaying(false);
   };
-
   const handlePrevDemo = () => {
     setCurrentDemo((prev) => (prev - 1 + demos.length) % demos.length);
     setIsPlaying(false);
   };
-
   return (
     <>
       <Helmet>
@@ -96,7 +90,6 @@ export default function DemoPage() {
           content="live demos, AI solutions demo, IT services demo, interactive demonstrations, technology showcase, business automation demo"
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
@@ -122,7 +115,6 @@ export default function DemoPage() {
             </p>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -140,7 +132,6 @@ export default function DemoPage() {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -168,7 +159,6 @@ export default function DemoPage() {
             </div>
           </div>
         </section>
-
         {/* Main Demo Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -182,7 +172,6 @@ export default function DemoPage() {
                 Explore our most popular solutions through interactive demonstrations and real-world use cases.
               </p>
             </div>
-
             {/* Demo Player */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 mb-12">
               <div className="aspect-video bg-slate-800 rounded-lg overflow-hidden relative group">
@@ -196,7 +185,6 @@ export default function DemoPage() {
                     <p className="text-gray-300">{demos[currentDemo].description}</p>
                   </div>
                 </div>
-
                 {/* Demo Controls */}
                 <div className="absolute bottom-4 left-4 right-4 bg-black/50 backdrop-blur-sm rounded-lg p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="flex items-center justify-between">
@@ -229,7 +217,6 @@ export default function DemoPage() {
                   </div>
                 </div>
               </div>
-
               {/* Demo Info */}
               <div className="mt-6">
                 <div className="flex items-center justify-between mb-4">
@@ -242,7 +229,6 @@ export default function DemoPage() {
                     <div className="text-gray-400 text-sm">{demos[currentDemo].duration}</div>
                   </div>
                 </div>
-
                 {/* Features */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                   {demos[currentDemo].features.map((feature, index) => (
@@ -254,7 +240,6 @@ export default function DemoPage() {
                 </div>
               </div>
             </div>
-
             {/* Demo Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {demos.map((demo, index) => (
@@ -302,7 +287,6 @@ export default function DemoPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">

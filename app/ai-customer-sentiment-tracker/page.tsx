@@ -13,7 +13,6 @@ import {
   Globe,
   AlertCircle
 } from 'lucide-react';
-
 const AICustomerSentimentTrackerPage = () => {
   const features = [
     {
@@ -47,7 +46,6 @@ const AICustomerSentimentTrackerPage = () => {
       description: "Share insights across teams, assign tasks, and track resolution progress for better customer experience."
     }
   ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -97,7 +95,6 @@ const AICustomerSentimentTrackerPage = () => {
       popular: false
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -105,7 +102,6 @@ const AICustomerSentimentTrackerPage = () => {
         <meta name="description" content="Monitor and analyze customer sentiment across all channels with AI-powered insights and real-time alerts." />
         <meta name="keywords" content="customer sentiment, sentiment analysis, customer satisfaction, brand monitoring, AI analytics" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -129,7 +125,6 @@ const AICustomerSentimentTrackerPage = () => {
               Monitor customer sentiment across all channels with AI-powered analysis, real-time alerts, 
               and actionable insights to improve customer satisfaction and loyalty.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -150,7 +145,6 @@ const AICustomerSentimentTrackerPage = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -174,7 +168,6 @@ const AICustomerSentimentTrackerPage = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -191,7 +184,6 @@ const AICustomerSentimentTrackerPage = () => {
               loyalty, and business growth.
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -215,7 +207,6 @@ const AICustomerSentimentTrackerPage = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -233,7 +224,6 @@ const AICustomerSentimentTrackerPage = () => {
               across all touchpoints.
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -257,7 +247,6 @@ const AICustomerSentimentTrackerPage = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -275,7 +264,6 @@ const AICustomerSentimentTrackerPage = () => {
               with no hidden fees or long-term contracts.
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <motion.div
@@ -296,7 +284,6 @@ const AICustomerSentimentTrackerPage = () => {
                     </div>
                   </div>
                 )}
-
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>
@@ -305,7 +292,6 @@ const AICustomerSentimentTrackerPage = () => {
                     <span className="text-gray-400 ml-2">{plan.period}</span>
                   </div>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
@@ -314,7 +300,6 @@ const AICustomerSentimentTrackerPage = () => {
                     </li>
                   ))}
                 </ul>
-
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -331,7 +316,6 @@ const AICustomerSentimentTrackerPage = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -368,7 +352,6 @@ const AICustomerSentimentTrackerPage = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className="py-16 px-4 bg-black/20">
         <div className="max-w-7xl mx-auto text-center">
@@ -391,5 +374,4 @@ const AICustomerSentimentTrackerPage = () => {
     </div>
   );
 };
-
 export default AICustomerSentimentTrackerPage;

@@ -1,4 +1,4 @@
-import { Sparkles, PenTool, Video, Image, FileText, CheckCircle, ArrowRight, Star } from "lucide-react";
+import { Sparkles, PenTool, Video, Image, FileText, CheckCircle, ArrowRight, Star } from 'lucide-react';
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
@@ -8,7 +8,6 @@ import FuturisticTextEnhanced from "../components/FuturisticTextEnhanced";
 import ResponsiveContainer from "../components/ResponsiveContainer";
 import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
-
 const AIContentStudioZionTechGroup = () => {
   const structuredData = {
     "@context": "https://schema.org",
@@ -35,7 +34,6 @@ const AIContentStudioZionTechGroup = () => {
       "url": "https://ziontechgroup.com"
     }
   };
-
   const features = [
     {
       title: "AI Writing Assistant",
@@ -62,7 +60,6 @@ const AIContentStudioZionTechGroup = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   const pricingPlans = [
     {
       name: "Creator",
@@ -114,7 +111,6 @@ const AIContentStudioZionTechGroup = () => {
       popular: false
     }
   ];
-
   return (
     <PerformanceOptimizer>
       <EnhancedAccessibility>
@@ -128,7 +124,6 @@ const AIContentStudioZionTechGroup = () => {
           />
           
           <StructuredData type="SoftwareApplication" data={structuredData} />
-
           <main id="main-content" role="main" aria-label="Zion AI Content Studio Pro">
             {/* Hero Section */}
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -177,7 +172,6 @@ const AIContentStudioZionTechGroup = () => {
                 </div>
               </ResponsiveContainer>
             </section>
-
             {/* Features Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8">
               <ResponsiveContainer>
@@ -210,7 +204,6 @@ const AIContentStudioZionTechGroup = () => {
                 </div>
               </ResponsiveContainer>
             </section>
-
             {/* Pricing Section */}
             <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
               <div className="max-w-7xl mx-auto">
@@ -263,7 +256,6 @@ const AIContentStudioZionTechGroup = () => {
                 </div>
               </div>
             </section>
-
             {/* Testimonials Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8">
               <div className="max-w-7xl mx-auto">
@@ -295,7 +287,6 @@ const AIContentStudioZionTechGroup = () => {
                 </div>
               </div>
             </section>
-
             {/* CTA Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-pink-900/30">
               <div className="max-w-4xl mx-auto text-center">
@@ -333,5 +324,4 @@ const AIContentStudioZionTechGroup = () => {
     </PerformanceOptimizer>
   );
 };
-
 export default AIContentStudioZionTechGroup;

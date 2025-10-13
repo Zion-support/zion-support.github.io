@@ -1,6 +1,5 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 export default function ZionSecurityShieldPro() {
   const features = [
     {
@@ -40,14 +39,12 @@ export default function ZionSecurityShieldPro() {
       benefits: ["Biometric authentication", "Hardware tokens", "Mobile app verification", "SSO integration"]
     }
   ];
-
   const securityStats = [
     { number: "99.9%", label: "Threat Detection Accuracy", icon: <Shield className="w-6 h-6" /> },
     { number: "50%", label: "Faster Incident Response", icon: <Zap className="w-6 h-6" /> },
     { number: "24/7", label: "Security Monitoring", icon: <Eye className="w-6 h-6" /> },
     { number: "100%", label: "Compliance Coverage", icon: <Award className="w-6 h-6" /> }
   ];
-
   const pricingPlans = [
     {
       name: "Essential",
@@ -97,7 +94,6 @@ export default function ZionSecurityShieldPro() {
       popular: false
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -112,7 +108,6 @@ export default function ZionSecurityShieldPro() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/zion-security-shield-pro" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10 animate-pulse"></div>
@@ -213,7 +208,6 @@ export default function ZionSecurityShieldPro() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -256,7 +250,6 @@ export default function ZionSecurityShieldPro() {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-red-800/50">
           <div className="max-w-7xl mx-auto">
@@ -323,7 +316,6 @@ export default function ZionSecurityShieldPro() {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -364,7 +356,6 @@ export default function ZionSecurityShieldPro() {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">

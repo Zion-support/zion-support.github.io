@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink } from 'lucide-react';
-
 interface FuturisticButtonProps {
   href?: string;
   to?: string;
@@ -13,7 +12,6 @@ interface FuturisticButtonProps {
   onClick?: () => void;
   external?: boolean;
 }
-
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   href,
   to,
@@ -38,9 +36,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     md: 'px-6 py-3 text-base',
     lg: 'px-8 py-4 text-lg'
   };
-
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
-
   const content = (
     <>
       {icon && <span className="mr-2">{icon}</span>}
@@ -49,7 +45,6 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
       {!external && !icon && <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />}
     </>
   );
-
   if (href) {
     return (
       <a
@@ -63,7 +58,6 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
       </a>
     );
   }
-
   if (to) {
     return (
       <Link
@@ -75,7 +69,6 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
       </Link>
     );
   }
-
   return (
     <button
       className={classes}
@@ -85,5 +78,4 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     </button>
   );
 };
-
 export default FuturisticButton;

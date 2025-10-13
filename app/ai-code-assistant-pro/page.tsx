@@ -1,4 +1,4 @@
-import { Brain, Code, Zap, Shield, CheckCircle, ArrowRight, Star, Globe } from "lucide-react";
+import { Brain, Code, Zap, Shield, CheckCircle, ArrowRight, Star, Globe } from 'lucide-react';
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
@@ -8,7 +8,6 @@ import FuturisticTextEnhanced from "../components/FuturisticTextEnhanced";
 import ResponsiveContainer from "../components/ResponsiveContainer";
 import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
-
 const AICodeAssistantProZionTechGroup = () => {
   const structuredData = {
     "@context": "https://schema.org",
@@ -35,7 +34,6 @@ const AICodeAssistantProZionTechGroup = () => {
       "url": "https://ziontechgroup.com"
     }
   };
-
   const features = [
     {
       title: "AI Code Generation",
@@ -62,7 +60,6 @@ const AICodeAssistantProZionTechGroup = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -111,7 +108,6 @@ const AICodeAssistantProZionTechGroup = () => {
       popular: false
     }
   ];
-
   return (
     <PerformanceOptimizer>
       <EnhancedAccessibility>
@@ -125,7 +121,6 @@ const AICodeAssistantProZionTechGroup = () => {
           />
           
           <StructuredData type="SoftwareApplication" data={structuredData} />
-
           <main id="main-content" role="main" aria-label="Zion AI Code Assistant Pro">
             {/* Hero Section */}
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -174,7 +169,6 @@ const AICodeAssistantProZionTechGroup = () => {
                 </div>
               </ResponsiveContainer>
             </section>
-
             {/* Features Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8">
               <ResponsiveContainer>
@@ -208,7 +202,6 @@ const AICodeAssistantProZionTechGroup = () => {
                 </div>
               </ResponsiveContainer>
             </section>
-
             {/* Pricing Section */}
             <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
               <div className="max-w-7xl mx-auto">
@@ -261,7 +254,6 @@ const AICodeAssistantProZionTechGroup = () => {
                 </div>
               </div>
             </section>
-
             {/* Testimonials Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8">
               <div className="max-w-7xl mx-auto">
@@ -293,7 +285,6 @@ const AICodeAssistantProZionTechGroup = () => {
                 </div>
               </div>
             </section>
-
             {/* CTA Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-purple-900/30">
               <div className="max-w-4xl mx-auto text-center">
@@ -331,5 +322,4 @@ const AICodeAssistantProZionTechGroup = () => {
     </PerformanceOptimizer>
   );
 };
-
 export default AICodeAssistantProZionTechGroup;

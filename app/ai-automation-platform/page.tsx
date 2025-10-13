@@ -7,7 +7,6 @@ import {
   Workflow,
   Target
 } from 'lucide-react';
-
 const AIAutomationPlatformPage = () => {
   const features = [
     {
@@ -35,7 +34,6 @@ const AIAutomationPlatformPage = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   const useCases = [
     {
       industry: "Finance",
@@ -58,7 +56,6 @@ const AIAutomationPlatformPage = () => {
       icon: <Settings className="w-6 h-6" />
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
@@ -67,7 +64,6 @@ const AIAutomationPlatformPage = () => {
         <meta name="keywords" content="AI automation, workflow automation, business process automation, intelligent automation, process optimization, AI platform" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-automation-platform" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -110,7 +106,6 @@ const AIAutomationPlatformPage = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -146,7 +141,6 @@ const AIAutomationPlatformPage = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
@@ -169,7 +163,6 @@ const AIAutomationPlatformPage = () => {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -204,7 +197,6 @@ const AIAutomationPlatformPage = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -237,5 +229,4 @@ const AIAutomationPlatformPage = () => {
     </div>
   );
 };
-
 export default AIAutomationPlatformPage;

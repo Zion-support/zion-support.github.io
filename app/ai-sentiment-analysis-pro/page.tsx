@@ -1,11 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, TrendingUp, Brain, Shield, Zap, Globe, Star, Users, Award, CheckCircle, Clock, MessageSquare, Target, BarChart3 } from 'lucide-react';
+import { ArrowRight, TrendingUp, Globe, CheckCircle, MessageSquare, Target, BarChart3 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
-
 const AISentimentAnalysisPro = () => {
   const features = [
     {
@@ -33,7 +31,6 @@ const AISentimentAnalysisPro = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   const benefits = [
     "95% sentiment accuracy",
     "Real-time monitoring",
@@ -42,7 +39,6 @@ const AISentimentAnalysisPro = () => {
     "Trend analysis",
     "Actionable insights"
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
@@ -51,7 +47,6 @@ const AISentimentAnalysisPro = () => {
         keywords="sentiment analysis, customer sentiment, emotion detection, social media monitoring, customer insights, AI analytics"
         canonical="https://ziontechgroup.com/ai-sentiment-analysis-pro"
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -96,7 +91,6 @@ const AISentimentAnalysisPro = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -130,7 +124,6 @@ const AISentimentAnalysisPro = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
@@ -152,7 +145,6 @@ const AISentimentAnalysisPro = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -187,5 +179,4 @@ const AISentimentAnalysisPro = () => {
     </div>
   );
 };
-
 export default AISentimentAnalysisPro;

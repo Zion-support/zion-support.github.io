@@ -1,7 +1,6 @@
-import { ArrowRight, Shield, Lock, Eye, AlertTriangle, CheckCircle, Star, Zap, Brain } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
+import { ArrowRight, Shield, Lock, Eye, AlertTriangle, CheckCircle, Star, Zap, Brain } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 export default function ZionSecurityShield() {
   const features = [
     {
@@ -35,7 +34,6 @@ export default function ZionSecurityShield() {
       description: "Advanced user behavior analysis to detect insider threats and anomalies"
     }
   ];
-
   const securityFeatures = [
     "Multi-factor Authentication (MFA)",
     "End-to-end Encryption",
@@ -50,7 +48,6 @@ export default function ZionSecurityShield() {
     "Email Security Gateway",
     "Cloud Security Posture Management"
   ];
-
   const pricingPlans = [
     {
       name: "Essential",
@@ -101,7 +98,6 @@ export default function ZionSecurityShield() {
       popular: false
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -115,7 +111,6 @@ export default function ZionSecurityShield() {
           content="cybersecurity, threat detection, security monitoring, AI security, zero trust, compliance, SOC 2, GDPR, security platform"
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -166,7 +161,6 @@ export default function ZionSecurityShield() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -198,7 +192,6 @@ export default function ZionSecurityShield() {
             </div>
           </div>
         </section>
-
         {/* Security Features List */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -223,7 +216,6 @@ export default function ZionSecurityShield() {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -283,7 +275,6 @@ export default function ZionSecurityShield() {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -316,7 +307,6 @@ export default function ZionSecurityShield() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">

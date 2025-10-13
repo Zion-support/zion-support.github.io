@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
-
 const ZionAiBusinessIntelligencePro = () => {
   const features = [
     {
@@ -31,7 +30,6 @@ const ZionAiBusinessIntelligencePro = () => {
       stats: "50+ languages"
     }
   ];
-
   const pricingPlans = [
     {
       name: "Professional",
@@ -94,7 +92,6 @@ const ZionAiBusinessIntelligencePro = () => {
       cta: "Contact Sales"
     }
   ];
-
   const capabilities = [
     {
       title: "Data Integration",
@@ -133,7 +130,6 @@ const ZionAiBusinessIntelligencePro = () => {
       features: ["Native mobile apps", "Offline access", "Push notifications", "Touch-optimized"]
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
@@ -142,7 +138,6 @@ const ZionAiBusinessIntelligencePro = () => {
         <meta name="keywords" content="business intelligence, AI analytics, data visualization, predictive analytics, business intelligence platform, data insights, enterprise analytics" />
         <link rel="canonical" href="https://ziontechgroup.com/zion-ai-business-intelligence-pro" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -185,7 +180,6 @@ const ZionAiBusinessIntelligencePro = () => {
               View Demo
             </FuturisticButton>
           </div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {stats.map((stat, index) => (
@@ -200,7 +194,6 @@ const ZionAiBusinessIntelligencePro = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -238,7 +231,6 @@ const ZionAiBusinessIntelligencePro = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
         <ResponsiveContainer>
@@ -279,7 +271,6 @@ const ZionAiBusinessIntelligencePro = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Pricing Section */}
       <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -339,7 +330,6 @@ const ZionAiBusinessIntelligencePro = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
         <ResponsiveContainer>
@@ -380,7 +370,6 @@ const ZionAiBusinessIntelligencePro = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
         <ResponsiveContainer>
@@ -420,5 +409,4 @@ const ZionAiBusinessIntelligencePro = () => {
     </div>
   );
 };
-
 export default ZionAiBusinessIntelligencePro;

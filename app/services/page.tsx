@@ -1,7 +1,6 @@
-import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Smartphone as Phone, Laptop, Headphones } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
+import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Laptop, Headphones } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 export default function Services() {
   const services = [
     {
@@ -338,7 +337,6 @@ export default function Services() {
       category: "Asset Management"
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -352,7 +350,6 @@ export default function Services() {
           content="AI services, business intelligence, customer support automation, content generation, cybersecurity, 5G solutions, cloud infrastructure, data analytics, code assistant, marketing automation, document processing, CRM, financial analytics"
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
@@ -391,7 +388,6 @@ export default function Services() {
             </div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -482,7 +478,6 @@ export default function Services() {
             </div>
           </div>
         </section>
-
         {/* Contact Information Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">

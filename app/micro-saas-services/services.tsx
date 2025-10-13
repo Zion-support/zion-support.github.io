@@ -1,9 +1,7 @@
 import React from "react";
-
 interface ServicesProps {
   className?: string;
 }
-
 const Services: React.FC<ServicesProps> = ({ className = "" }) => {
   return (
     <div className={className}>
@@ -11,5 +9,4 @@ const Services: React.FC<ServicesProps> = ({ className = "" }) => {
     </div>
   );
 };
-
 export default Services;

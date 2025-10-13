@@ -1,10 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
-
 const ZionAICybersecuritySuiteProPage = () => {
   const features = [
     {
@@ -44,7 +42,6 @@ const ZionAICybersecuritySuiteProPage = () => {
       color: "from-cyan-500 to-blue-500"
     }
   ];
-
   const pricingPlans = [
     {
       name: "Essential",
@@ -105,7 +102,6 @@ const ZionAICybersecuritySuiteProPage = () => {
       color: "from-purple-500 to-pink-500"
     }
   ];
-
   const securityModules = [
     {
       title: "Threat Intelligence",
@@ -144,7 +140,6 @@ const ZionAICybersecuritySuiteProPage = () => {
       color: "from-cyan-500 to-blue-500"
     }
   ];
-
   const threatTypes = [
     {
       title: "Ransomware Protection",
@@ -183,7 +178,6 @@ const ZionAICybersecuritySuiteProPage = () => {
       color: "from-cyan-500 to-blue-500"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -192,7 +186,6 @@ const ZionAICybersecuritySuiteProPage = () => {
         keywords="AI cybersecurity, threat detection, zero-trust security, incident response, endpoint protection, network security, compliance management, security automation"
         canonical="https://ziontechgroup.com/zion-ai-cybersecurity-suite-pro"
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -269,7 +262,6 @@ const ZionAICybersecuritySuiteProPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Threat Protection Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -304,7 +296,6 @@ const ZionAICybersecuritySuiteProPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Security Modules Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
@@ -338,7 +329,6 @@ const ZionAICybersecuritySuiteProPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -372,7 +362,6 @@ const ZionAICybersecuritySuiteProPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
@@ -430,7 +419,6 @@ const ZionAICybersecuritySuiteProPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -468,7 +456,6 @@ const ZionAICybersecuritySuiteProPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -507,5 +494,4 @@ const ZionAICybersecuritySuiteProPage = () => {
     </div>
   );
 };
-
 export default ZionAICybersecuritySuiteProPage;

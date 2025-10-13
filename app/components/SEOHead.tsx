@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface SEOHeadProps {
   title: string;
   description: string;
@@ -9,7 +8,6 @@ interface SEOHeadProps {
   ogImage?: string;
   ogType?: string;
 }
-
 const SEOHead: React.FC<SEOHeadProps> = ({
   title,
   description,
@@ -20,7 +18,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullCanonical = canonical || `https://ziontechgroup.com${window.location.pathname}`;
-
   return (
     <Helmet>
       <title>{fullTitle}</title>
@@ -48,5 +45,4 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     </Helmet>
   );
 };
-
 export default SEOHead;

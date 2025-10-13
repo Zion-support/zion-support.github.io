@@ -1,11 +1,8 @@
 import React, { useEffect } from 'react';
-
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
-
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-
   useEffect(() => {
     // Performance optimization logic
     const optimizePerformance = () => {
@@ -16,7 +13,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         '/images/logo.svg',
         '/icons/sprite.svg'
       ];
-
       criticalResources.forEach(resource => {
         const link = document.createElement('link');
         link.rel = 'preload';
@@ -27,7 +23,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         }
         document.head.appendChild(link);
       });
-
       // Optimize images
       const images = document.querySelectorAll('img');
       images.forEach(img => {
@@ -38,47 +33,39 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
           img.decoding = 'async';
         }
       });
-
       // Preconnect to external domains
       const externalDomains = [
         'https://fonts.googleapis.com',
         'https://fonts.gstatic.com',
         'https://cdnjs.cloudflare.com'
       ];
-
       externalDomains.forEach(domain => {
         const link = document.createElement('link');
         link.rel = 'preconnect';
         link.href = domain;
         document.head.appendChild(link);
       });
-
       // Enable resource hints
       const resourceHints = [
         { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
         { rel: 'dns-prefetch', href: '//fonts.gstatic.com' },
         { rel: 'dns-prefetch', href: '//cdnjs.cloudflare.com' }
       ];
-
       resourceHints.forEach(hint => {
         const link = document.createElement('link');
         link.rel = hint.rel;
         link.href = hint.href;
         document.head.appendChild(link);
       });
-
     };
-
     // Run optimization after component mounts
     const timer = setTimeout(optimizePerformance, 100);
     return () => clearTimeout(timer);
   }, []);
-
   return (
     <div className="performance-optimizer">
       {children}
     </div>
   );
 };
-
 export default PerformanceOptimizer;

@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { ImageIcon } from 'lucide-react';
-
 interface ImprovedImageProps {
   src: string;
   alt: string;
@@ -15,7 +14,6 @@ interface ImprovedImageProps {
   onLoad?: () => void;
   onError?: () => void;
 }
-
 const ImprovedImage: React.FC<ImprovedImageProps> = ({
   src,
   alt,
@@ -33,11 +31,9 @@ const ImprovedImage: React.FC<ImprovedImageProps> = ({
   const [hasError, setHasError] = useState(false);
   const [isInView, setIsInView] = useState(!lazy || priority);
   const imgRef = useRef<HTMLImageElement>(null);
-
   // Intersection Observer for lazy loading
   useEffect(() => {
     if (!lazy || priority) return;
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -50,24 +46,19 @@ const ImprovedImage: React.FC<ImprovedImageProps> = ({
         rootMargin: '50px'
       }
     );
-
     if (imgRef.current) {
       observer.observe(imgRef.current);
     }
-
     return () => observer.disconnect();
   }, [lazy, priority]);
-
   const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
   };
-
   const handleError = () => {
     setHasError(true);
     onError?.();
   };
-
   // Generate optimized src with quality parameter
   const getOptimizedSrc = (originalSrc: string) => {
     // If it's an external URL, return as is
@@ -79,9 +70,7 @@ const ImprovedImage: React.FC<ImprovedImageProps> = ({
     // This is a placeholder - in a real app, you'd use a service like Cloudinary or Next.js Image
     return originalSrc;
   };
-
   const optimizedSrc = getOptimizedSrc(src);
-
   return (
     <div
       ref={imgRef}
@@ -102,7 +91,6 @@ const ImprovedImage: React.FC<ImprovedImageProps> = ({
           )}
         </div>
       )}
-
       {/* Error State */}
       {hasError && (
         <div className="absolute inset-0 bg-slate-800 flex items-center justify-center">
@@ -112,7 +100,6 @@ const ImprovedImage: React.FC<ImprovedImageProps> = ({
           </div>
         </div>
       )}
-
       {/* Actual Image */}
       {isInView && !hasError && (
         <img
@@ -133,7 +120,6 @@ const ImprovedImage: React.FC<ImprovedImageProps> = ({
           }}
         />
       )}
-
       {/* Loading Spinner */}
       {isInView && !isLoaded && !hasError && (
         <div className="absolute inset-0 flex items-center justify-center">
@@ -143,7 +129,6 @@ const ImprovedImage: React.FC<ImprovedImageProps> = ({
     </div>
   );
 };
-
 // Preload component for critical images
 export const PreloadImage: React.FC<{ src: string; as?: string }> = ({ 
   src, 
@@ -155,15 +140,12 @@ export const PreloadImage: React.FC<{ src: string; as?: string }> = ({
     link.href = src;
     link.as = as;
     document.head.appendChild(link);
-
     return () => {
       document.head.removeChild(link);
     };
   }, [src, as]);
-
   return null;
 };
-
 // Image with blur placeholder
 export const BlurImage: React.FC<ImprovedImageProps & { blurDataURL?: string }> = ({
   blurDataURL,
@@ -176,5 +158,4 @@ export const BlurImage: React.FC<ImprovedImageProps & { blurDataURL?: string }> 
     />
   );
 };
-
 export default ImprovedImage;

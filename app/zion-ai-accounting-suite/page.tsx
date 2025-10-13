@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Calculator, Brain, Shield, ArrowRight, CheckCircle, Star, FileText, TrendingUp, Receipt, BarChart3, CreditCard, PieChart, Clock } from 'lucide-react';
+import { Calculator, Brain, Shield, ArrowRight, CheckCircle, Star, FileText, TrendingUp, Receipt, BarChart3, CreditCard, PieChart } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
-
 const ZionAIAccountingSuite = () => {
   const features = [
     {
@@ -42,7 +41,6 @@ const ZionAIAccountingSuite = () => {
       benefit: "99.9% fraud detection"
     }
   ];
-
   const pricingPlans = [
     {
       name: "Solo",
@@ -95,7 +93,6 @@ const ZionAIAccountingSuite = () => {
       popular: false
     }
   ];
-
   const accountingModules = [
     {
       title: "Invoice Management",
@@ -122,7 +119,6 @@ const ZionAIAccountingSuite = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -131,7 +127,6 @@ const ZionAIAccountingSuite = () => {
         keywords="AI accounting software, automated bookkeeping, invoice processing, expense tracking, financial analytics, tax preparation, accounting automation"
         canonical="https://ziontechgroup.com/zion-ai-accounting-suite"
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -167,7 +162,6 @@ const ZionAIAccountingSuite = () => {
                 Watch Demo
               </Link>
             </div>
-
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {stats.map((stat, index) => (
@@ -183,7 +177,6 @@ const ZionAIAccountingSuite = () => {
           </div>
         </div>
       </section>
-
       {/* Accounting Modules Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -217,7 +210,6 @@ const ZionAIAccountingSuite = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
@@ -255,7 +247,6 @@ const ZionAIAccountingSuite = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -320,7 +311,6 @@ const ZionAIAccountingSuite = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
@@ -359,7 +349,6 @@ const ZionAIAccountingSuite = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -391,5 +380,4 @@ const ZionAIAccountingSuite = () => {
     </div>
   );
 };
-
 export default ZionAIAccountingSuite;

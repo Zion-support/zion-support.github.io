@@ -1,12 +1,10 @@
 import React from 'react';
-
 interface FuturisticTextProps {
   children: React.ReactNode;
   variant?: 'heading' | 'subheading' | 'body' | 'caption' | 'neon' | 'gradient';
   className?: string;
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div';
 }
-
 const FuturisticText: React.FC<FuturisticTextProps> = ({
   children,
   variant = 'body',
@@ -23,10 +21,7 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({
     neon: "text-cyan-400 font-semibold drop-shadow-lg",
     gradient: "text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 font-semibold"
   };
-
   const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;
-
   return <Component className={classes}>{children}</Component>;
 };
-
 export default FuturisticText;

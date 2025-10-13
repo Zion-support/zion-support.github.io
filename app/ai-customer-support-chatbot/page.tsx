@@ -1,8 +1,7 @@
 "use client";
-import { Brain, Clock, Target, BarChart3 } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
+import { Brain, Clock, Target, BarChart3 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 export default function AICustomerSupportChatbot() {
   const chatbotFeatures = [
     {
@@ -33,7 +32,6 @@ export default function AICustomerSupportChatbot() {
       ],
     },
   ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -86,7 +84,6 @@ export default function AICustomerSupportChatbot() {
         "Track customer satisfaction, response times, and identify improvement opportunities",
     },
   ];
-
   return (
     <>
       <Helmet>
@@ -96,7 +93,6 @@ export default function AICustomerSupportChatbot() {
           content="Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs."
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         {/* Hero Section */}
         <div className="container mx-auto px-4 py-20">
@@ -123,7 +119,6 @@ export default function AICustomerSupportChatbot() {
               </Link>
             </div>
           </div>
-
           {/* Features Section */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {features.map((feature, index) => (
@@ -139,7 +134,6 @@ export default function AICustomerSupportChatbot() {
               </div>
             ))}
           </div>
-
           {/* Chatbot Features Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -169,7 +163,6 @@ export default function AICustomerSupportChatbot() {
               ))}
             </div>
           </div>
-
           {/* Pricing Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -223,7 +216,6 @@ export default function AICustomerSupportChatbot() {
               ))}
             </div>
           </div>
-
           {/* Testimonials Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -255,7 +247,6 @@ export default function AICustomerSupportChatbot() {
               ))}
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-4">

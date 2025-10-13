@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Users, Brain, Clock, Shield, ArrowRight, CheckCircle, Star, FileText, TrendingUp, Calendar, Heart } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
-
 const ZionHRAssistantPro = () => {
   const features = [
     {
@@ -42,7 +41,6 @@ const ZionHRAssistantPro = () => {
       benefit: "Proactive engagement"
     }
   ];
-
   const pricingPlans = [
     {
       name: "Startup",
@@ -95,7 +93,6 @@ const ZionHRAssistantPro = () => {
       popular: false
     }
   ];
-
   const hrProcesses = [
     {
       title: "Recruitment & Hiring",
@@ -122,7 +119,6 @@ const ZionHRAssistantPro = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -131,7 +127,6 @@ const ZionHRAssistantPro = () => {
         keywords="AI HR management, recruitment automation, performance analytics, employee engagement, HR software, talent management, human resources AI"
         canonical="https://ziontechgroup.com/zion-hr-assistant-pro"
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -167,7 +162,6 @@ const ZionHRAssistantPro = () => {
                 Watch Demo
               </Link>
             </div>
-
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {stats.map((stat, index) => (
@@ -183,7 +177,6 @@ const ZionHRAssistantPro = () => {
           </div>
         </div>
       </section>
-
       {/* HR Processes Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -217,7 +210,6 @@ const ZionHRAssistantPro = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
@@ -255,7 +247,6 @@ const ZionHRAssistantPro = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -320,7 +311,6 @@ const ZionHRAssistantPro = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
@@ -359,7 +349,6 @@ const ZionHRAssistantPro = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -391,5 +380,4 @@ const ZionHRAssistantPro = () => {
     </div>
   );
 };
-
 export default ZionHRAssistantPro;

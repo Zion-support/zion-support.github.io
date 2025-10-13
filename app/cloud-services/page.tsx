@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Cloud, Shield, Zap, Globe, ArrowRight, CheckCircle, BarChart3, Database, Lock, Users, Settings } from 'lucide-react';
-
 const CloudServicesPage: React.FC = () => {
   const services = [
     {
@@ -35,7 +34,28 @@ const CloudServicesPage: React.FC = () => {
       icon: <Database className="w-6 h-6" />
     }
   ];
-
+  const benefits = [
+    {
+      title: "Cost Savings",
+      description: "Reduce infrastructure costs by up to 40%",
+      icon: <CheckCircle className="w-8 h-8" />
+    },
+    {
+      title: "Enhanced Security",
+      description: "Enterprise-grade security and compliance",
+      icon: <Lock className="w-8 h-8" />
+    },
+    {
+      title: "Scalability",
+      description: "Scale resources up or down based on demand",
+      icon: <Users className="w-8 h-8" />
+    },
+    {
+      title: "24/7 Support",
+      description: "Round-the-clock monitoring and support",
+      icon: <Settings className="w-8 h-8" />
+    }
+  ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -65,7 +85,6 @@ const CloudServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -95,7 +114,6 @@ const CloudServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -125,7 +143,6 @@ const CloudServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -154,5 +171,4 @@ const CloudServicesPage: React.FC = () => {
     </div>
   );
 };
-
 export default CloudServicesPage;

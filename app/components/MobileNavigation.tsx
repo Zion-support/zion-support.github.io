@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ArrowRight } from 'lucide-react';
-
 const MobileNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
   const closeMenu = () => {
     setIsOpen(false);
   };
-
   return (
     <>
       {/* Mobile menu button */}
@@ -24,7 +20,6 @@ const MobileNavigation: React.FC = () => {
       >
         {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
       </button>
-
       {/* Mobile menu overlay */}
       {isOpen && (
         <div className="fixed inset-0 z-50 md:hidden">
@@ -50,7 +45,6 @@ const MobileNavigation: React.FC = () => {
                   <X className="w-6 h-6" />
                 </button>
               </div>
-
               {/* Navigation links */}
               <nav className="space-y-4 mb-8">
                 <Link
@@ -80,7 +74,6 @@ const MobileNavigation: React.FC = () => {
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </nav>
-
               {/* Quick services */}
               <div className="mb-8">
                 <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
@@ -110,7 +103,6 @@ const MobileNavigation: React.FC = () => {
                   </Link>
                 </div>
               </div>
-
               {/* CTA Button */}
               <Link
                 to="/contact"
@@ -127,5 +119,4 @@ const MobileNavigation: React.FC = () => {
     </>
   );
 };
-
 export default MobileNavigation;

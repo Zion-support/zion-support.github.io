@@ -1,7 +1,6 @@
-import { ArrowRight, Code, Smartphone, Globe, Database, Zap, BarChart3, Mail } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
+import { ArrowRight, Code, Smartphone, Globe, Database, Zap, BarChart3, Mail } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 export default function CustomDevelopment() {
   const services = [
     {
@@ -59,7 +58,6 @@ export default function CustomDevelopment() {
       features: ["RESTful APIs", "GraphQL", "API Documentation", "Rate Limiting"]
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -73,7 +71,6 @@ export default function CustomDevelopment() {
           content="custom development, software development, web development, mobile app development, e-commerce development, database development, API development, custom software"
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
@@ -112,7 +109,6 @@ export default function CustomDevelopment() {
             </div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -180,7 +176,6 @@ export default function CustomDevelopment() {
             </div>
           </div>
         </section>
-
         {/* Contact Information Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">

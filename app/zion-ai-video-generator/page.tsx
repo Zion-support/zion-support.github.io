@@ -1,10 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-
 const ZionAIVideoGeneratorPage = () => {
-  const [selectedPlan, setSelectedPlan] = useState('pro');
-
   const features = [
     {
       title: 'AI Video Creation',
@@ -79,7 +76,6 @@ const ZionAIVideoGeneratorPage = () => {
       included: true
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -136,7 +132,6 @@ const ZionAIVideoGeneratorPage = () => {
       color: 'from-cyan-500 to-blue-500'
     }
   ];
-
   const useCases = [
     {
       title: 'Marketing Videos',
@@ -163,7 +158,6 @@ const ZionAIVideoGeneratorPage = () => {
       examples: ['Product showcases', 'Sales presentations', 'Customer testimonials', 'How-to guides']
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -177,7 +171,6 @@ const ZionAIVideoGeneratorPage = () => {
           content="AI video generator, video creation, voice synthesis, automated editing, video templates, marketing videos, social media content, video AI"
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
@@ -233,7 +226,6 @@ const ZionAIVideoGeneratorPage = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -273,7 +265,6 @@ const ZionAIVideoGeneratorPage = () => {
             </div>
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -316,7 +307,6 @@ const ZionAIVideoGeneratorPage = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -383,7 +373,6 @@ const ZionAIVideoGeneratorPage = () => {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -422,7 +411,6 @@ const ZionAIVideoGeneratorPage = () => {
             </div>
           </div>
         </section>
-
         {/* Contact Information Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -482,5 +470,4 @@ const ZionAIVideoGeneratorPage = () => {
     </>
   );
 };
-
 export default ZionAIVideoGeneratorPage;

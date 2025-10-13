@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Download, ArrowRight, Sparkles, Target, Brain, Globe, Settings, Shield, BookOpen } from 'lucide-react';
-
 const WhitepapersPage = () => {
   const whitepapers = [
     {
@@ -54,7 +53,6 @@ const WhitepapersPage = () => {
       icon: <BookOpen className="w-6 h-6" />
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
@@ -63,7 +61,6 @@ const WhitepapersPage = () => {
         <meta name="keywords" content="whitepapers, industry reports, technology research, AI whitepapers, cybersecurity reports, cloud whitepapers" />
         <link rel="canonical" href="https://ziontechgroup.com/whitepapers" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -106,7 +103,6 @@ const WhitepapersPage = () => {
           </div>
         </div>
       </section>
-
       {/* Filter Section */}
       <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -126,7 +122,6 @@ const WhitepapersPage = () => {
           </div>
         </div>
       </section>
-
       {/* Whitepapers Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -172,7 +167,6 @@ const WhitepapersPage = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -205,5 +199,4 @@ const WhitepapersPage = () => {
     </div>
   );
 };
-
 export default WhitepapersPage;

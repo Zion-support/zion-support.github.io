@@ -1,8 +1,7 @@
-import { ArrowRight, Mail, Smartphone, Globe, Clock, MapPin, Send, CheckCircle } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { useState } from "react";
-
+import { ArrowRight, Mail, Smartphone, Globe, Clock, MapPin, Send, CheckCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -12,9 +11,7 @@ export default function Contact() {
     service: '',
     message: ''
   });
-
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -22,7 +19,6 @@ export default function Contact() {
       [name]: value
     }));
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
@@ -40,7 +36,6 @@ export default function Contact() {
       });
     }, 3000);
   };
-
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6" />,
@@ -67,7 +62,6 @@ export default function Contact() {
       description: "EST Time Zone"
     }
   ];
-
   const services = [
     "AI Business Intelligence",
     "AI Customer Support",
@@ -82,7 +76,6 @@ export default function Contact() {
     "CRM Assistant",
     "Financial Analytics"
   ];
-
   return (
     <>
       <Helmet>
@@ -96,7 +89,6 @@ export default function Contact() {
           content="contact Zion Tech Group, AI consulting, IT services contact, technology consultation, business automation contact"
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
@@ -120,7 +112,6 @@ export default function Contact() {
             </p>
           </div>
         </section>
-
         {/* Contact Info Cards */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -146,7 +137,6 @@ export default function Contact() {
             </div>
           </div>
         </section>
-
         {/* Contact Form and Additional Info */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -201,7 +191,6 @@ export default function Contact() {
                         />
                       </div>
                     </div>
-
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
@@ -232,7 +221,6 @@ export default function Contact() {
                         />
                       </div>
                     </div>
-
                     <div>
                       <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                         Service Interest
@@ -252,7 +240,6 @@ export default function Contact() {
                         ))}
                       </select>
                     </div>
-
                     <div>
                       <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                         Message *
@@ -268,7 +255,6 @@ export default function Contact() {
                         placeholder="Tell us about your project and how we can help..."
                       />
                     </div>
-
                     <button
                       type="submit"
                       className="w-full group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
@@ -279,7 +265,6 @@ export default function Contact() {
                   </form>
                 )}
               </div>
-
               {/* Additional Information */}
               <div className="space-y-8">
                 <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
@@ -315,7 +300,6 @@ export default function Contact() {
                     </li>
                   </ul>
                 </div>
-
                 <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
                   <h3 className="text-xl font-bold text-white mb-6">
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">

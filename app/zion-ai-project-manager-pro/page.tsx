@@ -1,11 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Calendar, Brain, Users, Zap, CheckCircle, Star, Award, BarChart3, Target, Sparkles, TrendingUp, Monitor, FileText, MessageSquare, Workflow, Shield, Lightbulb, GitBranch, Timer } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
-
 const ZionAIProjectManagerProPage = () => {
   const features = [
     {
@@ -45,7 +43,6 @@ const ZionAIProjectManagerProPage = () => {
       color: "from-cyan-500 to-blue-500"
     }
   ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -104,7 +101,6 @@ const ZionAIProjectManagerProPage = () => {
       color: "from-purple-500 to-pink-500"
     }
   ];
-
   const useCases = [
     {
       title: "Software Development",
@@ -143,7 +139,6 @@ const ZionAIProjectManagerProPage = () => {
       color: "from-cyan-500 to-blue-500"
     }
   ];
-
   const aiCapabilities = [
     {
       title: "Intelligent Task Prioritization",
@@ -182,7 +177,6 @@ const ZionAIProjectManagerProPage = () => {
       color: "from-cyan-500 to-blue-500"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -191,7 +185,6 @@ const ZionAIProjectManagerProPage = () => {
         keywords="AI project management, intelligent project planning, team collaboration, predictive analytics, resource allocation, project automation, agile project management"
         canonical="https://ziontechgroup.com/zion-ai-project-manager-pro"
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -268,7 +261,6 @@ const ZionAIProjectManagerProPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* AI Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -303,7 +295,6 @@ const ZionAIProjectManagerProPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
@@ -337,7 +328,6 @@ const ZionAIProjectManagerProPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -371,7 +361,6 @@ const ZionAIProjectManagerProPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
@@ -429,7 +418,6 @@ const ZionAIProjectManagerProPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -467,7 +455,6 @@ const ZionAIProjectManagerProPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -506,5 +493,4 @@ const ZionAIProjectManagerProPage = () => {
     </div>
   );
 };
-
 export default ZionAIProjectManagerProPage;

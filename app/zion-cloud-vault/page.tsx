@@ -1,7 +1,6 @@
-import { ArrowRight, Cloud, Lock, Shield, Zap, Globe, CheckCircle, Star, Database } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
+import { ArrowRight, Cloud, Lock, Shield, Zap, Globe, CheckCircle, Star, Database } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 export default function ZionCloudVault() {
   const features = [
     {
@@ -35,7 +34,6 @@ export default function ZionCloudVault() {
       description: "Scale from GB to PB with no storage limits and automatic scaling"
     }
   ];
-
   const storageFeatures = [
     "File Versioning & History",
     "Collaborative Workspaces",
@@ -50,7 +48,6 @@ export default function ZionCloudVault() {
     "Share Links & Permissions",
     "Integration with 100+ Apps"
   ];
-
   const pricingPlans = [
     {
       name: "Personal",
@@ -100,7 +97,6 @@ export default function ZionCloudVault() {
       popular: false
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -114,7 +110,6 @@ export default function ZionCloudVault() {
           content="cloud storage, secure file sharing, data encryption, cloud backup, file synchronization, enterprise storage, data security"
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -165,7 +160,6 @@ export default function ZionCloudVault() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -197,7 +191,6 @@ export default function ZionCloudVault() {
             </div>
           </div>
         </section>
-
         {/* Storage Features List */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -222,7 +215,6 @@ export default function ZionCloudVault() {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -282,7 +274,6 @@ export default function ZionCloudVault() {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -315,7 +306,6 @@ export default function ZionCloudVault() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">

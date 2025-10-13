@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BarChart3, Package, TrendingUp, AlertTriangle, Clock, Shield, Zap, ArrowRight, CheckCircle, Star, Smartphone, Globe } from 'lucide-react';
+import { BarChart3, Package, TrendingUp, AlertTriangle, Zap, ArrowRight, CheckCircle, Star, Smartphone, Globe } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
-
 const ZionAIInventoryManager = () => {
   const features = [
     {
@@ -42,7 +41,6 @@ const ZionAIInventoryManager = () => {
       benefit: "24/7 access"
     }
   ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -94,7 +92,6 @@ const ZionAIInventoryManager = () => {
       popular: false
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -103,7 +100,6 @@ const ZionAIInventoryManager = () => {
         keywords="AI inventory management, demand forecasting, inventory tracking, stock management, supply chain optimization, business automation"
         canonical="https://ziontechgroup.com/zion-ai-inventory-manager"
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -139,7 +135,6 @@ const ZionAIInventoryManager = () => {
                 Watch Demo
               </Link>
             </div>
-
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {stats.map((stat, index) => (
@@ -155,7 +150,6 @@ const ZionAIInventoryManager = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -193,7 +187,6 @@ const ZionAIInventoryManager = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
@@ -258,7 +251,6 @@ const ZionAIInventoryManager = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -297,7 +289,6 @@ const ZionAIInventoryManager = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -329,5 +320,4 @@ const ZionAIInventoryManager = () => {
     </div>
   );
 };
-
 export default ZionAIInventoryManager;

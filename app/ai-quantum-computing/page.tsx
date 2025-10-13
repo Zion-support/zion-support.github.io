@@ -1,9 +1,8 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Cpu, Brain, Atom, Users, Award, Globe, Lock, TrendingUp, Monitor, MessageSquare, Phone } from 'lucide-react';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import SEOOptimizer from "../../components/SEOOptimizer";
-
 export default function AiQuantumComputing() {
   const features = [
     "Quantum machine learning algorithms for complex optimization",
@@ -19,7 +18,6 @@ export default function AiQuantumComputing() {
     "Quantum entanglement and teleportation protocols",
     "Custom quantum circuit design and optimization"
   ];
-
   const pricingPlans = [
     {
       name: "Research",
@@ -78,7 +76,6 @@ export default function AiQuantumComputing() {
       popular: false
     }
   ];
-
   const applications = [
     {
       title: "Drug Discovery",
@@ -105,7 +102,6 @@ export default function AiQuantumComputing() {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -124,7 +120,6 @@ export default function AiQuantumComputing() {
         title="AI Quantum Computing - Revolutionary Quantum Solutions | Zion Tech Group"
         description="Harness the power of quantum computing with AI. Zion's quantum platform offers quantum machine learning, simulation, and optimization for breakthrough discoveries and solutions."
       />
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -199,7 +194,6 @@ export default function AiQuantumComputing() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -228,7 +222,6 @@ export default function AiQuantumComputing() {
             </div>
           </div>
         </section>
-
         {/* Applications */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
@@ -264,7 +257,6 @@ export default function AiQuantumComputing() {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -327,7 +319,6 @@ export default function AiQuantumComputing() {
             </div>
           </div>
         </section>
-
         {/* Testimonials */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -366,7 +357,6 @@ export default function AiQuantumComputing() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">

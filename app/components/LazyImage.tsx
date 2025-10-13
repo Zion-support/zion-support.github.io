@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { ImageIcon } from 'lucide-react';
-
 interface LazyImageProps {
   src: string;
   alt: string;
@@ -12,7 +11,6 @@ interface LazyImageProps {
   sizes?: string;
   quality?: number;
 }
-
 const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
@@ -28,10 +26,8 @@ const LazyImage: React.FC<LazyImageProps> = ({
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
-
   useEffect(() => {
     if (priority) return;
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -44,26 +40,20 @@ const LazyImage: React.FC<LazyImageProps> = ({
         threshold: 0.1
       }
     );
-
     if (imgRef.current) {
       observer.observe(imgRef.current);
     }
-
     return () => observer.disconnect();
   }, [priority]);
-
   const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
   };
-
   const handleError = () => {
     setHasError(true);
     onError?.();
   };
-
   const optimizedSrc = `${src}?w=800&q=${quality}&f=webp`;
-
   return (
     <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
       {/* Placeholder */}
@@ -80,7 +70,6 @@ const LazyImage: React.FC<LazyImageProps> = ({
           )}
         </div>
       )}
-
       {/* Error State */}
       {hasError && (
         <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
@@ -90,7 +79,6 @@ const LazyImage: React.FC<LazyImageProps> = ({
           </div>
         </div>
       )}
-
       {/* Actual Image */}
       {isInView && !hasError && (
         <img
@@ -108,5 +96,4 @@ const LazyImage: React.FC<LazyImageProps> = ({
     </div>
   );
 };
-
 export default LazyImage;

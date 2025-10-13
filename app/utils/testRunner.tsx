@@ -1,9 +1,7 @@
 import React from "react";
-
 interface TestrunnerxProps {
   className?: string;
 }
-
 const Testrunnerx: React.FC<TestrunnerxProps> = ({ className = "" }) => {
   return (
     <div className={className}>
@@ -11,5 +9,4 @@ const Testrunnerx: React.FC<TestrunnerxProps> = ({ className = "" }) => {
     </div>
   );
 };
-
 export default Testrunnerx;

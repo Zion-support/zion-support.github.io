@@ -1,13 +1,11 @@
 import React, { useEffect } from "react";
-import { AlertTriangle, RefreshCw, Home, Mail, Bug } from "lucide-react";
-import { Link } from "react-router-dom";
-
+import { AlertTriangle, RefreshCw, Home, Mail, Bug } from 'lucide-react';
+import { Link } from 'react-router-dom';
 interface ErrorFallbackProps {
   error: Error;
   resetErrorBoundary: () => void;
   errorInfo?: React.ErrorInfo;
 }
-
 const ErrorFallback: React.FC<ErrorFallbackProps> = ({
   error,
   resetErrorBoundary,
@@ -21,7 +19,6 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({
         console.error('Error info:', errorInfo);
       }
     }
-
     // Send error to analytics in production
     if (process.env.NODE_ENV === 'production' && window.gtag) {
       window.gtag('event', 'exception', {
@@ -34,7 +31,6 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({
       });
     }
   }, [error, errorInfo]);
-
   const handleReportError = () => {
     const errorReport = {
       message: error.message,
@@ -44,7 +40,6 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({
       userAgent: navigator.userAgent,
       url: window.location.href
     };
-
     // In a real app, you would send this to your error reporting service
     console.log('Error report:', errorReport);
     
@@ -52,7 +47,6 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({
     navigator.clipboard.writeText(JSON.stringify(errorReport, null, 2));
     alert('Error details copied to clipboard. Please send this to our support team.');
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
       <div className="max-w-2xl w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
@@ -87,7 +81,6 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({
             )}
           </div>
         </details>
-
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
@@ -114,7 +107,6 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({
             Report Error
           </button>
         </div>
-
         {/* Contact Information */}
         <div className="mt-8 pt-6 border-t border-white/10">
           <p className="text-gray-400 text-sm mb-2">
@@ -140,5 +132,4 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({
     </div>
   );
 };
-
 export default ErrorFallback;

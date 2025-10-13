@@ -1,17 +1,14 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface SEOOptimizerProps {
   children: React.ReactNode;
 }
-
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
   useEffect(() => {
     // Add structured data for better SEO
     const addStructuredData = () => {
       const existingScript = document.querySelector('script[type="application/ld+json"]');
       if (existingScript) return;
-
       const structuredData = {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -56,13 +53,11 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
           }
         ]
       };
-
       const script = document.createElement('script');
       script.type = 'application/ld+json';
       script.textContent = JSON.stringify(structuredData);
       document.head.appendChild(script);
     };
-
     // Add meta tags for better social sharing
     const addSocialMetaTags = () => {
       const metaTags = [
@@ -77,7 +72,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
         { property: 'og:image:height', content: '630' },
         { property: 'og:image:alt', content: 'Zion Tech Group - Advanced AI and IT Solutions' }
       ];
-
       metaTags.forEach(tag => {
         const existingTag = document.querySelector(`meta[name="${tag.name}"], meta[property="${tag.property}"]`);
         if (!existingTag) {
@@ -89,7 +83,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
         }
       });
     };
-
     // Add performance hints
     const addPerformanceHints = () => {
       const hints = [
@@ -98,7 +91,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
         { rel: 'preconnect', href: 'https://fonts.googleapis.com', crossorigin: 'anonymous' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
       ];
-
       hints.forEach(hint => {
         const existingHint = document.querySelector(`link[rel="${hint.rel}"][href="${hint.href}"]`);
         if (!existingHint) {
@@ -110,13 +102,11 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
         }
       });
     };
-
     // Initialize SEO optimizations
     addStructuredData();
     addSocialMetaTags();
     addPerformanceHints();
   }, []);
-
   return (
     <>
       <Helmet>
@@ -144,5 +134,4 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
     </>
   );
 };
-
 export default SEOOptimizer;

@@ -1,11 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface StructuredDataProps {
   type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'FAQPage' | 'BreadcrumbList' | 'SoftwareApplication';
   data: any;
 }
-
 const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
   const getStructuredData = () => {
     const baseData = {
@@ -13,7 +11,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
       "@type": type,
       ...data
     };
-
     switch (type) {
       case 'Organization':
         return {
@@ -41,7 +38,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
             "https://linkedin.com/company/ziontechgroup"
           ]
         };
-
       case 'WebSite':
         return {
           ...baseData,
@@ -53,7 +49,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
             "query-input": "required name=search_term_string"
           }
         };
-
       case 'WebPage':
         return {
           ...baseData,
@@ -67,7 +62,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
           },
           "breadcrumb": data.breadcrumb
         };
-
       case 'Service':
         return {
           ...baseData,
@@ -80,24 +74,20 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
           "areaServed": data.areaServed || "US",
           "hasOfferCatalog": data.hasOfferCatalog
         };
-
       case 'FAQPage':
         return {
           ...baseData,
           "mainEntity": data.mainEntity || []
         };
-
       case 'BreadcrumbList':
         return {
           ...baseData,
           "itemListElement": data.itemListElement || []
         };
-
       default:
         return baseData;
     }
   };
-
   return (
     <Helmet>
       <script type="application/ld+json">
@@ -106,5 +96,4 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
     </Helmet>
   );
 };
-
 export default StructuredData;

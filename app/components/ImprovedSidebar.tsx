@@ -1,22 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight, ChevronDown, ChevronRight, Brain, Shield, Zap, Globe, BarChart3, Cloud, Settings, Search, Star, TrendingUp, Users, Clock, CheckCircle, HelpCircle, Phone, Mail, MapPin, X, Home, BookOpen, FileText, MessageSquare, Calendar, DollarSign, Play } from 'lucide-react';
-
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
 const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const location = useLocation();
-
   // Close sidebar when route changes
   useEffect(() => {
     onClose();
   }, [location, onClose]);
-
   const toggleSection = (section: string) => {
     setExpandedSections(prev => 
       prev.includes(section) 
@@ -24,7 +20,6 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         : [...prev, section]
     );
   };
-
   const navigationSections = [
     {
       id: 'ai-services',
@@ -130,7 +125,6 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       ]
     }
   ];
-
   const quickLinks = [
     { label: 'Home', href: '/', icon: <Home className="w-4 h-4" /> },
     { label: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4" /> },
@@ -140,7 +134,6 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { label: 'Blog', href: '/blog', icon: <FileText className="w-4 h-4" /> },
     { label: 'Contact', href: '/contact', icon: <Phone className="w-4 h-4" /> }
   ];
-
   const companyLinks = [
     { label: 'About Us', href: '/about' },
     { label: 'Our Team', href: '/team' },
@@ -150,16 +143,13 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { label: 'Press', href: '/press' },
     { label: 'Partners', href: '/partners' }
   ];
-
   const filteredSections = navigationSections.map(section => ({
     ...section,
     items: section.items.filter(item => 
       item.label.toLowerCase().includes(searchQuery.toLowerCase())
     )
   })).filter(section => section.items.length > 0 || searchQuery === '');
-
   if (!isOpen) return null;
-
   return (
     <div className="fixed inset-0 z-50 lg:hidden">
       <div className="fixed inset-0 bg-black/50" onClick={onClose} />
@@ -175,7 +165,6 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <X className="w-6 h-6" />
             </button>
           </div>
-
           {/* Search */}
           <div className="mb-6">
             <div className="relative">
@@ -189,7 +178,6 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               />
             </div>
           </div>
-
           {/* Quick Links */}
           <div className="mb-8">
             <h3 className="text-white font-semibold mb-4">Quick Links</h3>
@@ -207,7 +195,6 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               ))}
             </div>
           </div>
-
           {/* Navigation Sections */}
           <div className="space-y-4">
             {filteredSections.map((section) => (
@@ -231,7 +218,6 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     <ChevronRight className="w-4 h-4 text-gray-400" />
                   )}
                 </button>
-
                 {expandedSections.includes(section.id) && (
                   <div className="ml-4 space-y-1 max-h-64 overflow-y-auto">
                     {section.items.map((item, index) => (
@@ -262,7 +248,6 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </div>
             ))}
           </div>
-
           {/* Company Links */}
           <div className="mt-8 pt-6 border-t border-white/10">
             <h3 className="text-white font-semibold mb-4">Company</h3>
@@ -279,7 +264,6 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               ))}
             </div>
           </div>
-
           {/* Contact Info */}
           <div className="mt-8 pt-6 border-t border-white/10">
             <h3 className="text-white font-semibold mb-4">Contact</h3>
@@ -303,5 +287,4 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     </div>
   );
 };
-
 export default ImprovedSidebar;

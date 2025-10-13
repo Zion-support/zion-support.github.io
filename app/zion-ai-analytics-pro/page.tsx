@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-
 const ZionAIAnalyticsProPage = () => {
   const features = [
     {
@@ -41,7 +40,6 @@ const ZionAIAnalyticsProPage = () => {
       benefits: ['Smart recommendations', 'Pattern recognition', 'Automated alerts', 'Action suggestions']
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -95,7 +93,6 @@ const ZionAIAnalyticsProPage = () => {
       popular: false
     }
   ];
-
   const integrations = [
     { name: 'Salesforce', logo: 'SF', category: 'CRM' },
     { name: 'HubSpot', logo: 'HS', category: 'Marketing' },
@@ -110,7 +107,6 @@ const ZionAIAnalyticsProPage = () => {
     { name: 'MongoDB', logo: 'MG', category: 'Database' },
     { name: 'AWS', logo: 'AW', category: 'Cloud' }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -118,7 +114,6 @@ const ZionAIAnalyticsProPage = () => {
         <meta name="description" content="Transform your business with Zion AI Analytics Pro. Advanced AI-powered business intelligence platform with real-time dashboards, predictive analytics, and automated insights." />
         <meta name="keywords" content="AI analytics, business intelligence, data visualization, predictive analytics, automated reporting, dashboard, data insights" />
       </Helmet>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
         <div className="text-center mb-16">
@@ -137,7 +132,6 @@ const ZionAIAnalyticsProPage = () => {
             Transform your business data into actionable insights with our advanced AI-powered analytics platform. 
             Get real-time dashboards, predictive analytics, and automated insights that drive growth.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105">
               Start Free Trial
@@ -148,7 +142,6 @@ const ZionAIAnalyticsProPage = () => {
               <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
             </button>
           </div>
-
           {/* Key Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
@@ -169,7 +162,6 @@ const ZionAIAnalyticsProPage = () => {
             </div>
           </div>
         </div>
-
         {/* Features Section */}
         <div className="mb-20">
           <div className="text-center mb-12">
@@ -211,7 +203,6 @@ const ZionAIAnalyticsProPage = () => {
             ))}
           </div>
         </div>
-
         {/* Integrations Section */}
         <div className="mb-20">
           <div className="text-center mb-12">
@@ -238,7 +229,6 @@ const ZionAIAnalyticsProPage = () => {
             ))}
           </div>
         </div>
-
         {/* Pricing Section */}
         <div className="mb-20">
           <div className="text-center mb-12">
@@ -297,7 +287,6 @@ const ZionAIAnalyticsProPage = () => {
             ))}
           </div>
         </div>
-
         {/* Testimonials Section */}
         <div className="mb-20">
           <div className="text-center mb-12">
@@ -340,7 +329,6 @@ const ZionAIAnalyticsProPage = () => {
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl p-8 border border-cyan-500/20">
@@ -396,5 +384,4 @@ const ZionAIAnalyticsProPage = () => {
     </div>
   );
 };
-
 export default ZionAIAnalyticsProPage;

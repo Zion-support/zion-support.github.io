@@ -1,16 +1,13 @@
-import { useState, useEffect } from "react";
-
+import { useState, useEffect } from 'react';
 export const useEnhancedPerformance = () => {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
   useEffect(() => {
     setLoading(true);
     // Initialize hook logic here
     setLoading(false);
   }, []);
-
   const processData = (input: any) => {
     try {
       setLoading(true);
@@ -23,7 +20,6 @@ export const useEnhancedPerformance = () => {
       setLoading(false);
     }
   };
-
   return {
     data,
     loading,
@@ -31,5 +27,4 @@ export const useEnhancedPerformance = () => {
     processData,
   };
 };
-
 export default useEnhancedPerformance;

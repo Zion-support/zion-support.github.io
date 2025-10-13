@@ -1,13 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface EnhancedSEOProps {
   title?: string;
   description?: string;
   keywords?: string;
   canonical?: string;
 }
-
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   title = "Zion Tech Group - Advanced AI & IT Solutions",
   description = "Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses.",
@@ -23,5 +21,4 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
     </Helmet>
   );
 };
-
 export default EnhancedSEO;

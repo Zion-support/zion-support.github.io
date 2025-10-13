@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
 export default function ConsultationPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -13,9 +11,7 @@ export default function ConsultationPage() {
     timeline: '',
     message: ''
   });
-
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -23,7 +19,6 @@ export default function ConsultationPage() {
       [name]: value
     }));
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitted(true);
@@ -41,7 +36,6 @@ export default function ConsultationPage() {
       });
     }, 3000);
   };
-
   const consultationTypes = [
     {
       title: "AI Strategy Consultation",
@@ -76,7 +70,6 @@ export default function ConsultationPage() {
       features: ["Network Planning", "Use Case Analysis", "Technology Selection", "Implementation Timeline"]
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -90,7 +83,6 @@ export default function ConsultationPage() {
           content="free consultation, AI strategy, IT consulting, digital transformation, business technology planning, expert guidance"
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
@@ -116,7 +108,6 @@ export default function ConsultationPage() {
             </p>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -144,7 +135,6 @@ export default function ConsultationPage() {
             </div>
           </div>
         </section>
-
         {/* Consultation Types */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -206,7 +196,6 @@ export default function ConsultationPage() {
             </div>
           </div>
         </section>
-
         {/* Consultation Form */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto">
@@ -264,7 +253,6 @@ export default function ConsultationPage() {
                       />
                     </div>
                   </div>
-
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
@@ -295,7 +283,6 @@ export default function ConsultationPage() {
                       />
                     </div>
                   </div>
-
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
@@ -336,7 +323,6 @@ export default function ConsultationPage() {
                       </select>
                     </div>
                   </div>
-
                   <div>
                     <label htmlFor="timeline" className="block text-sm font-medium text-gray-300 mb-2">
                       Project Timeline
@@ -356,7 +342,6 @@ export default function ConsultationPage() {
                       <option value="over-12-months" className="bg-slate-800">Over 12 months</option>
                     </select>
                   </div>
-
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                       Tell us about your project *
@@ -372,7 +357,6 @@ export default function ConsultationPage() {
                       placeholder="Describe your current challenges, goals, and what you hope to achieve with our consultation..."
                     />
                   </div>
-
                   <button
                     type="submit"
                     className="w-full group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
@@ -385,7 +369,6 @@ export default function ConsultationPage() {
             </div>
           </div>
         </section>
-
         {/* Contact Info */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">

@@ -1,8 +1,7 @@
 "use client";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { CheckCircle, Star, Brain, Clock, Target, BarChart3 } from 'lucide-react';
-
 export default function AIProjectManagementPro() {
   const features = [
     {
@@ -30,7 +29,6 @@ export default function AIProjectManagementPro() {
         "Comprehensive reporting and analytics to optimize project performance",
     },
   ];
-
   const projectFeatures = [
     {
       category: "Project Planning",
@@ -77,7 +75,6 @@ export default function AIProjectManagementPro() {
       ],
     },
   ];
-
   const pricingPlans = [
     {
       name: "Professional",
@@ -126,7 +123,6 @@ export default function AIProjectManagementPro() {
       popular: false,
     },
   ];
-
   return (
     <>
       <Helmet>
@@ -136,7 +132,6 @@ export default function AIProjectManagementPro() {
           content="Professional AI project management services with intelligent planning, smart scheduling, and comprehensive analytics."
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         {/* Hero Section */}
         <div className="container mx-auto px-4 py-20">
@@ -164,7 +159,6 @@ export default function AIProjectManagementPro() {
               </Link>
             </div>
           </div>
-
           {/* Features Section */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {features.map((feature, index) => (
@@ -180,7 +174,6 @@ export default function AIProjectManagementPro() {
               </div>
             ))}
           </div>
-
           {/* Project Features Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -210,7 +203,6 @@ export default function AIProjectManagementPro() {
               ))}
             </div>
           </div>
-
           {/* Pricing Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -266,7 +258,6 @@ export default function AIProjectManagementPro() {
               ))}
             </div>
           </div>
-
           {/* Testimonials Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -301,7 +292,6 @@ export default function AIProjectManagementPro() {
               ))}
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-4">

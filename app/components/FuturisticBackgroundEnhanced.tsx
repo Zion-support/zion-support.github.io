@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface FuturisticBackgroundEnhancedProps {
   children: React.ReactNode;
 }
-
 const FuturisticBackgroundEnhanced: React.FC<FuturisticBackgroundEnhancedProps> = ({ children }) => {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
@@ -21,5 +19,4 @@ const FuturisticBackgroundEnhanced: React.FC<FuturisticBackgroundEnhancedProps> 
     </div>
   );
 };
-
 export default FuturisticBackgroundEnhanced;

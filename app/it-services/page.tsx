@@ -1,8 +1,7 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import SEOOptimizer from "../components/SEOOptimizer";
-
 export default function ITServices() {
   const itServices = [
     {
@@ -354,7 +353,6 @@ export default function ITServices() {
       featured: false
     }
   ];
-
   const processSteps = [
     {
       step: "01",
@@ -381,7 +379,6 @@ export default function ITServices() {
       icon: <Monitor className="w-8 h-8" />
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -430,7 +427,6 @@ export default function ITServices() {
             </div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -477,7 +473,6 @@ export default function ITServices() {
             </div>
           </div>
         </section>
-
         {/* Process Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
@@ -504,7 +499,6 @@ export default function ITServices() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">

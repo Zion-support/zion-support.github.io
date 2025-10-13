@@ -1,8 +1,7 @@
 "use client";
 import { Brain, Zap, CheckCircle, Star, BarChart3, TrendingUp } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 export default function AIEcommerceOptimizerPro() {
   const features = [
     {
@@ -30,7 +29,6 @@ export default function AIEcommerceOptimizerPro() {
         "Continuously test and optimize your store elements for maximum performance",
     },
   ];
-
   const optimizationFeatures = [
     {
       category: "Product Optimization",
@@ -77,7 +75,6 @@ export default function AIEcommerceOptimizerPro() {
       ],
     },
   ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -127,7 +124,6 @@ export default function AIEcommerceOptimizerPro() {
       popular: false,
     },
   ];
-
   return (
     <>
       <Helmet>
@@ -137,7 +133,6 @@ export default function AIEcommerceOptimizerPro() {
           content="Transform your e-commerce business with advanced AI optimization solutions that boost sales, improve conversion rates, and maximize your online store performance."
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         {/* Hero Section */}
         <div className="container mx-auto px-4 py-20">
@@ -165,7 +160,6 @@ export default function AIEcommerceOptimizerPro() {
               </Link>
             </div>
           </div>
-
           {/* Features Section */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {features.map((feature, index) => (
@@ -181,7 +175,6 @@ export default function AIEcommerceOptimizerPro() {
               </div>
             ))}
           </div>
-
           {/* Optimization Features Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -211,7 +204,6 @@ export default function AIEcommerceOptimizerPro() {
               ))}
             </div>
           </div>
-
           {/* Pricing Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -267,7 +259,6 @@ export default function AIEcommerceOptimizerPro() {
               ))}
             </div>
           </div>
-
           {/* Testimonials Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -302,7 +293,6 @@ export default function AIEcommerceOptimizerPro() {
               ))}
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-4">

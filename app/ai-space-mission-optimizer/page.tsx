@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { 
   Rocket, 
   Satellite, 
@@ -7,24 +6,16 @@ import {
   Zap, 
   Target, 
   CheckCircle, 
-  ArrowRight,
-  Cpu,
   Globe,
-  Clock,
-  Users,
   Award,
-  Star,
   Activity,
-  PieChart,
   Navigation,
-  MapPin,
   Gauge
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
-
 const AISpaceMissionOptimizerPage = () => {
   const features = [
     {
@@ -52,7 +43,6 @@ const AISpaceMissionOptimizerPage = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   const pricingPlans = [
     {
       name: "Mission Starter",
@@ -106,7 +96,6 @@ const AISpaceMissionOptimizerPage = () => {
       popular: false
     }
   ];
-
   const capabilities = [
     {
       title: "Trajectory Optimization",
@@ -133,14 +122,12 @@ const AISpaceMissionOptimizerPage = () => {
       icon: <Award className="w-6 h-6" />
     }
   ];
-
   const stats = [
     { number: "99.9%", label: "Trajectory Accuracy", icon: <Rocket className="w-6 h-6" /> },
     { number: "50ms", label: "Real-Time Processing", icon: <Zap className="w-6 h-6" /> },
     { number: "10,000+", label: "Satellites Tracked", icon: <Satellite className="w-6 h-6" /> },
     { number: "24/7", label: "Mission Monitoring", icon: <Globe className="w-6 h-6" /> }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <EnhancedSEO
@@ -149,7 +136,6 @@ const AISpaceMissionOptimizerPage = () => {
         keywords="space mission AI, satellite optimization, trajectory planning, space technology, mission control, satellite management"
         canonical="https://ziontechgroup.com/ai-space-mission-optimizer"
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -192,7 +178,6 @@ const AISpaceMissionOptimizerPage = () => {
               View Demo
             </FuturisticButton>
           </div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {stats.map((stat, index) => (
@@ -207,7 +192,6 @@ const AISpaceMissionOptimizerPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -241,7 +225,6 @@ const AISpaceMissionOptimizerPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
         <ResponsiveContainer>
@@ -276,7 +259,6 @@ const AISpaceMissionOptimizerPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -334,7 +316,6 @@ const AISpaceMissionOptimizerPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -368,5 +349,4 @@ const AISpaceMissionOptimizerPage = () => {
     </div>
   );
 };
-
 export default AISpaceMissionOptimizerPage;
