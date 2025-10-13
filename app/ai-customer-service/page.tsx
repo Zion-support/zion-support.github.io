@@ -1,268 +1,108 @@
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Shield, Zap } from 'lucide-react';
+import { Brain, MessageCircle, Clock, CheckCircle, ArrowRight, Users, Zap, Shield } from 'lucide-react';
 
-export default function PagePage() {
+const AICustomerServicePage = () => {
   const features = [
     {
-      title: "Advanced Technology",
-      description: "Cutting-edge solutions powered by the latest technology",
-      icon: <Brain className="w-8 h-8" />
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI-Powered Chatbots",
+      description: "Intelligent chatbots that understand context and provide accurate responses 24/7"
     },
     {
-      title: "Secure & Reliable",
-      description: "Enterprise-grade security and reliability for your business",
-      icon: <Shield className="w-8 h-8" />
+      icon: <MessageCircle className="w-8 h-8" />,
+      title: "Multi-Channel Support",
+      description: "Seamless support across email, chat, phone, and social media platforms"
     },
     {
-      title: "Fast Implementation",
-      description: "Quick deployment and implementation for immediate results",
-      icon: <Zap className="w-8 h-8" />
+      icon: <Clock className="w-8 h-8" />,
+      title: "Instant Response",
+      description: "Get immediate answers to customer queries with sub-second response times"
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "Human Handoff",
+      description: "Smooth escalation to human agents when complex issues require personal attention"
     }
   ];
 
-<<<<<<< HEAD
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
-'use client';';
-import React from 'react';';';
-import {Helmet}}from 'react-helmet-async';';';
-import Navigation from '../components/Navigation';';';
-import Footer from '../components/Footer';';';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';';';
-const AiCustomerServicePage: React.FC = () => {,;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Brain,
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},'
-    {icon: BarChart,
-  },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    icon: BarChart,
-      title: 'Advanced Analytics','
-      description: 'Comprehensive analytics dashboard with real-time data visualization.','
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}];';
-const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    'Increase efficiency by up to 50%','
-    'Reduce costs by 30% with automation','
-    'Improve decision-making with AI insights','
-    'Scale operations without proportional staff increases','
-  ]
-return(<>)
-      <Helmet />
-<Helmet>
->>>>>>> origin/main
-        <title>Ai Customer Service - Zion Tech Group</title>
-<meta name="description" content="AI-powered solution" />"
-<meta name="keywords" content="AI, artificial intelligence, business solutions" /></Helmet>"
-<Navigation />
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900"></div>"
-<section className="relative py-20 px-4 overflow-hidden"></section>"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />'"
-<div className="relative max-w-7xl mx-auto text-center">"
-<h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">"
-              Ai Customer Service
-              <p className="text-xl text-gray-300">Section description</p></div>"
-</div></section>
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>'"
-<div className="relative max-w-7xl mx-auto text-center"></div>"
-<h1>Ai Customer Service;</h1>
->>>>>>> origin/main
-            </h1>
-<p>Advanced AI-powered ai customer service solution for modern businesses.</p></p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
-              <button>Get Started;</button></button>
-<button>View Demo,</button>
-                Get Started
-              </button>
-<button></button>
-                View Demo,
->>>>>>> origin/main
-              </button></div>
-</div></section>
+  const benefits = [
+    "24/7 Customer Support",
+    "Reduced Response Time",
+    "Improved Customer Satisfaction",
+    "Cost-Effective Solution",
+    "Scalable Support System",
+    "Multilingual Support"
+  ];
 
-        {/* Features Section */}
-        <section className="py-20 px-4"></section>"
-<p className="text-xl text-gray-300">Section description</p></div>"
-</div></section>
-<div className="max-w-7xl mx-auto"></div>"
-<div className="text-center mb-16"></div>"
-<h2>Key Features;</h2></h2>
-<p>Advanced AI technology that drives results;</p></p>
-</div>
-<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,"
-              {features.map((feature, index) => (
-  // TODO: Add parameters
-)
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,"
-                  <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,"
-                    <feature />
-<h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>"
-<p className="text-gray-300 mb-4">{feature.description</p>}</p>"
-                  {feature.benefits && (;
-                    <ul>
-                      {feature.benefits.map((benefit, idx) => (} <li>
-<CheckCircle />
-
-                          {benefit} </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-
-            </div></div>
-</section>
-        {/* Benefits Section */} <section className="py-20 px-4">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Key Features"
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced AI technology that drives results"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
-              {features.map((feature, index) => (
-  // TODO: Add parameters
-)
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">"
-<div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">"
-<feature.icon className="w-8 h-8 text-white" />"
-<h3 className="text-xl font-bold text-white mb-4">{feature.title}"
-                  <p className="text-gray-300 mb-4">{feature.description}"
-                  {feature.benefits && (
-  // TODO: Add parameters
-)
-                    <ul className="space-y-2">"
-                      {feature.benefits.map((benefit, idx) => (
-  // TODO: Add parameters
-)
-                        <li key={idx} className="flex items-center text-sm text-gray-400">"
-<CheckCircle className="w-4 h-4 text-green-400 mr-2" />"
-                          {benefit}
-                      ))}
-          <div className="max-w-7xl mx-auto"></div>"
-<div className="text-center mb-16"></div>"
-<h2>Why Choose Our Solution?</h2></h2>
-<p>Proven results that drive business growth and efficiency;</p></p>
-</div>
-<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,"
-              {benefits.map((benefit, index) => (
-  // TODO: Add parameters
-)
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,"
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,"
-                    <CheckCircle />
-<p className="text-lg text-white font-medium">{benefit</p>}</p></div>"
-              ))}
-            </div></div>
-</section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4"></section>"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-<p className="text-xl text-gray-300">Section description</p></div>"
-          ))
-        </section>
-<div className="max-w-4xl mx-auto text-center"></div>"
-<div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>"
-<h2>Ready to Get Started?</h2></h2>
-<p>Contact our experts to discuss your requirements and get started today.</p></p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
-                <button>Contact Us;</button></button>
-<button>Learn More;</button>
-                Ready to Get Started?
-              </h2>
-<p></p>
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>"
-<button></button>
-                  Contact Us
-                </button>
-<button></button>
-                  Learn More
->>>>>>> origin/main
-                </button></div>
-</div>
-          ))
-        </section></div>
-<Footer />
-
-  );
-};
-;
-export default AiCustomerServicePage;
->>>>>>> cursor/delete-records-a75e
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title> - Zion Tech Group</title>
-        <meta name="description" content="Advanced  solutions by Zion Tech Group" />
+        <title>AI Customer Service - Zion Tech Group</title>
+        <meta name="description" content="Revolutionize your customer service with AI-powered solutions. Intelligent chatbots, multi-channel support, and 24/7 assistance." />
       </Helmet>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            
+            AI Customer Service
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Advanced  solutions by Zion Tech Group
+            Transform your customer support with intelligent AI solutions that provide 
+            instant, accurate, and personalized assistance around the clock.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-6">
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center hover:bg-white/20 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
             </div>
           ))}
         </div>
+
+        {/* Benefits Section */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Choose Our AI Customer Service?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-3">
+                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                <span className="text-gray-300">{benefit}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-xl p-8 border border-white/20 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Transform Your Customer Service?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Let our AI experts help you implement intelligent customer service solutions 
+            that will delight your customers and reduce support costs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+            <button className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-300">
+              Learn More
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+};
+
+export default AICustomerServicePage;
