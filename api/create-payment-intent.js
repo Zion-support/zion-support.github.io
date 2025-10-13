@@ -42,6 +42,7 @@ export default function handler(req, res) {
       paymentIntent
     });
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error('Payment intent creation error:', error);
     res.status(500).json({ 
       error: 'Failed to create payment intent',
