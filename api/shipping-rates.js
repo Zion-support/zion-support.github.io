@@ -23,24 +23,10 @@ export default function handler(req, res) {
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
     }
-<<<<<<< HEAD
-  } catch (_error) {
-    // console.error('Error reading existing rates:', error);
-<<<<<<< HEAD
-=======
-
   } catch (error) {
     console.error('Error reading existing rates:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-=======
-  } catch (error) {
-    console.error('Error reading existing rates:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-a5ea
     existing = [];
   }
-  
   // Calculate shipping rates based on destination and weight
   const baseRate = 10;
   const weightMultiplier = weight * 0.5;
@@ -64,19 +50,8 @@ export default function handler(req, res) {
       rate: totalRate,
       id: newRate.id
     }));
-<<<<<<< HEAD
-  } catch (_error) {
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-    // console.error('Error saving shipping rate:', error);
-=======
   } catch (error) {
     console.error('Error saving shipping rate:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-a5ea
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save rate' }));

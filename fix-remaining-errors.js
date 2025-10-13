@@ -93,7 +93,7 @@ const ${pageName}: React.FC = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let&apos;s discuss how our ${pageName.replace(/([A-Z])/g, ' $1').trim().toLowerCase()} 
+            Let's discuss how our ${pageName.replace(/([A-Z])/g, ' $1').trim().toLowerCase()} 
             services can help you achieve your goals.
           </p>
           <a

@@ -3,155 +3,108 @@
 const fs = require('fs');
 const path = require('path');
 
-// List of files with merge conflicts
-const filesWithConflicts = [
-  './app/cloud-infrastructure/page.tsx',
-  './app/components/AccessibilityEnhancer.tsx',
-  './app/components/EnhancedSEO.tsx',
-  './app/components/ErrorFallback.tsx',
-  './app/components/FuturisticBackgroundEnhanced.tsx',
-  './app/components/PerformanceMonitor.tsx',
-  './app/components/SEOEnhancer.tsx',
-  './app/contact/page.tsx',
-  './app/contexts/AnalyticsContext.tsx',
-  './app/zion-ai-email-analyzer/page.tsx',
-  './app/zion-ai-inventory-manager/page.tsx',
-  './app/zion-ai-performance-optimizer/page.tsx',
-  './app/zion-ai-social-media-manager/page.tsx',
-  './app/zion-ai-voice-assistant-pro/page.tsx',
-  './app/zion-smart-expense-categorizer/page.tsx',
-  './app/zion-smart-inventory-optimizer/page.tsx',
-  './SidebarNavigation.tsx',
-  './App_minimal.tsx',
-  './api/newsletter/subscribe.js',
-  './api/quotes.js',
-  './api/error-report.js',
-  './api/create-payment-intent.js',
-  './api/wallet.js',
-  './api/onsite-request.js',
-  './api/subscribe.js',
-  './api/create-checkout-session.js',
-  './api/shipping-rates.js',
-  './scripts/generate-sitemap.cjs',
-  './performance-report.json',
-  './fix-syntax-errors.cjs'
-];
+// Function to fix common merge conflict issues
+function fixMergeConflicts(content) {
+  // Remove merge conflict markers
+  content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+  content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+  
+  // Fix common syntax issues
+  content = content.replace(/\}\s*\)\s*}/g, '})}'); // Fix })}
+  content = content.replace(/\}\s*\)\s*\)/g, '}))'); // Fix }))
+  content = content.replace(/\}\s*\)\s*\)\s*\)/g, '})))'); // Fix })))
+  content = content.replace(/\}\s*\)\s*\)\s*\)\s*\)/g, '}))))'); // Fix }))))
+  
+  // Fix missing semicolons after imports
+  content = content.replace(/import[^;]+from[^;]+(?=\n)/g, (match) => {
+    if (!match.endsWith(';')) {
+      return match + ';';
+    }
+    return match;
+  });
+  
+  // Fix missing semicolons after variable declarations
+  content = content.replace(/(const|let|var)\s+[^=]+=[^;]+(?=\n)/g, (match) => {
+    if (!match.endsWith(';')) {
+      return match + ';';
+    }
+    return match;
+  });
+  
+  // Fix JSX closing tags
+  content = content.replace(/>\s*}/g, '>}');
+  content = content.replace(/>\s*\)/g, '>)');
+  
+  // Fix function declarations
+  content = content.replace(/function\s+[^{]+{\s*}/g, (match) => {
+    return match.replace(/\s*}/, ' {}');
+  });
+  
+  // Fix arrow functions
+  content = content.replace(/=>\s*{\s*}/g, ' => {}');
+  
+  // Remove extra whitespace
+  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+  
+  return content;
+}
 
-function fixMergeConflicts(filePath) {
+// Function to process a file
+function processFile(filePath) {
   try {
-<<<<<<< HEAD
-    let content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixedContent = fixMergeConflicts(content);
     
-    // Remove all merge conflict markers and their content
-    // This is a simple approach - remove everything between <<<<<<< and >>>>>>>
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    
-    // Clean up any remaining conflict markers
-    content = content.replace(/^<<<<<<< HEAD$/gm, '');
-    content = content.replace(/^=======$/gm, '');
-    content = content.replace(/^>>>>>>> [^\n]+$/gm, '');
-    
-    // Remove empty lines that might be left behind
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed merge conflicts in: ${filePath}`);
-    return true;
+    if (content !== fixedContent) {
+      fs.writeFileSync(filePath, fixedContent, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to recursively find all TypeScript/JavaScript files
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  let files = [];
+// Function to recursively find files with merge conflicts
+function findFilesWithConflicts(dir) {
+  const files = [];
   
-  try {
-    const items = fs.readdirSync(dir);
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
     
     for (const item of items) {
-      const fullPath = path.join(dir, item);
+      const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        files = files.concat(findFiles(fullPath, extensions));
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
+        traverse(fullPath);
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
+        const content = fs.readFileSync(fullPath, 'utf8');
+        if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
+          files.push(fullPath);
+        }
       }
     }
-  } catch (error) {
-    console.error(`Error reading directory ${dir}:`, error.message);
   }
   
+  traverse(dir);
   return files;
-=======
-    if (!fs.existsSync(filePath)) {
-      console.log(`File not found: ${filePath}`);
-      return;
-    }
-
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-
-    // Remove merge conflict markers and keep the HEAD version
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1');
-    
-    // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< [^\n]+\n/g, '');
-    content = content.replace(/=======\n/g, '');
-    content = content.replace(/>>>>>>> [^\n]+\n/g, '');
-
-    // Clean up any double newlines that might have been created
-    content = content.replace(/\n\n\n+/g, '\n\n');
-
-    // Only write if content changed
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed merge conflicts in: ${filePath}`);
-    } else {
-      console.log(`No conflicts found in: ${filePath}`);
-    }
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
 }
 
+// Main execution
 console.log('Starting merge conflict resolution...');
 
-<<<<<<< HEAD
-const files = findFiles('.');
-let fixedCount = 0;
-let errorCount = 0;
+const filesWithConflicts = findFilesWithConflicts('.');
+console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
 
-for (const file of files) {
-  try {
-    const content = fs.readFileSync(file, 'utf8');
-    
-    // Check if file has merge conflicts
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-      if (fixMergeConflicts(file)) {
-        fixedCount++;
-      } else {
-        errorCount++;
-      }
-    }
-  } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
-    errorCount++;
+let fixedCount = 0;
+for (const file of filesWithConflicts) {
+  if (processFile(file)) {
+    fixedCount++;
   }
 }
 
-console.log(`\nMerge conflict resolution complete!`);
-console.log(`Files fixed: ${fixedCount}`);
-console.log(`Errors: ${errorCount}`);
-=======
-filesWithConflicts.forEach(filePath => {
-  fixMergeConflicts(filePath);
-});
-
-console.log('Merge conflict resolution completed!');
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
+console.log(`Fixed ${fixedCount} files`);
+console.log('Merge conflict resolution complete!');

@@ -1,27 +1,4 @@
-<<<<<<< HEAD
-const withErrorLogging = (handler) => {
-  return async (req, res) => {
-    try {
-      await handler(req, res);
-    } catch (error) {
-      console.error('API Error:', error);
-      res.statusCode = 500;
-      res.setHeader('Content-Type', 'application/json');
-      res.end(JSON.stringify({ error: 'Internal server error' }));
-    }
-  };
-};
-
-const handler = async (req, res) => {
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-=======
 export default function handler(req, res) {
->>>>>>> cursor/fix-errors-and-merge-to-main-a5ea
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
@@ -48,36 +25,13 @@ export default function handler(req, res) {
       timestamp: new Date().toISOString(),
       status: 'pending'
     };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-a5ea
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
-<<<<<<< HEAD
-<<<<<<< HEAD
       success: true,
       sessionId,
       sessionData
-=======
-      success: true, 
-      sessionId: `session_${Date.now()}`,
-      data: sessionData
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      sessionId: `session_${Date.now()}`,
-      ...sessionData
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-=======
-      success: true,
-      sessionId,
-      sessionData
->>>>>>> cursor/fix-errors-and-merge-to-main-a5ea
     }));
   } catch (error) {
     console.error('Checkout session creation error:', error);
@@ -87,16 +41,4 @@ export default function handler(req, res) {
       error: 'Failed to create checkout session'
     }));
   }
-<<<<<<< HEAD
-};
-
-export default withErrorLogging(handler);
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-a5ea

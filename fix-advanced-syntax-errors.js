@@ -70,7 +70,7 @@ function fixAdvancedSyntaxErrors(filePath) {
     content = content.replace(/(\w+)=\{([^}]+)\}/g, (match, prop, value) => {
       // Check if the value is malformed (missing quotes or has syntax errors)
       if (value.includes('"') && !value.includes("'") && !value.includes('`')) {
-        // It&apos;s a string, make sure it's properly quoted
+        // It's a string, make sure it's properly quoted
         if (!value.startsWith('"') || !value.endsWith('"')) {
           modified = true;
           return `${prop}={"${value.trim()}"}`;
