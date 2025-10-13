@@ -1,59 +1,59 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Video, Play, Edit3, Zap, Sparkles, Users, Award, Clock, DollarSign, Globe, Smartphone, Monitor, Headphones, Mic, Camera, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play as PlayIcon, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, ShoppingCart, CreditCard, Users, BarChart3, Zap, Sparkles, Clock, DollarSign, Globe, Smartphone, Monitor, Headphones, Mic, Camera, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play as PlayIcon, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Target, Shield, Code, Database, Mail, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Cpu, Wifi, Battery, Headphones as HeadphonesIcon } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
 import FuturisticCard from "../components/FuturisticCard";
 import FuturisticButton from "../components/FuturisticButton";
 
-export default function ZionAIVideoEditor() {
+export default function ZionAIEcommerce() {
   const features = [
-    "AI-powered video editing with one-click optimization",
-    "Automatic scene detection and smart cuts",
-    "Real-time video enhancement and color correction",
-    "Voice-to-text transcription with 99% accuracy",
-    "Auto-generated captions in 50+ languages",
-    "Smart background removal and replacement",
-    "AI music generation and sound effects",
-    "4K/8K video processing and export",
-    "Cloud-based rendering for faster processing",
-    "Team collaboration and version control",
-    "Brand kit integration and templates",
-    "Social media optimization for all platforms"
+    "AI-powered product recommendations",
+    "Intelligent inventory management",
+    "Dynamic pricing optimization",
+    "Automated customer service chatbots",
+    "Personalized shopping experiences",
+    "Smart fraud detection and prevention",
+    "Automated order processing",
+    "Real-time analytics and insights",
+    "Multi-channel selling integration",
+    "AI-powered search and filtering",
+    "Automated email marketing campaigns",
+    "Mobile-optimized responsive design"
   ];
 
   const pricingTiers = [
     {
       name: "Starter",
-      price: "$29",
+      price: "$39",
       period: "/month",
-      originalPrice: "$59",
+      originalPrice: "$79",
       discount: "50% OFF",
       features: [
-        "Up to 10 hours of video processing",
-        "1080p export quality",
-        "Basic AI editing tools",
-        "5GB cloud storage",
+        "Up to 100 products",
+        "Basic AI features",
         "Standard templates",
-        "Email support"
+        "5GB storage",
+        "Email support",
+        "Mobile app"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$79",
+      price: "$99",
       period: "/month",
-      originalPrice: "$159",
+      originalPrice: "$199",
       discount: "50% OFF",
       features: [
-        "Unlimited video processing",
-        "4K export quality",
-        "Advanced AI editing tools",
-        "100GB cloud storage",
+        "Unlimited products",
+        "Advanced AI features",
         "Premium templates",
+        "100GB storage",
         "Priority support",
-        "Team collaboration (up to 5 users)",
-        "API access"
+        "Multi-channel selling",
+        "API access",
+        "Custom integrations"
       ],
       popular: true
     },
@@ -64,16 +64,15 @@ export default function ZionAIVideoEditor() {
       originalPrice: "$399",
       discount: "50% OFF",
       features: [
-        "Unlimited everything",
-        "8K export quality",
-        "All AI editing tools",
-        "1TB cloud storage",
+        "Everything in Professional",
+        "All AI features",
         "Custom templates",
+        "1TB storage",
         "24/7 dedicated support",
-        "Unlimited team collaboration",
         "White-label options",
-        "Custom integrations",
-        "SLA guarantee"
+        "Custom AI training",
+        "SLA guarantee",
+        "On-premise deployment"
       ],
       popular: false
     }
@@ -81,54 +80,81 @@ export default function ZionAIVideoEditor() {
 
   const testimonials = [
     {
-      name: "Sarah Chen",
-      company: "Creative Studios Inc",
-      role: "Video Producer",
-      content: "Zion AI Video Editor has revolutionized our workflow. We're producing 3x more content with better quality and half the time.",
-      rating: 5,
-      avatar: "SC"
-    },
-    {
-      name: "Michael Rodriguez",
-      company: "Digital Marketing Agency",
-      role: "Creative Director",
-      content: "The AI-powered features are incredible. Auto-captions and scene detection save us hours every day.",
+      name: "Maria Rodriguez",
+      company: "Fashion Boutique",
+      role: "Store Owner",
+      content: "Zion AI E-commerce has increased our sales by 150% in just 6 months. The AI recommendations are incredibly accurate.",
       rating: 5,
       avatar: "MR"
     },
     {
-      name: "Emily Watson",
-      company: "E-learning Platform",
-      role: "Content Manager",
-      content: "Perfect for educational content. The voice-to-text and auto-captions make our videos accessible to everyone.",
+      name: "John Chen",
+      company: "Electronics Store",
+      role: "E-commerce Manager",
+      content: "The automated inventory management and pricing optimization have saved us thousands of dollars and hours of work.",
       rating: 5,
-      avatar: "EW"
+      avatar: "JC"
+    },
+    {
+      name: "Sarah Johnson",
+      company: "Home Decor Shop",
+      role: "Marketing Director",
+      content: "The AI-powered customer service chatbot handles 90% of our inquiries automatically. Customer satisfaction has never been higher.",
+      rating: 5,
+      avatar: "SJ"
     }
   ];
 
   const useCases = [
     {
-      title: "Content Creators",
-      description: "Perfect for YouTubers, TikTokers, and social media influencers",
-      icon: <Video className="w-8 h-8" />,
+      title: "Fashion & Apparel",
+      description: "AI-powered size recommendations and style matching",
+      icon: <ShoppingCart className="w-8 h-8" />,
       color: "from-pink-500 to-rose-500"
     },
     {
-      title: "Marketing Teams",
-      description: "Create professional marketing videos and advertisements",
-      icon: <Target className="w-8 h-8" />,
+      title: "Electronics",
+      description: "Smart product comparisons and technical specifications",
+      icon: <Cpu className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "E-learning",
-      description: "Educational content with auto-captions and accessibility features",
-      icon: <BookOpen className="w-8 h-8" />,
+      title: "Home & Garden",
+      description: "Personalized recommendations based on lifestyle",
+      icon: <Home className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Corporate",
-      description: "Internal training videos and corporate communications",
-      icon: <Users className="w-8 h-8" />,
+      title: "Health & Beauty",
+      description: "AI-powered skin analysis and product matching",
+      icon: <Heart className="w-8 h-8" />,
+      color: "from-purple-500 to-violet-500"
+    }
+  ];
+
+  const aiFeatures = [
+    {
+      title: "Smart Recommendations",
+      description: "AI analyzes customer behavior to suggest perfect products",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500"
+    },
+    {
+      title: "Dynamic Pricing",
+      description: "Automatically adjust prices based on demand and competition",
+      icon: <DollarSign className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Fraud Detection",
+      description: "AI-powered security to prevent fraudulent transactions",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500"
+    },
+    {
+      title: "Inventory Optimization",
+      description: "Predict demand and optimize stock levels automatically",
+      icon: <BarChart3 className="w-8 h-8" />,
       color: "from-purple-500 to-violet-500"
     }
   ];
@@ -136,20 +162,20 @@ export default function ZionAIVideoEditor() {
   return (
     <>
       <Helmet>
-        <title>Zion AI Video Editor - AI-Powered Video Editing Platform | Zion Tech Group</title>
+        <title>Zion AI E-commerce - Intelligent Online Store Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Revolutionary AI-powered video editing platform with automatic scene detection, voice-to-text, auto-captions, and 4K/8K processing. Start your free trial today!"
+          content="Revolutionary AI-powered e-commerce platform with smart recommendations, dynamic pricing, automated customer service, and intelligent inventory management. Start your online store today!"
         />
         <meta
           name="keywords"
-          content="AI video editor, video editing software, automatic video editing, AI video enhancement, video transcription, auto-captions, video processing, 4K video editing"
+          content="AI e-commerce, online store platform, smart recommendations, dynamic pricing, automated customer service, inventory management, e-commerce AI, online retail"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-video-editor" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-ecommerce" />
       </Helmet>
       <SEOOptimizer
-        title="Zion AI Video Editor - AI-Powered Video Editing Platform | Zion Tech Group"
-        description="Revolutionary AI-powered video editing platform with automatic scene detection, voice-to-text, auto-captions, and 4K/8K processing. Start your free trial today!"
+        title="Zion AI E-commerce - Intelligent Online Store Platform | Zion Tech Group"
+        description="Revolutionary AI-powered e-commerce platform with smart recommendations, dynamic pricing, automated customer service, and intelligent inventory management. Start your online store today!"
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -158,19 +184,19 @@ export default function ZionAIVideoEditor() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">Revolutionary AI Video Editing</span>
+              <span className="text-cyan-400 text-sm font-medium">Intelligent E-commerce Platform</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               Zion AI
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Video Editor
+                {" "}E-commerce
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              The future of video editing is here. Create professional videos in minutes with AI-powered automation, 
-              automatic scene detection, voice-to-text transcription, and stunning visual effects.
+              The future of online retail is here. Create intelligent e-commerce experiences with AI-powered recommendations, 
+              dynamic pricing, automated customer service, and smart inventory management.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -178,7 +204,7 @@ export default function ZionAIVideoEditor() {
                 href="/contact"
                 variant="primary"
                 size="lg"
-                icon={<Play className="w-5 h-5" />}
+                icon={<ShoppingCart className="w-5 h-5" />}
               >
                 Start Free Trial
               </FuturisticButton>
@@ -192,16 +218,16 @@ export default function ZionAIVideoEditor() {
               </FuturisticButton>
             </div>
             
-            {/* Video Preview */}
-            <div className="relative max-w-4xl mx-auto mb-16">
+            {/* E-commerce Preview */}
+            <div className="relative max-w-6xl mx-auto mb-16">
               <div className="aspect-video bg-gradient-to-br from-slate-800/50 to-purple-800/50 rounded-2xl border border-white/20 backdrop-blur-sm overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
                     <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
-                      <Play className="w-8 h-8 text-white ml-1" />
+                      <ShoppingCart className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">See Zion AI Video Editor in Action</h3>
-                    <p className="text-gray-300">Watch how AI transforms your video editing workflow</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">AI-Powered E-commerce Dashboard</h3>
+                    <p className="text-gray-300">See how AI transforms your online store</p>
                   </div>
                 </div>
               </div>
@@ -209,15 +235,51 @@ export default function ZionAIVideoEditor() {
           </div>
         </section>
 
-        {/* Features Section */}
+        {/* AI Features */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Powerful AI Features
+                AI-Powered Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to create professional videos with the power of artificial intelligence
+                Harness the power of artificial intelligence to create exceptional shopping experiences
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {aiFeatures.map((feature, index) => (
+                <FuturisticCard
+                  key={index}
+                  className="group cursor-pointer text-center"
+                  glowColor="cyan"
+                >
+                  <div className="p-6">
+                    <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                      {feature.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-300 group-hover:text-gray-200 transition-colors">
+                      {feature.description}
+                    </p>
+                  </div>
+                </FuturisticCard>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Complete E-commerce Solution
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Everything you need to build, manage, and grow your online store
               </p>
             </div>
             
@@ -226,11 +288,11 @@ export default function ZionAIVideoEditor() {
                 <FuturisticCard
                   key={index}
                   className="group cursor-pointer"
-                  glowColor="cyan"
+                  glowColor="purple"
                 >
                   <div className="p-6">
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
                         <Zap className="w-6 h-6 text-white" />
                       </div>
                       <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
@@ -245,14 +307,14 @@ export default function ZionAIVideoEditor() {
         </section>
 
         {/* Use Cases */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Perfect for Every Use Case
+                Perfect for Every Industry
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Whether you're a content creator, marketer, educator, or business professional
+                From fashion to electronics, AI e-commerce works for every business
               </p>
             </div>
             
@@ -261,7 +323,7 @@ export default function ZionAIVideoEditor() {
                 <FuturisticCard
                   key={index}
                   className="group cursor-pointer text-center"
-                  glowColor="purple"
+                  glowColor="green"
                 >
                   <div className="p-6">
                     <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${useCase.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -281,14 +343,14 @@ export default function ZionAIVideoEditor() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Start with our free trial and upgrade as you grow
+                Start with our free trial and scale as your business grows
               </p>
             </div>
             
@@ -352,7 +414,7 @@ export default function ZionAIVideoEditor() {
                 What Our Users Say
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of creators who trust Zion AI Video Editor
+                Join thousands of store owners who trust Zion AI E-commerce
               </p>
             </div>
             
@@ -390,10 +452,10 @@ export default function ZionAIVideoEditor() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Video Editing?
+              Ready to Launch Your AI-Powered Store?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of creators who are already using AI to create amazing videos. 
+              Join thousands of entrepreneurs who are already using AI to grow their online businesses. 
               Start your free trial today - no credit card required.
             </p>
             
@@ -402,7 +464,7 @@ export default function ZionAIVideoEditor() {
                 href="/contact"
                 variant="primary"
                 size="lg"
-                icon={<Play className="w-5 h-5" />}
+                icon={<ShoppingCart className="w-5 h-5" />}
               >
                 Start Free Trial
               </FuturisticButton>

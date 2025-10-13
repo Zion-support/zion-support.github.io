@@ -5,12 +5,18 @@ import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, C
 import EnhancedSEO from "./components/EnhancedSEO";
 =======
 import SEOOptimizer from "./components/SEOOptimizer";
+<<<<<<< HEAD
 =======
 import EnhancedSEO from "./components/EnhancedSEO";
 >>>>>>> cursor/analyze-improve-and-deploy-application-48cd
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
 import FuturisticButton from "./components/FuturisticButton";
+=======
+import EnhancedFuturisticBackground from "./components/EnhancedFuturisticBackground";
+import EnhancedFuturisticCard from "./components/EnhancedFuturisticCard";
+import EnhancedFuturisticButton from "./components/EnhancedFuturisticButton";
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-e88f
 import FuturisticText from "./components/FuturisticText";
 import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
@@ -187,10 +193,14 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <EnhancedSEO
 =======
       <FuturisticBackground />
 <<<<<<< HEAD
+=======
+      <EnhancedFuturisticBackground />
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-e88f
       <SEOOptimizer
 <<<<<<< HEAD
 >>>>>>> origin/main
@@ -247,22 +257,26 @@ const HomePage = () => {
           </ResponsiveText>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <FuturisticButton
+            <EnhancedFuturisticButton
               href="/contact"
               variant="primary"
               size="lg"
               icon={<Sparkles className="w-5 h-5" />}
+              animationType="glow"
+              glowColor="cyan"
             >
               Get Started Today
-            </FuturisticButton>
-            <FuturisticButton
+            </EnhancedFuturisticButton>
+            <EnhancedFuturisticButton
               href="/demo"
               variant="outline"
               size="lg"
               icon={<Monitor className="w-5 h-5" />}
+              animationType="scan"
+              glowColor="purple"
             >
               Watch Demo
-            </FuturisticButton>
+            </EnhancedFuturisticButton>
           </div>
           
           {/* Stats */}
@@ -294,10 +308,12 @@ const HomePage = () => {
           </div>
           <ResponsiveGrid cols={{ default: 1, sm: 2, lg: 4 }}>
             {features.map((feature, index) => (
-              <FuturisticCard
+              <EnhancedFuturisticCard
                 key={index}
                 className="group cursor-pointer"
                 glowColor={feature.color.includes('blue') ? 'cyan' : feature.color.includes('green') ? 'green' : feature.color.includes('purple') ? 'purple' : 'pink'}
+                animationType="float"
+                interactive={true}
               >
                 <Link
                   to={feature.link}
@@ -322,7 +338,7 @@ const HomePage = () => {
                     </span>
                   </div>
                 </Link>
-              </FuturisticCard>
+              </EnhancedFuturisticCard>
             ))}
           </ResponsiveGrid>
         </ResponsiveContainer>
@@ -456,20 +472,26 @@ const HomePage = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+            <EnhancedFuturisticButton
+              href="/contact"
+              variant="primary"
+              size="lg"
+              icon={<ArrowRight className="w-5 h-5" />}
+              animationType="glow"
+              glowColor="cyan"
             >
               Start Your Journey
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/services"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+            </EnhancedFuturisticButton>
+            <EnhancedFuturisticButton
+              href="/services"
+              variant="outline"
+              size="lg"
+              icon={<Sparkles className="w-5 h-5" />}
+              animationType="neon"
+              glowColor="purple"
             >
               Explore Services
-              <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
-            </Link>
+            </EnhancedFuturisticButton>
           </div>
         </div>
       </section>
