@@ -2,8 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import './index.css';
-import './app/utils/errorHandler';
-import './app/utils/messageHandler';
 
 // Ensure React scheduler is properly initialized
 if (typeof window !== 'undefined') {
@@ -12,3 +10,14 @@ if (typeof window !== 'undefined') {
     window.performance = window.performance || {};
     window.performance.now = window.performance.now || (() => Date.now());
   }
+}
+
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
+
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
