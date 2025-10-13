@@ -1,93 +1,81 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Users, Clock, Award, Target, TrendingUp, Cpu, Database, Globe, Mic, Eye, Hand } from 'lucide-react';
+import { Brain, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Code, Database, Mail, Users, Clock, DollarSign, Globe, Monitor, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Package, Receipt, ClipboardList, Workflow, Sparkles, Award, TrendingUp, Target, FileText, MessageSquare, Settings, Headphones, Smartphone, Laptop, Cpu, Wifi, Lock, Server, Network, Phone as PhoneIcon, Voicemail as VoicemailIcon, Headset as HeadsetIcon, Speaker as SpeakerIcon, Volume2 as Volume2Icon, VolumeX as VolumeXIcon, Play as PlayIcon, Pause as PauseIcon, Stop as StopIcon, SkipBack as SkipBackIcon, SkipForward as SkipForwardIcon, RotateCcw as RotateCcwIcon, RotateCw as RotateCwIcon, Shuffle as ShuffleIcon, Repeat as RepeatIcon, Repeat1 as Repeat1Icon, Shuffle2 as Shuffle2Icon, Maximize as MaximizeIcon, Minimize as MinimizeIcon, Square as SquareIcon, Circle as CircleIcon, Triangle as TriangleIcon, Hexagon as HexagonIcon, Octagon as OctagonIcon, Diamond as DiamondIcon, Star as StarIconIcon, Moon as MoonIcon, Sun as SunIcon, Sunrise as SunriseIcon, Sunset as SunsetIcon, CloudRain as CloudRainIcon, CloudSnow as CloudSnowIcon, CloudLightning as CloudLightningIcon, Wind as WindIcon, Droplets as DropletsIcon, Thermometer as ThermometerIcon, Gauge as GaugeIcon, Timer as TimerIcon, Stopwatch as StopwatchIcon, Hourglass as HourglassIcon, Package as PackageIcon, Receipt as ReceiptIcon, ClipboardList as ClipboardListIcon, Workflow as WorkflowIcon } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-const ZionAINeuralInterface = () => {
+const ZionAINeuralInterfacePage = () => {
   const features = [
     {
       title: "Thought-to-Text Conversion",
       description: "Convert your thoughts directly into text with 99.7% accuracy using advanced neural pattern recognition.",
       icon: <Brain className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
+      benefits: ["Increase typing speed by 500%", "Hands-free text input", "Accessibility for disabled users", "Multilingual support"]
     },
     {
       title: "Mind Control Interface",
-      description: "Control devices and applications through pure thought with our revolutionary neural interface technology.",
-      icon: <Hand className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
+      description: "Control devices and applications using only your thoughts through advanced brain-computer interface technology.",
+      icon: <Zap className="w-8 h-8" />,
+      benefits: ["Control smart home devices", "Navigate applications hands-free", "Gaming with mind control", "Medical device control"]
     },
     {
       title: "Neural Pattern Recognition",
-      description: "Advanced AI algorithms that learn and adapt to your unique neural patterns for optimal performance.",
-      icon: <Cpu className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
+      description: "Advanced AI algorithms that learn and adapt to your unique neural patterns for personalized experiences.",
+      icon: <Activity className="w-8 h-8" />,
+      benefits: ["Personalized AI responses", "Improved accuracy over time", "Security through neural biometrics", "Adaptive learning"]
     },
     {
       title: "Real-time Processing",
-      description: "Ultra-low latency processing ensures instant response to your neural commands and thoughts.",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+      description: "Ultra-low latency processing ensures immediate response to your neural commands and thoughts.",
+      icon: <Clock className="w-8 h-8" />,
+      benefits: ["< 10ms response time", "Real-time feedback", "Smooth user experience", "High-performance processing"]
     }
-  ];
-
-  const capabilities = [
-    "Direct neural communication with AI systems",
-    "Thought-based device control and automation",
-    "Mental note-taking and documentation",
-    "Neural data visualization and analysis",
-    "Brain-computer interface for accessibility",
-    "Mental health monitoring and optimization",
-    "Cognitive enhancement and memory augmentation",
-    "Telepathic communication protocols"
   ];
 
   const pricingPlans = [
     {
-      name: "Neural Starter",
+      name: "Starter",
       price: "$199",
-      period: "/month",
-      description: "Perfect for individuals exploring neural interface technology",
+      period: "month",
+      description: "Perfect for individuals and small teams",
       features: [
         "Basic thought-to-text conversion",
-        "Simple device control",
-        "Neural pattern learning",
-        "Basic analytics dashboard",
+        "Up to 5 devices",
+        "Standard neural patterns",
         "Email support",
-        "5GB neural data storage"
+        "Basic analytics"
       ],
       popular: false
     },
     {
-      name: "Neural Professional",
+      name: "Professional",
       price: "$399",
-      period: "/month",
-      description: "Advanced features for professionals and researchers",
+      period: "month",
+      description: "Advanced features for professionals",
       features: [
-        "All Starter features",
-        "Advanced mind control interface",
-        "Real-time neural analytics",
-        "Custom neural pattern training",
+        "Advanced thought-to-text conversion",
+        "Up to 20 devices",
+        "Custom neural patterns",
         "Priority support",
-        "50GB neural data storage",
+        "Advanced analytics",
         "API access",
-        "Team collaboration tools"
+        "Custom integrations"
       ],
       popular: true
     },
     {
-      name: "Neural Enterprise",
+      name: "Enterprise",
       price: "$799",
-      period: "/month",
-      description: "Complete solution for organizations and institutions",
+      period: "month",
+      description: "Full-scale solution for organizations",
       features: [
-        "All Professional features",
-        "Custom neural algorithms",
-        "White-label interface",
-        "Advanced security protocols",
-        "Dedicated support team",
-        "Unlimited neural data storage",
-        "Custom integrations",
+        "Premium thought-to-text conversion",
+        "Unlimited devices",
+        "AI-powered neural optimization",
+        "24/7 dedicated support",
+        "Enterprise analytics",
+        "Full API access",
+        "Custom development",
+        "On-premise deployment",
         "SLA guarantee"
       ],
       popular: false
@@ -97,44 +85,63 @@ const ZionAINeuralInterface = () => {
   const testimonials = [
     {
       name: "Dr. Sarah Chen",
-      company: "Neural Research Institute",
-      role: "Lead Neuroscientist",
-      content: "The Zion AI Neural Interface has revolutionized our research capabilities. The accuracy and speed of thought-to-text conversion is unprecedented.",
+      company: "NeuroTech Research",
+      role: "Lead Researcher",
+      content: "The Zion AI Neural Interface has revolutionized our research. We've achieved 99.7% accuracy in thought-to-text conversion, which is unprecedented in the field.",
       rating: 5,
       avatar: "SC"
     },
     {
-      name: "Marcus Rodriguez",
-      company: "Accessibility Solutions Inc.",
+      name: "Michael Rodriguez",
+      company: "Accessibility Solutions Inc",
       role: "CEO",
-      content: "This technology has given our clients with disabilities incredible new ways to interact with technology. It's truly life-changing.",
+      content: "This technology has transformed the lives of our disabled clients. They can now communicate and control devices using only their thoughts.",
       rating: 5,
       avatar: "MR"
     },
     {
-      name: "Dr. Emily Watson",
-      company: "Cognitive Enhancement Lab",
-      role: "Research Director",
-      content: "The neural pattern recognition capabilities are outstanding. We've seen remarkable improvements in cognitive performance across all test subjects.",
+      name: "Emily Watson",
+      company: "Future Tech Labs",
+      role: "CTO",
+      content: "The neural interface is incredibly responsive and accurate. Our team's productivity has increased by 300% since implementing this technology.",
       rating: 5,
       avatar: "EW"
     }
   ];
 
-  const stats = [
-    { number: "99.7%", label: "Accuracy Rate", icon: <Target className="w-6 h-6" /> },
-    { number: "2ms", label: "Response Time", icon: <Zap className="w-6 h-6" /> },
-    { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
-    { number: "50+", label: "Languages Supported", icon: <Globe className="w-6 h-6" /> }
+  const useCases = [
+    {
+      title: "Medical Applications",
+      description: "Help patients with paralysis communicate and control medical devices",
+      icon: <Activity className="w-6 h-6" />,
+      examples: ["Paralysis communication", "Prosthetic control", "Medical device operation", "Therapy assistance"]
+    },
+    {
+      title: "Gaming & Entertainment",
+      description: "Revolutionary gaming experience with mind control",
+      icon: <Gamepad2 className="w-6 h-6" />,
+      examples: ["Mind-controlled games", "Virtual reality", "Immersive experiences", "Accessibility gaming"]
+    },
+    {
+      title: "Productivity & Work",
+      description: "Enhance productivity with thought-based input and control",
+      icon: <Laptop className="w-6 h-6" />,
+      examples: ["Hands-free typing", "Presentation control", "Data analysis", "Remote work"]
+    },
+    {
+      title: "Accessibility",
+      description: "Make technology accessible to everyone regardless of physical limitations",
+      icon: <Users className="w-6 h-6" />,
+      examples: ["Motor disability support", "Communication aids", "Environmental control", "Learning assistance"]
+    }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
         title="Zion AI Neural Interface - Revolutionary Brain-Computer Interface | Zion Tech Group"
-        description="Revolutionary brain-computer interface for thought-to-text conversion and mind control with 99.7% accuracy. Transform how you interact with technology."
-        keywords="neural interface, brain-computer interface, thought-to-text, mind control, AI, neural technology, accessibility, cognitive enhancement"
-        canonical="https://ziontechgroup.com/zion-ai-neural-interface"
+        description="Experience the future with our revolutionary AI neural interface. Convert thoughts to text with 99.7% accuracy, control devices with your mind, and unlock new possibilities for human-computer interaction."
+        keywords="neural interface, brain-computer interface, thought-to-text, mind control, AI, accessibility, medical technology, futuristic technology"
       />
 
       {/* Hero Section */}
@@ -146,8 +153,8 @@ const ZionAINeuralInterface = () => {
         
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Brain className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">Revolutionary Neural Technology</span>
+            <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">Revolutionary Technology</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
@@ -156,131 +163,156 @@ const ZionAINeuralInterface = () => {
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Revolutionary brain-computer interface technology that enables direct thought-to-text conversion 
-            and mind control with unprecedented 99.7% accuracy. Transform how you interact with technology.
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
+            The world's most advanced brain-computer interface. Convert thoughts to text with 99.7% accuracy, 
+            control devices with your mind, and unlock new possibilities for human-computer interaction.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <div className="flex items-center text-green-400">
+              <CheckCircle className="w-5 h-5 mr-2" />
+              <span className="text-sm">99.7% accuracy</span>
+            </div>
+            <div className="flex items-center text-green-400">
+              <CheckCircle className="w-5 h-5 mr-2" />
+              <span className="text-sm">Real-time processing</span>
+            </div>
+            <div className="flex items-center text-green-400">
+              <CheckCircle className="w-5 h-5 mr-2" />
+              <span className="text-sm">Multi-device support</span>
+            </div>
+            <div className="flex items-center text-green-400">
+              <CheckCircle className="w-5 h-5 mr-2" />
+              <span className="text-sm">24/7 support</span>
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              Start Your Neural Journey
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              Start Free Trial
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
               to="/demo"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+              className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
             >
-              Watch Neural Demo
-              <Eye className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+              <Monitor className="mr-2 h-5 w-5" />
+              Watch Demo
             </Link>
-          </div>
-          
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  {stat.icon}
-                </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Revolutionary Neural Capabilities
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                Revolutionary Features
+              </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the future of human-computer interaction with our cutting-edge neural interface technology.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
-                <div
-                  className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
-                >
-                  {feature.icon}
+                <div className="flex items-center mb-6">
+                  <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-6 group-hover:scale-110 transition-transform">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                    {feature.title}
+                  </h3>
                 </div>
-                <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base">
+                <p className="text-gray-300 mb-6 leading-relaxed">
                   {feature.description}
                 </p>
+                <div className="space-y-3">
+                  {feature.benefits.map((benefit, idx) => (
+                    <div key={idx} className="flex items-center text-sm text-gray-300">
+                      <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></div>
+                      <span>{benefit}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Capabilities Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+      {/* Use Cases Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Neural Capabilities
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                Use Cases & Applications
+              </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Unlock the full potential of your mind with our comprehensive neural interface capabilities.
+              Discover how our neural interface technology is transforming industries and improving lives.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              {capabilities.slice(0, 4).map((capability, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300">{capability}</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index) => (
+              <div
+                key={index}
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+              >
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
+                  {useCase.icon}
                 </div>
-              ))}
-            </div>
-            <div className="space-y-4">
-              {capabilities.slice(4, 8).map((capability, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300">{capability}</span>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  {useCase.title}
+                </h3>
+                <p className="text-gray-300 mb-4 leading-relaxed">
+                  {useCase.description}
+                </p>
+                <div className="space-y-2">
+                  {useCase.examples.map((example, idx) => (
+                    <div key={idx} className="flex items-center text-sm text-gray-300">
+                      <div className="w-1 h-1 bg-cyan-400 rounded-full mr-2 flex-shrink-0"></div>
+                      <span>{example}</span>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Choose Your Neural Interface Plan
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                Pricing Plans
+              </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Select the perfect plan for your neural interface needs and start your journey into the future.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the perfect plan for your needs. All plans include a 14-day free trial.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div
                 key={index}
-                className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
-                  plan.popular
-                    ? 'border-cyan-500/50 shadow-cyan-500/20 scale-105'
-                    : 'border-white/10 hover:border-cyan-500/30'
+                className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative ${
+                  plan.popular 
+                    ? 'border-cyan-500 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' 
+                    : 'border-white/20 hover:bg-white/20'
                 }`}
               >
                 {plan.popular && (
@@ -292,29 +324,30 @@ const ZionAINeuralInterface = () => {
                 )}
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center mb-2">
-                    <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  <p className="text-gray-300 mb-4">{plan.description}</p>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-5xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-300 ml-2">/{plan.period}</span>
                   </div>
-                  <p className="text-gray-300 text-sm">{plan.description}</p>
                 </div>
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
+                <div className="space-y-4 mb-8">
+                  {plan.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span className="text-sm">{feature}</span>
-                    </li>
+                      <span>{feature}</span>
+                    </div>
                   ))}
-                </ul>
+                </div>
                 <Link
                   to="/contact"
-                  className={`w-full block text-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-400 hover:to-purple-400'
-                      : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+                      : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
                   }`}
                 >
                   Get Started
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </div>
             ))}
@@ -323,40 +356,32 @@ const ZionAINeuralInterface = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               What Our Users Say
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Hear from researchers, professionals, and innovators who are using our neural interface technology.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See how our neural interface technology is transforming lives and businesses.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
-                    {testimonial.avatar}
-                  </div>
-                  <div className="ml-4">
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center mb-3">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                
-                <p className="text-gray-300 italic">"{testimonial.content}"</p>
+                <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
+                <div>
+                  <div className="font-semibold text-white">{testimonial.name}</div>
+                  <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                </div>
               </div>
             ))}
           </div>
@@ -364,30 +389,55 @@ const ZionAINeuralInterface = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Ready to Experience the Future?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join the neural revolution and transform how you interact with technology. 
-            Start your journey with the Zion AI Neural Interface today.
+            Join thousands of users who are already experiencing the power of neural interface technology. 
+            Start your free trial today and unlock new possibilities.
           </p>
+          
+          {/* Contact Information */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="text-center">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <Mail className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-white font-semibold mb-2">Email</h3>
+              <p className="text-cyan-400">kleber@ziontechgroup.com</p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <Smartphone className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-white font-semibold mb-2">Phone</h3>
+              <p className="text-cyan-400">+1 302 464 0950</p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <Globe className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-white font-semibold mb-2">Address</h3>
+              <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
+            </div>
+          </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
             >
-              Start Your Neural Journey
+              Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
-              to="/pricing"
+              to="/demo"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
-              View All Plans
-              <Brain className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+              <Monitor className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
+              Watch Demo
             </Link>
           </div>
         </div>
@@ -396,4 +446,4 @@ const ZionAINeuralInterface = () => {
   );
 };
 
-export default ZionAINeuralInterface;
+export default ZionAINeuralInterfacePage;
