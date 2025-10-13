@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
-=======
 export default function UtilsPage() {
   return (
     <>
@@ -31,7 +25,6 @@ export default function UtilsPage() {
       </div>
     </>
 }
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';

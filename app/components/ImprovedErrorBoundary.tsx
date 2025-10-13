@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
-=======
 interface Props {
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
@@ -106,7 +100,6 @@ export const withErrorBoundary = <P extends object>(
 export const useErrorHandler = () => {
   return (error: Error, errorInfo?: ErrorInfo) => {
     // In production, you might want to send this to an error reporting service
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { Home } from 'lucide-react';
@@ -127,23 +120,4 @@ export default function Improvederrorboundary({ className = '', children, ...pro
       {children}
     </div>
   );
-<<<<<<< HEAD
-
-  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
-
-  return WrappedComponent;
-};
-
-// Hook for functional components to handle errors
-export const _useErrorHandler = () => {
-  return (error: Error, errorInfo?: ErrorInfo) => {
-    console.error('Error caught by hook:', error, errorInfo);
-
-    // In production, you might want to send this to an error reporting service
-    // Example: errorReportingService.captureException(error, { extra: errorInfo });
-  };
-};
-=======
-}
->>>>>>> origin/main
 >>>>>>> cursor/fix-errors-and-merge-to-main-eba1

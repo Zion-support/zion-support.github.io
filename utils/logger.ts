@@ -95,7 +95,6 @@ class Logger {
 }
 
 const logger = new Logger();
-=======
 export const logger = {
   // Logger implementation
   info: (message: string) => {

@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface ImageOptimizerProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-=======
-import React from 'react';
-
-interface ImageoptimizerProps {
->>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
-=======
 import React, { useState, useRef, useEffect } from 'react';
 
 interface ImageOptimizerProps {
@@ -101,8 +88,3 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     </div>
   );
 };
-<<<<<<< HEAD
-=======
-
-export default ImageOptimizer;
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1

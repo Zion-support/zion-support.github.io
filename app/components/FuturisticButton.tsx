@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { ExternalLink } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
 
 interface FuturisticButtonProps {
   href?: string;
