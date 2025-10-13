@@ -1,121 +1,31 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Shield, Zap, Users, BarChart3, Settings, TrendingUp, Globe, Database } from 'lucide-react';
-
-const ITSupportPage = () => {
-  const services = [
-    {
-      title: "24/7 Technical Support",
-      description: "Round-the-clock technical support for all your IT needs",
-      icon: <Shield className="w-8 h-8" />,
-      benefits: ["24/7 availability", "Remote support", "Quick response", "Expert technicians"]
-    },
-    {
-      title: "Hardware & Software Support",
-      description: "Comprehensive support for all hardware and software issues",
-      icon: <Settings className="w-8 h-8" />,
-      benefits: ["Hardware repair", "Software installation", "System optimization", "Troubleshooting"]
-    },
-    {
-      title: "Network Support",
-      description: "Network infrastructure support and maintenance",
-      icon: <Globe className="w-8 h-8" />,
-      benefits: ["Network setup", "Security monitoring", "Performance optimization", "Troubleshooting"]
-    }
-  ];
-
+import { ArrowRight } from 'lucide-react';
+export default function Softwaredevelopment() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div>
       <Helmet>
-        <title>IT Support Services - Zion Tech Group | 24/7 Technical Support</title>
-        <meta name="description" content="Professional IT support services including 24/7 technical support, hardware/software support, and network maintenance. Keep your systems running smoothly." />
-        <meta name="keywords" content="IT support, technical support, hardware support, software support, network support, IT maintenance" />
+        <title>Software Development - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Professional software development services from Zion Tech Group"
+        />
       </Helmet>
 
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              IT Support Services
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Professional IT support services to keep your systems running smoothly. 
-            From 24/7 technical support to network maintenance, we've got you covered.
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Software Development</h1>
+          <p className="text-lg text-gray-300 mb-8">
+            Professional software development services from Zion Tech Group
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
-            >
-              Get Support
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-        </div>
-      </section>
 
-      {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our IT Support Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT support solutions for your business.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
-              >
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mb-4">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
         </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Need IT Support?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Contact our expert IT support team for immediate assistance.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
-            >
-              Get Support
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
+      </div>
+</div>
   );
-};
-
-export default ITSupportPage;
+}

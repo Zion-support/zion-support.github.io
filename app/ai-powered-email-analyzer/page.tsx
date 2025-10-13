@@ -1,16 +1,24 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
 import { 
   Mail, 
   TrendingUp, 
   Shield, 
   Zap, 
   BarChart3, 
+  Zap, 
+  Shield, 
+  Target, 
+  Brain, 
+  Sparkles
+} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { 
+  Mail, 
+  Shield, 
+  Zap, 
+  BarChart3, 
   Users, 
-  Clock, 
   CheckCircle,
-  Star,
   ArrowRight,
   Brain,
   Target,
@@ -18,36 +26,33 @@ import {
 } from 'lucide-react';
 
 const AIPoweredEmailAnalyzerPage = () => {
+  const stats = [
+    { label: "Emails Analyzed", value: "1M+", icon: <Mail className="w-6 h-6" /> },
+    { label: "Accuracy Rate", value: "99.5%", icon: <Target className="w-6 h-6" /> },
+    { label: "Time Saved", value: "80%", icon: <Clock className="w-6 h-6" /> },
+    { label: "Cost Reduction", value: "60%", icon: <TrendingUp className="w-6 h-6" /> }
+  ];
+
   const features = [
     {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      title: "AI-Powered Sentiment Analysis",
-      description: "Advanced machine learning algorithms analyze email tone, sentiment, and emotional context to help you craft perfect responses."
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI-Powered Analysis",
+      description: "Advanced machine learning algorithms analyze email content, sentiment, and intent with 99.5% accuracy."
     },
     {
-      icon: <Target className="w-8 h-8 text-purple-400" />,
-      title: "Smart Response Suggestions",
-      description: "Get intelligent, context-aware response suggestions that match your communication style and business objectives."
+      icon: <Shield className="w-8 h-8" />,
+      title: "Security Detection",
+      description: "Automatically detect phishing attempts, spam, and malicious content to protect your organization."
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
-      title: "Email Performance Analytics",
-      description: "Track open rates, response times, and engagement metrics with detailed analytics and actionable insights."
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Analytics Dashboard",
+      description: "Comprehensive analytics and reporting to track email performance and communication trends."
     },
     {
-      icon: <Shield className="w-8 h-8 text-red-400" />,
-      title: "Security & Compliance",
-      description: "Enterprise-grade security with GDPR compliance, data encryption, and secure cloud storage for all email data."
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      icon: <Zap className="w-8 h-8" />,
       title: "Real-time Processing",
-      description: "Instant analysis and suggestions as you type, with lightning-fast processing powered by advanced AI models."
-    },
-    {
-      icon: <Users className="w-8 h-8 text-blue-400" />,
-      title: "Team Collaboration",
-      description: "Share insights across teams, set up approval workflows, and maintain consistent communication standards."
+      description: "Process and analyze emails in real-time with instant notifications and alerts."
     }
   ];
 
@@ -101,27 +106,21 @@ const AIPoweredEmailAnalyzerPage = () => {
     }
   ];
 
-  const stats = [
-    { number: "95%", label: "Accuracy Rate" },
-    { number: "2.5x", label: "Faster Response Time" },
-    { number: "40%", label: "Increase in Engagement" },
-    { number: "10k+", label: "Happy Customers" }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
-        <title>AI-Powered Email Analyzer | Zion Tech Group</title>
-        <meta name="description" content="Revolutionize your email communication with our AI-powered email analyzer. Get sentiment analysis, smart suggestions, and performance insights." />
-        <meta name="keywords" content="AI email analyzer, email sentiment analysis, email automation, business communication, email analytics" />
+        <title>AI Services - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI services with cutting-edge technology and expert solutions." />
+        <meta name="keywords" content="AI services, artificial intelligence, machine learning, automation" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-services" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 20 }}
+            animate={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -159,7 +158,23 @@ const AIPoweredEmailAnalyzerPage = () => {
             </div>
           </motion.div>
         </div>
-      </section>
+        
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
+            <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">AI-Powered Solutions</span>
+          </div>
+          
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+              AI Services
+            </span>
+          </h1>
+          
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Transform your business with our comprehensive AI services. From machine learning to automation, 
+            we provide cutting-edge solutions tailored to your needs.
+          </p>
 
       {/* Stats Section */}
       <section className="py-16 px-4">
@@ -168,13 +183,13 @@ const AIPoweredEmailAnalyzerPage = () => {
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 20 }}
+                animate={{ opacity: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
                 <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                  {stat.number}
+                  {stat.value}
                 </div>
                 <div className="text-gray-400 font-medium">
                   {stat.label}
@@ -186,11 +201,11 @@ const AIPoweredEmailAnalyzerPage = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 20 }}
+            animate={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -198,8 +213,7 @@ const AIPoweredEmailAnalyzerPage = () => {
               Powerful AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our advanced AI technology provides comprehensive email analysis and optimization tools 
-              to enhance your communication effectiveness.
+              Comprehensive AI solutions designed to accelerate your digital transformation
             </p>
           </motion.div>
 
@@ -207,8 +221,8 @@ const AIPoweredEmailAnalyzerPage = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 20 }}
+                animate={{ opacity: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300"
               >
@@ -224,15 +238,13 @@ const AIPoweredEmailAnalyzerPage = () => {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
 
       {/* Pricing Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 20 }}
+            animate={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -249,8 +261,8 @@ const AIPoweredEmailAnalyzerPage = () => {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 20 }}
+                animate={{ opacity: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-xl p-8 ${
                   plan.popular 
@@ -279,7 +291,7 @@ const AIPoweredEmailAnalyzerPage = () => {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
+                      <span className="text-gray-300">{feature.title}</span>
                     </li>
                   ))}
                 </ul>
@@ -305,8 +317,8 @@ const AIPoweredEmailAnalyzerPage = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 20 }}
+            animate={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-12 text-center"
           >
@@ -345,20 +357,17 @@ const AIPoweredEmailAnalyzerPage = () => {
           <p className="text-gray-300 mb-6">
             Contact us today to learn more about our AI-Powered Email Analyzer and how it can transform your business communication.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-gray-300">
-            <div className="flex items-center">
-              <Mail className="w-5 h-5 mr-2 text-cyan-400" />
-              <span>kleber@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center">
-              <Globe className="w-5 h-5 mr-2 text-cyan-400" />
-              <span>https://ziontechgroup.com</span>
-            </div>
-          </div>
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+          >
+            Start Your AI Journey
+            <Zap className="w-5 h-5 ml-2" />
+          </Link>
         </div>
       </section>
     </div>
   );
 };
 
-export default AIPoweredEmailAnalyzerPage;
+export default Page;

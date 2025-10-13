@@ -1,139 +1,31 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, BarChart3, DollarSign, TrendingUp, Zap, Shield, Cloud, Settings, FileText, Calculator } from 'lucide-react';
-
-const FinancialReportingToolPage = () => {
-  const features = [
-    {
-      title: "Automated Financial Reports",
-      description: "Generate comprehensive financial reports automatically with real-time data",
-      icon: <FileText className="w-8 h-8" />,
-      benefits: ["P&L statements", "Balance sheets", "Cash flow reports", "Custom templates"]
-    },
-    {
-      title: "Real-time Analytics",
-      description: "Monitor financial performance with interactive dashboards and visualizations",
-      icon: <BarChart3 className="w-8 h-8" />,
-      benefits: ["Live dashboards", "Interactive charts", "KPI tracking", "Trend analysis"]
-    },
-    {
-      title: "Budget Management",
-      description: "Create, track, and manage budgets with variance analysis and forecasting",
-      icon: <Calculator className="w-8 h-8" />,
-      benefits: ["Budget planning", "Variance analysis", "Forecasting", "Cost control"]
-    },
-    {
-      title: "Compliance & Security",
-      description: "Ensure financial data security and regulatory compliance",
-      icon: <Shield className="w-8 h-8" />,
-      benefits: ["Data encryption", "Audit trails", "Compliance reports", "Role-based access"]
-    }
-  ];
-
+import { ArrowRight } from 'lucide-react';
+export default function Financialreportingtool() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div>
       <Helmet>
-        <title>Financial Reporting Tool - Zion Tech Group | Automated Financial Reports & Analytics</title>
-        <meta name="description" content="Advanced financial reporting tool with automated reports, real-time analytics, and budget management. Streamline your financial processes and gain valuable insights." />
-        <meta name="keywords" content="financial reporting, financial analytics, budget management, financial dashboards, accounting software" />
+        <title>Financial Reporting Tool - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Professional financial reporting tool services from Zion Tech Group"
+        />
       </Helmet>
 
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              Financial Reporting Tool
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Streamline your financial reporting with automated reports, real-time analytics, and comprehensive 
-            budget management. Make data-driven decisions with confidence.
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Financial Reporting Tool</h1>
+          <p className="text-lg text-gray-300 mb-8">
+            Professional financial reporting tool services from Zion Tech Group
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
-            >
-              Start Free Trial
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/contact"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
-              Watch Demo
-            </Link>
-          </div>
-        </div>
-      </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Financial Management
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to manage your finances effectively and make informed business decisions.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
-              >
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mb-4">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
         </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Streamline Your Financial Reporting?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Start your free trial today and experience the power of automated financial reporting and analytics.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
-            >
-              Start Free Trial
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/micro-saas"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
-              View All Micro SAAS
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
+      </div>
+</div>
   );
-};
-
-export default FinancialReportingToolPage;
+}

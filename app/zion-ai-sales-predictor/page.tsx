@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
 import { ArrowRight, CheckCircle, Star, TrendingUp, Target, DollarSign, BarChart3, Brain, Zap, Clock, Globe, Smartphone, Lock, Settings, Users, Award, Shield, Mail, Headphones, Video, Calendar, MessageSquare, Download, Share2, Search, Filter, Edit, Trash2, Plus, Minus, Play, Pause, Stop, Volume2, VolumeX, Wifi, WifiOff, Signal, Bluetooth, Battery, BatteryLow, Power, RefreshCw, RotateCcw, RotateCw, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
+=======
+import { ArrowRight, CheckCircle, TrendingUp, Video, Calendar } from 'lucide-react';
+>>>>>>> origin/main
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";

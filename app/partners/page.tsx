@@ -1,10 +1,7 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Globe, Shield, Zap } from 'lucide-react';
 
 export default function Partners() {
-  const partners = [
+  // const partners = [
     {
       name: "Microsoft",
       logo: "/images/partners/microsoft.png",
@@ -49,30 +46,7 @@ export default function Partners() {
     }
   ];
 
-  const benefits = [
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Joint Marketing",
-      description: "Collaborative marketing campaigns and co-branded content"
-    },
-    {
-      icon: <Globe className="w-8 h-8" />,
-      title: "Global Reach",
-      description: "Access to our worldwide network of clients and opportunities"
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Technical Support",
-      description: "Dedicated technical resources and training programs"
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Innovation Labs",
-      description: "Joint innovation initiatives and R&D projects"
-    }
-  ];
-
-  const tiers = [
+  // const tiers = [
     {
       name: "Platinum",
       color: "from-gray-400 to-gray-600",
@@ -94,7 +68,7 @@ export default function Partners() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Partners - Zion Tech Group | Strategic Partnerships</title>
         <meta name="description" content="Join our partner ecosystem and unlock new opportunities for growth. Strategic partnerships with leading technology companies." />
@@ -114,6 +88,6 @@ export default function Partners() {
           </div>
         </div>
       </div>
-    </>
+</div>
   );
 }

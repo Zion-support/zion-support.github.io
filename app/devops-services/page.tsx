@@ -1,136 +1,128 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Clock, Shield, Zap, Users, BarChart3, Cloud, Settings, Code, Database, Server } from 'lucide-react';
+import { Server, Clock, Award, ArrowRight, CheckCircle, BarChart3, Database, Lock, Users, Settings, Zap, Globe } from 'lucide-react';
 
-const DevOpsServicesPage = () => {
+const DevOpsServicesPage: React.FC = () => {
   const services = [
     {
       title: "CI/CD Pipeline Setup",
-      description: "Automated build, test, and deployment pipelines for faster, more reliable software delivery",
-      icon: <Code className="w-8 h-8" />,
-      features: ["Automated testing", "Deployment automation", "Rollback capabilities", "Multi-environment support"]
+      description: "Automate your development workflow with continuous integration and deployment pipelines for faster, more reliable releases.",
+      icon: <Zap className="w-6 h-6" />,
+      features: ["Automated testing", "Code quality checks", "Deployment automation", "Rollback capabilities"]
     },
     {
       title: "Infrastructure as Code",
-      description: "Manage and provision infrastructure through code for consistency and scalability",
-      icon: <Database className="w-8 h-8" />,
-      features: ["Terraform/CloudFormation", "Version control", "Environment parity", "Cost optimization"]
+      description: "Manage your infrastructure using code with tools like Terraform, Ansible, and CloudFormation for consistency and scalability.",
+      icon: <Server className="w-6 h-6" />,
+      features: ["Terraform automation", "Configuration management", "Version control", "Environment consistency"]
     },
     {
       title: "Container Orchestration",
-      description: "Kubernetes and Docker container management for scalable, resilient applications",
-      icon: <Server className="w-8 h-8" />,
-      features: ["Kubernetes clusters", "Docker containerization", "Auto-scaling", "Service mesh"]
+      description: "Deploy and manage containerized applications with Kubernetes, Docker Swarm, or other orchestration platforms.",
+      icon: <Globe className="w-6 h-6" />,
+      features: ["Kubernetes deployment", "Container management", "Auto-scaling", "Service mesh"]
     },
     {
-      title: "Monitoring & Observability",
-      description: "Comprehensive monitoring, logging, and alerting for proactive issue detection",
-      icon: <BarChart3 className="w-8 h-8" />,
-      features: ["Real-time monitoring", "Log aggregation", "Performance metrics", "Alert management"]
+      title: "Monitoring & Logging",
+      description: "Comprehensive monitoring and logging solutions to ensure your applications run smoothly and issues are detected early.",
+      icon: <BarChart3 className="w-6 h-6" />,
+      features: ["Real-time monitoring", "Log aggregation", "Alerting systems", "Performance metrics"]
     },
     {
-      title: "Security Integration",
-      description: "DevSecOps practices with security scanning and compliance automation",
-      icon: <Shield className="w-8 h-8" />,
-      features: ["Security scanning", "Compliance checks", "Vulnerability management", "Policy enforcement"]
+      title: "Security Automation",
+      description: "Integrate security practices into your DevOps pipeline with automated security scanning and compliance checks.",
+      icon: <Lock className="w-6 h-6" />,
+      features: ["Security scanning", "Vulnerability assessment", "Compliance automation", "Secret management"]
     },
     {
-      title: "Cloud Migration",
-      description: "Seamless migration to cloud platforms with optimization and cost management",
-      icon: <Cloud className="w-8 h-8" />,
-      features: ["AWS/Azure/GCP", "Migration planning", "Cost optimization", "Performance tuning"]
+      title: "Database DevOps",
+      description: "Streamline database operations with automated migrations, backups, and performance optimization.",
+      icon: <Database className="w-6 h-6" />,
+      features: ["Database migrations", "Automated backups", "Performance tuning", "Schema management"]
     }
   ];
 
   const benefits = [
     {
-      title: "Faster Deployment",
-      description: "Reduce deployment time from days to minutes",
-      icon: <Zap className="w-6 h-6" />
+      title: "Faster Deployments",
+      description: "Reduce deployment time from hours to minutes with automated pipelines",
+      icon: <Clock className="w-8 h-8" />
     },
     {
-      title: "Higher Reliability",
-      description: "99.9% uptime with automated failover",
-      icon: <Shield className="w-6 h-6" />
+      title: "Higher Quality",
+      description: "Catch issues early with automated testing and quality gates",
+      icon: <Award className="w-8 h-8" />
     },
     {
-      title: "Team Productivity",
-      description: "Focus on development, not infrastructure",
-      icon: <Users className="w-6 h-6" />
+      title: "Better Collaboration",
+      description: "Improve team collaboration with shared tools and processes",
+      icon: <Users className="w-8 h-8" />
     },
     {
-      title: "Cost Efficiency",
-      description: "Optimize resource usage and reduce costs",
-      icon: <BarChart3 className="w-6 h-6" />
+      title: "Cost Optimization",
+      description: "Optimize infrastructure costs with automated scaling and resource management",
+      icon: <Settings className="w-8 h-8" />
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>DevOps Services - Zion Tech Group | CI/CD, Infrastructure, Cloud Solutions</title>
-        <meta name="description" content="Professional DevOps services including CI/CD pipelines, infrastructure as code, container orchestration, and cloud migration. Accelerate your development lifecycle." />
-        <meta name="keywords" content="DevOps services, CI/CD, infrastructure as code, Kubernetes, Docker, cloud migration, monitoring, automation" />
-      </Helmet>
-
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              DevOps Services
-            </span>
+            DevOps Services
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Accelerate your development lifecycle with our comprehensive DevOps solutions. 
-            From CI/CD pipelines to cloud migration, we help you build, deploy, and scale faster.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Accelerate your software delivery with our comprehensive DevOps solutions. 
+            From CI/CD pipelines to infrastructure automation, we help you build, deploy, and scale faster.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
+              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
             >
-              Get Started
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              Get Started Today
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link
-              to="/contact"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              to="/demo"
+              className="border border-blue-500 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500/10 transition-all duration-300"
             >
-              Schedule Consultation
+              View Demo
             </Link>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our DevOps Solutions
+              Our DevOps Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive DevOps services designed to streamline your development process and improve operational efficiency.
+              We provide end-to-end DevOps solutions that streamline your development process and improve software quality.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
-              >
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mb-4">
+              <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4">{service.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  {service.description}
+                </p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -142,25 +134,29 @@ const DevOpsServicesPage = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">
               Why Choose Our DevOps Services?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of modern DevOps practices with our expert team and proven methodologies.
+              Experience the benefits of modern DevOps practices with our expert guidance and proven methodologies.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   {benefit.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {benefit.title}
+                </h3>
+                <p className="text-gray-300">
+                  {benefit.description}
+                </p>
               </div>
             ))}
           </div>
@@ -168,27 +164,26 @@ const DevOpsServicesPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your DevOps?
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Transform Your Development Process?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let our DevOps experts help you build a more efficient, reliable, and scalable development process.
+            Let our DevOps experts help you implement modern practices that accelerate delivery and improve quality.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
+              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
             >
               Start Your DevOps Journey
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
-              to="/services"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              to="/consultation"
+              className="border border-blue-500 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500/10 transition-all duration-300"
             >
-              View All Services
+              Free Consultation
             </Link>
           </div>
         </div>

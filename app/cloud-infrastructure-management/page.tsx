@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import {
   Cloud,
@@ -105,3 +106,5 @@ export default function CloudInfrastructureManagement() {
     </Layout>
   );
 }
+=======
+>>>>>>> origin/main

@@ -1,5 +1,3 @@
-// Performanceenhancer utility functions
-
 export const Performanceenhancer = {
   init: () => {
     },

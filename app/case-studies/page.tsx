@@ -1,10 +1,14 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Target, Star, Globe, Shield, CheckCircle, TrendingUp, Zap, BarChart3, Clock } from 'lucide-react';
+=======
+import EnhancedSEO from '../components/EnhancedSEO';
+>>>>>>> origin/main
 
 export default function CaseStudies() {
-  const caseStudies = [
+  const _caseStudies = [
     {
       id: 1,
       title: "E-commerce Platform AI Transformation",
@@ -115,6 +119,7 @@ export default function CaseStudies() {
     }
   ];
 
+<<<<<<< HEAD
   const stats = [
     { number: "50+", label: "Projects Completed", icon: <CheckCircle className="w-6 h-6" /> },
     { number: "95%", label: "Client Satisfaction", icon: <TrendingUp className="w-6 h-6" /> },
@@ -158,7 +163,27 @@ export default function CaseStudies() {
             </div>
           </div>
         </section>
+=======
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <EnhancedSEO
+        title="Case Studies - Zion Tech Group | Success Stories"
+        description="Discover how Zion Tech Group has helped businesses transform with our AI and technology solutions. Read our success stories and case studies."
+        keywords="case studies, success stories, AI transformation, business results, technology solutions"
+        canonical="https://ziontechgroup.com/case-studies"
+      />
+      
+      <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Success Stories
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            See how we've helped businesses transform with technology
+          </p>
+        </div>
+>>>>>>> origin/main
       </div>
-    </>
+    </div>
   );
 }

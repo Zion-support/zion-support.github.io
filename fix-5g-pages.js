@@ -104,12 +104,8 @@ function fixPage(pageName) {
 
   try {
     fs.writeFileSync(filePath, content, "utf8");
-    console.log(`Fixed: ${filePath}`);
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
+    } catch (error) {
+    }
 }
 
-console.log("Fixing 5G pages...");
 pages.forEach(fixPage);
-console.log("Done!");

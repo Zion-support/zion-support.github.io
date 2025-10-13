@@ -1,7 +1,42 @@
-import { ArrowRight, Shield, Lock, Eye, AlertTriangle, CheckCircle, Star, Zap, Brain } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
+import { Link } from 'react-router-dom';
+const features = [
+    {
+      title: "Predictive Analytics",
+      description: "Advanced machine learning models for accurate financial forecasting",
+      icon: "Brain"
+    },
+    {
+      title: "Risk Assessment",
+      description: "Comprehensive risk analysis and mitigation strategies",
+      icon: "Shield"
+    },
+    {
+      title: "Real-time Monitoring",
+      description: "Continuous monitoring of financial metrics and KPIs",
+      icon: "Activity"
+    },
+    {
+      title: "Automated Reporting",
+      description: "Generate detailed reports automatically",
+      icon: "FileText"
+    }
+  ];
+const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CFO",
+      company: "TechCorp",
+      content: "The AI financial analysis platform has revolutionized our decision-making process.",
+      rating: 5
+    },
+    {
+      name: "Michael Chen",
+      role: "Investment Manager",
+      company: "FinancePro",
+      content: "Incredible accuracy and insights that have improved our portfolio performance.",
+      rating: 5
+    }
+  ];
 export default function ZionSecurityShield() {
   const features = [
     {
@@ -102,32 +137,8 @@ export default function ZionSecurityShield() {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "David Martinez",
-      company: "Financial Services Corp",
-      role: "CISO",
-      content: "Zion Security Shield has been a game-changer for our security posture. We've seen a 90% reduction in security incidents since implementation.",
-      rating: 5
-    },
-    {
-      name: "Lisa Thompson",
-      company: "Healthcare Solutions",
-      role: "IT Director",
-      content: "The AI threat detection is incredibly accurate. It caught several sophisticated attacks that other systems missed.",
-      rating: 5
-    },
-    {
-      name: "James Wilson",
-      company: "E-commerce Platform",
-      role: "Security Manager",
-      content: "Outstanding support and comprehensive security features. Our compliance audit passed with flying colors.",
-      rating: 5
-    }
-  ];
-
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion Security Shield - Advanced Cybersecurity Platform | Zion Tech Group</title>
         <meta
@@ -241,7 +252,7 @@ export default function ZionSecurityShield() {
                   className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
                 >
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{feature}</span>
+                  <span className="text-gray-300">{feature.title}</span>
                 </div>
               ))}
             </div>
@@ -288,7 +299,7 @@ export default function ZionSecurityShield() {
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
+                        <span className="text-gray-300">{feature.title}</span>
                       </li>
                     ))}
                   </ul>
@@ -368,6 +379,6 @@ export default function ZionSecurityShield() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

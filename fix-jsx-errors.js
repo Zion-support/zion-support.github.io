@@ -139,8 +139,6 @@ function processFile(filePath) {
       content.includes("export default function") &&
       content.split("export default function").length > 2
     ) {
-      console.log(`Fixing severely corrupted file: ${filePath}`);
-
       // Extract page name from file path
       const pathParts = filePath.split("/");
       const fileName = pathParts[pathParts.length - 2]; // Get directory name
@@ -163,18 +161,15 @@ function processFile(filePath) {
         description,
       );
       fs.writeFileSync(filePath, newContent);
-      console.log(`Fixed: ${filePath}`);
-    } else {
+      } else {
       // Try to fix the existing content
       const fixedContent = fixJSXContent(content);
       if (fixedContent !== content) {
         fs.writeFileSync(filePath, fixedContent);
-        console.log(`Fixed: ${filePath}`);
-      }
+        }
     }
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-  }
+    }
 }
 
 // Function to recursively find all .tsx files
@@ -208,12 +203,9 @@ function findTsxFiles(dir) {
 const appDir = path.join(__dirname, "app");
 const tsxFiles = findTsxFiles(appDir);
 
-console.log(`Found ${tsxFiles.length} .tsx files to process`);
-
 let fixedCount = 0;
 for (const file of tsxFiles) {
   processFile(file);
   fixedCount++;
 }
 
-console.log(`Processed ${fixedCount} files`);

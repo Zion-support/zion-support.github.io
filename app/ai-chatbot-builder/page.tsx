@@ -1,10 +1,7 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-
+import { ArrowRight } from 'lucide-react';
 export default function AiChatbotBuilder() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Chatbot Builder - Zion Tech Group</title>
         <meta
@@ -31,6 +28,6 @@ export default function AiChatbotBuilder() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

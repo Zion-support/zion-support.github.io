@@ -42,12 +42,20 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 
   const content = (
+<<<<<<< HEAD
     <>
+=======
+    <div>
+>>>>>>> origin/main
       {icon && <span className="mr-2">{icon}</span>}
       {children}
       {external && <ExternalLink className="w-4 h-4 ml-2" />}
       {!external && !icon && <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />}
+<<<<<<< HEAD
     </>
+=======
+</div>
+>>>>>>> origin/main
   );
 
   if (href) {

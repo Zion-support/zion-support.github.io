@@ -1,5 +1,3 @@
-// Sitemapgenerator utility functions
-
 export const Sitemapgenerator = {
   init: () => {
     },

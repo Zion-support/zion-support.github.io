@@ -1,8 +1,14 @@
-import { ArrowRight, Code, Smartphone, Globe, Database, Zap, BarChart3, Mail, Smartphone as Phone } from "lucide-react";
+import { ArrowRight, Code, Smartphone, Globe, Database, Zap, BarChart3, Mail } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import { Code, Globe, Smartphone, Zap, Database, ArrowRight, ArrowRight, Mail, Smartphone, Globe, ArrowRight } from 'lucide-react';
 
-export default function CustomDevelopment() {
+export default function page() {
+  const features = [
+    { title: "Feature 1", description: "Description 1" },
+    { title: "Feature 2", description: "Description 2" }
+  ];
   const services = [
     {
       title: "Custom Software Development",
@@ -61,7 +67,7 @@ export default function CustomDevelopment() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Custom Development Services - Zion Tech Group | Software Development Solutions</title>
         <meta
@@ -159,7 +165,7 @@ export default function CustomDevelopment() {
                             key={idx}
                             className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full border border-cyan-500/30"
                           >
-                            {feature}
+                            {feature.title}
                           </span>
                         ))}
                       </div>
@@ -237,6 +243,6 @@ export default function CustomDevelopment() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

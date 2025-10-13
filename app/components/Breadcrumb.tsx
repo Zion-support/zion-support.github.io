@@ -1,6 +1,12 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
+=======
+import { Link } from 'react-router-dom';
+import { ChevronRight, Home } from 'lucide-react';
+import { Link } from 'react-router-dom';
+>>>>>>> origin/main
 
 const Breadcrumb: React.FC = () => {
   const location = useLocation();

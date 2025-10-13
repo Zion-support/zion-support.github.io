@@ -14,4 +14,8 @@ export default function ZionAIEmailAnalyzer() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/main

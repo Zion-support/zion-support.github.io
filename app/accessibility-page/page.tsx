@@ -1,10 +1,7 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-
+import { ArrowRight } from 'lucide-react';
 export default function AccessibilityPage() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Accessibility - Zion Tech Group</title>
         <meta
@@ -29,6 +26,6 @@ export default function AccessibilityPage() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

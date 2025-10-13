@@ -1,21 +1,14 @@
-'use client'
-import { useEffect, useState } from 'react'
+import React from 'react';
 
-interface CacheStats {
-  hits: number
-  misses: number
-  size: number
-  maxSize: number
+interface CacheManagerProps {
+  children?: React.ReactNode;
 }
 
-const CacheManager = () => {
-  const [stats, setStats] = useState<CacheStats>({
-    hits: 0,
-    misses: 0,
-    size: 0,
-    maxSize: 50 * 1024 * 1024 // 50MB
-  })
+const CacheManager: React.FC<CacheManagerProps> = ({ children }) => {
+  return <>{children}</>;
+};
 
+<<<<<<< HEAD
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
@@ -272,3 +265,6 @@ const CacheManager = () => {
 }
 
 export default CacheManager;
+=======
+export default CacheManager;
+>>>>>>> origin/main

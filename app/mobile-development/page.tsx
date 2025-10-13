@@ -1,10 +1,7 @@
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
+import { Link } from 'react-router-dom';
 export default function MobileDevelopmentZionTechGroup() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>MobileDevelopment - Zion Tech Group</title>
       </Helmet>
@@ -25,6 +22,6 @@ export default function MobileDevelopmentZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

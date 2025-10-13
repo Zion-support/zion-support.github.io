@@ -1,10 +1,7 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-
+import { ArrowRight } from 'lucide-react';
 export default function AIAnalyticsDashboardZionTechGroup() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Analytics Dashboard - Zion Tech Group</title>
       </Helmet>
@@ -25,6 +22,6 @@ export default function AIAnalyticsDashboardZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

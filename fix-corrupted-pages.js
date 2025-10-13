@@ -145,12 +145,8 @@ function fixPage(pageInfo) {
 
   try {
     fs.writeFileSync(pageInfo.path, content, "utf8");
-    console.log(`Fixed: ${pageInfo.path}`);
-  } catch (error) {
-    console.error(`Error fixing ${pageInfo.path}:`, error.message);
-  }
+    } catch (error) {
+    }
 }
 
-console.log("Fixing corrupted pages...");
 pages.forEach(fixPage);
-console.log("Done!");

@@ -1,9 +1,8 @@
-import React from "react";
 import { Helmet } from "react-helmet-async";
 
 export default function Support() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Support - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Get help and support for our AI and IT solutions." />
@@ -14,6 +13,6 @@ export default function Support() {
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
-    </>
+</div>
   );
 }

@@ -1,10 +1,7 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-
+import { ArrowRight } from 'lucide-react';
 export default function Implementation5GPage() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>5G Implementation - Zion Tech Group</title>
         <meta
@@ -31,6 +28,6 @@ export default function Implementation5GPage() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

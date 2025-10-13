@@ -1,11 +1,7 @@
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-
-import { Link } from "react-router-dom";
-
+import { Link } from 'react-router-dom';
 export default function PageZionTechGroup() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Page - Zion Tech Group</title>
       </Helmet>
@@ -30,6 +26,6 @@ export default function PageZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

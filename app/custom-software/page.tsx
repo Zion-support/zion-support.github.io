@@ -1,11 +1,7 @@
-import { ArrowRight } from "lucide-react";
-
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
+import { Link } from 'react-router-dom';
 export default function CustomSoftwareZionTechGroup() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>CustomSoftware - Zion Tech Group</title>
       </Helmet>
@@ -24,6 +20,6 @@ export default function CustomSoftwareZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

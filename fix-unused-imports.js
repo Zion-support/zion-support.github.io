@@ -1,111 +1,91 @@
-#!/usr/bin/env node
+import fs from 'fs';
+import path from 'path';
 
-import fs from "fs";
-import { glob } from "glob";
-
-// Common unused imports that need to be removed
-const unusedImports = [
-  "Cloud",
-  "Code",
-  "Monitor",
-  "BarChart",
-  "Star",
-  "Settings",
-  "Users",
-  "DollarSign",
-  "TrendingUp",
-  "Shield",
-  "Target",
-  "Mail",
-  "Phone",
-  "Clock",
-  "PieChart",
-  "Activity",
-  "Award",
-  "BookOpen",
-  "Briefcase",
-  "Building",
-  "Calendar",
-  "Camera",
-  "Command",
-  "CreditCard",
-  "FileText",
-  "Gift",
-  "Heart",
-  "Home",
-  "Image",
-  "Laptop",
-  "Lock",
-  "MessageCircle",
-  "Palette",
-  "Play",
-  "Search",
-  "ShoppingCart",
-  "Smartphone",
-  "Tablet",
-  "Terminal",
-  "Truck",
-  "Wifi",
-  "Cpu",
-  "Database",
-  "Server",
-  "Layers",
-];
-
-function fixUnusedImports(filePath) {
-  let content = fs.readFileSync(filePath, "utf8");
-  let modified = false;
-
-  // Fix 'use client' directive placement
-  if (
-    content.includes("'use client';") &&
-    !content.startsWith("'use client';")
-  ) {
-    content = content.replace(/'use client';\s*\n/, "");
-    content = "'use client';\n" + content;
-    modified = true;
-  }
-
-  // Remove unused imports
-  const lucideImportMatch = content.match(
-    /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/,
-  );
-
-  if (lucideImportMatch) {
-    const existingIcons = lucideImportMatch[1].split(",").map((i) => i.trim());
-    const usedIcons = existingIcons.filter((icon) => {
-      // Check if the icon is actually used in the file
-      const iconRegex = new RegExp(`\\b${icon}\\b`, "g");
-      const matches = content.match(iconRegex);
-      return matches && matches.length > 1; // More than just the import
-    });
-
-    if (usedIcons.length !== existingIcons.length) {
-      if (usedIcons.length > 0) {
-        content = content.replace(
-          lucideImportMatch[0],
-          `import { ${usedIcons.join(", ")} } from 'lucide-react';`,
-        );
-      } else {
-        content = content.replace(lucideImportMatch[0] + "\n", "");
-      }
-      modified = true;
+// Get all TypeScript/JavaScript files
+const getAllFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
+  let files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      files = files.concat(getAllFiles(fullPath, extensions));
+    } else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath);
     }
   }
+  
+  return files;
+};
 
-  if (modified) {
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
+// Remove unused imports from a file
+const removeUnusedImports = (filePath) => {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const lines = content.split('\n');
+    const newLines = [];
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      // Check if this is an import line
+      if (line.trim().startsWith('import ')) {
+        // Check if the next line is also an import (multiline import)
+        let importLines = [line];
+        let j = i + 1;
+        
+        while (j < lines.length && lines[j].trim().startsWith('import ')) {
+          importLines.push(lines[j]);
+          j++;
+        }
+        
+        // Check if any of these imports are used in the file
+        const importContent = importLines.join('\n');
+        const restOfFile = lines.slice(j).join('\n');
+        
+        // Extract imported names
+        const importMatches = importContent.match(/\{([^}]+)\}/g);
+        if (importMatches) {
+          const importedNames = importMatches
+            .flatMap(match => match.slice(1, -1).split(','))
+            .map(name => name.trim().split(' as ')[0].trim());
+          
+          // Check if any imported name is used in the rest of the file
+          const isUsed = importedNames.some(name => {
+            if (name === 'React') return true; // Always keep React
+            const regex = new RegExp(`\\b${name}\\b`, 'g');
+            return regex.test(restOfFile);
+          });
+          
+          if (!isUsed) {
+            console.log(`Removing unused import from ${filePath}: ${importedNames.join(', ')}`);
+            i = j - 1; // Skip the import lines
+            continue;
+          }
+        }
+      }
+      
+      newLines.push(line);
+    }
+    
+    const newContent = newLines.join('\n');
+    if (newContent !== content) {
+      fs.writeFileSync(filePath, newContent);
+      console.log(`Updated ${filePath}`);
+    }
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
   }
-}
+};
 
 // Main execution
-async function main() {
-  const pageFiles = await glob("app/**/page.tsx");
-  console.log(`Found ${pageFiles.length} page files to fix...`);
+const files = getAllFiles('/workspace/app');
+console.log(`Found ${files.length} files to process`);
 
-  pageFiles.forEach(fixUnusedImports);
-  console.log("Unused imports fix completed!");
-}
+files.forEach(file => {
+  removeUnusedImports(file);
+});
 
-main().catch(console.error);
+console.log('Done fixing unused imports');
