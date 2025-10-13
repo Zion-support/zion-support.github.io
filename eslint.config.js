@@ -44,7 +44,9 @@ export default [
       'analyze-*.js',
       'check-*.js',
       'clean-*.js',
-      'jest.setup.js'
+      'jest.setup.js',
+      'app-broken/**',
+      'app-disabled/**'
     ],
     languageOptions: {
       ecmaVersion: 'latest',

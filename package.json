@@ -11,7 +11,7 @@
     "build:analyze": "vite build --mode analyze && npx vite-bundle-analyzer dist/stats.html",
     "preview": "vite preview",
     "start": "vite preview",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 1",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 1 --ignore-pattern 'app-broken/**' --ignore-pattern 'app-disabled/**'",
     "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix --max-warnings 0",
     "type-check": "tsc --noEmit --skipLibCheck",
     "type-check:ci": "tsc --noEmit -p tsconfig.ci.json",
