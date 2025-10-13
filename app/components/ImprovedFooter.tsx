@@ -25,7 +25,20 @@ import {
   ExternalLink,
   CheckCircle,
   TrendingUp,
-  Clock
+  Clock,
+  Cpu,
+  Layers,
+  Rocket,
+  Mic,
+  Image,
+  Video,
+  Music,
+  Gamepad2,
+  Heart,
+  Plane,
+  Eye,
+  Satellite,
+  Wifi
 } from 'lucide-react';
 
 const ImprovedFooter = () => {
@@ -61,6 +74,11 @@ const ImprovedFooter = () => {
         { label: 'AI Video Analysis', href: '/ai-video-analysis' },
         { label: 'AI Time Series Forecasting', href: '/ai-time-series-forecasting' },
         { label: 'AI NLP Text Analysis', href: '/ai-nlp-text-analysis' },
+        { label: 'AI Quantum Computing', href: '/ai-quantum-computing' },
+        { label: 'AI Metaverse Platform', href: '/ai-metaverse-platform' },
+        { label: 'AI Brain Interface', href: '/ai-brain-interface' },
+        { label: 'AI Digital Twins', href: '/ai-digital-twins' },
+        { label: 'AI Space Technology', href: '/ai-space-technology' },
         { label: 'View All AI Services', href: '/ai-services', featured: true }
       ]
     },
@@ -82,6 +100,12 @@ const ImprovedFooter = () => {
         { label: 'Cybersecurity Audit', href: '/cybersecurity-audit' },
         { label: 'Data Center Services', href: '/data-center-services' },
         { label: 'Asset Management', href: '/asset-management' },
+        { label: 'Advanced IoT Solutions', href: '/advanced-iot-solutions' },
+        { label: 'AR/VR Development Studio', href: '/ar-vr-development-studio' },
+        { label: 'Blockchain Development', href: '/blockchain-development-services' },
+        { label: 'Quantum Computing', href: '/quantum-computing-services' },
+        { label: 'Edge Computing', href: '/edge-computing-solutions' },
+        { label: 'Satellite Communications', href: '/satellite-communication-systems' },
         { label: 'View All IT Services', href: '/services', featured: true }
       ]
     },
@@ -113,6 +137,13 @@ const ImprovedFooter = () => {
         { label: 'Zion AI API Manager', href: '/zion-ai-api-manager' },
         { label: 'Zion AI Backup Manager', href: '/zion-ai-backup-manager' },
         { label: 'Zion AI Testing Automation', href: '/zion-ai-testing-automation' },
+        { label: 'Zion AI Voice Cloning', href: '/zion-ai-voice-cloning' },
+        { label: 'Zion AI Image Generation', href: '/zion-ai-image-generation' },
+        { label: 'Zion AI Video Editor', href: '/zion-ai-video-editor' },
+        { label: 'Zion AI Music Composer', href: '/zion-ai-music-composer' },
+        { label: 'Zion AI Game Dev Kit', href: '/zion-ai-game-dev' },
+        { label: 'Zion AI Fitness Coach', href: '/zion-ai-fitness-coach' },
+        { label: 'Zion AI Travel Planner', href: '/zion-ai-travel-planner' },
         { label: 'View All Micro SAAS', href: '/micro-saas', featured: true }
       ]
     },

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import Navigation from "./app/components/Navigation";
+import ImprovedNavigation from "./app/components/ImprovedNavigation";
 import Sidebar from "./app/components/Sidebar";
 import Footer from "./app/components/Footer";
 import LoadingPage from "./app/components/Loading";
@@ -136,7 +136,7 @@ function App() {
                         </a>
                         
                         <FuturisticBackground>
-                          <Navigation onSidebarToggle={toggleSidebar} />
+                          <ImprovedNavigation />
                           <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
                           <Breadcrumb />
                           

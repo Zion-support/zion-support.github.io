@@ -27,7 +27,20 @@ import {
   Clock,
   CheckCircle,
   DollarSign,
-  Play
+  Play,
+  Cpu,
+  Layers,
+  Rocket,
+  Mic,
+  Image,
+  Video,
+  Music,
+  Gamepad2,
+  Heart,
+  Plane,
+  Eye,
+  Satellite,
+  Wifi
 } from 'lucide-react';
 
 const ImprovedNavigation = () => {
@@ -196,6 +209,36 @@ const ImprovedNavigation = () => {
           icon: <Settings className="w-4 h-4" />
         },
         { 
+          label: 'AI Quantum Computing', 
+          href: '/ai-quantum-computing',
+          description: 'Quantum AI solutions',
+          icon: <Cpu className="w-4 h-4" />
+        },
+        { 
+          label: 'AI Metaverse Platform', 
+          href: '/ai-metaverse-platform',
+          description: 'Virtual world creation',
+          icon: <Globe className="w-4 h-4" />
+        },
+        { 
+          label: 'AI Brain Interface', 
+          href: '/ai-brain-interface',
+          description: 'Neural control systems',
+          icon: <Brain className="w-4 h-4" />
+        },
+        { 
+          label: 'AI Digital Twins', 
+          href: '/ai-digital-twins',
+          description: 'Digital replica technology',
+          icon: <Layers className="w-4 h-4" />
+        },
+        { 
+          label: 'AI Space Technology', 
+          href: '/ai-space-technology',
+          description: 'Space exploration AI',
+          icon: <Rocket className="w-4 h-4" />
+        },
+        { 
           label: 'View All AI Services', 
           href: '/ai-services',
           description: 'Explore all AI solutions',
@@ -287,6 +330,42 @@ const ImprovedNavigation = () => {
           href: '/asset-management',
           description: 'IT asset tracking',
           icon: <BarChart3 className="w-4 h-4" />
+        },
+        { 
+          label: 'Advanced IoT Solutions', 
+          href: '/advanced-iot-solutions',
+          description: 'Smart city IoT',
+          icon: <Wifi className="w-4 h-4" />
+        },
+        { 
+          label: 'AR/VR Development Studio', 
+          href: '/ar-vr-development-studio',
+          description: 'Immersive experiences',
+          icon: <Eye className="w-4 h-4" />
+        },
+        { 
+          label: 'Blockchain Development', 
+          href: '/blockchain-development-services',
+          description: 'DeFi & NFT solutions',
+          icon: <Layers className="w-4 h-4" />
+        },
+        { 
+          label: 'Quantum Computing', 
+          href: '/quantum-computing-services',
+          description: 'Quantum solutions',
+          icon: <Cpu className="w-4 h-4" />
+        },
+        { 
+          label: 'Edge Computing', 
+          href: '/edge-computing-solutions',
+          description: 'Distributed computing',
+          icon: <Wifi className="w-4 h-4" />
+        },
+        { 
+          label: 'Satellite Communications', 
+          href: '/satellite-communication-systems',
+          description: 'Global connectivity',
+          icon: <Satellite className="w-4 h-4" />
         },
         { 
           label: 'View All IT Services', 
@@ -440,6 +519,48 @@ const ImprovedNavigation = () => {
           href: '/zion-ai-testing-automation',
           description: 'Automated testing',
           icon: <CheckCircle className="w-4 h-4" />
+        },
+        { 
+          label: 'Zion AI Voice Cloning', 
+          href: '/zion-ai-voice-cloning',
+          description: 'Voice synthesis platform',
+          icon: <Mic className="w-4 h-4" />
+        },
+        { 
+          label: 'Zion AI Image Generation', 
+          href: '/zion-ai-image-generation',
+          description: 'AI image creation',
+          icon: <Image className="w-4 h-4" />
+        },
+        { 
+          label: 'Zion AI Video Editor', 
+          href: '/zion-ai-video-editor',
+          description: 'Intelligent video editing',
+          icon: <Video className="w-4 h-4" />
+        },
+        { 
+          label: 'Zion AI Music Composer', 
+          href: '/zion-ai-music-composer',
+          description: 'AI music creation',
+          icon: <Music className="w-4 h-4" />
+        },
+        { 
+          label: 'Zion AI Game Dev Kit', 
+          href: '/zion-ai-game-dev',
+          description: 'Game development platform',
+          icon: <Gamepad2 className="w-4 h-4" />
+        },
+        { 
+          label: 'Zion AI Fitness Coach', 
+          href: '/zion-ai-fitness-coach',
+          description: 'Personal fitness trainer',
+          icon: <Heart className="w-4 h-4" />
+        },
+        { 
+          label: 'Zion AI Travel Planner', 
+          href: '/zion-ai-travel-planner',
+          description: 'Intelligent travel planning',
+          icon: <Plane className="w-4 h-4" />
         },
         { 
           label: 'View All Micro SAAS', 

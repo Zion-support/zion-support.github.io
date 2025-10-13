@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Smartphone as Phone, Laptop, Headphones, CheckCircle, Star, Award, Rocket, Sparkles } from "lucide-react";
+import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Smartphone as Phone, Laptop, Headphones, CheckCircle, Star, Award, Rocket, Sparkles, Eye, Camera, Mic, Palette, Layers, Workflow, GitBranch, Cpu as Processor, Wrench, Search, MessageSquare, Calendar, CreditCard, ShoppingCart, Home, Car, Plane, Heart, BookOpen, GraduationCap, Music, Gamepad2, Video, Image, FileImage, FileVideo, FileAudio, FileCode, FileSpreadsheet, FileText as Document, FilePdf, FileArchive, Download, Upload, Share2, Copy, Edit, Trash2, Save, Plus, Minus, X, Check, AlertTriangle, Info, HelpCircle, ExternalLink, ArrowUp, ArrowDown, ArrowLeft, ChevronUp, ChevronDown, ChevronLeft, ChevronRight, Play, Pause, Stop, SkipBack, SkipForward, Volume2, VolumeX, Maximize, Minimize, RotateCcw, RotateCw, RefreshCw, RefreshCcw, Power, PowerOff, Battery, BatteryCharging, WifiOff, Bluetooth, BluetoothOff, Signal, SignalHigh, SignalLow, SignalZero, SignalMedium, Radio, RadioReceiver, Satellite, SatelliteDish, Antenna, Router, Switch, Hub, Cable, Plug, PlugZap, Lightbulb, LightbulbOff, Sun, Moon, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, CloudDrizzle, CloudHail, Wind, Thermometer, Droplets, Snowflake, Umbrella, Tornado, Hurricane, Earthquake, Volcano, Mountain, TreePine, TreePalm, Flower, Leaf, Sprout, Bug, Fish, Bird, Cat, Dog, Rabbit, Hamster, Squirrel, Whale, Dolphin, Penguin, Octopus, Crab, Lobster, Shrimp, Snail, Bee, Butterfly, Ladybug, Spider, Ant, Mosquito, Fly, Worm, Snake, Lizard, Frog, Turtle, Crocodile, Alligator, Elephant, Giraffe, Lion, Tiger, Bear, Panda, Koala, Kangaroo, Monkey, Gorilla, Chimpanzee, Hippopotamus, Rhinoceros, Zebra, Horse, Cow, Pig, Sheep, Goat, Chicken, Duck, Turkey, Rooster, Owl, Eagle, Hawk, Falcon, Parrot, Peacock, Flamingo, Toucan, Hummingbird, Woodpecker, Robin, Cardinal, BlueJay, Crow, Raven, Magpie, Starling, Finch, Canary, Sparrow, Pigeon, Dove, Swan, Goose, Pelican, Stork, Heron, Crane, Ibis, Spoonbill, Sandpiper, Plover, Oystercatcher, Avocet, Stilt, Godwit, Curlew, Whimbrel, Snipe, Woodcock, Rail, Coot, Gallinule, Moorhen, Jacana, PaintedSnipe, Seedsnipe, PlainsWanderer, Buttonquail, Mesite, Sandgrouse } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -336,6 +336,340 @@ export default function Services() {
       originalPrice: "$299/month",
       features: ["Asset Inventory", "Lifecycle Management", "Cost Tracking", "License Management", "Depreciation Tracking", "Compliance Reporting"],
       category: "Asset Management"
+    },
+    // NEW INNOVATIVE AI SERVICES
+    {
+      title: "AI Quantum Computing Solutions",
+      description: "Revolutionary quantum computing services for complex optimization problems, cryptography, and advanced simulations. Harness quantum supremacy for breakthrough results.",
+      icon: <Cpu className="w-8 h-8" />,
+      path: "/ai-quantum-computing",
+      color: "from-violet-500 to-purple-500",
+      price: "Starting at $2,999/month",
+      originalPrice: "$5,999/month",
+      features: ["Quantum Algorithms", "Cryptography", "Optimization", "Simulation", "Quantum ML", "Research Support"],
+      category: "Quantum AI",
+      popular: true
+    },
+    {
+      title: "AI Metaverse Development Platform",
+      description: "Complete metaverse creation tools with AI-powered avatars, virtual worlds, NFT marketplaces, and immersive experiences for businesses and creators.",
+      icon: <Globe className="w-8 h-8" />,
+      path: "/ai-metaverse-platform",
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $799/month",
+      originalPrice: "$1,599/month",
+      features: ["Virtual Worlds", "AI Avatars", "NFT Marketplace", "VR/AR Integration", "Blockchain", "Social Features"],
+      category: "Metaverse AI"
+    },
+    {
+      title: "AI Autonomous Vehicle Systems",
+      description: "Advanced AI systems for autonomous vehicles including computer vision, sensor fusion, path planning, and real-time decision making for self-driving cars.",
+      icon: <Car className="w-8 h-8" />,
+      path: "/ai-autonomous-vehicles",
+      color: "from-red-500 to-orange-500",
+      price: "Starting at $1,499/month",
+      originalPrice: "$2,999/month",
+      features: ["Computer Vision", "Sensor Fusion", "Path Planning", "Real-time AI", "Safety Systems", "Fleet Management"],
+      category: "Autonomous AI"
+    },
+    {
+      title: "AI Space Technology Solutions",
+      description: "Cutting-edge AI applications for space exploration, satellite management, space debris tracking, and autonomous space missions with advanced robotics.",
+      icon: <Rocket className="w-8 h-8" />,
+      path: "/ai-space-technology",
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $1,999/month",
+      originalPrice: "$3,999/month",
+      features: ["Satellite AI", "Space Robotics", "Debris Tracking", "Mission Planning", "Space Weather", "Astronaut Support"],
+      category: "Space AI"
+    },
+    {
+      title: "AI Climate Intelligence Platform",
+      description: "Advanced climate modeling and environmental monitoring using AI to predict weather patterns, track climate change, and optimize renewable energy systems.",
+      icon: <CloudRain className="w-8 h-8" />,
+      path: "/ai-climate-intelligence",
+      color: "from-green-500 to-teal-500",
+      price: "Starting at $599/month",
+      originalPrice: "$1,199/month",
+      features: ["Weather Prediction", "Climate Modeling", "Renewable Optimization", "Carbon Tracking", "Environmental Monitoring", "Disaster Prevention"],
+      category: "Climate AI"
+    },
+    {
+      title: "AI Brain-Computer Interface",
+      description: "Revolutionary brain-computer interface technology enabling direct neural control of devices, thought-to-text conversion, and cognitive enhancement applications.",
+      icon: <Brain className="w-8 h-8" />,
+      path: "/ai-brain-interface",
+      color: "from-pink-500 to-rose-500",
+      price: "Starting at $2,499/month",
+      originalPrice: "$4,999/month",
+      features: ["Neural Control", "Thought-to-Text", "Cognitive Enhancement", "Medical Applications", "Research Tools", "Accessibility"],
+      category: "Neuro AI"
+    },
+    {
+      title: "AI Digital Twin Technology",
+      description: "Create digital replicas of physical assets, processes, and systems with real-time monitoring, predictive maintenance, and simulation capabilities.",
+      icon: <Layers className="w-8 h-8" />,
+      path: "/ai-digital-twins",
+      color: "from-blue-500 to-cyan-500",
+      price: "Starting at $899/month",
+      originalPrice: "$1,799/month",
+      features: ["3D Modeling", "Real-time Sync", "Predictive Analytics", "Simulation", "IoT Integration", "Performance Optimization"],
+      category: "Digital Twins"
+    },
+    {
+      title: "AI Edge Computing Intelligence",
+      description: "Deploy AI models at the edge for real-time processing, reduced latency, and offline capabilities. Perfect for IoT, autonomous systems, and mobile applications.",
+      icon: <Wifi className="w-8 h-8" />,
+      path: "/ai-edge-computing",
+      color: "from-orange-500 to-red-500",
+      price: "Starting at $399/month",
+      originalPrice: "$799/month",
+      features: ["Edge AI Models", "Real-time Processing", "Offline Capability", "IoT Integration", "Low Latency", "Resource Optimization"],
+      category: "Edge AI"
+    },
+    {
+      title: "AI Synthetic Media Studio",
+      description: "Create realistic synthetic media including deepfakes, virtual influencers, AI-generated videos, and voice synthesis for marketing and entertainment.",
+      icon: <Video className="w-8 h-8" />,
+      path: "/ai-synthetic-media",
+      color: "from-purple-500 to-pink-500",
+      price: "Starting at $699/month",
+      originalPrice: "$1,399/month",
+      features: ["Deepfake Technology", "Virtual Influencers", "Voice Synthesis", "Video Generation", "Face Swapping", "Content Creation"],
+      category: "Synthetic Media"
+    },
+    {
+      title: "AI Blockchain Intelligence",
+      description: "Advanced blockchain analytics and DeFi solutions with AI-powered trading bots, smart contract auditing, and cryptocurrency market analysis.",
+      icon: <Layers className="w-8 h-8" />,
+      path: "/ai-blockchain-intelligence",
+      color: "from-yellow-500 to-orange-500",
+      price: "Starting at $799/month",
+      originalPrice: "$1,599/month",
+      features: ["Blockchain Analytics", "DeFi Solutions", "Trading Bots", "Smart Contract Audit", "Market Analysis", "Risk Assessment"],
+      category: "Blockchain AI"
+    },
+    // NEW MICRO SAAS SERVICES
+    {
+      title: "Zion AI Voice Cloning Studio",
+      description: "Professional voice cloning and synthesis platform for creating custom voice assistants, audiobooks, and multilingual content with natural speech patterns.",
+      icon: <Mic className="w-8 h-8" />,
+      path: "/zion-ai-voice-cloning",
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $199/month",
+      originalPrice: "$399/month",
+      features: ["Voice Cloning", "Text-to-Speech", "Multilingual Support", "Emotion Control", "Voice Training", "API Integration"],
+      category: "Voice AI"
+    },
+    {
+      title: "Zion AI Image Generation Pro",
+      description: "Advanced AI image generation with custom models, style transfer, and professional editing tools for marketing, design, and creative content.",
+      icon: <Image className="w-8 h-8" />,
+      path: "/zion-ai-image-generation",
+      color: "from-pink-500 to-purple-500",
+      price: "Starting at $149/month",
+      originalPrice: "$299/month",
+      features: ["AI Image Generation", "Style Transfer", "Custom Models", "Batch Processing", "High Resolution", "Commercial License"],
+      category: "Image AI"
+    },
+    {
+      title: "Zion AI Video Editor Pro",
+      description: "Intelligent video editing with automatic scene detection, smart cuts, background removal, and AI-powered effects for professional video production.",
+      icon: <Video className="w-8 h-8" />,
+      path: "/zion-ai-video-editor",
+      color: "from-red-500 to-pink-500",
+      price: "Starting at $179/month",
+      originalPrice: "$359/month",
+      features: ["Auto Scene Detection", "Smart Cuts", "Background Removal", "AI Effects", "Auto Subtitles", "Export Options"],
+      category: "Video AI"
+    },
+    {
+      title: "Zion AI Music Composer",
+      description: "AI-powered music composition and production tool with genre-specific models, instrument simulation, and professional mixing capabilities.",
+      icon: <Music className="w-8 h-8" />,
+      path: "/zion-ai-music-composer",
+      color: "from-purple-500 to-violet-500",
+      price: "Starting at $129/month",
+      originalPrice: "$259/month",
+      features: ["AI Composition", "Genre Models", "Instrument Simulation", "Mixing Tools", "Royalty-Free", "MIDI Export"],
+      category: "Music AI"
+    },
+    {
+      title: "Zion AI Game Development Kit",
+      description: "Complete game development platform with AI-powered character behavior, procedural content generation, and intelligent game balancing.",
+      icon: <Gamepad2 className="w-8 h-8" />,
+      path: "/zion-ai-game-dev",
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $299/month",
+      originalPrice: "$599/month",
+      features: ["AI Characters", "Procedural Generation", "Game Balancing", "Physics Simulation", "Multiplayer AI", "Asset Generation"],
+      category: "Game AI"
+    },
+    {
+      title: "Zion AI Learning Management System",
+      description: "Intelligent learning platform with personalized education paths, automated assessments, and AI tutoring for educational institutions and corporate training.",
+      icon: <GraduationCap className="w-8 h-8" />,
+      path: "/zion-ai-lms",
+      color: "from-blue-500 to-indigo-500",
+      price: "Starting at $249/month",
+      originalPrice: "$499/month",
+      features: ["Personalized Learning", "AI Tutoring", "Auto Assessments", "Progress Tracking", "Content Generation", "Analytics"],
+      category: "Education AI"
+    },
+    {
+      title: "Zion AI Real Estate Assistant",
+      description: "Comprehensive real estate platform with property valuation, market analysis, virtual tours, and AI-powered property recommendations.",
+      icon: <Home className="w-8 h-8" />,
+      path: "/zion-ai-real-estate",
+      color: "from-amber-500 to-yellow-500",
+      price: "Starting at $199/month",
+      originalPrice: "$399/month",
+      features: ["Property Valuation", "Market Analysis", "Virtual Tours", "AI Recommendations", "Investment Analysis", "CRM Integration"],
+      category: "Real Estate AI"
+    },
+    {
+      title: "Zion AI Fitness Coach Pro",
+      description: "Personal AI fitness trainer with workout generation, form analysis, nutrition planning, and progress tracking for personalized fitness journeys.",
+      icon: <Heart className="w-8 h-8" />,
+      path: "/zion-ai-fitness-coach",
+      color: "from-red-500 to-pink-500",
+      price: "Starting at $99/month",
+      originalPrice: "$199/month",
+      features: ["Workout Generation", "Form Analysis", "Nutrition Planning", "Progress Tracking", "Wearable Integration", "Personalized Plans"],
+      category: "Fitness AI"
+    },
+    {
+      title: "Zion AI Travel Planner",
+      description: "Intelligent travel planning with personalized itineraries, real-time recommendations, budget optimization, and AI-powered travel assistance.",
+      icon: <Plane className="w-8 h-8" />,
+      path: "/zion-ai-travel-planner",
+      color: "from-cyan-500 to-teal-500",
+      price: "Starting at $79/month",
+      originalPrice: "$159/month",
+      features: ["Personalized Itineraries", "Real-time Updates", "Budget Optimization", "Local Recommendations", "Booking Integration", "Travel Alerts"],
+      category: "Travel AI"
+    },
+    {
+      title: "Zion AI E-commerce Optimizer",
+      description: "Complete e-commerce optimization suite with AI-powered product recommendations, pricing optimization, inventory management, and customer insights.",
+      icon: <ShoppingCart className="w-8 h-8" />,
+      path: "/zion-ai-ecommerce-optimizer",
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $179/month",
+      originalPrice: "$359/month",
+      features: ["Product Recommendations", "Pricing Optimization", "Inventory Management", "Customer Insights", "A/B Testing", "Conversion Optimization"],
+      category: "E-commerce AI"
+    },
+    // NEW IT SERVICES
+    {
+      title: "Advanced IoT Solutions",
+      description: "Comprehensive Internet of Things implementation with sensor networks, data analytics, and real-time monitoring for smart cities and industrial applications.",
+      icon: <Wifi className="w-8 h-8" />,
+      path: "/advanced-iot-solutions",
+      color: "from-teal-500 to-cyan-500",
+      price: "Starting at $399/month",
+      originalPrice: "$799/month",
+      features: ["Sensor Networks", "Data Analytics", "Real-time Monitoring", "Smart City Solutions", "Industrial IoT", "Edge Computing"],
+      category: "IoT Solutions"
+    },
+    {
+      title: "AR/VR Development Studio",
+      description: "Complete augmented and virtual reality development services with immersive experiences, training simulations, and interactive applications.",
+      icon: <Eye className="w-8 h-8" />,
+      path: "/ar-vr-development-studio",
+      color: "from-purple-500 to-violet-500",
+      price: "Starting at $599/month",
+      originalPrice: "$1,199/month",
+      features: ["AR Applications", "VR Experiences", "Training Simulations", "3D Modeling", "Interactive Design", "Hardware Integration"],
+      category: "AR/VR Development"
+    },
+    {
+      title: "Blockchain Development Services",
+      description: "Complete blockchain solutions including smart contracts, DeFi applications, NFT marketplaces, and cryptocurrency integrations.",
+      icon: <Layers className="w-8 h-8" />,
+      path: "/blockchain-development-services",
+      color: "from-yellow-500 to-orange-500",
+      price: "Starting at $799/month",
+      originalPrice: "$1,599/month",
+      features: ["Smart Contracts", "DeFi Applications", "NFT Marketplaces", "Cryptocurrency Integration", "Token Development", "Security Auditing"],
+      category: "Blockchain Development"
+    },
+    {
+      title: "Advanced Cybersecurity Suite",
+      description: "Next-generation cybersecurity solutions with AI-powered threat detection, zero-trust architecture, and comprehensive security monitoring.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/advanced-cybersecurity-suite",
+      color: "from-red-500 to-pink-500",
+      price: "Starting at $499/month",
+      originalPrice: "$999/month",
+      features: ["AI Threat Detection", "Zero-Trust Architecture", "Security Monitoring", "Incident Response", "Compliance Management", "Penetration Testing"],
+      category: "Cybersecurity"
+    },
+    {
+      title: "Cloud-Native Development",
+      description: "Modern cloud-native application development with microservices, containerization, and serverless architecture for scalable applications.",
+      icon: <Cloud className="w-8 h-8" />,
+      path: "/cloud-native-development",
+      color: "from-blue-500 to-indigo-500",
+      price: "Starting at $699/month",
+      originalPrice: "$1,399/month",
+      features: ["Microservices", "Containerization", "Serverless Architecture", "Kubernetes", "API Development", "Scalability"],
+      category: "Cloud Development"
+    },
+    {
+      title: "AI-Powered DevOps Platform",
+      description: "Intelligent DevOps platform with automated testing, deployment, monitoring, and optimization using AI and machine learning.",
+      icon: <GitBranch className="w-8 h-8" />,
+      path: "/ai-powered-devops",
+      color: "from-green-500 to-teal-500",
+      price: "Starting at $449/month",
+      originalPrice: "$899/month",
+      features: ["Automated Testing", "AI Deployment", "Intelligent Monitoring", "Performance Optimization", "Predictive Analytics", "Self-Healing Systems"],
+      category: "AI DevOps"
+    },
+    {
+      title: "Edge Computing Solutions",
+      description: "Distributed edge computing infrastructure for low-latency applications, IoT processing, and real-time data analytics at the network edge.",
+      icon: <Wifi className="w-8 h-8" />,
+      path: "/edge-computing-solutions",
+      color: "from-orange-500 to-red-500",
+      price: "Starting at $349/month",
+      originalPrice: "$699/month",
+      features: ["Edge Infrastructure", "Low Latency Processing", "IoT Integration", "Real-time Analytics", "Distributed Computing", "Network Optimization"],
+      category: "Edge Computing"
+    },
+    {
+      title: "Quantum Computing Services",
+      description: "Quantum computing solutions for optimization problems, cryptography, and advanced simulations with access to quantum hardware and algorithms.",
+      icon: <Cpu className="w-8 h-8" />,
+      path: "/quantum-computing-services",
+      color: "from-violet-500 to-purple-500",
+      price: "Starting at $1,999/month",
+      originalPrice: "$3,999/month",
+      features: ["Quantum Algorithms", "Optimization Problems", "Cryptography", "Quantum Simulation", "Research Support", "Hardware Access"],
+      category: "Quantum Computing"
+    },
+    {
+      title: "5G Network Optimization",
+      description: "Advanced 5G network optimization services with performance tuning, coverage analysis, and capacity planning for maximum efficiency.",
+      icon: <Signal className="w-8 h-8" />,
+      path: "/5g-network-optimization",
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $599/month",
+      originalPrice: "$1,199/month",
+      features: ["Network Optimization", "Coverage Analysis", "Capacity Planning", "Performance Tuning", "Interference Management", "Quality Assurance"],
+      category: "5G Optimization"
+    },
+    {
+      title: "Satellite Communication Systems",
+      description: "Complete satellite communication solutions including ground stations, satellite tracking, and global connectivity services for remote locations.",
+      icon: <Satellite className="w-8 h-8" />,
+      path: "/satellite-communication-systems",
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $899/month",
+      originalPrice: "$1,799/month",
+      features: ["Ground Stations", "Satellite Tracking", "Global Connectivity", "Remote Access", "Data Transmission", "Network Management"],
+      category: "Satellite Communications"
     }
   ];
 
