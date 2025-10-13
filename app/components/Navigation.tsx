@@ -32,6 +32,14 @@ const Navigation = React.memo(() => {
     { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
     { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
     { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Chatbot Builder', path: '/zion-ai-chatbot-builder', icon: <Brain className="w-4 h-4" />, featured: true },
+    { name: 'Zion Project AI', path: '/zion-project-ai', icon: <Code className="w-4 h-4" />, featured: true },
+    { name: 'Zion Financial AI', path: '/zion-financial-ai', icon: <BarChart3 className="w-4 h-4" />, featured: true },
+    { name: 'Zion Cyber AI', path: '/zion-cyber-ai', icon: <Shield className="w-4 h-4" />, featured: true },
+    { name: 'Zion Marketing AI', path: '/zion-marketing-ai', icon: <Zap className="w-4 h-4" />, featured: true },
+    { name: 'Zion Data AI', path: '/zion-data-ai', icon: <Database className="w-4 h-4" />, featured: true },
+    { name: 'Zion HR AI', path: '/zion-hr-ai', icon: <Users className="w-4 h-4" />, featured: true },
+    { name: 'Zion E-commerce AI', path: '/zion-ecommerce-ai', icon: <Zap className="w-4 h-4" />, featured: true },
     { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> },
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
@@ -77,54 +85,6 @@ const Navigation = React.memo(() => {
               </Link>
             ))}
             
-<<<<<<< HEAD
-<<<<<<< HEAD
-            {/* Solutions Dropdown */}
-            <div className="relative">
-              <button
-                onClick={toggleSolutions}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    toggleSolutions();
-                  }
-                }}
-                className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-50 rounded-md px-2 py-1"
-                aria-expanded={isSolutionsOpen}
-                aria-haspopup="true"
-                aria-label="Solutions menu"
-              >
-                <span>Solutions</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isSolutionsOpen ? 'rotate-180' : ''}`} />
-              </button>
-              
-              {isSolutionsOpen && (
-                <div 
-                  className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-cyan-500/20"
-                  role="menu"
-                  aria-label="Solutions submenu"
-                >
-                  {solutions.map((solution, index) => (
-                    <Link
-                      key={solution.name}
-                      to={solution.path}
-                      className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-all duration-300 rounded-lg mx-2 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-50"
-                      onClick={() => setIsSolutionsOpen(false)}
-                      role="menuitem"
-                      tabIndex={0}
-                    >
-                      {solution.icon}
-                      <span>{solution.name}</span>
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-            
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e9d5
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-713a
             {/* AI Services Dropdown */}
             <div className="relative">
               <button
