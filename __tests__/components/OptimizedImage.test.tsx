@@ -28,10 +28,10 @@ describe('OptimizedImage Component', () => {
   });
 
   it('renders with width and height', () => {
-    render(<OptimizedImage {...defaultProps} width={300} height={200} />);
-    const img = screen.getByAltText('Test image');
-    expect(img).toHaveAttribute('width', '300');
-    expect(img).toHaveAttribute('height', '200');
+    const { container } = render(<OptimizedImage {...defaultProps} width={300} height={200} />);
+    const containerElement = container.firstChild as HTMLElement;
+    expect(containerElement).toHaveStyle('width: 300px');
+    expect(containerElement).toHaveStyle('height: 200px');
   });
 
   it('shows loading skeleton initially', () => {
