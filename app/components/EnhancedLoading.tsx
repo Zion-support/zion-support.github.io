@@ -1,88 +1,82 @@
-&amp;apos;use client&amp;apos;;
-import React from &amp;apos;react&amp;apos;;
-import { Helmet } from &amp;apos;react-helmet-async&amp;apos;;
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const EnhancedLoading: React.FC = () =&amp;gt; {
+const EnhancedLoading: React.FC = () => {
   return (
-    &amp;lt;div className=&amp;quot;min-h-screen bg-white&amp;quot;&amp;gt;
-      &amp;lt;Helmet&amp;gt;
-        &amp;lt;title&amp;gt;Enhanced Loading - Zion Tech Group&amp;lt;/title&amp;gt;
-        &amp;lt;meta name=&amp;quot;description&amp;quot; content=&amp;quot;Professional enhanced loading services by Zion Tech Group.&amp;quot; /&amp;gt;
-      &amp;lt;/Helmet&amp;gt;
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Enhanced Loading - Zion Tech Group</title>
+        <meta name="description" content="Professional enhanced loading services by Zion Tech Group." />
+      </Helmet>
 
       {/* Hero Section */}
-      &amp;lt;section className=&amp;quot;py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100&amp;quot;&amp;gt;
-        &amp;lt;div className=&amp;quot;max-w-6xl mx-auto text-center&amp;quot;&amp;gt;
-          &amp;lt;h1 className=&amp;quot;text-5xl font-bold text-gray-900 mb-6&amp;quot;&amp;gt;
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
             Enhanced Loading
-          &amp;lt;/h1&amp;gt;
-          &amp;lt;p className=&amp;quot;text-xl text-gray-600 max-w-3xl mx-auto&amp;quot;&amp;gt;
-            Professional enhanced loading services 
-            designed to help your business grow and succeed.
-          &amp;lt;/p&amp;gt;
-        &amp;lt;/div&amp;gt;
-      &amp;lt;/section&amp;gt;
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional enhanced loading services designed to optimize your application&apos;s performance and user experience.
+          </p>
+        </div>
+      </section>
 
-      {/* Content Section */}
-      &amp;lt;section className=&amp;quot;py-16 px-4&amp;quot;&amp;gt;
-        &amp;lt;div className=&amp;quot;max-w-6xl mx-auto&amp;quot;&amp;gt;
-          &amp;lt;div className=&amp;quot;grid md:grid-cols-2 gap-12 items-center&amp;quot;&amp;gt;
-            &amp;lt;div&amp;gt;
-              &amp;lt;h2 className=&amp;quot;text-3xl font-bold text-gray-900 mb-6&amp;quot;&amp;gt;Our Services&amp;lt;/h2&amp;gt;
-              &amp;lt;p className=&amp;quot;text-lg text-gray-600 mb-6&amp;quot;&amp;gt;
-                We provide comprehensive enhanced loading 
-                solutions tailored to your specific needs and requirements.
-              &amp;lt;/p&amp;gt;
-              &amp;lt;ul className=&amp;quot;space-y-3&amp;quot;&amp;gt;
-                &amp;lt;li className=&amp;quot;flex items-center&amp;quot;&amp;gt;
-                  &amp;lt;span className=&amp;quot;w-2 h-2 bg-blue-600 rounded-full mr-3&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
-                  Custom solutions
-                &amp;lt;/li&amp;gt;
-                &amp;lt;li className=&amp;quot;flex items-center&amp;quot;&amp;gt;
-                  &amp;lt;span className=&amp;quot;w-2 h-2 bg-blue-600 rounded-full mr-3&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
-                  Expert consultation
-                &amp;lt;/li&amp;gt;
-                &amp;lt;li className=&amp;quot;flex items-center&amp;quot;&amp;gt;
-                  &amp;lt;span className=&amp;quot;w-2 h-2 bg-blue-600 rounded-full mr-3&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
-                  Ongoing support
-                &amp;lt;/li&amp;gt;
-              &amp;lt;/ul&amp;gt;
-            &amp;lt;/div&amp;gt;
-            &amp;lt;div className=&amp;quot;bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white&amp;quot;&amp;gt;
-              &amp;lt;h3 className=&amp;quot;text-2xl font-bold mb-4&amp;quot;&amp;gt;Get Started&amp;lt;/h3&amp;gt;
-              &amp;lt;p className=&amp;quot;mb-6&amp;quot;&amp;gt;
-                Ready to transform your business with our enhanced loading services?
-              &amp;lt;/p&amp;gt;
-              &amp;lt;a
-                href=&amp;quot;/contact&amp;quot;
-                className=&amp;quot;inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors&amp;quot;
-              &amp;gt;
-                Contact Us
-              &amp;lt;/a&amp;gt;
-            &amp;lt;/div&amp;gt;
-          &amp;lt;/div&amp;gt;
-        &amp;lt;/div&amp;gt;
-      &amp;lt;/section&amp;gt;
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">
+            Our Enhanced Loading Solutions
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <div className="w-6 h-6 bg-blue-600 rounded animate-pulse"></div>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Smart Loading States</h3>
+              <p className="text-gray-600">
+                Intelligent loading indicators that adapt to your content and provide meaningful feedback to users.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                <div className="w-6 h-6 bg-green-600 rounded animate-bounce"></div>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Performance Optimization</h3>
+              <p className="text-gray-600">
+                Advanced techniques to minimize loading times and improve overall application performance.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                <div className="w-6 h-6 bg-purple-600 rounded animate-spin"></div>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Custom Animations</h3>
+              <p className="text-gray-600">
+                Beautiful, smooth animations that enhance user experience during loading states.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
-      &amp;lt;section className=&amp;quot;py-16 px-4 bg-blue-600&amp;quot;&amp;gt;
-        &amp;lt;div className=&amp;quot;max-w-4xl mx-auto text-center&amp;quot;&amp;gt;
-          &amp;lt;h2 className=&amp;quot;text-3xl font-bold text-white mb-6&amp;quot;&amp;gt;
-            Ready to Get Started?
-          &amp;lt;/h2&amp;gt;
-          &amp;lt;p className=&amp;quot;text-xl text-blue-100 mb-8&amp;quot;&amp;gt;
-            Let&amp;apos;s discuss how our enhanced loading 
-            services can help you achieve your goals.
-          &amp;lt;/p&amp;gt;
-          &amp;lt;a
-            href=&amp;quot;/contact&amp;quot;
-            className=&amp;quot;inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors&amp;quot;
-          &amp;gt;
+      <section className="py-20 px-4 bg-gray-900">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Enhance Your Loading Experience?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let us help you implement professional loading solutions that will delight your users.
+          </p>
+          <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
             Get Started Today
-          &amp;lt;/a&amp;gt;
-        &amp;lt;/div&amp;gt;
-      &amp;lt;/section&amp;gt;
-    &amp;lt;/div&amp;gt;
+          </button>
+        </div>
+      </section>
+    </div>
   );
 };
 

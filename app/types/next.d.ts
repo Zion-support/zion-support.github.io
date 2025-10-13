@@ -1,10 +1,17 @@
 // Next.js type declarations
 declare module 'next' {
   interface NextApiRequest {
-    user?: any;
+    user?: {
+      id: string;
+      email: string;
+      name?: string;
+    };
   }
   interface NextConfig {
     // Add any Next.js specific types here
+    experimental?: {
+      appDir?: boolean;
+    };
   }
 }
 // Export a utility function

@@ -1,22 +1,13 @@
 import React, { useEffect, useState } from 'react';
+
 // Type definitions for browser APIs
 declare global {
-  interface PerformanceObserver {
-    observe(options: { entryTypes: string[] }): void;
-    disconnect(): void;
-  }
   interface PerformanceNavigationTiming extends PerformanceEntry {
     requestStart: number;
     responseStart: number;
   }
-  const PerformanceObserver: {
-    new (callback: (list: { getEntries(): PerformanceEntry[] }) => void): PerformanceObserver;
-  };
-  const performance: {
-    getEntriesByType(type: string): PerformanceEntry[];
-  };
 }
-import React, { useEffect, useState } from 'react';
+
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -24,63 +15,82 @@ interface PerformanceMetrics {
   cls: number | null;
   ttfb: number | null;
 }
+
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
     fid: null,
     cls: null,
-    ttfb: null,
+    ttfb: null
   });
+
   useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'paint') {
-            if (entry.name === 'first-contentful-paint') {
-              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-            }
-          } else if (entry.entryType === 'largest-contentful-paint') {
-            setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
-          } else if (entry.entryType === 'first-input') {
-            const inputEntry = entry as any;
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
-          } else if (entry.entryType === 'layout-shift') {
-            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
-          }
-        }
-      });
-      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
-      // Monitor TTFB
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigationEntry) {
-        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+    const measurePerformance = () => {
+      try {
+        // First Contentful Paint (FCP)
+        const fcpEntries = performance.getEntriesByType('paint');
+        const fcpEntry = fcpEntries.find(entry => entry.name === 'first-contentful-paint');
+        const fcp = fcpEntry ? fcpEntry.startTime : null;
+
+        // Largest Contentful Paint (LCP)
+        const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
+        const lcp = lcpEntries.length > 0 ? lcpEntries[lcpEntries.length - 1].startTime : null;
+
+        // Time to First Byte (TTFB)
+        const navigationEntries = performance.getEntriesByType('navigation');
+        const navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
+        const ttfb = navigationEntry ? navigationEntry.responseStart - navigationEntry.requestStart : null;
+
+        setMetrics({
+          fcp,
+          lcp,
+          fid: null, // FID requires user interaction
+          cls: null, // CLS requires more complex calculation
+          ttfb
+        });
+      } catch (error) {
+        console.error('Error measuring performance:', error);
       }
-      return () => observer.disconnect();
+    };
+
+    // Measure performance after page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
     }
-    return undefined;
+
+    return () => {
+      window.removeEventListener('load', measurePerformance);
+    };
   }, []);
-  // Only show in development
-  if (process.env.NODE_ENV !== 'development') {
-    return null;
-  }
+
   return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
-      <h3 className="font-bold mb-2">Performance Metrics</h3>
-      <div className="space-y-1">
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>
-        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
+    <div className="bg-white rounded-lg shadow-lg p-6">
+      <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance Metrics</h3>
+      <div className="space-y-2">
+        <div className="flex justify-between">
+          <span className="text-sm text-gray-600">First Contentful Paint:</span>
+          <span className="text-sm font-medium">
+            {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span className="text-sm text-gray-600">Largest Contentful Paint:</span>
+          <span className="text-sm font-medium">
+            {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span className="text-sm text-gray-600">Time to First Byte:</span>
+          <span className="text-sm font-medium">
+            {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'N/A'}
+          </span>
+        </div>
       </div>
     </div>
   );
 };
+
 export default PerformanceMonitor;
