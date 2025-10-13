@@ -1,118 +1,102 @@
-<<<<<<< HEAD
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
-export default function WebDevelopmentZionTechGroup() {
-  return (
-    <>
-      <Helmet>
-        <title>WebDevelopment - Zion Tech Group</title>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">WebDevelopment</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional webdevelopment services coming soon.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Code, Globe, Smartphone, Monitor, ArrowRight, CheckCircle, Star, Users, Award, Zap } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Code, Globe, Smartphone, Monitor, Database, Shield, Zap } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import ResponsiveGrid from '../components/ResponsiveGrid';
 
-const WebDevelopmentPage: React.FC = () => {
+const WebDevelopmentPage = () => {
   const services = [
     {
-      id: "responsive-web-design",
-      name: "Responsive Web Design",
-      description: "Mobile-first, responsive websites that look perfect on all devices",
-      features: [
-        "Mobile-first approach",
-        "Cross-browser compatibility",
-        "Fast loading times",
-        "SEO optimized",
-        "Modern UI/UX design"
-      ],
-      icon: <Smartphone className="w-8 h-8" />,
-      href: "/contact"
+      id: 'responsive-web-design',
+      title: 'Responsive Web Design',
+      description: 'Modern, mobile-first web design that looks perfect on all devices and screen sizes.',
+      icon: Monitor,
+      features: ['Mobile-First Design', 'Cross-Browser Compatibility', 'Fast Loading Times', 'SEO Optimized'],
+      price: 'Starting at $2,500',
+      category: 'Design',
+      rating: 4.9,
+      reviews: 1247,
+      featured: true
     },
     {
-      id: "e-commerce-solutions",
-      name: "E-commerce Solutions",
-      description: "Complete online store development with payment integration and inventory management",
-      features: [
-        "Payment gateway integration",
-        "Inventory management",
-        "Order tracking system",
-        "Customer accounts",
-        "Analytics dashboard"
-      ],
-      icon: <Globe className="w-8 h-8" />,
-      href: "/contact"
+      id: 'e-commerce-development',
+      title: 'E-Commerce Development',
+      description: 'Complete e-commerce solutions with secure payment processing and inventory management.',
+      icon: Globe,
+      features: ['Payment Integration', 'Inventory Management', 'Order Tracking', 'Admin Dashboard'],
+      price: 'Starting at $5,000',
+      category: 'E-Commerce',
+      rating: 4.8,
+      reviews: 892,
+      featured: true
     },
     {
-      id: "web-applications",
-      name: "Web Applications",
-      description: "Custom web applications built with modern frameworks and technologies",
-      features: [
-        "React/Vue.js development",
-        "Node.js backend",
-        "Database integration",
-        "API development",
-        "Cloud deployment"
-      ],
-      icon: <Code className="w-8 h-8" />,
-      href: "/contact"
+      id: 'web-applications',
+      title: 'Web Applications',
+      description: 'Custom web applications built with modern technologies for optimal performance.',
+      icon: Code,
+      features: ['Custom Development', 'API Integration', 'Real-time Features', 'Scalable Architecture'],
+      price: 'Starting at $3,500',
+      category: 'Applications',
+      rating: 4.9,
+      reviews: 1156,
+      featured: true
     },
     {
-      id: "cms-development",
-      name: "CMS Development",
-      description: "Content management systems for easy website maintenance and updates",
-      features: [
-        "WordPress customization",
-        "Headless CMS solutions",
-        "Content editing interface",
-        "Multi-user management",
-        "Plugin development"
-      ],
-      icon: <Monitor className="w-8 h-8" />,
-      href: "/contact"
+      id: 'mobile-web-apps',
+      title: 'Mobile Web Apps',
+      description: 'Progressive Web Apps that work seamlessly across all mobile devices.',
+      icon: Smartphone,
+      features: ['PWA Technology', 'Offline Functionality', 'Push Notifications', 'App-like Experience'],
+      price: 'Starting at $2,800',
+      category: 'Mobile',
+      rating: 4.7,
+      reviews: 743,
+      featured: false
+    },
+    {
+      id: 'cms-development',
+      title: 'CMS Development',
+      description: 'Custom content management systems for easy website maintenance and updates.',
+      icon: Database,
+      features: ['Custom CMS', 'User Management', 'Content Editor', 'Multi-language Support'],
+      price: 'Starting at $3,200',
+      category: 'CMS',
+      rating: 4.8,
+      reviews: 567,
+      featured: false
+    },
+    {
+      id: 'web-security',
+      title: 'Web Security',
+      description: 'Comprehensive security solutions to protect your website from threats.',
+      icon: Shield,
+      features: ['SSL Certificates', 'Security Audits', 'Firewall Protection', 'Regular Updates'],
+      price: 'Starting at $1,500',
+      category: 'Security',
+      rating: 4.9,
+      reviews: 1456,
+      featured: false
     }
   ];
 
   const technologies = [
-    { name: "React", description: "Modern JavaScript library for building user interfaces" },
-    { name: "Vue.js", description: "Progressive JavaScript framework for building web applications" },
-    { name: "Node.js", description: "JavaScript runtime for server-side development" },
-    { name: "TypeScript", description: "Typed superset of JavaScript for better development experience" },
-    { name: "Next.js", description: "React framework for production-ready applications" },
-    { name: "Express.js", description: "Fast, unopinionated web framework for Node.js" },
-    { name: "MongoDB", description: "NoSQL database for modern applications" },
-    { name: "PostgreSQL", description: "Powerful, open source object-relational database" }
+    { name: 'React', icon: '⚛️', description: 'Modern UI library for dynamic interfaces' },
+    { name: 'Next.js', icon: '▲', description: 'Full-stack React framework for production' },
+    { name: 'TypeScript', icon: '🔷', description: 'Type-safe JavaScript for better development' },
+    { name: 'Node.js', icon: '🟢', description: 'Server-side JavaScript runtime' },
+    { name: 'MongoDB', icon: '🍃', description: 'NoSQL database for flexible data storage' },
+    { name: 'PostgreSQL', icon: '🐘', description: 'Reliable relational database system' }
   ];
 
   const stats = [
-    { label: "Projects Completed", value: "500+", icon: <Code className="w-6 h-6" /> },
-    { label: "Client Satisfaction", value: "98%", icon: <Star className="w-6 h-6" /> },
-    { label: "Average Load Time", value: "<2s", icon: <Zap className="w-6 h-6" /> },
-    { label: "Mobile Responsive", value: "100%", icon: <Smartphone className="w-6 h-6" /> }
+    { label: "Websites Built", value: "500+", icon: Globe },
+    { label: "Client Satisfaction", value: "98%", icon: Star },
+    { label: "Average Load Time", value: "<2s", icon: Zap },
+    { label: "Uptime", value: "99.9%", icon: Shield }
   ];
 
   const testimonials = [
@@ -120,23 +104,23 @@ const WebDevelopmentPage: React.FC = () => {
       name: "Sarah Johnson",
       company: "TechStart Inc",
       role: "CEO",
-      content: "Zion Tech Group delivered an exceptional e-commerce platform that increased our online sales by 250%.",
+      content: "Zion Tech Group delivered an exceptional e-commerce platform that increased our online sales by 300%. The team's expertise and attention to detail were outstanding.",
       rating: 5,
       avatar: "SJ"
     },
     {
       name: "Michael Chen",
-      company: "Digital Agency",
-      role: "Creative Director",
-      content: "Their web application development expertise helped us create a custom solution that perfectly fits our needs.",
+      company: "Digital Marketing Agency",
+      role: "Operations Director",
+      content: "Our new web application has transformed our workflow. The user interface is intuitive, and the performance is outstanding. Highly recommended!",
       rating: 5,
       avatar: "MC"
     },
     {
       name: "Emily Rodriguez",
-      company: "E-commerce Store",
-      role: "Owner",
-      content: "The responsive design and fast loading times have significantly improved our user experience and conversions.",
+      company: "Creative Studio",
+      role: "Project Manager",
+      content: "The responsive design work was flawless. Our website looks perfect on all devices, and the loading speed improvements were remarkable.",
       rating: 5,
       avatar: "ER"
     }
@@ -146,8 +130,8 @@ const WebDevelopmentPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
         title="Web Development Services - Zion Tech Group | Custom Websites & Applications"
-        description="Professional web development services including responsive design, e-commerce solutions, web applications, and CMS development. Transform your digital presence with our expert team."
-        keywords="web development, responsive design, e-commerce, web applications, CMS, React, Vue.js, Node.js, custom websites"
+        description="Professional web development services including responsive design, e-commerce, web applications, and mobile web apps. Transform your online presence with our expert team."
+        keywords="web development, responsive design, e-commerce development, web applications, mobile web apps, custom websites, web design"
       />
 
       {/* Hero Section */}
@@ -155,17 +139,15 @@ const WebDevelopmentPage: React.FC = () => {
         <ResponsiveContainer>
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Web Development
-              </span>
+              Web Development Services
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your digital presence with custom web solutions that drive results. 
-              From responsive websites to complex web applications, we build it all.
+              Transform your digital presence with our expert web development services. 
+              From responsive websites to complex web applications, we deliver solutions that drive results.
             </p>
             <FuturisticButton
               href="#services"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+              className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700"
             >
               Explore Our Services
               <ArrowRight className="w-5 h-5 ml-2" />
@@ -178,17 +160,48 @@ const WebDevelopmentPage: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <ResponsiveGrid className="grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <FuturisticCard key={index} className="text-center p-6">
-                <div className="text-blue-400 mb-4 flex justify-center">
-                  {stat.icon}
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-gray-300">
-                  {stat.label}
-                </div>
+            {stats.map((stat, index) => {
+              const IconComponent = stat.icon;
+              return (
+                <FuturisticCard key={index} className="text-center p-6">
+                  <div className="text-cyan-400 mb-4 flex justify-center">
+                    <IconComponent className="w-6 h-6" />
+                  </div>
+                  <div className="text-3xl font-bold text-white mb-2">
+                    {stat.value}
+                  </div>
+                  <div className="text-gray-300">
+                    {stat.label}
+                  </div>
+                </FuturisticCard>
+              );
+            })}
+          </ResponsiveGrid>
+        </ResponsiveContainer>
+      </section>
+
+      {/* Technologies Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <ResponsiveContainer>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Technologies We Use
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              We leverage cutting-edge technologies to build modern, scalable web solutions
+            </p>
+          </div>
+
+          <ResponsiveGrid className="grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            {technologies.map((tech, index) => (
+              <FuturisticCard key={index} className="p-6 text-center">
+                <div className="text-4xl mb-4">{tech.icon}</div>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  {tech.name}
+                </h3>
+                <p className="text-gray-300 text-sm">
+                  {tech.description}
+                </p>
               </FuturisticCard>
             ))}
           </ResponsiveGrid>
@@ -207,62 +220,53 @@ const WebDevelopmentPage: React.FC = () => {
             </p>
           </div>
 
-          <ResponsiveGrid className="grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service) => (
-              <FuturisticCard key={service.id} className="p-6 hover:scale-105 transition-transform">
-                <div className="text-blue-400 mb-4">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {service.name}
-                </h3>
-                <p className="text-gray-300 mb-4">
-                  {service.description}
-                </p>
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <FuturisticButton
-                  href={service.href}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-                >
-                  Get Started
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </FuturisticButton>
-              </FuturisticCard>
-            ))}
-          </ResponsiveGrid>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Technologies Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Technologies We Use
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              We work with the latest technologies and frameworks to deliver cutting-edge solutions
-            </p>
-          </div>
-
-          <ResponsiveGrid className="grid-cols-2 md:grid-cols-4 gap-6">
-            {technologies.map((tech, index) => (
-              <FuturisticCard key={index} className="p-6 text-center hover:scale-105 transition-transform">
-                <h3 className="text-lg font-semibold text-white mb-2">
-                  {tech.name}
-                </h3>
-                <p className="text-sm text-gray-300">
-                  {tech.description}
-                </p>
-              </FuturisticCard>
-            ))}
+          <ResponsiveGrid className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service) => {
+              const IconComponent = service.icon;
+              return (
+                <FuturisticCard key={service.id} className="p-6 hover:scale-105 transition-transform">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-cyan-400">
+                      <IconComponent className="w-8 h-8" />
+                    </div>
+                    {service.featured && (
+                      <span className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                        Featured
+                      </span>
+                    )}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4">
+                    {service.description}
+                  </p>
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, index) => (
+                      <li key={index} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-cyan-400 font-bold text-lg">{service.price}</span>
+                    <div className="flex items-center text-yellow-400">
+                      <Star className="w-4 h-4 fill-current" />
+                      <span className="ml-1 text-sm font-medium">{service.rating}</span>
+                      <span className="ml-1 text-xs text-gray-400">({service.reviews})</span>
+                    </div>
+                  </div>
+                  <Link
+                    to={`/${service.id}`}
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </Link>
+                </FuturisticCard>
+              );
+            })}
           </ResponsiveGrid>
         </ResponsiveContainer>
       </section>
@@ -283,7 +287,7 @@ const WebDevelopmentPage: React.FC = () => {
             {testimonials.map((testimonial, index) => (
               <FuturisticCard key={index} className="p-6">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold mr-4">
                     {testimonial.avatar}
                   </div>
                   <div>
@@ -312,15 +316,15 @@ const WebDevelopmentPage: React.FC = () => {
         <ResponsiveContainer>
           <FuturisticCard className="text-center p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Build Your Next Web Project?
+              Ready to Build Your Dream Website?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's discuss your web development needs and create something amazing together.
+              Let our expert web development team bring your vision to life with cutting-edge technology and innovative design.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <FuturisticButton
                 href="/contact"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700"
               >
                 Start Your Project
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -328,9 +332,9 @@ const WebDevelopmentPage: React.FC = () => {
               <FuturisticButton
                 href="/demo"
                 variant="outline"
-                className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white"
+                className="border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white"
               >
-                View Our Portfolio
+                View Our Work
               </FuturisticButton>
             </div>
           </FuturisticCard>
@@ -341,4 +345,3 @@ const WebDevelopmentPage: React.FC = () => {
 };
 
 export default WebDevelopmentPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
