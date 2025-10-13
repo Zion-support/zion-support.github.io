@@ -60,9 +60,13 @@ class ErrorHandler extends Component<Props, State> {
         timestamp: new Date().toISOString()
       };
       // Send to your error reporting service here
-      console.log('Error data prepared for reporting:', errorData);
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Error data prepared for reporting:', errorData);
+      }
     } catch (reportingError) {
-      console.error('Failed to prepare error data for reporting:', reportingError);
+      if (process.env.NODE_ENV === 'development') {
+        console.error('Failed to prepare error data for reporting:', reportingError);
+      }
     }
   }
 

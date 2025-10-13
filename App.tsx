@@ -9,6 +9,7 @@ import Footer from "./app/components/Footer";
 import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import UserFriendlyErrorBoundary from "./app/components/UserFriendlyErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import EnhancedPerformanceOptimizer from "./app/components/EnhancedPerformanceOptimizer";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
@@ -214,7 +215,8 @@ function App() {
 
   return (
     <ErrorHandler>
-      <EnhancedErrorBoundary>
+      <UserFriendlyErrorBoundary>
+        <EnhancedErrorBoundary>
         <HelmetProvider>
           <AccessibilityEnhancer>
             <Router>
@@ -476,7 +478,8 @@ function App() {
             </Router>
           </AccessibilityEnhancer>
         </HelmetProvider>
-      </EnhancedErrorBoundary>
+        </EnhancedErrorBoundary>
+      </UserFriendlyErrorBoundary>
     </ErrorHandler>
   );
 }

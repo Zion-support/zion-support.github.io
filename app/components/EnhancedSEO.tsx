@@ -1,3 +1,4 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
@@ -9,29 +10,32 @@ interface SEOProps {
   ogType?: string;
   twitterCard?: string;
   structuredData?: object;
-  noIndex?: boolean;
-  noFollow?: boolean;
+  noindex?: boolean;
+  nofollow?: boolean;
 }
 
 const EnhancedSEO: React.FC<SEOProps> = ({
   title = "Zion Tech Group - Advanced AI and IT Solutions",
   description = "Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology.",
   keywords = "AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology",
-  canonical = "https://ziontechgroup.com",
+  canonical,
   ogImage = "https://ziontechgroup.com/og-image.jpg",
   ogType = "website",
   twitterCard = "summary_large_image",
   structuredData,
-  noIndex = false,
-  noFollow = false,
+  noindex = false,
+  nofollow = false
 }) => {
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : 'https://ziontechgroup.com');
+  
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/logo.png",
-    "description": description,
+    "description": "Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
@@ -48,19 +52,20 @@ const EnhancedSEO: React.FC<SEOProps> = ({
     },
     "sameAs": [
       "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup"
+      "https://linkedin.com/company/ziontechgroup",
+      "https://github.com/ziontechgroup"
     ],
     "foundingDate": "2020",
-    "numberOfEmployees": "50-100",
-    "industry": "Information Technology",
+    "numberOfEmployees": "10-50",
+    "industry": "Technology",
     "services": [
       "AI Solutions",
       "IT Services", 
       "Micro SAAS",
-      "5G Solutions",
+      "Digital Transformation",
       "Cybersecurity",
-      "Cloud Computing",
-      "Digital Transformation"
+      "Cloud Solutions",
+      "5G Technology"
     ]
   };
 
@@ -69,28 +74,28 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{title}</title>
+      <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <link rel="canonical" href={canonical} />
+      <link rel="canonical" href={canonicalUrl} />
       
-      {/* Robots Meta */}
-      <meta name="robots" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} />
+      {/* Robots */}
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} />
       
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={title} />
+      {/* Open Graph */}
+      <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonical} />
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
-      {/* Twitter Card Meta Tags */}
+      {/* Twitter Card */}
       <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={title} />
+      <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
@@ -109,14 +114,16 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
       <meta name="theme-color" content="#00ffff" />
       <meta name="msapplication-TileColor" content="#00ffff" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       
       {/* Performance Hints */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+      <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       
-      {/* Favicon and Icons */}
+      {/* Favicon */}
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <link rel="icon" type="image/png" href="/favicon.png" />
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -126,15 +133,6 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
-      
-      {/* Additional Performance Optimizations */}
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="format-detection" content="telephone=no" />
-      
-      {/* Security Headers */}
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Frame-Options" content="DENY" />
-      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
     </Helmet>
   );
 };

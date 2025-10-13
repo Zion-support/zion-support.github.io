@@ -23,7 +23,7 @@ const WebVitalsTracker: React.FC = () => {
         });
       }
 
-      // Log to console in development
+      // Log to console in development only
       if (process.env.NODE_ENV === 'development') {
         console.log(`[Web Vitals] ${metric.name}:`, metric.value);
       }
