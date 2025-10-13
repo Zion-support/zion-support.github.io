@@ -76,102 +76,10 @@ export default [
         console: 'readonly',
         process: 'readonly',
         global: 'readonly',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-        HTMLElement: 'readonly',
-        Event: 'readonly',
-        KeyboardEvent: 'readonly',
-        MediaQueryListEvent: 'readonly',
-        PerformanceObserver: 'readonly',
-        PerformanceNavigationTiming: 'readonly',
-        HTMLInputElement: 'readonly',
-        HTMLTextAreaElement: 'readonly',
-        HTMLSelectElement: 'readonly',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-6c11
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
         setTimeout: 'readonly',
         clearTimeout: 'readonly',
         setInterval: 'readonly',
         clearInterval: 'readonly',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        HTMLElement: 'readonly',
-        HTMLInputElement: 'readonly',
-        HTMLTextAreaElement: 'readonly',
-        HTMLSelectElement: 'readonly',
-        KeyboardEvent: 'readonly',
-        Event: 'readonly',
-        MediaQueryListEvent: 'readonly',
-        PerformanceObserver: 'readonly',
-        PerformanceNavigationTiming: 'readonly',
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-        performance: 'readonly',
-        require: 'readonly',
-        module: 'readonly',
-        exports: 'readonly',
-        fs: 'readonly'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        performance: 'readonly'
->>>>>>> cursor/fix-errors-and-merge-to-main-6c11
-=======
-        performance: 'readonly'
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
       }
     },
     plugins: {

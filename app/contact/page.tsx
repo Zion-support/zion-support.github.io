@@ -126,69 +126,18 @@ export default function ContactPage() {
           </h2>
           
           {isSubmitted ? (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Message Sent!</h3>
-              <p className="text-gray-300 mb-6">
-                Thank you for contacting us. We&apos;ll get back to you within 24 hours.
+            <div className="bg-green-500/10 border border-green-500/20 rounded-2xl p-8 text-center">
+              <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
+              <p className="text-gray-300">
+                Thank you for your message. We&apos;ll get back to you within 24 hours.
               </p>
-              <button
-                onClick={() => {
-                  setIsSubmitted(false);
-                  setFormData({
-                    name: '',
-                    email: '',
-                    company: '',
-                    phone: '',
-                    subject: '',
-                    message: ''
-                  });
-                }}
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-=======
-            <div className="text-center">
-              <div className="bg-green-500/20 border border-green-500/30 rounded-xl p-8 mb-8">
-                <h3 className="text-2xl font-bold text-green-400 mb-4">Message Sent Successfully!</h3>
-                <p className="text-gray-300 mb-6">
-                  Thank you for your message. We'll get back to you within 24 hours.
-                </p>
-                <button
-                  onClick={() => {
-                    setIsSubmitted(false);
-                    setFormData({
-                      name: '',
-                      email: '',
-                      company: '',
-                      phone: '',
-                      subject: '',
-                      message: ''
-                    });
-                  }}
-                  className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-              >
-                Send Another Message
-              </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-white font-medium mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                     Full Name *
                   </label>
                   <input
@@ -198,12 +147,12 @@ export default function ContactPage() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Your full name"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-white font-medium mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                     Email Address *
                   </label>
                   <input
@@ -213,15 +162,15 @@ export default function ContactPage() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="your.email@company.com"
+                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    placeholder="your.email@example.com"
                   />
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
+              <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="company" className="block text-white font-medium mb-2">
+                  <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                     Company
                   </label>
                   <input
@@ -230,12 +179,12 @@ export default function ContactPage() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Your company name"
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-white font-medium mb-2">
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                     Phone Number
                   </label>
                   <input
@@ -244,14 +193,14 @@ export default function ContactPage() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="+1 (555) 123-4567"
                   />
                 </div>
               </div>
 
-              <div className="mb-6">
-                <label htmlFor="subject" className="block text-white font-medium mb-2">
+              <div>
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
                   Subject *
                 </label>
                 <select
@@ -260,19 +209,17 @@ export default function ContactPage() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
                   <option value="">Select a subject</option>
-                  {subjects.map((subject, index) => (
-                    <option key={index} value={subject}>
-                      {subject}
-                    </option>
+                  {subjects.map((subject) => (
+                    <option key={subject} value={subject}>{subject}</option>
                   ))}
                 </select>
               </div>
 
-              <div className="mb-8">
-                <label htmlFor="message" className="block text-white font-medium mb-2">
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                   Message *
                 </label>
                 <textarea
@@ -282,7 +229,7 @@ export default function ContactPage() {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   placeholder="Tell us about your project or how we can help you..."
                 />
               </div>
@@ -291,17 +238,17 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <>
-                      <div className="inline-block w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                       Sending...
                     </>
                   ) : (
                     <>
+                      <Send className="w-5 h-5 mr-2" />
                       Send Message
-                      <Send className="w-5 h-5 ml-2 inline" />
                     </>
                   )}
                 </button>

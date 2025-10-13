@@ -82,10 +82,6 @@ const ErrorFallback: React.FC = () => {
           </a>
         </div>
       </section>
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
     </div>
   );
 };
