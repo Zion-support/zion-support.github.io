@@ -1,221 +1,263 @@
-import { ArrowRight, Brain, BarChart3, Users, Mail, Smartphone, Globe, CheckCircle, Star, TrendingUp, Target, Zap } from "lucide-react";
+import { ArrowRight, BarChart3, Brain, Users, TrendingUp, CheckCircle, Mail, Smartphone, Globe, Star, Award, Clock, Zap, Target, PieChart, LineChart, Activity, Eye, Filter, Download, Share2 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 export default function ZionAiCustomerInsights() {
   const features = [
     {
-      title: "AI Sentiment Analysis",
-      description: "Analyze customer feedback, reviews, and interactions to understand emotions and satisfaction levels.",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
+      title: "Customer Analytics",
+      description: "Deep insights into customer behavior, preferences, and engagement patterns",
+      icon: <BarChart3 className="w-6 h-6" />
     },
     {
-      title: "Predictive Analytics",
-      description: "Predict customer behavior, churn risk, and lifetime value using advanced machine learning models.",
-      icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
+      title: "Behavior Tracking",
+      description: "Monitor customer interactions across all touchpoints in real-time",
+      icon: <Activity className="w-6 h-6" />
     },
     {
-      title: "Customer Segmentation",
-      description: "Automatically segment customers based on behavior, preferences, and demographics for targeted marketing.",
-      icon: <Target className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
+      title: "Predictive Insights",
+      description: "AI-powered predictions for customer lifetime value and churn risk",
+      icon: <Brain className="w-6 h-6" />
     },
     {
-      title: "Real-time Insights",
-      description: "Get instant insights and alerts about customer behavior changes and emerging trends.",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+      title: "Custom Reports",
+      description: "Generate detailed reports tailored to your business needs",
+      icon: <PieChart className="w-6 h-6" />
+    },
+    {
+      title: "API Integration",
+      description: "Seamlessly integrate with your existing CRM and marketing tools",
+      icon: <Zap className="w-6 h-6" />
+    },
+    {
+      title: "Real-time Dashboards",
+      description: "Live dashboards showing key customer metrics and trends",
+      icon: <LineChart className="w-6 h-6" />
     }
   ];
 
-  const pricing = [
+  const pricingPlans = [
     {
       name: "Starter",
       price: "$49",
-      period: "month",
-      description: "Perfect for small businesses getting started with customer insights",
+      period: "/month",
+      description: "Perfect for small businesses getting started with customer analytics",
       features: [
-        "Up to 10,000 customers",
-        "Basic sentiment analysis",
-        "Standard reports",
+        "Up to 1,000 customers",
+        "Basic analytics dashboard",
         "Email support",
-        "Monthly insights",
-        "3 data sources"
+        "Standard reports",
+        "API access",
+        "Data export"
       ],
-      popular: false
+      popular: false,
+      color: "from-blue-500 to-cyan-500"
     },
     {
       name: "Professional",
       price: "$149",
-      period: "month",
+      period: "/month",
       description: "Ideal for growing businesses with advanced analytics needs",
       features: [
-        "Up to 100,000 customers",
-        "Advanced AI analytics",
-        "Real-time insights",
+        "Up to 10,000 customers",
+        "Advanced analytics dashboard",
         "Priority support",
-        "Custom dashboards",
-        "10 data sources",
-        "Predictive modeling",
-        "API access"
+        "Custom reports",
+        "Predictive insights",
+        "Advanced API access",
+        "Team collaboration"
       ],
-      popular: true
+      popular: true,
+      color: "from-purple-500 to-pink-500"
     },
     {
       name: "Enterprise",
       price: "$399",
-      period: "month",
-      description: "For large organizations with complex customer data needs",
+      period: "/month",
+      description: "For large organizations with complex customer data requirements",
       features: [
         "Unlimited customers",
-        "Full AI suite",
-        "Real-time analytics",
+        "Enterprise dashboard",
         "24/7 support",
         "White-label solution",
-        "Unlimited data sources",
-        "Custom models",
-        "Dedicated account manager",
-        "On-premise deployment"
+        "Advanced AI insights",
+        "Full API access",
+        "Custom integrations",
+        "Dedicated account manager"
       ],
-      popular: false
+      popular: false,
+      color: "from-green-500 to-emerald-500"
     }
   ];
 
   const insights = [
     {
-      title: "Customer Satisfaction Score",
-      description: "Track and improve customer satisfaction with AI-powered sentiment analysis across all touchpoints.",
-      metric: "95% accuracy"
+      title: "Customer Segmentation",
+      description: "Automatically segment customers based on behavior, demographics, and value",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      metrics: ["95% accuracy", "Real-time updates", "Custom segments"]
     },
     {
       title: "Churn Prediction",
-      description: "Identify customers at risk of churning and take proactive measures to retain them.",
-      metric: "40% churn reduction"
+      description: "Identify customers at risk of churning with 90%+ accuracy",
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: "from-red-500 to-orange-500",
+      metrics: ["90% accuracy", "Early warning", "Actionable insights"]
     },
     {
-      title: "Lifetime Value Prediction",
-      description: "Predict customer lifetime value to optimize marketing spend and customer acquisition strategies.",
-      metric: "25% revenue increase"
+      title: "Lifetime Value",
+      description: "Predict customer lifetime value to optimize marketing spend",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      metrics: ["85% accuracy", "Revenue optimization", "ROI tracking"]
     },
     {
-      title: "Behavioral Segmentation",
-      description: "Automatically segment customers based on behavior patterns for personalized marketing campaigns.",
-      metric: "3x higher engagement"
+      title: "Engagement Scoring",
+      description: "Score customer engagement across all touchpoints and channels",
+      icon: <Activity className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      metrics: ["Multi-channel", "Real-time scoring", "Trend analysis"]
     }
   ];
 
   const testimonials = [
     {
-      name: "Jennifer Martinez",
+      name: "Michael Chen",
       company: "E-commerce Solutions",
-      content: "Zion AI Customer Insights helped us understand our customers better than ever. We've reduced churn by 40% and increased revenue by 25%.",
-      rating: 5
+      role: "Marketing Director",
+      content: "Zion AI Customer Insights helped us understand our customers better than ever. Our conversion rates increased by 45% and customer retention improved by 30%.",
+      rating: 5,
+      improvement: "45% increase in conversions"
     },
     {
-      name: "David Kim",
+      name: "Sarah Williams",
       company: "SaaS Platform",
-      content: "The predictive analytics are incredibly accurate. We can now identify at-risk customers before they churn and take action immediately.",
-      rating: 5
+      role: "Head of Growth",
+      content: "The predictive insights are game-changing. We can now identify at-risk customers before they churn and take proactive action to retain them.",
+      rating: 5,
+      improvement: "30% reduction in churn"
     },
     {
-      name: "Lisa Thompson",
+      name: "David Rodriguez",
       company: "Retail Chain",
-      content: "The customer segmentation feature has transformed our marketing campaigns. We're seeing 3x higher engagement rates with targeted messaging.",
-      rating: 5
+      role: "Customer Experience Manager",
+      content: "The customer segmentation feature has revolutionized our marketing campaigns. We can now target the right customers with the right message at the right time.",
+      rating: 5,
+      improvement: "60% higher campaign ROI"
     }
+  ];
+
+  const integrations = [
+    { name: "Salesforce", logo: "SF" },
+    { name: "HubSpot", logo: "HS" },
+    { name: "Mailchimp", logo: "MC" },
+    { name: "Shopify", logo: "SP" },
+    { name: "Stripe", logo: "ST" },
+    { name: "Zendesk", logo: "ZD" }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Customer Insights - AI-Powered Customer Analytics | Zion Tech Group</title>
+        <title>Zion AI Customer Insights - Advanced Customer Analytics Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform customer data into actionable insights with Zion AI Customer Insights. AI sentiment analysis, predictive analytics, and customer segmentation. Starting at $49/month."
+          content="Transform customer data into actionable insights with Zion AI Customer Insights. Advanced analytics, predictive insights, and behavioral tracking for better customer understanding."
         />
         <meta
           name="keywords"
-          content="AI customer insights, customer analytics, sentiment analysis, predictive analytics, customer segmentation, churn prediction, customer lifetime value"
+          content="customer analytics, customer insights, behavioral tracking, predictive analytics, customer segmentation, churn prediction, lifetime value, customer data platform"
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
+        
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          </div>
-          
-          <div className="max-w-7xl mx-auto text-center relative z-10">
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Brain className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Customer Intelligence</span>
+              <span className="text-cyan-400 text-sm font-medium">Advanced AI Analytics</span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
               Zion AI
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
                 {" "}Customer Insights
               </span>
+              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-lg blur opacity-30 animate-pulse"></div>
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your customer data into actionable insights with AI-powered analytics. 
-              Understand customer behavior, predict churn, and optimize your business strategy 
-              with advanced machine learning and sentiment analysis.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Transform your customer data into actionable insights with our advanced AI-powered analytics platform. 
+              Understand your customers better, predict their behavior, and optimize your business strategies.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Analyzing Customers
+                Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                Watch Demo
-                <BarChart3 className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                View Demo
+                <Eye className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white mb-2">500+</div>
+                <div className="text-gray-300 text-sm">Businesses Using</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white mb-2">90%</div>
+                <div className="text-gray-300 text-sm">Prediction Accuracy</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white mb-2">45%</div>
+                <div className="text-gray-300 text-sm">Avg. Conversion Increase</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white mb-2">4.9/5</div>
+                <div className="text-gray-300 text-sm">Customer Rating</div>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Powerful AI Analytics
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Powerful Analytics Features
               </h2>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Our AI-powered customer insights platform combines advanced machine learning 
-                with intuitive dashboards to help you understand your customers like never before.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Everything you need to understand your customers and make data-driven decisions.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
                 >
-                  <div
-                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
-                  >
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300 text-center leading-relaxed">
-                    {feature.description}
-                  </p>
+                  <h3 className="text-xl font-semibold text-white mb-3 text-center">{feature.title}</h3>
+                  <p className="text-gray-300 text-center">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -223,31 +265,35 @@ export default function ZionAiCustomerInsights() {
         </section>
 
         {/* Insights Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Key Insights You'll Get
+                AI-Powered Insights
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover the powerful insights that will transform your customer understanding and business strategy.
+                Get deep insights into your customer behavior with our advanced AI algorithms.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {insights.map((insight, index) => (
                 <div
                   key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 text-center"
                 >
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {insight.title}
-                  </h3>
-                  <p className="text-gray-300 mb-4 leading-relaxed">
-                    {insight.description}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-cyan-400 font-semibold">{insight.metric}</span>
-                    <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                  <div
+                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${insight.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    {insight.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{insight.title}</h3>
+                  <p className="text-gray-300 text-sm mb-4">{insight.description}</p>
+                  <div className="space-y-2">
+                    {insight.metrics.map((metric, metricIndex) => (
+                      <div key={metricIndex} className="text-xs text-cyan-300 bg-cyan-500/20 px-2 py-1 rounded-full">
+                        {metric}
+                      </div>
+                    ))}
                   </div>
                 </div>
               ))}
@@ -255,60 +301,89 @@ export default function ZionAiCustomerInsights() {
           </div>
         </section>
 
+        {/* Integrations Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Seamless Integrations
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Connect with your favorite tools and platforms for a unified customer view.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+              {integrations.map((integration, index) => (
+                <div
+                  key={index}
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 text-center"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                    <span className="text-white font-bold text-sm">{integration.logo}</span>
+                  </div>
+                  <div className="text-white font-medium text-sm">{integration.name}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Select the perfect plan for your customer insights needs. All plans include our core AI features.
+                Start with a free trial and scale as your business grows.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricing.map((plan, index) => (
+              {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
-                  className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300 hover:scale-105 relative ${
-                    plan.popular 
-                      ? 'border-cyan-500/50 shadow-2xl shadow-cyan-500/10' 
-                      : 'border-white/20 hover:border-cyan-500/30'
+                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
+                    plan.popular
+                      ? 'border-cyan-400 bg-gradient-to-br from-cyan-500/10 to-purple-500/10'
+                      : 'border-white/20 hover:border-cyan-400'
                   }`}
                 >
                   {plan.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
                   )}
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <div className="flex items-baseline justify-center mb-2">
-                      <span className="text-4xl font-bold text-cyan-400">${plan.price}</span>
-                      <span className="text-gray-400 ml-2">/{plan.period}</span>
+                  <div className="text-center mb-8">
+                    <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${plan.color} flex items-center justify-center mx-auto mb-4`}>
+                      <BarChart3 className="w-8 h-8 text-white" />
                     </div>
-                    <p className="text-gray-300 text-sm">{plan.description}</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <p className="text-gray-300 mb-4">{plan.description}</p>
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-4xl font-bold text-white">{plan.price}</span>
+                      <span className="text-gray-300 ml-1">{plan.period}</span>
+                    </div>
                   </div>
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                        {feature}
+                  <ul className="space-y-4 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
                   <Link
                     to="/contact"
-                    className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center group ${
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg hover:shadow-cyan-500/25'
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                         : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                     }`}
                   >
-                    Get Started
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    Start Free Trial
                   </Link>
                 </div>
               ))}
@@ -317,21 +392,21 @@ export default function ZionAiCustomerInsights() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Business Leaders
+                Success Stories
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how companies are using Zion AI Customer Insights to drive growth and improve customer experience.
+                See how businesses are using Zion AI Customer Insights to drive growth.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
                 >
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
@@ -339,9 +414,10 @@ export default function ZionAiCustomerInsights() {
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
-                  <div>
+                  <div className="border-t border-gray-700 pt-4">
                     <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.company}</div>
+                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                    <div className="text-xs text-cyan-400 mt-1">{testimonial.improvement}</div>
                   </div>
                 </div>
               ))}
@@ -350,14 +426,14 @@ export default function ZionAiCustomerInsights() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Understand Your Customers?
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Understand Your Customers Better?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses using Zion AI Customer Insights to make data-driven decisions 
-              and improve customer experience. Start your free trial today!
+            <p className="text-xl text-gray-300 mb-8">
+              Start your free trial today and discover the power of AI-driven customer insights. 
+              No credit card required, cancel anytime.
             </p>
             
             {/* Contact Information */}
@@ -394,11 +470,11 @@ export default function ZionAiCustomerInsights() {
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/demo"
+                to="/pricing"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                Watch Demo
-                <BarChart3 className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                View Pricing
+                <Award className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>

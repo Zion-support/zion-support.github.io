@@ -217,8 +217,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     };
   }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
 
-<<<<<<< HEAD
-=======
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
     
@@ -271,13 +269,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     setSettings(defaultSettings);
     applyAccessibilitySettings(defaultSettings);
   };
-
-  // Removed unused functions - functionality is handled by updateSetting directly
-<<<<<<< HEAD
-
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
+  
+    // Removed unused functions - functionality is handled by updateSetting directly
   return (
     <>
       {children}

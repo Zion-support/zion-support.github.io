@@ -1,178 +1,195 @@
-import { ArrowRight, Video, Play, Zap, Star, Users, Mail, Smartphone, Globe, CheckCircle } from "lucide-react";
+import { ArrowRight, Play, Download, Star, CheckCircle, Mail, Smartphone, Globe, Brain, Video, Zap, Users, Award, Clock, BarChart3, Sparkles, Camera, Mic, Edit3, Share2 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 export default function ZionAiVideoGenerator() {
   const features = [
     {
-      title: "AI Script Generation",
-      description: "Generate engaging video scripts using advanced AI that understands your brand voice and target audience.",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
+      title: "AI Video Creation",
+      description: "Generate professional videos in minutes using advanced AI technology",
+      icon: <Brain className="w-6 h-6" />
     },
     {
-      title: "Auto Voice Synthesis",
-      description: "Convert text to natural-sounding speech with multiple voice options and languages.",
-      icon: <Play className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
+      title: "Multiple Templates",
+      description: "Choose from 100+ professionally designed video templates",
+      icon: <Video className="w-6 h-6" />
     },
     {
-      title: "Smart Video Editing",
-      description: "AI-powered video editing with automatic cuts, transitions, and visual effects.",
-      icon: <Video className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
+      title: "Auto Voiceover",
+      description: "AI-powered voice generation in multiple languages and accents",
+      icon: <Mic className="w-6 h-6" />
     },
     {
-      title: "Brand Consistency",
-      description: "Maintain your brand identity across all videos with automated style and color matching.",
-      icon: <Star className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+      title: "HD Export",
+      description: "Export videos in 4K resolution for maximum quality",
+      icon: <Camera className="w-6 h-6" />
+    },
+    {
+      title: "Social Media Ready",
+      description: "Optimized formats for all major social media platforms",
+      icon: <Share2 className="w-6 h-6" />
+    },
+    {
+      title: "Brand Customization",
+      description: "Add your logo, colors, and branding elements automatically",
+      icon: <Edit3 className="w-6 h-6" />
     }
   ];
 
-  const pricing = [
+  const pricingPlans = [
     {
       name: "Starter",
       price: "$29",
-      period: "month",
-      description: "Perfect for small businesses and content creators",
+      period: "/month",
+      description: "Perfect for individuals and small businesses",
       features: [
         "10 videos per month",
-        "HD quality (1080p)",
-        "5 voice options",
+        "HD quality export",
         "Basic templates",
+        "Standard voiceover",
         "Email support",
-        "Watermark included"
+        "Brand customization"
       ],
-      popular: false
+      popular: false,
+      color: "from-blue-500 to-cyan-500"
     },
     {
       name: "Professional",
       price: "$79",
-      period: "month",
-      description: "Ideal for marketing agencies and growing businesses",
+      period: "/month",
+      description: "Ideal for growing businesses and content creators",
       features: [
         "50 videos per month",
-        "4K quality available",
-        "20+ voice options",
+        "4K quality export",
         "Premium templates",
+        "Advanced voiceover",
         "Priority support",
-        "No watermark",
-        "Custom branding",
-        "API access"
+        "Advanced branding",
+        "Analytics dashboard"
       ],
-      popular: true
+      popular: true,
+      color: "from-purple-500 to-pink-500"
     },
     {
       name: "Enterprise",
       price: "$199",
-      period: "month",
+      period: "/month",
       description: "For large organizations with high video needs",
       features: [
         "Unlimited videos",
-        "4K quality",
-        "50+ voice options",
-        "Custom templates",
+        "4K quality export",
+        "All templates",
+        "Premium voiceover",
         "24/7 support",
         "White-label solution",
         "Advanced analytics",
-        "Team collaboration",
-        "Custom integrations"
+        "API access"
       ],
-      popular: false
+      popular: false,
+      color: "from-green-500 to-emerald-500"
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      company: "Marketing Agency",
+      role: "Creative Director",
+      content: "Zion AI Video Generator has revolutionized our content creation process. We can now produce professional videos 10x faster than before.",
+      rating: 5,
+      videoCount: "500+ videos created"
+    },
+    {
+      name: "Michael Chen",
+      company: "E-commerce Store",
+      role: "Owner",
+      content: "The AI voiceover feature is incredible. It sounds so natural that our customers can't tell it's generated. Our conversion rates increased by 40%.",
+      rating: 5,
+      videoCount: "200+ videos created"
+    },
+    {
+      name: "Emily Rodriguez",
+      company: "Educational Platform",
+      role: "Content Manager",
+      content: "Creating educational videos used to take us days. Now we can produce high-quality content in minutes. Our students love the engaging visuals.",
+      rating: 5,
+      videoCount: "300+ videos created"
     }
   ];
 
   const useCases = [
     {
       title: "Marketing Videos",
-      description: "Create compelling product demos, explainer videos, and promotional content in minutes.",
-      benefit: "10x faster production"
+      description: "Create compelling promotional content for social media, websites, and advertising campaigns",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-yellow-500 to-orange-500"
     },
     {
-      title: "Social Media Content",
-      description: "Generate engaging short-form videos for TikTok, Instagram, and YouTube automatically.",
-      benefit: "5x more engagement"
+      title: "Product Demos",
+      description: "Showcase your products with professional demonstration videos",
+      icon: <Camera className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Training Materials",
-      description: "Produce professional training videos and educational content with AI-generated scripts.",
-      benefit: "80% cost reduction"
+      title: "Training Content",
+      description: "Develop educational and training materials for your team or customers",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500"
     },
     {
-      title: "E-commerce Videos",
-      description: "Create product showcase videos and customer testimonials at scale.",
-      benefit: "3x higher conversion"
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Chen",
-      company: "Digital Marketing Pro",
-      content: "Zion AI Video Generator has revolutionized our content creation process. We can now produce high-quality videos 10x faster than before.",
-      rating: 5
-    },
-    {
-      name: "Mike Rodriguez",
-      company: "E-commerce Solutions",
-      content: "The AI script generation is incredible. It understands our brand voice perfectly and creates engaging content every time.",
-      rating: 5
-    },
-    {
-      name: "Emily Johnson",
-      company: "Training Academy",
-      content: "We've saved thousands of dollars on video production while maintaining professional quality. Highly recommended!",
-      rating: 5
+      title: "Social Media",
+      description: "Generate engaging content for Instagram, TikTok, YouTube, and other platforms",
+      icon: <Share2 className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Video Generator - AI-Powered Video Creation | Zion Tech Group</title>
+        <title>Zion AI Video Generator - Create Professional Videos with AI | Zion Tech Group</title>
         <meta
           name="description"
-          content="Create professional videos in minutes with Zion AI Video Generator. AI script generation, voice synthesis, and smart editing. Starting at $29/month."
+          content="Create professional videos in minutes with Zion AI Video Generator. AI-powered video creation, voiceover, templates, and HD export. Start your free trial today."
         />
         <meta
           name="keywords"
-          content="AI video generator, video creation, AI video editing, automated video, video marketing, content creation, AI voice synthesis"
+          content="AI video generator, video creation, AI voiceover, video templates, social media videos, marketing videos, professional videos, video automation"
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
+        
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          </div>
-          
-          <div className="max-w-7xl mx-auto text-center relative z-10">
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Video className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Video Creation</span>
+              <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">#1 AI Video Generator 2024</span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
               Zion AI
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
                 {" "}Video Generator
               </span>
+              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-lg blur opacity-30 animate-pulse"></div>
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Create professional videos in minutes, not hours. Our AI-powered video generator combines 
-              script writing, voice synthesis, and smart editing to produce engaging content at scale.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Create professional videos in minutes using advanced AI technology. Generate engaging content for social media, 
+              marketing, and presentations with our intelligent video creation platform.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Creating Videos
+                Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -180,41 +197,54 @@ export default function ZionAiVideoGenerator() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Play className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white mb-2">10,000+</div>
+                <div className="text-gray-300 text-sm">Videos Created</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white mb-2">500+</div>
+                <div className="text-gray-300 text-sm">Happy Customers</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white mb-2">100+</div>
+                <div className="text-gray-300 text-sm">Templates</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white mb-2">4.9/5</div>
+                <div className="text-gray-300 text-sm">Customer Rating</div>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Powerful AI Features
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Powerful Features
               </h2>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Our AI video generator combines cutting-edge technology with user-friendly design 
-                to create professional videos effortlessly.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Everything you need to create professional videos with AI-powered technology.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
                 >
-                  <div
-                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
-                  >
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300 text-center leading-relaxed">
-                    {feature.description}
-                  </p>
+                  <h3 className="text-xl font-semibold text-white mb-3 text-center">{feature.title}</h3>
+                  <p className="text-gray-300 text-center">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -222,32 +252,29 @@ export default function ZionAiVideoGenerator() {
         </section>
 
         {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Perfect For Every Use Case
+                Perfect For
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Whether you're a marketer, educator, or content creator, our AI video generator adapts to your needs.
+                Whether you're a marketer, educator, or business owner, our AI video generator adapts to your needs.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {useCases.map((useCase, index) => (
                 <div
                   key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 text-center"
                 >
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {useCase.title}
-                  </h3>
-                  <p className="text-gray-300 mb-4 leading-relaxed">
-                    {useCase.description}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-cyan-400 font-semibold">{useCase.benefit}</span>
-                    <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                  <div
+                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${useCase.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    {useCase.icon}
                   </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                  <p className="text-gray-300 text-sm">{useCase.description}</p>
                 </div>
               ))}
             </div>
@@ -255,59 +282,61 @@ export default function ZionAiVideoGenerator() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Simple, Transparent Pricing
+                Simple Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your video creation needs. All plans include our core AI features.
+                Choose the plan that fits your video creation needs. All plans include a 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricing.map((plan, index) => (
+              {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
-                  className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300 hover:scale-105 relative ${
-                    plan.popular 
-                      ? 'border-cyan-500/50 shadow-2xl shadow-cyan-500/10' 
-                      : 'border-white/20 hover:border-cyan-500/30'
+                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
+                    plan.popular
+                      ? 'border-cyan-400 bg-gradient-to-br from-cyan-500/10 to-purple-500/10'
+                      : 'border-white/20 hover:border-cyan-400'
                   }`}
                 >
                   {plan.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
                   )}
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <div className="flex items-baseline justify-center mb-2">
-                      <span className="text-4xl font-bold text-cyan-400">${plan.price}</span>
-                      <span className="text-gray-400 ml-2">/{plan.period}</span>
+                  <div className="text-center mb-8">
+                    <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${plan.color} flex items-center justify-center mx-auto mb-4`}>
+                      <Video className="w-8 h-8 text-white" />
                     </div>
-                    <p className="text-gray-300 text-sm">{plan.description}</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <p className="text-gray-300 mb-4">{plan.description}</p>
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-4xl font-bold text-white">{plan.price}</span>
+                      <span className="text-gray-300 ml-1">{plan.period}</span>
+                    </div>
                   </div>
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                        {feature}
+                  <ul className="space-y-4 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
                   <Link
                     to="/contact"
-                    className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center group ${
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg hover:shadow-cyan-500/25'
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                         : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                     }`}
                   >
-                    Get Started
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    Start Free Trial
                   </Link>
                 </div>
               ))}
@@ -316,21 +345,21 @@ export default function ZionAiVideoGenerator() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Loved by Content Creators
+                What Our Customers Say
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our users say about Zion AI Video Generator
+                Join hundreds of businesses already using Zion AI Video Generator to create amazing content.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
                 >
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
@@ -338,9 +367,10 @@ export default function ZionAiVideoGenerator() {
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
-                  <div>
+                  <div className="border-t border-gray-700 pt-4">
                     <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.company}</div>
+                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                    <div className="text-xs text-cyan-400 mt-1">{testimonial.videoCount}</div>
                   </div>
                 </div>
               ))}
@@ -349,14 +379,14 @@ export default function ZionAiVideoGenerator() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Create Amazing Videos?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of content creators who are already using Zion AI Video Generator 
-              to produce professional videos at scale. Start your free trial today!
+            <p className="text-xl text-gray-300 mb-8">
+              Start your free trial today and experience the power of AI video generation. 
+              No credit card required, cancel anytime.
             </p>
             
             {/* Contact Information */}
@@ -393,11 +423,11 @@ export default function ZionAiVideoGenerator() {
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/demo"
+                to="/pricing"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                Watch Demo
-                <Play className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                View Pricing
+                <Award className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>

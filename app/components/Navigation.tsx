@@ -1,13 +1,6 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Sidebar as SidebarIcon, Globe } from 'lucide-react'
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
-=======
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Globe, Cpu, Link as LinkIcon, Sidebar as SidebarIcon } from 'lucide-react'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
 
 interface NavigationProps {
   onSidebarToggle?: () => void
@@ -16,6 +9,7 @@ interface NavigationProps {
 const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const [isAiServicesOpen, setIsAiServicesOpen] = useState(false)
   const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false)
   const [isItServicesOpen, setIsItServicesOpen] = useState(false)
   
@@ -27,6 +21,10 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     setIsServicesOpen(!isServicesOpen)
   }, [isServicesOpen])
 
+  const toggleAiServices = useCallback(() => {
+    setIsAiServicesOpen(!isAiServicesOpen)
+  }, [isAiServicesOpen])
+
   const toggleMicroSaas = useCallback(() => {
     setIsMicroSaasOpen(!isMicroSaasOpen)
   }, [isMicroSaasOpen])
@@ -35,11 +33,10 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     setIsItServicesOpen(!isItServicesOpen)
   }, [isItServicesOpen])
 
-<<<<<<< HEAD
-=======
   const aiServices = useMemo(() => [
     { name: 'AI Quantum Computing', path: '/ai-quantum-computing', icon: <Cpu className="w-4 h-4" />, featured: true },
     { name: 'AI Blockchain Solutions', path: '/ai-blockchain-solutions', icon: <LinkIcon className="w-4 h-4" />, featured: true },
+    { name: 'AI Autonomous Systems', path: '/ai-autonomous-systems', icon: <Cpu className="w-4 h-4" />, featured: true },
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Brain className="w-4 h-4" /> },
     { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> },
@@ -49,8 +46,6 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     { name: 'AI Marketing Automation', path: '/ai-marketing', icon: <Zap className="w-4 h-4" /> },
     { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
   ], [])
-
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
   const itServices = useMemo(() => [
     { name: 'AI-Powered DevOps', path: '/ai-powered-devops', icon: <Cpu className="w-4 h-4" />, featured: true },
     { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },
@@ -165,6 +160,48 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
               </Link>
             ))}
             
+            {/* AI Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={toggleAiServices}
+                className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group"
+              >
+                <span>AI Services</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isAiServicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {isAiServicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-cyan-500/20">
+                  <div className="px-4 py-2 border-b border-gray-700 mb-2">
+                    <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider">AI Services</h3>
+                  </div>
+                  {aiServices.map((service) => (
+                    <Link
+                      key={service.name}
+                      to={service.path}
+                      className={`flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 group ${
+                        service.featured ? 'bg-gradient-to-r from-cyan-500/5 to-purple-500/5 border-l-2 border-cyan-400' : ''
+                      }`}
+                      onClick={() => setIsAiServicesOpen(false)}
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition-all duration-300">
+                        {service.icon}
+                      </div>
+                      <div className="flex-1">
+                        <span className="font-medium">{service.name}</span>
+                        {service.featured && (
+                          <div className="flex items-center mt-1">
+                            <Star className="w-3 h-3 text-yellow-400 fill-current mr-1" />
+                            <span className="text-xs text-yellow-400">Featured</span>
+                          </div>
+                        )}
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             {/* Services Dropdown */}
             <div className="relative">
               <button
