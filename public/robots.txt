@@ -9,14 +9,61 @@ Crawl-delay: 1
 
 # Disallow admin and private areas
 Disallow: /admin/
+Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /private/
+Disallow: /static/
 
 # Allow important pages
 Allow: /ai-services/
+Allow: /it-services/
 Allow: /micro-saas/
 Allow: /5g-solutions/
-Allow: /contact/
 Allow: /about/
-Allow: /services/
+Allow: /contact/
+Allow: /pricing/
+Allow: /blog/
+
+# Block specific file types
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$
+Disallow: /*.log$
+
+# Allow search engines to access CSS and JS files
+Allow: /assets/
+Allow: /*.css$
+Allow: /*.js$
+
+# Block common bot traps
+Disallow: /search?
+Disallow: /?*
+Disallow: /tag/
+Disallow: /category/
+Disallow: /archive/
+
+# Allow social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
