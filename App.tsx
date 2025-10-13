@@ -62,6 +62,15 @@ const AiRecommendationEnginePage = React.lazy(() => import("./app/ai-recommendat
 const AiSalesAutomationPage = React.lazy(() => import("./app/ai-sales-automation/page"));
 const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
 
+// Additional AI Service Pages
+const AiAnalyticsDashboardProPage = React.lazy(() => import("./app/ai-analytics-dashboard-pro/page"));
+const AiContentGeneratorPage = React.lazy(() => import("./app/ai-content-generator/page"));
+const AiCybersecuritySuiteProPage = React.lazy(() => import("./app/ai-cybersecurity-suite-pro/page"));
+const AiCustomerSupportChatbotPage = React.lazy(() => import("./app/ai-customer-support-chatbot/page"));
+const AiCodeAssistantProPage = React.lazy(() => import("./app/ai-code-assistant-pro/page"));
+const AiBusinessIntelligenceProPage = React.lazy(() => import("./app/ai-business-intelligence-pro/page"));
+const AiCybersecurityPage = React.lazy(() => import("./app/ai-cybersecurity/page"));
+
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(
   () => import("./app/cloud-infrastructure/page"),
@@ -273,6 +282,16 @@ function App() {
                   <Route path="/ai-recommendation-engine" element={<AiRecommendationEnginePage />} />
                   <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
                   <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
+                  
+                  {/* Additional AI Service Routes */}
+                  <Route path="/ai-analytics-dashboard-pro" element={<AiAnalyticsDashboardProPage />} />
+                  <Route path="/ai-content-generator" element={<AiContentGeneratorPage />} />
+                  <Route path="/ai-cybersecurity-suite-pro" element={<AiCybersecuritySuiteProPage />} />
+                  <Route path="/ai-customer-support-chatbot" element={<AiCustomerSupportChatbotPage />} />
+                  <Route path="/ai-code-assistant-pro" element={<AiCodeAssistantProPage />} />
+                  <Route path="/ai-business-intelligence-pro" element={<AiBusinessIntelligenceProPage />} />
+                  <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
+                  <Route path="/ai-cybersecurity-suite" element={<AiCybersecurityPage />} />
 
                   {/* IT Service Routes */}
                   <Route

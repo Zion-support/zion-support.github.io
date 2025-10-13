@@ -102,7 +102,7 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/ai-cybersecurity"
+                  to="/ai-cybersecurity-suite"
                   className="text-gray-400 hover:text-cyan-400 transition-colors"
                 >
                   AI Cybersecurity
