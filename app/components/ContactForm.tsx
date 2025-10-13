@@ -14,10 +14,45 @@ const ContactForm: React.FC = () => {
   const [status, setStatus] = useState<FormStatus>({type: 'idle',
     message: '',})
 
+<<<<<<< HEAD
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
     const {name, value}}= e.target;
     setFormData(prev => ({)
       [name]: value;}));
+=======
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // Simulate API call
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      setIsSubmitted(true);
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        company: "",
+        message: "",
+        service: "",
+      });
+    } catch (error) {
+      } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  if (isSubmitted) {
+    return (
+      <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg text-center">
+        <MessageSquare className="w-8 h-8 mx-auto mb-2" />
+        <h3 className="text-lg font-semibold mb-2">Thank you!</h3>
+        <p>
+          Your message has been sent successfully. We'll get back to you soon.
+        </p>
+      </div>
+    );
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
   }
 
   const handleSubmit = async (e: React.FormEvent) => {,

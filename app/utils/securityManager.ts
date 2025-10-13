@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 import React from 'react';
 'use client';
@@ -85,3 +86,18 @@ export class SecurityManager {/* TODO: Fix JSX expression */,}}private construct
   private getRateLimitStorage(): Map<string, number[]> {/* TODO: Fix JSX expression */,}}
     return global._rateLimitStorage;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
+=======
+export const Securitymanager = {
+  init: () => {
+    },
+
+  process: (data: any) => {
+    return data;
+  },
+
+  cleanup: () => {
+    },
+};
+
+export default Securitymanager;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6

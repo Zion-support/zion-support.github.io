@@ -220,6 +220,7 @@ export const usePerformanceMonitor = () => {
 'use client';
 import {useEffect}}from 'react';
 
+<<<<<<< HEAD
 export const usePerformanceMonitor = () => {useEffect(() => {
       // This is a simplified version - in production you'd use the web-vitals library;
       if ('performance' in window) {
@@ -230,5 +231,81 @@ export const usePerformanceMonitor = () => {useEffect(() => {
           console.log('Page load time:', loadTime);}}
     // Run monitoring after page load;
     if (document.readyState === 'complete') {monitorWebVitals();}else {window.addEventListener('load', monitorWebVitals);}}return () => {window.removeEventListener('load', monitorWebVitals);}}, []);
+=======
+        // First Input Delay (FID)
+        const fidObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries()
+          entries.forEach((entry: any) => {
+            metricsRef.current.firstInputDelay = entry.processingStart - entry.startTime
+          })
+        })
+        fidObserver.observe({ entryTypes: ['first-input'] })
+
+        // Cumulative Layout Shift (CLS)
+        let clsValue = 0
+        const clsObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries()
+          entries.forEach((entry: any) => {
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value
+            }
+          })
+          metricsRef.current.cumulativeLayoutShift = clsValue
+        })
+        clsObserver.observe({ entryTypes: ['layout-shift'] })
+
+        // Time to Interactive (TTI) - approximation
+        const ttiObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries()
+          const lastEntry = entries[entries.length - 1]
+          metricsRef.current.timeToInteractive = lastEntry.startTime
+        })
+        ttiObserver.observe({ entryTypes: ['measure'] })
+
+        // Cleanup observers after 10 seconds
+        setTimeout(() => {
+          lcpObserver.disconnect()
+          fidObserver.disconnect()
+          clsObserver.disconnect()
+          ttiObserver.disconnect()
+        }, 10000)
+      }
+
+      // Log performance metrics
+      const logMetrics = () => {
+        // Send to analytics service
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'performance_metrics', {
+            load_time: metricsRef.current.loadTime,
+            first_contentful_paint: metricsRef.current.firstContentfulPaint,
+            largest_contentful_paint: metricsRef.current.largestContentfulPaint,
+            first_input_delay: metricsRef.current.firstInputDelay,
+            cumulative_layout_shift: metricsRef.current.cumulativeLayoutShift,
+            time_to_interactive: metricsRef.current.timeToInteractive
+          })
+        }
+      }
+
+      // Start measuring after page load
+      if (document.readyState === 'complete') {
+        measureWebVitals()
+      } else {
+        window.addEventListener('load', measureWebVitals)
+      }
+
+      // Log metrics after 5 seconds
+      setTimeout(logMetrics, 5000)
+    }
+
+    measurePerformance()
+
+    // Cleanup
+    return () => {
+      // Cleanup is handled by the setTimeout in measureWebVitals
+    }
+  }, [])
+
+  return metricsRef.current
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

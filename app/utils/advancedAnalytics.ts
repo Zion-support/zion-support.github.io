@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 'use client';
 import React from 'react';
@@ -14,6 +15,11 @@ const benefits = [
   ]
 return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
       <Helmet />
+=======
+export const Advancedanalytics = {
+  init: () => {
+    },
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -47,6 +53,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
                 <CheckCircle />
                 <p className="text-gray-300 text-lg">{benefit</p>}</p>
 
+<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         </section>
@@ -70,6 +77,10 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
                 <Mail>
                 Email Us;
   );
+=======
+  cleanup: () => {
+    },
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
 };
 
 export default AdvancedAnalyticsPage;

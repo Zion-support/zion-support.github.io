@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
   private observers: PerformanceObserver[] = [],
 constructor() {this.initializeMetrics()}}
@@ -90,3 +91,18 @@ export const preloadImage = (src: string): Promise<void> => {,
 export const preloadImages = (srcs: string[]): Promise<void[]> => {,
     return Promise.all(srcs.map(preloadImage))}}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
+=======
+export const Performanceutils = {
+  init: () => {
+    },
+
+  process: (data: any) => {
+    return data;
+  },
+
+  cleanup: () => {
+    },
+};
+
+export default Performanceutils;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 export const generateSitemap = useCallback((...args) => {const baseUrl = 'https: //ziontechgroup.com',
   const staticPages = [,}export const generateSitemap = useCallback((...args) => {}const baseUrl = 'https: //ziontechgroup.com',
@@ -81,3 +82,18 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
 export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */,}}`;
 }`;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
+=======
+export const Sitemapgenerator = {
+  init: () => {
+    },
+
+  process: (data: any) => {
+    return data;
+  },
+
+  cleanup: () => {
+    },
+};
+
+export default Sitemapgenerator;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6

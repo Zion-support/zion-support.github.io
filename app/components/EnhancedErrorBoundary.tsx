@@ -95,9 +95,16 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo
     });
 
+<<<<<<< HEAD
     // Log error to console in development
     if (process.env['NODE_ENV'] === 'development') {
       console.error('Error caught by boundary:', error, errorInfo);
+=======
+    // Log error to monitoring service
+    // In production, send to error reporting service
+    if (process.env['NODE_ENV'] === "production") {
+      // Example: sendErrorToService(error, errorInfo);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
     }
 
     // In production, you might want to send this to an error reporting service

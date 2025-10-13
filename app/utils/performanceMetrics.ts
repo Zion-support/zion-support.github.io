@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 'use client';
 /**;
@@ -548,3 +549,18 @@ interface PerformanceWithMemory extends Performance {/* TODO: Fix JSX expression
 // Type for LayoutShift;
 interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
+=======
+export const Performancemetrics = {
+  init: () => {
+    },
+
+  process: (data: any) => {
+    return data;
+  },
+
+  cleanup: () => {
+    },
+};
+
+export default Performancemetrics;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6

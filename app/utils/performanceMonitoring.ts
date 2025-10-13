@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 'use client';
 /**;
@@ -671,6 +672,18 @@ export const recordMetric = (nam,
   }
   // Also record in the main performance monitoring service;
   performanceMonitoring.recordCustomMetric(name, value, unit);
+=======
+export const Performancemonitoring = {
+  init: () => {
+    },
+
+  process: (data: any) => {
+    return data;
+  },
+
+  cleanup: () => {
+    },
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
 };
 function getRating(nam,;)
   e: string, valu);

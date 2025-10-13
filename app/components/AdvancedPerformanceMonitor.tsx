@@ -206,6 +206,115 @@ interface PerformanceMetrics {fcp: number | null;,}
       measureResourceTiming();
     }, 5000);
 
+<<<<<<< HEAD
+=======
+        onFCP((metric: any) => {
+          setMetrics(prev => ({ ...prev, fcp: metric.value }))
+          reportMetric('FCP', metric.value)
+        })
+
+        onLCP((metric: any) => {
+          setMetrics(prev => ({ ...prev, lcp: metric.value }))
+          reportMetric('LCP', metric.value)
+        })
+
+        onTTFB((metric: any) => {
+          setMetrics(prev => ({ ...prev, ttfb: metric.value }))
+          reportMetric('TTFB', metric.value)
+        })
+      } catch (error) {
+        }
+    }
+
+    // Measure memory usage
+    const measureMemoryUsage = () => {
+      if ('memory' in performance) {
+        const memory = (performance as any).memory
+        const memoryUsage = (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100
+        setMetrics(prev => ({ ...prev, memoryUsage }))
+        reportMetric('Memory Usage', memoryUsage)
+      }
+    }
+
+    // Measure page load time
+    const measureLoadTime = () => {
+      window.addEventListener('load', () => {
+        const loadTime = performance.now()
+        setMetrics(prev => ({ ...prev, loadTime }))
+        reportMetric('Load Time', loadTime)
+      })
+    }
+
+    // Report metrics to analytics
+    const reportMetric = (name: string, value: number) => {
+      // Send to Google Analytics
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'web_vitals', {
+          metric_name: name,
+          metric_value: Math.round(value),
+          metric_delta: Math.round(value)
+        })
+      }
+
+      // Send to custom analytics
+      if (typeof window !== 'undefined' && (window as any).analytics) {
+        (window as any).analytics.track('Performance Metric', {
+          name,
+          value: Math.round(value),
+          timestamp: Date.now()
+        })
+      }
+
+      // Log to console in development
+      if (process.env['NODE_ENV'] === 'development') {
+        }
+    }
+
+    // Monitor resource loading performance
+    const monitorResourcePerformance = () => {
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (entry.entryType === 'resource') {
+            const resourceEntry = entry as PerformanceResourceTiming
+            const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart
+            
+            // Report slow resources
+            if (loadTime > 1000) {
+              reportMetric('Slow Resource', loadTime)
+              }
+          }
+        })
+      })
+
+      observer.observe({ entryTypes: ['resource'] })
+    }
+
+    // Monitor long tasks
+    const monitorLongTasks = () => {
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          const longTask = entry as PerformanceEntry
+          if (longTask.duration > 50) {
+            reportMetric('Long Task', longTask.duration)
+            }
+        })
+      })
+
+      observer.observe({ entryTypes: ['longtask'] })
+    }
+
+    // Initialize all monitoring
+    measureWebVitals()
+    measureMemoryUsage()
+    measureLoadTime()
+    monitorResourcePerformance()
+    monitorLongTasks()
+
+    // Periodic memory monitoring
+    const memoryInterval = setInterval(measureMemoryUsage, 30000)
+
+    // Cleanup
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
     return () => {
       if (cleanup) cleanup();
       clearInterval(interval);

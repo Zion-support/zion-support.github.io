@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 import React from 'react';
 'use client';
@@ -451,3 +452,18 @@ export async function validateAsync(validator: (val: string) => Promise<Validati
     try {return await validator(value)}}} catch (error) {}return {isValid: false, errors: ['Validation failed'], error: 'Validation failed' ,}}}
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
+=======
+export const Validators = {
+  init: () => {
+    },
+
+  process: (data: any) => {
+    return data;
+  },
+
+  cleanup: () => {
+    },
+};
+
+export default Validators;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
