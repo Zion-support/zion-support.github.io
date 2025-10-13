@@ -1,30 +1,35 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { 
   PhoneIcon, 
   EnvelopeIcon, 
   MapPinIcon,
   ArrowRightIcon,
-  HeartIcon
+  HeartIcon,
+  GlobeAltIcon,
+  RocketLaunchIcon,
+  CpuChipIcon,
+  ShieldCheckIcon,
+  CloudIcon,
+  ChartBarIcon
 } from '@heroicons/react/24/outline';
-=======
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    { name: 'AI Solutions', href: '/ai-solutions' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
-    { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
-    { name: 'Digital Transformation', href: '/digital-transformation' },
-    { name: 'Micro SaaS', href: '/micro-saas' },
-    { name: '5G Solutions', href: '/5g-solutions' },
+    { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
+    { name: 'AI Quantum Computing', href: '/ai-quantum-computing', icon: RocketLaunchIcon },
+    { name: 'AI Neural Interface', href: '/ai-neural-interface', icon: CpuChipIcon },
+    { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
+    { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: CloudIcon },
+    { name: 'Digital Transformation', href: '/digital-transformation', icon: ChartBarIcon },
+    { name: 'Micro SaaS', href: '/micro-saas', icon: GlobeAltIcon },
+    { name: 'AI Content Studio', href: '/micro-saas-ai-content-studio', icon: CpuChipIcon },
+    { name: 'AI Workflow Automation', href: '/micro-saas-ai-workflow-automation', icon: ChartBarIcon },
+    { name: '5G Solutions', href: '/5g-solutions', icon: GlobeAltIcon },
   ];
 
-<<<<<<< HEAD
   const company = [
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/team' },
@@ -50,85 +55,93 @@ const Footer: React.FC = () => {
     { name: 'GDPR', href: '/gdpr' },
     { name: 'Security', href: '/security' },
     { name: 'Compliance', href: '/compliance' },
-=======
-  const socialLinks = [
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'GitHub', href: '#', icon: Github }
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
   ];
 
   return (
-    <footer className="bg-slate-900 border-t border-slate-700/50 relative overflow-hidden">
+    <footer className="bg-slate-900 border-t border-cyber relative overflow-hidden hologram-effect">
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
         <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent"></div>
+        <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-pink-500 to-transparent"></div>
+      </div>
+      
+      {/* Futuristic Grid Overlay */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="w-full h-full" style={{
+          backgroundImage: `
+            linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '50px 50px'
+        }}></div>
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center space-x-3 mb-6 group">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                <span className="text-white font-bold text-xl">Z</span>
+            <Link to="/" className="flex items-center space-x-3 mb-6 group quantum-float">
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform cyber-pulse">
+                <span className="text-white font-bold text-xl neon-text">Z</span>
               </div>
-              <span className="text-white font-bold text-2xl">Zion Tech Group</span>
+              <span className="text-white font-bold text-2xl text-hologram">Zion Tech Group</span>
             </Link>
-            <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
+            <p className="text-cyber mb-6 max-w-md leading-relaxed">
               Transforming businesses through cutting-edge AI and IT solutions. 
               We help companies innovate and grow in the digital age with real, proven results.
             </p>
             
             {/* Contact Info */}
             <div className="space-y-3 mb-6">
-              <div className="flex items-center space-x-3 text-gray-300">
-                <PhoneIcon className="w-5 h-5 text-purple-400" />
-                <span>+1-302-464-0950</span>
+              <div className="flex items-center space-x-3 text-cyber quantum-float">
+                <PhoneIcon className="w-5 h-5 text-purple-400 neural-pulse" />
+                <span className="neon-text">+1-302-464-0950</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <EnvelopeIcon className="w-5 h-5 text-purple-400" />
-                <span>kleber@ziontechgroup.com</span>
+              <div className="flex items-center space-x-3 text-cyber quantum-float" style={{animationDelay: '1s'}}>
+                <EnvelopeIcon className="w-5 h-5 text-purple-400 neural-pulse" />
+                <span className="neon-text">kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <MapPinIcon className="w-5 h-5 text-purple-400" />
-                <span>364 E Main St STE 1008, Middletown, DE 19709</span>
+              <div className="flex items-center space-x-3 text-cyber quantum-float" style={{animationDelay: '2s'}}>
+                <MapPinIcon className="w-5 h-5 text-purple-400 neural-pulse" />
+                <span className="neon-text">364 E Main St STE 1008, Middletown, DE 19709</span>
               </div>
             </div>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Services</h3>
+            <h3 className="text-white font-bold text-lg mb-6 text-hologram">Services</h3>
             <ul className="space-y-3">
-              {services.map((service) => (
-                <li key={service.name}>
-                  <Link 
-                    to={service.href}
-                    className="text-gray-300 hover:text-purple-400 transition-colors flex items-center group"
-                  >
-                    <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
+              {services.map((service, index) => {
+                const Icon = service.icon;
+                return (
+                  <li key={service.name} className="quantum-float" style={{animationDelay: `${index * 0.1}s`}}>
+                    <Link 
+                      to={service.href}
+                      className="text-cyber hover:text-purple-400 transition-colors flex items-center group"
+                    >
+                      <Icon className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
+                      <span className="group-hover:neon-text transition-all">{service.name}</span>
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
           {/* Company */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Company</h3>
+            <h3 className="text-white font-bold text-lg mb-6 text-hologram">Company</h3>
             <ul className="space-y-3">
-              {company.map((item) => (
-                <li key={item.name}>
+              {company.map((item, index) => (
+                <li key={item.name} className="quantum-float" style={{animationDelay: `${index * 0.1}s`}}>
                   <Link 
                     to={item.href}
-                    className="text-gray-300 hover:text-purple-400 transition-colors flex items-center group"
+                    className="text-cyber hover:text-purple-400 transition-colors flex items-center group"
                   >
                     <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
-                    {item.name}
+                    <span className="group-hover:neon-text transition-all">{item.name}</span>
                   </Link>
                 </li>
               ))}
@@ -137,31 +150,31 @@ const Footer: React.FC = () => {
 
           {/* Resources & Legal */}
           <div>
-            <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Resources</h3>
+            <h3 className="text-white font-bold text-lg mb-6 text-hologram">Resources</h3>
             <ul className="space-y-3 mb-8">
-              {resources.map((resource) => (
-                <li key={resource.name}>
+              {resources.map((resource, index) => (
+                <li key={resource.name} className="quantum-float" style={{animationDelay: `${index * 0.1}s`}}>
                   <Link 
                     to={resource.href}
-                    className="text-gray-300 hover:text-purple-400 transition-colors flex items-center group"
+                    className="text-cyber hover:text-purple-400 transition-colors flex items-center group"
                   >
                     <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
-                    {resource.name}
+                    <span className="group-hover:neon-text transition-all">{resource.name}</span>
                   </Link>
                 </li>
               ))}
             </ul>
             
-            <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Legal</h3>
+            <h3 className="text-white font-bold text-lg mb-6 text-hologram">Legal</h3>
             <ul className="space-y-3">
-              {legal.map((item) => (
-                <li key={item.name}>
+              {legal.map((item, index) => (
+                <li key={item.name} className="quantum-float" style={{animationDelay: `${index * 0.1}s`}}>
                   <Link 
                     to={item.href}
-                    className="text-gray-300 hover:text-purple-400 transition-colors flex items-center group"
+                    className="text-cyber hover:text-purple-400 transition-colors flex items-center group"
                   >
                     <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
-                    {item.name}
+                    <span className="group-hover:neon-text transition-all">{item.name}</span>
                   </Link>
                 </li>
               ))}
@@ -170,19 +183,19 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="mt-16 pt-8 border-t border-slate-700/50">
+        <div className="mt-16 pt-8 border-t border-cyber">
           <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-2xl font-bold text-white mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Stay Updated</h3>
-            <p className="text-gray-300 mb-6 text-lg">
+            <h3 className="text-2xl font-bold text-white mb-4 text-hologram">Stay Updated</h3>
+            <p className="text-cyber mb-6 text-lg">
               Get the latest insights on AI and IT trends delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                className="flex-1 px-4 py-3 bg-slate-800 border-cyber rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent cyber-pulse"
               />
-              <button className="px-8 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center font-semibold">
+              <button className="px-8 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center font-semibold cyber-pulse">
                 Subscribe
                 <ArrowRightIcon className="w-4 h-4 ml-2" />
               </button>
@@ -191,13 +204,13 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-slate-700/50 flex flex-col md:flex-row justify-between items-center">
-          <div className="flex items-center space-x-2 text-gray-400 mb-4 md:mb-0">
+        <div className="mt-12 pt-8 border-t border-cyber flex flex-col md:flex-row justify-between items-center">
+          <div className="flex items-center space-x-2 text-cyber mb-4 md:mb-0 quantum-float">
             <span>Made with</span>
-            <HeartIcon className="w-4 h-4 text-red-400" />
-            <span>by Zion Tech Group</span>
+            <HeartIcon className="w-4 h-4 text-red-400 neural-pulse" />
+            <span className="neon-text">by Zion Tech Group</span>
           </div>
-          <p className="text-gray-400 text-sm">
+          <p className="text-cyber text-sm neon-text">
             © {currentYear} Zion Tech Group. All rights reserved.
           </p>
         </div>

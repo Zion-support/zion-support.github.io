@@ -31,10 +31,13 @@ const Navigation = () => {
       icon: BriefcaseIcon,
       submenu: [
         { name: 'AI Solutions', href: '/ai-solutions' },
+        { name: 'AI Quantum Computing', href: '/ai-quantum-computing' },
+        { name: 'AI Neural Interface', href: '/ai-neural-interface' },
         { name: 'Cybersecurity', href: '/cybersecurity' },
         { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
         { name: 'Digital Transformation', href: '/digital-transformation' },
         { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: 'AI Content Studio', href: '/micro-saas-ai-content-studio' },
         { name: '5G Solutions', href: '/5g-solutions' }
       ]
     },
@@ -48,15 +51,15 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 sticky top-0 z-50">
+    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-cyber sticky top-0 z-50 hologram-scan">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">Z</span>
+          <Link to="/" className="flex items-center space-x-2 quantum-float">
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center cyber-pulse">
+              <span className="text-white font-bold text-lg neon-text">Z</span>
             </div>
-            <span className="text-xl font-bold text-white">Zion Tech Group</span>
+            <span className="text-xl font-bold text-white text-hologram">Zion Tech Group</span>
           </Link>
 
           {/* Desktop Navigation */}
