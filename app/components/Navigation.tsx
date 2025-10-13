@@ -5,29 +5,16 @@ import {
   Shield, 
   Zap, 
   Globe, 
-  ArrowRight, 
   Star, 
   Users, 
-  Award, 
-  BarChart3, 
-  Cloud, 
   Sparkles, 
   Mail, 
-  Smartphone, 
   Monitor,
-  Phone,
-  MapPin,
-  Code,
-  Database,
   ChevronDown,
   Menu,
   X,
-  Package,
-  Heart,
-  Receipt,
   TrendingUp,
   Cpu,
-  Network,
   FileText,
   Clock
 } from 'lucide-react';
@@ -45,9 +32,9 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     setIsMenuOpen(prev => !prev);
   }, []);
 
-  const toggleDropdown = useCallback((dropdown: string) => {
-    setActiveDropdown(prev => prev === dropdown ? null : dropdown);
-  }, []);
+  // const toggleDropdown = useCallback((dropdown: string) => {
+  //   setActiveDropdown(prev => prev === dropdown ? null : dropdown);
+  // }, []);
 
   const closeDropdowns = useCallback(() => {
     setActiveDropdown(null);

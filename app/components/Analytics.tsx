@@ -30,8 +30,8 @@ const Analytics: React.FC<AnalyticsProps> = ({
 
     // Initialize dataLayer
     window.dataLayer = window.dataLayer || [];
-    window.gtag = function() {
-      window.dataLayer.push(arguments);
+    window.gtag = function(...args: any[]) {
+      window.dataLayer.push(args);
     };
 
     window.gtag('js', new Date());
@@ -150,7 +150,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
 
     document.addEventListener('click', handleClick);
     return () => document.removeEventListener('click', handleClick);
-  }, [enabled]);
+  }, [enabled, trackEvent]);
 
   // Track form submissions
   useEffect(() => {

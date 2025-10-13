@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, TrendingUp, Target, DollarSign, BarChart3, Brain, Zap, Clock, Globe, Smartphone, Lock, Settings, Users, Award, Shield, Mail, Headphones, Video, Calendar, MessageSquare, Download, Share2, Search, Filter, Edit, Trash2, Plus, Minus, Play, Pause, Stop, Volume2, VolumeX, Wifi, WifiOff, Signal, Bluetooth, Battery, BatteryLow, Power, RefreshCw, RotateCcw, RotateCw, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, TrendingUp, Target, DollarSign, BarChart3, Brain, Zap, Clock, Globe, Smartphone, Lock, Settings, Users, Award, Shield, Mail, Headphones, Video, Calendar, MessageSquare, Download, Share2, Search, Filter, Edit, Trash2, Plus, Minus, Play, Pause, Square as Stop, Volume2, VolumeX, Wifi, WifiOff, Signal, Bluetooth, Battery, BatteryLow, Power, RefreshCw, RotateCcw, RotateCw, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Clock as Stopwatch, Hourglass } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
@@ -88,9 +88,8 @@ export default function ZionAISalesPredictor() {
         <meta name="keywords" content="AI sales predictor, sales forecasting, lead scoring, customer behavior prediction, churn prediction, revenue forecasting, CRM integration" />
         <link rel="canonical" href="https://ziontechgroup.com/zion-ai-sales-predictor" />
       </Helmet>
-      <SEOOptimizer />
-
-      {/* Hero Section */}
+      <SEOOptimizer>
+        {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -321,6 +320,7 @@ export default function ZionAISalesPredictor() {
           </div>
         </div>
       </section>
+      </SEOOptimizer>
     </div>
   );
 }
