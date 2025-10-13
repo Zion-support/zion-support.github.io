@@ -172,6 +172,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     applyAccessibilitySettings(defaultSettings);
   };
 
+<<<<<<< HEAD
   // const toggleLargeText = () => {
   //   updateSetting('largeText', !settings.largeText);
   // };
@@ -179,6 +180,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   // const toggleHighContrast = () => {
   //   updateSetting('highContrast', !settings.highContrast);
   // };
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-c2d1
 
   return (
     <>

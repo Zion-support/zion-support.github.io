@@ -53,7 +53,11 @@ const AdvancedPerformanceMonitor = () => {
           reportMetric('TTFB', metric.value)
         })
       } catch (error) {
+<<<<<<< HEAD
         console.warn('Failed to load web-vitals:', error);
+=======
+        console.error('Failed to load web-vitals:', error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-c2d1
       }
     }
 
@@ -98,7 +102,11 @@ const AdvancedPerformanceMonitor = () => {
 
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
+<<<<<<< HEAD
         console.log(`Performance metric ${name}:`, value);
+=======
+        console.log(`Performance metric: ${name} = ${value}`);
+>>>>>>> cursor/fix-errors-and-merge-to-main-c2d1
       }
     }
 
