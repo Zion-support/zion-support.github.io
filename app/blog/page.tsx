@@ -124,9 +124,13 @@ const BlogPage: React.FC = () => {
                   <div className="text-4xl mb-4">{post.image}</div>
                   <div className="flex items-center space-x-4 text-sm text-gray-400 mb-3">
                     <span className="flex items-center">
+<<<<<<< HEAD
 
                       <div className="w-4 h-4 mr-1" />
 
+=======
+<Calendar className="w-4 h-4 mr-1" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
                       {new Date(post.date).toLocaleDateString()}
                     </span>
                     <span className="flex items-center">

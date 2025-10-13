@@ -25,6 +25,7 @@ export default withErrorLogging(async (req, res) => {
   }
 
   try {
+<<<<<<< HEAD
 
     const session = {
       id: 'cs_test_' + Math.random().toString(36).substr(2, 9),
@@ -37,6 +38,16 @@ export default withErrorLogging(async (req, res) => {
   } catch (error) {
     console.error('Checkout session creation error:', error);
 
+=======
+console.log('Creating checkout session for product:', productId);
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      status: 'pending',
+      message: 'Checkout session created successfully'
+    }));
+  } catch (error) {
+    console.error('Error:', error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to create checkout session' }));
   }

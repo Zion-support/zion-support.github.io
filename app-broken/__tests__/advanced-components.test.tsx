@@ -1,7 +1,6 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { HelmetProvider, Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 // Mock components
 const AdvancedErrorBoundary = ({ children, enableRetry, onError }: { 
   children: React.ReactNode; 
@@ -103,3 +102,13 @@ describe('Advanced Components', () => {
     expect(document.title).toBe('Test Title');
   });
 });
+=======
+export default function Page() {
+  return (
+    <div>
+      <h1>Page Under Construction</h1>
+      <p>This page is currently being updated.</p>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd3e

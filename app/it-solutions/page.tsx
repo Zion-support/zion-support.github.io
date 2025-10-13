@@ -27,7 +27,7 @@ import {
   CircleStackIcon
 } from '@heroicons/react/24/outline';
 
-export default function ITSolutionsPage() {
+export default function ITSolutionsPage()   {
   const itServices = [
     {
       title: "IT Infrastructure Management",

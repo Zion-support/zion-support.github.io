@@ -20,6 +20,7 @@ import NeonButton from '../components/NeonButton';
 import AnimatedCard from '../components/AnimatedCard';
 import { services } from '../data/servicesData';
 
+<<<<<<< HEAD
 export default function HomePage() {
 
   const structuredData = {
@@ -34,6 +35,10 @@ export default function HomePage() {
       "query-input": "required name=search_term_string"
     }
   };
+=======
+export default function HomePage()  {
+const featuredServices = services.slice(0, 6);
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
 
   return (
     <>

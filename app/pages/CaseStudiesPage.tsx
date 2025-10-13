@@ -1,5 +1,5 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { ArrowRight, TrendingUp, Users, Clock, DollarSign } from 'lucide-react;
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [{
@@ -58,11 +58,11 @@ const CaseStudiesPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900">;
-      <Helmet>;
-        <title>Case Studies | Zion Tech Group</title>;
-        <meta name="description" content="Explore our successful case studies showcasing AI and IT solutions that transformed businesses across various industries." />;
-        <meta name="keywords" content="case studies, success stories, AI implementation, IT solutions, business transformation" />;
-      </Helmet>;
+      <Helmet>
+        <title>Case Studies | Zion Tech Group</title>
+        <meta name="description" content="Explore our successful case studies showcasing AI and IT solutions that transformed businesses across various industries." />
+        <meta name="keywords" content="case studies, success stories, AI implementation, IT solutions, business transformation" />
+      </Helmet>
       <div className="container mx-auto px-4 py-16">;
         {/* Hero Section */}
         <div className="text-center mb-16">;

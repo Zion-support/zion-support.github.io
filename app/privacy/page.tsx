@@ -1,13 +1,13 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 const PrivacyPage: React.FC = () => {
   return (
-    <>;
-      <Helmet>;
-        <title>Privacy Policy - Zion Tech Group</title>;
-        <meta name="description" content="Learn about how Zion Tech Group collects, uses, and protects your personal information in accordance with privacy laws and best practices." />;
-        <meta name="keywords" content="privacy policy, data protection, personal information, GDPR, privacy rights" />;
-      </Helmet>;
+    <>
+      <Helmet>
+        <title>Privacy Policy - Zion Tech Group</title>
+        <meta name="description" content="Learn about how Zion Tech Group collects, uses, and protects your personal information in accordance with privacy laws and best practices." />
+        <meta name="keywords" content="privacy policy, data protection, personal information, GDPR, privacy rights" />
+      </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
@@ -69,7 +69,7 @@ const PrivacyPage: React.FC = () => {
           </div>;
         </section>;
       </div>;
-    </>;
+    </>
   );
 };
 

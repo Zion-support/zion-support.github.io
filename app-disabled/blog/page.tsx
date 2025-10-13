@@ -1,5 +1,5 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { } from 'react-router-dom;
 import { User, Right, Filter } from 'lucide-react;
 import Footer from '../components/Footer;
@@ -44,16 +44,16 @@ const BlogPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState(');
   const [selectedCategory, setSelectedCategory] = useState('all);
   const filteredPosts = blogPosts.filter(post => {const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-        <title>Blog - Zion Tech Group</title>;
-        <meta name="description" content="Advanced blog solutions by Zion Tech Group" />;
-        <title>Blog - Zion Tech Group | AI & Technology Insights</title>;
-        <meta name="description" content="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group experts. />;
-        <meta name="keywords" content="AI blog, technology insights, quantum computing, cybersecurity, autonomous systems, tech trends />;
-        <meta property="og:title" content="Blog - Zion Tech Group />;
-        <meta property="og:description" content="Latest insights on AI and emerging technologies />;
-        <meta property="og:type" content="website />;
-        <meta property="og:url" content="https://ziontechgroup.com/blog />;
-      </Helmet>;
+        <title>Blog - Zion Tech Group</title>
+        <meta name="description" content="Advanced blog solutions by Zion Tech Group" />
+        <title>Blog - Zion Tech Group | AI & Technology Insights</title>
+        <meta name="description" content="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group experts. />
+        <meta name="keywords" content="AI blog, technology insights, quantum computing, cybersecurity, autonomous systems, tech trends />
+        <meta property="og:title" content="Blog - Zion Tech Group />
+        <meta property="og:description" content="Latest insights on AI and emerging technologies />
+        <meta property="og:type" content="website />
+        <meta property="og:url" content="https://ziontechgroup.com/blog />
+      </Helmet>
       <div className="container mx-auto px-4 py-20">;
         <div className="text-center mb-16">;
           <h1 className="text-5xl font-bold text-white mb-6">;
@@ -73,10 +73,10 @@ const BlogPage: React.FC = () => {
             </div>;
           </div>;
         </div>;
-        <title>Blog - Zion Tech Group | AI and IT Insights</title>;
-        <meta name="description" content="Stay updated with the latest insights on AI, IT solutions, and emerging technologies. Expert articles, tutorials, and industry trends." />;
-        <meta name="keywords" content="AI blog, IT insights, technology trends, enterprise solutions, cloud computing, cybersecurity" />;
-      </Helmet>;
+        <title>Blog - Zion Tech Group | AI and IT Insights</title>
+        <meta name="description" content="Stay updated with the latest insights on AI, IT solutions, and emerging technologies. Expert articles, tutorials, and industry trends." />
+        <meta name="keywords" content="AI blog, IT insights, technology trends, enterprise solutions, cloud computing, cybersecurity" />
+      </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">;

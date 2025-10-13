@@ -49,10 +49,10 @@ import { Right, Facebook, Twitter, edin, Instagram, Youtube, Github, Star, Circl
                   <to={link.url}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm";
                   >;
-              <li><to="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</>;
-              <li><to="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</>;
-              <li><to="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</>;
-              <li><to="/consultation" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Free Consultation</>;
+              <li><to="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</>
+              <li><to="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</>
+              <li><to="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</>
+              <li><to="/consultation" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Free Consultation</>
               <to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">;
                 Privacy Policy;
               <to="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">;

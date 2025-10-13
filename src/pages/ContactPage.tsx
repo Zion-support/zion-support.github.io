@@ -1,12 +1,12 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 const ContactPage: React.FC = () => {
   return (
-    <>;
-      <Helmet>;
-        <title>Contact Us - Zion Tech Group</title>;
-        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions." />;
-      </Helmet>;
+    <>
+      <Helmet>
+        <title>Contact Us - Zion Tech Group</title>
+        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions." />
+      </Helmet>
       <div className="min-h-screen bg-gray-900 text-white py-16">;
         <div className="container mx-auto px-4">;
           <div className="max-w-4xl mx-auto">;
@@ -80,7 +80,7 @@ const ContactPage: React.FC = () => {
           </div>;
         </div>;
       </div>;
-    </>;
+    </>
   );
 };
 

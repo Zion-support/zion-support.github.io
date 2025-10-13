@@ -7,13 +7,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-<<<<<<< HEAD
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
-<<<<<<< HEAD
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
@@ -29,6 +28,8 @@ import PerformanceMonitor from './app/components/PerformanceMonitor';
 import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import LoadingSpinner from './app/components/LoadingSpinner';
 >>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
 
 // Lazy load page components for better performance
 const HomePage = lazy(() => import('./app/page'));
@@ -87,31 +88,16 @@ function App() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
     <HelmetProvider>
 <<<<<<< HEAD
       <Router>
         <div className="min-h-screen bg-slate-900">
           <Navigation />
           <main className="relative z-10" id="main-content" role="main">
-=======
-      <ErrorBoundary>
-        <Router>
-          <div className="min-h-screen bg-slate-900">
-            <Navigation />
-            <main className="relative z-10" id="main-content" role="main">
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
             <Routes>
-=======
-    <HelmetProvider>
-      <EnhancedErrorBoundary>
-        <AccessibilityEnhancer>
-          <Router>
-            <div className="min-h-screen bg-slate-900">
-              <Header />
-              <main className="relative z-10" id="main-content" role="main">
-                <Suspense fallback={<LoadingSpinner fullScreen text="Loading page..." />}>
-                  <Routes>
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
               {/* Main Pages */}
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
@@ -149,26 +135,15 @@ function App() {
                   </div>
                 </div>
               } />
-<<<<<<< HEAD
-            </Routes>
+</Routes>
             </main>
             <Footer />
             <PerformanceMonitor />
           </div>
         </Router>
       </ErrorBoundary>
-=======
-                  </Routes>
-                </Suspense>
-              </main>
-              <Footer />
-              <PerformanceMonitor />
-            </div>
-          </Router>
-        </AccessibilityEnhancer>
-      </EnhancedErrorBoundary>
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
     </HelmetProvider>
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
@@ -230,6 +205,8 @@ function App() {
         </Router>
       </HelmetProvider>
     </ErrorBoundary>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
   );
 }
 

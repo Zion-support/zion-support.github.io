@@ -1,5 +1,5 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;
 const CareersPage: React.FC = () => {
   const benefits = [{
@@ -70,11 +70,11 @@ const CareersPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900">;
-      <Helmet>;
-        <title>Careers | Zion Tech Group</title>;
-        <meta name="description" content="Join our team of AI and IT experts. Explore career opportunities at Zion Tech Group and be part of the future of technology." />;
-        <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, cybersecurity, remote work, technology careers" />;
-      </Helmet>;
+      <Helmet>
+        <title>Careers | Zion Tech Group</title>
+        <meta name="description" content="Join our team of AI and IT experts. Explore career opportunities at Zion Tech Group and be part of the future of technology." />
+        <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, cybersecurity, remote work, technology careers" />
+      </Helmet>
       <div className="container mx-auto px-4 py-16">;
         {/* Hero Section */}
         <div className="text-center mb-16">;

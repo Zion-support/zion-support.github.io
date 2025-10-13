@@ -1,5 +1,5 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom;
 import { 
   CpuChipIcon,
@@ -229,12 +229,12 @@ export default function AISolutionsPage() {
   ];
 
   return (
-    <>;
-      <Helmet>;
-        <title>AI Solutions - Zion Tech Group</title>;
-        <meta name="description" content="Comprehensive AI solutions including machine learning, NLP, computer vision, predictive analytics, and more. Transform your business with cutting-edge artificial intelligence." />;
-        <meta name="keywords" content="AI solutions, machine learning, natural language processing, computer vision, predictive analytics, AI chatbots, artificial intelligence" />;
-      </Helmet>;
+    <>
+      <Helmet>
+        <title>AI Solutions - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive AI solutions including machine learning, NLP, computer vision, predictive analytics, and more. Transform your business with cutting-edge artificial intelligence." />
+        <meta name="keywords" content="AI solutions, machine learning, natural language processing, computer vision, predictive analytics, AI chatbots, artificial intelligence" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
         <div className="container mx-auto px-4">;
@@ -464,6 +464,6 @@ export default function AISolutionsPage() {
           </div>;
         </div>;
       </section>;
-    </>;
+    </>
   );
 }

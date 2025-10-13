@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react;
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
 import { useEffect, Node } from 'react;
 interface EnhancedAccessibilityProps {
   children: Node;
@@ -134,6 +138,7 @@ const EnhancedAccessibility: React.FC = () => {
     };
   }, []);
 
+<<<<<<< HEAD
   useEffect(() => {
     applyAccessibilitySettings(settings);
     localStorage.setItem('accessibility-settings', JSON.stringify(settings));
@@ -317,6 +322,9 @@ const EnhancedAccessibility: React.FC = () => {
       </div>
     </>
   );
+=======
+  return <>{children}</>
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
 };
 
 export default EnhancedAccessibility;

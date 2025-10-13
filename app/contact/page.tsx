@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Circle, Send, Phone, Mail, MapPin, Clock } from 'lucide-react';
 
-export default function ContactPage() {
+export default function ContactPage()   {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -35,27 +35,48 @@ export default function ContactPage() {
 
   const contactInfo = [
     {
+<<<<<<< HEAD
 
       icon: 'Phone',
       title: 'Phone',
+=======
+      icon: title: '',
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
       value: '+1 (555) 123-4567',
       description: 'Mon-Fri 9AM-6PM EST'
     },
     {
+<<<<<<< HEAD
       icon: 'Email',
       title: 'Email',
+=======
+      icon: title: 'Email',
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
       value: 'contact@ziontechgroup.com',
       description: 'We respond within 24 hours'
     },
     {
+<<<<<<< HEAD
       icon: 'Location',
       title: 'Address',
+=======
+      icon: title: 'Address',
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
       value: '123 Tech Street, Suite 100',
       description: 'San Francisco, CA 94105'
     },
     {
+<<<<<<< HEAD
       icon: 'Clock',
 
+=======
+      icon: title: 'Business Hours',
+<<<<<<< HEAD
+      value: &apos;Monday - Friday&apos;,
+      title: 'Business Hours',
+      value: 'Monday - Friday',
+>>>>>>> cursor/fix-errors-and-merge-to-main-0c82
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
       description: '9:00 AM - 6:00 PM EST'
     }
   ];

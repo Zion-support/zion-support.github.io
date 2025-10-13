@@ -1,5 +1,5 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Bot, BarChart3, Shield, Zap, Target } from 'lucide-react;
 const AIServicesPage: React.FC = () => {
   const services = [{
@@ -42,11 +42,11 @@ const AIServicesPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
-      <Helmet>;
-        <title>AI Services | Zion Tech Group</title>;
-        <meta name="description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, and automation solutions." />;
-        <meta name="keywords" content="AI services, machine learning, NLP, computer vision, automation, artificial intelligence" />;
-      </Helmet>;
+      <Helmet>
+        <title>AI Services | Zion Tech Group</title>
+        <meta name="description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, and automation solutions." />
+        <meta name="keywords" content="AI services, machine learning, NLP, computer vision, automation, artificial intelligence" />
+      </Helmet>
       <div className="container mx-auto px-4 py-16">;
         {/* Hero Section */}
         <div className="text-center mb-16">;

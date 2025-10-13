@@ -14,6 +14,7 @@ export default async function handler(req, res) {
   }
 
   try {
+<<<<<<< HEAD
 
     // Process the quote request
     const quote = {
@@ -41,5 +42,20 @@ export default async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Internal server error' }));
 
+=======
+// Store quote data (in a real app, save to database)
+    console.log('Quote request received:', { name, email, phone, details, country, service });
+
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true, 
+      message: 'Quote request received successfully',
+      quoteId: `QT-${Date.now()}`
+    }));
+  } catch (error) {
+    console.error('Error processing quote request:', error);
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to process quote request' }));
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
   }
 }

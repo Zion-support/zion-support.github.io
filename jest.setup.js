@@ -6,6 +6,7 @@ jest.mock('react-router-dom', () => {
   const actual = jest.requireActual('react-router-dom');
   return {
     ...actual,
+<<<<<<< HEAD
 
     useLocation: () => ({
       pathname: '/',
@@ -25,6 +26,9 @@ jest.mock('react-router-dom', () => {
 
 // Suppress console warnings
 
+=======
+useNavigate: () => jest.fn(),
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
 const originalError = console.error;
 beforeAll(() => {
   console.error = (...args) => {

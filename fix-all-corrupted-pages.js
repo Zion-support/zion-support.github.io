@@ -1,8 +1,8 @@
 import fs from 'fs;
 import path from 'path;
 import { fileURLToPath } from 'url;
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, BarChart, Target, TrendingUp } from 'lucide-react;
 const createGenericPage = (serviceName, title, description) => `'use client'';
       title: 'Advanced Technology'';
