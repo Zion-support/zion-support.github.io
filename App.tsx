@@ -6,13 +6,28 @@ import { ErrorBoundary } from 'react-error-boundary';
 // Components
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
-import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceOptimizer from './app/components/PerformanceOptimizer';
 import FuturisticBackground from './app/components/FuturisticBackground';
 import AnalyticsProvider from './app/components/AnalyticsProvider';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import LoadingSpinner from './app/components/LoadingSpinner';
+
+// Page Components
+import HomePage from './src/pages/HomePage';
+import ContactPage from './src/pages/ContactPage';
+import BlogPage from './src/pages/BlogPage';
+import SolutionsPage from './src/pages/SolutionsPage';
+
+// Placeholder components for missing pages
+const AboutPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">About Page</h1></div>;
+const ServicesPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">Services Page</h1></div>;
+const TutorialsPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">Tutorials Page</h1></div>;
+const DemoPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">Demo Page</h1></div>;
+const SupportPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">Support Page</h1></div>;
+const PrivacyPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">Privacy Page</h1></div>;
+const TermsPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">Terms Page</h1></div>;
+const PricingPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">Pricing Page</h1></div>;
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -50,13 +65,14 @@ function App() {
             <div className="min-h-screen bg-gray-900">
               <Navigation />
               <main className="relative z-10" id="main-content" role="main">
-                <Suspense fallback={<LoadingStates />}>
+                <Suspense fallback={<LoadingSpinner />}>
                   <Routes>
                     {/* Main Pages */}
                     <Route path="/" element={<HomePage />} />
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/contact" element={<ContactPage />} />
                     <Route path="/services" element={<ServicesPage />} />
+                    <Route path="/solutions" element={<SolutionsPage />} />
                     <Route path="/blog" element={<BlogPage />} />
                     <Route path="/tutorials" element={<TutorialsPage />} />
                     <Route path="/demo" element={<DemoPage />} />

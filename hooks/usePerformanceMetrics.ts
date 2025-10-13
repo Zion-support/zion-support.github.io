@@ -1,3 +1,24 @@
+import { useState, useEffect } from 'react';
+
+interface PerformanceMetrics {
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  ttfb?: number;
+  fmp?: number;
+  tti?: number;
+  tbt?: number;
+}
+
+interface PerformanceEntryExtended extends PerformanceEntry {
+  processingStart?: number;
+  hadRecentInput?: boolean;
+  value?: number;
+  responseStart?: number;
+  requestStart?: number;
+}
+
 export function usePerformanceMetrics() {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isSupported, setIsSupported] = useState(false);
@@ -29,12 +50,12 @@ export function usePerformanceMetrics() {
 
     // First Input Delay
     new PerformanceObserver(list => {
-      const entries = list.getEntries();
+      const entries = list.getEntries() as PerformanceEntryExtended[];
       entries.forEach(entry => {
-        if (entry.processingStart && entry.startTime) {
+        if (entry.processingStart !== undefined && entry.startTime !== undefined) {
           setMetrics(prev => ({ 
             ...prev, 
-            fid: entry.processingStart - entry.startTime 
+            fid: entry.processingStart! - entry.startTime 
           }));
         }
       });
@@ -43,10 +64,10 @@ export function usePerformanceMetrics() {
     // Cumulative Layout Shift
     let clsValue = 0;
     new PerformanceObserver(list => {
-      const entries = list.getEntries();
+      const entries = list.getEntries() as PerformanceEntryExtended[];
       entries.forEach(entry => {
         if (!entry.hadRecentInput) {
-          clsValue += entry.value;
+          clsValue += entry.value || 0;
         }
       });
       setMetrics(prev => ({ ...prev, cls: clsValue }));
@@ -54,12 +75,12 @@ export function usePerformanceMetrics() {
 
     // Time to First Byte
     new PerformanceObserver(list => {
-      const entries = list.getEntries();
+      const entries = list.getEntries() as PerformanceEntryExtended[];
       entries.forEach(entry => {
-        if (entry.responseStart && entry.requestStart) {
+        if (entry.responseStart !== undefined && entry.requestStart !== undefined) {
           setMetrics(prev => ({ 
             ...prev, 
-            ttfb: entry.responseStart - entry.requestStart 
+            ttfb: entry.responseStart! - entry.requestStart! 
           }));
         }
       });

@@ -1,75 +1,90 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function ContactPage() {
+const ContactPage: React.FC = () => {
   return (
-    <React.Fragment>
+    <>
       <Helmet>
-        <title>Contact Us | Zion Tech Group
-        <meta
-          name="description"
-          content="Get in touch with Zion Tech Group for AI solutions, digital transformation, and enterprise automation services."
-        />
-        <meta
-          name="keywords"
-          content="contact, get in touch, AI consulting, enterprise solutions"
-        />
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
+        <title>Contact Us - Zion Tech Group</title>
+        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-900 text-white py-16">
+        <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">Contact Us
-            <div className="grid md:grid-cols-2 gap-8">
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">Get in Touch
-                <p className="text-gray-600 mb-6">
-                  Ready to transform your business with AI? Contact our team of experts to discuss
-                  your project and discover how we can help.
+            <h1 className="text-4xl font-bold text-center mb-8">Contact Us</h1>
+            <div className="grid md:grid-cols-2 gap-12">
+              <div>
+                <h2 className="text-2xl font-semibold mb-6">Get in Touch</h2>
                 <div className="space-y-4">
-                    <h3 className="font-semibold text-gray-900">Phone
-                    <a href="tel:+13024640950" className="text-indigo-600 hover:text-indigo-800">
-                      (302) 464-0950
-                    <h3 className="font-semibold text-gray-900">Email
-                    <a
-                      href="mailto:kleber@ziontechgroup.com"
-                      className="text-indigo-600 hover:text-indigo-800"
-                    >
-                      kleber@ziontechgroup.com
-              <div className="bg-white rounded-lg shadow-lg p-6">
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">Send us a Message
+                  <div>
+                    <h3 className="text-lg font-semibold">Email</h3>
+                    <a href="mailto:info@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">
+                      info@ziontechgroup.com
+                    </a>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold">Phone</h3>
+                    <a href="tel:+1234567890" className="text-blue-400 hover:text-blue-300">
+                      +1 (234) 567-890
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h2 className="text-2xl font-semibold mb-6">Send us a Message</h2>
                 <form className="space-y-4">
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium mb-2">
                       Name
+                    </label>
                     <input
                       type="text"
                       id="name"
                       name="name"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       required
                     />
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium mb-2">
                       Email
+                    </label>
                     <input
                       type="email"
                       id="email"
                       name="email"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       required
                     />
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium text-gray-700 mb-1"
-                    >
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium mb-2">
                       Message
+                    </label>
                     <textarea
                       id="message"
                       name="message"
                       rows={4}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       required
-                    >
+                    ></textarea>
+                  </div>
                   <button
                     type="submit"
-                    className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition-colors"
                   >
                     Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
-}
+};
+
+export default ContactPage;
