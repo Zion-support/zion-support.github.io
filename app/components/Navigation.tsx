@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 =======
@@ -8,6 +9,9 @@ import { Link } from 'react-router-dom';
 =======
 'use client';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
+=======
+'use client';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-029f
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 

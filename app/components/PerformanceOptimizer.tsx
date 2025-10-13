@@ -8,6 +8,7 @@ interface PerformanceOptimizerProps {
 'use client;
 =======
 'use client';
+<<<<<<< HEAD
 import React from 'react';
 'use client';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
@@ -100,6 +101,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
 
 =======
 import React, { useEffect } from 'react';
+=======
+import React, { useEffect, useState, useCallback } from 'react';
+import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-029f
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;

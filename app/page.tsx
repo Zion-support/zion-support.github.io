@@ -1,8 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Shield, Users, Zap, Globe, Lock } from 'lucide-react';
+=======
+'use client';
+import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-029f
 import SEOOptimizer from './components/SEOOptimizer';
 =======
 'use client;

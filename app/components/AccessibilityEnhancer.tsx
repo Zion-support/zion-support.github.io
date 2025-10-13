@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 =======
 <<<<<<< HEAD
@@ -64,6 +65,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           }
 
 =======
+=======
+'use client';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-029f
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {

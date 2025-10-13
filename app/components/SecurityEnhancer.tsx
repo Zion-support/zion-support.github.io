@@ -40,6 +40,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({}
       return;
 =======
 'use client';
+<<<<<<< HEAD
 import React from 'react';
 'use client';
 import React, {useEffect}from 'react';
@@ -240,6 +241,9 @@ const target = e.target as HTMLInputElement;
 
 =======
 import React from 'react';
+=======
+import React, { useEffect } from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-029f
 
 interface SecurityEnhancerProps {
   children: React.ReactNode;

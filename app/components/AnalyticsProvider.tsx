@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, ReactNode } from 'react';
 import { AnalyticsContext } from '../contexts/AnalyticsContext';
 interface AnalyticsProviderProps {
@@ -8,6 +9,10 @@ interface AnalyticsProviderProps {
 'use client;
 
 import React, { createContext, useContext, useEffect } from 'react;
+=======
+'use client';
+import React, { createContext, useContext, useEffect } from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-029f
 
 interface AnalyticsContextType {}
   trackEvent: (eventName: string, parameters?: Record<string, any>) => void;

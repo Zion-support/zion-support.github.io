@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 'use client';
@@ -32,6 +33,9 @@ interface SEOOptimizerProps {title: string;,}
 'use client';
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
+=======
+'use client';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-029f
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
