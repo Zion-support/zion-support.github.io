@@ -1,67 +1,60 @@
-import React from 'react';
-import {Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe}}from 'lucide-react';
-const EnhancedServicesShowcase: React.FC = () => {,
-      stats: '300% ROI'
-    },
-    {
-      title: 'IT Infrastructure',
-      stats: '99.9% Uptime'
-    },
-    {
-      title: 'Cybersecurity',
-      stats: 'Zero Breaches'
-    },
-    {
-      title: 'Automation',
-      stats: '95% Efficiency'
-    }
-  ];
+'use client'}
+import React from 'react'}
+import { Helmet } from 'react-helmet-async'}
 
+export default function Page() {
   return (
-    <section className="py-16">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
-            Our Core Services
-          <p className="text-xl text-cyan-400 max-w-3xl mx-auto">
-            Comprehensive AI and IT solutions designed to transform your business and drive innovation
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
-            <div key={index} className="cyber-card hologram-card p-6 group hover:scale-105 transition-all duration-300">
-              <div className="flex items-center mb-4">
-                <service.icon className={`w-12 h-12 ${service.color} mr-4`} />
-                  <h3 className="text-xl font-bold text-white">{service.title}
-                  <div className="text-sm text-cyan-400 font-semibold">{service.stats}
-              <p className="text-gray-300 mb-4">{service.description}
-              <ul className="space-y-2 mb-6">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    {feature}
-                ))}
-              <a
-                href="/services"
-                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-transform"
-              >
-                Learn More <ArrowRight className="w-4 h-4 ml-2" />
-      stats: '95% Efficiency',}}
-  ]
-return(<section className="py-20 px-4">)
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title
-                {service.features.map((feature, featureIndex) => (} <li>
-                    <CheckCircle />
-
-        <div className="text-center mt-12">
-          <a
-            href="/services"
-            className="cyber-button inline-flex items-center"
-          >
-            View All Services
-            <ArrowRight className="w-5 h-5 ml-2" />
-  );
-};
-
-export default EnhancedServicesShowcase;
-</div></div></div></div>
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>EnhancedServicesShowcase - Zion Tech Group</title>
+        <meta name="description" content="Professional enhancedservicesshowcase services by Zion Tech Group." />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            EnhancedServicesShowcase
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional enhancedservicesshowcase solutions tailored to your business needs.
+          </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge enhancedservicesshowcase solutions.
+              </p>
+            </div>
+            
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation
+              </h3>
+              <p className="text-green-700">
+                Tailored enhancedservicesshowcase implementations for your specific requirements.
+              </p>
+            </div>
+            
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your enhancedservicesshowcase needs.
+              </p>
+            </div>
+          </div>
+          
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>}
+)
+}

@@ -1,14 +1,16 @@
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+=======
+>>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c
+import React, { useEffect } from 'react'}
+import { Helmet } from 'react-helmet-async'}
 
 interface SEOEnhancerProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  image?: string;
-  url?: string;
-  type?: string;
-  structuredData?: any;
+  title?: string}
+  description?: string}
+  keywords?: string[]
+  image?: string}
+  url?: string}
+  type?: string}
+  structuredData?: any}
 }
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
@@ -18,21 +20,23 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   image = '/images/og-image.jpg',
   url = typeof window !== 'undefined' ? window.location.href : '',
   type = 'website',
-  structuredData
+  structuredData}
 }) => {
   useEffect(() => {
     // Add structured data to the page
     if (structuredData) {
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify(structuredData);
-      document.head.appendChild(script);
-
+      const script = document.createElement('script')
+      script.type = 'application/ld+json'}
+      script.text = JSON.stringify(structuredData)
+      document.head.appendChild(script)
       return () => {
-        document.head.removeChild(script);
-      };
+        if (document.head.contains(script)) {
+          document.head.removeChild(script)
+        }
+      }
     }
-  }, [structuredData]);
+    return undefined}
+  }, [structuredData])
 
   // Generate meta tags
   const metaTags = [
@@ -41,7 +45,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     { name: 'author', content: 'Zion Tech Group' },
     { name: 'robots', content: 'index, follow' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-    
     // Open Graph tags
     { property: 'og:title', content: title },
     { property: 'og:description', content: description },
@@ -49,46 +52,37 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     { property: 'og:url', content: url },
     { property: 'og:type', content: type },
     { property: 'og:site_name', content: 'Zion Tech Group' },
-    
     // Twitter Card tags
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: title },
     { name: 'twitter:description', content: description },
     { name: 'twitter:image', content: image },
-    
     // Additional SEO tags
     { name: 'theme-color', content: '#0066cc' },
     { name: 'msapplication-TileColor', content: '#0066cc' },
     { name: 'apple-mobile-web-app-capable', content: 'yes' },
-    { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
-  ];
-
   return (
     <Helmet>
       <title>{title}</title>
       {metaTags.map((tag, index) => (
-        <meta key={index} {...tag} />
-      ))}
-      
+        <meta key={index} {...tag} />}
+))}
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
-      
       {/* Favicon */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      
       {/* DNS prefetch for performance */}
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-    </Helmet>
-  );
-};
+    </Helmet>}
+)
+}
 
 // Default structured data for the organization
 export const defaultStructuredData = {
@@ -102,8 +96,8 @@ export const defaultStructuredData = {
     "@type": "ContactPoint",
     "telephone": "+1-555-0123",
     "contactType": "customer service",
-    "availableLanguage": "English"
-  },
+    "availableLanguage": "English"}
+},
   "sameAs": [
     "https://www.linkedin.com/company/zion-tech-group",
     "https://twitter.com/ziontechgroup",
@@ -115,8 +109,13 @@ export const defaultStructuredData = {
     "addressLocality": "San Francisco",
     "addressRegion": "CA",
     "postalCode": "94105",
-    "addressCountry": "US"
-  }
-};
+    "addressCountry": "US"}
+}
+}
+=======
 
-export default SEOEnhancer;
+export default SEOEnhancer}
+=======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6405
+>>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c

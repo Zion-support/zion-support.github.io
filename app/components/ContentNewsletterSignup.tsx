@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Mail, CheckCircle, ArrowRight, Zap, Shield, Brain } from 'lucide-react';
 
@@ -145,3 +146,5 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
 };
 
 export default ContentNewsletterSignup;
+=======
+>>>>>>> origin/main

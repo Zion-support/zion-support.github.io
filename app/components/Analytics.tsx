@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -79,3 +80,5 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     </>
   );
 };
+=======
+>>>>>>> origin/main

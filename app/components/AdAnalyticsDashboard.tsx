@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -223,8 +224,15 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
       </div>
     );
   }
+=======
+'use client'}
+import React from 'react'}
+import { Helmet } from 'react-helmet-async'}
+>>>>>>> origin/main
 
+export default function Page() {
   return (
+<<<<<<< HEAD
     <div className={`ad-analytics-dashboard ${className}`}>
       {/* Header */}
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
@@ -254,10 +262,60 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition-colors">
               <Download className="w-4 h-4" />
               Export
+=======
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>AdAnalyticsDashboard - Zion Tech Group</title>
+        <meta name="description" content="Professional adanalyticsdashboard services by Zion Tech Group." />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            AdAnalyticsDashboard
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional adanalyticsdashboard solutions tailored to your business needs.
+          </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge adanalyticsdashboard solutions.
+              </p>
+            </div>
+            
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation
+              </h3>
+              <p className="text-green-700">
+                Tailored adanalyticsdashboard implementations for your specific requirements.
+              </p>
+            </div>
+            
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your adanalyticsdashboard needs.
+              </p>
+            </div>
+          </div>
+          
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today
+>>>>>>> origin/main
             </button>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
       {/* Key Metrics */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
@@ -454,3 +512,8 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
 };
 
 export default AdAnalyticsDashboard;
+=======
+    </div>}
+)
+}
+>>>>>>> origin/main

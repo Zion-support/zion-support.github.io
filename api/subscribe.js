@@ -1,0 +1,95 @@
+import fs from 'fs';
+import path from 'path';
+
+const dir = path.join(process.cwd(), 'data');
+const file = path.join(dir, 'subscribers.json');
+
+export default function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.statusCode = 405;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
+  }
+  const { email, name, preferences } = req.body || {};
+  if (!email) {
+    res.statusCode = 400;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Email is required' }));
+    return;
+  }
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+  let existing = [];
+  try {
+    if (fs.existsSync(file)) {
+      const data = fs.readFileSync(file, 'utf8');
+      existing = JSON.parse(data);
+      if (!Array.isArray(existing)) existing = [];
+    }
+  } catch (_error) {
+    // console.error('Error reading existing subscribers:', error);
+=======
+;
+} catch (error) {
+    console.error('Error reading existing subscribers:', error);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
+    existing = [];
+  }
+  
+  // Check if email already exists
+  const existingSubscriber = existing.find(sub => sub.email === email);
+  if (existingSubscriber) {
+    res.statusCode = 400;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Invalid email format' }));
+    return;
+  }
+  const newSubscriber = {
+    id: Date.now().toString(),
+    email,
+    name: name || '',
+    preferences: preferences || {},
+    timestamp: new Date().toISOString(),
+    status: 'active'
+  };
+  existing.push(newSubscriber);
+  try {
+    const newSubscriber = {
+      id: Date.now().toString(),
+      email,
+      name: name || '',
+      preferences: preferences || {},
+      timestamp: new Date().toISOString(),
+      status: 'active'
+    };
+
+    // In a real application, you would save to a database
+    // For now, we'll just log the subscription
+    console.log('New subscription:', newSubscriber);
+
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true, 
+      message: 'Successfully subscribed to newsletter',
+      id: newSubscriber.id;
+}));
+  } catch (_error) {
+    // console.error('Error saving subscriber:', error);
+=======
+  } catch (error) {
+    console.error('Error saving subscriber:', error);
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      error: 'Failed to process subscription',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    }));
+  }
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847

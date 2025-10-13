@@ -1,67 +1,60 @@
-import React, { useState, useEffect } from 'react';
+'use client'}
+import React from 'react'}
+import { Helmet } from 'react-helmet-async'}
 
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  isOnline: boolean;
-}
-
-const PerformanceMetrics: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    isOnline: navigator.onLine
-  });
-
-  useEffect(() => {
-    // Measure page load time
-    const loadTime = performance.now();
-    setMetrics(prev => ({ ...prev, loadTime }));
-
-    // Monitor memory usage
-    const updateMemoryUsage = () => {
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        setMetrics(prev => ({
-          ...prev,
-          memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024)
-        }));
-      }
-    };
-
-    // Monitor online status
-    const handleOnlineStatus = () => {
-      setMetrics(prev => ({ ...prev, isOnline: navigator.onLine }));
-    };
-
-    window.addEventListener('online', handleOnlineStatus);
-    window.addEventListener('offline', handleOnlineStatus);
-
-    // Update memory usage periodically
-    const interval = setInterval(updateMemoryUsage, 5000);
-
-    return () => {
-      window.removeEventListener('online', handleOnlineStatus);
-      window.removeEventListener('offline', handleOnlineStatus);
-      clearInterval(interval);
-    };
-  }, []);
-
-  // Only show in development
-  if (process.env['NODE_ENV'] !== 'development') {
-    return null;
-  }
-
+export default function Page() {
   return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-3 rounded-lg text-xs font-mono z-50">
-      <div className="space-y-1">
-        <div>Load: {metrics.loadTime.toFixed(0)}ms
-        <div>Memory: {metrics.memoryUsage}MB
-        <div className={metrics.isOnline ? 'text-green-400' : 'text-red-400'}>
-          {metrics.isOnline ? 'Online' : 'Offline'}
-  );
-};
-
-export default PerformanceMetrics;
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>PerformanceMetrics - Zion Tech Group</title>
+        <meta name="description" content="Professional performancemetrics services by Zion Tech Group." />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            PerformanceMetrics
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional performancemetrics solutions tailored to your business needs.
+          </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge performancemetrics solutions.
+              </p>
+            </div>
+            
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation
+              </h3>
+              <p className="text-green-700">
+                Tailored performancemetrics implementations for your specific requirements.
+              </p>
+            </div>
+            
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your performancemetrics needs.
+              </p>
+            </div>
+          </div>
+          
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>}
+)
+}

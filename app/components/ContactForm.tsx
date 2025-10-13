@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
@@ -246,3 +247,5 @@ const ContactForm: React.FC = () => {
 };
 
 export default ContactForm;
+=======
+>>>>>>> origin/main

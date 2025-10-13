@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useCallback } from 'react';
+import { Loader2, AlertCircle } from 'lucide-react';
 
 interface OptimizedImageProps {
   src: string;
@@ -8,6 +8,10 @@ interface OptimizedImageProps {
   height?: number;
   className?: string;
   priority?: boolean;
+  placeholder?: 'blur' | 'empty';
+  blurDataURL?: string;
+  sizes?: string;
+  loading?: 'lazy' | 'eager';
   onLoad?: () => void;
   onError?: () => void;
 }
@@ -19,57 +23,84 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   height,
   className = '',
   priority = false,
+  placeholder = 'empty',
+  blurDataURL = '',
+  sizes = '100vw',
+  loading = 'lazy',
   onLoad,
-  onError,
+  onError
 }) => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
-  const handleLoad = () => {
-    setIsLoaded(true);
+  const handleLoad = useCallback(() => {
+    setIsLoading(false);
+    setImageLoaded(true);
     onLoad?.();
-  };
+  }, [onLoad]);
 
-  const handleError = () => {
+  const handleError = useCallback(() => {
+    setIsLoading(false);
     setHasError(true);
     onError?.();
-  };
+  }, [onError]);
 
   if (hasError) {
     return (
-      <div
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
+      <div 
+        className={`flex items-center justify-center bg-gray-200 text-gray-500 ${className}`}
         style={{ width, height }}
+        role="img"
+        aria-label={alt}
       >
-        <span className="text-gray-500">Failed to load image
+        <div className="text-center">
+          <AlertCircle className="w-8 h-8 mx-auto mb-2" />
+          <p className="text-sm">Failed to load image</p>
+        </div>
+      </div>
     );
   }
 
   return (
-    <motion.div
-      className={`relative overflow-hidden ${className}`}
-      style={{ width, height }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.3 }}
-    >
-      {!isLoaded && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse" />
+    <div className={`relative overflow-hidden ${className}`} style={{ width, height }}>
+      {isLoading && (
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800">
+          {placeholder === 'blur' && blurDataURL ? (
+            <img 
+              src={blurDataURL} 
+              alt="" 
+              className="w-full h-full object-cover filter blur-sm"
+            />
+          ) : (
+            <div className="text-center">
+              <Loader2 className="w-6 h-6 animate-spin text-cyan-500 mx-auto mb-2" />
+              <p className="text-xs text-gray-500">Loading...</p>
+            </div>
+          )}
+        </div>
       )}
+
       <img
-        ref={imgRef}
         src={src}
         alt={alt}
         width={width}
         height={height}
+        loading={priority ? 'eager' : loading}
+        sizes={sizes}
+        className={`transition-opacity duration-300 ${
+          imageLoaded ? 'opacity-100' : 'opacity-0'
+        } ${className}`}
         onLoad={handleLoad}
         onError={handleError}
-        loading={priority ? 'eager' : 'lazy'}
-        className={`transition-opacity duration-300 ${
-          isLoaded ? 'opacity-100' : 'opacity-0'
-        }`}
+        style={{
+          width: width ? `${width}px` : '100%',
+          height: height ? `${height}px` : 'auto',
+          objectFit: 'cover'
+        }}
+        decoding="async"
       />
+    </div>
   );
 };
 

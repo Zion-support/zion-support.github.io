@@ -9,6 +9,6 @@ export default function PagePage() {
           This page is under development.
         </p>
       </div>
-    </div>
-  );
+    </div>;
+)
 }

@@ -1,232 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Calendar,
-  Clock,
-  Play,
-  Pause,
-  Edit,
-  Trash2,
-  Plus,
-  Save,
-  X,
-  AlertCircle,
-  CheckCircle,
-  Target,
-  BarChart3,
-  Settings
-} from 'lucide-react';
+'use client'}
+import React from 'react'}
+import { Helmet } from 'react-helmet-async'}
 
-interface ScheduledAd {
-  id: string;
-  title: string;
-  description: string;
-  adId: string;
-  startDate: string;
-  endDate: string;
-  startTime: string;
-  endTime: string;
-  daysOfWeek: number[];
-  timezone: string;
-  status: 'scheduled' | 'running' | 'paused' | 'completed' | 'cancelled';
-  priority: 'low' | 'medium' | 'high';
-  budget: number;
-  targetAudience: string;
-  createdAt: string;
-  updatedAt: string;
-}
-
-interface AdSchedulerProps {
-  className?: string;
-}
-
-const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
-  const [scheduledAds, setScheduledAds] = useState<ScheduledAd[]>([]);
-  const [isCreating, setIsCreating] = useState(false);
-  const [isEditing, setIsEditing] = useState(false);
-  const [selectedSchedule, setSelectedSchedule] = useState<ScheduledAd | null>(null);
-  const [viewMode, setViewMode] = useState<'list' | 'calendar'>('list');
-  const [filter, setFilter] = useState<'all' | 'scheduled' | 'running' | 'paused' | 'completed'>('all');
-
-  // Form state
-  const [formData, setFormData] = useState({
-    title: '',
-    description: '',
-    adId: '',
-    startDate: '',
-    endDate: '',
-    startTime: '09:00',
-    endTime: '17:00',
-    daysOfWeek: [] as number[],
-    timezone: 'UTC',
-    priority: 'medium' as 'low' | 'medium' | 'high',
-    budget: 0,
-    targetAudience: ''
-  });
-
-  // Mock data
-  useEffect(() => {
-    const mockSchedules: ScheduledAd[] = [
-      {
-        id: '1',
-        title: 'Morning AI Campaign',
-        description: 'Promote AI solutions during business hours',
-        adId: 'ad-1',
-        startDate: '2024-01-15',
-        endDate: '2024-02-15',
-        startTime: '09:00',
-        endTime: '17:00',
-        daysOfWeek: [1, 2, 3, 4, 5], // Monday to Friday
-        timezone: 'UTC',
-        status: 'running',
-        priority: 'high',
-        budget: 5000,
-        targetAudience: 'Tech Professionals',
-        createdAt: '2024-01-10T00:00:00Z',
-        updatedAt: '2024-01-15T10:30:00Z'
-      },
-      {
-        id: '2',
-        title: 'Weekend Edge Computing',
-        description: 'Edge computing solutions for developers',
-        adId: 'ad-2',
-        startDate: '2024-01-20',
-        endDate: '2024-03-20',
-        startTime: '10:00',
-        endTime: '18:00',
-        daysOfWeek: [6, 0], // Saturday and Sunday
-        timezone: 'UTC',
-        status: 'scheduled',
-        priority: 'medium',
-        budget: 3000,
-        targetAudience: 'Developers',
-        createdAt: '2024-01-18T00:00:00Z',
-        updatedAt: '2024-01-18T14:20:00Z'
-      }
-    ];
-    setScheduledAds(mockSchedules);
-  }, []);
-
-  const filteredSchedules = scheduledAds.filter(schedule => {
-    const matchesFilter = filter === 'all' || schedule.status === filter;
-    return matchesFilter;
-  });
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'running': return 'bg-green-500';
-      case 'scheduled': return 'bg-blue-500';
-      case 'paused': return 'bg-yellow-500';
-      case 'completed': return 'bg-gray-500';
-      case 'cancelled': return 'bg-red-500';
-      default: return 'bg-gray-500';
-    }
-  };
-
-  const getPriorityColor = (priority: string) => {
-    switch (priority) {
-      case 'high': return 'text-red-600 bg-red-50';
-      case 'medium': return 'text-yellow-600 bg-yellow-50';
-      case 'low': return 'text-green-600 bg-green-50';
-      default: return 'text-gray-600 bg-gray-50';
-    }
-  };
-
-  const getDaysOfWeekNames = (days: number[]) => {
-    const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-    return days.map(day => dayNames[day]).join(', ');
-  };
-
-  const handleCreate = () => {
-    setIsCreating(true);
-    setFormData({
-      title: '',
-      description: '',
-      adId: '',
-      startDate: '',
-      endDate: '',
-      startTime: '09:00',
-      endTime: '17:00',
-      daysOfWeek: [],
-      timezone: 'UTC',
-      priority: 'medium',
-      budget: 0,
-      targetAudience: ''
-    });
-  };
-
-  const handleEdit = (schedule: ScheduledAd) => {
-    setSelectedSchedule(schedule);
-    setFormData({
-      title: schedule.title,
-      description: schedule.description,
-      adId: schedule.adId,
-      startDate: schedule.startDate,
-      endDate: schedule.endDate,
-      startTime: schedule.startTime,
-      endTime: schedule.endTime,
-      daysOfWeek: schedule.daysOfWeek,
-      timezone: schedule.timezone,
-      priority: schedule.priority,
-      budget: schedule.budget,
-      targetAudience: schedule.targetAudience
-    });
-    setIsEditing(true);
-  };
-
-  const handleSave = () => {
-    if (isCreating) {
-      const newSchedule: ScheduledAd = {
-        id: Date.now().toString(),
-        ...formData,
-        status: 'scheduled',
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString()
-      };
-      setScheduledAds([...scheduledAds, newSchedule]);
-    } else if (isEditing && selectedSchedule) {
-      const updatedSchedules = scheduledAds.map(schedule =>
-        schedule.id === selectedSchedule.id
-          ? { ...schedule, ...formData, updatedAt: new Date().toISOString() }
-          : schedule
-      );
-      setScheduledAds(updatedSchedules);
-    }
-    
-    setIsCreating(false);
-    setIsEditing(false);
-    setSelectedSchedule(null);
-  };
-
-  const handleCancel = () => {
-    setIsCreating(false);
-    setIsEditing(false);
-    setSelectedSchedule(null);
-  };
-
-  const handleStatusChange = (id: string, newStatus: string) => {
-    const updatedSchedules = scheduledAds.map(schedule =>
-      schedule.id === id
-        ? { ...schedule, status: newStatus as any, updatedAt: new Date().toISOString() }
-        : schedule
-    );
-    setScheduledAds(updatedSchedules);
-  };
-
-  const handleDelete = (id: string) => {
-    setScheduledAds(scheduledAds.filter(schedule => schedule.id !== id));
-  };
-
-  const toggleDayOfWeek = (day: number) => {
-    setFormData(prev => ({
-      ...prev,
-      daysOfWeek: prev.daysOfWeek.includes(day)
-        ? prev.daysOfWeek.filter(d => d !== day)
-        : [...prev.daysOfWeek, day]
-    }));
-  };
-
+export default function Page() {
   return (
+<<<<<<< HEAD
     <div className={`ad-scheduler ${className}`}>
       {/* Header */}
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
@@ -597,3 +375,59 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
 };
 
 export default AdScheduler;
+=======
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>AdScheduler - Zion Tech Group</title>
+        <meta name="description" content="Professional adscheduler services by Zion Tech Group." />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            AdScheduler
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional adscheduler solutions tailored to your business needs.
+          </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge adscheduler solutions.
+              </p>
+            </div>
+            
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation
+              </h3>
+              <p className="text-green-700">
+                Tailored adscheduler implementations for your specific requirements.
+              </p>
+            </div>
+            
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your adscheduler needs.
+              </p>
+            </div>
+          </div>
+          
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>}
+)
+}
+>>>>>>> origin/main

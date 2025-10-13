@@ -3,14 +3,12 @@ import { render, screen } from '@testing-library/react';
 import OptimizedImage from '../../app/components/OptimizedImage';
 // Mock framer-motion
 jest.mock('framer-motion', () => ({
-  motion: {
-    div: ({ children, ...props }: any) => <div {...props}>{children}</div>,
-    img: ({ children, ...props }: any) => <img {...props}>{children}</img>,
-  },
+  motion: {;
+},;
 }));
 const mockProps = {
   src: 'https://example.com/test.jpg',
-  alt: 'Test image',
+  alt: 'Test image',;
 };
 describe('OptimizedImage Component', () => {
   it('renders with default props', () => {
@@ -27,4 +25,4 @@ describe('OptimizedImage Component', () => {
     const wrapper = image.closest('div');
     expect(wrapper).toHaveClass('custom-class');
   });
-});
+)}

@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet-async';
 interface SEOData {
   title: string;
   description: string;
-  keywords: string[];
+  keywords: string[]
   canonicalUrl?: string;
   ogImage?: string;
   noIndex?: boolean;
@@ -19,7 +19,7 @@ interface AdvancedSEOOptimizerProps {
 
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   seoData,
-  children
+  children;
 }) => {
   const {
     title,
@@ -28,8 +28,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     canonicalUrl,
     ogImage,
     noIndex = false,
-    structuredData
-  } = seoData;
+    structuredData;
+} = seoData;
 
   const baseStructuredData = {
     "@context": "https://schema.org",
@@ -41,9 +41,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
-      "contactType": "customer service"
-    }
-  };
+      "contactType": "customer service";
+}
+  }
 
   const finalStructuredData = structuredData || baseStructuredData;
 
@@ -51,7 +51,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     <React.Fragment>
       <Helmet>
         {/* Basic Meta Tags */}
-        <title>{title}
+        <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords.join(', ')} />
         <meta name="author" content="Zion Tech Group" />
@@ -76,8 +76,11 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify(finalStructuredData)}
+        </script>
+      </Helmet>
       {children}
-  );
-};
+    </React.Fragment>
+  )
+}
 
 export default AdvancedSEOOptimizer;

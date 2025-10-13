@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 
 interface CacheStats {
@@ -307,3 +308,5 @@ const CacheManager: React.FC = () => {
 };
 
 export default CacheManager;
+=======
+>>>>>>> origin/main

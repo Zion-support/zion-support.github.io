@@ -1,8 +1,4 @@
-import { withErrorLogging } from './withErrorLogging.cjs';
-
-const PROD_DOMAIN = 'https://ziontechgroup.com';
-
-async function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
@@ -20,36 +16,30 @@ async function handler(req, res) {
   }
 
   try {
-    // Basic checkout session creation logic
-    const sessionData = {
+    // Create checkout session logic here
+    const checkoutSession = {
+      id: `cs_${Date.now()}`,
       productId,
       userId: userId || null,
       timestamp: new Date().toISOString(),
       status: 'pending'
     };
 
-    // In a real implementation, you would:
-    // 1. Create a session with your payment provider (Stripe, PayPal, etc.)
-    // 2. Store session data in your database
-    // 3. Return the session ID and checkout URL
-
+    // Mock session creation
+    const sessionId = 'cs_' + Math.random().toString(36).substr(2, 9);
+    
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({
+    res.end(JSON.stringify({ 
       success: true,
-      sessionId: `session_${Date.now()}`,
-      checkoutUrl: `${PROD_DOMAIN}/checkout?session=${Date.now()}`,
+      sessionId,
       sessionData
     }));
-  } catch (error) {
-    console.error('Checkout session creation error:', error);
+  } catch (_error) { // eslint-disable-line no-unused-vars
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
-      error: 'Failed to create checkout session',
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+      error: 'Failed to create checkout session'
     }));
   }
 }
-
-export default withErrorLogging(handler);

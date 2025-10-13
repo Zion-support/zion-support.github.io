@@ -1,164 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Plus, 
-  Edit, 
-  Trash2, 
-  Play, 
-  Pause, 
-  Eye, 
-  BarChart3, 
-  Calendar,
-  Target,
-  DollarSign,
-  Users,
-  TrendingUp,
-  Filter,
-  Search,
-  Download,
-  Upload
-} from 'lucide-react';
+'use client'}
+import React from 'react'}
+import { Helmet } from 'react-helmet-async'}
 
-interface Ad {
-  id: string;
-  title: string;
-  description: string;
-  type: 'banner' | 'popup' | 'sidebar' | 'inline';
-  status: 'draft' | 'active' | 'paused' | 'completed';
-  targetAudience: string;
-  budget: number;
-  spent: number;
-  impressions: number;
-  clicks: number;
-  conversions: number;
-  startDate: string;
-  endDate: string;
-  createdAt: string;
-  updatedAt: string;
-  imageUrl?: string;
-  ctaText: string;
-  ctaUrl: string;
-  tags: string[];
-}
-
-interface AdManagementSystemProps {
-  className?: string;
-}
-
-const AdManagementSystem: React.FC<AdManagementSystemProps> = ({ className = '' }) => {
-  const [ads, setAds] = useState<Ad[]>([]);
-  const [selectedAd, setSelectedAd] = useState<Ad | null>(null);
-  const [isCreating, setIsCreating] = useState(false);
-  const [isEditing, setIsEditing] = useState(false);
-  const [filter, setFilter] = useState<'all' | 'draft' | 'active' | 'paused' | 'completed'>('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState<'createdAt' | 'budget' | 'performance'>('createdAt');
-
-  // Mock data - in real app, this would come from an API
-  useEffect(() => {
-    const mockAds: Ad[] = [
-      {
-        id: '1',
-        title: 'AI Revolution Banner',
-        description: 'Promote our latest AI solutions',
-        type: 'banner',
-        status: 'active',
-        targetAudience: 'Tech Professionals',
-        budget: 10000,
-        spent: 3500,
-        impressions: 125000,
-        clicks: 2500,
-        conversions: 125,
-        startDate: '2024-01-01',
-        endDate: '2024-12-31',
-        createdAt: '2024-01-01T00:00:00Z',
-        updatedAt: '2024-01-15T10:30:00Z',
-        imageUrl: '/images/ai-banner.jpg',
-        ctaText: 'Learn More',
-        ctaUrl: '/ai-solutions',
-        tags: ['AI', 'Technology', 'B2B']
-      },
-      {
-        id: '2',
-        title: 'Edge Computing Popup',
-        description: 'Edge computing solutions promotion',
-        type: 'popup',
-        status: 'paused',
-        targetAudience: 'Developers',
-        budget: 5000,
-        spent: 1200,
-        impressions: 45000,
-        clicks: 900,
-        conversions: 45,
-        startDate: '2024-02-01',
-        endDate: '2024-11-30',
-        createdAt: '2024-01-15T00:00:00Z',
-        updatedAt: '2024-01-20T14:20:00Z',
-        ctaText: 'Get Started',
-        ctaUrl: '/edge-computing',
-        tags: ['Edge', 'Computing', 'Developers']
-      }
-    ];
-    setAds(mockAds);
-  }, []);
-
-  const filteredAds = ads.filter(ad => {
-    const matchesFilter = filter === 'all' || ad.status === filter;
-    const matchesSearch = ad.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         ad.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         ad.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesFilter && matchesSearch;
-  });
-
-  const sortedAds = [...filteredAds].sort((a, b) => {
-    switch (sortBy) {
-      case 'createdAt':
-        return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
-      case 'budget':
-        return b.budget - a.budget;
-      case 'performance':
-        const aPerformance = a.conversions / a.clicks || 0;
-        const bPerformance = b.conversions / b.clicks || 0;
-        return bPerformance - aPerformance;
-      default:
-        return 0;
-    }
-  });
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'active': return 'bg-green-500';
-      case 'paused': return 'bg-yellow-500';
-      case 'draft': return 'bg-gray-500';
-      case 'completed': return 'bg-blue-500';
-      default: return 'bg-gray-500';
-    }
-  };
-
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'banner': return '📊';
-      case 'popup': return '💬';
-      case 'sidebar': return '📋';
-      case 'inline': return '📝';
-      default: return '📄';
-    }
-  };
-
-  const calculateCTR = (clicks: number, impressions: number) => {
-    return impressions > 0 ? ((clicks / impressions) * 100).toFixed(2) : '0.00';
-  };
-
-  const calculateConversionRate = (conversions: number, clicks: number) => {
-    return clicks > 0 ? ((conversions / clicks) * 100).toFixed(2) : '0.00';
-  };
-
-  const calculateROI = (spent: number, conversions: number, averageValue: number = 100) => {
-    const revenue = conversions * averageValue;
-    return spent > 0 ? (((revenue - spent) / spent) * 100).toFixed(1) : '0.0';
-  };
-
+export default function Page() {
   return (
+<<<<<<< HEAD
     <div className={`ad-management-system ${className}`}>
       {/* Header */}
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
@@ -418,3 +264,59 @@ const AdManagementSystem: React.FC<AdManagementSystemProps> = ({ className = '' 
 };
 
 export default AdManagementSystem;
+=======
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>AdManagementSystem - Zion Tech Group</title>
+        <meta name="description" content="Professional admanagementsystem services by Zion Tech Group." />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            AdManagementSystem
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional admanagementsystem solutions tailored to your business needs.
+          </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge admanagementsystem solutions.
+              </p>
+            </div>
+            
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation
+              </h3>
+              <p className="text-green-700">
+                Tailored admanagementsystem implementations for your specific requirements.
+              </p>
+            </div>
+            
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your admanagementsystem needs.
+              </p>
+            </div>
+          </div>
+          
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>}
+)
+}
+>>>>>>> origin/main

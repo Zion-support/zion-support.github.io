@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
 
@@ -54,3 +55,5 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 };
 
 export default AnimatedCounter;
+=======
+>>>>>>> origin/main
