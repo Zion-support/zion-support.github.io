@@ -1,19 +1,16 @@
-
-
-
-
+import React, { Component, ReactNode } from 'react';
+import { Link } from 'react-router-dom';
+import { RefreshCw, Home } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;}
+  fallback?: ReactNode;
 }
 
 interface State {
   hasError: boolean;
-
-
-
-
+  error?: Error;
+  errorInfo?: any;
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -21,7 +18,8 @@ class ErrorBoundary extends Component<Props, State> {
     super(props);
     this.state = {
       hasError: false,
-
+      error: undefined,
+      errorInfo: undefined
     };
   }
 
@@ -29,16 +27,17 @@ class ErrorBoundary extends Component<Props, State> {
     return {
       hasError: true,
       error,
+      errorInfo: undefined
+    };
+  }
 
-
+  componentDidCatch(error: Error, errorInfo: any) {
     this.setState({
       error,
       errorInfo
     });
 
-
     // Log error to console in development
-
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
@@ -51,9 +50,11 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   handleRetry = () => {
-
-
-
+    this.setState({
+      hasError: false,
+      error: undefined,
+      errorInfo: undefined
+    });
   };
 
   render() {
@@ -66,9 +67,7 @@ class ErrorBoundary extends Component<Props, State> {
         <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
           <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">
             <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6">
-
-
-
+              <RefreshCw className="w-8 h-8 text-red-400" />
             </div>
             
             <h1 className="text-2xl font-bold text-white mb-4">
@@ -76,26 +75,22 @@ class ErrorBoundary extends Component<Props, State> {
             </h1>
             
             <p className="text-gray-300 mb-6">
-
-
-
-
-
+              We're sorry, but something unexpected happened. Please try again or contact support if the problem persists.
             </p>
-'
+
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
                 <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
-
+                  Show Error Details
                 </summary>
                 <div className="mt-2 p-4 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto">
-                  <div className="mb-2">}
+                  <div className="mb-2">
                     <strong>Error:</strong> {this.state.error.message}
                   </div>
                   {this.state.errorInfo && (
                     <div>
                       <strong>Stack Trace:</strong>
-                      <pre className="mt-1 whitespace-pre-wrap">}
+                      <pre className="mt-1 whitespace-pre-wrap">
                         {this.state.errorInfo.componentStack}
                       </pre>
                     </div>
@@ -104,35 +99,18 @@ class ErrorBoundary extends Component<Props, State> {
               </details>
             )}
 
-            <div className="flex flex-col sm:flex-row gap-3">
-              <button
-                onClick={this.handleRetry}
-                className="flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
-              >
-                <RefreshCw className="w-4 h-4" />
-
-                </summary>
-                <pre className="mt-2 text-xs text-red-300 bg-slate-900 p-3 rounded overflow-auto">
-                  {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
-                </pre>
-              </details>
-            )}
-
             <div className="space-y-3">
               <button
                 onClick={this.handleRetry}
                 className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
               >
-                <ArrowPathIcon className="w-5 h-5" />
-
-
+                <RefreshCw className="w-5 h-5" />
                 Try Again
               </button>
               
               <Link
                 to="/"
-
+                className="w-full border border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <Home className="w-4 h-4" />
                 Go Home
@@ -140,20 +118,13 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
 
             <div className="mt-6 pt-6 border-t border-slate-700">
-              <p className="text-sm text-gray-400">'
+              <p className="text-sm text-gray-400">
                 If this problem persists, please{' '}
                 <Link to="/contact" className="text-purple-400 hover:text-purple-300">
                   contact our support team
                 </Link>
               </p>
             </div>
-
-              >
-                Go Home
-              </Link>
-            </div>
-
-
           </div>
         </div>
       );
@@ -163,4 +134,4 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }
 
-
+export default ErrorBoundary;

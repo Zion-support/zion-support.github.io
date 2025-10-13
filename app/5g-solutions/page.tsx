@@ -1,54 +1,52 @@
 import React from 'react';
-import { Helmet , Right,  Wifi,  Circle,  Zap,  Globe,  Smartphone  } from 'lucide-react';
+import { Helmet, Right, Wifi, Circle, Zap, Globe, Smartphone } from 'lucide-react';
 
 const FiveGSolutionsPage: React.FC = () => {
   const features = [
     {
-      icon: Zap,'
-      title: 'Ultra-Fast Speeds','
-      description: 'Experience lightning-fast 5G connectivity with speeds up to 10 Gbps','
-      benefits: ['10x faster than 4G', 'Low latency', 'High bandwidth', 'Reliable connection']}
+      icon: Zap,
+      title: 'Ultra-Fast Speeds',
+      description: 'Experience lightning-fast 5G connectivity with speeds up to 10 Gbps',
+      benefits: ['10x faster than 4G', 'Low latency', 'High bandwidth', 'Reliable connection']
     },
     {
-      icon: Globe,'
-      title: 'Global Coverage','
-      description: 'Comprehensive 5G network coverage across multiple regions','
-      benefits: ['Wide coverage', 'Seamless roaming', 'International support', 'Network redundancy']}
+      icon: Globe,
+      title: 'Global Coverage',
+      description: 'Comprehensive 5G network coverage across multiple regions',
+      benefits: ['Wide coverage', 'Seamless roaming', 'International support', 'Network redundancy']
     },
     {
-      icon: Smartphone,'
-      title: 'Mobile Optimization','
-      description: 'Optimized 5G solutions for mobile devices and applications','
-      benefits: ['Mobile-first design', 'App optimization', 'Battery efficiency', 'Device compatibility']}
+      icon: Smartphone,
+      title: 'Mobile Optimization',
+      description: 'Optimized 5G solutions for mobile devices and applications',
+      benefits: ['Mobile-first design', 'App optimization', 'Battery efficiency', 'Device compatibility']
     },
     {
       icon: Wifi,
-
-
+      title: 'IoT Integration',
+      description: 'Seamless integration with IoT devices and smart systems',
+      benefits: ['Device connectivity', 'Data streaming', 'Real-time monitoring', 'Scalable architecture']
     }
   ];
 
   const solutions = [
     {
-
+      title: '5G Network Infrastructure',
       description: 'Complete 5G network setup and optimization',
       price: 'Starting at $50,000',
       features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']
-
     },
-    {'
-      title: '5G Mobile Applications','
-      description: 'Custom mobile apps optimized for 5G networks','
-      price: 'Starting at $25,000','
-      features: ['App development', '5G optimization', 'Testing & QA', 'Deployment support']}
+    {
+      title: '5G Mobile Applications',
+      description: 'Custom mobile apps optimized for 5G networks',
+      price: 'Starting at $25,000',
+      features: ['App development', '5G optimization', 'Testing & QA', 'Deployment support']
     },
-    {'
-      title: '5G IoT Solutions','
-      description: 'IoT device connectivity and management platform','
-      price: 'Starting at $35,000','
+    {
+      title: '5G IoT Solutions',
+      description: 'IoT device connectivity and management platform',
+      price: 'Starting at $35,000',
       features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']
-
-
     }
   ];
 
@@ -107,7 +105,7 @@ const FiveGSolutionsPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
-              return (}
+              return (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300">
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg mb-4">
                     <IconComponent className="w-6 h-6 text-white" />
@@ -115,7 +113,7 @@ const FiveGSolutionsPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (}
+                    {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-400">
                         <Circle className="w-3 h-3 text-blue-400 mr-2" />
                         {benefit}
@@ -142,12 +140,12 @@ const FiveGSolutionsPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {solutions.map((solution, index) => (}
+            {solutions.map((solution, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300">
                 <h3 className="text-2xl font-bold text-white mb-4">{solution.title}</h3>
                 <p className="text-gray-300 mb-6">{solution.description}</p>
                 <ul className="space-y-3">
-                  {solution.features.map((feature, idx) => (}
+                  {solution.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-400">
                       <Circle className="w-4 h-4 text-blue-400 mr-3" />
                       {feature}
@@ -181,4 +179,4 @@ const FiveGSolutionsPage: React.FC = () => {
   );
 };
 
-export default FiveGSolutionsPage;'
+export default FiveGSolutionsPage;
