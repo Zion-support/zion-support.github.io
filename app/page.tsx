@@ -38,7 +38,59 @@ const HomePage = () => {
     },
   ];
 
+  const aiServicesHighlights = [
+    {
+      name: "AI Medical Diagnostics Pro",
+      description: "Revolutionary healthcare AI platform",
+      price: "From $299/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/ai-medical-diagnostics-pro"
+    },
+    {
+      name: "AI Analytics Dashboard Pro",
+      description: "Advanced AI-powered analytics",
+      price: "From $199/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/ai-analytics-dashboard-pro"
+    },
+    {
+      name: "AI Cybersecurity Suite Pro",
+      description: "Comprehensive AI security solution",
+      price: "From $399/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/ai-cybersecurity-suite-pro"
+    }
+  ];
+
   const microSaasHighlights = [
+    {
+      name: "Zion AI CRM Pro",
+      description: "AI-powered customer relationship management",
+      price: "From $49/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/zion-ai-crm-pro"
+    },
+    {
+      name: "Zion Blockchain Analytics Pro",
+      description: "Advanced crypto & DeFi analytics platform",
+      price: "From $79/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/zion-blockchain-analytics-pro"
+    },
+    {
+      name: "Zion Quantum Simulator Pro",
+      description: "Quantum computing simulation platform",
+      price: "From $99/month",
+      icon: <Zap className="w-6 h-6" />,
+      link: "/zion-quantum-simulator-pro"
+    },
+    {
+      name: "Zion Cyber Shield Pro",
+      description: "AI-powered cybersecurity platform",
+      price: "From $149/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/zion-cyber-shield-pro"
+    },
     {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform",
@@ -204,12 +256,63 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* AI Services Highlights */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <span className="holographic-text">Featured AI Services</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Cutting-edge artificial intelligence solutions transforming industries and revolutionizing business operations.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {aiServicesHighlights.map((service, index) => (
+              <Link 
+                key={index}
+                to={service.link}
+                className="group neon-card hover:transform hover:scale-105 transition-all duration-300"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl mr-4">
+                    {service.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white group-hover:text-purple-300 transition-colors">
+                      {service.name}
+                    </h3>
+                    <p className="text-sm text-purple-400 font-medium">{service.price}</p>
+                  </div>
+                </div>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <div className="flex items-center text-purple-400 group-hover:text-purple-300 transition-colors">
+                  <span className="text-sm font-medium">Learn More</span>
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
+            ))}
+          </div>
+          
+          <div className="text-center">
+            <Link 
+              to="/ai-services" 
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+            >
+              View All AI Services
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Micro SAAS Highlights */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Featured Micro SAAS Solutions
+              <span className="holographic-text">Featured Micro SAAS Solutions</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Ready-to-use software solutions that can transform your business operations immediately.

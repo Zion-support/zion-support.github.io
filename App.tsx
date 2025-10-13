@@ -57,6 +57,7 @@ const AiProjectManagementPage = React.lazy(() => import("./app/ai-project-manage
 const AiRecommendationEnginePage = React.lazy(() => import("./app/ai-recommendation-engine/page"));
 const AiSalesAutomationPage = React.lazy(() => import("./app/ai-sales-automation/page"));
 const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
+const AIMedicalDiagnosticsProPage = React.lazy(() => import("./app/ai-medical-diagnostics-pro/page"));
 
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(
@@ -177,6 +178,20 @@ const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
 );
 
+// New Advanced Micro SAAS Pages
+const ZionAICRMProPage = React.lazy(
+  () => import("./app/zion-ai-crm-pro/page"),
+);
+const ZionBlockchainAnalyticsProPage = React.lazy(
+  () => import("./app/zion-blockchain-analytics-pro/page"),
+);
+const ZionQuantumSimulatorProPage = React.lazy(
+  () => import("./app/zion-quantum-simulator-pro/page"),
+);
+const ZionCyberShieldProPage = React.lazy(
+  () => import("./app/zion-cyber-shield-pro/page"),
+);
+
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(
   () => import("./app/5g-data-analytics/page"),
@@ -261,6 +276,7 @@ function App() {
                   <Route path="/ai-recommendation-engine" element={<AiRecommendationEnginePage />} />
                   <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
                   <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
+                  <Route path="/ai-medical-diagnostics-pro" element={<AIMedicalDiagnosticsProPage />} />
 
                   {/* IT Service Routes */}
                   <Route
@@ -419,6 +435,24 @@ function App() {
                   <Route
                     path="/zion-performance-monitor"
                     element={<ZionPerformanceMonitorPage />}
+                  />
+
+                  {/* New Advanced Micro SAAS Routes */}
+                  <Route
+                    path="/zion-ai-crm-pro"
+                    element={<ZionAICRMProPage />}
+                  />
+                  <Route
+                    path="/zion-blockchain-analytics-pro"
+                    element={<ZionBlockchainAnalyticsProPage />}
+                  />
+                  <Route
+                    path="/zion-quantum-simulator-pro"
+                    element={<ZionQuantumSimulatorProPage />}
+                  />
+                  <Route
+                    path="/zion-cyber-shield-pro"
+                    element={<ZionCyberShieldProPage />}
                   />
 
                   {/* 5G Solutions Routes */}

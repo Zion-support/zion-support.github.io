@@ -20,6 +20,7 @@ const Navigation = React.memo(() => {
   }, [isMicroSaasOpen])
 
   const aiServices = useMemo(() => [
+    { name: 'AI Medical Diagnostics Pro', path: '/ai-medical-diagnostics-pro', icon: <Brain className="w-4 h-4" />, featured: true },
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Brain className="w-4 h-4" /> },
     { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> },
@@ -32,6 +33,10 @@ const Navigation = React.memo(() => {
     { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
     { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
     { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI CRM Pro', path: '/zion-ai-crm-pro', icon: <Brain className="w-4 h-4" />, featured: true },
+    { name: 'Zion Blockchain Analytics Pro', path: '/zion-blockchain-analytics-pro', icon: <Database className="w-4 h-4" />, featured: true },
+    { name: 'Zion Quantum Simulator Pro', path: '/zion-quantum-simulator-pro', icon: <Zap className="w-4 h-4" />, featured: true },
+    { name: 'Zion Cyber Shield Pro', path: '/zion-cyber-shield-pro', icon: <Shield className="w-4 h-4" />, featured: true },
     { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> },
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
