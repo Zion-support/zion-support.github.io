@@ -75,8 +75,8 @@ const HomePage = () => {
       description: "Ready-to-use software solutions for immediate deployment including analytics, security, and productivity tools",
       icon: <Zap className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500",
-      stats: "50+ solutions",
-      link: "/micro-saas"
+      stats: "60+ solutions",
+      link: "/micro-saas-services"
     },
     {
       title: "5G Solutions",
@@ -334,7 +334,7 @@ const HomePage = () => {
           </div>
           <div className="text-center mt-12">
             <Link
-              to="/micro-saas"
+              to="/micro-saas-services"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-700 transition-all duration-300 group"
             >
               View All Micro SAAS Solutions

@@ -79,6 +79,16 @@ const SmartInventoryOptimizerPage = React.lazy(() => import("./app/smart-invento
 const AICustomerSentimentTrackerPage = React.lazy(() => import("./app/ai-customer-sentiment-tracker/page"));
 const SmartExpenseCategorizerPage = React.lazy(() => import("./app/smart-expense-categorizer/page"));
 
+// Featured Micro SAAS Services
+const ZionAnalyticsProPage = React.lazy(() => import("./app/zion-analytics-pro/page"));
+const ZionSecurityShieldPage = React.lazy(() => import("./app/zion-security-shield/page"));
+const ZionCloudVaultPage = React.lazy(() => import("./app/zion-cloud-vault/page"));
+const ZionAICrmProPage = React.lazy(() => import("./app/zion-ai-crm-pro/page"));
+const ZionAIMarketingAutomationProPage = React.lazy(() => import("./app/zion-ai-marketing-automation-pro/page"));
+const ZionAIProjectManagerProPage = React.lazy(() => import("./app/zion-ai-project-manager-pro/page"));
+const ZionAIContentStudioPage = React.lazy(() => import("./app/zion-ai-content-studio/page"));
+const ZionAIDataSyncPage = React.lazy(() => import("./app/zion-ai-data-sync/page"));
+
 function App() {
   useEffect(() => {
     // Initialize performance monitoring
@@ -165,6 +175,16 @@ function App() {
                               <Route path="/smart-inventory-optimizer" element={<SmartInventoryOptimizerPage />} />
                               <Route path="/ai-customer-sentiment-tracker" element={<AICustomerSentimentTrackerPage />} />
                               <Route path="/smart-expense-categorizer" element={<SmartExpenseCategorizerPage />} />
+
+                              {/* Featured Micro SAAS Services */}
+                              <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
+                              <Route path="/zion-security-shield" element={<ZionSecurityShieldPage />} />
+                              <Route path="/zion-cloud-vault" element={<ZionCloudVaultPage />} />
+                              <Route path="/zion-ai-crm-pro" element={<ZionAICrmProPage />} />
+                              <Route path="/zion-ai-marketing-automation-pro" element={<ZionAIMarketingAutomationProPage />} />
+                              <Route path="/zion-ai-project-manager-pro" element={<ZionAIProjectManagerProPage />} />
+                              <Route path="/zion-ai-content-studio" element={<ZionAIContentStudioPage />} />
+                              <Route path="/zion-ai-data-sync" element={<ZionAIDataSyncPage />} />
 
                               {/* Additional AI Services Routes */}
                               <Route path="/ai-chatbot-builder" element={React.createElement(React.lazy(() => import("./app/ai-chatbot-builder/page")))} />

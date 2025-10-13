@@ -28,7 +28,11 @@ import {
   Receipt,
   TrendingUp,
   Cpu,
-  Network
+  Network,
+  Clock,
+  FileText,
+  Target,
+  Calendar
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -137,13 +141,27 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
       hasDropdown: true,
       dropdownItems: [
         {
+          name: 'Featured Solutions',
+          icon: <Star className="w-4 h-4" />,
+          items: [
+            { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" /> },
+            { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" /> },
+            { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" /> },
+            { name: 'Zion AI CRM Pro', path: '/zion-ai-crm-pro', icon: <Users className="w-4 h-4" /> },
+            { name: 'Zion AI Marketing Pro', path: '/zion-ai-marketing-automation-pro', icon: <Target className="w-4 h-4" /> },
+            { name: 'Zion AI Project Manager', path: '/zion-ai-project-manager-pro', icon: <Calendar className="w-4 h-4" /> }
+          ]
+        },
+        {
           name: 'AI-Powered Tools',
           icon: <Brain className="w-4 h-4" />,
           items: [
             { name: 'AI Email Analyzer', path: '/ai-powered-email-analyzer', icon: <Mail className="w-4 h-4" /> },
             { name: 'Customer Sentiment Tracker', path: '/ai-customer-sentiment-tracker', icon: <Heart className="w-4 h-4" /> },
             { name: 'Smart Expense Categorizer', path: '/smart-expense-categorizer', icon: <Receipt className="w-4 h-4" /> },
-            { name: 'Smart Inventory Optimizer', path: '/smart-inventory-optimizer', icon: <Package className="w-4 h-4" /> }
+            { name: 'Smart Inventory Optimizer', path: '/smart-inventory-optimizer', icon: <Package className="w-4 h-4" /> },
+            { name: 'AI Content Studio', path: '/zion-ai-content-studio', icon: <FileText className="w-4 h-4" /> },
+            { name: 'AI Data Sync', path: '/zion-ai-data-sync', icon: <Database className="w-4 h-4" /> }
           ]
         },
         {

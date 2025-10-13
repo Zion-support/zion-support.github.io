@@ -45,14 +45,14 @@ const Footer = React.memo(() => {
   ], []);
 
   const services = useMemo(() => [
-    { name: "AI Services", path: "/ai-services", icon: <Brain className="w-4 h-4" /> },
-    { name: "IT Services", path: "/it-services", icon: <Shield className="w-4 h-4" /> },
-    { name: "Micro SAAS", path: "/micro-saas", icon: <Zap className="w-4 h-4" /> },
+    { name: "AI Services", path: "/services", icon: <Brain className="w-4 h-4" /> },
+    { name: "IT Services", path: "/services", icon: <Shield className="w-4 h-4" /> },
+    { name: "Micro SAAS", path: "/micro-saas-services", icon: <Zap className="w-4 h-4" /> },
     { name: "5G Solutions", path: "/5g-solutions", icon: <Globe className="w-4 h-4" /> },
-    { name: "Cloud Services", path: "/cloud-services", icon: <Cloud className="w-4 h-4" /> },
-    { name: "Cybersecurity", path: "/cybersecurity", icon: <Shield className="w-4 h-4" /> },
-    { name: "Web Development", path: "/web-development", icon: <Code className="w-4 h-4" /> },
-    { name: "Data Analytics", path: "/data-analytics", icon: <BarChart3 className="w-4 h-4" /> }
+    { name: "Cloud Services", path: "/services", icon: <Cloud className="w-4 h-4" /> },
+    { name: "Cybersecurity", path: "/services", icon: <Shield className="w-4 h-4" /> },
+    { name: "Web Development", path: "/services", icon: <Code className="w-4 h-4" /> },
+    { name: "Data Analytics", path: "/services", icon: <BarChart3 className="w-4 h-4" /> }
   ], []);
 
   const companyLinks = useMemo(() => [
@@ -97,84 +97,35 @@ const Footer = React.memo(() => {
       
       <div className="relative z-10">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
           {/* Company Info */}
-          <div className="lg:col-span-2 space-y-4">
+          <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
+              <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </div>
+            
+            <p className="text-gray-300 text-sm leading-relaxed">
+              Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. 
+              Transform your operations with cutting-edge technology.
+            </p>
 
-            {/* Services */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
-              <ul className="space-y-3">
-                {services.map((service) => (
-                  <li key={service.name}>
-                    <Link
-                      to={service.path}
-                      className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors group"
-                    >
-                      <span className="mr-2 group-hover:scale-110 transition-transform duration-300">
-                        {service.icon}
-                      </span>
-                      <span className="text-sm">{service.name}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Company */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-white mb-4">Company</h3>
-              <ul className="space-y-3">
-                {companyLinks.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      to={link.path}
-                      className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Support */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-white mb-4">Support</h3>
-              <ul className="space-y-3">
-                {supportLinks.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      to={link.path}
-                      className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Legal */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-white mb-4">Legal</h3>
-              <ul className="space-y-3">
-                {legalLinks.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      to={link.path}
-                      className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+            {/* Contact Info */}
+            <div className="space-y-3">
+              <div className="flex items-center text-gray-300 text-sm">
+                <Mail className="w-4 h-4 mr-2 text-cyan-400" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center text-gray-300 text-sm">
+                <Phone className="w-4 h-4 mr-2 text-cyan-400" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-start text-gray-300 text-sm">
+                <MapPin className="w-4 h-4 mr-2 text-cyan-400 mt-0.5" />
+                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+              </div>
             </div>
           </div>
 
@@ -184,50 +135,105 @@ const Footer = React.memo(() => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/ai-services"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                  to="/ai-business-intelligence"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
                 >
-                  AI Services Overview
+                  AI Business Intelligence
                 </Link>
               </li>
               <li>
                 <Link
                   to="/ai-analytics"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
                 >
                   AI Analytics
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/ai-automation"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
-                >
-                  AI Automation
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/ai-content-generation"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
                 >
                   AI Content Generation
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/ai-customer-service"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                  to="/ai-customer-support"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
                 >
-                  AI Customer Service
+                  AI Customer Support
                 </Link>
               </li>
               <li>
                 <Link
                   to="/ai-cybersecurity"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
                 >
                   AI Cybersecurity
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-marketing-automation"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
+                >
+                  AI Marketing Automation
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Micro SAAS */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-purple-400">Featured SAAS</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/zion-analytics-pro"
+                  className="text-gray-400 hover:text-purple-400 transition-colors text-sm"
+                >
+                  Zion Analytics Pro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-security-shield"
+                  className="text-gray-400 hover:text-purple-400 transition-colors text-sm"
+                >
+                  Zion Security Shield
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-cloud-vault"
+                  className="text-gray-400 hover:text-purple-400 transition-colors text-sm"
+                >
+                  Zion Cloud Vault
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-crm-pro"
+                  className="text-gray-400 hover:text-purple-400 transition-colors text-sm"
+                >
+                  Zion AI CRM Pro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-content-studio"
+                  className="text-gray-400 hover:text-purple-400 transition-colors text-sm"
+                >
+                  Zion AI Content Studio
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/micro-saas-services"
+                  className="text-gray-400 hover:text-purple-400 transition-colors text-sm"
+                >
+                  View All SAAS Solutions
                 </Link>
               </li>
             </ul>
@@ -239,105 +245,50 @@ const Footer = React.memo(() => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/cloud-infrastructure"
-                  className="text-gray-400 hover:text-green-400 transition-colors"
+                  to="/cloud-migration"
+                  className="text-gray-400 hover:text-green-400 transition-colors text-sm"
                 >
-                  Cloud Infrastructure
+                  Cloud Migration
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/cybersecurity-solutions"
-                  className="text-gray-400 hover:text-green-400 transition-colors"
+                  to="/devops-services"
+                  className="text-gray-400 hover:text-green-400 transition-colors text-sm"
                 >
-                  Cybersecurity Solutions
+                  DevOps Services
                 </Link>
               </li>
               <li>
                 <Link
                   to="/web-development"
-                  className="text-gray-400 hover:text-green-400 transition-colors"
+                  className="text-gray-400 hover:text-green-400 transition-colors text-sm"
                 >
                   Web Development
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/mobile-development"
-                  className="text-gray-400 hover:text-green-400 transition-colors"
+                  to="/network-security"
+                  className="text-gray-400 hover:text-green-400 transition-colors text-sm"
                 >
-                  Mobile Development
+                  Network Security
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/database-management"
-                  className="text-gray-400 hover:text-green-400 transition-colors"
+                  to="/it-consulting"
+                  className="text-gray-400 hover:text-green-400 transition-colors text-sm"
                 >
-                  Database Management
+                  IT Consulting
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/custom-software"
-                  className="text-gray-400 hover:text-green-400 transition-colors"
+                  to="/services"
+                  className="text-gray-400 hover:text-green-400 transition-colors text-sm"
                 >
-                  Custom Software
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Micro SAAS */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-purple-400">Micro SAAS</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/zion-analytics-pro"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion Analytics Pro
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/zion-security-shield"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion Security Shield
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/zion-cloud-vault"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion Cloud Vault
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/zion-content-studio"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion Content Studio
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/zion-data-sync"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion Data Sync
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/zion-project-master"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion Project Master
+                  View All IT Services
                 </Link>
               </li>
             </ul>
@@ -345,116 +296,46 @@ const Footer = React.memo(() => {
 
           {/* Company */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Company</h4>
+            <h4 className="text-lg font-semibold mb-4 text-white">Company</h4>
             <ul className="space-y-2">
               <li>
                 <Link
                   to="/about"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors text-sm"
                 >
                   About Us
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/careers"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/case-studies"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Case Studies
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/blog"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors text-sm"
                 >
                   Blog
                 </Link>
               </li>
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Support</h4>
-            <ul className="space-y-2">
               <li>
                 <Link
                   to="/contact"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors text-sm"
                 >
                   Contact
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/support"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  to="/privacy"
+                  className="text-gray-400 hover:text-white transition-colors text-sm"
                 >
-                  Help Center
+                  Privacy Policy
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/pricing"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  to="/terms"
+                  className="text-gray-400 hover:text-white transition-colors text-sm"
                 >
-                  Pricing
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/consultation"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Consultation
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Resources</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/blog"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/tutorials"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Tutorials
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/demo"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Demo
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/sitemap"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Sitemap
+                  Terms of Service
                 </Link>
               </li>
             </ul>
