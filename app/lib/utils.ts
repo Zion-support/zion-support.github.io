@@ -8,6 +8,7 @@
 export interface utilsConfig {
   enabled: boolean;
 }
+<<<<<<< HEAD
 
 export class utils {
   private config: utilsConfig;
@@ -84,3 +85,5 @@ export const utils = () => {
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e

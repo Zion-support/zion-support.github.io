@@ -18,6 +18,7 @@ interface NavigationProps {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export default function Navigation({ className = '', children }: NavigationProps) {
@@ -214,3 +215,5 @@ import {
   X
 } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e

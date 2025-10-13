@@ -81,6 +81,7 @@ export const usePerformanceMonitor = () => {
   })
 
   useEffect(() => {
+<<<<<<< HEAD
     const measurePerformance = () => {
       if (typeof window === 'undefined' || !window.performance) return
 
@@ -186,3 +187,7 @@ export default usePerformanceMonitor
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+    setState('initialized');
+  }, []);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e

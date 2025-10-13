@@ -136,7 +136,14 @@ export default function EnhancedAccessibility({ children, className = '' }: Enha
     };
   }, []);
 
+<<<<<<< HEAD
   return <div className={className}>{children}</div>;
+=======
+  return (
+      {children}
+    </div>
+  );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
 =======

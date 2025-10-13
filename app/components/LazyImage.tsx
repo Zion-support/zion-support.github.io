@@ -29,6 +29,7 @@ export default function LazyImage({ className = '', children }: LazyImageProps) 
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
@@ -146,3 +147,5 @@ export default LazyImage;
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e

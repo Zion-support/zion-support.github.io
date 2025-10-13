@@ -15,6 +15,7 @@ export default function EnhancedPerformanceMonitor({ className = '', children }:
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
@@ -32,3 +33,5 @@ export default function EnhancedPerformanceMonitor({ className = '', children, .
 =======
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e

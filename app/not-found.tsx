@@ -8,6 +8,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 
+<<<<<<< HEAD
 interface notfoundProps {
   className?: string;
   children?: React.ReactNode;
@@ -125,3 +126,21 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+const NotFoundPage = () => {;
+  return (;
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"></div>;
+      <div className="container mx-auto px-4 py-16"></div>;
+        <div className="max-w-4xl mx-auto text-center"></div>;
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">;
+            NotFound;
+          </h1>;
+          <p className="text-xl text-gray-600 mb-8">;
+            This page is under development. Please check back later.;
+          </p>;
+        </div>;
+      </div>;
+</div>;
+}
+);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e

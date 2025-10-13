@@ -19,6 +19,7 @@ export default function Improvedfooter({ className = '', children, ...props }: I
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
@@ -144,3 +145,5 @@ const ImprovedFooter = () => {
     }
   ];
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface LoadingProps {
 <<<<<<< HEAD
   className?: string;
@@ -66,3 +67,7 @@ export default Loading;
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+interface LoadingProps {;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e

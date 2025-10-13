@@ -15,6 +15,7 @@ export default function ImprovedImage({ className = '', children }: ImprovedImag
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
@@ -32,3 +33,5 @@ export default function ImprovedImage({ className = '', children, ...props }: Im
 =======
 import { ImageIcon } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e

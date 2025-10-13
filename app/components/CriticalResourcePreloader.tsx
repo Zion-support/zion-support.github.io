@@ -160,6 +160,7 @@ const CriticalResourcePreloader = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export default function CriticalResourcePreloader({ className = '', children }: CriticalResourcePreloaderProps) {
@@ -189,3 +190,5 @@ export default function CriticalResourcePreloader({ className = '', children, ..
 =======
 export default CriticalResourcePreloader
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e

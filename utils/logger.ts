@@ -149,6 +149,7 @@ export const logger = {
   }
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export { logger };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
@@ -165,3 +166,5 @@ export default logger;
 =======
 export default logger;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -50,12 +51,22 @@ import "./index.css";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
+=======
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./index.css";
+
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
 );
 
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -77,3 +88,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import App from "./App";
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e

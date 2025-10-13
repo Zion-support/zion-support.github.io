@@ -17,6 +17,7 @@ export default function ErrorFallback({ className = '', children }: ErrorFallbac
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
@@ -37,3 +38,5 @@ export default function ErrorFallback({ className = '', children, ...props }: Er
 import { AlertTriangle, RefreshCw, Home, Mail, Bug } from 'lucide-react';
 import { Link } from 'react-router-dom';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e

@@ -35,7 +35,10 @@ export default function UtilsPage() {
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
 
 interface imageProps {
   className?: string;
@@ -57,6 +60,7 @@ export function formatDate(date: Date | string): string {
     day: 'numeric'
   });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function formatCurrency(amount: number, currency = 'USD'): string {
@@ -129,3 +133,5 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e

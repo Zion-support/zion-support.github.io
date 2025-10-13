@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -69,3 +70,11 @@ export default ResponsiveContainer;
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+  return (;
+    <div className={`responsivecontainer-component ${className}`} {...props}></div>;
+      {children}
+;
+</div>;
+);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e

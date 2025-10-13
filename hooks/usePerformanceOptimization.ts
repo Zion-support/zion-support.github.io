@@ -11,6 +11,7 @@ export default function usePerformanceOptimization() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
@@ -239,3 +240,5 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
   };
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e

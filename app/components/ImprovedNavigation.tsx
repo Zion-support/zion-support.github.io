@@ -787,12 +787,15 @@ const ImprovedNavigation = () => {
     </>
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 =======
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
 
 interface ImprovedNavigationProps {
   className?: string;
@@ -806,6 +809,7 @@ export default function ImprovedNavigation({ className = '', children }: Improve
       {children}
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -825,3 +829,5 @@ export default function ImprovedNavigation({ className = '', children, ...props 
 =======
 import { Link, useLocation } from 'react-router-dom';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e

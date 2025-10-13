@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 import React from 'react';
@@ -69,3 +70,5 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ children }) => {
 
 export default EnhancedAnalytics;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e

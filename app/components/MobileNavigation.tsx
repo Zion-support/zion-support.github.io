@@ -115,12 +115,15 @@ const MobileNavigation: React.FC = () => {
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 =======
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
 
 interface MobileNavigationProps {
   className?: string;
@@ -140,6 +143,7 @@ export default function MobileNavigation({ className = '', children }: MobileNav
 };
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 =======
@@ -286,3 +290,5 @@ export default MobileNavigation;
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e

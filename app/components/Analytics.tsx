@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 import React, { useEffect } from 'react';
@@ -27,6 +28,10 @@ export default function Analytics({ className = '', children, ...props }: Analyt
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
+=======
+import React, { useEffect } from 'react';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
 declare global {
   interface Window {
     gtag: (...args: any[]) => void;
@@ -34,6 +39,7 @@ declare global {
 }
 
 interface AnalyticsProps {
+<<<<<<< HEAD
 <<<<<<< HEAD
   children: React.ReactNode;
 }
@@ -256,3 +262,32 @@ export default Analytics;
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+  trackingId?: string;
+  children?: React.ReactNode;
+}
+
+const Analytics: React.FC<AnalyticsProps> = ({ trackingId, children }) => {
+  useEffect(() => {
+    if (trackingId && typeof window !== 'undefined') {
+      // Initialize Google Analytics
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+      document.head.appendChild(script);
+
+      window.gtag = window.gtag || function() {
+        (window.gtag as any).q = (window.gtag as any).q || [];
+        (window.gtag as any).q.push(arguments);
+      };
+
+      window.gtag('js', new Date());
+      window.gtag('config', trackingId);
+    }
+  }, [trackingId]);
+
+  return <>{children}</>;
+};
+
+export default Analytics;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e

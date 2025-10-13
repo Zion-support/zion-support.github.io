@@ -43,9 +43,12 @@ import { AlertTriangle } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Hand } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
 
 <<<<<<< HEAD
 interface ImprovedErrorBoundaryProps {
@@ -204,6 +207,7 @@ export const withErrorBoundary = <P extends object>(
       <Component {...props} />
     </ImprovedErrorBoundary>
   );
+<<<<<<< HEAD
   
   WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
   
@@ -224,3 +228,5 @@ export default ImprovedErrorBoundary;
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
