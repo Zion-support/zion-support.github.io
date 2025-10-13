@@ -1,106 +1,163 @@
-import { ArrowRight, BarChart3, Brain, Shield, Zap, Globe, Star, Users, Award, CheckCircle, TrendingUp, Clock, DollarSign, PieChart, Activity, Target } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { TrendingUp, Shield, BarChart3, CheckCircle, ArrowRight, Star } from 'lucide-react';
 
-const AIFinancialAnalysis = () => {
+const AiFinancialAnalysisPage: React.FC = () => {
   const features = [
     {
-      title: "Predictive Financial Modeling",
-      description: "Build accurate financial models and forecasts using AI",
-      icon: <TrendingUp className="w-6 h-6" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Risk Assessment",
-      description: "Advanced risk analysis and portfolio optimization",
+      title: 'Risk Assessment',
+      description: 'Advanced AI models for comprehensive financial risk analysis and assessment',
       icon: <Shield className="w-6 h-6" />,
-      color: "from-green-500 to-emerald-500"
+      benefits: [
+        'Credit risk analysis',
+        'Market risk assessment',
+        'Operational risk evaluation',
+        'Fraud detection'
+      ]
     },
     {
-      title: "Real-time Market Analysis",
-      description: "Monitor market trends and make informed decisions",
-      icon: <Activity className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
+      title: 'Investment Analysis',
+      description: 'AI-powered investment analysis and portfolio optimization recommendations',
+      icon: <TrendingUp className="w-6 h-6" />,
+      benefits: [
+        'Portfolio optimization',
+        'Market trend analysis',
+        'Investment recommendations',
+        'Performance tracking'
+      ]
     },
     {
-      title: "Automated Reporting",
-      description: "Generate comprehensive financial reports automatically",
-      icon: <FileText className="w-6 h-6" />,
-    "50% more accurate predictions",
-    "Real-time market monitoring",
-    "Automated risk assessment",
-    "Comprehensive financial reporting",
-    "Portfolio optimization",
-    "Regulatory compliance"
-        title="AI Financial Analysis - Intelligent Financial Intelligence | Zion Tech Group"
-        description="Transform your financial decision-making with AI-powered analysis. Predictive modeling, risk assessment, and automated reporting for modern finance teams."
-        keywords="AI financial analysis, financial modeling, risk assessment, market analysis, portfolio optimization, financial intelligence"
-            <DollarSign className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI Financial Intelligence</span>
-              AI Financial Analysis
-            Transform your financial decision-making with AI-powered analysis. 
-            Get predictive modeling, risk assessment, and automated reporting that drives better financial outcomes.
-              icon={<ArrowRight className="w-5 h-5" />}
-            >
-              Get Started Today
-              icon={<BarChart3 className="w-5 h-5" />}
-            >
-              View Demo
-              Advanced Financial Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Everything you need to make smarter financial decisions with AI-powered insights.
-              <FuturisticCard
-                <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base">
-                  {feature.description}
-                </p>
-              </FuturisticCard>
-        <ResponsiveContainer>
-          <div className="text-center mb-16">"
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose AI Financial Analysis?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of AI-driven financial intelligence that delivers measurable results.
-              <div key={index} className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg">
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                <span className="text-white font-medium">{benefit}</span>
-              </div>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
+      title: 'Financial Reporting',
+      description: 'Automated financial reporting with real-time insights and analytics',
+      icon: <BarChart3 className="w-6 h-6" />,
+      benefits: [
+        'Automated reporting',
+        'Real-time insights',
+        'Compliance monitoring',
+        'Custom dashboards'
+      ]
+    }
+  ];
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-2xl p-12">"
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Financial Analysis?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join leading financial institutions using AI Financial Analysis to make smarter decisions and drive growth.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <FuturisticButton
-                href="/contact"
-                variant="primary"
-                size="lg"
-                icon={<ArrowRight className="w-5 h-5" />}
-              >
-                Start Your Free Trial;
-              </FuturisticButton>
-              <FuturisticButton
-                href="/pricing"
-                variant="outline"
-                size="lg"
-                icon={<Target className="w-5 h-5" />}
-              >
-                View Pricing;
-              </FuturisticButton>
+  const benefits = [
+    'Reduce financial risks by 50%',
+    'Improve investment returns by 25%',
+    'Automate 80% of financial analysis',
+    'Detect fraud 90% faster',
+    'Ensure regulatory compliance',
+    'Save 30 hours per week'
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>AI Financial Analysis - Zion Tech Group</title>
+        <meta name="description" content="Professional AI financial analysis solutions by Zion Tech Group. Advanced financial intelligence and risk assessment." />
+        <meta name="keywords" content="AI financial analysis, financial intelligence, risk assessment, investment analysis, Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            AI Financial Analysis
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Transform your financial decision-making with AI-powered analysis. 
+            Get insights, assess risks, and optimize investments with advanced algorithms.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg font-semibold text-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2 inline" />
+            </button>
+            <button className="px-8 py-4 border border-purple-500 text-purple-400 rounded-lg font-semibold text-lg hover:bg-purple-500/10 transition-all duration-300">
+              View Demo
+            </button>
+          </div>
+        </div>
+
+        {/* Features Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Financial Analysis Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Everything you need for comprehensive financial intelligence
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-6">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
-        </ResponsiveContainer>
-export default AIFinancialAnalysis;
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 bg-slate-800/50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Why Choose Our Financial Analysis?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Proven results that improve financial performance and reduce risks
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <Star className="w-8 h-8 text-white" />
+                  </div>
+                  <p className="text-lg text-white font-medium">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Financial Analysis?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Start your AI-powered financial analysis journey today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg font-semibold text-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2 inline" />
+              </button>
+              <button className="px-8 py-4 border border-purple-500 text-purple-400 rounded-lg font-semibold text-lg hover:bg-purple-500/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+};
+
+export default AiFinancialAnalysisPage;
