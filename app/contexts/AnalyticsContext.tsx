@@ -1,19 +1,21 @@
-import React from 'react';
-<<<<<<< HEAD
-import { AnalyticsContext } from './AnalyticsContext';
-=======
-import { AnalyticsContext } from './AnalyticsContextDefinition';
->>>>>>> cursor/fix-errors-and-merge-to-main-3a06
+import React, { createContext, useContext, ReactNode } from 'react';
 
-export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+interface AnalyticsContextType {
+  trackEvent: (event: string, properties?: Record<string, any>) => void;
+  trackPageView: (page: string) => void;
+}
+
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+
+export const AnalyticsProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  const trackEvent = (event: string, properties?: Record<string, any>) => {
     // Analytics tracking implementation
-    console.log('Event tracked:', eventName, properties);
+    console.log('Analytics event:', event, properties);
   };
 
-  const trackPageView = (pageName: string) => {
+  const trackPageView = (page: string) => {
     // Page view tracking implementation
-    console.log('Page view tracked:', pageName);
+    console.log('Page view:', page);
   };
 
   return (
@@ -21,4 +23,12 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
       {children}
     </AnalyticsContext.Provider>
   );
+};
+
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (context === undefined) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
 };

@@ -1,33 +1,15 @@
 'use client';
-export const useRouter = (;) => {return($3;)
-  )}const push = useCallback((url: string) => {,
-    ,}window.location.href = url;}
-  }, []);
-  const replace = useCallback((url: string) => {,
-    ,}export const useRouter = () => {}const push = useCallback((url: string) => {,}window.location.href = url;}
-  }, []);
-  const replace = useCallback((url: string) => {,}window.location.replace(url);}
-  }, []);
-  const back = useCallback(() => {}window.history.back();}
-  }, []);
-  const forward = useCallback(() => {}window.history.forward();}
-  }, []);
-  const refresh = useCallback(() => {}window.location.reload();}
-  }, []);
-  return {}}push,
-export const useSearchParams = useCallback((...args) => {}const params = new URLSearchParams(window.location.search);
-  return params;}
-};
+import React from 'react';
 
-export default {useRouter, usePathname, useSearchParams}}export const useRouter = () => {/* TODO: Fix JSX expression */,}}, []);
-  const replace = useCallback((ur);
-  l: string) => {/* TODO: Fix JSX expression */,}}, []);
-  const back = useCallback(() => {/* TODO: Fix JSX expression */,}}, []);
-  const forward = useCallback(() => {/* TODO: Fix JSX expression */,}}, []);
-  const refresh = useCallback(() => {/* TODO: Fix JSX expression */,}}, []);
-  return {/* TODO: Fix JSX expression */,}}}
+export default function UtilsPage() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Utils</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+      </div>
+    </div>
+  );
 }
-export const usePathname = () => {/* TODO: Fix JSX expression */,}}
-export const useSearchParams = () => {/* TODO: Fix JSX expression */,}};
-
-export default {useRouter, usePathname, useSearchParams}}
