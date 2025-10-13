@@ -14,6 +14,12 @@ import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
+import Breadcrumb from "./app/components/Breadcrumb";
+import LoadingPage from "./app/components/Loading";
+import GlobalErrorBoundary from "./app/components/GlobalErrorBoundary";
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import EnhancedLoadingSpinner from "./app/components/EnhancedLoadingSpinner";
+import AdvancedPerformanceMonitor from "./app/components/AdvancedPerformanceMonitor";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -64,7 +70,7 @@ function App() {
                   <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
                   <Breadcrumb />
                   <main id="main-content" role="main">
-                    <Suspense fallback={<LoadingPage />}>
+                    <Suspense fallback={<EnhancedLoadingSpinner message="Loading Zion Tech Group..." variant="futuristic" size="lg" />}>
                       <Routes>
                         <Route path="/" element={<HomePage />} />
                         <Route path="/about" element={<AboutPage />} />
@@ -85,8 +91,8 @@ function App() {
                   </main>
                   <Footer />
                 </FuturisticBackground>
-                  </div>
-                </AnalyticsProvider>
+                <AnalyticsProvider />
+                <AdvancedPerformanceMonitor />
               </div>
             </Router>
           </AccessibilityEnhancer>
