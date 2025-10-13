@@ -2,43 +2,47 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
+  title: string;
+  description: string;
+  keywords: string;
   canonical?: string;
-  ogTitle?: string;
-  ogDescription?: string;
   ogImage?: string;
-  ogUrl?: string;
+  ogType?: string;
+  twitterCard?: string;
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
   structuredData?: object;
   noIndex?: boolean;
+  lang?: string;
+  noindex?: boolean;
+  nofollow?: boolean;
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title = "Zion Tech Group - Advanced AI and IT Solutions",
-  description = "Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses.",
-  keywords = "AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology",
+  title,
+  description,
+  keywords,
   canonical,
-  ogTitle,
-  ogDescription,
-  ogImage = "https://ziontechgroup.com/og-image.jpg",
-  ogUrl,
+  ogImage = '/og-image.svg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
   twitterTitle,
   twitterDescription,
-  twitterImage = "https://ziontechgroup.com/twitter-image.jpg",
+  twitterImage,
   structuredData,
-  noIndex = false
+  noIndex = false,
+  lang = 'en',
+  noindex = false,
+  nofollow = false
 }) => {
   const siteName = 'Zion Tech Group';
   const siteUrl = 'https://ziontechgroup.com';
+  const defaultImage = 'https://ziontechgroup.com/og-image.jpg';
   
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const fullCanonical = canonical ? (canonical.startsWith('http') ? canonical : `${siteUrl}${canonical}`) : undefined;
-  const fullOgUrl = ogUrl || fullCanonical || siteUrl;
-  const fullOgImage = ogImage || `${siteUrl}/og-image.jpg`;
+  const fullOgImage = ogImage || defaultImage;
   const fullTwitterImage = twitterImage || fullOgImage;
   
   const defaultKeywords = 'AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology, Zion Tech Group';
@@ -75,13 +79,12 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={finalKeywords} />
       <meta name="author" content={siteName} />
-      <meta name="robots" content={`${noIndex ? 'noindex' : 'index'}, follow`} />
-      <meta name="language" content="en" />
+      <meta name="robots" content={`${noIndex || noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
+      <meta name="language" content={lang} />
       <meta name="revisit-after" content="7 days" />
       <meta name="rating" content="general" />
       
@@ -89,18 +92,18 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       {fullCanonical && <link rel="canonical" href={fullCanonical} />}
       
       {/* Open Graph Meta Tags */}
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content={ogTitle || fullTitle} />
-      <meta property="og:description" content={ogDescription || description} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
       <meta property="og:image" content={fullOgImage} />
-      <meta property="og:url" content={fullOgUrl} />
+      <meta property="og:url" content={fullCanonical || siteUrl} />
       <meta property="og:site_name" content={siteName} />
-      <meta property="og:locale" content="en_US" />
+      <meta property="og:locale" content={lang === 'en' ? 'en_US' : lang} />
       
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={twitterTitle || ogTitle || fullTitle} />
-      <meta name="twitter:description" content={twitterDescription || ogDescription || description} />
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={twitterTitle || fullTitle} />
+      <meta name="twitter:description" content={twitterDescription || description} />
       <meta name="twitter:image" content={fullTwitterImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />

@@ -1,6 +1,7 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import { Activity } from "lucide-react";
 import "./app/styles/futuristic.css";
 import "./app/styles/futuristic-enhanced.css";
 import "./app/styles/accessibility-enhanced.css";
@@ -15,12 +16,13 @@ import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
+import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
+import PerformanceDashboard from "./app/components/PerformanceDashboard";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import LoadingPageEnhanced from "./app/components/EnhancedLoading";
-import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 import EnhancedSEO from "./app/components/EnhancedSEO";
 
 // Lazy load pages for better performance
@@ -67,23 +69,14 @@ const ZionContentStudioPage = React.lazy(() => import("./app/zion-content-studio
 const ZionAIVideoGeneratorPage = React.lazy(() => import("./app/zion-ai-video-generator/page"));
 const ZionAIInvoiceGeneratorPage = React.lazy(() => import("./app/zion-ai-invoice-generator/page"));
 const ZionAICustomerInsightsPage = React.lazy(() => import("./app/zion-ai-customer-insights/page"));
-const ZionAIEmailAnalyzerPage = React.lazy(() => import("./app/zion-ai-email-analyzer/page"));
-const ZionSmartInventoryOptimizerPage = React.lazy(() => import("./app/zion-smart-inventory-optimizer/page"));
-const ZionAICustomerSentimentTrackerPage = React.lazy(() => import("./app/zion-ai-customer-sentiment-tracker/page"));
-const ZionSmartExpenseCategorizerPage = React.lazy(() => import("./app/zion-smart-expense-categorizer/page"));
 const ZionAIVoiceAssistantProPage = React.lazy(() => import("./app/zion-ai-voice-assistant-pro/page"));
 const ZionAICodeReviewerPage = React.lazy(() => import("./app/zion-ai-code-reviewer/page"));
-const ZionAISocialMediaManagerPage = React.lazy(() => import("./app/zion-ai-social-media-manager/page"));
 const ZionAIContractAnalyzerPage = React.lazy(() => import("./app/zion-ai-contract-analyzer/page"));
-const ZionAIPerformanceOptimizerPage = React.lazy(() => import("./app/zion-ai-performance-optimizer/page"));
-const ZionAICustomerChurnPredictorPage = React.lazy(() => import("./app/zion-ai-customer-churn-predictor/page"));
 const ZionAISupplyChainOptimizerPage = React.lazy(() => import("./app/zion-ai-supply-chain-optimizer/page"));
-const ZionAIFinancialForecasterPage = React.lazy(() => import("./app/zion-ai-financial-forecaster/page"));
-const ZionAIContentModeratorPage = React.lazy(() => import("./app/zion-ai-content-moderator/page"));
+const ZionAIContentModeratorPage = React.lazy(() => import("./app/zion-ai-content-moderation/page"));
 const ZionAITranslatorProPage = React.lazy(() => import("./app/zion-ai-translator-pro/page"));
 const ZionAIDataCleanerPage = React.lazy(() => import("./app/zion-ai-data-cleaner/page"));
-const ZionAITaskSchedulerPage = React.lazy(() => import("./app/zion-ai-task-scheduler/page"));
-const ZionAICustomerSupportProPage = React.lazy(() => import("./app/zion-ai-customer-support-pro/page"));
+const ZionAICustomerServiceProPage = React.lazy(() => import("./app/zion-ai-customer-service-pro/page"));
 
 // 5G Solutions Pages
 const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
@@ -98,6 +91,7 @@ const FiveGIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/pa
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [showPerformanceDashboard, setShowPerformanceDashboard] = useState(false);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -105,6 +99,10 @@ function App() {
 
   const closeSidebar = () => {
     setIsSidebarOpen(false);
+  };
+
+  const togglePerformanceDashboard = () => {
+    setShowPerformanceDashboard(!showPerformanceDashboard);
   };
 
   useEffect(() => {
@@ -179,23 +177,14 @@ function App() {
                                 <Route path="/zion-ai-video-generator" element={<ZionAIVideoGeneratorPage />} />
                                 <Route path="/zion-ai-invoice-generator" element={<ZionAIInvoiceGeneratorPage />} />
                                 <Route path="/zion-ai-customer-insights" element={<ZionAICustomerInsightsPage />} />
-                                <Route path="/zion-ai-email-analyzer" element={<ZionAIEmailAnalyzerPage />} />
-                                <Route path="/zion-smart-inventory-optimizer" element={<ZionSmartInventoryOptimizerPage />} />
-                                <Route path="/zion-ai-customer-sentiment-tracker" element={<ZionAICustomerSentimentTrackerPage />} />
-                                <Route path="/zion-smart-expense-categorizer" element={<ZionSmartExpenseCategorizerPage />} />
                                 <Route path="/zion-ai-voice-assistant-pro" element={<ZionAIVoiceAssistantProPage />} />
                                 <Route path="/zion-ai-code-reviewer" element={<ZionAICodeReviewerPage />} />
-                                <Route path="/zion-ai-social-media-manager" element={<ZionAISocialMediaManagerPage />} />
                                 <Route path="/zion-ai-contract-analyzer" element={<ZionAIContractAnalyzerPage />} />
-                                <Route path="/zion-ai-performance-optimizer" element={<ZionAIPerformanceOptimizerPage />} />
-                                <Route path="/zion-ai-customer-churn-predictor" element={<ZionAICustomerChurnPredictorPage />} />
                                 <Route path="/zion-ai-supply-chain-optimizer" element={<ZionAISupplyChainOptimizerPage />} />
-                                <Route path="/zion-ai-financial-forecaster" element={<ZionAIFinancialForecasterPage />} />
                                 <Route path="/zion-ai-content-moderator" element={<ZionAIContentModeratorPage />} />
                                 <Route path="/zion-ai-translator-pro" element={<ZionAITranslatorProPage />} />
                                 <Route path="/zion-ai-data-cleaner" element={<ZionAIDataCleanerPage />} />
-                                <Route path="/zion-ai-task-scheduler" element={<ZionAITaskSchedulerPage />} />
-                                <Route path="/zion-ai-customer-support-pro" element={<ZionAICustomerSupportProPage />} />
+                                <Route path="/zion-ai-customer-service-pro" element={<ZionAICustomerServiceProPage />} />
 
                                 {/* 5G Services */}
                                 <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
@@ -232,6 +221,26 @@ function App() {
             </WebVitalsTracker>
           </PerformanceMonitor>
         </AnalyticsProvider>
+        
+        {/* Performance Dashboard - only show in development */}
+        {process.env.NODE_ENV === 'development' && (
+          <PerformanceDashboard
+            isVisible={showPerformanceDashboard}
+            onClose={() => setShowPerformanceDashboard(false)}
+            enableRealTime={true}
+          />
+        )}
+        
+        {/* Performance Dashboard Toggle Button - only in development */}
+        {process.env.NODE_ENV === 'development' && (
+          <button
+            onClick={togglePerformanceDashboard}
+            className="fixed bottom-4 left-4 bg-cyan-600 hover:bg-cyan-700 text-white p-3 rounded-full shadow-lg z-50 transition-colors"
+            title="Toggle Performance Dashboard"
+          >
+            <Activity className="w-5 h-5" />
+          </button>
+        )}
       </GlobalErrorBoundary>
     </HelmetProvider>
   );

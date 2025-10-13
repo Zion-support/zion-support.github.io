@@ -21,27 +21,6 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({
     );
   }
 
-<<<<<<< HEAD
-export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
-  const getServiceIcon = (serviceName: string) => {
-    switch (serviceName.toLowerCase()) {
-      case 'ai':
-      case 'ai services':
-        return <Brain className="w-8 h-8 text-cyan-400" />;
-      case 'security':
-      case 'cybersecurity':
-        return <Shield className="w-8 h-8 text-green-400" />;
-      case 'micro saas':
-      case 'saas':
-        return <Zap className="w-8 h-8 text-purple-400" />;
-      case '5g':
-      case '5g solutions':
-        return <Globe className="w-8 h-8 text-orange-400" />;
-      default:
-        return <Brain className="w-8 h-8 text-cyan-400" />;
-    }
-  };
-=======
   if (variant === 'default') {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -53,7 +32,6 @@ export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
       </div>
     );
   }
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
   // Futuristic variant
   return (
@@ -111,7 +89,40 @@ export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
   );
 };
 
-<<<<<<< HEAD
+export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
+  const getServiceIcon = (serviceName: string) => {
+    switch (serviceName.toLowerCase()) {
+      case 'ai':
+      case 'ai services':
+        return <Brain className="w-8 h-8 text-cyan-400" />;
+      case 'security':
+      case 'cybersecurity':
+        return <Shield className="w-8 h-8 text-green-400" />;
+      case 'micro saas':
+      case 'saas':
+        return <Zap className="w-8 h-8 text-purple-400" />;
+      case '5g':
+      case '5g solutions':
+        return <Globe className="w-8 h-8 text-orange-400" />;
+      default:
+        return <Brain className="w-8 h-8 text-cyan-400" />;
+    }
+  };
+
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="text-center">
+        <div className="mb-6">
+          {getServiceIcon(service)}
+        </div>
+        <Loader2 className="w-8 h-8 animate-spin text-cyan-400 mx-auto mb-4" />
+        <h2 className="text-xl font-semibold text-white mb-2">Loading {service}...</h2>
+        <p className="text-gray-400">Please wait while we prepare the content...</p>
+      </div>
+    </div>
+  );
+};
+
 export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
   return (
     <div className="animate-pulse">
@@ -141,6 +152,4 @@ export const CardSkeleton: React.FC = () => {
   );
 };
 
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 export default LoadingPage;
