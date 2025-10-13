@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Brain, Zap, Shield, BarChart3, Cloud, Code, Database, Mail, Users, Clock, DollarSign, Globe, Lock, Settings, Target, TrendingUp, Cpu, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Brain, Zap, Shield, BarChart3, Cloud, Code, Database, Mail, Users, Clock, DollarSign, Globe, Lock, Settings, Target, TrendingUp, Cpu, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Cube, Scale } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
@@ -353,6 +353,412 @@ export default function AIServices() {
       reviews: 432,
       link: "/ai-supply-chain-optimizer",
       featured: false
+    },
+    {
+      id: "ai-video-generation-pro",
+      name: "AI Video Generation Pro",
+      description: "Revolutionary AI video creation platform with text-to-video, voice synthesis, and advanced editing capabilities",
+      price: "From $1,800/month",
+      icon: <Video className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      features: [
+        "Text-to-video generation",
+        "AI voice synthesis & dubbing",
+        "Advanced video editing tools",
+        "Multiple video formats & resolutions",
+        "Real-time rendering",
+        "Custom avatar creation",
+        "Background removal & replacement",
+        "Multi-language support"
+      ],
+      benefits: [
+        "Create videos 10x faster",
+        "Reduce production costs by 70%",
+        "Scale video content creation",
+        "Maintain brand consistency"
+      ],
+      category: "Video",
+      rating: 4.8,
+      reviews: 1234,
+      link: "/ai-video-generation-pro",
+      featured: true
+    },
+    {
+      id: "ai-voice-cloning-pro",
+      name: "AI Voice Cloning Pro",
+      description: "Advanced voice synthesis and cloning technology with natural speech patterns and emotional expression",
+      price: "From $1,200/month",
+      icon: <Mic className="w-8 h-8" />,
+      color: "from-indigo-500 to-blue-500",
+      features: [
+        "High-fidelity voice cloning",
+        "Emotional voice synthesis",
+        "Multi-language voice support",
+        "Real-time voice conversion",
+        "Custom voice training",
+        "Voice authentication",
+        "Audio enhancement tools",
+        "API integration"
+      ],
+      benefits: [
+        "Create realistic voice content",
+        "Reduce voiceover costs by 80%",
+        "Scale audio production",
+        "Maintain voice consistency"
+      ],
+      category: "Voice",
+      rating: 4.7,
+      reviews: 856,
+      link: "/ai-voice-cloning-pro",
+      featured: false
+    },
+    {
+      id: "ai-image-generation-pro",
+      name: "AI Image Generation Pro",
+      description: "Professional AI image creation with advanced editing, style transfer, and high-resolution output",
+      price: "From $1,500/month",
+      icon: <Image className="w-8 h-8" />,
+      color: "from-rose-500 to-pink-500",
+      features: [
+        "Text-to-image generation",
+        "Style transfer & manipulation",
+        "High-resolution image upscaling",
+        "Background removal & replacement",
+        "Object detection & editing",
+        "Custom model training",
+        "Batch processing",
+        "Commercial licensing"
+      ],
+      benefits: [
+        "Generate images instantly",
+        "Reduce design costs by 60%",
+        "Create unique visual content",
+        "Scale creative production"
+      ],
+      category: "Image",
+      rating: 4.6,
+      reviews: 1456,
+      link: "/ai-image-generation-pro",
+      featured: false
+    },
+    {
+      id: "ai-3d-modeling-pro",
+      name: "AI 3D Modeling Pro",
+      description: "Intelligent 3D model generation with text prompts, automatic optimization, and multi-format export",
+      price: "From $2,200/month",
+      icon: <Cube className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500",
+      features: [
+        "Text-to-3D model generation",
+        "Automatic mesh optimization",
+        "Texture generation & mapping",
+        "Animation creation",
+        "Multi-format export (OBJ, FBX, STL)",
+        "Real-time preview",
+        "Custom model training",
+        "Cloud rendering"
+      ],
+      benefits: [
+        "Create 3D models 5x faster",
+        "Reduce modeling costs by 50%",
+        "Scale 3D content production",
+        "Improve design accuracy"
+      ],
+      category: "3D",
+      rating: 4.5,
+      reviews: 678,
+      link: "/ai-3d-modeling-pro",
+      featured: false
+    },
+    {
+      id: "ai-music-composition-pro",
+      name: "AI Music Composition Pro",
+      description: "Advanced AI music generation with genre adaptation, emotional expression, and professional mixing",
+      price: "From $1,600/month",
+      icon: <Music className="w-8 h-8" />,
+      color: "from-violet-500 to-purple-500",
+      features: [
+        "AI music composition",
+        "Genre & style adaptation",
+        "Emotional expression control",
+        "Instrument arrangement",
+        "Professional mixing & mastering",
+        "Copyright-free music",
+        "Custom model training",
+        "Multi-format export"
+      ],
+      benefits: [
+        "Generate music instantly",
+        "Reduce production costs by 70%",
+        "Create unique compositions",
+        "Scale music production"
+      ],
+      category: "Music",
+      rating: 4.7,
+      reviews: 923,
+      link: "/ai-music-composition-pro",
+      featured: false
+    },
+    {
+      id: "ai-code-generation-pro",
+      name: "AI Code Generation Pro",
+      description: "Advanced AI code generation with multi-language support, debugging, and optimization suggestions",
+      price: "From $1,800/month",
+      icon: <Code className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      features: [
+        "Multi-language code generation",
+        "Intelligent debugging assistance",
+        "Code optimization suggestions",
+        "Documentation generation",
+        "Test case creation",
+        "Code review automation",
+        "Custom model training",
+        "IDE integration"
+      ],
+      benefits: [
+        "Increase development speed by 60%",
+        "Reduce bugs by 70%",
+        "Improve code quality",
+        "Accelerate learning"
+      ],
+      category: "Development",
+      rating: 4.8,
+      reviews: 2156,
+      link: "/ai-code-generation-pro",
+      featured: false
+    },
+    {
+      id: "ai-document-analysis-pro",
+      name: "AI Document Analysis Pro",
+      description: "Intelligent document processing with OCR, data extraction, and automated classification",
+      price: "From $1,400/month",
+      icon: <FileText className="w-8 h-8" />,
+      color: "from-amber-500 to-orange-500",
+      features: [
+        "Advanced OCR technology",
+        "Intelligent data extraction",
+        "Document classification",
+        "Form processing automation",
+        "Multi-language support",
+        "Batch processing",
+        "API integration",
+        "Custom model training"
+      ],
+      benefits: [
+        "Process documents 10x faster",
+        "Reduce manual data entry by 90%",
+        "Improve accuracy",
+        "Scale document processing"
+      ],
+      category: "Document",
+      rating: 4.6,
+      reviews: 1123,
+      link: "/ai-document-analysis-pro",
+      featured: false
+    },
+    {
+      id: "ai-predictive-maintenance",
+      name: "AI Predictive Maintenance",
+      description: "Intelligent equipment monitoring with failure prediction, maintenance scheduling, and cost optimization",
+      price: "From $2,600/month",
+      icon: <Settings className="w-8 h-8" />,
+      color: "from-red-500 to-orange-500",
+      features: [
+        "Equipment failure prediction",
+        "Maintenance scheduling optimization",
+        "Sensor data analysis",
+        "Cost optimization algorithms",
+        "Real-time monitoring",
+        "Alert system",
+        "Integration with IoT devices",
+        "Custom model training"
+      ],
+      benefits: [
+        "Reduce downtime by 40%",
+        "Lower maintenance costs by 30%",
+        "Extend equipment lifespan",
+        "Improve operational efficiency"
+      ],
+      category: "Maintenance",
+      rating: 4.7,
+      reviews: 567,
+      link: "/ai-predictive-maintenance",
+      featured: false
+    },
+    {
+      id: "ai-energy-optimization",
+      name: "AI Energy Optimization",
+      description: "Smart energy management with consumption optimization, renewable integration, and cost reduction",
+      price: "From $1,900/month",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-yellow-500 to-orange-500",
+      features: [
+        "Energy consumption optimization",
+        "Renewable energy integration",
+        "Smart grid management",
+        "Cost reduction algorithms",
+        "Real-time monitoring",
+        "Predictive analytics",
+        "Carbon footprint tracking",
+        "Custom optimization models"
+      ],
+      benefits: [
+        "Reduce energy costs by 25%",
+        "Improve sustainability",
+        "Optimize renewable usage",
+        "Enhance energy efficiency"
+      ],
+      category: "Energy",
+      rating: 4.5,
+      reviews: 789,
+      link: "/ai-energy-optimization",
+      featured: false
+    },
+    {
+      id: "ai-legal-research-pro",
+      name: "AI Legal Research Pro",
+      description: "Advanced legal research platform with case law analysis, contract review, and compliance monitoring",
+      price: "From $2,800/month",
+      icon: <Scale className="w-8 h-8" />,
+      color: "from-slate-500 to-gray-500",
+      features: [
+        "Case law research & analysis",
+        "Contract review automation",
+        "Compliance monitoring",
+        "Legal document generation",
+        "Precedent analysis",
+        "Risk assessment",
+        "Multi-jurisdiction support",
+        "Custom legal models"
+      ],
+      benefits: [
+        "Reduce research time by 70%",
+        "Improve accuracy",
+        "Enhance compliance",
+        "Scale legal operations"
+      ],
+      category: "Legal",
+      rating: 4.8,
+      reviews: 456,
+      link: "/ai-legal-research-pro",
+      featured: false
+    },
+    {
+      id: "ai-medical-diagnosis",
+      name: "AI Medical Diagnosis",
+      description: "Advanced medical AI with image analysis, symptom assessment, and treatment recommendations",
+      price: "From $3,500/month",
+      icon: <Heart className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500",
+      features: [
+        "Medical image analysis",
+        "Symptom assessment",
+        "Treatment recommendations",
+        "Drug interaction checking",
+        "Patient monitoring",
+        "Diagnostic accuracy validation",
+        "HIPAA compliance",
+        "Custom medical models"
+      ],
+      benefits: [
+        "Improve diagnostic accuracy",
+        "Reduce misdiagnosis",
+        "Enhance patient care",
+        "Scale medical services"
+      ],
+      category: "Medical",
+      rating: 4.9,
+      reviews: 234,
+      link: "/ai-medical-diagnosis",
+      featured: false
+    },
+    {
+      id: "ai-fraud-detection-pro",
+      name: "AI Fraud Detection Pro",
+      description: "Advanced fraud detection with real-time monitoring, pattern recognition, and automated response",
+      price: "From $2,200/month",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500",
+      features: [
+        "Real-time fraud detection",
+        "Pattern recognition algorithms",
+        "Behavioral analysis",
+        "Automated response systems",
+        "Risk scoring",
+        "Multi-channel monitoring",
+        "Custom fraud models",
+        "Compliance reporting"
+      ],
+      benefits: [
+        "Detect fraud with 99% accuracy",
+        "Reduce false positives by 60%",
+        "Prevent financial losses",
+        "Enhance security"
+      ],
+      category: "Security",
+      rating: 4.7,
+      reviews: 892,
+      link: "/ai-fraud-detection-pro",
+      featured: false
+    },
+    {
+      id: "ai-sentiment-analysis-pro",
+      name: "AI Sentiment Analysis Pro",
+      description: "Advanced sentiment analysis with emotion detection, brand monitoring, and social media insights",
+      price: "From $1,300/month",
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      features: [
+        "Multi-language sentiment analysis",
+        "Emotion detection & classification",
+        "Brand monitoring",
+        "Social media insights",
+        "Real-time analysis",
+        "Custom sentiment models",
+        "API integration",
+        "Dashboard & reporting"
+      ],
+      benefits: [
+        "Understand customer sentiment",
+        "Improve brand reputation",
+        "Make data-driven decisions",
+        "Scale sentiment monitoring"
+      ],
+      category: "Analytics",
+      rating: 4.6,
+      reviews: 1234,
+      link: "/ai-sentiment-analysis-pro",
+      featured: false
+    },
+    {
+      id: "ai-recommendation-engine",
+      name: "AI Recommendation Engine",
+      description: "Intelligent recommendation system with personalization, A/B testing, and performance optimization",
+      price: "From $1,700/month",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      features: [
+        "Personalized recommendations",
+        "A/B testing framework",
+        "Real-time optimization",
+        "Multi-algorithm support",
+        "Performance analytics",
+        "Custom recommendation models",
+        "API integration",
+        "Scalable infrastructure"
+      ],
+      benefits: [
+        "Increase conversion rates by 40%",
+        "Improve user engagement",
+        "Boost revenue",
+        "Enhance user experience"
+      ],
+      category: "Recommendation",
+      rating: 4.8,
+      reviews: 1456,
+      link: "/ai-recommendation-engine",
+      featured: false
     }
   ];
 
@@ -369,12 +775,23 @@ export default function AIServices() {
     { name: "Marketing", count: aiServices.filter(s => s.category === "Marketing").length, active: false },
     { name: "HR & Recruitment", count: aiServices.filter(s => s.category === "HR & Recruitment").length, active: false },
     { name: "Finance", count: aiServices.filter(s => s.category === "Finance").length, active: false },
-    { name: "Supply Chain", count: aiServices.filter(s => s.category === "Supply Chain").length, active: false }
+    { name: "Supply Chain", count: aiServices.filter(s => s.category === "Supply Chain").length, active: false },
+    { name: "Video", count: aiServices.filter(s => s.category === "Video").length, active: false },
+    { name: "Voice", count: aiServices.filter(s => s.category === "Voice").length, active: false },
+    { name: "Image", count: aiServices.filter(s => s.category === "Image").length, active: false },
+    { name: "3D", count: aiServices.filter(s => s.category === "3D").length, active: false },
+    { name: "Music", count: aiServices.filter(s => s.category === "Music").length, active: false },
+    { name: "Document", count: aiServices.filter(s => s.category === "Document").length, active: false },
+    { name: "Maintenance", count: aiServices.filter(s => s.category === "Maintenance").length, active: false },
+    { name: "Energy", count: aiServices.filter(s => s.category === "Energy").length, active: false },
+    { name: "Legal", count: aiServices.filter(s => s.category === "Legal").length, active: false },
+    { name: "Medical", count: aiServices.filter(s => s.category === "Medical").length, active: false },
+    { name: "Recommendation", count: aiServices.filter(s => s.category === "Recommendation").length, active: false }
   ];
 
   const stats = [
-    { number: "25+", label: "AI Services", icon: <Brain className="w-6 h-6" /> },
-    { number: "15,000+", label: "AI Models Trained", icon: <Cpu className="w-6 h-6" /> },
+    { number: "40+", label: "AI Services", icon: <Brain className="w-6 h-6" /> },
+    { number: "25,000+", label: "AI Models Trained", icon: <Cpu className="w-6 h-6" /> },
     { number: "99.9%", label: "Accuracy Rate", icon: <Award className="w-6 h-6" /> },
     { number: "24/7", label: "AI Monitoring", icon: <Monitor className="w-6 h-6" /> }
   ];
@@ -488,11 +905,11 @@ export default function AIServices() {
               <div className="flex flex-wrap justify-center gap-4 mb-12">
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">25+ AI services</span>
+                  <span className="text-sm">40+ AI services</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">15,000+ models trained</span>
+                  <span className="text-sm">25,000+ models trained</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
