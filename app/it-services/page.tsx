@@ -431,20 +431,6 @@ export default function ITServices() {
       icon: <Monitor className="w-8 h-8" />
     }
   ];
-
-export default function ItServices() {
-  const itServices = [
-    {
-      title: "Cloud Infrastructure Management",
-      description: "Comprehensive cloud solutions with automated scaling, backup, disaster recovery, and multi-cloud support for enterprise-grade reliability.",
-      icon: <Cloud className="w-8 h-8" />,
-      path: "/cloud-infrastructure",
-      color: "from-blue-500 to-cyan-500",
-      price: "Starting at $249/month",
-      features: ["Auto-scaling", "Disaster Recovery", "Cost Optimization", "Security Hardening", "Multi-cloud Support", "24/7 Monitoring"],
-      category: "Cloud Services",
-      popularity: "Most Popular"
-    },
     {
       title: "Cybersecurity Solutions",
       description: "Enterprise-grade security services including threat detection, vulnerability assessment, compliance management, and incident response.",
