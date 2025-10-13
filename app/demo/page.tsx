@@ -1,26 +1,30 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Play, Right, Circle, Star, } from 'lucide-react';
+import { Play, Right, Circle, Star } from 'lucide-react';
 
 const DemoPage: React.FC = () => {
   const features = [
     {
-      icon: title: 'AI-Powered Analytics',
+      icon: 'Analytics',
+      title: 'AI-Powered Analytics',
       description: 'See how our AI analyzes your data in real-time',
       demo: &apos;Live Demo&apos;
     },
     {
-      icon: title: 'Advanced ',
+      icon: 'Security',
+      title: 'Advanced Security',
       description: 'Experience our enterprise-grade security features',
       demo: &apos;Demo&apos;
     },
     {
-      icon: title: 'Business Intelligence',
+      icon: 'Intelligence',
+      title: 'Business Intelligence',
       description: 'Explore our comprehensive BI dashboard',
       demo: &apos;BI Demo&apos;
     },
     {
-      icon: title: 'Team Collaboration',
+      icon: 'Collaboration',
+      title: 'Team Collaboration',
       description: 'See how teams work together seamlessly',
       demo: &apos;Collaboration Demo&apos;
     }

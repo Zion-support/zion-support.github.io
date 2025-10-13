@@ -1,11 +1,11 @@
 import React from 'react';
 
 interface FuturisticButtonProps {
-  children: .Node;
+  children: React.ReactNode;
   className?: string;
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
-  icon?: .Node;
+  icon?: React.ReactNode;
   onClick?: () => void;
   type?: &apos;button&apos; | &apos;submit&apos; | &apos;reset&apos;;
 }

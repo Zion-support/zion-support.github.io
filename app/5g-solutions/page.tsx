@@ -5,19 +5,31 @@ import { Right, Wifi, Circle, Zap, Globe, Smartphone } from 'lucide-react';
 const FiveGSolutionsPage: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
       icon: Zap,
+=======
+      icon: Wifi,
+>>>>>>> cursor/fix-errors-and-merge-to-main-0c82
       title: 'Ultra-Fast Speeds',
       description: 'Experience lightning-fast 5G connectivity with speeds up to 10 Gbps',
       benefits: [&apos;10x faster than 4G&apos;, &apos;Low latency&apos;, &apos;High bandwidth&apos;, &apos;Reliable connection&apos;]
     },
     {
+<<<<<<< HEAD
       icon: Globe,
+=======
+      icon: Circle,
+>>>>>>> cursor/fix-errors-and-merge-to-main-0c82
       title: 'Global Coverage',
       description: 'Comprehensive 5G network coverage across multiple regions',
       benefits: [&apos;Wide coverage&apos;, &apos;Seamless roaming&apos;, &apos;International support&apos;, &apos;Network redundancy&apos;]
     },
     {
+<<<<<<< HEAD
       icon: Smartphone,
+=======
+      icon: Wifi,
+>>>>>>> cursor/fix-errors-and-merge-to-main-0c82
       title: 'Mobile Optimization',
       description: 'Optimized 5G solutions for mobile devices and applications',
       benefits: [&apos;Mobile-first design&apos;, &apos;App optimization&apos;, &apos;Battery efficiency&apos;, &apos;Device compatibility&apos;]
