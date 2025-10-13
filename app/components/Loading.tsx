@@ -31,7 +31,7 @@ const Loading: React.FC<LoadingProps> = ({
     }, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [icons.length]);
 
   const CurrentIcon = icons[currentIcon];
 

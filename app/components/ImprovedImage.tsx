@@ -25,7 +25,7 @@ const ImprovedImage: React.FC<ImprovedImageProps> = ({
   placeholder,
   lazy = true,
   priority = false,
-  quality = 75,
+  // quality = 75, // Removed unused parameter
   sizes,
   onLoad,
   onError

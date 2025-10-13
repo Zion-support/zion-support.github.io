@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 
 interface EnhancedAnalyticsProps {
@@ -61,31 +61,31 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   };
 
   // Track service clicks
-  const trackServiceClick = (serviceName: string, serviceCategory: string) => {
+  const trackServiceClick = useCallback((serviceName: string, serviceCategory: string) => {
     trackEvent('service_click', {
       service_name: serviceName,
       service_category: serviceCategory,
       event_label: `${serviceCategory} - ${serviceName}`,
     });
-  };
+  }, [trackEvent]);
 
   // Track form submissions
-  const trackFormSubmission = (formName: string, formType: string) => {
+  const trackFormSubmission = useCallback((formName: string, formType: string) => {
     trackEvent('form_submit', {
       form_name: formName,
       form_type: formType,
       event_label: `${formType} - ${formName}`,
     });
-  };
+  }, [trackEvent]);
 
   // Track button clicks
-  const trackButtonClick = (buttonName: string, buttonLocation: string) => {
+  const trackButtonClick = useCallback((buttonName: string, buttonLocation: string) => {
     trackEvent('button_click', {
       button_name: buttonName,
       button_location: buttonLocation,
       event_label: `${buttonLocation} - ${buttonName}`,
     });
-  };
+  }, [trackEvent]);
 
   // Track scroll depth
   useEffect(() => {
@@ -179,7 +179,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       (window as any).trackFormSubmission = trackFormSubmission;
       (window as any).trackButtonClick = trackButtonClick;
     }
-  }, []);
+  }, [trackServiceClick, trackFormSubmission, trackButtonClick]);
 
   return <>{children}</>;
 };
