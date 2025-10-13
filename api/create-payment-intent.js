@@ -1,21 +1,3 @@
-const withErrorLogging = (handler) => {
-  return async (req, res) => {
-    try {
-
-      await handler(req, res);
-    
-} catch (error) {
-  console.error('Error:', error);
-} catch (error) {
-      console.error('API Error:', error);
-      res.statusCode = 500;
-      res.setHeader('Content-Type', 'application/json');
-      res.end(JSON.stringify({ error: 'Internal server error' }));
-    }
-  };
-};
-
-async function handler(req, res) {
 
 export default function handler(req, res) {
   if (req.method !== 'POST') {
@@ -26,18 +8,7 @@ export default function handler(req, res) {
   }
 
   try {
-
-    const { amount = 100, currency = 'usd' 
-} catch (error) {
-  console.error('Error:', error);
-} = req.body || {};
-    
-  try {
-
-    const { amount, currency = 'usd' 
-} catch (error) {
-  console.error('Error:', error);
-} = req.body || {};
+    const { amount, currency = 'usd' } = req.body || {};
     if (!amount) {
       res.statusCode = 400;
       res.setHeader('Content-Type', 'application/json');
@@ -66,6 +37,3 @@ export default function handler(req, res) {
     res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
   }
 }
-
-
-}}

@@ -10,11 +10,7 @@ import { execSync } from 'child_process';
 // Run TypeScript check and get all files with errors
 const runTypeCheck = () => {
   try {
-
-    const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8' 
-} catch (error) {
-  console.error('Error:', error);
-});
+    const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8' });
     return output;
   } catch (error) {
     return error.stdout || error.stderr || '';

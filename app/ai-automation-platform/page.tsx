@@ -1,4 +1,4 @@
-import { Right, Circle, Workflow } from 'lucide-react';
+import { Right, Circle, Workflow, Brain, Zap, Link } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
@@ -15,19 +15,19 @@ const AIAutomationPlatform = () => {
     {
       title: "Smart Decision Making",
       description: "AI-driven decision making for automated business processes",
-      icon: <className="w-6 h-6" />,
+      icon: <Brain className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
       title: "Process Optimization",
       description: "Continuously optimize processes using machine learning",
-      icon: <className="w-6 h-6" />,
+      icon: <Zap className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
       title: "Integration Hub",
       description: "Connect and automate across all your business systems",
-      icon: <className="w-6 h-6" />,
+      icon: <Link className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -56,7 +56,7 @@ const AIAutomationPlatform = () => {
           <ResponsiveContainer>
             <div className="relative z-10 text-center py-20">
               <div className="flex items-center justify-center mb-6">
-                <className="w-4 h-4 text-cyan-400 mr-2" />
+                <div className="w-4 h-4 text-cyan-400 mr-2" />
                 <span className="text-cyan-400 text-sm font-medium">Intelligent Automation</span>
               </div>
               
@@ -77,7 +77,7 @@ const AIAutomationPlatform = () => {
                 </FuturisticButton>
                 <FuturisticButton
                   variant="outline"
-                  icon={<className="w-5 h-5" />}
+                  icon={<Right className="w-5 h-5" />}
                 >
                   View Demo
                 </FuturisticButton>
@@ -151,7 +151,7 @@ const AIAutomationPlatform = () => {
               </p>
               <FuturisticButton
                 size="lg"
-                icon={<className="w-6 h-6" />}
+                icon={<Right className="w-6 h-6" />}
               >
                 Start Your Automation Journey
               </FuturisticButton>

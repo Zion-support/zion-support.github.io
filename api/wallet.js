@@ -21,17 +21,13 @@ export default function handler(req, res) {
   }
   let existing = [];
   try {
-
     if (fs.existsSync(file)) {
       const data = fs.readFileSync(file, 'utf8');
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
-    
-} catch (error) {
-  console.error('Error:', error);
-}
+    }
   } catch (error) {
-    // console.error('Error reading existing wallets:', error);
+    console.error('Error reading existing wallets:', error);
     existing = [];
   }
   // Check if wallet address already exists
@@ -61,10 +57,7 @@ export default function handler(req, res) {
       success: true, 
       message: 'Wallet added successfully',
       id: newWallet.id
-    
-} catch (error) {
-  console.error('Error:', error);
-}));
+    }));
   } catch (error) {
     // console.error('Error saving wallet:', error);
     res.statusCode = 500;

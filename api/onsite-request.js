@@ -18,16 +18,14 @@ export default function handler(req, res) {
   }
   let existing = [];
   try {
-
     if (fs.existsSync(file)) {
       const data = fs.readFileSync(file, 'utf8');
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
-    
-} catch (error) {
-  console.error('Error:', error);
-}
-  } catch {
+    }
+  } catch (error) {
+    console.error('Error reading file:', error);
+  }
     existing = [];
   }
   const newRequest = {
@@ -51,11 +49,8 @@ export default function handler(req, res) {
       success: true,
       message: 'Onsite request submitted successfully',
       id: newRequest.id
-    
-} catch (error) {
-  console.error('Error:', error);
-}));
-  } catch {
+    }));
+  } catch (error) {
     console.error('Error saving onsite request');
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');

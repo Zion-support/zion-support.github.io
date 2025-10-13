@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Circle, Star, Right, 3, 3, 2, as as as as Star as Circle as Right as as Icon, as Icon, as } from 'lucide-react';
+import { Circle, Star, Right, Brain, Zap, Shield } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
   const serviceCategories = [

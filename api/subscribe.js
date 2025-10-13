@@ -21,15 +21,11 @@ export default function handler(req, res) {
   }
   let existing = [];
   try {
-
     if (fs.existsSync(file)) {
       const data = fs.readFileSync(file, 'utf8');
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
-    
-} catch (error) {
-  console.error('Error:', error);
-}
+    }
   } catch (error) {
     console.error('Error reading existing subscribers:', error);
     existing = [];
@@ -60,10 +56,7 @@ export default function handler(req, res) {
       success: true, 
       message: 'Successfully subscribed to newsletter',
       id: newSubscriber.id
-    
-} catch (error) {
-  console.error('Error:', error);
-}));
+    }));
   } catch (error) {
     // console.error('Error saving subscriber:', error);
 

@@ -7,10 +7,10 @@ interface SidebarNavigationProps {
 }
 
 const navigationItems = [
-  { name: '', href: '/', icon: },
+  { name: 'Home', href: '/', icon: User },
   { name: 'Profile', href: '/profile', icon: User },
-  { name: '', href: '/settings', icon: },
-  { name: 'Help', href: '/help', icon: },
+  { name: 'Settings', href: '/settings', icon: User },
+  { name: 'Help', href: '/help', icon: User },
 ];
 
 const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {

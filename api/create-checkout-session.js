@@ -1,12 +1,8 @@
 const withErrorLogging = (handler) => {
   return async (req, res) => {
     try {
-
       await handler(req, res);
-    
-} catch (error) {
-  console.error('Error:', error);
-} catch (error) {
+    } catch (error) {
       console.error('API Error:', error);
       res.statusCode = 500;
       res.setHeader('Content-Type', 'application/json');
