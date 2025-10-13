@@ -1,19 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b847
-=======
-
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
 export default function ZionAIEmailAnalyzer() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

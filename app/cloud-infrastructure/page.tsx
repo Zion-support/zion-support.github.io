@@ -78,6 +78,7 @@ export default function CloudInfrastructure() {
 <<<<<<< HEAD
 =======
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
 =======
 }
@@ -90,3 +91,5 @@ export default function CloudInfrastructure() {
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6405
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e

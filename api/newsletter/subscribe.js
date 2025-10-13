@@ -11,22 +11,24 @@ export default async function handler(req, res) {
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
+
   try {
     const { email } = req.body || {};
+
     if (!email) {
       res.statusCode = 400;
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Email is required' }));
       return;
     }
-    // Simple email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
+
+    if (!isValidEmail(email)) {
       res.statusCode = 400;
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Invalid email format' }));
       return;
     }
+<<<<<<< HEAD
     // Save subscription logic here
     // In a real application, you would:
     // 1. Save to your database
@@ -48,16 +50,25 @@ export default async function handler(req, res) {
     res.end(JSON.stringify({ success: true, message: 'Successfully subscribed to newsletter' }));
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
+=======
+
+    // Here you would typically save to a database
+    // For now, we'll just log the email
+    console.log('Newsletter subscription:', email);
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
-      success: true,
-      message: 'Successfully subscribed to newsletter'
+      success: true, 
+      message: 'Successfully subscribed to newsletter' 
     }));
+
   } catch (error) {
     console.error('Newsletter subscription error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
+<<<<<<< HEAD
     res.end(JSON.stringify({ 
       error: 'Failed to subscribe to newsletter',
       details: process.env.NODE_ENV === 'development' ? error.message : undefined
@@ -88,3 +99,8 @@ export default handler;
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
+=======
+    res.end(JSON.stringify({ error: 'Internal server error' }));
+  }
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e

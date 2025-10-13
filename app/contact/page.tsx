@@ -129,6 +129,7 @@ export default function ContactPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             <div className="bg-green-500/10 border border-green-500/20 rounded-2xl p-8 text-center">
               <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
@@ -139,6 +140,8 @@ export default function ContactPage() {
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center">
               <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-4">
                 <CheckCircle className="w-8 h-8 text-white" />
@@ -160,6 +163,7 @@ export default function ContactPage() {
                   });
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+<<<<<<< HEAD
 <<<<<<< HEAD
               >
                 Send Another Message
@@ -189,6 +193,8 @@ export default function ContactPage() {
 });
                   }}
                   className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e
               >
                 Send Another Message
               </button>
