@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import React, { Helmet } from 'react-helmet-async';
+import React
+import { Helmet } from 'react-helmet-async';
 interface SEOOptimizerProps {
   title?: string;
   description?: string;
@@ -85,22 +86,20 @@ export default function SEOOptimizer({
     <div>
   )
     </div>
-  );
-  );
   )
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />"
       <meta name="keywords" content={keywords.join(', ')} />"
-      <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow'} />"'
+      <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow'} />"
       <meta name="viewport" content="width=device-width, initial-scale=1" />"
       <meta charSet="utf-8" />"
       <meta name="author" content="Zion Tech Group" />"
       <meta name="publisher" content="Zion Tech Group" />"
-      <meta name="language" content="en-US" />
+      <meta name="language" content="en-US"
       {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      {canonicalUrl && <link rel="canonical"
       
       {/* Open Graph Tags */}
       <meta property="og:title" content={title} />"
@@ -109,24 +108,24 @@ export default function SEOOptimizer({
       <meta property="og:type" content={ogType} />"
       {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}"
       <meta property="og:site_name" content="Zion Tech Group" />"
-      <meta property="og:locale" content="en_US" />
+      <meta property="og:locale" content="en_US"
       {/* Twitter Card Tags */}
       <meta name="twitter:card" content="summary_large_image" />"
       <meta name="twitter:title" content={title} />"
       <meta name="twitter:description" content={description} />"
       <meta name="twitter:image" content={ogImage} />"
       <meta name="twitter:site" content="@ziontechgroup" />"
-      <meta name="twitter:creator" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup"
       {/* Additional SEO Tags */}
       <meta name="theme-color" content="#1e293b" />"
       <meta name="msapplication-TileColor" content="#1e293b" />"
       <meta name="mobile-web-app-capable" content="yes" />"
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />"
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"
       {/* Structured Data */}
-      <script type="application/ld+json">
+      <script type="application/ld+json"
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>
@@ -135,7 +134,7 @@ export default function SEOOptimizer({
       
       {/* Structured Data */}
       {structuredData && (
-        <script type="application/ld+json">
+        <script type="application/ld+json"
           {JSON.stringify(structuredData)}
         </script>
       )}
@@ -143,7 +142,7 @@ export default function SEOOptimizer({
       {/* Performance hints */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />"
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />"
-      <link rel="dns-prefetch" href="https://ziontechgroup.com" />
+      <link rel="dns-prefetch" href="https://ziontechgroup.com"
     </Helmet>
   );
 }

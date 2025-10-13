@@ -233,8 +233,6 @@ import React from 'react';
     <div>
   )
     </div>
-  );
-  );
   )
       <button;
         onClick={() => setIsVisible(true)}
@@ -249,9 +247,9 @@ import React from 'react';
   const Component = () => {
   
     return (
-    <div className="fixed bottom-4 left-4 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg border min-w-64 z-50">"
-      <div className="flex justify-between items-center mb-3">"
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+    <div className="fixed bottom-4 left-4 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg border min-w-64 z-50"
+      <div className="flex justify-between items-center mb-3"
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white"
           Cache Manager;
         </h3>
         <button;
@@ -263,24 +261,24 @@ import React from 'react';
         </button>
       </div>
 
-      <div className="space-y-2 text-sm">"
-        <div className="flex justify-between">"
+      <div className="space-y-2 text-sm"
+        <div className="flex justify-between"
           <span className="text-gray-600 dark:text-gray-400">Cache Hits:</span>"
-          <span className="text-green-600 dark:text-green-400">{stats.hits}</span>
+          <span className="text-green-600 dark:text-green-400"
         </div>
-        <div className="flex justify-between">"
+        <div className="flex justify-between"
           <span className="text-gray-600 dark:text-gray-400">Cache Misses:</span>"
-          <span className="text-red-600 dark:text-red-400">{stats.misses}</span>
+          <span className="text-red-600 dark:text-red-400"
         </div>
-        <div className="flex justify-between">"
+        <div className="flex justify-between"
           <span className="text-gray-600 dark:text-gray-400">Cache Size:</span>"
-          <span className="text-blue-600 dark:text-blue-400">
+          <span className="text-blue-600 dark:text-blue-400"
             {formatBytes(stats.size)}
           </span>
         </div>
-        <div className="flex justify-between">"
+        <div className="flex justify-between"
           <span className="text-gray-600 dark:text-gray-400">Hit Rate:</span>"
-          <span className="text-purple-600 dark:text-purple-400">
+          <span className="text-purple-600 dark:text-purple-400"
             {stats.hits + stats.misses > 0 ;
               ? Math.round((stats.hits / (stats.hits + stats.misses)) * 100) 
               : 0}%
@@ -288,7 +286,7 @@ import React from 'react';
         </div>
       </div>
 
-      <div className="mt-4 space-y-2">
+      <div className="mt-4 space-y-2"
         <button;
           onClick={clearCache}
           className="w-full bg-red-500 text-white px-3 py-2 rounded text-sm hover:bg-red-600 transition-colors"
@@ -303,8 +301,6 @@ import React from 'react';
         </button>
       </div>
     </div>
-  );
-  );
   )
 }
 

@@ -113,53 +113,53 @@ const AIEcommerceSolutionsPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
+      <main className="container mx-auto px-4 py-16 pt-24"
         {/* Hero Section */}
-        <section className="text-center mb-16">"
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <section className="text-center mb-16"
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
             AI E-commerce Solutions;
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
             Transform your online business with AI-powered e-commerce solutions that increase sales, 
             improve customer experience, and optimize operations.
           </p>
         </section>
 
         {/* Services Grid */}
-        <section className="mb-16">"
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <section className="mb-16"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8"
             {ecommerceServices.map((service, index) => (
-              <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">"
-                <div className="flex items-center mb-6">"
-                  <div className="text-4xl mr-4">{service.icon}</div>
+              <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"
+                <div className="flex items-center mb-6"
+                  <div className="text-4xl mr-4"
                   <div>
                     <h3 className="text-2xl font-bold text-white">{service.title}</h3>"
-                    <p className="text-cyan-400 text-lg">{service.price}</p>
+                    <p className="text-cyan-400 text-lg"
                   </div>
                 </div>
                 
-                <p className="text-gray-300 mb-6">{service.description}</p>
+                <p className="text-gray-300 mb-6"
                 
-                <div className="mb-6">"
+                <div className="mb-6"
                   <h4 className="text-lg font-semibold text-cyan-400 mb-3">Features:</h4>"
-                  <ul className="space-y-2">
+                  <ul className="space-y-2"
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">"
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <li key={idx} className="flex items-center text-gray-300"
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
                 
-                <div className="mb-6">"
+                <div className="mb-6"
                   <h4 className="text-lg font-semibold text-cyan-400 mb-3">Benefits:</h4>"
-                  <ul className="space-y-2">
+                  <ul className="space-y-2"
                     {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">"
-                        <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
+                      <li key={idx} className="flex items-center text-gray-300"
+                        <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0"
                         {benefit}
                       </li>
                     ))}
@@ -178,28 +178,28 @@ const AIEcommerceSolutionsPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="mb-16">"
+        <section className="mb-16"
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Key Features</h2>"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             {features.map((feature, index) => (
-              <div key={index} className="text-center">"
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">"
-                  <feature.icon className="w-8 h-8 text-white" />
+              <div key={index} className="text-center"
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4"
+                  <feature.icon className="w-8 h-8 text-white"
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>"
-                <p className="text-gray-300">{feature.description}</p>
+                <p className="text-gray-300"
               </div>
             ))}
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="text-center">"
+        <section className="text-center"
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your E-commerce?</h2>"
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
             Let our AI solutions help you build a more profitable and efficient online business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"
             <a 
               href="/contact" "
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
@@ -217,8 +217,6 @@ const AIEcommerceSolutionsPage: React.FC = () => {
       </main>
       <Footer />
     </div>
-  );
-  );
   );
 };
 

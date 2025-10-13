@@ -117,10 +117,10 @@ interface SidebarProps {
 
   const services = useMemo(() => [
     {
-      name: "AI Solutions",
-      href: "/ai-services",
+      name: "AI Solutions"
+      href: "/ai-services"
       icon: <Brain className="w-5 h-5" />,"
-      color: "from-blue-500 to-cyan-500",
+      color: "from-blue-500 to-cyan-500"
       items: [
         { name: "AI Analytics", href: "/ai-analytics" },"
         { name: "AI Automation", href: "/ai-automation" },"
@@ -131,10 +131,10 @@ interface SidebarProps {
       ],
     },
     {
-      name: "IT Services",
-      href: "/services",
+      name: "IT Services"
+      href: "/services"
       icon: <Shield className="w-5 h-5" />,"
-      color: "from-green-500 to-emerald-500",
+      color: "from-green-500 to-emerald-500"
       items: [
         { name: "Cloud Infrastructure", href: "/cloud-infrastructure" },"
         { name: "Cybersecurity", href: "/cybersecurity-solutions" },"
@@ -145,10 +145,10 @@ interface SidebarProps {
       ],
     },
     {
-      name: "Micro SAAS",
-      href: "/micro-saas",
+      name: "Micro SAAS"
+      href: "/micro-saas"
       icon: <Zap className="w-5 h-5" />,"
-      color: "from-purple-500 to-pink-500",
+      color: "from-purple-500 to-pink-500"
       items: [
         { name: "Zion Analytics Pro", href: "/zion-analytics-pro" },"
         { name: "Zion Security Shield", href: "/zion-security-shield" },"
@@ -159,10 +159,10 @@ interface SidebarProps {
       ],
     },
     {
-      name: "5G Solutions",
-      href: "/5g-solutions",
+      name: "5G Solutions"
+      href: "/5g-solutions"
       icon: <Globe className="w-5 h-5" />,"
-      color: "from-orange-500 to-red-500",
+      color: "from-orange-500 to-red-500"
       items: [
         { name: "5G Data Analytics", href: "/5g-data-analytics" },"
         { name: "5G Edge Computing", href: "/5g-edge-computing" },"
@@ -180,13 +180,13 @@ interface SidebarProps {
     { name: "Contact", href: "/contact", icon: <Mail className="w-5 h-5" /> },"
     { name: "Blog", href: "/blog", icon: <Receipt className="w-5 h-5" /> },"
     { name: "Demo", href: "/demo", icon: <Monitor className="w-5 h-5" /> },"
-    { name: "Support", href: "/support", icon: <Heart className="w-5 h-5" /> }
+    { name: "Support", href: "/support", icon: <Heart className="w-5 h-5"
   ], []);
 
   const contactInfo = useMemo(() => [
     { icon: <Mail className="w-4 h-4" />, text: "kleber@ziontechgroup.com" },"
     { icon: <Phone className="w-4 h-4" />, text: "+1 (302) 464-0950" },"
-    { icon: <MapPin className="w-4 h-4" />, text: "364 E Main St STE 1008, Middletown, DE 19709" }
+    { icon: <MapPin className="w-4 h-4" />, text: "364 E Main St STE 1008, Middletown, DE 19709"
   ], []);
 
   if (!isOpen) return null;
@@ -196,8 +196,6 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     <div>
   )
     </div>
-  );
-  );
   )
   const companyLinks = [
     { name: 'Home', path: '/', icon: Home },'
@@ -223,8 +221,6 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     <div>
   )
     </div>
-  );
-  );
   )
     <>
       {/* Overlay */}
@@ -237,32 +233,32 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         onClick={onClose}
       />
       {/* Sidebar */}
-      <div className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 transform transition-transform duration-300 ease-in-out lg:translate-x-0">"
-        <div className="flex flex-col h-full">
+      <div className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 transform transition-transform duration-300 ease-in-out lg:translate-x-0"
+        <div className="flex flex-col h-full"
           {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-gray-200">"
-            <div className="flex items-center space-x-2">"
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">"
-                <Zap className="w-5 h-5 text-white" />
+          <div className="flex items-center justify-between p-4 border-b border-gray-200"
+            <div className="flex items-center space-x-2"
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center"
+                <Zap className="w-5 h-5 text-white"
               </div>
-              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+              <span className="text-xl font-bold text-gray-900"
             </div>
             <button;
               onClick={onClose}
               className="p-2 hover:bg-gray-100 rounded-lg transition-colors lg:hidden"
             >
-              <X className="w-6 h-6" />
+              <X className="w-6 h-6"
             </button>
           </div>
 
           {/* Navigation Content */}
-          <div className="flex-1 overflow-y-auto">
+          <div className="flex-1 overflow-y-auto"
             {/* Company Links */}
-            <div className="p-4">"
-              <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
+            <div className="p-4"
+              <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3"
                 Company;
               </h3>
-              <ul className="space-y-1">
+              <ul className="space-y-1"
                 {companyLinks.map((link, index) => (
                   <li key={index}>
                     <Link;
@@ -270,7 +266,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                       className="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
                       onClick={onClose}
                     >
-                      <link.icon className="w-4 h-4" />
+                      <link.icon className="w-4 h-4"
                       <span>{link.name}</span>
                     </Link>
                   </li>
@@ -279,32 +275,32 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             </div>
 
             {/* Service Categories */}
-            <div className="p-4">"
-              <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
+            <div className="p-4"
+              <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3"
                 Services;
               </h3>
-              <div className="space-y-1">
+              <div className="space-y-1"
                 {serviceCategories.map((category, index) => (
                   <div key={index}>
                     <button;
                       onClick={() => toggleSection(category.title)}
                       className="w-full flex items-center justify-between px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
                     >
-                      <div className="flex items-center space-x-3">"
+                      <div className="flex items-center space-x-3"
                         <div className={`w-6 h-6 ${category.bgColor} rounded flex items-center justify-center`}>
                           <category.icon className={`w-3 h-3 ${category.color}`} />
                         </div>
-                        <span className="font-medium">{category.title}</span>
+                        <span className="font-medium"
                       </div>
                       {expandedSections.has(category.title) ? (
-                        <ChevronDown className="w-4 h-4" />
+                        <ChevronDown className="w-4 h-4"
                       ) : (
-                        <ChevronRight className="w-4 h-4" />
+                        <ChevronRight className="w-4 h-4"
                       )}
                     </button>
                     
                     {expandedSections.has(category.title) && (
-                      <div className="ml-6 mt-1 space-y-1">
+                      <div className="ml-6 mt-1 space-y-1"
                         {category.services.map((service, serviceIndex) => (
                           <Link;
                             key={serviceIndex}
@@ -323,11 +319,11 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             </div>
 
             {/* Support Links */}
-            <div className="p-4">"
-              <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
+            <div className="p-4"
+              <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3"
                 Support;
               </h3>
-              <ul className="space-y-1">
+              <ul className="space-y-1"
                 {supportLinks.map((link, index) => (
                   <li key={index}>
                     <Link;
@@ -335,7 +331,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                       className="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
                       onClick={onClose}
                     >
-                      <link.icon className="w-4 h-4" />
+                      <link.icon className="w-4 h-4"
                       <span>{link.name}</span>
                     </Link>
                   </li>
@@ -345,14 +341,14 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
           </div>
 
           {/* Footer */}
-          <div className="p-4 border-t border-gray-200">"
-            <div className="space-y-3">"
-              <div className="flex items-center space-x-2 text-sm text-gray-600">"
-                <Phone className="w-4 h-4" />
+          <div className="p-4 border-t border-gray-200"
+            <div className="space-y-3"
+              <div className="flex items-center space-x-2 text-sm text-gray-600"
+                <Phone className="w-4 h-4"
                 <span>(302) 464-0950</span>
               </div>
-              <div className="flex items-center space-x-2 text-sm text-gray-600">"
-                <Mail className="w-4 h-4" />
+              <div className="flex items-center space-x-2 text-sm text-gray-600"
+                <Mail className="w-4 h-4"
                 <span>kleber@ziontechgroup.com</span>
               </div>
             </div>

@@ -118,7 +118,7 @@ export default PerformanceOptimizer;
     // Optimize images;
   const Component = () => {
   
-    return (<div className="performance-optimizer">)</div>
+    return (<div className="performance-optimizer"
       {children}{/* Performance Status Indicator (only in development) */}
       {process.env['NODE_ENV'] === 'development' && ('
   );

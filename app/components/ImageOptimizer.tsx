@@ -27,8 +27,6 @@ export default function ImageOptimizer({
     <div>
   )
     </div>
-  );
-  );
   )
     <img;
       src={src}

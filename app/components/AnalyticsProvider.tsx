@@ -48,8 +48,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     <div>
   )
     </div>
-  );
-  );
   )
     <AnalyticsContext.Provider value={value}>
       {children}

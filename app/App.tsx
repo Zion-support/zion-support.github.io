@@ -19,13 +19,13 @@ const App: React.FC = () => {
     <ErrorBoundary>
       <HelmetProvider>
         <BrowserRouter>
-          <div className="App">
+          <div className="App"
             <PerformanceMonitor />
             <AccessibilityEnhancer />
             <Suspense fallback={<AppLoadingSpinner />}>
               <Routes>
                 {/* Main Pages */}
-                <Route path="/" element={<HomePage />} />
+                <Route path="/"
               </Routes>
             </Suspense>
           </div>

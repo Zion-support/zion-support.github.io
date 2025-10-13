@@ -50,7 +50,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
       }}
     >
       {imageUrl && (
-        <div className="banner-image flex-shrink-0">
+        <div className="banner-image flex-shrink-0"
           <img;
             src={imageUrl}
             alt={title}
@@ -63,7 +63,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
         </div>
       )}
 
-      <div className="banner-content flex-1">
+      <div className="banner-content flex-1"
         <h2 
           className="font-bold mb-4"
           style={{ 
@@ -107,8 +107,6 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
         </a>
       </div>
     </div>
-  );
-  );
 };
 
 export default AdvertisingBanner;

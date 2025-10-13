@@ -70,21 +70,21 @@ const AIHealthcarePage: React.FC = () => {
   const categories = [...new Set(aiHealthcareServices.map(service => service.category))];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50"
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
+      <main className="container mx-auto px-4 py-16 pt-24"
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-teal-700 text-white py-20">"
+        <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-teal-700 text-white py-20"
           <div className="absolute inset-0 bg-black opacity-20"></div>"
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-            <div className="text-center">"
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+            <div className="text-center"
+              <h1 className="text-4xl md:text-6xl font-bold mb-6"
                 AI Healthcare Solutions;
               </h1>
-              <p className="text-xl md:text-2xl text-green-100 mb-8 max-w-4xl mx-auto">
+              <p className="text-xl md:text-2xl text-green-100 mb-8 max-w-4xl mx-auto"
                 Revolutionizing healthcare with advanced AI technology for medical imaging, drug discovery, personalized medicine, and clinical decision support.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"
                 <a 
                   href="/contact" "
                   className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-all"
@@ -103,49 +103,49 @@ const AIHealthcarePage: React.FC = () => {
         </section>
 
         {/* Services Grid */}
-        <section className="py-20">"
-          <div className="max-w-7xl mx-auto">"
-            <div className="text-center mb-16">"
+        <section className="py-20"
+          <div className="max-w-7xl mx-auto"
+            <div className="text-center mb-16"
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Our AI Healthcare Services</h2>"
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto"
                 Comprehensive AI solutions designed to transform healthcare delivery and improve patient outcomes.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               {aiHealthcareServices.map((service, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">"
+                <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
                   <div className="text-4xl mb-4">{service.icon}</div>"
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">{service.title}</h3>"
-                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <p className="text-gray-600 mb-4"
                   
-                  <div className="mb-4">"
+                  <div className="mb-4"
                     <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>"
-                    <ul className="text-sm text-gray-600 space-y-1">
+                    <ul className="text-sm text-gray-600 space-y-1"
                       {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center">"
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        <li key={idx} className="flex items-center"
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"
                           {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
                   
-                  <div className="mb-4">"
+                  <div className="mb-4"
                     <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>"
-                    <ul className="text-sm text-gray-600 space-y-1">
+                    <ul className="text-sm text-gray-600 space-y-1"
                       {service.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center">"
-                          <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
+                        <li key={idx} className="flex items-center"
+                          <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0"
                           {benefit}
                         </li>
                       ))}
                     </ul>
                   </div>
                   
-                  <div className="mb-4">"
+                  <div className="mb-4"
                     <div className="text-2xl font-bold text-green-600 mb-2">{service.price}</div>"
-                    <div className="text-sm text-gray-500">Category: {service.category}</div>
+                    <div className="text-sm text-gray-500"
                   </div>
                   
                   <a 
@@ -161,23 +161,23 @@ const AIHealthcarePage: React.FC = () => {
         </section>
 
         {/* Categories */}
-        <section className="py-20 bg-gray-50">"
-          <div className="max-w-7xl mx-auto">"
-            <div className="text-center mb-16">"
+        <section className="py-20 bg-gray-50"
+          <div className="max-w-7xl mx-auto"
+            <div className="text-center mb-16"
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Healthcare AI Categories</h2>"
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto"
                 Specialized AI solutions across different areas of healthcare.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               {categories.map((category, index) => (
-                <div key={index} className="text-center p-6 bg-white rounded-lg shadow-md">"
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">"
-                    <Heart className="w-8 h-8 text-white" />
+                <div key={index} className="text-center p-6 bg-white rounded-lg shadow-md"
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4"
+                    <Heart className="w-8 h-8 text-white"
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{category}</h3>"
-                  <p className="text-gray-600 text-sm">"
+                  <p className="text-gray-600 text-sm"
                     {category === 'Medical Imaging' && 'AI-powered diagnostic imaging and analysis'}'
                     {category === 'Drug Discovery' && 'Machine learning for pharmaceutical research'}'
                     {category === 'Personalized Medicine' && 'Genomic analysis and personalized treatments'}'
@@ -192,13 +192,13 @@ const AIHealthcarePage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-green-600 to-teal-700 text-white">"
-          <div className="max-w-4xl mx-auto text-center px-4">"
+        <section className="py-20 bg-gradient-to-r from-green-600 to-teal-700 text-white"
+          <div className="max-w-4xl mx-auto text-center px-4"
             <h2 className="text-4xl font-bold mb-6">Ready to Transform Healthcare?</h2>"
-            <p className="text-xl text-green-100 mb-8">"
+            <p className="text-xl text-green-100 mb-8"
               Let's discuss how our AI healthcare solutions can improve patient outcomes and operational efficiency.'
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"
               <a 
                 href="/contact" "
                 className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-all"
@@ -217,8 +217,6 @@ const AIHealthcarePage: React.FC = () => {
       </main>
       <Footer />
     </div>
-  );
-  );
 };
 
 export default AIHealthcarePage;

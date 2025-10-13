@@ -1,22 +1,23 @@
-import React, { Helmet } from 'react-helmet-async';
+import React
+import { Helmet } from 'react-helmet-async';
 export default function CustomSoftware() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
       <Helmet>
         <title>CustomSoftware - Zion Tech Group</title>
-        <meta name="description" content="Advanced customsoftware solutions" />
+        <meta name="description" content="Advanced customsoftware solutions"
       </Helmet>
-      <div className="container mx-auto px-4 py-16">"
-        <div className="text-center mb-16">"
-          <h1 className="text-5xl font-bold text-white mb-6">"
-            Custom Software <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+      <div className="container mx-auto px-4 py-16"
+        <div className="text-center mb-16"
+          <h1 className="text-5xl font-bold text-white mb-6"
+            Custom Software <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our comprehensive customsoftware solutions designed to transform your business;
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto"
+            Discover our comprehensive customsoftware solutions designed to transform your business.
           </p>
         </div>
-        <div className="text-center">"
-          <p className="text-gray-300">Coming Soon - CustomSoftware Solutions</p>
+        <div className="text-center"
+          <p className="text-gray-300"
 const CustomSoftwarePage: React.FC = () => {,
   return (
     <div>
@@ -28,11 +29,11 @@ const CustomSoftwarePage: React.FC = () => {,
   )
       <Helmet />
         <title>Custom Software Development - Zion Tech Group</title>
-        <div className="container mx-auto px-4 py-16">"
-          <div className="text-center mb-16">"
+        <div className="container mx-auto px-4 py-16"
+          <div className="text-center mb-16"
             <h1 className="text-5xl font-bold text-white mb-6">Custom Software Development;</h1>"
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">,</div>"
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">"
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Web Applications</h3>"
               <p className="text-gray-300 mb-4">Modern, responsive web applications built with the latest technologies.</p>"
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Mobile Applications</h3>"
@@ -45,7 +46,7 @@ const CustomSoftwarePage: React.FC = () => {,
               <p className="text-gray-300 mb-4">Custom customer relationship management systems tailored to your business.</p>"
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">API Development</h3>"
               <p className="text-gray-300 mb-4">RESTful APIs and GraphQL endpoints for seamless integration.</p>"
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">,</button>
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               Start Your Custom Project;
   );};
 

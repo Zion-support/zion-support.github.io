@@ -10,8 +10,6 @@ export default function CoreWebVitals({ className = '', children }: CoreWebVital
     <div className={`core-web-vitals ${className}`}>
       {children}
     </div>
-  );
-  );
 }
 
     // Log in development

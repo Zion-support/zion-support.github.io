@@ -36,21 +36,21 @@ const HomePage: React.FC = () => {
         <meta name="description" content="Leading provider of AI-powered solutions and IT services for modern businesses" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="[^"]*">
         {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="container mx-auto text-center">
-            <h1 className="text-6xl font-bold text-white mb-6">
+        <section className="[^"]*">
+          <div className="[^"]*">
+            <h1 className="[^"]*">
               Transform Your Business with{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"
                 AI-Powered Solutions
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="[^"]*">
               We deliver cutting-edge artificial intelligence and IT solutions that drive innovation, 
               efficiency, and growth for businesses of all sizes.
             </p>
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center gap-2 mx-auto">
+            <button className="[^"]*">
               Get Started Today
               <ArrowRight className="w-5 h-5" />
             </button>
@@ -58,17 +58,17 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto">
-            <h2 className="text-4xl font-bold text-white text-center mb-16">
+        <section className="[^"]*">
+          <div className="[^"]*">
+            <h2 className="[^"]*">
               Why Choose Zion Tech Group?
             </h2>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-8"
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center">
-                  <feature.icon className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center"
+                  <feature.icon className="w-12 h-12 text-blue-400 mx-auto mb-4"
+                  <h3 className="text-xl font-semibold text-white mb-4"
+                  <p className="text-gray-300"
                 </div>
               ))}
             </div>
@@ -76,13 +76,13 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Stats Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <section className="py-20 px-4 bg-white/5"
+          <div className="container mx-auto"
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
               {stats.map((stat, index) => (
                 <div key={index}>
-                  <div className="text-4xl font-bold text-blue-400 mb-2">{stat.value}</div>
-                  <div className="text-gray-300">{stat.label}</div>
+                  <div className="text-4xl font-bold text-blue-400 mb-2"
+                  <div className="text-gray-300"
                 </div>
               ))}
             </div>
@@ -90,15 +90,15 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
+        <section className="py-20 px-4"
+          <div className="container mx-auto text-center"
+            <h2 className="text-4xl font-bold text-white mb-6"
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
               Join hundreds of companies that trust Zion Tech Group for their AI and IT needs.
             </p>
-            <button className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300">
+            <button className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300"
               Start Your Journey Today
             </button>
           </div>

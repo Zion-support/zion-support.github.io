@@ -103,8 +103,6 @@ export const AnalyticsProvider: React.FC<{children: React.ReactNode ,}> = ({chil
     <div>
   )
     </div>
-  );
-  );
   )
     <>
     </>

@@ -10,6 +10,4 @@ export default function AccessibilityEnhancer({ children, className = '' }: Acce
     <div className={`accessibility-enhancer ${className}`}>
       {children}
     </div>
-  );
-  );
 }

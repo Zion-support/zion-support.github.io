@@ -1,4 +1,5 @@
-import React, { Link } from 'react-router-dom';
+import React
+import { Link } from 'react-router-dom';
 interface BreadcrumbProps {
   items: Array<{
     label: string;
@@ -12,20 +13,18 @@ export default function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
     <div>
   )
     </div>
-  );
-  );
   )
     <nav className={`breadcrumb ${className}`} aria-label="Breadcrumb">"
-      <ol className="flex space-x-2">
+      <ol className="flex space-x-2"
         {items.map((item, index) => (
-          <li key={index} className="flex items-center">"
-            {index > 0 && <span className="mx-2">/</span>}
+          <li key={index} className="flex items-center"
+            {index > 0 && <span className="mx-2"
             {item.href ? (
-              <Link to={item.href} className="text-blue-600 hover:text-blue-800">
+              <Link to={item.href} className="text-blue-600 hover:text-blue-800"
                 {item.label}
               </Link>
             ) : (
-              <span className="text-gray-500">{item.label}</span>
+              <span className="text-gray-500"
             )}
           </li>
         ))}
@@ -77,18 +76,16 @@ const Breadcrumb: React.FC = () => {
     <div>
   )
     </div>
-  );
-  );
   )
     <nav className="bg-gray-900/50 backdrop-blur-sm border-b border-gray-700/50" aria-label="Breadcrumb>"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>"
-        <ol className="flex items-center space-x-2 py-3 text-sm>
+        <ol className="
           {breadcrumbs.map((item, index) => (
 
-            <li key={item.href} className="flex items-center>
+            <li key={item.href} className="
               {index > 0 && (
 
-                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" aria-hidden="true />
+                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" aria-hidden="
               )}
 
               {index === 0 ? (
@@ -97,14 +94,14 @@ const Breadcrumb: React.FC = () => {
                   to={item.href}
 
                   className="flex items-center text-gray-300 hover:text-white transition-colors"
-                  aria-label="Home;
+                  aria-label="
                 >
                   <Home className="w-4 h-4" aria-hidden="true />"
-                  <span className="sr-only>Home</span>
+                  <span className="
                 </Link>
               ) : item.current ? (
 
-                <span className="text-white font-medium" aria-current="page>
+                <span className="text-white font-medium" aria-current="
                   {item.name}
 
                 </span>
@@ -113,13 +110,14 @@ const Breadcrumb: React.FC = () => {
                 <Link;
                   to={item.href}
 
-                  className="text-gray-300 hover:text-white transition-colors;
+                  className="
                 >
                   {item.name}
 
                 </Link>
 'use client';
-import React, { Link } from 'react-router-dom';
+import React
+import { Link } from 'react-router-dom';
 import React, { ChevronRight, Home } from 'lucide-react';
 interface BreadcrumbItem {
   label: string;
@@ -137,24 +135,22 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
     <div>
   )
     </div>
-  );
-  );
   )
-    <nav className="bg-slate-800/50 border-b border-cyan-500/20 py-3">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-        <ol className="flex items-center space-x-2 text-sm">
+    <nav className="bg-slate-800/50 border-b border-cyan-500/20 py-3"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        <ol className="flex items-center space-x-2 text-sm"
           <li>
             <Link
               to="/"
               className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 flex items-center"
             >
-              <Home className="w-4 h-4 mr-1" />
+              <Home className="w-4 h-4 mr-1"
               Home;
             </Link>
           </li>
           {items.map((item, index) => (
-            <li key={index} className="flex items-center">"
-              <ChevronRight className="w-4 h-4 text-gray-500 mx-2" />
+            <li key={index} className="flex items-center"
+              <ChevronRight className="w-4 h-4 text-gray-500 mx-2"
               {item.href ? (
                 <Link;
                   to={item.href}
@@ -163,7 +159,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
                   {item.label}
                 </Link>
               ) : (
-                <span className="text-cyan-400 font-medium">{item.label}</span>
+                <span className="text-cyan-400 font-medium"
               )}
 
     
@@ -178,14 +174,12 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
     <div>
   )
     </div>
-  );
-  );
   )
-    <nav className="bg-slate-800/50 py-2 px-4">"
-      <div className="max-w-7xl mx-auto">"
-        <ol className="flex items-center space-x-2 text-sm">
+    <nav className="bg-slate-800/50 py-2 px-4"
+      <div className="max-w-7xl mx-auto"
+        <ol className="flex items-center space-x-2 text-sm"
           {breadcrumbItems.map((item, index) => (
-            <li key={item.path} className="flex items-center">"
+            <li key={item.path} className="flex items-center"
               {index > 0 && <span className="text-gray-400 mx-2">/</span>}"
               <span className="text-gray-300">{item.name}</span>"
 import React, { useLocation } from 'react-router-dom';
@@ -216,16 +210,14 @@ const Breadcrumb: React.FC = () => {
     <div>
   )
     </div>
-  );
-  );
   )
-    <nav aria-label="Breadcrumb" className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700">"
-      <div className="max-w-7xl mx-auto px-4 py-3">"
-        <ol className="flex items-center space-x-2 text-sm">
+    <nav aria-label="Breadcrumb" className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700"
+      <div className="max-w-7xl mx-auto px-4 py-3"
+        <ol className="flex items-center space-x-2 text-sm"
           {breadcrumbItems.map((item, index) => (
-            <li key={item.path} className="flex items-center">
+            <li key={item.path} className="flex items-center"
               {index > 0 && (
-                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
+                <ChevronRight className="w-4 h-4 text-gray-400 mx-2"
               )}
               <a;
                 href={item.path}
@@ -235,7 +227,7 @@ const Breadcrumb: React.FC = () => {
                     : 'text-gray-300 hover:text-cyan-400'
                 }`}
               >
-                {item.icon && <item.icon className="w-4 h-4" />}
+                {item.icon && <item.icon className="w-4 h-4"
                 <span>{item.name}</span>
               </a>
             </li>
@@ -247,7 +239,7 @@ import React, { Link, useLocation } from 'react-router-dom';
 import React, { ChevronRight, Home } from 'lucide-react';
 export default function Breadcrumb() {
   const location = useLocation();
-  const pathnames = location.pathname.split("/").filter((x) => x);
+  const pathnames = location.pathname.split("/"
 
   const getBreadcrumbName = (path: string) => {
     const nameMap: { [key: string]: string } = {
@@ -299,24 +291,22 @@ export default function Breadcrumb() {
     <div>
   )
     </div>
-  );
-  );
   )
-    <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-cyan-500/20 py-3 px-4">"
-      <div className="max-w-7xl mx-auto">"
-        <ol className="flex items-center space-x-2 text-sm">
+    <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-cyan-500/20 py-3 px-4"
+      <div className="max-w-7xl mx-auto"
+        <ol className="flex items-center space-x-2 text-sm"
           <li>
             <Link
               to="/"
               className="flex items-center text-gray-400 hover:text-cyan-400 transition-colors"
             >
-              <Home className="w-4 h-4 mr-1" />
+              <Home className="w-4 h-4 mr-1"
               Home;
             </Link>
           </li>
           
           {pathnames.map((path, index) => {
-            const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`;
+            const routeTo = `/${pathnames.slice(0, index + 1).join("/"
             const isLast = index === pathnames.length - 1;
             const name = getBreadcrumbName(path);
 
@@ -326,13 +316,11 @@ export default function Breadcrumb() {
     <div>
   )
     </div>
-  );
-  );
   )
-              <li key={routeTo} className="flex items-center">"
-                <ChevronRight className="w-4 h-4 text-gray-500 mx-2" />
+              <li key={routeTo} className="flex items-center"
+                <ChevronRight className="w-4 h-4 text-gray-500 mx-2"
                 {isLast ? (
-                  <span className="text-cyan-400 font-medium">{name}</span>
+                  <span className="text-cyan-400 font-medium"
                 ) : (
                   <Link;
                     to={routeTo}

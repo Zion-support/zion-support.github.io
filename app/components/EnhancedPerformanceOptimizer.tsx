@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect } from 'react';
-import React, { Helmet } from 'react-helmet-async';
+import React
+import { Helmet } from 'react-helmet-async';
 import React, { ArrowRight, CheckCircle, Star, Users, Award, TrendingUp } from 'lucide-react';
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
@@ -31,11 +32,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [enablePreloading]);
 
   return (
-    <div className="performance-optimizer">
+    <div className="performance-optimizer"
       {children}
     </div>
-  );
-  );
 };
 
 export default PerformanceOptimizer;

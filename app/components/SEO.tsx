@@ -110,8 +110,6 @@ export const SEO: React.FC<SEOProps> = ({
     <div>
   )
     </div>
-  );
-  );
   )
   );
 };

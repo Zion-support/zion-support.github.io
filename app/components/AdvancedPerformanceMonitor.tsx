@@ -11,8 +11,6 @@ export default function AdvancedPerformanceMonitor({ className = '' }: AdvancedP
       <p>Advanced performance monitoring component</p>
     </div>
   );
-  );
-  );
 }
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
@@ -569,51 +567,51 @@ interface PerformanceMetrics {fcp: number | null;,}
   const Component = () => {
   
     return (
-    <div className="fixed bottom-4 right-4 z-50">
+    <div className="fixed bottom-4 right-4 z-50"
       <button;
         onClick={() => setIsVisible(!isVisible)}
         className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-3 rounded-full shadow-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-50"
         aria-label="Toggle performance monitor"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
         </svg>
       </button>
 
       {isVisible && (
-        <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-80">"
-          <h3 className="text-lg font-semibold mb-4 text-gray-800">Performance Metrics</h3>
+        <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-80"
+          <h3 className="text-lg font-semibold mb-4 text-gray-800"
           
-          <div className="space-y-3 text-sm">"
-            <div className="flex justify-between items-center">"
+          <div className="space-y-3 text-sm"
+            <div className="flex justify-between items-center"
               <span className="text-gray-600">Load Time:</span>"
               <span className={`font-mono ${metrics.loadTime ? getMetricColor(metrics.loadTime, { good: 1000, poor: 3000 }) : 'text-gray-400'}`}>
                 {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'N/A'}
               </span>
             </div>
             
-            <div className="flex justify-between items-center">"
+            <div className="flex justify-between items-center"
               <span className="text-gray-600">FCP:</span>"
               <span className={`font-mono ${metrics.fcp ? getMetricColor(metrics.fcp, { good: 1800, poor: 3000 }) : 'text-gray-400'}`}>
                 {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}
               </span>
             </div>
             
-            <div className="flex justify-between items-center">"
+            <div className="flex justify-between items-center"
               <span className="text-gray-600">LCP:</span>"
               <span className={`font-mono ${metrics.lcp ? getMetricColor(metrics.lcp, { good: 2500, poor: 4000 }) : 'text-gray-400'}`}>
                 {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}
               </span>
             </div>
             
-            <div className="flex justify-between items-center">"
+            <div className="flex justify-between items-center"
               <span className="text-gray-600">CLS:</span>"
               <span className={`font-mono ${metrics.cls !== null ? getMetricColor(metrics.cls, { good: 0.1, poor: 0.25 }) : 'text-gray-400'}`}>
                 {metrics.cls !== null ? metrics.cls.toFixed(3) : 'N/A'}
               </span>
             </div>
             
-            <div className="flex justify-between items-center">"
+            <div className="flex justify-between items-center"
               <span className="text-gray-600">TTFB:</span>"
               <span className={`font-mono ${metrics.ttfb ? getMetricColor(metrics.ttfb, { good: 800, poor: 1800 }) : 'text-gray-400'}`}>
                 {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
@@ -621,17 +619,17 @@ interface PerformanceMetrics {fcp: number | null;,}
             </div>
             
             {metrics.memoryUsage && (
-              <div className="flex justify-between items-center">"
+              <div className="flex justify-between items-center"
                 <span className="text-gray-600">Memory:</span>"
-                <span className="font-mono text-gray-600">
+                <span className="font-mono text-gray-600"
                   {metrics.memoryUsage.toFixed(1)}MB;
                 </span>
               </div>
             )}
           </div>
           
-          <div className="mt-4 pt-4 border-t border-gray-200">"
-            <div className="text-xs text-gray-500">
+          <div className="mt-4 pt-4 border-t border-gray-200"
+            <div className="text-xs text-gray-500"
               <p>Green: Good | Yellow: Needs Improvement | Red: Poor</p>
             </div>
           </div>
@@ -754,12 +752,12 @@ export default AdvancedPerformanceMonitor;
   const Component = () => {
   
     return (
-    <div className="fixed bottom-4 left-20 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg border min-w-80 z-50 max-h-96 overflow-y-auto">"
-      <div className="flex justify-between items-center mb-3">"
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+    <div className="fixed bottom-4 left-20 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg border min-w-80 z-50 max-h-96 overflow-y-auto"
+      <div className="flex justify-between items-center mb-3"
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white"
           Performance Monitor;
         </h3>
-        <div className="flex space-x-2">
+        <div className="flex space-x-2"
           <button;
             onClick={() => setIsRecording(!isRecording)}
             className={`px-2 py-1 rounded text-xs ${
@@ -780,12 +778,12 @@ export default AdvancedPerformanceMonitor;
         </div>
       </div>
 
-      <div className="mb-4">"
-        <div className="flex justify-between items-center">"
+      <div className="mb-4"
+        <div className="flex justify-between items-center"
           <span className="text-sm text-gray-600 dark:text-gray-400">Performance Score:</span>"
           <span className={`text-lg font-bold ${scoreColor}`}>{score}/100</span>
         </div>
-        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-1">
+        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-1"
           <div 
             className={`h-2 rounded-full ${
               score >= 80 ? 'bg-green-500' : score >= 60 ? 'bg-yellow-500' : 'bg-red-500'
@@ -795,64 +793,64 @@ export default AdvancedPerformanceMonitor;
         </div>
       </div>
 
-      <div className="space-y-2 text-sm">"
-        <div className="flex justify-between">"
+      <div className="space-y-2 text-sm"
+        <div className="flex justify-between"
           <span className="text-gray-600 dark:text-gray-400">First Contentful Paint:</span>"
-          <span className="text-blue-600 dark:text-blue-400">
+          <span className="text-blue-600 dark:text-blue-400"
             {formatMetric(metrics.firstContentfulPaint)}
           </span>
         </div>
-        <div className="flex justify-between">"
+        <div className="flex justify-between"
           <span className="text-gray-600 dark:text-gray-400">Largest Contentful Paint:</span>"
-          <span className="text-blue-600 dark:text-blue-400">
+          <span className="text-blue-600 dark:text-blue-400"
             {formatMetric(metrics.largestContentfulPaint)}
           </span>
         </div>
-        <div className="flex justify-between">"
+        <div className="flex justify-between"
           <span className="text-gray-600 dark:text-gray-400">First Input Delay:</span>"
-          <span className="text-blue-600 dark:text-blue-400">
+          <span className="text-blue-600 dark:text-blue-400"
             {formatMetric(metrics.firstInputDelay)}
           </span>
         </div>
-        <div className="flex justify-between">"
+        <div className="flex justify-between"
           <span className="text-gray-600 dark:text-gray-400">Cumulative Layout Shift:</span>"
-          <span className="text-blue-600 dark:text-blue-400">
+          <span className="text-blue-600 dark:text-blue-400"
             {formatMetric(metrics.cumulativeLayoutShift)}
           </span>
         </div>
-        <div className="flex justify-between">"
+        <div className="flex justify-between"
           <span className="text-gray-600 dark:text-gray-400">Time to First Byte:</span>"
-          <span className="text-blue-600 dark:text-blue-400">
+          <span className="text-blue-600 dark:text-blue-400"
             {formatMetric(metrics.timeToFirstByte)}
           </span>
         </div>
-        <div className="flex justify-between">"
+        <div className="flex justify-between"
           <span className="text-gray-600 dark:text-gray-400">Memory Usage:</span>"
-          <span className="text-blue-600 dark:text-blue-400">"
+          <span className="text-blue-600 dark:text-blue-400"
             {formatMetric(metrics.memoryUsage, 'MB')}
           </span>
         </div>
-        <div className="flex justify-between">"
+        <div className="flex justify-between"
           <span className="text-gray-600 dark:text-gray-400">Load Time:</span>"
-          <span className="text-blue-600 dark:text-blue-400">
+          <span className="text-blue-600 dark:text-blue-400"
             {formatMetric(metrics.loadTime)}
           </span>
         </div>
-        <div className="flex justify-between">"
+        <div className="flex justify-between"
           <span className="text-gray-600 dark:text-gray-400">DOM Content Loaded:</span>"
-          <span className="text-blue-600 dark:text-blue-400">
+          <span className="text-blue-600 dark:text-blue-400"
             {formatMetric(metrics.domContentLoaded)}
           </span>
         </div>
-        <div className="flex justify-between">"
+        <div className="flex justify-between"
           <span className="text-gray-600 dark:text-gray-400">Total Blocking Time:</span>"
-          <span className="text-blue-600 dark:text-blue-400">
+          <span className="text-blue-600 dark:text-blue-400"
             {formatMetric(metrics.totalBlockingTime)}
           </span>
         </div>
       </div>
 
-      <div className="mt-4 space-y-2">
+      <div className="mt-4 space-y-2"
         <button;
           onClick={exportMetrics}
           className="w-full bg-blue-500 text-white px-3 py-2 rounded text-sm hover:bg-blue-600 transition-colors"

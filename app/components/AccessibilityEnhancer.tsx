@@ -47,7 +47,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
         // Close dropdowns with Escape key
         if (event.key === 'Escape) {'
-          const openDropdowns = document.querySelectorAll('[aria-expanded="true]);;'
+          const openDropdowns = document.querySelectorAll('[aria-expanded="
 
           openDropdowns.forEach(dropdown => {
             (dropdown as HTMLElement).setAttribute('aria-expanded', 'false);'
@@ -277,8 +277,6 @@ export default function AccessibilityEnhancer() {
     <div>
   )
     </div>
-  );
-  );
   )
     <>
       {/* Toggle Button */}
@@ -289,56 +287,56 @@ export default function AccessibilityEnhancer() {
         title="Accessibility Settings"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"
         </svg>
       </button>
 
       {/* Settings Panel */}
       {isVisible && (
-        <div className="fixed top-16 right-4 z-50 bg-white rounded-lg shadow-xl p-6 w-80 max-w-sm">"
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">
+        <div className="fixed top-16 right-4 z-50 bg-white rounded-lg shadow-xl p-6 w-80 max-w-sm"
+          <h3 className="text-lg font-semibold text-gray-900 mb-4"
             Accessibility Settings;
           </h3>
           
-          <div className="space-y-4">"
-            <label className="flex items-center space-x-3">
+          <div className="space-y-4"
+            <label className="flex items-center space-x-3"
               <input
                 type="checkbox"
                 checked={settings.highContrast}
                 onChange={(e) => updateSetting('highContrast', e.target.checked)}
                 className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
               />
-              <span className="text-sm text-gray-700">High Contrast</span>
+              <span className="text-sm text-gray-700"
             </label>
 
-            <label className="flex items-center space-x-3">
+            <label className="flex items-center space-x-3"
               <input
                 type="checkbox"
                 checked={settings.largeText}
                 onChange={(e) => updateSetting('largeText', e.target.checked)}
                 className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
               />
-              <span className="text-sm text-gray-700">Large Text</span>
+              <span className="text-sm text-gray-700"
             </label>
 
-            <label className="flex items-center space-x-3">
+            <label className="flex items-center space-x-3"
               <input
                 type="checkbox"
                 checked={settings.reducedMotion}
                 onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
                 className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
               />
-              <span className="text-sm text-gray-700">Reduce Motion</span>
+              <span className="text-sm text-gray-700"
             </label>
 
-            <label className="flex items-center space-x-3">
+            <label className="flex items-center space-x-3"
               <input
                 type="checkbox"
                 checked={settings.focusVisible}
                 onChange={(e) => updateSetting('focusVisible', e.target.checked)}
                 className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
               />
-              <span className="text-sm text-gray-700">Enhanced Focus</span>
+              <span className="text-sm text-gray-700"
             </label>
           </div>
 
@@ -425,7 +423,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const handleKeyDown = (event: KeyboardEvent) => {
         // Skip to main content
         if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
+          const skipLink = document.querySelector('a[href="#main-content"
           if (skipLink) {
             skipLink.focus();
             event.preventDefault();
@@ -458,7 +456,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       }
 
       // Add skip links
-      const skipLink = document.querySelector('a[href="#main-content"]');
+      const skipLink = document.querySelector('a[href="#main-content"
       if (!skipLink) {
         const link = document.createElement('a');
         link.href = '#main-content';
@@ -475,10 +473,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const manageFocus = () => {
   
         // Trap focus in modals
-        const modals = document.querySelectorAll('[role="dialog"]');
+        const modals = document.querySelectorAll('[role="dialog"
         modals.forEach((modal) => {
           const focusableElements = modal.querySelectorAll(
-            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"
           );
           const firstElement = focusableElements[0] as HTMLElement;
           const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
@@ -533,11 +531,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   const Component = () => {
   
     return (
-    <div className="accessibility-enhanced">
+    <div className="accessibility-enhanced"
       {/* Accessibility Controls */}
-      <div className="accessibility-controls fixed top-4 right-4 z-50 bg-slate-800 p-4 rounded-lg shadow-lg border border-slate-700">"
+      <div className="accessibility-controls fixed top-4 right-4 z-50 bg-slate-800 p-4 rounded-lg shadow-lg border border-slate-700"
         <h3 className="text-white text-sm font-semibold mb-3">Accessibility</h3>"
-        <div className="space-y-2">
+        <div className="space-y-2"
           <button;
             onClick={toggleHighContrast}
             className="block w-full text-left text-sm text-gray-300 hover:text-white transition-colors"
@@ -545,7 +543,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           >
             {isHighContrast ? 'Disable' : 'Enable'} High Contrast;'
           </button>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2"
             <button;
               onClick={decreaseFontSize}
               className="text-sm text-gray-300 hover:text-white transition-colors"
@@ -553,7 +551,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
             >
               A-
             </button>
-            <span className="text-sm text-gray-300">{fontSize}px</span>
+            <span className="text-sm text-gray-300"
             <button;
               onClick={increaseFontSize}
               className="text-sm text-gray-300 hover:text-white transition-colors"
@@ -567,8 +565,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
       {children}
     </div>
-  );
-  );
   );
 }
 'use client';
@@ -784,7 +780,7 @@ export default AccessibilityEnhancer;
       // Focus trap for modals;
       const trapFocus = (element: HTMLElement) => {
         const focusableElements = element.querySelectorAll(
-          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"
         );
         const firstFocusableElement = focusableElements[0] as HTMLElement;
         const lastFocusableElement = focusableElements[focusableElements.length - 1] as HTMLElement;
@@ -816,7 +812,7 @@ export default AccessibilityEnhancer;
       };
 
       // Apply focus trap to modals and dropdowns
-      const modals = document.querySelectorAll('[role="dialog"], [role="menu"]');
+      const modals = document.querySelectorAll('[role="dialog"], [role="menu"
       const cleanupFunctions = Array.from(modals).map(modal => trapFocus(modal as HTMLElement));
 
       // Initialize all enhancements;
@@ -842,16 +838,16 @@ export default AccessibilityEnhancer;
   const Component = () => {
   
     return (
-    <div className="accessibility-enhanced">
+    <div className="accessibility-enhanced"
       {children}
   const Component = () => {
   
     return (
-    <div className="accessibility-enhancer">
+    <div className="accessibility-enhancer"
       {children}
       
       {/* Accessibility Settings Panel */}
-      <div className="fixed bottom-4 right-4 z-50">
+      <div className="fixed bottom-4 right-4 z-50"
         <button
           className="bg-cyan-500 text-white p-3 rounded-full shadow-lg hover:bg-cyan-600 transition-colors"
           onClick={() => {
@@ -870,49 +866,49 @@ export default AccessibilityEnhancer;
           className="absolute bottom-16 right-0 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg border min-w-64"
           style={{ display: 'none' }}
         >
-          <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
+          <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white"
             Accessibility Settings;
           </h3>
           
-          <div className="space-y-3">"
-            <label className="flex items-center space-x-2">
+          <div className="space-y-3"
+            <label className="flex items-center space-x-2"
               <input
                 type="checkbox"
                 checked={settings.highContrast}
                 onChange={(e) => updateSetting('highContrast', e.target.checked)}
                 className="rounded"
               />
-              <span className="text-sm text-gray-700 dark:text-gray-300">High Contrast</span>
+              <span className="text-sm text-gray-700 dark:text-gray-300"
             </label>
             
-            <label className="flex items-center space-x-2">
+            <label className="flex items-center space-x-2"
               <input
                 type="checkbox"
                 checked={settings.largeText}
                 onChange={(e) => updateSetting('largeText', e.target.checked)}
                 className="rounded"
               />
-              <span className="text-sm text-gray-700 dark:text-gray-300">Large Text</span>
+              <span className="text-sm text-gray-700 dark:text-gray-300"
             </label>
             
-            <label className="flex items-center space-x-2">
+            <label className="flex items-center space-x-2"
               <input
                 type="checkbox"
                 checked={settings.reducedMotion}
                 onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
                 className="rounded"
               />
-              <span className="text-sm text-gray-700 dark:text-gray-300">Reduce Motion</span>
+              <span className="text-sm text-gray-700 dark:text-gray-300"
             </label>
             
-            <label className="flex items-center space-x-2">
+            <label className="flex items-center space-x-2"
               <input
                 type="checkbox"
                 checked={settings.focusVisible}
                 onChange={(e) => updateSetting('focusVisible', e.target.checked)}
                 className="rounded"
               />
-              <span className="text-sm text-gray-700 dark:text-gray-300">Focus Indicators</span>
+              <span className="text-sm text-gray-700 dark:text-gray-300"
             </label>
           </div>
           

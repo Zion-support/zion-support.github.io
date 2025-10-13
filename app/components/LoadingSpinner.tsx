@@ -22,7 +22,7 @@ export default LoadingSpinner;
     <div className={`flex flex-col items-center justify-center ${className}`}>
       <Loader2 className={`animate-spin text-blue-500 ${sizeClasses[size]}`} />
       {text && (
-        <p className="mt-2 text-sm text-gray-600">{text}</p>
+        <p className="mt-2 text-sm text-gray-600"
       )}
     </div>
   );

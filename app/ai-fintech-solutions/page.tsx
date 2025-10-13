@@ -1,4 +1,5 @@
-import React, { Helmet } from 'react-helmet-async';
+import React
+import { Helmet } from 'react-helmet-async';
 import React, { CheckCircle, TrendingUp, Phone, Mail, MapPin, DollarSign, Shield, BarChart3, CreditCard } from 'lucide-react';
 const AIFintechSolutionsPage: React.FC = () => {
   const fintechServices = [
@@ -221,57 +222,57 @@ const AIFintechSolutionsPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
       <Helmet>
         <title>AI Fintech Solutions - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI fintech solutions including algorithmic trading, fraud detection, and robo-advisory. Starting at $699/month." />"
-        <meta name="keywords" content="ai fintech, algorithmic trading, fraud detection, credit scoring, robo-advisor, insurance underwriting, payment processing" />
+        <meta name="keywords" content="ai fintech, algorithmic trading, fraud detection, credit scoring, robo-advisor, insurance underwriting, payment processing"
       </Helmet>
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">"
-        <div className="max-w-7xl mx-auto text-center">"
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+      <section className="pt-24 pb-16 px-4"
+        <div className="max-w-7xl mx-auto text-center"
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6"
             AI Fintech Solutions;
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
             Transform financial services with AI-powered solutions that enhance trading, prevent fraud, and optimize investment strategies.
           </p>
           
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">"
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
               <div className="text-3xl font-bold text-cyan-400 mb-2">8+</div>"
-              <div className="text-gray-300">Fintech Tools</div>
+              <div className="text-gray-300"
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
               <div className="text-3xl font-bold text-green-400 mb-2">$699</div>"
-              <div className="text-gray-300">Starting Price</div>
+              <div className="text-gray-300"
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
               <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>"
-              <div className="text-gray-300">Fraud Detection</div>
+              <div className="text-gray-300"
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
               <div className="text-3xl font-bold text-orange-400 mb-2">25%</div>"
-              <div className="text-gray-300">Return Increase</div>
+              <div className="text-gray-300"
             </div>
           </div>
           
           {/* Contact Info */}
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">"
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">"
-              <div className="flex items-center space-x-2">"
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12"
+            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8"
+              <div className="flex items-center space-x-2"
                 <Phone className="w-5 h-5" />"
-                <span className="text-white font-medium">+1 302 464 0950</span>
+                <span className="text-white font-medium"
               </div>
-              <div className="flex items-center space-x-2">"
+              <div className="flex items-center space-x-2"
                 <Mail className="w-5 h-5" />"
-                <span className="text-white font-medium">kleber@ziontechgroup.com</span>
+                <span className="text-white font-medium"
               </div>
-              <div className="flex items-center space-x-2">"
+              <div className="flex items-center space-x-2"
                 <MapPin className="w-5 h-5" />"
-                <span className="text-white font-medium">Middletown, DE</span>
+                <span className="text-white font-medium"
               </div>
             </div>
           </div>
@@ -279,78 +280,78 @@ const AIFintechSolutionsPage: React.FC = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 px-4">"
-        <div className="max-w-7xl mx-auto">"
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
+      <section className="py-16 px-4"
+        <div className="max-w-7xl mx-auto"
+          <h2 className="text-3xl font-bold text-white text-center mb-12"
             Choose Your Fintech AI Solution;
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             {fintechServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">"
-                <div className="text-center mb-6">"
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                <div className="text-center mb-6"
                   <div className="text-5xl mb-4">{service.icon}</div>"
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>"
-                  <p className="text-gray-600 text-sm">{service.description}</p>
+                  <p className="text-gray-600 text-sm"
                 </div>
                 
-                <div className="mb-6">"
-                  <div className="flex items-center justify-between mb-4">"
+                <div className="mb-6"
+                  <div className="flex items-center justify-between mb-4"
                     <span className="text-2xl font-bold text-green-600">{service.price}</span>"
-                    <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+                    <span className="text-sm text-gray-500"
                   </div>
-                  <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">
+                  <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block"
                     {service.category}
                   </div>
                 </div>
                 
-                <div className="mb-6">"
+                <div className="mb-6"
                   <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>"
-                  <ul className="space-y-2">
+                  <ul className="space-y-2"
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600"
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"
                         {feature}
                       </li>
                     ))}
                     {service.features.length > 4 && (
-                      <li className="text-sm text-gray-500">
+                      <li className="text-sm text-gray-500"
                         +{service.features.length - 4} more features;
                       </li>
                     )}
                   </ul>
                 </div>
                 
-                <div className="mb-6">"
+                <div className="mb-6"
                   <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>"
-                  <ul className="space-y-1">
+                  <ul className="space-y-1"
                     {service.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">"
-                        <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
+                      <li key={benefitIndex} className="text-sm text-gray-600 flex items-center"
+                        <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0"
                         {benefit}
                       </li>
                     ))}
                   </ul>
                 </div>
                 
-                <div className="mb-6">"
+                <div className="mb-6"
                   <h4 className="font-semibold text-gray-900 mb-3">Technologies:</h4>"
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2"
                     {service.technologies.map((tech, techIndex) => (
-                      <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                      <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded"
                         {tech}
                       </span>
                     ))}
                   </div>
                 </div>
                 
-                <div className="text-center">
+                <div className="text-center"
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
                   >
                     Get Started Now;
                   </a>
-                  <p className="text-xs text-gray-500 mt-2">
+                  <p className="text-xs text-gray-500 mt-2"
                     {service.contactInfo}
                   </p>
                 </div>
@@ -361,15 +362,15 @@ const AIFintechSolutionsPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">"
-        <div className="max-w-4xl mx-auto text-center">"
-          <h2 className="text-3xl font-bold text-white mb-6">
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"
+        <div className="max-w-4xl mx-auto text-center"
+          <h2 className="text-3xl font-bold text-white mb-6"
             Ready to Transform Your Financial Services?
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
+          <p className="text-xl text-purple-100 mb-8"
             Get started with our AI fintech solutions today and revolutionize your financial operations.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"
             <a
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
@@ -386,8 +387,6 @@ const AIFintechSolutionsPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-  );
 };
 
 export default AIFintechSolutionsPage;

@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import React, { Helmet } from 'react-helmet-async';
+import React
+import { useState } from 'react';
+import React
+import { Helmet } from 'react-helmet-async';
 import React, { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, ArrowRight, BookOpen, Video, FileText } from 'lucide-react';
 const SupportPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -136,10 +138,11 @@ const SupportPage: React.FC = () => {
   };
 
 const PagePage: React.FC = () => {}
-import React, { Helmet } from 'react-helmet-async';
+import React
+import { Helmet } from 'react-helmet-async';
 const SupportPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"
     return matchesSearch && matchesCategory;
   });
       title: 'Email Support',
@@ -158,7 +161,7 @@ const SupportPage: React.FC = () => {
       title: 'Live Chat',
       <Helmet>
         <title>Support - Zion Tech Group</title>
-        <meta name="description" content="Get help and support for Zion Tech Group's AI and IT solutions. Find answers, contact support, and access resources." />"'
+        <meta name="description" content="Get help and support for Zion Tech Group's AI and IT solutions. Find answers, contact support, and access resources." />"
       availability: '24/7'
       title: 'Community Forum',
       description: 'Connect with other users and experts',
@@ -208,25 +211,23 @@ const SupportPage: React.FC = () => {
       <Helmet>
         <title>Support - Zion Tech Group | Technical Support & Help</title>
         <meta name="description" content="Get technical support and help for your AI and IT solutions. 24/7 support, documentation, and expert assistance from Zion Tech Group." />"
-        <meta name="keywords" content="technical support, AI support, IT help, customer service, documentation, troubleshooting" />
+        <meta name="keywords" content="technical support, AI support, IT help, customer service, documentation, troubleshooting"
       </Helmet>
       
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-xl text-gray-600 mb-8"
             Get help and support for all your needs.
           </p>
         </div>
-  );
-  );
-        <div className="max-w-4xl mx-auto">"
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">"
-            <div className="bg-white rounded-lg shadow-md p-6">"
+        <div className="max-w-4xl mx-auto"
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            <div className="bg-white rounded-lg shadow-md p-6"
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Documentation</h3>"
-              <p className="text-gray-600">
+              <p className="text-gray-600"
                 Comprehensive documentation and guides for all our services.
           </div>
-          <div className="relative">"
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+          <div className="relative"
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"
             <input
               type="text"
               placeholder="Search for help, questions, or topics..."
@@ -239,22 +240,22 @@ const SupportPage: React.FC = () => {
       </section>
 
       {/* Contact Support */}
-      <section className="py-16 px-4">"
-        <div className="max-w-7xl mx-auto">"
-          <div className="text-center mb-16">"
+      <section className="py-16 px-4"
+        <div className="max-w-7xl mx-auto"
+          <div className="text-center mb-16"
             <h2 className="text-4xl font-bold text-white mb-4">Contact Support</h2>"
-            <p className="text-xl text-gray-300">Get in touch with our support team</p>
+            <p className="text-xl text-gray-300"
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"
             {supportChannels.map((channel, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">"
-                <div className="w-16 h-16 bg-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
-                  <channel.icon className="w-8 h-8 text-white" />
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300"
+                <div className="w-16 h-16 bg-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4"
+                  <channel.icon className="w-8 h-8 text-white"
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{channel.title}</h3>"
                 <p className="text-gray-300 mb-4">{channel.description}</p>"
                 <p className="text-cyan-400 font-semibold mb-2">{channel.contact}</p>"
-                <p className="text-sm text-gray-400">{channel.hours}</p>
+                <p className="text-sm text-gray-400"
               </div>
             ))}
           </div>
@@ -262,40 +263,40 @@ const SupportPage: React.FC = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 px-4">"
-        <div className="max-w-4xl mx-auto">"
-          <div className="text-center mb-16">"
+      <section className="py-20 px-4"
+        <div className="max-w-4xl mx-auto"
+          <div className="text-center mb-16"
             <h2 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>"
-            <p className="text-xl text-gray-300">Find answers to common questions</p>
+            <p className="text-xl text-gray-300"
           </div>
           
-          <div className="space-y-6">
+          <div className="space-y-6"
             {filteredFaqs.map((faq, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">"
-                <div className="flex items-start justify-between">"
-                  <div className="flex-1">"
-                    <div className="flex items-center mb-2">"
-                      <span className="bg-cyan-500/20 text-cyan-400 text-xs font-semibold px-2 py-1 rounded-full mr-3">
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300"
+                <div className="flex items-start justify-between"
+                  <div className="flex-1"
+                    <div className="flex items-center mb-2"
+                      <span className="bg-cyan-500/20 text-cyan-400 text-xs font-semibold px-2 py-1 rounded-full mr-3"
                         {faq.category}
                       </span>
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>"
-                    <p className="text-gray-300">{faq.answer}</p>
+                    <p className="text-gray-300"
                   </div>
                 </div>
               </div>
             ))}
         {/* Search Section */}
-        <section className="py-16 px-4">
+        <section className="py-16 px-4"
         </section>
-          <div className="max-w-7xl mx-auto">"
-            <div className="text-center mb-16">"
+          <div className="max-w-7xl mx-auto"
+            <div className="text-center mb-16"
               <h2 className="text-4xl font-bold text-white mb-4">How can we help you?</h2>"
-              <p className="text-xl text-gray-300">Search our knowledge base or contact our support team</p>
+              <p className="text-xl text-gray-300"
             </div>
-            <div className="max-w-2xl mx-auto mb-16">"
-              <div className="relative">"
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <div className="max-w-2xl mx-auto mb-16"
+              <div className="relative"
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"
                 <input
                   type="text"
                   placeholder="Search for help articles, guides, and solutions..."
@@ -306,7 +307,7 @@ const SupportPage: React.FC = () => {
               </div>
             </div>
             
-            <div className="flex flex-wrap justify-center gap-2">
+            <div className="flex flex-wrap justify-center gap-2"
               {categories.map((category) => (
                 <button;
                   key={category.id}
@@ -321,24 +322,24 @@ const SupportPage: React.FC = () => {
                 </button>
               ))}
             </div>
-          <div className="max-w-7xl mx-auto">"
-            <div className="text-center mb-12">"
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <div className="max-w-7xl mx-auto"
+            <div className="text-center mb-12"
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"
                 Get in Touch;
               </h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
+              <p className="text-gray-300 max-w-3xl mx-auto"
                 Choose your preferred way to contact our support team;
               </p>
             </div>
-            <div className="bg-white rounded-lg shadow-md p-6">"
+            <div className="bg-white rounded-lg shadow-md p-6"
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Contact Support</h3>"
-              <p className="text-gray-600">
+              <p className="text-gray-600"
                 Reach out to our support team for personalized assistance.
               </p>
             </div>
-            <div className="bg-white rounded-lg shadow-md p-6">"
+            <div className="bg-white rounded-lg shadow-md p-6"
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Community</h3>"
-              <p className="text-gray-600">
+              <p className="text-gray-600"
                 Join our community forum for discussions and tips.
               </p>
             </div>
@@ -349,25 +350,23 @@ const SupportPage: React.FC = () => {
   const Component = () => {
   
     return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">"
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">"
+    <div className="min-h-screen bg-gray-900 text-white py-20"
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"
         <h1 className="text-4xl font-bold mb-8">Support</h1>"
-        <div className="prose prose-invert max-w-none">"
-          <p className="text-lg text-gray-300 mb-6">
+        <div className="prose prose-invert max-w-none"
+          <p className="text-lg text-gray-300 mb-6"
             Get help and support for our services.
           </p>
         </div>
       </div>
     </div>
   );
-  );
-  );
 }
-            <div className="space-y-6">
+            <div className="space-y-6"
               {filteredFaqs.map((faq, index) => (
-                <div key={index} className="cyber-card hologram-card p-6">"
+                <div key={index} className="cyber-card hologram-card p-6"
                   <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>"
-                  <p className="text-gray-300">{faq.answer}</p>
+                  <p className="text-gray-300"
                 </div>
               ))}
             ))
@@ -376,25 +375,25 @@ const SupportPage: React.FC = () => {
       </section>
 
         {/* Support Hours */}
-        <section className="py-16 px-4">"
-          <div className="max-w-4xl mx-auto">"
-            <div className="cyber-card hologram-card p-8">"
-              <div className="text-center mb-8">"
+        <section className="py-16 px-4"
+          <div className="max-w-4xl mx-auto"
+            <div className="cyber-card hologram-card p-8"
+              <div className="text-center mb-8"
                 <h2 className="text-3xl font-bold text-white mb-4">Support Hours</h2>"
-                <p className="text-xl text-gray-300">We're here when you need us</p>'
+                <p className="text-xl text-gray-300"
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
-                <div className="text-center">"
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8"
+                <div className="text-center"
                   <Clock className="w-12 h-12 text-red-400 mx-auto mb-4" />"
                   <h3 className="text-lg font-semibold text-white mb-2">Emergency Support</h3>"
                   <p className="text-gray-300 mb-2">24/7 for critical issues</p>"
-                  <p className="text-gray-300">Emergency support included</p>
+                  <p className="text-gray-300"
                 </div>
-                <div className="text-center">"
+                <div className="text-center"
                   <Clock className="w-12 h-12 text-green-400 mx-auto mb-4" />"
                   <h3 className="text-lg font-semibold text-white mb-2">General Inquiries</h3>"
                   <p className="text-gray-300 mb-2">Monday - Friday: 9:00 AM - 6:00 PM EST</p>"
-                  <p className="text-gray-300">Saturday: 10:00 AM - 4:00 PM EST</p>
+                  <p className="text-gray-300"
                 </div>
               </div>
             </div>
@@ -402,23 +401,23 @@ const SupportPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-4">"
-          <div className="max-w-7xl mx-auto">"
-            <div className="cyber-card hologram-card p-12 text-center">"
-              <h2 className="text-3xl font-bold text-white mb-6 neon-text">
+        <section className="py-16 px-4"
+          <div className="max-w-7xl mx-auto"
+            <div className="cyber-card hologram-card p-12 text-center"
+              <h2 className="text-3xl font-bold text-white mb-6 neon-text"
                 Still Need Help?
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
                 Can't find what you're looking for? Our expert support team is ready to help you with any questions or issues.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"
                 <a
                   href="tel:+13024640950"
                   className="cyber-button text-center"
                 >
                   Call (302) 464-0950
-                  <ArrowRight className="w-4 h-4 inline ml-2" />
+                  <ArrowRight className="w-4 h-4 inline ml-2"
                 </a>
                 <a
                   href="mailto:support@ziontechgroup.com"

@@ -1,59 +1,60 @@
-import React, { Helmet } from 'react-helmet-async';
+import React
+import { Helmet } from 'react-helmet-async';
 import React, { Eye, AlertTriangle, Users, Database, CheckCircle } from 'lucide-react';
 export default function CybersecuritySolutions() {
   const services = [
     {
-      title: "Security Assessment",
-      description: "Comprehensive security audits to identify vulnerabilities and assess your current security posture",
+      title: "Security Assessment"
+      description: "Comprehensive security audits to identify vulnerabilities and assess your current security posture"
       icon: <Eye className="w-8 h-8" />,"
       features: ["Vulnerability scanning", "Penetration testing", "Risk assessment", "Compliance audit"],"
-      price: "From $2,499/assessment",
+      price: "From $2,499/assessment"
     },
     {
-      title: "Threat Detection",
-      description: "Advanced threat detection and response systems to identify and neutralize security threats in real-time",
+      title: "Threat Detection"
+      description: "Advanced threat detection and response systems to identify and neutralize security threats in real-time"
       icon: <AlertTriangle className="w-8 h-8" />,"
       features: ["AI-powered detection", "Real-time monitoring", "Automated response", "Threat intelligence"],"
-      price: "From $1,999/month",
+      price: "From $1,999/month"
     },
     {
-      title: "Identity Management",
-      description: "Secure identity and access management solutions to control user access and prevent unauthorized access",
+      title: "Identity Management"
+      description: "Secure identity and access management solutions to control user access and prevent unauthorized access"
       icon: <Users className="w-8 h-8" />,"
       features: ["Multi-factor authentication", "Single sign-on", "Access governance", "Privileged access"],"
-      price: "From $1,299/month",
+      price: "From $1,299/month"
     },
     {
-      title: "Data Protection",
-      description: "Comprehensive data protection solutions to secure sensitive information and ensure compliance",
+      title: "Data Protection"
+      description: "Comprehensive data protection solutions to secure sensitive information and ensure compliance"
       icon: <Database className="w-8 h-8" />,"
       features: ["Data encryption", "Backup security", "Data loss prevention", "Compliance monitoring"],"
-      price: "From $1,799/month",
+      price: "From $1,799/month"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Essential",
-      price: "$2,999",
-      period: "/month",
-      description: "Basic security protection for small to medium businesses",
+      name: "Essential"
+      price: "$2,999"
+      period: "/month"
+      description: "Basic security protection for small to medium businesses"
       features: [
         "Security assessment","
         "Basic threat monitoring","
         "Email security","
         "Firewall management","
         "Standard support","
-        "Monthly reports"]
+        "Monthly reports"
       ],
       popular: false,
-      cta: "Get Started",
+      cta: "Get Started"
     },
     {
-      name: "Professional",
-      price: "$5,999",
-      period: "/month",
-      description: "Advanced security solutions for growing businesses",
+      name: "Professional"
+      price: "$5,999"
+      period: "/month"
+      description: "Advanced security solutions for growing businesses"
       features: [
         "Comprehensive security assessment","
         "Advanced threat detection","
@@ -62,16 +63,16 @@ export default function CybersecuritySolutions() {
         "Priority support","
         "Weekly reports","
         "Incident response","
-        "Security training"]
+        "Security training"
       ],
       popular: true,
-      cta: "Get Started",
+      cta: "Get Started"
     },
     {
-      name: "Enterprise",
-      price: "$9,999",
-      period: "/month",
-      description: "Complete security suite for large enterprises",
+      name: "Enterprise"
+      price: "$9,999"
+      period: "/month"
+      description: "Complete security suite for large enterprises"
       features: [
         "Full security assessment","
         "Advanced threat detection","
@@ -82,74 +83,74 @@ export default function CybersecuritySolutions() {
         "Rapid incident response","
         "Custom security training","
         "Compliance management","
-        "Security consulting"]
+        "Security consulting"
       ],
       popular: false,
-      cta: "Contact Sales",
+      cta: "Contact Sales"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
       <Helmet>
         <title>Cybersecurity Solutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced cybersecurity solutions and services by Zion Tech Group" />
+        <meta name="description" content="Advanced cybersecurity solutions and services by Zion Tech Group"
       </Helmet>
       
-      <div className="container mx-auto px-4 py-20">"
-        <div className="text-center mb-16">"
-          <h1 className="text-5xl font-bold text-white mb-6">
+      <div className="container mx-auto px-4 py-20"
+        <div className="text-center mb-16"
+          <h1 className="text-5xl font-bold text-white mb-6"
             Cybersecurity Solutions;
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto"
             Protect your business with our comprehensive cybersecurity services and solutions;
           </p>
         </div>
 
         {/* Services Section */}
-        <div className="mb-20">"
+        <div className="mb-20"
           <h2 className="text-3xl font-bold text-white text-center mb-12">Our Services</h2>"
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
             {services.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">"
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
                 <div className="text-blue-400 mb-4">{service.icon}</div>"
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>"
                 <p className="text-gray-300 mb-4">{service.description}</p>"
-                <ul className="space-y-2 mb-4">
+                <ul className="space-y-2 mb-4"
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300"
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2"
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <p className="text-blue-400 font-semibold">{service.price}</p>
+                <p className="text-blue-400 font-semibold"
               </div>
             ))}
           </div>
         </div>
 
         {/* Pricing Section */}
-        <div className="mb-20">"
+        <div className="mb-20"
           <h2 className="text-3xl font-bold text-white text-center mb-12">Pricing Plans</h2>"
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto"
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${plan.popular ? 'border-blue-400 ring-2 ring-blue-400' : 'border-white/20'} hover:bg-white/20 transition-all duration-300`}>'
                 {plan.popular && (
-                  <div className="bg-blue-400 text-white text-center py-1 px-4 rounded-full text-sm font-semibold mb-4 -mt-2">
+                  <div className="bg-blue-400 text-white text-center py-1 px-4 rounded-full text-sm font-semibold mb-4 -mt-2"
                     Most Popular;
                   </div>
                 )}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
                 <p className="text-gray-300 mb-4">{plan.description}</p>"
-                <div className="mb-6">"
+                <div className="mb-6"
                   <span className="text-4xl font-bold text-white">{plan.price}</span>"
-                  <span className="text-gray-300">{plan.period}</span>
+                  <span className="text-gray-300"
                 </div>
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3 mb-8"
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    <li key={featureIndex} className="flex items-center text-gray-300"
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3"
                       {feature}
                     </li>
                   ))}
@@ -170,22 +171,22 @@ const CybersecuritySolutionsPage: React.FC = () => {,
       <Helmet />
         <title>Cybersecurity Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive cybersecurity solutions including threat detection, vulnerability assessment, security monitoring, and compliance management." />"
-        <meta name="keywords" content="cybersecurity solutions, threat detection, vulnerability assessment, security monitoring, compliance management, data protection" />
+        <meta name="keywords" content="cybersecurity solutions, threat detection, vulnerability assessment, security monitoring, compliance management, data protection"
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-        <div className="container mx-auto px-4 py-16">"
-          <div className="text-center mb-16">"
-            <h1 className="text-5xl font-bold text-white mb-6">Cybersecurity Solutions;</h1>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
+        <div className="container mx-auto px-4 py-16"
+          <div className="text-center mb-16"
+            <h1 className="text-5xl font-bold text-white mb-6"
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Protect your organization with comprehensive cybersecurity solutions including;</p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"
               threat detection, vulnerability assessment, and 24/7 security monitoring.
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">,</div>"
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">"
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Threat Detection</h3>"
-              <p className="text-gray-300 mb-4">Advanced threat detection systems to identify and respond to security threats in real-time.</p>
+              <p className="text-gray-300 mb-4"
               </p>
-              <ul className="text-sm text-gray-400 space-y-2">
+              <ul className="text-sm text-gray-400 space-y-2"
                 <li>• Real-time monitoring</li>
                 <li>• Behavioral analysis</li>
                 <li>• Threat intelligence</li>
@@ -193,11 +194,11 @@ const CybersecuritySolutionsPage: React.FC = () => {,
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">"
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Vulnerability Assessment</h3>"
-              <p className="text-gray-300 mb-4">Comprehensive vulnerability scanning and assessment to identify security weaknesses.</p>
+              <p className="text-gray-300 mb-4"
               </p>
-              <ul className="text-sm text-gray-400 space-y-2">
+              <ul className="text-sm text-gray-400 space-y-2"
                 <li>• Network scanning</li>
                 <li>• Penetration testing</li>
                 <li>• Code analysis</li>
@@ -205,11 +206,11 @@ const CybersecuritySolutionsPage: React.FC = () => {,
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">"
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Security Monitoring</h3>"
-              <p className="text-gray-300 mb-4">24/7 security operations center (SOC) monitoring and incident response.</p>
+              <p className="text-gray-300 mb-4"
               </p>
-              <ul className="text-sm text-gray-400 space-y-2">
+              <ul className="text-sm text-gray-400 space-y-2"
                 <li>• 24/7 monitoring</li>
                 <li>• Incident response</li>
                 <li>• Log analysis</li>
@@ -217,11 +218,11 @@ const CybersecuritySolutionsPage: React.FC = () => {,
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">"
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Compliance Management</h3>"
-              <p className="text-gray-300 mb-4">Ensure compliance with industry regulations and security standards.</p>
+              <p className="text-gray-300 mb-4"
               </p>
-              <ul className="text-sm text-gray-400 space-y-2">
+              <ul className="text-sm text-gray-400 space-y-2"
                 <li>• GDPR compliance</li>
                 <li>• HIPAA compliance</li>
                 <li>• SOX compliance</li>
@@ -229,11 +230,11 @@ const CybersecuritySolutionsPage: React.FC = () => {,
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">"
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Data Protection</h3>"
-              <p className="text-gray-300 mb-4">Advanced data protection and encryption solutions for sensitive information.</p>
+              <p className="text-gray-300 mb-4"
               </p>
-              <ul className="text-sm text-gray-400 space-y-2">
+              <ul className="text-sm text-gray-400 space-y-2"
                 <li>• Data encryption</li>
                 <li>• Access controls</li>
                 <li>• Data loss prevention</li>
@@ -241,11 +242,11 @@ const CybersecuritySolutionsPage: React.FC = () => {,
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">"
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Security Training</h3>"
-              <p className="text-gray-300 mb-4">Comprehensive security awareness training for your employees.</p>
+              <p className="text-gray-300 mb-4"
               </p>
-              <ul className="text-sm text-gray-400 space-y-2">
+              <ul className="text-sm text-gray-400 space-y-2"
                 <li>• Phishing simulation</li>
                 <li>• Security awareness</li>
                 <li>• Best practices</li>
@@ -254,8 +255,8 @@ const CybersecuritySolutionsPage: React.FC = () => {,
             </div>
           </div>
 
-          <div className="text-center">"
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">,</button>
+          <div className="text-center"
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               Secure Your Organization;
             </button>
           </div>

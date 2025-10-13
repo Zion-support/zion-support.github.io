@@ -17,7 +17,7 @@ export default function SEOAudit() {
       }
 
       // Check for meta description
-      const metaDescription = document.querySelector('meta[name="description"]');
+      const metaDescription = document.querySelector('meta[name="description"
       if (!metaDescription || !metaDescription.getAttribute('content')) {
         issues.push('Missing meta description');
       } else {
@@ -50,23 +50,23 @@ export default function SEOAudit() {
       }
 
       // Check for internal links
-      const internalLinks = document.querySelectorAll('a[href^="/"], a[href*="ziontechgroup.com"]');
+      const internalLinks = document.querySelectorAll('a[href^="/"], a[href*="ziontechgroup.com"
       if (internalLinks.length < 3) {
         recommendations.push('Add more internal links for better SEO');
       }
 
       // Check for external links
-      const externalLinks = document.querySelectorAll('a[href^="http"]:not([href*="ziontechgroup.com"])');
+      const externalLinks = document.querySelectorAll('a[href^="http"]:not([href*="ziontechgroup.com"
       if (externalLinks.length > 0) {
         externalLinks.forEach(link => {
           if (!link.getAttribute('rel')?.includes('nofollow')) {'
-            recommendations.push('Consider adding rel="nofollow" to external links');
+            recommendations.push('Consider adding rel="nofollow"
           }
         });
       }
 
       // Check for structured data
-      const structuredData = document.querySelector('script[type="application/ld+json"]');
+      const structuredData = document.querySelector('script[type="application/ld+json"
       if (!structuredData) {
         recommendations.push('Add structured data for better search visibility');
       }

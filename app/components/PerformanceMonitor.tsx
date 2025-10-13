@@ -103,21 +103,19 @@ export default function PerformanceMonitor() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg font-mono text-sm z-50">"
-      <div className="mb-2 font-bold">Performance Monitor</div>
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg font-mono text-sm z-50"
+      <div className="mb-2 font-bold"
       <div>Load Time: {metrics.loadTime}ms</div>
       <div>Render Time: {metrics.renderTime}ms</div>
       <div>Memory: {metrics.memoryUsage}%</div>
       <div>FPS: {metrics.fps}</div>
-      <div className="text-xs text-gray-400 mt-2">
+      <div className="text-xs text-gray-400 mt-2"
       </div>
       
-      <div className="mt-3 pt-3 border-t border-white/20 text-xs text-gray-400">
+      <div className="mt-3 pt-3 border-t border-white/20 text-xs text-gray-400"
         Press Ctrl+Shift+P to toggle;
       </div>
     </div>
-  );
-  );
   );
 }
   return null;
@@ -158,14 +156,12 @@ const PerformanceMonitor: React.FC = () => {
   const Component = () => {
   
     return (
-    <div className="p-4 bg-gray-800 rounded-lg">"
+    <div className="p-4 bg-gray-800 rounded-lg"
       <h3 className="text-lg font-semibold text-white mb-4">Performance Monitor</h3>"
-      <div className="text-gray-300">
+      <div className="text-gray-300"
         <p>Performance monitoring is active.</p>
       </div>
     </div>
-  );
-  );
   );
 };
 
@@ -301,9 +297,9 @@ export default PerformanceMonitor;
   const Component = () => {
   
     return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs">"
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs"
       <h3 className="font-bold mb-2">Performance Metrics</h3>"
-      <div className="space-y-1">
+      <div className="space-y-1"
         {metrics.lcp && (
           <div className={`${metrics.lcp > 2500 ? 'text-red-400' : metrics.lcp > 1000 ? 'text-yellow-400' : 'text-green-400'}`}>'
             LCP: {Math.round(metrics.lcp)}ms;
@@ -333,12 +329,10 @@ export default PerformanceMonitor;
 
       </div>
       
-      <div className="mt-3 pt-3 border-t border-cyan-500/20 text-xs text-cyan-400">
+      <div className="mt-3 pt-3 border-t border-cyan-500/20 text-xs text-cyan-400"
         Press Ctrl+Shift+P to toggle;
       </div>
     </div>
-  );
-  );
   );
   // Track errors;
   useEffect(() => {

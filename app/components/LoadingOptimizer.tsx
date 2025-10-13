@@ -40,20 +40,18 @@ export default function LoadingOptimizer({
 
 function DefaultLoadingSpinner() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">"
-      <div className="text-center">"
-        <div className="relative">"
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"
+      <div className="text-center"
+        <div className="relative"
           <div className="w-16 h-16 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mx-auto mb-4"></div>"
-          <div className="absolute inset-0 flex items-center justify-center">"
-            <div className="w-8 h-8 bg-blue-600 rounded-full animate-pulse"></div>
+          <div className="absolute inset-0 flex items-center justify-center"
+            <div className="w-8 h-8 bg-blue-600 rounded-full animate-pulse"
           </div>
         </div>
         <h2 className="text-xl font-semibold text-white mb-2">Loading Zion Tech Group</h2>"
-        <p className="text-gray-300">Preparing your experience...</p>
+        <p className="text-gray-300"
       </div>
     </div>
-  );
-  );
 }
 
 // Preload critical resources;
@@ -132,8 +130,8 @@ export function LazyImage({
     return (
     <div ref={imgRef} className={`relative ${className}`}>
       {!isLoaded && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded">"
-          <img src={placeholder} alt="" className="w-full h-full object-cover opacity-0" />
+        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded"
+          <img src={placeholder} alt="" className="w-full h-full object-cover opacity-0"
         </div>
       )}
       {isInView && (
@@ -148,6 +146,4 @@ export function LazyImage({
         />
       )}
     </div>
-  );
-  );
 }

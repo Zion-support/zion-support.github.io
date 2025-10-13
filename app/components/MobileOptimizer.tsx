@@ -2,7 +2,7 @@ import React, {   useEffect   } from 'react';
 export default function MobileOptimizer() {
   useEffect(() => {
     // Add viewport meta tag if not present
-    let viewport = document.querySelector('meta[name="viewport"]');
+    let viewport = document.querySelector('meta[name="viewport"
     if (!viewport) {
       viewport = document.createElement('meta');
       viewport.setAttribute('name', 'viewport');'
@@ -13,7 +13,7 @@ export default function MobileOptimizer() {
     // Add touch-friendly classes
     const addTouchClasses = () => {
   
-      const buttons = document.querySelectorAll('button, a[role="button"]');
+      const buttons = document.querySelectorAll('button, a[role="button"
       buttons.forEach(button => {
         if (!button.classList.contains('touch-friendly')) {
           button.classList.add('touch-friendly', 'min-h-[44px]', 'min-w-[44px]');'

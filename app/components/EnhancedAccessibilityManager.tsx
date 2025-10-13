@@ -257,8 +257,6 @@ const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
     <div>
   )
     </div>
-  );
-  );
   )
     <AccessibilityContext.Provider value={contextValue}>
       {children}

@@ -140,7 +140,7 @@ const AdAnalytics: React.FC<AdAnalyticsProps> = ({
   const getTrendIcon = (trend: number) => {
     if (trend > 0) return <ArrowUpRight className="w-4 h-4 text-green-500" />;"
     if (trend < 0) return <ArrowDownRight className="w-4 h-4 text-red-500" />;"
-    return <div className="w-4 h-4" />;
+    return <div className="w-4 h-4"
   };
 
   const getTrendColor = (trend: number) => {
@@ -162,20 +162,18 @@ const AdAnalytics: React.FC<AdAnalyticsProps> = ({
   if (isLoading) {
     return (
     <div className={`ad-analytics ${className}`}>
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">"
-          <div className="animate-pulse">"
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6"
+          <div className="animate-pulse"
             <div className="h-8 bg-gray-200 rounded w-1/4 mb-6"></div>"
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8"
               {[...Array(4)].map((_, i) => (
-                <div key={i} className="h-24 bg-gray-200 rounded"></div>
+                <div key={i} className="h-24 bg-gray-200 rounded"
               ))}
             </div>
-            <div className="h-64 bg-gray-200 rounded"></div>
+            <div className="h-64 bg-gray-200 rounded"
           </div>
         </div>
       </div>
-  );
-  );
     );
   }
 
@@ -183,18 +181,18 @@ const AdAnalytics: React.FC<AdAnalyticsProps> = ({
   
     return (
     <div className={`ad-analytics ${className}`}>
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6"
         {/* Header */}
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center justify-between mb-6"
           <div>
             <h2 className="text-2xl font-bold text-gray-900">Ad Analytics</h2>"
-            <p className="text-gray-600">"
+            <p className="text-gray-600"
               Performance insights for {dateRange === '7d' ? 'last 7 days' : '
               dateRange === '30d' ? 'last 30 days' : '
               dateRange === '90d' ? 'last 90 days' : 'last year'}'
             </p>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3"
             <select;
               value={dateRange}
               onChange={(e) => {/* Handle date range change */}}
@@ -203,19 +201,19 @@ const AdAnalytics: React.FC<AdAnalyticsProps> = ({
               <option value="7d">Last 7 days</option>"
               <option value="30d">Last 30 days</option>"
               <option value="90d">Last 90 days</option>"
-              <option value="1y">Last year</option>
+              <option value="1y"
             </select>
-            <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">"
-              <RefreshCw className="w-5 h-5" />
+            <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
+              <RefreshCw className="w-5 h-5"
             </button>
-            <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">"
-              <Download className="w-5 h-5" />
+            <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
+              <Download className="w-5 h-5"
             </button>
           </div>
         </div>
 
         {/* Metrics Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
           {metrics.map((metric) => (
             <motion.div;
               key={metric.key}
@@ -223,11 +221,11 @@ const AdAnalytics: React.FC<AdAnalyticsProps> = ({
               animate={{ opacity: 1, y: 0 }}
               className={`p-6 rounded-lg border border-gray-200 ${getColorClasses(metric.color)}`}
             >
-              <div className="flex items-center justify-between mb-4">"
+              <div className="flex items-center justify-between mb-4"
                 <div className={`p-2 rounded-lg ${getColorClasses(metric.color)}`}>
-                  <metric.icon className="w-6 h-6" />
+                  <metric.icon className="w-6 h-6"
                 </div>
-                <div className="flex items-center gap-1">
+                <div className="flex items-center gap-1"
                   {getTrendIcon(metric.trend)}
                   <span className={`text-sm font-medium ${getTrendColor(metric.trend)}`}>
                     {Math.abs(metric.trend).toFixed(1)}%
@@ -236,18 +234,18 @@ const AdAnalytics: React.FC<AdAnalyticsProps> = ({
               </div>
               <div>
                 <p className="text-2xl font-bold text-gray-900">{metric.value}</p>"
-                <p className="text-sm text-gray-600">{metric.label}</p>
+                <p className="text-sm text-gray-600"
               </div>
             </motion.div>
           ))}
         </div>
 
         {/* Chart Section */}
-        <div className="mb-8">"
-          <div className="flex items-center justify-between mb-4">"
+        <div className="mb-8"
+          <div className="flex items-center justify-between mb-4"
             <h3 className="text-lg font-semibold text-gray-900">Performance Over Time</h3>"
-            <div className="flex items-center gap-2">"
-              <Filter className="w-4 h-4 text-gray-400" />
+            <div className="flex items-center gap-2"
+              <Filter className="w-4 h-4 text-gray-400"
               <select;
                 value={selectedMetric}
                 onChange={(e) => setSelectedMetric(e.target.value as any)}
@@ -256,13 +254,13 @@ const AdAnalytics: React.FC<AdAnalyticsProps> = ({
                 <option value="impressions">Impressions</option>"
                 <option value="clicks">Clicks</option>"
                 <option value="conversions">Conversions</option>"
-                <option value="revenue">Revenue</option>
+                <option value="revenue"
               </select>
             </div>
           </div>
           
           {/* Simple Bar Chart */}
-          <div className="h-64 flex items-end justify-between gap-1 bg-gray-50 rounded-lg p-4">
+          <div className="h-64 flex items-end justify-between gap-1 bg-gray-50 rounded-lg p-4"
             {analyticsData.slice(-14).map((day, index) => {
               const maxValue = Math.max(...analyticsData.slice(-14).map(d => d[selectedMetric]));
               const height = (day[selectedMetric] / maxValue) * 100;
@@ -288,32 +286,32 @@ const AdAnalytics: React.FC<AdAnalyticsProps> = ({
         </div>
 
         {/* Additional Metrics */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">"
-          <div className="bg-gray-50 p-6 rounded-lg">"
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          <div className="bg-gray-50 p-6 rounded-lg"
             <h4 className="font-semibold text-gray-900 mb-4">Conversion Funnel</h4>"
-            <div className="space-y-3">"
-              <div className="flex justify-between items-center">"
+            <div className="space-y-3"
+              <div className="flex justify-between items-center"
                 <span className="text-sm text-gray-600">Impressions</span>"
-                <span className="font-semibold">{totals.impressions.toLocaleString()}</span>
+                <span className="font-semibold"
               </div>
-              <div className="flex justify-between items-center">"
+              <div className="flex justify-between items-center"
                 <span className="text-sm text-gray-600">Clicks</span>"
-                <span className="font-semibold">{totals.clicks.toLocaleString()}</span>
+                <span className="font-semibold"
               </div>
-              <div className="flex justify-between items-center">"
+              <div className="flex justify-between items-center"
                 <span className="text-sm text-gray-600">Conversions</span>"
-                <span className="font-semibold">{totals.conversions.toLocaleString()}</span>
+                <span className="font-semibold"
               </div>
-              <div className="border-t pt-3">"
-                <div className="flex justify-between items-center">"
+              <div className="border-t pt-3"
+                <div className="flex justify-between items-center"
                   <span className="text-sm text-gray-600">CTR</span>"
-                  <span className="font-semibold">
+                  <span className="font-semibold"
                     {((totals.clicks / totals.impressions) * 100).toFixed(2)}%
                   </span>
                 </div>
-                <div className="flex justify-between items-center">"
+                <div className="flex justify-between items-center"
                   <span className="text-sm text-gray-600">Conversion Rate</span>"
-                  <span className="font-semibold">
+                  <span className="font-semibold"
                     {((totals.conversions / totals.clicks) * 100).toFixed(2)}%
                   </span>
                 </div>
@@ -321,27 +319,27 @@ const AdAnalytics: React.FC<AdAnalyticsProps> = ({
             </div>
           </div>
 
-          <div className="bg-gray-50 p-6 rounded-lg">"
+          <div className="bg-gray-50 p-6 rounded-lg"
             <h4 className="font-semibold text-gray-900 mb-4">Financial Summary</h4>"
-            <div className="space-y-3">"
-              <div className="flex justify-between items-center">"
+            <div className="space-y-3"
+              <div className="flex justify-between items-center"
                 <span className="text-sm text-gray-600">Total Spent</span>"
-                <span className="font-semibold">${totals.spent.toLocaleString()}</span>
+                <span className="font-semibold"
               </div>
-              <div className="flex justify-between items-center">"
+              <div className="flex justify-between items-center"
                 <span className="text-sm text-gray-600">Revenue Generated</span>"
-                <span className="font-semibold">${totals.revenue.toLocaleString()}</span>
+                <span className="font-semibold"
               </div>
-              <div className="border-t pt-3">"
-                <div className="flex justify-between items-center">"
+              <div className="border-t pt-3"
+                <div className="flex justify-between items-center"
                   <span className="text-sm text-gray-600">ROI</span>"
                   <span className={`font-semibold ${totals.spent > 0 ? (totals.revenue > totals.spent ? 'text-green-600' : 'text-red-600') : 'text-gray-600'}`}>'
                     {totals.spent > 0 ? (((totals.revenue - totals.spent) / totals.spent) * 100).toFixed(1) : 0}%
                   </span>
                 </div>
-                <div className="flex justify-between items-center">"
+                <div className="flex justify-between items-center"
                   <span className="text-sm text-gray-600">Cost per Click</span>"
-                  <span className="font-semibold">"
+                  <span className="font-semibold"
                     ${totals.clicks > 0 ? (totals.spent / totals.clicks).toFixed(2) : '0.00'}
                   </span>
                 </div>
@@ -349,13 +347,13 @@ const AdAnalytics: React.FC<AdAnalyticsProps> = ({
             </div>
           </div>
 
-          <div className="bg-gray-50 p-6 rounded-lg">"
+          <div className="bg-gray-50 p-6 rounded-lg"
             <h4 className="font-semibold text-gray-900 mb-4">Performance Trends</h4>"
-            <div className="space-y-3">
+            <div className="space-y-3"
               {metrics.map((metric) => (
-                <div key={metric.key} className="flex justify-between items-center">"
+                <div key={metric.key} className="flex justify-between items-center"
                   <span className="text-sm text-gray-600">{metric.label}</span>"
-                  <div className="flex items-center gap-1">
+                  <div className="flex items-center gap-1"
                     {getTrendIcon(metric.trend)}
                     <span className={`text-sm font-medium ${getTrendColor(metric.trend)}`}>
                       {metric.trend > 0 ? '+' : ''}{metric.trend.toFixed(1)}%'
@@ -368,8 +366,6 @@ const AdAnalytics: React.FC<AdAnalyticsProps> = ({
         </div>
       </div>
     </div>
-  );
-  );
   );
 };
 

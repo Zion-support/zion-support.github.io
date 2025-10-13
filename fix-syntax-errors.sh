@@ -1,53 +1,43 @@
 #!/bin/bash
 
-# Script to fix common syntax errors in React/TypeScript files
-echo "Fixing syntax errors..."
+echo "Fixing common syntax errors across all TSX files..."
 
-# Find all files with syntax errors and fix them
-find ./app -name "*.tsx" -o -name "*.ts" | while read file; do
-  if grep -q "return (" "$file" && grep -q "<div></div>" "$file" && grep -q "<Helmet></Helmet>" "$file"; then
-    echo "Fixing syntax errors in: $file"
-    
-    # Extract the function name and create a proper component
-    function_name=$(grep "export default function" "$file" | head -1 | sed 's/export default function \([^(]*\).*/\1/')
-    
-    # Create a clean version
-    cat > "$file" << EOF
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function ${function_name}() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <Helmet>
-        <title>${function_name} - Zion Tech Group</title>
-        <meta name="description" content="Professional ${function_name} services for businesses" />
-      </Helmet>
-      
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            ${function_name}
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional ${function_name} services coming soon.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
-EOF
-  fi
+# Find all TSX files
+find app -name "*.tsx" -type f | while read file; do
+  echo "Processing $file"
+  
+  # Fix unterminated strings in className attributes
+  sed -i 's/className="\([^"]*\)">"/className="\1">/g' "$file"
+  
+  # Fix extra closing parentheses
+  sed -i '/^  );$/N;/^  );\n  );$/d' "$file"
+  
+  # Fix semicolons in strings
+  sed -i 's/your business;/your business./g' "$file"
+  sed -i 's/your data;/your data./g' "$file"
+  sed -i 's/your workflow;/your workflow./g' "$file"
+  
+  # Fix import statements - separate React and other imports
+  sed -i 's/import React, { Helmet }/import React\nimport { Helmet }/g' "$file"
+  sed -i 's/import React, { Link }/import React\nimport { Link }/g' "$file"
+  sed -i 's/import React, { useState }/import React\nimport { useState }/g' "$file"
+  
+  # Fix unterminated strings in meta descriptions
+  sed -i 's/content="\([^"]*\)">"/content="\1">/g' "$file"
+  
+  # Fix missing closing quotes in strings
+  sed -i 's/"[^"]*$/"/g' "$file"
+  
+  # Fix extra closing brackets in arrays
+  sed -i '/^      \],$/N;/^      \],\n      \],$/d' "$file"
+  
+  # Fix missing closing tags
+  sed -i 's/<div[^>]*>$/&/g' "$file"
+  
+  # Fix unterminated JSX fragments
+  sed -i 's/<>$/&/g' "$file"
+  sed -i 's/<\/>$/&/g' "$file"
+  
 done
 
-echo "Syntax errors fixed!"
+echo "Syntax error fixes completed!"

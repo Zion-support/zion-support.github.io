@@ -10,6 +10,4 @@ export default function WebVitalsTracker({ className = '', children }: WebVitals
     <div className={`web-vitals-tracker ${className}`}>
       {children}
     </div>
-  );
-  );
 }

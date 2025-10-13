@@ -9,12 +9,10 @@ export default function FuturisticBackground({ children, className = '' }: Futur
   return (
     <div className={`futuristic-background ${className}`}>
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 opacity-90"></div>"
-      <div className="relative z-10">
+      <div className="relative z-10"
         {children}
       </div>
     </div>
-  );
-  );
   );
 }
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -94,8 +92,6 @@ export default function FuturisticBackground({ children, className = '' }: Futur
     <div>
   )
     </div>
-  );
-  );
   )
     <canvas;
       ref={canvasRef}

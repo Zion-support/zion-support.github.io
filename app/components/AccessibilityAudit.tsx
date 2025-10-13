@@ -18,7 +18,7 @@ export default function AccessibilityAudit() {
       const inputs = document.querySelectorAll('input, textarea, select');
       inputs.forEach((input, index) => {
         const id = input.id;
-        const label = document.querySelector(`label[for="${id}"]`);
+        const label = document.querySelector(`label[for="${id}"
         const ariaLabel = input.getAttribute('aria-label');
         const ariaLabelledBy = input.getAttribute('aria-labelledby');
         

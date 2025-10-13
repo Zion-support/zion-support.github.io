@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React
+import { useState } from 'react';
 
 interface OptimizedImageProps {
   src: string;
@@ -40,7 +41,7 @@ export default function OptimizedImage({
   if (hasError) {
     return (
     <div className={`optimized-image-error ${className}`}>
-        <div className="flex items-center justify-center w-full h-full bg-gray-100 text-gray-500">
+        <div className="flex items-center justify-center w-full h-full bg-gray-100 text-gray-500"
           Failed to load image;
         </div>
       </div>
@@ -51,7 +52,7 @@ export default function OptimizedImage({
   return (
     <div className={`relative ${className}`}>
       {isLoading && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
+        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded"
       )}
       <img;
         src={src}

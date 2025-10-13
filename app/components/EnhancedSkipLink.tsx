@@ -6,8 +6,6 @@ const EnhancedSkipLink: React.FC = () => {
     <div>
   )
     </div>
-  );
-  );
   )
     <a
       href="#main-content"
