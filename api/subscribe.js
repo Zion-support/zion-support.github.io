@@ -1,21 +1,58 @@
-import fs from 'fs'
-import path from 'path'
-const dir = path.join(process.cwd(), 'data'
-const file = path.join(dir, 'subscribers.json'
-  if (req.method !== 'POST'
-    res.setHeader('Content-Type', '
-    res.end(JSON.stringify({ error: 'Method not allowed'
-    res.setHeader('Content-Type', '
-    res.end(JSON.stringify({ error: 'Email is required'
-      const data = fs.readFileSync(file, 'utf8'
-  console.error('Error:'
-    console.error('Error reading existing subscribers:'
-    res.setHeader('Content-Type', '
-    res.end(JSON.stringify({ error: 'Email already subscribed'
-    name: name || ''
+import fs from 'fs';
+import path from 'path';
+
+const dir = path.join(process.cwd(), 'data');
+const file = path.join(dir, 'subscribers.json');
+
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.setHeader('Content-Type', 'application/json');
+    res.status(405).end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
+  }
+
+  const { email, name } = req.body;
+  if (!email) {
+    res.setHeader('Content-Type', 'application/json');
+    res.status(400).end(JSON.stringify({ error: 'Email is required' }));
+    return;
+  }
+
+  let subscribers = [];
+  try {
+    const data = fs.readFileSync(file, 'utf8');
+    subscribers = JSON.parse(data);
+  } catch (error) {
+    console.error('Error:', error);
+    console.error('Error reading existing subscribers:', error);
+  }
+
+  if (subscribers.find(sub => sub.email === email)) {
+    res.setHeader('Content-Type', 'application/json');
+    res.status(400).end(JSON.stringify({ error: 'Email already subscribed' }));
+    return;
+  }
+
+  const newSubscriber = {
+    id: Date.now().toString(),
+    email,
+    name: name || '',
+    timestamp: new Date().toISOString(),
     status: 'active'
-    res.setHeader('Content-Type', '
+  };
+
+  try {
+    subscribers.push(newSubscriber);
+    fs.writeFileSync(file, JSON.stringify(subscribers, null, 2));
+    
+    res.setHeader('Content-Type', 'application/json');
+    res.status(200).end(JSON.stringify({
+      success: true,
       message: 'Successfully subscribed to newsletter'
-  console.error('Error:'
-    res.setHeader('Content-Type', '
-    res.end(JSON.stringify({ error: 'Failed to save subscription'
+    }));
+  } catch (error) {
+    console.error('Error:', error);
+    res.setHeader('Content-Type', 'application/json');
+    res.status(500).end(JSON.stringify({ error: 'Failed to save subscription' }));
+  }
+}

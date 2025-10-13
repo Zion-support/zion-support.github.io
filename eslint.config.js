@@ -6,9 +6,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
-  js.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
     ignores: [
       'node_modules/**',
       'dist/**',
@@ -41,11 +39,14 @@ export default [
       '*.broken',
       '*.backup',
       'temp-*.js',
-      'analyze-*.js',
-      'check-*.js',
-      'clean-*.js',
-      'jest.setup.js'
-    ],
+      'jest.setup.js',
+      'app-broken/**',
+      'app-disabled/**'
+    ]
+  },
+  js.configs.recommended,
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',

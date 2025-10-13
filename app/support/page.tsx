@@ -1,80 +1,48 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Right, Circle } from 'lucide-react';
-=======
-import { Right, Circle, MessageCircle, Mail, Phone, BookOpen } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
+
 
 const SupportPage: React.FC = () => {
   const supportOptions = [
     {
-<<<<<<< HEAD
-      icon: 'Chat',
-=======
-      icon: MessageCircle,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
+
       title: 'Live Chat',
       description: 'Get instant help from our support team',
-      action: &apos;Start Chat&apos;,
-      color: &apos;from-blue-500 to-cyan-500&apos;
+      action: 'Start Chat',
+      color: 'from-blue-500 to-cyan-500'
     },
     {
-<<<<<<< HEAD
-      icon: 'Phone',
-      title: 'Phone Support',
-=======
-      icon: Mail,
-      title: 'Email Support',
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
-      description: 'Call us for immediate assistance',
-      action: &apos;Call Now&apos;,
-      color: &apos;from-green-500 to-emerald-500&apos;
-    },
-    {
-<<<<<<< HEAD
-      icon: 'Email',
-      title: 'Email Support',
-      description: 'Send us a detailed message',
-      action: &apos;Send Email&apos;,
-      color: &apos;from-purple-500 to-pink-500&apos;
-    },
-    {
-      icon: 'Book',
-=======
-      icon: Phone,
-      title: 'Phone Support',
+
       description: 'Call us for immediate assistance',
       action: 'Call Now',
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: BookOpen,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
+
       title: 'Documentation',
       description: 'Browse our comprehensive guides',
-      action: &apos;View Docs&apos;,
-      color: &apos;from-orange-500 to-red-500&apos;
+      action: 'View Docs',
+      color: 'from-orange-500 to-red-500'
     }
   ];
 
   const faqs = [
     {
-      question: &apos;How do I get started with your AI services?&apos;,
-      answer: &apos;Getting started is easy! Contact our team for a consultation, and we\&apos;ll help you identify the best AI solutions for your business needs.&apos;
+      question: 'How do I get started with your AI services?',
+      answer: 'Getting started is easy! Contact our team for a consultation, and we\'ll help you identify the best AI solutions for your business needs.'
     },
     {
-      question: &apos;What is your response time for support requests?&apos;,
-      answer: &apos;We typically respond to support requests within 2-4 hours during business hours, and within 24 hours for non-urgent matters.&apos;
+      question: 'What is your response time for support requests?',
+      answer: 'We typically respond to support requests within 2-4 hours during business hours, and within 24 hours for non-urgent matters.'
     },
     {
-      question: &apos;Do you offer training for your solutions?&apos;,
-      answer: &apos;Yes! We provide comprehensive training programs for all our solutions, including documentation, video tutorials, and live training sessions.&apos;
+      question: 'Do you offer training for your solutions?',
+      answer: 'Yes! We provide comprehensive training programs for all our solutions, including documentation, video tutorials, and live training sessions.'
     },
     {
-      question: &apos;What if I need custom development?&apos;,
-      answer: &apos;We offer custom development services for unique requirements. Contact our team to discuss your specific needs and get a quote.&apos;
+      question: 'What if I need custom development?',
+      answer: 'We offer custom development services for unique requirements. Contact our team to discuss your specific needs and get a quote.'
     }
   ];
 
@@ -97,7 +65,7 @@ const SupportPage: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              We&apos;re here to help! Get support for our AI and IT solutions through multiple channels.
+              We're here to help! Get support for our AI and IT solutions through multiple channels.
             </p>
           </div>
         </section>

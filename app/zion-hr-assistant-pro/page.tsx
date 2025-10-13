@@ -1,4 +1,4 @@
-&apos;use client&apos;;
+'use client';
 import React from 'react';
 
 export default function ZionHrAssistantProPage() {
