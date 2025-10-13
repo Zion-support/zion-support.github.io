@@ -156,8 +156,8 @@ const PerformanceMonitor: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default PerformanceMonitor;
+<<<<<<< HEAD
 =======
 export default PerformanceMonitor;
 >>>>>>> cursor/analyze-improve-and-deploy-application-b200
@@ -222,3 +222,5 @@ const PerformanceMonitor: React.FC = () => {
 
 export default PerformanceMonitor;
 >>>>>>> cursor/analyze-improve-and-deploy-application-a281
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-cec7

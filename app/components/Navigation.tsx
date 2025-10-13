@@ -90,6 +90,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const navigationItems = useMemo(() => [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       name: 'Home',
       path: '/',
       icon: <Globe className="w-4 h-4" />
@@ -110,6 +111,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 <<<<<<< HEAD
       icon: <Phone className="w-4 h-4" />
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-cec7
       label: 'Home',
       href: '/',
       icon: <Star className="w-4 h-4" />
@@ -185,10 +188,13 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       label: 'Contact',
       href: '/contact',
       icon: <Mail className="w-4 h-4" />
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-b200
 =======
       icon: <Mail className="w-4 h-4" />
 >>>>>>> cursor/analyze-improve-and-deploy-application-a281
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-cec7
     }
   ], []);
 
@@ -236,6 +242,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-a281
     <nav className="relative z-50 bg-black/20 backdrop-blur-md border-b border-cyan-500/20">
@@ -249,6 +256,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               </div>
               <span className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-cec7
     <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -262,13 +271,13 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 <Brain className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
                 Zion Tech Group
               </span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
@@ -346,6 +355,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               onClick={onSidebarToggle}
               className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all duration-300"
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-cec7
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
               <div key={item.label} className="relative group">
@@ -412,19 +423,15 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               onClick={onSidebarToggle}
               className="p-2 text-gray-300 hover:text-cyan-400 transition-colors"
               aria-label="Toggle sidebar"
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
             >
               <SidebarIcon className="w-6 h-6" />
             </button>
             <button
               onClick={toggleMenu}
-<<<<<<< HEAD
-              className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all duration-300"
-=======
               className="p-2 text-gray-300 hover:text-cyan-400 transition-colors"
               aria-label="Toggle menu"
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
             >
+<<<<<<< HEAD
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 =======
                 <Link
@@ -572,11 +579,15 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 <Menu className="block h-6 w-6" />
               )}
 >>>>>>> cursor/analyze-improve-and-deploy-application-a281
+=======
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+>>>>>>> cursor/website-audit-and-update-with-deployment-cec7
             </button>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         {/* Mobile Navigation */}
@@ -609,6 +620,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 </Link>
               </div>
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-cec7
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="lg:hidden border-t border-white/10 mt-4 pt-4 pb-4">
@@ -682,6 +695,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               >
                 Get Started
               </FuturisticButton>
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-b200
 =======
                 <div className="flex items-center space-x-2">
@@ -805,12 +819,15 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 </div>
               )}
 >>>>>>> cursor/analyze-improve-and-deploy-application-a281
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-cec7
             </div>
           </div>
         </div>
       )}
     </nav>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 });
@@ -822,5 +839,8 @@ Navigation.displayName = 'Navigation';
 =======
 };
 >>>>>>> cursor/analyze-improve-and-deploy-application-a281
+=======
+};
+>>>>>>> cursor/website-audit-and-update-with-deployment-cec7
 
 export default Navigation;
