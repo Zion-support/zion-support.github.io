@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -19,8 +20,14 @@ export default function PerformanceMonitor() {
   });
 
   const [isVisible, setIsVisible] = useState(false);
+=======
+import { useEffect } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
 
+export default function PerformanceMonitor() {
   useEffect(() => {
+<<<<<<< HEAD
     // Only run in development
     if (process.env['NODE_ENV'] !== 'development') return;
 
@@ -185,3 +192,31 @@ export default PerformanceMonitor;
 
 export default PerformanceMonitor
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
+=======
+    // Monitor Core Web Vitals
+    onCLS(console.log);
+    onINP(console.log);
+    onFCP(console.log);
+    onLCP(console.log);
+    onTTFB(console.log);
+
+    // Monitor bundle loading performance
+    if ('performance' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'navigation') {
+            console.log('Navigation timing:', {
+              domContentLoaded: entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart,
+              loadComplete: entry.loadEventEnd - entry.loadEventStart,
+              totalTime: entry.loadEventEnd - entry.navigationStart
+            });
+          }
+        }
+      });
+      observer.observe({ entryTypes: ['navigation'] });
+    }
+  }, []);
+
+  return null;
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680

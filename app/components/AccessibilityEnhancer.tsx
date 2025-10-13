@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 =======
 <<<<<<< HEAD
@@ -123,8 +124,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 >>>>>>> origin/cursor/ad-creation-and-management-f267
 =======
 >>>>>>> origin/cursor/analyze-and-resolve-javascript-errors-6208
+=======
+import { useEffect } from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
 
+export default function AccessibilityEnhancer() {
   useEffect(() => {
+<<<<<<< HEAD
     // Load saved settings from localStorage
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
@@ -188,11 +194,42 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     const handleMouseDown = () => {
       setSettings(prev => ({ ...prev, focusVisible: false }));
       document.body.classList.remove('keyboard-navigation');
+=======
+    // Add skip links
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+    document.body.insertBefore(skipLink, document.body.firstChild);
+
+    // Enhance focus management
+    const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Tab') {
+        const focusable = document.querySelectorAll(focusableElements);
+        const firstElement = focusable[0] as HTMLElement;
+        const lastElement = focusable[focusable.length - 1] as HTMLElement;
+
+        if (e.shiftKey) {
+          if (document.activeElement === firstElement) {
+            lastElement.focus();
+            e.preventDefault();
+          }
+        } else {
+          if (document.activeElement === lastElement) {
+            firstElement.focus();
+            e.preventDefault();
+          }
+        }
+      }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
     };
 
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
 
+<<<<<<< HEAD
     // Add skip links
     const addSkipLinks = () => {
       const skipLinks = document.createElement('div');
@@ -211,11 +248,26 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     return () => {
       highContrastQuery.removeEventListener('change', handleHighContrastChange);
       reducedMotionQuery.removeEventListener('change', handleReducedMotionChange);
+=======
+    // Add ARIA landmarks
+    const main = document.querySelector('main');
+    if (main && !main.getAttribute('role')) {
+      main.setAttribute('role', 'main');
+    }
+
+    const nav = document.querySelector('nav');
+    if (nav && !nav.getAttribute('role')) {
+      nav.setAttribute('role', 'navigation');
+    }
+
+    return () => {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown);
     };
   }, []);
 
+<<<<<<< HEAD
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
 >>>>>>> origin/cursor/analyze-and-resolve-javascript-errors-6208
     const root = document.documentElement;
@@ -601,3 +653,7 @@ const AccessibilityEnhancer: React.FC = () => {
 
 export default AccessibilityEnhancer
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
+=======
+  return null;
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680

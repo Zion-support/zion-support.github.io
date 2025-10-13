@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const CACHE_NAME = 'zion-tech-group-v1';
 const STATIC_CACHE = 'static-v1';
 const DYNAMIC_CACHE = 'dynamic-v1';
@@ -14,17 +15,31 @@ const CACHE_NAME = 'zion-tech-group-v2';
 const STATIC_CACHE_NAME = 'zion-tech-group-static-v2';
 const DYNAMIC_CACHE_NAME = 'zion-tech-group-dynamic-v2';
 >>>>>>> origin/cursor/analyze-console-errors-and-fix-issues-9064
+=======
+// Enhanced Service Worker for Zion Tech Group
+const CACHE_NAME = 'zion-tech-v1';
+const STATIC_CACHE = 'zion-static-v1';
+const DYNAMIC_CACHE = 'zion-dynamic-v1';
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
 const STATIC_ASSETS = [
   '/',
   '/about',
-  '/contact',
   '/services',
+<<<<<<< HEAD
   '/manifest.json',
 <<<<<<< HEAD
 <<<<<<< HEAD
   '/favicon.svg'
 =======
   '/favicon.svg',
+=======
+  '/ai-services',
+  '/micro-saas',
+  '/5g-solutions',
+  '/contact',
+  '/manifest.json',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
   '/robots.txt'
 >>>>>>> origin/cursor/analyze-console-errors-and-fix-issues-845e
 =======
@@ -57,6 +72,7 @@ const STATIC_FILES = [
 ];
 
 // Install event
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
     caches.open(STATIC_CACHE)
       .then((cache) => {
@@ -72,16 +88,37 @@ const STATIC_FILES = [
 });
 
 // Activate event - clean up old caches
+=======
+self.addEventListener('install', (event) => {
+  console.log('Service Worker installing...');
+  event.waitUntil(
+    caches.open(STATIC_CACHE)
+      .then((cache) => {
+        console.log('Caching static assets');
+        return cache.addAll(STATIC_ASSETS);
+      })
+      .then(() => self.skipWaiting())
+  );
+});
+
+// Activate event
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
 self.addEventListener('activate', (event) => {
+  console.log('Service Worker activating...');
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
           if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
+<<<<<<< HEAD
+=======
+            console.log('Deleting old cache:', cacheName);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
             return caches.delete(cacheName);
           }
         })
       );
+<<<<<<< HEAD
     }).then(() => {
       return self.clients.claim();
     })
@@ -89,11 +126,19 @@ self.addEventListener('activate', (event) => {
 });
 
 // Fetch event - serve from cache, fallback to network
+=======
+    }).then(() => self.clients.claim())
+  );
+});
+
+// Fetch event
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
 
   // Skip non-GET requests
+<<<<<<< HEAD
   if (request.method !== 'GET') {
     return;
   }
@@ -110,6 +155,22 @@ self.addEventListener('fetch', (event) => {
           return cachedResponse;
         }
 
+=======
+  if (request.method !== 'GET') return;
+
+  // Skip chrome-extension and other non-http requests
+  if (!url.protocol.startsWith('http')) return;
+
+  event.respondWith(
+    caches.match(request)
+      .then((response) => {
+        // Return cached version if available
+        if (response) {
+          return response;
+        }
+
+        // Otherwise fetch from network
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
         return fetch(request)
           .then((response) => {
             // Don't cache if not a valid response
@@ -131,13 +192,18 @@ self.addEventListener('fetch', (event) => {
           .catch(() => {
             // Return offline page for navigation requests
             if (request.mode === 'navigate') {
+<<<<<<< HEAD
               return caches.match('/');
+=======
+              return caches.match('/offline.html');
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
             }
           });
       })
   );
 });
 
+<<<<<<< HEAD
 // Background sync for form submissions
 self.addEventListener('sync', (event) => {
   if (event.tag === 'contact-form') {
@@ -211,3 +277,22 @@ async function removePendingForm(id) {
 }
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
+=======
+// Background sync for analytics
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'background-sync') {
+    event.waitUntil(doBackgroundSync());
+  }
+});
+
+function doBackgroundSync() {
+  // Send analytics data when connection is restored
+  return fetch('/api/analytics', {
+    method: 'POST',
+    body: JSON.stringify({
+      timestamp: Date.now(),
+      type: 'background-sync'
+    })
+  });
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680

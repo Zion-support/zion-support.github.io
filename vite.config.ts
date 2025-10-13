@@ -48,6 +48,7 @@ export default defineConfig({
     // Performance optimizations
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     chunkSizeWarningLimit: 500,
     assetsInlineLimit: 2048,
 =======
@@ -59,6 +60,10 @@ export default defineConfig({
     assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0544
     // Enable compression
+=======
+    chunkSizeWarningLimit: 150,
+    assetsInlineLimit: 2048,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
     reportCompressedSize: true,
     // Additional optimizations for production
 >>>>>>> origin/cursor/analyze-and-resolve-javascript-errors-6208
@@ -66,7 +71,39 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
+<<<<<<< HEAD
       },
+=======
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+        passes: 3,
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        unsafe_regexp: true,
+        unsafe_undefined: true,
+        conditionals: true,
+        dead_code: true,
+        evaluate: true,
+        if_return: true,
+        join_vars: true,
+        loops: true,
+        sequences: true,
+        side_effects: false,
+        unused: true,
+      },
+      mangle: {
+        safari10: true,
+        toplevel: true,
+        properties: {
+          regex: /^_/
+        }
+      },
+      format: {
+        comments: false,
+        ascii_only: true
+      }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
     },
 <<<<<<< HEAD
 =======
@@ -123,6 +160,7 @@ export default defineConfig({
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
+<<<<<<< HEAD
           // Large page components (lazy load)
           if (id.includes('/app/') && id.includes('/page.tsx')) {
             return 'pages'
@@ -147,6 +185,38 @@ export default defineConfig({
             return 'zion-other'
           }
           // 5G service pages - group together
+=======
+          // Group AI service pages by category for better caching
+          if (id.includes('/ai-') && id.includes('/page.tsx')) {
+            if (id.includes('analytics') || id.includes('data')) {
+              return 'ai-analytics'
+            }
+            if (id.includes('content') || id.includes('generation')) {
+              return 'ai-content'
+            }
+            if (id.includes('cybersecurity') || id.includes('security')) {
+              return 'ai-security'
+            }
+            if (id.includes('crm') || id.includes('customer')) {
+              return 'ai-crm'
+            }
+            return 'ai-services'
+          }
+          // Group Zion service pages by type
+          if (id.includes('/zion-') && id.includes('/page.tsx')) {
+            if (id.includes('analytics') || id.includes('data')) {
+              return 'zion-analytics'
+            }
+            if (id.includes('video') || id.includes('content')) {
+              return 'zion-content'
+            }
+            if (id.includes('security') || id.includes('shield')) {
+              return 'zion-security'
+            }
+            return 'zion-services'
+          }
+          // Group 5G service pages
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
             return '5g-services'
           }
@@ -159,17 +229,34 @@ export default defineConfig({
               !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-') && !id.includes('/micro-')) {
             return 'main-pages'
           }
+<<<<<<< HEAD
           // Large vendor libraries
           if (id.includes('node_modules')) {
             // Group large libraries separately
             if (id.includes('axios') || id.includes('lodash')) {
               return 'http-utils'
+=======
+          // Components - group by type for better caching
+          if (id.includes('/components/')) {
+            if (id.includes('Performance') || id.includes('Analytics')) {
+              return 'components-performance'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
             }
             if (id.includes('date-fns') || id.includes('moment')) {
               return 'date-utils'
             }
+<<<<<<< HEAD
             return 'vendor'
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0544
+=======
+            if (id.includes('Loading') || id.includes('Error')) {
+              return 'components-ui'
+            }
+            if (id.includes('Futuristic') || id.includes('Responsive')) {
+              return 'components-ui-advanced'
+            }
+            return 'components-common'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
           }
           // Default chunk for other modules
           return 'vendor'
@@ -215,6 +302,7 @@ export default defineConfig({
       global: 'globalThis',
     },
   },
+<<<<<<< HEAD
   define: {
     __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
   },
@@ -258,3 +346,6 @@ export default defineConfig({
 =======
 });
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0544
+=======
+});
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680

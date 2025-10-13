@@ -201,6 +201,7 @@ interface PerformanceMetrics {fcp: number | null;,}
     measureResourceTiming();
     measureCoreWebVitals();
 
+<<<<<<< HEAD
     // Monitor performance every 5 seconds
     const interval = setInterval(() => {
       measureResourceTiming();
@@ -208,6 +209,8 @@ interface PerformanceMetrics {fcp: number | null;,}
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
         onFCP((metric: any) => {
           setMetrics(prev => ({ ...prev, fcp: metric.value }))
           reportMetric('FCP', metric.value)
@@ -424,5 +427,9 @@ interface PerformanceMetrics {fcp: number | null;,}
   return null;
 };
 
+<<<<<<< HEAD
 export default AdvancedPerformanceMonitor;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
+=======
+export default AdvancedPerformanceMonitor
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680

@@ -264,6 +264,7 @@ export default function Navigation() {
           <Link to="/" className="text-xl font-bold text-gray-800">
             Zion Tech Group
           </Link>
+<<<<<<< HEAD
           <div className="space-x-6">
             <Link to="/about" className="text-gray-600 hover:text-gray-800">
               About
@@ -282,6 +283,71 @@ export default function Navigation() {
             <Link to="/" className="flex-shrink-0 flex items-center">
               <span className="text-2xl font-bold text-white">Zion Tech Group</span>
             </Link>
+=======
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navigationItems.map((item) => (
+              <div key={item.name} className="relative group">
+                <Link
+                  to={item.path}
+                  className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                    isActive(item.path)
+                      ? 'text-cyan-400 bg-cyan-500/10'
+                      : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'
+                  }`}
+                >
+                  {item.icon}
+                  <span>{item.name}</span>
+                  {item.hasDropdown && (
+                    <ChevronDown className="w-4 h-4" />
+                  )}
+                </Link>
+                
+                {/* Services Dropdown */}
+                {item.hasDropdown && (
+                  <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                    <div className="p-6">
+                      <h3 className="text-white font-semibold mb-4 text-lg">Our Services</h3>
+                      <div className="space-y-6">
+                        {serviceDropdownItems.map((category, categoryIndex) => (
+                          <div key={categoryIndex}>
+                            <h4 className="text-cyan-400 font-medium mb-3 text-sm uppercase tracking-wide">
+                              {category.category}
+                            </h4>
+                            <div className="space-y-2">
+                              {category.items.map((service, serviceIndex) => (
+                                <Link
+                                  key={serviceIndex}
+                                  to={service.path}
+                                  className="block p-3 rounded-lg hover:bg-cyan-500/10 transition-colors group"
+                                >
+                                  <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
+                                    {service.name}
+                                  </div>
+                                  <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+                                    {service.description}
+                                  </div>
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="mt-6 pt-4 border-t border-cyan-500/20">
+                        <Link
+                          to="/services"
+                          className="block text-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
+                        >
+                          View All Services →
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
           </div>
 
           {/* Desktop Navigation */}
