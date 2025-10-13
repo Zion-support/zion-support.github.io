@@ -55,18 +55,53 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         About
                         <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
                       </Link>
-                      <Link
-                        to="/services"
-                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
-                      >
-                        Services
-                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
-                      </Link>
+                      <div className="relative group">
+                        <Link
+                          to="/services"
+                          className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group flex items-center"
+                        >
+                          Services
+                          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
+                        </Link>
+                        {/* Dropdown Menu */}
+                        <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-sm rounded-lg shadow-xl border border-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                          <div className="p-4">
+                            <div className="grid grid-cols-1 gap-2">
+                              <Link to="/ai-business-intelligence" className="block px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/5 rounded transition-colors">
+                                AI Business Intelligence
+                              </Link>
+                              <Link to="/ai-customer-support" className="block px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/5 rounded transition-colors">
+                                AI Customer Support
+                              </Link>
+                              <Link to="/ai-social-media-manager" className="block px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/5 rounded transition-colors">
+                                AI Social Media Manager
+                              </Link>
+                              <Link to="/ai-email-marketing-automation" className="block px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/5 rounded transition-colors">
+                                AI Email Marketing
+                              </Link>
+                              <Link to="/ai-project-management" className="block px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/5 rounded transition-colors">
+                                AI Project Management
+                              </Link>
+                              <div className="border-t border-white/10 my-2"></div>
+                              <Link to="/services" className="block px-3 py-2 text-sm text-cyan-400 font-medium hover:bg-white/5 rounded transition-colors">
+                                View All Services →
+                              </Link>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                       <Link
                         to="/contact"
                         className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
                       >
                         Contact
+                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
+                      </Link>
+                      <Link
+                        to="/consultation"
+                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
+                      >
+                        Free Consultation
                         <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
                       </Link>
                     </nav>
@@ -86,85 +121,127 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
               <main>{children}</main>
 
-              <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 py-12 relative z-10">
+              <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 py-16 relative z-10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
                     {/* Company Info */}
-                    <div className="space-y-4">
-                      <h3 className="text-xl font-bold text-white mb-4">
+                    <div className="lg:col-span-2 space-y-4">
+                      <h3 className="text-2xl font-bold text-white mb-4">
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
                           Zion Tech Group
                         </span>
                       </h3>
-                      <p className="text-gray-300 text-sm leading-relaxed">
-                        Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.
+                      <p className="text-gray-300 text-sm leading-relaxed mb-6">
+                        Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses. 
+                        We help companies leverage cutting-edge technology to achieve their goals.
                       </p>
                       <div className="flex space-x-4">
-                        <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                          <span className="text-white text-xs font-bold">Z</span>
+                        <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                          <span className="text-white text-sm font-bold">Z</span>
+                        </div>
+                        <div className="flex flex-col justify-center">
+                          <span className="text-white text-sm font-semibold">AI & IT Solutions</span>
+                          <span className="text-gray-400 text-xs">Since 2020</span>
                         </div>
                       </div>
                     </div>
 
                     {/* Quick Links */}
                     <div className="space-y-4">
-                      <h4 className="text-lg font-semibold text-white">Quick Links</h4>
-                      <div className="space-y-2">
-                        <Link to="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                      <h4 className="text-lg font-semibold text-white">Company</h4>
+                      <div className="space-y-3">
+                        <Link to="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                           About Us
                         </Link>
-                        <Link to="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                        <Link to="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                           Our Services
                         </Link>
-                        <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                        <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                           Contact
                         </Link>
-                        <Link to="/consultation" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                        <Link to="/consultation" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                           Free Consultation
                         </Link>
+                        <Link to="/demo" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Request Demo
+                        </Link>
                       </div>
                     </div>
 
-                    {/* Services */}
+                    {/* AI Services */}
                     <div className="space-y-4">
-                      <h4 className="text-lg font-semibold text-white">Services</h4>
-                      <div className="space-y-2">
+                      <h4 className="text-lg font-semibold text-white">AI Services</h4>
+                      <div className="space-y-3">
                         <Link to="/ai-business-intelligence" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          AI Business Intelligence
+                          Business Intelligence
                         </Link>
                         <Link to="/ai-customer-support" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          AI Customer Support
+                          Customer Support
                         </Link>
-                        <Link to="/ai-content-generation" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          AI Content Generation
+                        <Link to="/ai-social-media-manager" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Social Media Manager
                         </Link>
-                        <Link to="/ai-cybersecurity" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          AI Cybersecurity
+                        <Link to="/ai-email-marketing-automation" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Email Marketing
+                        </Link>
+                        <Link to="/ai-project-management" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Project Management
                         </Link>
                       </div>
                     </div>
 
-                    {/* Contact Info */}
+                    {/* IT Services */}
                     <div className="space-y-4">
-                      <h4 className="text-lg font-semibold text-white">Contact Info</h4>
+                      <h4 className="text-lg font-semibold text-white">IT Services</h4>
                       <div className="space-y-3">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-5 h-5 bg-gradient-to-r from-cyan-500 to-purple-600 rounded flex items-center justify-center">
-                            <span className="text-white text-xs">@</span>
-                          </div>
-                          <span className="text-gray-300 text-sm">kleber@ziontechgroup.com</span>
+                        <Link to="/ai-cybersecurity" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Cybersecurity
+                        </Link>
+                        <Link to="/5g-solutions" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          5G Solutions
+                        </Link>
+                        <Link to="/cloud-infrastructure" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Cloud Infrastructure
+                        </Link>
+                        <Link to="/ai-data-analytics" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Data Analytics
+                        </Link>
+                        <Link to="/ai-code-assistant" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Code Assistant
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Contact Info Section */}
+                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 mb-8">
+                    <h4 className="text-lg font-semibold text-white mb-4">Get In Touch</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                          <span className="text-white text-sm">@</span>
                         </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-5 h-5 bg-gradient-to-r from-cyan-500 to-purple-600 rounded flex items-center justify-center">
-                            <span className="text-white text-xs">📞</span>
-                          </div>
-                          <span className="text-gray-300 text-sm">+1 302 464 0950</span>
+                        <div>
+                          <span className="text-gray-300 text-sm block">Email</span>
+                          <span className="text-cyan-400 text-sm font-medium">kleber@ziontechgroup.com</span>
                         </div>
-                        <div className="flex items-start space-x-3">
-                          <div className="w-5 h-5 bg-gradient-to-r from-cyan-500 to-purple-600 rounded flex items-center justify-center mt-0.5">
-                            <span className="text-white text-xs">📍</span>
-                          </div>
-                          <span className="text-gray-300 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                          <span className="text-white text-sm">📞</span>
+                        </div>
+                        <div>
+                          <span className="text-gray-300 text-sm block">Phone</span>
+                          <span className="text-cyan-400 text-sm font-medium">+1 302 464 0950</span>
+                        </div>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mt-0.5">
+                          <span className="text-white text-sm">📍</span>
+                        </div>
+                        <div>
+                          <span className="text-gray-300 text-sm block">Address</span>
+                          <span className="text-cyan-400 text-sm font-medium">364 E Main St STE 1008<br />Middletown DE 19709</span>
                         </div>
                       </div>
                     </div>

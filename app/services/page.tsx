@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail } from "lucide-react";
+import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Share2, CheckSquare } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -23,11 +23,38 @@ export default function Services() {
       features: ["Multi-language Support", "Sentiment Analysis", "CRM Integration", "Live Chat Handoff"]
     },
     {
+      title: "AI Social Media Manager",
+      description: "Automate your social media presence with AI-powered content creation, smart scheduling, and performance optimization across all platforms.",
+      icon: <Share2 className="w-8 h-8" />,
+      path: "/ai-social-media-manager",
+      color: "from-purple-500 to-pink-500",
+      price: "Starting at $49/month",
+      features: ["AI Content Generation", "Smart Scheduling", "Multi-Platform", "Analytics"]
+    },
+    {
+      title: "AI Email Marketing Automation",
+      description: "Transform your email marketing with AI-powered automation, content generation, and intelligent segmentation for maximum conversions.",
+      icon: <Mail className="w-8 h-8" />,
+      path: "/ai-email-marketing-automation",
+      color: "from-red-500 to-orange-500",
+      price: "Starting at $79/month",
+      features: ["AI Content Generation", "Smart Segmentation", "Automated Workflows", "Advanced Analytics"]
+    },
+    {
+      title: "AI Project Management",
+      description: "Revolutionize project management with AI-powered planning, intelligent resource allocation, and predictive analytics for higher success rates.",
+      icon: <CheckSquare className="w-8 h-8" />,
+      path: "/ai-project-management",
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $89/month",
+      features: ["AI Task Automation", "Resource Allocation", "Predictive Analytics", "Risk Management"]
+    },
+    {
       title: "AI Content Generation Suite",
       description: "Create high-quality content at scale with our AI-powered writing tools. Blog posts, social media content, product descriptions, and more.",
       icon: <FileText className="w-8 h-8" />,
       path: "/ai-content-generation",
-      color: "from-purple-500 to-pink-500",
+      color: "from-indigo-500 to-purple-500",
       price: "Starting at $149/month",
       features: ["SEO Optimization", "Brand Voice Training", "Multi-format Output", "Plagiarism Detection"]
     },
@@ -36,7 +63,7 @@ export default function Services() {
       description: "Advanced threat detection and response system. Real-time monitoring, automated incident response, and compliance reporting.",
       icon: <Shield className="w-8 h-8" />,
       path: "/ai-cybersecurity",
-      color: "from-red-500 to-orange-500",
+      color: "from-teal-500 to-cyan-500",
       price: "Starting at $399/month",
       features: ["Threat Detection", "Automated Response", "Compliance Reports", "24/7 Monitoring"]
     },
@@ -45,7 +72,7 @@ export default function Services() {
       description: "Complete 5G network deployment and management solutions. Ultra-low latency, massive IoT connectivity, and edge computing capabilities.",
       icon: <Wifi className="w-8 h-8" />,
       path: "/5g-solutions",
-      color: "from-cyan-500 to-blue-500",
+      color: "from-yellow-500 to-orange-500",
       price: "Custom Pricing",
       features: ["Network Planning", "Edge Computing", "IoT Integration", "Performance Monitoring"]
     },
@@ -54,7 +81,7 @@ export default function Services() {
       description: "Comprehensive cloud solutions with automated scaling, backup, and disaster recovery. Multi-cloud and hybrid cloud support.",
       icon: <Cloud className="w-8 h-8" />,
       path: "/cloud-infrastructure",
-      color: "from-indigo-500 to-purple-500",
+      color: "from-pink-500 to-rose-500",
       price: "Starting at $249/month",
       features: ["Auto-scaling", "Disaster Recovery", "Cost Optimization", "Security Hardening"]
     },
@@ -63,7 +90,7 @@ export default function Services() {
       description: "Advanced data processing and visualization platform. Machine learning models, automated insights, and interactive dashboards.",
       icon: <BarChart3 className="w-8 h-8" />,
       path: "/ai-data-analytics",
-      color: "from-teal-500 to-cyan-500",
+      color: "from-emerald-500 to-green-500",
       price: "Starting at $179/month",
       features: ["ML Models", "Interactive Dashboards", "Data Pipeline", "Real-time Processing"]
     },
@@ -72,25 +99,16 @@ export default function Services() {
       description: "Intelligent code generation, review, and optimization. Support for multiple programming languages with automated testing and documentation.",
       icon: <Code className="w-8 h-8" />,
       path: "/ai-code-assistant",
-      color: "from-yellow-500 to-orange-500",
+      color: "from-violet-500 to-purple-500",
       price: "Starting at $129/month",
       features: ["Code Generation", "Bug Detection", "Performance Optimization", "Documentation"]
-    },
-    {
-      title: "AI Marketing Automation",
-      description: "End-to-end marketing automation with AI-driven personalization. Email campaigns, social media management, and lead scoring.",
-      icon: <Target className="w-8 h-8" />,
-      path: "/ai-marketing-automation",
-      color: "from-pink-500 to-rose-500",
-      price: "Starting at $199/month",
-      features: ["Email Automation", "Social Media", "Lead Scoring", "A/B Testing"]
     },
     {
       title: "AI Document Processing",
       description: "Intelligent document analysis, extraction, and processing. OCR, form recognition, and automated data entry solutions.",
       icon: <FileText className="w-8 h-8" />,
       path: "/ai-document-processing",
-      color: "from-emerald-500 to-green-500",
+      color: "from-amber-500 to-yellow-500",
       price: "Starting at $159/month",
       features: ["OCR Technology", "Form Recognition", "Data Extraction", "Workflow Automation"]
     },
@@ -99,18 +117,9 @@ export default function Services() {
       description: "Intelligent CRM with AI-powered lead qualification, sales forecasting, and automated follow-ups. Integration with major CRM platforms.",
       icon: <Users className="w-8 h-8" />,
       path: "/ai-crm-assistant",
-      color: "from-violet-500 to-purple-500",
+      color: "from-rose-500 to-pink-500",
       price: "Starting at $229/month",
       features: ["Lead Scoring", "Sales Forecasting", "Automated Follow-ups", "CRM Integration"]
-    },
-    {
-      title: "AI Financial Analytics",
-      description: "Advanced financial modeling and risk assessment. Automated reporting, fraud detection, and investment analysis tools.",
-      icon: <TrendingUp className="w-8 h-8" />,
-      path: "/ai-financial-analytics",
-      color: "from-amber-500 to-yellow-500",
-      price: "Starting at $349/month",
-      features: ["Risk Assessment", "Fraud Detection", "Investment Analysis", "Compliance Reporting"]
     }
   ];
 
