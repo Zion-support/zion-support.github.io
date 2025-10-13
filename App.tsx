@@ -14,13 +14,8 @@ import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import ErrorBoundary from "./app/components/ErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
-<<<<<<< HEAD
-=======
-import LoadingPage from "./app/components/Loading";
-import EnhancedSEO from "./app/components/EnhancedSEO";
-import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
-import PerformanceMonitor from "./app/components/PerformanceMonitor";
->>>>>>> cursor/analyze-improve-and-deploy-application-5cc2
+import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
+import EnhancedAnalytics from "./app/components/EnhancedAnalytics";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -34,6 +29,7 @@ const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
 const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
 const DemoPage = React.lazy(() => import("./app/demo/page"));
+const ConsultationPage = React.lazy(() => import("./app/consultation/page"));
 const SupportPage = React.lazy(() => import("./app/support/page"));
 
 // AI Services Pages
@@ -123,24 +119,26 @@ function App() {
     <HelmetProvider>
       <ErrorBoundary>
         <AnalyticsProvider>
-          <PerformanceMonitor showDetails={process.env.NODE_ENV === 'development'}>
-            <WebVitalsTracker>
-              <AccessibilityEnhancer>
-                <Router>
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                    {/* Skip to main content link */}
-                    <a href="#main-content" className="skip-link">
-                      Skip to main content
-                    </a>
-                    
-                    <FuturisticBackground>
-                      <Navigation onSidebarToggle={toggleSidebar} />
-                      <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-                      <Breadcrumb />
-                      
-                      <main id="main-content" role="main" className="relative z-10">
-                        <Suspense fallback={<LoadingPage message="Loading Zion Tech Group..." />}>
-                          <Routes>
+          <EnhancedAnalytics>
+            <PerformanceOptimizer>
+              <PerformanceMonitor showDetails={process.env.NODE_ENV === 'development'}>
+                <WebVitalsTracker>
+                  <AccessibilityEnhancer>
+                    <Router>
+                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                        {/* Skip to main content link */}
+                        <a href="#main-content" className="skip-link">
+                          Skip to main content
+                        </a>
+                        
+                        <FuturisticBackground>
+                          <Navigation onSidebarToggle={toggleSidebar} />
+                          <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
+                          <Breadcrumb />
+                          
+                          <main id="main-content" role="main" className="relative z-10">
+                            <Suspense fallback={<LoadingPage message="Loading Zion Tech Group..." />}>
+                              <Routes>
                             {/* Main Pages */}
                             <Route path="/" element={<HomePage />} />
                             <Route path="/about" element={<AboutPage />} />
@@ -154,6 +152,7 @@ function App() {
                             <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
                             <Route path="/tutorials" element={<TutorialsPage />} />
                             <Route path="/demo" element={<DemoPage />} />
+                            <Route path="/consultation" element={<ConsultationPage />} />
                             <Route path="/support" element={<SupportPage />} />
 
                             {/* AI Services Routes */}
@@ -222,15 +221,17 @@ function App() {
                             <Route path="/zion-ai-customer-support-pro" element={<ZionAICustomerSupportProPage />} />
                           </Routes>
                         </Suspense>
-                      </main>
-                      
-                      <Footer />
-                    </FuturisticBackground>
-                  </div>
-                </Router>
-              </AccessibilityEnhancer>
-            </WebVitalsTracker>
-          </PerformanceMonitor>
+                          </main>
+                          
+                          <Footer />
+                        </FuturisticBackground>
+                      </div>
+                    </Router>
+                  </AccessibilityEnhancer>
+                </WebVitalsTracker>
+              </PerformanceMonitor>
+            </PerformanceOptimizer>
+          </EnhancedAnalytics>
         </AnalyticsProvider>
       </ErrorBoundary>
     </HelmetProvider>

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from "react"; export default function AdvancedPerformanceMonitor() { return <div>Performance Monitor</div>; }
-=======
 'use client'
 import { useEffect, useState } from 'react'
 
@@ -183,5 +180,3 @@ const AdvancedPerformanceMonitor = () => {
 }
 
 export default AdvancedPerformanceMonitor
-
->>>>>>> cursor/analyze-improve-and-deploy-application-5cc2
