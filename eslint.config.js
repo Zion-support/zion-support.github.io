@@ -38,10 +38,6 @@ export default tseslint.config(
 
 
       "corrupted-src-backup/**",
-
-
-
-
       "cleanup-*.cjs",
       "comprehensive-*.cjs",
       "fix-*.cjs",
@@ -69,11 +65,6 @@ export default tseslint.config(
       "ci-cd-reports/**",
       "content/**",
       "contracts/**"
-
-
-
-      "*.js"
-
     ],
   }
 );

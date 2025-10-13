@@ -1,4 +1,3 @@
-import React from 'react';
 
 interface ImageOptimizerProps {
   src: string;
@@ -11,26 +10,12 @@ interface ImageOptimizerProps {
 }
 
 
-export default function ImageOptimizer({ 
-  src, 
-  alt, 
-  className = '', 
-
-  lazy = true,
-  placeholder
-
-  lazy = true
-
-
-
 export default function ImageOptimizer({
   src,
   alt,
   className = '',
   lazy = true,
   placeholder
-
-
 }: ImageOptimizerProps) {
   return (
     <img
