@@ -93,6 +93,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         <Link to="/ai-fraud-detection-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                           Fraud Detection
                         </Link>
+                        <Link to="/ai-climate-solutions-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Climate Solutions
+                        </Link>
+                        <Link to="/ai-agricultural-intelligence-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Agricultural Intelligence
+                        </Link>
                         <Link to="/ai-services" className="block text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">
                           View All AI Services →
                         </Link>
@@ -148,6 +154,21 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         </Link>
                         <Link to="/zion-ai-chatbot-builder" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                           AI Chatbot Builder
+                        </Link>
+                        <Link to="/ai-voice-assistant-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          AI Voice Assistant Pro
+                        </Link>
+                        <Link to="/ai-image-recognition-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          AI Image Recognition Pro
+                        </Link>
+                        <Link to="/ai-fraud-detection-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          AI Fraud Detection Pro
+                        </Link>
+                        <Link to="/ai-climate-solutions-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          AI Climate Solutions Pro
+                        </Link>
+                        <Link to="/ai-agricultural-intelligence-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          AI Agricultural Intelligence Pro
                         </Link>
                         <Link to="/micro-saas" className="block text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">
                           View All Micro SAAS →

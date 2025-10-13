@@ -997,6 +997,161 @@ export default function MicroSaas() {
       reviews: 1234,
       link: "/zion-social-scheduler",
       featured: false
+    },
+    {
+      id: "ai-voice-assistant-pro",
+      name: "AI Voice Assistant Pro",
+      description: "Advanced voice AI with natural language processing, multi-channel support, and real-time transcription",
+      price: "From $199/month",
+      originalPrice: "$399/month",
+      discount: "50% OFF",
+      icon: <Mic className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      features: [
+        "Natural language processing",
+        "Multi-channel voice support",
+        "Real-time transcription",
+        "Intelligent routing",
+        "Voice analytics",
+        "Custom voice training",
+        "50+ language support",
+        "24/7 availability"
+      ],
+      benefits: [
+        "99.5% accuracy rate",
+        "Reduce response times by 80%",
+        "Handle 90% of queries automatically",
+        "Scale customer service operations"
+      ],
+      category: "AI Voice",
+      rating: 4.9,
+      reviews: 2156,
+      link: "/ai-voice-assistant-pro",
+      featured: true
+    },
+    {
+      id: "ai-image-recognition-pro",
+      name: "AI Image Recognition Pro",
+      description: "Advanced computer vision with object detection, facial recognition, OCR, and scene analysis",
+      price: "From $149/month",
+      originalPrice: "$299/month",
+      discount: "50% OFF",
+      icon: <Eye className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      features: [
+        "Advanced object detection",
+        "Facial recognition & analysis",
+        "Text & OCR recognition",
+        "Scene & activity recognition",
+        "Real-time processing",
+        "Custom model training",
+        "100+ language OCR",
+        "API integration"
+      ],
+      benefits: [
+        "99.7% accuracy rate",
+        "Sub-second response times",
+        "Reduce manual work by 95%",
+        "Improve quality control"
+      ],
+      category: "Computer Vision",
+      rating: 4.8,
+      reviews: 1834,
+      link: "/ai-image-recognition-pro",
+      featured: true
+    },
+    {
+      id: "ai-fraud-detection-pro",
+      name: "AI Fraud Detection Pro",
+      description: "Advanced fraud prevention with real-time detection, behavioral analysis, and compliance reporting",
+      price: "From $299/month",
+      originalPrice: "$599/month",
+      discount: "50% OFF",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500",
+      features: [
+        "Real-time fraud detection",
+        "Behavioral analysis",
+        "Transaction monitoring",
+        "Identity verification",
+        "Risk scoring",
+        "Compliance & reporting",
+        "Multi-factor authentication",
+        "24/7 monitoring"
+      ],
+      benefits: [
+        "99.9% detection accuracy",
+        "Reduce fraud losses by 92%",
+        "Sub-50ms response time",
+        "Ensure compliance requirements"
+      ],
+      category: "Security",
+      rating: 4.9,
+      reviews: 1456,
+      link: "/ai-fraud-detection-pro",
+      featured: true
+    },
+    {
+      id: "ai-climate-solutions-pro",
+      name: "AI Climate Solutions Pro",
+      description: "Comprehensive climate and sustainability management with carbon tracking and energy optimization",
+      price: "From $199/month",
+      originalPrice: "$399/month",
+      discount: "50% OFF",
+      icon: <Leaf className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      features: [
+        "Carbon footprint tracking",
+        "Energy optimization",
+        "Climate risk assessment",
+        "Sustainability reporting",
+        "Renewable energy planning",
+        "Supply chain sustainability",
+        "ESG compliance",
+        "Real-time monitoring"
+      ],
+      benefits: [
+        "Reduce carbon footprint by 40%",
+        "Save 35% on energy costs",
+        "Achieve net-zero goals faster",
+        "Improve ESG ratings"
+      ],
+      category: "Sustainability",
+      rating: 4.8,
+      reviews: 892,
+      link: "/ai-climate-solutions-pro",
+      featured: true
+    },
+    {
+      id: "ai-agricultural-intelligence-pro",
+      name: "AI Agricultural Intelligence Pro",
+      description: "Smart farming solutions with crop monitoring, weather prediction, and precision agriculture",
+      price: "From $149/month",
+      originalPrice: "$299/month",
+      discount: "50% OFF",
+      icon: <Leaf className="w-8 h-8" />,
+      color: "from-yellow-500 to-orange-500",
+      features: [
+        "Crop monitoring & analysis",
+        "Weather prediction & planning",
+        "Soil health analysis",
+        "Precision irrigation",
+        "Pest & disease detection",
+        "Yield optimization",
+        "Drone integration",
+        "Mobile app access"
+      ],
+      benefits: [
+        "Increase yields by 25%",
+        "Reduce water usage by 30%",
+        "Minimize pesticide use",
+        "Optimize resource allocation"
+      ],
+      category: "Agriculture",
+      rating: 4.7,
+      reviews: 1234,
+      link: "/ai-agricultural-intelligence-pro",
+      featured: true
     }
   ];
 
@@ -1020,12 +1175,16 @@ export default function MicroSaas() {
     { name: "Sales", count: microSaasServices.filter(s => s.category === "Sales").length, active: false },
     { name: "Research", count: microSaasServices.filter(s => s.category === "Research").length, active: false },
     { name: "SEO", count: microSaasServices.filter(s => s.category === "SEO").length, active: false },
-    { name: "Development", count: microSaasServices.filter(s => s.category === "Development").length, active: false }
+    { name: "Development", count: microSaasServices.filter(s => s.category === "Development").length, active: false },
+    { name: "AI Voice", count: microSaasServices.filter(s => s.category === "AI Voice").length, active: false },
+    { name: "Computer Vision", count: microSaasServices.filter(s => s.category === "Computer Vision").length, active: false },
+    { name: "Sustainability", count: microSaasServices.filter(s => s.category === "Sustainability").length, active: false },
+    { name: "Agriculture", count: microSaasServices.filter(s => s.category === "Agriculture").length, active: false }
   ];
 
   const stats = [
-    { number: "25+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
-    { number: "15,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "30+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "25,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }
   ];

@@ -1,13 +1,6 @@
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor } from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
 import EnhancedSEO from "./components/EnhancedSEO";
-=======
-import SEOOptimizer from "./components/SEOOptimizer";
-=======
-import EnhancedSEO from "./components/EnhancedSEO";
->>>>>>> cursor/analyze-improve-and-deploy-application-48cd
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
 import FuturisticButton from "./components/FuturisticButton";
@@ -15,13 +8,6 @@ import FuturisticText from "./components/FuturisticText";
 import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
 import ResponsiveText from "./components/ResponsiveText";
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-48cd
 
 const HomePage = () => {
   const structuredData = {
@@ -150,13 +136,53 @@ const HomePage = () => {
       icon: <Calendar className="w-6 h-6" />,
       link: "/zion-ai-project-manager-pro",
       featured: true
+    },
+    {
+      name: "AI Voice Assistant Pro",
+      description: "Advanced voice AI with natural language processing and multi-channel support for seamless customer interactions",
+      price: "From $199/month",
+      icon: <Mic className="w-6 h-6" />,
+      link: "/ai-voice-assistant-pro",
+      featured: true
+    },
+    {
+      name: "AI Image Recognition Pro",
+      description: "Advanced computer vision with object detection, facial recognition, and OCR for intelligent image processing",
+      price: "From $149/month",
+      icon: <Eye className="w-6 h-6" />,
+      link: "/ai-image-recognition-pro",
+      featured: true
+    },
+    {
+      name: "AI Fraud Detection Pro",
+      description: "Advanced fraud prevention with real-time detection, behavioral analysis, and compliance reporting",
+      price: "From $299/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/ai-fraud-detection-pro",
+      featured: true
+    },
+    {
+      name: "AI Climate Solutions Pro",
+      description: "Comprehensive climate and sustainability management with carbon tracking and energy optimization",
+      price: "From $199/month",
+      icon: <Leaf className="w-6 h-6" />,
+      link: "/ai-climate-solutions-pro",
+      featured: true
+    },
+    {
+      name: "AI Agricultural Intelligence Pro",
+      description: "Smart farming solutions with crop monitoring, weather prediction, and precision agriculture",
+      price: "From $149/month",
+      icon: <Leaf className="w-6 h-6" />,
+      link: "/ai-agricultural-intelligence-pro",
+      featured: true
     }
   ];
 
   const stats = [
-    { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "25,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "60+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "80+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
   ];
 
@@ -186,19 +212,7 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-<<<<<<< HEAD
       <EnhancedSEO
-=======
-      <FuturisticBackground />
-<<<<<<< HEAD
-      <SEOOptimizer
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
-=======
-      <EnhancedSEO
->>>>>>> cursor/analyze-improve-and-deploy-application-48cd
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
         keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"

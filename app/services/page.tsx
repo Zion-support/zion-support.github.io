@@ -336,6 +336,66 @@ export default function Services() {
       originalPrice: "$299/month",
       features: ["Asset Inventory", "Lifecycle Management", "Cost Tracking", "License Management", "Depreciation Tracking", "Compliance Reporting"],
       category: "Asset Management"
+    },
+    {
+      title: "AI Voice Assistant Pro",
+      description: "Advanced voice AI with natural language processing, multi-channel support, and real-time transcription for seamless customer interactions.",
+      icon: <Mic className="w-8 h-8" />,
+      path: "/ai-voice-assistant-pro",
+      color: "from-blue-500 to-cyan-500",
+      price: "Starting at $199/month",
+      originalPrice: "$399/month",
+      features: ["Natural Language Processing", "Multi-Channel Support", "Real-Time Transcription", "Intelligent Routing", "Voice Analytics", "Custom Training"],
+      category: "AI Voice",
+      popular: true
+    },
+    {
+      title: "AI Image Recognition Pro",
+      description: "Advanced computer vision with object detection, facial recognition, OCR, and scene analysis for intelligent image processing.",
+      icon: <Eye className="w-8 h-8" />,
+      path: "/ai-image-recognition-pro",
+      color: "from-purple-500 to-pink-500",
+      price: "Starting at $149/month",
+      originalPrice: "$299/month",
+      features: ["Object Detection", "Facial Recognition", "OCR Technology", "Scene Analysis", "Real-Time Processing", "Custom Models"],
+      category: "Computer Vision",
+      popular: true
+    },
+    {
+      title: "AI Fraud Detection Pro",
+      description: "Advanced fraud prevention with real-time detection, behavioral analysis, and compliance reporting for comprehensive security.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/ai-fraud-detection-pro",
+      color: "from-red-500 to-pink-500",
+      price: "Starting at $299/month",
+      originalPrice: "$599/month",
+      features: ["Real-Time Detection", "Behavioral Analysis", "Transaction Monitoring", "Identity Verification", "Risk Scoring", "Compliance Reporting"],
+      category: "Security",
+      popular: true
+    },
+    {
+      title: "AI Climate Solutions Pro",
+      description: "Comprehensive climate and sustainability management with carbon tracking, energy optimization, and ESG reporting.",
+      icon: <Leaf className="w-8 h-8" />,
+      path: "/ai-climate-solutions-pro",
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $199/month",
+      originalPrice: "$399/month",
+      features: ["Carbon Tracking", "Energy Optimization", "Climate Risk Assessment", "Sustainability Reporting", "Renewable Planning", "ESG Compliance"],
+      category: "Sustainability",
+      popular: true
+    },
+    {
+      title: "AI Agricultural Intelligence Pro",
+      description: "Smart farming solutions with crop monitoring, weather prediction, soil analysis, and precision agriculture for maximum yields.",
+      icon: <Leaf className="w-8 h-8" />,
+      path: "/ai-agricultural-intelligence-pro",
+      color: "from-yellow-500 to-orange-500",
+      price: "Starting at $149/month",
+      originalPrice: "$299/month",
+      features: ["Crop Monitoring", "Weather Prediction", "Soil Analysis", "Precision Irrigation", "Pest Detection", "Yield Optimization"],
+      category: "Agriculture",
+      popular: true
     }
   ];
 
