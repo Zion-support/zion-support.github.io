@@ -1,58 +1,11 @@
-import React, { useState } from 'react';
-import { Settings, Users, Sparkles, ArrowRight, CheckCircle, Star, Globe, Brain, BarChart3, Database, Target, FileText, Smartphone, Mail, Headphones, Download, Play } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { ArrowRight, FileText, Download, Settings, Sparkles, CheckCircle, Star, Users, Brain, Mail, Smartphone, Globe, Database, BarChart3, Target, Headphones, Layout, CreditCard, Calculator, Play } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Download } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Play } from 'lucide-react';
-import { Headphones } from 'lucide-react';
-// import { Phone } from 'lucide-react'; // Unused import
-import { Smartphone } from 'lucide-react';
-import { FileText } from 'lucide-react';
-// import { Hand } from 'lucide-react'; // Unused import
 
 const ZionAIInvoiceGeneratorPage = () => {
-  const testimonials = [
-    {
-      name: "John Smith",
-      role: "CEO, TechCorp",
-      content: "Zion Tech Group transformed our business with their AI solutions.",
-      avatar: "/images/testimonials/john-smith.jpg"
-    },
-    {
-      name: "Sarah Johnson",
-      role: "CTO, InnovateLabs",
-      content: "The team's expertise in AI and automation is unmatched.",
-      avatar: "/images/testimonials/sarah-johnson.jpg"
-    },
-    {
-      name: "Mike Chen",
-      role: "Founder, StartupXYZ",
-      content: "We saw immediate results after implementing their solutions.",
-      avatar: "/images/testimonials/mike-chen.jpg"
-    }
-  ];
 
-  const stats = [
-    { label: "Projects Completed", value: "500+" },
-    { label: "Happy Clients", value: "200+" },
-    { label: "Years Experience", value: "5+" },
-    { label: "Team Members", value: "50+" }
-  ];
+  // const [selectedPlan, setSelectedPlan] = useState('pro');
 
-  const [selectedPlan, setSelectedPlan] = useState('pro');
 
   const features = [
     {
@@ -214,7 +167,7 @@ const ZionAIInvoiceGeneratorPage = () => {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion AI Invoice Generator - Automated Invoice Creation with AI | Zion Tech Group</title>
         <meta
@@ -284,7 +237,7 @@ const ZionAIInvoiceGeneratorPage = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -324,7 +277,7 @@ const ZionAIInvoiceGeneratorPage = () => {
         </section>
 
         {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-green-800/50 relative z-10">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-green-800/50 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -367,7 +320,7 @@ const ZionAIInvoiceGeneratorPage = () => {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -412,7 +365,7 @@ const ZionAIInvoiceGeneratorPage = () => {
                     {plan.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span>{feature}</span>
+                        <span>{feature.title}</span>
                       </div>
                     ))}
                   </div>
@@ -434,7 +387,7 @@ const ZionAIInvoiceGeneratorPage = () => {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -459,7 +412,7 @@ const ZionAIInvoiceGeneratorPage = () => {
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                      {testimonial.avatar}
+                      {`/avatars/avatar-${index + 1}.jpg`}
                     </div>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
@@ -473,7 +426,7 @@ const ZionAIInvoiceGeneratorPage = () => {
         </section>
 
         {/* Contact Information Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -528,8 +481,8 @@ const ZionAIInvoiceGeneratorPage = () => {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 };
 
-export default ZionAIInvoiceGeneratorPage;
+export default ZionAIInvoiceGeneratorPage;</section>

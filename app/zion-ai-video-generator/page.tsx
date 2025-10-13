@@ -1,57 +1,11 @@
-import React, { useState } from 'react';
-import { Settings, Users, Sparkles, ArrowRight, CheckCircle, Star, Globe, Brain, BarChart3, Target, Mic, Smartphone, Mail, Headphones, Edit, Play } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { ArrowRight, Video, Play, Edit, Settings, Sparkles, CheckCircle, Star, Users, Brain, Mic, Palette, Share, Mail, Smartphone, Globe, Cloud, BarChart3, Target, Headphones, Layout } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Edit } from 'lucide-react';
-import { Play } from 'lucide-react';
-import { Headphones } from 'lucide-react';
-// import { Phone } from 'lucide-react'; // Unused import
-import { Smartphone } from 'lucide-react';
-import { Mic } from 'lucide-react';
-import { Cloud } from 'lucide-react';
 
 const ZionAIVideoGeneratorPage = () => {
-  const testimonials = [
-    {
-      name: "John Smith",
-      role: "CEO, TechCorp",
-      content: "Zion Tech Group transformed our business with their AI solutions.",
-      avatar: "/images/testimonials/john-smith.jpg"
-    },
-    {
-      name: "Sarah Johnson",
-      role: "CTO, InnovateLabs",
-      content: "The team's expertise in AI and automation is unmatched.",
-      avatar: "/images/testimonials/sarah-johnson.jpg"
-    },
-    {
-      name: "Mike Chen",
-      role: "Founder, StartupXYZ",
-      content: "We saw immediate results after implementing their solutions.",
-      avatar: "/images/testimonials/mike-chen.jpg"
-    }
-  ];
 
-  const stats = [
-    { label: "Projects Completed", value: "500+" },
-    { label: "Happy Clients", value: "200+" },
-    { label: "Years Experience", value: "5+" },
-    { label: "Team Members", value: "50+" }
-  ];
+  // const [selectedPlan, setSelectedPlan] = useState('pro');
 
-  const [selectedPlan, setSelectedPlan] = useState('pro');
 
   const features = [
     {
@@ -213,7 +167,7 @@ const ZionAIVideoGeneratorPage = () => {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion AI Video Generator Pro - Create Professional Videos with AI | Zion Tech Group</title>
         <meta
@@ -283,7 +237,7 @@ const ZionAIVideoGeneratorPage = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -323,7 +277,7 @@ const ZionAIVideoGeneratorPage = () => {
         </section>
 
         {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -366,7 +320,7 @@ const ZionAIVideoGeneratorPage = () => {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -433,7 +387,7 @@ const ZionAIVideoGeneratorPage = () => {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -458,7 +412,7 @@ const ZionAIVideoGeneratorPage = () => {
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                      {testimonial.avatar}
+                      {`/avatars/avatar-${index + 1}.jpg`}
                     </div>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
@@ -472,7 +426,7 @@ const ZionAIVideoGeneratorPage = () => {
         </section>
 
         {/* Contact Information Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -527,8 +481,8 @@ const ZionAIVideoGeneratorPage = () => {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 };
 
-export default ZionAIVideoGeneratorPage;
+export default ZionAIVideoGeneratorPage;</section>

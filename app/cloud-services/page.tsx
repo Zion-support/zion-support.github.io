@@ -98,7 +98,7 @@ const CloudServicesPage: React.FC = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      </section><section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -128,7 +128,7 @@ const CloudServicesPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      </section><section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -158,7 +158,7 @@ const CloudServicesPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      </section><section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Move to the Cloud?
@@ -186,4 +186,4 @@ const CloudServicesPage: React.FC = () => {
   );
 };
 
-export default CloudServicesPage;
+export default CloudServicesPage;</section>

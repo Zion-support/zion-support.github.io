@@ -1,19 +1,8 @@
+
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Award } from 'lucide-react';
-// import { Star } from 'lucide-react'; // Unused import
-import { Shield } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Mail } from 'lucide-react';
-// import { Phone } from 'lucide-react'; // Unused import
-import { Smartphone } from 'lucide-react';
-// import { Globe as GlobeIcon } from 'lucide-react'; // Unused import
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe } from 'lucide-react';
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone } from 'lucide-react';
+
 
 export default function AboutPage() {
 
@@ -41,14 +30,14 @@ export default function AboutPage() {
   ];
 
   const stats = [
-    { label: "Projects Completed", value: "500+" },
-    { label: "Happy Clients", value: "200+" },
-    { label: "Years Experience", value: "5+" },
-    { label: "Team Members", value: "50+" }
+    { label: "Projects Completed", number: "500+" },
+    { label: "Happy Clients", number: "200+" },
+    { label: "Years Experience", number: "10+" },
+    { label: "Team Members", number: "50+" }
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>About - Zion Tech Group | AI & IT Solutions</title>
         <meta
@@ -104,10 +93,15 @@ export default function AboutPage() {
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
+              {[
+                { number: "500+", label: "Projects Completed" },
+                { number: "50+", label: "Happy Clients" },
+                { number: "5+", label: "Years Experience" },
+                { number: "24/7", label: "Support Available" }
+              ].map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
-                    {stat.value}
+                    {stat.number}
                   </div>
                   <div className="text-gray-300 text-sm md:text-base">
                     {stat.label}
@@ -269,6 +263,6 @@ export default function AboutPage() {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 }

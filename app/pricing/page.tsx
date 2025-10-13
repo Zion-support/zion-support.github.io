@@ -1,25 +1,10 @@
+
+import { ArrowRight, CheckCircle, Zap, Shield, Cloud, Brain, Mail, Smartphone, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-// import { Star } from 'lucide-react'; // Unused import
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Globe } from 'lucide-react';
-// import { Calendar } from 'lucide-react'; // Unused import
-// import { Monitor } from 'lucide-react'; // Unused import
-import { Mail } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { Smartphone } from 'lucide-react';
-// import { Hand } from 'lucide-react'; // Unused import
-// import { Mic } from 'lucide-react'; // Unused import
-import { Cloud } from 'lucide-react';
-import { ArrowRight, CheckCircle, Zap, Shield, Cloud, Brain, Mail, Smartphone, Globe, Phone } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 
 export default function Pricing() {
+
   const aiServicesPricing = [
     {
       name: "AI Analytics Dashboard",
@@ -189,7 +174,7 @@ export default function Pricing() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Pricing - Zion Tech Group | AI & IT Solutions</title>
         <meta
@@ -244,7 +229,7 @@ export default function Pricing() {
         </section>
 
         {/* AI Services Pricing */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -309,7 +294,7 @@ export default function Pricing() {
         </section>
 
         {/* Micro SAAS Pricing */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -374,7 +359,7 @@ export default function Pricing() {
         </section>
 
         {/* Enterprise Pricing */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -439,7 +424,7 @@ export default function Pricing() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -464,7 +449,7 @@ export default function Pricing() {
         </section>
 
         {/* Contact CTA */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
@@ -517,6 +502,7 @@ export default function Pricing() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }
+</section>

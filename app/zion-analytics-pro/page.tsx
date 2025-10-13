@@ -1,6 +1,8 @@
+
 import { ArrowRight, CheckCircle, Star, BarChart3, DollarSign } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+
 import SEOOptimizer from "../components/SEOOptimizer";
 
 export default function ZionAnalyticsPro() {
@@ -137,7 +139,7 @@ export default function ZionAnalyticsPro() {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -167,7 +169,7 @@ export default function ZionAnalyticsPro() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -232,7 +234,7 @@ export default function ZionAnalyticsPro() {
         </section>
 
         {/* Testimonials */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -273,7 +275,7 @@ export default function ZionAnalyticsPro() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Data?
@@ -309,4 +311,4 @@ export default function ZionAnalyticsPro() {
       </div>
     </React.Fragment>
   );
-}
+}</section>

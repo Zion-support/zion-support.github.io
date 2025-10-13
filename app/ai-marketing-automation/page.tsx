@@ -1,22 +1,10 @@
+
+import { ArrowRight, Target, Mail, Share2, BarChart3, Users, Zap, Mail as Email, Smartphone, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
-// import { Star } from 'lucide-react'; // Unused import
-import { Zap } from 'lucide-react';
-import { Globe } from 'lucide-react';
-// import { Monitor } from 'lucide-react'; // Unused import
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Share2 } from 'lucide-react';
-// import { Phone } from 'lucide-react'; // Unused import
-import { Smartphone } from 'lucide-react';
-import { ArrowRight, Target, Mail, Share2, BarChart3, Users, Zap, Smartphone, Globe } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 
 export default function AIMarketingAutomation() {
+
   const features = [
     {
       title: "Email Marketing Automation",
@@ -110,7 +98,7 @@ export default function AIMarketingAutomation() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Marketing Automation - Zion Tech Group | Advanced Marketing Solutions</title>
         <meta
@@ -163,7 +151,7 @@ export default function AIMarketingAutomation() {
         </section>
 
         {/* Features Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -214,7 +202,7 @@ export default function AIMarketingAutomation() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -280,7 +268,7 @@ export default function AIMarketingAutomation() {
         </section>
 
         {/* Contact Information Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -334,6 +322,6 @@ export default function AIMarketingAutomation() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
-}
+}</section>

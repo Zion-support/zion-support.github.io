@@ -1,52 +1,21 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Cloud, Shield, CheckCircle, ArrowRight, Globe, BarChart3, Settings, Star, Activity, Lock, Network } from 'lucide-react';
+
+import { Cloud, Shield, CheckCircle, ArrowRight, Globe, BarChart3, Settings, Star, Activity, Lock } from 'lucide-react';
+import { Cloud, Shield, CheckCircle, ArrowRight, Globe, BarChart3, Settings, Activity, Lock } from 'lucide-react';
+
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Lock } from 'lucide-react';
-// import { Code } from 'lucide-react'; // Unused import
-// import { Monitor } from 'lucide-react'; // Unused import
-import { BarChart3 } from 'lucide-react';
-import { Activity } from 'lucide-react';
-import { Cloud } from 'lucide-react';
 
 const CloudInfrastructure = () => {
-  const testimonials = [
-    {
-      name: "John Smith",
-      role: "CEO, TechCorp",
-      content: "Zion Tech Group transformed our business with their AI solutions.",
-      avatar: "/images/testimonials/john-smith.jpg"
-    },
-    {
-      name: "Sarah Johnson",
-      role: "CTO, InnovateLabs",
-      content: "The team's expertise in AI and automation is unmatched.",
-      avatar: "/images/testimonials/sarah-johnson.jpg"
-    },
-    {
-      name: "Mike Chen",
-      role: "Founder, StartupXYZ",
-      content: "We saw immediate results after implementing their solutions.",
-      avatar: "/images/testimonials/mike-chen.jpg"
-    }
-  ];
+  const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
 
-  const stats = [
-    { label: "Projects Completed", value: "500+" },
-    { label: "Happy Clients", value: "200+" },
-    { label: "Years Experience", value: "5+" },
-    { label: "Team Members", value: "50+" }
-  ];
+  const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
+
+  const capabilities: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+
+  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
 
   const services = [
     {
@@ -76,6 +45,50 @@ const CloudInfrastructure = () => {
       icon: <Activity className="w-8 h-8" />,
       features: ["Automatic scaling", "Cost optimization", "Performance monitoring", "Load balancing"],
       price: "From $999/month"
+    }
+  ];
+
+  const stats = [
+    {
+      number: "99.99%",
+      label: "Uptime Guarantee",
+      icon: <CheckCircle className="w-6 h-6 text-green-400" />
+    },
+    {
+      number: "40%",
+      label: "Cost Reduction",
+      icon: <BarChart3 className="w-6 h-6 text-blue-400" />
+    },
+    {
+      number: "0",
+      label: "Security Incidents",
+      icon: <Shield className="w-6 h-6 text-red-400" />
+    },
+    {
+      number: "<1s",
+      label: "Response Time",
+      icon: <Activity className="w-6 h-6 text-purple-400" />
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CTO, TechCorp",
+      content: "Zion Tech Group transformed our cloud infrastructure. We achieved 40% cost savings while improving performance.",
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      role: "VP Engineering, DataFlow",
+      content: "Their cloud migration expertise saved us months of work. Zero downtime and seamless transition.",
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "Head of IT, InnovateLab",
+      content: "The security implementation was flawless. We now have enterprise-grade protection at a fraction of the cost.",
+      avatar: "ER"
     }
   ];
 
@@ -135,31 +148,24 @@ const CloudInfrastructure = () => {
     }
   ];
 
+  const stats = [
+    { label: "Uptime", value: "99.9%", icon: <Activity className="w-6 h-6" /> },
+    { label: "Cost Savings", value: "40%", icon: <BarChart3 className="w-6 h-6" /> },
+    { label: "Deployment Speed", value: "10x", icon: <Zap className="w-6 h-6" /> },
+    { label: "Security Score", value: "A+", icon: <Shield className="w-6 h-6" /> }
+  ];
+
   const capabilities = [
-    {
-      title: "Multi-Cloud Strategy",
-      description: "Design and implement hybrid and multi-cloud architectures for maximum flexibility and redundancy",
-      icon: <Globe className="w-6 h-6" />,
-      stats: "99.99% uptime"
-    },
-    {
-      title: "Cost Optimization",
-      description: "Reduce cloud costs by up to 40% through intelligent resource management and optimization",
-      icon: <BarChart3 className="w-6 h-6" />,
-      stats: "40% cost reduction"
-    },
-    {
-      title: "Security First",
-      description: "Implement enterprise-grade security measures to protect your cloud infrastructure",
-      icon: <Lock className="w-6 h-6" />,
-      stats: "Zero security incidents"
-    },
-    {
-      title: "24/7 Monitoring",
-      description: "Continuous monitoring and alerting to ensure optimal performance and availability",
-      icon: <Activity className="w-6 h-6" />,
-      stats: "Sub-second response"
-    }
+    "Multi-cloud deployment and management",
+    "Automated scaling and load balancing",
+    "Advanced monitoring and alerting",
+    "Disaster recovery and backup solutions",
+    "Security compliance and auditing",
+    "Cost optimization and resource management"
+  ];
+
+  const testimonials = [
+    { name: "Sarah Johnson", role: "CTO", company: "TechCorp", content: "Zion's cloud infrastructure transformed our operations completely.", rating: 5, avatar: "/api/placeholder/64/64" }
   ];
 
   return (
@@ -168,7 +174,7 @@ const CloudInfrastructure = () => {
         <title>Cloud Infrastructure Services - Enterprise Cloud Solutions | Zion Tech Group</title>
         <meta name="description" content="Transform your business with our comprehensive cloud infrastructure services. Migration, security, auto-scaling, and 24/7 monitoring. Get started today!" />
         <meta name="keywords" content="cloud infrastructure, cloud migration, cloud security, auto scaling, infrastructure as code, cloud consulting, AWS, Azure, GCP" />
-        <link rel="canonical" href="https://ziontechgroup.com/cloud-infrastructure" />
+        <link rel="canonical" />
       </Helmet>
 
       {/* Hero Section */}
@@ -197,19 +203,11 @@ const CloudInfrastructure = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <FuturisticButton
-              href="#pricing"
-              variant="primary"
-              size="lg"
-              icon={<Cloud className="w-5 h-5" />}
-            >
+              >
               Get Started
             </FuturisticButton>
             <FuturisticButton
-              href="#services"
-              variant="outline"
-              size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
-            >
+              >
               Explore Services
             </FuturisticButton>
           </div>
@@ -221,7 +219,7 @@ const CloudInfrastructure = () => {
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   {stat.icon}
                 </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
               </div>
             ))}
@@ -230,7 +228,7 @@ const CloudInfrastructure = () => {
       </section>
 
       {/* Capabilities Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      </section><section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -248,19 +246,11 @@ const CloudInfrastructure = () => {
                 className="group hover:scale-105 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  {capability.icon}
+                  <Cloud className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-blue-400 transition-colors">
-                  {capability.title}
+                  {capability}
                 </h3>
-                <p className="text-gray-300 text-center mb-4 leading-relaxed">
-                  {capability.description}
-                </p>
-                <div className="text-center">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-400">
-                    {capability.stats}
-                  </span>
-                </div>
               </FuturisticCard>
             ))}
           </div>
@@ -268,7 +258,7 @@ const CloudInfrastructure = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
+      </section><section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -298,7 +288,7 @@ const CloudInfrastructure = () => {
                   {service.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
+                      {feature.title}
                     </div>
                   ))}
                 </div>
@@ -312,7 +302,7 @@ const CloudInfrastructure = () => {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
+      </section><section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -352,7 +342,7 @@ const CloudInfrastructure = () => {
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      {feature.title}
                     </li>
                   ))}
                 </ul>
@@ -360,7 +350,6 @@ const CloudInfrastructure = () => {
                 <FuturisticButton
                   href={plan.cta === "Contact Sales" ? "/contact" : "#contact"}
                   variant={plan.popular ? "primary" : "outline"}
-                  size="lg"
                   className="w-full"
                 >
                   {plan.cta}
@@ -372,7 +361,7 @@ const CloudInfrastructure = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
+      </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -399,7 +388,7 @@ const CloudInfrastructure = () => {
                 </p>
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
-                    {testimonial.avatar}
+                    {`/avatars/avatar-${index + 1}.jpg`}
                   </div>
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
@@ -413,7 +402,7 @@ const CloudInfrastructure = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
+      </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
         <ResponsiveContainer>
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -425,19 +414,11 @@ const CloudInfrastructure = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <FuturisticButton
-                href="/contact"
-                variant="primary"
-                size="lg"
-                icon={<Cloud className="w-5 h-5" />}
-              >
+                >
                 Get Started Today
               </FuturisticButton>
               <FuturisticButton
-                href="/demo"
-                variant="outline"
-                size="lg"
-                icon={<ArrowRight className="w-5 h-5" />}
-              >
+                >
                 Schedule Demo
               </FuturisticButton>
             </div>
@@ -452,4 +433,4 @@ const CloudInfrastructure = () => {
   );
 };
 
-export default CloudInfrastructure;
+export default CloudInfrastructure;</section>

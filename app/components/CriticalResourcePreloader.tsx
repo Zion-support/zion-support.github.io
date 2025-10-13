@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
+'use client'
+
 import { useEffect } from 'react';
+
 
 const CriticalResourcePreloader = () => {
   useEffect(() => {

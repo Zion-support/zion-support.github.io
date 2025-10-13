@@ -1,23 +1,10 @@
+
+import { ArrowRight, Shield, Lock, Eye, AlertTriangle, Users, Database, Mail, Smartphone, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { AlertTriangle } from 'lucide-react';
-import { Users } from 'lucide-react';
-// import { Star } from 'lucide-react'; // Unused import
-import { Shield } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Lock } from 'lucide-react';
-// import { Monitor } from 'lucide-react'; // Unused import
-import { Mail } from 'lucide-react';
-// import { Phone } from 'lucide-react'; // Unused import
-import { Smartphone } from 'lucide-react';
-import { ArrowRight, Shield, Lock, Eye, AlertTriangle, Users, Database, Mail, Smartphone, Globe, Network } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 
 export default function Cybersecurity() {
+
   const services = [
     {
       title: "AI Cybersecurity Suite",
@@ -76,7 +63,7 @@ export default function Cybersecurity() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Cybersecurity Services - Zion Tech Group | Advanced Security Solutions</title>
         <meta
@@ -128,7 +115,7 @@ export default function Cybersecurity() {
         </section>
 
         {/* Services Grid */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -196,7 +183,7 @@ export default function Cybersecurity() {
         </section>
 
         {/* Contact Information Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -250,6 +237,6 @@ export default function Cybersecurity() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
-}
+}</section>

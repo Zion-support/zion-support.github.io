@@ -1,10 +1,14 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+
 import { ArrowRight } from 'lucide-react';
+
+import { Helmet } from 'react-helmet-async';
+
+import { Link } from 'react-router-dom';
+
 
 export default function AICodeSecurityAuditorZionTechGroup() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Code Security Auditor - Zion Tech Group</title>
       </Helmet>
@@ -25,6 +29,6 @@ export default function AICodeSecurityAuditorZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

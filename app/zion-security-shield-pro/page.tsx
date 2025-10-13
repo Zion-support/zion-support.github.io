@@ -1,22 +1,13 @@
+
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Search } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Globe } from 'lucide-react';
-// import { Monitor } from 'lucide-react'; // Unused import
-import { Mail } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { FileText } from 'lucide-react';
 
 
-export default function ZionSecurityShieldPro() {
+export default function Page() {
+  const benefits = [
+    "Benefit 1",
+    "Benefit 2"
+  ];
   const features = [
     {
       title: "AI-Powered Threat Detection",
@@ -114,7 +105,7 @@ export default function ZionSecurityShieldPro() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion Security Shield Pro - Advanced AI Cybersecurity Platform | Zion Tech Group</title>
         <meta
@@ -230,7 +221,7 @@ export default function ZionSecurityShieldPro() {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -273,7 +264,7 @@ export default function ZionSecurityShieldPro() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-red-800/50">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-red-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -340,7 +331,7 @@ export default function ZionSecurityShieldPro() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -367,7 +358,7 @@ export default function ZionSecurityShieldPro() {
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-gradient-to-r from-red-500 to-orange-600 rounded-full flex items-center justify-center text-white font-semibold mr-3">
-                      {testimonial.avatar}
+                      {`/avatars/avatar-${index + 1}.jpg`}
                     </div>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
@@ -381,7 +372,7 @@ export default function ZionSecurityShieldPro() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -436,6 +427,6 @@ export default function ZionSecurityShieldPro() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
-}
+}</section>

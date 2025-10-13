@@ -111,7 +111,7 @@ export default function Community() {
         </section>
 
         {/* Stats Section */}
-        <section className="py-16 px-4 bg-gray-800/30">
+        </section><section className="py-16 px-4 bg-gray-800/30">
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
@@ -128,7 +128,7 @@ export default function Community() {
         </section>
 
         {/* Events Section */}
-        <section className="py-20 px-4">
+        </section><section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4">Upcoming Events</h2>
@@ -167,7 +167,7 @@ export default function Community() {
         </section>
 
         {/* Initiatives Section */}
-        <section className="py-20 px-4 bg-gray-800/30">
+        </section><section className="py-20 px-4 bg-gray-800/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4">Community Initiatives</h2>
@@ -192,7 +192,7 @@ export default function Community() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
+        </section><section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Join Our Community?</h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -212,3 +212,4 @@ export default function Community() {
   );
 }
 
+</section>

@@ -1,21 +1,44 @@
-import React, { useState } from 'react';
-import { ArrowRight, CheckCircle, Star, Play, Pause, Calendar, Network } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Pause } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Calendar } from 'lucide-react';
-// import { Monitor } from 'lucide-react'; // Unused import
-import { Play } from 'lucide-react';
-// import { Hand } from 'lucide-react'; // Unused import
-import { Cloud } from 'lucide-react';
+import { Play, Pause, SkipForward, SkipBack, Maximize, ArrowRight, CheckCircle, Star, Calendar } from 'lucide-react';
 
-export default function DemoPage() {
+export default function Page() {
+  const features = [
+    { title: "Feature 1", description: "Description 1" },
+    { title: "Feature 2", description: "Description 2" }
+  ];
   const [currentDemo, setCurrentDemo] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
+
+  const stats = [
+    { number: "500+", label: "Demos Available" },
+    { number: "50K+", label: "Users Trained" },
+    { number: "95%", label: "Success Rate" },
+    { number: "24/7", label: "Support Available" }
+  ];
+
+  const benefits = [
+    {
+      icon: <Play className="w-8 h-8 text-cyan-400" />,
+      title: "Interactive Demos",
+      description: "Hands-on experience with our solutions"
+    },
+    {
+      icon: <Users className="w-8 h-8 text-green-400" />,
+      title: "Expert Guidance",
+      description: "Learn from our experienced team"
+    },
+    {
+      icon: <Award className="w-8 h-8 text-purple-400" />,
+      title: "Proven Results",
+      description: "See real-world success stories"
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8 text-yellow-400" />,
+      title: "Data-Driven",
+      description: "Make informed decisions with data"
+    }
+  ];
 
   const demos = [
     {
@@ -81,36 +104,6 @@ export default function DemoPage() {
   ];
 
   const handlePlayPause = () => {
-  const benefits = [
-    {
-      title: "Expert Team",
-      description: "Our team of AI and technology experts delivers exceptional results.",
-      icon: <Users className="w-8 h-8" />
-    },
-    {
-      title: "Proven Results",
-      description: "We have a track record of successful projects and satisfied clients.",
-      icon: <CheckCircle className="w-8 h-8" />
-    },
-    {
-      title: "24/7 Support",
-      description: "Round-the-clock support to ensure your success.",
-      icon: <Clock className="w-8 h-8" />
-    },
-    {
-      title: "Innovation",
-      description: "Cutting-edge solutions that keep you ahead of the competition.",
-      icon: <Zap className="w-8 h-8" />
-    }
-  ];
-
-  const stats = [
-    { label: "Projects Completed", value: "500+" },
-    { label: "Happy Clients", value: "200+" },
-    { label: "Years Experience", value: "5+" },
-    { label: "Team Members", value: "50+" }
-  ];
-
     setIsPlaying(!isPlaying);
   };
 
@@ -125,7 +118,7 @@ export default function DemoPage() {
   };
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Live Demos - Zion Tech Group | Interactive AI & IT Solutions</title>
         <meta
@@ -289,7 +282,7 @@ export default function DemoPage() {
                   {demos[currentDemo].features.map((feature, index) => (
                     <div key={index} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                      {feature}
+                      {feature.title}
                     </div>
                   ))}
                 </div>
@@ -377,6 +370,6 @@ export default function DemoPage() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

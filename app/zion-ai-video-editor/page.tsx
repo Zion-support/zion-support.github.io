@@ -1,12 +1,13 @@
+
+import { ArrowRight } from 'lucide-react';
+
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-// import { Edit } from 'lucide-react'; // Unused import
-import { ArrowRight } from 'lucide-react';
+
 
 export default function ZionAiVideoEditorZionTechGroup() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>ZionAiVideoEditor - Zion Tech Group</title>
       </Helmet>
@@ -27,6 +28,6 @@ export default function ZionAiVideoEditorZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

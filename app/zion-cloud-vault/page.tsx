@@ -1,19 +1,8 @@
+
+import { ArrowRight, Cloud, Lock, Shield, Zap, Globe, CheckCircle, Star, Database } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Search } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Lock } from 'lucide-react';
-// import { Filter } from 'lucide-react'; // Unused import
-import { Cloud } from 'lucide-react';
-import { ArrowRight, Cloud, Lock, Shield, Zap, Globe, CheckCircle, Star, Database, Search } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+
 
 export default function ZionCloudVault() {
   const features = [
@@ -115,7 +104,7 @@ export default function ZionCloudVault() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion Cloud Vault - Secure Cloud Storage Platform | Zion Tech Group</title>
         <meta
@@ -180,7 +169,7 @@ export default function ZionCloudVault() {
         </section>
 
         {/* Features Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -212,7 +201,7 @@ export default function ZionCloudVault() {
         </section>
 
         {/* Storage Features List */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -229,7 +218,7 @@ export default function ZionCloudVault() {
                   className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
                 >
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{feature}</span>
+                  <span className="text-gray-300">{feature.title}</span>
                 </div>
               ))}
             </div>
@@ -237,7 +226,7 @@ export default function ZionCloudVault() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -276,7 +265,7 @@ export default function ZionCloudVault() {
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
+                        <span className="text-gray-300">{feature.title}</span>
                       </li>
                     ))}
                   </ul>
@@ -297,7 +286,7 @@ export default function ZionCloudVault() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -330,7 +319,7 @@ export default function ZionCloudVault() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Secure Your Data?
@@ -356,6 +345,7 @@ export default function ZionCloudVault() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }
+</section>

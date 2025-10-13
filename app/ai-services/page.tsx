@@ -16,4 +16,3 @@ const AIServicesPage = () => {
     </div>
   );
 }
-export default AIServicesPage;

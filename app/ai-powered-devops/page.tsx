@@ -1,42 +1,32 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { ArrowRight, CheckCircle, Star, Brain, Zap, Award, DollarSign, Globe, TrendingUp, Monitor, MessageSquare, Eye, Rocket, Phone } from 'lucide-react';
-import { Link } from "react-router-dom";
-import SEOOptimizer from "../../components/SEOOptimizer";
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Rocket } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { MessageSquare } from 'lucide-react';
-// import { Plus } from 'lucide-react'; // Unused import
-import { DollarSign } from 'lucide-react';
-import { Phone } from 'lucide-react';
-// import { Cloud } from 'lucide-react'; // Unused import
 
-export default function AiPoweredDevops() {
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Star, Brain, Zap, Award, DollarSign, Globe, TrendingUp, Monitor, MessageSquare, Eye, Rocket, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import SEOOptimizer from "../../components/SEOOptimizer";
+
+
+export default function AIPoweredDevOpsPage() {
+  const testimonials = [
+    { name: "John Doe", role: "CEO", company: "Tech Corp", content: "Great service!", rating: 5, avatar: "/api/placeholder/64/64" }
+  ];
   const features = [
-    "AI-powered automated testing and quality assurance",
-    "Intelligent deployment orchestration and rollback",
-    "Predictive infrastructure scaling and optimization",
-    "Automated security vulnerability detection and patching",
-    "AI-driven performance monitoring and alerting",
-    "Intelligent log analysis and anomaly detection",
-    "Automated code review and optimization suggestions",
-    "Smart resource allocation and cost optimization",
-    "AI-powered incident response and resolution",
-    "Automated compliance checking and reporting",
-    "Intelligent capacity planning and forecasting",
-    "AI-driven continuous integration and deployment"
+    "Automated CI/CD Pipeline Setup",
+    "Intelligent Monitoring & Alerting",
+    "Auto-scaling Infrastructure",
+    "Security Vulnerability Scanning",
+    "Performance Optimization",
+    "Cost Optimization"
   ];
 
+  const capabilities = [
+    "Automated CI/CD pipeline setup",
+    "Intelligent monitoring and alerting",
+    "Auto-scaling infrastructure management",
+    "Security vulnerability scanning",
+    "Performance optimization",
+    "Cost optimization recommendations"
+  ];
+  
   const pricingPlans = [
     {
       name: "Startup",
@@ -124,7 +114,7 @@ export default function AiPoweredDevops() {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>AI-Powered DevOps - Intelligent Development Operations | Zion Tech Group</title>
         <meta
@@ -137,10 +127,9 @@ export default function AiPoweredDevops() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/ai-powered-devops" />
       </Helmet>
-      <SEOOptimizer
-        title="AI-Powered DevOps - Intelligent Development Operations | Zion Tech Group"
-        description="Revolutionize your DevOps with AI. Automated testing, intelligent deployment, predictive scaling, and smart monitoring. Transform your development operations with Zion's AI-powered DevOps platform."
-      />
+      <SEOOptimizer>
+        <div>AI-Powered DevOps Content</div>
+      </SEOOptimizer>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -218,7 +207,7 @@ export default function AiPoweredDevops() {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -238,7 +227,7 @@ export default function AiPoweredDevops() {
                 >
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />
-                    <span className="text-white font-medium">{feature}</span>
+                    <span className="text-white font-medium">{feature.title}</span>
                   </div>
                 </div>
               ))}
@@ -247,7 +236,7 @@ export default function AiPoweredDevops() {
         </section>
 
         {/* Capabilities */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -265,16 +254,13 @@ export default function AiPoweredDevops() {
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
                 >
                   <div
-                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${capability.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                    className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300"
                   >
-                    {capability.icon}
+                    <Zap className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-                    {capability.title}
+                    {capability}
                   </h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    {capability.description}
-                  </p>
                 </div>
               ))}
             </div>
@@ -282,7 +268,7 @@ export default function AiPoweredDevops() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -345,7 +331,7 @@ export default function AiPoweredDevops() {
         </section>
 
         {/* Testimonials */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -370,7 +356,7 @@ export default function AiPoweredDevops() {
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
-                      {testimonial.avatar}
+                      {`/avatars/avatar-${index + 1}.jpg`}
                     </div>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
@@ -384,7 +370,7 @@ export default function AiPoweredDevops() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
               Ready to Transform Your DevOps?
@@ -438,6 +424,6 @@ export default function AiPoweredDevops() {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
-}
+}</section>

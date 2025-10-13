@@ -1,12 +1,13 @@
+
+import { ArrowRight } from 'lucide-react';
+
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-// import { Network } from 'lucide-react'; // Unused import
-import { ArrowRight } from 'lucide-react';
+
 
 export default function NetworkInfrastructureZionTechGroup() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>NetworkInfrastructure - Zion Tech Group</title>
       </Helmet>
@@ -27,6 +28,6 @@ export default function NetworkInfrastructureZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

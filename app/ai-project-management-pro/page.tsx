@@ -1,6 +1,8 @@
+
 "use client";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+
 import { CheckCircle, Star, Brain, Clock, Target, BarChart3 } from 'lucide-react';
 
 export default function AIProjectManagementPro() {
@@ -207,7 +209,7 @@ export default function AIProjectManagementPro() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      </section><section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -228,7 +230,6 @@ export default function AIProjectManagementPro() {
                 Advanced analytics and insights to drive data-driven decision making
               </p>
             </div>
-          </div>
 
           {/* Pricing Section */}
           <div className="mb-16">
@@ -296,9 +297,10 @@ export default function AIProjectManagementPro() {
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+</div>
   );
 };
 
 export default Page;
+</section>
