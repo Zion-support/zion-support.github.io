@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { 
-  TrendingUp, 
-  Zap, 
-  Brain, 
-  PieChart, 
-  Sparkles, 
-  ArrowRight,
-  CheckCircle
-} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 

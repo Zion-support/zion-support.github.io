@@ -1,5 +1,28 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
+import { 
+  Brain, 
+  Shield, 
+  Zap, 
+  Globe, 
+  Star, 
+  Users, 
+  Sparkles, 
+  Mail, 
+  Monitor,
+  ChevronDown,
+  ChevronUp,
+  Menu,
+  X,
+  Linkedin, 
+  Twitter, 
+  Github, 
+  Phone, 
+  MapPin,
+  ArrowRight,
+  Award
+} from 'lucide-react';
+
 const services = [
     {
       title: "Cloud Migration",
@@ -27,24 +50,6 @@ const microSaasServices = [
     { name: "Cloud Solutions", href: "/cloud-services" },
     { name: "DevOps", href: "/devops" }
   ];
-  Brain, 
-=======
-import {
-  Linkedin, 
-  Twitter, 
-  Github, 
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
-  Mail, 
-  Phone, 
-  MapPin,
-  ArrowRight,
-  Twitter,
-  Linkedin,
-  Github,
-  Award,
-  Users
-} from "lucide-react";
-import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();

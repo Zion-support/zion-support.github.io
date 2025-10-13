@@ -1,13 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Cloud, Shield, CheckCircle, ArrowRight, Globe, BarChart3, Settings, Star, Activity, Lock } from 'lucide-react';
-=======
-<<<<<<< HEAD
-import { Cloud, Shield, CheckCircle, ArrowRight, Globe, BarChart3, Settings, Star, Activity, Lock } from 'lucide-react';
-=======
 import { Cloud, Shield, CheckCircle, ArrowRight, Globe, BarChart3, Settings, Activity, Lock } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
->>>>>>> f79fb9e5ca53251693aa9e67e477c500c97551c0
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';

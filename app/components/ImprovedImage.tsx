@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useRef, useEffect } from 'react';
-import { ImageIcon, ImageIcon } from 'lucide-react';
-=======
 import { ImageIcon } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
 
 interface ImprovedImageProps {
   src: string;

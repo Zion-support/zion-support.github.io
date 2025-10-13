@@ -1,13 +1,6 @@
 import React from "react";
-<<<<<<< HEAD
-import { ArrowRight, Star, Shield, Cloud, Database, Code, Network, Smartphone, Monitor, Headphones, Settings, Zap, BarChart3, Target, HardDrive, Minimize } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
 import SEOOptimizer from "../components/SEOOptimizer";
 import { Cloud, Shield, Network, Database, Code, Headphones, Smartphone, Monitor, Target, HardDrive, Settings, ArrowRight, Star, ArrowRight, ArrowRight } from 'lucide-react';
 

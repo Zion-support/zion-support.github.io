@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { useState, useCallback } from 'react';
-import { Menu, X, Brain, Shield, Zap, Globe, ChevronDown, ChevronUp } from 'lucide-react';
-import { Link } from 'react-router-dom';
-=======
 import { Link, useLocation } from 'react-router-dom';
 import {
   Brain, 
@@ -15,10 +11,10 @@ import {
   Mail, 
   Monitor,
   ChevronDown,
+  ChevronUp,
   Menu,
   X
 } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import React from "react";
-import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Cloud, Globe, Calendar, Phone, CheckCircle, Sparkles, Heart, Receipt, Package, Code } from 'lucide-react';
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Globe, Phone, CheckCircle, Sparkles, Heart, Receipt, Package } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
 
 export default function Page() {
   const stats = [

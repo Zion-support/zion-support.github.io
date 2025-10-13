@@ -1,20 +1,22 @@
 #!/bin/bash
 
-# Find all files with merge conflicts
-find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | while read file; do
-  if grep -q "<<<<<<< HEAD" "$file"; then
-    echo "Fixing merge conflicts in: $file"
+echo "Fixing merge conflicts in all files..."
+
+# Find all files with merge conflict markers
+files_with_conflicts=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
+
+echo "Found files with conflicts:"
+echo "$files_with_conflicts"
+
+# Fix each file
+for file in $files_with_conflicts; do
+    echo "Fixing $file..."
     
-    # Create a backup
-    cp "$file" "$file.backup"
+    # Remove conflict markers and keep the content after =======
+    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+    sed -i '/>>>>>>> /d' "$file"
     
-    # Remove merge conflict markers and keep the HEAD version
-    sed -i '/^<<<<<<< HEAD/,/^=======/!d' "$file"
-    sed -i '/^=======/d' "$file"
-    sed -i '/^>>>>>>> /d' "$file"
-    
-    echo "Fixed: $file"
-  fi
+    echo "Fixed $file"
 done
 
-echo "Merge conflicts fixed!"
+echo "All merge conflicts fixed!"

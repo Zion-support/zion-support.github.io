@@ -10,8 +10,6 @@ import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
 
 const AICodeAssistantProZionTechGroup = () => {
-<<<<<<< HEAD
-=======
   const testimonials = [
     {
       name: "Alex Thompson",
@@ -64,7 +62,6 @@ const AICodeAssistantProZionTechGroup = () => {
       "url": "https://ziontechgroup.com"
     }
   };
->>>>>>> f79fb9e5ca53251693aa9e67e477c500c97551c0
 
   const features = [
     {

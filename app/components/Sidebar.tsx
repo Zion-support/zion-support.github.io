@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-import React, { useState, useCallback, useMemo } from 'react'
-import { Link } from 'react-router-dom'
-import { 
-=======
+import React, { useState, useCallback, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
   X, 
   ChevronDown, 
   ChevronRight,

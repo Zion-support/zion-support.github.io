@@ -1,10 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Package, Zap, BarChart3, Users, CheckCircle, ArrowRight, Brain, Target, Globe, Shield } from 'lucide-react';
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
 const SmartInventoryOptimizerPage = () => {
   const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
 

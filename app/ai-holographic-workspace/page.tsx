@@ -1,9 +1,5 @@
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Monitor, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Users, Eye, Hand } from 'lucide-react';
-=======
 import { Monitor, ArrowRight, CheckCircle, Star, Shield, BarChart3, Users, Eye, Hand } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const AIHolographicWorkspace = () => {

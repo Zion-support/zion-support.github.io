@@ -20,8 +20,6 @@ import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import EnhancedSEO from "./app/components/EnhancedSEO";
 import ImprovedErrorBoundary from "./app/components/ImprovedErrorBoundary";
-import ImprovedAccessibility from "./app/components/ImprovedAccessibility";
-import ImprovedPerformanceMonitor from "./app/components/ImprovedPerformanceMonitor";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));

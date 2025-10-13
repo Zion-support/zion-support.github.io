@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import { HelmetProvider } from 'react-helmet-async';
-=======
 "use client";
 
 import { Suspense, lazy } from 'react';
@@ -15,7 +12,6 @@ import CacheManager from "./components/CacheManager";
 import AdvancedPerformanceMonitor from "./components/AdvancedPerformanceMonitor";
 
 // Lazy load pages for better performance
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
 const HomePage = lazy(() => import("./page"));
 const AboutPage = lazy(() => import("./about/page"));
 const ContactPage = lazy(() => import("./contact/page"));

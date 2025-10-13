@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Shield, Brain, Lock, Zap, ArrowRight, CheckCircle, Star, Award, BarChart3, Clock, Target, Sparkles, TrendingUp, Globe, Smartphone, Monitor, AlertTriangle, Eye, Search, Database, Network, Shield as FileShield, Key, Bug, Activity, Server, Wifi, HardDrive, Cloud, Settings, Users, Bell, FileText, Download, Upload } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
