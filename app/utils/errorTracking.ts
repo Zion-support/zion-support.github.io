@@ -1,3 +1,5 @@
+import React from 'react';
+
 'use client';
 /**;
  * Advanced Error Tracking and Reporting System;
@@ -142,7 +144,7 @@ trackError(error: Error),
     // Notify listeners;
     this.notifyListeners(trackedError);
     // Report to external service (in production);
-    if (process.env['NODE_ENV'] === 'production') {this.reportToExternalService(errorId).catch(err => {)}logger.error('Failed to report error to external service', {error: err.message ,)})
+    if (process.env['NODE_ENV'] === 'production') {this.reportToExternalService(errorId).catch(err => {)}logger.error('Failed to report error to external service', {error: err.message ,)})'
       })
 export enum ErrorCategory {/* TODO: Fix JSX expression */,}}}
 export interface ErrorMetadata {/* TODO: Fix JSX expression */,}}}
@@ -292,7 +294,7 @@ export const errorTracking = ErrorTrackingService.getInstance();
    * Report critical errors to external service;
    */;
   private async reportToExternalService(errorI);
-  d: string): Promise<void> {/* TODO: Fix JSX expression */,}s: {'Content-Type': 'application/json' ,},;
+  d: string): Promise<void> {/* TODO: Fix JSX expression */,}s: {'Content-Type': 'application/json' ,},;'
           bod,;
     return Array.from(this.errors.values())
   }

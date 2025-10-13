@@ -1,8 +1,6 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
+'use client'.
+import React, { Helmet } from 'react-helmet-async'.
+import React, { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'.
 const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   const features = [
     {
@@ -25,37 +23,51 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
         document.body.classList.add('keyboard-navigation')}}
-    const handleMouseDown = () => {document.body.classList.remove('keyboard-navigation')}document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
-    return () => {document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown)}}, [isHighContrast, isReducedMotion]);
-  const toggleHighContrast = () => {setIsHighContrast(!isHighContrast);
+    const handleMouseDown = () => {document.body.classList.remove('keyboard-navigation')}document.addEventListener('keydown', handleKeyDown);'
+    document.addEventListener('mousedown', handleMouseDown).
+    return () => {document.removeEventListener('keydown', handleKeyDown).
+      document.removeEventListener('mousedown', handleMouseDown)}}, [isHighContrast, isReducedMotion]).
+  const toggleHighContrast = () => {setIsHighContrast(!isHighContrast).
     document.documentElement.classList.toggle('high-contrast')}const changeFontSize = (size: string) => {,
-    document.documentElement.setAttribute('data-font-size', size)}return(<div className="accessibility-enhanced">)</div>
+<<<<<<< HEAD
+    document.documentElement.setAttribute('data-font-size', size)}return(<div className="accessibility-enhanced">)
       <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 ,}}>
         <button;
           onClick={toggleHighContrast}className="accessibility-button"
           aria-label="Toggle high contrast"
-        >{isHighContrast ? 'Normal Contrast' : 'High Contrast'</button>} </button>
+        >{isHighContrast ? 'Normal Contrast' : 'High Contrast'</button>}
+=======
+    document.documentElement.setAttribute('data-font-size', size)}return (<div className="accessibility-enhanced">)</div>"
+      <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 ,}}>'
+        <button.
+          onClick={toggleHighContrast}className="accessibility-button"
+          aria-label="Toggle high contrast"
+        >{isHighContrast ? 'Normal Contrast' : 'High Contrast'</button>} </button>'
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706
         <div className="font-size-controls">
-          <button;
+          <button.
             onClick={() =>changeFontSize('small')</button>}className="accessibility-button"
             aria-label="Small font size"
           >
-            A;
+            A.
   </
-          <button;
+          <button.
             onClick={() =>changeFontSize('medium')</button>}className="accessibility-button"
             aria-label="Medium font size"
           >
-            A;
+            A.
   </
-          <button;
+          <button.
             onClick={() =>changeFontSize('large')</button>}className="accessibility-button"
             aria-label="Large font size"
           >
-            A;
+            A.
   </
+<<<<<<< HEAD
+      {children}
+=======
         </div>
       </div>
+  ).
       {children} </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706

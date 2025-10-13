@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -414,3 +415,26 @@ export default HomePage;
                   className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
                   Our Services
 export default HomePage;
+=======
+
+export default function PagePage() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Page</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+      </div>
+    </div>
+  );
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/main
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
+>>>>>>> origin/main

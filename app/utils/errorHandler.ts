@@ -1,3 +1,5 @@
+import React from 'react';
+
 // Global error handler for resource loading failures
 export class ResourceErrorHandler {
   private static instance: ResourceErrorHandler;
@@ -41,20 +43,20 @@ export class ResourceErrorHandler {
   private handleImageError(img: HTMLImageElement): void {
     const src = img['src'];
     
-    // Check if it's a Cloudinary 401 error
-    if (src.includes('res.cloudinary.com') && src.includes('dpfhynunl')) {
+    // Check if it's a Cloudinary 401 error'
+    if (src.includes('res.cloudinary.com') && src.includes('dpfhynunl')) {'
       console.warn(`Cloudinary image failed to load: ${src}`);
       this.failedResources.add(src);
       
       // Replace with a fallback image or placeholder
-      img['src'] = '/images/placeholder.jpg';
+      img['src'] = '/images/placeholder.jpg';'
       img.alt = 'Image not available';
       img.classList.add('error-placeholder');
     }
   }
 
   private handleFetchError(url: string, status: number): void {
-    if (url.includes('res.cloudinary.com') && url.includes('dpfhynunl')) {
+    if (url.includes('res.cloudinary.com') && url.includes('dpfhynunl')) {'
       console.warn(`Cloudinary fetch failed (${status}): ${url}`);
       this.failedResources.add(url);
     }

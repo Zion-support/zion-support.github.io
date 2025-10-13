@@ -3,7 +3,7 @@
 echo "Fixing all merge conflicts..."
 
 # Find all files with merge conflicts
-files_with_conflicts=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
+files_with_conflicts=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "" 2>/dev/null)
 
 if [ -z "$files_with_conflicts" ]; then
     echo "No merge conflicts found!"
@@ -20,15 +20,13 @@ for file in $files_with_conflicts; do
     cp "$file" "$file.backup"
     
     # Use sed to remove merge conflict markers and keep HEAD content
-    sed -i '/^<<<<<<< HEAD/,/^=======/!d; /^=======/d; /^>>>>>>> /d' "$file"
-    
+    sed -i '/^/,/^/!d; /^/d; /^    
     # Alternative approach using awk if sed fails
-    if grep -q "<<<<<<< HEAD" "$file"; then
+    if grep -q "" "$file"; then
         awk '
-        /^<<<<<<< HEAD/ { in_head = 1; next }
-        /^=======/ { in_head = 0; in_other = 1; next }
-        /^>>>>>>> / { in_other = 0; next }
-        in_head || (!in_head && !in_other) { print }
+        /^/ { in_head = 1; next }
+        /^/ { in_head = 0; in_other = 1; next }
+        /^        in_head || (!in_head && !in_other) { print }
         ' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
     fi
 done

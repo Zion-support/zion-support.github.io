@@ -1,8 +1,12 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+=======
+>>>>>>> origin/main
 
-export default function AiContentGeneration() {
+export default function PagePage() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AiContentGeneration - Zion Tech Group</title>
@@ -26,3 +30,15 @@ export default function AiContentGeneration() {
         <meta name="description" content="Advanced AI-powered ai content generation solution for modern businesses." />
         <meta name="keywords" content="AI ai content generation, artificial intelligence, ai content generation, AI solutions, intelligent automation" />
       </Helmet>
+=======
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Page</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/main

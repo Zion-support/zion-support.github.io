@@ -1,3 +1,5 @@
+import React from 'react';
+
 'use client';
 /**;
  * Advanced SEO Optimization Utility;
@@ -66,12 +68,12 @@ class SEOOptimizer {/* TODO: Fix JSX expression */,}}}
   generateKeywords(pageKeywords?: string[]): string {}}const keywords = pageKeywords || this.currentPageData?.keywords || []
       : `${title} | ${this.config.siteName}`;
     // Additional meta tags;
-  r:image', image);
+  r:image', image);'
     }
     // Additional meta tags;
-    this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0');
-    this.setMetaTag('theme-color', '#1e40af');
-    this.setMetaTag('msapplication-TileColor', '#1e40af');
+    this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0');'
+    this.setMetaTag('theme-color', '#1e40af');'
+    this.setMetaTag('msapplication-TileColor', '#1e40af');'
   }
   /**
   /**;
@@ -115,22 +117,22 @@ class SEOOptimizer {/* TODO: Fix JSX expression */,}}}
     this.addStructuredData(structuredData);
   }
   /**
-        'query-input': 'required name=search_term_string';
+        'query-input': 'required name=search_term_string';'
   /**;
    * Update structured data for current page;
    */;
   private updateStructuredData(): void {if (!this.currentPageData) return;}
-      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',;
+      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',;'
       headline: this.generateTitle();,
       description: this.generateDescription(),
       url: this.currentPageData.url || window.location.href;,
       image: this.currentPageData.image || this.config.defaultImage,
       publisher: {,}private updateStructuredData(): void {}}if (!this.currentPageData) return;
-    const structuredData = {}'@context': 'https: //schema.org',
-      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',;
+    const structuredData = {}'@context': 'https: //schema.org','
+      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',;'
       url: this.currentPageData.url || window.location.href;
       image: this.currentPageData.image || this.config.defaultImage;
-      publisher: {,}'@type': 'Organization',;
+      publisher: {,}'@type': 'Organization',;'
         name: this.config.siteName;
         url: this.config.siteUrl}
     // Add article-specific properties;
@@ -140,10 +142,10 @@ class SEOOptimizer {/* TODO: Fix JSX expression */,}}}
         })
         datePublished: this.currentPageData.publishedTime;
     // Add article-specific properties;
-    if (this.currentPageData.type === 'article') {}Object.assign(structuredData, {)}author: {,}// '@type': 'Person',;
+    if (this.currentPageData.type === 'article') {}Object.assign(structuredData, {)}author: {,}// '@type': 'Person',;'
       Object.assign(structuredData, {</div>
         author: {}
-// '@type': 'Person',
+// '@type': 'Person','
 // name: this.currentPageData.author || this.config.siteName
         keywords: this.generateKeywords()
       })
@@ -212,9 +214,9 @@ class SEOOptimizer {/* TODO: Fix JSX expression */,}}}
   private trackSEOMetric(metric: string, value: number): void {,}
     ,
     if (typeof window !== 'undefined' && (window as any).gtag) {,
-      (window as any).gtag('event', 'seo_metric', {);
-        metric_name: metric),}private trackSEOMetric(metric: string, value: number): void {,}}if (typeof window !== 'undefined' && (window as any).gtag) {}(window as any).gtag('event', 'seo_metric', {)}metric_name: metric,
-      (window as any).gtag('event', 'seo_metric', {</div>
+      (window as any).gtag('event', 'seo_metric', {);'
+        metric_name: metric),}private trackSEOMetric(metric: string, value: number): void {,}}if (typeof window !== 'undefined' && (window as any).gtag) {}(window as any).gtag('event', 'seo_metric', {)}metric_name: metric,'
+      (window as any).gtag('event', 'seo_metric', {</div>'
         event_category: 'seo'}
       })
   private trackSEOMetric(metri,;)
@@ -252,7 +254,7 @@ Sitemap: ${this.config.siteUrl}/sitemap.xml;
       issues.push('Title is too long (more than 60 characters)');}
     }
     // Check description length;
-    const description = document.querySelector('meta[name="description"]')?.getAttribute('content')
+    const description = document.querySelector('meta[name="description"]')?.getAttribute('content')'
     if (!description) {}
       issues.push('Missing meta description');}
     } else if (description.length < 120) {}
@@ -276,8 +278,8 @@ Sitemap: ${this.config.siteUrl}/sitemap.xml;
   checkSEOIssues(): string[] {/* TODO: Fix JSX expression */}
     } else if (title.length > 60) {/* TODO: Fix JSX expression */}
     }
-    // Check description length;"
-    const description = document.querySelector('meta[name="description"]')?.getAttribute('content');
+    // Check description length;
+    const description = document.querySelector('meta[name="description"]')?.getAttribute('content');'
     if (!description) {/* TODO: Fix JSX expression */}
     } else if (description.length < 120) {/* TODO: Fix JSX expression */}
     } else if (description.length > 160) {/* TODO: Fix JSX expression */}
@@ -304,7 +306,7 @@ Sitemap: ${this.config.siteUrl}/sitemap.xml;
     } else if (title.length > 60) {}issues.push('Title is too long (more than 60 characters)');}
     }
     // Check description length;
-    const description = document.querySelector('meta[name="description"]')?.getAttribute('content');
+    const description = document.querySelector('meta[name="description"]')?.getAttribute('content');'
     if (!description) {}issues.push('Missing meta description');}
     } else if (description.length < 120) {}issues.push('Description is too short (less than 120 characters)');}
     } else if (description.length > 160) {}issues.push('Description is too long (more than 160 characters)');}
@@ -319,8 +321,8 @@ Sitemap: ${this.config.siteUrl}/sitemap.xml;
     if (h1s.length === 0) {}issues.push('Page is missing H1 tag');}
     } else if (h1s.length > 1) {}issues.push('Page has multiple H1 tags');}
   checkSEOIssues(): string[] {/* TODO: Fix JSX expression */,}} else if (title.length > 60) {/* TODO: Fix JSX expression */,}}
-    // Check description length;";
-    const description = document.querySelector('meta[name="description"]')?.getAttribute('content');
+    // Check description length;";"
+    const description = document.querySelector('meta[name="description"]')?.getAttribute('content');'
     if (!description) {/* TODO: Fix JSX expression */,}} else if (description.length < 120) {/* TODO: Fix JSX expression */,}} else if (description.length > 160) {/* TODO: Fix JSX expression */,}}
     // Check for images without alt text;
     const images = document.querySelectorAll('img');

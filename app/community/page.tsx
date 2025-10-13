@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 };
 
 export default PagePage;
@@ -63,3 +64,19 @@ export default PagePage;
                   <div className="text-white font-semibold">Phone</div>
                   <a href="tel: +13024640950" className="text-cyan-400 hover:text-cyan-300">,
                     +1 (302) 464-0950;
+=======
+import React from 'react';
+
+export default function PagePage() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Page</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/main

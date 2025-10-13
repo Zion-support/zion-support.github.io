@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -22,3 +23,9 @@
                 <Mail>
                 Email Us;
   );
+=======
+// AdvancedCaching utility
+export const AdvancedCaching = () => {
+  // Implementation
+};
+>>>>>>> origin/main

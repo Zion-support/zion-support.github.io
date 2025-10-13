@@ -1,7 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Zap, Users, BarChart3, Shield } from 'lucide-react';
-
+=======
+import React, { Helmet } from 'react-helmet-async'.
+import React, { CheckCircle, TrendingUp, Phone, Mail, MapPin, Zap, Users, BarChart3, Shield } from 'lucide-react'.
 const MicroSAASSolutionsPage: React.FC = () => {
   const microSAASServices = [
     {
@@ -17,14 +18,14 @@ const MicroSAASSolutionsPage: React.FC = () => {
         'Deadline Alerts',
         'Progress Reports',
         'Mobile App',
-        'API Integration'
+        'API Integration']
       ],
       benefits: [
         'Increase productivity by 40%',
         'Reduce project delays by 60%',
         'Improve team coordination',
         'Track time automatically',
-        'Generate insights'
+        'Generate insights']
       ],
       marketPrice: '$49-99/month',
       category: 'Productivity',
@@ -44,14 +45,14 @@ const MicroSAASSolutionsPage: React.FC = () => {
         'Recurring Billing',
         'Financial Reports',
         'Payment Reminders',
-        'Multi-currency Support'
+        'Multi-currency Support']
       ],
       benefits: [
         'Save 5+ hours weekly',
         'Reduce billing errors by 90%',
         'Improve cash flow',
         'Automate follow-ups',
-        'Professional invoices'
+        'Professional invoices']
       ],
       marketPrice: '$39-79/month',
       category: 'Finance',
@@ -71,14 +72,14 @@ const MicroSAASSolutionsPage: React.FC = () => {
         'Multi-platform Support',
         'Engagement Tracking',
         'Content Calendar',
-        'Team Collaboration'
+        'Team Collaboration']
       ],
       benefits: [
         'Increase engagement by 50%',
         'Save 10+ hours weekly',
         'Optimize posting times',
         'Grow followers faster',
-        'Track performance'
+        'Track performance']
       ],
       marketPrice: '$79-149/month',
       category: 'Social Media',
@@ -98,14 +99,14 @@ const MicroSAASSolutionsPage: React.FC = () => {
         'Email Templates',
         'Analytics Dashboard',
         'Deliverability Monitoring',
-        'Integration APIs'
+        'Integration APIs']
       ],
       benefits: [
         'Increase open rates by 45%',
         'Boost click-through by 60%',
         'Automate campaigns',
         'Personalize at scale',
-        'Track performance'
+        'Track performance']
       ],
       marketPrice: '$99-299/month',
       category: 'Email Marketing',
@@ -125,14 +126,14 @@ const MicroSAASSolutionsPage: React.FC = () => {
         'Ticket Management',
         'Analytics Dashboard',
         'Custom Training',
-        'API Integration'
+        'API Integration']
       ],
       benefits: [
         'Handle 80% of queries automatically',
         'Reduce response time to seconds',
         'Improve customer satisfaction',
         'Scale support operations',
-        'Reduce costs by 70%'
+        'Reduce costs by 70%']
       ],
       marketPrice: '$149-399/month',
       category: 'Customer Support',
@@ -152,14 +153,14 @@ const MicroSAASSolutionsPage: React.FC = () => {
         'Alert System',
         'Export Options',
         'Team Collaboration',
-        'API Integration'
+        'API Integration']
       ],
       benefits: [
         'Make data-driven decisions',
         'Identify trends automatically',
         'Save hours on reporting',
         'Improve business performance',
-        'Monitor KPIs in real-time'
+        'Monitor KPIs in real-time']
       ],
       marketPrice: '$99-299/month',
       category: 'Analytics',
@@ -179,14 +180,14 @@ const MicroSAASSolutionsPage: React.FC = () => {
         'Content Calendar',
         'Plagiarism Check',
         'Tone Customization',
-        'Multi-language Support'
+        'Multi-language Support']
       ],
       benefits: [
         'Create content 10x faster',
         'Maintain consistent quality',
         'Improve SEO rankings',
         'Scale content production',
-        'Reduce writing costs'
+        'Reduce writing costs']
       ],
       marketPrice: '$79-199/month',
       category: 'Content Creation',
@@ -206,14 +207,14 @@ const MicroSAASSolutionsPage: React.FC = () => {
         'Email Sequences',
         'CRM Integration',
         'Performance Tracking',
-        'Custom Filters'
+        'Custom Filters']
       ],
       benefits: [
         'Find 100+ leads daily',
         'Qualify leads automatically',
         'Increase conversion rates',
         'Automate outreach',
-        'Scale lead generation'
+        'Scale lead generation']
       ],
       marketPrice: '$149-399/month',
       category: 'Lead Generation',
@@ -233,14 +234,14 @@ const MicroSAASSolutionsPage: React.FC = () => {
         'Budget Management',
         'Timeline Optimization',
         'Reporting Dashboard',
-        'Integration APIs'
+        'Integration APIs']
       ],
       benefits: [
         'Complete projects 30% faster',
         'Reduce project risks',
         'Optimize resource allocation',
         'Improve team coordination',
-        'Track progress effectively'
+        'Track progress effectively']
       ],
       marketPrice: '$99-249/month',
       category: 'Project Management',
@@ -260,14 +261,14 @@ const MicroSAASSolutionsPage: React.FC = () => {
         'Supplier Management',
         'Analytics Dashboard',
         'Multi-location Support',
-        'API Integration'
+        'API Integration']
       ],
       benefits: [
         'Reduce inventory costs by 25%',
         'Eliminate stockouts',
         'Optimize reorder points',
         'Improve cash flow',
-        'Automate management'
+        'Automate management']
       ],
       marketPrice: '$79-199/month',
       category: 'Inventory Management',
@@ -287,14 +288,14 @@ const MicroSAASSolutionsPage: React.FC = () => {
         'Payroll Integration',
         'Training Management',
         'Compliance Monitoring',
-        'Reporting Dashboard'
+        'Reporting Dashboard']
       ],
       benefits: [
         'Streamline HR processes',
         'Improve recruitment quality',
         'Track performance effectively',
         'Ensure compliance',
-        'Reduce HR workload'
+        'Reduce HR workload']
       ],
       marketPrice: '$99-299/month',
       category: 'HR Management',
@@ -314,14 +315,14 @@ const MicroSAASSolutionsPage: React.FC = () => {
         'Collaboration Tools',
         'Automated Organization',
         'Security & Compliance',
-        'API Integration'
+        'API Integration']
       ],
       benefits: [
         'Find documents instantly',
         'Automate organization',
         'Improve collaboration',
         'Ensure compliance',
-        'Reduce paper usage'
+        'Reduce paper usage']
       ],
       marketPrice: '$49-149/month',
       category: 'Document Management',
@@ -329,58 +330,72 @@ const MicroSAASSolutionsPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706
 
+export default function PagePage() {
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Page</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+      </div>
+    </div>
+  );
+}
+=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Micro SAAS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive micro SAAS solutions including task management, invoicing, social media, email marketing, and more. Starting at $19/month." />
+        <meta name="description" content="Comprehensive micro SAAS solutions including task management, invoicing, social media, email marketing, and more. Starting at $19/month." />"
         <meta name="keywords" content="micro saas, task management, invoicing, social media management, email marketing, customer support, analytics" />
       </Helmet>
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="pt-24 pb-16 px-4">"
+        <div className="max-w-7xl mx-auto text-center">"
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            Micro SAAS Solutions
+            Micro SAAS Solutions.
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Powerful, affordable micro SAAS tools designed to streamline your business operations and boost productivity.
           </p>
           
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">12+</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">"
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+              <div className="text-3xl font-bold text-cyan-400 mb-2">12+</div>"
               <div className="text-gray-300">Micro SAAS Tools</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">$19</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+              <div className="text-3xl font-bold text-green-400 mb-2">$19</div>"
               <div className="text-gray-300">Starting Price</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">40%</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+              <div className="text-3xl font-bold text-purple-400 mb-2">40%</div>"
               <div className="text-gray-300">Productivity Boost</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+              <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>"
               <div className="text-gray-300">Support</div>
             </div>
           </div>
           
           {/* Contact Info */}
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-5 h-5" />
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">"
+            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">"
+              <div className="flex items-center space-x-2">"
+                <Phone className="w-5 h-5" />"
                 <span className="text-white font-medium">+1 302 464 0950</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-5 h-5" />
+              <div className="flex items-center space-x-2">"
+                <Mail className="w-5 h-5" />"
                 <span className="text-white font-medium">kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-5 h-5" />
+              <div className="flex items-center space-x-2">"
+                <MapPin className="w-5 h-5" />"
                 <span className="text-white font-medium">Middletown, DE</span>
               </div>
             </div>
@@ -389,23 +404,23 @@ const MicroSAASSolutionsPage: React.FC = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 px-4">"
+        <div className="max-w-7xl mx-auto">"
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Choose Your Micro SAAS Solution
+            Choose Your Micro SAAS Solution.
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSAASServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                <div className="text-center mb-6">
-                  <div className="text-5xl mb-4">{service.icon}</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">"
+                <div className="text-center mb-6">"
+                  <div className="text-5xl mb-4">{service.icon}</div>"
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>"
                   <p className="text-gray-600 text-sm">{service.description}</p>
                 </div>
                 
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-2xl font-bold text-green-600">{service.price}</span>
+                <div className="mb-6">"
+                  <div className="flex items-center justify-between mb-4">"
+                    <span className="text-2xl font-bold text-green-600">{service.price}</span>"
                     <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                   </div>
                   <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">
@@ -413,28 +428,28 @@ const MicroSAASSolutionsPage: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                <div className="mb-6">"
+                  <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>"
                   <ul className="space-y-2">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                     {service.features.length > 4 && (
                       <li className="text-sm text-gray-500">
-                        +{service.features.length - 4} more features
+                        +{service.features.length - 4} more features.
                       </li>
                     )}
                   </ul>
                 </div>
                 
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
+                <div className="mb-6">"
+                  <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>"
                   <ul className="space-y-1">
                     {service.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
+                      <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">"
                         <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
@@ -442,8 +457,8 @@ const MicroSAASSolutionsPage: React.FC = () => {
                   </ul>
                 </div>
                 
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Technologies:</h4>
+                <div className="mb-6">"
+                  <h4 className="font-semibold text-gray-900 mb-3">Technologies:</h4>"
                   <div className="flex flex-wrap gap-2">
                     {service.technologies.map((tech, techIndex) => (
                       <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
@@ -458,7 +473,7 @@ const MicroSAASSolutionsPage: React.FC = () => {
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
                   >
-                    Get Started Now
+                    Get Started Now.
                   </a>
                   <p className="text-xs text-gray-500 mt-2">
                     {service.contactInfo}
@@ -471,8 +486,8 @@ const MicroSAASSolutionsPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">"
+        <div className="max-w-4xl mx-auto text-center">"
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Streamline Your Business?
           </h2>
@@ -484,19 +499,21 @@ const MicroSAASSolutionsPage: React.FC = () => {
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
             >
-              Call (302) 464-0950
+              Call (302) 464-0950.
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
             >
-              Email Us
+              Email Us.
             </a>
           </div>
         </div>
       </section>
     </div>
-  );
+  ).
+  ).
 };
 
-export default MicroSAASSolutionsPage;
+export default MicroSAASSolutionsPage.
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706

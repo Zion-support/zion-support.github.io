@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   '/about',
   '/services',
   '/favicon.svg'
@@ -11,11 +12,122 @@
       })
       .catch((error) => {
         console.error('Service worker install failed:', error);
+=======
+<<<<<<< HEAD
+export default function Component() {
+return (;
+<div>;
+<h1>Component<//;
+<p>This component is under construction.<//;
+<//;
+);
+}
+self.addEventListener('install', (event) => {'
+  console.log('Service Worker installing...');'
+  event.waitUntil(
+  // TODO: Add parameters
+)
+  );
+});
+// Fetch event
+self.addEventListener('fetch', (event) => {'
+  event.respondWith(
+  // TODO: Add parameters
+)
+    caches.match(event.request)
+      .then((response) => {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+        // Return cached version or fetch from network
+        return response || fetch(event.request)
+      })
+  )
+})
+// Activate event
+self.addEventListener('activate', (event) => {'
+  event.waitUntil(
+  // TODO: Add parameters
+)
+    caches.keys().then((cacheNames) => {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      return Promise.all(
+  // TODO: Add parameters
+)
+        cacheNames.map((cacheName) => {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+          if (cacheName !== CACHE_NAME) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+            console.log('Deleting old cache:', cacheName)'
+            return caches.delete(cacheName)
+          }
+        })
+      )
+    })
+  );
+});
+// Background sync for offline form submissions
+self.addEventListener('sync', (event) => {'
+  if (event.tag === 'contact-form') {'
+    event.waitUntil(syncContactForm());
+  }
+});
+async function syncContactForm() {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  // Handle offline form submissions
+  console.log('Syncing contact form data');'
+}
+=======
+// Service Worker for Zion Tech Group Website
+const CACHE_NAME = 'zion-tech-group-v1';
+const STATIC_CACHE = 'static-v1';
+const DYNAMIC_CACHE = 'dynamic-v1';
+
+const STATIC_FILES = [
+  '/',
+  '/about',
+  '/services',
+  '/contact',
+  '/manifest.json',
+  '/favicon.ico'
+];
+
+// Install event - cache static files
+self.addEventListener('install', (event) => {
+  console.log('Service Worker: Installing...');
+  
+  event.waitUntil(
+    caches.open(STATIC_CACHE)
+      .then((cache) => {
+        console.log('Service Worker: Caching static files');
+        return cache.addAll(STATIC_FILES);
+      })
+      .then(() => {
+        console.log('Service Worker: Installation complete');
+        return self.skipWaiting();
+      })
+      .catch((error) => {
+        console.error('Service Worker: Installation failed', error);
+>>>>>>> origin/main
       })
   );
 });
 
 // Activate event - clean up old caches
+<<<<<<< HEAD
   console.log('Service Worker activating...');
   event.waitUntil(
     caches.keys().then((cacheNames) => {
@@ -29,6 +141,36 @@
 });
 
 // Fetch event - serve from cache, fallback to network
+=======
+self.addEventListener('activate', (event) => {
+  console.log('Service Worker: Activating...');
+  
+  event.waitUntil(
+    caches.keys()
+      .then((cacheNames) => {
+        return Promise.all(
+          cacheNames.map((cacheName) => {
+            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
+              console.log('Service Worker: Deleting old cache', cacheName);
+              return caches.delete(cacheName);
+            }
+          })
+        );
+      })
+      .then(() => {
+        console.log('Service Worker: Activation complete');
+        return self.clients.claim();
+      })
+  );
+});
+
+// Fetch event - serve from cache or network
+self.addEventListener('fetch', (event) => {
+  const { request } = event;
+  const url = new URL(request.url);
+
+  // Skip non-GET requests
+>>>>>>> origin/main
   if (request.method !== 'GET') {
     return;
   }
@@ -45,6 +187,25 @@
           return cachedResponse;
         }
 
+<<<<<<< HEAD
+=======
+        // Otherwise fetch from network
+        return fetch(request)
+          .then((response) => {
+            // Don't cache if not a valid response
+            if (!response || response.status !== 200 || response.type !== 'basic') {
+              return response;
+            }
+
+            // Clone the response
+            const responseToCache = response.clone();
+
+            // Cache dynamic content
+            caches.open(DYNAMIC_CACHE)
+              .then((cache) => {
+                cache.put(request, responseToCache);
+              });
+>>>>>>> origin/main
 
             return response;
           })
@@ -52,11 +213,19 @@
             // Return offline page for navigation requests
             if (request.mode === 'navigate') {
               return caches.match('/');
+<<<<<<< HEAD
+=======
+            }
+          });
+      })
+  );
+});
+
+>>>>>>> origin/main
 // Background sync for form submissions
 self.addEventListener('sync', (event) => {
   if (event.tag === 'contact-form') {
     event.waitUntil(
-      // Handle form submission sync
       handleFormSync()
     );
   }
@@ -69,7 +238,10 @@ self.addEventListener('message', (event) => {
   }
 });
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
 async function handleFormSync() {
   try {
     // Get pending form data from IndexedDB
@@ -95,6 +267,11 @@ async function handleFormSync() {
     }
   } catch (error) {
     console.error('Form sync failed:', error);
+<<<<<<< HEAD
+=======
+  }
+}
+>>>>>>> origin/main
 
 // Helper functions for IndexedDB
 async function getPendingForms() {
@@ -105,3 +282,7 @@ async function getPendingForms() {
 async function removePendingForm(id) {
   // Implementation would go here
 }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
+>>>>>>> origin/main

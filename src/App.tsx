@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+'use client';
+import React, { Suspense, lazy, useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+>>>>>>> origin/main
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
@@ -73,6 +79,13 @@ const App: React.FC = () => {
   if (!isInitialized) {
     return <LoadingSpinner />;
   }
+<<<<<<< HEAD
+=======
+
+  return (
+    <ErrorBoundary>
+      <Router>
+>>>>>>> origin/main
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <Navigation />
           <Suspense fallback={<LoadingSpinner />}>
@@ -131,7 +144,26 @@ const App: React.FC = () => {
               
               {/* Catch all route */}
               <Route path="*" element={<NotFoundPage />} />
-            </Routes>
-          </Suspense>
           <Footer />
+<<<<<<< HEAD
         </div>
+=======
+  );
+};
+
+// 404 Page Component
+const NotFoundPage: React.FC = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+    <div className="text-center">
+      <h1 className="text-6xl font-bold text-cyan-400 mb-4">404
+      <h2 className="text-2xl font-semibold text-white mb-4">Page Not Found
+      <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.
+      <a
+        href="/"
+        className="cyber-button inline-flex items-center px-6 py-3 text-lg font-semibold"
+      >
+        Go Home
+);
+
+export default App;
+>>>>>>> origin/main

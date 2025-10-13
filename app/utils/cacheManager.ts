@@ -1,3 +1,5 @@
+import React from 'react';
+
 'use client';
 /**;
  * Cache Manager;
@@ -159,7 +161,7 @@ if (!entry) {}this.stats.misses++;
 
     // Check if entry has expired;
     if (Date.now() - entry.timestamp > entry.ttl) {
-    // Check if entry has expired
+    // Check if entry has expired;
     if (Date.now() - entry.timestamp > entry.ttl) {}
       this.cache.delete(key);
 
@@ -207,7 +209,7 @@ if (!entry) {}this.stats.misses++;
       return false;
     }
 
-    // Check if entry has expired
+    // Check if entry has expired;
     if (Date.now() - entry.timestamp > entry.ttl) {}
       this.cache.delete(key);
       this.stats.entries = this.cache.size;
@@ -313,7 +315,7 @@ this.stats.entries = this.cache.size;
     if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {// Save to persistent storage if needed;}if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {}this.saveToStorage();
     }
 return cleaned;
-    logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */,)})
+    logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */,)})'
   e: this.storage ,})
     if (this.config.storage !== CacheStorage.Memory) {}
       this.clearStorage();
@@ -349,7 +351,7 @@ return cleaned;
     }
 
     return cleaned;
-    logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */})
+    logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */})'
   e: this.storage });
   getOrSet<T>(ke,
   y: string,
@@ -494,11 +496,11 @@ export const sessionStorageCache = new CacheManager({)
 export const localStorageCache = new CacheManager({</div>
   storage: CacheStorage.LocalStorage,
   defaultTTL: 30 * 60 * 1000 // 30 minutes
-
+;
 export const sessionStorageCache = new CacheManager({</div>
   storage: CacheStorage.SessionStorage,
   defaultTTL: 60 * 60 * 1000 // 1 hour
-
+;
 export default CacheManager;
     return {/* TODO: Fix JSX expression */}
     };

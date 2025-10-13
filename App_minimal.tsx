@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react;
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom;
@@ -14,3 +15,37 @@ import HomePage from './app/page;
 
 };
 
+=======
+import React from 'react';
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import { HelmetProvider } from 'react-helmet-async';
+
+import Navigation from './app/components/Navigation';
+
+import Footer from './app/components/Footer';
+
+import HomePage from './app/page';
+
+const App: React.FC = () => {
+  return (
+    <HelmetProvider>
+      <Router>
+        <div className="min-h-screen bg-white">
+          <Navigation />
+          <main>
+            <Routes>
+<<<<<<< HEAD
+              <Route path="/ element={<HomePage />} />
+=======
+              <Route path="/" element={<HomePage />} />
+            </Routes>
+          </main>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706
+          <Footer />
+  );
+};
+
+export default App;
+>>>>>>> origin/main

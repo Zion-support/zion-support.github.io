@@ -1,7 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, DollarSign, Shield, BarChart3, CreditCard } from 'lucide-react';
-
+=======
+import React, { Helmet } from 'react-helmet-async'.
+import React, { CheckCircle, TrendingUp, Phone, Mail, MapPin, DollarSign, Shield, BarChart3, CreditCard } from 'lucide-react'.
 const AIFintechSolutionsPage: React.FC = () => {
   const fintechServices = [
     {
@@ -17,14 +18,14 @@ const AIFintechSolutionsPage: React.FC = () => {
         'Backtesting Engine',
         'Live Trading Execution',
         'Performance Analytics',
-        'Custom Strategies'
+        'Custom Strategies']
       ],
       benefits: [
         'Increase trading returns by 25-40%',
         'Reduce risk exposure by 30%',
         'Execute trades in milliseconds',
         'Adapt to market changes automatically',
-        'Minimize emotional trading decisions'
+        'Minimize emotional trading decisions']
       ],
       marketPrice: '$5,000-15,000/month',
       category: 'Algorithmic Trading',
@@ -44,14 +45,14 @@ const AIFintechSolutionsPage: React.FC = () => {
         'Device Fingerprinting',
         'Pattern Recognition',
         'Alert Management',
-        'Compliance Reporting'
+        'Compliance Reporting']
       ],
       benefits: [
         'Detect 99.9% of fraud attempts',
         'Reduce false positives by 85%',
         'Prevent financial losses',
         'Maintain regulatory compliance',
-        'Protect customer trust'
+        'Protect customer trust']
       ],
       marketPrice: '$2,500-8,000/month',
       category: 'Fraud Prevention',
@@ -71,14 +72,14 @@ const AIFintechSolutionsPage: React.FC = () => {
         'Regulatory Compliance',
         'API Integration',
         'Custom Scorecards',
-        'Performance Monitoring'
+        'Performance Monitoring']
       ],
       benefits: [
         'Improve approval rates by 20%',
         'Reduce default rates by 15%',
         'Enable faster decisions',
         'Include underserved populations',
-        'Maintain regulatory compliance'
+        'Maintain regulatory compliance']
       ],
       marketPrice: '$3,500-12,000/month',
       category: 'Credit Scoring',
@@ -98,14 +99,14 @@ const AIFintechSolutionsPage: React.FC = () => {
         'Goal-based Investing',
         'Market Analysis',
         'Client Communication',
-        'Performance Tracking'
+        'Performance Tracking']
       ],
       benefits: [
         'Lower management fees by 60%',
         'Improve portfolio performance by 15%',
         'Provide 24/7 management',
         'Enable personalized strategies',
-        'Scale to unlimited clients'
+        'Scale to unlimited clients']
       ],
       marketPrice: '$4,000-15,000/month',
       category: 'Robo-Advisory',
@@ -125,14 +126,14 @@ const AIFintechSolutionsPage: React.FC = () => {
         'Fraud Detection',
         'Regulatory Compliance',
         'API Integration',
-        'Custom Models'
+        'Custom Models']
       ],
       benefits: [
         'Reduce underwriting time by 70%',
         'Improve risk assessment by 25%',
         'Lower operational costs by 40%',
         'Enable real-time decisions',
-        'Maintain regulatory compliance'
+        'Maintain regulatory compliance']
       ],
       marketPrice: '$5,000-20,000/month',
       category: 'Insurance Tech',
@@ -152,14 +153,14 @@ const AIFintechSolutionsPage: React.FC = () => {
         'Chargeback Management',
         'Currency Conversion',
         'API Integration',
-        'Custom Reporting'
+        'Custom Reporting']
       ],
       benefits: [
         'Increase approval rates by 15%',
         'Reduce processing costs by 20%',
         'Minimize chargebacks by 30%',
         'Enable global payments',
-        'Provide real-time insights'
+        'Provide real-time insights']
       ],
       marketPrice: '$2,000-8,000/month',
       category: 'Payment Processing',
@@ -179,14 +180,14 @@ const AIFintechSolutionsPage: React.FC = () => {
         'Policy Management',
         'Alert System',
         'Documentation',
-        'Integration APIs'
+        'Integration APIs']
       ],
       benefits: [
         'Reduce compliance costs by 50%',
         'Improve accuracy by 90%',
         'Enable real-time monitoring',
         'Minimize regulatory risks',
-        'Automate reporting processes'
+        'Automate reporting processes']
       ],
       marketPrice: '$4,000-15,000/month',
       category: 'RegTech',
@@ -206,14 +207,14 @@ const AIFintechSolutionsPage: React.FC = () => {
         'Risk Management',
         'Client Communication',
         'Performance Analytics',
-        'Integration APIs'
+        'Integration APIs']
       ],
       benefits: [
         'Improve client satisfaction by 40%',
         'Increase assets under management',
         'Optimize tax strategies',
         'Provide comprehensive planning',
-        'Scale advisory services'
+        'Scale advisory services']
       ],
       marketPrice: '$6,000-25,000/month',
       category: 'Wealth Management',
@@ -221,58 +222,72 @@ const AIFintechSolutionsPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706
 
+export default function PagePage() {
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Page</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+      </div>
+    </div>
+  );
+}
+=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Fintech Solutions - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI fintech solutions including algorithmic trading, fraud detection, and robo-advisory. Starting at $699/month." />
+        <meta name="description" content="Revolutionary AI fintech solutions including algorithmic trading, fraud detection, and robo-advisory. Starting at $699/month." />"
         <meta name="keywords" content="ai fintech, algorithmic trading, fraud detection, credit scoring, robo-advisor, insurance underwriting, payment processing" />
       </Helmet>
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="pt-24 pb-16 px-4">"
+        <div className="max-w-7xl mx-auto text-center">"
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Fintech Solutions
+            AI Fintech Solutions.
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform financial services with AI-powered solutions that enhance trading, prevent fraud, and optimize investment strategies.
           </p>
           
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">8+</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">"
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+              <div className="text-3xl font-bold text-cyan-400 mb-2">8+</div>"
               <div className="text-gray-300">Fintech Tools</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">$699</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+              <div className="text-3xl font-bold text-green-400 mb-2">$699</div>"
               <div className="text-gray-300">Starting Price</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+              <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>"
               <div className="text-gray-300">Fraud Detection</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-orange-400 mb-2">25%</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+              <div className="text-3xl font-bold text-orange-400 mb-2">25%</div>"
               <div className="text-gray-300">Return Increase</div>
             </div>
           </div>
           
           {/* Contact Info */}
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-5 h-5" />
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">"
+            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">"
+              <div className="flex items-center space-x-2">"
+                <Phone className="w-5 h-5" />"
                 <span className="text-white font-medium">+1 302 464 0950</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-5 h-5" />
+              <div className="flex items-center space-x-2">"
+                <Mail className="w-5 h-5" />"
                 <span className="text-white font-medium">kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-5 h-5" />
+              <div className="flex items-center space-x-2">"
+                <MapPin className="w-5 h-5" />"
                 <span className="text-white font-medium">Middletown, DE</span>
               </div>
             </div>
@@ -281,23 +296,23 @@ const AIFintechSolutionsPage: React.FC = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 px-4">"
+        <div className="max-w-7xl mx-auto">"
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Choose Your Fintech AI Solution
+            Choose Your Fintech AI Solution.
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {fintechServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                <div className="text-center mb-6">
-                  <div className="text-5xl mb-4">{service.icon}</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">"
+                <div className="text-center mb-6">"
+                  <div className="text-5xl mb-4">{service.icon}</div>"
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>"
                   <p className="text-gray-600 text-sm">{service.description}</p>
                 </div>
                 
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-2xl font-bold text-green-600">{service.price}</span>
+                <div className="mb-6">"
+                  <div className="flex items-center justify-between mb-4">"
+                    <span className="text-2xl font-bold text-green-600">{service.price}</span>"
                     <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                   </div>
                   <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">
@@ -305,28 +320,28 @@ const AIFintechSolutionsPage: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                <div className="mb-6">"
+                  <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>"
                   <ul className="space-y-2">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                     {service.features.length > 4 && (
                       <li className="text-sm text-gray-500">
-                        +{service.features.length - 4} more features
+                        +{service.features.length - 4} more features.
                       </li>
                     )}
                   </ul>
                 </div>
                 
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
+                <div className="mb-6">"
+                  <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>"
                   <ul className="space-y-1">
                     {service.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
+                      <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">"
                         <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
@@ -334,8 +349,8 @@ const AIFintechSolutionsPage: React.FC = () => {
                   </ul>
                 </div>
                 
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Technologies:</h4>
+                <div className="mb-6">"
+                  <h4 className="font-semibold text-gray-900 mb-3">Technologies:</h4>"
                   <div className="flex flex-wrap gap-2">
                     {service.technologies.map((tech, techIndex) => (
                       <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
@@ -350,7 +365,7 @@ const AIFintechSolutionsPage: React.FC = () => {
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
                   >
-                    Get Started Now
+                    Get Started Now.
                   </a>
                   <p className="text-xs text-gray-500 mt-2">
                     {service.contactInfo}
@@ -363,8 +378,8 @@ const AIFintechSolutionsPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">"
+        <div className="max-w-4xl mx-auto text-center">"
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Transform Your Financial Services?
           </h2>
@@ -376,19 +391,21 @@ const AIFintechSolutionsPage: React.FC = () => {
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
             >
-              Call (302) 464-0950
+              Call (302) 464-0950.
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
             >
-              Email Us
+              Email Us.
             </a>
           </div>
         </div>
       </section>
     </div>
-  );
+  ).
+  ).
 };
 
-export default AIFintechSolutionsPage;
+export default AIFintechSolutionsPage.
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706

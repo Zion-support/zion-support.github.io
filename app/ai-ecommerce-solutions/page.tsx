@@ -1,8 +1,10 @@
-'use client';
+<<<<<<< HEAD
 import React from 'react';
-import { CheckCircle, Star, Users, BarChart3, Zap, Shield, ShoppingCart, CreditCard, Package, TrendingUp, Globe, Smartphone } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+=======
+'use client'.
+import React, { CheckCircle, Star, Users, BarChart3, Zap, Shield, ShoppingCart, CreditCard, Package, TrendingUp, Globe, Smartphone } from 'lucide-react'.
+import Navigation from '../components/Navigation'.
+import Footer from '../components/Footer'.
 
 const AIEcommerceSolutionsPage: React.FC = () => {
   const ecommerceServices = [
@@ -19,14 +21,14 @@ const AIEcommerceSolutionsPage: React.FC = () => {
         'Automated customer service',
         'Multi-channel selling',
         'Payment processing',
-        'Order tracking'
+        'Order tracking']
       ],
       benefits: [
         'Increase conversion rates by 35%',
         'Reduce cart abandonment by 50%',
         'Automated inventory management',
-        '24/7 customer support'
-      ]
+        '24/7 customer support']
+      ],
     },
     {
       title: 'AI Product Recommendation Engine',
@@ -39,14 +41,14 @@ const AIEcommerceSolutionsPage: React.FC = () => {
         'Cross-selling and upselling',
         'Personalized product feeds',
         'A/B testing capabilities',
-        'Analytics dashboard'
+        'Analytics dashboard']
       ],
       benefits: [
         'Increase average order value by 25%',
         'Improve customer engagement',
         'Higher conversion rates',
-        'Reduced bounce rate'
-      ]
+        'Reduced bounce rate']
+      ],
     },
     {
       title: 'AI Chatbot for E-commerce',
@@ -59,14 +61,14 @@ const AIEcommerceSolutionsPage: React.FC = () => {
         'Order status tracking',
         'Product information queries',
         'Return and refund assistance',
-        'Integration with CRM'
+        'Integration with CRM']
       ],
       benefits: [
         '24/7 customer support',
         'Reduce support tickets by 60%',
         'Faster response times',
-        'Improved customer satisfaction'
-      ]
+        'Improved customer satisfaction']
+      ],
     },
     {
       title: 'AI Inventory Management',
@@ -79,14 +81,14 @@ const AIEcommerceSolutionsPage: React.FC = () => {
         'Stock level optimization',
         'Supplier management',
         'Cost analysis',
-        'Real-time tracking'
+        'Real-time tracking']
       ],
       benefits: [
         'Reduce stockouts by 40%',
         'Lower inventory costs',
         'Improved cash flow',
-        'Better supplier relationships'
-      ]
+        'Better supplier relationships']
+      ],
     }
   ];
 
@@ -112,15 +114,29 @@ const AIEcommerceSolutionsPage: React.FC = () => {
       description: 'Enterprise-grade security for your e-commerce platform'
     }
   ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706
 
+export default function PagePage() {
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Page</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+      </div>
+    </div>
+  );
+}
+=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
-        <section className="text-center mb-16">
+        <section className="text-center mb-16">"
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI E-commerce Solutions
+            AI E-commerce Solutions.
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your online business with AI-powered e-commerce solutions that increase sales, 
@@ -129,25 +145,25 @@ const AIEcommerceSolutionsPage: React.FC = () => {
         </section>
 
         {/* Services Grid */}
-        <section className="mb-16">
+        <section className="mb-16">"
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {ecommerceServices.map((service, index) => (
-              <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
-                <div className="flex items-center mb-6">
+              <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">"
+                <div className="flex items-center mb-6">"
                   <div className="text-4xl mr-4">{service.icon}</div>
                   <div>
-                    <h3 className="text-2xl font-bold text-white">{service.title}</h3>
+                    <h3 className="text-2xl font-bold text-white">{service.title}</h3>"
                     <p className="text-cyan-400 text-lg">{service.price}</p>
                   </div>
                 </div>
                 
                 <p className="text-gray-300 mb-6">{service.description}</p>
                 
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-cyan-400 mb-3">Features:</h4>
+                <div className="mb-6">"
+                  <h4 className="text-lg font-semibold text-cyan-400 mb-3">Features:</h4>"
                   <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">
+                      <li key={idx} className="flex items-center text-gray-300">"
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
@@ -155,11 +171,11 @@ const AIEcommerceSolutionsPage: React.FC = () => {
                   </ul>
                 </div>
                 
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-cyan-400 mb-3">Benefits:</h4>
+                <div className="mb-6">"
+                  <h4 className="text-lg font-semibold text-cyan-400 mb-3">Benefits:</h4>"
                   <ul className="space-y-2">
                     {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">
+                      <li key={idx} className="flex items-center text-gray-300">"
                         <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
@@ -168,10 +184,10 @@ const AIEcommerceSolutionsPage: React.FC = () => {
                 </div>
                 
                 <a 
-                  href="/contact" 
+                  href="/contact" "
                   className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
                 >
-                  Get Started
+                  Get Started.
                 </a>
               </div>
             ))}
@@ -179,15 +195,15 @@ const AIEcommerceSolutionsPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Key Features</h2>
+        <section className="mb-16">"
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Key Features</h2>"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div key={index} className="text-center">"
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">"
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>"
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
@@ -195,30 +211,33 @@ const AIEcommerceSolutionsPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your E-commerce?</h2>
+        <section className="text-center">"
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your E-commerce?</h2>"
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Let our AI solutions help you build a more profitable and efficient online business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
+              href="/contact" "
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
             >
-              Get Free Consultation
+              Get Free Consultation.
             </a>
             <a 
-              href="/case-studies" 
+              href="/case-studies" "
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
             >
-              View Case Studies
+              View Case Studies.
             </a>
           </div>
         </section>
       </main>
       <Footer />
     </div>
-  );
+  ).
+  ).
+  ).
 };
 
-export default AIEcommerceSolutionsPage;
+export default AIEcommerceSolutionsPage.
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706

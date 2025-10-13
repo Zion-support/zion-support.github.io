@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+
+import { MetadataRoute } from 'next';
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = 'https://ziontechgroup.com';
+  
+  const routes = [
+    '',
+    '/about',
+>>>>>>> origin/main
     '/services',
     '/ai-services',
     '/cloud-services',
@@ -15,6 +28,13 @@
     '/financial-it',
     '/web-development',
   ];
+<<<<<<< HEAD
+=======
+
+  return routes.map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+>>>>>>> origin/main
     changeFrequency: 'monthly',
     priority: route === '' ? 1 : 0.8,
   }));

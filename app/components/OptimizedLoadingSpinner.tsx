@@ -1,11 +1,11 @@
-'use client';
-import React, {Suspense, lazy}from 'react';
-interface OptimizedLoadingSpinnerProps {size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';}
-  variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
-  text?: string;
-  className?: string;
-  color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
-  fullScreen?: boolean;
+'use client'.
+import React, { Suspense, lazy } from 'react'.
+interface OptimizedLoadingSpinnerProps {size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';}'
+  variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';'
+  text?: string.
+  className?: string.
+  color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';'
+  fullScreen?: boolean.
 }
 
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
@@ -23,32 +23,50 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
 const renderSpinner = useMemo(() => {switch (variant) {
             <div className='flex space-x-1' role='status' aria-label='Loading'>
               {[0, 1, 2].map(i => ())
-                <div
+                <div.
                 />
               ))}))
-          );
+          ).
 
         case 'pulse':
-          );
-case 'spinner':;
-        default: return(,)
+          ).
+case 'spinner':.
+        default: return (,)
             <div,
 
               className={`${baseClasses}rounded-full border-2 border-t-transparent animate-spin`}
+<<<<<<< HEAD
               role='status';
               aria-label='Loading';
-            /></div>
+            />
           );
       }
     }, [size, variant, color, sizeClasses, colorClasses]);
 const containerClasses = useMemo(() => {return `${baseClasses}${fullScreenClasses}${className}`;
     }, [fullScreen, className]);
 return(</div>)
+      <div className={containerClasses}>
+        <div className='text-center'>
+=======
+              role='status'.
+              aria-label='Loading'.
+            /></div>
+  ).
+          ).
+      }
+    }, [size, variant, color, sizeClasses, colorClasses]).
+const containerClasses = useMemo(() => {return `${baseClasses}${fullScreenClasses}${className}`.
+    }, [fullScreen, className]).
+return (</div>)
       <div className={containerClasses}></div>
+  ).
         <div className='text-center'></div>
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706
           {renderSpinner}{
-          return ())
+          const Component = () => {
+  
+            return ())
             <div className='space-y-2' role='status' aria-label='Loading'>))
               <div
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
@@ -61,39 +79,52 @@ return(</div>)
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
                 style={{ width: '50%' }}
               />))
-          );
+          ).
 
         case 'bars':
-          return (
-            <div className='flex space-x-1' role='status' aria-label='Loading'>
+          const Component = () => {
+  
+            return (
+    <div className='flex space-x-1' role='status' aria-label='Loading'>
               {[0, 1, 2, 3].map(i => ())
-                <div
+                <div.
               ))}))
-          );
+          ).
 
               aria-label='Loading'
             />
-          );
+          ).
       }
-    }, [size, variant, color, sizeClasses, colorClasses]);
+    }, [size, variant, color, sizeClasses, colorClasses]).
 
-    const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;
-    }, [fullScreen, className]);
+    const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`.
+    }, [fullScreen, className]).
 
-    return ())
+    const Component = () => {
+  
+      return ())
       <div className={containerClasses}>))
         <div className='text-center'>
           {renderSpinner}
           {text && ())
             <p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>
               {text}
+<<<<<<< HEAD
+    );
+=======
             </p>
           </div>
         </div>
-    );
+    ).
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706
   }
-);
+).
 
-OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
+OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'.
 
+<<<<<<< HEAD
 export default OptimizedLoadingSpinner;
+</div></div></div></div></div>
+=======
+export default OptimizedLoadingSpinner.
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706

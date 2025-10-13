@@ -1,7 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Server, Database, Cloud, Shield } from 'lucide-react';
-
+=======
+import React, { Helmet } from 'react-helmet-async'.
+import React, { CheckCircle, TrendingUp, Phone, Mail, MapPin, Server, Database, Cloud, Shield } from 'lucide-react'.
 const ITMicroSaasPage: React.FC = () => {
   const itServices = [
     {
@@ -17,14 +18,14 @@ const ITMicroSaasPage: React.FC = () => {
         'Monitoring & Alerts',
         'Backup & Recovery',
         'Performance Tuning',
-        '24/7 Support'
+        '24/7 Support']
       ],
       benefits: [
         'Reduce cloud costs by 40%',
         'Improve uptime to 99.9%',
         'Enhance security posture',
         'Scale automatically',
-        'Minimize downtime'
+        'Minimize downtime']
       ],
       marketPrice: '$500-1,500/month',
       category: 'Cloud Services',
@@ -44,14 +45,14 @@ const ITMicroSaasPage: React.FC = () => {
         'Security Hardening',
         'Capacity Planning',
         'Migration Services',
-        '24/7 Monitoring'
+        '24/7 Monitoring']
       ],
       benefits: [
         'Improve query speed by 80%',
         'Reduce database costs by 30%',
         'Prevent data loss',
         'Optimize storage usage',
-        'Ensure high availability'
+        'Ensure high availability']
       ],
       marketPrice: '$800-2,500/month',
       category: 'Database Services',
@@ -71,14 +72,14 @@ const ITMicroSaasPage: React.FC = () => {
         'Authentication',
         'Versioning',
         'Analytics & Monitoring',
-        'SDK Generation'
+        'SDK Generation']
       ],
       benefits: [
         'Accelerate development by 60%',
         'Improve API performance',
         'Enhance developer experience',
         'Reduce integration time',
-        'Ensure API security'
+        'Ensure API security']
       ],
       marketPrice: '$1,000-3,000/month',
       category: 'API Services',
@@ -98,14 +99,14 @@ const ITMicroSaasPage: React.FC = () => {
         'Monitoring & Logging',
         'Security Scanning',
         'Rollback Capabilities',
-        'Team Training'
+        'Team Training']
       ],
       benefits: [
         'Reduce deployment time by 90%',
         'Improve code quality',
         'Minimize human errors',
         'Enable rapid scaling',
-        'Ensure consistency'
+        'Ensure consistency']
       ],
       marketPrice: '$1,500-4,000/month',
       category: 'DevOps',
@@ -125,14 +126,14 @@ const ITMicroSaasPage: React.FC = () => {
         'Security Training',
         'Incident Response',
         'Security Monitoring',
-        'Risk Assessment'
+        'Risk Assessment']
       ],
       benefits: [
         'Identify security gaps',
         'Prevent data breaches',
         'Ensure compliance',
         'Improve security posture',
-        'Reduce security risks'
+        'Reduce security risks']
       ],
       marketPrice: '$2,000-5,000/month',
       category: 'Cybersecurity',
@@ -152,14 +153,14 @@ const ITMicroSaasPage: React.FC = () => {
         'Monitoring & Observability',
         'Load Balancing',
         'Circuit Breakers',
-        'Documentation'
+        'Documentation']
       ],
       benefits: [
         'Improve scalability',
         'Enable independent deployment',
         'Reduce system complexity',
         'Enhance fault tolerance',
-        'Accelerate development'
+        'Accelerate development']
       ],
       marketPrice: '$2,500-6,000/month',
       category: 'Architecture',
@@ -179,14 +180,14 @@ const ITMicroSaasPage: React.FC = () => {
         'Schema Evolution',
         'Error Handling',
         'Monitoring & Alerts',
-        'Data Lineage'
+        'Data Lineage']
       ],
       benefits: [
         'Process millions of records',
         'Ensure data quality',
         'Enable real-time analytics',
         'Reduce manual work',
-        'Improve data reliability'
+        'Improve data reliability']
       ],
       marketPrice: '$1,200-3,500/month',
       category: 'Data Engineering',
@@ -206,14 +207,14 @@ const ITMicroSaasPage: React.FC = () => {
         'Custom Dashboards',
         'Alert Management',
         'Performance Analytics',
-        'SLA Monitoring'
+        'SLA Monitoring']
       ],
       benefits: [
         'Prevent outages',
         'Improve performance',
         'Reduce MTTR',
         'Ensure SLA compliance',
-        'Optimize resources'
+        'Optimize resources']
       ],
       marketPrice: '$800-2,500/month',
       category: 'Monitoring',
@@ -233,14 +234,14 @@ const ITMicroSaasPage: React.FC = () => {
         'Push Notifications',
         'App Store Deployment',
         'Performance Optimization',
-        'Maintenance & Updates'
+        'Maintenance & Updates']
       ],
       benefits: [
         'Reach both platforms',
         'Reduce development costs',
         'Faster time to market',
         'Consistent user experience',
-        'Easy maintenance'
+        'Easy maintenance']
       ],
       marketPrice: '$1,800-5,000/month',
       category: 'Mobile Development',
@@ -260,14 +261,14 @@ const ITMicroSaasPage: React.FC = () => {
         'SEO Optimization',
         'Security Implementation',
         'Testing & QA',
-        'Deployment & Hosting'
+        'Deployment & Hosting']
       ],
       benefits: [
         'Modern user interface',
         'Fast loading times',
         'Mobile-friendly design',
         'SEO optimized',
-        'Secure and scalable'
+        'Secure and scalable']
       ],
       marketPrice: '$1,200-3,500/month',
       category: 'Web Development',
@@ -275,58 +276,72 @@ const ITMicroSaasPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706
 
+export default function PagePage() {
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Page</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+      </div>
+    </div>
+  );
+}
+=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>IT Micro SAAS Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT micro SAAS services including cloud management, database optimization, API development, and DevOps automation. Starting at $199/month." />
+        <meta name="description" content="Comprehensive IT micro SAAS services including cloud management, database optimization, API development, and DevOps automation. Starting at $199/month." />"
         <meta name="keywords" content="it micro saas, cloud management, database optimization, api development, devops, cybersecurity, microservices" />
       </Helmet>
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="pt-24 pb-16 px-4">"
+        <div className="max-w-7xl mx-auto text-center">"
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            IT Micro SAAS Services
+            IT Micro SAAS Services.
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Professional IT services delivered as micro SAAS solutions. Scale your technology infrastructure with our expert services.
           </p>
           
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">10+</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">"
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+              <div className="text-3xl font-bold text-cyan-400 mb-2">10+</div>"
               <div className="text-gray-300">IT Services</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">$199</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+              <div className="text-3xl font-bold text-green-400 mb-2">$199</div>"
               <div className="text-gray-300">Starting Price</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+              <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>"
               <div className="text-gray-300">Uptime SLA</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+              <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>"
               <div className="text-gray-300">Support</div>
             </div>
           </div>
           
           {/* Contact Info */}
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-5 h-5" />
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">"
+            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">"
+              <div className="flex items-center space-x-2">"
+                <Phone className="w-5 h-5" />"
                 <span className="text-white font-medium">+1 302 464 0950</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-5 h-5" />
+              <div className="flex items-center space-x-2">"
+                <Mail className="w-5 h-5" />"
                 <span className="text-white font-medium">kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-5 h-5" />
+              <div className="flex items-center space-x-2">"
+                <MapPin className="w-5 h-5" />"
                 <span className="text-white font-medium">Middletown, DE</span>
               </div>
             </div>
@@ -335,23 +350,23 @@ const ITMicroSaasPage: React.FC = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 px-4">"
+        <div className="max-w-7xl mx-auto">"
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Choose Your IT Service
+            Choose Your IT Service.
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {itServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                <div className="text-center mb-6">
-                  <div className="text-5xl mb-4">{service.icon}</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">"
+                <div className="text-center mb-6">"
+                  <div className="text-5xl mb-4">{service.icon}</div>"
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>"
                   <p className="text-gray-600 text-sm">{service.description}</p>
                 </div>
                 
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-2xl font-bold text-green-600">{service.price}</span>
+                <div className="mb-6">"
+                  <div className="flex items-center justify-between mb-4">"
+                    <span className="text-2xl font-bold text-green-600">{service.price}</span>"
                     <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                   </div>
                   <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">
@@ -359,28 +374,28 @@ const ITMicroSaasPage: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                <div className="mb-6">"
+                  <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>"
                   <ul className="space-y-2">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                     {service.features.length > 4 && (
                       <li className="text-sm text-gray-500">
-                        +{service.features.length - 4} more features
+                        +{service.features.length - 4} more features.
                       </li>
                     )}
                   </ul>
                 </div>
                 
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
+                <div className="mb-6">"
+                  <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>"
                   <ul className="space-y-1">
                     {service.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
+                      <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">"
                         <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
@@ -388,8 +403,8 @@ const ITMicroSaasPage: React.FC = () => {
                   </ul>
                 </div>
                 
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Technologies:</h4>
+                <div className="mb-6">"
+                  <h4 className="font-semibold text-gray-900 mb-3">Technologies:</h4>"
                   <div className="flex flex-wrap gap-2">
                     {service.technologies.map((tech, techIndex) => (
                       <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
@@ -404,7 +419,7 @@ const ITMicroSaasPage: React.FC = () => {
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
                   >
-                    Get Started Now
+                    Get Started Now.
                   </a>
                   <p className="text-xs text-gray-500 mt-2">
                     {service.contactInfo}
@@ -417,8 +432,8 @@ const ITMicroSaasPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">"
+        <div className="max-w-4xl mx-auto text-center">"
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Optimize Your IT Infrastructure?
           </h2>
@@ -430,19 +445,21 @@ const ITMicroSaasPage: React.FC = () => {
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
             >
-              Call (302) 464-0950
+              Call (302) 464-0950.
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
             >
-              Email Us
+              Email Us.
             </a>
           </div>
         </div>
       </section>
     </div>
-  );
+  ).
+  ).
 };
 
-export default ITMicroSaasPage;
+export default ITMicroSaasPage.
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706

@@ -1,16 +1,16 @@
-import React from 'react';
+import React from 'react'.
 
 interface AdvertisingBannerProps {
-  title: string;
-  description: string;
-  ctaText: string;
-  ctaUrl: string;
-  imageUrl?: string;
-  backgroundColor?: string;
-  textColor?: string;
-  variant?: 'default' | 'gradient' | 'minimal';
-  size?: 'small' | 'medium' | 'large';
-  className?: string;
+  title: string.
+  description: string.
+  ctaText: string.
+  ctaUrl: string.
+  imageUrl?: string.
+  backgroundColor?: string.
+  textColor?: string.
+  variant?: 'default' | 'gradient' | 'minimal';'
+  size?: 'small' | 'medium' | 'large';'
+  className?: string.
 }
 
 const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
@@ -23,7 +23,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
   textColor = '#ffffff',
   variant = 'default',
   size = 'medium',
-  className = ''
+  className = '
 }) => {
   const sizeClasses = {
     small: 'py-4 px-6',
@@ -51,16 +51,15 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
     >
       {imageUrl && (
         <div className="banner-image flex-shrink-0">
-          <img
+          <img.
             src={imageUrl}
             alt={title}
             className="rounded-md"
             style={{
-              width: size === 'small' ? '120px' : size === 'medium' ? '200px' : '280px',
+              width: size === 'small' ? '120px' : size === 'medium' ? '200px' : '280px','
               height: 'auto'
             }}
           />
-        </div>
       )}
 
       <div className="banner-content flex-1">
@@ -72,23 +71,26 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
           }}
         >
           {title}
-        </h2>
         <p 
           className="mb-6 opacity-90"
           style={{ 
             margin: '0 0 1.5rem 0', 
-            fontSize: size === 'small' ? '0.875rem' : '1rem',
-            opacity: 0.9
+            fontSize: size === 'small' ? '0.875rem' : '1rem','
+            opacity: 0.9.
           }}
         >
           {description}
-        </p>
+<<<<<<< HEAD
         <a
+=======
+        </p>
+        <a.
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706
           href={ctaUrl}
           className="inline-block px-6 py-3 rounded-md font-bold transition-all duration-200 hover:opacity-80"
           style={{
             display: 'inline-block',
-            padding: size === 'small' ? '0.5rem 1rem' : size === 'medium' ? '0.75rem 1.5rem' : '1rem 2rem',
+            padding: size === 'small' ? '0.5rem 1rem' : size === 'medium' ? '0.75rem 1.5rem' : '1rem 2rem','
             backgroundColor: 'rgba(255, 255, 255, 0.2)',
             color: textColor,
             textDecoration: 'none',
@@ -97,17 +99,22 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
             transition: 'background-color 0.2s'
           }}
           onMouseOver={(e) => {
-            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
+            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.3)'.
           }}
           onMouseOut={(e) => {
-            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)'.
           }}
         >
           {ctaText}
+<<<<<<< HEAD
+  );
+=======
         </a>
       </div>
     </div>
-  );
+  ).
+  ).
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706
 };
 
-export default AdvertisingBanner;
+export default AdvertisingBanner.
