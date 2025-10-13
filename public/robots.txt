@@ -9,25 +9,31 @@ Crawl-delay: 1
 
 # Disallow admin and private areas
 Disallow: /admin/
+Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /private/
+Disallow: /node_modules/
 
 # Allow important pages
 Allow: /ai-services/
 Allow: /micro-saas/
 Allow: /5g-solutions/
-Allow: /about
-Allow: /contact
-Allow: /services
+Allow: /case-studies/
+Allow: /careers/
 
-<<<<<<< HEAD
-# Host
-Host: https://ziontechgroup.com
-=======
 # Block common bot traps
-Disallow: /*?*
-Disallow: /*#
-Disallow: /search?*
-Disallow: /filter?*
->>>>>>> cursor/analyze-improve-and-deploy-application-568e
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$
+Disallow: /*.log$
+
+# Allow specific file types
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /*.ico$
