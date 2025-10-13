@@ -163,6 +163,22 @@ const Footer = React.memo(() => {
                   Custom Software
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/quantum-computing-solutions"
+                  className="text-gray-400 hover:text-green-400 transition-colors"
+                >
+                  Quantum Computing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/edge-computing-solutions"
+                  className="text-gray-400 hover:text-green-400 transition-colors"
+                >
+                  Edge Computing
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -216,6 +232,30 @@ const Footer = React.memo(() => {
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
                   Zion Project Master
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-video-generator"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Zion AI Video Generator
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-social-media-manager"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Zion AI Social Media Manager
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-customer-insights-pro"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Zion AI Customer Insights Pro
                 </Link>
               </li>
             </ul>

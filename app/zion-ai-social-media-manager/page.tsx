@@ -1,102 +1,102 @@
-import { ArrowRight, Atom, Zap, Shield, Brain, CheckCircle, Star, Cpu, Database, Globe } from "lucide-react";
+import { ArrowRight, Share2, TrendingUp, Calendar, BarChart3, CheckCircle, Star, Brain, Zap, Users } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function QuantumComputingSolutions() {
+export default function ZionAiSocialMediaManager() {
   const features = [
     {
-      icon: <Atom className="w-6 h-6" />,
-      title: "Quantum Algorithm Development",
-      description: "Custom quantum algorithms for optimization, cryptography, and machine learning applications"
+      icon: <Share2 className="w-6 h-6" />,
+      title: "AI Content Creation",
+      description: "Generate engaging posts, captions, and hashtags for all major social platforms"
+    },
+    {
+      icon: <Calendar className="w-6 h-6" />,
+      title: "Smart Scheduling",
+      description: "AI-powered optimal posting times based on your audience engagement patterns"
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Trend Analysis",
+      description: "Real-time trend monitoring and content suggestions to boost engagement"
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Advanced Analytics",
+      description: "Comprehensive performance tracking with AI insights and recommendations"
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Audience Insights",
+      description: "Deep audience analysis to understand demographics and behavior patterns"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Quantum Simulation",
-      description: "Advanced quantum simulation for molecular modeling, drug discovery, and materials science"
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Quantum Cryptography",
-      description: "Ultra-secure quantum key distribution and post-quantum cryptography solutions"
-    },
-    {
-      icon: <Brain className="w-6 h-6" />,
-      title: "Quantum Machine Learning",
-      description: "Quantum-enhanced machine learning algorithms for complex pattern recognition"
-    },
-    {
-      icon: <Cpu className="w-6 h-6" />,
-      title: "Quantum Hardware Integration",
-      description: "Integration with leading quantum computers and quantum processing units"
-    },
-    {
-      icon: <Database className="w-6 h-6" />,
-      title: "Quantum Database Optimization",
-      description: "Quantum algorithms for database search and optimization problems"
+      title: "Auto-Engagement",
+      description: "AI-powered responses to comments and messages to maintain active engagement"
     }
   ];
 
-  const applications = [
-    "Financial Portfolio Optimization",
-    "Drug Discovery & Molecular Modeling",
-    "Cryptographic Security",
-    "Supply Chain Optimization",
-    "Climate Modeling",
-    "Machine Learning Acceleration",
-    "Logistics & Routing",
-    "Risk Analysis",
-    "Materials Science",
-    "Artificial Intelligence"
+  const platforms = [
+    "Facebook",
+    "Instagram",
+    "Twitter/X",
+    "LinkedIn",
+    "TikTok",
+    "YouTube",
+    "Pinterest",
+    "Snapchat",
+    "WhatsApp Business",
+    "Telegram"
   ];
 
   const pricingPlans = [
     {
-      name: "Explorer",
-      price: "$5,000",
+      name: "Starter",
+      price: "$29",
       period: "/month",
-      description: "Perfect for research institutions",
+      description: "Perfect for small businesses",
       features: [
-        "Basic quantum algorithm development",
-        "Quantum simulation access",
-        "Standard support",
-        "Monthly quantum compute hours",
-        "Documentation & training",
-        "1 quantum project"
+        "3 social accounts",
+        "50 posts per month",
+        "Basic analytics",
+        "Content suggestions",
+        "Email support",
+        "1 user"
       ],
       popular: false
     },
     {
-      name: "Innovator",
-      price: "$15,000",
+      name: "Professional",
+      price: "$79",
       period: "/month",
-      description: "Most popular for enterprises",
+      description: "Most popular for growing businesses",
       features: [
-        "Advanced quantum algorithms",
-        "Custom quantum solutions",
+        "10 social accounts",
+        "Unlimited posts",
+        "Advanced analytics",
+        "AI content creation",
         "Priority support",
-        "Extended quantum compute hours",
-        "Dedicated quantum engineer",
-        "3 quantum projects",
-        "API access",
-        "Performance optimization"
+        "5 users",
+        "Scheduling",
+        "Hashtag research"
       ],
       popular: true
     },
     {
-      name: "Pioneer",
-      price: "$50,000",
+      name: "Enterprise",
+      price: "$199",
       period: "/month",
-      description: "For cutting-edge organizations",
+      description: "For large organizations",
       features: [
-        "Full quantum stack development",
-        "Custom quantum hardware integration",
+        "Unlimited accounts",
+        "Unlimited posts",
+        "Premium analytics",
+        "AI content creation",
         "24/7 dedicated support",
-        "Unlimited quantum compute",
-        "Quantum research team",
-        "Unlimited projects",
-        "White-label solutions",
+        "Unlimited users",
+        "White-label solution",
         "Custom integrations",
-        "Quantum consulting"
+        "Team collaboration"
       ],
       popular: false
     }
@@ -104,24 +104,24 @@ export default function QuantumComputingSolutions() {
 
   const testimonials = [
     {
-      name: "Dr. Sarah Chen",
-      company: "Quantum Research Institute",
-      role: "Director of Quantum Computing",
-      content: "Zion Tech Group's quantum solutions have accelerated our research by 10x. Their algorithms are cutting-edge and their support is exceptional.",
+      name: "Jessica Martinez",
+      company: "Fashion Brand",
+      role: "Social Media Manager",
+      content: "Zion AI Social Media Manager has tripled our engagement rates. The AI content suggestions are spot-on and save us hours every day.",
       rating: 5
     },
     {
-      name: "Michael Rodriguez",
-      company: "Financial Services Corp",
-      role: "Chief Technology Officer",
-      content: "The quantum portfolio optimization has revolutionized our trading strategies. We've seen 300% improvement in optimization speed.",
+      name: "David Kim",
+      company: "Tech Startup",
+      role: "Marketing Director",
+      content: "The scheduling feature is incredible. It posts at the perfect times and our reach has increased by 200% since we started using it.",
       rating: 5
     },
     {
-      name: "Dr. Emily Watson",
-      company: "Pharmaceutical Research",
-      role: "Head of Computational Biology",
-      content: "Quantum molecular modeling has opened new possibilities in drug discovery. The results are incredibly promising.",
+      name: "Amanda Thompson",
+      company: "Restaurant Chain",
+      role: "Digital Marketing Lead",
+      content: "The analytics are so detailed and the AI insights help us understand our audience better than ever before.",
       rating: 5
     }
   ];
@@ -129,63 +129,63 @@ export default function QuantumComputingSolutions() {
   return (
     <>
       <Helmet>
-        <title>Quantum Computing Solutions - Next-Gen Computing Power | Zion Tech Group</title>
+        <title>Zion AI Social Media Manager - Automate Your Social Presence | Zion Tech Group</title>
         <meta
           name="description"
-          content="Harness the power of quantum computing with Zion Tech Group. Advanced quantum algorithms, simulation, cryptography, and machine learning solutions for the future."
+          content="Manage all your social media accounts with AI. Zion AI Social Media Manager offers content creation, scheduling, analytics, and engagement automation for all major platforms."
         />
         <meta
           name="keywords"
-          content="quantum computing, quantum algorithms, quantum simulation, quantum cryptography, quantum machine learning, quantum optimization"
+          content="social media management, AI social media, content creation, social media scheduling, social media analytics, social media automation"
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 mb-6">
-              <Atom className="w-4 h-4 text-indigo-400 mr-2" />
-              <span className="text-indigo-400 text-sm font-medium">Next-Generation Computing</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
+              <Share2 className="w-4 h-4 text-blue-400 mr-2" />
+              <span className="text-blue-400 text-sm font-medium">AI-Powered Social Media</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
-                Quantum Computing Solutions
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                Zion AI Social Media Manager
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Unlock the power of quantum computing with our advanced solutions. Quantum algorithms, 
-              simulation, cryptography, and machine learning for the next generation of computing.
+              Automate your social media presence with AI. Create content, schedule posts, analyze performance, 
+              and engage with your audience across all major platforms - all in one powerful platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
+                className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group"
               >
-                Explore Quantum Solutions
+                Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
               >
-                Watch Quantum Demo
+                Watch Demo
               </Link>
             </div>
             
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-indigo-400 mb-2">1000x</div>
-                <div className="text-gray-300">Faster Processing</div>
+                <div className="text-3xl font-bold text-blue-400 mb-2">500K+</div>
+                <div className="text-gray-300">Posts Scheduled</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
-                <div className="text-gray-300">Quantum Accuracy</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">300%</div>
+                <div className="text-gray-300">Average Engagement Increase</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">50+</div>
-                <div className="text-gray-300">Quantum Algorithms</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">10</div>
+                <div className="text-gray-300">Platforms Supported</div>
               </div>
             </div>
           </div>
@@ -196,10 +196,10 @@ export default function QuantumComputingSolutions() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Quantum Capabilities
+                Complete Social Media Management
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Cutting-edge quantum computing solutions for the most complex computational challenges.
+                Everything you need to dominate social media with AI-powered automation.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -208,7 +208,7 @@ export default function QuantumComputingSolutions() {
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
@@ -223,25 +223,24 @@ export default function QuantumComputingSolutions() {
           </div>
         </section>
 
-        {/* Applications Section */}
+        {/* Platforms Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Quantum Applications
+                All Major Platforms Supported
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform industries with quantum computing solutions across multiple domains.
+                Manage all your social media accounts from one unified dashboard.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {applications.map((application, index) => (
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+              {platforms.map((platform, index) => (
                 <div
                   key={index}
-                  className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
+                  className="flex items-center justify-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
                 >
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{application}</span>
+                  <span className="text-gray-300 text-center font-medium">{platform}</span>
                 </div>
               ))}
             </div>
@@ -253,10 +252,10 @@ export default function QuantumComputingSolutions() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Quantum Computing Plans
+                Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the quantum computing power that matches your research and business needs.
+                Start with a free trial and scale as your social media presence grows.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -265,13 +264,13 @@ export default function QuantumComputingSolutions() {
                   key={index}
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                     plan.popular
-                      ? 'border-indigo-400 bg-gradient-to-br from-indigo-500/10 to-purple-500/10'
-                      : 'border-white/20 hover:border-indigo-400'
+                      ? 'border-blue-400 bg-gradient-to-br from-blue-500/10 to-cyan-500/10'
+                      : 'border-white/20 hover:border-blue-400'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -296,11 +295,11 @@ export default function QuantumComputingSolutions() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700'
-                        : 'border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-slate-900'
+                        ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700'
+                        : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900'
                     }`}
                   >
-                    Get Started
+                    Start Free Trial
                   </Link>
                 </div>
               ))}
@@ -313,10 +312,10 @@ export default function QuantumComputingSolutions() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Quantum Researchers
+                Trusted by Social Media Professionals
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what quantum computing experts say about our solutions
+                See what our users say about Zion AI Social Media Manager
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -345,24 +344,24 @@ export default function QuantumComputingSolutions() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Enter the Quantum Era?
+              Ready to Transform Your Social Media?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the quantum revolution with Zion Tech Group's cutting-edge quantum computing solutions.
+              Join thousands of businesses using Zion AI Social Media Manager to grow their online presence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center"
               >
-                Start Your Quantum Journey
+                Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
               >
-                Watch Quantum Demo
+                Watch Demo
               </Link>
             </div>
           </div>
