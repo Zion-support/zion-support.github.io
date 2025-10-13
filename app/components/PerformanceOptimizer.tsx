@@ -82,10 +82,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'navigation') {
-            console.log('Navigation timing:', entry);
-          } else if (entry.entryType === 'resource') {
-            console.log('Resource timing:', entry);
-          }
+            } else if (entry.entryType === 'resource') {
+            }
         });
       });
       

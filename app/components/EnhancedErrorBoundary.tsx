@@ -42,8 +42,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
+      }
 
     // Call custom error handler if provided
     if (this.props.onError) {
@@ -79,8 +78,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         });
       }
     } catch (loggingError) {
-      console.error('Failed to log error to service:', loggingError);
-    }
+      }
   };
 
   private handleRetry = () => {

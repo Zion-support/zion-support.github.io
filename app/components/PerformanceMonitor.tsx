@@ -18,41 +18,32 @@ const PerformanceMonitor: React.FC = () => {
   });
 
   useEffect(() => {
-    // Only run in browser
-    if (typeof window === 'undefined') return;
-
-    // Load web-vitals library dynamically
+    // Load Web Vitals
     const loadWebVitals = async () => {
       try {
         const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
         
-        // Measure Core Web Vitals
         getCLS((metric) => {
           setMetrics(prev => ({ ...prev, cls: metric.value }));
-          console.log('CLS:', metric);
         });
-
+        
         getFID((metric) => {
           setMetrics(prev => ({ ...prev, fid: metric.value }));
-          console.log('FID:', metric);
         });
-
+        
         getFCP((metric) => {
           setMetrics(prev => ({ ...prev, fcp: metric.value }));
-          console.log('FCP:', metric);
         });
-
+        
         getLCP((metric) => {
           setMetrics(prev => ({ ...prev, lcp: metric.value }));
-          console.log('LCP:', metric);
         });
-
+        
         getTTFB((metric) => {
           setMetrics(prev => ({ ...prev, ttfb: metric.value }));
-          console.log('TTFB:', metric);
         });
       } catch (error) {
-        console.warn('Failed to load web-vitals:', error);
+        console.error('Failed to load Web Vitals:', error);
       }
     };
 
@@ -74,10 +65,10 @@ const PerformanceMonitor: React.FC = () => {
     const memoryInterval = setInterval(monitorMemory, 30000);
 
     // Monitor page load performance
-    const measurePageLoad = () => {
+    const monitorPageLoad = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
-        console.log('Page load metrics:', {
+        console.log('Page load performance:', {
           domContentLoaded: Math.round(navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart),
           loadComplete: Math.round(navigation.loadEventEnd - navigation.loadEventStart),
           totalTime: Math.round(navigation.loadEventEnd - navigation.fetchStart)
@@ -85,68 +76,50 @@ const PerformanceMonitor: React.FC = () => {
       }
     };
 
-    // Measure after page load
+    // Monitor after page load
     if (document.readyState === 'complete') {
-      measurePageLoad();
+      monitorPageLoad();
     } else {
-      window.addEventListener('load', measurePageLoad);
+      window.addEventListener('load', monitorPageLoad);
     }
 
-    // Monitor resource loading
-    const monitorResources = () => {
-      const resources = performance.getEntriesByType('resource');
-      const slowResources = resources.filter((resource: any) => resource.duration > 1000);
-      
-      if (slowResources.length > 0) {
-        console.warn('Slow resources detected:', slowResources.map((r: any) => ({
-          name: r.name,
-          duration: Math.round(r.duration) + 'ms'
-        })));
-      }
-    };
-
-    // Monitor resources after a delay
-    setTimeout(monitorResources, 5000);
-
-    // Cleanup
     return () => {
       clearInterval(memoryInterval);
-      window.removeEventListener('load', measurePageLoad);
+      window.removeEventListener('load', monitorPageLoad);
     };
   }, []);
 
-  // Don't render anything in production
-  if (process.env.NODE_ENV === 'production') {
+  // Only show in development
+  if (process.env.NODE_ENV !== 'development') {
     return null;
   }
 
-  // Development mode - show metrics
   return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs">
-      <h3 className="font-bold mb-2">Performance Metrics</h3>
+    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-4 text-white text-xs font-mono z-50">
+      <div className="mb-2 text-cyan-400 font-semibold">Performance Metrics</div>
       <div className="space-y-1">
         {metrics.lcp && (
-          <div className={`${metrics.lcp > 2500 ? 'text-red-400' : metrics.lcp > 1000 ? 'text-yellow-400' : 'text-green-400'}`}>
+          <div>
             LCP: {Math.round(metrics.lcp)}ms
           </div>
         )}
         {metrics.fid && (
-          <div className={`${metrics.fid > 300 ? 'text-red-400' : metrics.fid > 100 ? 'text-yellow-400' : 'text-green-400'}`}>
+          <div>
             FID: {Math.round(metrics.fid)}ms
           </div>
         )}
         {metrics.cls && (
-          <div className={`${metrics.cls > 0.25 ? 'text-red-400' : metrics.cls > 0.1 ? 'text-yellow-400' : 'text-green-400'}`}>
+          <div>
             CLS: {metrics.cls.toFixed(3)}
           </div>
         )}
         {metrics.fcp && (
-          <div className={`${metrics.fcp > 3000 ? 'text-red-400' : metrics.fcp > 1000 ? 'text-yellow-400' : 'text-green-400'}`}>
+          <div>
             FCP: {Math.round(metrics.fcp)}ms
           </div>
         )}
         {metrics.ttfb && (
-          <div className={`${metrics.ttfb > 800 ? 'text-red-400' : metrics.ttfb > 600 ? 'text-yellow-400' : 'text-green-400'}`}>
+          <div>
             TTFB: {Math.round(metrics.ttfb)}ms
           </div>
         )}
@@ -155,8 +128,4 @@ const PerformanceMonitor: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default PerformanceMonitor;
-=======
-export default PerformanceMonitor;
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
