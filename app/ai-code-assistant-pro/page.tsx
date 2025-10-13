@@ -1,4 +1,59 @@
 
+import React from 'react';
+import { 
+  Code, 
+  Shield, 
+  Zap, 
+  Globe, 
+  Brain, 
+  Star, 
+  CheckCircle, 
+  ArrowRight 
+} from 'lucide-react';
+
+// Placeholder components - these would need to be imported from actual component files
+const PerformanceOptimizer = ({ children }: { children: React.ReactNode }) => <div>{children}</div>;
+const EnhancedAccessibility = ({ children }: { children: React.ReactNode }) => <div>{children}</div>;
+const FuturisticBackgroundEnhanced = ({ children }: { children: React.ReactNode }) => <div>{children}</div>;
+const EnhancedSEO = ({ children, title, description, keywords, canonical, structuredData }: { 
+  children?: React.ReactNode;
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  structuredData?: any;
+}) => <div>{children}</div>;
+const StructuredData = ({ children, type, data }: { 
+  children?: React.ReactNode;
+  type?: string;
+  data?: any;
+}) => <div>{children}</div>;
+const ResponsiveContainer = ({ children, className }: { children: React.ReactNode; className?: string }) => <div className={className}>{children}</div>;
+const FuturisticTextEnhanced = ({ children, className }: { children: React.ReactNode; className?: string }) => <h2 className={className}>{children}</h2>;
+const FuturisticButtonEnhanced = ({ children, className, onClick, variant, size, gradient, animated, glow, neon, href, icon, iconPosition, glowColor }: { 
+  children: React.ReactNode; 
+  className?: string; 
+  onClick?: () => void;
+  variant?: string;
+  size?: string;
+  gradient?: boolean;
+  animated?: boolean;
+  glow?: boolean;
+  neon?: boolean;
+  href?: string;
+  icon?: React.ReactNode;
+  iconPosition?: string;
+  glowColor?: string;
+}) => <button className={className} onClick={onClick}>{children}</button>;
+const FuturisticCardEnhanced = ({ children, className, glowColor, hoverEffect, animated, neon }: { 
+  children: React.ReactNode; 
+  className?: string;
+  glowColor?: string;
+  hoverEffect?: boolean;
+  animated?: boolean;
+  neon?: boolean;
+}) => <div className={className}>{children}</div>;
+
 const AICodeAssistantProZionTechGroup = () => {
   const structuredData = {
     "@context": "https://schema.org",
@@ -176,7 +231,7 @@ const AICodeAssistantProZionTechGroup = () => {
                     href="#pricing"
                     variant="primary"
                     size="lg"
-                    icon={Code}
+                    icon={<Code className="w-5 h-5" />}
                     iconPosition="left"
                     glowColor="blue"
                     neon={true}
@@ -188,7 +243,7 @@ const AICodeAssistantProZionTechGroup = () => {
                     href="#demo"
                     variant="outline"
                     size="lg"
-                    icon={ArrowRight}
+                    icon={<ArrowRight className="w-5 h-5" />}
                     iconPosition="left"
                     glowColor="cyan"
                     neon={true}
@@ -287,7 +342,7 @@ const AICodeAssistantProZionTechGroup = () => {
                         href="/contact"
                         variant={plan.popular ? "primary" : "outline"}
                         size="lg"
-                        icon={ArrowRight}
+                        icon={<ArrowRight className="w-5 h-5" />}
                         iconPosition="right"
                         glowColor={plan.popular ? "blue" : "purple"}
                         neon={true}
@@ -351,7 +406,7 @@ const AICodeAssistantProZionTechGroup = () => {
                     href="/contact"
                     variant="primary"
                     size="lg"
-                    icon={ArrowRight}
+                    icon={<ArrowRight className="w-5 h-5" />}
                     iconPosition="right"
                     glowColor="blue"
                     neon={true}
@@ -363,7 +418,7 @@ const AICodeAssistantProZionTechGroup = () => {
                     href="/demo"
                     variant="outline"
                     size="lg"
-                    icon={Code}
+                    icon={<Code className="w-5 h-5" />}
                     iconPosition="right"
                     glowColor="cyan"
                     neon={true}

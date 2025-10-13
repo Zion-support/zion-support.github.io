@@ -1,3 +1,4 @@
+import React from 'react';
 import { 
   BarChart3, 
   TrendingUp, 
@@ -12,10 +13,37 @@ import {
   Activity,
   LineChart
 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const AIDataAnalyticsProPage = () => {
-  
-  
+  const features = [
+    {
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Advanced Analytics",
+      description: "Comprehensive data analysis with machine learning algorithms",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      icon: <TrendingUp className="w-8 h-8" />,
+      title: "Predictive Modeling",
+      description: "Forecast trends and patterns with AI-powered predictions",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      icon: <Database className="w-8 h-8" />,
+      title: "Real-time Processing",
+      description: "Process and analyze data streams in real-time",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI Insights",
+      description: "Get intelligent recommendations and automated insights",
+      color: "from-orange-500 to-red-500"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>

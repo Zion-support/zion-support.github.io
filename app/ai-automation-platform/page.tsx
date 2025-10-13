@@ -1,3 +1,4 @@
+import React from 'react';
 import { 
   Zap, 
   BarChart3, 
@@ -8,19 +9,76 @@ import {
   Database, 
   ArrowRight,
   Sparkles,
-  Star,
   CheckCircle,
-  TrendingUp,
-  Settings,
-  Bot,
-  Workflow,
   Target
 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const AIAutomationPlatformPage = () => {
-  
-  
-  
+  const features = [
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: "Intelligent Workflow Automation",
+      description: "Automate complex business processes with AI that learns and adapts to your specific needs",
+      color: "from-cyan-500 to-blue-500"
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Predictive Analytics",
+      description: "Make data-driven decisions with AI-powered insights and forecasting capabilities",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Enterprise Security",
+      description: "Bank-level security with end-to-end encryption and compliance with industry standards",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      icon: <Cloud className="w-8 h-8" />,
+      title: "Cloud Integration",
+      description: "Seamlessly integrate with your existing cloud infrastructure and third-party services",
+      color: "from-orange-500 to-red-500"
+    }
+  ];
+
+  const benefits = [
+    "Reduce manual work by up to 80%",
+    "Improve process accuracy by 95%",
+    "Cut operational costs by 60%",
+    "Scale operations without additional staff",
+    "24/7 automated monitoring and optimization",
+    "Real-time insights and reporting"
+  ];
+
+  const useCases = [
+    {
+      title: "Customer Service Automation",
+      description: "Automate ticket routing, response generation, and escalation processes",
+      icon: <Users className="w-6 h-6" />,
+      industry: "Customer Service"
+    },
+    {
+      title: "Financial Process Automation",
+      description: "Automate invoice processing, expense management, and financial reporting",
+      icon: <Database className="w-6 h-6" />,
+      industry: "Finance"
+    },
+    {
+      title: "HR & Recruitment",
+      description: "Streamline candidate screening, onboarding, and employee management",
+      icon: <Code className="w-6 h-6" />,
+      industry: "Human Resources"
+    },
+    {
+      title: "Marketing Automation",
+      description: "Automate campaign management, lead scoring, and customer segmentation",
+      icon: <Target className="w-6 h-6" />,
+      industry: "Marketing"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
