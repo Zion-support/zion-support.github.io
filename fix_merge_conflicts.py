@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-Script to automatically resolve merge conflicts in TypeScript files.
-This script keeps the newer version (after =======) and removes conflict markers.
+Script to automatically resolve merge conflicts in TypeScript/React files.
+This script will choose the newer version (after =======) for most conflicts.
 """
 
 import os
 import re
-import glob
+import sys
 
 def fix_merge_conflicts(file_path):
     """Fix merge conflicts in a single file."""
@@ -14,51 +14,91 @@ def fix_merge_conflicts(file_path):
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Check if file has merge conflict markers
-        if '<<<<<<< HEAD' not in content:
-            return False
+        original_content = content
         
-        # Split by conflict markers
-        parts = re.split(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>>', content, flags=re.DOTALL)
+        # Pattern to match merge conflict blocks
+        conflict_pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+'
         
-        if len(parts) != 4:  # Should have: [before, old_content, new_content, after]
-            print(f"Warning: Unexpected conflict format in {file_path}")
-            return False
+        def resolve_conflict(match):
+            head_content = match.group(1).strip()
+            branch_content = match.group(2).strip()
+            
+            # For most cases, choose the branch content (after =======)
+            # This is usually the newer, more complete version
+            return branch_content
         
-        # Keep the newer version (after =======)
-        new_content = parts[0] + parts[2] + parts[3]
+        # Replace all merge conflicts
+        content = re.sub(conflict_pattern, resolve_conflict, content, flags=re.DOTALL)
+        
+        # Also handle cases where there might be incomplete conflict markers
+        content = re.sub(r'<<<<<<< HEAD\n.*?\n=======\n', '', content, flags=re.DOTALL)
+        content = re.sub(r'>>>>>>> [^\n]+\n?', '', content)
         
         # Clean up any remaining conflict markers
-        new_content = re.sub(r'<<<<<<< HEAD.*?>>>>>>>.*?\n', '', new_content, flags=re.DOTALL)
-        new_content = re.sub(r'=======.*?>>>>>>>.*?\n', '', new_content, flags=re.DOTALL)
+        content = re.sub(r'<<<<<<< HEAD\n?', '', content)
+        content = re.sub(r'=======\n?', '', content)
+        content = re.sub(r'>>>>>>> [^\n]+\n?', '', content)
         
-        # Write the cleaned content back
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(new_content)
-        
-        print(f"Fixed merge conflicts in {file_path}")
-        return True
-        
+        # Only write if content changed
+        if content != original_content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            print(f"✅ Fixed merge conflicts in {file_path}")
+            return True
+        else:
+            print(f"ℹ️  No conflicts found in {file_path}")
+            return False
+            
     except Exception as e:
-        print(f"Error processing {file_path}: {e}")
+        print(f"❌ Error processing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to process all TypeScript files."""
-    # Find all TypeScript files in the app directory
-    pattern = "app/**/*.tsx"
-    files = glob.glob(pattern, recursive=True)
+    """Main function to process all files with merge conflicts."""
+    # List of files with merge conflicts
+    files_with_conflicts = [
+        'app/landing-page-builder/page.tsx',
+        'app/zion-ai-inventory-manager/page.tsx',
+        'app/components/ImageOptimizer.tsx',
+        'app/components/FuturisticText.tsx',
+        'app/zion-ai-crm-pro/page.tsx',
+        'app/cybersecurity-solutions/page.tsx',
+        'app/pricing/page.tsx',
+        'app/quantum-data-encryption-vault/page.tsx',
+        'app/zion-ai-email-marketing-pro/page.tsx',
+        'app/ai-mobile-app-builder/page.tsx',
+        'app/zion-ai-analytics-pro/page.tsx',
+        'app/zion-ai-customer-churn-predictor-pro/page.tsx',
+        'app/ai-website-builder/page.tsx',
+        'app/zion-ai-survey-builder/page.tsx',
+        'app/zion-ai-inventory-optimizer-pro/page.tsx',
+        'app/ai-mobile-builder/page.tsx',
+        'app/cloud-infrastructure-management/page.tsx',
+        'app/micro-saas-services/ai-chatbot-builder/page.tsx',
+        'utils/accessibilityUtils.ts',
+        'utils/cn.ts',
+        'utils/performanceUtils.ts',
+        'utils/seoUtils.ts'
+    ]
     
     fixed_count = 0
-    total_conflicts = 0
+    total_count = len(files_with_conflicts)
     
-    for file_path in files:
-        if fix_merge_conflicts(file_path):
-            fixed_count += 1
-        total_conflicts += 1
+    print(f"🔧 Processing {total_count} files with merge conflicts...")
     
-    print(f"\nProcessed {total_conflicts} files")
-    print(f"Fixed merge conflicts in {fixed_count} files")
+    for file_path in files_with_conflicts:
+        if os.path.exists(file_path):
+            if fix_merge_conflicts(file_path):
+                fixed_count += 1
+        else:
+            print(f"⚠️  File not found: {file_path}")
+    
+    print(f"\n📊 Summary: Fixed {fixed_count} out of {total_count} files")
+    
+    if fixed_count > 0:
+        print("✅ Merge conflicts resolved successfully!")
+    else:
+        print("ℹ️  No merge conflicts were found or fixed.")
 
 if __name__ == "__main__":
     main()
