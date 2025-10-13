@@ -18,6 +18,7 @@
   .high-contrast {
     --tw-bg-opacity: 1;
     --tw-text-opacity: 1;
+    filter: contrast(150%) brightness(120%);
   }
   
   .high-contrast * {
@@ -26,26 +27,76 @@
     border-color: black !important;
   }
   
+  .high-contrast .text-gray-300,
+  .high-contrast .text-gray-400 {
+    color: black !important;
+  }
+  
   .large-text {
-    font-size: 1.125rem;
+    font-size: calc(var(--base-font-size, 1rem) * 1.25);
   }
   
   .large-text h1 {
-    font-size: 2.5rem;
+    font-size: calc(var(--base-font-size, 1rem) * 3);
   }
   
   .large-text h2 {
-    font-size: 2rem;
+    font-size: calc(var(--base-font-size, 1rem) * 2.5);
   }
   
   .large-text h3 {
-    font-size: 1.75rem;
+    font-size: calc(var(--base-font-size, 1rem) * 2);
+  }
+  
+  .large-text p,
+  .large-text span {
+    font-size: calc(var(--base-font-size, 1rem) * 1.125);
   }
   
   .reduced-motion * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .screen-reader {
+    /* Enhanced screen reader support */
+  }
+  
+  .screen-reader .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  
+  /* Focus indicators */
+  .focus-visible {
+    outline: 2px solid #00ffff;
+    outline-offset: 2px;
+  }
+  
+  /* Skip links */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 1000;
+    border-radius: 4px;
+  }
+  
+  .skip-link:focus {
+    top: 6px;
   }
 }
 

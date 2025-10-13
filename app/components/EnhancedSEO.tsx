@@ -51,11 +51,14 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
     "url": siteUrl,
     "logo": `${siteUrl}/logo.svg`,
     "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
+    "foundingDate": "2020",
+    "numberOfEmployees": "50-100",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
+      "email": "kleber@ziontechgroup.com",
+      "availableLanguage": "English"
     },
     "address": {
       "@type": "PostalAddress",
@@ -68,7 +71,41 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
     "sameAs": [
       "https://twitter.com/ziontechgroup",
       "https://linkedin.com/company/ziontechgroup"
-    ]
+    ],
+    "serviceArea": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "AI and IT Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI Solutions",
+            "description": "Artificial intelligence and machine learning services"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "IT Services",
+            "description": "Information technology consulting and implementation"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Digital Transformation",
+            "description": "Business process automation and digital modernization"
+          }
+        }
+      ]
+    }
   };
 
   const mergedStructuredData = structuredData ? { ...defaultStructuredData, ...structuredData } : defaultStructuredData;

@@ -161,6 +161,7 @@ export default defineConfig({
 <<<<<<< HEAD
           }
           // 5G service pages
+<<<<<<< HEAD
 =======
             if (serviceName && ['analytics', 'automation', 'business-intelligence', 'content-generation'].includes(serviceName)) {
               return 'ai-core'
@@ -178,6 +179,8 @@ export default defineConfig({
           }
           // 5G service pages - group together
 >>>>>>> cursor/analyze-improve-and-deploy-application-b200
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-db59
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
             return '5g-services'
           }
