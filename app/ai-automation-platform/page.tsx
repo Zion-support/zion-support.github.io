@@ -14,29 +14,15 @@ export default function AiAutomationPlatform() {
             AI Automation Platform
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-            Streamline your business processes with our advanced AI automation platform.
+            Advanced AI automation platform solutions by Zion Tech Group
           </p>
         </div>
         <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Process Automation</h3>
-              <p className="text-gray-600">
-                Automate repetitive tasks and workflows with intelligent AI solutions.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Smart Integration</h3>
-              <p className="text-gray-600">
-                Seamlessly integrate with your existing systems and tools.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Analytics & Insights</h3>
-              <p className="text-gray-600">
-                Get detailed insights and analytics on your automated processes.
-              </p>
-            </div>
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Coming Soon</h2>
+            <p className="text-gray-600">
+              This page is under development. Please check back later for updates.
+            </p>
           </div>
         </div>
       </div>

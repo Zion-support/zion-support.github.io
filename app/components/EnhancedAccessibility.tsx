@@ -7,7 +7,7 @@ interface EnhancedAccessibilityProps {
 
 export default function EnhancedAccessibility({ className = '', children }: EnhancedAccessibilityProps) {
   return (
-    <div className={`${className}`}>
+    <div className={`enhanced-accessibility ${className}`}>
       {children}
     </div>
   );

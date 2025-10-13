@@ -1,19 +1,14 @@
 import React from 'react';
 
-
 interface AdvancedPerformanceMonitorProps {
   className?: string;
-  children?: React.ReactNode;
 }
 
-export default function AdvancedPerformanceMonitor({ className = '', children }: AdvancedPerformanceMonitorProps) {
+export default function AdvancedPerformanceMonitor({ className = '' }: AdvancedPerformanceMonitorProps) {
   return (
-    <div className={className}>
-      {children}
+    <div className={`advanced-performance-monitor ${className}`}>
+      <h3>Performance Monitor</h3>
+      <p>Advanced performance monitoring component</p>
     </div>
   );
 }
-
-
-
-

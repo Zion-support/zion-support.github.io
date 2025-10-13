@@ -14,29 +14,15 @@ export default function AiChatbotBuilder() {
             AI Chatbot Builder
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-            Create intelligent chatbots with our advanced AI chatbot builder platform.
+            Advanced AI chatbot builder solutions by Zion Tech Group
           </p>
         </div>
         <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Natural Language Processing</h3>
-              <p className="text-gray-600">
-                Advanced NLP capabilities for understanding and responding to user queries naturally.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Custom Training</h3>
-              <p className="text-gray-600">
-                Train your chatbot with your specific data and business requirements.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Multi-Platform Integration</h3>
-              <p className="text-gray-600">
-                Deploy your chatbot across multiple platforms and channels.
-              </p>
-            </div>
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Coming Soon</h2>
+            <p className="text-gray-600">
+              This page is under development. Please check back later for updates.
+            </p>
           </div>
         </div>
       </div>

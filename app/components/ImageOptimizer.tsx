@@ -19,8 +19,9 @@ export default function ImageOptimizer({
   lazy = true,
   placeholder
 }: ImageOptimizerProps) {
-  // Note: quality and format parameters are reserved for future image optimization features
-  console.log('Image optimization params:', { quality, format });
+  // Note: quality, format, and placeholder are available for future implementation
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const _unused = { quality, format, placeholder };
   
   return (
     <img
@@ -28,9 +29,6 @@ export default function ImageOptimizer({
       alt={alt}
       className={className}
       loading={lazy ? 'lazy' : 'eager'}
-      style={{
-        backgroundColor: placeholder || '#f3f4f6'
-      }}
     />
   );
 }

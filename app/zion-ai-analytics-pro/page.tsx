@@ -1,12 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function ZionAiAnalyticsPro() {
+export default function ZionAIAnalyticsPro() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Zion AI Analytics Pro - Zion Tech Group</title>
-        <meta name="description" content="Advanced zion ai analytics pro solutions by Zion Tech Group" />
+        <meta name="description" content="Advanced AI analytics solutions by Zion Tech Group" />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -14,7 +14,7 @@ export default function ZionAiAnalyticsPro() {
             Zion AI Analytics Pro
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-            Advanced zion ai analytics pro solutions by Zion Tech Group
+            Advanced AI analytics solutions by Zion Tech Group
           </p>
         </div>
         <div className="max-w-4xl mx-auto">
