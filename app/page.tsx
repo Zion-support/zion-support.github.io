@@ -90,19 +90,19 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
-      name: "Zion Analytics Pro",
-      description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
+      name: "Zion AI Analytics Pro",
+      description: "Advanced business intelligence platform with real-time dashboards, predictive analytics, and AI-powered insights",
       price: "From $299/month",
       icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-analytics-pro",
+      link: "/zion-ai-analytics-pro",
       featured: true
     },
     {
-      name: "Zion Security Shield",
-      description: "Advanced cybersecurity protection with AI-powered threat detection and automated response",
+      name: "Zion AI Security Shield",
+      description: "AI-powered cybersecurity protection with 24/7 monitoring, threat detection, and automated response",
       price: "From $499/month",
       icon: <Shield className="w-6 h-6" />,
-      link: "/zion-security-shield",
+      link: "/zion-ai-security-shield",
       featured: true
     },
     {
@@ -193,13 +193,13 @@ const HomePage = () => {
             <span className="text-cyan-400 text-sm font-medium">#1 Technology Solutions Provider 2024</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               Welcome to Zion Tech Group
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center px-4">
             Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. 
             Transform your operations with cutting-edge technology and innovative solutions.
           </p>
@@ -250,7 +250,7 @@ const HomePage = () => {
               From AI-powered analytics to enterprise security, we have everything you need.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {features.map((feature, index) => (
               <div
                 key={index}
@@ -296,7 +296,7 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}

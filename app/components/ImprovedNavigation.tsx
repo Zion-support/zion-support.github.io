@@ -25,7 +25,8 @@ import {
   Users,
   Award,
   Clock,
-  CheckCircle
+  CheckCircle,
+  Monitor
 } from 'lucide-react';
 
 const ImprovedNavigation = () => {
@@ -82,7 +83,7 @@ const ImprovedNavigation = () => {
         { 
           label: 'AI Business Intelligence Pro', 
           href: '/ai-business-intelligence-pro',
-          description: 'Data-driven insights',
+          description: 'Advanced analytics platform',
           icon: <TrendingUp className="w-4 h-4" />
         },
         { 
@@ -302,15 +303,15 @@ const ImprovedNavigation = () => {
       color: 'from-purple-500 to-pink-500',
       dropdown: [
         { 
-          label: 'Zion Analytics Pro', 
-          href: '/zion-analytics-pro',
-          description: 'Business intelligence platform',
+          label: 'Zion AI Analytics Pro', 
+          href: '/zion-ai-analytics-pro',
+          description: 'Advanced business intelligence platform',
           icon: <BarChart3 className="w-4 h-4" />
         },
         { 
-          label: 'Zion Security Shield', 
-          href: '/zion-security-shield',
-          description: 'Advanced security protection',
+          label: 'Zion AI Security Shield', 
+          href: '/zion-ai-security-shield',
+          description: 'AI-powered cybersecurity protection',
           icon: <Shield className="w-4 h-4" />
         },
         { 
@@ -564,8 +565,8 @@ const ImprovedNavigation = () => {
   ];
 
   const quickLinks = [
-    { label: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4" /> },
-    { label: 'Demo', href: '/demo', icon: <Play className="w-4 h-4" /> },
+    { label: 'Pricing', href: '/pricing', icon: <BarChart3 className="w-4 h-4" /> },
+    { label: 'Demo', href: '/demo', icon: <Monitor className="w-4 h-4" /> },
     { label: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },
     { label: 'Consultation', href: '/consultation', icon: <Users className="w-4 h-4" /> }
   ];
@@ -579,7 +580,7 @@ const ImprovedNavigation = () => {
   const Sidebar = () => (
     <div className={`fixed inset-0 z-50 lg:hidden ${isSidebarOpen ? 'block' : 'hidden'}`}>
       <div className="fixed inset-0 bg-black/50" onClick={() => setIsSidebarOpen(false)} />
-      <div className="fixed right-0 top-0 h-full w-80 bg-slate-900/95 backdrop-blur-sm border-l border-white/10">
+      <div className="fixed right-0 top-0 h-full w-80 max-w-[90vw] bg-slate-900/95 backdrop-blur-sm border-l border-white/10">
         <div className="p-6">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-xl font-bold text-white">Menu</h2>

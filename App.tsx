@@ -22,14 +22,17 @@ const ServicesPage = React.lazy(() => import("./app/services/page"));
 const BlogPage = React.lazy(() => import("./app/blog/page"));
 const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
-const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
 const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
 const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
 const DemoPage = React.lazy(() => import("./app/demo/page"));
 const SupportPage = React.lazy(() => import("./app/support/page"));
+const PricingPage = React.lazy(() => import("./app/pricing/page"));
+const ConsultationPage = React.lazy(() => import("./app/consultation/page"));
 
 // AI Services Pages
+const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
+const AIBusinessIntelligenceProPage = React.lazy(() => import("./app/ai-business-intelligence-pro/page"));
 const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
 const AIContentGenerationPage = React.lazy(() => import("./app/ai-content-generation/page"));
 const AICustomerSupportPage = React.lazy(() => import("./app/ai-customer-support/page"));
@@ -42,6 +45,7 @@ const AIVoiceAssistantPage = React.lazy(() => import("./app/ai-voice-assistant/p
 const AIWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
 
 // IT Services Pages
+const CloudInfrastructurePage = React.lazy(() => import("./app/cloud-infrastructure/page"));
 const CloudMigrationPage = React.lazy(() => import("./app/cloud-migration/page"));
 const DevOpsServicesPage = React.lazy(() => import("./app/devops/page"));
 const ITConsultingPage = React.lazy(() => import("./app/it-consulting/page"));
@@ -61,6 +65,8 @@ const FiveGDataAnalyticsPage = React.lazy(() => import("./app/5g-data-analytics/
 const FiveGImplementationPage = React.lazy(() => import("./app/5g-implementation/page"));
 
 // Micro SAAS Services Pages
+const ZionAIAnalyticsProPage = React.lazy(() => import("./app/zion-ai-analytics-pro/page"));
+const ZionAISecurityShieldPage = React.lazy(() => import("./app/zion-ai-security-shield/page"));
 const MicroSaaSServicesPage = React.lazy(() => import("./app/zion-content-studio/page"));
 const ProjectManagementToolPage = React.lazy(() => import("./app/project-management-pro/page"));
 const CustomerRelationshipManagerPage = React.lazy(() => import("./app/zion-ai-crm-pro/page"));
@@ -148,8 +154,12 @@ function App() {
                             <Route path="/tutorials" element={<TutorialsPage />} />
                             <Route path="/demo" element={<DemoPage />} />
                             <Route path="/support" element={<SupportPage />} />
+                            <Route path="/pricing" element={<PricingPage />} />
+                            <Route path="/consultation" element={<ConsultationPage />} />
 
                             {/* AI Services Routes */}
+                            <Route path="/ai-services" element={<AIServicesPage />} />
+                            <Route path="/ai-business-intelligence-pro" element={<AIBusinessIntelligenceProPage />} />
                             <Route path="/ai-analytics" element={<AIAnalyticsPage />} />
                             <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
                             <Route path="/ai-customer-support" element={<AICustomerSupportPage />} />
@@ -162,6 +172,7 @@ function App() {
                             <Route path="/ai-workflow-automation" element={<AIWorkflowAutomationPage />} />
 
                             {/* IT Services Routes */}
+                            <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                             <Route path="/cloud-migration" element={<CloudMigrationPage />} />
                             <Route path="/devops" element={<DevOpsServicesPage />} />
                             <Route path="/it-consulting" element={<ITConsultingPage />} />
@@ -181,6 +192,8 @@ function App() {
                             <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
 
                             {/* Micro SAAS Services Routes */}
+                            <Route path="/zion-ai-analytics-pro" element={<ZionAIAnalyticsProPage />} />
+                            <Route path="/zion-ai-security-shield" element={<ZionAISecurityShieldPage />} />
                             <Route path="/zion-content-studio" element={<MicroSaaSServicesPage />} />
                             <Route path="/project-management-pro" element={<ProjectManagementToolPage />} />
                             <Route path="/zion-ai-crm-pro" element={<CustomerRelationshipManagerPage />} />

@@ -90,8 +90,8 @@ const ImprovedFooter = () => {
       icon: <Zap className="w-5 h-5" />,
       color: 'from-purple-500 to-pink-500',
       links: [
-        { label: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
-        { label: 'Zion Security Shield', href: '/zion-security-shield' },
+        { label: 'Zion AI Analytics Pro', href: '/zion-ai-analytics-pro' },
+        { label: 'Zion AI Security Shield', href: '/zion-ai-security-shield' },
         { label: 'Zion Cloud Vault', href: '/zion-cloud-vault' },
         { label: 'Zion AI Inventory Manager', href: '/zion-ai-inventory-manager' },
         { label: 'Zion HR Assistant Pro', href: '/zion-hr-assistant-pro' },
