@@ -14,7 +14,11 @@ interface PerformanceMetrics {
   totalBlockingTime: number | null
 }
 
+<<<<<<< HEAD
 const AdvancedPerformanceMonitor = () => {
+=======
+const AdvancedPerformanceMonitor: React.FC = () => {
+>>>>>>> cursor/website-audit-and-update-with-deployment-df24
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: null,
     firstContentfulPaint: null,
@@ -34,6 +38,7 @@ const AdvancedPerformanceMonitor = () => {
     // Only run in development
     if (process.env.NODE_ENV !== 'development') return
 
+<<<<<<< HEAD
     const measurePerformance = () => {
       // Measure Core Web Vitals
       const observer = new PerformanceObserver((list) => {
@@ -59,6 +64,35 @@ const AdvancedPerformanceMonitor = () => {
       const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigationEntry) {
         setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }))
+=======
+        onCLS((metric: any) => {
+          setMetrics(prev => ({ ...prev, cls: metric.value }))
+          reportMetric()
+        })
+      })
+
+        onINP((metric: any) => {
+          setMetrics(prev => ({ ...prev, fid: metric.value }))
+          reportMetric()
+        })
+
+        onFCP((metric: any) => {
+          setMetrics(prev => ({ ...prev, fcp: metric.value }))
+          reportMetric()
+        })
+
+        onLCP((metric: any) => {
+          setMetrics(prev => ({ ...prev, lcp: metric.value }))
+          reportMetric()
+        })
+
+        onTTFB((metric: any) => {
+          setMetrics(prev => ({ ...prev, ttfb: metric.value }))
+          reportMetric()
+        })
+      } catch (error) {
+        console.warn('Web Vitals not available:', error)
+>>>>>>> cursor/website-audit-and-update-with-deployment-df24
         console.warn('Failed to load web-vitals:', error);
       }
 
@@ -102,6 +136,7 @@ const AdvancedPerformanceMonitor = () => {
           }
         }
       })
+<<<<<<< HEAD
 =======
   return (
     <div className="fixed bottom-4 right-4 bg-black text-white p-4 rounded-lg shadow-lg text-xs font-mono max-w-xs">
@@ -221,6 +256,14 @@ const AdvancedPerformanceMonitor = () => {
   const calculateScore = () => {
     let score = 100
     let factors = 0
+=======
+    }
+
+    measurePerformance()
+  }, [])
+
+  if (!isVisible) return null
+>>>>>>> cursor/website-audit-and-update-with-deployment-df24
 
     if (metrics.fcp !== null) {
       factors++
@@ -251,6 +294,7 @@ const AdvancedPerformanceMonitor = () => {
 
   const performanceScore = calculateScore()
 
+<<<<<<< HEAD
   // Render performance dashboard in development
   if (process.env.NODE_ENV === 'development') {
     return (
@@ -280,3 +324,18 @@ export default AdvancedPerformanceMonitor
 =======
 export default AdvancedPerformanceMonitor
 >>>>>>> cursor/website-audit-and-update-with-deployment-3b6d
+=======
+
+
+  // Don't render if no metrics are available
+  if (!performanceScore) return null
+
+  return (
+    <div className="performance-monitor">
+      <h3>Performance Score: {performanceScore || 'Calculating...'}</h3>
+    </div>
+  );
+};
+
+export default AdvancedPerformanceMonitor;
+>>>>>>> cursor/website-audit-and-update-with-deployment-df24

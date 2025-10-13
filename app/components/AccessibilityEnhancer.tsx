@@ -219,6 +219,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       if (cleanupContrast) cleanupContrast();
       if (cleanupMotion) cleanupMotion();
     };
+<<<<<<< HEAD
   }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
 
 <<<<<<< HEAD
@@ -226,6 +227,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 =======
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-3b6d
+=======
+  }, []);
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-df24
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
     
@@ -272,9 +277,14 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     applyAccessibilitySettings(defaultSettings);
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-3b6d
+=======
+
+  // Removed unused functions - functionality is handled by updateSetting directly
+>>>>>>> cursor/website-audit-and-update-with-deployment-df24
   return (
     <>
       {children}
