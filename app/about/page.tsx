@@ -4,18 +4,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-import React from 'react;
-
-import { Helmet } from 'react-helmet-async;
-
-import {
-  Download,
-  ExternalLink,
-  ChevronRight,
-  Phone,
-  Mail,
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Shield, Users } from 'lucide-react';
+import { ArrowRight, Brain, Shield, Users, CheckCircle } from 'lucide-react';
 
 =======
 import { Helmet } from "react-helmet-async";
@@ -23,6 +14,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Brain } from "lucide-react";
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 export default function AboutPage() {
+<<<<<<< HEAD
   // Team members data (for future use)
   // const teamMembers = [
   //   {
@@ -195,24 +187,24 @@ import { Helmet } from 'react-helmet-async'
 
 const AboutPage: React.FC = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f512
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-  </>
+    <>
       <Helmet>
+<<<<<<< HEAD
         <title>About Us - Zion Tech Group</title>
 <<<<<<< HEAD
 <<<<<<< HEAD
         <meta name="description" content="Learn about Zion Tech Group's mission, team, and expertise in AI and IT solutions" />
+=======
+        <title>About - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions for modern businesses." />
+>>>>>>> cursor/fix-errors-and-merge-to-main-f512
       </Helmet>
       
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            About Zion Tech Group
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            We are a cutting-edge technology company specializing in AI solutions, 
-            cloud infrastructure, and innovative IT services that transform businesses.
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -222,6 +214,11 @@ const AboutPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 We are pioneers in AI and IT solutions, dedicated to transforming businesses through innovative technology and cutting-edge artificial intelligence.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Mission Section */}
         <section className="py-20 bg-slate-800">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -363,6 +360,7 @@ const AboutPage: React.FC = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
                   </p>
                 </div>
+<<<<<<< HEAD
 =======
 'use client';
 import React from 'react';
@@ -394,8 +392,14 @@ export default function AboutPage() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We are passionate about transforming businesses through cutting-edge AI and IT solutions.
             </p>
+=======
+              </div>
+            </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f512
           </div>
+        </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
             <div>
@@ -458,72 +462,73 @@ export default function AboutPage() {
                 </p>
         {/* Team Section */}
         <section className="py-20 bg-slate-800">
+=======
+        {/* Values Section */}
+        <section className="py-20">
+>>>>>>> cursor/fix-errors-and-merge-to-main-f512
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Meet Our Team</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Our Values</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our diverse team of experts brings together decades of experience in AI, 
-                software development, and business transformation.
+                The principles that guide everything we do and every solution we create.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-32 h-32 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <User className="w-16 h-16 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">AI Research Team</h3>
-                <p className="text-gray-400">Leading AI researchers and engineers</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-slate-800 rounded-lg p-8 text-center">
+                <Brain className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-white mb-4">Innovation</h3>
+                <p className="text-gray-300">
+                  We constantly push the boundaries of what's possible with AI and technology.
+                </p>
               </div>
-              <div className="flex items-center text-gray-300">
-                <Shield className="w-6 h-6 text-green-400 mr-3" />
-                <span>Enterprise-Grade Security</span>
+              <div className="bg-slate-800 rounded-lg p-8 text-center">
+                <Shield className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-white mb-4">Security</h3>
+                <p className="text-gray-300">
+                  Your data and systems are protected with enterprise-grade security measures.
+                </p>
               </div>
-              <div className="flex items-center text-gray-300">
-                <Users className="w-6 h-6 text-purple-400 mr-3" />
-                <span>Expert Team Support</span>
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Meet Our Team</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-                <div className="w-24 h-24 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-white">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </span>
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Get In Touch</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Ready to transform your business with AI? Let's start a conversation about your goals and how we can help.
-              </p>
+              <div className="bg-slate-800 rounded-lg p-8 text-center">
+                <Users className="w-12 h-12 text-green-400 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-white mb-4">Collaboration</h3>
+                <p className="text-gray-300">
+                  We work closely with our clients to understand and solve their unique challenges.
+                </p>
+              </div>
             </div>
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-slate-800 rounded-lg p-8">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  <div className="text-center">
-                    <Phone className="w-8 h-8 text-blue-400 mx-auto mb-4" />
-                    <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
-                    <p className="text-gray-300">+1 (555) 123-4567</p>
-                  </div>
-                  <div className="text-center">
-                    <Mail className="w-8 h-8 text-green-400 mx-auto mb-4" />
-                    <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-                    <p className="text-gray-300">info@ziontechgroup.com</p>
-                  </div>
-                  <div className="text-center">
-                    <MapPin className="w-8 h-8 text-purple-400 mx-auto mb-4" />
-                    <h3 className="text-lg font-semibold text-white mb-2">Location</h3>
-                    <p className="text-gray-300">San Francisco, CA</p>
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
-                <p className="text-blue-400 mb-2">{member.role}</p>
-                <p className="text-sm text-gray-400 mb-3">{member.expertise}</p>
-                <p className="text-sm text-gray-300">{member.bio}</p>
-              </div>
-            ))}
-    </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+              Let's discuss how our AI and IT solutions can help your organization achieve its goals.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/demo"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+              >
+                Schedule Demo
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
+<<<<<<< HEAD
 }
 =======
         {/* Team Section */}
@@ -822,3 +827,6 @@ export default AboutPage
   );
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-f512

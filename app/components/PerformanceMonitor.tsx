@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -77,22 +78,22 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children, showD
     };
 
     // Monitor Core Web Vitals
+=======
+import React, { useEffect } from 'react';
+
+const PerformanceMonitor: React.FC = () => {
+  useEffect(() => {
+    // Simple performance monitoring
+>>>>>>> cursor/fix-errors-and-merge-to-main-f512
     const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
-        if (entry.entryType === 'largest-contentful-paint') {
-          updateMetrics({ lcp: entry.startTime });
-        }
-        if (entry.entryType === 'first-input') {
-          updateMetrics({ fid: entry.processingStart - entry.startTime });
-        }
-        if (entry.entryType === 'layout-shift') {
-          updateMetrics({ cls: (entry as any).value });
-        }
-        if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
-          updateMetrics({ fcp: entry.startTime });
+      for (const entry of list.getEntries()) {
+        if (entry.entryType === 'navigation') {
+          console.log('Navigation timing:', entry);
         }
       }
+    });
 
+<<<<<<< HEAD
       setMetrics({
         loadTime: Math.round(loadTime),
         renderTime: Math.round(renderTime),
@@ -893,17 +894,19 @@ const PerformanceMonitor: React.FC = () => {
     
     // Show monitor after 2 seconds
     const visibilityTimer = setTimeout(() => setIsVisible(true), 2000);
+=======
+    observer.observe({ entryTypes: ['navigation'] });
+>>>>>>> cursor/fix-errors-and-merge-to-main-f512
 
     return () => {
-      clearTimeout(timer);
-      clearTimeout(visibilityTimer);
+      observer.disconnect();
     };
-  }, [showInProduction]);
+  }, []);
 
-  if (!isVisible) {
-    return null;
-  }
+  return null; // This component doesn't render anything
+};
 
+<<<<<<< HEAD
   const getScoreColor = (value: number | null, thresholds: { good: number; poor: number }) => {
     if (value === null) return 'text-gray-400';
     if (value <= thresholds.good) return 'text-green-400';
@@ -1527,3 +1530,6 @@ export default PerformanceMonitor;
 =======
 export default PerformanceMonitor;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
+=======
+export default PerformanceMonitor;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f512

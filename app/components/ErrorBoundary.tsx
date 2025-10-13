@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   fallback?: ReactNode;
 'use client;
 
@@ -98,9 +99,20 @@ interface State {
   error: Error | null
   errorInfo: ErrorInfo | null
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
+=======
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+
+interface Props {
+  children: ReactNode;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f512
 }
 
-export class ErrorBoundary extends Component<Props, State> {
+interface State {
+  hasError: boolean;
+  error?: Error;
+}
+
+class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
 <<<<<<< HEAD
     super(props);
@@ -110,9 +122,12 @@ export class ErrorBoundary extends Component<Props, State> {
   static getDerivedStateFromError(error: Error): State {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Update state so the next render will show the fallback UI
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f512
     return { hasError: true, error };
 =======
     super(props)
@@ -133,6 +148,7 @@ export class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     // Log the error to console and any error reporting service
@@ -180,9 +196,12 @@ export class ErrorBoundary extends Component<Props, State> {
       });
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
     }
+=======
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+>>>>>>> cursor/fix-errors-and-merge-to-main-f512
   }
-    })  };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   handleGoHome = () => {
     window.location.href = /;
@@ -314,13 +333,22 @@ class ErrorBoundary extends Component<Props, State> {
             <p className="text-gray-600 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
+=======
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-900">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-300 mb-8">We're sorry, but something unexpected happened.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f512
             <button
-              onClick={this.handleRetry}
-              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              onClick={() => window.location.reload()}
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
             >
-              <RefreshCw className="w-4 h-4 mr-2" />
-              Try Again
+              Reload Page
             </button>
+<<<<<<< HEAD
             {process.env['NODE_ENV'] === 'development' && this.state.error && (
               <details className="mt-4 text-left">
                 <summary className="cursor-pointer text-sm text-gray-500">
@@ -751,6 +779,8 @@ class ErrorBoundary extends Component<Props, State> {
                 </details>
               )}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f512
           </div>
         </div>
       );
@@ -762,6 +792,7 @@ class ErrorBoundary extends Component<Props, State> {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ErrorBoundary;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
 =======
@@ -770,3 +801,6 @@ export default ErrorBoundary;
 =======
 export default ErrorBoundary;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+export default ErrorBoundary;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f512

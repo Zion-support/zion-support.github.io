@@ -21,6 +21,7 @@ root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
+<<<<<<< HEAD
 );
 =======
 import React from 'react';
@@ -40,3 +41,6 @@ if (root) {
   )};
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+);
+>>>>>>> cursor/fix-errors-and-merge-to-main-f512

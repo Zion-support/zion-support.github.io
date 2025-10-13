@@ -3,6 +3,9 @@ import react from "@vitejs/plugin-react";
 import { resolve } from "path";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f512
 export default defineConfig(({ mode }) => ({
   plugins: [
     react({
@@ -10,8 +13,11 @@ export default defineConfig(({ mode }) => ({
       fastRefresh: true,
     }),
   ],
+<<<<<<< HEAD
   root: ".",
   publicDir: "public",
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f512
   resolve: {
     alias: {
       "@": resolve(__dirname, "./app"),
@@ -24,6 +30,9 @@ export default defineConfig(({ mode }) => ({
     cssCodeSplit: true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f512
     chunkSizeWarningLimit: 1000,
 <<<<<<< HEAD
 =======
@@ -113,6 +122,9 @@ export default defineConfig(({ mode }) => ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f512
           if (id.includes("node_modules")) {
             if (id.includes("react") || id.includes("react-dom")) {
               return "react-vendor";
@@ -137,6 +149,7 @@ export default defineConfig(({ mode }) => ({
           if (id.includes('react') && !id.includes('react-dom')) {
             return 'react-core'
           }
+<<<<<<< HEAD
           if (id.includes('react-dom')) {
             return 'react-dom'
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fe6
@@ -151,6 +164,8 @@ export default defineConfig(({ mode }) => ({
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f9e
           }
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f512
           if (id.includes("/app/") && id.includes("/page.tsx")) {
             return "pages";
 =======
@@ -474,6 +489,7 @@ export default defineConfig({
           return 'app';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         },
+<<<<<<< HEAD
 =======
               return 'vendor-react'};
             if (id.includes('react-router')) {
@@ -538,6 +554,8 @@ export default defineConfig({
         chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/[name]-[hash].js',
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f512
         assetFileNames: (assetInfo) => {
           const ext = assetInfo.name?.split('.').pop();
           if (/\.(css)$/i.test(assetInfo.name || '')) {
@@ -547,13 +565,17 @@ export default defineConfig({
           if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) {
             return `assets/images/[name]-[hash].${ext}`;
           }
+<<<<<<< HEAD
           if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name || '')) {
             return `assets/fonts/[name]-[hash].${ext}`;
           }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f512
           return `assets/[name]-[hash].${ext}`;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009
         },
+<<<<<<< HEAD
         assetFileNames: "assets/[name]-[hash].[ext]",
         chunkFileNames: "assets/js/[name]-[hash].js",
         entryFileNames: "assets/js/[name]-[hash].js",
@@ -574,6 +596,12 @@ export default defineConfig({
     },
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+        chunkFileNames: "assets/js/[name]-[hash].js",
+        entryFileNames: "assets/js/[name]-[hash].js",
+      },
+    },
+>>>>>>> cursor/fix-errors-and-merge-to-main-f512
   },
   optimizeDeps: {
     include: [
@@ -589,11 +617,15 @@ export default defineConfig({
     __BUILD_TIME__: JSON.stringify(new Date().toISOString()),
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f512
   css: {
     devSourcemap: mode !== "production",
   },
   envPrefix: "VITE_",
   logLevel: mode === "production" ? "warn" : "info",
+<<<<<<< HEAD
 }));
 =======
 });
@@ -652,3 +684,6 @@ export default defineConfig({
   };
 });
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+}));
+>>>>>>> cursor/fix-errors-and-merge-to-main-f512
