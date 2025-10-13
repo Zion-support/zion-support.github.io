@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Right, Wifi, Circle, Zap, Globe, Smartphone } from 'lucide-react';
-
+import { Right, Wifi, Circle, Zap, Globe, Smartphone } from 'lucide-react'
 const FiveGSolutionsPage: React.FC = () => {
   const features = [
     {
@@ -9,65 +8,52 @@ const FiveGSolutionsPage: React.FC = () => {
       title: 'Ultra-Fast Speeds',
       description: 'Experience lightning-fast 5G connectivity with speeds up to 10 Gbps',
       benefits: ['10x faster than 4G', 'Low latency', 'High bandwidth', 'Reliable connection']
-    },
+    }
     {
       icon: Globe,
       title: 'Global Coverage',
       description: 'Comprehensive 5G network coverage across multiple regions',
       benefits: ['Wide coverage', 'Seamless roaming', 'International support', 'Network redundancy']
-    },
+    }
     {
       icon: Smartphone,
       title: 'Mobile Optimization',
       description: 'Optimized 5G solutions for mobile devices and applications',
       benefits: ['Mobile-first design', 'App optimization', 'Battery efficiency', 'Device compatibility']
-    },
+    }
     {
       icon: Wifi,
-<<<<<<< HEAD
-
+      title: 'IoT Connectivity',
+      description: 'Connect thousands of IoT devices with 5G technology',
+      benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions'],
       title: 'IoT Connectivity',
       description: 'Connect thousands of IoT devices with 5G technology',
       benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
-
-=======
-title: 'IoT Connectivity',
-      description: 'Connect thousands of IoT devices with 5G technology',
-      benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     }
-  ];
-
+  ]
   const solutions = [
     {
-<<<<<<< HEAD
 
       title: '5G Network Infrastructure',
-=======
-title: '5G Network Infrastructure',
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
+      title: '5G Network Infrastructure',
       description: 'Complete 5G network setup and optimization',
       price: 'Starting at $50,000',
       features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']
-    },
+    }
     {
       title: '5G Mobile Applications',
       description: 'Custom mobile apps optimized for 5G networks',
       price: 'Starting at $25,000',
       features: ['App development', '5G optimization', 'Testing & QA', 'Deployment support']
-    },
+    }
     {
       title: '5G IoT Solutions',
       description: 'IoT device connectivity and management platform',
       price: 'Starting at $35,000',
       features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
@@ -91,7 +77,7 @@ title: '5G Network Infrastructure',
             </h1>
             
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-              Transform your business with ultra-fast 5G connectivity. Experience lightning-fast speeds, 
+              Transform your business with ultra-fast 5G connectivity. Experience lightning-fast speeds
               low latency, and seamless IoT integration for the digital future.
             </p>
             
@@ -122,7 +108,7 @@ title: '5G Network Infrastructure',
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => {
-              const IconComponent = feature.icon;
+              const IconComponent = feature.icon
               return (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300">
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg mb-4">
@@ -139,7 +125,7 @@ title: '5G Network Infrastructure',
                     ))}
                   </ul>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -194,7 +180,6 @@ title: '5G Network Infrastructure',
         </div>
       </section>
     </div>
-  );
-};
-
-export default FiveGSolutionsPage;
+  )
+}
+export default FiveGSolutionsPage

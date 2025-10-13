@@ -1,45 +1,40 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SEOHead from '../components/SEOHead';
+import SEOHead from '../components/SEOHead'
 import { 
-  ArrowRightIcon, 
-  ShieldCheckIcon, 
-  CloudIcon, 
-  CpuChipIcon,
-  ChartBarIcon,
-  GlobeAltIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  MapPinIcon,
-  RocketLaunchIcon,
-  SparklesIcon,
+  ArrowRightIcon
+  ShieldCheckIcon
+  CloudIcon
+  CpuChipIcon
+  ChartBarIcon
+  GlobeAltIcon
+  PhoneIcon
+  EnvelopeIcon
+  MapPinIcon
+  RocketLaunchIcon
+  SparklesIcon
   BoltIcon
 } from '@heroicons/react/24/outline';
-import FuturisticBackground from '../components/FuturisticBackground';
-import NeonButton from '../components/NeonButton';
-import AnimatedCard from '../components/AnimatedCard';
-import { services } from '../data/servicesData';
-
-<<<<<<< HEAD
+import FuturisticBackground from '../components/FuturisticBackground'
+import NeonButton from '../components/NeonButton'
+import AnimatedCard from '../components/AnimatedCard'
+import { services } from '../data/servicesData'
 export default function HomePage()  {
 
   const structuredData = {
-=======
 export default function HomePage() {
 const structuredData = {
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "description": "Advanced AI and IT solutions provider specializing in cybersecurity, cloud infrastructure, and digital transformation.",
+    "@context": "https://schema.org"
+    "@type": "WebSite"
+    "name": "Zion Tech Group"
+    "url": "https://ziontechgroup.com"
+    "description": "Advanced AI and IT solutions provider specializing in cybersecurity, cloud infrastructure, and digital transformation."
     "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://ziontechgroup.com/search?q={search_term_string}",
+      "@type": "SearchAction"
+      "target": "https://ziontechgroup.com/search?q={search_term_string}"
       "query-input": "required name=search_term_string"
     }
-  };
-
+  }
   return (
     <>
       <SEOHead 
@@ -71,7 +66,7 @@ const structuredData = {
               Advanced AI and IT Solutions for Modern Businesses
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Empowering businesses with cutting-edge artificial intelligence, cybersecurity solutions, 
+              Empowering businesses with cutting-edge artificial intelligence, cybersecurity solutions
               cloud infrastructure, and digital transformation services to drive innovation and growth.
             </p>
             
@@ -159,7 +154,7 @@ const structuredData = {
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto">
-                With over 4 years of experience in cutting-edge technology solutions, 
+                With over 4 years of experience in cutting-edge technology solutions
                 we've helped businesses across various industries transform their operations 
                 and achieve unprecedented growth.
               </p>
@@ -242,5 +237,5 @@ const structuredData = {
         </div>
       </section>
     </>
-  );
+  )
 }

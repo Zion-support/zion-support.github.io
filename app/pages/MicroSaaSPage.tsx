@@ -1,18 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
+import SEO from '../components/SEO'
 import { 
-  GlobeAltIcon,
-  CpuChipIcon,
-  ChartBarIcon,
-  RocketLaunchIcon,
-  CheckCircleIcon,
-  ArrowRightIcon,
-  PhoneIcon,
-  EnvelopeIcon,
+  GlobeAltIcon
+  CpuChipIcon
+  ChartBarIcon
+  RocketLaunchIcon
+  CheckCircleIcon
+  ArrowRightIcon
+  PhoneIcon
+  EnvelopeIcon
   MapPinIcon
 } from '@heroicons/react/24/outline';
-
 export default function MicroSaaSPage() {
   const services = [
     {
@@ -20,36 +19,34 @@ export default function MicroSaaSPage() {
       title: 'Custom Micro SaaS Development',
       description: 'Tailored micro SaaS solutions designed to solve specific business challenges with scalable architecture.',
       features: ['Custom development', 'Scalable architecture', 'API integration', 'Multi-tenant support']
-    },
+    }
     {
       icon: CpuChipIcon,
       title: 'AI-Powered Micro SaaS',
       description: 'Intelligent micro SaaS applications powered by artificial intelligence and machine learning.',
       features: ['AI integration', 'Machine learning', 'Predictive analytics', 'Automated workflows']
-    },
+    }
     {
       icon: ChartBarIcon,
       title: 'Analytics & Reporting',
       description: 'Comprehensive analytics and reporting solutions for your micro SaaS applications.',
       features: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Business intelligence']
-    },
+    }
     {
       icon: RocketLaunchIcon,
       title: 'Deployment & Scaling',
       description: 'Seamless deployment and automatic scaling solutions for your micro SaaS applications.',
       features: ['Cloud deployment', 'Auto-scaling', 'Load balancing', 'Performance optimization']
     }
-  ];
-
+  ]
   const industries = [
-    { name: 'E-commerce', description: 'Online retail solutions' },
-    { name: 'Healthcare', description: 'Medical practice management' },
-    { name: 'Finance', description: 'Financial services tools' },
-    { name: 'Education', description: 'Learning management systems' },
-    { name: 'Real Estate', description: 'Property management tools' },
+    { name: 'E-commerce', description: 'Online retail solutions' }
+    { name: 'Healthcare', description: 'Medical practice management' }
+    { name: 'Finance', description: 'Financial services tools' }
+    { name: 'Education', description: 'Learning management systems' }
+    { name: 'Real Estate', description: 'Property management tools' }
     { name: 'Manufacturing', description: 'Production optimization' }
-  ];
-
+  ]
   return (
     <>
       <SEO 
@@ -85,14 +82,14 @@ export default function MicroSaaSPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link 
-                to="/contact" 
+                to="/contact"
                 className="group bg-gradient-to-r from-pink-600 to-rose-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
               >
                 Start Your Project
                 <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link 
-                to="/demo" 
+                to="/demo"
                 className="group border-2 border-pink-400 text-pink-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-pink-400 hover:text-white transition-all duration-300 flex items-center gap-2"
               >
                 View Examples
@@ -202,7 +199,7 @@ export default function MicroSaaSPage() {
             </div>
             
             <Link 
-              to="/contact" 
+              to="/contact"
               className="inline-flex items-center gap-2 bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
             >
               Start Your Project <ArrowRightIcon className="w-5 h-5" />
@@ -239,13 +236,13 @@ export default function MicroSaaSPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
+                to="/contact"
                 className="bg-gradient-to-r from-pink-600 to-rose-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-pink-700 hover:to-rose-700 transition-all duration-300"
               >
                 Get Started Today
               </Link>
               <Link 
-                to="/demo" 
+                to="/demo"
                 className="border-2 border-pink-400 text-pink-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-pink-400 hover:text-white transition-all duration-300"
               >
                 View Portfolio
@@ -255,5 +252,5 @@ export default function MicroSaaSPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

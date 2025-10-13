@@ -1,17 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
+import SEO from '../components/SEO'
 import { 
-  DocumentTextIcon,
-  CodeBracketIcon,
-  CogIcon,
-  QuestionMarkCircleIcon,
-  ArrowRightIcon,
-  PhoneIcon,
-  EnvelopeIcon,
+  DocumentTextIcon
+  CodeBracketIcon
+  CogIcon
+  QuestionMarkCircleIcon
+  ArrowRightIcon
+  PhoneIcon
+  EnvelopeIcon
   MapPinIcon
 } from '@heroicons/react/24/outline';
-
 export default function DocumentationPage() {
   const sections = [
     {
@@ -19,54 +18,52 @@ export default function DocumentationPage() {
       title: 'API Documentation',
       description: 'Comprehensive API reference for all our services and integrations.',
       links: [
-        { name: 'Authentication', href: '/docs/api/authentication' },
-        { name: 'AI Services API', href: '/docs/api/ai-services' },
-        { name: 'Cloud Management API', href: '/docs/api/cloud-management' },
+        { name: 'Authentication', href: '/docs/api/authentication' }
+        { name: 'AI Services API', href: '/docs/api/ai-services' }
+        { name: 'Cloud Management API', href: '/docs/api/cloud-management' }
         { name: 'Webhooks', href: '/docs/api/webhooks' }
       ]
-    },
+    }
     {
       icon: CogIcon,
       title: 'Integration Guides',
       description: 'Step-by-step guides for integrating our solutions with your systems.',
       links: [
-        { name: 'Getting Started', href: '/docs/integration/getting-started' },
-        { name: 'SDK Installation', href: '/docs/integration/sdk' },
-        { name: 'Configuration', href: '/docs/integration/configuration' },
+        { name: 'Getting Started', href: '/docs/integration/getting-started' }
+        { name: 'SDK Installation', href: '/docs/integration/sdk' }
+        { name: 'Configuration', href: '/docs/integration/configuration' }
         { name: 'Best Practices', href: '/docs/integration/best-practices' }
       ]
-    },
+    }
     {
       icon: DocumentTextIcon,
       title: 'User Guides',
       description: 'Detailed user guides for all our products and services.',
       links: [
-        { name: 'AI Solutions Guide', href: '/docs/guides/ai-solutions' },
-        { name: 'Cloud Infrastructure', href: '/docs/guides/cloud-infrastructure' },
-        { name: 'Cybersecurity Setup', href: '/docs/guides/cybersecurity' },
+        { name: 'AI Solutions Guide', href: '/docs/guides/ai-solutions' }
+        { name: 'Cloud Infrastructure', href: '/docs/guides/cloud-infrastructure' }
+        { name: 'Cybersecurity Setup', href: '/docs/guides/cybersecurity' }
         { name: 'Micro SaaS Development', href: '/docs/guides/micro-saas' }
       ]
-    },
+    }
     {
       icon: QuestionMarkCircleIcon,
       title: 'Troubleshooting',
       description: 'Common issues and solutions to help you resolve problems quickly.',
       links: [
-        { name: 'FAQ', href: '/docs/troubleshooting/faq' },
-        { name: 'Error Codes', href: '/docs/troubleshooting/error-codes' },
-        { name: 'Performance Issues', href: '/docs/troubleshooting/performance' },
+        { name: 'FAQ', href: '/docs/troubleshooting/faq' }
+        { name: 'Error Codes', href: '/docs/troubleshooting/error-codes' }
+        { name: 'Performance Issues', href: '/docs/troubleshooting/performance' }
         { name: 'Contact Support', href: '/support' }
       ]
     }
-  ];
-
+  ]
   const quickStart = [
-    { step: 1, title: 'Sign Up', description: 'Create your account and get API credentials' },
-    { step: 2, title: 'Install SDK', description: 'Install our SDK for your preferred language' },
-    { step: 3, title: 'Configure', description: 'Set up your environment and configuration' },
+    { step: 1, title: 'Sign Up', description: 'Create your account and get API credentials' }
+    { step: 2, title: 'Install SDK', description: 'Install our SDK for your preferred language' }
+    { step: 3, title: 'Configure', description: 'Set up your environment and configuration' }
     { step: 4, title: 'Make API Call', description: 'Start making API calls to our services' }
-  ];
-
+  ]
   return (
     <>
       <SEO 
@@ -102,14 +99,14 @@ export default function DocumentationPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link 
-                to="#quick-start" 
+                to="#quick-start"
                 className="group bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
               >
                 Quick Start Guide
                 <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link 
-                to="/support" 
+                to="/support"
                 className="group border-2 border-green-400 text-green-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-400 hover:text-white transition-all duration-300 flex items-center gap-2"
               >
                 Get Support
@@ -206,15 +203,13 @@ export default function DocumentationPage() {
                 <code>{`// Initialize the client
 const client = new ZionTechClient({
   apiKey: 'your-api-key',
-  environment: 'production'
-});
-
+      environment: 'production'
+})
 // Make an API call
 const response = await client.ai.generateText({
   prompt: 'Hello, world!',
-  maxTokens: 100
-});
-
+      maxTokens: 100
+})
 console.log(response.data);`}</code>
               </pre>
             </div>
@@ -274,13 +269,13 @@ console.log(response.data);`}</code>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/support" 
+                to="/support"
                 className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300"
               >
                 Contact Support
               </Link>
               <Link 
-                to="/contact" 
+                to="/contact"
                 className="border-2 border-green-400 text-green-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-400 hover:text-white transition-all duration-300"
               >
                 Get In Touch
@@ -290,5 +285,5 @@ console.log(response.data);`}</code>
         </div>
       </section>
     </>
-  );
+  )
 }

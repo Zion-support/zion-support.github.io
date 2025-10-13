@@ -1,18 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
+import SEO from '../components/SEO'
 import { 
-  ShieldCheckIcon,
-  LockClosedIcon,
-  EyeIcon,
-  ExclamationTriangleIcon,
-  CheckCircleIcon,
-  ArrowRightIcon,
-  PhoneIcon,
-  EnvelopeIcon,
+  ShieldCheckIcon
+  LockClosedIcon
+  EyeIcon
+  ExclamationTriangleIcon
+  CheckCircleIcon
+  ArrowRightIcon
+  PhoneIcon
+  EnvelopeIcon
   MapPinIcon
 } from '@heroicons/react/24/outline';
-
 export default function CybersecurityPage() {
   const services = [
     {
@@ -20,36 +19,34 @@ export default function CybersecurityPage() {
       title: 'Advanced Threat Protection',
       description: 'Comprehensive security solutions to protect against malware, ransomware, and advanced persistent threats.',
       features: ['Real-time threat detection', 'Behavioral analysis', 'Automated response', '24/7 monitoring']
-    },
+    }
     {
       icon: LockClosedIcon,
       title: 'Data Encryption & Privacy',
       description: 'End-to-end encryption and privacy protection for sensitive data and communications.',
       features: ['AES-256 encryption', 'Zero-knowledge architecture', 'Secure key management', 'Compliance support']
-    },
+    }
     {
       icon: EyeIcon,
       title: 'Security Monitoring',
       description: 'Continuous monitoring and analysis of your security posture with real-time alerts.',
       features: ['SIEM implementation', 'Log analysis', 'Incident response', 'Security dashboards']
-    },
+    }
     {
       icon: ExclamationTriangleIcon,
       title: 'Vulnerability Assessment',
       description: 'Regular security assessments and penetration testing to identify and fix vulnerabilities.',
       features: ['Penetration testing', 'Vulnerability scanning', 'Security audits', 'Compliance checks']
     }
-  ];
-
+  ]
   const compliance = [
-    { name: 'SOC 2 Type II', status: 'Certified' },
-    { name: 'ISO 27001', status: 'Certified' },
-    { name: 'GDPR', status: 'Compliant' },
-    { name: 'HIPAA', status: 'Compliant' },
-    { name: 'PCI DSS', status: 'Compliant' },
+    { name: 'SOC 2 Type II', status: 'Certified' }
+    { name: 'ISO 27001', status: 'Certified' }
+    { name: 'GDPR', status: 'Compliant' }
+    { name: 'HIPAA', status: 'Compliant' }
+    { name: 'PCI DSS', status: 'Compliant' }
     { name: 'NIST', status: 'Compliant' }
-  ];
-
+  ]
   return (
     <>
       <SEO 
@@ -79,20 +76,20 @@ export default function CybersecurityPage() {
               Protect Your Business with Advanced Security Solutions
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
-              Comprehensive cybersecurity services designed to protect your digital assets, 
+              Comprehensive cybersecurity services designed to protect your digital assets
               data, and infrastructure from evolving threats and ensure regulatory compliance.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link 
-                to="/contact" 
+                to="/contact"
                 className="group bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
               >
                 Get Security Assessment
                 <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link 
-                to="/demo" 
+                to="/demo"
                 className="group border-2 border-red-400 text-red-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-red-400 hover:text-white transition-all duration-300 flex items-center gap-2"
               >
                 Schedule Demo
@@ -186,7 +183,7 @@ export default function CybersecurityPage() {
             </div>
             
             <Link 
-              to="/contact" 
+              to="/contact"
               className="inline-flex items-center gap-2 bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
             >
               Get Your Security Assessment <ArrowRightIcon className="w-5 h-5" />
@@ -223,13 +220,13 @@ export default function CybersecurityPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
+                to="/contact"
                 className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300"
               >
                 Get Security Consultation
               </Link>
               <Link 
-                to="/demo" 
+                to="/demo"
                 className="border-2 border-red-400 text-red-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-red-400 hover:text-white transition-all duration-300"
               >
                 Schedule Demo
@@ -239,5 +236,5 @@ export default function CybersecurityPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

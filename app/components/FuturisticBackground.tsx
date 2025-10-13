@@ -1,5 +1,4 @@
 import React from 'react';
-
 const FuturisticBackground = () => {
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
@@ -15,7 +14,7 @@ const FuturisticBackground = () => {
                 key={i}
                 className="border border-purple-500/30 animate-pulse"
                 style={{
-                  animationDelay: `${i * 0.1}s`,
+                  animationDelay: `${i * 0.1}s`
                   animationDuration: '3s'
                 }}
               ></div>
@@ -36,9 +35,9 @@ const FuturisticBackground = () => {
               key={i}
               className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-ping"
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
+                left: `${Math.random() * 100}%`
+                top: `${Math.random() * 100}%`
+                animationDelay: `${Math.random() * 3}s`
                 animationDuration: `${2 + Math.random() * 3}s`
               }}
             ></div>
@@ -52,7 +51,6 @@ const FuturisticBackground = () => {
         <div className="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-transparent via-cyan-500 to-transparent opacity-60"></div>
       </div>
     </div>
-  );
-};
-
-export default FuturisticBackground;
+  )
+}
+export default FuturisticBackground

@@ -1,18 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
+import SEO from '../components/SEO'
 import { 
-  CloudIcon,
-  ServerIcon,
-  CpuChipIcon,
-  ChartBarIcon,
-  CheckCircleIcon,
-  ArrowRightIcon,
-  PhoneIcon,
-  EnvelopeIcon,
+  CloudIcon
+  ServerIcon
+  CpuChipIcon
+  ChartBarIcon
+  CheckCircleIcon
+  ArrowRightIcon
+  PhoneIcon
+  EnvelopeIcon
   MapPinIcon
 } from '@heroicons/react/24/outline';
-
 export default function CloudSolutionsPage() {
   const services = [
     {
@@ -20,36 +19,34 @@ export default function CloudSolutionsPage() {
       title: 'Cloud Migration',
       description: 'Seamless migration of your applications and data to the cloud with minimal downtime.',
       features: ['Assessment & planning', 'Data migration', 'Application modernization', 'Performance optimization']
-    },
+    }
     {
       icon: ServerIcon,
       title: 'Infrastructure Management',
       description: 'Complete management of your cloud infrastructure with 24/7 monitoring and support.',
       features: ['Server provisioning', 'Load balancing', 'Auto-scaling', 'Backup & recovery']
-    },
+    }
     {
       icon: CpuChipIcon,
       title: 'Container Solutions',
       description: 'Docker and Kubernetes solutions for modern application deployment and management.',
       features: ['Container orchestration', 'Microservices architecture', 'CI/CD pipelines', 'Service mesh']
-    },
+    }
     {
       icon: ChartBarIcon,
       title: 'Cloud Analytics',
       description: 'Advanced analytics and monitoring solutions for your cloud infrastructure and applications.',
       features: ['Performance monitoring', 'Cost optimization', 'Security analytics', 'Predictive insights']
     }
-  ];
-
+  ]
   const platforms = [
-    { name: 'Amazon Web Services (AWS)', logo: 'AWS' },
-    { name: 'Microsoft Azure', logo: 'Azure' },
-    { name: 'Google Cloud Platform', logo: 'GCP' },
-    { name: 'IBM Cloud', logo: 'IBM' },
-    { name: 'Oracle Cloud', logo: 'Oracle' },
+    { name: 'Amazon Web Services (AWS)', logo: 'AWS' }
+    { name: 'Microsoft Azure', logo: 'Azure' }
+    { name: 'Google Cloud Platform', logo: 'GCP' }
+    { name: 'IBM Cloud', logo: 'IBM' }
+    { name: 'Oracle Cloud', logo: 'Oracle' }
     { name: 'DigitalOcean', logo: 'DO' }
-  ];
-
+  ]
   return (
     <>
       <SEO 
@@ -79,20 +76,20 @@ export default function CloudSolutionsPage() {
               Scale Your Business with Advanced Cloud Solutions
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
-              Comprehensive cloud infrastructure services designed to optimize performance, 
+              Comprehensive cloud infrastructure services designed to optimize performance
               reduce costs, and ensure scalability for your business applications and data.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link 
-                to="/contact" 
+                to="/contact"
                 className="group bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
               >
                 Get Cloud Assessment
                 <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link 
-                to="/demo" 
+                to="/demo"
                 className="group border-2 border-blue-400 text-blue-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400 hover:text-white transition-all duration-300 flex items-center gap-2"
               >
                 Schedule Demo
@@ -186,7 +183,7 @@ export default function CloudSolutionsPage() {
             </div>
             
             <Link 
-              to="/contact" 
+              to="/contact"
               className="inline-flex items-center gap-2 bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
             >
               Get Your Cloud Assessment <ArrowRightIcon className="w-5 h-5" />
@@ -223,13 +220,13 @@ export default function CloudSolutionsPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
+                to="/contact"
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
               >
                 Get Cloud Consultation
               </Link>
               <Link 
-                to="/demo" 
+                to="/demo"
                 className="border-2 border-blue-400 text-blue-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >
                 Schedule Demo
@@ -239,5 +236,5 @@ export default function CloudSolutionsPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

@@ -1,16 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Right, User, Calendar } from 'lucide-react';
-
+import { Right, User, Calendar } from 'lucide-react'
 const BlogPage: React.FC = () => {
   const categories = [
-    { id: "all", name: "All Posts", count: 12 },
-    { id: "ai", name: "AI & Machine Learning", count: 5 },
-    { id: "cybersecurity", name: "Cybersecurity", count: 3 },
-    { id: "cloud", name: "Computing", count: 2 },
+    { id: "all", name: "All Posts", count: 12 }
+    { id: "ai", name: "AI & Machine Learning", count: 5 }
+    { id: "cybersecurity", name: "Cybersecurity", count: 3 }
+    { id: "cloud", name: "Computing", count: 2 }
     { id: "development", name: "Development", count: 2 }
-  ];
-
+  ]
   const blogPosts = [
     {
       id: 1,
@@ -21,7 +19,7 @@ const BlogPage: React.FC = () => {
       category: "ai",
       readTime: "5 min read",
       image: "🤖"
-    },
+    }
     {
       id: 2,
       title: "Cybersecurity Best Practices for 2024",
@@ -31,7 +29,7 @@ const BlogPage: React.FC = () => {
       category: "cybersecurity",
       readTime: "7 min read",
       image: "🔒"
-    },
+    }
     {
       id: 3,
       title: "Migration: A Complete Guide",
@@ -41,7 +39,7 @@ const BlogPage: React.FC = () => {
       category: "cloud",
       readTime: "10 min read",
       image: "☁️"
-    },
+    }
     {
       id: 4,
       title: "Scalable Applications with Modern Tech",
@@ -51,7 +49,7 @@ const BlogPage: React.FC = () => {
       category: "development",
       readTime: "8 min read",
       image: "⚡"
-    },
+    }
     {
       id: 5,
       title: "AI-Powered Analytics: Transforming Data Insights",
@@ -61,7 +59,7 @@ const BlogPage: React.FC = () => {
       category: "ai",
       readTime: "6 min read",
       image: "📊"
-    },
+    }
     {
       id: 6,
       title: "Zero Trust Architecture",
@@ -72,8 +70,7 @@ const BlogPage: React.FC = () => {
       readTime: "9 min read",
       image: "🛡️"
     }
-  ];
-
+  ]
   return (
     <>
       <Helmet>
@@ -93,7 +90,7 @@ const BlogPage: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Stay updated with the latest insights on AI, IT solutions, cybersecurity, 
+              Stay updated with the latest insights on AI, IT solutions, cybersecurity
               and technology trends from our experts.
             </p>
           </div>
@@ -124,13 +121,10 @@ const BlogPage: React.FC = () => {
                   <div className="text-4xl mb-4">{post.image}</div>
                   <div className="flex items-center space-x-4 text-sm text-gray-400 mb-3">
                     <span className="flex items-center">
-<<<<<<< HEAD
 
                       <div className="w-4 h-4 mr-1" />
 
-=======
 <div className="w-4 h-4 mr-1" />
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
                       {new Date(post.date).toLocaleDateString()}
                     </span>
                     <span className="flex items-center">
@@ -178,7 +172,6 @@ const BlogPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-
-export default BlogPage;
+  )
+}
+export default BlogPage

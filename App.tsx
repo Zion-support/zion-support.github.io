@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { Suspense } from 'react';
-=======
 import React, { Suspense, lazy } from 'react';
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -13,14 +9,7 @@ import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
 import LoadingSpinner from './app/components/LoadingSpinner';
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
 
 // Page Components
 import HomePage from './app/page';
@@ -54,6 +43,11 @@ import MicroSaaSPage from './app/pages/MicroSaaSPage';
 import FiveGSolutionsPage from './app/pages/5GSolutionsPage';
 import TeamPage from './app/pages/TeamPage';
 import DocumentationPage from './app/pages/DocumentationPage';
+
+// Micro SaaS Service Pages
+import AIContentGeneratorPro from './app/ai-content-generator-pro/page';
+import BusinessIntelligenceDashboard from './app/business-intelligence-dashboard/page';
+import CybersecurityMonitorSuite from './app/cybersecurity-monitor-suite/page';
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -94,125 +88,73 @@ function App() {
             <div className="flex-1 flex flex-col">
               <Navigation onSidebarToggle={() => setSidebarOpen(true)} />
               <main className="relative z-10 flex-1" id="main-content" role="main">
-              <ErrorBoundary>
-<<<<<<< HEAD
-                <Routes>
-                  {/* Main Pages */}
-                  <Route path="/" element={<HomePage />} />
-                  <Route path="/about" element={<AboutPage />} />
-                  <Route path="/contact" element={<ContactPage />} />
-                  <Route path="/services" element={<ServicesPage />} />
-                  <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
-                  <Route path="/ai-solutions" element={<AISolutionsPage />} />
-                  <Route path="/it-solutions" element={<ITSolutionsPage />} />
-                  <Route path="/blog" element={<BlogPage />} />
-                  <Route path="/tutorials" element={<TutorialsPage />} />
-                  <Route path="/demo" element={<DemoPage />} />
-                  <Route path="/support" element={<SupportPage />} />
-                  <Route path="/privacy" element={<PrivacyPage />} />
-                  <Route path="/terms" element={<TermsPage />} />
-                  <Route path="/pricing" element={<PricingPage />} />
-                  <Route path="/solutions" element={<SolutionsPage />} />
-                  
-                  {/* Service Pages */}
-                  <Route path="/ai-services" element={<AIServicesPage />} />
-                  <Route path="/it-services" element={<ITServicesPage />} />
-                  <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
-                  <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-                  <Route path="/case-studies" element={<CaseStudiesPage />} />
-                  <Route path="/careers" element={<CareersPage />} />
-                  
-<<<<<<< HEAD
-=======
-                  {/* Additional Service Pages */}
-                  <Route path="/cybersecurity" element={<CybersecurityPage />} />
-                  <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
-                  <Route path="/micro-saas" element={<MicroSaaSPage />} />
-                  <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                  
-                  {/* Additional Pages */}
-                  <Route path="/team" element={<TeamPage />} />
-                  <Route path="/docs" element={<DocumentationPage />} />
-                  
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-                  {/* Catch all route */}
-                  <Route path="*" element={
-                    <div className="min-h-screen flex items-center justify-center bg-slate-900">
-                      <div className="text-center">
-                        <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
-                        <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
-                        <a href="/" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">
-                          Go Home
-                        </a>
-=======
-                <Suspense fallback={<LoadingSpinner fullScreen text="Loading page..." />}>
-                  <Routes>
-                    {/* Main Pages */}
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/about" element={<AboutPage />} />
-                    <Route path="/contact" element={<ContactPage />} />
-                    <Route path="/services" element={<ServicesPage />} />
-                    <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
-                    <Route path="/ai-solutions" element={<AISolutionsPage />} />
-                    <Route path="/it-solutions" element={<ITSolutionsPage />} />
-                    <Route path="/blog" element={<BlogPage />} />
-                    <Route path="/tutorials" element={<TutorialsPage />} />
-                    <Route path="/demo" element={<DemoPage />} />
-                    <Route path="/support" element={<SupportPage />} />
-                    <Route path="/privacy" element={<PrivacyPage />} />
-                    <Route path="/terms" element={<TermsPage />} />
-                    <Route path="/pricing" element={<PricingPage />} />
-                    <Route path="/solutions" element={<SolutionsPage />} />
-                    
-                    {/* Service Pages */}
-                    <Route path="/ai-services" element={<AIServicesPage />} />
-                    <Route path="/it-services" element={<ITServicesPage />} />
-                    <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
-                    <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-                    <Route path="/case-studies" element={<CaseStudiesPage />} />
-                    <Route path="/careers" element={<CareersPage />} />
-                    
-                    {/* Catch all route */}
-                    <Route path="*" element={
-                      <div className="min-h-screen flex items-center justify-center bg-slate-900">
-                        <div className="text-center">
-                          <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
-                          <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
-                          <a href="/" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">
-                            Go Home
-                          </a>
+                <ErrorBoundary>
+                  <Suspense fallback={<LoadingSpinner fullScreen text="Loading page..." />}>
+                    <Routes>
+                      {/* Main Pages */}
+                      <Route path="/" element={<HomePage />} />
+                      <Route path="/about" element={<AboutPage />} />
+                      <Route path="/contact" element={<ContactPage />} />
+                      <Route path="/services" element={<ServicesPage />} />
+                      <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
+                      <Route path="/ai-solutions" element={<AISolutionsPage />} />
+                      <Route path="/it-solutions" element={<ITSolutionsPage />} />
+                      <Route path="/blog" element={<BlogPage />} />
+                      <Route path="/tutorials" element={<TutorialsPage />} />
+                      <Route path="/demo" element={<DemoPage />} />
+                      <Route path="/support" element={<SupportPage />} />
+                      <Route path="/privacy" element={<PrivacyPage />} />
+                      <Route path="/terms" element={<TermsPage />} />
+                      <Route path="/pricing" element={<PricingPage />} />
+                      <Route path="/solutions" element={<SolutionsPage />} />
+                      
+                      {/* Service Pages */}
+                      <Route path="/ai-services" element={<AIServicesPage />} />
+                      <Route path="/it-services" element={<ITServicesPage />} />
+                      <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                      <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                      <Route path="/case-studies" element={<CaseStudiesPage />} />
+                      <Route path="/careers" element={<CareersPage />} />
+                      
+                      {/* Additional Service Pages */}
+                      <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                      <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
+                      <Route path="/micro-saas" element={<MicroSaaSPage />} />
+                      <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                      
+                      {/* Additional Pages */}
+                      <Route path="/team" element={<TeamPage />} />
+                      <Route path="/docs" element={<DocumentationPage />} />
+                      
+                      {/* Micro SaaS Service Pages */}
+                      <Route path="/ai-content-generator-pro" element={<AIContentGeneratorPro />} />
+                      <Route path="/business-intelligence-dashboard" element={<BusinessIntelligenceDashboard />} />
+                      <Route path="/cybersecurity-monitor-suite" element={<CybersecurityMonitorSuite />} />
+                      
+                      {/* Catch all route */}
+                      <Route path="*" element={
+                        <div className="min-h-screen flex items-center justify-center bg-slate-900">
+                          <div className="text-center">
+                            <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
+                            <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
+                            <a href="/" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">
+                              Go Home
+                            </a>
+                          </div>
                         </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
-                      </div>
-                    </div>
-                  } />
-                </Routes>
-              </ErrorBoundary>
-<<<<<<< HEAD
+                      } />
+                    </Routes>
+                  </Suspense>
+                </ErrorBoundary>
               </main>
               <Footer />
               <PerformanceMonitor />
               <AccessibilityEnhancer />
             </div>
-=======
-            </main>
-            <Footer />
-            <PerformanceMonitor />
-            <AccessibilityEnhancer />
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
           </div>
         </Router>
       </HelmetProvider>
     </ErrorBoundary>
-<<<<<<< HEAD
-=======
-=======
-import EnhancedAccessibility from './app/components/EnhancedAccessibility';
-import LoadingSpinner from './app/components/LoadingSpinner';
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
->>>>>>> origin/main
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   );
 }
 

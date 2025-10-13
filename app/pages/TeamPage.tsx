@@ -1,17 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
+import SEO from '../components/SEO'
 import { 
-  UserGroupIcon,
-  AcademicCapIcon,
-  BriefcaseIcon,
-  StarIcon,
-  ArrowRightIcon,
-  PhoneIcon,
-  EnvelopeIcon,
+  UserGroupIcon
+  AcademicCapIcon
+  BriefcaseIcon
+  StarIcon
+  ArrowRightIcon
+  PhoneIcon
+  EnvelopeIcon
   MapPinIcon
 } from '@heroicons/react/24/outline';
-
 export default function TeamPage() {
   const team = [
     {
@@ -21,7 +20,7 @@ export default function TeamPage() {
       image: '/images/team/kleber-santos.jpg',
       linkedin: 'https://linkedin.com/in/kleber-santos',
       twitter: 'https://twitter.com/kleber_santos'
-    },
+    }
     {
       name: 'Sarah Johnson',
       role: 'CTO',
@@ -29,7 +28,7 @@ export default function TeamPage() {
       image: '/images/team/sarah-johnson.jpg',
       linkedin: 'https://linkedin.com/in/sarah-johnson',
       twitter: 'https://twitter.com/sarah_johnson'
-    },
+    }
     {
       name: 'Michael Chen',
       role: 'Lead AI Engineer',
@@ -37,7 +36,7 @@ export default function TeamPage() {
       image: '/images/team/michael-chen.jpg',
       linkedin: 'https://linkedin.com/in/michael-chen',
       twitter: 'https://twitter.com/michael_chen'
-    },
+    }
     {
       name: 'Emily Rodriguez',
       role: 'Head of Design',
@@ -45,7 +44,7 @@ export default function TeamPage() {
       image: '/images/team/emily-rodriguez.jpg',
       linkedin: 'https://linkedin.com/in/emily-rodriguez',
       twitter: 'https://twitter.com/emily_rodriguez'
-    },
+    }
     {
       name: 'David Kim',
       role: 'DevOps Engineer',
@@ -53,7 +52,7 @@ export default function TeamPage() {
       image: '/images/team/david-kim.jpg',
       linkedin: 'https://linkedin.com/in/david-kim',
       twitter: 'https://twitter.com/david_kim'
-    },
+    }
     {
       name: 'Lisa Wang',
       role: 'Project Manager',
@@ -62,31 +61,29 @@ export default function TeamPage() {
       linkedin: 'https://linkedin.com/in/lisa-wang',
       twitter: 'https://twitter.com/lisa_wang'
     }
-  ];
-
+  ]
   const values = [
     {
       icon: StarIcon,
       title: 'Excellence',
       description: 'We strive for excellence in everything we do, delivering the highest quality solutions.'
-    },
+    }
     {
       icon: UserGroupIcon,
       title: 'Collaboration',
       description: 'We believe in the power of teamwork and collaboration to achieve great results.'
-    },
+    }
     {
       icon: AcademicCapIcon,
       title: 'Innovation',
       description: 'We continuously innovate and stay ahead of technology trends.'
-    },
+    }
     {
       icon: BriefcaseIcon,
       title: 'Integrity',
       description: 'We maintain the highest ethical standards in all our business practices.'
     }
-  ];
-
+  ]
   return (
     <>
       <SEO 
@@ -220,13 +217,13 @@ export default function TeamPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/careers" 
+                to="/careers"
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
               >
                 View Open Positions
               </Link>
               <Link 
-                to="/contact" 
+                to="/contact"
                 className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
               >
                 Get In Touch
@@ -263,7 +260,7 @@ export default function TeamPage() {
             </div>
             
             <Link 
-              to="/contact" 
+              to="/contact"
               className="inline-flex items-center gap-2 bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
             >
               Contact Our Team <ArrowRightIcon className="w-5 h-5" />
@@ -272,5 +269,5 @@ export default function TeamPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

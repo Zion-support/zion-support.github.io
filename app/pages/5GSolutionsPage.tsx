@@ -1,18 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
+import SEO from '../components/SEO'
 import { 
-  SignalIcon,
-  CpuChipIcon,
-  GlobeAltIcon,
-  DevicePhoneMobileIcon,
-  CheckCircleIcon,
-  ArrowRightIcon,
-  PhoneIcon,
-  EnvelopeIcon,
+  SignalIcon
+  CpuChipIcon
+  GlobeAltIcon
+  DevicePhoneMobileIcon
+  CheckCircleIcon
+  ArrowRightIcon
+  PhoneIcon
+  EnvelopeIcon
   MapPinIcon
 } from '@heroicons/react/24/outline';
-
 export default function FiveGSolutionsPage() {
   const services = [
     {
@@ -20,36 +19,34 @@ export default function FiveGSolutionsPage() {
       title: '5G Network Infrastructure',
       description: 'Complete 5G network design, deployment, and optimization for maximum performance and coverage.',
       features: ['Network planning', 'Site surveys', 'Equipment installation', 'Performance optimization']
-    },
+    }
     {
       icon: CpuChipIcon,
       title: 'Edge Computing Solutions',
       description: 'Ultra-low latency edge computing solutions powered by 5G technology for real-time applications.',
       features: ['Edge servers', 'Data processing', 'Real-time analytics', 'IoT integration']
-    },
+    }
     {
       icon: GlobeAltIcon,
       title: 'IoT & Smart City Solutions',
       description: 'Comprehensive IoT solutions and smart city implementations leveraging 5G connectivity.',
       features: ['Sensor networks', 'Data collection', 'Smart monitoring', 'Automated systems']
-    },
+    }
     {
       icon: DevicePhoneMobileIcon,
       title: 'Mobile Applications',
       description: 'Next-generation mobile applications designed to leverage 5G capabilities and performance.',
       features: ['AR/VR apps', 'Real-time streaming', 'High-bandwidth apps', 'Cloud integration']
     }
-  ];
-
+  ]
   const applications = [
-    { name: 'Autonomous Vehicles', description: 'Real-time communication for self-driving cars' },
-    { name: 'Remote Surgery', description: 'Ultra-low latency medical procedures' },
-    { name: 'Smart Manufacturing', description: 'Industrial IoT and automation' },
-    { name: 'Virtual Reality', description: 'Immersive VR experiences' },
-    { name: 'Smart Grids', description: 'Energy management systems' },
+    { name: 'Autonomous Vehicles', description: 'Real-time communication for self-driving cars' }
+    { name: 'Remote Surgery', description: 'Ultra-low latency medical procedures' }
+    { name: 'Smart Manufacturing', description: 'Industrial IoT and automation' }
+    { name: 'Virtual Reality', description: 'Immersive VR experiences' }
+    { name: 'Smart Grids', description: 'Energy management systems' }
     { name: 'Telemedicine', description: 'Remote healthcare services' }
-  ];
-
+  ]
   return (
     <>
       <SEO 
@@ -79,20 +76,20 @@ export default function FiveGSolutionsPage() {
               Next-Generation Connectivity for Modern Businesses
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
-              Transform your business with cutting-edge 5G solutions including network infrastructure, 
+              Transform your business with cutting-edge 5G solutions including network infrastructure
               edge computing, IoT applications, and smart city implementations.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link 
-                to="/contact" 
+                to="/contact"
                 className="group bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
               >
                 Get 5G Assessment
                 <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link 
-                to="/demo" 
+                to="/demo"
                 className="group border-2 border-indigo-400 text-indigo-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 flex items-center gap-2"
               >
                 Schedule Demo
@@ -186,7 +183,7 @@ export default function FiveGSolutionsPage() {
             </div>
             
             <Link 
-              to="/contact" 
+              to="/contact"
               className="inline-flex items-center gap-2 bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
             >
               Get Your 5G Assessment <ArrowRightIcon className="w-5 h-5" />
@@ -223,13 +220,13 @@ export default function FiveGSolutionsPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
+                to="/contact"
                 className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300"
               >
                 Get 5G Consultation
               </Link>
               <Link 
-                to="/demo" 
+                to="/demo"
                 className="border-2 border-indigo-400 text-indigo-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-400 hover:text-white transition-all duration-300"
               >
                 Schedule Demo
@@ -239,5 +236,5 @@ export default function FiveGSolutionsPage() {
         </div>
       </section>
     </>
-  );
+  )
 }
