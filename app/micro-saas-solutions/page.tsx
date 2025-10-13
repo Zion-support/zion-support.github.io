@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
-=======
-
-'use client';
-
->>>>>>> origin/main
-=======
-'use client';
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -467,6 +457,348 @@ export default function MicroSaaSSolutionsPage()   {
       benefits: ["Better engagement", "Optimized planning", "Success metrics"],
       useCases: ["Conferences", "Webinars", "Corporate events"],
       href: "/ai-event-management"
+    },
+    {
+      title: "AI Restaurant Management System",
+      description: "Complete restaurant management with AI-powered menu optimization, inventory tracking, and customer analytics.",
+      icon: GlobeAltIcon,
+      features: [
+        "Menu optimization",
+        "Inventory management",
+        "Customer analytics",
+        "Staff scheduling",
+        "POS integration",
+        "Revenue forecasting"
+      ],
+      color: "from-orange-500 to-red-500",
+      price: "$189/month",
+      setupFee: "$800",
+      benefits: ["20% revenue increase", "Reduced waste", "Better customer service"],
+      useCases: ["Restaurants", "Cafes", "Food trucks"],
+      href: "/ai-restaurant-management"
+    },
+    {
+      title: "AI Fleet Management Platform",
+      description: "Intelligent fleet management with route optimization, maintenance scheduling, and driver analytics.",
+      icon: CloudIcon,
+      features: [
+        "Route optimization",
+        "Maintenance scheduling",
+        "Driver analytics",
+        "Fuel tracking",
+        "GPS monitoring",
+        "Cost analysis"
+      ],
+      color: "from-blue-500 to-indigo-500",
+      price: "$299/month",
+      setupFee: "$1,500",
+      benefits: ["15% fuel savings", "Reduced maintenance", "Better efficiency"],
+      useCases: ["Delivery services", "Transportation", "Logistics"],
+      href: "/ai-fleet-management"
+    },
+    {
+      title: "AI Fitness Coaching Platform",
+      description: "Personalized fitness coaching with AI-powered workout plans, nutrition tracking, and progress monitoring.",
+      icon: UserGroupIcon,
+      features: [
+        "Personalized workouts",
+        "Nutrition tracking",
+        "Progress monitoring",
+        "Goal setting",
+        "Community features",
+        "Wearable integration"
+      ],
+      color: "from-green-500 to-emerald-500",
+      price: "$79/month",
+      setupFee: "$300",
+      benefits: ["Personalized plans", "Better results", "User engagement"],
+      useCases: ["Gyms", "Personal trainers", "Fitness apps"],
+      href: "/ai-fitness-coaching"
+    },
+    {
+      title: "AI Property Management Suite",
+      description: "Comprehensive property management with tenant screening, maintenance tracking, and financial analytics.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Tenant screening",
+        "Maintenance tracking",
+        "Financial analytics",
+        "Lease management",
+        "Communication tools",
+        "Reporting dashboard"
+      ],
+      color: "from-purple-500 to-pink-500",
+      price: "$199/month",
+      setupFee: "$900",
+      benefits: ["Reduced vacancies", "Better tenant quality", "Streamlined operations"],
+      useCases: ["Property managers", "Real estate", "Rental properties"],
+      href: "/ai-property-management"
+    },
+    {
+      title: "AI Travel Planning Assistant",
+      description: "Intelligent travel planning with personalized recommendations, booking optimization, and itinerary management.",
+      icon: GlobeAltIcon,
+      features: [
+        "Personalized recommendations",
+        "Booking optimization",
+        "Itinerary management",
+        "Budget tracking",
+        "Weather integration",
+        "Local insights"
+      ],
+      color: "from-cyan-500 to-blue-500",
+      price: "$149/month",
+      setupFee: "$600",
+      benefits: ["Better experiences", "Cost savings", "Time efficiency"],
+      useCases: ["Travel agencies", "Corporate travel", "Personal use"],
+      href: "/ai-travel-planning"
+    },
+    {
+      title: "AI Pet Care Management",
+      description: "Comprehensive pet care management with health tracking, appointment scheduling, and behavior analysis.",
+      icon: UserGroupIcon,
+      features: [
+        "Health tracking",
+        "Appointment scheduling",
+        "Behavior analysis",
+        "Vaccination reminders",
+        "Vet communication",
+        "Pet profiles"
+      ],
+      color: "from-pink-500 to-rose-500",
+      price: "$99/month",
+      setupFee: "$400",
+      benefits: ["Better pet health", "Reduced costs", "Peace of mind"],
+      useCases: ["Veterinarians", "Pet owners", "Pet services"],
+      href: "/ai-pet-care"
+    },
+    {
+      title: "AI Waste Management System",
+      description: "Smart waste management with collection optimization, recycling tracking, and environmental impact analysis.",
+      icon: CogIcon,
+      features: [
+        "Collection optimization",
+        "Recycling tracking",
+        "Environmental impact",
+        "Route planning",
+        "Cost analysis",
+        "Compliance reporting"
+      ],
+      color: "from-green-500 to-teal-500",
+      price: "$279/month",
+      setupFee: "$1,300",
+      benefits: ["Reduced costs", "Better efficiency", "Environmental impact"],
+      useCases: ["Waste companies", "Municipalities", "Businesses"],
+      href: "/ai-waste-management"
+    },
+    {
+      title: "AI Home Automation Hub",
+      description: "Intelligent home automation with energy optimization, security monitoring, and smart device control.",
+      icon: CpuChipIcon,
+      features: [
+        "Energy optimization",
+        "Security monitoring",
+        "Smart device control",
+        "Voice commands",
+        "Automation rules",
+        "Mobile app"
+      ],
+      color: "from-indigo-500 to-purple-500",
+      price: "$129/month",
+      setupFee: "$500",
+      benefits: ["Energy savings", "Enhanced security", "Convenience"],
+      useCases: ["Smart homes", "Property management", "Homeowners"],
+      href: "/ai-home-automation"
+    },
+    {
+      title: "AI Language Learning Platform",
+      description: "Personalized language learning with AI-powered curriculum, pronunciation analysis, and progress tracking.",
+      icon: UserGroupIcon,
+      features: [
+        "Personalized curriculum",
+        "Pronunciation analysis",
+        "Progress tracking",
+        "Conversation practice",
+        "Cultural insights",
+        "Gamification"
+      ],
+      color: "from-yellow-500 to-orange-500",
+      price: "$89/month",
+      setupFee: "$350",
+      benefits: ["Faster learning", "Better retention", "Engaging experience"],
+      useCases: ["Language schools", "Corporate training", "Personal learning"],
+      href: "/ai-language-learning"
+    },
+    {
+      title: "AI Mental Health Assistant",
+      description: "Comprehensive mental health support with mood tracking, therapy recommendations, and crisis intervention.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Mood tracking",
+        "Therapy recommendations",
+        "Crisis intervention",
+        "Meditation guides",
+        "Progress monitoring",
+        "Professional referrals"
+      ],
+      color: "from-teal-500 to-cyan-500",
+      price: "$199/month",
+      setupFee: "$800",
+      benefits: ["Better mental health", "Early intervention", "Accessible care"],
+      useCases: ["Healthcare providers", "Wellness centers", "Individuals"],
+      href: "/ai-mental-health"
+    },
+    {
+      title: "AI Agricultural Intelligence",
+      description: "Smart farming solutions with crop monitoring, weather analysis, and yield optimization.",
+      icon: GlobeAltIcon,
+      features: [
+        "Crop monitoring",
+        "Weather analysis",
+        "Yield optimization",
+        "Pest detection",
+        "Irrigation control",
+        "Market insights"
+      ],
+      color: "from-green-500 to-emerald-500",
+      price: "$399/month",
+      setupFee: "$2,000",
+      benefits: ["Increased yields", "Reduced costs", "Better sustainability"],
+      useCases: ["Farms", "Agricultural consultants", "Food producers"],
+      href: "/ai-agricultural-intelligence"
+    },
+    {
+      title: "AI Construction Management",
+      description: "Intelligent construction project management with safety monitoring, progress tracking, and resource optimization.",
+      icon: CogIcon,
+      features: [
+        "Safety monitoring",
+        "Progress tracking",
+        "Resource optimization",
+        "Quality control",
+        "Schedule management",
+        "Cost tracking"
+      ],
+      color: "from-slate-500 to-gray-500",
+      price: "$449/month",
+      setupFee: "$2,200",
+      benefits: ["Safer projects", "On-time delivery", "Cost control"],
+      useCases: ["Construction companies", "Project managers", "Contractors"],
+      href: "/ai-construction-management"
+    },
+    {
+      title: "AI Beauty & Wellness Platform",
+      description: "Personalized beauty and wellness recommendations with skin analysis, product matching, and routine optimization.",
+      icon: UserGroupIcon,
+      features: [
+        "Skin analysis",
+        "Product matching",
+        "Routine optimization",
+        "Progress tracking",
+        "Expert consultations",
+        "Community features"
+      ],
+      color: "from-pink-500 to-rose-500",
+      price: "$119/month",
+      setupFee: "$500",
+      benefits: ["Personalized care", "Better results", "Expert guidance"],
+      useCases: ["Beauty brands", "Salons", "Wellness centers"],
+      href: "/ai-beauty-wellness"
+    },
+    {
+      title: "AI Legal Document Generator",
+      description: "Automated legal document creation with contract generation, compliance checking, and template management.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Contract generation",
+        "Compliance checking",
+        "Template management",
+        "Legal research",
+        "Document review",
+        "Version control"
+      ],
+      color: "from-indigo-500 to-blue-500",
+      price: "$329/month",
+      setupFee: "$1,500",
+      benefits: ["Time savings", "Reduced errors", "Compliance assurance"],
+      useCases: ["Law firms", "Legal departments", "Small businesses"],
+      href: "/ai-legal-document-generator"
+    },
+    {
+      title: "AI Personal Finance Manager",
+      description: "Comprehensive personal finance management with budgeting, investment tracking, and financial goal planning.",
+      icon: CurrencyDollarIcon,
+      features: [
+        "Budgeting tools",
+        "Investment tracking",
+        "Goal planning",
+        "Expense categorization",
+        "Bill reminders",
+        "Financial insights"
+      ],
+      color: "from-emerald-500 to-teal-500",
+      price: "$79/month",
+      setupFee: "$300",
+      benefits: ["Better financial health", "Goal achievement", "Money management"],
+      useCases: ["Financial advisors", "Individuals", "Families"],
+      href: "/ai-personal-finance"
+    },
+    {
+      title: "AI Wedding Planning Assistant",
+      description: "Complete wedding planning solution with vendor management, timeline optimization, and budget tracking.",
+      icon: RocketLaunchIcon,
+      features: [
+        "Vendor management",
+        "Timeline optimization",
+        "Budget tracking",
+        "Guest management",
+        "Checklist automation",
+        "Inspiration gallery"
+      ],
+      color: "from-pink-500 to-purple-500",
+      price: "$199/month",
+      setupFee: "$800",
+      benefits: ["Stress-free planning", "Budget control", "Perfect execution"],
+      useCases: ["Wedding planners", "Couples", "Event venues"],
+      href: "/ai-wedding-planning"
+    },
+    {
+      title: "AI Elderly Care Monitor",
+      description: "Comprehensive elderly care monitoring with health tracking, medication reminders, and emergency alerts.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Health tracking",
+        "Medication reminders",
+        "Emergency alerts",
+        "Activity monitoring",
+        "Family notifications",
+        "Care coordination"
+      ],
+      color: "from-blue-500 to-indigo-500",
+      price: "$249/month",
+      setupFee: "$1,200",
+      benefits: ["Better care", "Peace of mind", "Independence support"],
+      useCases: ["Care facilities", "Families", "Healthcare providers"],
+      href: "/ai-elderly-care"
+    },
+    {
+      title: "AI Sports Analytics Platform",
+      description: "Advanced sports analytics with performance tracking, injury prevention, and strategic insights.",
+      icon: ChartBarIcon,
+      features: [
+        "Performance tracking",
+        "Injury prevention",
+        "Strategic insights",
+        "Player analysis",
+        "Team optimization",
+        "Predictive modeling"
+      ],
+      color: "from-red-500 to-pink-500",
+      price: "$399/month",
+      setupFee: "$2,000",
+      benefits: ["Better performance", "Injury reduction", "Competitive advantage"],
+      useCases: ["Sports teams", "Coaches", "Athletes"],
+      href: "/ai-sports-analytics"
     }
   ];
 
@@ -652,7 +984,7 @@ export default function MicroSaaSSolutionsPage()   {
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600">
               <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
-              <div className="text-4xl font-bold text-green-400 mb-6">$99-299<span className="text-lg text-gray-400">/month</span></div>
+              <div className="text-4xl font-bold text-green-400 mb-6">$79-199<span className="text-lg text-gray-400">/month</span></div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
@@ -683,7 +1015,7 @@ export default function MicroSaaSSolutionsPage()   {
                 </span>
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
-              <div className="text-4xl font-bold text-green-400 mb-6">$299-599<span className="text-lg text-gray-400">/month</span></div>
+              <div className="text-4xl font-bold text-green-400 mb-6">$199-449<span className="text-lg text-gray-400">/month</span></div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
