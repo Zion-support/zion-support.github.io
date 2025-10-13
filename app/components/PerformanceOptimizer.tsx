@@ -1,82 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-<<<<<<< HEAD
-  // Preload critical resources
-  useEffect(() => {
-    const preloadCriticalResources = () => {
-      // Preload critical fonts
-      const fontLink = document.createElement('link');
-      fontLink.rel = 'preload';
-      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';
-      fontLink.as = 'style';
-      document.head.appendChild(fontLink);
-
-      // Preload critical images
-      const criticalImages = [
-        '/logo.svg',
-        '/og-image.svg'
-      ];
-
-      criticalImages.forEach(src => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = src;
-        link.as = 'image';
-        document.head.appendChild(link);
-      });
-    };
-
-    preloadCriticalResources();
-  }, []);
-
-  // Optimize scroll performance
-  const handleScroll = useCallback(() => {
-    // Throttle scroll events
-    let ticking = false;
-    
-    const updateScrollPosition = () => {
-      // Add scroll-based optimizations here
-      ticking = false;
-    };
-
-    if (!ticking) {
-      requestAnimationFrame(updateScrollPosition);
-      ticking = true;
-    }
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [handleScroll]);
-
-  // Optimize resize performance
-  const handleResize = useCallback(() => {
-    let ticking = false;
-    
-    const updateLayout = () => {
-      // Add resize-based optimizations here
-      ticking = false;
-    };
-
-    if (!ticking) {
-      requestAnimationFrame(updateLayout);
-      ticking = true;
-    }
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener('resize', handleResize, { passive: true });
-    return () => window.removeEventListener('resize', handleResize);
-  }, [handleResize]);
-
-  return <>{children}</>;
-=======
   const [isOptimized, setIsOptimized] = useState(false);
 
   useEffect(() => {
@@ -112,164 +40,126 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       });
     };
 
-    // Preconnect to external domains
-    const preconnectExternalDomains = () => {
-      const domains = [
-        'https://fonts.googleapis.com',
-        'https://fonts.gstatic.com',
-        'https://www.google-analytics.com',
-        'https://www.googletagmanager.com'
-      ];
-
-      domains.forEach(domain => {
-        const link = document.createElement('link');
-        link.rel = 'preconnect';
-        link.href = domain;
-        link.crossOrigin = 'anonymous';
-        document.head.appendChild(link);
-      });
+    // Optimize fonts
+    const optimizeFonts = () => {
+      const fontLink = document.createElement('link');
+      fontLink.rel = 'preload';
+      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';
+      fontLink.as = 'style';
+      document.head.appendChild(fontLink);
     };
 
-    // Optimize third-party scripts
-    const optimizeThirdPartyScripts = () => {
-      // Defer non-critical scripts
-      const scripts = document.querySelectorAll('script[src]');
-      scripts.forEach(script => {
-        if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
-          script.setAttribute('defer', 'true');
-        }
-      });
-    };
-
-    // Initialize optimizations
-    const initializeOptimizations = () => {
-      preloadCriticalResources();
-      preconnectExternalDomains();
-      optimizeImages();
-      optimizeThirdPartyScripts();
-      setIsOptimized(true);
-    };
-
-    // Run optimizations after component mount
-    const timer = setTimeout(initializeOptimizations, 100);
-
-    return () => clearTimeout(timer);
+    // Run optimizations
+    preloadCriticalResources();
+    optimizeImages();
+    optimizeFonts();
+    
+    setIsOptimized(true);
   }, []);
 
-  // Intersection Observer for lazy loading
+  // Optimize scroll performance
   useEffect(() => {
-    if (!isOptimized) return;
-
-    const observerOptions = {
-      root: null,
-      rootMargin: '50px',
-      threshold: 0.1
+    let ticking = false;
+    
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          // Add scroll-based optimizations here
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const element = entry.target as HTMLElement;
-          
-          // Add animation classes when element comes into view
-          element.classList.add('animate-fade-in');
-          
-          // Unobserve after animation
-          observer.unobserve(element);
-        }
-      });
-    }, observerOptions);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-    // Observe elements with data-lazy attribute
-    const lazyElements = document.querySelectorAll('[data-lazy]');
-    lazyElements.forEach(el => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, [isOptimized]);
-
-  // Resource hints for better performance
+  // Optimize resize performance
   useEffect(() => {
-    if (!isOptimized) return;
+    let ticking = false;
+    
+    const handleResize = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          // Add resize-based optimizations here
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
 
-    // DNS prefetch for external resources
-    const dnsPrefetchDomains = [
-      '//fonts.googleapis.com',
-      '//fonts.gstatic.com',
-      '//www.google-analytics.com'
-    ];
+    window.addEventListener('resize', handleResize, { passive: true });
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
-    dnsPrefetchDomains.forEach(domain => {
-      const link = document.createElement('link');
-      link.rel = 'dns-prefetch';
-      link.href = domain;
-      document.head.appendChild(link);
-    });
-
-    // Module preload for critical JavaScript
-    const criticalModules = [
-      '/assets/react-vendor',
-      '/assets/main-pages'
-    ];
-
-    criticalModules.forEach(module => {
-      const link = document.createElement('link');
-      link.rel = 'modulepreload';
-      link.href = `${module}.js`;
-      document.head.appendChild(link);
-    });
-  }, [isOptimized]);
+  // Optimize animations
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      * {
+        will-change: auto;
+      }
+      
+      .animate-pulse {
+        animation-duration: 2s;
+        animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+      }
+      
+      .animate-spin {
+        animation-duration: 1s;
+        animation-timing-function: linear;
+      }
+      
+      .animate-bounce {
+        animation-duration: 1s;
+        animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+      
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+    
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
 
   return (
     <>
       {children}
-      
-      {/* Performance monitoring styles */}
-      <style jsx>{`
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+      <style>{`
+        * {
+          will-change: auto;
         }
         
-        .animate-fade-in {
-          animation: fade-in 0.6s ease-out forwards;
+        .animate-pulse {
+          animation-duration: 2s;
+          animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
         }
         
-        /* Optimize font loading */
-        @font-face {
-          font-family: 'Inter';
-          font-style: normal;
-          font-weight: 400;
-          font-display: swap;
-          src: local('Inter'), url('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2') format('woff2');
+        .animate-spin {
+          animation-duration: 1s;
+          animation-timing-function: linear;
         }
         
-        /* Critical CSS for above-the-fold content */
-        .hero-section {
-          contain: layout style paint;
+        .animate-bounce {
+          animation-duration: 1s;
+          animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
         
-        .navigation {
-          contain: layout style;
-        }
-        
-        /* Optimize animations for better performance */
-        .transition-transform {
-          will-change: transform;
-        }
-        
-        .transition-opacity {
-          will-change: opacity;
-        }
-        
-        /* Reduce motion for users who prefer it */
         @media (prefers-reduced-motion: reduce) {
-          * {
+          *,
+          *::before,
+          *::after {
             animation-duration: 0.01ms !important;
             animation-iteration-count: 1 !important;
             transition-duration: 0.01ms !important;
@@ -278,7 +168,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       `}</style>
     </>
   );
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
 };
 
 export default PerformanceOptimizer;

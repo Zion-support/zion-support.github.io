@@ -14,12 +14,8 @@ import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import ErrorBoundary from "./app/components/ErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
-<<<<<<< HEAD
-import EnhancedSEO from "./app/components/EnhancedSEO";
-=======
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 import EnhancedAnalytics from "./app/components/EnhancedAnalytics";
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -100,6 +96,14 @@ const ZionAITranslatorProPage = React.lazy(() => import("./app/zion-ai-translato
 const ZionAIDataCleanerPage = React.lazy(() => import("./app/zion-ai-data-cleaner/page"));
 const ZionAITaskSchedulerPage = React.lazy(() => import("./app/zion-ai-task-scheduler/page"));
 const ZionAICustomerSupportProPage = React.lazy(() => import("./app/zion-ai-customer-support-pro/page"));
+
+// New Micro SAAS Services
+const ZionAIInventoryManagerPage = React.lazy(() => import("./app/zion-ai-inventory-manager/page"));
+const ZionAIAccountingSuitePage = React.lazy(() => import("./app/zion-ai-accounting-suite/page"));
+
+// IT Services
+const CloudInfrastructurePage = React.lazy(() => import("./app/cloud-infrastructure/page"));
+const CybersecurityAuditPage = React.lazy(() => import("./app/cybersecurity-audit/page"));
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -223,6 +227,14 @@ function App() {
                             <Route path="/zion-ai-data-cleaner" element={<ZionAIDataCleanerPage />} />
                             <Route path="/zion-ai-task-scheduler" element={<ZionAITaskSchedulerPage />} />
                             <Route path="/zion-ai-customer-support-pro" element={<ZionAICustomerSupportProPage />} />
+
+                            {/* New Micro SAAS Services Routes */}
+                            <Route path="/zion-ai-inventory-manager" element={<ZionAIInventoryManagerPage />} />
+                            <Route path="/zion-ai-accounting-suite" element={<ZionAIAccountingSuitePage />} />
+
+                            {/* IT Services Routes */}
+                            <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                            <Route path="/cybersecurity-audit" element={<CybersecurityAuditPage />} />
                           </Routes>
                         </Suspense>
                           </main>

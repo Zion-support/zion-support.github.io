@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Brain, 
-  BarChart3, 
-  Zap, 
+  Shield, 
+  AlertTriangle, 
   CheckCircle, 
   ArrowRight,
   Star,
@@ -15,15 +14,15 @@ import {
   Target,
   Award,
   Sparkles,
+  Lock,
   Eye,
-  MessageSquare,
-  Shield,
-  TrendingUp,
-  Settings,
+  Zap,
   Globe,
+  BarChart3,
+  Settings,
   Activity,
-  Heart,
-  Lock
+  TrendingUp,
+  FileText
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import StructuredData from '../components/StructuredData';
@@ -31,13 +30,13 @@ import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 
-const AIServices = () => {
+const CybersecurityAudit = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "AI Services",
-    "description": "Comprehensive AI solutions including machine learning, natural language processing, computer vision, and predictive analytics",
-    "url": "https://ziontechgroup.com/ai-services",
+    "name": "Cybersecurity Audit Services",
+    "description": "Comprehensive cybersecurity audits including vulnerability assessments, penetration testing, and compliance reviews",
+    "url": "https://ziontechgroup.com/cybersecurity-audit",
     "provider": {
       "@type": "Organization",
       "name": "Zion Tech Group",
@@ -45,153 +44,153 @@ const AIServices = () => {
     },
     "offers": {
       "@type": "Offer",
-      "price": "199",
+      "price": "2999",
       "priceCurrency": "USD",
       "priceSpecification": {
         "@type": "PriceSpecification",
-        "price": "199",
+        "price": "2999",
         "priceCurrency": "USD",
         "billingIncrement": "P1M"
       }
     }
   };
 
-  const aiServices = [
+  const auditServices = [
     {
-      title: "Machine Learning Solutions",
-      description: "Custom ML models for predictive analytics, recommendation systems, and automated decision making",
-      icon: <Brain className="w-8 h-8" />,
+      title: "Vulnerability Assessment",
+      description: "Comprehensive scanning and analysis of your IT infrastructure for security vulnerabilities",
+      icon: <Eye className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500",
       features: [
-        "Predictive modeling",
-        "Recommendation engines",
-        "Anomaly detection",
-        "Automated decision making"
-      ],
-      price: "From $2,999",
-      applications: ["E-commerce", "Finance", "Healthcare", "Manufacturing"]
-    },
-    {
-      title: "Natural Language Processing",
-      description: "AI-powered text analysis, sentiment analysis, and automated content generation",
-      icon: <MessageSquare className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500",
-      features: [
-        "Sentiment analysis",
-        "Text classification",
-        "Content generation",
-        "Language translation"
+        "Network vulnerability scanning",
+        "Web application testing",
+        "Database security review",
+        "Configuration analysis"
       ],
       price: "From $1,999",
-      applications: ["Customer Service", "Content Marketing", "Social Media", "Legal"]
+      duration: "1-2 weeks"
     },
     {
-      title: "Computer Vision",
-      description: "Image and video analysis for object detection, facial recognition, and quality control",
-      icon: <Eye className="w-8 h-8" />,
+      title: "Penetration Testing",
+      description: "Simulated cyber attacks to identify real-world security weaknesses and test defenses",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      features: [
+        "External penetration testing",
+        "Internal network testing",
+        "Social engineering tests",
+        "Physical security assessment"
+      ],
+      price: "From $2,999",
+      duration: "2-3 weeks"
+    },
+    {
+      title: "Compliance Audit",
+      description: "Ensure your organization meets industry standards and regulatory requirements",
+      icon: <FileText className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500",
       features: [
-        "Object detection",
-        "Facial recognition",
-        "Quality control",
-        "Medical imaging"
+        "SOC 2 Type II compliance",
+        "HIPAA compliance review",
+        "GDPR compliance audit",
+        "PCI DSS assessment"
       ],
-      price: "From $2,499",
-      applications: ["Manufacturing", "Security", "Healthcare", "Retail"]
+      price: "From $3,999",
+      duration: "3-4 weeks"
     },
     {
-      title: "AI Chatbots & Virtual Assistants",
-      description: "Intelligent conversational AI for customer service, sales, and internal operations",
-      icon: <Users className="w-8 h-8" />,
+      title: "Security Architecture Review",
+      description: "Evaluate your overall security architecture and provide improvement recommendations",
+      icon: <Settings className="w-8 h-8" />,
       color: "from-orange-500 to-red-500",
       features: [
-        "24/7 customer support",
-        "Multi-language support",
-        "Voice integration",
-        "Custom training"
+        "Security framework assessment",
+        "Policy and procedure review",
+        "Access control evaluation",
+        "Incident response planning"
       ],
-      price: "From $1,499",
-      applications: ["Customer Service", "Sales", "HR", "IT Support"]
+      price: "From $2,499",
+      duration: "2-3 weeks"
     },
     {
-      title: "Predictive Analytics",
-      description: "Forecast trends, customer behavior, and business outcomes with advanced analytics",
-      icon: <TrendingUp className="w-8 h-8" />,
+      title: "Cloud Security Audit",
+      description: "Comprehensive security assessment of your cloud infrastructure and configurations",
+      icon: <Cloud className="w-8 h-8" />,
       color: "from-cyan-500 to-blue-500",
       features: [
-        "Demand forecasting",
-        "Customer lifetime value",
-        "Risk assessment",
-        "Market analysis"
+        "AWS security assessment",
+        "Azure security review",
+        "Google Cloud audit",
+        "Multi-cloud security analysis"
       ],
-      price: "From $1,799",
-      applications: ["Finance", "Retail", "Supply Chain", "Marketing"]
+      price: "From $2,799",
+      duration: "2-3 weeks"
     },
     {
-      title: "AI Security & Fraud Detection",
-      description: "Advanced AI-powered security solutions for threat detection and fraud prevention",
-      icon: <Shield className="w-8 h-8" />,
+      title: "Mobile Security Audit",
+      description: "Security assessment of mobile applications and BYOD policies",
+      icon: <Smartphone className="w-8 h-8" />,
       color: "from-indigo-500 to-purple-500",
       features: [
-        "Fraud detection",
-        "Threat analysis",
-        "Behavioral monitoring",
-        "Real-time alerts"
+        "Mobile app security testing",
+        "iOS/Android vulnerability scan",
+        "BYOD policy review",
+        "Mobile device management audit"
       ],
-      price: "From $2,299",
-      applications: ["Banking", "E-commerce", "Cybersecurity", "Insurance"]
+      price: "From $1,799",
+      duration: "1-2 weeks"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "AI Starter",
-      price: "$199",
-      period: "per month",
-      description: "Perfect for small businesses",
+      name: "Basic Audit",
+      price: "$2,999",
+      period: "one-time",
+      description: "Essential security assessment",
       features: [
-        "Basic AI consultation",
-        "Simple chatbot setup",
+        "Vulnerability assessment",
+        "Basic penetration testing",
+        "Security report",
         "Email support",
-        "Monthly reports",
-        "Basic analytics",
-        "Standard integrations"
+        "30-day follow-up",
+        "Basic recommendations"
       ],
       popular: false,
       cta: "Get Started"
     },
     {
-      name: "AI Professional",
-      price: "$499",
-      period: "per month",
-      description: "Most popular for growing businesses",
+      name: "Comprehensive Audit",
+      price: "$4,999",
+      period: "one-time",
+      description: "Most popular for medium businesses",
       features: [
-        "Custom AI development",
-        "Advanced analytics",
+        "Full vulnerability assessment",
+        "Advanced penetration testing",
+        "Compliance review",
         "Priority support",
-        "Weekly consultations",
-        "Custom integrations",
-        "API access",
-        "Performance monitoring",
-        "Training & support"
+        "90-day follow-up",
+        "Detailed remediation plan",
+        "Executive presentation",
+        "Implementation support"
       ],
       popular: true,
       cta: "Get Started"
     },
     {
-      name: "AI Enterprise",
-      price: "$1,299",
-      period: "per month",
-      description: "For large enterprises",
+      name: "Enterprise Audit",
+      price: "$9,999",
+      period: "one-time",
+      description: "Complete security evaluation",
       features: [
-        "Custom AI solutions",
+        "Full security audit suite",
+        "Custom testing scenarios",
         "24/7 phone support",
-        "Dedicated AI team",
-        "Daily consultations",
-        "White-label options",
-        "Custom security",
-        "Advanced analytics",
-        "Unlimited integrations"
+        "6-month follow-up",
+        "Dedicated security team",
+        "Custom compliance framework",
+        "White-label reporting",
+        "Ongoing consultation"
       ],
       popular: false,
       cta: "Contact Sales"
@@ -200,54 +199,54 @@ const AIServices = () => {
 
   const testimonials = [
     {
-      name: "Dr. Sarah Johnson",
-      company: "MedTech Solutions",
-      role: "CTO",
-      content: "Zion Tech Group's AI solutions helped us reduce diagnostic time by 60% and improve accuracy by 35%. Their machine learning models are incredibly sophisticated.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      company: "E-commerce Giant",
-      role: "VP of Technology",
-      content: "The AI chatbot they built handles 80% of our customer inquiries automatically. Customer satisfaction increased by 40% and response time decreased by 90%.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
+      name: "Robert Kim",
       company: "Financial Services Inc.",
-      role: "Risk Manager",
-      content: "Their fraud detection AI has prevented over $2M in fraudulent transactions. The accuracy rate is 99.7% and false positives are minimal.",
+      role: "CISO",
+      content: "Zion Tech Group's cybersecurity audit helped us identify critical vulnerabilities we didn't know existed. Their team is thorough and professional, and the remediation plan was excellent.",
       rating: 5,
-      avatar: "ER"
+      avatar: "RK"
+    },
+    {
+      name: "Lisa Thompson",
+      company: "Healthcare Solutions",
+      role: "IT Director",
+      content: "The HIPAA compliance audit was comprehensive and helped us achieve full compliance. Their expertise in healthcare security regulations is outstanding.",
+      rating: 5,
+      avatar: "LT"
+    },
+    {
+      name: "David Martinez",
+      company: "E-commerce Platform",
+      role: "CTO",
+      content: "The penetration testing revealed several critical issues that could have led to data breaches. Their detailed report and remediation guidance were invaluable.",
+      rating: 5,
+      avatar: "DM"
     }
   ];
 
   const stats = [
-    { number: "95%", label: "Accuracy Rate", icon: <Target className="w-6 h-6" /> },
-    { number: "60%", label: "Process Improvement", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "40%", label: "Cost Reduction", icon: <DollarSign className="w-6 h-6" /> },
-    { number: "24/7", label: "AI Support", icon: <Clock className="w-6 h-6" /> }
+    { number: "99.9%", label: "Vulnerability Detection", icon: <Target className="w-6 h-6" /> },
+    { number: "48h", label: "Average Response Time", icon: <Clock className="w-6 h-6" /> },
+    { number: "500+", label: "Audits Completed", icon: <Award className="w-6 h-6" /> },
+    { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
   ];
 
-  const industries = [
-    { name: "Healthcare", logo: "H", description: "Medical AI solutions" },
-    { name: "Finance", logo: "F", description: "FinTech AI applications" },
-    { name: "E-commerce", logo: "E", description: "Retail AI solutions" },
-    { name: "Manufacturing", logo: "M", description: "Industrial AI" },
-    { name: "Education", logo: "E", description: "EdTech AI platforms" },
-    { name: "Real Estate", logo: "R", description: "PropTech AI tools" }
+  const complianceFrameworks = [
+    { name: "SOC 2 Type II", logo: "S2", description: "Security compliance" },
+    { name: "HIPAA", logo: "H", description: "Healthcare compliance" },
+    { name: "GDPR", logo: "G", description: "Data protection" },
+    { name: "PCI DSS", logo: "P", description: "Payment security" },
+    { name: "ISO 27001", logo: "I", description: "Information security" },
+    { name: "NIST", logo: "N", description: "Cybersecurity framework" }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
-        title="AI Services - Machine Learning, NLP, Computer Vision | Zion Tech Group"
-        description="Comprehensive AI solutions including machine learning, NLP, computer vision, and predictive analytics. Achieve 95% accuracy with 60% process improvement."
-        keywords="AI services, machine learning, natural language processing, computer vision, AI chatbots, predictive analytics, AI consulting"
-        canonical="https://ziontechgroup.com/ai-services"
+        title="Cybersecurity Audit Services - Vulnerability Assessment & Penetration Testing | Zion Tech Group"
+        description="Comprehensive cybersecurity audits including vulnerability assessments, penetration testing, and compliance reviews. Protect your business with 99.9% vulnerability detection."
+        keywords="cybersecurity audit, vulnerability assessment, penetration testing, security compliance, SOC 2, HIPAA, GDPR, PCI DSS"
+        canonical="https://ziontechgroup.com/cybersecurity-audit"
         structuredData={structuredData}
       />
       
@@ -263,18 +262,18 @@ const AIServices = () => {
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">Advanced AI Solutions</span>
+            <span className="text-cyan-400 text-sm font-medium">Enterprise Security Solutions</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              AI Services
+              Cybersecurity Audit Services
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your business with cutting-edge AI solutions. Achieve 95% accuracy, 
-            improve processes by 60%, and reduce costs by 40% with our comprehensive AI services.
+            Protect your business with comprehensive cybersecurity audits. Identify vulnerabilities, 
+            ensure compliance, and strengthen your security posture with our expert assessment services.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -284,7 +283,7 @@ const AIServices = () => {
               size="lg"
               icon={<Sparkles className="w-5 h-5" />}
             >
-              Get AI Consultation
+              Get Security Assessment
             </FuturisticButton>
             <FuturisticButton
               href="/demo"
@@ -292,7 +291,7 @@ const AIServices = () => {
               size="lg"
               icon={<Monitor className="w-5 h-5" />}
             >
-              View AI Demo
+              View Sample Report
             </FuturisticButton>
           </div>
           
@@ -311,19 +310,19 @@ const AIServices = () => {
         </ResponsiveContainer>
       </section>
 
-      {/* AI Services Section */}
+      {/* Audit Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Our AI Solutions
+              Our Audit Services
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Comprehensive AI services tailored to your business needs and industry requirements
+              Comprehensive cybersecurity assessment services tailored to your business needs
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {aiServices.map((service, index) => (
+            {auditServices.map((service, index) => (
               <FuturisticCard key={index} className="group">
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}>
                   {service.icon}
@@ -342,17 +341,9 @@ const AIServices = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="mb-4">
-                  <div className="text-center mb-2">
-                    <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                  </div>
-                  <div className="flex flex-wrap gap-1 justify-center">
-                    {service.applications.map((app, appIndex) => (
-                      <span key={appIndex} className="px-2 py-1 bg-cyan-500/20 text-cyan-300 text-xs rounded-full">
-                        {app}
-                      </span>
-                    ))}
-                  </div>
+                <div className="text-center space-y-2">
+                  <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
+                  <div className="text-sm text-gray-400">Duration: {service.duration}</div>
                 </div>
               </FuturisticCard>
             ))}
@@ -360,28 +351,28 @@ const AIServices = () => {
         </ResponsiveContainer>
       </section>
 
-      {/* Industries Section */}
+      {/* Compliance Frameworks Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry Expertise
+              Compliance Frameworks
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We deliver AI solutions across multiple industries with deep domain expertise
+              We help you achieve compliance with major industry standards and regulations
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {industries.map((industry, index) => (
+            {complianceFrameworks.map((framework, index) => (
               <div
                 key={index}
                 className="text-center group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center text-white font-bold text-lg mx-auto mb-3 group-hover:scale-110 transition-transform">
-                  {industry.logo}
+                  {framework.logo}
                 </div>
-                <h3 className="text-white font-semibold mb-2">{industry.name}</h3>
-                <p className="text-gray-300 text-sm">{industry.description}</p>
+                <h3 className="text-white font-semibold mb-2">{framework.name}</h3>
+                <p className="text-gray-300 text-sm">{framework.description}</p>
               </div>
             ))}
           </div>
@@ -393,10 +384,10 @@ const AIServices = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              AI Service Plans
+              Audit Service Packages
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the AI service plan that fits your business needs
+              Choose the audit package that fits your security needs
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -451,10 +442,10 @@ const AIServices = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by AI Leaders
+              Trusted by Security Leaders
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our clients say about our AI services
+              See what our clients say about our cybersecurity audit services
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -489,10 +480,10 @@ const AIServices = () => {
         <ResponsiveContainer>
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business with AI?
+              Ready to Secure Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Join thousands of businesses already using our AI services to achieve better results and competitive advantage.
+              Don't wait for a security breach. Get a comprehensive cybersecurity audit today and protect your business from threats.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <FuturisticButton
@@ -501,7 +492,7 @@ const AIServices = () => {
                 size="lg"
                 icon={<ArrowRight className="w-5 h-5" />}
               >
-                Get AI Consultation
+                Get Security Assessment
               </FuturisticButton>
               <FuturisticButton
                 href="/demo"
@@ -509,7 +500,7 @@ const AIServices = () => {
                 size="lg"
                 icon={<Monitor className="w-5 h-5" />}
               >
-                View AI Demo
+                View Sample Report
               </FuturisticButton>
             </div>
           </div>
@@ -519,4 +510,4 @@ const AIServices = () => {
   );
 };
 
-export default AIServices;
+export default CybersecurityAudit;
