@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight } from 'lucide-react'
+import { ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight } from 'lucide-react'
+import MobileNavigation from './MobileNavigation'
 
 const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)
@@ -160,104 +161,9 @@ const Navigation = React.memo(() => {
             </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="lg:hidden">
-            <button
-              onClick={toggleMenu}
-              className="text-white hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10"
-            >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
+          {/* Mobile Navigation */}
+          <MobileNavigation />
         </div>
-
-        {/* Mobile menu */}
-        {isOpen && (
-          <div className="lg:hidden py-4 border-t border-cyan-500/20">
-            <div className="flex flex-col space-y-2">
-              {mainNavItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className="px-4 py-3 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 font-medium"
-                  onClick={toggleMenu}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              
-              {/* Mobile AI Services */}
-              <div>
-                <button
-                  onClick={toggleServices}
-                  className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 font-medium"
-                >
-                  <span>AI Services</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                
-                {isServicesOpen && (
-                  <div className="ml-4 mt-2 space-y-1">
-                    {aiServices.map((service) => (
-                      <Link
-                        key={service.name}
-                        to={service.path}
-                        className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-cyan-400 transition-colors rounded-lg hover:bg-cyan-500/10"
-                        onClick={() => {
-                          setIsServicesOpen(false)
-                          toggleMenu()
-                        }}
-                      >
-                        {service.icon}
-                        <span>{service.name}</span>
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Mobile Micro SAAS */}
-              <div>
-                <button
-                  onClick={toggleMicroSaas}
-                  className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 font-medium"
-                >
-                  <span>Micro SAAS</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMicroSaasOpen ? 'rotate-180' : ''}`} />
-                </button>
-                
-                {isMicroSaasOpen && (
-                  <div className="ml-4 mt-2 space-y-1">
-                    {microSaasServices.map((service) => (
-                      <Link
-                        key={service.name}
-                        to={service.path}
-                        className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-purple-400 transition-colors rounded-lg hover:bg-purple-500/10"
-                        onClick={() => {
-                          setIsMicroSaasOpen(false)
-                          toggleMenu()
-                        }}
-                      >
-                        {service.icon}
-                        <span>{service.name}</span>
-                        {service.featured && <Star className="w-3 h-3 text-yellow-400 fill-current ml-auto" />}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              <Link
-                to="/consultation"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-4 py-3 rounded-lg transition-all duration-300 text-center font-semibold mt-4 flex items-center justify-center space-x-2"
-                onClick={toggleMenu}
-              >
-                <span>Get Started</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-        )}
       </div>
     </nav>
   )

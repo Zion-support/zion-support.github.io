@@ -60,15 +60,18 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
-          // Core React libraries
-          if (id.includes('react') || id.includes('react-dom')) {
-            return 'react-vendor'
+          // Core React libraries - split into smaller chunks
+          if (id.includes('react/') && !id.includes('react-dom')) {
+            return 'react-core'
+          }
+          if (id.includes('react-dom')) {
+            return 'react-dom'
           }
           // Router
           if (id.includes('react-router')) {
             return 'router'
           }
-          // UI libraries
+          // UI libraries - split animations and icons
           if (id.includes('framer-motion')) {
             return 'animations'
           }
@@ -95,9 +98,18 @@ export default defineConfig({
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
-          // Large page components (lazy load)
+          // Large page components (lazy load) - split by category
+          if (id.includes('/app/ai-') && id.includes('/page.tsx')) {
+            return 'ai-pages'
+          }
+          if (id.includes('/app/zion-') && id.includes('/page.tsx')) {
+            return 'saas-pages'
+          }
+          if (id.includes('/app/5g-') && id.includes('/page.tsx')) {
+            return '5g-pages'
+          }
           if (id.includes('/app/') && id.includes('/page.tsx')) {
-            return 'pages'
+            return 'main-pages'
           }
           // Service pages
           if (id.includes('/ai-') || id.includes('/zion-')) {
@@ -137,6 +149,13 @@ export default defineConfig({
       "react-helmet-async",
       "framer-motion",
       "lucide-react",
+      "web-vitals",
+      "clsx",
+      "tailwind-merge",
+    ],
+    exclude: [
+      // Exclude large dependencies that should be loaded on demand
+      "recharts",
     ],
   },
   // CSS optimization
