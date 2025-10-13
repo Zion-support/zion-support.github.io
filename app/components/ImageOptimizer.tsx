@@ -17,7 +17,6 @@ const ImageOptimizer = React.memo<ImageOptimizerProps>(({
   width,
   height,
   className = '',
-  placeholder,
   lazy = true
 }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -40,21 +39,22 @@ const ImageOptimizer = React.memo<ImageOptimizerProps>(({
     return `${src}?format=webp&quality=80`;
   }, [src]);
 
-  const placeholderSrc = useMemo(() => {
-    if (placeholder) return placeholder;
-    
-    // Generate a simple placeholder based on dimensions
-    const w = width || 300;
-    const h = height || 200;
-    return `data:image/svg+xml;base64,${btoa(`
-      <svg width="${w}" height="${h}" xmlns="http://www.w3.org/2000/svg">
-        <rect width="100%" height="100%" fill="#f3f4f6"/>
-        <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="#9ca3af" font-family="Arial, sans-serif" font-size="14">
-          Loading...
-        </text>
-      </svg>
-    `)}`;
-  }, [placeholder, width, height]);
+  // Placeholder generation logic (currently unused but kept for future use)
+  // const placeholderSrc = useMemo(() => {
+  //   if (placeholder) return placeholder;
+  //   
+  //   // Generate a simple placeholder based on dimensions
+  //   const w = width || 300;
+  //   const h = height || 200;
+  //   return `data:image/svg+xml;base64,${btoa(`
+  //     <svg width="${w}" height="${h}" xmlns="http://www.w3.org/2000/svg">
+  //       <rect width="100%" height="100%" fill="#f3f4f6"/>
+  //       <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="#9ca3af" font-family="Arial, sans-serif" font-size="14">
+  //         Loading...
+  //       </text>
+  //     </svg>
+  //   `)}`;
+  // }, [placeholder, width, height]);
 
   if (hasError) {
     return (
