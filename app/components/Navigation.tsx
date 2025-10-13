@@ -84,15 +84,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     {
       name: 'Contact',
       path: '/contact',
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: <Phone className="w-4 h-4" />
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
-      label: 'Home',
-      href: '/',
-      icon: <Star className="w-4 h-4" />
     },
     {
       label: 'AI Services',
@@ -165,16 +157,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       label: 'Contact',
       href: '/contact',
       icon: <Mail className="w-4 h-4" />
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
-=======
-      icon: <Mail className="w-4 h-4" />
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
-=======
-      icon: <Mail className="w-4 h-4" />
->>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
     }
   ], []);
 
