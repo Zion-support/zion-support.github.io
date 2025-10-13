@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -19,12 +20,19 @@ export default function PagePage() {
             Page
 =======
 export default function AiContentStudioPage() {
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function AiContentStudio() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Ai Content Studio - Zion Tech Group</title>
         <meta name="description" content="Advanced ai content studio solutions by Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
 
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -399,9 +407,23 @@ export default AiContentStudioPage;
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
+=======
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Ai Content Studio
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced ai content studio solutions by Zion Tech Group.
+          </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-6053
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443

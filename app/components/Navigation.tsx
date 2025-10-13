@@ -100,7 +100,11 @@ const Navigation = () => {
 =======
 import React, { useState, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+<<<<<<< HEAD
 import { Menu, Home, Shield, Zap, Brain, Globe } from 'lucide-react';
+=======
+import { Menu, X, Home, Shield, Zap, Brain, Globe } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443
 
 interface NavigationProps {
   onSidebarToggle?: () => void;

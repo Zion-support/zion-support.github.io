@@ -509,6 +509,7 @@ export default AdvancedPerformanceMonitor;
 =======
 import React from 'react';
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-6053
 interface AdvancedPerformanceMonitorProps {
@@ -528,3 +529,9 @@ export default function AdvancedPerformanceMonitor({ className = '', children }:
 =======
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-6053
+=======
+// interface AdvancedPerformanceMonitorProps {
+//   className?: string;
+//   children?: React.ReactNode;
+// }
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443

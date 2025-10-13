@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -252,12 +253,19 @@ export default AiSentimentAnalyzerPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-a070
 =======
 export default function AiSentimentAnalyzerPage() {
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function AiSentimentAnalyzer() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Ai Sentiment Analyzer - Zion Tech Group</title>
         <meta name="description" content="Advanced ai sentiment analyzer solutions by Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
 
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -302,3 +310,18 @@ export default function AiSentimentAnalyzerPage() {
   );
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-6053
+=======
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Ai Sentiment Analyzer
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced ai sentiment analyzer solutions by Zion Tech Group.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443

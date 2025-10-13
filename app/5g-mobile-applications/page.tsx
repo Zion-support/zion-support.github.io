@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Shield, Zap } from 'lucide-react';
@@ -165,3 +166,28 @@ export default function FivegMobileApplicationsPage() {
   );
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-6053
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function FiveGMobileApplications() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>5G Mobile Applications - Zion Tech Group</title>
+        <meta name="description" content="Advanced 5g mobile applications solutions by Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            5G Mobile Applications
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced 5g mobile applications solutions by Zion Tech Group.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443

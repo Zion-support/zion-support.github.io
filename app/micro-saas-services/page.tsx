@@ -24,113 +24,20 @@ export default function PagePage() {
 =======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Sparkles, Zap, Brain, Shield, Globe, BarChart3 } from 'lucide-react';
 
 export default function MicroSaasServices() {
-  const microSaasServices = [
-    {
-      id: "zion-ai-analytics-pro",
-      name: "Zion AI Analytics Pro",
-      description: "Advanced AI-powered business intelligence platform with real-time dashboards, predictive analytics, and automated reporting.",
-      icon: <BarChart3 className="w-8 h-8" />,
-      price: "From $299/month",
-      features: [
-        "Real-time Analytics Dashboard",
-        "Predictive Modeling & Forecasting",
-        "Automated Report Generation",
-        "Custom Data Visualization",
-        "API Integration",
-        "24/7 Support"
-      ],
-      link: "/zion-analytics-pro"
-    },
-    {
-      id: "zion-security-shield",
-      name: "Zion Security Shield",
-      description: "Comprehensive cybersecurity solution with threat detection, vulnerability scanning, and automated incident response.",
-      icon: <Shield className="w-8 h-8" />,
-      price: "From $199/month",
-      features: [
-        "Real-time Threat Detection",
-        "Vulnerability Assessment",
-        "Automated Incident Response",
-        "Compliance Monitoring",
-        "Security Training Modules",
-        "24/7 Security Monitoring"
-      ],
-      link: "/zion-security-shield"
-    },
-    {
-      id: "zion-cloud-vault",
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage and collaboration platform with advanced encryption, file sharing, and team management features.",
-      icon: <Globe className="w-8 h-8" />,
-      price: "From $149/month",
-      features: [
-        "End-to-End Encryption",
-        "Team Collaboration Tools",
-        "Version Control",
-        "Advanced File Sharing",
-        "Mobile Access",
-        "99.9% Uptime Guarantee"
-      ],
-      link: "/zion-cloud-vault"
-    },
-    {
-      id: "zion-content-studio",
-      name: "Zion Content Studio",
-      description: "AI-powered content creation platform for blogs, social media, marketing materials, and multimedia content.",
-      icon: <Brain className="w-8 h-8" />,
-      price: "From $99/month",
-      features: [
-        "AI Content Generation",
-        "Multi-format Support",
-        "Brand Voice Training",
-        "SEO Optimization",
-        "Content Calendar",
-        "Performance Analytics"
-      ],
-      link: "/zion-content-studio"
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Quick Deployment",
-      description: "Get up and running in minutes, not months. Our micro SAAS solutions are ready to use immediately."
-    },
-    {
-      icon: <CheckCircle className="w-6 h-6" />,
-      title: "No Setup Required",
-      description: "Skip the complex installation and configuration. Everything is pre-configured and optimized for your business."
-    },
-    {
-      icon: <Sparkles className="w-6 h-6" />,
-      title: "AI-Powered",
-      description: "Leverage cutting-edge AI technology to automate tasks and improve efficiency across your organization."
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Enterprise Security",
-      description: "Bank-level security with encryption, compliance, and monitoring to protect your sensitive data."
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
-        <title>Micro SAAS Services - Zion Tech Group</title>
-        <meta name="description" content="Ready-to-use micro SAAS solutions for immediate business transformation. AI-powered tools for analytics, security, content, and collaboration." />
+        <title>Micro Saas Services - Zion Tech Group</title>
+        <meta name="description" content="Advanced micro saas services solutions by Zion Tech Group" />
       </Helmet>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Micro SAAS Services
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Micro Saas Services
           </h1>
+<<<<<<< HEAD
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Ready-to-use software solutions that can transform your business operations immediately. 
             No setup required, no complex configurations - just powerful tools that work out of the box.
@@ -237,6 +144,11 @@ export default function MicroSaasServicesPage() {
             </Link>
           </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced micro saas services solutions by Zion Tech Group.
+          </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
 =======
 'use client';

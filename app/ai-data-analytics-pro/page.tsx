@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -21,12 +22,19 @@ export default function PagePage() {
           </p>
 =======
 export default function AiDataAnalyticsProPage() {
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function AiDataAnalyticsPro() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Ai Data Analytics Pro - Zion Tech Group</title>
         <meta name="description" content="Advanced ai data analytics pro solutions by Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
 
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -78,3 +86,18 @@ export default function AiDataAnalyticsProPage() {
 =======
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-6053
+=======
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Ai Data Analytics Pro
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced ai data analytics pro solutions by Zion Tech Group.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443

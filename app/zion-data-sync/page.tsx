@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 'use client';
 >>>>>>> cursor/fix-errors-and-merge-to-main-a070
@@ -22,12 +23,19 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function ZionDataSyncPage() {
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function ZionDataSync() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Zion Data Sync - Zion Tech Group</title>
         <meta name="description" content="Advanced zion data sync solutions by Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
@@ -60,10 +68,21 @@ export default function ZionDataSyncPage() {
             </p>
           </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-a070
+=======
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Zion Data Sync
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced zion data sync solutions by Zion Tech Group.
+          </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -223,3 +242,6 @@ export default ZionDataSyncPage;
 =======
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-6053
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443

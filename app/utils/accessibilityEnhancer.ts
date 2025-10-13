@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // accessibilityEnhancer utility functions
 
 export interface AccessibilityEnhancerConfig {
@@ -71,9 +72,47 @@ class AccessibilityEnhancer {
 
   getConfig(): AccessibilityConfig {
     return { ...this.config };
-  }
+=======
+import { cn } from '../../utils/cn';
+
+export interface AccessibilityConfig {
+  enableHighContrast: boolean;
+  enableReducedMotion: boolean;
+  enableScreenReader: boolean;
+  fontSize: 'small' | 'medium' | 'large';
 }
 
+export const defaultAccessibilityConfig: AccessibilityConfig = {
+  enableHighContrast: false,
+  enableReducedMotion: false,
+  enableScreenReader: false,
+  fontSize: 'medium'
+};
+
+export function enhanceAccessibility(config: Partial<AccessibilityConfig> = {}) {
+  const mergedConfig = { ...defaultAccessibilityConfig, ...config };
+  
+  // Apply accessibility enhancements based on configuration
+  if (mergedConfig.enableHighContrast) {
+    document.documentElement.classList.add('high-contrast');
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443
+  }
+  
+  if (mergedConfig.enableReducedMotion) {
+    document.documentElement.classList.add('reduced-motion');
+  }
+  
+  if (mergedConfig.enableScreenReader) {
+    document.documentElement.classList.add('screen-reader-optimized');
+  }
+  
+  // Apply font size
+  document.documentElement.setAttribute('data-font-size', mergedConfig.fontSize);
+  
+  return mergedConfig;
+}
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const accessibilityEnhancer = new AccessibilityEnhancer();
 <<<<<<< HEAD
@@ -1255,3 +1294,17 @@ export default accessibilityEnhancer;
 // Export default instance
 export const accessibilityEnhancer = new AccessibilityEnhancer();
 >>>>>>> cursor/fix-errors-and-merge-to-main-6053
+=======
+export function getAccessibilityClasses(config: AccessibilityConfig) {
+  return cn(
+    {
+      'high-contrast': config.enableHighContrast,
+      'reduced-motion': config.enableReducedMotion,
+      'screen-reader-optimized': config.enableScreenReader,
+      'text-sm': config.fontSize === 'small',
+      'text-base': config.fontSize === 'medium',
+      'text-lg': config.fontSize === 'large'
+    }
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443

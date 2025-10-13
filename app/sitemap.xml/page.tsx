@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -164,3 +165,28 @@ export default function SitemapXmlPage() {
   );
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-6053
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function SitemapXml() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>Sitemap XML - Zion Tech Group</title>
+        <meta name="description" content="Advanced sitemap xml solutions by Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Sitemap XML
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced sitemap xml solutions by Zion Tech Group.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443

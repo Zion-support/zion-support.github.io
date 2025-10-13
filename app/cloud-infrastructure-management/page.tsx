@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -27,10 +28,19 @@ export default function PagePage() {
 export default function CloudInfrastructureManagementPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function CloudInfrastructureManagement() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443
       <Helmet>
         <title>Cloud Infrastructure Management - Zion Tech Group</title>
         <meta name="description" content="Advanced cloud infrastructure management solutions by Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
@@ -114,3 +124,18 @@ export default CloudInfrastructureManagementPage;
 =======
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-6053
+=======
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Cloud Infrastructure Management
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced cloud infrastructure management solutions by Zion Tech Group.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443

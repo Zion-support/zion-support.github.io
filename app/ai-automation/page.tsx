@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
@@ -22,12 +23,19 @@ export default function PagePage() {
       
 =======
 export default function AiAutomationPage() {
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function AiAutomation() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Ai Automation - Zion Tech Group</title>
         <meta name="description" content="Advanced ai automation solutions by Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
@@ -444,10 +452,21 @@ export default AIAutomationPage;
               <p className="text-gray-300">{feature.description}</p>
             </div>
           ))}
+=======
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Ai Automation
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced ai automation solutions by Zion Tech Group.
+          </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
@@ -457,3 +476,6 @@ export default AiAutomationPage;
 =======
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-6053
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443

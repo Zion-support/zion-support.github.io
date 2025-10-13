@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -116,3 +117,6 @@ export default function FuturisticButton({ className = '', children }: Futuristi
   );
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-6053
+=======
+// import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443

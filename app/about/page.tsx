@@ -115,6 +115,7 @@ export default AboutPage;
 =======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Shield, Users, Award, Globe, Zap } from 'lucide-react';
 
@@ -179,25 +180,26 @@ export default function AboutPage() {
     { number: "99.9%", label: "Uptime Guarantee" },
     { number: "24/7", label: "Support Available" }
   ];
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443
 
+export default function About() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group - a leading provider of AI solutions, cybersecurity, cloud services, and 5G technology. Meet our expert team and discover our mission." />
+        <title>About - Zion Tech Group</title>
+        <meta name="description" content="Advanced about solutions by Zion Tech Group" />
       </Helmet>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            About Zion Tech Group
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            About
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            We're a team of passionate technologists dedicated to transforming businesses through innovative AI solutions, 
-            robust cybersecurity, scalable cloud services, and cutting-edge 5G technology.
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced about solutions by Zion Tech Group.
           </p>
         </div>
+<<<<<<< HEAD
 
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
@@ -339,6 +341,8 @@ export default function AboutPage() {
             </Link>
           </div>
         </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443
       </div>
     </div>
   );

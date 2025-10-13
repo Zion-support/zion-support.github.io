@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 'use client';
 >>>>>>> cursor/fix-errors-and-merge-to-main-a070
@@ -208,23 +209,28 @@ export default function ContactPage() {
     console.log('Form submitted:', formData);
     // Add form submission logic here
   };
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443
 
+export default function Contact() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
-        <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI solutions, cybersecurity, cloud services, and 5G technology. Contact our expert team today." />
+        <title>Contact - Zion Tech Group</title>
+        <meta name="description" content="Advanced contact solutions by Zion Tech Group" />
       </Helmet>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Contact Us
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Contact
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Ready to transform your business with cutting-edge technology? Get in touch with our expert team.
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced contact solutions by Zion Tech Group.
           </p>
         </div>
+<<<<<<< HEAD
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
@@ -432,6 +438,8 @@ export default function ContactPage() {
             </form>
           </div>
         </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443
       </div>
     </div>
 =======

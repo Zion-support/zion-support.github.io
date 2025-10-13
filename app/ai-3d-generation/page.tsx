@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -18,12 +19,19 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function Ai3dGenerationPage() {
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function Ai3dGeneration() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Ai 3d Generation - Zion Tech Group</title>
         <meta name="description" content="Advanced ai 3d generation solutions by Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-6053
       <div className="container mx-auto px-4 py-16">
@@ -349,3 +357,18 @@ export default Ai3dGenerationPage;
 =======
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-6053
+=======
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Ai 3d Generation
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced ai 3d generation solutions by Zion Tech Group.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-5443
