@@ -76,7 +76,7 @@ const HomePage = () => {
       icon: <Zap className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500",
       stats: "50+ solutions",
-      link: "/micro-saas"
+      link: "/micro-saas-services"
     },
     {
       title: "5G Solutions",
@@ -94,7 +94,7 @@ const HomePage = () => {
       description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
       price: "From $299/month",
       icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-analytics-pro",
+      link: "/zion-ai-analytics-pro",
       featured: true
     },
     {
@@ -102,7 +102,7 @@ const HomePage = () => {
       description: "Advanced cybersecurity protection with AI-powered threat detection and automated response",
       price: "From $499/month",
       icon: <Shield className="w-6 h-6" />,
-      link: "/zion-security-shield",
+      link: "/zion-security-shield-pro",
       featured: true
     },
     {
@@ -110,7 +110,7 @@ const HomePage = () => {
       description: "Secure cloud storage solution with end-to-end encryption and unlimited scalability",
       price: "From $99/month",
       icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault",
+      link: "/zion-cloud-vault-pro",
       featured: true
     },
     {
@@ -333,7 +333,7 @@ const HomePage = () => {
           </div>
           <div className="text-center mt-12">
             <Link
-              to="/micro-saas"
+              to="/micro-saas-services"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-700 transition-all duration-300 group"
             >
               View All Micro SAAS Solutions

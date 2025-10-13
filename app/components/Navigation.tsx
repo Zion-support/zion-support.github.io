@@ -29,7 +29,10 @@ import {
   TrendingUp,
   Cpu,
   Network,
-  Sparkles
+  FileText,
+  Target,
+  Calendar,
+  Clock
 } from 'lucide-react';
 
 interface NavigationProps {

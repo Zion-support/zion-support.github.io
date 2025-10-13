@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
               <li><Link to="/ai-services" className="text-gray-300 hover:text-white transition-colors">AI Services</Link></li>
               <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">IT Services</Link></li>
               <li><Link to="/5g-solutions" className="text-gray-300 hover:text-white transition-colors">5G Solutions</Link></li>
-              <li><Link to="/micro-saas" className="text-gray-300 hover:text-white transition-colors">Micro SAAS</Link></li>
+              <li><Link to="/micro-saas-services" className="text-gray-300 hover:text-white transition-colors">Micro SAAS</Link></li>
             </ul>
           </div>
 
@@ -57,15 +57,15 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">contact@ziontechgroup.com</span>
+                <span className="text-gray-300">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">+1 (555) 123-4567</span>
+                <span className="text-gray-300">+1 302 464 0950</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">New York, NY</span>
+                <span className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</span>
               </div>
             </div>
           </div>
