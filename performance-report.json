@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
 =======
   "timestamp": "2025-10-13T10:41:07.440Z",
   "buildStats": {
@@ -7,6 +8,14 @@
     "jsFiles": 12,
     "jsSize": 668684,
 >>>>>>> cursor/fix-errors-and-merge-to-main-aec0
+=======
+  "timestamp": "2025-10-13T10:52:48.013Z",
+  "buildStats": {
+    "totalFiles": 85,
+    "totalSize": 815888,
+    "jsFiles": 82,
+    "jsSize": 806785,
+>>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
     "cssFiles": 1,
     "cssSize": 1811,
     "imageFiles": 0,
