@@ -16,6 +16,8 @@ import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import FuturisticBackground from "./app/components/FuturisticBackground";
+import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
+import SEOOptimizer from "./app/components/SEOOptimizer";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -405,6 +407,8 @@ function App() {
             <AnalyticsProvider>
               <div>
                 <PerformanceMonitor />
+                <PerformanceEnhancer />
+                <SEOOptimizer />
               </div>
             </AnalyticsProvider>
           </div>

@@ -34,6 +34,11 @@ export default defineConfig({
     modulePreload: {
       polyfill: false,
     },
+    // Performance optimizations
+    chunkSizeWarningLimit: 1000,
+    assetsInlineLimit: 4096,
+    // Enable compression
+    reportCompressedSize: true,
     rollupOptions: {
       output: {
         manualChunks: (id) => {
@@ -77,12 +82,8 @@ export default defineConfig({
         },
       },
     },
-    // Optimize bundle size
-    chunkSizeWarningLimit: 1000,
     // Enable tree shaking
     treeshake: true,
-    // Enable compression
-    reportCompressedSize: true,
   },
   server: {
     port: 3000,
