@@ -1,29 +1,30 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-0f93
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-29e3
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6c11
 // Next.js type declarations
 declare module 'next' {
   interface NextApiRequest {
     user?: any;
   }
-  
   interface NextConfig {
     // Add any Next.js specific types here
   }
 }
-
 // Export a utility function
 export const nextUtil = () => {
   // Implementation
   return true;
 };
-
 export default nextUtil;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -33,3 +34,5 @@ export default nextUtil;
 >>>>>>> cursor/fix-errors-and-merge-to-main-0f93
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-29e3
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6c11

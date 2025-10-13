@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AdvancedPerformanceMonitor: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">
@@ -12,8 +11,8 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     </div>
   );
 };
-
 export default AdvancedPerformanceMonitor;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -23,3 +22,5 @@ export default AdvancedPerformanceMonitor;
 >>>>>>> cursor/fix-errors-and-merge-to-main-0f93
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-29e3
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6c11

@@ -22,9 +22,13 @@ import PrivacyPage from './app/pages/PrivacyPage';
 import TermsPage from './app/pages/TermsPage';
 import PricingPage from './app/pages/PricingPage';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import SolutionsPage from './app/pages/SolutionsPage';
 >>>>>>> 539bab9ad9bcba958009bc45d5cd0a0e02c6f6bc
+=======
+import SolutionsPage from './app/pages/SolutionsPage';
+>>>>>>> cursor/fix-errors-and-merge-to-main-6c11
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -76,6 +80,7 @@ function App() {
                     <Route path="/privacy" element={<PrivacyPage />} />
                     <Route path="/terms" element={<TermsPage />} />
                     <Route path="/pricing" element={<PricingPage />} />
+                    <Route path="/solutions" element={<SolutionsPage />} />
                     
                     {/* Catch all route */}
                     <Route path="*" element={

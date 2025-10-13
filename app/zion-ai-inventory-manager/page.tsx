@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,6 +10,8 @@ import { Helmet } from 'react-helmet-async';
 >>>>>>> cursor/fix-errors-and-merge-to-main-0f93
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-29e3
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6c11
 export default function ZionAIInventoryManager() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -16,7 +19,6 @@ export default function ZionAIInventoryManager() {
         <title>Zion AI Inventory Manager | Zion Tech Group</title>
         <meta name="description" content="Professional AI Inventory Manager services by Zion Tech Group. Advanced AI and IT solutions for your business." />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
@@ -26,7 +28,6 @@ export default function ZionAIInventoryManager() {
             AI-powered inventory management solutions for modern businesses.
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold text-white mb-4">Smart Inventory Tracking</h3>
@@ -39,7 +40,6 @@ export default function ZionAIInventoryManager() {
               <li>• Automated reordering</li>
             </ul>
           </div>
-
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold text-white mb-4">Demand Forecasting</h3>
             <p className="text-gray-300 mb-4">
@@ -51,7 +51,6 @@ export default function ZionAIInventoryManager() {
               <li>• Trend analysis</li>
             </ul>
           </div>
-
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold text-white mb-4">Cost Optimization</h3>
             <p className="text-gray-300 mb-4">
@@ -64,7 +63,6 @@ export default function ZionAIInventoryManager() {
             </ul>
           </div>
         </div>
-
         <div className="text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Optimize Your Inventory?</h2>
@@ -82,9 +80,12 @@ export default function ZionAIInventoryManager() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-0f93
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-29e3
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6c11

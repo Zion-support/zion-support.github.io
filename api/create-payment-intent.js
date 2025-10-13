@@ -18,6 +18,7 @@ async function handler(req, res) {
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
+<<<<<<< HEAD
 
   try {
     const { amount, currency = 'usd' } = req.body || {};
@@ -30,6 +31,18 @@ async function handler(req, res) {
     }
 
     // Mock payment intent creation
+=======
+  
+  const { amount, currency = 'usd' } = req.body || {};
+  if (!amount) {
+    res.statusCode = 400;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Amount is required' }));
+    return;
+  }
+  
+  try {
+>>>>>>> cursor/fix-errors-and-merge-to-main-6c11
     const paymentIntent = {
       id: `pi_${Date.now()}`,
       amount: Math.round(amount * 100), // Convert to cents
@@ -37,14 +50,25 @@ async function handler(req, res) {
       status: 'requires_payment_method',
       created: Math.floor(Date.now() / 1000)
     };
-
+    
     res.statusCode = 200;
+<<<<<<< HEAD
     res.json({ paymentIntent });
   } catch (_error) {
+=======
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ paymentIntent }));
+  } catch (error) {
+    console.error('Payment intent creation error:', error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-6c11
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
   }
 }
 
+<<<<<<< HEAD
 export default withErrorLogging(handler);
+=======
+export default withErrorLogging(handler);
+>>>>>>> cursor/fix-errors-and-merge-to-main-6c11

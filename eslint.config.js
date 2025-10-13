@@ -75,14 +75,24 @@ export default [
         document: 'readonly',
         console: 'readonly',
         process: 'readonly',
-        Buffer: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
         global: 'readonly',
+<<<<<<< HEAD
+=======
+        HTMLElement: 'readonly',
+        Event: 'readonly',
+        KeyboardEvent: 'readonly',
+        MediaQueryListEvent: 'readonly',
+        PerformanceObserver: 'readonly',
+        PerformanceNavigationTiming: 'readonly',
+        HTMLInputElement: 'readonly',
+        HTMLTextAreaElement: 'readonly',
+        HTMLSelectElement: 'readonly',
+>>>>>>> cursor/fix-errors-and-merge-to-main-6c11
         setTimeout: 'readonly',
         clearTimeout: 'readonly',
         setInterval: 'readonly',
         clearInterval: 'readonly',
+<<<<<<< HEAD
         HTMLElement: 'readonly',
         HTMLInputElement: 'readonly',
         HTMLTextAreaElement: 'readonly',
@@ -97,6 +107,9 @@ export default [
         module: 'readonly',
         exports: 'readonly',
         fs: 'readonly'
+=======
+        performance: 'readonly'
+>>>>>>> cursor/fix-errors-and-merge-to-main-6c11
       }
     },
     plugins: {

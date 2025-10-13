@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React, { useEffect, useState } from 'react';
@@ -25,6 +26,9 @@ declare global {
 }
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-29e3
+=======
+import React, { useEffect, useState } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-6c11
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
@@ -189,6 +193,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -197,6 +202,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 >>>>>>> cursor/fix-errors-and-merge-to-main-0f93
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-29e3
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6c11
 };
 
 export default AccessibilityEnhancer;
