@@ -1,5 +1,5 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Right, Play, User, Star, Circle, Clock } from 'lucide-react;
 const TutorialsPage: React.FC = () => {
   const tutorials = [{
@@ -79,12 +79,12 @@ const TutorialsPage: React.FC = () => {
   ];
 
   return (
-    <>;
-      <Helmet>;
-        <title>Tutorials - Learn AI & IT Skills | Zion Tech Group</title>;
-        <meta name="description" content="Master AI and IT skills with our comprehensive tutorials. Learn from experts with hands-on projects and real-world examples." />;
-        <meta name="keywords" content="tutorials, AI learning, IT training, machine learning, cloud computing, cybersecurity, online courses" />;
-      </Helmet>;
+    <>
+      <Helmet>
+        <title>Tutorials - Learn AI & IT Skills | Zion Tech Group</title>
+        <meta name="description" content="Master AI and IT skills with our comprehensive tutorials. Learn from experts with hands-on projects and real-world examples." />
+        <meta name="keywords" content="tutorials, AI learning, IT training, machine learning, cloud computing, cybersecurity, online courses" />
+      </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
@@ -191,7 +191,7 @@ const TutorialsPage: React.FC = () => {
           </div>;
         </section>;
       </div>;
-    </>;
+    </>
   );
 };
 

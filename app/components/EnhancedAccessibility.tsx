@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 import { useEffect, Node } from 'react;
 interface EnhancedAccessibilityProps {
   children: Node;
@@ -80,7 +80,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children 
     };
   }, []);
 
-  return <>{children}</>;
+  return <>{children}</>
 };
 
 export default EnhancedAccessibility;

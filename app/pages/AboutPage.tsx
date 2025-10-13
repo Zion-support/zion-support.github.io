@@ -1,15 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
-=======
-import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
 import { 
   CheckCircleIcon,
   UserGroupIcon,
@@ -24,91 +14,14 @@ import {
   MapPinIcon
 } from '@heroicons/react/24/outline';
 
-export default function AboutPage() {
-<<<<<<< HEAD
-  return (
+export default function AboutPage()   {
+return (
     <>
       <Helmet>
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group's mission, values, and expertise in AI and IT solutions. Discover our team and company culture." />
         <meta name="keywords" content="about us, company, team, mission, values, AI solutions, IT services" />
       </Helmet>
-      
-=======
-  const values = [
-    {
-      icon: CheckCircleIcon,
-      title: 'Mission-Driven',
-      description: 'We are committed to delivering innovative solutions that drive real business value and transformation.'
-    },
-    {
-      icon: UserGroupIcon,
-      title: 'Client-Focused',
-      description: 'Our success is measured by our clients\' success. We build lasting partnerships based on trust and results.'
-    },
-    {
-      icon: StarIcon,
-      title: 'Excellence',
-      description: 'We maintain the highest standards of quality and continuously strive for excellence in everything we do.'
-    },
-    {
-      icon: LightBulbIcon,
-      title: 'Innovation',
-      description: 'We embrace cutting-edge technologies and creative approaches to solve complex business challenges.'
-    },
-    {
-      icon: ShieldCheckIcon,
-      title: 'Integrity',
-      description: 'We conduct business with honesty, transparency, and ethical practices in all our interactions.'
-    },
-    {
-      icon: RocketLaunchIcon,
-      title: 'Agility',
-      description: 'We adapt quickly to changing market conditions and client needs to deliver optimal solutions.'
-    }
-  ];
-
-  const team = [
-    {
-      name: 'Kleber Santos',
-      role: 'Founder & CEO',
-<<<<<<< HEAD
-      description: 'Technology visionary with 15+ years of experience in AI and enterprise solutions.',
-      image: '/team/kleber.jpg'
-    },
-    {
-      name: 'Sarah Johnson',
-      role: 'CTO',
-      description: 'Expert in cloud architecture and cybersecurity with a passion for innovation.',
-      image: '/team/sarah.jpg'
-    },
-    {
-      name: 'Michael Chen',
-      role: 'Lead AI Engineer',
-      description: 'Machine learning specialist focused on practical AI applications for business.',
-      image: '/team/michael.jpg'
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'Head of Design',
-      description: 'User experience designer creating intuitive and engaging digital experiences.',
-      image: '/team/emily.jpg'
-=======
-      image: '/api/placeholder/300/300',
-      bio: 'Visionary leader with 4+ years of experience in AI and IT solutions, driving innovation and business transformation.'
-    },
-    {
-      name: 'AI Development Team',
-      role: 'AI Specialists',
-      image: '/api/placeholder/300/300',
-      bio: 'Expert team of AI engineers and data scientists specializing in machine learning, NLP, and computer vision.'
-    },
-    {
-      name: 'IT Solutions Team',
-      role: 'IT Architects',
-      image: '/api/placeholder/300/300',
-      bio: 'Skilled professionals in cloud infrastructure, cybersecurity, and digital transformation strategies.'
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
     }
   ];
 
@@ -121,8 +34,7 @@ export default function AboutPage() {
 
   return (
     <>
-<<<<<<< HEAD
-      <SEO 
+<SEO 
         title="About Us - Zion Tech Group"
         description="Learn about Zion Tech Group's mission, values, and team. We're passionate about delivering cutting-edge AI and IT solutions."
         keywords="about us, team, mission, values, AI company, IT solutions"
@@ -130,16 +42,6 @@ export default function AboutPage() {
       />
 
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-=======
-      <EnhancedSEO
-        title="About Us - Zion Tech Group | AI and IT Solutions"
-        description="Learn about Zion Tech Group's mission, values, and team. We're dedicated to delivering cutting-edge AI and IT solutions that transform businesses."
-        keywords="about us, team, mission, values, AI solutions, IT services, company"
-        canonicalUrl="/about"
-        ogImage="/api/placeholder/1200/630"
-      />
-
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-20">
@@ -152,49 +54,15 @@ export default function AboutPage() {
               About Zion Tech Group
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-<<<<<<< HEAD
-              Empowering businesses through innovative technology solutions
+Empowering businesses through innovative technology solutions
             </p>
 <<<<<<< HEAD
             <p className="text-lg text-gray-400 max-w-3xl mx-auto">
               Founded in 2020, we've been at the forefront of digital transformation, 
               helping companies leverage the power of artificial intelligence, cybersecurity, 
               and cloud technologies to achieve unprecedented growth.
-=======
-            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
-              Founded in 2020, Zion Tech Group has been at the forefront of digital transformation, 
-              helping businesses leverage cutting-edge AI and IT solutions to achieve their goals.
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
             </p>
           </div>
-=======
-              Pioneering the Future of AI and IT Solutions
-            </p>
-            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
-              Founded in 2020, Zion Tech Group has been at the forefront of technological innovation, 
-              helping businesses harness the power of artificial intelligence and cutting-edge IT solutions 
-              to achieve unprecedented growth and efficiency.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-300 text-lg">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
         </div>
       </section>
 
@@ -202,8 +70,7 @@ export default function AboutPage() {
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-<<<<<<< HEAD
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+<div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -224,30 +91,6 @@ export default function AboutPage() {
                     We believe technology should be accessible, powerful, and transformative. 
                     Every solution we create is designed to make a real difference in our clients' success.
                   </p>
-=======
-            <div className="grid md:grid-cols-2 gap-12">
-              <div>
-                <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
-                <p className="text-xl text-gray-300 mb-6 leading-relaxed">
-                  To democratize access to advanced AI and IT solutions, empowering businesses of all sizes 
-                  to compete and thrive in the digital economy through innovative technology and expert guidance.
-                </p>
-                <div className="flex items-center text-purple-400">
-                  <HeartIcon className="w-6 h-6 mr-2" />
-                  <span className="font-semibold">Driven by Purpose</span>
-                </div>
-              </div>
-              
-              <div>
-                <h2 className="text-4xl font-bold text-white mb-6">Our Vision</h2>
-                <p className="text-xl text-gray-300 mb-6 leading-relaxed">
-                  To be the global leader in AI and IT transformation, creating a world where every business 
-                  can leverage cutting-edge technology to solve complex challenges and achieve sustainable growth.
-                </p>
-                <div className="flex items-center text-cyan-400">
-                  <RocketLaunchIcon className="w-6 h-6 mr-2" />
-                  <span className="font-semibold">Building the Future</span>
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
                 </div>
               </div>
             </div>
@@ -267,11 +110,7 @@ export default function AboutPage() {
             </p>
           </div>
           
-<<<<<<< HEAD
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-=======
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
+<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {values.map((value, index) => {
               const Icon = value.icon;
               return (
@@ -286,8 +125,7 @@ export default function AboutPage() {
                 </div>
               );
             })}
-<<<<<<< HEAD
-          </div>
+</div>
         </div>
       </section>
 
@@ -316,17 +154,6 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
-          </div>
-        </div>
-      </section>
-
-<<<<<<< HEAD
-      {/* Team */}
-=======
-      {/* Team Section */}
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -338,23 +165,15 @@ export default function AboutPage() {
             </p>
           </div>
           
-<<<<<<< HEAD
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {team.map((member, index) => (
               <div key={index} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-=======
-          <div className="grid md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <div key={index} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
-                <div className="w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform">
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
                   <span className="text-white font-bold text-2xl">
                     {member.name.split(' ').map(n => n[0]).join('')}
                   </span>
                 </div>
-<<<<<<< HEAD
-                <h3 className="text-xl font-bold text-white mb-2 text-center">
+<h3 className="text-xl font-bold text-white mb-2 text-center">
                   {member.name}
                 </h3>
                 <p className="text-purple-400 text-center mb-4">
@@ -362,12 +181,6 @@ export default function AboutPage() {
                 </p>
                 <p className="text-gray-300 text-sm text-center leading-relaxed">
                   {member.description}
-=======
-                <h3 className="text-2xl font-bold text-white mb-2 text-center">{member.name}</h3>
-                <p className="text-cyan-400 text-center mb-4 font-semibold">{member.role}</p>
-                <p className="text-gray-300 text-center leading-relaxed">
-                  {member.bio}
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
                 </p>
               </div>
             ))}
@@ -383,11 +196,7 @@ export default function AboutPage() {
               Ready to Work With Us?
             </h2>
             <p className="text-xl text-gray-300 mb-12">
-<<<<<<< HEAD
-              Let's discuss how we can help transform your business with our innovative solutions
-=======
-              Let's discuss how our expertise can help transform your business
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
+Let's discuss how we can help transform your business with our innovative solutions
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -22,7 +22,7 @@ import {
   CogIcon
 } from '@heroicons/react/24/outline';
 
-export default function MicroSaaSSolutionsPage() {
+export default function MicroSaaSSolutionsPage()   {
   const microSaaSProducts = [
     {
       title: "AI-Powered Analytics Dashboard",

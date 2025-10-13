@@ -1,13 +1,13 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 const TermsPage: React.FC = () => {
   return (
-    <>;
-      <Helmet>;
-        <title>Terms of Service - Zion Tech Group</title>;
+    <>
+      <Helmet>
+        <title>Terms of Service - Zion Tech Group</title>
         <meta name="description" content="Read the terms of service for using Zion Tech Group's AI and IT solutions. Understand your rights and responsibilities." />';
-        <meta name="keywords" content="terms of service, terms and conditions, user agreement, service terms" />;
-      </Helmet>;
+        <meta name="keywords" content="terms of service, terms and conditions, user agreement, service terms" />
+      </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
@@ -79,7 +79,7 @@ const TermsPage: React.FC = () => {
           </div>;
         </section>;
       </div>;
-    </>;
+    </>
   );
 };
 

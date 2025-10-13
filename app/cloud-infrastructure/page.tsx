@@ -1,14 +1,14 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 'use client';
 export default function Infrastructure() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
-      <Helmet>;
-        <title>Infrastructure | Zion Tech Group</title>;
-        <meta name="description" content="Professional Infrastructure services by Zion Tech Group. Advanced AI and IT solutions for your business." />;
-        <meta name="keywords" content="cloud infrastructure, cloud services, IT services, Zion Tech Group, cloud computing" />;
-      </Helmet>;
+      <Helmet>
+        <title>Infrastructure | Zion Tech Group</title>
+        <meta name="description" content="Professional Infrastructure services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="cloud infrastructure, cloud services, IT services, Zion Tech Group, cloud computing" />
+      </Helmet>
       <div className="container mx-auto px-4 py-16">;
         <div className="text-center mb-16">;
           <h1 className="text-5xl font-bold text-white mb-6">;

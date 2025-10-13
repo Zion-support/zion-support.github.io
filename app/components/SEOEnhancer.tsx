@@ -1,6 +1,6 @@
-import React from 'react;
+import React from 'react';
 import { useEffect } from 'react;
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 interface SEOEnhancerProps {
   title?: string;
   description?: string;
@@ -59,10 +59,10 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },';
   ];
   return (
-    <Helmet>;
-      <title>{title}</title>;
+    <Helmet>
+      <title>{title}</title>
       {metaTags.map((tag, _index) => (
-        <meta key={_index} {...tag} />;
+        <meta key={_index} {...tag} />
       ))}
       {/* Canonical URL */}
       <link rel="canonical" href={url} />;
@@ -77,7 +77,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       {/* DNS prefetch for performance */}
       <link rel="dns-prefetch" href="//www.google-analytics.com" />;
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />;
-    </Helmet>;
+    </Helmet>
   );
 };
 // Default structured data for the organization;

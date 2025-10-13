@@ -1,5 +1,5 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom;
 import { Right, Circle } from 'lucide-react;
 const SupportPage: React.FC = () => {
@@ -52,12 +52,12 @@ const SupportPage: React.FC = () => {
   ];
 
   return (
-    <>;
-      <Helmet>;
-        <title>Support - Get Help | Zion Tech Group</title>;
+    <>
+      <Helmet>
+        <title>Support - Get Help | Zion Tech Group</title>
         <meta name="description" content="Get help and support for Zion Tech Group's AI and IT solutions. Live chat, phone support, documentation, and more." />';
-        <meta name="keywords" content="support, help, customer service, technical support, documentation, FAQ" />;
-      </Helmet>;
+        <meta name="keywords" content="support, help, customer service, technical support, documentation, FAQ" />
+      </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
@@ -144,7 +144,7 @@ const SupportPage: React.FC = () => {
           </div>;
         </section>;
       </div>;
-    </>;
+    </>
   );
 };
 

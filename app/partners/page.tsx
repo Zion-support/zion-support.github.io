@@ -1,5 +1,5 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { } from 'react-router-dom;
 import { Circle, Right, } from 'lucide-react;
 const PartnersPage: React.FC = () => {
@@ -50,12 +50,12 @@ const PartnersPage: React.FC = () => {
   ];
 
   return (
-    <>;
-      <Helmet>;
-        <title>Partners - Strategic Partnerships | Zion Tech Group</title>;
-        <meta name="description" content="Join our partner ecosystem and grow your business with Zion Tech Group. Strategic partnerships, technical support, and joint go-to-market opportunities." />;
-        <meta name="keywords" content="partners, partnerships, strategic alliances, technology partners, business partners, partner program" />;
-      </Helmet>;
+    <>
+      <Helmet>
+        <title>Partners - Strategic Partnerships | Zion Tech Group</title>
+        <meta name="description" content="Join our partner ecosystem and grow your business with Zion Tech Group. Strategic partnerships, technical support, and joint go-to-market opportunities." />
+        <meta name="keywords" content="partners, partnerships, strategic alliances, technology partners, business partners, partner program" />
+      </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
@@ -140,7 +140,7 @@ const PartnersPage: React.FC = () => {
           </div>;
         </section>;
       </div>;
-    </>;
+    </>
   );
 };
 

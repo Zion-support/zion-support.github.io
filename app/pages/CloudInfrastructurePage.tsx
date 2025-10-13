@@ -1,5 +1,5 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Cloud, Server, Database, Shield, Zap, Globe } from 'lucide-react;
 const CloudInfrastructurePage: React.FC = () => {
   const services = [{
@@ -42,11 +42,11 @@ const CloudInfrastructurePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">;
-      <Helmet>;
-        <title>Cloud Infrastructure | Zion Tech Group</title>;
-        <meta name="description" content="Comprehensive cloud infrastructure services including migration, automation, security, and optimization." />;
-        <meta name="keywords" content="cloud infrastructure, cloud migration, DevOps, infrastructure as code, cloud security" />;
-      </Helmet>;
+      <Helmet>
+        <title>Cloud Infrastructure | Zion Tech Group</title>
+        <meta name="description" content="Comprehensive cloud infrastructure services including migration, automation, security, and optimization." />
+        <meta name="keywords" content="cloud infrastructure, cloud migration, DevOps, infrastructure as code, cloud security" />
+      </Helmet>
       <div className="container mx-auto px-4 py-16">;
         {/* Hero Section */}
         <div className="text-center mb-16">;

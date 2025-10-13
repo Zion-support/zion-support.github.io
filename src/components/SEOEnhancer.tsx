@@ -1,6 +1,6 @@
-import React from 'react;
+import React from 'react';
 import { Node } from 'react;
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 interface SEOEnhancerProps {
   title: string;
   description: string;
@@ -36,29 +36,29 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
 
   return (
     <.Fragment>;
-      <Helmet>;
+      <Helmet>
         {/* Basic Meta Tags */}
         <title>{title}
-        <meta name="description" content={description} />;
+        <meta name="description" content={description} />
         <meta name="keywords" content={keywords.join(', ')} />';
-        <meta name="author" content="Zion Tech Group" />;
+        <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />';
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />;
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />;
-        <meta name="language" content="English" />;
-        <meta name="revisit-after" content="7 days" />;
-        <meta name="distribution" content="global" />;
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="distribution" content="global" />
         {/* Open Graph Tags */}
-        <meta property="og:title" content={title} />;
-        <meta property="og:description" content={description} />;
-        <meta property="og:type" content="website" />;
-        <meta property="og:url" content="https://ziontechgroup.com" />;
-        <meta property="og:site_name" content="Zion Tech Group" />;
-        <meta property="og:locale" content="en_US" />;
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com" />
+        <meta property="og:site_name" content="Zion Tech Group" />
+        <meta property="og:locale" content="en_US" />
         {/* Twitter d Tags */}
-        <meta name="twitter:card" content="summary_large_image" />;
-        <meta name="twitter:title" content={title} />;
-        <meta name="twitter:description" content={description} />;
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
         {/* Structured Data */}
         <script type="application/ld+json">;
           {JSON.stringify(finalStructuredData)}

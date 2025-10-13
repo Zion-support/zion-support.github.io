@@ -1,37 +1,19 @@
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
-=======
-#!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
 
 function fixHtmlEntities(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
-    let modified = false;
+let modified = false;
 
     // Fix common HTML entities
     const replacements = [
-=======
-    
-    // Fix common HTML entities
-    const fixes = [
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
       { from: /&apos;/g, to: "'" },
       { from: /&quot;/g, to: '"' },
       { from: /&lt;/g, to: '<' },
       { from: /&gt;/g, to: '>' },
       { from: /&amp;/g, to: '&' },
-<<<<<<< HEAD
-      { from: /&nbsp;/g, to: ' ' },
+{ from: /&nbsp;/g, to: ' ' },
       { from: /&rbrace;/g, to: '}' },
       { from: /&lbrace;/g, to: '{' },
       { from: /&rpar;/g, to: ')' },
@@ -70,26 +52,10 @@ function fixHtmlEntities(filePath) {
     });
 
     if (modified) {
-=======
-      { from: /&rbrace;/g, to: '}' },
-      { from: /&lbrace;/g, to: '{' }
-    ];
-    
-    let hasChanges = false;
-    fixes.forEach(fix => {
-      if (fix.from.test(content)) {
-        content = content.replace(fix.from, fix.to);
-        hasChanges = true;
-      }
-    });
-    
-    if (hasChanges) {
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed HTML entities in: ${filePath}`);
       return true;
     }
-<<<<<<< HEAD
 =======
     
 >>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
@@ -132,41 +98,3 @@ function processDirectory(dirPath) {
 console.log('Starting HTML entity fix...');
 const totalFixed = processDirectory('./app');
 console.log(`Fixed HTML entities in ${totalFixed} files.`);
-=======
-function findTsxFiles(dir) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        files.push(fullPath);
-      }
-    }
-  }
-  
-  traverse(dir);
-  return files;
-}
-
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const files = findTsxFiles(appDir);
-
-console.log(`Found ${files.length} TypeScript files to process...`);
-
-let fixedCount = 0;
-files.forEach(file => {
-  if (fixHtmlEntities(file)) {
-    fixedCount++;
-  }
-});
-
-console.log(`Fixed HTML entities in ${fixedCount} files.`);
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3

@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 import { useState, useEffect } from 'react;
 import { } from 'react-router-dom;
 import { ChevronDown, Menu, X, Right, Star, Square, } from 'lucide-react;

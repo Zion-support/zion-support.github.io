@@ -1,5 +1,5 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Play, Right, Circle, Star } from 'lucide-react;
 const DemoPage: React.FC = () => {
   const features = [{
@@ -49,12 +49,12 @@ const DemoPage: React.FC = () => {
   ];
 
   return (
-    <>;
-      <Helmet>;
-        <title>Demo - See Our Solutions in Action | Zion Tech Group</title>;
-        <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />;
-        <meta name="keywords" content="demo, demonstration, AI demo, IT solutions demo, interactive demo, product showcase" />;
-      </Helmet>;
+    <>
+      <Helmet>
+        <title>Demo - See Our Solutions in Action | Zion Tech Group</title>
+        <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
+        <meta name="keywords" content="demo, demonstration, AI demo, IT solutions demo, interactive demo, product showcase" />
+      </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
@@ -171,7 +171,7 @@ const DemoPage: React.FC = () => {
           </div>;
         </section>;
       </div>;
-    </>;
+    </>
   );
 };
 
