@@ -1,3 +1,27 @@
+      }
+    });
+
+    observer.observe({ entryTypes: ['measure', 'navigation'] });'
+
+    return () => {
+  // TODO: Implement
+}
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  // TODO: Implement
+}
+      observer.disconnect();
+    };
+  }, []);
+
+  return null;
+};
+;
+export default PerformanceMonitor;
+;
+export default PerformanceMonitor;
 import React, { useEffect } from 'react';
 
 interface PerformanceMonitorProps {
@@ -16,6 +40,4 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ className = '',
       {children}
     </div>
   );
-};
-
-export default PerformanceMonitor;
+}

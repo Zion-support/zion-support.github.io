@@ -1,0 +1,54 @@
+import type { NextApiRequest, NextApiResponse } from 'next';';';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+import { setSessionCookie } from '../../../utils/adminAuth';';';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  if (req.method !== 'POST') {'
+    res.status(405).json({ error: 'Method Not Allowed' })'
+    res.status(405).json({ error: 'Method Not Allowed' })'
+    return;
+import { setSessionCookie } from '../../../utils/adminAuth';';';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  if (req.method !== 'POST') {'
+    res.status(405).json({ error: 'Method Not Allowed' })'
+    return
+  }
+  const { username, password } = req.body || {}
+  const envUser = process.env.ADMIN_USERNAME || 'kleber@ziontechgroup.com';';
+const envPass = process.env.ADMIN_PASSWORD || 'Tw2.R5u&2!sDfeW''
+  if (username === envUser && password === envPass) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    setSessionCookie(res, { username, issuedAt: Date.now() })
+    res.status(200).json({ ok: true })
+  } else {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    res && res.status(401).json({ error: 'Invalid credentials' })'
+  }
+    res.status(200).json({ ok: true })
+  } else {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    res.status(401).json({ error: 'Invalid credentials' })'
+  }
+}
+
+}}

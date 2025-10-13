@@ -1,1 +1,33 @@
 
+        </div>
+      </div>
+    </>
+  );
+
+};
+
+export default OfflinePage;
+export default function OfflinePage() {
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function Offline() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>Offline - Zion Tech Group</title>
+        <meta name="description" content="Advanced offline solutions by Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Offline
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced offline solutions by Zion Tech Group.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}

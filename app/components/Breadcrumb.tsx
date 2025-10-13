@@ -1,4 +1,12 @@
 import React from 'react';
+        </ol></div>
+</nav>
+  )
+}
+;
+export default Breadcrumb;
+
+}})
 import { Link, useLocation } from 'react-router-dom';
 import { Home, ChevronRight } from 'lucide-react';
 
@@ -48,3 +56,16 @@ const Breadcrumb: React.FC = () => {
 };
 
 export default Breadcrumb;
+
+interface BreadcrumbProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Breadcrumb({ className = '', children }: BreadcrumbProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}

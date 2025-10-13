@@ -1,5 +1,25 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+// API endpoint for onsite requests;
+// API endpoint for onsite requests
+import fs from 'fs';
+import path from 'path';
+
+// Simple wrapper function to replace withSentry
+<<<<<<< HEAD
+=======
 export default function handler(req, res) {
   if (req.method !== "POST") {
+=======
+function withSentry(handler) {
+  return handler;
+}
+
+const dir = path.join(process.cwd(), 'data');
+const file = path.join(dir, 'onsite-requests.json');
+
+function handler(req, res) {
+  if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader("Content-Type", "application/json");
     res.end(JSON.stringify({ error: "Method not allowed" }));
@@ -24,8 +44,11 @@ export default function handler(req, res) {
     }
   } catch (error) {
     // Log error for debugging in development
+<<<<<<< HEAD
     console.error("Error reading existing requests:", error);
     existing = [];
+=======
+    console.error('Error reading existing requests:', error);
   }
 
   const newRequest = {
@@ -37,6 +60,9 @@ export default function handler(req, res) {
     message,
     location,
     timestamp: new Date().toISOString(),
+<<<<<<< HEAD
+=======
+    status: 'pending'
   };
 
   existing.push(newRequest);
@@ -44,6 +70,7 @@ export default function handler(req, res) {
   try {
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode = 200;
+<<<<<<< HEAD
     res.setHeader("Content-Type", "application/json");
     res.end(
       JSON.stringify({
@@ -59,3 +86,41 @@ export default function handler(req, res) {
     res.end(JSON.stringify({ error: "Failed to save request" }));
   }
 }
+=======
+const { withSentry } = require('./withSentry.cjs');'
+
+async function handler(req, res) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  if (req.method !== 'POST') {'
+    res.statusCode = 405
+    res.setHeader('Content-Type', 'application/json')'
+    res.end(JSON.stringify({ error: 'Method not allowed' }))'
+    return
+  }
+
+module.exports = handler;
+
+
+}
+=======
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true, 
+      message: 'Request submitted successfully',
+      id: newRequest.id 
+    }));
+  } catch (error) {
+    console.error('Error saving request:', error);
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: false, 
+      error: 'Failed to save request' 
+    }));
+  }
+}
+
+module.exports = withSentry(handler);

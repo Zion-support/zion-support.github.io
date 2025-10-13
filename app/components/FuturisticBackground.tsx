@@ -1,25 +1,37 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 
 interface FuturisticBackgroundProps {
-  children: React.ReactNode;
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
+export default function FuturisticBackground({ className = '', children }: FuturisticBackgroundProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
-    const ctx = canvas.getContext('2d');
     if (!ctx) return;
-
-    const resizeCanvas = () => {
+;
+const resizeCanvas = () => {
+  // TODO: Implement
+}
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  // TODO: Implement
+}
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
 
-    const animate = () => {
+    };
+
+    const drawParticles = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
       // Create animated particles
@@ -27,16 +39,19 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
       const particleCount = 50;
       
       for (let i = 0; i < particleCount; i++) {
-        const x = (i / particleCount) * canvas.width;
-        const y = canvas.height / 2 + Math.sin(time + i * 0.1) * 100;
-        const size = Math.sin(time + i * 0.2) * 2 + 2;
+        const x = (Math.sin(time + i) * canvas.width / 2) + canvas.width / 2;
+        const y = (Math.cos(time * 0.5 + i) * canvas.height / 2) + canvas.height / 2;
+        const size = Math.sin(time + i) * 2 + 1;
         
         ctx.beginPath();
         ctx.arc(x, y, size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(59, 130, 246, ${Math.sin(time + i * 0.3) * 0.3 + 0.3})`;
+        ctx.fillStyle = `rgba(34, 197, 94, ${Math.sin(time + i) * 0.3 + 0.3})`;
         ctx.fill();
       }
-      
+    };
+
+    const animate = () => {
+      drawParticles();
       requestAnimationFrame(animate);
     };
 
@@ -44,21 +59,23 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
     animate();
 
     window.addEventListener('resize', resizeCanvas);
-    return () => window.removeEventListener('resize', resizeCanvas);
+    
+    return () => {
+      window.removeEventListener('resize', resizeCanvas);
+    };
   }, []);
 
   return (
-    <div className="relative min-h-screen">
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full pointer-events-none"
-        style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%)' }}
-      />
-      <div className="relative z-10">
-        {children}
-      </div>
-    </div>
+    <canvas
+      ref={canvasRef}
+      className="fixed inset-0 w-full h-full pointer-events-none z-0"
+      style={{ background: 'linear-gradient(135deg, #0f172a 0%, #581c87 50%, #0f172a 100%)' }}
+    />
   );
 };
+;
+export default FuturisticBackgroundPage;
 
+}
 export default FuturisticBackground;
+}

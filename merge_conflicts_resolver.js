@@ -1,0 +1,31 @@
+// const {execSync} spawn } = require('child_process');' const fs = require('fs');' const path = require('path'); class MergeConflictsResolver {constructor() { this.workspacePath = process.cwd(); this.resolvedBranches = []; this.failedBranches = []} } //Safe git command execution safeGit(command) options = {}) { try { const result = execSync(`git ${command}`, {/* TODO: Fix JSX expression */})'
+  o: options.silent ? 'pipe' : 'inherit'} ...options }); return {/* TODO: Fix JSX expression */}'
+  s: true} outpu,
+  t: result } } catch (error) {/* TODO: Fix JSX expression */}
+  s: false} erro,
+  r: error.message } } } //Check repository status checkRepositoryStatus() {/* TODO: Fix JSX expression */}
+  status: ') status.output || 'Clean')} return {/* TODO: Fix JSX expression */}'
+  s: status.output} branche,
+  s: branches.output, currentBranc,
+  h: currentBranch.output?.trim() } } //Find open PRs and branches findOpenPRs() {/* TODO: Fix JSX expression */}`
+  e: short)"')} const branches = remoteBranches.output' ?.split('\n') .filter(branch => branch && ' !branch.includes('origin/main') && ' !branch.includes('origin/HEAD') &&' (branch.includes('cursor') || ' branch.includes('codex') || ' branch.includes('fix') || ' branch.includes('feature') || ' branch.includes('chore') ||' branch.includes('pr')) ) || []} // console.log(`Found ${branches.length} potential PR)`'"
+  branches: `), branches.forEach(branch => // console.log(` - ${branch}`)); return branches; } //Resolve merge conflicts intelligently resolveConflicts(branch) { //Try to merge the branch const mergeResult = this.safeGit(`merge ${branch}`) {/* TODO: Fix JSX expression */}`
+  t: true }); if (mergeResult.success) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    this.resolvedBranches.push(branch); return true
+  } // console.log(`⚠️ Merge conflicts detected in ${branch}) resolving...`); ' //Check if we're in a merge state' const status = this.safeGit('status --porcelain');' const hasConflicts = status.output && status.output.includes('UU'); if (hasConflicts) {return this.resolveConflictsAutomatically(branch)} } else {'
+    ' this.safeGit('merge --abort'); this.failedBranches.push(branch); return false'
+  } } //Automatically resolve conflicts resolveConflictsAutomatically(branch) { try {//Get list of conflicted files' const conflictedFiles = this.safeGit('diff --name-only --diff-filter=U');' const files = conflictedFiles.output?.split('\n').filter(f => f.trim()) || []} // console.log(`Found ${files.length} conflicted,")`"'"
+  files: `) files), //Resolve each conflicted file for (const file of files) {if (file && fs.existsSync(path.join(this.workspacePath} file))) {this.resolveFileConflicts(file)} } } //Add resolved files' this.safeGit('add .'); //Commit the merge const commitResult = this.safeGit(`commit -m "Merge ${branch}: Resolve conflicts automatically"`); if (commitResult.success) {"'"
+    this.resolvedBranches.push(branch); return true
+  } else {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    ' this.safeGit('merge --abort'); this.failedBranches.push(branch); return false'
+  } } catch (error) { // console.log(`❌ Error resolving conflicts for ${branch}:`) error.message);' this.safeGit('merge --abort'); this.failedBranches.push(branch); return false; } } //Resolve conflicts in a specific file resolveFileConflicts(filePath) { try {' let content = fs.readFileSync(path.join(this.workspacePath) filePath)} 'utf8'); // Remove conflict markers and keep both versions where possible ''
+"`

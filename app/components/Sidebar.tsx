@@ -1,50 +1,104 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { X, Home, Shield, Zap, Brain, Globe } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-c832
 
-interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
+  MapPin,
+  Clock
+} from 'lucide-react';'
+;
+const Sidebar: React.FC = () => {;
+const [isOpen, setIsOpen] = useState(false);
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['ai-services', 'micro-saas', 'it-services']));';
+const location = useLocation();
+useEffect(() => {;
+const handleResize = (;
+      if (window.innerWidth >= 1024) {) => {
+  // TODO: Add properties
 }
-
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const navigationItems = [
     {
-      name: 'Home',
-      path: '/',
-      icon: <Home className="w-5 h-5" />
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Micro SaaS','
+      key: 'micro-saas','
+      items: [
+  // TODO: Add items
+]
+  // TODO: Add items
+]
+        { name: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings },'
+        { name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard', icon: BarChart },'
+        { name: 'Support Bot', path: '/micro-saas/support-bot', icon: Users },'
+        { name: 'Social Manager', path: '/micro-saas/social-manager', icon: Settings },'
+        { name: 'Email Marketing', path: '/micro-saas/email-marketing', icon: Mail },'
+        { name: 'Inventory Management', path: '/micro-saas/inventory-management', icon: Settings },'
+        { name: 'Lead Scoring', path: '/micro-saas/lead-scoring', icon: BarChart },'
+        { name: 'Document Processor', path: '/micro-saas/document-processor', icon: Settings },'
+        { name: 'SEO Optimizer', path: '/micro-saas/seo-optimizer', icon: Settings },'
+        { name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler', icon: Clock },'
+        { name: 'Chat Analytics', path: '/micro-saas/chat-analytics', icon: BarChart },'
+        { name: 'Expense Tracker', path: '/micro-saas/expense-tracker', icon: BarChart },'
+        { name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings },'
+      ]
     },
     {
-      name: 'About',
-      path: '/about',
-      icon: <Brain className="w-5 h-5" />
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'IT Services','
+      key: 'it-services','
+      items: [
+  // TODO: Add items
+]
+  // TODO: Add items
+]
+        { name: 'IT Services Overview', path: '/it-services', icon: Code },'
+        { name: 'IT Consulting', path: '/it-consulting', icon: Users },'
+        { name: 'IT Infrastructure', path: '/it-infrastructure', icon: Settings },'
+        { name: 'IT Support', path: '/it-support', icon: Users },'
+        { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: Cloud },'
+        { name: 'Cloud Migration', path: '/cloud-migration', icon: Cloud },'
+        { name: 'Cybersecurity', path: '/cybersecurity', icon: Shield },'
+        { name: 'Database Management', path: '/database-management', icon: Settings },'
+        { name: 'Managed IT', path: '/managed-it', icon: Settings },'
+      ]
     },
     {
-      name: 'Services',
-      path: '/services',
-      icon: <Shield className="w-5 h-5" />
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Company','
+      items: [
+  // TODO: Add items
+]
+  // TODO: Add items
+]
+        { name: 'Team', path: '/team', icon: Users },'
+        { name: 'Careers', path: '/careers', icon: Users },'
+        { name: 'Consultation', path: '/consultation', icon: Phone },'
+        { name: 'Pricing', path: '/pricing', icon: BarChart },'
+      ]
     },
     {
-      name: 'AI Services',
-      path: '/ai-services',
-      icon: <Brain className="w-5 h-5" />
-    },
-    {
-      name: 'Micro SAAS',
-      path: '/micro-saas',
-      icon: <Zap className="w-5 h-5" />
-    },
-    {
-      name: '5G Solutions',
-      path: '/5g-solutions',
-      icon: <Globe className="w-5 h-5" />
-    },
-    {
-      name: 'Contact',
-      path: '/contact',
-      icon: <Globe className="w-5 h-5" />
     }
   ];
+;
+const contactInfo = {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    phone: '(302) 464-0950','
+    email: 'kleber@ziontechgroup.com','
+    address: '364 E Main St STE 1008 Middletown, DE 19709','
+    hours: 'Mon-Fri 9AM-6PM EST''
+  };
 
   return (
     <>
@@ -91,3 +145,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 };
 
 export default Sidebar;
+
+export default function Sidebar({ className = '', children }: SidebarProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}

@@ -1,0 +1,67 @@
+import type { NextApiRequest, NextApiResponse } from 'next';';
+import fs from 'fs';';
+import path from 'path';';';
+const CONTENT_PATH = path && path.join(process && process.cwd(), 'data', 'docs', 'content && content.json');const CONTENT_PATH = path && path.join(process && process.cwd(), 'datadocscontent && datadocscontent.json');';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+const CONTENT_PATH = path.join (process.cwd (), 'data', 'docs', 'content.json');const CONTENT_PATH = path.join (process.cwd (), 'datadocscontent.json');';
+export default /**;
+ * handler - Function description
+ */
+function handler() {;
+const token = req.headers['x - admin - token'] as string | undefined,'
+  // Check condition
+if ( {) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  $2
+}
+    return res.status (403).json ({ error: 'Forbidden' })'
+  }
+  try {;
+const data = fs.readFileSync (CONTENT_PATH, 'utf8')'
+    res.status (200).json (JSON.parse (data))
+  } catch (e) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    res.status (500).json ({ error: 'Failed to read content' })'
+  }
+  } catch (e) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    res.status (500).json ({ error: 'Failed to read content' })'
+  }  } catch (e) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    res.status (500).json ({ error: 'Failed to read content' })'
+    res.status(500).json({ error: 'Failed to read content' })'
+  }
+}
+const CONTENT_PATH = path.join(process.cwd(), 'data', 'docs', 'content.json');';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+const token = req.headers['x-admin-token'] as string | undefined'
+  if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    return res.status(403).json({ error: 'Forbidden' })'
+  }
+  try {;
+const data = fs.readFileSync(CONTENT_PATH, 'utf8')'
+    res.status(200).json(JSON.parse(data))
+  } catch (e) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    res.status(500).json({ error: 'Failed to read content' })'
+  }
+}

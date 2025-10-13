@@ -1,3 +1,4 @@
+export default PerformanceOptimizer;
 import React, { useEffect } from 'react';
 
 interface PerformanceOptimizerProps {
@@ -61,3 +62,4 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
 };
 
 export default PerformanceOptimizer;
+}
