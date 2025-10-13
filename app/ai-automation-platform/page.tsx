@@ -1,96 +1,110 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Code, Globe, Smartphone, Zap, Shield, Users, Award, CheckCircle, Star, Play, Headphones, Camera, Layers } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import FuturisticBackground from '../components/FuturisticBackground';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
+import { ArrowRight, Zap, Bot, Workflow, Settings, BarChart3, Shield, Users, Clock, CheckCircle, Star, Play, Headphones, Camera, Layers } from 'lucide-react';
+import EnhancedSEO from '../../components/EnhancedSEO';
+import FuturisticBackground from '../../components/FuturisticBackground';
+import FuturisticCard from '../../components/FuturisticCard';
+import FuturisticButton from '../../components/FuturisticButton';
+import ResponsiveContainer from '../../components/ResponsiveContainer';
 
-const WebDevelopmentPage: React.FC = () => {
+const AIAutomationPlatformPage = () => {
   const features = [
     {
-      title: "Responsive Web Design",
-      description: "Create beautiful, responsive websites that work perfectly on all devices and screen sizes",
-      icon: <Smartphone className="w-8 h-8" />,
+      title: "Intelligent Process Automation",
+      description: "Automate complex business processes with AI-powered decision making and adaptive learning capabilities",
+      icon: <Workflow className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Modern Web Applications",
-      description: "Build powerful web applications using the latest technologies and frameworks",
-      icon: <Code className="w-8 h-8" />,
+      title: "Smart Workflow Management",
+      description: "Create, manage, and optimize workflows with AI-driven insights and predictive analytics",
+      icon: <Settings className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "E-commerce Solutions",
-      description: "Develop secure and scalable e-commerce platforms with advanced features",
-      icon: <Globe className="w-8 h-8" />,
+      title: "Robotic Process Automation",
+      description: "Deploy software robots to handle repetitive tasks with 99.9% accuracy and 24/7 availability",
+      icon: <Bot className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Performance Optimization",
-      description: "Optimize your website for speed, SEO, and user experience",
-      icon: <Zap className="w-8 h-8" />,
+      title: "AI-Powered Analytics",
+      description: "Gain deep insights into your automation performance with advanced analytics and reporting",
+      icon: <BarChart3 className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
-  const services = [
+  const capabilities = [
     {
-      title: "Custom Web Development",
-      description: "Tailored web solutions built from scratch to meet your specific business requirements",
-      features: ["Custom design", "Responsive layout", "Database integration", "API development"],
-      price: "From $5,000"
+      title: "Document Processing",
+      description: "Automatically extract, classify, and process documents with 98% accuracy",
+      features: ["OCR & ICR", "Data extraction", "Document classification", "Quality validation"]
     },
     {
-      title: "E-commerce Development",
-      description: "Complete e-commerce solutions with payment integration and inventory management",
-      features: ["Payment processing", "Inventory management", "Order tracking", "Admin dashboard"],
-      price: "From $8,000"
+      title: "Email Automation",
+      description: "Intelligent email processing, routing, and response generation",
+      features: ["Smart routing", "Auto-responses", "Sentiment analysis", "Priority scoring"]
     },
     {
-      title: "Web Application Development",
-      description: "Complex web applications with advanced functionality and user management",
-      features: ["User authentication", "Real-time features", "Data visualization", "Mobile optimization"],
-      price: "From $12,000"
+      title: "Data Integration",
+      description: "Seamlessly connect and synchronize data across multiple systems",
+      features: ["API integration", "Real-time sync", "Data validation", "Error handling"]
     },
     {
-      title: "Website Maintenance",
-      description: "Ongoing maintenance and updates to keep your website secure and up-to-date",
-      features: ["Security updates", "Content updates", "Performance monitoring", "Backup management"],
-      price: "From $200/month"
+      title: "Customer Service",
+      description: "Automate customer interactions with AI-powered chatbots and virtual assistants",
+      features: ["Natural language processing", "Context awareness", "Escalation handling", "Multi-channel support"]
     }
   ];
 
-  const technologies = [
-    { name: "React", description: "Modern JavaScript library for building user interfaces" },
-    { name: "Next.js", description: "React framework for production-ready applications" },
-    { name: "Node.js", description: "JavaScript runtime for server-side development" },
-    { name: "TypeScript", description: "Typed superset of JavaScript for better development" },
-    { name: "MongoDB", description: "NoSQL database for modern applications" },
-    { name: "PostgreSQL", description: "Reliable relational database system" }
+  const benefits = [
+    {
+      title: "Cost Reduction",
+      description: "Reduce operational costs by up to 70% through intelligent automation",
+      icon: <Zap className="w-6 h-6" />,
+      stat: "70%"
+    },
+    {
+      title: "Efficiency Gain",
+      description: "Increase productivity and efficiency across all business processes",
+      icon: <Clock className="w-6 h-6" />,
+      stat: "300%"
+    },
+    {
+      title: "Error Reduction",
+      description: "Minimize human errors with AI-powered validation and quality checks",
+      icon: <Shield className="w-6 h-6" />,
+      stat: "99.9%"
+    },
+    {
+      title: "Scalability",
+      description: "Scale your automation efforts without proportional increase in resources",
+      icon: <Users className="w-6 h-6" />,
+      stat: "Unlimited"
+    }
   ];
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      company: "TechStart Inc",
-      role: "CEO",
-      content: "Zion Tech Group delivered an exceptional e-commerce platform that increased our online sales by 150%. The team's expertise and attention to detail were outstanding.",
+      name: "Jennifer Martinez",
+      company: "Financial Services Inc",
+      role: "COO",
+      content: "The AI automation platform has transformed our operations. We've reduced processing time by 80% and eliminated manual errors completely.",
       rating: 5
     },
     {
-      name: "Michael Chen",
-      company: "Digital Solutions",
-      role: "CTO",
-      content: "The web application they built for us is robust, scalable, and user-friendly. Our customers love the new interface and functionality.",
-      rating: 5
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "E-commerce Hub",
+      name: "David Chen",
+      company: "Manufacturing Corp",
       role: "Operations Director",
-      content: "Professional, reliable, and innovative. Zion Tech Group transformed our online presence and significantly improved our business operations.",
+      content: "Zion Tech Group's automation platform is incredibly powerful. The ROI was evident within the first month of implementation.",
+      rating: 5
+    },
+    {
+      name: "Sarah Johnson",
+      company: "Healthcare Systems",
+      role: "IT Director",
+      content: "The platform seamlessly integrated with our existing systems and has dramatically improved our workflow efficiency.",
       rating: 5
     }
   ];
@@ -99,13 +113,13 @@ const WebDevelopmentPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <FuturisticBackground />
       <EnhancedSEO
-        title="Web Development Services | Custom Web Solutions | Zion Tech Group"
-        description="Professional web development services including custom websites, e-commerce solutions, web applications, and maintenance. Modern, responsive, and scalable web solutions."
-        keywords="web development, custom websites, e-commerce development, web applications, responsive design, modern web development"
-        canonical="https://ziontechgroup.com/web-development"
+        title="AI Automation Platform | Intelligent Process Automation | Zion Tech Group"
+        description="Transform your business with our AI-powered automation platform. Automate processes, reduce costs, and increase efficiency with intelligent automation solutions."
+        keywords="AI automation, process automation, RPA, workflow automation, intelligent automation, business process automation, AI platform"
+        canonical="https://ziontechgroup.com/ai-automation-platform"
         author="Zion Tech Group"
-        section="IT Services"
-        tags={["Web Development", "Custom Websites", "E-commerce", "Web Applications", "Responsive Design"]}
+        section="AI Services"
+        tags={["AI Automation", "Process Automation", "RPA", "Workflow", "AI Platform"]}
         readingTime={7}
       />
 
@@ -118,19 +132,19 @@ const WebDevelopmentPage: React.FC = () => {
         
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Code className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">Custom Web Solutions</span>
+            <Zap className="w-4 h-4 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">Intelligent Automation Solutions</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Web Development
+              AI Automation Platform
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-            Build modern, responsive, and scalable web applications with our expert web development services. 
-            From simple websites to complex web applications, we deliver solutions that drive business growth.
+            Transform your business operations with our comprehensive AI automation platform. 
+            Automate complex processes, reduce costs, and increase efficiency with intelligent automation solutions.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -140,15 +154,15 @@ const WebDevelopmentPage: React.FC = () => {
               size="lg"
               icon={<ArrowRight className="w-5 h-5" />}
             >
-              Start Your Project
+              Get Started
             </FuturisticButton>
             <FuturisticButton
-              href="#portfolio"
+              href="#demo"
               variant="outline"
               size="lg"
               icon={<Play className="w-5 h-5" />}
             >
-              View Portfolio
+              Watch Demo
             </FuturisticButton>
           </div>
         </ResponsiveContainer>
@@ -159,11 +173,11 @@ const WebDevelopmentPage: React.FC = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Our Web Development Capabilities
+              Platform Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              We specialize in creating modern, responsive, and high-performance web solutions 
-              that meet your business objectives and exceed user expectations.
+              Our AI automation platform provides comprehensive tools and capabilities to automate 
+              any business process with intelligence and efficiency.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -189,72 +203,65 @@ const WebDevelopmentPage: React.FC = () => {
         </ResponsiveContainer>
       </section>
 
-      {/* Services Section */}
+      {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Development Services
+              Automation Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive web development services tailored to your specific needs and business goals.
+              Comprehensive automation capabilities designed to handle any business process or workflow.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+            {capabilities.map((capability, index) => (
               <FuturisticCard key={index} className="p-8">
-                <div className="flex items-start justify-between mb-4">
-                  <h3 className="text-xl font-semibold text-white mb-2">
-                    {service.title}
-                  </h3>
-                  <span className="text-cyan-400 font-bold text-lg">
-                    {service.price}
-                  </span>
-                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">
+                  {capability.title}
+                </h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  {service.description}
+                  {capability.description}
                 </p>
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
+                <ul className="space-y-2">
+                  {capability.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       <span className="text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                <FuturisticButton
-                  href="/contact"
-                  variant="outline"
-                  size="sm"
-                  className="w-full"
-                >
-                  Get Quote
-                </FuturisticButton>
               </FuturisticCard>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Technologies Section */}
+      {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Technologies We Use
+              Business Impact
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We work with the latest web technologies and frameworks to deliver cutting-edge solutions.
+              See the measurable impact our AI automation platform can have on your business.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {technologies.map((tech, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
               <FuturisticCard key={index} className="p-6 text-center">
+                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center">
+                  {benefit.icon}
+                </div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">
+                  {benefit.stat}
+                </div>
                 <h3 className="text-lg font-semibold text-white mb-2">
-                  {tech.name}
+                  {benefit.title}
                 </h3>
                 <p className="text-gray-300 text-sm">
-                  {tech.description}
+                  {benefit.description}
                 </p>
               </FuturisticCard>
             ))}
@@ -270,7 +277,7 @@ const WebDevelopmentPage: React.FC = () => {
               Client Success Stories
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our clients say about our web development services.
+              See how our AI automation platform has transformed businesses across industries.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -298,10 +305,10 @@ const WebDevelopmentPage: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Build Your Web Solution?
+            Ready to Automate Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Let's discuss your web development project and create a solution that drives your business forward.
+            Discover how our AI automation platform can transform your business operations and drive measurable results.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -311,15 +318,15 @@ const WebDevelopmentPage: React.FC = () => {
               size="lg"
               icon={<ArrowRight className="w-5 h-5" />}
             >
-              Start Your Project
+              Start Automation
             </FuturisticButton>
             <FuturisticButton
-              href="/portfolio"
+              href="/demo"
               variant="outline"
               size="lg"
-              icon={<Code className="w-5 h-5" />}
+              icon={<Play className="w-5 h-5" />}
             >
-              View Our Work
+              Schedule Demo
             </FuturisticButton>
           </div>
         </div>
@@ -328,4 +335,4 @@ const WebDevelopmentPage: React.FC = () => {
   );
 };
 
-export default WebDevelopmentPage;
+export default AIAutomationPlatformPage;

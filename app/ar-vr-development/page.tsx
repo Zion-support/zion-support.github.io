@@ -1,96 +1,96 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Code, Globe, Smartphone, Zap, Shield, Users, Award, CheckCircle, Star, Play, Headphones, Camera, Layers } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import FuturisticBackground from '../components/FuturisticBackground';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
+import { ArrowRight, Eye, Cube, Smartphone, Globe, Zap, Shield, Users, Award, CheckCircle, Star, Play, Headphones, Camera, Layers } from 'lucide-react';
+import EnhancedSEO from '../../components/EnhancedSEO';
+import FuturisticBackground from '../../components/FuturisticBackground';
+import FuturisticCard from '../../components/FuturisticCard';
+import FuturisticButton from '../../components/FuturisticButton';
+import ResponsiveContainer from '../../components/ResponsiveContainer';
 
-const WebDevelopmentPage: React.FC = () => {
+const ARVRDevelopmentPage = () => {
   const features = [
     {
-      title: "Responsive Web Design",
-      description: "Create beautiful, responsive websites that work perfectly on all devices and screen sizes",
+      title: "AR Mobile Applications",
+      description: "Immersive augmented reality experiences for iOS and Android with real-time object recognition and tracking",
       icon: <Smartphone className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Modern Web Applications",
-      description: "Build powerful web applications using the latest technologies and frameworks",
-      icon: <Code className="w-8 h-8" />,
+      title: "VR Immersive Experiences",
+      description: "Virtual reality applications for Oculus, HTC Vive, and other VR platforms with photorealistic environments",
+      icon: <Eye className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "E-commerce Solutions",
-      description: "Develop secure and scalable e-commerce platforms with advanced features",
-      icon: <Globe className="w-8 h-8" />,
+      title: "Mixed Reality Solutions",
+      description: "Seamless integration of AR and VR technologies for enterprise training and collaboration",
+      icon: <Layers className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Performance Optimization",
-      description: "Optimize your website for speed, SEO, and user experience",
-      icon: <Zap className="w-8 h-8" />,
+      title: "3D Content Creation",
+      description: "Custom 3D models, animations, and interactive content optimized for AR/VR platforms",
+      icon: <Cube className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const services = [
     {
-      title: "Custom Web Development",
-      description: "Tailored web solutions built from scratch to meet your specific business requirements",
-      features: ["Custom design", "Responsive layout", "Database integration", "API development"],
+      title: "AR Mobile App Development",
+      description: "Native iOS and Android AR applications using ARKit, ARCore, and Unity",
+      features: ["Real-time object tracking", "3D model rendering", "Cloud anchor support", "Multi-platform compatibility"],
+      price: "From $15,000"
+    },
+    {
+      title: "VR Application Development",
+      description: "Immersive VR experiences for gaming, training, and enterprise applications",
+      features: ["Cross-platform VR support", "Hand tracking", "Spatial audio", "Performance optimization"],
+      price: "From $25,000"
+    },
+    {
+      title: "Mixed Reality Solutions",
+      description: "Enterprise-grade MR applications for training, collaboration, and visualization",
+      features: ["HoloLens development", "Spatial mapping", "Gesture recognition", "Cloud integration"],
+      price: "From $35,000"
+    },
+    {
+      title: "3D Content & Asset Creation",
+      description: "Custom 3D models, animations, and interactive content for AR/VR applications",
+      features: ["3D modeling & texturing", "Animation & rigging", "Asset optimization", "Quality assurance"],
       price: "From $5,000"
-    },
-    {
-      title: "E-commerce Development",
-      description: "Complete e-commerce solutions with payment integration and inventory management",
-      features: ["Payment processing", "Inventory management", "Order tracking", "Admin dashboard"],
-      price: "From $8,000"
-    },
-    {
-      title: "Web Application Development",
-      description: "Complex web applications with advanced functionality and user management",
-      features: ["User authentication", "Real-time features", "Data visualization", "Mobile optimization"],
-      price: "From $12,000"
-    },
-    {
-      title: "Website Maintenance",
-      description: "Ongoing maintenance and updates to keep your website secure and up-to-date",
-      features: ["Security updates", "Content updates", "Performance monitoring", "Backup management"],
-      price: "From $200/month"
     }
   ];
 
   const technologies = [
-    { name: "React", description: "Modern JavaScript library for building user interfaces" },
-    { name: "Next.js", description: "React framework for production-ready applications" },
-    { name: "Node.js", description: "JavaScript runtime for server-side development" },
-    { name: "TypeScript", description: "Typed superset of JavaScript for better development" },
-    { name: "MongoDB", description: "NoSQL database for modern applications" },
-    { name: "PostgreSQL", description: "Reliable relational database system" }
+    { name: "Unity 3D", description: "Cross-platform game engine for AR/VR development" },
+    { name: "Unreal Engine", description: "High-fidelity 3D creation platform" },
+    { name: "ARKit", description: "Apple's framework for AR development" },
+    { name: "ARCore", description: "Google's platform for building AR experiences" },
+    { name: "WebXR", description: "Web-based AR/VR experiences" },
+    { name: "OpenXR", description: "Open standard for VR and AR applications" }
   ];
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      company: "TechStart Inc",
-      role: "CEO",
-      content: "Zion Tech Group delivered an exceptional e-commerce platform that increased our online sales by 150%. The team's expertise and attention to detail were outstanding.",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      company: "Digital Solutions",
+      name: "Sarah Chen",
+      company: "TechVision Corp",
       role: "CTO",
-      content: "The web application they built for us is robust, scalable, and user-friendly. Our customers love the new interface and functionality.",
+      content: "Zion Tech Group delivered an exceptional AR training application that reduced our training time by 60%. The immersive experience was exactly what we needed.",
       rating: 5
     },
     {
-      name: "Emily Rodriguez",
-      company: "E-commerce Hub",
-      role: "Operations Director",
-      content: "Professional, reliable, and innovative. Zion Tech Group transformed our online presence and significantly improved our business operations.",
+      name: "Michael Rodriguez",
+      company: "EduTech Solutions",
+      role: "Product Manager",
+      content: "The VR educational platform they created has revolutionized how our students learn. The quality and attention to detail exceeded our expectations.",
+      rating: 5
+    },
+    {
+      name: "Emily Johnson",
+      company: "Retail Innovations",
+      role: "CEO",
+      content: "Our AR shopping app has increased customer engagement by 200%. Zion Tech Group's expertise in AR/VR development is unmatched.",
       rating: 5
     }
   ];
@@ -99,14 +99,14 @@ const WebDevelopmentPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <FuturisticBackground />
       <EnhancedSEO
-        title="Web Development Services | Custom Web Solutions | Zion Tech Group"
-        description="Professional web development services including custom websites, e-commerce solutions, web applications, and maintenance. Modern, responsive, and scalable web solutions."
-        keywords="web development, custom websites, e-commerce development, web applications, responsive design, modern web development"
-        canonical="https://ziontechgroup.com/web-development"
+        title="AR/VR Development Services | Immersive Technology Solutions | Zion Tech Group"
+        description="Professional AR/VR development services for mobile, desktop, and enterprise applications. Create immersive experiences with cutting-edge technology."
+        keywords="AR development, VR development, augmented reality, virtual reality, mixed reality, 3D development, immersive technology, ARKit, ARCore, Unity, Unreal Engine"
+        canonical="https://ziontechgroup.com/ar-vr-development"
         author="Zion Tech Group"
-        section="IT Services"
-        tags={["Web Development", "Custom Websites", "E-commerce", "Web Applications", "Responsive Design"]}
-        readingTime={7}
+        section="Technology Services"
+        tags={["AR/VR", "Development", "Immersive Technology", "3D", "Mobile Apps"]}
+        readingTime={8}
       />
 
       {/* Hero Section */}
@@ -118,19 +118,19 @@ const WebDevelopmentPage: React.FC = () => {
         
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Code className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">Custom Web Solutions</span>
+            <Eye className="w-4 h-4 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">Immersive Technology Solutions</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Web Development
+              AR/VR Development
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-            Build modern, responsive, and scalable web applications with our expert web development services. 
-            From simple websites to complex web applications, we deliver solutions that drive business growth.
+            Create immersive augmented and virtual reality experiences that engage users and transform industries. 
+            From mobile AR apps to enterprise VR solutions, we bring your vision to life.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -159,11 +159,11 @@ const WebDevelopmentPage: React.FC = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Our Web Development Capabilities
+              Our AR/VR Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              We specialize in creating modern, responsive, and high-performance web solutions 
-              that meet your business objectives and exceed user expectations.
+              We specialize in creating immersive experiences across all major AR/VR platforms and devices. 
+              From concept to deployment, we handle every aspect of your project.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -197,7 +197,7 @@ const WebDevelopmentPage: React.FC = () => {
               Development Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive web development services tailored to your specific needs and business goals.
+              Comprehensive AR/VR development services tailored to your specific needs and industry requirements.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -244,7 +244,7 @@ const WebDevelopmentPage: React.FC = () => {
               Technologies We Use
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We work with the latest web technologies and frameworks to deliver cutting-edge solutions.
+              We work with the latest AR/VR technologies and frameworks to deliver cutting-edge experiences.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -270,7 +270,7 @@ const WebDevelopmentPage: React.FC = () => {
               Client Success Stories
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our clients say about our web development services.
+              See what our clients say about our AR/VR development services.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -298,10 +298,10 @@ const WebDevelopmentPage: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Build Your Web Solution?
+            Ready to Create Immersive Experiences?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Let's discuss your web development project and create a solution that drives your business forward.
+            Let's discuss your AR/VR project and bring your vision to life with cutting-edge technology and expert development.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -317,7 +317,7 @@ const WebDevelopmentPage: React.FC = () => {
               href="/portfolio"
               variant="outline"
               size="lg"
-              icon={<Code className="w-5 h-5" />}
+              icon={<Eye className="w-5 h-5" />}
             >
               View Our Work
             </FuturisticButton>
@@ -328,4 +328,4 @@ const WebDevelopmentPage: React.FC = () => {
   );
 };
 
-export default WebDevelopmentPage;
+export default ARVRDevelopmentPage;
