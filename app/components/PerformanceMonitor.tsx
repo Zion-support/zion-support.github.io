@@ -1,127 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-=======
 import React, { useState, useEffect } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
 
 interface PerformanceMetrics {
-<<<<<<< HEAD
-  lcp: number | null;
-  inp: number | null;
-  cls: number | null;
-  fcp: number | null;
-  ttfb: number | null;
-}
-
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    lcp: null,
-    inp: null,
-    cls: null,
-    fcp: null,
-    ttfb: null
-  });
-
-<<<<<<< HEAD
-  useEffect(() => {
-    // Only run in browser
-    if (typeof window === 'undefined') return;
-
-    // Load web-vitals library dynamically
-    const loadWebVitals = async () => {
-      try {
-        const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
-        
-        // Measure Core Web Vitals
-        getCLS((metric) => {
-          setMetrics(prev => ({ ...prev, cls: metric.value }));
-          console.log('CLS:', metric);
-        });
-
-        getFID((metric) => {
-          setMetrics(prev => ({ ...prev, fid: metric.value }));
-          console.log('FID:', metric);
-        });
-
-        getFCP((metric) => {
-          setMetrics(prev => ({ ...prev, fcp: metric.value }));
-          console.log('FCP:', metric);
-        });
-
-        getLCP((metric) => {
-          setMetrics(prev => ({ ...prev, lcp: metric.value }));
-          console.log('LCP:', metric);
-        });
-
-        getTTFB((metric) => {
-          setMetrics(prev => ({ ...prev, ttfb: metric.value }));
-          console.log('TTFB:', metric);
-        });
-      } catch (error) {
-        console.warn('Failed to load web-vitals:', error);
-      }
-    };
-
-    loadWebVitals();
-
-    // Monitor memory usage if available
-    const monitorMemory = () => {
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        console.log('Memory usage:', {
-          used: Math.round(memory.usedJSHeapSize / 1024 / 1024) + ' MB',
-          total: Math.round(memory.totalJSHeapSize / 1024 / 1024) + ' MB',
-          limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024) + ' MB'
-        });
-      }
-    };
-
-    // Monitor memory every 30 seconds
-    const memoryInterval = setInterval(monitorMemory, 30000);
-
-    // Monitor page load performance
-    const measurePageLoad = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigation) {
-        console.log('Page load metrics:', {
-          domContentLoaded: Math.round(navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart),
-          loadComplete: Math.round(navigation.loadEventEnd - navigation.loadEventStart),
-          totalTime: Math.round(navigation.loadEventEnd - navigation.fetchStart)
-        });
-      }
-    };
-
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePageLoad();
-    } else {
-      window.addEventListener('load', measurePageLoad);
-    }
-
-    // Monitor resource loading
-    const monitorResources = () => {
-      const resources = performance.getEntriesByType('resource');
-      const slowResources = resources.filter((resource: any) => resource.duration > 1000);
-      
-      if (slowResources.length > 0) {
-        console.warn('Slow resources detected:', slowResources.map((r: any) => ({
-          name: r.name,
-          duration: Math.round(r.duration) + 'ms'
-        })));
-      }
-    };
-
-    // Monitor resources after a delay
-    setTimeout(monitorResources, 5000);
-
-    // Cleanup
-    return () => {
-      clearInterval(memoryInterval);
-      window.removeEventListener('load', measurePageLoad);
-    };
-=======
 import React, { useState, useEffect, useCallback } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
@@ -144,7 +24,6 @@ const PerformanceMonitor: React.FC = () => {
     if (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.poor) return 'text-yellow-400';
     return 'text-red-400';
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
   }, []);
 
   const formatMetric = useCallback((value: number | undefined, unit: string = 'ms') => {
@@ -436,7 +315,6 @@ const PerformanceMonitor: React.FC = () => {
         >
           Hide permanently
         </button>
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
       </div>
       
       <div className="mt-3 pt-3 border-t border-cyan-500/20 text-xs text-cyan-400">
@@ -446,13 +324,7 @@ const PerformanceMonitor: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default PerformanceMonitor;
-<<<<<<< HEAD
-=======
-export default PerformanceMonitor;
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
 =======
   lcp?: number;
   fid?: number;
@@ -513,12 +385,8 @@ const PerformanceMonitor: React.FC = () => {
 };
 
 export default PerformanceMonitor;
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 =======
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
 =======
 export default PerformanceMonitor;
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
 =======
 export default PerformanceMonitor;
->>>>>>> cursor/analyze-improve-and-deploy-application-9867

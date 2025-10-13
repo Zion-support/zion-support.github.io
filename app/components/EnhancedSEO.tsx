@@ -15,16 +15,6 @@ interface EnhancedSEOProps {
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
-<<<<<<< HEAD
-  structuredData?: object;
-  noIndex?: boolean;
-  noFollow?: boolean;
-  lang?: string;
-<<<<<<< HEAD
-  noindex?: boolean;
-  nofollow?: boolean;
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 =======
   structuredData?: any;
   noindex?: boolean;
@@ -34,9 +24,7 @@ interface EnhancedSEOProps {
   section?: string;
   tags?: string[];
   readingTime?: number;
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
 =======
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
 }
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
@@ -44,11 +32,6 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   description,
   keywords,
   canonical,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  ogImage = '/og-image.svg',
-  ogType = 'website'
-=======
   ogTitle,
   ogDescription,
   ogImage = "https://ziontechgroup.com/og-image.jpg",
@@ -56,44 +39,18 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   ogTitle,
   ogDescription,
   ogImage = 'https://ziontechgroup.com/og-image.jpg',
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
   ogUrl,
   ogType = 'website',
   twitterCard = 'summary_large_image',
   twitterTitle,
   twitterDescription,
-<<<<<<< HEAD
-  twitterImage = "https://ziontechgroup.com/twitter-image.jpg",
-  structuredData,
-  noindex = false,
-  nofollow = false,
-  lang = 'en',
-  author,
-  section,
-  tags = [],
-  readingTime
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
-=======
   twitterImage,
   structuredData,
   noIndex = false,
   noFollow = false,
   lang = 'en'
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
 }) => {
   const siteUrl = 'https://ziontechgroup.com';
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const defaultImage = 'https://ziontechgroup.com/og-image.jpg';
-  
-  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
-  const fullCanonical = canonical ? (canonical.startsWith('http') ? canonical : `${siteUrl}${canonical}`) : undefined;
-  const fullOgUrl = ogUrl || fullCanonical || siteUrl;
-  const fullOgImage = ogImage || defaultImage;
-  const fullTwitterImage = twitterImage || fullOgImage;
-  
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
   const defaultKeywords = 'AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology, Zion Tech Group';
   const finalKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords;
 
@@ -125,28 +82,17 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   };
 
   const mergedStructuredData = structuredData ? { ...defaultStructuredData, ...structuredData } : defaultStructuredData;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 =======
   const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
   const fullOgUrl = ogUrl || fullCanonical;
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
   const fullTwitterImage = twitterImage ? (twitterImage.startsWith('http') ? twitterImage : `${siteUrl}${twitterImage}`) : fullOgImage;
 
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
   return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <meta name="keywords" content={finalKeywords} />
-      <meta name="author" content={siteName} />
-      <meta name="robots" content={`${noIndex || noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
-=======
   
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const fullCanonical = canonical ? (canonical.startsWith('http') ? canonical : `${siteUrl}${canonical}`) : undefined;
@@ -166,7 +112,6 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={finalKeywords} />
       <meta name="robots" content={robotsContent} />
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
       <meta name="language" content={lang} />
       {author && <meta name="author" content={author} />}
       {section && <meta name="article:section" content={section} />}
@@ -191,19 +136,12 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={ogTitle || title} />
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
       <meta property="og:description" content={ogDescription || description} />
       <meta property="og:image" content={fullOgImage} />
       <meta property="og:url" content={fullOgUrl} />
       <meta property="og:type" content={ogType} />
-<<<<<<< HEAD
-      <meta property="og:site_name" content={siteName} />
-<<<<<<< HEAD
-      <meta property="og:locale" content={lang === 'en' ? 'en_US' : lang} />
-=======
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
       
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content={twitterCard} />
@@ -222,8 +160,6 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       
-<<<<<<< HEAD
-=======
       <meta property="og:locale" content="en_US" />
 
       {/* Twitter Card Meta Tags */}
@@ -240,20 +176,16 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <meta name="theme-color" content="#1e293b" />
       <meta name="msapplication-TileColor" content="#1e293b" />
 
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(mergedStructuredData)}
       </script>
-<<<<<<< HEAD
-=======
       {/* Favicon and Icons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="manifest" href="/site.webmanifest" />
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
       
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -311,5 +243,4 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   );
 };
 
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
 export default EnhancedSEO;

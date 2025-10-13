@@ -1,30 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
 =======
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
 import React, { useState } from "react";
 import { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-<<<<<<< HEAD
-import EnhancedSEO from '../components/EnhancedSEO';
-=======
 import EnhancedSEO from "../components/EnhancedSEO";
 import FuturisticCard from "../components/FuturisticCard";
 import FuturisticButton from "../components/FuturisticButton";
 import ResponsiveContainer from "../components/ResponsiveContainer";
 import ResponsiveGrid from "../components/ResponsiveGrid";
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
 =======
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
 
 export default function Blog() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -38,11 +23,7 @@ export default function Blog() {
     { id: "development", name: "Development", count: 2 }
   ];
 
-<<<<<<< HEAD
-  const blogPosts = [
-=======
   const posts = [
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
     {
       id: 1,
       title: "The Future of AI in Business: 2024 Trends and Predictions",
@@ -52,35 +33,19 @@ export default function Blog() {
       date: "2024-01-15",
       readTime: "8 min read",
       category: "ai",
-<<<<<<< HEAD
-      readTime: "5 min read",
-<<<<<<< HEAD
-      image: "/images/blog/ai-business-2024.jpg",
-=======
       image: "/images/blog/ai-business-trends.jpg",
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
       featured: true
 =======
       image: "/api/placeholder/400/250"
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
     },
     {
       id: 2,
-<<<<<<< HEAD
-      title: "Cybersecurity Best Practices for Small Businesses",
-<<<<<<< HEAD
-      excerpt: "Essential security measures every small business should implement to protect their digital assets.",
-      content: "In today's digital landscape, small businesses are increasingly targeted by cybercriminals...",
-      author: "Michael Chen",
-      date: "2024-01-10",
-=======
       title: "Cybersecurity Best Practices for Remote Work Environments",
       excerpt: "Essential security measures to protect your organization's data and systems in remote work settings.",
       content: "With the shift to remote work, cybersecurity has become more critical than ever. Organizations must implement comprehensive security strategies to protect sensitive data and maintain business continuity...",
       author: "Michael Rodriguez",
       date: "2024-01-12",
       readTime: "6 min read",
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
       category: "cybersecurity",
       image: "/images/blog/remote-security.jpg",
       featured: false
@@ -153,29 +118,6 @@ export default function Blog() {
         <link rel="canonical" href="https://ziontechgroup.com/blog" />
       </Helmet>
 
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="text-center">
-              <h1 className="text-5xl font-bold mb-6">Tech Insights & Innovation</h1>
-              <p className="text-xl mb-8 max-w-3xl mx-auto">
-                Stay ahead with the latest trends, insights, and best practices in AI, cybersecurity, cloud computing, and technology innovation.
-              </p>
-              
-              {/* Search Bar */}
-              <div className="max-w-2xl mx-auto relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search articles..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:border-transparent"
-                />
-              </div>
-=======
       title: "5G Technology: Transforming Industries and Creating New Opportunities",
       excerpt: "Discover how 5G technology is revolutionizing various industries and creating new business opportunities for forward-thinking companies.",
       author: "Zion Tech Group",
@@ -185,7 +127,6 @@ export default function Blog() {
       excerpt: "Learn the best practices for migrating your infrastructure to the cloud successfully.",
       content: "Cloud migration is a complex process that requires careful planning and execution...",
       author: "Emily Rodriguez",
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
       date: "2024-01-05",
       category: "cloud",
       readTime: "8 min read",
@@ -256,25 +197,11 @@ export default function Blog() {
     const matchesCategory = selectedCategory === "all" || post.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <FuturisticBackground />
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
       <EnhancedSEO
-<<<<<<< HEAD
-        title="Blog - Zion Tech Group | Technology Insights and Industry News"
-        description="Stay updated with the latest technology trends, industry insights, and expert analysis from Zion Tech Group."
-        keywords="technology blog, AI insights, business technology, cybersecurity, cloud computing, 5G technology"
-        canonical="https://ziontechgroup.com/blog"
-      />
-
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -533,7 +460,6 @@ export default function Blog() {
                   </div>
                 </div>
               </FuturisticCard>
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
             ))}
           </ResponsiveGrid>
 
@@ -548,12 +474,7 @@ export default function Blog() {
       </section>
 
       {/* Newsletter Signup */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <section className="py-16 px-4 sm:px-6 lg:px-8 relative">
-=======
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Stay Updated
@@ -576,12 +497,6 @@ export default function Blog() {
       </section>
     </div>
   );
-<<<<<<< HEAD
-};
-
-export default BlogPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-=======
 
         {/* Categories */}
         <section className="py-8 px-4 sm:px-6 lg:px-8">
@@ -697,7 +612,6 @@ export default BlogPage;
 };
 
 export default BlogPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
 =======
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -725,7 +639,5 @@ export default BlogPage;
     </div>
   );
 }
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
 =======
 }
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
