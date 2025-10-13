@@ -67,11 +67,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 
   const navigationItems = useMemo(() => [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
       name: 'Home',
       path: '/',
       icon: <Globe className="w-4 h-4" />

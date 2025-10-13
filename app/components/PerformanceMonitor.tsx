@@ -18,7 +18,6 @@ const PerformanceMonitor: React.FC = () => {
   });
 
   useEffect(() => {
-<<<<<<< HEAD
     // Only run in browser
     if (typeof window === 'undefined') return;
 

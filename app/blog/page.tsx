@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
 import React, { useState } from "react";
 import { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from "lucide-react";
 import { Helmet } from "react-helmet-async";
