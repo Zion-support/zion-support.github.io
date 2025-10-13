@@ -1,33 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Target, Star, Globe, Shield, CheckCircle } from 'lucide-react';
-
-import { ArrowRight, TrendingUp, Zap, BarChart3, Clock, CheckCircle } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
-export default function CaseStudies() {
-  const caseStudies = [
-    {
-      id: 1,
-      title: "E-commerce Platform AI Transformation",
-      company: "TechStart Inc.",
-      industry: "E-commerce",
-      challenge: "Manual inventory management and customer service bottlenecks",
-      solution: "AI-powered inventory optimization and automated customer support",
-      results: [
-        "60% reduction in inventory costs",
-        "40% increase in customer satisfaction",
-        "80% faster response times",
-        "35% increase in sales"
-      ],
-      image: "/images/case-studies/ecommerce-ai.jpg",
-      duration: "6 months",
-      services: ["AI Analytics", "AI Customer Support", "Data Analytics"],
-      image: "/api/placeholder/600/400",
-=======
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -63,45 +33,10 @@ export default function CaseStudies() {
       ],
       technologies: ['AI/ML', 'Natural Language Processing', 'CRM Integration', 'Cloud Infrastructure'],
       image: '/api/placeholder/600/400',
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
       featured: true
     },
     {
       id: 2,
-<<<<<<< HEAD
-      title: "Healthcare Data Analytics Implementation",
-      company: "MedTech Solutions",
-      industry: "Healthcare",
-      challenge: "Complex patient data analysis and treatment optimization",
-      solution: "Advanced AI analytics platform for predictive healthcare insights",
-      results: [
-        "45% improvement in diagnosis accuracy",
-        "30% reduction in treatment costs",
-        "50% faster data processing",
-        "25% increase in patient outcomes"
-      ],
-      duration: "8 months",
-      services: ["AI Analytics", "Data Engineering", "Machine Learning"],
-      image: "/api/placeholder/600/400",
-      featured: false
-    },
-    {
-      id: 3,
-      title: "Manufacturing Process Automation",
-      company: "Industrial Corp",
-      industry: "Manufacturing",
-      challenge: "Inefficient production processes and quality control issues",
-      solution: "AI-driven process optimization and automated quality monitoring",
-      results: [
-        "55% increase in production efficiency",
-        "70% reduction in defects",
-        "40% decrease in downtime",
-        "25% cost savings"
-      ],
-      duration: "10 months",
-      services: ["AI Automation", "IoT Solutions", "Process Optimization"],
-      image: "/api/placeholder/600/400",
-=======
       title: 'Enterprise Cybersecurity Overhaul',
       client: 'Global Finance Inc.',
       industry: 'Financial Services',
@@ -138,27 +73,10 @@ export default function CaseStudies() {
       ],
       technologies: ['AWS', 'Docker', 'Kubernetes', 'Terraform', 'CI/CD'],
       image: '/api/placeholder/600/400',
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
       featured: false
     },
     {
       id: 4,
-<<<<<<< HEAD
-      title: "Financial Services Risk Management",
-      company: "FinanceFirst",
-      industry: "Financial Services",
-      challenge: "Manual fraud detection and risk assessment processes",
-      solution: "AI-powered fraud detection and real-time risk analysis",
-      results: [
-        "85% improvement in fraud detection",
-        "60% reduction in false positives",
-        "90% faster risk assessment",
-        "50% decrease in financial losses"
-      ],
-      duration: "7 months",
-      services: ["AI Fraud Detection", "Risk Analytics", "Cybersecurity"],
-      image: "/api/placeholder/600/400",
-=======
       title: 'AI-Driven Business Intelligence Platform',
       client: 'ManufacturingPro Ltd.',
       industry: 'Manufacturing',
@@ -175,27 +93,10 @@ export default function CaseStudies() {
       ],
       technologies: ['Machine Learning', 'IoT Integration', 'Real-time Analytics', 'Predictive Modeling'],
       image: '/api/placeholder/600/400',
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
       featured: false
     },
     {
       id: 5,
-<<<<<<< HEAD
-      title: "Retail Customer Experience Enhancement",
-      company: "RetailMax",
-      industry: "Retail",
-      challenge: "Personalized customer experience and inventory management",
-      solution: "AI-driven personalization and demand forecasting",
-      results: [
-        "65% increase in customer engagement",
-        "40% improvement in inventory turnover",
-        "50% boost in average order value",
-        "30% increase in customer retention"
-      ],
-      duration: "5 months",
-      services: ["AI Marketing", "Recommendation Engine", "Data Analytics"],
-      image: "/api/placeholder/600/400",
-=======
       title: 'Secure Healthcare Data Management',
       client: 'MediCare Systems',
       industry: 'Healthcare',
@@ -212,27 +113,10 @@ export default function CaseStudies() {
       ],
       technologies: ['Data Encryption', 'HIPAA Compliance', 'Role-Based Access', 'Audit Logging'],
       image: '/api/placeholder/600/400',
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
       featured: false
     },
     {
       id: 6,
-<<<<<<< HEAD
-      title: "Logistics Optimization with 5G",
-      company: "LogiTech",
-      industry: "Logistics",
-      challenge: "Real-time tracking and route optimization challenges",
-      solution: "5G-enabled IoT network with AI-powered route optimization",
-      results: [
-        "45% reduction in delivery times",
-        "35% decrease in fuel costs",
-        "80% improvement in tracking accuracy",
-        "25% increase in customer satisfaction"
-      ],
-      duration: "9 months",
-      services: ["5G Solutions", "IoT Integration", "AI Analytics"],
-      image: "/api/placeholder/600/400",
-=======
       title: 'E-commerce Platform Development',
       client: 'StyleHub Fashion',
       industry: 'Fashion Retail',
@@ -289,20 +173,10 @@ export default function CaseStudies() {
       ],
       technologies: ['Multi-Cloud', 'AWS', 'Azure', 'GCP', 'Terraform', 'Kubernetes'],
       image: '/api/placeholder/600/400',
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
       featured: false
     }
   ];
 
-<<<<<<< HEAD
-  const stats = [
-    { number: "50+", label: "Projects Completed", icon: <CheckCircle className="w-6 h-6" /> },
-    { number: "95%", label: "Client Satisfaction", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "40%", label: "Average Cost Reduction", icon: <BarChart3 className="w-6 h-6" /> },
-    { number: "60%", label: "Average Efficiency Gain", icon: <Zap className="w-6 h-6" /> }
-  ];
-
-=======
   const filteredStudies = caseStudies.filter(study => 
     selectedCategory === 'all' || study.category === selectedCategory
   );
@@ -519,7 +393,6 @@ export default function CaseStudies() {
               >
                 Free Consultation
                 <Zap className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
               </Link>
             </div>
           </div>

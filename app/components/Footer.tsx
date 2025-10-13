@@ -61,7 +61,9 @@ const Footer = React.memo(() => {
     { name: "Careers", path: "/careers" },
     { name: "Blog", path: "/blog" },
     { name: "Press", path: "/press" },
-    { name: "Partners", path: "/partners" }
+    { name: "Partners", path: "/partners" },
+    { name: "Investors", path: "/investors" },
+    { name: "Team", path: "/team" }
   ], []);
 
   const supportLinks = useMemo(() => [
@@ -70,7 +72,9 @@ const Footer = React.memo(() => {
     { name: "Documentation", path: "/docs" },
     { name: "Tutorials", path: "/tutorials" },
     { name: "Demo", path: "/demo" },
-    { name: "Pricing", path: "/pricing" }
+    { name: "Pricing", path: "/pricing" },
+    { name: "Consultation", path: "/consultation" },
+    { name: "Help Center", path: "/help" }
   ], []);
 
   const legalLinks = useMemo(() => [
@@ -79,7 +83,20 @@ const Footer = React.memo(() => {
     { name: "Cookie Policy", path: "/cookies" },
     { name: "GDPR Compliance", path: "/gdpr" },
     { name: "Security", path: "/security" },
-    { name: "Sitemap", path: "/sitemap" }
+    { name: "Sitemap", path: "/sitemap" },
+    { name: "Accessibility", path: "/accessibility" },
+    { name: "SLA", path: "/sla" }
+  ], []);
+
+  const resourceLinks = useMemo(() => [
+    { name: "API Documentation", path: "/api-docs" },
+    { name: "Developer Tools", path: "/developer-tools" },
+    { name: "SDK Downloads", path: "/sdk" },
+    { name: "Code Examples", path: "/code-examples" },
+    { name: "Integration Guides", path: "/integration-guides" },
+    { name: "Status Page", path: "/status" },
+    { name: "News & Updates", path: "/news" },
+    { name: "Community Forum", path: "/community" }
   ], []);
 
   const stats = useMemo(() => [
@@ -101,9 +118,10 @@ const Footer = React.memo(() => {
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center neon-glow-cyan">
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
+              <span className="text-xl font-bold text-white holographic">Zion Tech Group</span>
             </div>
 
             {/* Services */}
@@ -180,7 +198,7 @@ const Footer = React.memo(() => {
 
           {/* AI Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-cyan-400">AI Services</h4>
+            <h4 className="text-lg font-semibold mb-4 text-cyan-400 neon-glow-cyan">AI Services</h4>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -235,7 +253,7 @@ const Footer = React.memo(() => {
 
           {/* IT Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-green-400">IT Services</h4>
+            <h4 className="text-lg font-semibold mb-4 text-green-400 neon-glow-purple">IT Services</h4>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -290,7 +308,7 @@ const Footer = React.memo(() => {
 
           {/* Micro SAAS */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-purple-400">Micro SAAS</h4>
+            <h4 className="text-lg font-semibold mb-4 text-purple-400 neon-glow-pink">Micro SAAS</h4>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -423,40 +441,18 @@ const Footer = React.memo(() => {
 
           {/* Resources */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Resources</h4>
+            <h4 className="text-lg font-semibold mb-4 neon-glow-cyan">Resources</h4>
             <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/blog"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/tutorials"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Tutorials
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/demo"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Demo
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/sitemap"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Sitemap
-                </Link>
-              </li>
+              {resourceLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.path}
+                    className="text-gray-400 hover:text-cyan-400 transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

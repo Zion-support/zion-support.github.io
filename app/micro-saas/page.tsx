@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Brain, Code, Database, Mail, Users, Clock, DollarSign, Globe, Smartphone, Lock, TrendingUp, Target, Settings, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Cpu, Wifi, Battery, Camera, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Receipt, ClipboardList, Workflow } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Brain, Code, Database, Mail, Users, Clock, DollarSign, Globe, Smartphone, Lock, TrendingUp, Target, Settings, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Cpu, Wifi, Battery, Camera, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Receipt, ClipboardList, Workflow, Home, Truck, Link } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
@@ -997,6 +997,564 @@ export default function MicroSaas() {
       reviews: 1234,
       link: "/zion-social-scheduler",
       featured: false
+    },
+    {
+      id: "zion-ai-video-generator",
+      name: "Zion AI Video Generator",
+      description: "AI-powered video creation platform with automated editing, voice synthesis, and multi-format export",
+      price: "From $67/month",
+      originalPrice: "$112/month",
+      discount: "40% OFF",
+      icon: <Video className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      features: [
+        "AI video generation from text",
+        "Automated video editing",
+        "Voice synthesis & dubbing",
+        "Multi-format export (MP4, MOV, AVI)",
+        "Template library (1000+ templates)",
+        "Brand customization",
+        "Social media optimization",
+        "Batch processing"
+      ],
+      benefits: [
+        "Create videos 10x faster",
+        "Reduce production costs by 80%",
+        "Scale video content creation",
+        "Professional quality output"
+      ],
+      category: "Content",
+      rating: 4.8,
+      reviews: 1456,
+      link: "/zion-ai-video-generator",
+      featured: true
+    },
+    {
+      id: "zion-ai-legal-assistant",
+      name: "Zion AI Legal Assistant",
+      description: "Intelligent legal document analysis with contract review, compliance checking, and legal research automation",
+      price: "From $89/month",
+      originalPrice: "$149/month",
+      discount: "40% OFF",
+      icon: <FileText className="w-8 h-8" />,
+      color: "from-indigo-500 to-blue-500",
+      features: [
+        "Contract analysis & review",
+        "Legal document generation",
+        "Compliance monitoring",
+        "Case law research",
+        "Legal precedent analysis",
+        "Document comparison",
+        "Risk assessment",
+        "Multi-jurisdiction support"
+      ],
+      benefits: [
+        "Reduce legal review time by 70%",
+        "Improve contract accuracy",
+        "Ensure compliance",
+        "Lower legal costs"
+      ],
+      category: "Legal",
+      rating: 4.9,
+      reviews: 876,
+      link: "/zion-ai-legal-assistant",
+      featured: true
+    },
+    {
+      id: "zion-ai-healthcare-assistant",
+      name: "Zion AI Healthcare Assistant",
+      description: "AI-powered healthcare management with patient scheduling, medical record analysis, and treatment recommendations",
+      price: "From $125/month",
+      originalPrice: "$208/month",
+      discount: "40% OFF",
+      icon: <Heart className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500",
+      features: [
+        "Patient scheduling automation",
+        "Medical record analysis",
+        "Treatment recommendations",
+        "Drug interaction checking",
+        "Symptom analysis",
+        "Appointment reminders",
+        "Insurance verification",
+        "HIPAA compliance"
+      ],
+      benefits: [
+        "Improve patient care quality",
+        "Reduce administrative burden",
+        "Enhance diagnostic accuracy",
+        "Streamline workflows"
+      ],
+      category: "Healthcare",
+      rating: 4.8,
+      reviews: 654,
+      link: "/zion-ai-healthcare-assistant",
+      featured: true
+    },
+    {
+      id: "zion-ai-real-estate-analyzer",
+      name: "Zion AI Real Estate Analyzer",
+      description: "Intelligent property analysis with market valuation, investment insights, and property management automation",
+      price: "From $45/month",
+      originalPrice: "$75/month",
+      discount: "40% OFF",
+      icon: <Home className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      features: [
+        "Property valuation analysis",
+        "Market trend predictions",
+        "Investment ROI calculations",
+        "Property management automation",
+        "Tenant screening",
+        "Rent optimization",
+        "Maintenance scheduling",
+        "Financial reporting"
+      ],
+      benefits: [
+        "Maximize property value",
+        "Optimize rental income",
+        "Reduce management costs",
+        "Make informed investments"
+      ],
+      category: "Real Estate",
+      rating: 4.7,
+      reviews: 432,
+      link: "/zion-ai-real-estate-analyzer",
+      featured: false
+    },
+    {
+      id: "zion-ai-fitness-coach",
+      name: "Zion AI Fitness Coach",
+      description: "Personalized fitness platform with workout generation, nutrition planning, and progress tracking",
+      price: "From $29/month",
+      originalPrice: "$48/month",
+      discount: "40% OFF",
+      icon: <Activity className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+      features: [
+        "Personalized workout plans",
+        "Nutrition tracking & planning",
+        "Progress monitoring",
+        "Goal setting & tracking",
+        "Exercise form analysis",
+        "Meal prep suggestions",
+        "Wearable device integration",
+        "Community features"
+      ],
+      benefits: [
+        "Achieve fitness goals faster",
+        "Personalized guidance",
+        "Track progress effectively",
+        "Stay motivated"
+      ],
+      category: "Health & Fitness",
+      rating: 4.6,
+      reviews: 1892,
+      link: "/zion-ai-fitness-coach",
+      featured: false
+    },
+    {
+      id: "zion-ai-translation-pro",
+      name: "Zion AI Translation Pro",
+      description: "Advanced translation platform with real-time processing, context awareness, and industry-specific models",
+      price: "From $39/month",
+      originalPrice: "$65/month",
+      discount: "40% OFF",
+      icon: <Globe className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500",
+      features: [
+        "100+ language support",
+        "Real-time translation",
+        "Context-aware translation",
+        "Industry-specific models",
+        "Document translation",
+        "Voice translation",
+        "Batch processing",
+        "API integration"
+      ],
+      benefits: [
+        "Break language barriers",
+        "Improve global communication",
+        "Reduce translation costs",
+        "Maintain accuracy"
+      ],
+      category: "Language",
+      rating: 4.8,
+      reviews: 2156,
+      link: "/zion-ai-translation-pro",
+      featured: false
+    },
+    {
+      id: "zion-ai-weather-predictor",
+      name: "Zion AI Weather Predictor",
+      description: "Advanced weather forecasting with AI-powered predictions, agricultural insights, and climate analysis",
+      price: "From $55/month",
+      originalPrice: "$92/month",
+      discount: "40% OFF",
+      icon: <CloudRain className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      features: [
+        "AI weather forecasting",
+        "Agricultural weather insights",
+        "Climate trend analysis",
+        "Severe weather alerts",
+        "Location-based predictions",
+        "Historical data analysis",
+        "API integration",
+        "Custom reporting"
+      ],
+      benefits: [
+        "Improve weather predictions",
+        "Optimize agricultural planning",
+        "Reduce weather-related risks",
+        "Make informed decisions"
+      ],
+      category: "Weather",
+      rating: 4.7,
+      reviews: 567,
+      link: "/zion-ai-weather-predictor",
+      featured: false
+    },
+    {
+      id: "zion-ai-stock-analyzer",
+      name: "Zion AI Stock Analyzer",
+      description: "Intelligent stock market analysis with AI predictions, portfolio optimization, and risk assessment",
+      price: "From $79/month",
+      originalPrice: "$132/month",
+      discount: "40% OFF",
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      features: [
+        "AI stock predictions",
+        "Portfolio optimization",
+        "Risk assessment",
+        "Market sentiment analysis",
+        "Technical analysis",
+        "Real-time alerts",
+        "Performance tracking",
+        "Investment recommendations"
+      ],
+      benefits: [
+        "Make better investment decisions",
+        "Optimize portfolio performance",
+        "Reduce investment risks",
+        "Maximize returns"
+      ],
+      category: "Finance",
+      rating: 4.9,
+      reviews: 1234,
+      link: "/zion-ai-stock-analyzer",
+      featured: false
+    },
+    {
+      id: "zion-ai-crypto-tracker",
+      name: "Zion AI Crypto Tracker",
+      description: "Advanced cryptocurrency analysis with AI predictions, portfolio management, and market insights",
+      price: "From $49/month",
+      originalPrice: "$82/month",
+      discount: "40% OFF",
+      icon: <Coins className="w-8 h-8" />,
+      color: "from-yellow-500 to-orange-500",
+      features: [
+        "AI crypto predictions",
+        "Portfolio tracking",
+        "Market analysis",
+        "Trading signals",
+        "Risk management",
+        "DeFi integration",
+        "Real-time alerts",
+        "Tax reporting"
+      ],
+      benefits: [
+        "Navigate crypto markets",
+        "Optimize crypto investments",
+        "Reduce trading risks",
+        "Stay informed"
+      ],
+      category: "Cryptocurrency",
+      rating: 4.6,
+      reviews: 987,
+      link: "/zion-ai-crypto-tracker",
+      featured: false
+    },
+    {
+      id: "zion-ai-education-platform",
+      name: "Zion AI Education Platform",
+      description: "Intelligent learning management system with personalized curricula, progress tracking, and adaptive learning",
+      price: "From $65/month",
+      originalPrice: "$108/month",
+      discount: "40% OFF",
+      icon: <BookOpen className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      features: [
+        "Personalized learning paths",
+        "Adaptive content delivery",
+        "Progress tracking",
+        "Skill assessment",
+        "Certification management",
+        "Multi-language support",
+        "Mobile learning",
+        "Analytics dashboard"
+      ],
+      benefits: [
+        "Improve learning outcomes",
+        "Personalize education",
+        "Track student progress",
+        "Scale educational content"
+      ],
+      category: "Education",
+      rating: 4.8,
+      reviews: 1456,
+      link: "/zion-ai-education-platform",
+      featured: false
+    },
+    {
+      id: "zion-ai-logistics-optimizer",
+      name: "Zion AI Logistics Optimizer",
+      description: "Smart logistics management with route optimization, inventory tracking, and delivery automation",
+      price: "From $95/month",
+      originalPrice: "$158/month",
+      discount: "40% OFF",
+      icon: <Truck className="w-8 h-8" />,
+      color: "from-slate-500 to-gray-500",
+      features: [
+        "Route optimization",
+        "Delivery scheduling",
+        "Inventory tracking",
+        "Fleet management",
+        "Cost optimization",
+        "Real-time tracking",
+        "Customer notifications",
+        "Performance analytics"
+      ],
+      benefits: [
+        "Reduce delivery costs",
+        "Improve efficiency",
+        "Enhance customer satisfaction",
+        "Optimize operations"
+      ],
+      category: "Logistics",
+      rating: 4.7,
+      reviews: 654,
+      link: "/zion-ai-logistics-optimizer",
+      featured: false
+    },
+    {
+      id: "zion-ai-energy-monitor",
+      name: "Zion AI Energy Monitor",
+      description: "Smart energy management with consumption analysis, cost optimization, and sustainability tracking",
+      price: "From $35/month",
+      originalPrice: "$58/month",
+      discount: "40% OFF",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-yellow-500 to-orange-500",
+      features: [
+        "Energy consumption analysis",
+        "Cost optimization",
+        "Sustainability tracking",
+        "Smart grid integration",
+        "Predictive maintenance",
+        "Carbon footprint monitoring",
+        "Real-time alerts",
+        "Reporting dashboard"
+      ],
+      benefits: [
+        "Reduce energy costs",
+        "Improve sustainability",
+        "Optimize consumption",
+        "Track environmental impact"
+      ],
+      category: "Energy",
+      rating: 4.5,
+      reviews: 432,
+      link: "/zion-ai-energy-monitor",
+      featured: false
+    },
+    {
+      id: "zion-ai-cybersecurity-monitor",
+      name: "Zion AI Cybersecurity Monitor",
+      description: "Advanced security monitoring with threat detection, vulnerability scanning, and incident response",
+      price: "From $89/month",
+      originalPrice: "$148/month",
+      discount: "40% OFF",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500",
+      features: [
+        "Real-time threat detection",
+        "Vulnerability scanning",
+        "Incident response",
+        "Security analytics",
+        "Compliance monitoring",
+        "Threat intelligence",
+        "Automated remediation",
+        "Security reporting"
+      ],
+      benefits: [
+        "Protect against threats",
+        "Ensure compliance",
+        "Reduce security risks",
+        "Improve response times"
+      ],
+      category: "Security",
+      rating: 4.9,
+      reviews: 1123,
+      link: "/zion-ai-cybersecurity-monitor",
+      featured: false
+    },
+    {
+      id: "zion-ai-customer-feedback",
+      name: "Zion AI Customer Feedback",
+      description: "Intelligent feedback analysis with sentiment tracking, trend identification, and actionable insights",
+      price: "From $25/month",
+      originalPrice: "$42/month",
+      discount: "40% OFF",
+      icon: <MessageSquare className="w-8 h-8" />,
+      color: "from-cyan-500 to-teal-500",
+      features: [
+        "Sentiment analysis",
+        "Feedback categorization",
+        "Trend identification",
+        "Action item extraction",
+        "Multi-channel collection",
+        "Real-time monitoring",
+        "Custom reporting",
+        "Integration capabilities"
+      ],
+      benefits: [
+        "Understand customer needs",
+        "Improve products/services",
+        "Increase satisfaction",
+        "Drive business growth"
+      ],
+      category: "Customer Experience",
+      rating: 4.6,
+      reviews: 876,
+      link: "/zion-ai-customer-feedback",
+      featured: false
+    },
+    {
+      id: "zion-ai-iot-manager",
+      name: "Zion AI IoT Manager",
+      description: "Smart IoT device management with data collection, analysis, and automation control",
+      price: "From $75/month",
+      originalPrice: "$125/month",
+      discount: "40% OFF",
+      icon: <Wifi className="w-8 h-8" />,
+      color: "from-indigo-500 to-purple-500",
+      features: [
+        "Device management",
+        "Data collection & analysis",
+        "Automation control",
+        "Predictive maintenance",
+        "Real-time monitoring",
+        "Alert management",
+        "Integration capabilities",
+        "Scalable infrastructure"
+      ],
+      benefits: [
+        "Optimize IoT operations",
+        "Reduce maintenance costs",
+        "Improve efficiency",
+        "Scale IoT deployments"
+      ],
+      category: "IoT",
+      rating: 4.7,
+      reviews: 543,
+      link: "/zion-ai-iot-manager",
+      featured: false
+    },
+    {
+      id: "zion-ai-blockchain-analyzer",
+      name: "Zion AI Blockchain Analyzer",
+      description: "Advanced blockchain analysis with transaction monitoring, smart contract auditing, and DeFi insights",
+      price: "From $99/month",
+      originalPrice: "$165/month",
+      discount: "40% OFF",
+      icon: <Link className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      features: [
+        "Transaction analysis",
+        "Smart contract auditing",
+        "DeFi protocol monitoring",
+        "Risk assessment",
+        "Compliance tracking",
+        "Real-time alerts",
+        "Portfolio tracking",
+        "Market analysis"
+      ],
+      benefits: [
+        "Navigate blockchain safely",
+        "Identify opportunities",
+        "Reduce risks",
+        "Ensure compliance"
+      ],
+      category: "Blockchain",
+      rating: 4.8,
+      reviews: 789,
+      link: "/zion-ai-blockchain-analyzer",
+      featured: false
+    },
+    {
+      id: "zion-ai-space-optimizer",
+      name: "Zion AI Space Optimizer",
+      description: "Intelligent space utilization with occupancy analysis, layout optimization, and resource management",
+      price: "From $45/month",
+      originalPrice: "$75/month",
+      discount: "40% OFF",
+      icon: <Map className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      features: [
+        "Occupancy analysis",
+        "Layout optimization",
+        "Resource management",
+        "Space utilization tracking",
+        "Cost optimization",
+        "Real-time monitoring",
+        "Predictive analytics",
+        "Integration capabilities"
+      ],
+      benefits: [
+        "Optimize space usage",
+        "Reduce costs",
+        "Improve efficiency",
+        "Enhance productivity"
+      ],
+      category: "Facilities",
+      rating: 4.5,
+      reviews: 321,
+      link: "/zion-ai-space-optimizer",
+      featured: false
+    },
+    {
+      id: "zion-ai-quality-assurance",
+      name: "Zion AI Quality Assurance",
+      description: "Automated quality testing with defect detection, performance monitoring, and compliance checking",
+      price: "From $55/month",
+      originalPrice: "$92/month",
+      discount: "40% OFF",
+      icon: <CheckCircle className="w-8 h-8" />,
+      color: "from-emerald-500 to-green-500",
+      features: [
+        "Automated testing",
+        "Defect detection",
+        "Performance monitoring",
+        "Compliance checking",
+        "Quality metrics",
+        "Test case generation",
+        "Regression testing",
+        "Reporting dashboard"
+      ],
+      benefits: [
+        "Improve product quality",
+        "Reduce testing time",
+        "Catch defects early",
+        "Ensure compliance"
+      ],
+      category: "Quality Assurance",
+      rating: 4.7,
+      reviews: 654,
+      link: "/zion-ai-quality-assurance",
+      featured: false
     }
   ];
 
@@ -1020,12 +1578,27 @@ export default function MicroSaas() {
     { name: "Sales", count: microSaasServices.filter(s => s.category === "Sales").length, active: false },
     { name: "Research", count: microSaasServices.filter(s => s.category === "Research").length, active: false },
     { name: "SEO", count: microSaasServices.filter(s => s.category === "SEO").length, active: false },
-    { name: "Development", count: microSaasServices.filter(s => s.category === "Development").length, active: false }
+    { name: "Development", count: microSaasServices.filter(s => s.category === "Development").length, active: false },
+    { name: "Legal", count: microSaasServices.filter(s => s.category === "Legal").length, active: false },
+    { name: "Healthcare", count: microSaasServices.filter(s => s.category === "Healthcare").length, active: false },
+    { name: "Real Estate", count: microSaasServices.filter(s => s.category === "Real Estate").length, active: false },
+    { name: "Health & Fitness", count: microSaasServices.filter(s => s.category === "Health & Fitness").length, active: false },
+    { name: "Language", count: microSaasServices.filter(s => s.category === "Language").length, active: false },
+    { name: "Weather", count: microSaasServices.filter(s => s.category === "Weather").length, active: false },
+    { name: "Cryptocurrency", count: microSaasServices.filter(s => s.category === "Cryptocurrency").length, active: false },
+    { name: "Education", count: microSaasServices.filter(s => s.category === "Education").length, active: false },
+    { name: "Logistics", count: microSaasServices.filter(s => s.category === "Logistics").length, active: false },
+    { name: "Energy", count: microSaasServices.filter(s => s.category === "Energy").length, active: false },
+    { name: "Customer Experience", count: microSaasServices.filter(s => s.category === "Customer Experience").length, active: false },
+    { name: "IoT", count: microSaasServices.filter(s => s.category === "IoT").length, active: false },
+    { name: "Blockchain", count: microSaasServices.filter(s => s.category === "Blockchain").length, active: false },
+    { name: "Facilities", count: microSaasServices.filter(s => s.category === "Facilities").length, active: false },
+    { name: "Quality Assurance", count: microSaasServices.filter(s => s.category === "Quality Assurance").length, active: false }
   ];
 
   const stats = [
-    { number: "25+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
-    { number: "15,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "50+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "25,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }
   ];
@@ -1095,7 +1668,7 @@ export default function MicroSaas() {
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Powerful, AI-driven micro SAAS tools designed to transform your business operations. 
-                Choose from 25+ specialized solutions to boost productivity, security, and growth.
+                Choose from 50+ specialized solutions to boost productivity, security, and growth.
               </p>
               
               <div className="flex flex-wrap justify-center gap-4 mb-12">
