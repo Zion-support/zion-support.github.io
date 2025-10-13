@@ -1,5 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
+import logger from '../../utils/logger';
 
 interface Props {
   children: ReactNode;
@@ -36,10 +37,8 @@ class ProductionErrorBoundary extends Component<Props, State> {
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     });
 
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by ProductionErrorBoundary:', error, errorInfo);
-    }
+    // Log error using logger
+    logger.error('Error caught by ProductionErrorBoundary:', error, errorInfo);
 
     // In production, you would typically send this to an error reporting service
     if (process.env.NODE_ENV === 'production') {

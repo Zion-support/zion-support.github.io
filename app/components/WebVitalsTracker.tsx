@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+import logger from '../../utils/logger';
 
 interface WebVitalsData {
   name: string;
@@ -30,13 +31,11 @@ const WebVitalsTracker: React.FC = () => {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify(metric),
-        }).catch(console.error);
+        }).catch(logger.error);
       }
 
       // Log to console in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Web Vital:', metric);
-      }
+      logger.debug('Web Vital:', metric);
     };
 
     // Track Core Web Vitals

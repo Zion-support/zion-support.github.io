@@ -45,11 +45,11 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   tags = []
 }) => {
   const siteUrl = "https://ziontechgroup.com";
-  const defaultImage = `${siteUrl}/api/placeholder/1200/630`;
+  const defaultImage = `${siteUrl}/og-image.jpg`;
   
   const fullTitle = title.includes("Zion Tech Group") ? title : `${title} | Zion Tech Group`;
   const fullDescription = description || "Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses.";
-  const fullKeywords = keywords || "AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology";
+  const fullKeywords = keywords || "AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology, artificial intelligence, machine learning, data analytics, cloud computing, software development, enterprise solutions";
   
   const defaultStructuredData = {
     "@context": "https://schema.org",
@@ -117,6 +117,12 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <meta name="keywords" content={fullKeywords} />
       <meta name="author" content={author} />
       <meta name="robots" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#8b5cf6" />
+      <meta name="msapplication-TileColor" content="#8b5cf6" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="format-detection" content="telephone=no" />
       
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical} />}
@@ -137,6 +143,22 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <meta name="twitter:image" content={twitterImage || ogImage || defaultImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
+      
+      {/* Additional SEO Meta Tags */}
+      <meta name="language" content="en-US" />
+      <meta name="revisit-after" content="7 days" />
+      <meta name="rating" content="general" />
+      <meta name="distribution" content="global" />
+      <meta name="geo.region" content="US-DE" />
+      <meta name="geo.placename" content="Middletown" />
+      <meta name="geo.position" content="39.4496;-75.7163" />
+      <meta name="ICBM" content="39.4496, -75.7163" />
+      
+      {/* Preconnect to external domains for performance */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      <link rel="preconnect" href="https://www.googletagmanager.com" />
       
       {/* Article Specific Meta Tags */}
       {publishedTime && (

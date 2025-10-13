@@ -17,6 +17,7 @@ import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import ComprehensiveErrorBoundary from "./app/components/ComprehensiveErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 
 // Lazy load pages for better performance
@@ -91,14 +92,17 @@ function App() {
     // Initialize performance monitoring
     if (typeof window !== 'undefined') {
       // Add any global initialization logic here
-      console.log('Zion Tech Group App initialized');
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Zion Tech Group App initialized');
+      }
     }
   }, []);
 
   return (
-    <ImprovedErrorBoundary>
-      <GlobalErrorBoundary>
-        <EnhancedErrorBoundary>
+    <ComprehensiveErrorBoundary>
+      <ImprovedErrorBoundary>
+        <GlobalErrorBoundary>
+          <EnhancedErrorBoundary>
           <HelmetProvider>
             <AnalyticsProvider>
               <PerformanceMonitor>
@@ -200,9 +204,10 @@ function App() {
               </PerformanceMonitor>
             </AnalyticsProvider>
           </HelmetProvider>
-        </EnhancedErrorBoundary>
-      </GlobalErrorBoundary>
-    </ImprovedErrorBoundary>
+          </EnhancedErrorBoundary>
+        </GlobalErrorBoundary>
+      </ImprovedErrorBoundary>
+    </ComprehensiveErrorBoundary>
   );
 }
 
