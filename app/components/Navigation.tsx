@@ -11,8 +11,13 @@ import {
   ChevronDown,
 =======
   Globe, 
+<<<<<<< HEAD
   ChevronDown
 >>>>>>> cursor/analyze-improve-and-deploy-application-c4da
+=======
+  ChevronDown,
+  ChevronUp
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -51,22 +56,65 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
       name: 'Services',
       path: '/services',
       icon: <Shield className="w-4 h-4" />,
-      hasDropdown: true
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'AI Services', path: '/ai-services' },
+        { name: 'IT Services', path: '/services' },
+        { name: '5G Solutions', path: '/5g-solutions' },
+        { name: 'Micro SAAS', path: '/micro-saas' }
+      ]
     },
     {
       name: 'AI Services',
       path: '/ai-services',
-      icon: <Brain className="w-4 h-4" />
+      icon: <Brain className="w-4 h-4" />,
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'AI Analytics', path: '/ai-analytics' },
+        { name: 'AI Content Generation', path: '/ai-content-generation' },
+        { name: 'AI Customer Support', path: '/ai-customer-support' },
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
+        { name: 'AI Data Analytics', path: '/ai-data-analytics' },
+        { name: 'AI Document Processing', path: '/ai-document-processing' },
+        { name: 'AI Marketing Automation', path: '/ai-marketing-automation' },
+        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics' },
+        { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation' }
+      ]
     },
     {
       name: 'Micro SAAS',
       path: '/micro-saas',
-      icon: <Zap className="w-4 h-4" />
+      icon: <Zap className="w-4 h-4" />,
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'AI Video Generator', path: '/zion-ai-video-generator' },
+        { name: 'AI Invoice Generator', path: '/zion-ai-invoice-generator' },
+        { name: 'AI Customer Insights', path: '/zion-ai-customer-insights' },
+        { name: 'AI Email Analyzer', path: '/zion-ai-email-analyzer' },
+        { name: 'Smart Inventory Optimizer', path: '/zion-smart-inventory-optimizer' },
+        { name: 'AI Customer Sentiment Tracker', path: '/zion-ai-customer-sentiment-tracker' },
+        { name: 'Smart Expense Categorizer', path: '/zion-smart-expense-categorizer' },
+        { name: 'AI Voice Assistant Pro', path: '/zion-ai-voice-assistant-pro' },
+        { name: 'AI Code Reviewer', path: '/zion-ai-code-reviewer' },
+        { name: 'AI Social Media Manager', path: '/zion-ai-social-media-manager' }
+      ]
     },
     {
       name: '5G Solutions',
       path: '/5g-solutions',
-      icon: <Globe className="w-4 h-4" />
+      icon: <Globe className="w-4 h-4" />,
+      hasDropdown: true,
+      dropdownItems: [
+        { name: '5G Network Infrastructure', path: '/5g-network-infrastructure' },
+        { name: '5G Edge Computing', path: '/5g-edge-computing' },
+        { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
+        { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions' },
+        { name: '5G Private Networks', path: '/5g-private-networks' },
+        { name: '5G Mobile Applications', path: '/5g-mobile-applications' },
+        { name: '5G Data Analytics', path: '/5g-data-analytics' },
+        { name: '5G Implementation', path: '/5g-implementation' }
+      ]
     },
     {
       name: 'Contact',
@@ -139,6 +187,7 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                   )}
                 </Link>
                 
+<<<<<<< HEAD
                 {/* Services Dropdown */}
                 {item.hasDropdown && (
                   <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
@@ -168,6 +217,23 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                           View All Services →
                         </Link>
                       </div>
+=======
+                {/* Dropdown Menu */}
+                {item.hasDropdown && item.dropdownItems && (
+                  <div className="absolute top-full left-0 mt-1 w-64 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div className="py-2">
+                      {item.dropdownItems.map((dropdownItem, index) => (
+                        <Link
+                          key={index}
+                          to={dropdownItem.path}
+                          className={`block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors ${
+                            isActive(dropdownItem.path) ? 'text-cyan-400 bg-cyan-500/10' : ''
+                          }`}
+                        >
+                          {dropdownItem.name}
+                        </Link>
+                      ))}
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
                     </div>
                   </div>
                 )}
@@ -192,19 +258,41 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-sm rounded-lg mt-2">
               {navigationItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className={`flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                    isActive(item.path)
-                      ? 'text-cyan-400 bg-cyan-500/10'
-                      : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'
-                  }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.icon}
-                  <span>{item.name}</span>
-                </Link>
+                <div key={item.name}>
+                  <Link
+                    to={item.path}
+                    className={`flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                      isActive(item.path)
+                        ? 'text-cyan-400 bg-cyan-500/10'
+                        : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'
+                    }`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.icon}
+                    <span>{item.name}</span>
+                    {item.hasDropdown && (
+                      <ChevronDown className="w-4 h-4 ml-auto" />
+                    )}
+                  </Link>
+                  
+                  {/* Mobile Dropdown */}
+                  {item.hasDropdown && item.dropdownItems && (
+                    <div className="ml-4 mt-1 space-y-1">
+                      {item.dropdownItems.map((dropdownItem, index) => (
+                        <Link
+                          key={index}
+                          to={dropdownItem.path}
+                          className={`block px-3 py-2 text-sm text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-md transition-colors ${
+                            isActive(dropdownItem.path) ? 'text-cyan-400 bg-cyan-500/10' : ''
+                          }`}
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {dropdownItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
           </div>
