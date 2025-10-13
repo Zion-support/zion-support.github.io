@@ -1,6 +1,13 @@
-import React from 'react';'react;
+import React, { useState, useEffect } from 'react';
+interface AccessibilitySettings {
+  highContrast: boolean;
+  fontSize: 'small' | 'normal' | 'large' | 'extra-large';
+  reducedMotion: boolean;
+  screenReader: boolean;
+}
+
 interface EnhancedAccessibilityProps {
-  children: Node;
+  children: React.ReactNode;
 }
 
 const EnhancedAccessibility: React.FC = () => {
@@ -14,7 +21,7 @@ const EnhancedAccessibility: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Enhanced accessibility features;
+    // Enhanced accessibility features
     const addSkipLinks = () => {
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
@@ -23,9 +30,9 @@ const EnhancedAccessibility: React.FC = () => {
       document.body.insertBefore(skipLink, document.body.firstChild);
     }
     const enhanceFocusManagement = () => {
-      // Add focus indicators;
+      // Add focus indicators
       const style = document.createElement('style');
-      style.textContent = `;
+      style.textContent = `
         *:focus {
           outline: 2px solid #06b6d4 !important;
           outline-offset: 2px !important;
@@ -45,7 +52,7 @@ const EnhancedAccessibility: React.FC = () => {
       document.head.appendChild(style);
     }
     const addAriaLabels = () => {
-      // Add ARIA labels to interactive elements;
+      // Add ARIA labels to interactive elements
       const buttons = document.querySelectorAll('button:not([aria-label])');
       buttons.forEach((button) => {
         if (!button.textContent?.trim()) {
@@ -64,27 +71,27 @@ const EnhancedAccessibility: React.FC = () => {
     mediaQuery.addEventListener('change', handleChange);
 
     const setupKeyboardNavigation = () => {
-      // Enhanced keyboard navigation;
-      document.addEventListener('keydown', (e) => {';
-        if (e.key === 'Tab') {';
+      // Enhanced keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Tab') {
           document.body.classList.add('keyboard-navigation');
         }
       });
 
-      document.addEventListener('mousedown', () => {';
+      document.addEventListener('mousedown', () => {
         document.body.classList.remove('keyboard-navigation');
       });
     }
-    // Initialize accessibility enhancements;
+    // Initialize accessibility enhancements
     addSkipLinks();
     enhanceFocusManagement();
     addAriaLabels();
     setupKeyboardNavigation();
 
-    // Cleanup;
+    // Cleanup
     return () => {
-      // Cleanup if needed;
-    }
+      // Cleanup if needed
+    };
   }, []);
 
   useEffect(() => {

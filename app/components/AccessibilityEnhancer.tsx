@@ -138,13 +138,9 @@ const AccessibilityEnhancer: React.FC = () => {
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown);
-    }
+    };
   }, []);
 
-return null;
-import React from 'react';
-
-const AccessibilityEnhancer: React.FC = () => {
   return null;
-}
+};
 export default AccessibilityEnhancer;
