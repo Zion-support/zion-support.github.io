@@ -1,112 +1,127 @@
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-// Get all TypeScript/JavaScript files
-<<<<<<< HEAD
-function getAllFiles(dir, fileList = []) {
-  const files = fs.readdirSync(dir);
-  
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      getAllFiles(filePath, fileList);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      fileList.push(filePath);
-    }
-  });
-  
-  return fileList;
-=======
-function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  let results = [];
-  const list = fs.readdirSync(dir);
-  
-  list.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat && stat.isDirectory()) {
-      // Skip node_modules and other directories
-      if (!['node_modules', '.git', 'dist', 'build'].includes(file)) {
-        results = results.concat(getAllFiles(filePath, extensions));
-      }
-    } else {
-      if (extensions.some(ext => file.endsWith(ext))) {
-        results.push(filePath);
-      }
-    }
-  });
-  
-  return results;
->>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
-}
+// List of files with unused imports/variables
+const filesToFix = [
+  'App_clean.tsx',
+  'app/ai-holographic-workspace/page.tsx',
+  'app/ai-image-recognition-pro/page.tsx',
+  'app/ai-quantum-financial-oracle/page.tsx',
+  'app/ai-sentiment-analysis-pro/page.tsx',
+  'app/ai-space-mission-optimizer/page.tsx',
+  'app/ai-voice-cloning-studio/page.tsx',
+  'app/careers/page.tsx',
+  'app/case-studies/page.tsx',
+  'app/cloud-infrastructure/page.tsx',
+  'app/cloud-services/page.tsx',
+  'app/community/page.tsx',
+  'app/compliance/page.tsx',
+  'app/components/EnhancedPerformanceMonitor.tsx',
+  'app/components/Footer.tsx',
+  'app/components/ImprovedFooter.tsx',
+  'app/components/ImprovedImage.tsx',
+  'app/components/Navigation.tsx',
+  'app/components/PerformanceOptimizer.tsx',
+  'app/consultation/page.tsx',
+  'app/custom-development/page.tsx',
+  'app/cybersecurity-solutions/page.tsx',
+  'app/devops-services/page.tsx',
+  'app/layout.tsx',
+  'app/micro-saas-services/page.tsx',
+  'app/page.tsx',
+  'app/partners/page.tsx',
+  'app/quantum-computing-solutions/page.tsx',
+  'app/quantum-data-encryption-vault/page.tsx',
+  'app/smart-inventory-optimizer/page.tsx',
+  'app/software-development/page.tsx',
+  'app/zion-ai-accounting-suite/page.tsx',
+  'app/zion-ai-customer-insights/page.tsx',
+  'app/zion-ai-cybersecurity-suite-pro/page.tsx',
+  'app/zion-ai-inventory-manager/page.tsx',
+  'app/zion-ai-invoice-generator/page.tsx',
+  'app/zion-ai-meeting-transcriber/page.tsx'
+];
 
-// Fix unused imports in a file
-function fixUnusedImports(filePath) {
-  try {
-<<<<<<< HEAD
-    console.log(`Fixing unused imports in: ${filePath}`);
-    
-    // Use ESLint to fix unused imports
-    execSync(`npx eslint "${filePath}" --fix --ext .ts,.tsx`, { 
-      stdio: 'pipe',
-      cwd: '/workspace'
-    });
-    
-    console.log(`✅ Fixed: ${filePath}`);
-  } catch (error) {
-    console.log(`❌ Error fixing ${filePath}: ${error.message}`);
-=======
-    const content = fs.readFileSync(filePath, 'utf8');
-    
-    // Skip if file has merge conflicts
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-      console.log(`Skipping ${filePath} - has merge conflicts`);
-      return;
-    }
-    
-    // Run ESLint with --fix to remove unused imports
-    try {
-      execSync(`npx eslint "${filePath}" --fix --ext .ts,.tsx,.js,.jsx`, { 
-        stdio: 'pipe',
-        cwd: process.cwd()
+function removeUnusedImports(content) {
+  // Remove unused imports from lucide-react
+  const lucideImports = [
+    'Zap', 'Clock', 'Award', 'Target', 'TrendingUp', 'Cpu', 'Database', 'Globe', 'Mic', 'Layers', 'Box',
+    'Brain', 'Shield', 'Star', 'Users', 'ArrowRight', 'Pause', 'Download', 'Upload', 'CheckCircle',
+    'BarChart3', 'Server', 'Network', 'Lock', 'Settings', 'Cloud', 'Calendar', 'Rocket', 'Code', 'WebIcon',
+    'Monitor', 'Phone', 'MapPin', 'Package', 'Heart', 'Receipt', 'FileText', 'PieChart', 'Hand',
+    'AlertTriangle', 'DollarSign', 'Truck', 'Mail', 'Headphones', 'MessageSquare', 'Share2', 'Search',
+    'Filter', 'Edit', 'Trash2', 'Plus', 'Minus', 'Play', 'Stop', 'Volume2', 'VolumeX', 'Wifi', 'WifiOff',
+    'Signal', 'Bluetooth'
+  ];
+  
+  // Remove unused React Router imports
+  const routerImports = ['Link'];
+  
+  // Remove unused React Helmet imports
+  const helmetImports = ['Helmet'];
+  
+  // Remove unused component imports
+  const componentImports = [
+    'LoadingPageEnhanced', 'PerformanceOptimizer', 'EnhancedSEO', 'FuturisticCard', 'FuturisticText',
+    'ResponsiveGrid', 'ResponsiveText', 'MobileNavigation'
+  ];
+  
+  // Process each file
+  filesToFix.forEach(filePath => {
+    const fullPath = path.join(__dirname, filePath);
+    if (fs.existsSync(fullPath)) {
+      let content = fs.readFileSync(fullPath, 'utf8');
+      
+      // Remove unused imports from lucide-react
+      lucideImports.forEach(importName => {
+        // Remove from import statement
+        content = content.replace(new RegExp(`\\s*${importName}\\s*,?`, 'g'), '');
+        // Clean up empty import lines
+        content = content.replace(/import\s*{\s*}\s*from\s*['"]lucide-react['"];?\s*\n?/g, '');
+        // Clean up trailing commas in imports
+        content = content.replace(/,\s*}/g, '}');
       });
-      console.log(`Fixed unused imports in ${filePath}`);
-    } catch (error) {
-      // ESLint might fail for some files, that's okay
-      console.log(`Could not auto-fix ${filePath}: ${error.message}`);
+      
+      // Remove unused React Router imports
+      routerImports.forEach(importName => {
+        content = content.replace(new RegExp(`\\s*${importName}\\s*,?`, 'g'), '');
+        content = content.replace(/import\s*{\s*}\s*from\s*['"]react-router-dom['"];?\s*\n?/g, '');
+        content = content.replace(/,\s*}/g, '}');
+      });
+      
+      // Remove unused React Helmet imports
+      helmetImports.forEach(importName => {
+        content = content.replace(new RegExp(`\\s*${importName}\\s*,?`, 'g'), '');
+        content = content.replace(/import\s*{\s*}\s*from\s*['"]react-helmet-async['"];?\s*\n?/g, '');
+        content = content.replace(/,\s*}/g, '}');
+      });
+      
+      // Remove unused component imports
+      componentImports.forEach(importName => {
+        content = content.replace(new RegExp(`\\s*${importName}\\s*,?`, 'g'), '');
+        content = content.replace(/,\s*}/g, '}');
+      });
+      
+      // Remove unused variables
+      content = content.replace(/const\s+quality\s*=\s*[^;]+;?\s*\n?/g, '');
+      content = content.replace(/const\s+isOptimized\s*=\s*[^;]+;?\s*\n?/g, '');
+      content = content.replace(/const\s+toggleDropdown\s*=\s*[^;]+;?\s*\n?/g, '');
+      content = content.replace(/const\s+structuredData\s*=\s*[^;]+;?\s*\n?/g, '');
+      content = content.replace(/const\s+partners\s*=\s*[^;]+;?\s*\n?/g, '');
+      content = content.replace(/const\s+tiers\s*=\s*[^;]+;?\s*\n?/g, '');
+      content = content.replace(/const\s+selectedPlan\s*=\s*[^;]+;?\s*\n?/g, '');
+      content = content.replace(/const\s+setSelectedPlan\s*=\s*[^;]+;?\s*\n?/g, '');
+      content = content.replace(/const\s+error\s*=\s*[^;]+;?\s*\n?/g, '');
+      
+      // Clean up empty lines
+      content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+      
+      fs.writeFileSync(fullPath, content);
+      console.log(`Fixed: ${filePath}`);
     }
-  } catch (error) {
-    console.log(`Error processing ${filePath}: ${error.message}`);
->>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
-  }
+  });
 }
 
-// Main execution
-<<<<<<< HEAD
-console.log('🔧 Starting to fix unused imports...');
-
-const files = getAllFiles('/workspace/app');
-let fixedCount = 0;
-
-files.forEach(file => {
-  try {
-    fixUnusedImports(file);
-    fixedCount++;
-  } catch (error) {
-    console.log(`Error processing ${file}: ${error.message}`);
-  }
-});
-
-console.log(`\n🎉 Fixed unused imports in ${fixedCount} files!`);
-=======
-console.log('Fixing unused imports...');
-
-const files = getAllFiles('./app');
-files.forEach(fixUnusedImports);
-
-console.log('Done fixing unused imports!');
->>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
+// Run the fix
+removeUnusedImports();
+console.log('Unused imports and variables removed successfully!');

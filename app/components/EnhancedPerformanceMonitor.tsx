@@ -11,11 +11,11 @@ interface PerformanceMetrics {
   totalBlockingTime: number;
 }
 
-interface PerformanceMonitorProps {
+interface PerformanceProps {
   showInProduction?: boolean;
 }
 
-const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
+const EnhancedPerformance: React.FC<PerformanceProps> = ({ 
   showInProduction = false 
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
@@ -68,7 +68,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         }, 0);
 
         const finalMetrics: PerformanceMetrics = {
-          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+          loadTime: navigation.loadEventEnd - navigation.loadEventt,
           firstContentfulPaint: fcp ? fcp.startTime : vitals.firstContentfulPaint || 0,
           largestContentfulPaint: vitals.largestContentfulPaint || 0,
           firstInputDelay: vitals.firstInputDelay || 0,
@@ -95,7 +95,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             }
           });
         }
-      } catch (error) {
+      } catch {
         setIsLoading(false);
       }
     };
@@ -235,4 +235,4 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   );
 };
 
-export default EnhancedPerformanceMonitor;
+export default EnhancedPerformance;

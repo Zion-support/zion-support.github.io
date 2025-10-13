@@ -25,7 +25,7 @@ const ImprovedImage: React.FC<ImprovedImageProps> = ({
   placeholder,
   lazy = true,
   priority = false,
-  quality = 75,
+  // quality = 75,
   sizes,
   onLoad,
   onError
@@ -77,7 +77,7 @@ const ImprovedImage: React.FC<ImprovedImageProps> = ({
     }
     
     // For local images, you could add optimization parameters
-    // This is a placeholder - in a real app, you'd use a service like Cloudinary or Next.js Image
+    // This is a placeholder - in a real app, you'd use a service likeinary or Next.js Image
     return originalSrc;
   };
 

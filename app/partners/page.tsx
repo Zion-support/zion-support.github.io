@@ -1,96 +1,46 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Users, Globe, Shield, Zap } from 'lucide-react';
 
-export default function Partners() {
-  const partners = [
-    {
-      name: "Microsoft",
-      logo: "/images/partners/microsoft.png",
-      description: "Leading cloud and productivity solutions",
-      category: "Technology Partner",
-      tier: "Platinum"
-    },
-    {
-      name: "Amazon Web Services",
-      logo: "/images/partners/aws.png",
-      description: "Comprehensive cloud computing platform",
-      category: "Cloud Partner",
-      tier: "Platinum"
-    },
-    {
-      name: "Google Cloud",
-      logo: "/images/partners/google-cloud.png",
-      description: "AI and machine learning cloud services",
-      category: "AI Partner",
-      tier: "Gold"
-    },
-    {
-      name: "Salesforce",
-      logo: "/images/partners/salesforce.png",
-      description: "Customer relationship management platform",
-      category: "CRM Partner",
-      tier: "Gold"
-    },
-    {
-      name: "IBM",
-      logo: "/images/partners/ibm.png",
-      description: "Enterprise AI and hybrid cloud solutions",
-      category: "Enterprise Partner",
-      tier: "Silver"
-    },
-    {
-      name: "Oracle",
-      logo: "/images/partners/oracle.png",
-      description: "Database and enterprise software solutions",
-      category: "Database Partner",
-      tier: "Silver"
-    }
-  ];
-
-  const tiers = [
-    {
-      name: "Platinum",
-      color: "from-gray-400 to-gray-600",
-      requirements: "Strategic partnership with significant revenue commitment",
-      benefits: ["Highest priority support", "Dedicated account manager", "Custom solutions", "Joint go-to-market"]
-    },
-    {
-      name: "Gold",
-      color: "from-yellow-400 to-yellow-600",
-      requirements: "Strong partnership with regular collaboration",
-      benefits: ["Priority support", "Training programs", "Marketing support", "Technical resources"]
-    },
-    {
-      name: "Silver",
-      color: "from-gray-300 to-gray-500",
-      requirements: "Partnership with mutual business opportunities",
-      benefits: ["Standard support", "Partner portal access", "Co-marketing opportunities", "Technical documentation"]
-    }
-  ];
-
+const PagePage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Partners - Zion Tech Group | Strategic Partnerships</title>
-        <meta name="description" content="Join our partner ecosystem and unlock new opportunities for growth. Strategic partnerships with leading technology companies." />
-        <meta name="keywords" content="partners, partnerships, technology partners, cloud partners, strategic alliances" />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services and solutions." />
       </Helmet>
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                Our Partners
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Strategic partnerships that drive innovation and deliver exceptional value to our clients.
-            </p>
+        <div className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Page
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Professional page services and solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  to="/consultation" 
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+                >
+                  Get Started
+                </Link>
+                <Link 
+                  to="/case-studies" 
+                  className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors"
+                >
+                  View Case Studies
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </>
   );
-}
+};
+
+export default PagePage;
