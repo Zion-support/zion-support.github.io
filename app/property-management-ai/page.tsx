@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 =======
 'use client';
+<<<<<<< HEAD
 import React from 'react'.;
 import {Helmet}}from 'react-helmet-async'.;
 import {Home, Users, DollarSign, BarChart, Shield, Zap}}from 'lucide-react';
@@ -24,3 +25,19 @@ const PropertyManagementAIPage: React.FC = () => {,
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">"""
                     <feature.icon className="w-8 h-8 text-white" />"""
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
+=======
+import React from 'react';
+
+export default function PropertyManagementAiPage() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Property Management Ai</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

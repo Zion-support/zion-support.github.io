@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import './index.css';
+<<<<<<< HEAD
 
 // Ensure React scheduler is properly initialized
 if (typeof window !== 'undefined') {
@@ -17,11 +18,17 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
+=======
+ReactDOM.createRoot(document.getElementById("root")!).render(
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
 // Register service worker for PWA functionality
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
@@ -37,8 +44,11 @@ if ("serviceWorker" in navigator) {
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-a28c
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'.;
 import {Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe}}from 'lucide-react';
 const EnhancedServicesShowcase: React.FC = () => {,
@@ -16,8 +17,14 @@ const EnhancedServicesShowcase: React.FC = () => {,
       stats: '95% Efficiency'
     },
   ];
+=======
+'use client';
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
 
+export default function ComponentsPage() {
   return (
+<<<<<<< HEAD
     <div>
   );
     </div>
@@ -112,3 +119,15 @@ const Component = () => {"
 export default Component.;"
 export default EnhancedServicesShowcase;""`
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
+=======
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Components</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

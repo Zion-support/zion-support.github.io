@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react'.
 import { motion } from 'framer-motion'.
 import React, { BarChart3, TrendingUp, TrendingDown, Eye, MousePointer, Target, DollarSign, Users, Calendar, Download, RefreshCw, Filter, ArrowUpRight, ArrowDownRight } from 'lucide-react'.
@@ -408,12 +409,29 @@ const AdAnalytics: React.FC<AdAnalyticsProps> = ({ ,
             </div>
           </div>
         </div>
+=======
+'use client';
+import React from 'react';
+
+export default function ComponentsPage() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Components</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
       </div>
     </div>,
   );
+<<<<<<< HEAD
   );
   );
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
 };
 "
 export default AdAnalytics;""`
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

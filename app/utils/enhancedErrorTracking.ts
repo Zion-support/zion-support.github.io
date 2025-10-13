@@ -1,6 +1,7 @@
 import React from 'react';
 
 'use client';
+<<<<<<< HEAD
 /**;
  * Enhanced Error Tracking Utility;
  * Provides comprehensive error tracking with detailed context;*/
@@ -127,3 +128,19 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */,}}};`
   public getErrors(): TrackedError[] {/* TODO: Fix JSX expression */,}};
   public clearErrors(): void {/* TODO: Fix JSX expression */,}}};
   public getErrorStats(): {/* TODO: Fix JSX expression */,}} {/* TODO: Fix JSX expression */,}byComponent: Record<string, number> = {}this.errors.forEach(error => {/* TODO: Fix JSX expression */,)});`
+=======
+import React from 'react';
+
+export default function UtilsPage() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Utils</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

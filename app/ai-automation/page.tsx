@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default function PagePage() {
   return (
@@ -9,9 +10,14 @@ import { Helmet } from 'react-helmet-async';
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+'use client';
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
 
-const AiAutomationPage: React.FC = () => {
+export default function AiAutomationPage() {
   return (
+<<<<<<< HEAD
     <div>
   );
     </div>,
@@ -47,10 +53,22 @@ const AiAutomationPage: React.FC = () => {
             </button>
           </div>
         </div>
+=======
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Ai Automation</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
       </div>
-    </>
+    </div>
   );
+<<<<<<< HEAD
 };
 "
 export default AiAutomationPage;""
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

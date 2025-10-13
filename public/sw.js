@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   '/about',
   '/services',
   '/favicon.svg'
@@ -104,4 +105,81 @@ async function getPendingForms() {
 
 async function removePendingForm(id) {
   // Implementation would go here
+=======
+export default function Component() {
+return (;
+<div>;
+<h1>Component<//;
+<p>This component is under construction.<//;
+<//;
+);
+}
+self.addEventListener('install', (event) => {'
+  console.log('Service Worker installing...');'
+  event.waitUntil(
+  // TODO: Add parameters
+)
+  );
+});
+// Fetch event
+self.addEventListener('fetch', (event) => {'
+  event.respondWith(
+  // TODO: Add parameters
+)
+    caches.match(event.request)
+      .then((response) => {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+        // Return cached version or fetch from network
+        return response || fetch(event.request)
+      })
+  )
+})
+// Activate event
+self.addEventListener('activate', (event) => {'
+  event.waitUntil(
+  // TODO: Add parameters
+)
+    caches.keys().then((cacheNames) => {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      return Promise.all(
+  // TODO: Add parameters
+)
+        cacheNames.map((cacheName) => {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+          if (cacheName !== CACHE_NAME) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+            console.log('Deleting old cache:', cacheName)'
+            return caches.delete(cacheName)
+          }
+        })
+      )
+    })
+  );
+});
+// Background sync for offline form submissions
+self.addEventListener('sync', (event) => {'
+  if (event.tag === 'contact-form') {'
+    event.waitUntil(syncContactForm());
+  }
+});
+async function syncContactForm() {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  // Handle offline form submissions
+  console.log('Syncing contact form data');'
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
 }

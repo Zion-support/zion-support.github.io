@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react'.
 import { motion, AnimatePresence } from 'framer-motion'.
 import React, { Calendar, Clock, Play, Pause, Edit, Trash2, Plus, Save, X, AlertCircle, CheckCircle, Target, BarChart3, Settings } from 'lucide-react'.
@@ -202,8 +203,14 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = ''   }) => {,
         : [...prev.daysOfWeek, day]
       }));
   };
+=======
+'use client';
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
 
+export default function ComponentsPage() {
   return (
+<<<<<<< HEAD
     <div className={`ad-scheduler ${className}`}>
 <<<<<<< HEAD
       {/* Header */}
@@ -732,3 +739,15 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = ''   }) => {,
 };
 "
 export default AdScheduler;""`
+=======
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Components</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

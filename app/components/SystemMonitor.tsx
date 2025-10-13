@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React, { Helmet } from 'react-helmet-async'.;
 import React, { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const SystemMonitorPage: React.FC = () => {
@@ -35,8 +36,13 @@ const SystemMonitorPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
 
+export default function ComponentsPage() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 <<<<<<< HEAD
       <Helmet>
@@ -192,3 +198,15 @@ const SystemMonitorPage: React.FC = () => {
 "
 export default SystemMonitorPage;""
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
+=======
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Components</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

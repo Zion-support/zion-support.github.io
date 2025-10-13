@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Server, Database, Cloud, Lock, Settings, Monitor } from 'lucide-react';
 const ITInfrastructurePage: React.FC = () => {
@@ -447,3 +448,20 @@ const ITInfrastructurePage: React.FC = () => {
 };"
 export default ITInfrastructurePage;""
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
+=======
+'use client';
+import React from 'react';
+
+export default function ItInfrastructurePage() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">It Infrastructure</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

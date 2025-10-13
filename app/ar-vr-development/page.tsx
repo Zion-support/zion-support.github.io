@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ArrowRight, Glasses, Brain, Shield, Zap, Globe, Star, Users, Award, CheckCircle, TrendingUp, Clock, Eye, Image, Target, Scan } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
@@ -106,3 +107,20 @@ const ARVRDevelopment = () => {
           </div>
         </ResponsiveContainer>
 export default ARVRDevelopment;
+=======
+'use client';
+import React from 'react';
+
+export default function ArVrDevelopmentPage() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Ar Vr Development</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

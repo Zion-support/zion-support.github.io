@@ -1,11 +1,9 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Home, ArrowLeft, Search, AlertTriangle, RefreshCw } from 'lucide-react';
 
-const NotFoundPage: React.FC = () => {
+export default function AppPage() {
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>404 - Page Not Found | Zion Tech Group</title>
@@ -123,9 +121,15 @@ const NotFoundPage: React.FC = () => {
             </p>
           </div>
         </div>
+=======
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">App</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
       </div>
-    </>
+    </div>
   );
-};
-
-export default NotFoundPage;
+}

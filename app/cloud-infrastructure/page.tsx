@@ -1,4 +1,6 @@
+'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
       <Helmet>
         <title>CloudInfrastructure - Zion Tech Group</title>
@@ -16,3 +18,18 @@ import { Helmet } from 'react-helmet-async';
         <div className="text-center">
           <p className="text-gray-300">Coming Soon - CloudInfrastructure Solutions</p>
 
+=======
+
+export default function CloudInfrastructurePage() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Cloud Infrastructure</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
