@@ -63,6 +63,12 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
+>>>>>>> cursor/website-audit-and-update-with-deployment-3531
+>>>>>>> origin/main
     // Log the error data for debugging
 =======
 

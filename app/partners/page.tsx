@@ -100,7 +100,6 @@ export default function Partners() {
         <meta name="description" content="Join our partner ecosystem and unlock new opportunities for growth. Strategic partnerships with leading technology companies." />
         <meta name="keywords" content="partners, partnerships, technology partners, cloud partners, strategic alliances" />
       </Helmet>
-      </div>
     </>
   );
 }

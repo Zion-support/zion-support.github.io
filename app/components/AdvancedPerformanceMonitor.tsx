@@ -34,6 +34,7 @@ const AdvancedPerformanceMonitor = () => {
     // Only run in development
     if (process.env.NODE_ENV !== 'development') return
 
+<<<<<<< HEAD
     const measurePerformance = () => {
       // Measure Core Web Vitals
       const observer = new PerformanceObserver((list) => {
@@ -103,6 +104,7 @@ const AdvancedPerformanceMonitor = () => {
         }
       })
 =======
+<<<<<<< HEAD
   return (
     <div className="fixed bottom-4 right-4 bg-black text-white p-4 rounded-lg shadow-lg text-xs font-mono max-w-xs">
       <h3 className="font-bold mb-2">Performance Metrics</h3>
@@ -122,6 +124,9 @@ const AdvancedPerformanceMonitor = () => {
         Close
       </button>
 >>>>>>> cursor/analyze-improve-and-deploy-application-29f3
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-3531
+>>>>>>> origin/main
     </div>
   )
 }
@@ -279,4 +284,9 @@ export default AdvancedPerformanceMonitor
 
 =======
 export default AdvancedPerformanceMonitor
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-29f3
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
+>>>>>>> cursor/website-audit-and-update-with-deployment-3531
+>>>>>>> origin/main

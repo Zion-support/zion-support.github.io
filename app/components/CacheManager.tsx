@@ -21,6 +21,7 @@ const CacheManager = () => {
   useEffect(() => {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
     // Service Worker registration for caching
     const registerServiceWorker = async () => {
       if ('serviceWorker' in navigator) {
@@ -30,6 +31,15 @@ const CacheManager = () => {
         } catch (error) {
           console.error('Service Worker registration failed:', error);
 >>>>>>> cursor/analyze-improve-and-deploy-application-29f3
+=======
+          console.log('Service Worker registered:', registration);
+
+        } catch (error) {
+          console.error('Service Worker registration failed:', error);
+>>>>>>> cursor/website-audit-and-update-with-deployment-3210
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
+>>>>>>> cursor/website-audit-and-update-with-deployment-3531
+>>>>>>> origin/main
         }
       }
     }
@@ -51,6 +61,15 @@ const CacheManager = () => {
         try {
           const cache = await caches.open(CACHE_NAME);
           await cache.addAll(CACHE_URLS);
+<<<<<<< HEAD
+=======
+          console.log('Static assets cached successfully');
+
+        } catch (error) {
+          console.error('Failed to cache static assets:', error);
+>>>>>>> cursor/website-audit-and-update-with-deployment-3210
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
+>>>>>>> cursor/website-audit-and-update-with-deployment-3531
         }
       }
 

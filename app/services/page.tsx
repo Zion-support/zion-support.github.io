@@ -5,112 +5,182 @@ import { Link } from "react-router-dom";
 export default function Services() {
   const services = [
     {
-      title: "AI-Powered Business Intelligence",
-      description: "Transform raw data into actionable insights with our advanced AI analytics platform. Real-time dashboards, predictive analytics, and automated reporting.",
+      title: "AI-Powered Business Intelligence Pro",
+      description: "Transform raw data into actionable insights with our advanced AI analytics platform. Real-time dashboards, predictive analytics, and automated reporting with 99.9% accuracy.",
       icon: <Brain className="w-8 h-8" />,
       path: "/ai-business-intelligence",
       color: "from-blue-500 to-cyan-500",
       price: "Starting at $299/month",
-      features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration"]
+      originalPrice: "$599/month",
+      features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration", "Mobile App", "White-label Options"],
+      category: "AI Analytics",
+      popular: true
     },
     {
-      title: "AI Customer Support Automation",
-      description: "Deploy intelligent chatbots and automated customer service solutions. 24/7 support with natural language processing and sentiment analysis.",
+      title: "AI Customer Support Automation Suite",
+      description: "Deploy intelligent chatbots and automated customer service solutions. 24/7 support with natural language processing, sentiment analysis, and multilingual capabilities.",
       icon: <Bot className="w-8 h-8" />,
       path: "/ai-customer-support",
       color: "from-green-500 to-emerald-500",
       price: "Starting at $199/month",
-      features: ["Multi-language Support", "Sentiment Analysis", "CRM Integration", "Live Chat Handoff"]
+      originalPrice: "$399/month",
+      features: ["Multi-language Support", "Sentiment Analysis", "CRM Integration", "Live Chat Handoff", "Voice Recognition", "Custom Training"],
+      category: "AI Customer Service",
+      popular: true
     },
     {
-      title: "AI Content Generation Suite",
-      description: "Create high-quality content at scale with our AI-powered writing tools. Blog posts, social media content, product descriptions, and more.",
+      title: "AI Content Generation Studio",
+      description: "Create high-quality content at scale with our AI-powered writing tools. Blog posts, social media content, product descriptions, and marketing materials with SEO optimization.",
       icon: <FileText className="w-8 h-8" />,
       path: "/ai-content-generation",
       color: "from-purple-500 to-pink-500",
       price: "Starting at $149/month",
-      features: ["SEO Optimization", "Brand Voice Training", "Multi-format Output", "Plagiarism Detection"]
+      originalPrice: "$299/month",
+      features: ["SEO Optimization", "Brand Voice Training", "Multi-format Output", "Plagiarism Detection", "Content Calendar", "Team Collaboration"],
+      category: "AI Content"
     },
     {
-      title: "AI Cybersecurity Monitor",
-      description: "Advanced threat detection and response system. Real-time monitoring, automated incident response, and compliance reporting.",
+      title: "AI Cybersecurity Defense Matrix",
+      description: "Advanced threat detection and response system with real-time monitoring, automated incident response, and compliance reporting. Protect your business 24/7.",
       icon: <Shield className="w-8 h-8" />,
       path: "/ai-cybersecurity",
       color: "from-red-500 to-orange-500",
       price: "Starting at $399/month",
-      features: ["Threat Detection", "Automated Response", "Compliance Reports", "24/7 Monitoring"]
+      originalPrice: "$799/month",
+      features: ["Threat Detection", "Automated Response", "Compliance Reports", "24/7 Monitoring", "Incident Response", "Security Training"],
+      category: "Cybersecurity",
+      popular: true
     },
     {
-      title: "5G Network Infrastructure",
-      description: "Complete 5G network deployment and management solutions. Ultra-low latency, massive IoT connectivity, and edge computing capabilities.",
+      title: "5G Network Infrastructure Solutions",
+      description: "Complete 5G network deployment and management solutions. Ultra-low latency, massive IoT connectivity, and edge computing capabilities for smart cities and enterprises.",
       icon: <Wifi className="w-8 h-8" />,
       path: "/5g-solutions",
       color: "from-cyan-500 to-blue-500",
       price: "Custom Pricing",
-      features: ["Network Planning", "Edge Computing", "IoT Integration", "Performance Monitoring"]
+      features: ["Network Planning", "Edge Computing", "IoT Integration", "Performance Monitoring", "Smart City Solutions", "Private Networks"],
+      category: "5G Technology"
     },
     {
-      title: "Cloud Infrastructure Management",
-      description: "Comprehensive cloud solutions with automated scaling, backup, and disaster recovery. Multi-cloud and hybrid cloud support.",
+      title: "Cloud Infrastructure Management Pro",
+      description: "Comprehensive cloud solutions with automated scaling, backup, and disaster recovery. Multi-cloud and hybrid cloud support with cost optimization.",
       icon: <Cloud className="w-8 h-8" />,
       path: "/cloud-infrastructure",
       color: "from-indigo-500 to-purple-500",
       price: "Starting at $249/month",
-      features: ["Auto-scaling", "Disaster Recovery", "Cost Optimization", "Security Hardening"]
+      originalPrice: "$499/month",
+      features: ["Auto-scaling", "Disaster Recovery", "Cost Optimization", "Security Hardening", "Multi-cloud", "DevOps Integration"],
+      category: "Cloud Services"
     },
     {
-      title: "AI-Powered Data Analytics",
-      description: "Advanced data processing and visualization platform. Machine learning models, automated insights, and interactive dashboards.",
+      title: "AI-Powered Data Analytics Platform",
+      description: "Advanced data processing and visualization platform with machine learning models, automated insights, and interactive dashboards for data-driven decisions.",
       icon: <BarChart3 className="w-8 h-8" />,
       path: "/ai-data-analytics",
       color: "from-teal-500 to-cyan-500",
       price: "Starting at $179/month",
-      features: ["ML Models", "Interactive Dashboards", "Data Pipeline", "Real-time Processing"]
+      originalPrice: "$359/month",
+      features: ["ML Models", "Interactive Dashboards", "Data Pipeline", "Real-time Processing", "Data Visualization", "Custom Reports"],
+      category: "Data Analytics"
     },
     {
       title: "AI Code Assistant Pro",
-      description: "Intelligent code generation, review, and optimization. Support for multiple programming languages with automated testing and documentation.",
+      description: "Intelligent code generation, review, and optimization with support for multiple programming languages, automated testing, and documentation generation.",
       icon: <Code className="w-8 h-8" />,
       path: "/ai-code-assistant",
       color: "from-yellow-500 to-orange-500",
       price: "Starting at $129/month",
-      features: ["Code Generation", "Bug Detection", "Performance Optimization", "Documentation"]
+      originalPrice: "$259/month",
+      features: ["Code Generation", "Bug Detection", "Performance Optimization", "Documentation", "Code Review", "Refactoring"],
+      category: "Development Tools"
     },
     {
-      title: "AI Marketing Automation",
-      description: "End-to-end marketing automation with AI-driven personalization. Email campaigns, social media management, and lead scoring.",
+      title: "AI Marketing Automation Hub",
+      description: "End-to-end marketing automation with AI-driven personalization, email campaigns, social media management, and advanced lead scoring algorithms.",
       icon: <Target className="w-8 h-8" />,
       path: "/ai-marketing-automation",
       color: "from-pink-500 to-rose-500",
       price: "Starting at $199/month",
-      features: ["Email Automation", "Social Media", "Lead Scoring", "A/B Testing"]
+      originalPrice: "$399/month",
+      features: ["Email Automation", "Social Media", "Lead Scoring", "A/B Testing", "Personalization", "Analytics Dashboard"],
+      category: "Marketing Automation"
     },
     {
-      title: "AI Document Processing",
-      description: "Intelligent document analysis, extraction, and processing. OCR, form recognition, and automated data entry solutions.",
+      title: "AI Document Intelligence Suite",
+      description: "Intelligent document analysis, extraction, and processing with OCR technology, form recognition, and automated data entry solutions.",
       icon: <FileText className="w-8 h-8" />,
       path: "/ai-document-processing",
       color: "from-emerald-500 to-green-500",
       price: "Starting at $159/month",
-      features: ["OCR Technology", "Form Recognition", "Data Extraction", "Workflow Automation"]
+      originalPrice: "$319/month",
+      features: ["OCR Technology", "Form Recognition", "Data Extraction", "Workflow Automation", "Document Classification", "Search & Retrieval"],
+      category: "Document Management"
     },
     {
-      title: "AI Sales CRM Assistant",
-      description: "Intelligent CRM with AI-powered lead qualification, sales forecasting, and automated follow-ups. Integration with major CRM platforms.",
+      title: "AI Sales CRM Assistant Pro",
+      description: "Intelligent CRM with AI-powered lead qualification, sales forecasting, and automated follow-ups. Integration with major CRM platforms and sales tools.",
       icon: <Users className="w-8 h-8" />,
       path: "/ai-crm-assistant",
       color: "from-violet-500 to-purple-500",
       price: "Starting at $229/month",
-      features: ["Lead Scoring", "Sales Forecasting", "Automated Follow-ups", "CRM Integration"]
+      originalPrice: "$459/month",
+      features: ["Lead Scoring", "Sales Forecasting", "Automated Follow-ups", "CRM Integration", "Pipeline Management", "Performance Analytics"],
+      category: "Sales & CRM"
     },
     {
-      title: "AI Financial Analytics",
-      description: "Advanced financial modeling and risk assessment. Automated reporting, fraud detection, and investment analysis tools.",
+      title: "AI Financial Analytics Pro",
+      description: "Advanced financial modeling and risk assessment with automated reporting, fraud detection, and investment analysis tools for financial institutions.",
       icon: <TrendingUp className="w-8 h-8" />,
       path: "/ai-financial-analytics",
       color: "from-amber-500 to-yellow-500",
       price: "Starting at $349/month",
-      features: ["Risk Assessment", "Fraud Detection", "Investment Analysis", "Compliance Reporting"]
+      originalPrice: "$699/month",
+      features: ["Risk Assessment", "Fraud Detection", "Investment Analysis", "Compliance Reporting", "Portfolio Optimization", "Market Prediction"],
+      category: "Financial Services"
+    },
+    {
+      title: "AI Healthcare Diagnostics",
+      description: "Revolutionary AI-powered medical diagnostics with image analysis, symptom assessment, and treatment recommendations for healthcare providers.",
+      icon: <Brain className="w-8 h-8" />,
+      path: "/ai-healthcare-diagnostics",
+      color: "from-rose-500 to-pink-500",
+      price: "Starting at $499/month",
+      originalPrice: "$999/month",
+      features: ["Medical Imaging", "Symptom Analysis", "Treatment Recommendations", "Patient Monitoring", "Drug Interaction", "Compliance Tracking"],
+      category: "Healthcare AI"
+    },
+    {
+      title: "AI Supply Chain Optimizer",
+      description: "Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation for manufacturing and retail.",
+      icon: <Globe className="w-8 h-8" />,
+      path: "/ai-supply-chain-optimizer",
+      color: "from-slate-500 to-gray-500",
+      price: "Starting at $279/month",
+      originalPrice: "$559/month",
+      features: ["Demand Forecasting", "Inventory Optimization", "Route Planning", "Supplier Management", "Risk Assessment", "Cost Analysis"],
+      category: "Supply Chain"
+    },
+    {
+      title: "AI Legal Research Assistant",
+      description: "Advanced legal research and document analysis with case law search, contract review, and compliance monitoring for law firms and legal departments.",
+      icon: <FileText className="w-8 h-8" />,
+      path: "/ai-legal-research",
+      color: "from-indigo-500 to-blue-500",
+      price: "Starting at $329/month",
+      originalPrice: "$659/month",
+      features: ["Case Law Search", "Contract Analysis", "Compliance Monitoring", "Document Review", "Legal Research", "Precedent Analysis"],
+      category: "Legal Tech"
+    },
+    {
+      title: "AI Energy Management System",
+      description: "Smart energy management with consumption optimization, renewable energy integration, and predictive maintenance for utilities and commercial buildings.",
+      icon: <Zap className="w-8 h-8" />,
+      path: "/ai-energy-management",
+      color: "from-yellow-500 to-orange-500",
+      price: "Starting at $199/month",
+      originalPrice: "$399/month",
+      features: ["Energy Optimization", "Renewable Integration", "Predictive Maintenance", "Smart Grid", "Cost Analysis", "Carbon Tracking"],
+      category: "Energy Management"
     }
   ];
 
@@ -186,6 +256,14 @@ export default function Services() {
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
                 >
+                  {service.popular && (
+                    <div className="absolute top-4 right-4">
+                      <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-2 py-1 rounded-full">
+                        POPULAR
+                      </span>
+                    </div>
+                  )}
+                  
                   {/* Animated background effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   
@@ -195,28 +273,43 @@ export default function Services() {
                     >
                       {service.icon}
                     </div>
+                    
+                    <div className="text-center mb-4">
+                      <span className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full border border-cyan-500/30">
+                        {service.category}
+                      </span>
+                    </div>
+                    
                     <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-300 transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-gray-300 text-center mb-4 leading-relaxed">
+                    <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm">
                       {service.description}
                     </p>
                     
-                    {/* Price and Features */}
-                    <div className="space-y-3">
-                      <div className="text-center">
+                    {/* Pricing */}
+                    <div className="text-center mb-4">
+                      <div className="flex items-center justify-center space-x-2">
                         <span className="text-cyan-400 font-bold text-lg">{service.price}</span>
+                        {service.originalPrice && (
+                          <span className="text-gray-500 line-through text-sm">{service.originalPrice}</span>
+                        )}
                       </div>
-                      <div className="flex flex-wrap gap-2 justify-center">
-                        {service.features.map((feature, idx) => (
-                          <span
-                            key={idx}
-                            className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full border border-cyan-500/30"
-                          >
-                            {feature}
-                          </span>
-                        ))}
-                      </div>
+                    </div>
+                    
+                    {/* Features */}
+                    <div className="space-y-2 mb-6">
+                      {service.features.slice(0, 4).map((feature, idx) => (
+                        <div key={idx} className="flex items-center text-sm text-gray-300">
+                          <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2 flex-shrink-0"></div>
+                          <span>{feature}</span>
+                        </div>
+                      ))}
+                      {service.features.length > 4 && (
+                        <div className="text-xs text-cyan-400 text-center">
+                          +{service.features.length - 4} more features
+                        </div>
+                      )}
                     </div>
                     
                     <div className="mt-4 text-center">
