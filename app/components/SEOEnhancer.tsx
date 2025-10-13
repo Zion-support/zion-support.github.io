@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 interface SEOEnhancerProps {
   title?: string;
@@ -81,7 +81,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   );
 };
 // Default structured data for the organization
-const  {
+const defaultStructuredData = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Zion Tech Group",

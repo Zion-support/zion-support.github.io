@@ -1,7 +1,7 @@
-import { useEffect, Node } from 'react';
+import React, { useEffect } from 'react';
 
 interface EnhancedAccessibilityProps {
-  children: Node;
+  children: React.ReactNode;
 }
 
 const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children }) => {
