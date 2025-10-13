@@ -1,21 +1,8 @@
-'use client';
-import React, { Helmet } from 'react-helmet-async';
-import React, { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-const ContentCarouselPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
 import React, { useState, useEffect } from 'react';
 import {Cloud, Zap, Shield, ChevronLeft, ChevronRight}}from 'lucide-react';
@@ -114,35 +101,6 @@ const ContentCarousel: React.FC = React.memo((props) => {
 
 export default ContentCarousel;
       description: 'Worldwide deployment and support for international businesses'
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechCorp Solutions',
-      role: 'CTO',
-      content: 'Zion Tech Group transformed our entire IT infrastructure. The AI solutions they implemented increased our efficiency by 300%.',
-      rating: 5;
-    },
-    {
-      name: 'Michael Chen',
-      company: 'FinanceFlow Inc',
-      role: 'CEO',
-      content: 'Outstanding service and cutting-edge technology. Their cloud migration saved us $2M annually while improving performance.',
-      rating: 5;
-    },
-    {
-      name: 'Alex Rodriguez',
-      company: 'HealthTech Plus',
-      role: 'IT Director',
-      content: 'The cybersecurity solutions provided by Zion Tech Group are exceptional. We\'ve had zero security incidents since implementation.','
-      rating: 5;
-    }
-  ];
-
-  const Component = () => {
-  
-    return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>ContentCarousel | Zion Tech Group</title>
@@ -260,37 +218,3 @@ export default ContentCarousel;
                   index === currentSlide ? 'bg-purple-400' : 'bg-white/30'
                 }`}
               />
-            ))}
-          </div>
-              className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentSlide ? 'bg-white' : 'bg-white/30'
-        </div>
-
-        {/* Additional Info */}
-        <div className="mt-16 text-center">"
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">"
-            <div className="text-center">"
-              <div className="text-3xl font-bold text-white mb-2">500+</div>"
-              <div className="text-gray-300">Happy Clients</div>
-            </div>
-            <div className="text-center">"
-              <div className="text-3xl font-bold text-white mb-2">99.9%</div>"
-              <div className="text-gray-300">Uptime</div>
-            </div>
-            <div className="text-center">"
-              <div className="text-3xl font-bold text-white mb-2">24/7</div>"
-              <div className="text-gray-300">Support</div>
-            </div>
-            <div className="text-center">"
-              <div className="text-3xl font-bold text-white mb-2">50+</div>"
-              <div className="text-gray-300">Countries</div>
-            </div>
-          </div>
-        </div>
-      </div>
-  );
-    </div>
-  );
-};
-
-export default ContentCarouselPage;

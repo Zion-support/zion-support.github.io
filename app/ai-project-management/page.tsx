@@ -1,7 +1,5 @@
-import React, { Helmet } from 'react-helmet-async';
-export default function AiProjectManagement() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
       <Helmet>
         <title>AiProjectManagement - Zion Tech Group</title>
         <meta name="description" content="Advanced aiprojectmanagement solutions" />
@@ -14,13 +12,8 @@ export default function AiProjectManagement() {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover our comprehensive aiprojectmanagement solutions designed to transform your business;
           </p>
-        </div>
-        <div className="text-center">"
-          <p className="text-gray-300">Coming Soon - AiProjectManagement Solutions</p>
 
-        </div>
       </div>
     </div>
-  );
   );
 }

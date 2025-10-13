@@ -13,7 +13,18 @@ export default function CoreWebVitals({ className = '', children }: CoreWebVital
   );
   );
 }
+  }, []);
 
-    // Log in development
-    if (process.env['NODE_ENV'] === 'development') {'
-      }
+  useEffect(() => {
+    // Measure Core Web Vitals
+    onCLS(reportWebVitals);
+    onINP(reportWebVitals);
+    onFCP(reportWebVitals);
+    onLCP(reportWebVitals);
+    onTTFB(reportWebVitals);
+  }, [reportWebVitals]);
+
+  return null;
+};
+
+export default CoreWebVitals;

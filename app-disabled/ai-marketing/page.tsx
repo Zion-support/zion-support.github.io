@@ -1,36 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
-export default function AiMarketing() {
-  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AiMarketing - Zion Tech Group</title>
@@ -47,9 +16,3 @@ export default function AiMarketing() {
         </div>
         <div className="text-center">
           <p className="text-gray-300">Coming Soon - AiMarketing Solutions</p>
-
-        </div>
-      </div>
-    </div>
-  );
-}

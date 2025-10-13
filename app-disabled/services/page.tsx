@@ -1,14 +1,5 @@
-'use client;
-
-import React from 'react;
-
-import { Helmet } from 'react-helmet-async;
-
-import { 
-'use client';
-
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { }
   Brain, 
   Cloud, 
   Shield, 
@@ -18,49 +9,22 @@ import { Helmet } from 'react-helmet-async';
   Zap, 
   Globe,
   CheckCircle,
-import { Brain, Shield, Cloud, BarChart3, Globe, Zap } from 'lucide-react';
+  ArrowRight,
+  Search,
 
-export default function ServicesPage() {
-  const services = [
-    {
-      icon: <Brain className="w-8 h-8" />,
-      title: "AI Solutions",
-      description: "Transform your business with cutting-edge artificial intelligence and machine learning technologies.",
-      features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Cybersecurity",
-      description: "Protect your digital assets with our comprehensive cybersecurity solutions and threat monitoring.",
-      features: ["Threat Detection", "Security Audits", "Incident Response", "Compliance"]
-    },
-    {
-      icon: <Cloud className="w-8 h-8" />,
-      title: "Cloud Services",
-      description: "Migrate and optimize your infrastructure with our cloud solutions and managed services.",
-      features: ["Cloud Migration", "Infrastructure Management", "Scalability", "Cost Optimization"]
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Micro SAAS",
-      description: "Ready-to-use software solutions that can transform your business operations immediately.",
-      features: ["AI Tools", "Business Automation", "Quick Deployment", "No Setup Required"]
-    },
-    {
-      icon: <Globe className="w-8 h-8" />,
-      title: "5G Solutions",
-      description: "Leverage the power of 5G technology for next-generation connectivity and IoT solutions.",
-      features: ["5G Infrastructure", "IoT Solutions", "Edge Computing", "Smart Cities"]
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8" />,
-      title: "Data Analytics",
-      description: "Unlock insights from your data with our advanced analytics and business intelligence solutions.",
-      features: ["Business Intelligence", "Data Visualization", "Predictive Modeling", "Real-time Analytics"]
-    }
-  ];
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+} from 'lucide-react;
+
+;
+
+const ServicesPage: React.FC = () => {const services = [;
+    // AI Services
+    {      ico,
+    n: Brain,
+      title: 'AI Solutions,
+      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.,
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting],
+      price: Starting at $1,500
+      category: 'AI Services,
       <Helmet>
         <title>Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI and IT services by Zion Tech Group" />
@@ -93,69 +57,51 @@ export default function ServicesPage() {
                   </li>
                 ))}
               </ul>
-              </div>
+
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all duration-300">
+                {service.title}
+              </h3>
               
-              <div className="mb-4">
-                {service.popular && (
-                  <span className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full mb-3">
-                    POPULAR
-                  </span>
-                )}
-                <span className="inline-block bg-white/20 text-white text-xs font-medium px-3 py-1 rounded-full">
-                  {service.category}
-                </span>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                {service.description}
+              </p>
+
+              <div className="mb-6">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-2xl font-bold text-white">{service.price}</span>
+                  {service.originalPrice && (
+                    <span className="text-lg text-gray-400 line-through">{service.originalPrice}</span>
+                  )}
+                </div>
               </div>
+
+              <div className="mb-6">
+                <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Features:</h4>
+                <ul className="space-y-2">
+                  {service.features.slice(0, 3).map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-3 flex-shrink-0"></div>
+                      {feature}
+                    </li>
+                  ))}
+                  {service.features.length > 3 && (
+                    <li className="text-sm text-gray-400">
+                      +{service.features.length - 3} more features
+                    </li>
+                  )}
+                </ul>
+              </div>
+
+              <a
+                href={service.path}
+                className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 hover:transform hover:scale-105 hover:shadow-lg"
+              >
+                Learn More
+              </a>
             </div>
           ))}
         </div>
       </div>
     </div>
-  );
-}
-export default ServicesPage;
-            ))
-          </div>
-        </section>
-
-        {/* Services Grid */}
-        <section className="py-20 px-4">
-        </section>
-          <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="cyber-card p-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
-                    <service.icon className="w-6 h-6 text-white" />
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </button>
-            </div>
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-        </section>
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-            <p className="text-xl text-gray-100 mb-8">
-              Let's discuss how our services can help transform your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-    </>
   );
 }

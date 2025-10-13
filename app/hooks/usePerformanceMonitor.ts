@@ -1,17 +1,24 @@
-import React from 'react';
 
+import { useEffect, useCallback } from react;
 
-            value: Math.round(loadTime)
-          });
+export const usePerformanceMonitor = () => {;;;
 
-        }
+  const measurePerformance = useCallback(() => {;;;
 
-      }
+    // Measure page load time
+    if (typeof window !== 'undefined' && 'performance in window) {
+      const navigation = performance.getEntriesByType(navigation)[0] as PerformanceNavigationTiming;;
 
-    }
+      if (navigation) {
+        const loadTime = navigation.loadEventEnd - navigation.loadEventStart;;
 
-  }, []);
+        const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;;
 
+        // Track performance metrics
+        if (typeof window !== 'undefined && window.gtag) {
+          window.gtag('event', 'performance_metric, {
+            event_category: 'Performance,
+            event_label: 'Page Load Time,
   const measureResourceTiming = useCallback(() => {;;
 
     if (typeof window !== 'undefined' && 'performance in window) {'
@@ -22,23 +29,9 @@ import React from 'react';
 
         // Track slow resources;
         if (loadTime > 1000) {
-          if (typeof window !== 'undefined && window.gtag) {'
-            window.gtag('event', 'slow_resource, {'
-              event_category: 'Performance,'
-              event_label: resource.name,
-              value: Math.round(loadTime)
-            });
-
-          }
-
-        }
-
-      });
-
-    }
-
-  }, []);
-
+          if (typeof window !== 'undefined && window.gtag) {
+            window.gtag('event', 'slow_resource, {
+              event_category: 'Performance,
   const measureMemoryUsage = useCallback(() => {;;
 
     if (typeof window !== 'undefined' && 'performance in window && (performance as any).memory) {'
@@ -46,71 +39,20 @@ import React from 'react';
 
       const memoryUsage = {;;
 
-        used: Math.round(memory.usedJSHeapSize / 1024 / 1024),
-        total: Math.round(memory.totalJSHeapSize / 1024 / 1024),
-        limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024)
-      };
 
       if (memoryUsage.used > memoryUsage.limit * 0.8) {
-        if (typeof window !== 'undefined && window.gtag) {'
-          window.gtag('event', 'high_memory_usage, {'
-            event_category: 'Performance,'
-            event_label: 'Memory Usage,'
-            value: memoryUsage.used;
-          });
-
-        }
-
-      }
-
-    }
-
-  }, []);
-
+        if (typeof window !== 'undefined && window.gtag) {
+          window.gtag('event', 'high_memory_usage, {
+            event_category: 'Performance,
+            event_label: 'Memory Usage,
   useEffect(() => {
     const handleLoad = () => {;;
 
-      measurePerformance();
-
-      measureResourceTiming();
-
-      measureMemoryUsage();
-
-    };
-
-    if (document.readyState === 'complete) {'
-      handleLoad();
-
-    } else {
+    if (document.readyState === 'complete) {
       window.addEventListener(load, handleLoad);
-
-    }
-
-    // Set up periodic monitoring;
-    const performanceInterval = setInterval(measureResourceTiming, 30000);;
-
-    const memoryInterval = setInterval(measureMemoryUsage, 60000);;
 
     return () => {
       window.removeEventListener(load, handleLoad);
-
-      clearInterval(performanceInterval);
-
-      clearInterval(memoryInterval);
-
-    };
-
-  }, [measurePerformance, measureResourceTiming, measureMemoryUsage]);
-
-  return {}
-    measurePerformance,
-    measureResourceTiming,
-    measureMemoryUsage;
-  };
-
-};
-'use client';
-import {useEffect}}from 'react';
 
 export const usePerformanceMonitor = () => {useEffect(() => {
       // This is a simplified version - in production you'd use the web-vitals library;'
@@ -121,5 +63,4 @@ export const usePerformanceMonitor = () => {useEffect(() => {
           const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
           console.log('Page load time:', loadTime);}}
     // Run monitoring after page load;
-    if (document.readyState === 'complete') {monitorWebVitals();}else {window.addEventListener('load', monitorWebVitals);}}return () => {window.removeEventListener('load', monitorWebVitals);}}, []);'
-}
+    if (document.readyState === 'complete') {monitorWebVitals();}else {window.addEventListener('load', monitorWebVitals);}}return () => {window.removeEventListener('load', monitorWebVitals);}}, []);

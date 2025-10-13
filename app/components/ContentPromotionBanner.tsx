@@ -1,79 +1,4 @@
-'use client';
-import React, { Sparkles, ArrowRight, Star } from 'lucide-react';
-const ContentPromotionBanner: React.FC = React.memo((props) => {
-  return (
-    <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 text-white py-4 relative overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 via-purple-600/20 to-pink-600/20 animate-pulse"></div>
-      
-      <div className="container mx-auto px-4 relative z-10">"
-        <div className="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left">"
-          <div className="flex items-center space-x-2 mb-2 sm:mb-0">"
-            <Sparkles className="w-5 h-5 animate-pulse" />"
-            <span className="font-semibold text-sm sm:text-base"><span className="sr-only">Screen reader: </span>New AI Solutions Available</span>"
-            <Star className="w-4 h-4 text-yellow-300 animate-bounce" />
-          </div>
-          
-          <div className="flex items-center space-x-4 ml-0 sm:ml-6">"
-            <span className="text-sm sm:text-base"><span className="sr-only">Screen reader: </span>
-              Transform your business with cutting-edge AI technology;
-            </span>
-            <a
-              href="/services"
-              className="flex items-center space-x-1 bg-white/20 hover:bg-white/30 px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105"
-            >
-              <span><span className="sr-only">Screen reader: </span>Learn More</span>"
-              <ArrowRight className="w-3 h-3" />
-            </a>
-import React, { Helmet } from 'react-helmet-async';
-import React, { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-const ContentPromotionBannerPage: React.FC = () => {
-import {Zap, Shield, Star, Users, ArrowRight}}from 'lucide-react';
-
-const ContentPromotionBanner: React.FC = () => {,
-      description: 'Leverage cutting-edge AI to automate and optimize your business processes.',
-      icon: Zap;,},
-    {title: 'Enterprise Security',
-      description: 'Bank-level security and compliance to protect your data and operations.',
-      icon: Shield;,},
-    {title: 'Proven Results',
-      description: 'Join 500+ companies that have transformed their operations with our solutions.',
-      icon: Star;,},
-    {title: 'Expert Support',
-      description: '24/7 support from our team of AI and IT specialists.',
-      icon: Users;,}];
-        {/* Features Section */} <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 mb-12">,</div>"
-              <p className="text-purple-100 text-sm">{feature.description</p>}</p>"
-        {/* CTA Section */} <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">"
-      description: 'Worldwide deployment and support for international businesses'
-  ];
-
-  ];
-
-  const stats = [
-    {
-      icon: Users,
-      value: '10,000+',
-      label: 'Happy Customers',
-      description: 'Businesses trust our solutions'
-    },
-    {
-      icon: TrendingUp,
-      value: '99.9%',
-      label: 'Uptime',
-      description: 'Reliable service guarantee'
-    },
-    {
-      icon: Star,
-      value: '4.9/5',
-      label: 'Rating',
-      description: 'Highly rated by clients'
-    }
-  ];
-
-  const Component = () => {
-  
-    return (
+import { Sparkles, ArrowRight, Star } from 'lucide-react';
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>ContentPromotionBanner | Zion Tech Group</title>
@@ -129,10 +54,6 @@ const ContentPromotionBanner: React.FC = () => {,
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
                 <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* Benefits Section */}
@@ -177,12 +98,3 @@ const ContentPromotionBanner: React.FC = () => {,
           </div>
         </div>
       </section>
-    </div>
-  );
-};
-
-export default ContentPromotionBannerPage;
-  );
-});
-
-export default ContentPromotionBanner;

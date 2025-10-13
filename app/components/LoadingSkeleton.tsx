@@ -1,6 +1,3 @@
-'use client';
-import React from 'react';
-
 const LoadingSkeletonPage: React.FC = () => {
   const features = [
     {
@@ -35,16 +32,6 @@ const LoadingSkeletonPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-interface SkeletonProps {
-  className?: string;
-  width?: string | number;
-  height?: string | number;
-  rounded?: boolean;
-  animate?: boolean;
-}
-
-const Skeleton: React.FC<SkeletonProps> = ({
-  className = '',
   width = '100%',
   height = '1rem',
   rounded = false,
@@ -59,8 +46,4 @@ const Skeleton: React.FC<SkeletonProps> = ({
       className={`${baseClasses} ${roundedClasses} ${animateClasses} ${className}`}
       style={{ width, height }}
       aria-hidden="true"
-    />
-  );
-};
-
 export default LoadingSkeletonPage;

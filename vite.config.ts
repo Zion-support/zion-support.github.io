@@ -2,82 +2,68 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
 
-// https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [
     react({
-      // Enable JSX runtime
       jsxRuntime: "automatic",
+      fastRefresh: true,
     }),
   ],
   resolve: {
     alias: {
       "@": resolve(__dirname, "./app"),
-      "@/components": resolve(__dirname, "./app/components"),
-      "@/utils": resolve(__dirname, "./app/utils"),
-      "@/hooks": resolve(__dirname, "./hooks"),
     },
   },
   build: {
-    outDir: "dist",
-    sourcemap: true,
+    target: "esnext",
+    minify: "terser",
+    sourcemap: mode !== "production",
+    cssCodeSplit: true,
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Group node_modules
-          if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'react-vendor'
+          if (id.includes("node_modules")) {
+            if (id.includes("react") || id.includes("react-dom")) {
+              return "react-vendor";
             }
-            if (id.includes('lucide-react')) {
-              return 'icons'
+            if (id.includes("react-router")) {
+              return "router-vendor";
             }
-            if (id.includes('framer-motion')) {
-              return 'animations'
+            if (id.includes("framer-motion") || id.includes("lucide-react")) {
+              return "ui-vendor";
             }
-            return 'vendor'
+            return "vendor";
           }
-          
-          // Group app pages by category
-          if (id.includes('/app/') && id.includes('/page.tsx')) {
-            if (id.includes('/ai-')) {
-              return 'ai-pages'
-            }
-            if (id.includes('/micro-saas')) {
-              return 'micro-saas-pages'
-            }
-            if (id.includes('/zion-')) {
-              return 'zion-pages'
-            }
-            if (id.includes('/components/')) {
-              return 'components'
-            }
-            return 'pages'
+          if (id.includes("/app/") && id.includes("/page.tsx")) {
+            return "pages";
           }
-          
-          // Group utilities
-          if (id.includes('/utils/') || id.includes('/hooks/')) {
-            return 'utils'
+          if (id.includes("/components/")) {
+            return "components";
           }
-        }
-      }
-    }
-  },
-  server: {
-    port: 3000,
-    open: true,
-  },
-  preview: {
-    port: 4173,
-    open: true,
+        },
+        assetFileNames: "assets/[name]-[hash].[ext]",
+        chunkFileNames: "assets/js/[name]-[hash].js",
+        entryFileNames: "assets/js/[name]-[hash].js",
+      },
+    },
   },
   optimizeDeps: {
     include: [
-      'react',
-      'react-dom',
-      'react-router-dom',
-      'lucide-react',
-      'framer-motion'
-    ]
-  }
-});
+      "react",
+      "react-dom",
+      "react-router-dom",
+      "framer-motion",
+      "lucide-react",
+    ],
+  },
+  define: {
+    __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
+    __BUILD_TIME__: JSON.stringify(new Date().toISOString()),
+  },
+  css: {
+    devSourcemap: mode !== "production",
+  },
+  envPrefix: "VITE_",
+  logLevel: mode === "production" ? "warn" : "info",
+}));

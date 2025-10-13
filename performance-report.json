@@ -1,4 +1,15 @@
 {
+<<<<<<< HEAD
+  "timestamp": "2025-10-13T01:38:53.389Z",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 "timestamp": "2025-10-13T11:09:39.189Z",
   "buildStats": {
     "totalFiles": 85,
@@ -26,6 +37,8 @@
   "timestamp": "2025-10-13T07:00:40.183Z",
   "timestamp": "2025-10-13T05:30:55.112Z",
   "timestamp": "2025-10-12T10:13:22.015Z",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
+>>>>>>> 087b9b5bb73300eddd182f26a6fee488e6ebab96
   "optimizations": [
     "Icon imports optimized",
     "Bundle splitting improved",
@@ -36,9 +49,19 @@
     "Error boundaries added",
     "Performance monitoring enabled"
   ],
+<<<<<<< HEAD
+  "recommendations": [
+    "Consider implementing image optimization pipeline",
+    "Add more granular code splitting for large pages",
+    "Implement preloading for critical resources",
+    "Add more comprehensive caching strategies",
+    "Consider implementing CDN for static assets"
+=======
+>>>>>>> origin/cursor/analyze-and-fix-application-errors-5651
   "recommendations": [
     "Consider implementing lazy loading for non-critical components",
     "Optimize images to reduce bundle size",
     "Implement service worker for better caching"
+>>>>>>> 087b9b5bb73300eddd182f26a6fee488e6ebab96
   ]
 }

@@ -1,15 +1,10 @@
-'use client;'
+'use client;
 
 import React from 'react;'
 
 import { Helmet } from react-helmet-async;
 
 interface EnhancedSEOHeadProps {}
-import React, { Helmet } from 'react-helmet-async';
-interface SEOHeadProps {
-  title?: string;
-
-  description?: string;
 
   keywords?: string[];
 
@@ -31,15 +26,12 @@ interface SEOHeadProps {
 
   tags?: string[];
 
-}
-
 const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions,'
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.,'
-  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI],'
-  canonicalUrl = 'https://ziontechgroup.com,'
-  ogImage = 'https://ziontechgroup.com/og-image.jpg,'
-  structuredData,
+  title = 'Zion Tech Group - Advanced AI and IT Solutions,
+  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.,
+  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI],
+  canonicalUrl = 'https://ziontechgroup.com,
+  ogImage = 'https://ziontechgroup.com/og-image.jpg,
   noIndex = false,
   author = 'Zion Tech Group,'
   publishedTime,
@@ -49,26 +41,12 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group;;
 
-  const fullDescription = description.length > 160 ? description.substring(0, 157) + ... : description;;
-
-  const fullKeywords = [...keywords, 'Zion Tech Group', 'technology solutions', 'AI consulting', IT services];;'
-
-const SEOHead: React.FC = () => {
-  return (
-    <div>
-  )
-    </div>
-  );
-  );
-  )
     <Helmet>
       {/* Basic Meta Tags */}
-
-      <title>{fullTitle}</title>
-      <meta name="description content={fullDescription} />"
-      <meta name="keywords" content={fullKeywords.join(', )} />"'
-      <meta name="author content={author} />"
-      <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow} />"'
+      <meta name="description content={fullDescription} />
+      <meta name="keywords" content={fullKeywords.join(', )} />
+      <meta name="author content={author} />
+      <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow} />
       <link rel="canonical href={canonicalUrl} />
       {/* Open Graph Tags */}
 
@@ -116,17 +94,10 @@ const SEOHead: React.FC = () => {
       {tags.map((tag, index) => (
 
         <meta key={index} property="article:tag content={tag} />
-      ))}
-
-      {/* Structured Data */}
 
       {structuredData && (
 
         <script type="application/ld+json>
-          {JSON.stringify(structuredData)}
-
-        </script>
-      )}
 
       {/* Default Organization Structured Data */}
 
@@ -157,61 +128,12 @@ const SEOHead: React.FC = () => {
             availableLanguage: en;
           },
           sameAs: [
-            'https://linkedin.com/company/ziontechgroup,'
-            https://twitter.com/ziontechgroup]
-          ],
-        })}
-
-      </script>
-    </Helmet>
-  );
-
-};
-
+            'https://linkedin.com/company/ziontechgroup,
+            https://twitter.com/ziontechgroup
 export default EnhancedSEOHead;
-      <title>{fullTitle}</title>
-      <meta name="description" content={fullDescription} />"
-      <meta name="keywords" content={keywords} />"
-      <meta name="author" content="Zion Tech Group" />"
-      <meta name="robots" content={`${noIndex ? 'noindex' : 'index'},${noFollow ? 'nofollow' : 'follow'}`} />"'
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />"
-      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />"
-      <meta property="og:description" content={fullDescription} />"
-      <meta property="og:type" content={ogType} />"
-      <meta property="og:url" content={canonicalUrl || 'https://ziontechgroup.com'} />"
-      <meta property="og:image" content={ogImage.startsWith('http') ? ogImage : `https://ziontechgroup.com${ogImage}`} />"
-      <meta property="og:image:width" content="1200" />"
-      <meta property="og:image:height" content="630" />"
-      <meta property="og:site_name" content="Zion Tech Group" />"
-      <meta property="og:locale" content="en_US" />
-      {/* Twitter Card Meta Tags */}
-      <meta name="description" content={description} />"
-      {keywords.length > 0 && <meta name="keywords" content={keywordsString} />}"
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      
-      {/* Robots */}
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />'
-      {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />"
-      <meta property="og:description" content={description} />"
-      <meta property="og:type" content={ogType} />"
-      <meta property="og:url" content={canonicalUrl || 'https://ziontechgroup.com'} />"
-      <meta property="og:image" content={ogImage} />"
-      <meta property="og:site_name" content="Zion Tech Group" />"
-      <meta property="og:locale" content="en_US" />
-      {/* Twitter Card */}
-      <meta name="twitter:card" content={twitterCard} />"
-      <meta name="twitter:site" content={twitterSite} />"
-      <meta name="twitter:creator" content={twitterCreator} />"
-      <meta name="twitter:title" content={fullTitle} />"
-      <meta name="twitter:description" content={fullDescription} />"
-      <meta name="twitter:image" content={ogImage.startsWith('http') ? ogImage : `https://ziontechgroup.com${ogImage}`} />"
-      <meta name="twitter:site" content="@ziontechgroup" />"
+      <meta name="twitter:description" content={fullDescription} />
+      <meta name="twitter:image" content={ogImage.startsWith('http') ? ogImage : `https://ziontechgroup.com${ogImage}`} />
+      <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
       {/* Additional SEO Meta Tags */}
       <meta name="theme-color" content="#8b5cf6" />"
@@ -220,12 +142,7 @@ export default EnhancedSEOHead;
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />"
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       {/* Language and Region */}
-      <meta name="language" content="English" />"
-      <meta name="geo.region" content="US-DE" />"
-      <meta name="geo.placename" content="Middletown" />"
-      <meta name="geo.position" content="39.4496;-75.7163" />"
-      <meta name="ICBM" content="39.4496, -75.7163" />
-      {/* Structured Data */}
+      <meta name="language" content="English" />
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
@@ -239,8 +156,4 @@ export default EnhancedSEOHead;
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />"
       <link rel="dns-prefetch" href="//www.google-analytics.com" />"
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-    </Helmet>
-  );
-};
-
-export default SEOHead;
+export default EnhancedSEOHead;

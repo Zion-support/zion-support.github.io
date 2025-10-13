@@ -1,3 +1,4 @@
+import React from 'react';
 'use client';
 import React from 'react';
 'use client';
@@ -67,17 +68,6 @@ const ContentStatistics: React.FC = React.memo((props) => {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: BarChart,
-      value: counters.savings,
-      label: 'Million Saved',
-      suffix: 'M+',
-      color: 'text-pink-400',
-      description: 'Client cost savings'
-    },
-    {
-      icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
       description: 'Leading AI solutions for modern businesses'
@@ -162,58 +152,6 @@ const ContentStatistics: React.FC = React.memo((props) => {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our contentstatistics solutions deliver unmatched performance, security, and scalability.
-  ];
-
-  useEffect(() => {
-    const duration = 2000; // 2 seconds;
-    const steps = 60;
-    const stepDuration = duration / steps;
-
-    const timers = Object.keys(targetCounters).map((key) => {
-      const target = targetCounters[key as keyof typeof targetCounters];
-      const increment = target / steps;
-      let current = 0;
-
-      return setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          current = target;
-        }
-        setCounters(prev => ({
-          ...prev,
-          [key]: Math.floor(current)
-        }));
-      }, stepDuration);
-    });
-
-    const Component = () => {
-  
-      return () => {
-      timers.forEach(timer => clearInterval(timer));
-    };
-  }, []);
-        {/* Achievements Section */} <div className="bg-gradient-to-r from-blue-900 to-purple-900 rounded-2xl p-8 md: p-12">,</div>"
-          <div className="text-center mb-12">"
-            <h3 className="text-3xl font-bold text-white mb-4">Why We're Different</h3>"'
-            <p className="text-xl text-blue-100 max-w-2xl mx-auto">Our commitment to excellence and innovation sets us apart in the industry.</p>
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,</div>
-            {achievements.map((achievement, index) => (
-              <div key={index}className="text-center">"
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">"
-                  <div className="flex justify-center mb-4">"
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-500 p-3 rounded-full">"
-                      <achievement.icon className="w-8 h-8 text-white" />
-                    </div>
-                  </div>
-                  <h4 className="text-xl font-bold text-white mb-2">{achievement.title}</h4>"
-                  <p className="text-gray-300">{achievement.description</p>}</p>
-                </div>
-  );
-});
-
 export default ContentStatistics;
           ))
         </div>
@@ -280,8 +218,3 @@ export default ContentStatistics;
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us;
               </button>
-            </div>
-          </div>
-        </div>
-      </section>
-export default ContentStatisticsPage;
