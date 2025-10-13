@@ -15,12 +15,10 @@ import { Package } from 'lucide-react';
 import { Heart } from 'lucide-react';
 import { Receipt } from 'lucide-react';
 
-=======
 import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import { ArrowRight, Shield, Cloud, Globe, Calendar, Phone, CheckCircle, Sparkles, Heart, Receipt, Package, Code } from 'lucide-react';
 
 export default function Page() {

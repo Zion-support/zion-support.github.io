@@ -15,7 +15,6 @@ import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-=======
 import { Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Users, Award, Zap, Shield } from 'lucide-react';
 
 interface ImprovedfooterProps {

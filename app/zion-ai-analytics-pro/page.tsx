@@ -131,7 +131,6 @@ const ZionAIAnalyticsProPage = () => {
     { name: 'MongoDB', logo: 'MG', category: 'Database' },
     { name: 'AWS', logo: 'AW', category: 'Cloud' }
   ];
-=======
 
 export default function ZionAiAnalyticsProPage() {
   return (
@@ -174,4 +173,6 @@ export default function ZionAiAnalyticsProPage() {
       </div>
     </div>
   );
+}
+
 }

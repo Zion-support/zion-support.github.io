@@ -13,8 +13,6 @@ import { Hand } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
 import { useState } from 'react';
-=======
-import { ArrowRight } from 'lucide-react';
 import { Play, Pause, SkipForward, SkipBack, Maximize, ArrowRight, CheckCircle, Star, Calendar, Users, Award } from 'lucide-react';
 
 export default function Page() {
@@ -128,47 +126,48 @@ export default function Page() {
     setIsPlaying(false);
   };
 
-export default function DemoPage() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Demo - Zion Tech Group</title>
-        <meta name="description" content="Demo solutions by Zion Tech Group" />
+        <title>Live Demo - Zion Tech Group</title>
+        <meta name="description" content="Experience our AI and IT solutions with interactive demos." />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Demo</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive demo solutions designed to meet your business needs.
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Live Demo
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Experience our AI and IT solutions with interactive demos and see the power of our technology.
+          </p>
+        </div>
+
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+          <h2 className="text-2xl font-bold text-white mb-6">Interactive Demos</h2>
+          <p className="text-gray-300 mb-8">
+            Click through our interactive demos to see how our solutions can transform your business.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {demos.map((demo, index) => (
+              <div key={index} className="bg-white/5 rounded-lg p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                  {demo.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{demo.title}</h3>
+                <p className="text-gray-300 mb-4">{demo.description}</p>
+                <button
+                  onClick={() => setCurrentDemo(index)}
+                  className="w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300"
+                >
+                  Try Demo
+                </button>
+              </div>
+            ))}
           </div>
         </div>
       </div>
     </div>
   );
-}
-
 }

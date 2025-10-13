@@ -18,7 +18,6 @@ import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
-
 export default function ZionCloudVaultPro() {
   const features = [
     {
@@ -142,4 +141,6 @@ export default function Page() {
       </div>
     </div>
   );
+}
+
 }

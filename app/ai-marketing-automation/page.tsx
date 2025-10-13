@@ -13,11 +13,7 @@ import { Share2 } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
 
-
 export default function AIMarketingAutomation() {
-=======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 const benefits = [
     "Advanced AI algorithms for accurate predictions",
     "Real-time risk assessment and monitoring",
@@ -188,4 +184,5 @@ export default function AiMarketingAutomationPage() {
   );
 }
 
+}
 }

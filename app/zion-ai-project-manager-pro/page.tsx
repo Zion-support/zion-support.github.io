@@ -1,7 +1,5 @@
 import React from 'react';
 import { Calendar, Brain, Users, Zap, CheckCircle, Star, Award, BarChart3, Target, Sparkles, TrendingUp, Monitor, FileText, MessageSquare, Workflow, Shield, Lightbulb, GitBranch, Timer } from 'lucide-react';
-=======
-import React from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -207,6 +205,5 @@ export default function ZionAiProjectManagerProPage() {
     </div>
   );
 };
-
 
 }

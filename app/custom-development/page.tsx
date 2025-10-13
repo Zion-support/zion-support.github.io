@@ -11,7 +11,6 @@ import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
 
-
 export default function page() {
   const features = [
     { title: "Feature 1", description: "Description 1" },
@@ -73,9 +72,7 @@ export default function page() {
       features: ["RESTful APIs", "GraphQL", "API Documentation", "Rate Limiting"]
     }
   ];
-=======
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 export default function CustomDevelopmentPage() {
   return (
@@ -118,4 +115,6 @@ export default function CustomDevelopmentPage() {
       </div>
     </div>
   );
+}
+
 }

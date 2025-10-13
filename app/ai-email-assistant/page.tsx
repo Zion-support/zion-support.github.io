@@ -192,6 +192,7 @@ export default function AIEmailAssistant() {
                 Get instant insights from your data with real-time processing and visualization
               </p>
             </div>
+          </div>
 
           {/* Pricing Section */}
           <div className="mb-16">
@@ -259,9 +260,7 @@ export default function AIEmailAssistant() {
             </div>
           </div>
         </div>
-      </div>
-</div>
+      </section>
+    </div>
   );
-};
-
-export default Page;
+}

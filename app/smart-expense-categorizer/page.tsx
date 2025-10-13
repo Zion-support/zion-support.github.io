@@ -68,7 +68,6 @@ const SmartExpenseCategorizerPage = () => {
       popular: false
     }
   ];
-=======
 
 export default function SmartExpenseCategorizerPage() {
   return (
@@ -111,4 +110,6 @@ export default function SmartExpenseCategorizerPage() {
       </div>
     </div>
   );
+}
+
 }

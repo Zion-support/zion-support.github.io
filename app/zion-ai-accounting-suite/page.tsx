@@ -98,8 +98,6 @@ const ZionAIAccountingSuite = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-=======
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function ZionAiAccountingSuitePage() {
@@ -143,4 +141,6 @@ export default function ZionAiAccountingSuitePage() {
       </div>
     </div>
   );
+}
+
 }

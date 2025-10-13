@@ -5,8 +5,6 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import React from "react";
 import SEOOptimizer from "../../components/SEOOptimizer";
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Award } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -22,8 +20,6 @@ import { Plus } from 'lucide-react';
 import { DollarSign } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-=======
-import { ArrowRight } from 'lucide-react';
 import { Brain, ArrowRight, Monitor, Zap, CheckCircle, Award, DollarSign, MessageSquare, Phone, Globe, Star } from 'lucide-react';
 
 export default function AIPoweredDevOpsPage() {

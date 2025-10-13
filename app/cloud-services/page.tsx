@@ -56,7 +56,6 @@ const CloudServicesPage: React.FC = () => {
     "Faster time to market",
     "Disaster recovery and backup"
   ];
-=======
 import { Helmet } from 'react-helmet-async';
 
 export default function CloudServicesPage() {
@@ -100,4 +99,6 @@ export default function CloudServicesPage() {
       </div>
     </div>
   );
+}
+
 }

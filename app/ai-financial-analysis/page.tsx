@@ -60,7 +60,6 @@ const AIFinancialAnalysisPage = () => {
     "Personalized investment recommendations",
     "Advanced fraud detection and prevention"
   ];
-=======
 
 export default function AiFinancialAnalysisPage() {
   return (
@@ -103,4 +102,6 @@ export default function AiFinancialAnalysisPage() {
       </div>
     </div>
   );
+}
+
 }

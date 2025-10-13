@@ -19,7 +19,6 @@ import {
   TrendingDown,
   Monitor
 } from "lucide-react";
-=======
 import { ArrowRight } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { Database } from 'lucide-react';

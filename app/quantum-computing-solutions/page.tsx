@@ -11,8 +11,6 @@ import {
   Lock,
   Gauge
 } from 'lucide-react';
-=======
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Cpu, Zap, Shield, Brain, Target, CheckCircle, Globe, Activity, Lock, Gauge } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
@@ -195,6 +193,5 @@ export default function QuantumComputingSolutionsPage() {
     </div>
   );
 };
-
 
 }

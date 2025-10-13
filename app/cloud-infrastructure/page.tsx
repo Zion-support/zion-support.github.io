@@ -156,11 +156,7 @@ const CloudInfrastructure = () => {
       cta: "Contact Sales"
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import { ArrowRight, Activity, BarChart3, CheckCircle } from 'lucide-react';
 
 export default function CloudInfrastructurePage() {
@@ -212,4 +208,6 @@ export default function CloudInfrastructurePage() {
       </div>
     </div>
   );
+}
+
 }

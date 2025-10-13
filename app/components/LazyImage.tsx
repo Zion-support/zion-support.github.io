@@ -3,16 +3,11 @@ import React, { useState, useRef, useEffect } from 'react';
 interface LazyImageProps {
   src: string;
   alt: string;
-=======
-import { lazy } from 'react';
-import React from 'react';
-
-interface LazyimageProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function Lazyimage({ className = '', children, ...props }: LazyimageProps) {
+export default function LazyImage({ className = '', children, ...props }: LazyImageProps) {
   return (
     <div className={`lazyimage-component ${className}`} {...props}>
       {children}

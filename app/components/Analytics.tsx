@@ -7,7 +7,6 @@ declare global {
     dataLayer: any[];
   }
 }
-=======
 import React from 'react';
 
 interface AnalyticsProps {

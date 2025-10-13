@@ -37,7 +37,6 @@ class ProductionErrorBoundary extends Component<Props, State>
     if (process.env.NODE_ENV === 'production') 
       this.logErrorToService(error, errorInfo);
 
-
   private logErrorToService = async (error: Error, errorInfo: ErrorInfo) => 
     try 
       const errorData = 
@@ -172,6 +171,5 @@ class ProductionErrorBoundary extends Component<Props, State>
       );
 
     return this.props.children;
-
 
 export default ProductionErrorBoundary;

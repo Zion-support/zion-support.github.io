@@ -58,7 +58,6 @@ const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = (
         repeat: Infinity,
         ease: "easeInOut"
 
-
 ;
   return (
     <motion.div

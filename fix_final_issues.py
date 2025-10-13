@@ -1,98 +1,95 @@
 #!/usr/bin/env python3
+"""
+Fix final remaining issues including merge conflicts and syntax errors
+"""
 import os
 import re
 import glob
 
-def fix_final_issues(file_path):
-    """Fix final syntax issues in React/TypeScript files"""
+def fix_file_issues(file_path):
+    """Fix issues in a single file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Fix missing semicolons in object properties
-        content = re.sub(r"description: '([^']+)'$", r"description: '\1',", content, flags=re.MULTILINE)
+        # Remove any remaining merge conflict markers
+        content = re.sub(r'<<<<<<< HEAD.*?=======', '', content, flags=re.DOTALL)
+        content = re.sub(r'=======.*?>>>>>>> .*', '', content, flags=re.DOTALL)
+        content = re.sub(r'=======.*', '', content)
+        content = re.sub(r'>>>>>>> .*', '', content)
         
-        # Fix missing commas in object properties
-        content = re.sub(r"title: '([^']+)'$", r"title: '\1',", content, flags=re.MULTILINE)
+        # Fix common syntax issues
+        # Remove duplicate imports
+        lines = content.split('\n')
+        seen_imports = set()
+        new_lines = []
         
-        # Fix missing commas in icon properties
-        content = re.sub(r"icon: <([^>]+) />$", r"icon: <\1 />,", content, flags=re.MULTILINE)
+        for line in lines:
+            if line.strip().startswith('import '):
+                if line.strip() not in seen_imports:
+                    seen_imports.add(line.strip())
+                    new_lines.append(line)
+            else:
+                new_lines.append(line)
         
-        # Fix missing closing brackets in arrays
-        if content.count('[') > content.count(']'):
-            open_brackets = content.count('[')
-            close_brackets = content.count(']')
-            missing_brackets = open_brackets - close_brackets
-            
-            if missing_brackets > 0:
-                # Find the last array and add missing closing brackets
-                last_array = content.rfind('[')
-                if last_array != -1:
-                    # Find the end of the file or next major structure
-                    end_pos = content.find('\n  return', last_array)
-                    if end_pos == -1:
-                        end_pos = content.find('\nexport default', last_array)
-                    if end_pos == -1:
-                        end_pos = len(content)
-                    
-                    # Add missing closing brackets
-                    missing_brackets_str = ']' * missing_brackets
-                    content = content[:end_pos] + missing_brackets_str + content[end_pos:]
+        content = '\n'.join(new_lines)
         
-        # Fix missing closing braces in objects
-        if content.count('{') > content.count('}'):
-            open_braces = content.count('{')
-            close_braces = content.count('}')
+        # Fix missing closing braces by adding them at the end if needed
+        open_braces = content.count('{')
+        close_braces = content.count('}')
+        
+        if open_braces > close_braces:
             missing_braces = open_braces - close_braces
-            
-            if missing_braces > 0:
-                # Find the last object and add missing closing braces
-                last_object = content.rfind('{')
-                if last_object != -1:
-                    # Find the end of the file or next major structure
-                    end_pos = content.find('\n  return', last_object)
-                    if end_pos == -1:
-                        end_pos = content.find('\nexport default', last_object)
-                    if end_pos == -1:
-                        end_pos = len(content)
-                    
-                    # Add missing closing braces
-                    missing_braces_str = '}' * missing_braces
-                    content = content[:end_pos] + missing_braces_str + content[end_pos:]
+            content += '\n' + '}' * missing_braces
         
-        # Clean up any remaining issues
-        content = re.sub(r'\n\n\n+', '\n\n', content)
-        content = re.sub(r'[ \t]+$', '', content, flags=re.MULTILINE)
+        # Clean up extra newlines
+        content = re.sub(r'\n\s*\n\s*\n+', '\n\n', content)
         
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            print(f"Fixed final issues in: {file_path}")
             return True
         
         return False
+        
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    # Find all TypeScript/JavaScript files
+    """Main function to fix all remaining issues"""
+    # Get all TypeScript/JavaScript files
     patterns = [
-        'app/**/*.tsx',
-        'app/**/*.ts',
-        'app/**/*.js',
-        'app/**/*.jsx'
+        '/workspace/app/**/*.tsx',
+        '/workspace/app/**/*.ts',
+        '/workspace/**/*.tsx',
+        '/workspace/**/*.ts',
+        '/workspace/**/*.jsx',
+        '/workspace/**/*.js'
     ]
     
-    fixed_count = 0
+    all_files = []
     for pattern in patterns:
-        for file_path in glob.glob(pattern, recursive=True):
-            if fix_final_issues(file_path):
-                fixed_count += 1
+        all_files.extend(glob.glob(pattern, recursive=True))
     
-    print(f"Fixed final issues in {fixed_count} files")
+    # Filter out node_modules and other irrelevant directories
+    files_to_process = []
+    for file_path in all_files:
+        if any(exclude in file_path for exclude in ['node_modules', '.git', 'dist', 'build']):
+            continue
+        files_to_process.append(file_path)
+    
+    print(f"Processing {len(files_to_process)} files...")
+    
+    fixed_count = 0
+    for file_path in files_to_process:
+        if fix_file_issues(file_path):
+            print(f"Fixed: {file_path}")
+            fixed_count += 1
+    
+    print(f"\nFixed issues in {fixed_count} files")
 
 if __name__ == "__main__":
     main()

@@ -11,8 +11,6 @@ import {
   Navigation,
   Gauge
 } from 'lucide-react';
-=======
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Rocket, Satellite, Orbit, Zap, Target, CheckCircle, Globe, Activity, Navigation, Gauge } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
@@ -193,6 +191,5 @@ export default function AiSpaceMissionOptimizerPage() {
     </div>
   );
 };
-
 
 }

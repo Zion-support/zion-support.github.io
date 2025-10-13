@@ -1,4 +1,10 @@
-export default function Page() {
+import React from 'react';
+import { ArrowRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { Mic, Brain, Zap, Shield, BarChart3, Users, Settings } from 'lucide-react';
+
+export default function MicroSaasPage() {
   const benefits = [
     "Benefit 1",
     "Benefit 2"
@@ -18,146 +24,129 @@ export default function Page() {
       popular: true
     },
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: 'AI CRM Pro',
-      description: 'Intelligent customer relationship management with AI-powered automation.',
-      features: ['Lead Scoring', 'Automated Follow-ups', 'Sales Forecasting', 'Customer Insights'],
-      link: '/zion-ai-crm-pro',
-      price: '$149/month'
-    },
-    {
       icon: <Zap className="w-8 h-8" />,
-      title: 'AI Video Generator',
-      description: 'Create professional videos automatically with AI-powered content generation.',
-      features: ['Auto Video Creation', 'Multiple Templates', 'Voice Synthesis', 'Brand Customization'],
-      link: '/zion-ai-video-generator',
-      price: '$79/month'
+      title: 'Email Marketing Pro',
+      description: 'Complete email marketing automation platform with AI-powered personalization.',
+      features: ['AI Personalization', 'Automated Campaigns', 'Advanced Analytics', 'A/B Testing'],
+      link: '/zion-email-marketing-pro',
+      price: '$79/month',
+      popular: false
     },
     {
-      title: 'Zion Analytics Pro',
-      description: 'Advanced analytics dashboard with real-time insights and customizable reports.',
-      icon: <BarChart3 className="w-8 h-8" />,
-      path: '/zion-analytics-pro',
-      features: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'API integration'],
-      price: '$299/month',
-      featured: true
-    },
-    {
-      title: 'Zion Security Shield',
-      description: 'Comprehensive security monitoring and threat detection for your applications.',
       icon: <Shield className="w-8 h-8" />,
-      path: '/zion-security-shield',
-      features: ['Threat detection', 'Security monitoring', 'Incident response', 'Compliance reporting'],
-      price: '$199/month',
-      featured: true
-    },
-    {
-      title: 'Zion Cloud Vault',
-      description: 'Secure cloud storage solution with advanced encryption and backup features.',
-      icon: <Cloud className="w-8 h-8" />,
-      path: '/zion-cloud-vault',
-      features: ['End-to-end encryption', 'Automated backups', 'File sharing', 'Version control'],
-      price: '$99/month',
-      featured: false
-    },
-    {
-      title: 'Zion Content Studio',
-      description: 'AI-powered content creation and management platform for marketing teams.',
-      icon: <Sparkles className="w-8 h-8" />,
-      path: '/zion-content-studio',
-      features: ['AI content generation', 'Content calendar', 'Team collaboration', 'Multi-platform publishing'],
+      title: 'Security Monitor Pro',
+      description: 'Real-time security monitoring and threat detection for your digital assets.',
+      features: ['Real-time Monitoring', 'Threat Detection', 'Automated Alerts', 'Compliance Reports'],
+      link: '/zion-security-monitor-pro',
       price: '$149/month',
-      featured: false
+      popular: false
     },
     {
-      title: 'Zion AI CRM Pro',
-      description: 'Intelligent customer relationship management with AI-powered automation.',
-      icon: <Users className="w-8 h-8" />,
-      path: '/zion-ai-crm-pro',
-      features: ['AI lead scoring', 'Automated follow-ups', 'Sales forecasting', 'Customer segmentation'],
-      price: '$229/month',
-      featured: true
-    },
-    {
-      title: 'Zion AI Marketing Automation Pro',
-      description: 'Complete marketing automation platform with AI-driven campaign optimization.',
-      icon: <TrendingUp className="w-8 h-8" />,
-      path: '/zion-ai-marketing-automation-pro',
-      features: ['Email automation', 'Social media scheduling', 'Lead nurturing', 'A/B testing'],
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: 'Business Intelligence Pro',
+      description: 'Comprehensive business intelligence platform with advanced reporting and analytics.',
+      features: ['Custom Dashboards', 'Data Visualization', 'Report Automation', 'API Integration'],
+      link: '/zion-business-intelligence-pro',
       price: '$199/month',
-      featured: false
+      popular: true
     },
     {
-      title: 'Zion AI Project Manager Pro',
-      description: 'Smart project management tool with AI-powered resource allocation and timeline optimization.',
-      icon: <Award className="w-8 h-8" />,
-      path: '/zion-ai-project-manager-pro',
-      features: ['AI task prioritization', 'Resource optimization', 'Timeline forecasting', 'Team collaboration'],
-      price: '$159/month',
-      featured: false
-    },
-    {
-      title: 'Zion AI Data Analytics Pro',
-      description: 'Advanced data analytics platform with machine learning insights and predictive modeling.',
-      icon: <Database className="w-8 h-8" />,
-      path: '/zion-ai-data-analytics-pro',
-      features: ['ML insights', 'Predictive modeling', 'Data visualization', 'Custom dashboards'],
-      price: '$279/month',
-      featured: true
-    },
-    {
-      title: 'Zion AI Code Assistant Pro',
-      description: 'Intelligent code generation and review tool with support for multiple programming languages.',
-      icon: <Cpu className="w-8 h-8" />,
-      path: '/zion-ai-code-assistant-pro',
-      features: ['Code generation', 'Bug detection', 'Performance optimization', 'Documentation'],
+      icon: <Users className="w-8 h-8" />,
+      title: 'CRM Pro',
+      description: 'Advanced customer relationship management with AI-powered insights and automation.',
+      features: ['AI Insights', 'Lead Scoring', 'Automated Workflows', 'Advanced Analytics'],
+      link: '/zion-crm-pro',
       price: '$129/month',
-      featured: false
+      popular: false
+    },
+    {
+      icon: <Settings className="w-8 h-8" />,
+      title: 'Project Manager Pro',
+      description: 'Comprehensive project management platform with team collaboration and automation.',
+      features: ['Team Collaboration', 'Task Automation', 'Time Tracking', 'Resource Planning'],
+      link: '/zion-project-manager-pro',
+      price: '$89/month',
+      popular: false
     }
   ];
 
-  const stats = [
-    { label: "Active Users", value: "10,000+", icon: <Users className="w-6 h-6" /> },
-    { label: "Uptime", value: "99.9%", icon: <Shield className="w-6 h-6" /> },
-    { label: "Customer Satisfaction", value: "98%", icon: <Star className="w-6 h-6" /> },
-    { label: "Data Security", value: "100%", icon: <Cloud className="w-6 h-6" /> }
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$29",
+      period: "/month",
+      description: "Perfect for small teams",
+      features: [
+        "Up to 5 micro SaaS tools",
+        "Basic features",
+        "Email support",
+        "Standard templates",
+        "Basic analytics",
+        "1 user account"
+      ],
+      popular: false,
+    },
+    {
+      name: "Professional",
+      price: "$79",
+      period: "/month",
+      description: "Ideal for growing businesses",
+      features: [
+        "Up to 15 micro SaaS tools",
+        "Advanced features",
+        "Priority support",
+        "Custom templates",
+        "Advanced analytics",
+        "Up to 5 user accounts",
+        "API access",
+        "White-label options"
+      ],
+      popular: true,
+    },
+    {
+      name: "Enterprise",
+      price: "$199",
+      period: "/month",
+      description: "For large organizations",
+      features: [
+        "Unlimited micro SaaS tools",
+        "Premium features",
+        "Dedicated support",
+        "Fully custom solutions",
+        "Enterprise analytics",
+        "Unlimited user accounts",
+        "Full API access",
+        "Custom integrations",
+        "SLA guarantee"
+      ],
+      popular: false,
+    },
   ];
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      company: "TechStart Inc",
-      role: "CEO",
-      content: "Zion Analytics Pro transformed our data insights. We've seen a 300% improvement in decision-making speed.",
+      text: "Zion Tech Group's micro SaaS solutions have transformed our business operations. The AI-powered tools are incredibly intuitive and powerful.",
+      author: "Sarah Johnson",
+      role: "CEO, TechStart Inc.",
       rating: 5,
       avatar: "SJ"
     },
     {
-      name: "Michael Chen",
-      company: "Digital Marketing Agency",
-      role: "Operations Director",
-      content: "Zion Security Shield gives us peace of mind. Our security incidents dropped by 95% since implementation.",
+      text: "The level of customization and support we received was outstanding. Our productivity has increased by 300% since implementing their solutions.",
+      author: "Michael Chen",
+      role: "CTO, DataFlow Systems",
       rating: 5,
       avatar: "MC"
     },
     {
-      name: "Emily Rodriguez",
-      company: "Creative Studio",
-      role: "Project Manager",
-      content: "Zion AI Project Manager Pro has streamlined our workflow. We're completing projects 40% faster now.",
+      text: "Best investment we've made for our business. The micro SaaS approach allows us to scale exactly what we need, when we need it.",
+      author: "Emily Rodriguez",
+      role: "Operations Director, GrowthCorp",
       rating: 5,
       avatar: "ER"
     }
   ];
 
-export default function MicroSaasPage() {
-  return (
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { Mic } from 'lucide-react';
-
-export default function MicroSaasZionTechGroup() {
   return (
     <>
       <Helmet>
@@ -180,46 +169,7 @@ export default function MicroSaasZionTechGroup() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-=======
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Micro Saas - Zion Tech Group</title>
-        <meta name="description" content="Micro Saas solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Micro Saas</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive micro saas solutions designed to meet your business needs.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
+    </>
   );
-}
-
 }

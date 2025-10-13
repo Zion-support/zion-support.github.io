@@ -119,7 +119,6 @@ const HomePage = () => {
       features: ["Business Intelligence", "Data Visualization", "Predictive Modeling", "Real-time Analytics"]
     }
   ];
-=======
 
 export default function AppPage() {
   return (
@@ -162,4 +161,6 @@ export default function AppPage() {
       </div>
     </div>
   );
+}
+
 }

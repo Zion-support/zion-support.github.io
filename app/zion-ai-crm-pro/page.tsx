@@ -127,7 +127,6 @@ const ZionAICRMProPage = () => {
     { name: 'Zapier', logo: 'ZP', category: 'Automation' },
     { name: 'Salesforce', logo: 'SF', category: 'CRM' }
   ];
-=======
 
 export default function ZionAiCrmProPage() {
   return (
@@ -170,4 +169,6 @@ export default function ZionAiCrmProPage() {
       </div>
     </div>
   );
+}
+
 }

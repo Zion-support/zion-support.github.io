@@ -1,7 +1,6 @@
 import React from 'react';
 
 import EnhancedSEO from '../components/EnhancedSEO';
-=======
 import { Helmet } from 'react-helmet-async';
 
 export default function CareersPage() {

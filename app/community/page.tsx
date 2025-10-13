@@ -69,7 +69,6 @@ export default function Community() {
       participants: "100+ contributors"
     }
   ];
-=======
 
 export default function CommunityPage() {
   return (
@@ -112,4 +111,6 @@ export default function CommunityPage() {
       </div>
     </div>
   );
+}
+
 }

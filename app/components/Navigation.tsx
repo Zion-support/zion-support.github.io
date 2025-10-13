@@ -30,8 +30,6 @@ import { Cloud } from 'lucide-react';
 import { Package } from 'lucide-react';
 import { Heart } from 'lucide-react';
 import { Receipt } from 'lucide-react';
-=======
-import { Link } from 'react-router-dom';
 import { Menu, X, Brain, Shield, Zap, Globe, ChevronDown, ChevronUp } from 'lucide-react';
 
 interface NavigationProps {

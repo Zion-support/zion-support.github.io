@@ -1,7 +1,6 @@
 import { Star } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 
-
 interface PerformanceMetrics {
   loadTime: number
   firstContentfulPaint: number
@@ -20,7 +19,6 @@ export const usePerformanceMonitor = () => {
     cumulativeLayoutShift: 0,
     timeToInteractive: 0
   })
-=======
 import { useState, useEffect } from 'react';
 
 export function usePerformanceMonitor() {
@@ -35,3 +33,5 @@ export function usePerformanceMonitor() {
 }
 
 export default usePerformanceMonitor;
+
+}

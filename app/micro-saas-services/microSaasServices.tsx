@@ -1,7 +1,6 @@
 import React from "react";
 import { Mic } from 'lucide-react';
 
-=======
 import React from 'react';
 
 interface MicrosaasservicesProps {

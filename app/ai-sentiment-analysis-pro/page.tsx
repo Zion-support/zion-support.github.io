@@ -1,14 +1,11 @@
 import React from 'react';
 import { ArrowRight, TrendingUp, Globe, CheckCircle, MessageSquare, Target, BarChart3 } from 'lucide-react';
-=======
-import React from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 import FuturisticButton from '../components/FuturisticButton';
-import { ArrowRight } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { TrendingUp } from 'lucide-react';
@@ -97,6 +94,5 @@ export default function AiSentimentAnalysisProPage() {
     </div>
   );
 };
-
 
 }

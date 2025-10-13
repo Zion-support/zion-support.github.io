@@ -70,3 +70,4 @@ files.forEach(file => {
 });
 
 console.log('Finished fixing import syntax.');
+}}}}

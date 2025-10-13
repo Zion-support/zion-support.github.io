@@ -9,7 +9,6 @@ import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
-import { ArrowRight } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { Sparkles } from 'lucide-react';

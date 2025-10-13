@@ -15,7 +15,6 @@ import {
   AlertCircle,
   TrendingUp
 } from 'lucide-react';
-=======
 import { ArrowRight } from 'lucide-react';
 import { Heart, Zap, BarChart3, TrendingUp, Shield, Target, Brain, Users, CheckCircle, ArrowRight, Globe, AlertCircle, Clock } from 'lucide-react';
 

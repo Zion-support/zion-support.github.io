@@ -16,11 +16,8 @@ import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-=======
 import React, { useMemo, useCallback, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import { X, ChevronDown, ChevronRight, Home, Users, Settings, BarChart3, Shield, Cloud, Code, Brain, Zap, Database, Star, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
 interface SidebarProps {

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Home } from 'lucide-react';
-=======
 
 interface BreadcrumbProps {
   className?: string;

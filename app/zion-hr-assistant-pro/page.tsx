@@ -133,8 +133,6 @@ const ZionHRAssistantPro = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-=======
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function ZionHrAssistantProPage() {
@@ -178,4 +176,6 @@ export default function ZionHrAssistantProPage() {
       </div>
     </div>
   );
+}
+
 }

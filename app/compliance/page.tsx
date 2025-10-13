@@ -77,7 +77,6 @@ export default function page() {
       features: ["Regular Assessments", "Policy Updates", "Training Programs", "Incident Response"]
     }
   ];
-=======
 
 export default function CompliancePage() {
   return (
@@ -120,4 +119,6 @@ export default function CompliancePage() {
       </div>
     </div>
   );
+}
+
 }

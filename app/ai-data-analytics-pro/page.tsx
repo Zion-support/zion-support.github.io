@@ -45,9 +45,7 @@ const AIDataAnalyticsProPage = () => {
     "Scale to handle any data volume",
     "Integrate with existing systems"
   ];
-=======
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
 import { TrendingUp, Zap, Brain, PieChart, Sparkles, ArrowRight, CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
@@ -92,4 +90,6 @@ export default function AiDataAnalyticsProPage() {
       </div>
     </div>
   );
+}
+
 }

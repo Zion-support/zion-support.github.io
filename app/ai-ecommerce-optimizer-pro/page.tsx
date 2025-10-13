@@ -123,7 +123,6 @@ export default function AIEcommerceOptimizerPro() {
       popular: false,
     },
   ];
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -168,4 +167,6 @@ export default function AiEcommerceOptimizerProPage() {
       </div>
     </div>
   );
+}
+
 }

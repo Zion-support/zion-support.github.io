@@ -1,12 +1,9 @@
 import React from 'react';
-=======
 import { Link } from 'react-router-dom';
 import { Monitor, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Users, Eye, Hand } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { Shield } from 'lucide-react';
@@ -186,6 +183,5 @@ export default function AiHolographicWorkspacePage() {
     </div>
   );
 };
-
 
 }

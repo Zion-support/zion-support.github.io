@@ -9,7 +9,6 @@ import { Brain } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Calendar } from 'lucide-react';
 
-=======
 import { Helmet } from 'react-helmet-async';
 import { Brain, Users, Zap, Globe, Clock, CheckCircle } from 'lucide-react';
 const features = [

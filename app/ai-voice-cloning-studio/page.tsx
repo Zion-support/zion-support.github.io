@@ -11,8 +11,6 @@ import {
   FileAudio,
   Globe
 } from 'lucide-react';
-=======
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mic, Play, Settings, Users, Zap, CheckCircle, Brain, Volume2, FileAudio, Globe } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
@@ -180,6 +178,5 @@ export default function AiVoiceCloningStudioPage() {
     </div>
   );
 };
-
 
 }

@@ -154,3 +154,4 @@ files.forEach(file => {
 });
 
 console.log('Finished fixing missing imports.');
+}

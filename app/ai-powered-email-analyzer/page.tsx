@@ -90,7 +90,6 @@ const AIPoweredEmailAnalyzerPage = () => {
       popular: false
     }
   ];
-=======
 import React from 'react';
 import { Mail, TrendingUp, Shield, Zap, BarChart3, Target, Brain, Sparkles } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -136,4 +135,6 @@ export default function AiPoweredEmailAnalyzerPage() {
       </div>
     </div>
   );
+}
+
 }

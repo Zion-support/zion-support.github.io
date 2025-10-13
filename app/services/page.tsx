@@ -29,7 +29,6 @@ import { FileText } from 'lucide-react';
 import { Hand } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
-=======
 import React from 'react';
 import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Laptop, Headphones } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
@@ -372,47 +371,48 @@ export default function Services() {
     }
   ];
 
-export default function ServicesPage() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Services solutions by Zion Tech Group" />
+        <title>Our Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive AI and IT services for modern businesses. From AI solutions to cloud infrastructure, we've got you covered." />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Services</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive services solutions designed to meet your business needs.
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Our Services
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Comprehensive AI and IT solutions designed to transform your business and drive growth.
           </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                {service.icon}
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                {service.title}
+              </h3>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                {service.description}
               </p>
+              <div className="flex items-center justify-between">
+                <span className="text-purple-400 font-semibold">{service.price}</span>
+                <Link
+                  to={service.path}
+                  className="text-white hover:text-purple-400 transition-colors"
+                >
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
             </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
   );
-}
-
 }

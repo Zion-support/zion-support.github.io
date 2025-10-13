@@ -1,6 +1,5 @@
 import { Star } from 'lucide-react';
 
-=======
 import { ArrowRight } from 'lucide-react';
 const features = [
     {
