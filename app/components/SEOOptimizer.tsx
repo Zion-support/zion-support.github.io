@@ -14,8 +14,8 @@ interface SEOOptimizerProps {
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = "Zion Tech Group - Advanced AI and IT Solutions",
-  description = "Leading provider of AI-powered solutions, cybersecurity, cloud computing, and digital transformation services. Transform your business with cutting-edge technology.",
-  keywords = "AI solutions, IT services, cybersecurity, cloud computing, digital transformation, technology services, Zion Tech Group, machine learning, 5G solutions, micro SaaS",
+  description = "Transform your business with Zion Tech Group's cutting-edge AI solutions, cybersecurity services, and digital transformation expertise. 99.9% uptime SLA, 24/7 support.",
+  keywords = "AI solutions, IT services, cybersecurity, cloud computing, digital transformation, business automation, technology consulting, Zion Tech Group, machine learning, 5G solutions, micro SaaS, enterprise software",
   canonical,
   ogImage = "https://ziontechgroup.com/og-image.jpg",
   noIndex = false,
@@ -153,7 +153,18 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         "provider": {
           "@type": "Organization",
           "name": "Zion Tech Group"
-        }
+        },
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "priceCurrency": "USD",
+          "category": "Technology Services"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "serviceType": "AI and IT Solutions"
       };
     }
     

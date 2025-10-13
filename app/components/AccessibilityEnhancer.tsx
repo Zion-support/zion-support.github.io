@@ -14,6 +14,7 @@ interface AccessibilityEnhancerProps {
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+<<<<<<< HEAD
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     largeText: false,
@@ -23,6 +24,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   });
 
   const [isVisible, setIsVisible] = useState(false);
+=======
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [isLargeText, setIsLargeText] = useState(false);
+  const [, setIsReducedMotion] = useState(false);
+>>>>>>> cursor/analyze-improve-and-deploy-application-713a
 
   useEffect(() => {
     // Load saved settings from localStorage
@@ -83,13 +89,19 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     // Keyboard navigation enhancement
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
+<<<<<<< HEAD
         setSettings(prev => ({ ...prev, focusVisible: true }));
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-713a
         document.body.classList.add('keyboard-navigation');
       }
     };
 
     const handleMouseDown = () => {
+<<<<<<< HEAD
       setSettings(prev => ({ ...prev, focusVisible: false }));
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-713a
       document.body.classList.remove('keyboard-navigation');
     };
 
@@ -194,6 +206,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         <Eye className="w-5 h-5" />
       </button>
 
+<<<<<<< HEAD
       {/* Accessibility Panel */}
       {isVisible && (
         <div className="fixed bottom-20 left-4 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 w-80 max-h-96 overflow-y-auto">
@@ -320,6 +333,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
       {/* CSS for accessibility features */}
       <style jsx global>{`
+=======
+      {/* Skip Links Styles */}
+      <style>{`
+>>>>>>> cursor/analyze-improve-and-deploy-application-713a
         .skip-links {
           position: absolute;
           top: -40px;

@@ -1,62 +1,47 @@
 const CACHE_NAME = 'zion-tech-group-v1';
-const STATIC_CACHE = 'zion-static-v1';
-const DYNAMIC_CACHE = 'zion-dynamic-v1';
+const STATIC_CACHE = 'static-v1';
+const DYNAMIC_CACHE = 'dynamic-v1';
 
-// Files to cache for offline functionality
-const STATIC_FILES = [
+const STATIC_ASSETS = [
   '/',
   '/about',
   '/contact',
   '/services',
-  '/ai-services',
   '/manifest.json',
-  '/offline.html'
+  '/favicon.svg'
 ];
 
-// Install event - cache static files
+// Install event - cache static assets
 self.addEventListener('install', (event) => {
-  console.log('Service Worker installing...');
-  
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
-        console.log('Caching static files');
-        return cache.addAll(STATIC_FILES);
+        return cache.addAll(STATIC_ASSETS);
       })
       .then(() => {
-        console.log('Static files cached successfully');
         return self.skipWaiting();
-      })
-      .catch((error) => {
-        console.error('Error caching static files:', error);
       })
   );
 });
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-  console.log('Service Worker activating...');
-  
   event.waitUntil(
-    caches.keys()
-      .then((cacheNames) => {
-        return Promise.all(
-          cacheNames.map((cacheName) => {
-            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              console.log('Deleting old cache:', cacheName);
-              return caches.delete(cacheName);
-            }
-          })
-        );
-      })
-      .then(() => {
-        console.log('Service Worker activated');
-        return self.clients.claim();
-      })
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    }).then(() => {
+      return self.clients.claim();
+    })
   );
 });
 
-// Fetch event - serve from cache or network
+// Fetch event - serve from cache, fallback to network
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
@@ -74,13 +59,10 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(request)
       .then((cachedResponse) => {
-        // Return cached version if available
         if (cachedResponse) {
-          console.log('Serving from cache:', request.url);
           return cachedResponse;
         }
 
-        // Otherwise fetch from network
         return fetch(request)
           .then((response) => {
             // Don't cache if not a valid response
@@ -99,97 +81,60 @@ self.addEventListener('fetch', (event) => {
 
             return response;
           })
-          .catch((error) => {
-            console.log('Network request failed:', error);
-            
+          .catch(() => {
             // Return offline page for navigation requests
-            if (request.destination === 'document') {
-              return caches.match('/offline.html');
+            if (request.mode === 'navigate') {
+              return caches.match('/');
             }
-            
-            // Return a fallback response for other requests
-            return new Response('Offline content not available', {
-              status: 503,
-              statusText: 'Service Unavailable',
-              headers: new Headers({
-                'Content-Type': 'text/plain'
-              })
-            });
           });
       })
   );
 });
 
-// Background sync for offline form submissions
+// Background sync for form submissions
 self.addEventListener('sync', (event) => {
-  if (event.tag === 'background-sync') {
-    console.log('Background sync triggered');
-    event.waitUntil(doBackgroundSync());
-  }
-});
-
-// Push notification handling
-self.addEventListener('push', (event) => {
-  console.log('Push notification received');
-  
-  const options = {
-    body: event.data ? event.data.text() : 'New update available',
-    icon: '/images/icon-192x192.png',
-    badge: '/images/badge-72x72.png',
-    vibrate: [100, 50, 100],
-    data: {
-      dateOfArrival: Date.now(),
-      primaryKey: 1
-    },
-    actions: [
-      {
-        action: 'explore',
-        title: 'Explore',
-        icon: '/images/checkmark.png'
-      },
-      {
-        action: 'close',
-        title: 'Close',
-        icon: '/images/xmark.png'
-      }
-    ]
-  };
-
-  event.waitUntil(
-    self.registration.showNotification('Zion Tech Group', options)
-  );
-});
-
-// Notification click handling
-self.addEventListener('notificationclick', (event) => {
-  console.log('Notification clicked');
-  
-  event.notification.close();
-
-  if (event.action === 'explore') {
+  if (event.tag === 'contact-form') {
     event.waitUntil(
-      clients.openWindow('/')
+      // Handle form submission sync
+      handleFormSync()
     );
   }
 });
 
-// Helper function for background sync
-async function doBackgroundSync() {
+async function handleFormSync() {
   try {
-    // Implement background sync logic here
-    console.log('Performing background sync...');
+    // Get pending form data from IndexedDB
+    const pendingForms = await getPendingForms();
+    
+    for (const form of pendingForms) {
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(form.data)
+        });
+
+        if (response.ok) {
+          // Remove from pending forms
+          await removePendingForm(form.id);
+        }
+      } catch (error) {
+        console.error('Failed to sync form:', error);
+      }
+    }
   } catch (error) {
-    console.error('Background sync failed:', error);
+    console.error('Form sync failed:', error);
   }
 }
 
-// Message handling for communication with main thread
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
-  }
-  
-  if (event.data && event.data.type === 'GET_VERSION') {
-    event.ports[0].postMessage({ version: CACHE_NAME });
-  }
-});
+// Helper functions for IndexedDB
+async function getPendingForms() {
+  // Implementation would go here
+  return [];
+}
+
+async function removePendingForm(id) {
+  // Implementation would go here
+}

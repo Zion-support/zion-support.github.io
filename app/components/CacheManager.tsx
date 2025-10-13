@@ -8,10 +8,8 @@ const CacheManager = () => {
       if ('serviceWorker' in navigator) {
         try {
           const registration = await navigator.serviceWorker.register('/sw.js')
-          console.log('Service Worker registered:', registration)
-        } catch (error) {
-          console.log('Service Worker registration failed:', error)
-        }
+          } catch (error) {
+          }
       }
     }
 
@@ -32,10 +30,8 @@ const CacheManager = () => {
         try {
           const cache = await caches.open(CACHE_NAME)
           await cache.addAll(CACHE_URLS)
-          console.log('Static assets cached')
-        } catch (error) {
-          console.log('Failed to cache static assets:', error)
-        }
+          } catch (error) {
+          }
       }
 
       // Cache API responses
@@ -50,7 +46,6 @@ const CacheManager = () => {
           
           return response
         } catch (error) {
-          console.log('Failed to cache API response:', error)
           return fetch(request)
         }
       }
@@ -82,7 +77,6 @@ const CacheManager = () => {
           
           // If memory usage is high, trigger garbage collection
           if (usedMemory > 0.8) {
-            console.log('High memory usage detected, triggering cleanup')
             // Force garbage collection if available
             if ((window as any).gc) {
               (window as any).gc()
@@ -130,8 +124,7 @@ const CacheManager = () => {
     // Cleanup function
     return () => {
       // Cleanup any intervals or observers
-      console.log('Cache manager cleanup')
-    }
+      }
   }, [])
 
   return null

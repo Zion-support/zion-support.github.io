@@ -1,14 +1,10 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, BarChart3, Star, ArrowRight } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight } from 'lucide-react'
 
 const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
-<<<<<<< HEAD
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e9d5
   const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false)
   
   const toggleMenu = useCallback(() => {
@@ -19,29 +15,9 @@ const Navigation = React.memo(() => {
     setIsServicesOpen(!isServicesOpen)
   }, [isServicesOpen])
 
-<<<<<<< HEAD
-  const toggleSolutions = useCallback(() => {
-    setIsSolutionsOpen(!isSolutionsOpen)
-  }, [isSolutionsOpen])
-
   const toggleMicroSaas = useCallback(() => {
     setIsMicroSaasOpen(!isMicroSaasOpen)
   }, [isMicroSaasOpen])
-
-
-  const solutions = useMemo(() => [
-    { name: 'AI Analytics', path: '/ai-analytics', icon: <Database className="w-4 h-4" /> },
-    { name: 'AI Automation', path: '/ai-automation', icon: <Zap className="w-4 h-4" /> },
-    { name: 'AI Content Generation', path: '/ai-content-generation', icon: <Code className="w-4 h-4" /> },
-    { name: 'AI Customer Service', path: '/ai-customer-service', icon: <Shield className="w-4 h-4" /> },
-    { name: 'AI Marketing', path: '/ai-marketing', icon: <Globe className="w-4 h-4" /> },
-    { name: 'AI Project Management', path: '/ai-project-management', icon: <Smartphone className="w-4 h-4" /> }
-  ], [])
-=======
-  const toggleMicroSaas = useCallback(() => {
-    setIsMicroSaasOpen(!isMicroSaasOpen)
-  }, [isMicroSaasOpen])
->>>>>>> cursor/analyze-improve-and-deploy-application-e9d5
 
   const aiServices = useMemo(() => [
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
@@ -51,7 +27,6 @@ const Navigation = React.memo(() => {
     { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> },
     { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> }
   ], [])
-
 
   const microSaasServices = useMemo(() => [
     { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
@@ -103,6 +78,7 @@ const Navigation = React.memo(() => {
             ))}
             
 <<<<<<< HEAD
+<<<<<<< HEAD
             {/* Solutions Dropdown */}
             <div className="relative">
               <button
@@ -147,6 +123,8 @@ const Navigation = React.memo(() => {
             
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-e9d5
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-713a
             {/* AI Services Dropdown */}
             <div className="relative">
               <button
@@ -256,39 +234,6 @@ const Navigation = React.memo(() => {
                 </Link>
               ))}
               
-<<<<<<< HEAD
-              {/* Mobile Solutions */}
-              <div>
-                <button
-                  onClick={toggleSolutions}
-                  className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 font-medium"
-                >
-                  <span>Solutions</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isSolutionsOpen ? 'rotate-180' : ''}`} />
-                </button>
-                
-                {isSolutionsOpen && (
-                  <div className="ml-4 mt-2 space-y-1">
-                    {solutions.map((solution) => (
-                      <Link
-                        key={solution.name}
-                        to={solution.path}
-                        className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-cyan-400 transition-colors rounded-lg hover:bg-cyan-500/10"
-                        onClick={() => {
-                          setIsSolutionsOpen(false)
-                          toggleMenu()
-                        }}
-                      >
-                        {solution.icon}
-                        <span>{solution.name}</span>
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-              
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e9d5
               {/* Mobile AI Services */}
               <div>
                 <button

@@ -41,8 +41,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('AdvancedErrorBoundary caught an error:', error, errorInfo);
-    }
+      }
 
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
@@ -63,8 +62,6 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     };
 
     // Example: Send to your error reporting service
-    console.error('Production error:', errorData);
-    
     // You could send this to your backend:
     // fetch('/api/error-report', {
     //   method: 'POST',

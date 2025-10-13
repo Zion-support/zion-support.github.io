@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, CheckCircle, Users, Award, TrendingUp, BarChart3, Cloud, Lock, Sparkles, Mail, Smartphone } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import LazyImage from "./components/LazyImage";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
 import SEOOptimizer from "./components/SEOOptimizer";
 
 const HomePage = () => {
