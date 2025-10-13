@@ -1,235 +1,174 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-export default function Support() {
-import React from 'react;
-
-import { Helmet } from 'react-helmet-async;
-
-import { Link } from 'react-router-dom;
-
-import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react;
-
-import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, HelpCircle, BookOpen, Users, Zap } from 'lucide-react;
-
-interface FAQ {}
-  question: string;
-
-  answer: string;
-
-  category: string});)
-}
-
-import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search } from 'lucide-react;
-
-import Navigation from ../components
-import Footer from ../components
+import { Link } from 'react-router-dom';
+import { Mail, Phone, MessageCircle, Clock, CheckCircle, ArrowRight } from 'lucide-react';
 
 const SupportPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState(');
-
-  const [selectedCategory, setSelectedCategory] = useState('all);
-
+  const supportOptions = [
     {
-      question: 'How do I get started with your AI solutions?,'
-      answer: 'Contact our team for a free consultation where we\'ll assess your needs and recommend the best AI solutions for your business. We\'ll guide you through the entire process from planning to implementation.,'
-      category: 'general;'
-    },
-      category: 'general});)},'
-    {
-      question: 'What support do you provide after implementation?,
-      answer: 'We provide 24/7 technical support, regular maintenance, updates, and ongoing optimization to ensure your systems run smoothly. Our support includes monitoring, troubleshooting, and performance optimization.,
-      category: 'support
-      answer: 'Contact our team for a free consultation where we\'ll assess your needs and recommend the best AI solutions for your business. We\'ll guide you through the entire process from planning to implementation.',
-      question: 'How long does implementation typically take?,
-      answer: 'Implementation time varies based on project complexity. Simple solutions can be deployed in 2-4 weeks, while complex enterprise systems may take 3-6 months. We provide detailed timelines during the planning phase.,
-      category: 'implementation});)
-},
-      question: 'What security measures do you have in place?,
-      answer: 'We implement enterprise-grade security including encryption, access controls, regular security audits, and compliance with industry standards like SOC 2, GDPR, and HIPAA.,
-      category: 'security});)
-},
-    {
-      question: 'What security measures do you have in place?,'
-      answer: 'We implement enterprise-grade security including encryption, access controls, regular security audits, and compliance with industry standards like SOC 2, GDPR, and HIPAA.,'
-      category: 'security});)'
-},
-    {
-      question: 'Can you integrate with our existing systems?,'
-      answer: 'Absolutely. We specialize in seamless integration with existing systems and can work with most platforms, databases, and APIs to ensure smooth data flow and functionality.,'
-      category: 'integration});)'
-},
-    {
-      question: 'What happens if we need to scale up?,'
-      answer: 'Our solutions are designed to scale with your business. We can easily add more capacity, features, or users as your needs grow, with minimal disruption to your operations.,'
-      category: 'scaling});)'
-},
-    {
-      question: 'Do you provide custom development?,'
-      answer: 'Yes, we offer custom development services to create tailored solutions that meet your specific business requirements and integrate perfectly with your existing workflows.,'
-      category: 'development;'
-    }  ];
-
-  const supportChannels = [;;
-
-    {
-      name: 'Phone Support,
-      description: 'Speak directly with our technical experts,
-      category: 'implementation'});;)
-},
-    {}
-      question: 'Do you offer training for our team?',
-      answer: 'Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions. Training includes hands-on workshops, documentation, and ongoing support.',
-      category: 'training'});;)
-},
-    {}
-      question: 'What security measures do you have in place?',
-      answer: 'We implement enterprise-grade security including encryption, access controls, regular security audits, and compliance with industry standards like SOC 2, GDPR, and HIPAA.',
-      category: 'security'});;)
-},
-    {}
-      question: 'Can you integrate with our existing systems?',
-      answer: 'Absolutely. We specialize in seamless integration with existing systems and can work with most platforms, databases, and APIs to ensure smooth data flow and functionality.',
-      category: 'integration'});;)
-},
-    {}
-      question: 'What happens if we need to scale up?',
-      answer: 'Our solutions are designed to scale with your business. We can easily add more capacity, features, or users as your needs grow, with minimal disruption to your operations.',
-      category: 'scaling'});;)
-},
-    {}
-      question: 'Do you provide custom development?',
-      answer: 'Yes, we offer custom development services to create tailored solutions that meet your specific business requirements and integrate perfectly with your existing workflows.',
-      category: 'development'
-      contact: '+1 (555) 123-4567,
-      availability: '24/7 Available,
-      color: 'text-blue-400
-      color: 'text-blue-400});)},
-    {
-      name: 'Email Support,
-      description: 'Get detailed responses to your questions,
-      color: 'text-green-400});)},
-    {
-      name: 'Live Chat,
-      description: 'Instant help when you need it most,
-    {
-      name: 'Emergency Support,
-      description: 'Critical issues resolved quickly,
-  const filteredFAQs = faqs.filter(faq => {;
-    const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||                         faq.answer.toLowerCase().includes(searchTerm.toLowerCase());;
-
-  const toggleFAQ = (index: number) => {;
-    return matchesSearch && matchesCategory});;)
-});;
-
-  const toggleFAQ = (index: number) => {}
-    setExpandedFAQ(expandedFAQ === index ? null : index);
-
-  };
-
-const PagePage: React.FC = () => {}
-      description: 'Get instant help through our chat system',
-      icon: MessageCircle,
-      contact: 'Available on website',
-    }
-  ]
-
-  const filteredFaqs = faqs.filter(faq =>
-    faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-
-  return (
-    <div className="min-h-screen pt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="text-cyan-400">Support</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Get help and support for our AI and IT solutions.
-          </p>
-        </div>
-      </div>
-      description: 'Send us a detailed message',
+      title: 'Email Support',
+      description: 'Get help via email with detailed responses',
+      icon: <Mail className="w-6 h-6" />,
       contact: 'support@ziontechgroup.com',
-      hours: 'Response within 4 hours'
-      hours: '24/7'
-      description: 'Chat with our support team',
+      responseTime: 'Within 24 hours',
+      availability: '24/7'
+    },
+    {
+      title: 'Phone Support',
+      description: 'Speak directly with our support team',
+      icon: <Phone className="w-6 h-6" />,
+      contact: '+1 (302) 464-0950',
+      responseTime: 'Immediate',
+      availability: 'Mon-Fri 9AM-6PM EST'
+    },
+    {
+      title: 'Live Chat',
+      description: 'Get instant help with our live chat',
+      icon: <MessageCircle className="w-6 h-6" />,
       contact: 'Available on website',
-      hours: 'Mon-Fri 9AM-6PM EST'
+      responseTime: 'Immediate',
+      availability: 'Mon-Fri 9AM-6PM EST'
     }
   ];
 
-  const filteredFaqs = faqs.filter(faq => 
-    faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    faq.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    faq.category.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const faqs = [
+    {
+      question: 'How do I get started with your services?',
+      answer: 'Contact us through any of our support channels and we\'ll schedule a consultation to understand your needs and provide a customized solution.'
+    },
+    {
+      question: 'What is your typical project timeline?',
+      answer: 'Project timelines vary based on complexity, but most projects are completed within 4-12 weeks. We provide detailed timelines during the consultation phase.'
+    },
+    {
+      question: 'Do you provide ongoing support?',
+      answer: 'Yes, we offer comprehensive ongoing support including maintenance, updates, and 24/7 monitoring for all our solutions.'
+    },
+    {
+      question: 'What technologies do you work with?',
+      answer: 'We work with a wide range of technologies including AI/ML frameworks, cloud platforms, modern web technologies, and enterprise systems.'
+    }
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Support - Zion Tech Group</title>
-        <meta name="description" content="Customer support by Zion Tech Group" />
-        <title>Support - Zion Tech Group | 24/7 Technical Support</title>
-        <meta name="description" content="Get 24/7 technical support for all your AI and IT solutions. Contact our expert team via phone, email, or live chat. />
-        <meta name="keywords" content="technical support, IT support, AI support, customer service, help desk />
+        <meta name="description" content="Get support for your AI and IT solutions. Our expert team is here to help you succeed." />
+        <meta name="keywords" content="support, help, AI solutions, IT services, customer service, Zion Tech Group" />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Support Center
-      <Navigation />
       
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            How Can We
-            <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Help You?
-            </span>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Support Center
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Get help and support for all your needs.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            We're here to help you succeed. Get support for your AI and IT solutions 
+            through our multiple support channels.
           </p>
         </div>
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Documentation</h3>
-              <p className="text-gray-600">
-                Comprehensive documentation and guides for all our services.
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Contact Support</h3>
-              <p className="text-gray-600">
-                Reach out to our support team for personalized assistance.
-              </p>
-          </div>
 
-}
-  );  ));)
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-12">
+        {/* Support Options */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                How Can We Help?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose the support option that works best for you
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {supportOptions.map((option, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    {option.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4">{option.title}</h3>
+                  <p className="text-gray-300 mb-6">{option.description}</p>
+                  
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      <span className="font-medium">Contact:</span>
+                      <span className="ml-2">{option.contact}</span>
+                    </div>
+                    <div className="flex items-center text-gray-300">
+                      <Clock className="w-4 h-4 text-blue-400 mr-2" />
+                      <span className="font-medium">Response:</span>
+                      <span className="ml-2">{option.responseTime}</span>
+                    </div>
+                    <div className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
+                      <span className="font-medium">Available:</span>
+                      <span className="ml-2">{option.availability}</span>
+                    </div>
+                  </div>
+
+                  <button className="w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
+                    Contact Now
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 bg-slate-800/50">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-xl text-gray-300">
+                Find answers to common questions about our services
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              {faqs.map((faq, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
+                  <h3 className="text-xl font-bold text-white mb-4">{faq.question}</h3>
+                  <p className="text-gray-300">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20">
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Still Need Help?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Can't find what you're looking for? Our support team is ready to help you succeed.
+              Can't find what you're looking for? Our team is ready to assist you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">
-                Contact Support
-                <ArrowRight className="inline-block ml-2 w-5 h-5" />
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Schedule Call
-              </button>
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg font-semibold text-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+              >
+                Contact Us
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <a
+                href="mailto:support@ziontechgroup.com"
+                className="px-8 py-4 border border-purple-500 text-purple-400 rounded-lg font-semibold text-lg hover:bg-purple-500/10 transition-all duration-300"
+              >
+                Send Email
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
+  );
+};
 
 export default SupportPage;
