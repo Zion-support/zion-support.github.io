@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import SEOOptimizer from "./components/SEOOptimizer";
 
 const HomePage = () => {
@@ -95,6 +96,70 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company</title>
+        <meta name="description" content="Leading provider of AI-powered solutions, IT services, and digital transformation. We help businesses transform with cutting-edge technology including AI, 5G, cloud computing, and cybersecurity." />
+        <meta name="keywords" content="AI solutions, IT services, digital transformation, business automation, technology consulting, 5G solutions, cloud computing, cybersecurity, machine learning, artificial intelligence" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="robots" content="index, follow" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/" />
+        <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta property="og:description" content="Leading provider of AI-powered solutions, IT services, and digital transformation. Transform your business with cutting-edge technology." />
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <meta property="og:site_name" content="Zion Tech Group" />
+        
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://ziontechgroup.com/" />
+        <meta property="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta property="twitter:description" content="Leading provider of AI-powered solutions, IT services, and digital transformation. Transform your business with cutting-edge technology." />
+        <meta property="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "url": "https://ziontechgroup.com",
+            "logo": "https://ziontechgroup.com/logo.png",
+            "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "364 E Main St STE 1008",
+              "addressLocality": "Middletown",
+              "addressRegion": "DE",
+              "postalCode": "19709",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-302-464-0950",
+              "contactType": "customer service",
+              "email": "kleber@ziontechgroup.com"
+            },
+            "sameAs": [
+              "https://twitter.com/ziontechgroup",
+              "https://linkedin.com/company/ziontechgroup",
+              "https://github.com/ziontechgroup"
+            ],
+            "foundingDate": "2020",
+            "numberOfEmployees": "10-50",
+            "industry": "Technology",
+            "services": [
+              "AI Solutions",
+              "IT Services", 
+              "Digital Transformation",
+              "5G Solutions",
+              "Cloud Computing",
+              "Cybersecurity"
+            ]
+          })}
+        </script>
+      </Helmet>
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."

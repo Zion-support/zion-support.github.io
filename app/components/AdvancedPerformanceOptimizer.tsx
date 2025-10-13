@@ -139,44 +139,9 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
   // Bundle splitting optimization
   const optimizeBundleSplitting = useCallback(() => {
-    // Dynamically import non-critical components
-    const lazyLoadComponents = () => {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const target = entry.target as HTMLElement;
-            const componentName = target.dataset.lazyComponent;
-            
-            if (componentName) {
-              // Dynamically import the component
-              import(`../components/${componentName}.tsx`)
-                .then(() => {
-                  // Component loaded successfully
-                  target.classList.add('loaded');
-                })
-                .catch((error) => {
-                  if (process.env.NODE_ENV === 'development') {
-                    console.warn(`Failed to load component ${componentName}:`, error);
-                  }
-                });
-              
-              observer.unobserve(target);
-            }
-          }
-        });
-      });
-
-      // Observe all elements with lazy-loading data attribute
-      const lazyElements = document.querySelectorAll('[data-lazy-component]');
-      lazyElements.forEach((element) => observer.observe(element));
-    };
-
-    // Start lazy loading after initial page load
-    if (document.readyState === 'complete') {
-      lazyLoadComponents();
-    } else {
-      window.addEventListener('load', lazyLoadComponents);
-    }
+    // This optimization is handled by React.lazy in the main App component
+    // No additional dynamic imports needed here to avoid duplicate import warnings
+    console.log('Bundle splitting optimization handled by React.lazy');
   }, []);
 
   // Performance monitoring
