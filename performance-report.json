@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "timestamp": "2025-10-13T09:02:12.194Z",
 =======
   "timestamp": "2025-10-13T09:23:16.492Z",
@@ -48,6 +49,14 @@
     "jsFiles": 15,
     "jsSize": 687513,
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
+=======
+  "timestamp": "2025-10-13T09:40:10.236Z",
+  "buildStats": {
+    "totalFiles": 17,
+    "totalSize": 627480,
+    "jsFiles": 14,
+    "jsSize": 618518,
+>>>>>>> cursor/analyze-improve-and-deploy-application-e258
     "cssFiles": 1,
     "cssSize": 1811,
     "imageFiles": 1,

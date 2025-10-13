@@ -10,6 +10,7 @@ interface PerformanceOptimizerProps {
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [isOptimized, setIsOptimized] = useState(false);
 
 =======
@@ -28,18 +29,36 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       const criticalImages = [
         '/logo.svg',
         '/og-image.svg'
+=======
+  const [isOptimized, setIsOptimized] = useState(false);
+
+  useEffect(() => {
+    // Preload critical resources
+    const preloadCriticalResources = () => {
+      const criticalImages = [
+        '/api/placeholder/1200/630', // Hero image
+        '/api/placeholder/800/600',  // Service images
+>>>>>>> cursor/analyze-improve-and-deploy-application-e258
       ];
 
       criticalImages.forEach(src => {
         const link = document.createElement('link');
         link.rel = 'preload';
+<<<<<<< HEAD
         link.href = src;
         link.as = 'image';
+=======
+        link.as = 'image';
+        link.href = src;
+>>>>>>> cursor/analyze-improve-and-deploy-application-e258
         document.head.appendChild(link);
       });
     };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-e258
     // Optimize images
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
@@ -267,9 +286,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       `}</style>
     </>
   );
+<<<<<<< HEAD
 =======
   return <>{children}</>;
 >>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-e258
 };
 
 export default PerformanceOptimizer;
