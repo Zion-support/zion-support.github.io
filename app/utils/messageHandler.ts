@@ -40,7 +40,7 @@ export class MessageHandler {
     // Listen for chrome extension messages
     if (typeof window !== 'undefined' && (window as WindowWithChrome).chrome?.runtime) {
       const chrome = (window as WindowWithChrome).chrome;
-      chrome.runtime.onMessage.addListener((message: unknown, sender: unknown, sendResponse: (response?: unknown) => void) => {
+      chrome?.runtime?.onMessage.addListener((message: unknown, sender: unknown, sendResponse: (response?: unknown) => void) => {
         // Always send a response to prevent async response errors
         try {
           this.handleChromeMessage(message, sender, sendResponse);
