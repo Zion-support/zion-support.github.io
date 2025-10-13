@@ -1,4 +1,4 @@
-import { ArrowRight, BarChart3, TrendingUp, Shield, Zap, Globe, CheckCircle, Star, Users, Database, Brain, Target } from "lucide-react";
+import { ArrowRight, BarChart3, TrendingUp, Shield, Zap, Globe, CheckCircle, Star, Brain } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
