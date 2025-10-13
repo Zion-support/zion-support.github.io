@@ -10,40 +10,32 @@ const withErrorLogging = (handler) => {
   };
 };
 
-export default withErrorLogging(async (req, res) => {
-  if (req.method !== 'POST') {
+export default withErrorLogging(async (req, res) => {'
+  if (req.method !== 'POST') {'
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
 
   const { productId } = req.body;
-  if (!productId) {
+  if (!productId) {'
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Product ID is required' }));
     return;
   }
 
   try {
-<<<<<<< HEAD
-
-    const session = {
-=======
-const session = {
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-      id: 'cs_test_' + Math.random().toString(36).substr(2, 9),
+'
+      id: 'cs_test_' + Math.random().toString(36).substr(2, 9),'
       status: 'pending',
       productId: productId
     };
-
+'
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify(session));
-  } catch (error) {
+  } catch (error) {'
     console.error('Checkout session creation error:', error);
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
+'
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to create checkout session' }));
   }

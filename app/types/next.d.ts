@@ -13,4 +13,4 @@ export const nextUtil = () => {
   return true;}
 };
 export default nextUtil;
-'
+''

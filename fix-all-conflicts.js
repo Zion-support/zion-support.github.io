@@ -6,17 +6,17 @@ import { execSync } from 'child_process';
 
 // Function to fix merge conflicts in a file
 function fixMergeConflicts(filePath) {
-  try {
+  try {'
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Check if file has merge conflicts
+    // Check if file has merge conflicts'
     if (!content.includes(')
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)
+    content = content.replace(/([\s\S]*?)
     
     // Remove any remaining conflict markers
     content = content.replace(/[\s\S]*?
     
-    // Clean up any double newlines
+    // Clean up any double newlines'
     content = content.replace(/\n\n\n+/g, '\n\n');
     
     fs.writeFileSync(filePath, content);
@@ -37,16 +37,16 @@ function findFilesWithConflicts(dir) {
     for (const item of items) {
       const fullPath = path.join(currentPath, item);
       const stat = fs.statSync(fullPath);
-      
+      '
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         walkDir(fullPath);
       } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
-        try {
+        try {'
           const content = fs.readFileSync(fullPath, 'utf8');
           if (content.includes('<<<<<<< HEAD')) {
             files.push(fullPath);
           }
-        } catch (error) {
+        } catch (error) {'
           // Skip files that can't be read
         }
       }
@@ -57,10 +57,10 @@ function findFilesWithConflicts(dir) {
   return files;
 }
 
-// Main execution
+// Main execution'
 console.log('🔍 Searching for files with merge conflicts...');
 const conflictedFiles = findFilesWithConflicts('/workspace');
-
+`
 console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
 
 let fixedCount = 0;
@@ -69,6 +69,6 @@ for (const file of conflictedFiles) {
     fixedCount++;
   }
 }
-
+`
 console.log(`✅ Fixed merge conflicts in ${fixedCount} files`);
 console.log('🎉 All merge conflicts resolved!');

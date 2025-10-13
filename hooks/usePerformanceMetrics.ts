@@ -22,7 +22,7 @@ export function usePerformanceMetrics() {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isSupported, setIsSupported] = useState(false);
 
-  useEffect(() => {
+  useEffect(() => {'
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {';
       return;
     }
@@ -35,7 +35,7 @@ export function usePerformanceMetrics() {
       const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
       if (fcpEntry) {
         setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
-      }
+      }'
     }).observe({ entryTypes: ['paint'] });
     // Largest Contentful Paint;
     new PerformanceObserver(list => {
@@ -43,7 +43,7 @@ export function usePerformanceMetrics() {
       const lastEntry = entries[entries.length - 1];
       if (lastEntry) {
         setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
-      }
+      }'
     }).observe({ entryTypes: ['largest-contentful-paint'] });
     // First Input Delay;
     new PerformanceObserver(list => {
@@ -83,4 +83,4 @@ export function usePerformanceMetrics() {
   }, []);
 
   return { metrics, isSupported };
-}
+}'

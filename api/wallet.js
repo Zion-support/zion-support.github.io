@@ -1,41 +1,32 @@
 import fs from 'fs';
 import path from 'path';
-
+'
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'wallets.json');
 
-export default async function handler(req, res) {
-  if (req.method !== 'POST') {
+export default async function handler(req, res) {'
+  if (req.method !== 'POST') {'
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
 
-<<<<<<< HEAD
-  const { address, type, name, userId } = req.body;
 
-=======
-const { address, type, name, userId } = req.body;
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-  if (!address || !type) {
+  if (!address || !type) {'
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Address and type are required' }));
     return;
   }
 
-<<<<<<< HEAD
-  let wallets = [];
-=======
-let wallets = [];
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-  try {
+
+  try {'
     const data = fs.readFileSync(file, 'utf8');
     wallets = JSON.parse(data);
-  } catch (error) {
+  } catch (error) {'
     console.error('Error:', error);
   }
 
-  if (wallets.find(wallet => wallet.address === address)) {
+  if (wallets.find(wallet => wallet.address === address)) {'
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Wallet address already exists' }));
     return;
@@ -44,9 +35,9 @@ let wallets = [];
   const newWallet = {
     id: Date.now().toString(),
     address,
-    type,
-    name: name || '',
-    userId: userId || '',
+    type,'
+    name: name || ','
+    userId: userId || ','
     status: 'active',
     createdAt: new Date().toISOString()
   };
@@ -54,25 +45,16 @@ let wallets = [];
   try {
     wallets.push(newWallet);
     fs.writeFileSync(file, JSON.stringify(wallets, null, 2));
-
+'
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
-      success: true,
+      success: true,'
       message: 'Wallet added successfully' 
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     }));
-  } catch (error) {
+  } catch (error) {'
     console.error('Error:', error);
     res.setHeader('Content-Type', 'application/json');
-<<<<<<< HEAD
 
-    res.end(JSON.stringify({ error: 'Failed to save wallet' }));
-
-=======
-res.end(JSON.stringify({ error: 'Failed to save wallet' }));
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   }
-}
+}'

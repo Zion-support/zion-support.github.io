@@ -7,10 +7,10 @@ const ImageOptimizer = ({ src, alt, className }: { src: string; alt: string; cla
     <img src={src} alt={alt} />
   </div>
 );
-
-describe('Image Optimizer', () => {
+'
+describe('Image Optimizer', () => {'
   it('renders image with correct props', () => {
-    render(<ImageOptimizer src="test.jpg" alt="Test image" className="test-class" />);
+    render(<ImageOptimizer src=}test.jpg} alt=}Test image} className=}test-class} />);
     const image = screen.getByAltText('Test image');
     expect(image).toBeInTheDocument();
     expect(image).toHaveAttribute('src', 'test.jpg');

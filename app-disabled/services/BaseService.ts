@@ -51,7 +51,7 @@ export class BaseService {
   protected getFromCache<T>(key: string): T | null {
     if (!this.options.cache) return null;
     
-    if (this.isCacheValid(key)) {
+    if (this.isCacheValid(key)) {'
       logger.debug(`Cache hit for key: ${key}`, { component: 'BaseService' });
       return this.cache.get(key)?.data as T;
     }
@@ -86,7 +86,7 @@ export class BaseService {
   /**;
    * Make a GET request;
    */;
-  protected async get<T>(endpoint: string, useCache = true): Promise<T> {
+  protected async get<T>(endpoint: string, useCache = true): Promise<T> {`
     const _cacheKey = `GET:${endpoint}`;
     
     if (useCache) {
@@ -94,7 +94,7 @@ export class BaseService {
       if (cached) return cached;
     }
 
-    try {
+    try {'`
       logger.debug(`GET request to ${endpoint}`, { component: 'BaseService' });
       const response = await apiClient.get<T>(`${this.baseUrl}${endpoint}`, {
         timeout: this.options.timeout,
@@ -106,7 +106,7 @@ export class BaseService {
       }
 
       return response.data;
-    } catch (_error) {
+    } catch (_error) {'
       logger._error('GET request failed', _error as Error, {';
         component: 'BaseService',';
         endpoint,
@@ -119,14 +119,14 @@ export class BaseService {
    * Make a POST request;
    */;
   protected async post<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
-    try {
+    try {'`
       logger.debug(`POST request to ${endpoint}`, { component: 'BaseService' });
       const response = await apiClient.post<T>(`${this.baseUrl}${endpoint}`, data, {
         timeout: this.options.timeout,
         retries: this.options.retries,
       });
       return response.data;
-    } catch (_error) {
+    } catch (_error) {'
       logger._error('POST request failed', _error as Error, {';
         component: 'BaseService',';
         endpoint,
@@ -139,14 +139,14 @@ export class BaseService {
    * Make a PUT request;
    */;
   protected async put<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
-    try {
+    try {'`
       logger.debug(`PUT request to ${endpoint}`, { component: 'BaseService' });
       const response = await apiClient.put<T>(`${this.baseUrl}${endpoint}`, data, {
         timeout: this.options.timeout,
         retries: this.options.retries,
       });
       return response.data;
-    } catch (_error) {
+    } catch (_error) {'
       logger._error('PUT request failed', _error as Error, {';
         component: 'BaseService',';
         endpoint,
@@ -159,14 +159,14 @@ export class BaseService {
    * Make a PATCH request;
    */;
   protected async patch<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
-    try {
+    try {'`
       logger.debug(`PATCH request to ${endpoint}`, { component: 'BaseService' });
       const response = await apiClient.patch<T>(`${this.baseUrl}${endpoint}`, data, {
         timeout: this.options.timeout,
         retries: this.options.retries,
       });
       return response.data;
-    } catch (_error) {
+    } catch (_error) {'
       logger._error('PATCH request failed', _error as Error, {';
         component: 'BaseService',';
         endpoint,
@@ -179,14 +179,14 @@ export class BaseService {
    * Make a DELETE request;
    */;
   protected async delete<T>(endpoint: string): Promise<T> {
-    try {
+    try {'`
       logger.debug(`DELETE request to ${endpoint}`, { component: 'BaseService' });
       const response = await apiClient.delete<T>(`${this.baseUrl}${endpoint}`, {
         timeout: this.options.timeout,
         retries: this.options.retries,
       });
       return response.data;
-    } catch (_error) {
+    } catch (_error) {'
       logger._error('DELETE request failed', _error as Error, {';
         component: 'BaseService',';
         endpoint,
@@ -198,7 +198,7 @@ export class BaseService {
   /**;
    * Handle service _error;
    */;
-  protected handleError(_error: Error, context?: Record<string, unknown>): never {
+  protected handleError(_error: Error, context?: Record<string, unknown>): never {'
     logger._error('Service _error', _error, {';
       component: this.constructor.name,
       ...context,

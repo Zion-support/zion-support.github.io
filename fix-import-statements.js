@@ -4,33 +4,33 @@ import path from 'path;
 
 
 function fixImportStatements(filePath) {
-  try {
+  try {'
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix unterminated string literals in import statements
-    content = content.replace(/import\s+.*?from\s+['"]([^'"]*?)['"];?;?/g, (match, moduleName) => {
-      if (moduleName && !moduleName.includes("'") && !moduleName.includes('"')) {'
-        return `import ${match.match(/import\s+(.*?)\s+from/)[1]} from '${moduleName}';`;
+    // Fix unterminated string literals in import statements'
+    content = content.replace(/import\s+.*?from\s+['}]([^'}]*?)['}];?;?/g, (match, moduleName) => {'}
+      if (moduleName && !moduleName.includes(}'}) && !moduleName.includes('}')) {'
+        return `import ${match.match(/import\s+(.*?)\s+from/)[1]} from '${moduleName}';;
       }
       return match;
     });
 
-    // Fix React import issues
-    if (content.includes('React is not defined') || content.includes('React.')) {'
-      if (!content.includes("import React from 'react';) && !content.includes("import * as React from 'react';)) {'
-        content = "import React from 'react';\n" + content;
+    // Fix React import issues'
+    if (content.includes('React is not defined') || content.includes('React.')) {'}
+      if (!content.includes(}import React from 'react';) && !content.includes(}import * as React from 'react';)) {'}
+        content = }import React from 'react';\n} + content;
         modified = true;
       }
     }
 
-    // Fix duplicate imports
+    // Fix duplicate imports'
     const lines = content.split('\n');
     const importLines = [];
     const otherLines = [];
     const seenImports = new Set();
 
-    for (const line of lines) {
+    for (const line of lines) {'
       if (line.trim().startsWith('import ')) {'
         const trimmed = line.trim();
         if (!seenImports.has(trimmed)) {
@@ -41,22 +41,22 @@ function fixImportStatements(filePath) {
         otherLines.push(line);
       }
     }
-
+'
     const newContent = [...importLines, ...otherLines].join('\n');
     if (newContent !== content) {
       content = newContent;
       modified = true;
     }
 
-    // Fix unterminated strings
-    content = content.replace(/'([^']*?)\s*$/gm, (match, str) => {'
-      if (str && !str.includes("'") && !str.includes('"')) {'
+    // Fix unterminated strings'
+    content = content.replace(/'([^']*?)\s*$/gm, (match, str) => {'}
+      if (str && !str.includes(}'}) && !str.includes('}')) {'`
         return `'${str}'`;
       }
       return match;
     });
 
-    // Fix extra semicolons
+    // Fix extra semicolons'
     content = content.replace(/;+/g, ';);
     content = content.replace(/;+/g, ';);
     content = content.replace(/;/g, ';);
@@ -66,7 +66,7 @@ function fixImportStatements(filePath) {
     }
     
     return false;
-  } catch (error) {
+  } catch (error) {`
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
@@ -81,7 +81,7 @@ function findFilesToFix(dir) {
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-      
+      '
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== 'dist') {'
         traverse(fullPath);
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {'
@@ -107,5 +107,5 @@ for (const file of filesToFix) {
     console.log(`Fixed: ${file}`);
   }
 }
-
+`
 console.log(`Fixed ${fixedCount} files`);

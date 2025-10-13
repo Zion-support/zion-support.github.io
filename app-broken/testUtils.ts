@@ -28,16 +28,16 @@ export const mockFetch = (response: any) => {
   ) as jest.Mock;
 };
 
-export const createMockUser = (overrides = {}) => ({
-  id: '1',
-  name: 'Test User',
+export const createMockUser = (overrides = {}) => ({'
+  id: '1','
+  name: 'Test User','
   email: 'test@example.com',
   ...overrides,
 });
 
-export const createMockService = (overrides = {}) => ({
-  id: '1',
-  title: 'Test Service',
+export const createMockService = (overrides = {}) => ({'
+  id: '1','
+  title: 'Test Service','
   description: 'Test Description',
   price: 100,
   ...overrides,

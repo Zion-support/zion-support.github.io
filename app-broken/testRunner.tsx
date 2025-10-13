@@ -12,7 +12,7 @@ const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
 };
 
 const customRender = (
-  ui: Element,
+  ui: Element,'
   options?: Omit<RenderOptions, 'wrapper'>
 ): RenderResult => {
   return render(ui, { wrapper: AllTheProviders, ...options });
@@ -39,6 +39,6 @@ export interface TestConfig {
   parallel: boolean;
 }
 
-// Re-export everything
+// Re-export everything'
 export * from '@testing-library/react';
 export { customRender as render };
