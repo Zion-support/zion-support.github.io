@@ -1,210 +1,191 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Brain, 
   Mail, 
   Phone, 
   MapPin, 
-  ArrowRight, 
+  Globe, 
   Twitter, 
   Linkedin, 
   Github,
-  Users,
-  Award,
+  ArrowRight,
+  Shield,
   Zap,
-  Shield
+  Brain,
+  Cloud
 } from 'lucide-react';
 
-export default function Footer() {
-  const mainLinks = [
-    { name: "About", path: "/about" },
-    { name: "Services", path: "/services" },
-    { name: "AI Services", path: "/ai-services" },
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  const mainServices = [
+    { name: "AI Solutions", path: "/ai-services" },
+    { name: "IT Services", path: "/services" },
     { name: "Micro SAAS", path: "/micro-saas" },
     { name: "5G Solutions", path: "/5g-solutions" },
+    { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
-    { name: "Blog", path: "/blog" },
-    { name: "Tutorials", path: "/tutorials" },
-    { name: "Demo", path: "/demo" },
-    { name: "Consultation", path: "/consultation" },
-    { name: "Support", path: "/support" },
   ];
 
   const aiServices = [
     { name: "AI Analytics", path: "/ai-analytics" },
-<<<<<<< HEAD
-<<<<<<< HEAD
     { name: "AI Cybersecurity", path: "/ai-cybersecurity" },
     { name: "AI Content Generation", path: "/ai-content-generation" },
     { name: "AI Customer Support", path: "/ai-customer-support" },
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e258
-    { name: "AI Content Generation", path: "/ai-content-generation" },
-    { name: "AI Customer Support", path: "/ai-customer-support" },
-    { name: "AI Cybersecurity", path: "/ai-cybersecurity" },
     { name: "AI Data Analytics", path: "/ai-data-analytics" },
-    { name: "AI Document Processing", path: "/ai-document-processing" },
     { name: "AI Marketing Automation", path: "/ai-marketing-automation" },
     { name: "AI Predictive Analytics", path: "/ai-predictive-analytics" },
     { name: "AI Voice Assistant", path: "/ai-voice-assistant" },
-    { name: "AI Workflow Automation", path: "/ai-workflow-automation" },
   ];
 
   const microSaasServices = [
-    { name: "AI Video Generator", path: "/zion-ai-video-generator" },
-    { name: "AI Invoice Generator", path: "/zion-ai-invoice-generator" },
-    { name: "AI Customer Insights", path: "/zion-ai-customer-insights" },
-    { name: "AI Email Analyzer", path: "/zion-ai-email-analyzer" },
-    { name: "Smart Inventory Optimizer", path: "/zion-smart-inventory-optimizer" },
-    { name: "AI Customer Sentiment Tracker", path: "/zion-ai-customer-sentiment-tracker" },
-    { name: "Smart Expense Categorizer", path: "/zion-smart-expense-categorizer" },
-    { name: "AI Voice Assistant Pro", path: "/zion-ai-voice-assistant-pro" },
-    { name: "AI Code Reviewer", path: "/zion-ai-code-reviewer" },
-    { name: "AI Social Media Manager", path: "/zion-ai-social-media-manager" },
-  ];
-
-  const itServices = [
-<<<<<<< HEAD
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
-=======
-    { name: "AI Data Analytics", path: "/ai-data-analytics" },
-    { name: "AI Workflow Automation", path: "/ai-workflow-automation" },
-    { name: "AI Predictive Analytics", path: "/ai-predictive-analytics" },
-    { name: "AI Voice Assistant", path: "/ai-voice-assistant" },
-  ];
-
-  const itServices = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e258
-    { name: "Cloud Migration", path: "/cloud-migration" },
-    { name: "Web Development", path: "/web-development" },
-    { name: "DevOps", path: "/devops" },
-    { name: "IT Consulting", path: "/it-consulting" },
-<<<<<<< HEAD
-    { name: "Network Security", path: "/network-security" },
-    { name: "Custom Software", path: "/custom-software" },
-    { name: "System Integration", path: "/system-integration" },
-  ];
-
-  const fiveGServices = [
-    { name: "5G Network Infrastructure", path: "/5g-network-infrastructure" },
-    { name: "5G Edge Computing", path: "/5g-edge-computing" },
-    { name: "5G IoT Solutions", path: "/5g-iot-solutions" },
-    { name: "5G Smart City Solutions", path: "/5g-smart-city-solutions" },
-    { name: "5G Private Networks", path: "/5g-private-networks" },
-    { name: "5G Mobile Applications", path: "/5g-mobile-applications" },
-    { name: "5G Data Analytics", path: "/5g-data-analytics" },
-    { name: "5G Implementation", path: "/5g-implementation" },
-=======
-    { name: "System Integration", path: "/system-integration" },
-    { name: "Network Security", path: "/network-security" },
-    { name: "Custom Software", path: "/custom-software" },
-    { name: "Software Development", path: "/software-development" },
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
-  ];
-
-<<<<<<< HEAD
-  const microSaasServices = [
-    { name: "Zion Analytics Pro", path: "/zion-ai-analytics-pro" },
-    { name: "Zion AI CRM Pro", path: "/zion-ai-crm-pro" },
-    { name: "Zion AI Video Generator", path: "/zion-ai-video-generator" },
+    { name: "Zion Analytics Pro", path: "/zion-analytics-pro" },
     { name: "Zion Security Shield", path: "/zion-security-shield" },
-    { name: "Zion AI Marketing", path: "/zion-ai-marketing-automation" },
-    { name: "Zion E-commerce Suite", path: "/zion-ecommerce-suite" },
-    { name: "Zion AI Content Generator", path: "/zion-ai-content-generator" },
-    { name: "Zion AI Voice Assistant", path: "/zion-ai-voice-assistant" },
+    { name: "Zion Cloud Vault", path: "/zion-cloud-vault" },
+    { name: "Zion AI CRM Pro", path: "/zion-ai-crm-pro" },
+    { name: "Zion AI Marketing Automation Pro", path: "/zion-ai-marketing-automation-pro" },
+    { name: "Zion AI Project Manager Pro", path: "/zion-ai-project-manager-pro" },
   ];
 
-  const fiveGServices = [
-    { name: "5G Network Infrastructure", path: "/5g-network-infrastructure" },
-    { name: "5G Edge Computing", path: "/5g-edge-computing" },
-    { name: "5G IoT Solutions", path: "/5g-iot-solutions" },
-    { name: "5G Smart City", path: "/5g-smart-city-solutions" },
-    { name: "5G Private Networks", path: "/5g-private-networks" },
-    { name: "5G Mobile Apps", path: "/5g-mobile-applications" },
+  const itServices = [
+    { name: "Cloud Infrastructure", path: "/cloud-infrastructure" },
+    { name: "Cybersecurity", path: "/cybersecurity" },
+    { name: "Digital Transformation", path: "/digital-transformation" },
+    { name: "IT Consulting", path: "/it-consulting" },
+    { name: "System Integration", path: "/system-integration" },
+    { name: "Data Management", path: "/data-management" },
   ];
 
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e258
-  const stats = [
-    { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
-    { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "60+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
-    { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
+  const companyLinks = [
+    { name: "About Us", path: "/about" },
+    { name: "Our Team", path: "/team" },
+    { name: "Careers", path: "/careers" },
+    { name: "News", path: "/news" },
+    { name: "Case Studies", path: "/case-studies" },
+    { name: "Blog", path: "/blog" },
+  ];
+
+  const supportLinks = [
+    { name: "Help Center", path: "/help" },
+    { name: "Documentation", path: "/docs" },
+    { name: "API Reference", path: "/api" },
+    { name: "Status", path: "/status" },
+    { name: "Support", path: "/support" },
+    { name: "Contact", path: "/contact" },
+  ];
+
+  const legalLinks = [
+    { name: "Privacy Policy", path: "/privacy" },
+    { name: "Terms of Service", path: "/terms" },
+    { name: "Cookie Policy", path: "/cookies" },
+    { name: "GDPR", path: "/gdpr" },
+    { name: "Security", path: "/security" },
+    { name: "Compliance", path: "/compliance" },
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Stats Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-                {stat.icon}
-              </div>
-              <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
-              <div className="text-gray-300 text-sm">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
-=======
-        <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-8">
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
-          {/* Company Info */}
-          <div className="lg:col-span-1">
-=======
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e258
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
+            <div className="flex items-center mb-6">
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mr-3">
+                <Brain className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-bold text-white">Zion Tech Group</span>
+              <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Zion Tech Group
+              </span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses.
+              Leading provider of AI-powered solutions, IT services, and digital transformation 
+              for modern businesses. Transform your operations with cutting-edge technology.
             </p>
             
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
-                <Mail className="w-5 h-5 mr-3 text-cyan-400" />
-                <span>kleber@ziontechgroup.com</span>
+                <Mail className="w-4 h-4 mr-3 text-cyan-400" />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
               </div>
               <div className="flex items-center text-gray-300">
-                <Phone className="w-5 h-5 mr-3 text-cyan-400" />
-                <span>+1 (302) 464-0950</span>
+                <Phone className="w-4 h-4 mr-3 text-cyan-400" />
+                <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
+                  +1 (302) 464-0950
+                </a>
               </div>
-              <div className="flex items-start text-gray-300">
-                <MapPin className="w-5 h-5 mr-3 text-cyan-400 mt-1" />
-                <span>364 E Main St STE 1008<br />Middletown, DE 19709</span>
+              <div className="flex items-center text-gray-300">
+                <MapPin className="w-4 h-4 mr-3 text-cyan-400" />
+                <span>364 E Main St STE 1008, Middletown, DE 19709</span>
               </div>
             </div>
+
+            {/* Social Links */}
+            <div className="flex space-x-4 mt-6">
+              <a 
+                href="https://twitter.com/ziontechgroup" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-slate-700 rounded-lg flex items-center justify-center hover:bg-cyan-600 transition-colors"
+                aria-label="Follow us on Twitter"
+              >
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://linkedin.com/company/ziontechgroup" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-slate-700 rounded-lg flex items-center justify-center hover:bg-cyan-600 transition-colors"
+                aria-label="Connect with us on LinkedIn"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://github.com/ziontechgroup" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-slate-700 rounded-lg flex items-center justify-center hover:bg-cyan-600 transition-colors"
+                aria-label="View our GitHub"
+              >
+                <Github className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Main Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-white">Services</h3>
+            <ul className="space-y-3">
+              {mainServices.map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    to={service.path}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center group"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">AI Services</h3>
-            <ul className="space-y-2">
-              {aiServices.slice(0, 6).map((service) => (
-                <li key={service.name}>
-                  <Link
+            <h3 className="text-lg font-semibold mb-4 text-white flex items-center">
+              <Brain className="w-5 h-5 mr-2 text-cyan-400" />
+              AI Solutions
+            </h3>
+            <ul className="space-y-3">
+              {aiServices.slice(0, 6).map((service, index) => (
+                <li key={index}>
+                  <Link 
                     to={service.path}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center text-sm"
+                    className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2" />
                     {service.name}
                   </Link>
                 </li>
@@ -214,88 +195,17 @@ export default function Footer() {
 
           {/* Micro SAAS */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Micro SAAS</h3>
-            <ul className="space-y-2">
-              {microSaasServices.slice(0, 6).map((service) => (
-                <li key={service.name}>
-                  <Link
+            <h3 className="text-lg font-semibold mb-4 text-white flex items-center">
+              <Zap className="w-5 h-5 mr-2 text-purple-400" />
+              Micro SAAS
+            </h3>
+            <ul className="space-y-3">
+              {microSaasServices.slice(0, 6).map((service, index) => (
+                <li key={index}>
+                  <Link 
                     to={service.path}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center text-sm"
+                    className="text-gray-300 hover:text-purple-400 transition-colors text-sm"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2" />
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-<<<<<<< HEAD
-          {/* IT Services */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4">IT Services</h3>
-            <ul className="space-y-2">
-              {itServices.map((service) => (
-                <li key={service.name}>
-                  <Link
-                    to={service.path}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center text-sm"
-                  >
-                    <ArrowRight className="w-3 h-3 mr-2" />
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          {/* IT Services */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4">IT Services</h3>
-            <ul className="space-y-2">
-              {itServices.map((service) => (
-                <li key={service.name}>
-                  <Link
-                    to={service.path}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"
-                  >
-                    <ArrowRight className="w-4 h-4 mr-2" />
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
-          {/* Micro SAAS */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Micro SAAS</h3>
-            <ul className="space-y-2">
-              {microSaasServices.map((service) => (
-                <li key={service.name}>
-                  <Link
-                    to={service.path}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"
-                  >
-                    <ArrowRight className="w-4 h-4 mr-2" />
-=======
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e258
-          {/* 5G Solutions */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4">5G Solutions</h3>
-            <ul className="space-y-2">
-              {fiveGServices.slice(0, 6).map((service) => (
-                <li key={service.name}>
-                  <Link
-                    to={service.path}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center text-sm"
-                  >
-                    <ArrowRight className="w-3 h-3 mr-2" />
                     {service.name}
                   </Link>
                 </li>
@@ -305,15 +215,17 @@ export default function Footer() {
 
           {/* IT Services */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">IT Services</h3>
-            <ul className="space-y-2">
-              {itServices.slice(0, 6).map((service) => (
-                <li key={service.name}>
-                  <Link
+            <h3 className="text-lg font-semibold mb-4 text-white flex items-center">
+              <Shield className="w-5 h-5 mr-2 text-green-400" />
+              IT Services
+            </h3>
+            <ul className="space-y-3">
+              {itServices.map((service, index) => (
+                <li key={index}>
+                  <Link 
                     to={service.path}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center text-sm"
+                    className="text-gray-300 hover:text-green-400 transition-colors text-sm"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2" />
                     {service.name}
                   </Link>
                 </li>
@@ -322,46 +234,82 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="border-t border-gray-700 mt-12 pt-8">
+        {/* Additional Links */}
+        <div className="border-t border-slate-700 mt-12 pt-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Company */}
+            <div>
+              <h4 className="text-sm font-semibold mb-4 text-gray-300 uppercase tracking-wider">Company</h4>
+              <ul className="space-y-2">
+                {companyLinks.map((link, index) => (
+                  <li key={index}>
+                    <Link 
+                      to={link.path}
+                      className="text-gray-400 hover:text-white transition-colors text-sm"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Support */}
+            <div>
+              <h4 className="text-sm font-semibold mb-4 text-gray-300 uppercase tracking-wider">Support</h4>
+              <ul className="space-y-2">
+                {supportLinks.map((link, index) => (
+                  <li key={index}>
+                    <Link 
+                      to={link.path}
+                      className="text-gray-400 hover:text-white transition-colors text-sm"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Legal */}
+            <div>
+              <h4 className="text-sm font-semibold mb-4 text-gray-300 uppercase tracking-wider">Legal</h4>
+              <ul className="space-y-2">
+                {legalLinks.map((link, index) => (
+                  <li key={index}>
+                    <Link 
+                      to={link.path}
+                      className="text-gray-400 hover:text-white transition-colors text-sm"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-slate-700 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2024 Zion Tech Group. All rights reserved.
+              © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-            
-            {/* Social Links */}
-            <div className="flex space-x-4">
-              <a
-                href="https://twitter.com/ziontechgroup"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-cyan-400 transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a
-                href="https://linkedin.com/company/ziontechgroup"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-cyan-400 transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a
-                href="https://github.com/ziontechgroup"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-cyan-400 transition-colors"
-                aria-label="GitHub"
-              >
-                <Github className="w-5 h-5" />
-              </a>
+            <div className="flex items-center space-x-6 text-sm text-gray-400">
+              <span>Made with ❤️ for innovation</span>
+              <div className="flex items-center">
+                <Cloud className="w-4 h-4 mr-1" />
+                <span>Powered by AI</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;
