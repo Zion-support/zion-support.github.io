@@ -70,7 +70,8 @@ export default function Services() {
       price: "Starting at $249/month",
       originalPrice: "$499/month",
       features: ["Auto-scaling", "Disaster Recovery", "Cost Optimization", "Security Hardening", "Multi-cloud", "DevOps Integration"],
-      category: "Cloud Services"
+      category: "Cloud Services",
+      popular: true
     },
     {
       title: "AI-Powered Data Analytics Platform",
@@ -313,7 +314,8 @@ export default function Services() {
       price: "Starting at $349/month",
       originalPrice: "$699/month",
       features: ["Security Audits", "Compliance Assessment", "Vulnerability Testing", "Penetration Testing", "Risk Assessment", "Remediation Planning"],
-      category: "Cybersecurity"
+      category: "Cybersecurity",
+      popular: true
     },
     {
       title: "Data Center Services & Colocation",

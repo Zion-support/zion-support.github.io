@@ -2,12 +2,12 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Cloud, 
+  Shield, 
   ArrowRight, 
   CheckCircle, 
   Star, 
-  Server, 
-  Shield, 
+  Lock, 
+  AlertTriangle, 
   Zap, 
   Sparkles,
   BarChart3,
@@ -19,7 +19,6 @@ import {
   MapPin,
   Database,
   Settings,
-  Lock,
   Cpu,
   Network,
   HardDrive,
@@ -27,99 +26,103 @@ import {
   Activity,
   TrendingUp,
   Clock,
-  DollarSign
+  DollarSign,
+  Eye,
+  Search,
+  FileText
 } from 'lucide-react';
 
-const CloudInfrastructurePage = () => {
+const CybersecurityAuditPage = () => {
   const features = [
     {
-      title: 'Auto-scaling',
-      description: 'Automatically scale resources based on demand to optimize costs and performance',
-      icon: <Activity className="w-6 h-6" />,
-      details: ['Horizontal scaling', 'Vertical scaling', 'Load balancing', 'Resource optimization']
+      title: 'Security Audits',
+      description: 'Comprehensive security assessments to identify vulnerabilities and risks',
+      icon: <Search className="w-6 h-6" />,
+      details: ['Vulnerability scanning', 'Penetration testing', 'Risk assessment', 'Security gap analysis']
     },
     {
-      title: 'Disaster Recovery',
-      description: 'Comprehensive backup and recovery solutions to ensure business continuity',
+      title: 'Compliance Assessment',
+      description: 'Ensure your organization meets industry standards and regulatory requirements',
+      icon: <FileText className="w-6 h-6" />,
+      details: ['GDPR compliance', 'HIPAA compliance', 'SOX compliance', 'PCI DSS compliance']
+    },
+    {
+      title: 'Vulnerability Testing',
+      description: 'Identify and assess security weaknesses in your systems and applications',
+      icon: <AlertTriangle className="w-6 h-6" />,
+      details: ['Automated scanning', 'Manual testing', 'Code review', 'Configuration analysis']
+    },
+    {
+      title: 'Penetration Testing',
+      description: 'Simulate real-world attacks to test your security defenses',
       icon: <Shield className="w-6 h-6" />,
-      details: ['Automated backups', 'Point-in-time recovery', 'Cross-region replication', 'RTO/RPO optimization']
+      details: ['Network penetration', 'Web application testing', 'Social engineering', 'Physical security']
     },
     {
-      title: 'Cost Optimization',
-      description: 'Intelligent cost management and resource optimization to reduce cloud spending',
-      icon: <DollarSign className="w-6 h-6" />,
-      details: ['Right-sizing recommendations', 'Reserved instances', 'Spot instances', 'Cost monitoring']
+      title: 'Risk Assessment',
+      description: 'Evaluate potential security risks and their impact on your business',
+      icon: <BarChart3 className="w-6 h-6" />,
+      details: ['Risk identification', 'Impact analysis', 'Likelihood assessment', 'Risk mitigation']
     },
     {
-      title: 'Security Hardening',
-      description: 'Enterprise-grade security measures to protect your cloud infrastructure',
-      icon: <Lock className="w-6 h-6" />,
-      details: ['Network segmentation', 'Identity management', 'Encryption at rest', 'Compliance frameworks']
-    },
-    {
-      title: 'Multi-cloud Support',
-      description: 'Seamless integration across AWS, Azure, Google Cloud, and private clouds',
-      icon: <Globe className="w-6 h-6" />,
-      details: ['Cloud migration', 'Hybrid cloud', 'Multi-cloud management', 'Vendor lock-in prevention']
-    },
-    {
-      title: 'DevOps Integration',
-      description: 'Complete CI/CD pipeline integration with infrastructure as code',
+      title: 'Remediation Planning',
+      description: 'Develop actionable plans to address identified security issues',
       icon: <Settings className="w-6 h-6" />,
-      details: ['Infrastructure as Code', 'CI/CD pipelines', 'Container orchestration', 'Monitoring & logging']
+      details: ['Priority ranking', 'Implementation timeline', 'Resource allocation', 'Progress tracking']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$249',
+      name: 'Basic Audit',
+      price: '$349',
       period: '/month',
-      description: 'Perfect for small businesses starting their cloud journey',
+      description: 'Essential security assessment for small businesses',
       features: [
-        'Up to 5 servers',
-        'Basic monitoring',
+        'Vulnerability scan',
+        'Basic compliance check',
+        'Security report',
         'Email support',
-        'Standard backup',
-        'Basic security',
-        'Monthly reports'
+        '30-day follow-up',
+        'Basic recommendations'
       ],
       popular: false,
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      name: 'Professional',
-      price: '$499',
+      name: 'Professional Audit',
+      price: '$699',
       period: '/month',
-      description: 'Ideal for growing businesses with advanced cloud needs',
+      description: 'Comprehensive security assessment for growing businesses',
       features: [
-        'Up to 20 servers',
-        'Advanced monitoring',
+        'Full vulnerability assessment',
+        'Penetration testing',
+        'Compliance audit',
         'Priority support',
-        'Automated backups',
-        'Enhanced security',
-        'Real-time alerts',
-        'Cost optimization',
+        'Detailed remediation plan',
+        'Quarterly follow-up',
+        'Security training',
         'API access'
       ],
       popular: true,
       color: 'from-purple-500 to-pink-500'
     },
     {
-      name: 'Enterprise',
-      price: '$999',
+      name: 'Enterprise Audit',
+      price: '$1,299',
       period: '/month',
-      description: 'For large organizations with complex infrastructure requirements',
+      description: 'Complete security program for large organizations',
       features: [
-        'Unlimited servers',
-        'Enterprise monitoring',
+        'Comprehensive security audit',
+        'Advanced penetration testing',
+        'Full compliance assessment',
         '24/7 phone support',
-        'Disaster recovery',
-        'Advanced security',
-        'Custom integrations',
-        'Dedicated account manager',
-        'On-premise deployment',
-        'Compliance support'
+        'Custom remediation plan',
+        'Monthly follow-up',
+        'Security training program',
+        'Dedicated security consultant',
+        'On-site assessment',
+        'Executive reporting'
       ],
       popular: false,
       color: 'from-orange-500 to-red-500'
@@ -127,50 +130,50 @@ const CloudInfrastructurePage = () => {
   ];
 
   const stats = [
-    { number: '99.9%', label: 'Uptime SLA', icon: <Shield className="w-6 h-6" /> },
-    { number: '40%', label: 'Cost Reduction', icon: <DollarSign className="w-6 h-6" /> },
-    { number: '50+', label: 'Cloud Providers', icon: <Globe className="w-6 h-6" /> },
-    { number: '24/7', label: 'Support Available', icon: <Clock className="w-6 h-6" /> }
+    { number: '99.9%', label: 'Vulnerability Detection', icon: <Eye className="w-6 h-6" /> },
+    { number: '50+', label: 'Compliance Standards', icon: <Shield className="w-6 h-6" /> },
+    { number: '24/7', label: 'Security Monitoring', icon: <Clock className="w-6 h-6" /> },
+    { number: '100%', label: 'Client Satisfaction', icon: <Star className="w-6 h-6" /> }
   ];
 
   const testimonials = [
     {
-      name: 'Robert Johnson',
-      company: 'TechStart Inc.',
-      role: 'CTO',
-      content: 'Zion Tech Group transformed our cloud infrastructure. We reduced costs by 45% while improving performance and reliability.',
+      name: 'Sarah Williams',
+      company: 'Healthcare Solutions',
+      role: 'CISO',
+      content: 'Zion Tech Group\'s cybersecurity audit helped us achieve HIPAA compliance and significantly improved our security posture.',
       rating: 5,
-      avatar: 'RJ'
+      avatar: 'SW'
     },
     {
-      name: 'Maria Garcia',
-      company: 'E-commerce Solutions',
-      role: 'IT Director',
-      content: 'The auto-scaling feature is incredible. Our application handles traffic spikes seamlessly without manual intervention.',
-      rating: 5,
-      avatar: 'MG'
-    },
-    {
-      name: 'David Chen',
+      name: 'Michael Rodriguez',
       company: 'Financial Services',
-      role: 'VP of Technology',
-      content: 'Their disaster recovery solution saved us during a major outage. We were back online in minutes, not hours.',
+      role: 'IT Director',
+      content: 'Their penetration testing revealed critical vulnerabilities we never knew existed. The remediation plan was comprehensive and actionable.',
       rating: 5,
-      avatar: 'DC'
+      avatar: 'MR'
+    },
+    {
+      name: 'Jennifer Lee',
+      company: 'E-commerce Platform',
+      role: 'Security Manager',
+      content: 'The compliance assessment was thorough and helped us prepare for our PCI DSS audit. We passed with flying colors.',
+      rating: 5,
+      avatar: 'JL'
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Cloud Infrastructure Management Pro - Zion Tech Group | Enterprise Cloud Solutions</title>
+        <title>Cybersecurity Audit & Compliance - Zion Tech Group | Security Assessment Services</title>
         <meta
           name="description"
-          content="Comprehensive cloud solutions with automated scaling, backup, and disaster recovery. Multi-cloud and hybrid cloud support with cost optimization. Starting at $249/month."
+          content="Comprehensive cybersecurity audits with compliance assessment, vulnerability testing, and security recommendations. Protect your business with expert security services. Starting at $349/month."
         />
         <meta
           name="keywords"
-          content="cloud infrastructure, cloud management, AWS, Azure, Google Cloud, disaster recovery, auto-scaling, cost optimization, cloud migration, hybrid cloud"
+          content="cybersecurity audit, security assessment, penetration testing, vulnerability testing, compliance audit, HIPAA, GDPR, PCI DSS, security consulting, risk assessment"
         />
       </Helmet>
 
@@ -186,18 +189,18 @@ const CloudInfrastructurePage = () => {
               <div>
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
                   <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-                  <span className="text-cyan-400 text-sm font-medium">Enterprise Cloud Solutions</span>
+                  <span className="text-cyan-400 text-sm font-medium">Security Assessment Services</span>
                 </div>
                 
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                    Cloud Infrastructure Pro
+                    Cybersecurity Audit
                   </span>
                 </h1>
                 
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Comprehensive cloud solutions with automated scaling, backup, and disaster recovery. 
-                  Multi-cloud and hybrid cloud support with cost optimization for enterprise environments.
+                  Comprehensive cybersecurity audits with compliance assessment, vulnerability testing, and security recommendations. 
+                  Protect your business with expert security services and ensure regulatory compliance.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -205,15 +208,15 @@ const CloudInfrastructurePage = () => {
                     to="/contact"
                     className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
                   >
-                    Get Started
+                    Get Security Assessment
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <Link
                     to="/demo"
                     className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
                   >
-                    View Demo
-                    <Server className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                    View Sample Report
+                    <FileText className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
                   </Link>
                 </div>
                 
@@ -233,11 +236,11 @@ const CloudInfrastructurePage = () => {
               
               <div className="relative">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                  <div className="aspect-video bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
-                    <Cloud className="w-16 h-16 text-cyan-400" />
+                  <div className="aspect-video bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-lg flex items-center justify-center mb-4">
+                    <Shield className="w-16 h-16 text-cyan-400" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Cloud Management Dashboard</h3>
-                  <p className="text-gray-300 text-sm">Real-time monitoring and management of your cloud infrastructure</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">Security Assessment Dashboard</h3>
+                  <p className="text-gray-300 text-sm">Comprehensive security monitoring and compliance tracking</p>
                 </div>
               </div>
             </div>
@@ -250,11 +253,11 @@ const CloudInfrastructurePage = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Enterprise Cloud Features
+                  Comprehensive Security Services
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to manage and optimize your cloud infrastructure at scale.
+                Everything you need to assess, protect, and secure your digital infrastructure.
               </p>
             </div>
             
@@ -264,7 +267,7 @@ const CloudInfrastructurePage = () => {
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
@@ -293,11 +296,11 @@ const CloudInfrastructurePage = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Flexible Pricing Plans
+                  Security Audit Packages
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your cloud infrastructure needs. All plans include our core features.
+                Choose the security assessment package that best fits your organization's needs.
               </p>
             </div>
             
@@ -357,11 +360,11 @@ const CloudInfrastructurePage = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Client Success Stories
+                  Client Security Success
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how businesses are using our cloud infrastructure solutions to drive growth and efficiency.
+                See how organizations are using our security services to protect their digital assets.
               </p>
             </div>
             
@@ -397,10 +400,10 @@ const CloudInfrastructurePage = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Optimize Your Cloud Infrastructure?
+                Ready to Secure Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Start your cloud transformation journey today. Our experts will help you design and implement the perfect cloud solution.
+                Start your security assessment today. Our experts will help you identify and address security vulnerabilities.
               </p>
               
               {/* Contact Details */}
@@ -433,14 +436,14 @@ const CloudInfrastructurePage = () => {
                   to="/contact"
                   className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
                 >
-                  Start Your Cloud Journey
+                  Start Security Assessment
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   to="/demo"
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
                 >
-                  Schedule Demo
+                  Schedule Consultation
                 </Link>
               </div>
             </div>
@@ -451,4 +454,4 @@ const CloudInfrastructurePage = () => {
   );
 };
 
-export default CloudInfrastructurePage;
+export default CybersecurityAuditPage;
