@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { 
-  Users, 
+  GraduationCap, 
   Brain, 
-  Target, 
+  BookOpen, 
   CheckCircle, 
   ArrowRight, 
   Star, 
@@ -15,7 +15,6 @@ import {
   Phone,
   Globe,
   Sparkles,
-  TrendingUp,
   Zap,
   FileText,
   Calendar,
@@ -30,60 +29,67 @@ import {
   MessageSquare,
   Video,
   Headphones,
-  Settings
+  Settings,
+  Users,
+  Target,
+  TrendingUp,
+  Play,
+  Mic,
+  Camera,
+  Monitor
 } from "lucide-react";
 
-export default function ZionAIRecruitmentPro() {
+export default function ZionAIEducationPro() {
   const features = [
     {
-      title: "AI-Powered Candidate Screening",
-      description: "Advanced machine learning algorithms analyze resumes, cover letters, and applications to identify the best candidates automatically.",
+      title: "AI-Powered Personalized Learning",
+      description: "Advanced AI creates personalized learning paths for each student based on their learning style, pace, and performance.",
       icon: <Brain className="w-8 h-8" />,
-      benefits: ["95% accuracy in candidate matching", "80% reduction in screening time", "Bias-free evaluation process"]
+      benefits: ["95% learning effectiveness", "Personalized curriculum", "Adaptive learning paths"]
     },
     {
-      title: "Intelligent Job Matching",
-      description: "AI analyzes job requirements and candidate profiles to create perfect matches with predictive success scoring.",
-      icon: <Target className="w-8 h-8" />,
-      benefits: ["90% improvement in job-candidate fit", "Predictive success scoring", "Automated shortlisting"]
+      title: "Intelligent Assessment & Grading",
+      description: "AI-powered assessment tools with automated grading, feedback generation, and performance analytics.",
+      icon: <BookOpen className="w-8 h-8" />,
+      benefits: ["90% faster grading", "Automated feedback", "Performance insights"]
     },
     {
-      title: "Video Interview Analysis",
-      description: "AI-powered video interview analysis with sentiment detection, communication skills assessment, and cultural fit evaluation.",
+      title: "Virtual Classroom & Tutoring",
+      description: "AI-powered virtual classrooms with interactive features, real-time collaboration, and intelligent tutoring systems.",
       icon: <Video className="w-8 h-8" />,
-      benefits: ["Real-time interview insights", "Communication skills scoring", "Cultural fit assessment"]
+      benefits: ["Immersive learning experience", "Real-time collaboration", "24/7 AI tutoring"]
     },
     {
-      title: "Automated Reference Checking",
-      description: "AI automatically contacts references, analyzes responses, and provides comprehensive candidate background reports.",
-      icon: <UserCheck className="w-8 h-8" />,
-      benefits: ["100% automated reference checks", "Comprehensive background reports", "Instant verification"]
+      title: "Learning Analytics & Insights",
+      description: "Comprehensive learning analytics with student progress tracking, engagement metrics, and predictive insights.",
+      icon: <BarChart3 className="w-8 h-8" />,
+      benefits: ["Real-time progress tracking", "Engagement analytics", "Predictive insights"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$199/month",
-      description: "Perfect for small businesses",
+      name: "Individual Teacher",
+      price: "$99/month",
+      description: "Perfect for individual educators",
       features: [
-        "Up to 50 job postings/month",
-        "AI candidate screening",
-        "Basic video interview analysis",
+        "Up to 50 students",
+        "Basic AI learning paths",
+        "Assessment tools",
         "Email support",
         "Standard integrations"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$399/month",
-      description: "Ideal for growing companies",
+      name: "School District",
+      price: "$299/month",
+      description: "Ideal for schools and districts",
       features: [
-        "Up to 200 job postings/month",
-        "Advanced AI screening",
-        "Full video interview analysis",
-        "Automated reference checking",
+        "Up to 1,000 students",
+        "Advanced AI learning",
+        "Full assessment suite",
+        "Virtual classrooms",
         "Priority support",
         "Advanced analytics",
         "Custom workflows"
@@ -92,11 +98,11 @@ export default function ZionAIRecruitmentPro() {
     },
     {
       name: "Enterprise",
-      price: "$799/month",
-      description: "For large organizations",
+      price: "$599/month",
+      description: "For large educational institutions",
       features: [
-        "Unlimited job postings",
-        "AI-powered recruitment suite",
+        "Unlimited students",
+        "AI-powered education suite",
         "Custom AI model training",
         "White-label solutions",
         "Dedicated account manager",
@@ -109,25 +115,25 @@ export default function ZionAIRecruitmentPro() {
   ];
 
   const stats = [
-    { number: "85%", label: "Faster Hiring Process", icon: <Clock className="w-6 h-6" /> },
-    { number: "95%", label: "Candidate Match Accuracy", icon: <Target className="w-6 h-6" /> },
-    { number: "60%", label: "Cost Reduction", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "10,000+", label: "Successful Placements", icon: <Users className="w-6 h-6" /> }
+    { number: "95%", label: "Learning Effectiveness", icon: <GraduationCap className="w-6 h-6" /> },
+    { number: "90%", label: "Faster Grading", icon: <Clock className="w-6 h-6" /> },
+    { number: "85%", label: "Student Engagement", icon: <Users className="w-6 h-6" /> },
+    { number: "50,000+", label: "Students Served", icon: <BookOpen className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Recruitment Pro - AI-Powered Talent Acquisition | Zion Tech Group</title>
+        <title>Zion AI Education Pro - AI-Powered Educational Solutions | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform your recruitment process with Zion AI Recruitment Pro. AI-powered candidate screening, video interview analysis, automated reference checking, and intelligent job matching."
+          content="Transform education with Zion AI Education Pro. AI-powered personalized learning, intelligent assessment, virtual classrooms, and learning analytics."
         />
         <meta
           name="keywords"
-          content="AI recruitment, talent acquisition, candidate screening, video interview analysis, automated hiring, recruitment automation, HR technology, AI-powered recruitment"
+          content="AI education, personalized learning, intelligent assessment, virtual classrooms, learning analytics, educational technology, e-learning"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-recruitment-pro" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-education-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -141,18 +147,18 @@ export default function ZionAIRecruitmentPro() {
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
                 <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">#1 AI Recruitment Platform 2024</span>
+                <span className="text-cyan-400 text-sm font-medium">#1 AI Education Platform 2024</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  Zion AI Recruitment Pro
+                  Zion AI Education Pro
                 </span>
               </h1>
               
               <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Revolutionize your talent acquisition with AI-powered recruitment automation. 
-                Screen candidates, analyze interviews, and find the perfect match with 95% accuracy.
+                Revolutionize education with AI-powered solutions. 
+                Achieve 95% learning effectiveness, reduce grading time by 90%, and enhance student engagement.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -194,11 +200,11 @@ export default function ZionAIRecruitmentPro() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  AI-Powered Recruitment Features
+                  AI-Powered Education Features
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leverage cutting-edge AI technology to transform your recruitment process and find the best talent faster.
+                Leverage cutting-edge AI technology to enhance learning outcomes and transform educational experiences.
               </p>
             </div>
             
@@ -243,7 +249,7 @@ export default function ZionAIRecruitmentPro() {
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing plans designed to scale with your recruitment needs.
+                Flexible pricing plans designed to scale with your educational needs.
               </p>
             </div>
             
@@ -302,10 +308,10 @@ export default function ZionAIRecruitmentPro() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Recruitment?
+                Ready to Transform Education?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of companies using AI to find the best talent faster and more efficiently.
+                Join leading educational institutions using AI to enhance learning outcomes and student success.
               </p>
               
               {/* Contact Details */}

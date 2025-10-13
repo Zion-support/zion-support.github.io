@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { 
-  Users, 
+  DollarSign, 
   Brain, 
-  Target, 
+  TrendingUp, 
   CheckCircle, 
   ArrowRight, 
   Star, 
@@ -15,7 +15,6 @@ import {
   Phone,
   Globe,
   Sparkles,
-  TrendingUp,
   Zap,
   FileText,
   Calendar,
@@ -30,60 +29,66 @@ import {
   MessageSquare,
   Video,
   Headphones,
-  Settings
+  Settings,
+  CreditCard,
+  PieChart,
+  Calculator,
+  Target,
+  AlertTriangle,
+  TrendingDown
 } from "lucide-react";
 
-export default function ZionAIRecruitmentPro() {
+export default function ZionAIFinancePro() {
   const features = [
     {
-      title: "AI-Powered Candidate Screening",
-      description: "Advanced machine learning algorithms analyze resumes, cover letters, and applications to identify the best candidates automatically.",
-      icon: <Brain className="w-8 h-8" />,
-      benefits: ["95% accuracy in candidate matching", "80% reduction in screening time", "Bias-free evaluation process"]
+      title: "AI Financial Forecasting",
+      description: "Advanced AI algorithms analyze financial data to provide accurate forecasts, budget planning, and investment recommendations.",
+      icon: <TrendingUp className="w-8 h-8" />,
+      benefits: ["95% forecast accuracy", "Automated budget planning", "Investment optimization"]
     },
     {
-      title: "Intelligent Job Matching",
-      description: "AI analyzes job requirements and candidate profiles to create perfect matches with predictive success scoring.",
-      icon: <Target className="w-8 h-8" />,
-      benefits: ["90% improvement in job-candidate fit", "Predictive success scoring", "Automated shortlisting"]
+      title: "Intelligent Risk Assessment",
+      description: "AI-powered risk analysis with real-time monitoring, fraud detection, and compliance checking for financial security.",
+      icon: <Shield className="w-8 h-8" />,
+      benefits: ["99.9% fraud detection", "Real-time risk monitoring", "Compliance automation"]
     },
     {
-      title: "Video Interview Analysis",
-      description: "AI-powered video interview analysis with sentiment detection, communication skills assessment, and cultural fit evaluation.",
-      icon: <Video className="w-8 h-8" />,
-      benefits: ["Real-time interview insights", "Communication skills scoring", "Cultural fit assessment"]
+      title: "Automated Financial Reporting",
+      description: "AI-generated financial reports with automated data collection, analysis, and presentation for stakeholders.",
+      icon: <FileText className="w-8 h-8" />,
+      benefits: ["90% faster reporting", "Automated data collection", "Real-time insights"]
     },
     {
-      title: "Automated Reference Checking",
-      description: "AI automatically contacts references, analyzes responses, and provides comprehensive candidate background reports.",
-      icon: <UserCheck className="w-8 h-8" />,
-      benefits: ["100% automated reference checks", "Comprehensive background reports", "Instant verification"]
+      title: "Smart Investment Management",
+      description: "AI-powered portfolio management with automated rebalancing, performance tracking, and investment recommendations.",
+      icon: <PieChart className="w-8 h-8" />,
+      benefits: ["Automated portfolio management", "Performance optimization", "Risk-adjusted returns"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$199/month",
-      description: "Perfect for small businesses",
+      name: "Personal Finance",
+      price: "$49/month",
+      description: "Perfect for individuals",
       features: [
-        "Up to 50 job postings/month",
-        "AI candidate screening",
-        "Basic video interview analysis",
+        "Up to 5 accounts",
+        "Basic AI forecasting",
+        "Budget planning",
         "Email support",
         "Standard integrations"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$399/month",
-      description: "Ideal for growing companies",
+      name: "Small Business",
+      price: "$199/month",
+      description: "Ideal for small businesses",
       features: [
-        "Up to 200 job postings/month",
-        "Advanced AI screening",
-        "Full video interview analysis",
-        "Automated reference checking",
+        "Up to 25 accounts",
+        "Advanced AI forecasting",
+        "Full risk assessment",
+        "Automated reporting",
         "Priority support",
         "Advanced analytics",
         "Custom workflows"
@@ -92,11 +97,11 @@ export default function ZionAIRecruitmentPro() {
     },
     {
       name: "Enterprise",
-      price: "$799/month",
+      price: "$499/month",
       description: "For large organizations",
       features: [
-        "Unlimited job postings",
-        "AI-powered recruitment suite",
+        "Unlimited accounts",
+        "AI-powered finance suite",
         "Custom AI model training",
         "White-label solutions",
         "Dedicated account manager",
@@ -109,25 +114,25 @@ export default function ZionAIRecruitmentPro() {
   ];
 
   const stats = [
-    { number: "85%", label: "Faster Hiring Process", icon: <Clock className="w-6 h-6" /> },
-    { number: "95%", label: "Candidate Match Accuracy", icon: <Target className="w-6 h-6" /> },
-    { number: "60%", label: "Cost Reduction", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "10,000+", label: "Successful Placements", icon: <Users className="w-6 h-6" /> }
+    { number: "95%", label: "Forecast Accuracy", icon: <TrendingUp className="w-6 h-6" /> },
+    { number: "99.9%", label: "Fraud Detection", icon: <Shield className="w-6 h-6" /> },
+    { number: "90%", label: "Faster Reporting", icon: <Clock className="w-6 h-6" /> },
+    { number: "$1M+", label: "Assets Managed", icon: <DollarSign className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Recruitment Pro - AI-Powered Talent Acquisition | Zion Tech Group</title>
+        <title>Zion AI Finance Pro - AI-Powered Financial Solutions | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform your recruitment process with Zion AI Recruitment Pro. AI-powered candidate screening, video interview analysis, automated reference checking, and intelligent job matching."
+          content="Transform finance with Zion AI Finance Pro. AI-powered forecasting, risk assessment, automated reporting, and smart investment management."
         />
         <meta
           name="keywords"
-          content="AI recruitment, talent acquisition, candidate screening, video interview analysis, automated hiring, recruitment automation, HR technology, AI-powered recruitment"
+          content="AI finance, financial forecasting, risk assessment, automated reporting, investment management, financial technology, fintech"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-recruitment-pro" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-finance-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -141,18 +146,18 @@ export default function ZionAIRecruitmentPro() {
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
                 <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">#1 AI Recruitment Platform 2024</span>
+                <span className="text-cyan-400 text-sm font-medium">#1 AI Finance Platform 2024</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  Zion AI Recruitment Pro
+                  Zion AI Finance Pro
                 </span>
               </h1>
               
               <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Revolutionize your talent acquisition with AI-powered recruitment automation. 
-                Screen candidates, analyze interviews, and find the perfect match with 95% accuracy.
+                Revolutionize finance with AI-powered solutions. 
+                Achieve 95% forecast accuracy, detect fraud with 99.9% precision, and optimize financial performance.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -194,11 +199,11 @@ export default function ZionAIRecruitmentPro() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  AI-Powered Recruitment Features
+                  AI-Powered Finance Features
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leverage cutting-edge AI technology to transform your recruitment process and find the best talent faster.
+                Leverage cutting-edge AI technology to optimize financial operations and maximize returns.
               </p>
             </div>
             
@@ -243,7 +248,7 @@ export default function ZionAIRecruitmentPro() {
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing plans designed to scale with your recruitment needs.
+                Flexible pricing plans designed to scale with your financial needs.
               </p>
             </div>
             
@@ -302,10 +307,10 @@ export default function ZionAIRecruitmentPro() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Recruitment?
+                Ready to Transform Your Finance?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of companies using AI to find the best talent faster and more efficiently.
+                Join leading financial institutions using AI to optimize operations and maximize returns.
               </p>
               
               {/* Contact Details */}

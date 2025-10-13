@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { 
-  Users, 
+  Scale, 
   Brain, 
-  Target, 
+  FileText, 
   CheckCircle, 
   ArrowRight, 
   Star, 
@@ -15,9 +15,7 @@ import {
   Phone,
   Globe,
   Sparkles,
-  TrendingUp,
   Zap,
-  FileText,
   Calendar,
   UserCheck,
   Search,
@@ -30,60 +28,66 @@ import {
   MessageSquare,
   Video,
   Headphones,
-  Settings
+  Settings,
+  Gavel,
+  BookOpen,
+  AlertTriangle,
+  TrendingUp,
+  Users,
+  Target
 } from "lucide-react";
 
-export default function ZionAIRecruitmentPro() {
+export default function ZionAILegalAssistantPro() {
   const features = [
     {
-      title: "AI-Powered Candidate Screening",
-      description: "Advanced machine learning algorithms analyze resumes, cover letters, and applications to identify the best candidates automatically.",
-      icon: <Brain className="w-8 h-8" />,
-      benefits: ["95% accuracy in candidate matching", "80% reduction in screening time", "Bias-free evaluation process"]
+      title: "AI Contract Analysis",
+      description: "Advanced AI analyzes contracts, identifies risks, and suggests improvements with 99% accuracy and legal compliance.",
+      icon: <FileText className="w-8 h-8" />,
+      benefits: ["99% contract analysis accuracy", "80% faster contract review", "Risk identification automation"]
     },
     {
-      title: "Intelligent Job Matching",
-      description: "AI analyzes job requirements and candidate profiles to create perfect matches with predictive success scoring.",
-      icon: <Target className="w-8 h-8" />,
-      benefits: ["90% improvement in job-candidate fit", "Predictive success scoring", "Automated shortlisting"]
+      title: "Legal Document Generation",
+      description: "AI-powered document generation for contracts, agreements, and legal briefs with customizable templates.",
+      icon: <BookOpen className="w-8 h-8" />,
+      benefits: ["Automated document creation", "Legal compliance checking", "Template customization"]
     },
     {
-      title: "Video Interview Analysis",
-      description: "AI-powered video interview analysis with sentiment detection, communication skills assessment, and cultural fit evaluation.",
-      icon: <Video className="w-8 h-8" />,
-      benefits: ["Real-time interview insights", "Communication skills scoring", "Cultural fit assessment"]
+      title: "Case Law Research",
+      description: "AI-powered legal research with intelligent case law analysis, precedent identification, and citation management.",
+      icon: <Search className="w-8 h-8" />,
+      benefits: ["90% faster legal research", "Comprehensive case law database", "Intelligent precedent matching"]
     },
     {
-      title: "Automated Reference Checking",
-      description: "AI automatically contacts references, analyzes responses, and provides comprehensive candidate background reports.",
-      icon: <UserCheck className="w-8 h-8" />,
-      benefits: ["100% automated reference checks", "Comprehensive background reports", "Instant verification"]
+      title: "Compliance Monitoring",
+      description: "Real-time compliance monitoring with automated alerts for regulatory changes and compliance requirements.",
+      icon: <Shield className="w-8 h-8" />,
+      benefits: ["Real-time compliance tracking", "Automated regulatory updates", "Risk assessment alerts"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$199/month",
-      description: "Perfect for small businesses",
+      name: "Solo Practice",
+      price: "$299/month",
+      description: "Perfect for solo practitioners",
       features: [
-        "Up to 50 job postings/month",
-        "AI candidate screening",
-        "Basic video interview analysis",
+        "Up to 50 cases/month",
+        "Basic contract analysis",
+        "Document generation",
         "Email support",
         "Standard integrations"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$399/month",
-      description: "Ideal for growing companies",
+      name: "Law Firm",
+      price: "$699/month",
+      description: "Ideal for law firms",
       features: [
-        "Up to 200 job postings/month",
-        "Advanced AI screening",
-        "Full video interview analysis",
-        "Automated reference checking",
+        "Up to 500 cases/month",
+        "Advanced contract analysis",
+        "Full document generation",
+        "Case law research",
         "Priority support",
         "Advanced analytics",
         "Custom workflows"
@@ -92,11 +96,11 @@ export default function ZionAIRecruitmentPro() {
     },
     {
       name: "Enterprise",
-      price: "$799/month",
-      description: "For large organizations",
+      price: "$1,499/month",
+      description: "For large legal organizations",
       features: [
-        "Unlimited job postings",
-        "AI-powered recruitment suite",
+        "Unlimited cases",
+        "AI-powered legal suite",
         "Custom AI model training",
         "White-label solutions",
         "Dedicated account manager",
@@ -109,25 +113,25 @@ export default function ZionAIRecruitmentPro() {
   ];
 
   const stats = [
-    { number: "85%", label: "Faster Hiring Process", icon: <Clock className="w-6 h-6" /> },
-    { number: "95%", label: "Candidate Match Accuracy", icon: <Target className="w-6 h-6" /> },
-    { number: "60%", label: "Cost Reduction", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "10,000+", label: "Successful Placements", icon: <Users className="w-6 h-6" /> }
+    { number: "99%", label: "Contract Analysis Accuracy", icon: <Scale className="w-6 h-6" /> },
+    { number: "80%", label: "Faster Document Review", icon: <Clock className="w-6 h-6" /> },
+    { number: "90%", label: "Faster Legal Research", icon: <Search className="w-6 h-6" /> },
+    { number: "5,000+", label: "Legal Cases Processed", icon: <FileText className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Recruitment Pro - AI-Powered Talent Acquisition | Zion Tech Group</title>
+        <title>Zion AI Legal Assistant Pro - AI-Powered Legal Solutions | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform your recruitment process with Zion AI Recruitment Pro. AI-powered candidate screening, video interview analysis, automated reference checking, and intelligent job matching."
+          content="Transform legal practice with Zion AI Legal Assistant Pro. AI-powered contract analysis, document generation, case law research, and compliance monitoring."
         />
         <meta
           name="keywords"
-          content="AI recruitment, talent acquisition, candidate screening, video interview analysis, automated hiring, recruitment automation, HR technology, AI-powered recruitment"
+          content="AI legal assistant, contract analysis, legal document generation, case law research, compliance monitoring, legal technology, law firm automation"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-recruitment-pro" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-legal-assistant-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -141,18 +145,18 @@ export default function ZionAIRecruitmentPro() {
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
                 <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">#1 AI Recruitment Platform 2024</span>
+                <span className="text-cyan-400 text-sm font-medium">#1 AI Legal Platform 2024</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  Zion AI Recruitment Pro
+                  Zion AI Legal Assistant Pro
                 </span>
               </h1>
               
               <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Revolutionize your talent acquisition with AI-powered recruitment automation. 
-                Screen candidates, analyze interviews, and find the perfect match with 95% accuracy.
+                Revolutionize legal practice with AI-powered solutions. 
+                Achieve 99% contract analysis accuracy, reduce document review time by 80%, and enhance legal research efficiency.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -194,11 +198,11 @@ export default function ZionAIRecruitmentPro() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  AI-Powered Recruitment Features
+                  AI-Powered Legal Features
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leverage cutting-edge AI technology to transform your recruitment process and find the best talent faster.
+                Leverage cutting-edge AI technology to enhance legal practice and improve client outcomes.
               </p>
             </div>
             
@@ -243,7 +247,7 @@ export default function ZionAIRecruitmentPro() {
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing plans designed to scale with your recruitment needs.
+                Flexible pricing plans designed to scale with your legal practice needs.
               </p>
             </div>
             
@@ -302,10 +306,10 @@ export default function ZionAIRecruitmentPro() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Recruitment?
+                Ready to Transform Your Legal Practice?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of companies using AI to find the best talent faster and more efficiently.
+                Join leading law firms using AI to enhance their legal practice and deliver better client outcomes.
               </p>
               
               {/* Contact Details */}

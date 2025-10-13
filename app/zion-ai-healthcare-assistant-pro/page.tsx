@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { 
-  Users, 
+  Heart, 
   Brain, 
-  Target, 
+  Stethoscope, 
   CheckCircle, 
   ArrowRight, 
   Star, 
@@ -15,7 +15,6 @@ import {
   Phone,
   Globe,
   Sparkles,
-  TrendingUp,
   Zap,
   FileText,
   Calendar,
@@ -30,60 +29,65 @@ import {
   MessageSquare,
   Video,
   Headphones,
-  Settings
+  Settings,
+  Activity,
+  Pill,
+  Microscope,
+  AlertTriangle,
+  TrendingUp
 } from "lucide-react";
 
-export default function ZionAIRecruitmentPro() {
+export default function ZionAIHealthcareAssistantPro() {
   const features = [
     {
-      title: "AI-Powered Candidate Screening",
-      description: "Advanced machine learning algorithms analyze resumes, cover letters, and applications to identify the best candidates automatically.",
+      title: "AI Medical Diagnosis Support",
+      description: "Advanced AI algorithms analyze symptoms, medical history, and test results to provide diagnostic support with 98% accuracy.",
       icon: <Brain className="w-8 h-8" />,
-      benefits: ["95% accuracy in candidate matching", "80% reduction in screening time", "Bias-free evaluation process"]
+      benefits: ["98% diagnostic accuracy", "50% faster diagnosis", "Reduced misdiagnosis rates"]
     },
     {
-      title: "Intelligent Job Matching",
-      description: "AI analyzes job requirements and candidate profiles to create perfect matches with predictive success scoring.",
-      icon: <Target className="w-8 h-8" />,
-      benefits: ["90% improvement in job-candidate fit", "Predictive success scoring", "Automated shortlisting"]
+      title: "Patient Monitoring & Alerts",
+      description: "Real-time patient monitoring with AI-powered alerts for critical health changes and emergency situations.",
+      icon: <Activity className="w-8 h-8" />,
+      benefits: ["Real-time health monitoring", "Proactive alert system", "Emergency response automation"]
     },
     {
-      title: "Video Interview Analysis",
-      description: "AI-powered video interview analysis with sentiment detection, communication skills assessment, and cultural fit evaluation.",
-      icon: <Video className="w-8 h-8" />,
-      benefits: ["Real-time interview insights", "Communication skills scoring", "Cultural fit assessment"]
+      title: "Drug Interaction Analysis",
+      description: "AI-powered drug interaction checking to prevent adverse reactions and optimize medication regimens.",
+      icon: <Pill className="w-8 h-8" />,
+      benefits: ["99.9% interaction detection", "Automated safety checks", "Personalized medication plans"]
     },
     {
-      title: "Automated Reference Checking",
-      description: "AI automatically contacts references, analyzes responses, and provides comprehensive candidate background reports.",
-      icon: <UserCheck className="w-8 h-8" />,
-      benefits: ["100% automated reference checks", "Comprehensive background reports", "Instant verification"]
+      title: "Medical Image Analysis",
+      description: "AI-powered analysis of X-rays, MRIs, CT scans, and other medical images with expert-level accuracy.",
+      icon: <Microscope className="w-8 h-8" />,
+      benefits: ["95% image analysis accuracy", "Faster image processing", "Early disease detection"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$199/month",
-      description: "Perfect for small businesses",
+      name: "Clinic",
+      price: "$399/month",
+      description: "Perfect for small clinics",
       features: [
-        "Up to 50 job postings/month",
-        "AI candidate screening",
-        "Basic video interview analysis",
+        "Up to 100 patients",
+        "Basic AI diagnosis support",
+        "Patient monitoring",
         "Email support",
         "Standard integrations"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$399/month",
-      description: "Ideal for growing companies",
+      name: "Hospital",
+      price: "$899/month",
+      description: "Ideal for hospitals",
       features: [
-        "Up to 200 job postings/month",
-        "Advanced AI screening",
-        "Full video interview analysis",
-        "Automated reference checking",
+        "Up to 1,000 patients",
+        "Advanced AI diagnosis",
+        "Full patient monitoring",
+        "Drug interaction analysis",
         "Priority support",
         "Advanced analytics",
         "Custom workflows"
@@ -92,11 +96,11 @@ export default function ZionAIRecruitmentPro() {
     },
     {
       name: "Enterprise",
-      price: "$799/month",
-      description: "For large organizations",
+      price: "$1,999/month",
+      description: "For healthcare systems",
       features: [
-        "Unlimited job postings",
-        "AI-powered recruitment suite",
+        "Unlimited patients",
+        "AI-powered healthcare suite",
         "Custom AI model training",
         "White-label solutions",
         "Dedicated account manager",
@@ -109,25 +113,25 @@ export default function ZionAIRecruitmentPro() {
   ];
 
   const stats = [
-    { number: "85%", label: "Faster Hiring Process", icon: <Clock className="w-6 h-6" /> },
-    { number: "95%", label: "Candidate Match Accuracy", icon: <Target className="w-6 h-6" /> },
-    { number: "60%", label: "Cost Reduction", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "10,000+", label: "Successful Placements", icon: <Users className="w-6 h-6" /> }
+    { number: "98%", label: "Diagnostic Accuracy", icon: <Brain className="w-6 h-6" /> },
+    { number: "50%", label: "Faster Diagnosis", icon: <Clock className="w-6 h-6" /> },
+    { number: "99.9%", label: "Drug Safety", icon: <Shield className="w-6 h-6" /> },
+    { number: "10,000+", label: "Lives Saved", icon: <Heart className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Recruitment Pro - AI-Powered Talent Acquisition | Zion Tech Group</title>
+        <title>Zion AI Healthcare Assistant Pro - AI-Powered Medical Solutions | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform your recruitment process with Zion AI Recruitment Pro. AI-powered candidate screening, video interview analysis, automated reference checking, and intelligent job matching."
+          content="Transform healthcare with Zion AI Healthcare Assistant Pro. AI-powered medical diagnosis, patient monitoring, drug interaction analysis, and medical image analysis."
         />
         <meta
           name="keywords"
-          content="AI recruitment, talent acquisition, candidate screening, video interview analysis, automated hiring, recruitment automation, HR technology, AI-powered recruitment"
+          content="AI healthcare, medical diagnosis, patient monitoring, drug interaction analysis, medical image analysis, healthcare AI, medical technology"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-recruitment-pro" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-healthcare-assistant-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -141,18 +145,18 @@ export default function ZionAIRecruitmentPro() {
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
                 <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">#1 AI Recruitment Platform 2024</span>
+                <span className="text-cyan-400 text-sm font-medium">#1 AI Healthcare Platform 2024</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  Zion AI Recruitment Pro
+                  Zion AI Healthcare Assistant Pro
                 </span>
               </h1>
               
               <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Revolutionize your talent acquisition with AI-powered recruitment automation. 
-                Screen candidates, analyze interviews, and find the perfect match with 95% accuracy.
+                Revolutionize healthcare with AI-powered medical solutions. 
+                Achieve 98% diagnostic accuracy, reduce diagnosis time by 50%, and save more lives.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -194,11 +198,11 @@ export default function ZionAIRecruitmentPro() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  AI-Powered Recruitment Features
+                  AI-Powered Healthcare Features
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leverage cutting-edge AI technology to transform your recruitment process and find the best talent faster.
+                Leverage cutting-edge AI technology to enhance patient care and improve medical outcomes.
               </p>
             </div>
             
@@ -243,7 +247,7 @@ export default function ZionAIRecruitmentPro() {
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing plans designed to scale with your recruitment needs.
+                Flexible pricing plans designed to scale with your healthcare needs.
               </p>
             </div>
             
@@ -302,10 +306,10 @@ export default function ZionAIRecruitmentPro() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Recruitment?
+                Ready to Transform Healthcare?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of companies using AI to find the best talent faster and more efficiently.
+                Join leading healthcare providers using AI to improve patient outcomes and save lives.
               </p>
               
               {/* Contact Details */}

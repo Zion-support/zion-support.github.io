@@ -58,7 +58,11 @@ import {
   BarChart3 as AnalyticsIcon,
   Cloud as CloudIcon,
   Brain as AIIcon,
-  Shield as ProtectionIcon
+  Shield as ProtectionIcon,
+  Scale,
+  Home,
+  GraduationCap,
+  DollarSign
 } from "lucide-react";
 
 export default function MicroSaasServices() {
@@ -88,6 +92,195 @@ export default function MicroSaasServices() {
         "60% reduction in manual reporting time",
         "Real-time business insights",
         "Predictive trend analysis"
+      ]
+    },
+    {
+      id: "zion-ai-recruitment-pro",
+      name: "Zion AI Recruitment Pro",
+      description: "Revolutionize talent acquisition with AI-powered recruitment automation. Screen candidates, analyze interviews, and find the perfect match with 95% accuracy.",
+      icon: <Users className="w-8 h-8" />,
+      price: "From $199/month",
+      originalPrice: "$399/month",
+      features: [
+        "AI-Powered Candidate Screening",
+        "Intelligent Job Matching",
+        "Video Interview Analysis",
+        "Automated Reference Checking",
+        "Predictive Success Scoring",
+        "Bias-free Evaluation",
+        "Multi-channel Integration",
+        "Advanced Analytics Dashboard"
+      ],
+      category: "HR & Recruitment",
+      popular: true,
+      link: "/zion-ai-recruitment-pro",
+      benefits: [
+        "85% faster hiring process",
+        "95% candidate match accuracy",
+        "60% cost reduction",
+        "10,000+ successful placements"
+      ]
+    },
+    {
+      id: "zion-ai-supply-chain-optimizer-pro",
+      name: "Zion AI Supply Chain Optimizer Pro",
+      description: "Optimize your supply chain with AI-powered demand forecasting, route optimization, supplier risk assessment, and inventory management.",
+      icon: <Package className="w-8 h-8" />,
+      price: "From $299/month",
+      originalPrice: "$599/month",
+      features: [
+        "AI Demand Forecasting",
+        "Route Optimization",
+        "Supplier Risk Assessment",
+        "Inventory Optimization",
+        "Cost Analysis",
+        "Real-time Monitoring",
+        "Predictive Analytics",
+        "Automated Alerts"
+      ],
+      category: "Supply Chain",
+      popular: true,
+      link: "/zion-ai-supply-chain-optimizer-pro",
+      benefits: [
+        "35% cost reduction",
+        "95% forecast accuracy",
+        "40% faster deliveries",
+        "99.9% supply chain uptime"
+      ]
+    },
+    {
+      id: "zion-ai-healthcare-assistant-pro",
+      name: "Zion AI Healthcare Assistant Pro",
+      description: "Transform healthcare with AI-powered medical solutions. Achieve 98% diagnostic accuracy, reduce diagnosis time by 50%, and save more lives.",
+      icon: <Heart className="w-8 h-8" />,
+      price: "From $399/month",
+      originalPrice: "$799/month",
+      features: [
+        "AI Medical Diagnosis Support",
+        "Patient Monitoring & Alerts",
+        "Drug Interaction Analysis",
+        "Medical Image Analysis",
+        "Health Trend Analysis",
+        "Emergency Response",
+        "Compliance Monitoring",
+        "Telemedicine Integration"
+      ],
+      category: "Healthcare",
+      popular: true,
+      link: "/zion-ai-healthcare-assistant-pro",
+      benefits: [
+        "98% diagnostic accuracy",
+        "50% faster diagnosis",
+        "99.9% drug safety",
+        "10,000+ lives saved"
+      ]
+    },
+    {
+      id: "zion-ai-legal-assistant-pro",
+      name: "Zion AI Legal Assistant Pro",
+      description: "Revolutionize legal practice with AI-powered solutions. Achieve 99% contract analysis accuracy, reduce document review time by 80%, and enhance legal research efficiency.",
+      icon: <Scale className="w-8 h-8" />,
+      price: "From $299/month",
+      originalPrice: "$599/month",
+      features: [
+        "AI Contract Analysis",
+        "Legal Document Generation",
+        "Case Law Research",
+        "Compliance Monitoring",
+        "Risk Assessment",
+        "Automated Briefing",
+        "Client Communication",
+        "Legal Analytics"
+      ],
+      category: "Legal",
+      popular: false,
+      link: "/zion-ai-legal-assistant-pro",
+      benefits: [
+        "99% contract analysis accuracy",
+        "80% faster document review",
+        "90% faster legal research",
+        "5,000+ legal cases processed"
+      ]
+    },
+    {
+      id: "zion-ai-real-estate-pro",
+      name: "Zion AI Real Estate Pro",
+      description: "Revolutionize real estate with AI-powered solutions. Achieve 95% valuation accuracy, increase sales by 50%, and provide exceptional client experiences.",
+      icon: <Home className="w-8 h-8" />,
+      price: "From $199/month",
+      originalPrice: "$399/month",
+      features: [
+        "AI Property Valuation",
+        "Smart Property Matching",
+        "Virtual Property Tours",
+        "Market Trend Analysis",
+        "Lead Qualification",
+        "Investment Analysis",
+        "Client Management",
+        "Market Forecasting"
+      ],
+      category: "Real Estate",
+      popular: false,
+      link: "/zion-ai-real-estate-pro",
+      benefits: [
+        "95% valuation accuracy",
+        "90% match accuracy",
+        "50% faster sales",
+        "10,000+ properties sold"
+      ]
+    },
+    {
+      id: "zion-ai-education-pro",
+      name: "Zion AI Education Pro",
+      description: "Revolutionize education with AI-powered solutions. Achieve 95% learning effectiveness, reduce grading time by 90%, and enhance student engagement.",
+      icon: <GraduationCap className="w-8 h-8" />,
+      price: "From $99/month",
+      originalPrice: "$199/month",
+      features: [
+        "AI-Powered Personalized Learning",
+        "Intelligent Assessment & Grading",
+        "Virtual Classroom & Tutoring",
+        "Learning Analytics & Insights",
+        "Curriculum Optimization",
+        "Student Progress Tracking",
+        "Automated Feedback",
+        "Performance Analytics"
+      ],
+      category: "Education",
+      popular: false,
+      link: "/zion-ai-education-pro",
+      benefits: [
+        "95% learning effectiveness",
+        "90% faster grading",
+        "85% student engagement",
+        "50,000+ students served"
+      ]
+    },
+    {
+      id: "zion-ai-finance-pro",
+      name: "Zion AI Finance Pro",
+      description: "Revolutionize finance with AI-powered solutions. Achieve 95% forecast accuracy, detect fraud with 99.9% precision, and optimize financial performance.",
+      icon: <DollarSign className="w-8 h-8" />,
+      price: "From $49/month",
+      originalPrice: "$99/month",
+      features: [
+        "AI Financial Forecasting",
+        "Intelligent Risk Assessment",
+        "Automated Financial Reporting",
+        "Smart Investment Management",
+        "Fraud Detection",
+        "Budget Optimization",
+        "Portfolio Management",
+        "Compliance Monitoring"
+      ],
+      category: "Finance",
+      popular: false,
+      link: "/zion-ai-finance-pro",
+      benefits: [
+        "95% forecast accuracy",
+        "99.9% fraud detection",
+        "90% faster reporting",
+        "$1M+ assets managed"
       ]
     },
     {
@@ -391,6 +584,13 @@ export default function MicroSaasServices() {
 
   const categories = [
     { name: "AI Analytics", icon: <AnalyticsIcon className="w-5 h-5" />, count: 2 },
+    { name: "HR & Recruitment", icon: <Users className="w-5 h-5" />, count: 1 },
+    { name: "Supply Chain", icon: <Package className="w-5 h-5" />, count: 1 },
+    { name: "Healthcare", icon: <Heart className="w-5 h-5" />, count: 1 },
+    { name: "Legal", icon: <Scale className="w-5 h-5" />, count: 1 },
+    { name: "Real Estate", icon: <Home className="w-5 h-5" />, count: 1 },
+    { name: "Education", icon: <GraduationCap className="w-5 h-5" />, count: 1 },
+    { name: "Finance", icon: <DollarSign className="w-5 h-5" />, count: 1 },
     { name: "Cybersecurity", icon: <ProtectionIcon className="w-5 h-5" />, count: 1 },
     { name: "Cloud Storage", icon: <CloudIcon className="w-5 h-5" />, count: 1 },
     { name: "CRM & Sales", icon: <TeamIcon className="w-5 h-5" />, count: 1 },
@@ -405,7 +605,7 @@ export default function MicroSaasServices() {
   ];
 
   const stats = [
-    { number: "12+", label: "Micro SAAS Solutions", icon: <Rocket className="w-6 h-6" /> },
+    { number: "20+", label: "Micro SAAS Solutions", icon: <Rocket className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <SupportIcon className="w-6 h-6" /> },
     { number: "50%", label: "Average Cost Savings", icon: <TrendingUp className="w-6 h-6" /> }
