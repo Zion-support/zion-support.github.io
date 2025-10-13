@@ -15,14 +15,25 @@ const PerformanceMonitor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const updateMetric = useCallback((metric: any) => {
-    setMetrics(prev => ({
-      ...prev,
-      [metric.name === 'CLS' ? 'cumulativeLayoutShift' : 
-       metric.name === 'INP' ? 'interactionToNextPaint' :
-       metric.name === 'FCP' ? 'firstContentfulPaint' :
-       metric.name === 'LCP' ? 'largestContentfulPaint' :
-       metric.name === 'TTFB' ? 'timeToFirstByte' : 'loadTime']: metric.value
-    }));
+    setMetrics(prev => {
+      const baseMetrics = prev || {
+        loadTime: 0,
+        firstContentfulPaint: 0,
+        largestContentfulPaint: 0,
+        interactionToNextPaint: 0,
+        cumulativeLayoutShift: 0,
+        timeToFirstByte: 0
+      };
+      
+      return {
+        ...baseMetrics,
+        [metric.name === 'CLS' ? 'cumulativeLayoutShift' : 
+         metric.name === 'INP' ? 'interactionToNextPaint' :
+         metric.name === 'FCP' ? 'firstContentfulPaint' :
+         metric.name === 'LCP' ? 'largestContentfulPaint' :
+         metric.name === 'TTFB' ? 'timeToFirstByte' : 'loadTime']: metric.value
+      };
+    });
   }, []);
 
   useEffect(() => {
@@ -39,10 +50,21 @@ const PerformanceMonitor: React.FC = () => {
     const measurePerformance = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       
-      setMetrics(prev => ({
-        ...prev,
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart
-      }));
+      setMetrics(prev => {
+        const baseMetrics = prev || {
+          loadTime: 0,
+          firstContentfulPaint: 0,
+          largestContentfulPaint: 0,
+          interactionToNextPaint: 0,
+          cumulativeLayoutShift: 0,
+          timeToFirstByte: 0
+        };
+        
+        return {
+          ...baseMetrics,
+          loadTime: navigation.loadEventEnd - navigation.loadEventStart
+        };
+      });
     };
 
     // Measure after page load

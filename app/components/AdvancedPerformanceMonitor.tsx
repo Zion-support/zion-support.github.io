@@ -53,7 +53,8 @@ const AdvancedPerformanceMonitor = () => {
           reportMetric('TTFB', metric.value)
         })
       } catch (error) {
-        }
+        console.error('Failed to load web vitals:', error);
+      }
     }
 
     // Measure memory usage
@@ -97,7 +98,8 @@ const AdvancedPerformanceMonitor = () => {
 
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
-        }
+        console.log(`Performance metric ${name}:`, value);
+      }
     }
 
     // Monitor resource loading performance

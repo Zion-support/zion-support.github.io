@@ -39,11 +39,7 @@ export default defineConfig({
     assetsInlineLimit: 2048,
     // Enable compression
     reportCompressedSize: true,
-<<<<<<< HEAD
-    // Additional optimizations
-=======
     // Optimize for production
->>>>>>> cursor/analyze-improve-and-deploy-application-713a
     terserOptions: {
       compress: {
         drop_console: true,
