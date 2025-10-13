@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Eye, EyeOff, Volume2, VolumeX, Type, Contrast } from 'lucide-react';
+import { Eye, EyeOff, VolumeX, Type, Contrast } from 'lucide-react';
 
 interface AccessibilitySettings {
   highContrast: boolean;
@@ -29,7 +29,7 @@ const AccessibilityEnhancer: React.FC = () => {
 
     // Apply initial settings
     applyAccessibilitySettings(settings);
-  }, []);
+  }, [settings]);
 
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
@@ -221,7 +221,7 @@ const AccessibilityEnhancer: React.FC = () => {
       )}
 
       {/* CSS for accessibility features */}
-      <style jsx global>{`
+      <style global>{`
         .high-contrast {
           --tw-bg-opacity: 1;
           --tw-text-opacity: 1;

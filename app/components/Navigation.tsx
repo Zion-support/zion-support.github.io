@@ -110,7 +110,7 @@ const Navigation = React.memo(() => {
                   role="menu"
                   aria-label="Solutions submenu"
                 >
-                  {solutions.map((solution, index) => (
+                  {solutions.map((solution) => (
                     <Link
                       key={solution.name}
                       to={solution.path}

@@ -48,6 +48,7 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({
 
       return () => clearInterval(interval);
     }
+    return undefined;
   }, [showProgress]);
 
   return (
