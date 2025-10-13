@@ -13,7 +13,7 @@ function fixHTMLConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-    if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+    if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false;
     }
     
@@ -36,14 +36,14 @@ function fixHTMLConflicts(filePath) {
         continue;
       }
       
-      if (line.startsWith('=======')) {
+      if (line.startsWith('')) {
         separatorFound = true;
         continue;
       }
       
       if (line.startsWith('>>>>>>>')) {
         inConflict = false;
-        // Use HEAD content (before =======)
+        // Use HEAD content (before )
         result.push(...headContent);
         continue;
       }
@@ -52,7 +52,7 @@ function fixHTMLConflicts(filePath) {
         if (!separatorFound) {
           headContent.push(line);
         }
-        // Skip lines after ======= until >>>>>>>
+        // Skip lines after  until >>>>>>>
       } else {
         result.push(line);
       }

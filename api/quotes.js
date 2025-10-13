@@ -1,5 +1,8 @@
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
+    res.statusCode = 405;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
 
@@ -7,6 +10,9 @@ export default async function handler(req, res) {
     const { name, email, phone, details, country, service } = req.body || {};
 
     if (!name || !email || !phone || !details) {
+      res.statusCode = 400;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Name, email, phone, and details are required' }));
       return;
     }
 
@@ -28,7 +34,7 @@ export default async function handler(req, res) {
       status: 'pending'
     };
 
-    // // console.log('Quote request received:', quoteData);
+    console.log('Quote request received:', quoteData);
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
@@ -39,12 +45,8 @@ export default async function handler(req, res) {
       data: quoteData
     }));
 
-<<<<<<< HEAD
-  } catch {
-=======
-  } catch (_error) {  
->>>>>>> cursor/fix-errors-and-merge-to-main-c5cd
-    // console.error('Quote submission error:', error);
+  } catch (error) {
+    console.error('Quote submission error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Internal server error' }));
