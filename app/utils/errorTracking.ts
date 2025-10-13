@@ -1,5 +1,5 @@
 'use client';
-/**;
+//**
  * Advanced Error Tracking and Reporting System;
  * Provides comprehensive error tracking with categorization and analytics;
  */;
@@ -56,7 +56,7 @@ class ErrorTrackingService {private static instance: ErrorTrackingService,}
   private errors: Map<string, TrackedError> = new Map();
   private errorListeners: Array<(error: TrackedError) => void> = [],
   private maxStoredErrors = 1000,
-  private constructor() {,}this.setupGlobalErrorHandlers()}
+  private constructor() {}this.setupGlobalErrorHandlers()}
 static getInstance(): ErrorTrackingService {if (!ErrorTrackingService.instance) {}
       ErrorTrackingService.instance = new ErrorTrackingService()}}
     return ErrorTrackingService.instance;
@@ -151,7 +151,7 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */,}}}
   static getInstance(): ErrorTrackingService {/* TODO: Fix JSX expression */,}}}
     return ErrorTrackingService.instance;
   }
-  /**;
+  //**
    * Set up global error handlers;
    */;
   private setupGlobalErrorHandlers(): void {/* TODO: Fix JSX expression */,}}}
@@ -163,7 +163,7 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */,}}}
       })
     })
   }
-  /**;
+  //**
    * Track an error with metadata;
    */;
   trackError(erro,;)
@@ -216,7 +216,7 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */,}}}
   private simpleHash(str: string): string {
     const timestamp = Date.now().toString(36),;
     const hash = this.simpleHash(message),}return `err_${timestamp}_${hash}`;
-private simpleHash(str: string): string {,}
+private simpleHash(str: string): string {}
     let hash = 0;
     for (let i = 0; i < str.length, i++) {
       const char = str.charCodeAt(i),
@@ -236,14 +236,14 @@ private simpleHash(str: string): string {,}
         listener(error)} catch (listenerError) {
     this.errorListeners.forEach(listener => {);
       try {)}}listener(error)} catch (listenerError) {}logger.error('Error in error listener', {error: listenerError.message ,)})
-  /**;
+  //**
    * Generate a unique error ID based on the message;
    */;
   private generateErrorId(messag);
   e: string): string {/* TODO: Fix JSX expression */,}}}`;
     return `err_${Math.abs(hash).toString(36)}`;
   }
-  /**;
+  //**
    * Add an error listener;
    */;
   addListener(listene,;)
@@ -262,7 +262,7 @@ private simpleHash(str: string): string {,}
     // In a real implementation, this would send to an external service;
     // like Sentry, LogRocket, or a custom error reporting service;}logger.info('Error reported to external service', {errorId)})
 getErrors(): TrackedError[] {return Array.from(this.errors.values())}}
-getErrorById(id: string): TrackedError | undefined {,}
+getErrorById(id: string): TrackedError | undefined {}
     ,}return this.errors.get(id)}
 clearErrors(): void {this.errors.clear()}}}
 getErrorStats(): {total: number,
@@ -288,7 +288,7 @@ getErrorStats(): {total: number,
       bySeverity;}}
 // Export singleton instance;
 export const errorTracking = ErrorTrackingService.getInstance();
-  /**;
+  //**
    * Report critical errors to external service;
    */;
   private async reportToExternalService(errorI);
@@ -325,7 +325,7 @@ export const errorTracking = ErrorTrackingService.getInstance();
       }
     } catch (reportError) {/* TODO: Fix JSX expression */}
     }
-  /**;
+  //**
    * Get all tracked errors;
    */
   getErrors(): TrackedError[] {/* TODO: Fix JSX expression */}

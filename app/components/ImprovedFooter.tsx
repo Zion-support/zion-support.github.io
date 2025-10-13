@@ -4,7 +4,7 @@ interface ImprovedFooterProps {
   // Add props here
 }
 
-const ImprovedFooter: React.FC<ImprovedFooterProps> = (props) => {
+const ImprovedFooter: React.FC<ImprovedFooterProps> = () => {
   return (
     <div className="improvedfooter">
       {/* Component content */}

@@ -1,5 +1,5 @@
 'use client';
-/**;
+//**
  * Advanced Performance Monitoring Utility;
  * Tracks Core Web Vitals and custom metrics;
  */;
@@ -11,8 +11,8 @@ interface PerformanceMetrics {fcp?: number; // First Contentful Paint;}
   fmp?: number; // First Meaningful Paint;
   customMetrics: Record<string, number>;
   customMetrics: Record<string, number>;</strin>
-class PerformanceMonitor {}}private metrics: PerformanceMetrics = {,}customMetrics: {,}interface PerformanceMetrics {/* TODO: Fix JSX expression */,}}}
-class PerformanceMonitor {/* TODO: Fix JSX expression */,}}s: {,}}
+class PerformanceMonitor {}}private metrics: PerformanceMetrics = {}customMetrics: {}interface PerformanceMetrics {/* TODO: Fix JSX expression */,}}}
+class PerformanceMonitor {/* TODO: Fix JSX expression */,}}s: {}}
   private,;
   observers: PerformanceObserver[] = [],
   };
@@ -85,7 +85,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */,}}s: {,}}
         // Cumulative Layout Shift;
             if (!(entry as any).hadRecentInput) {,;
         // Cumulative Layout Shift;}this.observeEntry('layout-shift', (entries) => {}let clsValue = 0;
-          entries.forEach((entry: PerformanceEntry) => {,}if (!(entry as any).hadRecentInput) {}clsValue += (entry as any).value;
+          entries.forEach((entry: PerformanceEntry) => {}if (!(entry as any).hadRecentInput) {}clsValue += (entry as any).value;
               clsValue += (entry as any).value;
             }
 
@@ -122,12 +122,12 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */,}}s: {,}}
         // Cumulative Layout Shift;
         this.observeEntry('layout-shift', (entries) => {/* TODO: Fix JSX expression */,}}
     } catch (error) {}logger.error('Failed to initialize performance observers', error as Error);
-  private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {,}
-    try {,}
+  private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {}
+    try {}
       const observer = new PerformanceObserver((list) => {,;
         for (const entry of list.getEntries()) {,;
           if (entry.name === name) {,;
-            (this.metrics as any)[metricKey] = entry.startTime;,}private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {,}}try {}}const observer = new PerformanceObserver((list) => {}for (const entry of list.getEntries()) {}if (entry.name === name) {}(this.metrics as any)[metricKey] = entry.startTime;
+            (this.metrics as any)[metricKey] = entry.startTime;,}private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {}}try {}}const observer = new PerformanceObserver((list) => {}for (const entry of list.getEntries()) {}if (entry.name === name) {}(this.metrics as any)[metricKey] = entry.startTime;
             (this.metrics as any)[metricKey] = entry.startTime;
             this.logMetric(metricKey as string, entry.startTime);
           }
@@ -242,7 +242,7 @@ observer.observe({entryTypes: ['layout-shift'] ,)})
     }
     this.metrics.customMetrics[name] = value;,;
     this.logMetric(name, value)}}
-  private logMetric(name: string, value: number): void {,}
+  private logMetric(name: string, value: number): void {}
     ,}if (process.env['NODE_ENV'] === 'development') {}ms`);
     this.logMetric(name, value);
   }
@@ -259,10 +259,10 @@ observer.observe({entryTypes: ['layout-shift'] ,)})
     if (size > 100000) {// 100KB}this.addCustomMetric(`largeResource_${entry.name)}`, size);
     }
   }
-  addCustomMetric(name: string, value: number): void {,}}this.metrics.customMetrics[name] = value;
+  addCustomMetric(name: string, value: number): void {}}this.metrics.customMetrics[name] = value;
     this.logMetric(name, value);
   }
-  private logMetric(name: string, value: number): void {,}}if (process.env['NODE_ENV'] === 'development') {}}ms`);
+  private logMetric(name: string, value: number): void {}}if (process.env['NODE_ENV'] === 'development') {}}ms`);
     }
     // Send to analytics if available;
     if (typeof window !== 'undefined' && (window as any).gtag) {}(window as any).gtag('event', 'performance_metric', {)}metric_name: name,

@@ -4,7 +4,7 @@ interface StructuredDataProps {
   // Add props here
 }
 
-const StructuredData: React.FC<StructuredDataProps> = (props) => {
+const StructuredData: React.FC<StructuredDataProps> = () => {
   return (
     <div className="structureddata">
       {/* Component content */}

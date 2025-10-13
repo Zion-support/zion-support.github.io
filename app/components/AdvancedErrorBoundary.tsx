@@ -4,7 +4,7 @@ interface AdvancedErrorBoundaryProps {
   // Add props here
 }
 
-const AdvancedErrorBoundary: React.FC<AdvancedErrorBoundaryProps> = (props) => {
+const AdvancedErrorBoundary: React.FC<AdvancedErrorBoundaryProps> = () => {
   return (
     <div className="advancederrorboundary">
       {/* Component content */}

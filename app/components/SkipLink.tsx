@@ -4,7 +4,7 @@ interface SkipLinkProps {
   // Add props here
 }
 
-const SkipLink: React.FC<SkipLinkProps> = (props) => {
+const SkipLink: React.FC<SkipLinkProps> = () => {
   return (
     <div className="skiplink">
       {/* Component content */}

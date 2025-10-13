@@ -4,7 +4,7 @@ interface ResponsiveContainerProps {
   // Add props here
 }
 
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = (props) => {
+const ResponsiveContainer: React.FC<ResponsiveContainerProps> = () => {
   return (
     <div className="responsivecontainer">
       {/* Component content */}

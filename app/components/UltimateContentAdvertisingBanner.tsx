@@ -4,7 +4,7 @@ interface UltimateContentAdvertisingBannerProps {
   // Add props here
 }
 
-const UltimateContentAdvertisingBanner: React.FC<UltimateContentAdvertisingBannerProps> = (props) => {
+const UltimateContentAdvertisingBanner: React.FC<UltimateContentAdvertisingBannerProps> = () => {
   return (
     <div className="ultimatecontentadvertisingbanner">
       {/* Component content */}

@@ -4,7 +4,7 @@ interface AdvancedAccessibilityEnhancerProps {
   // Add props here
 }
 
-const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = (props) => {
+const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = () => {
   return (
     <div className="advancedaccessibilityenhancer">
       {/* Component content */}

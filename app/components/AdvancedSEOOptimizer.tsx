@@ -4,7 +4,7 @@ interface AdvancedSEOOptimizerProps {
   // Add props here
 }
 
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = (props) => {
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = () => {
   return (
     <div className="advancedseooptimizer">
       {/* Component content */}

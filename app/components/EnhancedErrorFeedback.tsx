@@ -4,7 +4,7 @@ interface EnhancedErrorFeedbackProps {
   // Add props here
 }
 
-const EnhancedErrorFeedback: React.FC<EnhancedErrorFeedbackProps> = (props) => {
+const EnhancedErrorFeedback: React.FC<EnhancedErrorFeedbackProps> = () => {
   return (
     <div className="enhancederrorfeedback">
       {/* Component content */}

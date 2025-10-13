@@ -4,7 +4,7 @@ interface SEOOptimizerProps {
   // Add props here
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = (props) => {
+const SEOOptimizer: React.FC<SEOOptimizerProps> = () => {
   return (
     <div className="seooptimizer">
       {/* Component content */}

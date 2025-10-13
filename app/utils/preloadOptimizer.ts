@@ -1,4 +1,4 @@
-/**;
+//**
  * Preload Optimizer;
  * Optimizes resource loading for better performance;
  */;

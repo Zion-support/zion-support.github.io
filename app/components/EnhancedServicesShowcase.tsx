@@ -4,7 +4,7 @@ interface EnhancedServicesShowcaseProps {
   // Add props here
 }
 
-const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = (props) => {
+const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = () => {
   return (
     <div className="enhancedservicesshowcase">
       {/* Component content */}

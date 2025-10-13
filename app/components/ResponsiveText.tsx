@@ -4,7 +4,7 @@ interface ResponsiveTextProps {
   // Add props here
 }
 
-const ResponsiveText: React.FC<ResponsiveTextProps> = (props) => {
+const ResponsiveText: React.FC<ResponsiveTextProps> = () => {
   return (
     <div className="responsivetext">
       {/* Component content */}

@@ -4,7 +4,7 @@ interface ContentNewsletterSignupProps {
   // Add props here
 }
 
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = (props) => {
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = () => {
   return (
     <div className="contentnewslettersignup">
       {/* Component content */}

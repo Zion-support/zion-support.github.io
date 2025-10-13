@@ -4,7 +4,7 @@ interface MobileOptimizerProps {
   // Add props here
 }
 
-const MobileOptimizer: React.FC<MobileOptimizerProps> = (props) => {
+const MobileOptimizer: React.FC<MobileOptimizerProps> = () => {
   return (
     <div className="mobileoptimizer">
       {/* Component content */}

@@ -4,7 +4,7 @@ interface WebVitalsTrackerProps {
   // Add props here
 }
 
-const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = (props) => {
+const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = () => {
   return (
     <div className="webvitalstracker">
       {/* Component content */}

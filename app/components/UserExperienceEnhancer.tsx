@@ -4,7 +4,7 @@ interface UserExperienceEnhancerProps {
   // Add props here
 }
 
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = (props) => {
+const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = () => {
   return (
     <div className="userexperienceenhancer">
       {/* Component content */}

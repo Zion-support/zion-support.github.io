@@ -225,7 +225,7 @@ const root = document.documentElement;
     root.setAttribute('data-font-size', this.config.fontSize);
 // Apply color scheme;
     root.setAttribute('data-color-scheme', this.config.colorScheme);
-public focusElement(selector: string): boolean {,}
+public focusElement(selector: string): boolean {}
     if (typeof document === 'undefined') return false;
 const element = document.querySelector(selector) as HTMLElement;
     if (element) {
@@ -233,8 +233,8 @@ const element = document.querySelector(selector) as HTMLElement;
       return true;}}
     return false;
   }
-public trapFocus(container: HTMLElement): () => void {,}
-    const focusableElements = container.querySelectorAll(,)
+public trapFocus(container: HTMLElement): () => void {}
+    const focusableElements = container.querySelectorAll()
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     ) as NodeListOf<HTMLElement>
 const firstElement = focusableElements[0];

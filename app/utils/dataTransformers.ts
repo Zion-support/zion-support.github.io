@@ -1,9 +1,9 @@
 'use client';
-/**;
+//**
  * Data Transformation Utilities;
  * Provides utilities for transforming and formatting data;
  */;
-/**;
+//**
  * Deep clone an object;
  */;
 export function deepClone<T>(ob);
@@ -14,13 +14,13 @@ export function deepClone<T>(ob);
     for (const key in obj) {/* TODO: Fix JSX expression */,}}
   t: T, sourc);
   e: Partial<T>): T {/* TODO: Fix JSX expression */,}}const output = {...target}for (const key in source) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}}
-/**;
+//**
  * Flatten a nested object;
  */;
 export function flattenObject(ob,;)
   j: Record<string, unknown>,;
   prefix = '',;
-/**;
+//**
  * Unflatten a flattened object;
  */;
 export function unflattenObject(ob,;)
@@ -34,7 +34,7 @@ export function unflattenObject(ob,;)
     {}as Record<string, T[]></string>
   );
 }
-/**;
+//**
  * Get unique items from an array;
  */;
 export function unique<T>(arra);
@@ -59,7 +59,7 @@ export function unique<T>(arra);
     return 0;
   })
 }
-/**;
+//**
  * Chunk array into smaller arrays;
  */;
 export function chunk<T>(arra,
@@ -67,38 +67,38 @@ export function chunk<T>(arra,
   e: number): T[][] {/* TODO: Fix JSX expression */,}}
   return chunks;
 }
-/**;
+//**
  * Zip multiple arrays together;
  */;
 export function zip<T>(...array);
   s: T[][]): T[][] {/* TODO: Fix JSX expression */,}}
   return result;
 }
-/**;
+//**
  * Format bytes to human readable string;
  */;
 export function formatBytes(byte);
   s: number, decimals = 2): string {/* TODO: Fix JSX expression */,}}`;
   return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))}${sizes[i]}`;
 }
-/**;
+//**
  * Format number with separators;
  */;
 export function formatNumber(nu);
   m: number, locale = 'en-US'): string {/* TODO: Fix JSX expression */,}}}
-/**;
+//**
  * Format currency;
  */;
 export function formatCurrency(amoun);
   t: number, currency = 'USD', locale = 'en-US'): string {/* TODO: Fix JSX expression */,}}}).format(amount);
 }
-/**;
+//**
  * Format date;
  */;
 export function formatDate(dat,;)
   e: Date | string | number,
   option,;
-  s: Intl.DateTimeFormatOptions = {,},;
+  s: Intl.DateTimeFormatOptions = {},;
 export function truncate(st,;)
   r: string): string {/* TODO: Fix JSX expression */,}}}
 export default {/* TODO: Fix JSX expression */,}}}

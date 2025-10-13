@@ -4,7 +4,7 @@ interface EnhancedPerformanceOptimizerProps {
   // Add props here
 }
 
-const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> = (props) => {
+const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> = () => {
   return (
     <div className="enhancedperformanceoptimizer">
       {/* Component content */}

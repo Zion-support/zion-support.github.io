@@ -4,7 +4,7 @@ interface PerformanceDashboardProps {
   // Add props here
 }
 
-const PerformanceDashboard: React.FC<PerformanceDashboardProps> = (props) => {
+const PerformanceDashboard: React.FC<PerformanceDashboardProps> = () => {
   return (
     <div className="performancedashboard">
       {/* Component content */}

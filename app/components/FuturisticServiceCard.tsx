@@ -4,7 +4,7 @@ interface FuturisticServiceCardProps {
   // Add props here
 }
 
-const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = (props) => {
+const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = () => {
   return (
     <div className="futuristicservicecard">
       {/* Component content */}

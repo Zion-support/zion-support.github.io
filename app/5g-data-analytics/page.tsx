@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function Page5gdataanalytics(() {
+export default function Page5gdataanalytics() {
   return (
     <>
       <Helmet>

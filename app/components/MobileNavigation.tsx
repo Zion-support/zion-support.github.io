@@ -4,7 +4,7 @@ interface MobileNavigationProps {
   // Add props here
 }
 
-const MobileNavigation: React.FC<MobileNavigationProps> = (props) => {
+const MobileNavigation: React.FC<MobileNavigationProps> = () => {
   return (
     <div className="mobilenavigation">
       {/* Component content */}

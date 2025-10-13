@@ -4,7 +4,7 @@ interface SEOProps {
   // Add props here
 }
 
-const SEO: React.FC<SEOProps> = (props) => {
+const SEO: React.FC<SEOProps> = () => {
   return (
     <div className="seo">
       {/* Component content */}

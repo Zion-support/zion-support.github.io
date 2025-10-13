@@ -4,7 +4,7 @@ interface CriticalResourcePreloaderProps {
   // Add props here
 }
 
-const CriticalResourcePreloader: React.FC<CriticalResourcePreloaderProps> = (props) => {
+const CriticalResourcePreloader: React.FC<CriticalResourcePreloaderProps> = () => {
   return (
     <div className="criticalresourcepreloader">
       {/* Component content */}

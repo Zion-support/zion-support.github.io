@@ -4,7 +4,7 @@ interface OptimizedLoadingSpinnerProps {
   // Add props here
 }
 
-const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = (props) => {
+const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = () => {
   return (
     <div className="optimizedloadingspinner">
       {/* Component content */}

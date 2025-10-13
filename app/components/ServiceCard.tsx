@@ -4,7 +4,7 @@ interface ServiceCardProps {
   // Add props here
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = (props) => {
+const ServiceCard: React.FC<ServiceCardProps> = () => {
   return (
     <div className="servicecard">
       {/* Component content */}

@@ -4,7 +4,7 @@ interface SecurityEnhancerProps {
   // Add props here
 }
 
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = (props) => {
+const SecurityEnhancer: React.FC<SecurityEnhancerProps> = () => {
   return (
     <div className="securityenhancer">
       {/* Component content */}

@@ -4,7 +4,7 @@ interface LoadingSkeletonProps {
   // Add props here
 }
 
-const LoadingSkeleton: React.FC<LoadingSkeletonProps> = (props) => {
+const LoadingSkeleton: React.FC<LoadingSkeletonProps> = () => {
   return (
     <div className="loadingskeleton">
       {/* Component content */}

@@ -4,7 +4,7 @@ interface EnhancedAccessibilityManagerProps {
   // Add props here
 }
 
-const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> = (props) => {
+const EnhancedAccessibilityManager: React.FC<EnhancedAccessibilityManagerProps> = () => {
   return (
     <div className="enhancedaccessibilitymanager">
       {/* Component content */}

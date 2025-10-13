@@ -4,7 +4,7 @@ interface LoadingSpinnerProps {
   // Add props here
 }
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = (props) => {
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = () => {
   return (
     <div className="loadingspinner">
       {/* Component content */}

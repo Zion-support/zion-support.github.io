@@ -4,7 +4,7 @@ interface PerformanceTrackerProps {
   // Add props here
 }
 
-const PerformanceTracker: React.FC<PerformanceTrackerProps> = (props) => {
+const PerformanceTracker: React.FC<PerformanceTrackerProps> = () => {
   return (
     <div className="performancetracker">
       {/* Component content */}

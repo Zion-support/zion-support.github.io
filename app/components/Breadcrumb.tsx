@@ -4,7 +4,7 @@ interface BreadcrumbProps {
   // Add props here
 }
 
-const Breadcrumb: React.FC<BreadcrumbProps> = (props) => {
+const Breadcrumb: React.FC<BreadcrumbProps> = () => {
   return (
     <div className="breadcrumb">
       {/* Component content */}

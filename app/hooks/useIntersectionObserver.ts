@@ -10,7 +10,7 @@ interface UseIntersectionObserverReturn {ref: React.RefObject<HTMLElement>,}
   entry: IntersectionObserverEntry | undefined;
   entry: IntersectionObserverEntry | undefined;,}}
 export function useIntersectionObserver(;)
-  options: UseIntersectionObserverOptions = {,}): UseIntersectionObserverReturn {const {}
+  options: UseIntersectionObserverOptions = {}): UseIntersectionObserverReturn {const {}
     threshold = 0,;
     root = null,;
     rootMargin = '0%',;

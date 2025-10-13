@@ -4,7 +4,7 @@ interface PWAInstallerProps {
   // Add props here
 }
 
-const PWAInstaller: React.FC<PWAInstallerProps> = (props) => {
+const PWAInstaller: React.FC<PWAInstallerProps> = () => {
   return (
     <div className="pwainstaller">
       {/* Component content */}

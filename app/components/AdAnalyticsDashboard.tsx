@@ -4,7 +4,7 @@ interface AdAnalyticsDashboardProps {
   // Add props here
 }
 
-const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = (props) => {
+const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = () => {
   return (
     <div className="adanalyticsdashboard">
       {/* Component content */}

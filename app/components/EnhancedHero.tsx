@@ -4,7 +4,7 @@ interface EnhancedHeroProps {
   // Add props here
 }
 
-const EnhancedHero: React.FC<EnhancedHeroProps> = (props) => {
+const EnhancedHero: React.FC<EnhancedHeroProps> = () => {
   return (
     <div className="enhancedhero">
       {/* Component content */}

@@ -4,7 +4,7 @@ interface SEOAuditProps {
   // Add props here
 }
 
-const SEOAudit: React.FC<SEOAuditProps> = (props) => {
+const SEOAudit: React.FC<SEOAuditProps> = () => {
   return (
     <div className="seoaudit">
       {/* Component content */}

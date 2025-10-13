@@ -4,7 +4,7 @@ interface HeaderProps {
   // Add props here
 }
 
-const Header: React.FC<HeaderProps> = (props) => {
+const Header: React.FC<HeaderProps> = () => {
   return (
     <div className="header">
       {/* Component content */}

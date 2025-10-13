@@ -4,7 +4,7 @@ interface ImprovedErrorBoundaryProps {
   // Add props here
 }
 
-const ImprovedErrorBoundary: React.FC<ImprovedErrorBoundaryProps> = (props) => {
+const ImprovedErrorBoundary: React.FC<ImprovedErrorBoundaryProps> = () => {
   return (
     <div className="improvederrorboundary">
       {/* Component content */}

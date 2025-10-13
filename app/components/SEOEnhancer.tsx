@@ -4,7 +4,7 @@ interface SEOEnhancerProps {
   // Add props here
 }
 
-const SEOEnhancer: React.FC<SEOEnhancerProps> = (props) => {
+const SEOEnhancer: React.FC<SEOEnhancerProps> = () => {
   return (
     <div className="seoenhancer">
       {/* Component content */}

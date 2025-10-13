@@ -4,7 +4,7 @@ interface AdTemplatesProps {
   // Add props here
 }
 
-const AdTemplates: React.FC<AdTemplatesProps> = (props) => {
+const AdTemplates: React.FC<AdTemplatesProps> = () => {
   return (
     <div className="adtemplates">
       {/* Component content */}

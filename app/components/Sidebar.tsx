@@ -4,7 +4,7 @@ interface SidebarProps {
   // Add props here
 }
 
-const Sidebar: React.FC<SidebarProps> = (props) => {
+const Sidebar: React.FC<SidebarProps> = () => {
   return (
     <div className="sidebar">
       {/* Component content */}

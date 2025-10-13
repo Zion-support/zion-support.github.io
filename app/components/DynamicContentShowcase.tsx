@@ -4,7 +4,7 @@ interface DynamicContentShowcaseProps {
   // Add props here
 }
 
-const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = (props) => {
+const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = () => {
   return (
     <div className="dynamiccontentshowcase">
       {/* Component content */}

@@ -4,7 +4,7 @@ interface FuturisticBackgroundEnhancedProps {
   // Add props here
 }
 
-const FuturisticBackgroundEnhanced: React.FC<FuturisticBackgroundEnhancedProps> = (props) => {
+const FuturisticBackgroundEnhanced: React.FC<FuturisticBackgroundEnhancedProps> = () => {
   return (
     <div className="futuristicbackgroundenhanced">
       {/* Component content */}

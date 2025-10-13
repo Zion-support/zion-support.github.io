@@ -4,7 +4,7 @@ interface EnhancedAnalyticsProps {
   // Add props here
 }
 
-const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = (props) => {
+const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = () => {
   return (
     <div className="enhancedanalytics">
       {/* Component content */}

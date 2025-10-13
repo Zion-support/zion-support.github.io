@@ -4,7 +4,7 @@ interface NewContentAdvertisingBannerProps {
   // Add props here
 }
 
-const NewContentAdvertisingBanner: React.FC<NewContentAdvertisingBannerProps> = (props) => {
+const NewContentAdvertisingBanner: React.FC<NewContentAdvertisingBannerProps> = () => {
   return (
     <div className="newcontentadvertisingbanner">
       {/* Component content */}

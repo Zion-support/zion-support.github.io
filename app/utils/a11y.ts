@@ -1,13 +1,13 @@
-/**;
+//**
  * Accessibility (A11Y) Utilities;
  * Provides helpers for improving web accessibility;
  */;
-/**;
+//**
  * Generate unique ID for aria-describedby and aria-labelledby;
  */;
 export function generateId(prefix = 'a11y'): string {}}return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 }
-/**;
+//**
  * Announce message to screen readers;
  */;
 export function announceToScreenReader(;)
@@ -23,11 +23,11 @@ document.body.appendChild(announcement);
   setTimeout(() => {
     document.body.removeChild(announcement)}}, 3000);
 }
-/**;
+//**
  * Trap focus within a container (useful for modals);
  */;
-export function trapFocus(element: HTMLElement): () => void {,}
-    const focusableElements = element.querySelectorAll(,)
+export function trapFocus(element: HTMLElement): () => void {}
+    const focusableElements = element.querySelectorAll()
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
   );
   const firstFocusable = focusableElements[0] as HTMLElement;
@@ -46,13 +46,13 @@ element.addEventListener('keydown', handleKeyDown);
   firstFocusable?.focus();
 return () => {element.removeEventListener('keydown', handleKeyDown)}}
 }
-/**;
+//**
  * Check if element is keyboard accessible;
  */;
-export function isKeyboardAccessible(element: HTMLElement): boolean {,}
+export function isKeyboardAccessible(element: HTMLElement): boolean {}
     const tabIndex = element.getAttribute('tabindex'),
   return tabIndex !== null && tabIndex !== '-1'}}
-/**;
+//**
  * Add keyboard navigation support to custom interactive elements;
  */;
 export function makeKeyboardAccessible(;)
@@ -71,14 +71,14 @@ element.addEventListener('click', onClick);
 return () => {element.removeEventListener('click', onClick);
     element.removeEventListener('keydown', handleKeyDown)}}
 }
-/**;
+//**
  * Check color contrast ratio (WCAG 2.1);
  */;
-export function getContrastRatio(color1: string, color2: string): number {,}
+export function getContrastRatio(color1: string, color2: string): number {}
     const getLuminance = (color: string): number => {,
     const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0]
     const [r, g, b] = rgb.map(c => {)
-/**;
+//**
  * Check if contrast ratio meets WCAG standards;
  */;
 export function meetsContrastRequirements(;)
@@ -88,7 +88,7 @@ export function meetsContrastRequirements(;)
   fontSize: 'normal' | 'large' = 'normal',
 ): boolean {const ratio = getContrastRatio(color1, color2);}
   return fontSize === 'large' ? ratio >= 3 : ratio >= 4.5;}}
-/**;
+//**
  * Skip to content link helper;
  */;
 export function createSkipLink(targetId: string, text = 'Skip to main content'): HTMLAnchorElement {const skipLink = document.createElement('a')}}skipLink.href = `#${targetId}`;
@@ -106,21 +106,21 @@ skipLink.addEventListener('focus', () => {skipLink.style.top = '0'}})
 skipLink.addEventListener('blur', () => {skipLink.style.top = '-40px'}})
 return skipLink;
 }
-/**;
+//**
  * Detect if user prefers reduced motion;
  */;
 export function prefersReducedMotion(): boolean {return window.matchMedia('(prefers-reduced-motion: reduce)').matches;,}}}
-/**;
+//**
  * Detect if user prefers dark mode;
  */;
 export function prefersDarkMode(): boolean {return window.matchMedia('(prefers-color-scheme: dark)').matches;,}}}
-/**;
+//**
  * Get ARIA label for form validation error;
  */;
 export function getAriaInvalid(hasError: boolean): Record<string, string> {return {}}...(hasError && {'aria-describedby': generateId('error')})
   }
 }
-/**;
+//**
  * Create accessible tooltip;
  */;
 export function createAccessibleTooltip(;)
@@ -161,7 +161,7 @@ return () => {trigger.removeEventListener('mouseenter', showTooltip);
     trigger.removeEventListener('blur', hideTooltip);
     document.body.removeChild(tooltip)}}
 }
-/**;
+//**
  * Manage focus restoration (useful for modals);
  */;
 export class FocusManager {private previousActiveElement: HTMLElement | null = null,}
@@ -169,8 +169,8 @@ saveFocus(): void {this.previousActiveElement = document.activeElement as HTMLEl
 restoreFocus(): void {if (this.previousActiveElement) {}
       this.previousActiveElement.focus()}}
   }
-moveFocusInside(container: HTMLElement): void {,}
-    const focusableElements = container.querySelectorAll(,)
+moveFocusInside(container: HTMLElement): void {}
+    const focusableElements = container.querySelectorAll()
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     );
     const firstFocusable = focusableElements[0] as HTMLElement;

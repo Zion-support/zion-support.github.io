@@ -4,7 +4,7 @@ interface ServiceCardSkeletonProps {
   // Add props here
 }
 
-const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = (props) => {
+const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = () => {
   return (
     <div className="servicecardskeleton">
       {/* Component content */}

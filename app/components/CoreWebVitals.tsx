@@ -4,7 +4,7 @@ interface CoreWebVitalsProps {
   // Add props here
 }
 
-const CoreWebVitals: React.FC<CoreWebVitalsProps> = (props) => {
+const CoreWebVitals: React.FC<CoreWebVitalsProps> = () => {
   return (
     <div className="corewebvitals">
       {/* Component content */}

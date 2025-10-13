@@ -4,7 +4,7 @@ interface FuturisticTextEnhancedProps {
   // Add props here
 }
 
-const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = (props) => {
+const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = () => {
   return (
     <div className="futuristictextenhanced">
       {/* Component content */}

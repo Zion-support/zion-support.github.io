@@ -4,7 +4,7 @@ interface ImprovedNavigationProps {
   // Add props here
 }
 
-const ImprovedNavigation: React.FC<ImprovedNavigationProps> = (props) => {
+const ImprovedNavigation: React.FC<ImprovedNavigationProps> = () => {
   return (
     <div className="improvednavigation">
       {/* Component content */}

@@ -1,4 +1,4 @@
-/**;
+//**
  * Google Analytics gtag types;
  */;
 interface GtagEvent {event_category?: string;}

@@ -4,7 +4,7 @@ interface AnimatedCounterProps {
   // Add props here
 }
 
-const AnimatedCounter: React.FC<AnimatedCounterProps> = (props) => {
+const AnimatedCounter: React.FC<AnimatedCounterProps> = () => {
   return (
     <div className="animatedcounter">
       {/* Component content */}

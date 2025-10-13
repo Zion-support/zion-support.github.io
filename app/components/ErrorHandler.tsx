@@ -4,7 +4,7 @@ interface ErrorHandlerProps {
   // Add props here
 }
 
-const ErrorHandler: React.FC<ErrorHandlerProps> = (props) => {
+const ErrorHandler: React.FC<ErrorHandlerProps> = () => {
   return (
     <div className="errorhandler">
       {/* Component content */}

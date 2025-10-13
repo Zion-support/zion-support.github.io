@@ -4,7 +4,7 @@ interface FuturisticButtonEnhancedProps {
   // Add props here
 }
 
-const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = (props) => {
+const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = () => {
   return (
     <div className="futuristicbuttonenhanced">
       {/* Component content */}

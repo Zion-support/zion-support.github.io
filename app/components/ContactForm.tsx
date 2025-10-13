@@ -4,7 +4,7 @@ interface ContactFormProps {
   // Add props here
 }
 
-const ContactForm: React.FC<ContactFormProps> = (props) => {
+const ContactForm: React.FC<ContactFormProps> = () => {
   return (
     <div className="contactform">
       {/* Component content */}

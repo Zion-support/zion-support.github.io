@@ -4,7 +4,7 @@ interface EnhancedLoadingSkeletonProps {
   // Add props here
 }
 
-const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = (props) => {
+const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = () => {
   return (
     <div className="enhancedloadingskeleton">
       {/* Component content */}

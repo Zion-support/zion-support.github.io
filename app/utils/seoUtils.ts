@@ -28,7 +28,7 @@ private applyConfig(): void {if (typeof document === 'undefined') return;}
         this.addMetaTag('article:tag', tag)}})
     }
   }
-private updateMetaTag(name: string, content: string): void {,}
+private updateMetaTag(name: string, content: string): void {}
     if (typeof document === 'undefined') return;}let meta = document.querySelector(`meta[name="${name)}"]`) as HTMLMetaElement;
     if (!meta) {meta = document.createElement('meta');
       meta.name = name;
@@ -60,14 +60,14 @@ if (this.config.twitterImage) {}twitterTags.push({name: 'twitter:image', content
 twitterTags.forEach(tag => {)
     this.updateMetaTag(tag.name, tag.content)}})
   }
-private updateMetaTagByProperty(property: string, content: string): void {,}
+private updateMetaTagByProperty(property: string, content: string): void {}
     if (typeof document === 'undefined') return;}let meta = document.querySelector(`meta[property="${property)}"]`) as HTMLMetaElement;
     if (!meta) {meta = document.createElement('meta');
       meta.setAttribute('property', property);
       document.head.appendChild(meta)}}
     meta.content = content;
   }
-private addMetaTag(name: string, content: string): void {,}
+private addMetaTag(name: string, content: string): void {}
     if (typeof document === 'undefined') return;
 // Utility functions;
 export const generateMetaDescription = (content: string, maxLength: number = 160): string => {,

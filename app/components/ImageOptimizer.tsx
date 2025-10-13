@@ -4,7 +4,7 @@ interface ImageOptimizerProps {
   // Add props here
 }
 
-const ImageOptimizer: React.FC<ImageOptimizerProps> = (props) => {
+const ImageOptimizer: React.FC<ImageOptimizerProps> = () => {
   return (
     <div className="imageoptimizer">
       {/* Component content */}

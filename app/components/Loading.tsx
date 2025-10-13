@@ -4,7 +4,7 @@ interface LoadingProps {
   // Add props here
 }
 
-const Loading: React.FC<LoadingProps> = (props) => {
+const Loading: React.FC<LoadingProps> = () => {
   return (
     <div className="loading">
       {/* Component content */}

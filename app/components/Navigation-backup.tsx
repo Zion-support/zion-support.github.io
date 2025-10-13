@@ -1,10 +1,10 @@
 import React from 'react';
 
-interface Navigation-backupProps {
+interface NavigationBackupProps {
   // Add props here
 }
 
-const Navigation-backup: React.FC<Navigation-backupProps> = (props) => {
+const NavigationBackup: React.FC<NavigationBackupProps> = () => {
   return (
     <div className="navigation-backup">
       {/* Component content */}
@@ -12,4 +12,4 @@ const Navigation-backup: React.FC<Navigation-backupProps> = (props) => {
   );
 };
 
-export default Navigation-backup;
+export default NavigationBackup;

@@ -4,7 +4,7 @@ interface FooterProps {
   // Add props here
 }
 
-const Footer: React.FC<FooterProps> = (props) => {
+const Footer: React.FC<FooterProps> = () => {
   return (
     <div className="footer">
       {/* Component content */}

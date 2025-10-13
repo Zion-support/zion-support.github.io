@@ -4,7 +4,7 @@ interface ResponsiveGridProps {
   // Add props here
 }
 
-const ResponsiveGrid: React.FC<ResponsiveGridProps> = (props) => {
+const ResponsiveGrid: React.FC<ResponsiveGridProps> = () => {
   return (
     <div className="responsivegrid">
       {/* Component content */}

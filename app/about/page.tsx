@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Shield, Users, Download, ExternalLink, ChevronRight, Phone, Mail, CheckCircle } from 'lucide-react';
+import { ArrowRight, Brain, Shield, Users, CheckCircle } from 'lucide-react';
 
 export default function AboutPage() {
   return (

@@ -4,7 +4,7 @@ interface OptimizedImageProps {
   // Add props here
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = (props) => {
+const OptimizedImage: React.FC<OptimizedImageProps> = () => {
   return (
     <div className="optimizedimage">
       {/* Component content */}

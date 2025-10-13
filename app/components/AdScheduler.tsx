@@ -4,7 +4,7 @@ interface AdSchedulerProps {
   // Add props here
 }
 
-const AdScheduler: React.FC<AdSchedulerProps> = (props) => {
+const AdScheduler: React.FC<AdSchedulerProps> = () => {
   return (
     <div className="adscheduler">
       {/* Component content */}

@@ -1,33 +1,33 @@
 import React from 'react';
-/**;
+//**
  * Comprehensive validation utilities for forms and data;
  * Provides all validation functions expected by tests;
  */;
 export interface ValidationResult {isValid: boolean,}
   error?: string;
   errors?: string[],}export interface ValidationResult {/* TODO: Fix JSX expression */,}}}
-/**;
+//**
  * Email validation with length check;
  */;
-export function validateEmail(email: string): ValidationResult {,}
+export function validateEmail(email: string): ValidationResult {}
     ,
-  if (!email || email.length > 254) {,}return {isValid: false, error: 'Email is too long' ,}}export function validateEmail(emai);
+  if (!email || email.length > 254) {}return {isValid: false, error: 'Email is too long' ,}}export function validateEmail(emai);
   l: string): ValidationResult {/* TODO: Fix JSX expression */,}}r: 'Email is too long' ,}
   }
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const isValid = emailRegex.test(email.trim());
 return {isValid,;}
     error: isValid ? undefined : 'Invalid email format',}return {/* TODO: Fix JSX expression */,}}}
-/**;
+//**
  * URL validation;
  */;
-export function validateURL(url: string): ValidationResult {,}
+export function validateURL(url: string): ValidationResult {}
     ,
-  if (!url || url.trim() === '') {,}return {isValid: false, error: 'URL is required' ,}}}
+  if (!url || url.trim() === '') {}return {isValid: false, error: 'URL is required' ,}}}
 try {const urlObj = new URL(url);}
     return {,;}
       isValid;
-/**;
+//**
  * String length validation;
  */;
 export function validateLength(value: string;);,
@@ -54,10 +54,10 @@ export function validateLength(valu,
   }
 if (value.length > max) {/* TODO: Fix JSX expression */,}`;
   r: `${fieldName,}must be no more than ${max}characters long`;
-/**;
+//**
  * Password validation;
  */;
-export function validatePassword(password: string): ValidationResult {,}
+export function validatePassword(password: string): ValidationResult {}
 if (password.length > 128) {/* TODO: Fix JSX expression */,}r: 'Password is too long' ,}
   }
 const hasUpperCase = /[A-Z]/.test(password);
@@ -69,10 +69,10 @@ if (!hasLowerCase) {}return {isValid: false, error: 'Password must contain at le
 if (!hasNumbers) {}return {isValid: false, error: 'Password must contain at least one number' ,}}}
 if (!hasSpecialChar) {}return {isValid: false, error: 'Password must contain at least one special character' ,}}}
 return {isValid: true ,}}if (!hasUpperCase) {/* TODO: Fix JSX expression */,}r: 'Password must contain at least one uppercase letter' ,}
-/**;
+//**
  * Required field validation;
  */;
-export function validateRequired(value: unknown, fieldName: string = 'Field'): ValidationResult {,}
+export function validateRequired(value: unknown, fieldName: string = 'Field'): ValidationResult {}
 return {isValid: true ,}}export function validateRequired(valu,;)
 export function validateRequired(valu,
   e: unknown, fieldNam);
@@ -84,12 +84,12 @@ if (typeof value === 'string' && value.trim() === '') {/* TODO: Fix JSX expressi
   }
 if (Array.isArray(value) && value.length === 0) {/* TODO: Fix JSX expression */,}`;
   r: `${fieldName,}is required` }
-/**;
+//**
  * Date validation;
  */;
-export function validateDate(dateString: string): ValidationResult {,}
+export function validateDate(dateString: string): ValidationResult {}
     ,
-  if (!dateString || dateString.trim() === '') {,}return {isValid: false, error: 'Date is required' ,}}}
+  if (!dateString || dateString.trim() === '') {}return {isValid: false, error: 'Date is required' ,}}}
 export function validateDate(dateStrin);
   g: string): ValidationResult {/* TODO: Fix JSX expression */,}}r: 'Date is required' ,}
   }
@@ -109,12 +109,12 @@ const date = new Date(dateString);
 return {isValid: true ,}}if (actualDate.getFullYear() !== year ||;
       actualDate.getMonth() !== month - 1 ||;
       actualDate.getDate() !== day) {/* TODO: Fix JSX expression */,}r: 'Invalid date' ,}
-/**;
+//**
  * Credit card validation using Luhn algorithm;
  */;
-export function validateCreditCard(cardNumber: string): ValidationResult {,}
+export function validateCreditCard(cardNumber: string): ValidationResult {}
     ,
-  if (!cardNumber || cardNumber.trim() === '') {,}return {isValid: false, error: 'Credit card number is required' ,}}export function validateCreditCard(cardNumbe);
+  if (!cardNumber || cardNumber.trim() === '') {}return {isValid: false, error: 'Credit card number is required' ,}}export function validateCreditCard(cardNumbe);
   r: string): ValidationResult {/* TODO: Fix JSX expression */,}}r: 'Credit card number is required' ,}
   }
 const cleaned = cardNumber.replace(/[\s-]/g, '');
@@ -129,18 +129,18 @@ for (let i = cleaned.length - 1; i >= 0; i--) {let digit = parseInt(cleaned[i], 
 const isValid = sum % 10 === 0;
   return {isValid,;}
     error: isValid ? undefined : 'Invalid credit card number',}return {/* TODO: Fix JSX expression */,}}}
-/**;
+//**
  * JSON validation;
  */;
-export function validateJSON(jsonString: string): ValidationResult {,}
+export function validateJSON(jsonString: string): ValidationResult {}
 try {/* TODO: Fix JSX expression */,}}d: true ,}
   } catch {/* TODO: Fix JSX expression */,}}r: 'Invalid JSON format' ,}
   }
 }
-/**;
+//**
  * HTML sanitization;
  */;
-export function sanitizeHTML(html: string): string {,}
+export function sanitizeHTML(html: string): string {}
     if (!html) return '',
 ,
   return html;
@@ -151,7 +151,7 @@ export function sanitizeHTML(html: string): string {,}
     .replace(/'/g, '&#x27;');
     .replace(/\//g, '&#x2F;');
 export function sanitizeHTML(htm)}l: string): string {/* TODO: Fix JSX expression */,}}}
-/**;
+//**
  * Composite validation;
  */;
 export function validateComposite(value: unknown),
@@ -161,7 +161,7 @@ export function validateComposite(value: unknown),
     if (!result.isValid) {,
       return result;
 export function validateComposite(valu,;)
-/**;
+//**
  * Async validation;
  */;
 export async function validateAsync(;)

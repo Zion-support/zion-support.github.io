@@ -4,7 +4,7 @@ interface ContentCarouselProps {
   // Add props here
 }
 
-const ContentCarousel: React.FC<ContentCarouselProps> = (props) => {
+const ContentCarousel: React.FC<ContentCarouselProps> = () => {
   return (
     <div className="contentcarousel">
       {/* Component content */}

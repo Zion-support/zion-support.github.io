@@ -4,7 +4,7 @@ interface GlobalErrorBoundaryProps {
   // Add props here
 }
 
-const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = (props) => {
+const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = () => {
   return (
     <div className="globalerrorboundary">
       {/* Component content */}

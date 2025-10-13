@@ -4,7 +4,7 @@ interface ContentPromotionBannerProps {
   // Add props here
 }
 
-const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = (props) => {
+const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = () => {
   return (
     <div className="contentpromotionbanner">
       {/* Component content */}

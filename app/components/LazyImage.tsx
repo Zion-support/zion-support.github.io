@@ -4,7 +4,7 @@ interface LazyImageProps {
   // Add props here
 }
 
-const LazyImage: React.FC<LazyImageProps> = (props) => {
+const LazyImage: React.FC<LazyImageProps> = () => {
   return (
     <div className="lazyimage">
       {/* Component content */}

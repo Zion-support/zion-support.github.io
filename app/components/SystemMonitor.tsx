@@ -4,7 +4,7 @@ interface SystemMonitorProps {
   // Add props here
 }
 
-const SystemMonitor: React.FC<SystemMonitorProps> = (props) => {
+const SystemMonitor: React.FC<SystemMonitorProps> = () => {
   return (
     <div className="systemmonitor">
       {/* Component content */}

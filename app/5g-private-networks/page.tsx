@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function Page5gprivatenetworks(() {
+export default function Page5gprivatenetworks() {
   return (
     <>
       <Helmet>
