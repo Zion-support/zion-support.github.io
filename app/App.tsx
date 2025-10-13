@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface AppProps {
@@ -36,6 +37,15 @@ import { HelmetProvider } from 'react-helmet-async';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 
 =======
+=======
+"use client";
+
+import { HelmetProvider } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
+import { Home } from 'lucide-react';
+import { Network } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 // Lazy load pages for better performance
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -94,6 +104,7 @@ export default function App() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <ErrorBoundary>
           <Suspense fallback={<LoadingSpinner />}>
 =======
@@ -105,6 +116,16 @@ export default function App() {
           <Suspense fallback={<LoadingSpinner />}>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
             <Routes>
+=======
+        <ErrorBoundary>
+          <PerformanceMonitor />
+          <AccessibilityEnhancer>
+            <CriticalResourcePreloader />
+            <CacheManager />
+            <AdvancedPerformanceMonitor />
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />

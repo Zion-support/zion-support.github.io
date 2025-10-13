@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -290,6 +291,14 @@ export default function AiContentStudioPage() {
 =======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Star } from 'lucide-react';
+import { FileText } from 'lucide-react';
+
+const AIContentStudioZionTechGroup = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 export default function AiContentStudioPage() {
         return (

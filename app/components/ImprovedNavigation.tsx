@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 const ImprovedNavigation = () => {
@@ -625,6 +626,21 @@ const ImprovedNavigation = () => {
           </div>
         </div>
       </div>
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+
+interface ImprovednavigationProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Improvednavigation({ className = '', children, ...props }: ImprovednavigationProps) {
+  return (
+    <div className={`improvednavigation-component ${className}`} {...props}>
+      {children}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
     </div>
   return (
     <>

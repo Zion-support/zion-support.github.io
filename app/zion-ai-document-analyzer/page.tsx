@@ -7,6 +7,7 @@
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -125,6 +126,12 @@ const useCases = [
 
 export default function ZionAIDocumentAnalyzer() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+export default function ZionAIDocumentAnalyzer() {
+
+export default function ZionAiDocumentAnalyzerPage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   return (
     <div>
   return (
@@ -342,4 +349,9 @@ export default function ZionaidocumentanalyzerPage() {
       </section>
     </div>
   );
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 }

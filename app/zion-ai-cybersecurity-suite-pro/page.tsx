@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -92,6 +93,18 @@ import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { AlertTriangle } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Network } from 'lucide-react';
+import { Lock } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 const ZionAICybersecuritySuiteProPage = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
@@ -551,6 +564,7 @@ const ZionAICybersecuritySuiteProPage = () => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ZionAICybersecuritySuiteProPage;
   );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
@@ -559,3 +573,6 @@ export default ZionAICybersecuritySuiteProPage;
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

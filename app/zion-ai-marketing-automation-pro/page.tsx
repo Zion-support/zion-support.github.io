@@ -1,11 +1,25 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 =======
 =======
+=======
+import React from 'react';
+import { Users } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
+
+import { Helmet } from "react-helmet-async";
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 
 const testimonials = [

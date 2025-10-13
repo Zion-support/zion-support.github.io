@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -62,6 +63,19 @@ export default function ZionhrassistantproPage() {
 import { Link } from 'react-router-dom';
 import { Users, Brain, Clock, Shield, ArrowRight, CheckCircle, Star, FileText, TrendingUp, Calendar, Heart } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
+=======
+import React from 'react';
+import { Clock } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { FileText } from 'lucide-react';
+import { Heart } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 const ZionHRAssistantPro = () => {
   const features = [
@@ -182,6 +196,10 @@ const ZionHRAssistantPro = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
+<<<<<<< HEAD
+=======
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -504,4 +522,8 @@ export default ZionHRAssistantPro;
   );
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

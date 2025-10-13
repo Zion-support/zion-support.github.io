@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Link } from 'react-router-dom';
 // import { Home } from 'lucide-react'; // Unused import
@@ -13,6 +14,15 @@ const Breadcrumb: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default function Breadcrumb({ className = '', children }: BreadcrumbProps) {
+=======
+
+interface BreadcrumbProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Breadcrumb({ className = '', children, ...props }: BreadcrumbProps) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   return (
     <div className={`${className}`}>
       {children}

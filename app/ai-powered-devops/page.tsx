@@ -1,11 +1,24 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 =======
 =======
+=======
+import React from 'react';
+import { Helmet } from "react-helmet-async";
+import { Helmet } from 'react-helmet-async';
+import { Star } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Rocket } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { Plus } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 
 const testimonials = [

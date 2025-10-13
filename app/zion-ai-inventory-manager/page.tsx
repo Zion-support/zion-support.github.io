@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -64,6 +65,14 @@ import { BarChart3, Package, TrendingUp, AlertTriangle, Zap, ArrowRight, CheckCi
 import EnhancedSEO from '../components/EnhancedSEO';
 import { Link } from 'react-router-dom';
 import { Zap, ArrowRight, CheckCircle, CheckCircle, ArrowRight } from 'lucide-react';
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Zap } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 const ZionAIInventoryManager = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];

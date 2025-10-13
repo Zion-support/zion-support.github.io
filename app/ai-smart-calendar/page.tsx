@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -42,6 +43,14 @@ import React from 'react';
 
 export default function Page() {
 
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+
+export default function GDataAnalyticsZionTechGroupPage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
@@ -20,6 +21,13 @@ import React from 'react';
 interface ErrorBoundaryProps {
   className?: string;
   children?: React.ReactNode;
+=======
+import React from 'react';
+
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 }
 
 <<<<<<< HEAD

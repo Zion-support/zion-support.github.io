@@ -1,9 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 =======
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 
 import React from 'react';

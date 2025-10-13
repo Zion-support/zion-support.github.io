@@ -1,12 +1,32 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 =======
 =======
 
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Database } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Network } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Headphones } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 export default function ITServices() {
   const itServices = [

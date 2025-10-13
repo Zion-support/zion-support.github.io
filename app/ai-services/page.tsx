@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -15,6 +16,9 @@ import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 export default function aiServices() {
 =======
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 import { Helmet } from 'react-helmet-async';
 
 export default function AIServices() {

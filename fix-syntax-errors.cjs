@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -122,6 +123,59 @@ function fixSyntaxErrors(filePath) {
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
+=======
+const fs = require('fs');
+const path = require('path');
+
+// List of files with missing closing braces
+const filesToFix = [
+  'app/ai-data-analytics-pro/page.tsx',
+  'app/ai-ecommerce-optimizer-pro/page.tsx',
+  'app/ai-financial-analysis/page.tsx',
+  'app/ai-financial-analytics-pro/page.tsx',
+  'app/ai-healthcare-diagnostics/page.tsx',
+  'app/ai-marketing-automation/page.tsx',
+  'app/ai-powered-email-analyzer/page.tsx',
+  'app/ar-vr-development/page.tsx',
+  'app/cloud-infrastructure/page.tsx',
+  'app/cloud-services/page.tsx',
+  'app/community/page.tsx',
+  'app/compliance/page.tsx',
+  'app/contact/page.tsx',
+  'app/custom-development/page.tsx',
+  'app/cybersecurity-solutions/page.tsx',
+  'app/cybersecurity/page.tsx',
+  'app/page.tsx',
+  'app/pricing/page.tsx',
+  'app/smart-expense-categorizer/page.tsx',
+  'app/zion-ai-accounting-suite/page.tsx',
+  'app/zion-ai-analytics-pro/page.tsx',
+  'app/zion-ai-crm-pro/page.tsx',
+  'app/zion-ai-document-analyzer/page.tsx',
+  'app/zion-ai-neural-interface/page.tsx',
+  'app/zion-cloud-vault-pro/page.tsx',
+  'app/zion-hr-assistant-pro/page.tsx'
+];
+
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Count opening and closing braces
+    const openBraces = (content.match(/\{/g) || []).length;
+    const closeBraces = (content.match(/\}/g) || []).length;
+    
+    if (openBraces > closeBraces) {
+      const missingBraces = openBraces - closeBraces;
+      console.log(`Fixing ${filePath}: adding ${missingBraces} closing braces`);
+      
+      // Add missing closing braces at the end
+      for (let i = 0; i < missingBraces; i++) {
+        content += '\n}';
+      }
+      
+      fs.writeFileSync(filePath, content);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
       return true;
     }
     
@@ -133,6 +187,7 @@ function fixSyntaxErrors(filePath) {
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Function to create a basic page component
 function createBasicPageComponent(filePath) {
@@ -212,8 +267,19 @@ function findSourceFiles(dir) {
       }
     } catch (error) {
       // Skip directories that can't be read
+=======
+// Fix all files
+let fixedCount = 0;
+filesToFix.forEach(filePath => {
+  if (fs.existsSync(filePath)) {
+    if (fixFile(filePath)) {
+      fixedCount++;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
     }
+  } else {
+    console.log(`File not found: ${filePath}`);
   }
+<<<<<<< HEAD
   
   scanDirectory(dir);
   return files;
@@ -281,3 +347,8 @@ try {
   process.exit(1);
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+});
+
+console.log(`Fixed ${fixedCount} files`);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

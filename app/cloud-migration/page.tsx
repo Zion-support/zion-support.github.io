@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 =======
@@ -16,6 +17,13 @@ import { Helmet } from 'react-helmet-async';
 
 <<<<<<< HEAD
 export default function cloudMigration() {
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Cloud } from 'lucide-react';
+
+export default function CloudMigration() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

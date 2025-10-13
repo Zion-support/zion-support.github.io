@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -20,6 +21,8 @@ export default function Page() {
 
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 =======
@@ -126,7 +129,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
+<<<<<<< HEAD
 export default function CybersecurityAudit() {
+=======
+export default function GDataAnalyticsZionTechGroupPage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">

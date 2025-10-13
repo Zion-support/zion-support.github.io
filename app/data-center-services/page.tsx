@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -112,6 +113,21 @@ import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedAccessibility from '../components/EnhancedAccessibility';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import { Server, ArrowRight, CheckCircle, Star, Users, Calendar, Phone, Mail } from 'lucide-react';
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Server } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 const DataCenterServicesPage = () => {
   const dataCenterServices = [

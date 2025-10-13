@@ -9,6 +9,7 @@ import { Helmet } from 'react-helmet-async';
 export default function demo() {
 =======
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Play, Pause, SkipForward, SkipBack, Maximize, ArrowRight, CheckCircle, Star, Calendar } from 'lucide-react';
 
@@ -21,6 +22,17 @@ import { useState } from 'react';
 
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+import { Pause } from 'lucide-react';
+import { Network } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { Play } from 'lucide-react';
+import { Hand } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+
+import { useState } from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 export default function Page() {
   const [currentDemo, setCurrentDemo] = useState(0);

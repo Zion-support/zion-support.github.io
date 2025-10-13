@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31,6 +32,16 @@ export default function AiCustomerSupportChatbotPage() {
         description: "Intelligent chatbot that understands context and provides accurate answers",
         icon: <Brain className="w-8 h-8" />
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const features = [
+    {
+      title: "Predictive Analytics",
+      description: "Advanced machine learning models for accurate financial forecasting",
+      icon: "Brain"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
     },
     {,
     title: "24/7 Availability",
@@ -48,7 +59,27 @@ export default function AiCustomerSupportChatbotPage() {
         icon: <Users className="w-8 h-8" />
     }
   ];
+<<<<<<< HEAD
 
+=======
+const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CFO",
+      company: "TechCorp",
+      content: "The AI financial analysis platform has revolutionized our decision-making process.",
+      rating: 5
+    },
+    {
+      name: "Michael Chen",
+      role: "Investment Manager",
+      company: "FinancePro",
+      content: "Incredible accuracy and insights that have improved our portfolio performance.",
+      rating: 5
+    }
+  ];
+export default function AICustomerSupportChatbot() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   const testimonials = [
     {,
     name: "Sarah Johnson",

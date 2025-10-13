@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,6 +26,12 @@ export default function softwareDevelopment() {
   );
 }
 =======
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Globe, Smartphone, Monitor, Code, Zap, BarChart3, Clock, Award, Settings, Users, CheckCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 export default function SoftwaredevelopmentPage() {
   return (
@@ -215,6 +222,7 @@ const SoftwareDevelopmentPage = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <PerformanceOptimizer>
       <EnhancedAccessibility>
         <FuturisticBackgroundEnhanced>
@@ -251,6 +259,65 @@ const SoftwareDevelopmentPage = () => {
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
                   Build tailored software solutions that meet your specific business requirements. 
                   From web applications to mobile apps, we deliver excellence.
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      <Helmet>
+        <title>Software Development - Zion Tech Group</title>
+        <meta name="description" content="Professional software development services for modern applications." />
+      </Helmet>
+      
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Software Development
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Transform your ideas into powerful, scalable software solutions with our expert development team. 
+            From web applications to mobile apps, we deliver cutting-edge technology that drives business growth.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+            >
+              Start Your Project
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <Link
+              to="/portfolio"
+              className="border border-blue-500 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500/10 transition-all duration-300"
+            >
+              View Our Work
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Development Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide comprehensive software development services tailored to your specific needs and business objectives.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  {service.description}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -303,6 +370,7 @@ const SoftwareDevelopmentPage = () => {
                       </p>
                     </FuturisticCardEnhanced>
                   ))}
+<<<<<<< HEAD
                 </div>
               </ResponsiveContainer>
             </section>
@@ -317,6 +385,55 @@ const SoftwareDevelopmentPage = () => {
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                     A proven 4-step process to ensure successful project delivery
                   </p>
+=======
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technologies Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Technologies We Use
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We work with the latest technologies and frameworks to deliver modern, efficient solutions.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {technologies.map((tech, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20">
+                <div className="text-white font-semibold mb-1">{tech.name}</div>
+                <div className="text-gray-400 text-sm">{tech.category}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Why Choose Our Development Services?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the benefits of working with our expert development team and proven methodologies.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  {benefit.icon}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                   {developmentProcess.map((step, index) => (
@@ -474,6 +591,7 @@ const SoftwareDevelopmentPage = () => {
                   </FuturisticButtonEnhanced>
                 </div>
               </div>
+<<<<<<< HEAD
             </section>
           </main>
         </FuturisticBackgroundEnhanced>
@@ -549,3 +667,40 @@ const SoftwareDevelopmentPage: React.FC = () => {
     </div>
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Build Your Next Software Solution?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let our expert development team help you turn your ideas into reality with cutting-edge software solutions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Start Your Project
+            </Link>
+            <Link
+              to="/consultation"
+              className="border border-blue-500 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500/10 transition-all duration-300"
+            >
+              Free Consultation
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default SoftwareDevelopmentPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

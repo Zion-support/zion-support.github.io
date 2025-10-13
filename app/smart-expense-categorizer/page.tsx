@@ -4,12 +4,74 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 =======
+=======
+import { Receipt } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function smartExpenseCategorizer() {
+=======
+  const benefits: string[] = [];
+
+  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+
+  const pricingPlans = [
+    {
+      name: "Personal",
+      price: "$19",
+      period: "/month",
+      description: "Perfect for individuals",
+      features: [
+        "Up to 500 transactions/month",
+        "Basic AI categorization",
+        "Receipt scanning",
+        "Basic analytics",
+        "Email support",
+        "1 user account"
+      ],
+      popular: false
+    },
+    {
+      name: "Business",
+      price: "$59",
+      period: "/month",
+      description: "Ideal for small businesses",
+      features: [
+        "Up to 5,000 transactions/month",
+        "Advanced AI categorization",
+        "Bank integration",
+        "Advanced analytics",
+        "Priority support",
+        "5 user accounts",
+        "API access"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$149",
+      period: "/month",
+      description: "For large organizations",
+      features: [
+        "Unlimited transactions",
+        "Custom AI models",
+        "White-label solution",
+        "Advanced security",
+        "Dedicated support",
+        "Unlimited users",
+        "Custom integrations"
+      ],
+      popular: false
+    }
+  ];
+
+export default function SmartExpenseCategorizerPage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -84,6 +146,7 @@ export default function SmartexpensecategorizerPage() {
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticBackgroundEnhanced from '../components/FuturisticBackgroundEnhanced';
@@ -468,3 +531,7 @@ export default SmartExpenseCategorizerPage;
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

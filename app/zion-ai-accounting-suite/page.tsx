@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -64,6 +65,11 @@ import { Calculator, Brain, Shield, ArrowRight, CheckCircle, Star, FileText, Tre
 import EnhancedSEO from '../components/EnhancedSEO';
 import { Link } from 'react-router-dom';
 import { Brain, ArrowRight, CheckCircle, CheckCircle, ArrowRight } from 'lucide-react';
+=======
+import React from 'react';
+import { BarChart3 } from 'lucide-react';
+import { FileText } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 const ZionAIAccountingSuite = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
@@ -151,6 +157,10 @@ const ZionAIAccountingSuite = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
+<<<<<<< HEAD
+=======
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -473,4 +483,8 @@ export default ZionAIAccountingSuite;
   );
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

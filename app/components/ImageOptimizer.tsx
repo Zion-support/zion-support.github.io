@@ -1,10 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 =======
 import { useState, useEffect } from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 interface ImageOptimizerProps {
 <<<<<<< HEAD
 <<<<<<< HEAD

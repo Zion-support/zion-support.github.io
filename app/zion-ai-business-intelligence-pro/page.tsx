@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -16,6 +17,9 @@ import { BarChart3, TrendingUp, Brain, Zap, CheckCircle, ArrowRight, Activity, U
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 import { Helmet } from 'react-helmet-async';
 
 const ZionAiBusinessIntelligencePro = () => {

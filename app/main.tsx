@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -19,6 +20,14 @@ interface MainProps {
   className?: string;
   children?: React.ReactNode;
 }
+=======
+import React from 'react';
+import "./index.css";
+
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement,
+);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 export default function main({ className = '', children }: mainProps) {
   return (

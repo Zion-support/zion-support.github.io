@@ -4,6 +4,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
@@ -14,18 +15,21 @@ export default function zionAiCrmPro() {
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 import { Users } from 'lucide-react';
 import { Star } from 'lucide-react';
-import { MapPin } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
 import { TrendingUp } from 'lucide-react';
 import { Zap } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Mail } from 'lucide-react';
+<<<<<<< HEAD
 import { Play } from 'lucide-react';
 import { Phone } from 'lucide-react';
+=======
+import { Mic } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 const ZionAICRMProPage = () => {
   const features = [
@@ -511,7 +515,12 @@ export default ZionAICRMProPage;
   );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 }
+<<<<<<< HEAD
 =======
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

@@ -1,9 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 import React from 'react';
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 interface EnhancedLoadingSpinnerProps {
@@ -83,3 +87,34 @@ export default LoadingSpinner;
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  text?: string;
+  className?: string;
+}
+
+const EnhancedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  size = 'md', 
+  text = 'Loading...', 
+  className = '' 
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16'
+  };
+
+  return (
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 ${sizeClasses[size]}`}></div>
+      {text && (
+        <p className="mt-2 text-sm text-gray-600">{text}</p>
+      )}
+    </div>
+  );
+};
+
+export default EnhancedLoadingSpinner;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

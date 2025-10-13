@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -139,6 +140,13 @@ const AIDataAnalyticsProPage = () => {
     "Integrate with existing systems"
   ];
 
+=======
+import React from 'react';
+import { TrendingUp, BarChart3, Database, Brain } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+
+const AIDataAnalyticsProPage = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   const features = [
     {
       icon: <BarChart3 className="w-8 h-8" />,
@@ -487,4 +495,8 @@ export default AIDataAnalyticsProPage;
 =======
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 =======
@@ -36,6 +37,21 @@ import { Helmet } from "react-helmet-async";
 
 export default function Contact() {
 =======
+=======
+import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
+import { Clock, MapPin, Code, Mail, Phone, Smartphone, Cloud } from 'lucide-react';
+
+export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: ''
+  });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 export default function Contact() {
   const [formData, setFormData] = useState({,
@@ -239,6 +255,7 @@ export default function ContactPage() {
 <<<<<<< HEAD
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -260,3 +277,6 @@ import { useState } from 'react';
 
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

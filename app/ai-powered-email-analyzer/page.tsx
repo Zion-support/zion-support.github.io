@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -116,6 +117,16 @@ import FuturisticTextEnhanced from "../components/FuturisticTextEnhanced";
 import ResponsiveContainer from "../components/ResponsiveContainer";
 import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
+=======
+import React from 'react';
+import { Star } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Mail } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 const AIPoweredEmailAnalyzerPage = () => {
   const stats = [
@@ -197,6 +208,10 @@ const AIPoweredEmailAnalyzerPage = () => {
       popular: false
     }
   ];
+<<<<<<< HEAD
+=======
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
   const testimonials = [
     {
@@ -515,4 +530,8 @@ export default function Page() {
   );
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

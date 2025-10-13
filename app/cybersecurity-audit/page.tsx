@@ -1,10 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 =======
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 

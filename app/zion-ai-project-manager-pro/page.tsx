@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -93,6 +94,17 @@ import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Users } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 const ZionAIProjectManagerProPage = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
@@ -550,6 +562,7 @@ const ZionAIProjectManagerProPage = () => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ZionAIProjectManagerProPage;
   );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
@@ -558,3 +571,6 @@ export default ZionAIProjectManagerProPage;
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

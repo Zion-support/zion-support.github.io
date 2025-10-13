@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -10,6 +11,52 @@ import { Helmet } from 'react-helmet-async';
 
 export default function AIHealthcareDiagnostics() {
 
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Users } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+
+export default function AIHealthcareDiagnostics() {
+const benefits = [
+    "Advanced AI algorithms for accurate predictions",
+    "Real-time risk assessment and monitoring",
+    "Automated report generation and insights",
+    "Seamless integration with existing systems",
+    "24/7 monitoring and alert system",
+    "Scalable cloud-based infrastructure"
+  ];
+const features = [
+    {
+      title: "Predictive Analytics",
+      description: "Advanced machine learning models for accurate financial forecasting",
+      icon: "Brain"
+    },
+    {
+      title: "Risk Assessment",
+      description: "Comprehensive risk analysis and mitigation strategies",
+      icon: "Shield"
+    },
+    {
+      title: "Real-time Monitoring",
+      description: "Continuous monitoring of financial metrics and KPIs",
+      icon: "Activity"
+    },
+    {
+      title: "Automated Reporting",
+      description: "Generate detailed reports automatically",
+      icon: "FileText"
+    }
+  ];
+export default function Page() {
+  const benefits = [
+    "Benefit 1",
+    "Benefit 2"
+  ];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   const features = [
     {,
     title: "Medical Imaging Analysis",
@@ -178,4 +225,9 @@ export default function AIHealthcareDiagnostics() {
 }
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

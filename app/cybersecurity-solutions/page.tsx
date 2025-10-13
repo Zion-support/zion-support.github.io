@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -54,6 +55,18 @@ export default function CybersecuritySolutionsPage() {
           </p>
 <<<<<<< HEAD
 =======
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Database } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 export default function CybersecuritysolutionsPage() {
   return (
@@ -215,6 +228,10 @@ const CybersecuritySolutionsPage = () => {
       popular: false
     }
   ];
+<<<<<<< HEAD
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
   const testimonials = [
     {
@@ -517,4 +534,8 @@ export default CybersecuritySolutionsPage;
 =======
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

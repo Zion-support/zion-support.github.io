@@ -1,7 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { TrendingUp } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
@@ -484,9 +494,13 @@ const AISentimentAnalysisProPage = () => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default AISentimentAnalysisProPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

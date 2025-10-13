@@ -7,6 +7,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function aiAnalytics() {
@@ -72,6 +73,8 @@ export default function AianalyticsPage() {
 }
 =======
 import { Helmet } from 'react-helmet-async';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 import { 
   BarChart3, 
   TrendingUp, 
@@ -88,6 +91,7 @@ import {
   Sparkles,
   Lightbulb
 } from "lucide-react";
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
 =======
@@ -165,6 +169,26 @@ export default function AiAnalytics() {
     }
   ];
 
+=======
+import { Database } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Phone } from 'lucide-react';
+
+export default function AIAnalyticsPage() {
+  return (
+    <div>
+      <h1>Page Content</h1>
+    </div>
+  );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   const analyticsStats = [
     { number: "40%", label: "Faster Decision Making", icon: <Zap className="w-6 h-6" /> },
     { number: "85%", label: "Prediction Accuracy", icon: <Brain className="w-6 h-6" /> },
@@ -199,6 +223,7 @@ export default function AiAnalytics() {
     }
   ];
 
+<<<<<<< HEAD
   const pricingPlans = [
     {,
     name: "Starter",
@@ -703,3 +728,15 @@ export default function AIAnalyticsPage() {
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+  const features = [
+    {
+      title: "Real-time Analytics",
+      description: "Process and analyze data in real-time with our advanced AI algorithms and machine learning models.",
+      icon: <BarChart3 className="w-8 h-8" />,
+      benefits: ["Interactive charts", "Custom dashboards", "Mobile-responsive", "Export capabilities"]
+    }
+  ];
+
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

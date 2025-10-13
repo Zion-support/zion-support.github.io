@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -60,6 +61,10 @@ export default function AispacemissionoptimizerPage() {
             </p>
 =======
 import {
+=======
+import React from 'react';
+import { 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   Rocket, 
   Satellite, 
   Orbit, 
@@ -83,10 +88,30 @@ import {
   Navigation,
   Gauge
 } from 'lucide-react';
+<<<<<<< HEAD
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
+=======
+import { Helmet } from 'react-helmet-async';
+import { Rocket, Satellite, Orbit, Zap, Target, CheckCircle, Globe, Activity, Navigation, Gauge } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { PieChart } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Rocket } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Activity } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 const AISpaceMissionOptimizerPage = () => {
   const features = [
@@ -473,9 +498,13 @@ const AISpaceMissionOptimizerPage = () => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default AISpaceMissionOptimizerPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

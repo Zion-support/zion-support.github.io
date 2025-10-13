@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -33,6 +34,14 @@ const testimonials = [
       rating: 5,
       company: "FutureTech"
   }
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Users, Star, Shield, Zap, Brain, Settings, BarChart3, Mail, MessageSquare, Hand, Sparkles, Target } from 'lucide-react';
+
+"use client";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 export default function AIEmailAssistant() {
   const features = [
@@ -192,6 +201,7 @@ export default function AiemailassistantPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
+<<<<<<< HEAD
           
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
@@ -226,3 +236,108 @@ import { Link } from 'react-router-dom';
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-800/20 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900/50 to-purple-900/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Use Cases
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover how our AI email assistant can transform your business communication
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  {useCase.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
+                <p className="text-gray-300">{useCase.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
+              Pricing Plans
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index) => (
+                <div
+                  key={index}
+                  className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 relative ${plan.popular ? "ring-2 ring-cyan-500" : ""}`}
+                >
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  <div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      {plan.name}
+                    </h3>
+                    <div className="text-4xl font-bold text-cyan-400 mb-2">
+                      {plan.price}
+                      <span className="text-lg text-gray-300">
+                        {plan.period}
+                      </span>
+                    </div>
+                    <p className="text-gray-300">{plan.description}</p>
+                  </div>
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li
+                        key={featureIndex}
+                        className="text-gray-300 flex items-center"
+                      >
+                        <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    to="/contact"
+                    className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
+                      plan.popular
+                        ? "bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600"
+                        : "border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10"
+                    }`}
+                  >
+                    Get Started
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

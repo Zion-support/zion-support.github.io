@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
@@ -32,6 +33,8 @@ export default function usePerformanceOptimization() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
 =======
 import { useEffect, useCallback, useRef } from 'react';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 interface PerformanceOptimizationOptions {
   enableLazyLoading?: boolean;

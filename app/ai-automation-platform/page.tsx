@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -49,6 +50,24 @@ import {
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
 import { Helmet } from 'react-helmet-async';
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { 
+  ArrowRight,
+  Users,
+  Star,
+  CheckCircle,
+  TrendingUp,
+  Settings,
+  Sparkles,
+  Target,
+  BarChart3,
+  Cloud,
+  Workflow
+} from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 const AIAutomationPlatformPage = () => {
   const features = [
@@ -114,6 +133,7 @@ const AIAutomationPlatformPage = () => {
     }
   ];
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 
@@ -127,6 +147,21 @@ import { Helmet } from 'react-helmet-async';
 export default function AiAutomationPlatformPage() {
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+  const benefits = [
+    "Reduce manual work by 80%",
+    "Improve process efficiency by 300%",
+    "Eliminate human errors completely",
+    "Scale operations without additional staff",
+    "24/7 automated monitoring",
+    "Real-time process optimization",
+    "Seamless system integration",
+    "Predictive maintenance alerts",
+    "Compliance automation",
+    "Cost reduction up to 60%"
+  ];
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>

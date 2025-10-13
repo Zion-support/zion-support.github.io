@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -60,6 +61,10 @@ export default function AivoicecloningstudioPage() {
             </p>
 =======
 import {
+=======
+import React from 'react';
+import { 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   Mic, 
   Play, 
   Settings, 
@@ -83,10 +88,31 @@ import {
   FileAudio,
   Globe
 } from 'lucide-react';
+<<<<<<< HEAD
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
+=======
+import { Helmet } from 'react-helmet-async';
+import { Mic, Play, Settings, Users, Zap, CheckCircle, Brain, Volume2, FileAudio, Globe } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Pause } from 'lucide-react';
+import { Download } from 'lucide-react';
+import { Upload } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Play } from 'lucide-react';
+import { Volume2 } from 'lucide-react';
+import { Mic } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 const AIVoiceCloningStudioPage = () => {
   const features = [
@@ -443,9 +469,13 @@ const AIVoiceCloningStudioPage = () => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default AIVoiceCloningStudioPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

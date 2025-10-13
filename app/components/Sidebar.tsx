@@ -2,9 +2,22 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 import React from 'react';
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Home } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Network } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { Mic } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 interface SidebarProps {
   className?: string;

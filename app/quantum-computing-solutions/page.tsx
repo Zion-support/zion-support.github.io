@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -60,6 +61,10 @@ export default function QuantumcomputingsolutionsPage() {
             </p>
 =======
 import {
+=======
+import React from 'react';
+import { 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   Cpu, 
   Zap, 
   Shield, 
@@ -83,10 +88,32 @@ import {
   Lock,
   Gauge
 } from 'lucide-react';
+<<<<<<< HEAD
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
+=======
+import { Helmet } from 'react-helmet-async';
+import { Cpu, Zap, Shield, Brain, Target, CheckCircle, Globe, Activity, Lock, Gauge } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { PieChart } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Database } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Lock } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Activity } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 const QuantumComputingSolutionsPage = () => {
   const features = [
@@ -473,9 +500,13 @@ const QuantumComputingSolutionsPage = () => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default QuantumComputingSolutionsPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

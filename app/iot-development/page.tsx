@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -13,6 +14,14 @@ export default function iotDevelopment() {
 =======
 export default function IotDevelopmentPage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+
+export default function IotDevelopmentZionTechGroup() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

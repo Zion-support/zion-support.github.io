@@ -4,6 +4,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 =======
 =======
 
@@ -43,6 +44,21 @@ export default function ConsultationPage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
 =======
+=======
+import { Clock } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Network } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 export default function ConsultationPage() {
   return (
@@ -401,6 +417,7 @@ const ConsultationPage = () => {
       </EnhancedAccessibility>
     </PerformanceOptimizer>
   );
+<<<<<<< HEAD
 };
 
 export default ConsultationPage;
@@ -408,3 +425,6 @@ export default ConsultationPage;
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

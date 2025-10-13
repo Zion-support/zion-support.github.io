@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -65,6 +66,15 @@ import EnhancedSEO from '../components/EnhancedSEO';
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Award } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Lock } from 'lucide-react';
+import { Mic } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 const QuantumDataEncryptionVault = () => {
   const features = [
@@ -517,9 +527,13 @@ export default function Page() {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default QuantumDataEncryptionVault;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

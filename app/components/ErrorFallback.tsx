@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface ErrorFallbackProps {
@@ -19,6 +20,14 @@ interface ErrorfallbackProps {
   children?: React.ReactNode;
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+import React from 'react';
+
+interface ErrorFallbackProps {
+  error: Error;
+  resetErrorBoundary: () => void;
+  errorInfo?: React.ErrorInfo;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 }
 
 <<<<<<< HEAD

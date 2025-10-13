@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -91,6 +92,12 @@ import { Link } from 'react-router-dom';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 
+=======
+import React from 'react';
+import { Helmet } from "react-helmet-async";
+import { Helmet } from 'react-helmet-async';
+import { Star } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 export default function ZionAISalesPredictor() {
   const features = [

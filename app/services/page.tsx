@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29,8 +30,13 @@ export default function services() {
 import React from 'react';
 import { Brain, Shield, Globe, Code, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Laptop, Headphones, Phone } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
+=======
+import React from 'react';
+import { Helmet } from "react-helmet-async";
+import { Search, Users, Star, Cpu, Shield, Database, TrendingUp, Zap, Brain, Settings, Globe, Server, Network, Lock, Calendar, Code, Monitor, Target, BarChart3, Wifi, Headphones, Phone, FileText, Hand, Cloud } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
-export default function Services() {
+export default function ServicesPage() {
   const services = [
     {,
     title: "AI-Powered Business Intelligence Pro",
@@ -470,6 +476,7 @@ export default function ServicesPage() {
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -497,3 +504,8 @@ import { Link } from 'react-router-dom';
 
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+    </div>
+  );
+}}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

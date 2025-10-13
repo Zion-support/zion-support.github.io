@@ -1,11 +1,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 
 interface ImprovedFooterProps {
 =======
 
 import React from 'react';
+=======
+import { Link } from 'react-router-dom';
+import { Users } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Mic } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 interface ImprovedfooterProps {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -51,6 +60,7 @@ const ImprovedFooter = () => {
 
   const currentYear = new Date().getFullYear();
 
+<<<<<<< HEAD
   const serviceCategories = [
     {
       title: 'AI Services',
@@ -159,6 +169,8 @@ const ImprovedFooter = () => {
 const ImprovedFooter: React.FC<ImprovedfooterProps> = ({ className = '', children, ...props }) => {
   const currentYear = new Date().getFullYear();
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   const companyLinks = [
     { label: 'About Us', href: '/about' },
     { label: 'Our Team', href: '/team' },

@@ -3,6 +3,7 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 =======
 
@@ -47,6 +48,10 @@ export default function CareersPage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
 =======
+=======
+
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 export default function CareersPage() {
   return (

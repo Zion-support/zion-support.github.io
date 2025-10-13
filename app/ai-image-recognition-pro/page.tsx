@@ -1,7 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Users } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
@@ -484,9 +490,13 @@ const AIImageRecognitionProPage = () => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default AIImageRecognitionProPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

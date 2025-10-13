@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 export default function UtilsPage() {
@@ -151,6 +152,10 @@ import { ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+=======
+import React from 'react';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 export default function UtilsPage() {
   return (

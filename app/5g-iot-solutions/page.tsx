@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -26,11 +27,14 @@ export default function FiveGIotSolutionsPage() {
   return (
 =======
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
+<<<<<<< HEAD
 export default function IoT5GPage() {
   return (
 
@@ -60,6 +64,9 @@ export default function IoT5GPage() {
 =======
 
 export default function FiveGIotsolutionsPage() {
+=======
+export default function Page() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-12">

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -25,6 +26,16 @@ export default function aiHolographicWorkspace() {
 export default function AiHolographicWorkspacePage() {
 =======
 
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Users } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Hand } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 const AIHolographicWorkspace = () => {
   const features = [
@@ -233,4 +244,8 @@ import { Monitor, ArrowRight, CheckCircle, Star, Shield, BarChart3, Users, Eye, 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

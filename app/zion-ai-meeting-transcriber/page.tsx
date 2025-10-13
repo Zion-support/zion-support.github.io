@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -91,6 +92,14 @@ import { Link } from 'react-router-dom';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 
+=======
+import React from 'react';
+import { Helmet } from "react-helmet-async";
+import { Helmet } from 'react-helmet-async';
+import { Search } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Mic } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 export default function ZionAIMeetingTranscriber() {
   const features = [

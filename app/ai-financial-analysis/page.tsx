@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -112,6 +113,11 @@ import FuturisticTextEnhanced from "../components/FuturisticTextEnhanced";
 import ResponsiveContainer from "../components/ResponsiveContainer";
 import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { TrendingUp } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 const AIFinancialAnalysisPage = () => {
   const benefits = [
@@ -463,6 +469,7 @@ const AIFinancialAnalysisPage = () => {
       </EnhancedAccessibility>
     </PerformanceOptimizer>
   );
+<<<<<<< HEAD
 };
 
 export default AIFinancialAnalysisPage;
@@ -470,3 +477,8 @@ export default AIFinancialAnalysisPage;
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

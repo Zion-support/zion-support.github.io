@@ -36,8 +36,13 @@ import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
+<<<<<<< HEAD
 import { LoadingPage } from './app/components/LoadingStates';
 import { GlobalErrorBoundary } from './app/components/EnhancedErrorFeedback';
+=======
+import LoadingPage from "./app/components/LoadingStates";
+import GlobalErrorBoundary from "./app/components/EnhancedErrorFeedback";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
@@ -154,13 +159,19 @@ function App() {
   }, []);
 
   return (
+<<<<<<< HEAD
     <GlobalErrorBoundary>
       <EnhancedErrorBoundary>
         <HelmetProvider>
+=======
+    <HelmetProvider>
+        <GlobalErrorBoundary>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
           <AnalyticsProvider>
             <PerformanceMonitor>
               <WebVitalsTracker>
                 <EnhancedAccessibility>
+<<<<<<< HEAD
                   <AccessibilityEnhancer>
                     <CoreWebVitals>
                       <Router>
@@ -188,6 +199,32 @@ function App() {
                                   <Route path="/support" element={<SupportPage />} />
                                   <Route path="/privacy" element={<PrivacyPage />} />
                                   <Route path="/terms" element={<TermsPage />} />
+=======
+                <Router>
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                    <FuturisticBackground>
+                      <Navigation onSidebarToggle={toggleSidebar} />
+                      <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
+                      <Breadcrumb />
+                      
+                      <main className="relative z-10" id="main-content" role="main">
+                        <Suspense fallback={<LoadingPage />}>
+                          <Routes>
+                                {/* Main Pages */}
+                                <Route path="/" element={<HomePage />} />
+                                <Route path="/about" element={<AboutPage />} />
+                                <Route path="/contact" element={<ContactPage />} />
+                                <Route path="/services" element={<ServicesPage />} />
+                                <Route path="/blog" element={<BlogPage />} />
+                                <Route path="/demo" element={<DemoPage />} />
+                                <Route path="/privacy" element={<PrivacyPage />} />
+                                <Route path="/terms" element={<TermsPage />} />
+                                <Route path="/ai-services" element={<AIServicesPage />} />
+                                <Route path="/micro-saas" element={<MicroSaasPage />} />
+                                <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                                <Route path="/tutorials" element={<TutorialsPage />} />
+                                <Route path="/support" element={<SupportPage />} />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
                                   {/* AI Services */}
                                   <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
@@ -251,6 +288,7 @@ function App() {
                                   <Route path="/zion-customer-satisfaction-monitor" element={<ZionCustomerSatisfactionMonitorPage />} />
                                   <Route path="/zion-ai-workflow-automator" element={<ZionAIWorkflowAutomatorPage />} />
 
+<<<<<<< HEAD
                                   {/* 5G Services */}
                                   <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
                                   <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
@@ -282,14 +320,40 @@ function App() {
                       </Router>
                     </CoreWebVitals>
                   </AccessibilityEnhancer>
+=======
+                                {/* Catch all route */}
+                                <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
+                                  <div className="text-center">
+                                    <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
+                                    <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
+                                    <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                      Go Home
+                                    </a>
+                                  </div>
+                                </div>} />
+                              </Routes>
+                            </Suspense>
+                        </main>
+                        
+                        <Footer />
+                      </FuturisticBackground>
+                    </div>
+                  </Router>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
                 </EnhancedAccessibility>
               </WebVitalsTracker>
             </PerformanceMonitor>
           </AnalyticsProvider>
+<<<<<<< HEAD
         </HelmetProvider>
       </EnhancedErrorBoundary>
     </GlobalErrorBoundary>
   );
+=======
+        </GlobalErrorBoundary>
+      </HelmetProvider>
+    );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 }
 
 export default App;

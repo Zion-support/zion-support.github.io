@@ -4,6 +4,7 @@ import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
@@ -108,6 +109,8 @@ export default function WhitepapersPage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 export default function WhitepapersPage() {
   return (

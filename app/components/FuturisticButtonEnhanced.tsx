@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 interface FuturisticButtonEnhancedProps {
 =======
 import { motion } from 'framer-motion';
 import { Icon, Icon } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 interface FuturisticButtonEnhancedProps {
   children: React.ReactNode;

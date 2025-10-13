@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -12,6 +13,13 @@ import { Helmet } from 'react-helmet-async';
 export default function zionAiCodeReviewer() {
 =======
 
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Code } from 'lucide-react';
+
+import { Helmet } from "react-helmet-async";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 import React from 'react';
 

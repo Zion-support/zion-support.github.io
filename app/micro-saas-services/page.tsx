@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -14,6 +15,21 @@ export default function microSaasServices() {
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Globe, Phone, CheckCircle, Sparkles, Heart, Receipt, Package, Calendar as ScheduleIcon, Cloud as CloudIcon, Shield as ProtectionIcon } from 'lucide-react';
+=======
+import React from 'react';
+import { Shield } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { Filter } from 'lucide-react';
+import { Mic } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Package } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import { Receipt } from 'lucide-react';
+
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 export default function MicroSaasServices() {
   const microSaasServices = [

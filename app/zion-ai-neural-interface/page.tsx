@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -62,6 +63,17 @@ export default function ZionaineuralinterfacePage() {
 import { Link } from 'react-router-dom';
 import { Brain, ArrowRight, CheckCircle, Star, Zap, Users, Target, Cpu, Globe, Eye, Hand } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
+=======
+import React from 'react';
+import { Users } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Hand } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 const ZionAINeuralInterface = () => {
   const features = [
@@ -187,6 +199,10 @@ const ZionAINeuralInterface = () => {
     { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "50+", label: "Languages Supported", icon: <Globe className="w-6 h-6" /> }
   ];
+<<<<<<< HEAD
+=======
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -508,4 +524,8 @@ export default ZionAINeuralInterface;
   );
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

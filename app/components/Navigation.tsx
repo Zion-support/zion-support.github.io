@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 import React, { useState } from 'react';
@@ -11,6 +12,17 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 =======
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Home } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Network } from 'lucide-react';
+import { Mic } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 =======
 

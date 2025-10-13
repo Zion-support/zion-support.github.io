@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,6 +10,32 @@ interface servicetemplateProps {
 =======
 
 
+=======
+import React from 'react';
+
+const features = [
+    {
+      title: "Predictive Analytics",
+      description: "Advanced machine learning models for accurate financial forecasting",
+      icon: "Brain"
+    },
+    {
+      title: "Risk Assessment",
+      description: "Comprehensive risk analysis and mitigation strategies",
+      icon: "Shield"
+    },
+    {
+      title: "Real-time Monitoring",
+      description: "Continuous monitoring of financial metrics and KPIs",
+      icon: "Activity"
+    },
+    {
+      title: "Automated Reporting",
+      description: "Generate detailed reports automatically",
+      icon: "FileText"
+    }
+  ];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 interface ServiceTemplateProps {
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 =======
@@ -149,3 +150,34 @@ export default StructuredData;
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+import React from 'react';
+
+interface StructuredDataProps {
+  type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'FAQPage' | 'BreadcrumbList' | 'SoftwareApplication';
+  data: any;
+}
+
+const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
+  const getStructuredData = () => {
+    const baseData = {
+      '@context': 'https://schema.org',
+      '@type': type,
+      ...data
+    };
+
+    return baseData;
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(getStructuredData(), null, 2)
+      }}
+    />
+  );
+};
+
+export default StructuredData;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

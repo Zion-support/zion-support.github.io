@@ -7,12 +7,49 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 =======
+=======
+import { Users } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Lock } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { FileText } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function compliance() {
+=======
+  const services = [
+    {
+      title: "Compliance Assessment",
+      description: "Comprehensive evaluation of your current compliance posture and gap analysis",
+      features: ["Risk Assessment", "Gap Analysis", "Remediation Planning", "Documentation Review"]
+    },
+    {
+      title: "Policy Development",
+      description: "Custom policies and procedures tailored to your industry and regulatory requirements",
+      features: ["Policy Creation", "Procedure Documentation", "Training Materials", "Implementation Support"]
+    },
+    {
+      title: "Audit Support",
+      description: "Expert guidance and support throughout the audit process",
+      features: ["Pre-Audit Preparation", "Audit Management", "Evidence Collection", "Remediation Support"]
+    },
+    {
+      title: "Ongoing Monitoring",
+      description: "Continuous monitoring and maintenance of compliance programs",
+      features: ["Regular Assessments", "Policy Updates", "Training Programs", "Incident Response"]
+    }
+  ];
+
+export default function CompliancePage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -87,6 +124,7 @@ export default function CompliancePage() {
     </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import EnhancedSEO from '../components/EnhancedSEO';
@@ -487,3 +525,7 @@ export default CompliancePage;
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

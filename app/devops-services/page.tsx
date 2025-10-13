@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,6 +26,12 @@ export default function devopsServices() {
   );
 }
 =======
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Zap, Server, Globe, BarChart3, Lock, Database, Clock, Award, Users, Settings, CheckCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 export default function DevopsservicesPage() {
   return (
@@ -215,6 +222,7 @@ const DevOpsServicesPage = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <PerformanceOptimizer>
       <EnhancedAccessibility>
         <FuturisticBackgroundEnhanced>
@@ -224,6 +232,53 @@ const DevOpsServicesPage = () => {
             keywords="devops services, ci/cd pipeline, infrastructure as code, monitoring, cloud migration, devops automation"
             canonical="https://ziontechgroup.com/devops-services"
           />
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      <Helmet>
+        <title>DevOps Services - Zion Tech Group</title>
+        <meta name="description" content="Professional DevOps services for modern software development and deployment." />
+      </Helmet>
+      
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            DevOps Services
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Accelerate your software delivery with our comprehensive DevOps solutions. 
+            From CI/CD pipelines to infrastructure automation, we help you build, deploy, and scale faster.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+            >
+              Get Started Today
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <Link
+              to="/demo"
+              className="border border-blue-500 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500/10 transition-all duration-300"
+            >
+              View Demo
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our DevOps Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide end-to-end DevOps solutions that streamline your development process and improve software quality.
+            </p>
+          </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
           
           <main className="min-h-screen">
             {/* Hero Section */}
@@ -307,6 +362,7 @@ const DevOpsServicesPage = () => {
               </ResponsiveContainer>
             </section>
 
+<<<<<<< HEAD
             {/* DevOps Process Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
               <ResponsiveContainer>
@@ -549,3 +605,35 @@ const DevOpsServicesPage: React.FC = () => {
     </div>
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+      {/* CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Transform Your Development Process?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let our DevOps experts help you implement modern practices that accelerate delivery and improve quality.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Start Your DevOps Journey
+            </Link>
+            <Link
+              to="/consultation"
+              className="border border-blue-500 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500/10 transition-all duration-300"
+            >
+              Free Consultation
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default DevOpsServicesPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

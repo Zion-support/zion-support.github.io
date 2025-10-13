@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 =======
@@ -12,6 +13,8 @@
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 interface CacheManagerProps {
   className?: string;
@@ -54,9 +57,12 @@ const CacheManager: React.FC = () => {
 };
 
 export default CacheManager;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

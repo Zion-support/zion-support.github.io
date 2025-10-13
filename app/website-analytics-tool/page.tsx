@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -20,11 +21,14 @@ export default function websiteAnalyticsTool() {
       <div className="container mx-auto px-4 py-20">
 =======
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
+<<<<<<< HEAD
 export default function Websiteanalyticstool() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
@@ -58,6 +62,9 @@ export default function WebsiteAnalyticsToolPage() {
 =======
 
 export default function WebsiteanalyticstoolPage() {
+=======
+export default function Page() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-12">

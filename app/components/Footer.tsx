@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -19,8 +18,25 @@ import {
   Users
 } from "lucide-react";
 import { Link } from 'react-router-dom';
+=======
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { Mic } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
-const services = [
+const Footer = () => {
+  const services = [
     {
       title: "Cloud Migration",
       description: "Seamless migration to cloud infrastructure",
@@ -47,9 +63,28 @@ const microSaasServices = [
     { name: "Cloud Solutions", href: "/cloud-services" },
     { name: "DevOps", href: "/devops" }
   ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+import { 
+  Brain, 
+  Mail, 
+  Phone, 
+  MapPin,
+  Clock, 
+  ArrowRight,
+  Shield,
+  Zap,
+  Globe,
+  Twitter,
+  Linkedin,
+  Github,
+  Award,
+  Users
+} from "lucide-react";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 
 <<<<<<< HEAD
@@ -927,7 +962,12 @@ export default Footer;
 };
 
 export default Footer;
+<<<<<<< HEAD
 
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

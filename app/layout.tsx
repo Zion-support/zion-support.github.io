@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 
@@ -40,6 +41,10 @@ import ImprovedNavigation from "./components/ImprovedNavigation";
 import ImprovedFooter from "./components/ImprovedFooter";
 import ImprovedSidebar from "./components/ImprovedSidebar";
 import { Helmet } from 'react-helmet-async';
+=======
+import React from 'react';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 interface LayoutProps {
   children: React.ReactNode;

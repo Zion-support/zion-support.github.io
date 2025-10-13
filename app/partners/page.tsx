@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -16,6 +17,13 @@ import { Helmet } from 'react-helmet-async';
 export default function partners() {
 =======
 import { Helmet } from 'react-helmet-async';
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Database } from 'lucide-react';
+import { Mic } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 export default function Partners() {
   const partners = [

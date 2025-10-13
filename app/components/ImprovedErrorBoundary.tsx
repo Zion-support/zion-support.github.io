@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 interface Props {
@@ -46,6 +47,9 @@ import { Link } from 'react-router-dom';
 import { Home } from 'lucide-react';
 import { AlertTriangle } from 'lucide-react';
 import { Mail } from 'lucide-react';
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 import { Hand } from 'lucide-react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -56,6 +60,7 @@ import { Hand } from 'lucide-react';
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface ImprovedErrorBoundaryProps {
 =======
@@ -83,6 +88,8 @@ export default function ImprovedErrorBoundary({ className = '', children }: Impr
 =======
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 interface Props {
   children: ReactNode;
 =======

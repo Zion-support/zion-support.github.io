@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -169,6 +170,17 @@ const AICodeAssistantProZionTechGroup = () => {
     }
 <<<<<<< HEAD
   };
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Star } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Code } from 'lucide-react';
+
+const AICodeAssistantProZionTechGroup = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 =======
 

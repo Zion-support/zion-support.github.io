@@ -1,10 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 import React, { useEffect } from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 <<<<<<< HEAD
 <<<<<<< HEAD

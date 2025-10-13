@@ -11,7 +11,27 @@ import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+import { 
+  ArrowRight,
+  Users,
+  Star,
+  CheckCircle,
+  Zap,
+  Brain,
+  Globe,
+  Monitor,
+  Target,
+  BarChart3,
+  Heart,
+  AlertCircle,
+  TrendingUp
+} from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Heart, Zap, BarChart3, TrendingUp, Shield, Target, Brain, Users, CheckCircle, ArrowRight, Globe, AlertCircle, Clock } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 import { Helmet } from 'react-helmet-async';
 =======
@@ -118,6 +138,7 @@ export default function AiCustomerSentimentTrackerPage() {
         popular: false
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   ];
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
@@ -141,6 +162,12 @@ export default function AiCustomerSentimentTrackerPage() {
 export default function AiCustomerSentimentTrackerPage() {
           return (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
+=======
+  ];
+
+export default function AiCustomerSentimentTrackerPage() {
+  return (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Ai Customer Sentiment Tracker - Zion Tech Group</title>
