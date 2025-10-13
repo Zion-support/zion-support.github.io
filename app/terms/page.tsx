@@ -1,15 +1,28 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+=======
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
 const TermsPage: React.FC = () => {
   return (
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>Terms of Service - Zion Tech Group</title>
         <meta name="description" content="Read the terms of service for using Zion Tech Group's AI and IT solutions. Understand your rights and responsibilities." />'
         <meta name="keywords" content="terms of service, terms and conditions, user agreement, service terms" />
       </Helmet>
 <<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+        <title>Terms of Service - Zion Tech Group</title>'
+        <meta name="description" content="Read the terms of service for using Zion Tech Group's AI and IT solutions. Understand your rights and responsibilities." />';
+        <meta name="keywords" content="terms of service, terms and conditions, user agreement, service terms" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;}
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
         {/* Hero Section */}
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -50,9 +63,15 @@ const TermsPage: React.FC = () => {
                 <p className="text-gray-300 mb-6">
                   Permission is granted to temporarily download one copy of our materials for personal, 
                   non-commercial transitory viewing only.;
+<<<<<<< HEAD
                 </p>
                 <h2 className="text-2xl font-semibold text-white mb-4">Disclaimer</h2>
                 <p className="text-gray-300 mb-6">
+=======
+                </p>;
+                <h2 className="text-2xl font-semibold text-white mb-4">Disclaimer</h2>;
+                <p className="text-gray-300 mb-6">;'
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
                   The materials on our website are provided on an 'as is' basis. Zion Tech Group makes';
                   no warranties, expressed or implied, and hereby disclaims and negates all other warranties.;
                 </p>
@@ -94,6 +113,7 @@ const TermsPage: React.FC = () => {
       </div>
     </>
   );
+<<<<<<< HEAD
 }
 export default TermsPage;
 =======
@@ -135,3 +155,8 @@ export default TermsPage;
   )}
 export default TermsPage
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+=======
+};
+
+export default TermsPage;'
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227

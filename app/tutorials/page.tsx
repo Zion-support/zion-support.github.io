@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Right, Play, User, Star, Circle, Clock } from 'lucide-react'
+=======
+import React from 'react';'
+import { Helmet , Right,  Play,  User,  Star,  Circle,  Clock   } from 'lucide-react';
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
 const TutorialsPage: React.FC = () => {
   const tutorials = [{
       id: 1,
@@ -11,7 +16,12 @@ const TutorialsPage: React.FC = () => {
       instructor: "Dr. Sarah Johnson",
       rating: 4.8,
       students: 1250,
+<<<<<<< HEAD
       thumbnail: "🤖"},
+=======
+      thumbnail: "🤖";}
+    },
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
     {
       id: 2,
       title: "Infrastructure Setup",
@@ -21,7 +31,12 @@ const TutorialsPage: React.FC = () => {
       instructor: "Michael Chen",
       rating: 4.9,
       students: 980,
+<<<<<<< HEAD
       thumbnail: "☁️"},
+=======
+      thumbnail: "☁️";}
+    },
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
     {
       id: 3,
       title: "Cybersecurity Fundamentals",
@@ -31,7 +46,12 @@ const TutorialsPage: React.FC = () => {
       instructor: "Emily Rodriguez",
       rating: 4.7,
       students: 2100,
+<<<<<<< HEAD
       thumbnail: "🔒"},
+=======
+      thumbnail: "🔒";}
+    },
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
     {
       id: 4,
       title: "Advanced Machine Learning",
@@ -41,7 +61,12 @@ const TutorialsPage: React.FC = () => {
       instructor: "Dr. David Kim",
       rating: 4.9,
       students: 750,
+<<<<<<< HEAD
       thumbnail: "🧠"},
+=======
+      thumbnail: "🧠";}
+    },
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
     {
       id: 5,
       title: "DevOps Best Practices",
@@ -51,7 +76,12 @@ const TutorialsPage: React.FC = () => {
       instructor: "Lisa Wang",
       rating: 4.8,
       students: 1100,
+<<<<<<< HEAD
       thumbnail: "⚙️"},
+=======
+      thumbnail: "⚙️";}
+    },
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
     {
       id: 6,
       title: "Data Analytics with Python",
@@ -61,8 +91,15 @@ const TutorialsPage: React.FC = () => {
       instructor: "James Wilson",
       rating: 4.6,
       students: 1650,
+<<<<<<< HEAD
       thumbnail: "📊"}
   ]
+=======
+      thumbnail: "📊";}
+    }
+  ];
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
   const categories = [{ name: "All", count: 24 },
     { name: "AI & ML", count: 8 },
     { name: "Computing", count: 6 },
@@ -108,7 +145,7 @@ const TutorialsPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category, _index) => (
-                <button;
+                <button;}
                   key={_index}
                   className="$1"
                 >
@@ -123,6 +160,7 @@ const TutorialsPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-white text-center mb-16">
               Featured Tutorials;
+<<<<<<< HEAD
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {tutorials.map((tutorial) => (
@@ -130,6 +168,15 @@ const TutorialsPage: React.FC = () => {
                   <div className="text-4xl mb-4">{tutorial.thumbnail}</div>
                   <div className="flex items-center justify-between mb-3">
                     <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-medium">
+=======
+            </h2>;
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
+              {tutorials.map((tutorial) => (}
+                <div key={tutorial.id} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">;
+                  <div className="text-4xl mb-4">{tutorial.thumbnail}</div>;
+                  <div className="flex items-center justify-between mb-3">;
+                    <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-medium">;
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
                       {tutorial.level}
                     </span>
                     <div className="flex items-center text-yellow-400">
@@ -228,6 +275,7 @@ const TutorialsPage: React.FC = () => {
       </div>
     </>
   );
+<<<<<<< HEAD
 }
 export default TutorialsPage;
 =======
@@ -257,3 +305,8 @@ export default TutorialsPage;
   )}
 export default TutorialsPage
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+=======
+};
+
+export default TutorialsPage;'
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227

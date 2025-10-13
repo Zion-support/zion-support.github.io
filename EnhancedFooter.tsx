@@ -1,13 +1,19 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+=======
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';'
+'use client';
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
 const EnhancedFooter: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Enhanced Footer - Zion Tech Group</title>
         <meta name="description" content="Professional enhanced footer services by Zion Tech Group." />
-      </Helmet>
+      </Helmet>}
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-6xl mx-auto text-center">
@@ -27,5 +33,10 @@ const EnhancedFooter: React.FC = () => {
 =======
 };
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 export default EnhancedFooter;
+=======
+export default EnhancedFooter;
+'
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227

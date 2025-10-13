@@ -1,7 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Right, User } from 'lucide-react';
+=======
+import React from 'react';'
+import { Helmet , Right,  User,  Calendar  } from 'lucide-react';
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
 
 =======
 import React from 'react'
@@ -9,7 +14,7 @@ import { Helmet } from 'react-helmet-async'
 import { Right, User, Calendar } from 'lucide-react'
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 const BlogPage: React.FC = () => {
-  const categories = [
+  const categories = [}
     { id: "all", name: "All Posts", count: 12 },
     { id: "ai", name: "AI & Machine Learning", count: 5 },
     { id: "cybersecurity", name: "Cybersecurity", count: 3 },
@@ -25,7 +30,7 @@ const BlogPage: React.FC = () => {
       date: "2024-01-15",
       category: "ai",
       readTime: "5 min read",
-      image: "🤖"
+      image: "🤖"}
     },
     {
       id: 2,
@@ -35,7 +40,7 @@ const BlogPage: React.FC = () => {
       date: "2024-01-12",
       category: "cybersecurity",
       readTime: "7 min read",
-      image: "🔒"
+      image: "🔒"}
     },
     {
       id: 3,
@@ -45,7 +50,7 @@ const BlogPage: React.FC = () => {
       date: "2024-01-10",
       category: "cloud",
       readTime: "10 min read",
-      image: "☁️"
+      image: "☁️"}
     },
     {
       id: 4,
@@ -55,7 +60,7 @@ const BlogPage: React.FC = () => {
       date: "2024-01-08",
       category: "development",
       readTime: "8 min read",
-      image: "⚡"
+      image: "⚡"}
     },
     {
       id: 5,
@@ -65,7 +70,7 @@ const BlogPage: React.FC = () => {
       date: "2024-01-05",
       category: "ai",
       readTime: "6 min read",
-      image: "📊"
+      image: "📊"}
     },
     {
       id: 6,
@@ -75,7 +80,7 @@ const BlogPage: React.FC = () => {
       date: "2024-01-03",
       category: "cybersecurity",
       readTime: "9 min read",
-      image: "🛡️"
+      image: "🛡️"}
     }
   ]
   return (
@@ -108,7 +113,7 @@ const BlogPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
-                <button
+                <button}
                   key={category.id}
                   className="px-6 py-3 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 text-white hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300"
                 >
@@ -123,7 +128,7 @@ const BlogPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.map((post) => (
+              {blogPosts.map((post) => (}
                 <article key={post.id} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">
                   <div className="text-4xl mb-4">{post.image}</div>
                   <div className="flex items-center space-x-4 text-sm text-gray-400 mb-3">
@@ -182,9 +187,15 @@ const BlogPage: React.FC = () => {
     </>
 <<<<<<< HEAD
   );
+<<<<<<< HEAD
 }
 export default BlogPage;
 =======
   )}
 export default BlogPage
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+=======
+};
+
+export default BlogPage;'
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227

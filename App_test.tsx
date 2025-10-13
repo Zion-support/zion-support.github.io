@@ -11,5 +11,10 @@ const App: React.FC = () => {
 =======
 };
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 export default App;
+=======
+export default App;
+'
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227

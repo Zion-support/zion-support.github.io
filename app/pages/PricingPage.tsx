@@ -5,14 +5,13 @@ const PricingPage: React.FC = () => {
     <>
       <Helmet>
         <title>PricingPage - Zion Tech Group</title>
-        <meta name="description" content="PricingPage page for Zion Tech Group" />
+        <meta name="description" content="PricingPage - Zion Tech Group" />
       </Helmet>
-      <div className="min-h-screen bg-slate-900 text-white p-8">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8">PricingPage</h1>
-          <p className="text-lg text-gray-300">
-            This is the PricingPage page for Zion Tech Group.
-          </p>
+      
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">PricingPage</h1>
+          <p className="text-gray-300">This page is under construction.</p>
         </div>
       </div>
     </>

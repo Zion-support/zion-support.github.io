@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 interface SEOProps {
+<<<<<<< HEAD
   title?: string
   description?: string
   keywords?: string
@@ -12,20 +13,25 @@ interface SEOProps {
   modifiedTime?: string
   section?: string
   tags?: string[]}
+=======
+  title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: 'website' | 'article' | 'profile';
+}
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
 
 const SEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide.',
-  keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions',
-  image = '/og-image.svg',
+  title = 'Zion Tech Group - Advanced AI & IT Solutions',
+  description = 'Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services.',
+  keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, technology consulting, Zion Tech Group',
+  image = 'https://ziontechgroup.com/og-image.jpg',
   url = 'https://ziontechgroup.com',
-  type = 'website',
-  author = 'Zion Tech Group',
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = []
+  type = 'website'
 }) => {
+<<<<<<< HEAD
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
   const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`
   const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`
@@ -54,71 +60,41 @@ const SEO: React.FC<SEOProps> = ({
       'https://github.com/ziontechgroup'
     ]
   }
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+      <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta name="author" content={author} />
-      <meta name="robots" content="index, follow" />
-      <link rel="canonical" href={fullUrl} />
-
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={fullUrl} />
-      <meta property="og:title" content={fullTitle} />
+      
+      {/* Open Graph */}
+      <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={fullImage} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={url} />
+      <meta property="og:image" content={image} />
+      
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:url" content={fullUrl} />
-      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={fullImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-
-      {/* Article specific meta tags */}
-      {type === 'article' && publishedTime && (
-        <meta property="article:published_time" content={publishedTime} />
-      )}
-      {type === 'article' && modifiedTime && (
-        <meta property="article:modified_time" content={modifiedTime} />
-      )}
-      {type === 'article' && author && (
-        <meta property="article:author" content={author} />
-      )}
-      {type === 'article' && section && (
-        <meta property="article:section" content={section} />
-      )}
-      {type === 'article' && tags.length > 0 && (
-        tags.map((tag, index) => (
-          <meta key={index} property="article:tag" content={tag} />
-        ))
-      )}
-
-      {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#0f172a" />
-      <meta name="msapplication-TileColor" content="#0f172a" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="format-detection" content="telephone=no,address=no,email=no" />
-      <meta name="color-scheme" content="dark light" />
-
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
-      </script>
+      <meta name="twitter:image" content={image} />
+      
+      {/* Canonical URL */}
+      <link rel="canonical" href={url} />
     </Helmet>
 <<<<<<< HEAD
   );
+<<<<<<< HEAD
 }
 export default SEO;
 =======
   )}
 export default SEO
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+=======
+};
+
+export default SEO;
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
+<<<<<<< HEAD
     // Add skip link functionality
     const addSkipLink = () => {
       const skipLink = document.createElement('a');
@@ -12,10 +13,20 @@ const AccessibilityEnhancer: React.FC = () => {
 <<<<<<< HEAD
     }
 // Focus management for keyboard navigation
+=======
+    // Add keyboard navigation enhancements
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
+      // Skip to main content with Alt + M
+      if (event.altKey && event.key === 'm') {
+        event.preventDefault();
+        const mainContent = document.getElementById('main-content');
+        if (mainContent) {
+          mainContent.focus();
+          mainContent.scrollIntoView({ behavior: 'smooth' });
+        }
       }
+<<<<<<< HEAD
     }
     const handleMouseDown = () => {
       document.body.classList.remove('keyboard-navigation');
@@ -31,10 +42,21 @@ const AccessibilityEnhancer: React.FC = () => {
       style.textContent = `
         *:focus {
           outline: 2px solid #3b82f6;
+=======
+    };
+
+    // Add focus indicators for keyboard navigation
+    const addFocusStyles = () => {
+      const style = document.createElement('style');
+      style.textContent = `
+        .focus-visible:focus {
+          outline: 2px solid #8b5cf6;
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
           outline-offset: 2px;
         }
       `;
       document.head.appendChild(style);
+<<<<<<< HEAD
     }
     // Add ARIA landmarks
     const addAriaLandmarks = () => {
@@ -132,14 +154,16 @@ const AccessibilityEnhancer: React.FC = () => {
     addAriaLandmarks();
     addAltText();
 <<<<<<< HEAD
+=======
+    };
 
-    // Add event listeners
     document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
+    addFocusStyles();
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
 
-    // Cleanup
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
+<<<<<<< HEAD
       document.removeEventListener('mousedown', handleMouseDown);
     }
   }, []);
@@ -155,6 +179,12 @@ export default AccessibilityEnhancer;
   }, []);
 
   return null;
+=======
+    };
+  }, []);
+
+  return null;
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
 };
 
 export default AccessibilityEnhancer;

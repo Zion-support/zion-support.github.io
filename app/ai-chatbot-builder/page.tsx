@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+=======
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
 export default function AiChatbotBuilder() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -28,6 +33,7 @@ export default function AiChatbotBuilder() {
             <p className="text-gray-600">
 <<<<<<< HEAD
               This page is under development. Please check back later for updates.;
+<<<<<<< HEAD
             </p>
           </div>
         </div>
@@ -39,3 +45,13 @@ export default function AiChatbotBuilder() {
               This page is under development. Please check back later for updates.</p></div></div></div></div>
   )}
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+=======
+            </p>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
+  );}
+}
+'
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227

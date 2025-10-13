@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const CareersPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900">
@@ -157,6 +158,21 @@ const CareersPage: React.FC = () => {
               </button>
             </div>
           </div>
+=======
+
+const CareersPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>CareersPage - Zion Tech Group</title>
+        <meta name="description" content="CareersPage - Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">CareersPage</h1>
+          <p className="text-gray-300">This page is under construction.</p>
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
         </div>
       </div>
     </>

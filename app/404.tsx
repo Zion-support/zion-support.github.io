@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
+=======
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';'
+'use client';
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
 export default function NotFoundPage() {
   return (
     <>
@@ -46,6 +52,7 @@ export default function NotFoundPage() {
         </div>
       </div>
     </>
+<<<<<<< HEAD
   );
 }
 =======
@@ -70,3 +77,7 @@ export default function NotFoundPage() {
                 Round-the-clock support for all your 404 needs.</p></div></div></div></div></>
   )}
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+=======
+  );}
+}'
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227

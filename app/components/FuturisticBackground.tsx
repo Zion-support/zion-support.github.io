@@ -1,7 +1,7 @@
 import React from 'react'
 const FuturisticBackground = () => {
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden">
+    <div className="fixed inset-0 -z-10 overflow-hidden">}
       {/* Animated Grid Background */}
       <div className="absolute inset-0 bg-slate-900">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900"></div>
@@ -13,8 +13,8 @@ const FuturisticBackground = () => {
               <div
                 key={i}
                 className="border border-purple-500/30 animate-pulse"
-                style={{
-                  animationDelay: `${i * 0.1}s`,
+                style={{}
+                  animationDelay: `${i * 0.1}s`,'
                   animationDuration: '3s'
                 }}
               ></div>
@@ -34,7 +34,7 @@ const FuturisticBackground = () => {
             <div
               key={i}
               className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-ping"
-              style={{
+              style={{}
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 3}s`,
@@ -53,9 +53,15 @@ const FuturisticBackground = () => {
     </div>
 <<<<<<< HEAD
   );
+<<<<<<< HEAD
 }
 export default FuturisticBackground;
 =======
   )}
 export default FuturisticBackground
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+=======
+};
+
+export default FuturisticBackground;'
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227

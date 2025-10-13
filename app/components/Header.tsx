@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -12,6 +13,32 @@ const Header: React.FC = () => {
       ]},
     { name: 'Solutions', href: '/solutions' },'{ name: 'Case Studies', href: '/case-studies' },'{ name: 'Blog', href: '/blog' },'{ name: 'Contact', href: '/contact' }'
   ]
+=======
+import React from 'react';'
+{ useState } from 'react';'
+import { Link  , Menu,  X,  ChevronDown   } from 'lucide-react';
+const Header: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+'}
+  const navigationItems = [{ name: 'Home', href: '/' },';'
+    { name: 'About', href: '/about' },';
+    { '
+      name: 'Services',';'
+      href: '/services',';'}
+      submenu: [{ name: 'AI Services', href: '/ai-services' },';'
+        { name: 'IT Services', href: '/it-services' },';'
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },';'
+        { name: 'Digital Transformation', href: '/digital-transformation' }';
+      ];
+    },'
+    { name: 'Solutions', href: '/solutions' },';'
+    { name: 'Case Studies', href: '/case-studies' },';'
+    { name: 'Blog', href: '/blog' },';'
+    { name: 'Contact', href: '/contact' }';
+  ];
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
   return (
     <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,10 +51,17 @@ const Header: React.FC = () => {
             </Link>
           </div>
           {/* Desktop Navigation */}
+<<<<<<< HEAD
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">
+=======
+          <div className="hidden md:block">;
+            <div className="ml-10 flex items-baseline space-x-4">;
+              {navigationItems.map((item) => (}
+                <div key={item.name} className="relative group">;
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
                   <Link;
                     to={item.href}
                     className="$1"
@@ -41,7 +75,7 @@ const Header: React.FC = () => {
                   {item.submenu && isServicesOpen && (
                     <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
                       {item.submenu.map((subItem) => (
-                        <Link;
+                        <Link;}
                           key={subItem.name}
                           to={subItem.href}
                           className="$1"
@@ -100,10 +134,17 @@ const Header: React.FC = () => {
         </div>
         {/* Mobile Navigation */}
         {isOpen && (
+<<<<<<< HEAD
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 rounded-lg mt-2">
               {navigationItems.map((item) => (
                 <div key={item.name}>
+=======
+          <div className="md:hidden">;
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 rounded-lg mt-2">;
+              {navigationItems.map((item) => (}
+                <div key={item.name}>;
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
                   <Link;
                     to={item.href}
                     className="$1"
@@ -114,7 +155,7 @@ const Header: React.FC = () => {
                   {item.submenu && (
                     <div className="ml-4 space-y-1">
                       {item.submenu.map((subItem) => (
-                        <Link;
+                        <Link;}
                           key={subItem.name}
                           to={subItem.href}
                           className="$1"
@@ -173,6 +214,7 @@ const Header: React.FC = () => {
       </div>
     </nav>
   );
+<<<<<<< HEAD
 }
 export default Header;
 =======
@@ -187,3 +229,8 @@ export default Header;
   )}
 export default Header
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+=======
+};
+
+export default Header;'
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227

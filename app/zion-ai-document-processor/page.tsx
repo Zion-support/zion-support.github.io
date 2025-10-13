@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React from 'react'
 'use client'
+=======
+import React from 'react';'
+'use client';
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
 export default function ZionAiDocumentProcessorPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">
@@ -8,6 +13,7 @@ export default function ZionAiDocumentProcessorPage() {
         <p className="text-gray-300 text-lg">
 <<<<<<< HEAD
           This page is under development.;
+<<<<<<< HEAD
         </p>
       </div>
     </div>
@@ -17,3 +23,11 @@ export default function ZionAiDocumentProcessorPage() {
           This page is under development.</p></div></div>
   )}
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+=======
+        </p>;
+      </div>;
+    </div>;
+  );}
+}
+'
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227

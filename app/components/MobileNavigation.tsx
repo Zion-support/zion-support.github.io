@@ -1,13 +1,19 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
+=======
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';'
+'use client';
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
 const MobileNavigation: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Mobile - Zion Tech Group</title>
         <meta name="description" content="Professional mobile navigation services by Zion Tech Group." />
-      </Helmet>
+      </Helmet>}
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-6xl mx-auto text-center">
@@ -70,8 +76,13 @@ const MobileNavigation: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Get Started?;
+<<<<<<< HEAD
           </h2>
           <p className="text-xl text-blue-100 mb-8">
+=======
+          </h2>;
+          <p className="text-xl text-blue-100 mb-8">;'
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
             Let's discuss how our mobile navigation';
             services can help you achieve your goals.;
           </p>
@@ -85,6 +96,7 @@ const MobileNavigation: React.FC = () => {
       </section>
     </div>
   );
+<<<<<<< HEAD
 }
 export default MobileNavigation;
 =======
@@ -122,3 +134,8 @@ export default MobileNavigation;
   )}
 export default MobileNavigation
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+=======
+};
+
+export default MobileNavigation;'
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227

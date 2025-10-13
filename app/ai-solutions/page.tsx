@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 =======
 import React from 'react'
@@ -139,6 +140,9 @@ export default function AISolutionsPage() {
     }
 <<<<<<< HEAD
   ];
+=======
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
 const AISolutionsPage: React.FC = () => {
 =======
   ]
@@ -169,10 +173,9 @@ const AISolutionsPage: React.FC = () => {
     <>
       <Helmet>
         <title>AI Solutions - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Comprehensive AI solutions including machine learning, NLP, computer vision, predictive analytics, and more. Transform your business with cutting-edge artificial intelligence." />
-        <meta name="keywords" content="AI solutions, machine learning, natural language processing, computer vision, predictive analytics, AI chatbots, artificial intelligence" />
+        <meta name="description" content="Explore our advanced AI solutions including machine learning, natural language processing, and predictive analytics." />
       </Helmet>
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4">
@@ -402,6 +405,37 @@ const AISolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>;    </>
+=======
+      
+      <div className="min-h-screen bg-slate-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">AI Solutions</h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Harness the power of artificial intelligence to transform your business operations
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-slate-800/50 rounded-lg p-8">
+              <h3 className="text-2xl font-bold mb-4">Machine Learning</h3>
+              <p className="text-gray-300 mb-6">Custom ML models tailored to your specific business needs and data.</p>
+            </div>
+            
+            <div className="bg-slate-800/50 rounded-lg p-8">
+              <h3 className="text-2xl font-bold mb-4">Natural Language Processing</h3>
+              <p className="text-gray-300 mb-6">Advanced NLP solutions for text analysis and language understanding.</p>
+            </div>
+            
+            <div className="bg-slate-800/50 rounded-lg p-8">
+              <h3 className="text-2xl font-bold mb-4">Predictive Analytics</h3>
+              <p className="text-gray-300 mb-6">Data-driven insights and predictions to guide business decisions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
   );
 }
 export default AISolutionsPage;

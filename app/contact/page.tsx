@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Circle, Send, Phone, Mail, MapPin, Clock } from 'lucide-react'
@@ -17,6 +18,28 @@ export default function ContactPage()    {
       ...formData,
       [e.target.name]: e.target.value
 <<<<<<< HEAD
+=======
+import React, { useState } from 'react';'
+import { Helmet , Circle,  Send,  Phone,  Mail,  MapPin,  Clock  } from 'lucide-react';
+
+export default function ContactPage()    {
+  const [formData, setFormData] = useState({'
+    name: '','
+    email: '','
+    company: '','
+    phone: '','
+    subject: '','
+    message: ''}
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value}
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
     });
   }
 =======
@@ -30,10 +53,20 @@ export default function ContactPage()    {
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     setIsSubmitted(true);
+<<<<<<< HEAD
     setIsSubmitting(false);
   }
   const contactInfo = [
     {
+=======
+    setIsSubmitting(false);}
+  };
+
+  const contactInfo = [
+    {
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
 
       icon: 'Phone',      title: 'Phone',
 =======
@@ -47,25 +80,39 @@ export default function ContactPage()    {
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
       value: '+1 (555) 123-4567',
       description: 'Mon-Fri 9AM-6PM EST'
+=======
+'
+      icon: 'Phone','
+      title: 'Phone','
+      value: '+1 (555) 123-4567','
+      description: 'Mon-Fri 9AM-6PM EST'}
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
     },
-    {
-      icon: 'Email',
-      title: 'Email',
-      value: 'contact@ziontechgroup.com',
-      description: 'We respond within 24 hours'
+    {'
+      icon: 'Email','
+      title: 'Email','
+      value: 'contact@ziontechgroup.com','
+      description: 'We respond within 24 hours'}
     },
-    {
-      icon: 'Location',
-      title: 'Address',
-      value: '123 Tech Street, Suite 100',
-      description: 'San Francisco, CA 94105'
+    {'
+      icon: 'Location','
+      title: 'Address','
+      value: '123 Tech Street, Suite 100','
+      description: 'San Francisco, CA 94105'}
     },
-    {
+    {'
       icon: 'Clock',
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
 =======
       description: '9:00 AM - 6:00 PM EST'
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
     }
   ]
@@ -76,6 +123,22 @@ export default function ContactPage()    {
     'Micro SAAS',
     'Digital Transformation',
     '5G Implementation',
+=======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd3e'
+      description: '9:00 AM - 6:00 PM EST'}
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
+    }
+  ];
+
+  const subjects = ['
+    'AI Services','
+    'IT Services','
+    'Services','
+    'Micro SAAS','
+    'Digital Transformation','
+    '5G Implementation','
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
     'Other'
   ]
   return (
@@ -110,8 +173,13 @@ export default function ContactPage()    {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contactInfo.map((info, index) => {
+<<<<<<< HEAD
               const Icon = info.icon
               return (
+=======
+              const Icon = info.icon;
+              return (}
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4">
                     <Icon className="w-6 h-6 text-white" />
@@ -138,11 +206,12 @@ export default function ContactPage()    {
                 <Circle className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-300 mb-6">'
                 Thank you for contacting us. We'll get back to you within 24 hours.
               </p>
               <button
                 onClick={() => {
+<<<<<<< HEAD
                   setIsSubmitted(false)
                   setFormData({
                     name: '',
@@ -152,6 +221,18 @@ export default function ContactPage()    {
                     subject: '',
                     message: ''
                   })}}
+=======
+                  setIsSubmitted(false);
+                  setFormData({'
+                    name: '','
+                    email: '','
+                    company: '','
+                    phone: '','
+                    subject: '','
+                    message: ''}
+                  });
+                }}
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
                 Send Another Message
@@ -236,7 +317,7 @@ export default function ContactPage()    {
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
                   <option value="">Select a subject</option>
-                  {subjects.map((subject, index) => (
+                  {subjects.map((subject, index) => (}
                     <option key={index} value={subject}>
                       {subject}
                     </option>
@@ -275,7 +356,7 @@ export default function ContactPage()    {
                     <>
                       Send Message
                       <Send className="w-5 h-5 ml-2 inline" />
-                    </>
+                    </>}
                   )}
                 </button>
               </div>
@@ -284,4 +365,9 @@ export default function ContactPage()    {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   )}
+=======
+  );
+}'
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227

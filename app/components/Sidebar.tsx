@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
@@ -20,6 +21,11 @@ import {
   SignalIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline';
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { XMarkIcon } from '@heroicons/react/24/outline';
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
 
 interface SidebarProps {
   isOpen: boolean;
@@ -27,6 +33,7 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+<<<<<<< HEAD
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
   const location = useLocation();
 
@@ -88,10 +95,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const isExpanded = (sectionName: string) => {
     return expandedSections.includes(sectionName);
   };
+=======
+  if (!isOpen) return null;
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
 
   if (!isOpen) return null;
 
   return (
+<<<<<<< HEAD
     <>
       {/* Overlay */}
       <div 
@@ -187,9 +198,25 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </Link>
             ))}
           </div>
+=======
+    <div className="fixed inset-0 z-50 md:hidden">
+      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose}></div>
+      <div className="relative flex flex-col w-64 h-full bg-slate-900">
+        <div className="flex items-center justify-between p-4 border-b border-slate-700">
+          <span className="text-xl font-bold text-white">Menu</span>
+          <button onClick={onClose} className="text-gray-400 hover:text-white">
+            <XMarkIcon className="w-6 h-6" />
+          </button>
+        </div>
+        <nav className="flex-1 p-4 space-y-2">
+          <Link to="/" className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded">Home</Link>
+          <Link to="/about" className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded">About</Link>
+          <Link to="/services" className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded">Services</Link>
+          <Link to="/contact" className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded">Contact</Link>
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
         </nav>
       </div>
-    </>
+    </div>
   );
 };
 

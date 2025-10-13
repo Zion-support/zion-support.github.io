@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
+=======
+import React from 'react';'
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
 'use client';
       {/* Content Section */}
 =======
@@ -41,6 +45,7 @@ import React from 'react'
                 className="$1"
               >
                 Contact Us;
+<<<<<<< HEAD
               </a>
             </div>
           </div>
@@ -68,3 +73,10 @@ import React from 'react'
                 className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
                 Contact Us</a></div></div></div></section>
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+=======
+              </a>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;'
+>>>>>>> cursor/analyze-improve-and-deploy-application-4227
