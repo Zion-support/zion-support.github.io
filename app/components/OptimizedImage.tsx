@@ -1,77 +1,74 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
+import { motion } from 'framer-motion';
 
 interface OptimizedImageProps {
   src: string;
   alt: string;
+  className?: string;
   width?: number;
   height?: number;
-  className?: string;
   priority?: boolean;
   onLoad?: () => void;
   onError?: () => void;
-  children?: React.ReactNode;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
+export default function OptimizedImage({
   src,
   alt,
+  className = '',
   width,
   height,
-  className = '',
   priority = false,
   onLoad,
-  onError,
-  children,
-}) => {
+  onError
+}: OptimizedImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
 
-  useEffect(() => {
-    if (imgRef.current?.complete) {
-      setIsLoaded(true);
-    }
-  }, []);
-
-  const handleLoad = () => {
+  const handleLoad = useCallback(() => {
     setIsLoaded(true);
     onLoad?.();
-  };
+  }, [onLoad]);
 
-  const handleError = () => {
+  const handleError = useCallback(() => {
     setHasError(true);
     onError?.();
+  }, [onError]);
+
+  const containerStyle: React.CSSProperties = {
+    width: width ? `${width}px` : undefined,
+    height: height ? `${height}px` : undefined,
   };
 
   if (hasError) {
     return (
-      <div className={`${className} flex items-center justify-center bg-gray-200 text-gray-500`}>
+      <div 
+        className={`flex items-center justify-center bg-gray-200 text-gray-500 ${className}`}
+        style={containerStyle}
+      >
         <span>Failed to load image</span>
       </div>
     );
   }
 
   return (
-    <div className={`${className} relative`}>
+    <div className={`relative ${className}`} style={containerStyle}>
       {!isLoaded && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
-          <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
-        </div>
+        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
       )}
-      <img
-        ref={imgRef}
+      <motion.img
         src={src}
         alt={alt}
-        width={width}
-        height={height}
         loading={priority ? 'eager' : 'lazy'}
         onLoad={handleLoad}
         onError={handleError}
-        className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+        className={`w-full h-full object-cover transition-opacity duration-300 ${
+          isLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isLoaded ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
       />
-      {children}
     </div>
   );
-};
-
-export default OptimizedImage;
+}

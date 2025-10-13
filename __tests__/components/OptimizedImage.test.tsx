@@ -2,6 +2,7 @@ import React from 'react';
 import { render, screen, waitFor, act } from '@testing-library/react';
 import OptimizedImage from '../../app/components/OptimizedImage';
 
+<<<<<<< HEAD
 // Mock framer-motion
 jest.mock('framer-motion', () => ({
   motion: {
@@ -31,6 +32,24 @@ describe('OptimizedImage', () => {
     const img = screen.getByAltText('Test image');
     expect(img).toHaveAttribute('width', '300');
     expect(img).toHaveAttribute('height', '200');
+=======
+const defaultProps = {
+  src: 'test-image.jpg',
+  alt: 'Test image',
+  width: 300,
+  height: 200,
+};
+
+describe('OptimizedImage Component', () => {
+  it('renders with default props', () => {
+    const { container } = render(<OptimizedImage {...defaultProps} />);
+    expect(container.firstChild).toBeInTheDocument();
+  });
+
+  it('renders with custom className', () => {
+    const { container } = render(<OptimizedImage {...defaultProps} className="test-class" />);
+    expect(container.firstChild).toHaveClass('test-class');
+>>>>>>> cursor/fix-errors-and-merge-to-main-a87d
   });
 
   it('shows loading skeleton initially', () => {
