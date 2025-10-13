@@ -27,7 +27,7 @@ const Footer = React.memo(() => {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-2">
@@ -70,18 +70,10 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/cloud-services"
+                  to="/micro-saas"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Cloud Solutions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/cybersecurity"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Cybersecurity
+                  Micro SAAS
                 </Link>
               </li>
               <li>
@@ -94,18 +86,26 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/data-analytics"
+                  to="/cloud-infrastructure"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Data Analytics
+                  Cloud Infrastructure
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/web-development"
+                  to="/cybersecurity-solutions"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Web Development
+                  Cybersecurity
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/data-analytics"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Data Analytics
                 </Link>
               </li>
             </ul>
@@ -117,18 +117,18 @@ const Footer = React.memo(() => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/ai-analytics"
+                  to="/ai-business-intelligence"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  AI Analytics
+                  AI Business Intelligence
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/ai-automation"
+                  to="/ai-customer-support"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  AI Automation
+                  AI Customer Support
                 </Link>
               </li>
               <li>
@@ -141,34 +141,89 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/ai-customer-service"
+                  to="/ai-cybersecurity"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  AI Customer Service
+                  AI Cybersecurity
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/ai-marketing"
+                  to="/ai-workflow-automation"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  AI Marketing
+                  AI Workflow Automation
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/data-analytics"
+                  to="/zion-analytics-pro"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Data Analytics
+                  Zion Analytics Pro
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/custom-development"
+                  to="/zion-security-shield"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Custom Development
+                  Zion Security Shield
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Micro SAAS */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Micro SAAS</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/zion-analytics-pro"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Zion Analytics Pro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-security-shield"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Zion Security Shield
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-cloud-vault"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Zion Cloud Vault
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-content-studio"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Zion Content Studio
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-workflow-automation"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Zion Workflow Automation
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-lead-magnet"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Zion Lead Magnet
                 </Link>
               </li>
             </ul>
