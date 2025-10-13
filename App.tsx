@@ -4,9 +4,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
 import "./app/styles/futuristic-enhanced.css";
-import Navigation from "./app/components/Navigation";
-import Footer from "./app/components/Footer";
-import HomePage from "./app/page";
+import "./app/styles/futuristic-advanced.css";
+import Navigation from "./app/components/EnhancedNavigation";
+import Footer from "./app/components/EnhancedFooter";
+import HomePage from "./app/EnhancedHomePage";
 import { LoadingPage } from "./app/components/LoadingStates";
 import ErrorBoundary from "./app/components/ErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
@@ -151,6 +152,20 @@ const ZionComplianceManagerPage = React.lazy(
 );
 const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
+);
+
+// New Micro SAAS Services
+const ZionAICryptoTraderPage = React.lazy(
+  () => import("./app/zion-ai-crypto-trader/page"),
+);
+const ZionAIHealthMonitorPage = React.lazy(
+  () => import("./app/zion-ai-health-monitor/page"),
+);
+const ZionAISmartHomePage = React.lazy(
+  () => import("./app/zion-ai-smart-home/page"),
+);
+const ZionAISpaceOptimizerPage = React.lazy(
+  () => import("./app/zion-ai-space-optimizer/page"),
 );
 
 // 5G Solutions Pages
@@ -362,6 +377,24 @@ function App() {
                   <Route
                     path="/zion-performance-monitor"
                     element={<ZionPerformanceMonitorPage />}
+                  />
+
+                  {/* New Micro SAAS Routes */}
+                  <Route
+                    path="/zion-ai-crypto-trader"
+                    element={<ZionAICryptoTraderPage />}
+                  />
+                  <Route
+                    path="/zion-ai-health-monitor"
+                    element={<ZionAIHealthMonitorPage />}
+                  />
+                  <Route
+                    path="/zion-ai-smart-home"
+                    element={<ZionAISmartHomePage />}
+                  />
+                  <Route
+                    path="/zion-ai-space-optimizer"
+                    element={<ZionAISpaceOptimizerPage />}
                   />
 
                   {/* 5G Solutions Routes */}
