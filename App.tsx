@@ -20,6 +20,9 @@ import FuturisticBackground from "./app/components/FuturisticBackground";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import EnhancedSEO from "./app/components/EnhancedSEO";
+import ImprovedErrorBoundary from "./app/components/ImprovedErrorBoundary";
+import ImprovedAccessibility from "./app/components/ImprovedAccessibility";
+import ImprovedPerformanceMonitor from "./app/components/ImprovedPerformanceMonitor";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -119,23 +122,21 @@ function App() {
 
   return (
     <HelmetProvider>
-      <GlobalErrorBoundary>
+      <ImprovedErrorBoundary>
         <AnalyticsProvider>
-          <PerformanceMonitor>
+          <ImprovedPerformanceMonitor showDetails={process.env.NODE_ENV === 'development'}>
             <WebVitalsTracker>
-              <EnhancedAccessibility>
-                <AccessibilityEnhancer>
-                  <CoreWebVitals>
-                    <Router>
-                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                        <FuturisticBackground>
-                          <Navigation onSidebarToggle={toggleSidebar} />
-                          <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-                          <Breadcrumb />
-                          
-                          <main className="relative z-10" id="main-content" role="main">
-                            <Suspense fallback={<LoadingPage />}>
-                              <Routes>
+              <ImprovedAccessibility>
+                <Router>
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                    <FuturisticBackground>
+                      <Navigation onSidebarToggle={toggleSidebar} />
+                      <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
+                      <Breadcrumb />
+                      
+                      <main className="relative z-10" id="main-content" role="main">
+                        <Suspense fallback={<LoadingPage />}>
+                          <Routes>
                                 {/* Main Pages */}
                                 <Route path="/" element={<HomePage />} />
                                 <Route path="/about" element={<AboutPage />} />
@@ -228,21 +229,19 @@ function App() {
                                 </div>} />
                               </Routes>
                             </Suspense>
-                          </main>
-                          
-                          <Footer />
-                        </FuturisticBackground>
-                      </div>
-                    </Router>
-                  </CoreWebVitals>
-                </AccessibilityEnhancer>
-              </EnhancedAccessibility>
-            </WebVitalsTracker>
-          </PerformanceMonitor>
-        </AnalyticsProvider>
-      </GlobalErrorBoundary>
-    </HelmetProvider>
-  );
+                        </main>
+                        
+                        <Footer />
+                      </FuturisticBackground>
+                    </div>
+                  </Router>
+                </ImprovedAccessibility>
+              </WebVitalsTracker>
+            </ImprovedPerformanceMonitor>
+          </AnalyticsProvider>
+        </ImprovedErrorBoundary>
+      </HelmetProvider>
+    );
 }
 
 export default App;
