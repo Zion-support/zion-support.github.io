@@ -40,24 +40,12 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       href: '/services', 
       icon: BriefcaseIcon,
       submenu: [
-<<<<<<< HEAD
-        { name: 'AI Solutions', href: '/ai-solutions' },
-        { name: 'IT Solutions', href: '/it-solutions' },
-        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
-        { name: 'Cybersecurity', href: '/cybersecurity' },
-        { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
-        { name: 'Digital Transformation', href: '/digital-transformation' },
-        { name: '5G Solutions', href: '/5g-solutions' }
-      ]
-    },
-<<<<<<< HEAD
-    { name: 'Solutions', href: '/solutions', icon: CogIcon },
-=======
         { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
+        { name: 'IT Solutions', href: '/it-solutions', icon: BriefcaseIcon },
+        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: GlobeAltIcon },
         { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
         { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: CloudIcon },
         { name: 'Digital Transformation', href: '/digital-transformation', icon: CogIcon },
-        { name: 'Micro SaaS', href: '/micro-saas', icon: GlobeAltIcon },
         { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
       ]
     },
@@ -72,21 +60,12 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon }
       ]
     },
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
     { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
     { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
     { name: 'Demo', href: '/demo', icon: PlayIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
->>>>>>> origin/main
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   ];
 
   const isActive = (path: string) => {
