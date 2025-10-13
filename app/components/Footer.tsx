@@ -97,14 +97,6 @@ const Footer = React.memo(() => {
       
       <div className="relative z-10">
         {/* Main Footer Content */}
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-12">
-          {/* Company Info */}
-          <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
-=======
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           {/* Stats Section */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
@@ -170,7 +162,6 @@ const Footer = React.memo(() => {
                     {link.icon}
                   </a>
                 ))}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
               </div>
             </div>
 
@@ -246,7 +237,6 @@ const Footer = React.memo(() => {
             </div>
           </div>
 
-<<<<<<< HEAD
           {/* AI Services */}
           <div>
             <h4 className="text-lg font-semibold mb-4 text-cyan-400">AI Services</h4>
@@ -555,7 +545,9 @@ const Footer = React.memo(() => {
               >
                 Cookie Policy
               </Link>
-=======
+            </div>
+          </div>
+
           {/* Newsletter Signup */}
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl p-8 mb-12 border border-white/10">
             <div className="max-w-2xl mx-auto text-center">
@@ -593,7 +585,6 @@ const Footer = React.memo(() => {
                 <Star className="w-4 h-4 text-yellow-400 fill-current" />
                 <span className="text-gray-400">in Delaware, USA</span>
               </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
             </div>
           </div>
         </div>
