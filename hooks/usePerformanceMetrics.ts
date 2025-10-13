@@ -1,3 +1,13 @@
+import { useState, useEffect } from 'react';
+
+interface PerformanceMetrics {
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  ttfb?: number;
+}
+
 export function usePerformanceMetrics() {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isSupported, setIsSupported] = useState(false);
@@ -31,10 +41,11 @@ export function usePerformanceMetrics() {
     new PerformanceObserver(list => {
       const entries = list.getEntries();
       entries.forEach(entry => {
-        if (entry.processingStart && entry.startTime) {
+        const inputEntry = entry as any;
+        if (inputEntry.processingStart && inputEntry.startTime) {
           setMetrics(prev => ({ 
             ...prev, 
-            fid: entry.processingStart - entry.startTime 
+            fid: inputEntry.processingStart - inputEntry.startTime 
           }));
         }
       });
@@ -45,8 +56,9 @@ export function usePerformanceMetrics() {
     new PerformanceObserver(list => {
       const entries = list.getEntries();
       entries.forEach(entry => {
-        if (!entry.hadRecentInput) {
-          clsValue += entry.value;
+        const layoutEntry = entry as any;
+        if (!layoutEntry.hadRecentInput) {
+          clsValue += layoutEntry.value;
         }
       });
       setMetrics(prev => ({ ...prev, cls: clsValue }));
@@ -56,10 +68,11 @@ export function usePerformanceMetrics() {
     new PerformanceObserver(list => {
       const entries = list.getEntries();
       entries.forEach(entry => {
-        if (entry.responseStart && entry.requestStart) {
+        const navEntry = entry as any;
+        if (navEntry.responseStart && navEntry.requestStart) {
           setMetrics(prev => ({ 
             ...prev, 
-            ttfb: entry.responseStart - entry.requestStart 
+            ttfb: navEntry.responseStart - navEntry.requestStart 
           }));
         }
       });

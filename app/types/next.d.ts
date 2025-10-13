@@ -1,7 +1,8 @@
-// next.d utility
-export const next.d = () => {
-  // Implementation
-  return true;
-};
+// Next.js type definitions
+declare module 'next' {
+  interface NextApiRequest {
+    user?: any;
+  }
+}
 
-export default next.d;
+export {};
