@@ -1,19 +1,19 @@
 import { ArrowRight } from "lucide-react";
-
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ComplianceZionTechGroup() {
+export default function CompliancePage() {
   return (
     <>
       <Helmet>
         <title>Compliance - Zion Tech Group</title>
+        <meta name="description" content="Professional compliance services and solutions from Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">Compliance</h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional compliance services coming soon.
+            Professional compliance services and solutions coming soon.
           </p>
           <Link
             to="/contact"
@@ -27,9 +27,3 @@ export default function ComplianceZionTechGroup() {
     </>
   );
 }
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6877

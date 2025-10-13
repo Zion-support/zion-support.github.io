@@ -1,19 +1,19 @@
 import { ArrowRight } from "lucide-react";
-
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function CommunityZionTechGroup() {
+export default function CommunityPage() {
   return (
     <>
       <Helmet>
         <title>Community - Zion Tech Group</title>
+        <meta name="description" content="Join our community and connect with technology professionals" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">Community</h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional community services coming soon.
+            Join our community and connect with technology professionals.
           </p>
           <Link
             to="/contact"
@@ -27,9 +27,3 @@ export default function CommunityZionTechGroup() {
     </>
   );
 }
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6877

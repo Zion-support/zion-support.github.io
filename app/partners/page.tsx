@@ -1,19 +1,19 @@
 import { ArrowRight } from "lucide-react";
-
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function PartnersZionTechGroup() {
+export default function PartnersPage() {
   return (
     <>
       <Helmet>
         <title>Partners - Zion Tech Group</title>
+        <meta name="description" content="Partner with Zion Tech Group for technology solutions and services" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">Partners</h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional partners services coming soon.
+            Partner with us for technology solutions and services.
           </p>
           <Link
             to="/contact"
@@ -23,12 +23,6 @@ export default function PartnersZionTechGroup() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6877
       </div>
     </>
   );
