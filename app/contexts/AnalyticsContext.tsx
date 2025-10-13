@@ -5,25 +5,11 @@ interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void;
   trackPageView: (pageName: string) => void;
   setUser: (userId: string, properties?: Record<string, any>) => void;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba71
-  isEnabled: boolean;
-}
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-=======
   isEnabled: boolean;
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
->>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isEnabled, setIsEnabled] = useState(false);
   const [userId, setUserId] = useState<string | null>(null);
@@ -54,22 +40,20 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     trackEvent,
     trackPageView,
     setUser,
-<<<<<<< HEAD
-    isEnabled,
+    isEnabled
   };
 
-=======
-    isEnabled};
->>>>>>> cursor/fix-errors-and-merge-to-main-ba71
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
   );
 };
-<<<<<<< HEAD
 
-export { AnalyticsContext };
-=======
-export { AnalyticsContext };
->>>>>>> cursor/fix-errors-and-merge-to-main-ba71
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (context === undefined) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+};

@@ -1,7 +1,9 @@
 import fs from 'fs';
 import path from 'path';
+
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'wallets.json');
+
 export default function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -26,8 +28,8 @@ export default function handler(req, res) {
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
     }
-  } catch (_error) {
-    // console.error('Error reading existing wallets:', error);
+  } catch (error) {
+    console.error('Error reading existing wallets:', error);
     existing = [];
   }
   
@@ -58,5 +60,10 @@ export default function handler(req, res) {
       message: 'Wallet added successfully',
       id: newWallet.id
     }));
-  } catch (_error) {
-    // console.error('Error saving wallet:', error);
+  } catch (error) {
+    console.error('Error saving wallet:', error);
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to save wallet' }));
+  }
+}

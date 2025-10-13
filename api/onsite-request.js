@@ -1,100 +1,49 @@
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
 // Simple wrapper function to replace withSentry
-// const withSentry = (handler) => handler;
+const withSentry = (handler) => handler;
 
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba71
-const dir = path.join(process.cwd(), 'data');
-const file = path.join(dir, 'onsite-requests.json');
-
-export default function handler(req, res) {
+export default withSentry(async function handler(req, res) {
   if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
+    return res.status(405).json({ error: 'Method not allowed' });
   }
-  const { name, email, company, phone, message, location } = req.body || {};
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
-  let existing = [];
-  try {
-    if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8');
-      existing = JSON.parse(data);
-      if (!Array.isArray(existing)) existing = [];
-    }
-  } catch {
-    existing = [];
-  }
-  const newRequest = {
-    id: Date.now().toString(),
-    name,
-    email,
-    company,
-    phone,
-    message,
-    location,
-    timestamp: new Date().toISOString(),
-    status: 'pending'
-  };
-  existing.push(newRequest);
-  try {
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
-      message: 'Onsite request submitted successfully',
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba71
 
-      message: 'Onsite request submitted successfully',
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-=======
-      message: 'Onsite request submitted successfully',
->>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba71
-      id: newRequest.id
-    }));
-  } catch {
-    console.error('Error saving onsite request');
-    res.statusCode = 500;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to save request' }));
+  try {
+    const { name, email, company, phone, message, service } = req.body;
+
+    if (!name || !email || !message) {
+      return res.status(400).json({ 
+        error: 'Name, email, and message are required' 
+      });
+    }
+
+    // In a real application, you would:
+    // 1. Save to your database
+    // 2. Send email notification to your team
+    // 3. Add to your CRM
+    // 4. Send confirmation email to the client
+
+    const requestData = {
+      name,
+      email,
+      company,
+      phone,
+      message,
+      service,
+      timestamp: new Date().toISOString(),
+      ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress
+    };
+
+    console.log('Onsite request received:', requestData);
+
+    // Mock success response
+    res.status(200).json({ 
+      success: true, 
+      message: 'Request submitted successfully!' 
+    });
+  } catch (error) {
+    console.error('Onsite request error:', error);
+    res.status(500).json({ error: 'Failed to submit request' });
   }
-}
+});

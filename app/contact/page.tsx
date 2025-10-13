@@ -25,10 +25,10 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
+
     setIsSubmitted(true);
     setIsSubmitting(false);
   };
@@ -77,7 +77,7 @@ export default function ContactPage() {
         <meta name="description" content="Get in touch with Zion Tech Group for AI solutions, IT services, and digital transformation. Contact our experts today." />
         <meta name="keywords" content="contact, AI services, IT solutions, digital transformation, business consultation" />
       </Helmet>
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -88,7 +88,7 @@ export default function ContactPage() {
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Ready to transform your business with AI and IT solutions? 
+            Ready to transform your business with AI and IT solutions?
             Get in touch with our experts today.
           </p>
         </div>
@@ -124,30 +124,10 @@ export default function ContactPage() {
           <h2 className="text-4xl font-bold text-white text-center mb-16">
             Send us a Message
           </h2>
-          
+
           {isSubmitted ? (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center">
               <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-4">
-=======
-            <div className="text-center py-16">
-              <div className="w-16 h-16 rounded-full bg-green-500 flex items-center justify-center mx-auto mb-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-ba71
                 <CheckCircle className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
@@ -155,23 +135,8 @@ export default function ContactPage() {
                 Thank you for contacting us. We'll get back to you within 24 hours.
               </p>
               <button
-<<<<<<< HEAD
-                onClick={() => {
-                  setIsSubmitted(false);
-                  setFormData({
-                    name: '',
-                    email: '',
-                    company: '',
-                    phone: '',
-                    subject: '',
-                    message: ''
-                  });
-                }}
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-=======
                 onClick={() => setIsSubmitted(false)}
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
->>>>>>> cursor/fix-errors-and-merge-to-main-ba71
               >
                 Send Another Message
               </button>

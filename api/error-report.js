@@ -24,42 +24,8 @@ export default function handler(req, res) {
       timestamp: new Date().toISOString()
     });
     res.status(200).json({ success: true });
-<<<<<<< HEAD
   } catch (error) {
     console.error('Error processing error report:', error);
     res.status(500).json({ error: 'Failed to process error report' });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
-
-  } catch (_error) { // eslint-disable-line no-unused-vars
-    // console.error('Error reporting error:', error);
-    // console.error removed for production
-    res.status(500).json({ error: 'Internal server error' });
-  }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-=======
-  } catch (_error) {
-    console.error('Error processing error report:', _error);
-    res.status(500).json({ error: 'Failed to process error report' });
-  }
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba71
