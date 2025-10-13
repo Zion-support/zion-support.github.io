@@ -139,7 +139,7 @@ function App() {
                       </a>
                       
                       <FuturisticBackground>
-                        <Navigation onSidebarToggle={toggleSidebar} />
+                        <Navigation />
                         <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
                         <Breadcrumb />
                         

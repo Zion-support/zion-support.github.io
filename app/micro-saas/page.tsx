@@ -1,23 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Brain, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Users, 
-  Award, 
-  CheckCircle, 
-  TrendingUp, 
-  Star,
-  Mail,
-  BarChart3,
-  Target,
-  Clock,
-  Smartphone
-} from 'lucide-react';
+import { ArrowRight, Brain, Globe, Users, CheckCircle, TrendingUp, Mail, BarChart3 } from "lucide-react";;
 
 const MicroSaasPage = () => {
   const microSaasProducts = [

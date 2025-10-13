@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 
 declare global {
@@ -30,8 +30,8 @@ const Analytics: React.FC<AnalyticsProps> = ({
 
     // Initialize dataLayer
     window.dataLayer = window.dataLayer || [];
-    window.gtag = function() {
-      window.dataLayer.push(arguments);
+    window.gtag = function(...args: any[]) {
+      window.dataLayer.push(args);
     };
 
     window.gtag('js', new Date());
@@ -84,7 +84,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
           if (entry.entryType === 'first-input') {
             window.gtag('event', 'web_vitals', {
               name: 'FID',
-              value: Math.round(entry.processingStart - entry.startTime),
+              value: Math.round((entry as any).processingStart - entry.startTime),
               event_category: 'Web Vitals',
               event_label: 'First Input Delay',
             });
@@ -122,11 +122,11 @@ const Analytics: React.FC<AnalyticsProps> = ({
   }, [enabled]);
 
   // Track custom events
-  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
+  const trackEvent = useCallback((eventName: string, parameters?: Record<string, any>) => {
     if (!enabled || typeof window === 'undefined' || !window.gtag) return;
     
     window.gtag('event', eventName, parameters);
-  };
+  }, [enabled]);
 
   // Track button clicks
   useEffect(() => {
@@ -150,7 +150,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
 
     document.addEventListener('click', handleClick);
     return () => document.removeEventListener('click', handleClick);
-  }, [enabled]);
+  }, [enabled, trackEvent]);
 
   // Track form submissions
   useEffect(() => {
@@ -168,7 +168,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
 
     document.addEventListener('submit', handleSubmit);
     return () => document.removeEventListener('submit', handleSubmit);
-  }, [enabled]);
+  }, [enabled, trackEvent]);
 
   // Track scroll depth
   useEffect(() => {
@@ -195,7 +195,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
 
     window.addEventListener('scroll', trackScroll, { passive: true });
     return () => window.removeEventListener('scroll', trackScroll);
-  }, [enabled]);
+  }, [enabled, trackEvent]);
 
   return null; // This component doesn't render anything
 };

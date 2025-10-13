@@ -25,7 +25,8 @@ class EnhancedErrorBoundary extends Component<EnhancedErrorBoundaryProps, Enhanc
       hasError: false,
       error: undefined,
       errorInfo: undefined,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      retryCount: 0
     };
     this.maxRetries = props.maxRetries || 3;
   }

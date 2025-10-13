@@ -49,7 +49,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children, showD
           for (const entry of list.getEntries()) {
             setMetrics(prev => ({ 
               ...prev, 
-              firstInputDelay: entry.processingStart - entry.startTime 
+              firstInputDelay: (entry as any).processingStart - entry.startTime 
             }));
           }
         });

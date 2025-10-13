@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { Sparkles, PenTool, Video, Image, FileText, CheckCircle, ArrowRight, Star, Users, Award, Clock, Globe, Smartphone, Mail } from "lucide-react";
+import { Sparkles, PenTool, Video, Image, FileText, CheckCircle, ArrowRight, Star } from "lucide-react";
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
@@ -229,10 +228,6 @@ const AIContentStudioZionTechGroup = () => {
                   {features.map((feature, index) => (
                     <FuturisticCardEnhanced
                       key={index}
-                      glowColor={index % 2 === 0 ? 'purple' : 'pink'}
-                      hoverEffect={true}
-                      animated={true}
-                      neon={true}
                       className="text-center"
                     >
                       <div
@@ -268,10 +263,6 @@ const AIContentStudioZionTechGroup = () => {
                   {pricingPlans.map((plan, index) => (
                     <FuturisticCardEnhanced
                       key={index}
-                      glowColor={plan.popular ? 'purple' : 'pink'}
-                      hoverEffect={true}
-                      animated={true}
-                      neon={true}
                       className={`relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}
                     >
                       {plan.popular && (
