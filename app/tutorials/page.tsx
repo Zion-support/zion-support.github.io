@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Right, Play, User, Star, Circle } from 'lucide-react';
 
-const TutorialsPage: React.FC = () => {
+const TutorialsPage = () => {
   const tutorials = [
     {
       id: 1,

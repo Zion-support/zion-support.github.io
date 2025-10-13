@@ -1,8 +1,8 @@
-'use client';
 import React from 'react';
+'use client';
 import { Helmet } from 'react-helmet-async';
 
-const ImprovedNavigation: React.FC = () => {
+const ImprovedNavigation = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
@@ -70,7 +70,7 @@ const ImprovedNavigation: React.FC = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let&apos;s discuss how our improved navigation 
+            Let's discuss how our improved navigation 
             services can help you achieve your goals.
           </p>
           <a

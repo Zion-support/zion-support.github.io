@@ -4,14 +4,14 @@ import {Helmet}}from 'react-helmet-async';
 import ../components/ from '../components/';
 import Footer from '../components/Footer';
 import {Circle, Right, Star, }}from 'lucide-react';
-const PageFixedPage: React.FC = () => {,
+const PageFixedPage: React.FC = () => {,}
       benefits: [&apos;Smart recommendations&apos;, &apos;Predictive analytics&apos;, &apos;Automated insights&apos;, &apos;Real-time analysis&apos;]},
     {icon: benefits: [&apos;Real-time dashboards&apos;, &apos;Custom reports&apos;, &apos;Data visualization&apos;, &apos;Performance metrics&apos;]},
     {icon: title: 'Precision ing',
-      description: 'specific goals and objectives with precision and accuracy.',
+      description: 'specific goals and objectives with precision and accuracy.',}
       benefits: [&apos;Goal tracking&apos;, &apos;Performance optimization&apos;, &apos;Strategic planning&apos;, &apos;Success metrics&apos;]},
     {icon: title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+      description: 'Optimize your business growth with data-driven strategies.',}
       benefits: [&apos;Growth strategies&apos;, &apos;Market analysis&apos;, &apos;Competitive insights&apos;, &apos;ROI optimization&apos;]}]
 return(<.Fragment>)
       <Helmet />
@@ -37,7 +37,7 @@ return(<.Fragment>)
               <p>Powerful AI technology that drives results;
                   <p className="text-gray-300 mb-4">{feature.description</p>}
                   {feature.benefits && (;
-                    <ul>
+                    <ul>})
                       {feature.benefits.map((benefit, idx) => (} <li>
                           <Circle />
         {/* CTA Section */} <section className="py-20 px-4">
@@ -52,7 +52,7 @@ return(<.Fragment>)
               <p>Contact our experts to discuss your requirements and get started today.
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
                 <button>Contact Us;
-                <button>Learn More;
+                <button>Learn More;)
       ))
       <Footer />
 

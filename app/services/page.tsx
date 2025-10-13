@@ -2,40 +2,40 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Circle, Star, Right, Brain, Zap, Shield, Cloud, Smartphone, Database, Globe } from 'lucide-react';
 
-const ServicesPage: React.FC = () => {
+const ServicesPage = () => {
   const serviceCategories = [
     {
-      title: &apos;AI & Machine Learning&apos;,
-      color: &apos;text-purple-600&apos;,
-      bgColor: &apos;bg-purple-50&apos;,
+      title: 'AI & Machine Learning',
+      color: 'text-purple-600',
+      bgColor: 'bg-purple-50',
       services: [
-        { name: &apos;AI Consulting & Strategy&apos;, price: &apos;$2,500/month&apos;, description: 'Comprehensive AI strategy development and implementation planning', features: [&apos;AI Roadmap Development&apos;, &apos;Technology Assessment&apos;, &apos;ROI Analysis&apos;, &apos;Implementation Planning&apos;] },
-        { name: 'Machine Learning Solutions', price: &apos;$1,500/month&apos;, description: 'Custom ML models for predictive analytics and decision-making', features: [&apos;Predictive Analytics&apos;, &apos;Custom Model Development&apos;, &apos;Data Pipeline Setup&apos;, &apos;Model Monitoring&apos;] },
-        { name: 'Natural Language Processing', price: &apos;$1,200/month&apos;, description: 'Advanced NLP solutions for text analysis and language understanding', features: [&apos;Text Analysis&apos;, &apos;Sentiment Analysis&apos;, &apos;Language Translation&apos;, &apos;Chatbot Development&apos;] },
-        { name: 'Computer Vision', price: &apos;$1,800/month&apos;, description: 'Image and video analysis solutions for object detection and recognition', features: [&apos;Object Detection&apos;, &apos;Image Classification&apos;, &apos;Analysis&apos;, &apos;Facial Recognition&apos;] },
-        { name: 'AI Automation', price: &apos;$1,400/month&apos;, description: 'Intelligent process automation with decision-making capabilities', features: [&apos;Process Automation&apos;, &apos;Workflow Optimization&apos;, &apos;Decision Trees&apos;, &apos;Exception Handling&apos;] },
-        { name: 'AI Chatbots', price: &apos;$800/month&apos;, description: 'Intelligent conversational AI for customer service and support', features: [&apos;24/7 Support&apos;, &apos;Multi-language Support&apos;, &apos;Integration APIs&apos;, &apos;Analytics Dashboard&apos;] }
+        { name: 'AI Consulting & Strategy', price: '$2,500/month', description: 'Comprehensive AI strategy development and implementation planning', features: ['AI Roadmap Development', 'Technology Assessment', 'ROI Analysis', 'Implementation Planning'] },
+        { name: 'Machine Learning Solutions', price: '$1,500/month', description: 'Custom ML models for predictive analytics and decision-making', features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring'] },
+        { name: 'Natural Language Processing', price: '$1,200/month', description: 'Advanced NLP solutions for text analysis and language understanding', features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development'] },
+        { name: 'Computer Vision', price: '$1,800/month', description: 'Image and video analysis solutions for object detection and recognition', features: ['Object Detection', 'Image Classification', 'Analysis', 'Facial Recognition'] },
+        { name: 'AI Automation', price: '$1,400/month', description: 'Intelligent process automation with decision-making capabilities', features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'] },
+        { name: 'AI Chatbots', price: '$800/month', description: 'Intelligent conversational AI for customer service and support', features: ['24/7 Support', 'Multi-language Support', 'Integration APIs', 'Analytics Dashboard'] }
       ]
     },
     {
       title: 'IT Infrastructure',
-      color: &apos;text-blue-600&apos;,
-      bgColor: &apos;bg-blue-50&apos;,
+      color: 'text-blue-600',
+      bgColor: 'bg-blue-50',
       services: [
-        { name: 'Migration', price: &apos;$3,000/month&apos;, description: 'Seamless migration to cloud platforms with minimal downtime', features: [&apos;AWS/Azure/GCP Migration&apos;, &apos;Data Transfer&apos;, &apos;Setup&apos;, &apos;Performance Optimization&apos;] },
-        { name: 'Network ', price: &apos;$2,200/month&apos;, description: 'Comprehensive network security solutions and monitoring', features: [&apos;Firewall Configuration&apos;, &apos;Intrusion Detection&apos;, &apos;VPN Setup&apos;, &apos;Audits&apos;] },
-        { name: 'Management', price: &apos;$1,800/month&apos;, description: 'design, optimization, and maintenance services', features: [&apos;Design&apos;, &apos;Performance Tuning&apos;, &apos;Backup Solutions&apos;, &apos;Data Recovery&apos;] },
-        { name: &apos;DevOps & CI/CD&apos;, price: &apos;$2,000/month&apos;, description: 'Automated deployment and continuous integration solutions', features: [&apos;Pipeline Setup&apos;, &apos;Automated Testing&apos;, &apos;Deployment Automation&apos;, &apos;Monitoring&apos;] }
+        { name: 'Migration', price: '$3,000/month', description: 'Seamless migration to cloud platforms with minimal downtime', features: ['AWS/Azure/GCP Migration', 'Data Transfer', 'Setup', 'Performance Optimization'] },
+        { name: 'Network ', price: '$2,200/month', description: 'Comprehensive network security solutions and monitoring', features: ['Firewall Configuration', 'Intrusion Detection', 'VPN Setup', 'Audits'] },
+        { name: 'Management', price: '$1,800/month', description: 'design, optimization, and maintenance services', features: ['Design', 'Performance Tuning', 'Backup Solutions', 'Data Recovery'] },
+        { name: 'DevOps & CI/CD', price: '$2,000/month', description: 'Automated deployment and continuous integration solutions', features: ['Pipeline Setup', 'Automated Testing', 'Deployment Automation', 'Monitoring'] }
       ]
     },
     {
       title: 'Digital Transformation',
-      color: &apos;text-green-600&apos;,
-      bgColor: &apos;bg-green-50&apos;,
+      color: 'text-green-600',
+      bgColor: 'bg-green-50',
       services: [
-        { name: 'Digital Strategy', price: &apos;$2,800/month&apos;, description: 'Comprehensive digital transformation strategy and implementation', features: [&apos;Digital Assessment&apos;, &apos;Technology Roadmap&apos;, &apos;Change Management&apos;, &apos;ing Programs&apos;] },
-        { name: 'Process Automation', price: &apos;$1,600/month&apos;, description: 'Business process automation and optimization solutions', features: [&apos;Process Analysis&apos;, &apos;Workflow Design&apos;, &apos;Automation Implementation&apos;, &apos;Performance Monitoring&apos;] },
-        { name: 'Data Analytics', price: &apos;$1,900/month&apos;, description: 'Advanced data analytics and business intelligence solutions', features: [&apos;Data Visualization&apos;, &apos;Predictive Analytics&apos;, &apos;Dashboard Creation&apos;, &apos;Insights Generation&apos;] }
+        { name: 'Digital Strategy', price: '$2,800/month', description: 'Comprehensive digital transformation strategy and implementation', features: ['Digital Assessment', 'Technology Roadmap', 'Change Management', 'ing Programs'] },
+        { name: 'Process Automation', price: '$1,600/month', description: 'Business process automation and optimization solutions', features: ['Process Analysis', 'Workflow Design', 'Automation Implementation', 'Performance Monitoring'] },
+        { name: 'Data Analytics', price: '$1,900/month', description: 'Advanced data analytics and business intelligence solutions', features: ['Data Visualization', 'Predictive Analytics', 'Dashboard Creation', 'Insights Generation'] }
       ]
     }
   ];
@@ -45,7 +45,7 @@ const ServicesPage: React.FC = () => {
       name: "Sarah Johnson",
       company: "TechCorp Inc.",
       role: "CTO",
-      content: "Zion Tech Group transformed our infrastructure with their AI solutions. We&apos;ve seen a 40% increase in efficiency.",
+      content: "Zion Tech Group transformed our infrastructure with their AI solutions. We've seen a 40% increase in efficiency.",
       rating: 5
     },
     {
@@ -84,7 +84,7 @@ const ServicesPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Comprehensive AI and IT solutions to transform your business. 
-              From machine learning to cloud migration, we&apos;ve got you covered.
+              From machine learning to cloud migration, we've got you covered.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
@@ -165,7 +165,7 @@ const ServicesPage: React.FC = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let&apos;s discuss how our services can help you achieve your goals.
+              Let's discuss how our services can help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">

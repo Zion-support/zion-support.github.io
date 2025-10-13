@@ -1,8 +1,8 @@
-'use client';
 import React from 'react';
+'use client';
 import { Helmet } from 'react-helmet-async';
 
-const FuturisticButtonEnhanced: React.FC = () => {
+const FuturisticButtonEnhanced = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
@@ -71,7 +71,7 @@ const FuturisticButtonEnhanced: React.FC = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let&apos;s discuss how our futuristic button enhanced 
+            Let's discuss how our futuristic button enhanced 
             services can help you achieve your goals.
           </p>
           <a

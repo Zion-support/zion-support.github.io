@@ -19,10 +19,10 @@ export default function AIAutomation() {
         <div className="text-center">
           <p className="text-gray-300">Coming Soon - AI Automation Solutions</p>
 
-  return (</div>
-      benefits: [&apos;Smart recommendations&apos;, &apos;Predictive analytics&apos;, &apos;Automated insights&apos;, &apos;Real-time analysis&apos;]},
+  return (</div>}
+      benefits: [&apo;s;Smart recommendations&apos;, &apos;Predictive analytics&apos;, &apos;Automated insights&apos;, &apos;Real-time analysis&apos;]},
     {icon: benefits: [&apos;Growth strategies&apos;, &apos;Market analysis&apos;, &apos;Competitive insights&apos;, &apos;ROI optimization&apos;]}]
-  ]
+  ])
 return(<>)
       <Helmet />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">

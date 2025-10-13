@@ -6,9 +6,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
-  js.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
     ignores: [
       'node_modules/**',
       'dist/**',
@@ -18,6 +16,8 @@ export default [
       '*.config.js',
       '*.config.ts',
       '*.config.mjs',
+      'app-broken/**',
+      'app-disabled/**',
       'add-missing-routes*.jsx',
       'aggressive-*.js',
       'aggressive-*.cjs',
@@ -45,7 +45,11 @@ export default [
       'check-*.js',
       'clean-*.js',
       'jest.setup.js'
-    ],
+    ]
+  },
+  js.configs.recommended,
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',

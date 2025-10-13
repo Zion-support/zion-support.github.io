@@ -1,8 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Right, User } from 'lucide-react';
+import { Right, User, Calendar } from 'lucide-react';
 
-const BlogPage: React.FC = () => {
+const BlogPage = () => {
   const categories = [
     { id: "all", name: "All Posts", count: 12 },
     { id: "ai", name: "AI & Machine Learning", count: 5 },
@@ -124,7 +124,7 @@ const BlogPage: React.FC = () => {
                   <div className="text-4xl mb-4">{post.image}</div>
                   <div className="flex items-center space-x-4 text-sm text-gray-400 mb-3">
                     <span className="flex items-center">
-                      <className="w-4 h-4 mr-1" />
+                      <Calendar className="w-4 h-4 mr-1" />
                       {new Date(post.date).toLocaleDateString()}
                     </span>
                     <span className="flex items-center">

@@ -45,7 +45,7 @@ import { Right, Star, } from 'lucide-react';
       results: [
         &apos;60% reduction in response time,
         &apos;40% cost savings,
-        95% customer satisfaction rate
+        95% customer satisfaction rate}
       team: &apos;8 specialists});)},
     {
       id: 2,
@@ -85,7 +85,7 @@ import { Right, Star, } from 'lucide-react';
         Automated compliance reporting
       ],
       image: &apos;/images/case-studies/cybersecurity-healthcare.jpg,
-      duration: &apos;4 months,
+      duration: &apos;4 months,}
       team: &apos;10 specialists});)
 },
     {
@@ -114,7 +114,7 @@ import { Right, Star, } from 'lucide-react';
         Scalable infrastructure for future growth
       ],
       image: &apos;/images/case-studies/digital-transformation.jpg,
-      duration: &apos;8 months,
+      duration: &apos;8 months,}
       team: &apos;15 specialists    },
     {
       id: &apos;6,
@@ -130,26 +130,26 @@ import { Right, Star, } from 'lucide-react';
         &apos;Automated compliance verification
       ],
       image: &apos;/images/case-studies/blockchain-supply-chain.jpg,
-      duration: &apos;7 months,
+      duration: &apos;7 months,}
       team: &apos;11 specialists    }
 
   const stats = [;
     { label: &apos;Projects Completed&apos;, value: &apos;150+, icon: Circle },
     { label: &apos;Client Satisfaction&apos;, value: &apos;98%, icon: User,
     { label: &apos;Team Members&apos;, value: &apos;50+, icon: User,
-    { label: &apos;Industry s&apos;, value: &apos;25+, icon: User  ];
+    { label: &apos;Industry s&apos;, value: &apos;25+, icon: User  ];}
 {/* Stats Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map((stat, index) => (}
               <div key={index} className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mb-4">
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-400">{stat.label}</div>
-              </div>
+              </div>)
             ))}
     <>
   </>
@@ -185,10 +185,10 @@ import { Right, Star, } from 'lucide-react';
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-purple-400 mb-3">Technologies Used</h4>
                     <div className="flex flex-wrap gap-2">
-                      {study.technologies.map((tech, index) => (
+                      {study.technologies.map((tech, index) => (}
                         <span key={index} className="bg-white/10 text-gray-300 px-3 py-1 rounded-full text-sm">
                           {tech}
-                        </span>
+                        </span>)
                       ))}
                     </div>
                   </div>
@@ -232,7 +232,7 @@ import { Right, Star, } from 'lucide-react';
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
-
+}
                 <div key={index} className="text-center>
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-4>
                     <stat.icon className="w-8 h-8 text-white />
@@ -240,9 +240,9 @@ import { Right, Star, } from 'lucide-react';
 
         <section className="py-16 px-4>
           <div className="max-w-7xl mx-auto>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8>)
               {caseStudies.map((study) => (
-
+}
                 <div key={study.id} className="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:border-purple-400 transition-all duration-300 group>
                   <div className="aspect-video bg-gradient-to-br from-purple-500 to-blue-500 relative>
                     <div className="absolute inset-0 bg-black/20></div>
@@ -253,9 +253,9 @@ import { Right, Star, } from 'lucide-react';
                       </div>                    </div>
                     <div className="mb-6>
                       <h4 className="text-lg font-semibold text-white mb-3>Results</h4>
-                      <ul className="space-y-2>
+                      <ul className="space-y-2>)
                         {study.results.map((result, index) => (
-
+}
                           <li key={index} className="flex items-center text-gray-300 text-sm>
                             <Circle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0 />
 
@@ -283,6 +283,6 @@ import { Right, Star, } from 'lucide-react';
               </div>
             </div>
           </div>
-
+)
   );  ));)
 export default CaseStudiesPage;

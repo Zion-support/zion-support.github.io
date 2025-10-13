@@ -3,53 +3,53 @@ import { Helmet } from 'react-helmet-async';
 import { } from 'react-router-dom';
 import { Circle, Right, } from 'lucide-react';
 
-const PartnersPage: React.FC = () => {
+const PartnersPage = () => {
   const partners = [
     {
       name: 'Microsoft',
-      logo: &apos;🏢&apos;,
+      logo: '🏢',
       description: 'Strategic partnership for cloud and AI solutions',
-      category: &apos;Technology&apos;
+      category: 'Technology'
     },
     {
       name: 'Amazon Web Services',
-      logo: &apos;☁️&apos;,
+      logo: '☁️',
       description: 'infrastructure and AI services collaboration',
       category: ''
     },
     {
       name: 'Google ',
-      logo: &apos;🔍&apos;,
+      logo: '🔍',
       description: 'AI and machine learning platform integration',
-      category: &apos;AI/ML&apos;
+      category: 'AI/ML'
     },
     {
       name: 'IBM',
-      logo: &apos;💼&apos;,
+      logo: '💼',
       description: 'Enterprise AI solutions and consulting',
-      category: &apos;Enterprise&apos;
+      category: 'Enterprise'
     },
     {
       name: 'Salesforce',
-      logo: &apos;📊&apos;,
+      logo: '📊',
       description: 'CRM and business intelligence integration',
-      category: &apos;CRM&apos;
+      category: 'CRM'
     },
     {
       name: 'Oracle',
-      logo: &apos;🗄️&apos;,
+      logo: '🗄️',
       description: 'and enterprise application solutions',
       category: ''
     }
   ];
 
   const benefits = [
-    &apos;Access to cutting-edge technology&apos;,
-    &apos;Joint go-to-market opportunities&apos;,
-    &apos;Technical support and training&apos;,
-    &apos;Co-marketing and co-selling programs&apos;,
-    &apos;Priority access to new features&apos;,
-    &apos;Dedicated partner success manager&apos;
+    'Access to cutting-edge technology',
+    'Joint go-to-market opportunities',
+    'Technical support and training',
+    'Co-marketing and co-selling programs',
+    'Priority access to new features',
+    'Dedicated partner success manager'
   ];
 
   return (

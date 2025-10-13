@@ -3,43 +3,43 @@ import { Helmet } from 'react-helmet-async';
 import { Right, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground';
 
-const AiServicesPage: React.FC = () => {
+const AiServicesPage = () => {
   const services = [
     {
       icon: Brain,
       title: 'AI Consulting',
       description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.',
-      color: &apos;from-purple-500 to-pink-500&apos;
+      color: 'from-purple-500 to-pink-500'
     },
     {
       icon: BarChart3,
       title: 'AI Analytics',
       description: 'Advanced analytics solutions powered by machine learning and AI algorithms.',
-      color: &apos;from-blue-500 to-cyan-500&apos;
+      color: 'from-blue-500 to-cyan-500'
     },
     {
       icon: Zap,
       title: 'AI Automation',
       description: 'Intelligent automation solutions to streamline your business processes.',
-      color: &apos;from-green-500 to-emerald-500&apos;
+      color: 'from-green-500 to-emerald-500'
     },
     {
       icon: FileText,
       title: 'AI Content Generation',
       description: 'AI-powered content creation for marketing, documentation, and communication.',
-      color: &apos;from-orange-500 to-red-500&apos;
+      color: 'from-orange-500 to-red-500'
     },
     {
       icon: MessageSquare,
       title: 'AI Customer Service',
       description: 'Intelligent chatbots and customer service solutions powered by AI.',
-      color: &apos;from-indigo-500 to-purple-500&apos;
+      color: 'from-indigo-500 to-purple-500'
     },
     {
       icon: Shield,
       title: 'AI Security',
       description: 'AI-powered security solutions to protect your business and data.',
-      color: &apos;from-cyan-500 to-blue-500&apos;
+      color: 'from-cyan-500 to-blue-500'
     }
   ];
 
@@ -48,14 +48,14 @@ const AiServicesPage: React.FC = () => {
       name: "Dr. Sarah Johnson",
       company: "MedTech Solutions",
       role: "CTO",
-      content: "Zion&apos;s AI healthcare solutions have revolutionized our diagnostic capabilities. We&apos;ve seen a 40% improvement in accuracy.",
+      content: "Zion's AI healthcare solutions have revolutionized our diagnostic capabilities. We've seen a 40% improvement in accuracy.",
       rating: 5
     },
     {
       name: "Michael Chen",
       company: "E-commerce Plus",
       role: "CEO",
-      content: "The AI automation tools have transformed our operations. We&apos;ve reduced manual work by 80% and increased productivity significantly.",
+      content: "The AI automation tools have transformed our operations. We've reduced manual work by 80% and increased productivity significantly.",
       rating: 5
     },
     {

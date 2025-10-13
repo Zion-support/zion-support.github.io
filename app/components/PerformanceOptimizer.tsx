@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, Node } from 'react';
 
 interface PerformanceOptimizerProps {

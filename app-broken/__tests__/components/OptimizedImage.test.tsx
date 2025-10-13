@@ -3,15 +3,15 @@ import { render, screen } from '@testing-library/react';
 import OptimizedImage from '../../app/components/OptimizedImage';
 // Mock framer-motion
 jest.mock('framer-motion', () => ({
-  motion: {
-  },
+  motion: {}
+  },)
 }));
 const mockProps = {
   src: 'https://example.com/test.jpg',
-  alt: 'Test image',
+  alt: 'Test image',}
 };
 describe('OptimizedImage Component', () => {
-  it('renders with default props', () => {
+  it('renders with default props', () => {}
     render(<OptimizedImage {...mockProps} />);
     const image = screen.getByAltText('Test image');
     expect(image).toBeInTheDocument();

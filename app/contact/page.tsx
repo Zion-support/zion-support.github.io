@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Circle, Send } from 'lucide-react';
@@ -15,14 +16,14 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: .ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = async (e: .FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -35,35 +36,39 @@ export default function ContactPage() {
 
   const contactInfo = [
     {
-      icon: title: '',
-      value: &apos;+1 (555) 123-4567&apos;,
+      icon: <Circle className="w-6 h-6" />,
+      title: 'Phone',
+      value: '+1 (555) 123-4567',
       description: 'Mon-Fri 9AM-6PM EST'
     },
     {
-      icon: title: 'Email',
-      value: &apos;contact@ziontechgroup.com&apos;,
+      icon: <Circle className="w-6 h-6" />,
+      title: 'Email',
+      value: 'contact@ziontechgroup.com',
       description: 'We respond within 24 hours'
     },
     {
-      icon: title: 'Address',
-      value: &apos;123 Tech Street, Suite 100&apos;,
+      icon: <Circle className="w-6 h-6" />,
+      title: 'Address',
+      value: '123 Tech Street, Suite 100',
       description: 'San Francisco, CA 94105'
     },
     {
-      icon: title: 'Business Hours',
-      value: &apos;Monday - Friday&apos;,
+      icon: <Circle className="w-6 h-6" />,
+      title: 'Business Hours',
+      value: 'Monday - Friday',
       description: '9:00 AM - 6:00 PM EST'
     }
   ];
 
   const subjects = [
-    &apos;AI Services&apos;,
-    &apos;IT Services&apos;,
-    &apos;Services&apos;,
-    &apos;Micro SAAS&apos;,
-    &apos;Digital Transformation&apos;,
-    &apos;5G Implementation&apos;,
-    &apos;Other&apos;
+    'AI Services',
+    'IT Services',
+    'Services',
+    'Micro SAAS',
+    'Digital Transformation',
+    '5G Implementation',
+    'Other'
   ];
 
   return (
@@ -128,7 +133,7 @@ export default function ContactPage() {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
               <p className="text-gray-300 mb-6">
-                Thank you for contacting us. We&apos;ll get back to you within 24 hours.
+                Thank you for contacting us. We'll get back to you within 24 hours.
               </p>
               <button
                 onClick={() => {

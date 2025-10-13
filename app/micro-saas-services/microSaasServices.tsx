@@ -1,8 +1,8 @@
-'use client';
 import React from 'react';
+'use client';
 import { Helmet } from 'react-helmet-async';
 
-const MicroSaasServices: React.FC = () => {
+const MicroSaasServices = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
@@ -71,7 +71,7 @@ const MicroSaasServices: React.FC = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let&apos;s discuss how our micro saas services 
+            Let's discuss how our micro saas services 
             services can help you achieve your goals.
           </p>
           <a

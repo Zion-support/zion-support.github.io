@@ -1,16 +1,32 @@
-import fs from 'fs'
-import path from 'path'
-const dir = path.join(process.cwd(), 'data'
-const file = path.join(dir, 'onsite-requests.json'
-  if (req.method !== 'POST'
-    res.setHeader('Content-Type', '
-    res.end(JSON.stringify({ error: 'Method not allowed'
-      const data = fs.readFileSync(file, 'utf8'
-  console.error('Error:'
-    status: 'pending'
-    res.setHeader('Content-Type', '
-      message: 'Onsite request submitted successfully'
-  console.error('Error:'
-    console.error('Error saving onsite request'
-    res.setHeader('Content-Type', '
-    res.end(JSON.stringify({ error: 'Failed to save request'
+export default function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  const { name, email, company, message, service } = req.body;
+  
+  if (!name || !email || !message) {
+    return res.status(400).json({ 
+      error: 'Name, email, and message are required' 
+    });
+  }
+
+  try {
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return res.status(400).json({ error: 'Invalid email format' });
+    }
+
+    // Here you would typically save to database or send notification
+    console.log('Onsite request received:', { name, email, company, message, service });
+    
+    res.status(200).json({ 
+      success: true, 
+      message: 'Onsite request submitted successfully' 
+    });
+  } catch (error) {
+    console.error('Onsite request error:', error);
+    res.status(500).json({ error: 'Failed to submit onsite request' });
+  }
+}

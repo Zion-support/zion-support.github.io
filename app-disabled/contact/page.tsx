@@ -5,27 +5,27 @@ const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
     name: '',    email: &apos;,
     company: &apos;,
     phone: &apos;,
-    service: &apos;,
-    message: &apos;;)
+    service: &apos;,)
+    message: &apos;;)}
 })const [isSubmitting, setIsSubmitting] = useState(false);
 
 const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>(idle);
 
 const handleChange = useCallback((e: .ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;;
 
-    setFormData(prev => ({
-    message: '';)
+    setFormData(prev => ({)
+    message: '';)}
 })
 const [isSubmitting, setIsSubmitting] = useState(false);
 const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>(&apos;idle&apos;);
 const handleChange = useCallback((e: .ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {}
     setFormData(prev => ({}
-      ...prev,
+      ...prev,)
       [e.target.name]: e.target.value;)
 })))
 }, []);
 
-const handleSubmit = useCallback(async (e: .FormEvent) => {    setFormData(prev => ({;
+const handleSubmit = useCallback(async (e: .FormEvent) => {    setFormData(prev => ({;)
   const handleSubmit = useCallback(async (e: .FormEvent) => {;
   const handleSubmit = useCallback (async (e: .FormEvent) => {;
     e.preventDefault();    setIsSubmitting(true);
@@ -35,15 +35,15 @@ const handleSubmit = useCallback(async (e: .FormEvent) => {    setFormData(prev 
         company: &apos;,
         phone: &apos;,
         service: &apos;,
-message: &apos;]
+message: &apos;]})
     });]
     } catch (error) {
       setSubmitStatus(&apos;error)]
       setSubmitStatus(&apos;error);
-
+}
     } finally {
       setIsSubmitting(false);
-
+}
   }, []);
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
@@ -53,10 +53,10 @@ message: &apos;]
         <meta name="keywords" content="contact us, AI consulting, IT support, free consultation, get quote, technical support 
       <
 
-      <{/* Hero Section *
+      <{/* Hero Section *)
       <section className="relative py-20 px-4 overflow-hidden>)
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse 
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: &apos;1s }}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse }
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: &apo;s;1s }}
 
         <div className="relative max-w-7xl mx-auto text-center>
           <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight>
@@ -158,14 +158,14 @@ message: &apos;]
                       <>
                         <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                         <span>Sending...</span>
-                      </>
+                      </>)
                     ) : (
                       <>
                         <Send className="w-5 h-5 mr-2" />
                         Send Message
         </div>
-      </div>
-  );
+      </div>)
+  );}
 }
       {/* Contact Form and Info *
       <section className="py-20 px-4>
@@ -178,8 +178,8 @@ message: &apos;]
               
               {submitStatus === &apos;success&apos; && (<div className=mb-6 p-4 bg-green-500/20 border border-green-500
                   <Circle className="w-5 h-5 text-green-400 mr-2 
-                  <span className="text-green-400>Message sent successfully!<
-                <)
+                  <span className="text-green-400>Message sent successfully!<)
+                <)}
               )}
 
               {submitStatus === &apos;error&apos; && (<div className=mb-6 p-4 bg-red-500/20 border border-red-500
@@ -190,7 +190,7 @@ message: &apos;]
                   <
                   <textarea
                     id="message"
-                    name="message"
+                    name="message"}
                     value = { formData.message };
                     onChange = { handleChange };
                     rows = { 5 };
@@ -209,7 +209,7 @@ message: &apos;]
                 >
                   {isSubmitting ? (<>}
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"><
-                      Sending...
+                      Sending...)
                     <)
                   ) : (<>
                       
@@ -266,7 +266,7 @@ message: &apos;]
       <
 
       <Footer 
-    <
+    <)
   );
 
 )]

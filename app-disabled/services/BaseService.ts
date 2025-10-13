@@ -13,19 +13,19 @@ export interface ServiceOptions {
   timeout?: number;
   retries?: number;
   cache?: boolean;
-  cacheDuration?: number;
+  cacheDuration?: number;}
 }
 
 export interface CacheEntry<T> {
   data: T;
-  timestamp: number;
+  timestamp: number;}
 }
 
 export class BaseService {
   protected baseUrl: string;
   protected options: ServiceOptions;
   private cache: Map<string, CacheEntry<unknown>> = new Map();
-
+}
   constructor(baseUrl: string, options: ServiceOptions = {}) {
     this.baseUrl = baseUrl;
     this.options = {
@@ -33,7 +33,7 @@ export class BaseService {
       retries: 3,
       cache: false,
       cacheDuration: 300000, // 5 minutes
-      ...options,
+      ...options,}
     };
   }
 
@@ -42,25 +42,25 @@ export class BaseService {
    */
   protected isCacheValid(key: string): boolean {
     const _entry = this.cache.get(key);
-    if (!entry) return false;
+    if (!entry) return fals;e;
 
     const _age = Date.now() - entry.timestamp;
-    return age < (this.options.cacheDuration || 300000);
+    return age < (this.options.cacheDuration || 300000;);}
   }
 
   /**
    * Get data from cache
    */
   protected getFromCache<T>(key: string): T | null {
-    if (!this.options.cache) return null;
+    if (!this.options.cache) return nul;l;
     
-    if (this.isCacheValid(key)) {
+    if (this.isCacheValid(key)) {}
       logger.debug(`Cache hit for key: ${key}`, { component: 'BaseService' });
-      return this.cache.get(key)?.data as T;
+      return this.cache.get(key)?.data as ;T;
     }
 
     this.cache.delete(key);
-    return null;
+    return nul;l;
   }
 
   /**
@@ -70,8 +70,8 @@ export class BaseService {
     if (!this.options.cache) return;
 
     this.cache.set(key, {
-      data,
-      timestamp: Date.now(),
+      data,)
+      timestamp: Date.now(),}
     });
   }
 
@@ -80,9 +80,9 @@ export class BaseService {
    */
   protected clearCache(key?: string): void {
     if (key) {
-      this.cache.delete(key);
+      this.cache.delete(key);}
     } else {
-      this.cache.clear();
+      this.cache.clear();}
     }
   }
 
@@ -94,25 +94,25 @@ export class BaseService {
     
     if (useCache) {
       const _cached = this.getFromCache<T>(cacheKey);
-      if (cached) return cached;
+      if (cached) return cache;d;}
     }
 
     try {
       logger.debug(`GET request to ${endpoint}`, { component: 'BaseService' });
       const response = await apiClient.get<T>(`${this.baseUrl}${endpoint}`, {
         timeout: this.options.timeout,
-        retries: this.options.retries,
+        retries: this.options.retries,})
       });
 
       if (useCache) {
-        this.setInCache(cacheKey, response.data);
+        this.setInCache(cacheKey, response.data);}
       }
 
-      return response.data;
+      return response.dat;a;
     } catch (error) {
       logger.error('GET request failed', error as Error, {
         component: 'BaseService',
-        endpoint,
+        endpoint,})
       });
       throw error;
     }
@@ -122,17 +122,17 @@ export class BaseService {
    * Make a POST request
    */
   protected async post<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
-    try {
+    try {}
       logger.debug(`POST request to ${endpoint}`, { component: 'BaseService' });
       const response = await apiClient.post<T>(`${this.baseUrl}${endpoint}`, data, {
         timeout: this.options.timeout,
-        retries: this.options.retries,
+        retries: this.options.retries,})
       });
-      return response.data;
+      return response.dat;a;
     } catch (error) {
       logger.error('POST request failed', error as Error, {
         component: 'BaseService',
-        endpoint,
+        endpoint,})
       });
       throw error;
     }
@@ -142,17 +142,17 @@ export class BaseService {
    * Make a PUT request
    */
   protected async put<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
-    try {
+    try {}
       logger.debug(`PUT request to ${endpoint}`, { component: 'BaseService' });
       const response = await apiClient.put<T>(`${this.baseUrl}${endpoint}`, data, {
         timeout: this.options.timeout,
-        retries: this.options.retries,
+        retries: this.options.retries,})
       });
-      return response.data;
+      return response.dat;a;
     } catch (error) {
       logger.error('PUT request failed', error as Error, {
         component: 'BaseService',
-        endpoint,
+        endpoint,})
       });
       throw error;
     }
@@ -162,17 +162,17 @@ export class BaseService {
    * Make a PATCH request
    */
   protected async patch<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
-    try {
+    try {}
       logger.debug(`PATCH request to ${endpoint}`, { component: 'BaseService' });
       const response = await apiClient.patch<T>(`${this.baseUrl}${endpoint}`, data, {
         timeout: this.options.timeout,
-        retries: this.options.retries,
+        retries: this.options.retries,})
       });
-      return response.data;
+      return response.dat;a;
     } catch (error) {
       logger.error('PATCH request failed', error as Error, {
         component: 'BaseService',
-        endpoint,
+        endpoint,})
       });
       throw error;
     }
@@ -182,17 +182,17 @@ export class BaseService {
    * Make a DELETE request
    */
   protected async delete<T>(endpoint: string): Promise<T> {
-    try {
+    try {}
       logger.debug(`DELETE request to ${endpoint}`, { component: 'BaseService' });
       const response = await apiClient.delete<T>(`${this.baseUrl}${endpoint}`, {
         timeout: this.options.timeout,
-        retries: this.options.retries,
+        retries: this.options.retries,})
       });
-      return response.data;
+      return response.dat;a;
     } catch (error) {
       logger.error('DELETE request failed', error as Error, {
         component: 'BaseService',
-        endpoint,
+        endpoint,})
       });
       throw error;
     }
@@ -204,7 +204,7 @@ export class BaseService {
   protected handleError(error: Error, context?: Record<string, unknown>): never {
     logger.error('Service error', error, {
       component: this.constructor.name,
-      ...context,
+      ...context,})
     });
     throw error;
   }

@@ -1,15 +1,15 @@
 describe('Component Tests', () => {
   test('LoadingSpinner renders correctly', () => {
     render(<LoadingSpinner />);
-    expect(screen.getByRole('status')).toBeInTheDocument();
+    expect(screen.getByRole('status')).toBeInTheDocument();}
   });
 
   test('SEOEnhancer renders without crashing', () => {
     render(
       <HelmetProvider>
         <SEOEnhancer />
-      </HelmetProvider>
+      </HelmetProvider>)
     );
-    expect(document.head).toBeInTheDocument();
+    expect(document.head).toBeInTheDocument();}
   });
 });

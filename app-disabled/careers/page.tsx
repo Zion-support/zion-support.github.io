@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet-async;
 import { Right, Circle, Star, } from 'lucide-react;
 
 interface JobPosition {
-  // Add properties here
+  // Add properties here}
 }
   id: number;
 
@@ -91,8 +91,8 @@ const eersPage: React.FC = () => {
           </p>
         </div>
       </div>
-    </div>
-  );
+    </div>)
+  ;);}
 };
 import { Right, Circle, Star, } from 'lucide-react';
     },
@@ -181,7 +181,7 @@ import { Right, Circle, Star, } from 'lucide-react';
     const matchesDepartment = selectedDepartment === 'all || position.department === selectedDepartment;;
 
     const matchesLocation = selectedLocation === 'all || position.location === selectedLocation;;
-
+)
   const featuredPositions = filteredPositions.filter(position => position.featured);;
 
   const regularPositions = filteredPositions.filter(position => !position.featured);;
@@ -218,7 +218,7 @@ import { Right, Circle, Star, } from 'lucide-react';
         &apos;Flexible remote work&apos;,
         &apos;Professional development budget&apos;
       ],
-      posted: &apos;2 days ago,
+      posted: &apos;2 days ago,}
       featured: true});
 
 },
@@ -233,22 +233,22 @@ import { Right, Circle, Star, } from 'lucide-react';
 
     {
       stat: &apos;98%,
-      label: &apos;Employee Satisfaction,
+      label: &apos;Employee Satisfaction,}
       description: 'Our team loves working here});)
 },
     {
       stat: '50+,
-      label: &apos;Team Members,
+      label: &apos;Team Members,}
       description: 'Growing team of experts});)
 },
     {
       stat: '15+,
-      label: &apos;Countries,
+      label: &apos;Countries,}
       description: 'Global remote team});)
 },
     {
       stat: '4.9/5,
-      label: &apos;Glassdoor Rating,
+      label: &apos;Glassdoor Rating,}
       description: 'Highly rated workplace});)
         <title>eers - Zion Tech Group | Join Our Team</title>
         <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI, quantum computing, and emerging technologies. Explore open positions and start your career with us. />
@@ -285,7 +285,7 @@ import { Right, Circle, Star, } from 'lucide-react';
                 {departments.map((dept) => (
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Work on cutting-edge AI and IT solutions that transform businesses worldwide.
-              Be part of a team that's shaping the future of AI and IT solutions. We&apos;re looking for passionate individuals who want to make a difference.
+              Be part of a team that's shaping the future of AI and IT solutions. We&apos;re looking for passionate individuals who want to make a difference.}
           {/* Why Work With Us */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div>
@@ -304,9 +304,9 @@ import { Right, Circle, Star, } from 'lucide-react';
                   </div>
                 </div>
 
-                  <option key={dept.id} value={dept.id} className="bg-slate-800>
+                  <option key={dept.id} value={dept.id} className="bg-slate-800>)
                 {locations.map((loc) => (
-
+}
                   <option key={loc.id} value={loc.id} className="bg-slate-800>
         </section>
   return (<div>
@@ -321,10 +321,10 @@ import { Right, Circle, Star, } from 'lucide-react';
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <h3 className="text-xl font-bold text-white mb-2">{position.title}</h3>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>)
         <section className="relative py-20 px-4 overflow-hidden>)
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse 
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: &apos;1s }}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: &apo;s;1s }}
 
           <div className="relative max-w-7xl mx-auto text-center>
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6>
@@ -343,15 +343,15 @@ import { Right, Circle, Star, } from 'lucide-react';
           <section className="py-16 px-4>
             <div className="max-w-7xl mx-auto>
               <h2 className="text-3xl font-bold text-white mb-12 text-center>Featured Positions</h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8>)
                 {featuredPositions.map((position) => (
-
+}
                   <div key={position.id} className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 hover:border-cyan-400/50 transition-all duration-300 group>
-                    <div className="flex items-start justify-between mb-6>
+                    <div className="flex items-start justify-between mb-6>)
               {values.map((value, index) => (
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">)
+              {benefits.map((benefit, index) => (}
                 <div key={index} className="text-center p-6 rounded-lg hover:shadow-lg transition-shadow">
                   <div className="flex justify-center mb-4">
                     {benefit.icon}
@@ -369,7 +369,7 @@ import { Right, Circle, Star, } from 'lucide-react';
           <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 text-center backdrop-blur-lg border border-white/10">
             <h2 className="text-4xl font-bold text-white mb-4">
               Don&apos;t See Your Role?
-        </section>
+        </section>)
       )}
 
         {/* All Positions */}
@@ -385,7 +385,7 @@ import { Right, Circle, Star, } from 'lucide-react';
                 <div className="text-6xl mb-4>🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-4>No positions found</h3>
                 <p className="text-gray-300 mb-8>Try adjusting your filters or check back later for new opportunities</p>
-                <button
+                <button)
                   onClick={() => {
                     setSelectedDepartment('all);
 
@@ -393,15 +393,16 @@ import { Right, Circle, Star, } from 'lucide-react';
 
 
                   className={bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
-                    position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : 'border-white/20
+                    position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : 'border-white/20}
                   } hover:border-purple-400 transition-all duration-300 group}
 
                 >                <div></div>
                   {position.featured && (
-
+}
                   <p className="text-gray-300 mb-6>{position.description}</p>
                       {position.requirements.length > 3 && (
 
-                        <li className="text-sm text-gray-400>
+                        <li className="text-sm text-gray-400>)
             </div>  ));)
 export default eersPage;
+}

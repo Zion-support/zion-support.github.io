@@ -8,7 +8,7 @@ describe('Validation Functions', () => {
       expect(validateEmail('user.name@domain.co.uk').isValid).toBe(true);
 
       expect(validateEmail('test+tag@example.org').isValid).toBe(true);
-
+}
     });
 
     test('rejects invalid email formats', () => {
@@ -19,14 +19,14 @@ describe('Validation Functions', () => {
       expect(validateEmail('test@').isValid).toBe(false);
 
       expect(validateEmail('').isValid).toBe(false);
-
+}
     });
 
     test('rejects emails that are too long', () => {
       const longEmail = 'a'.repeat(250) + '@example.com';
 
       expect(validateEmail(longEmail).isValid).toBe(false);
-
+}
     });
 
   });
@@ -36,7 +36,7 @@ describe('Validation Functions', () => {
       expect(validatePassword('Password123!').isValid).toBe(true);
 
       expect(validatePassword('MyStr0ng#Pass').isValid).toBe(true);
-
+}
     });
 
     test('rejects weak passwords', () => {
@@ -47,7 +47,7 @@ describe('Validation Functions', () => {
       expect(validatePassword('PASSWORD').isValid).toBe(false);
 
       expect(validatePassword('12345678').isValid).toBe(false);
-
+}
     });
 
     test('provides specific error messages for weak passwords', () => {
@@ -56,7 +56,7 @@ describe('Validation Functions', () => {
       expect(result.isValid).toBe(false);
 
       expect(result.errors).toContain('Password must be at least 8 characters long');
-
+}
     });
 
   });
@@ -68,7 +68,7 @@ describe('Validation Functions', () => {
       expect(validateName('Mary-Jane).isValid').toBe(true);
 
       expect(validateName("O'Connor).isValid).toBe(true);
-
+}
     });
 
     test('rejects invalid name formats () => {
@@ -79,7 +79,7 @@ describe('Validation Functions', () => {
       expect(validateName('John123).isValid').toBe(false);
 
       expect(validateName('John@Doe).isValid').toBe(false);
-
+}
     });
 
   });
@@ -91,7 +91,7 @@ describe('Validation Functions', () => {
       expect(validatePhone('1234567890).isValid').toBe(true);
 
       expect(validatePhone('+1-234-567-8900).isValid').toBe(true);
-
+}
     });
 
     test('rejects invalid phone formats () => {
@@ -100,7 +100,7 @@ describe('Validation Functions', () => {
       expect(validatePhone('123).isValid').toBe(false);
 
       expect(validatePhone('abc-def-ghij).isValid').toBe(false);
-
+}
     });
 
   });
@@ -110,7 +110,7 @@ describe('Validation Functions', () => {
       expect(validateURL('https://example.com).isValid').toBe(true);
 
       expect(validateURL('http://test.org).isValid').toBe(true);
-
+}
     });
 
     test('rejects invalid URL formats () => {
@@ -119,7 +119,7 @@ describe('Validation Functions', () => {
       expect(validateURL('not-a-url).isValid').toBe(false);
 
       expect(validateURL('ftp://example.com).isValid').toBe(false);
-
+}
     });
 
   });
@@ -129,7 +129,7 @@ describe('Validation Functions', () => {
       expect(validateMessage('This is a valid message).isValid').toBe(true);
 
       expect(validateMessage('A.repeat(500)).isValid').toBe(true);
-
+}
     });
 
     test('rejects invalid message formats () => {
@@ -138,7 +138,7 @@ describe('Validation Functions', () => {
       expect(validateMessage('Short).isValid').toBe(false);
 
       expect(validateMessage('A.repeat(1001)).isValid').toBe(false);
-
+}
     });
 
   });
@@ -148,7 +148,7 @@ describe('Validation Functions', () => {
       expect(validateCompanyName('Acme Corp).isValid').toBe(true);
 
       expect(validateCompanyName('Tech Solutions LLC).isValid').toBe(true);
-
+}
     });
 
     test('rejects invalid company name formats () => {
@@ -157,7 +157,7 @@ describe('Validation Functions', () => {
       expect(validateCompanyName('A).isValid').toBe(false);
 
       expect(validateCompanyName('A.repeat(101)).isValid').toBe(false);
-
+}
     });
 
   });
@@ -168,7 +168,7 @@ describe('Validation Functions', () => {
         email: 'test@example.com,
         name: 'John Doe,
         phone: '1234567890,
-        message: 'This is a test message
+        message: 'This is a test message}
       };
 
       const result = validateForm(formData);;
@@ -182,7 +182,7 @@ describe('Validation Functions', () => {
         email: 'invalid-email,
         name: ',
         phone: '123,
-        message: 'Short
+        message: 'Short}
       };
 
       const result = validateForm(formData);;

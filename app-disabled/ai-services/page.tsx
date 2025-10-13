@@ -23,7 +23,7 @@ const AIServicesPagePage: React.FC = () => {const features = [;;;
       ico,
     n: title: 'AI-Powered Intelligence,
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.,
-      benefits: [&apos;Smart recommendations&apos;, &apos;Predictive analytics&apos;, &apos;Automated insights&apos;, &apos;Real-time analysis]
+      benefits: [&apos;Smart recommendations&apos;, &apos;Predictive analytics&apos;, &apos;Automated insights&apos;, &apos;Real-time analysis]}
 import { Helmet } from 'react-helmet-async';
 import { Box, Mic, } from 'lucide-react';
 import ../components/ from '../components/';
@@ -78,7 +78,7 @@ import { Circle, Right, Star, } from 'lucide-react';
       features: [&apos;Workflow automation&apos;, &apos;Process optimization&apos;, &apos;Custom integrations&apos;, &apos;Real-time monitoring&apos;],
       pricing: &apos;Starting at $49/month&apos;,
       link: &apos;/ai-automation&apos;,
-      popular: true
+      popular: true}
     },
     {
       icon: <className="w-8 h-8 text-red-500" />,
@@ -87,7 +87,7 @@ import { Circle, Right, Star, } from 'lucide-react';
       features: [&apos;Threat detection&apos;, &apos;Anomaly monitoring&apos;, &apos;Automated response&apos;, &apos;Compliance reporting&apos;],
       pricing: &apos;Starting at $99/month&apos;,
       link: &apos;/ai-cybersecurity&apos;,
-      popular: false
+      popular: false}
     },
     {
       icon: <className="w-8 h-8 text-green-500" />,
@@ -96,7 +96,7 @@ import { Circle, Right, Star, } from 'lucide-react';
       features: [&apos;Predictive analytics&apos;, &apos;Data visualization&apos;, &apos;Custom dashboards&apos;, &apos;Real-time insights&apos;],
       pricing: &apos;Starting at $39/month&apos;,
       link: &apos;/ai-analytics&apos;,
-      popular: false
+      popular: false}
     },
     {
       icon: <className="w-8 h-8 text-orange-500" />,
@@ -105,7 +105,7 @@ import { Circle, Right, Star, } from 'lucide-react';
       features: [&apos;Predictive Modeling&apos;, &apos;Pattern Recognition&apos;, &apos;Automated Learning&apos;, &apos;Real-time Adaptation&apos;],
       pricing: &apos;Starting at $99/month&apos;,
       link: &apos;/machine-learning&apos;,
-      popular: true
+      popular: true}
     },
     {
       icon: <className="w-8 h-8 text-green-500" />,
@@ -114,7 +114,7 @@ import { Circle, Right, Star, } from 'lucide-react';
       features: [&apos;Text Analysis&apos;, &apos;Sentiment Analysis&apos;, &apos;Language Translation&apos;, &apos;Chatbot Development&apos;],
       pricing: &apos;Starting at $89/month&apos;,
       link: &apos;/nlp&apos;,
-      popular: false
+      popular: false}
     },
     {
       icon: <className="w-8 h-8 text-purple-500" />,
@@ -123,7 +123,7 @@ import { Circle, Right, Star, } from 'lucide-react';
       features: [&apos;Image Recognition&apos;, &apos;Object Detection&apos;, &apos;Facial Recognition&apos;, &apos;Analysis&apos;],
       pricing: &apos;Starting at $119/month&apos;,
       link: &apos;/computer-vision&apos;,
-      popular: true
+      popular: true}
     },
     {
       icon: <3 className="w-8 h-8 text-yellow-500" />,
@@ -132,7 +132,7 @@ import { Circle, Right, Star, } from 'lucide-react';
       features: [&apos;Trend Analysis&apos;, &apos;Risk Assessment&apos;, &apos;Performance Prediction&apos;, &apos;Scenario Planning&apos;],
       pricing: &apos;Starting at $149/month&apos;,
       link: &apos;/predictive-analytics&apos;,
-      popular: false
+      popular: false}
     }
   ]
       <Helmet>

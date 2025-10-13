@@ -5,7 +5,7 @@ export default function Blog() {
 interface BlogPost {
   id: number;  title: string;
 
-import React from 'react';
+import React from 'react';}
 import { Helmet } from 'react-helmet-async';
 import { } from 'react-router-dom';
 import { User, Right, Filter } from 'lucide-react';
@@ -18,21 +18,21 @@ const BlogPage: React.FC = () => {
       excerpt: 'Exploring how artificial intelligence is transforming modern business operations.',
       author: 'Zion Tech Team',
       date: '2024-01-15',
-      readTime: '5 min read'
+      readTime: '5 min read'}
     },
     {
       title: 'Migration Best Practices',
       excerpt: 'Essential strategies for successful cloud migration and optimization.',
       author: 'Zion Tech Team',
       date: '2024-01-10',
-      readTime: '7 min read'
+      readTime: '7 min read'}
     },
     {
       title: 'Cybersecurity Trends 2024',
       excerpt: 'Latest trends and threats in cybersecurity and how to protect your business.',
       author: 'Zion Tech Team',
       date: '2024-01-05',
-      readTime: '6 min read'
+      readTime: '6 min read'}
     }
   ];
 
@@ -54,7 +54,7 @@ const BlogPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState(');
 
   const [selectedCategory, setSelectedCategory] = useState('all);
-  const filteredPosts = blogPosts.filter(post => {;
+  const filteredPosts = blogPosts.filter(post => {;)
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Advanced blog solutions by Zion Tech Group" />
@@ -92,7 +92,7 @@ const BlogPage: React.FC = () => {
         <meta name="keywords" content="AI blog, IT insights, technology trends, enterprise solutions, cloud computing, cybersecurity" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">}
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -107,7 +107,7 @@ const BlogPage: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.map((post, index) => (
+              {blogPosts.map((post, index) => (}
                 <article key={index} className="cyber-card p-6">
                   <h2 className="text-xl font-semibold text-white mb-3">{post.title}</h2>
                   <p className="text-gray-300 mb-4">{post.excerpt}</p>
@@ -128,7 +128,7 @@ const BlogPage: React.FC = () => {
                       <Right className="w-4 h-4 ml-1" />
                     </button>
                   </div>
-                </article>
+                </article>)
               ))}
             </div>
           </div>
@@ -139,7 +139,7 @@ const BlogPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl font-bold text-white mb-6">Latest Articles</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredPosts.map((post) => (
+            {filteredPosts.map((post) => (}
               <div key={post.id} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden hover:bg-white/10 transition-all duration-300">
                 <div className="h-48 bg-gradient-to-r from-purple-500/20 to-blue-500/20 flex items-center justify-center">
                   <div className="text-center">
@@ -148,7 +148,7 @@ const BlogPage: React.FC = () => {
                     </div>
                     <span className="text-sm text-gray-300">Article Image</span>
                   <div className="flex items-center gap-4 mb-3">
-                    <span className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded">
+                    <span className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded">)
                       {categories.find(c => c.name === post.category)?.label}
 
                     </span>
@@ -173,10 +173,10 @@ const BlogPage: React.FC = () => {
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex flex-wrap gap-2">
-                      {post.tags.map((tag, index) => (
+                      {post.tags.map((tag, index) => (}
                         <span key={index} className="bg-white/10 text-gray-300 px-3 py-1 rounded-full text-sm">
                           {tag}
-                        </span>
+                        </span>)
                       ))}
                     </div>
                     <button className="flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors">
@@ -194,7 +194,7 @@ const BlogPage: React.FC = () => {
             {selectedCategory === 'all' ? 'All Articles' : categories.find(c => c.name === selectedCategory)?.label}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {searchedPosts.map((post) => (
+            {searchedPosts.map((post) => (}
               <article key={post.id} className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
                 <div className="aspect-video bg-gradient-to-br from-purple-500/20 to-blue-500/20 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
@@ -202,7 +202,7 @@ const BlogPage: React.FC = () => {
                 <div className="p-6">
                   <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">
                     <span className="flex items-center gap-1">
-                      <className="w-4 h-4" />
+                      <className="w-4 h-4" />)
                       {new Date(post.date).toLocaleDateString()}
                     </span>
                     <span className="flex items-center gap-1">
@@ -214,7 +214,7 @@ const BlogPage: React.FC = () => {
         </section>
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured Article</h2>
-            {blogPosts.filter(post => post.featured).map((post) => (
+            {blogPosts.filter(post => post.featured).map((post) => (}
               <div key={post.id} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div>
@@ -237,7 +237,7 @@ const BlogPage: React.FC = () => {
                           <span>{post.author}</span>
                         </div>
                         <div className="flex items-center space-x-1">
-                          <className="w-4 h-4" />
+                          <className="w-4 h-4" />)
                           <span>{new Date(post.date).toLocaleDateString()}</span>
                         </div>
                         <div className="flex items-center space-x-1">
@@ -260,14 +260,14 @@ const BlogPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Featured Article
-            </h2>
+            </h2>)
             {(() => {
               const featuredPost = filteredPosts.find(post => post.featured);
               return featuredPost ? (
                 <article className="cyber-card hologram-card p-8 mb-16">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div>
-                      <img
+                      <img}
                         src={featuredPost.image}
                         alt={featuredPost.title}
                         className="w-full h-64 object-cover rounded-lg"
@@ -302,15 +302,15 @@ const BlogPage: React.FC = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="flex flex-wrap gap-2 mb-6">
+                      <div className="flex flex-wrap gap-2 mb-6">)
                         {featuredPost.tags.map((tag) => (
-                          <span
+                          <span}
                             key={tag}
                             className="px-2 py-1 bg-gray-700/50 text-gray-300 rounded text-xs"
                           >
                             <Tag className="w-3 h-3 inline mr-1" />
                             {tag}
-                          </span>
+                          </span>)
                         ))}
                       </div>
                       <button className="cyber-button w-fit">
@@ -319,7 +319,7 @@ const BlogPage: React.FC = () => {
                     </div>
                   </div>
                 </article>
-              ) : null;
+              ) : nul;l;
             })()}
           </div>
         </section>
@@ -332,7 +332,7 @@ const BlogPage: React.FC = () => {
             Latest Articles
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredPosts.map((post) => (
+            {filteredPosts.map((post) => (}
               <article key={post.id} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
                 <img
                   src={post.image}
@@ -366,15 +366,15 @@ const BlogPage: React.FC = () => {
                   {post.excerpt}
                 </p>
                 
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-4">)
                   {post.tags.slice(0, 3).map((tag) => (
-                    <span
+                    <span}
                       key={tag}
                       className="px-2 py-1 bg-gray-700/50 text-gray-300 rounded text-xs"
                     >
                       <Tag className="w-3 h-3 inline mr-1" />
                       {tag}
-                    </span>
+                    </span>)
                   ))}
                 </div>
                 

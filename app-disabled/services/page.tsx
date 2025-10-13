@@ -28,7 +28,7 @@ const ServicesPage: React.FC = () => {const services = [;
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+          {services.map((service, index) => (}
             <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
                 {service.icon}
@@ -39,12 +39,12 @@ const ServicesPage: React.FC = () => {const services = [;
               <p className="text-gray-300 mb-6 leading-relaxed">
                 {service.description}
               </p>
-              <ul className="space-y-2">
-                {service.features.map((feature, featureIndex) => (
+              <ul className="space-y-2">)
+                {service.features.map((feature, featureIndex) => (}
                   <li key={featureIndex} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></div>
                     {feature}
-                  </li>
+                  </li>)
                 ))}
               </ul>
 
@@ -59,8 +59,8 @@ const ServicesPage: React.FC = () => {const services = [;
               <div className="mb-6">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-2xl font-bold text-white">{service.price}</span>
-                  {service.originalPrice && (
-                    <span className="text-lg text-gray-400 line-through">{service.originalPrice}</span>
+                  {service.originalPrice && (}
+                    <span className="text-lg text-gray-400 line-through">{service.originalPrice}</span>)
                   )}
                 </div>
               </div>
@@ -68,16 +68,16 @@ const ServicesPage: React.FC = () => {const services = [;
               <div className="mb-6">
                 <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Features:</h4>
                 <ul className="space-y-2">
-                  {service.features.slice(0, 3).map((feature, featureIndex) => (
+                  {service.features.slice(0, 3).map((feature, featureIndex) => (}
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                       <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-3 flex-shrink-0"></div>
                       {feature}
-                    </li>
+                    </li>)
                   ))}
                   {service.features.length > 3 && (
-                    <li className="text-sm text-gray-400">
+                    <li className="text-sm text-gray-400">}
                       +{service.features.length - 3} more features
-                    </li>
+                    </li>)
                   )}
                 </ul>
               </div>

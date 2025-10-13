@@ -1,8 +1,8 @@
-'use client';
 import React from 'react';
+'use client';
 import { Helmet } from 'react-helmet-async';
 
-const MobileNavigation: React.FC = () => {
+const MobileNavigation = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
@@ -70,7 +70,7 @@ const MobileNavigation: React.FC = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let&apos;s discuss how our mobile navigation 
+            Let's discuss how our mobile navigation 
             services can help you achieve your goals.
           </p>
           <a

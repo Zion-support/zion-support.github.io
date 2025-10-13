@@ -1,5 +1,5 @@
-&apos;use client&apos;;
 import React from 'react';
+'use client';
 
 export default function AiDataAnalyticsPage() {
   return (

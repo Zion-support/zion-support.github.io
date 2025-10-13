@@ -1,21 +1,30 @@
-import fs from 'fs'
-import path from 'path'
-const dir = path.join(process.cwd(), 'data'
-const file = path.join(dir, 'subscribers.json'
-  if (req.method !== 'POST'
-    res.setHeader('Content-Type', '
-    res.end(JSON.stringify({ error: 'Method not allowed'
-    res.setHeader('Content-Type', '
-    res.end(JSON.stringify({ error: 'Email is required'
-      const data = fs.readFileSync(file, 'utf8'
-  console.error('Error:'
-    console.error('Error reading existing subscribers:'
-    res.setHeader('Content-Type', '
-    res.end(JSON.stringify({ error: 'Email already subscribed'
-    name: name || ''
-    status: 'active'
-    res.setHeader('Content-Type', '
-      message: 'Successfully subscribed to newsletter'
-  console.error('Error:'
-    res.setHeader('Content-Type', '
-    res.end(JSON.stringify({ error: 'Failed to save subscription'
+export default function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  const { email, list = 'general' } = req.body;
+  
+  if (!email) {
+    return res.status(400).json({ error: 'Email is required' });
+  }
+
+  try {
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return res.status(400).json({ error: 'Invalid email format' });
+    }
+
+    // Here you would typically save to database or send to email service
+    console.log('Subscription received:', { email, list });
+    
+    res.status(200).json({ 
+      success: true, 
+      message: 'Successfully subscribed' 
+    });
+  } catch (error) {
+    console.error('Subscription error:', error);
+    res.status(500).json({ error: 'Failed to subscribe' });
+  }
+}

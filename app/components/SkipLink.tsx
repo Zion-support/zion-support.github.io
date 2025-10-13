@@ -1,5 +1,5 @@
-&apos;use client&apos;;
 import React from 'react';
+'use client';
 
       {/* Content Section */}
       <section className="py-16 px-4">
