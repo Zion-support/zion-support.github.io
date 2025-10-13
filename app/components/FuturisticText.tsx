@@ -1,65 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import { cn } from '../lib/utils';
+import React from 'react';
 
 interface FuturisticTextProps {
-  text: string;
-  delay?: number;
-  speed?: number;
+  children: React.ReactNode;
+  variant?: 'heading' | 'subheading' | 'body' | 'caption';
   className?: string;
-  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div';
+  gradient?: boolean;
 }
 
-const FuturisticText = ({ 
-  text, 
-  delay = 0, 
-  speed = 100, 
-  className,
-  as: Component = 'span'
-}: FuturisticTextProps) => {
-  const [displayedText, setDisplayedText] = useState('');
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isComplete, setIsComplete] = useState(false);
+const FuturisticText: React.FC<FuturisticTextProps> = ({
+  children,
+  variant = 'body',
+  className = '',
+  gradient = false
+}) => {
+  const baseClasses = 'transition-all duration-300';
+  
+  const variantClasses = {
+    heading: 'text-4xl md:text-6xl lg:text-7xl font-bold leading-tight',
+    subheading: 'text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight',
+    body: 'text-base md:text-lg leading-relaxed',
+    caption: 'text-sm md:text-base leading-relaxed'
+  };
 
-  useEffect(() => {
-    if (currentIndex < text.length) {
-      const timeout = setTimeout(() => {
-        setDisplayedText(prev => prev + text[currentIndex]);
-        setCurrentIndex(prev => prev + 1);
-      }, speed);
+  const gradientClasses = gradient 
+    ? 'text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400'
+    : 'text-white';
 
-      return () => clearTimeout(timeout);
-    } else {
-      setIsComplete(true);
-    }
-  }, [currentIndex, text, speed]);
+  const classes = `${baseClasses} ${variantClasses[variant]} ${gradientClasses} ${className}`;
 
-  useEffect(() => {
-    if (delay > 0) {
-      const timeout = setTimeout(() => {
-        setCurrentIndex(0);
-        setDisplayedText('');
-        setIsComplete(false);
-      }, delay);
-
-      return () => clearTimeout(timeout);
-    }
-  }, [delay]);
-
-  return (
-    <Component
-      className={cn(
-        'relative inline-block',
-        'before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300',
-        'after:absolute after:inset-0 after:bg-gradient-to-r after:from-transparent after:via-cyan-500/20 after:to-transparent after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300',
-        className
-      )}
-    >
-      {displayedText}
-      {!isComplete && (
-        <span className="animate-pulse text-cyan-400">|</span>
-      )}
-    </Component>
-  );
+  return <span className={classes}>{children}</span>;
 };
 
 export default FuturisticText;

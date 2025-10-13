@@ -1,132 +1,224 @@
 import React from 'react';
-<<<<<<< HEAD
-import EnhancedSEO from '../components/EnhancedSEO';
-
-const WebDevelopmentPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <EnhancedSEO
-        title="Web Development - Custom Web Solutions"
-        description="Build modern, responsive, and scalable web applications with our expert web development services."
-        keywords="web development, custom web applications, responsive design, web solutions, modern websites"
-        canonical="/web-development"
-      />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center mb-16">
-=======
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Code, Cloud, Shield, Zap, Users, Award, BarChart3 } from 'lucide-react';
+import { Code, ArrowRight, CheckCircle, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from 'lucide-react';
+import EnhancedSEO from '../components/EnhancedSEO';
+import FuturisticBackground from '../components/FuturisticBackground';
+import ResponsiveContainer from '../components/ResponsiveContainer';
+import FuturisticCard from '../components/FuturisticCard';
+import FuturisticButton from '../components/FuturisticButton';
 
 const WebDevelopmentPage = () => {
+  const services = [
+    {
+      title: 'Custom Web Applications',
+      description: 'Tailored web applications built with modern technologies and best practices.',
+      icon: <Code className="w-8 h-8" />,
+      color: 'from-blue-500 to-cyan-500',
+      features: ['React/Next.js', 'Node.js', 'Database Integration', 'API Development']
+    },
+    {
+      title: 'E-commerce Solutions',
+      description: 'Complete e-commerce platforms with payment integration and inventory management.',
+      icon: <Cloud className="w-8 h-8" />,
+      color: 'from-green-500 to-emerald-500',
+      features: ['Payment Processing', 'Inventory Management', 'Order Tracking', 'Admin Dashboard']
+    },
+    {
+      title: 'Progressive Web Apps',
+      description: 'Modern PWAs that work seamlessly across all devices and platforms.',
+      icon: <Smartphone className="w-8 h-8" />,
+      color: 'from-purple-500 to-indigo-500',
+      features: ['Offline Functionality', 'Push Notifications', 'App-like Experience', 'Cross-platform']
+    },
+    {
+      title: 'API Development',
+      description: 'RESTful and GraphQL APIs for seamless data integration and communication.',
+      icon: <Target className="w-8 h-8" />,
+      color: 'from-orange-500 to-yellow-500',
+      features: ['RESTful APIs', 'GraphQL', 'Authentication', 'Documentation']
+    }
+  ];
+
+  const benefits = [
+    'Modern, responsive design',
+    'Fast loading times',
+    'SEO optimized',
+    'Mobile-first approach',
+    'Cross-browser compatibility',
+    'Scalable architecture'
+  ];
+
+  const stats = [
+    { number: '200+', label: 'Websites Built', icon: <Code className="w-6 h-6" /> },
+    { number: '99.9%', label: 'Client Satisfaction', icon: <Award className="w-6 h-6" /> },
+    { number: '24/7', label: 'Support Available', icon: <Cloud className="w-6 h-6" /> },
+    { number: '50+', label: 'Technologies Used', icon: <Users className="w-6 h-6" /> }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      <Helmet>
-        <title>Web Development - Zion Tech Group | Professional Technology Solutions</title>
-        <meta name="description" content="Professional web development services and solutions. Expert implementation and support for your business needs." />
-        <meta name="keywords" content="web development, professional services, business solutions, technology consulting" />
-      </Helmet>
+      <FuturisticBackground />
+      <EnhancedSEO
+        title="Web Development - Zion Tech Group | Custom Web Applications & Solutions"
+        description="Professional web development services including custom applications, e-commerce solutions, PWAs, and API development. Modern, responsive, and scalable web solutions."
+        keywords="web development, custom web applications, e-commerce, PWA, API development, responsive design"
+        canonical="https://ziontechgroup.com/web-development"
+      />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto text-center">
->>>>>>> cursor/analyze-improve-and-deploy-application-0571
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <ResponsiveContainer className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               Web Development
             </span>
           </h1>
-<<<<<<< HEAD
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Build modern, responsive, and scalable web applications with our expert web development services.
-          </p>
-        </div>
-        
-        <div className="text-center">
-          <p className="text-gray-300 text-lg">Service details coming soon. Contact us for more information.</p>
-        </div>
-      </div>
-=======
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Professional web development services and solutions. Expert implementation and support for your business needs.
+            Professional web development services that deliver modern, responsive, and scalable solutions. 
+            From custom applications to e-commerce platforms, we build websites that work.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
+            <FuturisticButton
+              href="/contact"
+              variant="primary"
+              size="lg"
+              icon={<Sparkles className="w-5 h-5" />}
             >
-              Get Started
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
+              Get Started Today
+            </FuturisticButton>
+            <FuturisticButton
+              href="/demo"
+              variant="outline"
+              size="lg"
+              icon={<Monitor className="w-5 h-5" />}
+            >
+              View Portfolio
+            </FuturisticButton>
           </div>
-        </div>
+        </ResponsiveContainer>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Professional Service",
-                description: "Expert web development solutions tailored to your business needs.",
-                icon: <Code className="w-8 h-8" />,
-                color: "from-blue-500 to-cyan-500"
-              },
-              {
-                title: "Quality Assurance",
-                description: "Rigorous testing and quality control processes to ensure excellence.",
-                icon: <Shield className="w-8 h-8" />,
-                color: "from-green-500 to-emerald-500"
-              },
-              {
-                title: "24/7 Support",
-                description: "Round-the-clock support and maintenance for your peace of mind.",
-                icon: <Users className="w-8 h-8" />,
-                color: "from-purple-500 to-indigo-500"
-              }
-            ].map((service, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
-              >
-                <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 text-white`}>
-                  {service.icon}
+      {/* Stats Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <ResponsiveContainer>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center group">
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  {stat.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300">{service.description}</p>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
-        </div>
+        </ResponsiveContainer>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <ResponsiveContainer>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Our Web Development Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              Comprehensive web development solutions tailored to your business needs and goals.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => (
+              <FuturisticCard key={index} className="p-6 text-center group hover:scale-105 transition-all duration-300">
+                <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mx-auto mb-4 text-white group-hover:scale-110 transition-transform duration-300`}>
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <div className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <span>{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </FuturisticCard>
+            ))}
+          </div>
+        </ResponsiveContainer>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <ResponsiveContainer>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Why Choose Our Web Development Services?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Our web development solutions are designed to deliver exceptional performance and user experience.
+              </p>
+              <div className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                    <span className="text-gray-300">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-6">Get Started Today</h3>
+              <p className="text-gray-300 mb-6">
+                Ready to build your next web project? Contact our experts for a personalized consultation.
+              </p>
+              <FuturisticButton
+                href="/contact"
+                variant="primary"
+                size="lg"
+                className="w-full"
+              >
+                Contact Us
+              </FuturisticButton>
+            </div>
+          </div>
+        </ResponsiveContainer>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <ResponsiveContainer className="text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Get Started?
+            Ready to Build Your Next Web Project?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Contact our expert team to discuss your web development requirements and get a customized solution.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Let's create a web solution that drives your business forward and delivers exceptional user experience.
           </p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center group"
-          >
-            Contact Us Today
-            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <FuturisticButton
+              href="/contact"
+              variant="primary"
+              size="lg"
+              icon={<ArrowRight className="w-5 h-5" />}
+            >
+              Contact Us Today
+            </FuturisticButton>
+            <FuturisticButton
+              href="/demo"
+              variant="outline"
+              size="lg"
+              icon={<Monitor className="w-5 h-5" />}
+            >
+              View Portfolio
+            </FuturisticButton>
+          </div>
+        </ResponsiveContainer>
       </section>
->>>>>>> cursor/analyze-improve-and-deploy-application-0571
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default WebDevelopmentPage;
-=======
-export default WebDevelopmentPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-0571

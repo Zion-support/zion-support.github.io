@@ -2,15 +2,15 @@ import React, { useEffect } from 'react';
 
 const WebVitalsTracker: React.FC = () => {
   useEffect(() => {
-    // Web Vitals tracking logic
-    if (typeof window !== 'undefined') {
-      // Track Core Web Vitals
-      const trackWebVitals = () => {
-        // This would typically integrate with analytics
-        console.log('Web Vitals tracking initialized');
-      };
-      
-      trackWebVitals();
+    // Track Core Web Vitals
+    if (typeof window !== 'undefined' && 'web-vitals' in window) {
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+        getCLS(console.log);
+        getFID(console.log);
+        getFCP(console.log);
+        getLCP(console.log);
+        getTTFB(console.log);
+      });
     }
   }, []);
 
