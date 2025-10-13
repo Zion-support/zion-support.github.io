@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -34,6 +35,9 @@ import { Phone } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
 
 const Footer = () => {
   const services = [

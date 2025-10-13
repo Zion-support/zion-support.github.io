@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -14,6 +15,9 @@ interface mainProps {
 
 import React from "react";
 import "./index.css";
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
 
 interface MainProps {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
@@ -265,3 +266,10 @@ export default function usePerformanceOptimization() {
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+// Performance optimization hook
+export default function usePerformanceMonitor() {
+  // Implementation would go here
+  return {};
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed

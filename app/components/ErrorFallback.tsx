@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface ErrorFallbackProps {
@@ -15,6 +16,9 @@ import { Home } from 'lucide-react';
 import { AlertTriangle } from 'lucide-react';
 import { Mail } from 'lucide-react';
 
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
 interface ErrorfallbackProps {
   className?: string;
   children?: React.ReactNode;

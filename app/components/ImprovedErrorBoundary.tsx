@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 interface Props {
@@ -59,6 +60,9 @@ import { Hand } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
 
 <<<<<<< HEAD
 <<<<<<< HEAD

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 import React, { useState } from 'react';
@@ -23,6 +24,9 @@ import { Globe } from 'lucide-react';
 import { Network } from 'lucide-react';
 import { Mic } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
 
 =======
 

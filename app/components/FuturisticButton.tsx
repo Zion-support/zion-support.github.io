@@ -2,8 +2,11 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
 
 interface FuturisticButtonProps {
 =======

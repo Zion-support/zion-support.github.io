@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -13,6 +14,9 @@ import React from 'react';
 <<<<<<< HEAD
 interface EnhancedAccessibilityProps {
 =======
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
 interface EnhancedaccessibilityProps {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
 =======

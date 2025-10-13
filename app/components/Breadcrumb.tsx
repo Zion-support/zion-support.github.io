@@ -2,6 +2,7 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Link } from 'react-router-dom';
 // import { Home } from 'lucide-react'; // Unused import
@@ -15,6 +16,8 @@ const Breadcrumb: React.FC = () => {
 <<<<<<< HEAD
 export default function Breadcrumb({ className = '', children }: BreadcrumbProps) {
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
 
 interface BreadcrumbProps {
   className?: string;

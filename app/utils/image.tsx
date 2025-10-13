@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 export default function UtilsPage() {
@@ -50,6 +51,9 @@ import React from 'react';
 // Image utility component
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ac37
+=======
+// Image utility functions
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
 
 interface imageProps {
   className?: string;

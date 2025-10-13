@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 const ImprovedNavigation = () => {
@@ -630,6 +631,9 @@ const ImprovedNavigation = () => {
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
 
 interface ImprovednavigationProps {
   className?: string;

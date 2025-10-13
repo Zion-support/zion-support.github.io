@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 =======
@@ -131,6 +132,9 @@ import React from 'react';
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
 =======
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
 
 
 import React, { useState } from 'react';

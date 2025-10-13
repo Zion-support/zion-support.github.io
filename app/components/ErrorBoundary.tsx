@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
@@ -17,6 +18,9 @@ import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
 
 interface ErrorBoundaryProps {
   className?: string;

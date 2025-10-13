@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 import React, { useEffect } from 'react';
@@ -44,6 +45,9 @@ import React, { useEffect } from 'react';
 import { Star } from 'lucide-react';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
 declare global {
   interface Window {,
     gtag: (...args: any[]) => void;

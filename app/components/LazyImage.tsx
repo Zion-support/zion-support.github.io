@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface LazyImageProps {
@@ -12,6 +13,9 @@ interface LazyImageProps {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 import React, { useState, useRef, useEffect } from 'react';
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
 
 interface LazyImageProps {
   src: string;

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 interface ImprovedFooterProps {
 =======
@@ -15,6 +16,8 @@ import { Shield } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import { Mic } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
 
 interface ImprovedfooterProps {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
