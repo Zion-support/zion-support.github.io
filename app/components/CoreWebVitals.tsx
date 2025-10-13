@@ -1,8 +1,6 @@
-import React, { useEffect } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+import React from 'react';
 
 const CoreWebVitals: React.FC = () => {
-
   return null;
 };
 

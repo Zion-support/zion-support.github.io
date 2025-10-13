@@ -12,7 +12,7 @@ interface State {
   errorInfo?: ErrorInfo;
 }
 
-export class EnhancedErrorBoundary extends Component<Props, State> {
+export class GlobalErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
@@ -109,4 +109,4 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
   }
 }
 
-export default EnhancedErrorBoundary;
+export default GlobalErrorBoundary;

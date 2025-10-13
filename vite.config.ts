@@ -26,8 +26,8 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 150, // Reduced threshold for better performance
-    assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
+    chunkSizeWarningLimit: 150, // Reduced warning threshold for better performance
+    assetsInlineLimit: 1024, // Reduced for better caching and faster initial load
     // Enable compression
     reportCompressedSize: true,
     // Optimize for production
@@ -96,22 +96,59 @@ export default defineConfig({
           }
           // AI service pages - group by category with smaller chunks
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
-            return 'ai-services'
+            const serviceName = id.split('/ai-')[1]?.split('/')[0];
+            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
+              return 'ai-analytics'
+            }
+            if (serviceName?.includes('content') || serviceName?.includes('generation')) {
+              return 'ai-content'
+            }
+            if (serviceName?.includes('cyber') || serviceName?.includes('security')) {
+              return 'ai-security'
+            }
+            if (serviceName?.includes('customer') || serviceName?.includes('support')) {
+              return 'ai-customer'
+            }
+            return 'ai-other'
           }
-          // Group all Zion service pages
+          // Zion service pages - group by category
           if (id.includes('/zion-') && id.includes('/page.tsx')) {
-            return 'zion-services'
+            const serviceName = id.split('/zion-')[1]?.split('/')[0];
+            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
+              return 'zion-analytics'
+            }
+            if (serviceName?.includes('ai-')) {
+              return 'zion-ai'
+            }
+            if (serviceName?.includes('security') || serviceName?.includes('shield')) {
+              return 'zion-security'
+            }
+            return 'zion-other'
           }
-          // Group all 5G service pages
+          // 5G service pages - group together
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
             return '5g-services'
           }
-          // Main pages - split further
+          // IT service pages - group together
           if (id.includes('/app/') && id.includes('/page.tsx') && 
-              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
-            if (id.includes('about') || id.includes('contact') || id.includes('services')) {
-              return 'core-pages'
-            }
+              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-') &&
+              (id.includes('devops') || id.includes('cloud') || id.includes('network') || 
+               id.includes('software') || id.includes('web') || id.includes('it-'))) {
+            return 'it-services'
+          }
+          // Micro SAAS pages - group together
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              (id.includes('micro-saas') || id.includes('project-management') || 
+               id.includes('customer-relationship') || id.includes('inventory') ||
+               id.includes('financial') || id.includes('employee') || id.includes('social') ||
+               id.includes('email') || id.includes('website') || id.includes('task') ||
+               id.includes('smart-') || id.includes('ai-powered'))) {
+            return 'micro-saas'
+          }
+          // Main pages - keep core pages together
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              (id.includes('about') || id.includes('contact') || id.includes('services') || 
+               id.includes('blog') || id.includes('privacy') || id.includes('terms'))) {
             return 'main-pages'
           }
           // Components - group by type

@@ -2,92 +2,24 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface EnhancedSEOProps {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   keywords?: string;
   canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  noIndex?: boolean;
-  structuredData?: object;
 }
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
-  title,
-  description,
-  keywords = '',
-  canonical = '',
-  ogImage = '/api/placeholder/1200/630',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  noIndex = false,
-  structuredData
+  title = "Zion Tech Group - Advanced AI & IT Solutions",
+  description = "Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses.",
+  keywords = "AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology",
+  canonical
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const siteUrl = 'https://ziontechgroup.com';
-  const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
-  const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
-
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+      <title>{title}</title>
       <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
-      <link rel="canonical" href={fullCanonical} />
-      
-      {/* Robots */}
-      {noIndex && <meta name="robots" content="noindex, nofollow" />}
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={fullCanonical} />
-      <meta property="og:image" content={fullOgImage} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={fullOgImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-      
-      {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-      <meta name="format-detection" content="telephone=no" />
-      <meta name="theme-color" content="#06b6d4" />
-      <meta name="msapplication-TileColor" content="#06b6d4" />
-      <meta name="msapplication-config" content="/browserconfig.xml" />
-      <meta name="author" content="Zion Tech Group" />
-      
-      {/* Security Headers */}
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Frame-Options" content="DENY" />
-      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-      
-      {/* Performance Hints */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      
-      {/* PWA Meta Tags */}
-      <link rel="manifest" href="/manifest.json" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      <link rel="apple-touch-icon" href="/icon-192x192.png" />
-      
-      {/* Structured Data */}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
+      <meta name="keywords" content={keywords} />
+      {canonical && <link rel="canonical" href={canonical} />}
     </Helmet>
   );
 };
