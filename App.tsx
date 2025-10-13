@@ -27,6 +27,9 @@ const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
 const CookiesPage = React.lazy(() => import("./app/cookies/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
+const CaseStudiesPage = React.lazy(() => import("./app/case-studies/page"));
+const CareersPage = React.lazy(() => import("./app/careers/page"));
+const ConsultationPage = React.lazy(() => import("./app/consultation/page"));
 
 // Main App Component
 function App() {
@@ -63,6 +66,9 @@ function App() {
                       <Route path="/terms" element={<TermsPage />} />
                       <Route path="/cookies" element={<CookiesPage />} />
                       <Route path="/sitemap" element={<SitemapPage />} />
+                      <Route path="/case-studies" element={<CaseStudiesPage />} />
+                      <Route path="/careers" element={<CareersPage />} />
+                      <Route path="/consultation" element={<ConsultationPage />} />
                     </Routes>
                   </Suspense>
                 </main>

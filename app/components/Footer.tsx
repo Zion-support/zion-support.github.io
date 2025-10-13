@@ -257,6 +257,14 @@ const Footer = React.memo(() => {
                   Blog
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/pricing"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Pricing
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -282,18 +290,18 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/pricing"
+                  to="/consultation"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Pricing
+                  Free Consultation
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/consultation"
+                  to="/demo"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Consultation
+                  Demo
                 </Link>
               </li>
             </ul>

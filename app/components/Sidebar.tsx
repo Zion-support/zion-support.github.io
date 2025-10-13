@@ -79,8 +79,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Home', path: '/', icon: <Home className="w-4 h-4" /> },
     { name: 'About', path: '/about', icon: <Users className="w-4 h-4" /> },
     { name: 'Services', path: '/services', icon: <Settings className="w-4 h-4" /> },
-    { name: 'Pricing', path: '/pricing', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'Case Studies', path: '/case-studies', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'Pricing', path: '/pricing', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'Careers', path: '/careers', icon: <Users className="w-4 h-4" /> },
     { name: 'Blog', path: '/blog', icon: <Brain className="w-4 h-4" /> },
     { name: 'Contact', path: '/contact', icon: <Phone className="w-4 h-4" /> }
   ], [])
@@ -272,6 +273,37 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   <span>{info.text}</span>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div className="border-t border-white/10 pt-6 mb-6">
+            <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Quick Links</h4>
+            <div className="space-y-2">
+              <Link
+                to="/consultation"
+                className="flex items-center space-x-3 px-4 py-2 rounded-lg text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300"
+                onClick={onClose}
+              >
+                <Zap className="w-4 h-4" />
+                <span className="text-sm">Free Consultation</span>
+              </Link>
+              <Link
+                to="/demo"
+                className="flex items-center space-x-3 px-4 py-2 rounded-lg text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300"
+                onClick={onClose}
+              >
+                <BarChart3 className="w-4 h-4" />
+                <span className="text-sm">Live Demo</span>
+              </Link>
+              <Link
+                to="/pricing"
+                className="flex items-center space-x-3 px-4 py-2 rounded-lg text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300"
+                onClick={onClose}
+              >
+                <Award className="w-4 h-4" />
+                <span className="text-sm">Pricing Plans</span>
+              </Link>
             </div>
           </div>
 
