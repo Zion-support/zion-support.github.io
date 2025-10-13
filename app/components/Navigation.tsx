@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import { Link, useLocation } from 'react-router-dom';
-=======
-import { Link } from 'react-router-dom';
->>>>>>> cursor/analyze-improve-and-deploy-application-59f5
 import { 
   Bars3Icon, 
   XMarkIcon,
@@ -20,18 +16,13 @@ import {
   CogIcon,
 <<<<<<< HEAD
   ChevronDownIcon,
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-59f5
   GlobeAltIcon
 } from '@heroicons/react/24/outline';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-<<<<<<< HEAD
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const location = useLocation();
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-59f5
 
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
@@ -49,32 +40,13 @@ const Navigation = () => {
         { name: '5G Solutions', href: '/5g-solutions' }
       ]
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
     { name: 'Solutions', href: '/solutions', icon: CogIcon },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
     { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
     { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
     { name: 'Demo', href: '/demo', icon: PlayIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
-<<<<<<< HEAD
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
-<<<<<<< HEAD
-=======
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Tutorials', href: '/tutorials' },
-    { name: 'Support', href: '/support' },
-    { name: 'Contact', href: '/contact' }
->>>>>>> cursor/website-audit-and-update-with-deployment-936a
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-=======
-    { name: 'Contact', href: '/contact', icon: PhoneIcon },
->>>>>>> cursor/analyze-improve-and-deploy-application-59f5
   ];
 
   const isActive = (path: string) => {
@@ -95,39 +67,6 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            {navigation.map((item) => (
-              <div key={item.name} className="relative group">
-                <Link
-                  to={item.href}
-                  className="flex items-center space-x-1 text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                  onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
-                  onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
-                >
-                  <item.icon className="w-4 h-4" />
-                  <span>{item.name}</span>
-                  {item.submenu && <ChevronDownIcon className="w-4 h-4" />}
-                </Link>
-                
-                {/* Dropdown Menu */}
-                {item.submenu && isServicesOpen && (
-                  <div className="absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700">
-                    {item.submenu.map((subItem) => (
-                      <Link
-                        key={subItem.name}
-                        to={subItem.href}
-                        className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
-                        onClick={() => setIsServicesOpen(false)}
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-=======
             {navigation.map((item) => {
               const Icon = item.icon;
               return (
@@ -163,22 +102,6 @@ const Navigation = () => {
                 </div>
               );
             })}
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-=======
-            {navigation.map((item) => {
-              const Icon = item.icon;
-              return (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className="flex items-center space-x-1 text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                >
-                  <Icon className="w-4 h-4" />
-                  <span>{item.name}</span>
-                </Link>
-              );
-            })}
->>>>>>> cursor/analyze-improve-and-deploy-application-59f5
           </div>
 
           {/* CTA Button */}
@@ -209,7 +132,6 @@ const Navigation = () => {
               {navigation.map((item) => {
                 const Icon = item.icon;
                 return (
-<<<<<<< HEAD
                   <div key={item.name}>
                     <Link
                       to={item.href}
@@ -234,17 +156,6 @@ const Navigation = () => {
                       </div>
                     )}
                   </div>
-=======
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <Icon className="w-5 h-5" />
-                    <span>{item.name}</span>
-                  </Link>
->>>>>>> cursor/analyze-improve-and-deploy-application-59f5
                 );
               })}
               <div className="pt-4 border-t border-slate-700">

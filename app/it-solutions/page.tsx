@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -245,6 +242,168 @@ export default function ITSolutionsPage() {
       benefits: ["Full compliance", "Risk mitigation", "Audit readiness"],
       useCases: ["SOX compliance", "GDPR compliance", "HIPAA compliance"],
       href: "/it-compliance"
+    },
+    {
+      title: "5G Network Implementation",
+      description: "Complete 5G network deployment and optimization services for ultra-fast connectivity and IoT applications.",
+      icon: WifiIcon,
+      features: [
+        "5G network design",
+        "Infrastructure deployment",
+        "Performance optimization",
+        "IoT integration",
+        "Edge computing setup",
+        "Network monitoring"
+      ],
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $5,000/month",
+      benefits: ["Ultra-fast speeds", "Low latency", "IoT ready"],
+      useCases: ["5G deployment", "IoT networks", "Edge computing"],
+      href: "/5g-implementation"
+    },
+    {
+      title: "Blockchain Infrastructure Services",
+      description: "Comprehensive blockchain infrastructure setup, smart contract development, and decentralized application deployment.",
+      icon: CircleStackIcon,
+      features: [
+        "Blockchain setup",
+        "Smart contract development",
+        "DApp deployment",
+        "Security auditing",
+        "Token development",
+        "Network maintenance"
+      ],
+      color: "from-yellow-500 to-orange-500",
+      price: "Starting at $4,500/month",
+      benefits: ["Decentralized security", "Smart contracts", "Future-proof technology"],
+      useCases: ["Blockchain development", "DeFi applications", "NFT platforms"],
+      href: "/blockchain-services"
+    },
+    {
+      title: "Edge Computing Solutions",
+      description: "Edge computing infrastructure for real-time processing, reduced latency, and improved performance at the network edge.",
+      icon: ServerIcon,
+      features: [
+        "Edge infrastructure setup",
+        "Real-time processing",
+        "Latency optimization",
+        "Data synchronization",
+        "Security implementation",
+        "Performance monitoring"
+      ],
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $3,200/month",
+      benefits: ["Reduced latency", "Real-time processing", "Improved performance"],
+      useCases: ["IoT applications", "Real-time analytics", "Edge AI"],
+      href: "/edge-computing"
+    },
+    {
+      title: "Quantum Computing Integration",
+      description: "Quantum computing infrastructure and integration services for advanced computational capabilities and research applications.",
+      icon: CpuChipIcon,
+      features: [
+        "Quantum infrastructure",
+        "Algorithm development",
+        "Integration services",
+        "Performance optimization",
+        "Research support",
+        "Security implementation"
+      ],
+      color: "from-violet-500 to-purple-500",
+      price: "Starting at $8,000/month",
+      benefits: ["Quantum advantage", "Advanced algorithms", "Research capabilities"],
+      useCases: ["Quantum research", "Advanced computing", "Cryptography"],
+      href: "/quantum-computing"
+    },
+    {
+      title: "IoT Platform Management",
+      description: "Comprehensive IoT platform management including device connectivity, data processing, and analytics.",
+      icon: WifiIcon,
+      features: [
+        "Device management",
+        "Data processing",
+        "Analytics dashboard",
+        "Security monitoring",
+        "Firmware updates",
+        "Performance optimization"
+      ],
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $2,200/month",
+      benefits: ["Scalable IoT", "Real-time monitoring", "Automated management"],
+      useCases: ["Smart cities", "Industrial IoT", "Connected devices"],
+      href: "/iot-platform"
+    },
+    {
+      title: "DevOps & CI/CD Automation",
+      description: "Complete DevOps implementation with automated CI/CD pipelines, infrastructure as code, and deployment automation.",
+      icon: CogIcon,
+      features: [
+        "CI/CD pipeline setup",
+        "Infrastructure as code",
+        "Automated testing",
+        "Deployment automation",
+        "Monitoring & alerting",
+        "Performance optimization"
+      ],
+      color: "from-orange-500 to-red-500",
+      price: "Starting at $2,800/month",
+      benefits: ["Faster deployments", "Automated processes", "Improved reliability"],
+      useCases: ["Software development", "Deployment automation", "DevOps transformation"],
+      href: "/devops-automation"
+    },
+    {
+      title: "Microservices Architecture",
+      description: "Microservices architecture design and implementation for scalable, maintainable, and resilient applications.",
+      icon: ServerIcon,
+      features: [
+        "Architecture design",
+        "Service decomposition",
+        "API gateway setup",
+        "Service mesh implementation",
+        "Monitoring & logging",
+        "Performance optimization"
+      ],
+      color: "from-teal-500 to-green-500",
+      price: "Starting at $3,500/month",
+      benefits: ["Scalable architecture", "Independent services", "Fault tolerance"],
+      useCases: ["Application modernization", "Scalable systems", "Cloud-native apps"],
+      href: "/microservices"
+    },
+    {
+      title: "API Management Platform",
+      description: "Comprehensive API management platform with security, monitoring, analytics, and developer portal capabilities.",
+      icon: GlobeAltIcon,
+      features: [
+        "API gateway setup",
+        "Security implementation",
+        "Rate limiting",
+        "Analytics & monitoring",
+        "Developer portal",
+        "Documentation automation"
+      ],
+      color: "from-blue-500 to-indigo-500",
+      price: "Starting at $1,800/month",
+      benefits: ["Secure APIs", "Developer experience", "Performance monitoring"],
+      useCases: ["API management", "Developer platforms", "Integration services"],
+      href: "/api-management"
+    },
+    {
+      title: "Data Lake & Analytics Platform",
+      description: "Comprehensive data lake setup with advanced analytics, machine learning integration, and real-time processing capabilities.",
+      icon: CircleStackIcon,
+      features: [
+        "Data lake architecture",
+        "ETL/ELT pipelines",
+        "Analytics platform",
+        "ML integration",
+        "Real-time processing",
+        "Data governance"
+      ],
+      color: "from-purple-500 to-pink-500",
+      price: "Starting at $4,200/month",
+      benefits: ["Unified data platform", "Advanced analytics", "ML capabilities"],
+      useCases: ["Big data analytics", "Machine learning", "Data science"],
+      href: "/data-lake-analytics"
     }
   ];
 

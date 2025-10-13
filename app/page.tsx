@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import SEO from './components/SEO';
-=======
 import EnhancedSEO from './components/EnhancedSEO';
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
 import { 
   ArrowRightIcon, 
   ShieldCheckIcon, 
@@ -24,38 +17,43 @@ import {
 export default function HomePage() {
   return (
     <>
-<<<<<<< HEAD
-      <SEO 
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
-        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
-        url="/"
-=======
       <EnhancedSEO
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
         keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
         canonicalUrl="/"
         ogImage="/api/placeholder/1200/630"
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
       />
       
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
+        {/* Futuristic Animated Background */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="w-full h-full bg-gradient-to-br from-purple-900/30 to-cyan-900/30"></div>
+          {/* Animated Grid */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(147,51,234,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(147,51,234,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
+          {/* Floating Particles */}
+          <div className="absolute inset-0">
+            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping opacity-75"></div>
+            <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping opacity-75 animation-delay-1000"></div>
+            <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-pink-400 rounded-full animate-ping opacity-75 animation-delay-2000"></div>
+            <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-yellow-400 rounded-full animate-ping opacity-75 animation-delay-3000"></div>
+          </div>
         </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
+            <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent animate-pulse">
               Zion Tech Group
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Advanced AI and IT Solutions for Modern Businesses
-            </p>
-            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
+            <div className="relative">
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed animate-fade-in">
+                Advanced AI and IT Solutions for Modern Businesses
+              </p>
+              {/* Neon glow effect */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg blur opacity-30 animate-pulse"></div>
+            </div>
+            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto animate-fade-in-up">
               Empowering businesses with cutting-edge artificial intelligence, cybersecurity solutions, 
               cloud infrastructure, and digital transformation services to drive innovation and growth.
             </p>
@@ -63,17 +61,21 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link 
                 to="/contact" 
-                className="group bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+                className="group relative bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 overflow-hidden"
               >
-                Get Started Today
-                <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                {/* Neon glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg blur opacity-50 group-hover:opacity-75 transition-opacity"></div>
+                <span className="relative z-10">Get Started Today</span>
+                <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
               </Link>
               <Link 
                 to="/services" 
-                className="group border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center gap-2"
+                className="group relative border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center gap-2 overflow-hidden"
               >
-                Explore Services
-                <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                {/* Hover glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-lg blur opacity-0 group-hover:opacity-20 transition-opacity"></div>
+                <span className="relative z-10">Explore Services</span>
+                <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
               </Link>
             </div>
           </div>
@@ -86,13 +88,20 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-slate-900 relative overflow-hidden">
+        {/* Futuristic background elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-900/10 via-transparent to-cyan-900/10"></div>
+          <div className="absolute top-1/4 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
               Our Core Services
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-fade-in">
               Comprehensive technology solutions designed to accelerate your business growth
             </p>
           </div>

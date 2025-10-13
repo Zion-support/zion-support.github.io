@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -251,6 +248,215 @@ export default function MicroSaaSSolutionsPage() {
       benefits: ["40% open rates", "Personalized content", "Optimized timing"],
       useCases: ["Email campaigns", "Newsletter management", "Lead nurturing"],
       href: "/ai-email-marketing"
+    },
+    {
+      title: "AI-Powered Lead Scoring Engine",
+      description: "Intelligent lead scoring system that automatically ranks prospects based on behavior, engagement, and likelihood to convert.",
+      icon: ChartBarIcon,
+      features: [
+        "Behavioral analysis",
+        "Engagement tracking",
+        "Conversion prediction",
+        "Real-time scoring",
+        "CRM integration",
+        "Custom scoring models"
+      ],
+      color: "from-emerald-500 to-teal-500",
+      price: "$179/month",
+      setupFee: "$800",
+      benefits: ["35% higher conversion", "Automated prioritization", "Real-time insights"],
+      useCases: ["Sales optimization", "Lead qualification", "Marketing automation"],
+      href: "/ai-lead-scoring"
+    },
+    {
+      title: "AI Customer Churn Prediction",
+      description: "Predict and prevent customer churn with AI-powered analytics and automated retention campaigns.",
+      icon: UserGroupIcon,
+      features: [
+        "Churn prediction models",
+        "Risk scoring",
+        "Automated alerts",
+        "Retention campaigns",
+        "Customer health monitoring",
+        "ROI tracking"
+      ],
+      color: "from-red-500 to-pink-500",
+      price: "$249/month",
+      setupFee: "$1,200",
+      benefits: ["25% churn reduction", "Proactive retention", "Revenue protection"],
+      useCases: ["Customer retention", "Subscription management", "Lifetime value optimization"],
+      href: "/ai-churn-prediction"
+    },
+    {
+      title: "AI-Powered A/B Testing Platform",
+      description: "Intelligent A/B testing platform that automatically optimizes tests and provides statistical significance analysis.",
+      icon: CogIcon,
+      features: [
+        "Automated test creation",
+        "Statistical analysis",
+        "Winner determination",
+        "Multi-variate testing",
+        "Real-time results",
+        "Performance insights"
+      ],
+      color: "from-violet-500 to-purple-500",
+      price: "$149/month",
+      setupFee: "$600",
+      benefits: ["50% faster optimization", "Statistical accuracy", "Automated insights"],
+      useCases: ["Website optimization", "Email testing", "Landing page optimization"],
+      href: "/ai-ab-testing"
+    },
+    {
+      title: "AI Invoice Processing System",
+      description: "Automated invoice processing with AI-powered data extraction, validation, and approval workflows.",
+      icon: DocumentTextIcon,
+      features: [
+        "OCR data extraction",
+        "Invoice validation",
+        "Approval workflows",
+        "Payment processing",
+        "Compliance checking",
+        "Analytics dashboard"
+      ],
+      color: "from-indigo-500 to-blue-500",
+      price: "$199/month",
+      setupFee: "$900",
+      benefits: ["90% time savings", "Error reduction", "Automated workflows"],
+      useCases: ["Accounts payable", "Invoice management", "Financial automation"],
+      href: "/ai-invoice-processing"
+    },
+    {
+      title: "AI-Powered SEO Optimizer",
+      description: "Comprehensive SEO optimization tool with AI-powered content analysis, keyword research, and performance tracking.",
+      icon: GlobeAltIcon,
+      features: [
+        "Keyword research",
+        "Content optimization",
+        "Competitor analysis",
+        "Rank tracking",
+        "Technical SEO audit",
+        "Performance insights"
+      ],
+      color: "from-green-500 to-emerald-500",
+      price: "$129/month",
+      setupFee: "$500",
+      benefits: ["40% traffic increase", "Automated optimization", "Competitive advantage"],
+      useCases: ["Website SEO", "Content marketing", "Search visibility"],
+      href: "/ai-seo-optimizer"
+    },
+    {
+      title: "AI Social Media Scheduler",
+      description: "Intelligent social media management with AI-powered content scheduling, hashtag optimization, and engagement tracking.",
+      icon: GlobeAltIcon,
+      features: [
+        "Smart scheduling",
+        "Hashtag optimization",
+        "Engagement tracking",
+        "Content suggestions",
+        "Multi-platform posting",
+        "Analytics dashboard"
+      ],
+      color: "from-rose-500 to-pink-500",
+      price: "$89/month",
+      setupFee: "$300",
+      benefits: ["200% engagement boost", "Optimal timing", "Content optimization"],
+      useCases: ["Social media marketing", "Brand management", "Community building"],
+      href: "/ai-social-scheduler"
+    },
+    {
+      title: "AI-Powered Survey Analytics",
+      description: "Advanced survey analysis tool that uses AI to extract insights, sentiment analysis, and actionable recommendations.",
+      icon: ChartBarIcon,
+      features: [
+        "Sentiment analysis",
+        "Trend identification",
+        "Automated insights",
+        "Visualization tools",
+        "Response categorization",
+        "Action recommendations"
+      ],
+      color: "from-cyan-500 to-blue-500",
+      price: "$119/month",
+      setupFee: "$400",
+      benefits: ["80% faster analysis", "Deep insights", "Actionable recommendations"],
+      useCases: ["Customer feedback", "Market research", "Employee surveys"],
+      href: "/ai-survey-analytics"
+    },
+    {
+      title: "AI Expense Management System",
+      description: "Intelligent expense tracking and management with automated categorization, receipt processing, and compliance monitoring.",
+      icon: CurrencyDollarIcon,
+      features: [
+        "Receipt OCR",
+        "Auto-categorization",
+        "Policy compliance",
+        "Approval workflows",
+        "Expense reporting",
+        "Analytics dashboard"
+      ],
+      color: "from-yellow-500 to-orange-500",
+      price: "$159/month",
+      setupFee: "$700",
+      benefits: ["75% time savings", "Policy compliance", "Automated processing"],
+      useCases: ["Expense tracking", "Financial management", "Compliance monitoring"],
+      href: "/ai-expense-management"
+    },
+    {
+      title: "AI-Powered Time Tracking",
+      description: "Intelligent time tracking with automatic activity detection, productivity insights, and project management integration.",
+      icon: ClockIcon,
+      features: [
+        "Automatic tracking",
+        "Activity detection",
+        "Productivity insights",
+        "Project integration",
+        "Team analytics",
+        "Billing automation"
+      ],
+      color: "from-teal-500 to-green-500",
+      price: "$79/month",
+      setupFee: "$200",
+      benefits: ["Accurate tracking", "Productivity insights", "Automated billing"],
+      useCases: ["Time management", "Project tracking", "Billing automation"],
+      href: "/ai-time-tracking"
+    },
+    {
+      title: "AI Customer Feedback Analyzer",
+      description: "Comprehensive feedback analysis tool that uses AI to process reviews, surveys, and social media mentions for actionable insights.",
+      icon: ChatBubbleLeftRightIcon,
+      features: [
+        "Multi-source feedback",
+        "Sentiment analysis",
+        "Topic extraction",
+        "Trend identification",
+        "Competitor analysis",
+        "Action recommendations"
+      ],
+      color: "from-purple-500 to-indigo-500",
+      price: "$189/month",
+      setupFee: "$800",
+      benefits: ["360° feedback view", "Real-time insights", "Competitive intelligence"],
+      useCases: ["Customer insights", "Brand monitoring", "Product feedback"],
+      href: "/ai-feedback-analyzer"
+    },
+    {
+      title: "AI-Powered Password Manager",
+      description: "Advanced password management with AI-powered security analysis, breach monitoring, and automated password generation.",
+      icon: ShieldCheckIcon,
+      features: [
+        "AI password generation",
+        "Security analysis",
+        "Breach monitoring",
+        "Multi-device sync",
+        "Team sharing",
+        "Compliance reporting"
+      ],
+      color: "from-red-500 to-orange-500",
+      price: "$49/month",
+      setupFee: "$100",
+      benefits: ["Enhanced security", "Automated management", "Breach protection"],
+      useCases: ["Password security", "Team management", "Compliance"],
+      href: "/ai-password-manager"
     }
   ];
 

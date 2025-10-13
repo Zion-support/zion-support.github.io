@@ -239,6 +239,168 @@ export default function AISolutionsPage() {
       benefits: ["Strategic insights", "Market intelligence", "ROI optimization"],
       useCases: ["Strategic planning", "Market analysis", "Competitive research"],
       href: "/ai-business-intelligence"
+    },
+    {
+      title: "AI-Powered Code Review Assistant",
+      description: "Intelligent code review system that automatically analyzes code quality, security vulnerabilities, and performance issues.",
+      icon: CpuChipIcon,
+      features: [
+        "Automated code analysis",
+        "Security vulnerability detection",
+        "Performance optimization",
+        "Best practice suggestions",
+        "Code quality scoring",
+        "Integration with CI/CD"
+      ],
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $1,500/month",
+      benefits: ["50% faster reviews", "Security enhancement", "Code quality improvement"],
+      useCases: ["Software development", "Code quality", "Security auditing"],
+      href: "/ai-code-review"
+    },
+    {
+      title: "AI-Powered Legal Document Analysis",
+      description: "Advanced legal document processing with AI-powered contract analysis, risk assessment, and compliance checking.",
+      icon: DocumentTextIcon,
+      features: [
+        "Contract analysis",
+        "Risk assessment",
+        "Compliance checking",
+        "Clause extraction",
+        "Legal research",
+        "Document comparison"
+      ],
+      color: "from-slate-500 to-gray-500",
+      price: "Starting at $2,800/month",
+      benefits: ["90% time savings", "Risk mitigation", "Compliance assurance"],
+      useCases: ["Legal document review", "Contract management", "Compliance monitoring"],
+      href: "/ai-legal-analysis"
+    },
+    {
+      title: "AI-Powered Medical Diagnosis Assistant",
+      description: "Advanced medical AI system for diagnostic assistance, symptom analysis, and treatment recommendations.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Symptom analysis",
+        "Diagnostic assistance",
+        "Treatment recommendations",
+        "Medical image analysis",
+        "Drug interaction checking",
+        "Patient monitoring"
+      ],
+      color: "from-red-500 to-pink-500",
+      price: "Starting at $5,000/month",
+      benefits: ["Improved accuracy", "Faster diagnosis", "Better outcomes"],
+      useCases: ["Medical diagnosis", "Healthcare", "Clinical decision support"],
+      href: "/ai-medical-diagnosis"
+    },
+    {
+      title: "AI-Powered Supply Chain Optimizer",
+      description: "Intelligent supply chain management with demand forecasting, inventory optimization, and logistics planning.",
+      icon: CloudIcon,
+      features: [
+        "Demand forecasting",
+        "Inventory optimization",
+        "Logistics planning",
+        "Supplier management",
+        "Risk assessment",
+        "Cost optimization"
+      ],
+      color: "from-blue-500 to-cyan-500",
+      price: "Starting at $3,500/month",
+      benefits: ["30% cost reduction", "Optimized inventory", "Risk mitigation"],
+      useCases: ["Supply chain management", "Logistics optimization", "Inventory control"],
+      href: "/ai-supply-chain"
+    },
+    {
+      title: "AI-Powered Energy Management",
+      description: "Smart energy management system with AI-powered optimization, consumption analysis, and cost reduction strategies.",
+      icon: LightBulbIcon,
+      features: [
+        "Energy consumption analysis",
+        "Cost optimization",
+        "Predictive maintenance",
+        "Renewable energy integration",
+        "Carbon footprint tracking",
+        "Automated controls"
+      ],
+      color: "from-yellow-500 to-orange-500",
+      price: "Starting at $2,200/month",
+      benefits: ["25% energy savings", "Cost reduction", "Sustainability improvement"],
+      useCases: ["Energy management", "Sustainability", "Cost optimization"],
+      href: "/ai-energy-management"
+    },
+    {
+      title: "AI-Powered Real Estate Analytics",
+      description: "Advanced real estate market analysis with AI-powered property valuation, market trends, and investment insights.",
+      icon: ChartBarIcon,
+      features: [
+        "Property valuation",
+        "Market trend analysis",
+        "Investment recommendations",
+        "Risk assessment",
+        "Location analysis",
+        "ROI predictions"
+      ],
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $1,800/month",
+      benefits: ["Accurate valuations", "Market insights", "Investment optimization"],
+      useCases: ["Real estate investment", "Property valuation", "Market analysis"],
+      href: "/ai-real-estate"
+    },
+    {
+      title: "AI-Powered Language Translation",
+      description: "Advanced multilingual translation system with context understanding, cultural adaptation, and real-time processing.",
+      icon: ChatBubbleLeftRightIcon,
+      features: [
+        "Multi-language support",
+        "Context understanding",
+        "Cultural adaptation",
+        "Real-time translation",
+        "Document translation",
+        "Voice translation"
+      ],
+      color: "from-purple-500 to-pink-500",
+      price: "Starting at $1,200/month",
+      benefits: ["95% accuracy", "Cultural context", "Real-time processing"],
+      useCases: ["Global communication", "Document translation", "Multilingual support"],
+      href: "/ai-translation"
+    },
+    {
+      title: "AI-Powered Weather Prediction",
+      description: "Advanced weather forecasting system with AI-powered analysis, extreme weather prediction, and climate modeling.",
+      icon: CloudIcon,
+      features: [
+        "Weather forecasting",
+        "Extreme weather prediction",
+        "Climate modeling",
+        "Agricultural insights",
+        "Risk assessment",
+        "Custom alerts"
+      ],
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $2,500/month",
+      benefits: ["Improved accuracy", "Early warning", "Risk mitigation"],
+      useCases: ["Weather forecasting", "Agriculture", "Risk management"],
+      href: "/ai-weather-prediction"
+    },
+    {
+      title: "AI-Powered Personalization Engine",
+      description: "Advanced personalization system that creates unique user experiences based on behavior, preferences, and context.",
+      icon: UserGroupIcon,
+      features: [
+        "Behavioral analysis",
+        "Preference learning",
+        "Context awareness",
+        "Dynamic content",
+        "A/B testing",
+        "Performance optimization"
+      ],
+      color: "from-rose-500 to-pink-500",
+      price: "Starting at $1,600/month",
+      benefits: ["40% engagement increase", "Personalized experiences", "Higher conversion"],
+      useCases: ["E-commerce", "Content platforms", "Marketing personalization"],
+      href: "/ai-personalization"
     }
   ];
 
