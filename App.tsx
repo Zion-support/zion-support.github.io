@@ -11,6 +11,7 @@ import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
 import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
@@ -37,15 +38,36 @@ import EnhancedSEO from "./app/components/EnhancedSEO";
 import { performanceOptimizer } from "./utils/performanceUtils";
 import { accessibilityManager } from "./utils/accessibilityUtils";
 >>>>>>> cursor/analyze-improve-and-deploy-application-2b18
+=======
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import Breadcrumb from "./app/components/Breadcrumb";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
+import AnalyticsProvider from "./app/components/AnalyticsProvider";
+import PerformanceMonitor from "./app/components/PerformanceMonitor";
+import WebVitalsTracker from "./app/components/WebVitalsTracker";
+import CoreWebVitals from "./app/components/CoreWebVitals";
+import FuturisticBackground from "./app/components/FuturisticBackground";
+import EnhancedSEO from "./app/components/EnhancedSEO";
+>>>>>>> cursor/analyze-improve-and-deploy-application-da10
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
 const ContactPage = React.lazy(() => import("./app/contact/page"));
 const ServicesPage = React.lazy(() => import("./app/services/page"));
 const BlogPage = React.lazy(() => import("./app/blog/page"));
+<<<<<<< HEAD
+=======
+const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
+const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
+const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
+const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
+const DemoPage = React.lazy(() => import("./app/demo/page"));
+const SupportPage = React.lazy(() => import("./app/support/page"));
+>>>>>>> cursor/analyze-improve-and-deploy-application-da10
 const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // AI Services Pages
 const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
@@ -98,6 +120,8 @@ const AICustomerSentimentTrackerPage = React.lazy(() => import("./app/ai-custome
 const SmartExpenseCategorizerPage = React.lazy(() => import("./app/smart-expense-categorizer/page"));
 
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-da10
 // AI Service Pages
 const AiAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
 const AiAutomationPage = React.lazy(() => import("./app/ai-automation/page"));
@@ -128,7 +152,9 @@ const NetworkInfrastructurePage = React.lazy(() => import("./app/network-infrast
 const ZionAnalyticsProPage = React.lazy(() => import("./app/zion-analytics-pro/page"));
 const ZionSecurityShieldPage = React.lazy(() => import("./app/zion-security-shield/page"));
 const ZionCloudVaultPage = React.lazy(() => import("./app/zion-cloud-vault/page"));
-const ZionContentStudioPage = React.lazy(() => import("./app/zion-content-studio/page"));
+const ZionAiCrmProPage = React.lazy(() => import("./app/zion-ai-crm-pro/page"));
+const ZionAiMarketingAutomationProPage = React.lazy(() => import("./app/zion-ai-marketing-automation-pro/page"));
+const ZionAiProjectManagerProPage = React.lazy(() => import("./app/zion-ai-project-manager-pro/page"));
 
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(() => import("./app/5g-data-analytics/page"));
@@ -138,11 +164,16 @@ const FiveGMobileApplicationsPage = React.lazy(() => import("./app/5g-mobile-app
 const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network-infrastructure/page"));
 const FiveGPrivateNetworksPage = React.lazy(() => import("./app/5g-private-networks/page"));
 const FiveGSmartCitySolutionsPage = React.lazy(() => import("./app/5g-smart-city-solutions/page"));
+<<<<<<< HEAD
 const FiveGIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
+=======
+const FiveG5gIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
+>>>>>>> cursor/analyze-improve-and-deploy-application-da10
 
 // Main App Component
 >>>>>>> cursor/analyze-improve-and-deploy-application-2b18
 function App() {
+<<<<<<< HEAD
   useEffect(() => {
     // Initialize performance monitoring
     if (typeof window !== 'undefined') {
@@ -306,6 +337,31 @@ function App() {
                     <Breadcrumb />
                     <main id="main-content" role="main">
                       <Suspense fallback={<ImprovedLoading message="Loading Zion Tech Group..." variant="futuristic" />}>
+=======
+  const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
+
+  const toggleSidebar = React.useCallback(() => {
+    setIsSidebarOpen(prev => !prev);
+  }, []);
+
+  const closeSidebar = React.useCallback(() => {
+    setIsSidebarOpen(false);
+  }, []);
+
+  return (
+    <GlobalErrorBoundary>
+      <EnhancedErrorBoundary>
+        <HelmetProvider>
+          <AccessibilityEnhancer>
+            <Router>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                <FuturisticBackground>
+                  <Navigation onSidebarToggle={toggleSidebar} />
+                  <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
+                  <Breadcrumb />
+                  <main id="main-content" role="main">
+                    <Suspense fallback={<LoadingPage />}>
+>>>>>>> cursor/analyze-improve-and-deploy-application-da10
                       <Routes>
                         <Route path="/" element={<HomePage />} />
                         <Route path="/about" element={<AboutPage />} />
@@ -313,8 +369,6 @@ function App() {
                         <Route path="/services" element={<ServicesPage />} />
                         <Route path="/micro-saas" element={<MicroSaasPage />} />
                         <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                        <Route path="/ai-healthcare-diagnostics" element={<AIHealthcareDiagnosticsPage />} />
-                        <Route path="/ai-supply-chain-optimizer" element={<AISupplyChainOptimizerPage />} />
                         <Route path="/pricing" element={<PricingPage />} />
                         <Route path="/blog" element={<BlogPage />} />
                         <Route path="/ai-services" element={<AIServicesPage />} />
@@ -356,7 +410,9 @@ function App() {
                         <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
                         <Route path="/zion-security-shield" element={<ZionSecurityShieldPage />} />
                         <Route path="/zion-cloud-vault" element={<ZionCloudVaultPage />} />
-                        <Route path="/zion-content-studio" element={<ZionContentStudioPage />} />
+                        <Route path="/zion-ai-crm-pro" element={<ZionAiCrmProPage />} />
+                        <Route path="/zion-ai-marketing-automation-pro" element={<ZionAiMarketingAutomationProPage />} />
+                        <Route path="/zion-ai-project-manager-pro" element={<ZionAiProjectManagerProPage />} />
                         
                         {/* 5G Solutions Routes */}
                         <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
@@ -366,7 +422,11 @@ function App() {
                         <Route path="/5g-network-infrastructure" element={<FiveGNetworkInfrastructurePage />} />
                         <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
                         <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
+<<<<<<< HEAD
                         <Route path="/5g-iot-solutions" element={<FiveGIotSolutionsPage />} />
+=======
+                        <Route path="/5g-iot-solutions" element={<FiveG5gIotSolutionsPage />} />
+>>>>>>> cursor/analyze-improve-and-deploy-application-da10
                       </Routes>
                     </Suspense>
                   </main>
@@ -375,6 +435,7 @@ function App() {
                 <PerformanceMonitor />
                 <WebVitalsTracker />
                 <CoreWebVitals />
+<<<<<<< HEAD
                 <PerformanceOptimizer 
                   enableImageOptimization={true}
                   enablePreloading={true}
@@ -382,6 +443,8 @@ function App() {
                   enableCompression={true}
                   enableLazyLoading={true}
                 />
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-da10
                 <EnhancedSEO 
                   title="Zion Tech Group - Advanced AI and IT Solutions"
                   description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses."
@@ -399,8 +462,11 @@ function App() {
         </HelmetProvider>
       </EnhancedErrorBoundary>
     </GlobalErrorBoundary>
+<<<<<<< HEAD
     </ImprovedErrorBoundary>
 >>>>>>> cursor/analyze-improve-and-deploy-application-2b18
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-da10
   );
 }
 

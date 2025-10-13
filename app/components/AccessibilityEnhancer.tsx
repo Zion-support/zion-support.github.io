@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, ReactNode } from 'react'
 
 interface AccessibilityEnhancerProps {
@@ -378,6 +379,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       `}</style>
     </>
   );
+=======
+import React from 'react';
+
+interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
+}
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+  return <>{children}</>;
+>>>>>>> cursor/analyze-improve-and-deploy-application-da10
 };
 
 export default AccessibilityEnhancer;

@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Generate sitemap.xml for better SEO
 const generateSitemap = () => {
   const baseUrl = 'https://ziontechgroup.com';
@@ -128,6 +129,8 @@ Allow: /pricing
 
 generateSitemap();
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-da10
 // Define all routes for the sitemap
 const routes = [
   // Main pages
@@ -136,6 +139,7 @@ const routes = [
   { url: '/contact', priority: '0.9', changefreq: 'monthly' },
   { url: '/services', priority: '0.9', changefreq: 'weekly' },
   { url: '/pricing', priority: '0.8', changefreq: 'monthly' },
+<<<<<<< HEAD
   { url: '/blog', priority: '0.7', changefreq: 'daily' },
   { url: '/ai-services', priority: '0.9', changefreq: 'weekly' },
   { url: '/micro-saas', priority: '0.9', changefreq: 'weekly' },
@@ -147,6 +151,16 @@ const routes = [
   { url: '/terms', priority: '0.3', changefreq: 'yearly' },
   { url: '/cookies', priority: '0.3', changefreq: 'yearly' },
   { url: '/sitemap', priority: '0.4', changefreq: 'monthly' },
+=======
+  { url: '/blog', priority: '0.7', changefreq: 'weekly' },
+  { url: '/tutorials', priority: '0.7', changefreq: 'weekly' },
+  { url: '/demo', priority: '0.8', changefreq: 'monthly' },
+  { url: '/support', priority: '0.7', changefreq: 'weekly' },
+  { url: '/privacy', priority: '0.5', changefreq: 'yearly' },
+  { url: '/terms', priority: '0.5', changefreq: 'yearly' },
+  { url: '/cookies', priority: '0.5', changefreq: 'yearly' },
+  { url: '/sitemap', priority: '0.3', changefreq: 'monthly' },
+>>>>>>> cursor/analyze-improve-and-deploy-application-da10
 
   // AI Services
   { url: '/ai-analytics', priority: '0.8', changefreq: 'weekly' },
@@ -178,7 +192,13 @@ const routes = [
   { url: '/zion-analytics-pro', priority: '0.8', changefreq: 'weekly' },
   { url: '/zion-security-shield', priority: '0.8', changefreq: 'weekly' },
   { url: '/zion-cloud-vault', priority: '0.8', changefreq: 'weekly' },
+<<<<<<< HEAD
   { url: '/zion-content-studio', priority: '0.8', changefreq: 'weekly' },
+=======
+  { url: '/zion-ai-crm-pro', priority: '0.8', changefreq: 'weekly' },
+  { url: '/zion-ai-marketing-automation-pro', priority: '0.8', changefreq: 'weekly' },
+  { url: '/zion-ai-project-manager-pro', priority: '0.8', changefreq: 'weekly' },
+>>>>>>> cursor/analyze-improve-and-deploy-application-da10
 
   // 5G Solutions
   { url: '/5g-data-analytics', priority: '0.8', changefreq: 'weekly' },
@@ -188,7 +208,11 @@ const routes = [
   { url: '/5g-network-infrastructure', priority: '0.8', changefreq: 'weekly' },
   { url: '/5g-private-networks', priority: '0.8', changefreq: 'weekly' },
   { url: '/5g-smart-city-solutions', priority: '0.8', changefreq: 'weekly' },
+<<<<<<< HEAD
   { url: '/5g-iot-solutions', priority: '0.8', changefreq: 'weekly' }
+=======
+  { url: '/5g-iot-solutions', priority: '0.8', changefreq: 'weekly' },
+>>>>>>> cursor/analyze-improve-and-deploy-application-da10
 ];
 
 // Generate sitemap XML
@@ -241,6 +265,41 @@ Disallow: /_next/
 Disallow: /static/
 
 # Allow important pages
+<<<<<<< HEAD
+=======
+Allow: /ai-services/
+Allow: /services/
+Allow: /micro-saas/
+Allow: /5g-solutions/
+Allow: /about/
+Allow: /contact/
+Allow: /pricing/
+Allow: /blog/
+Allow: /tutorials/
+Allow: /demo/
+Allow: /support/
+
+# Block specific file types
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$
+Disallow: /*.log$
+
+# Allow search engines to access CSS and JS files
+Allow: /assets/
+Allow: /*.css$
+Allow: /*.js$
+
+# Block common bot traps
+Disallow: /search?
+Disallow: /?*
+Disallow: /tag/
+Disallow: /category/
+Disallow: /archive/
+
+# Allow social media crawlers
+User-agent: facebookexternalhit
+>>>>>>> cursor/analyze-improve-and-deploy-application-da10
 Allow: /
 Allow: /about
 Allow: /contact
@@ -251,6 +310,7 @@ Allow: /5g-solutions
 Allow: /blog
 `;
 
+<<<<<<< HEAD
   const outputPath = path.join(__dirname, '..', 'public', 'robots.txt');
   
   try {
@@ -265,3 +325,44 @@ Allow: /blog
 writeSitemap();
 generateRobotsTxt();
 >>>>>>> cursor/analyze-improve-and-deploy-application-2b18
+=======
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /`;
+}
+
+// Write sitemap to public directory
+const sitemapContent = generateSitemap();
+const robotsContent = generateRobotsTxt();
+
+// Ensure public directory exists
+const publicDir = path.join(__dirname, '..', 'public');
+if (!fs.existsSync(publicDir)) {
+  fs.mkdirSync(publicDir, { recursive: true });
+}
+
+// Write files
+fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemapContent);
+fs.writeFileSync(path.join(publicDir, 'robots.txt'), robotsContent);
+
+console.log(`Generated sitemap with ${routes.length} routes`);
+console.log('Generated robots.txt');
+>>>>>>> cursor/analyze-improve-and-deploy-application-da10
