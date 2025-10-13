@@ -5,6 +5,33 @@ import { Link } from "react-router-dom";
 export default function Services() {
   const services = [
     {
+      title: "AI Quantum Computing",
+      description: "Revolutionary quantum computing solutions with AI-powered optimization, cryptography, and simulation capabilities for complex problem solving.",
+      icon: <Brain className="w-8 h-8" />,
+      path: "/ai-quantum-computing",
+      color: "from-blue-500 to-cyan-500",
+      price: "Starting at $2,999/month",
+      features: ["Quantum ML", "Quantum Cryptography", "Quantum Optimization", "Quantum Simulation"]
+    },
+    {
+      title: "AI Blockchain Solutions",
+      description: "Combine AI with blockchain technology for secure, transparent, and intelligent decentralized solutions including smart contracts and DeFi.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/ai-blockchain-solutions",
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $499/month",
+      features: ["Smart Contracts", "DeFi AI", "NFT Generation", "Security Auditing"]
+    },
+    {
+      title: "AI-Powered DevOps",
+      description: "Transform your DevOps operations with AI-driven deployment, predictive monitoring, auto-scaling, and intelligent infrastructure management.",
+      icon: <Zap className="w-8 h-8" />,
+      path: "/ai-powered-devops",
+      color: "from-purple-500 to-pink-500",
+      price: "Starting at $999/month",
+      features: ["Auto Deployment", "Predictive Monitoring", "Intelligent Scaling", "Security Automation"]
+    },
+    {
       title: "AI-Powered Business Intelligence",
       description: "Transform raw data into actionable insights with our advanced AI analytics platform. Real-time dashboards, predictive analytics, and automated reporting.",
       icon: <Brain className="w-8 h-8" />,
