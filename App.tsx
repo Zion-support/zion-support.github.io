@@ -10,13 +10,9 @@ import AnalyticsProvider from './app/components/AnalyticsProvider';
 import LoadingSpinner from './app/components/LoadingSpinner';
 
 // Page Components
-<<<<<<< HEAD
 import HomePage from './app/pages/HomePage';
-=======
-import HomePage from './src/pages/HomePage';
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
 import AboutPage from './app/pages/AboutPage';
-import ContactPage from './src/pages/ContactPage';
+import ContactPage from './app/pages/ContactPage';
 import ServicesPage from './app/pages/ServicesPage';
 import BlogPage from './app/pages/BlogPage';
 import TutorialsPage from './app/pages/TutorialsPage';
@@ -25,11 +21,6 @@ import SupportPage from './app/pages/SupportPage';
 import PrivacyPage from './app/pages/PrivacyPage';
 import TermsPage from './app/pages/TermsPage';
 import PricingPage from './app/pages/PricingPage';
-<<<<<<< HEAD
-import SolutionsPage from './app/pages/SolutionsPage';
-=======
-import SolutionsPage from './src/pages/SolutionsPage';
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (

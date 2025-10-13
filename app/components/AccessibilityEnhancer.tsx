@@ -129,14 +129,14 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     };
 
     focusableElements.forEach(element => {
-      element.addEventListener('focus', handleFocus as EventListener);
-      element.addEventListener('blur', handleBlur as EventListener);
+      element.addEventListener('focus', handleFocus);
+      element.addEventListener('blur', handleBlur);
     });
 
     return () => {
       focusableElements.forEach(element => {
-        element.removeEventListener('focus', handleFocus as EventListener);
-        element.removeEventListener('blur', handleBlur as EventListener);
+        element.removeEventListener('focus', handleFocus);
+        element.removeEventListener('blur', handleBlur);
       });
     };
   }, []);

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Zap, Globe, Smartphone, Wifi, Cpu, Shield, BarChart, CheckCircle } from 'lucide-react';
+import { ArrowRight, Zap, Globe, Smartphone, Wifi, CheckCircle } from 'lucide-react';
 
 const FiveGSolutionsPage: React.FC = () => {
   const features = [
