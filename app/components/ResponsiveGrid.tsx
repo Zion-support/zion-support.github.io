@@ -1,39 +1,78 @@
 import React from 'react';
+import { clsx } from 'clsx';
 
 interface ResponsiveGridProps {
   children: React.ReactNode;
+  className?: string;
   cols?: {
     default?: number;
     sm?: number;
     md?: number;
     lg?: number;
     xl?: number;
+    '2xl'?: number;
   };
-  gap?: 'sm' | 'md' | 'lg' | 'xl';
-  className?: string;
+  gap?: 'none' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
+  autoFit?: boolean;
+  minWidth?: string;
 }
 
 const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({
   children,
+  className,
   cols = { default: 1, sm: 2, md: 3, lg: 4 },
   gap = 'md',
-  className = ''
+  autoFit = false,
+  minWidth = '300px'
 }) => {
   const gapClasses = {
+    none: 'gap-0',
     sm: 'gap-2',
     md: 'gap-4',
     lg: 'gap-6',
-    xl: 'gap-8'
+    xl: 'gap-8',
+    '2xl': 'gap-12'
   };
 
-  const gridCols = `grid-cols-${cols.default || 1} ${
-    cols.sm ? `sm:grid-cols-${cols.sm}` : ''
-  } ${cols.md ? `md:grid-cols-${cols.md}` : ''} ${
-    cols.lg ? `lg:grid-cols-${cols.lg}` : ''
-  } ${cols.xl ? `xl:grid-cols-${cols.xl}` : ''}`;
+  const getGridCols = () => {
+    if (autoFit) {
+      return 'grid-cols-[repeat(auto-fit,minmax(300px,1fr))]';
+    }
+
+    const colClasses = [];
+    
+    if (cols.default) {
+      colClasses.push(`grid-cols-${cols.default}`);
+    }
+    if (cols.sm) {
+      colClasses.push(`sm:grid-cols-${cols.sm}`);
+    }
+    if (cols.md) {
+      colClasses.push(`md:grid-cols-${cols.md}`);
+    }
+    if (cols.lg) {
+      colClasses.push(`lg:grid-cols-${cols.lg}`);
+    }
+    if (cols.xl) {
+      colClasses.push(`xl:grid-cols-${cols.xl}`);
+    }
+    if (cols['2xl']) {
+      colClasses.push(`2xl:grid-cols-${cols['2xl']}`);
+    }
+
+    return colClasses.join(' ');
+  };
 
   return (
-    <div className={`grid ${gridCols} ${gapClasses[gap]} ${className}`}>
+    <div
+      className={clsx(
+        'grid',
+        getGridCols(),
+        gapClasses[gap],
+        className
+      )}
+      style={autoFit ? { gridTemplateColumns: `repeat(auto-fit, minmax(${minWidth}, 1fr))` } : {}}
+    >
       {children}
     </div>
   );

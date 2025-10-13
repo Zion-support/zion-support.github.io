@@ -9,7 +9,6 @@ interface WebVitalsData {
 }
 
 const CoreWebVitals: React.FC = () => {
-<<<<<<< HEAD
   const reportWebVitals = useCallback((data: WebVitalsData) => {
     // Send to Google Analytics if available
     if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -18,29 +17,14 @@ const CoreWebVitals: React.FC = () => {
         metric_value: Math.round(data.value),
         metric_delta: Math.round(data.delta),
         metric_id: data.id,
-        metric_navigation_type: data.navigationType
+        metric_navigation_type: data.navigationType,
       });
     }
 
-    // Send to custom analytics
-    if (typeof window !== 'undefined' && (window as any).analytics) {
-      (window as any).analytics.track('Web Vitals', {
-        metric: data.name,
-        value: data.value,
-        delta: data.delta,
-        id: data.id
-      });
-    }
-
-    // Log in development
+    // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       console.log('Web Vital:', data.name, data.value);
     }
-=======
-  useEffect(() => {
-    // Core Web Vitals monitoring
-    console.log('Core Web Vitals monitoring initialized');
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
   }, []);
 
   useEffect(() => {

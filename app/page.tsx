@@ -90,6 +90,30 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
+      name: "Zion AI Workflow Automation Pro",
+      description: "Transform your business with AI-powered workflow automation. Reduce manual work by 80% and increase efficiency by 95%",
+      price: "From $299/month",
+      icon: <Zap className="w-6 h-6" />,
+      link: "/zion-ai-workflow-automation-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Data Warehouse Pro",
+      description: "Transform your data into actionable insights with AI-powered analytics. Connect 500+ data sources with enterprise security",
+      price: "From $499/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/zion-ai-data-warehouse-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Mobile App Builder Pro",
+      description: "Build native mobile apps without coding using AI-powered visual builder. Deploy to iOS, Android, and web",
+      price: "From $199/month",
+      icon: <Smartphone className="w-6 h-6" />,
+      link: "/zion-ai-mobile-app-builder-pro",
+      featured: true
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
       price: "From $299/month",
@@ -140,9 +164,9 @@ const HomePage = () => {
   ];
 
   const stats = [
-    { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "25,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "60+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "100+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
   ];
 
@@ -194,16 +218,27 @@ const HomePage = () => {
             <span className="text-cyan-400 text-sm font-medium">#1 Technology Solutions Provider 2024</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Transform Your Business with AI
-            </span>
-          </h1>
+          <FuturisticText
+            as="h1"
+            size={{ default: '4xl', md: '6xl', lg: '7xl' }}
+            weight="bold"
+            className="mb-6 leading-tight"
+            animated={true}
+            glowEffect={true}
+            gradient="cyan-purple"
+          >
+            Transform Your Business with AI
+          </FuturisticText>
           
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
+          <ResponsiveText
+            size={{ default: 'lg', md: 'xl', lg: '2xl' }}
+            color="gray-300"
+            className="mb-8 max-w-4xl mx-auto leading-relaxed text-center"
+            animated={true}
+          >
             Unlock the power of artificial intelligence, cybersecurity, and cloud solutions. 
             We help businesses scale, secure, and innovate with cutting-edge technology that drives real results.
-          </p>
+          </ResponsiveText>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <FuturisticButton
@@ -251,11 +286,18 @@ const HomePage = () => {
               From AI-powered analytics to enterprise security, we have everything you need.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <ResponsiveGrid
+            cols={{ default: 1, sm: 2, lg: 4 }}
+            gap="md"
+            className="max-w-7xl mx-auto"
+          >
             {features.map((feature, index) => (
-              <div
+              <FuturisticCard
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 cursor-pointer"
+                className="p-6 group hover:scale-105 transition-all duration-300 cursor-pointer"
+                glowColor="cyan"
+                hoverEffect={true}
+                animated={true}
               >
                 <Link
                   to={feature.link}
@@ -280,9 +322,9 @@ const HomePage = () => {
                     </span>
                   </div>
                 </Link>
-              </div>
+              </FuturisticCard>
             ))}
-          </div>
+          </ResponsiveGrid>
         </ResponsiveContainer>
       </section>
 
@@ -297,41 +339,53 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <ResponsiveGrid
+            cols={{ default: 1, md: 2, lg: 3 }}
+            gap="lg"
+            className="max-w-7xl mx-auto"
+          >
             {microSaasHighlights.map((saas, index) => (
-              <Link
+              <FuturisticCard
                 key={index}
-                to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                className="p-6 group hover:scale-105 transition-all duration-300 relative overflow-hidden"
+                glowColor="purple"
+                hoverEffect={true}
+                animated={true}
               >
-                {saas.featured && (
-                  <div className="absolute top-4 right-4">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                      Featured
-                    </span>
+                <Link
+                  to={saas.link}
+                  className="block"
+                  aria-label={`Learn more about ${saas.name}`}
+                >
+                  {saas.featured && (
+                    <div className="absolute top-4 right-4 z-10">
+                      <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                        Featured
+                      </span>
+                    </div>
+                  )}
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
+                      {saas.icon}
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                        {saas.name}
+                      </h3>
+                      <p className="text-cyan-400 font-medium">{saas.price}</p>
+                    </div>
                   </div>
-                )}
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
-                    {saas.icon}
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {saas.description}
+                  </p>
+                  <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                      {saas.name}
-                    </h3>
-                    <p className="text-cyan-400 font-medium">{saas.price}</p>
-                  </div>
-                </div>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {saas.description}
-                </p>
-                <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </Link>
+                </Link>
+              </FuturisticCard>
             ))}
-          </div>
+          </ResponsiveGrid>
           <div className="text-center mt-12">
             <Link
               to="/micro-saas"
@@ -355,11 +409,18 @@ const HomePage = () => {
               See what our clients say about working with Zion Tech Group
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <ResponsiveGrid
+            cols={{ default: 1, md: 3 }}
+            gap="lg"
+            className="max-w-7xl mx-auto"
+          >
             {testimonials.map((testimonial, index) => (
-              <div
+              <FuturisticCard
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                className="p-6 group hover:scale-105 transition-all duration-300 relative overflow-hidden"
+                glowColor="cyan"
+                hoverEffect={true}
+                animated={true}
               >
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -371,22 +432,36 @@ const HomePage = () => {
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                 </div>
-              </div>
+              </FuturisticCard>
             ))}
-          </div>
+          </ResponsiveGrid>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+          <FuturisticText
+            as="h2"
+            size={{ default: '3xl', md: '4xl', lg: '5xl' }}
+            weight="bold"
+            color="white"
+            className="mb-6"
+            animated={true}
+            glowEffect={true}
+            gradient="cyan-purple"
+          >
             Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+          </FuturisticText>
+          <ResponsiveText
+            size={{ default: 'xl' }}
+            color="gray-300"
+            className="mb-8 leading-relaxed"
+            animated={true}
+          >
             Join thousands of businesses already using our solutions to drive growth and innovation. 
             Start your digital transformation journey today.
-          </p>
+          </ResponsiveText>
           
           {/* Contact Information */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -414,20 +489,22 @@ const HomePage = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+            <FuturisticButton
+              href="/contact"
+              variant="primary"
+              size="lg"
+              icon={<ArrowRight className="w-5 h-5" />}
             >
               Start Your Journey
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/services"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+            </FuturisticButton>
+            <FuturisticButton
+              href="/services"
+              variant="outline"
+              size="lg"
+              icon={<Sparkles className="w-5 h-5" />}
             >
               Explore Services
-              <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
-            </Link>
+            </FuturisticButton>
           </div>
         </div>
       </section>
