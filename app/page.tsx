@@ -144,6 +144,22 @@ const HomePage = () => {
       icon: <Calendar className="w-6 h-6" />,
       link: "/zion-ai-project-manager-pro",
       featured: true
+    },
+    {
+      name: "Zion AI Voice Cloning Pro",
+      description: "Advanced voice synthesis and cloning with 99.9% accuracy for content creators and businesses",
+      price: "From $29/month",
+      icon: <Settings className="w-6 h-6" />,
+      link: "/zion-ai-voice-cloning-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Code Reviewer Pro",
+      description: "AI-powered code analysis and review with 99.7% accuracy for developers and teams",
+      price: "From $19/month",
+      icon: <Settings className="w-6 h-6" />,
+      link: "/zion-ai-code-reviewer-pro",
+      featured: true
     }
   ];
 
@@ -495,6 +511,7 @@ const HomePage = () => {
         </div>
       </section>
       </main>
+      </FuturisticBackgroundEnhanced>
       </EnhancedAccessibility>
     </PerformanceOptimizer>
   );

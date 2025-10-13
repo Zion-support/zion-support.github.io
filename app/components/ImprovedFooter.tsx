@@ -82,6 +82,8 @@ const ImprovedFooter = () => {
         { label: 'Cybersecurity Audit', href: '/cybersecurity-audit' },
         { label: 'Data Center Services', href: '/data-center-services' },
         { label: 'Asset Management', href: '/asset-management' },
+        { label: 'Cloud Migration Enterprise', href: '/cloud-migration-enterprise' },
+        { label: 'Cybersecurity Enterprise Suite', href: '/cybersecurity-enterprise-suite' },
         { label: 'View All IT Services', href: '/services', featured: true }
       ]
     },
@@ -113,6 +115,9 @@ const ImprovedFooter = () => {
         { label: 'Zion AI API Manager', href: '/zion-ai-api-manager' },
         { label: 'Zion AI Backup Manager', href: '/zion-ai-backup-manager' },
         { label: 'Zion AI Testing Automation', href: '/zion-ai-testing-automation' },
+        { label: 'Zion AI Voice Cloning Pro', href: '/zion-ai-voice-cloning-pro' },
+        { label: 'Zion AI Code Reviewer Pro', href: '/zion-ai-code-reviewer-pro' },
+        { label: 'Zion AI Project Manager Pro', href: '/zion-ai-project-manager-pro' },
         { label: 'View All Micro SAAS', href: '/micro-saas', featured: true }
       ]
     },

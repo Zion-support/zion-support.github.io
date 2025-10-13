@@ -50,156 +50,96 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
       hasDropdown: true,
       dropdownItems: [
         { name: 'AI Services', path: '/ai-services' },
-        { name: 'IT Services', path: '/services' },
-        { name: '5G Solutions', path: '/5g-solutions' },
-        { name: 'Micro SAAS', path: '/micro-saas' }
-      ]
-    },
-    {
-      name: 'AI Services',
-      path: '/ai-services',
-      icon: <Brain className="w-4 h-4" />,
-      hasDropdown: true,
-      dropdownItems: [
-        { name: 'AI Analytics', path: '/ai-analytics' },
-        { name: 'AI Content Generation', path: '/ai-content-generation' },
-        { name: 'AI Customer Support', path: '/ai-customer-support' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
-        { name: 'AI Data Analytics', path: '/ai-data-analytics' },
-        { name: 'AI Document Processing', path: '/ai-document-processing' },
-        { name: 'AI Marketing Automation', path: '/ai-marketing-automation' },
-        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics' },
-        { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation' }
-      ]
-    },
-    {
-      name: 'Micro SAAS',
-      path: '/micro-saas',
-      icon: <Zap className="w-4 h-4" />,
-      hasDropdown: true,
-      dropdownItems: [
-        { name: 'AI Video Generator', path: '/zion-ai-video-generator' },
-        { name: 'AI Invoice Generator', path: '/zion-ai-invoice-generator' },
-        { name: 'AI Customer Insights', path: '/zion-ai-customer-insights' },
-        { name: 'AI Email Analyzer', path: '/zion-ai-email-analyzer' },
-        { name: 'Smart Inventory Optimizer', path: '/zion-smart-inventory-optimizer' },
-        { name: 'AI Customer Sentiment Tracker', path: '/zion-ai-customer-sentiment-tracker' },
-        { name: 'Smart Expense Categorizer', path: '/zion-smart-expense-categorizer' },
-        { name: 'AI Voice Assistant Pro', path: '/zion-ai-voice-assistant-pro' },
-        { name: 'AI Code Reviewer', path: '/zion-ai-code-reviewer' },
-        { name: 'AI Social Media Manager', path: '/zion-ai-social-media-manager' }
-      ]
-    },
-    {
-      name: '5G Solutions',
-      path: '/5g-solutions',
-      icon: <Globe className="w-4 h-4" />,
-      hasDropdown: true,
-      dropdownItems: [
-        { name: '5G Network Infrastructure', path: '/5g-network-infrastructure' },
-        { name: '5G Edge Computing', path: '/5g-edge-computing' },
-        { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
-        { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions' },
-        { name: '5G Private Networks', path: '/5g-private-networks' },
-        { name: '5G Mobile Applications', path: '/5g-mobile-applications' },
-        { name: '5G Data Analytics', path: '/5g-data-analytics' },
-        { name: '5G Implementation', path: '/5g-implementation' }
+        { name: 'IT Services', path: '/it-services' },
+        { name: 'Micro SAAS', path: '/micro-saas' },
+        { name: '5G Solutions', path: '/5g-solutions' }
       ]
     },
     {
       name: 'Contact',
       path: '/contact',
-      icon: <Globe className="w-4 h-4" />
+      icon: <Zap className="w-4 h-4" />
     }
   ];
 
-  const serviceDropdownItems = [
+  const services = [
     {
       category: 'AI Services',
       items: [
-        { name: 'AI Analytics', path: '/ai-analytics', description: 'Advanced data analytics and insights' },
-        { name: 'AI CRM Pro', path: '/zion-ai-crm-pro', description: 'Intelligent customer relationship management' },
-        { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI-powered content creation' },
+        { name: 'AI Analytics', path: '/ai-analytics', description: 'Advanced data analytics powered by AI' },
         { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI-powered security solutions' },
-        { name: 'AI Video Generator', path: '/zion-ai-video-generator', description: 'Create videos with AI' }
+        { name: 'AI Content Generation', path: '/ai-content-generation', description: 'Automated content creation' },
+        { name: 'AI Customer Support', path: '/ai-customer-support', description: 'Intelligent customer service' }
       ]
     },
     {
       category: 'IT Services',
       items: [
-        { name: 'Cloud Migration', path: '/cloud-migration', description: 'Seamless cloud transition' },
-        { name: 'Web Development', path: '/web-development', description: 'Custom web applications' },
-        { name: 'DevOps', path: '/devops', description: 'CI/CD and automation' },
-        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic technology guidance' },
-        { name: 'System Integration', path: '/system-integration', description: 'Connect your systems' }
+        { name: 'Cloud Migration', path: '/cloud-migration', description: 'Seamless cloud migration services' },
+        { name: 'Web Development', path: '/web-development', description: 'Modern web applications' },
+        { name: 'DevOps', path: '/devops', description: 'Development operations solutions' },
+        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT consulting' }
       ]
     },
     {
       category: 'Micro SAAS',
       items: [
-        { name: 'Zion Analytics Pro', path: '/zion-ai-analytics-pro', description: 'Business intelligence platform' },
-        { name: 'Zion Security Shield', path: '/zion-security-shield', description: 'Advanced cybersecurity' },
-        { name: 'Zion AI Marketing', path: '/zion-ai-marketing-automation', description: 'Marketing automation' },
-        { name: 'Zion E-commerce Suite', path: '/zion-ecommerce-suite', description: 'Complete e-commerce platform' }
+        { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', description: 'Business intelligence platform' },
+        { name: 'Zion Security Shield', path: '/zion-security-shield', description: 'Advanced security protection' },
+        { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', description: 'Secure cloud storage' },
+        { name: 'Zion AI CRM Pro', path: '/zion-ai-crm-pro', description: 'AI-powered CRM solution' }
       ]
     }
   ];
 
   return (
-    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-cyan-500/20 sticky top-0 z-50">
+    <nav className="bg-black/20 backdrop-blur-sm border-b border-white/10 relative z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <Brain className="w-5 h-5 text-white" />
-            </div>
-            <span className="text-xl font-bold text-white">Zion Tech Group</span>
+          <Link to="/" className="text-2xl font-bold text-white group">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:from-cyan-300 group-hover:to-purple-300 transition-all duration-300">
+              Zion Tech Group
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navigationItems.map((item) => (
-              <div key={item.name} className="relative group">
+            {navigationItems.map((item, index) => (
+              <div key={index} className="relative group">
                 <Link
                   to={item.path}
-                  className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    isActive(item.path)
-                      ? 'text-cyan-400 bg-cyan-500/10'
-                      : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'
+                  className={`flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 ${
+                    isActive(item.path) ? 'text-cyan-400' : ''
                   }`}
                 >
                   {item.icon}
                   <span>{item.name}</span>
                   {item.hasDropdown && (
-                    <ChevronDown className="w-4 h-4" />
+                    <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
                   )}
                 </Link>
                 
-                {/* Services Dropdown */}
-                {item.hasDropdown && (
-                  <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                    <div className="p-6">
-                      <h3 className="text-white font-semibold mb-4 text-lg">Our Services</h3>
-                      <div className="space-y-6">
-                        {serviceDropdownItems.map((category, categoryIndex) => (
-                          <div key={categoryIndex}>
-                            <h4 className="text-cyan-400 font-medium mb-3 text-sm uppercase tracking-wide">
-                              {category.category}
-                            </h4>
-                            <div className="space-y-2">
-                              {category.items.map((service, serviceIndex) => (
+                {/* Services Mega Menu */}
+                {item.name === 'Services' && (
+                  <div className="absolute top-full left-0 mt-2 w-screen max-w-6xl bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                    <div className="p-8">
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {services.map((service, serviceIndex) => (
+                          <div key={serviceIndex} className="space-y-4">
+                            <h3 className="text-lg font-semibold text-white mb-4">{service.category}</h3>
+                            <div className="space-y-3">
+                              {service.items.map((serviceItem, itemIndex) => (
                                 <Link
-                                  key={serviceIndex}
-                                  to={service.path}
+                                  key={itemIndex}
+                                  to={serviceItem.path}
                                   className="block p-3 rounded-lg hover:bg-cyan-500/10 transition-colors group"
                                 >
-                                  <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
-                                    {service.name}
+                                  <div className="text-sm font-medium text-gray-300 group-hover:text-cyan-400 transition-colors">
+                                    {serviceItem.name}
                                   </div>
                                   <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
-                                    {service.description}
+                                    {serviceItem.description}
                                   </div>
                                 </Link>
                               ))}
@@ -214,21 +154,7 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                         >
                           View All Services →
                         </Link>
-                      </div>                {/* Dropdown Menu */}
-                {item.hasDropdown && item.dropdownItems && (
-                  <div className="absolute top-full left-0 mt-1 w-64 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    <div className="py-2">
-                      {item.dropdownItems.map((dropdownItem, index) => (
-                        <Link
-                          key={index}
-                          to={dropdownItem.path}
-                          className={`block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors ${
-                            isActive(dropdownItem.path) ? 'text-cyan-400 bg-cyan-500/10' : ''
-                          }`}
-                        >
-                          {dropdownItem.name}
-                        </Link>
-                      ))}
+                      </div>
                     </div>
                   </div>
                 )}
@@ -250,46 +176,46 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-sm rounded-lg mt-2">
-              {navigationItems.map((item) => (
-                <div key={item.name}>
-                  <Link
-                    to={item.path}
-                    className={`flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                      isActive(item.path)
-                        ? 'text-cyan-400 bg-cyan-500/10'
-                        : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'
-                    }`}
-                    onClick={() => setIsOpen(false)}
-                  >
+          <div className="md:hidden mt-4 space-y-2">
+            {navigationItems.map((item, index) => (
+              <div key={index} className="relative">
+                <Link
+                  to={item.path}
+                  className={`flex items-center justify-between px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                    isActive(item.path) 
+                      ? 'text-cyan-400 bg-cyan-500/10' 
+                      : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  <div className="flex items-center space-x-2">
                     {item.icon}
                     <span>{item.name}</span>
-                    {item.hasDropdown && (
-                      <ChevronDown className="w-4 h-4 ml-auto" />
-                    )}
-                  </Link>
-                  
-                  {/* Mobile Dropdown */}
-                  {item.hasDropdown && item.dropdownItems && (
-                    <div className="ml-4 mt-1 space-y-1">
-                      {item.dropdownItems.map((dropdownItem, index) => (
-                        <Link
-                          key={index}
-                          to={dropdownItem.path}
-                          className={`block px-3 py-2 text-sm text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-md transition-colors ${
-                            isActive(dropdownItem.path) ? 'text-cyan-400 bg-cyan-500/10' : ''
-                          }`}
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {dropdownItem.name}
-                        </Link>
-                      ))}
-                    </div>
+                  </div>
+                  {item.hasDropdown && (
+                    <ChevronDown className="w-4 h-4" />
                   )}
-                </div>
-              ))}
-            </div>
+                </Link>
+                
+                {/* Mobile Dropdown */}
+                {item.hasDropdown && item.dropdownItems && (
+                  <div className="ml-4 mt-2 space-y-1">
+                    {item.dropdownItems.map((dropdownItem, index) => (
+                      <Link
+                        key={index}
+                        to={dropdownItem.path}
+                        className={`block px-3 py-2 text-sm text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-md transition-colors ${
+                          isActive(dropdownItem.path) ? 'text-cyan-400 bg-cyan-500/10' : ''
+                        }`}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {dropdownItem.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         )}
       </div>

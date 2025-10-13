@@ -19,7 +19,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       // Preload critical images
       const criticalImages = [
         '/logo.svg',
-        '/og-image.svg'        '/og-image.svg',
+        '/og-image.svg',
         '/api/placeholder/1200/630', // Hero image
         '/api/placeholder/800/600',  // Service images
       ];
@@ -33,7 +33,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       });
     };
 
-<<<<<<< HEAD>>>>>>> cursor/analyze-improve-and-deploy-application-ad0b
     // Optimize images
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
@@ -91,8 +90,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     // Run optimizations after component mount
     const timer = setTimeout(initializeOptimizations, 100);
 
-    return () => clearTimeout(timer);
-=======
     preloadCriticalResources();
   }, []);
 
@@ -137,7 +134,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     return () => window.removeEventListener('resize', handleResize);
   }, [handleResize]);
 
-<<<<<<< HEAD>>>>>>> cursor/analyze-improve-and-deploy-application-ad0b
   // Intersection Observer for lazy loading
   useEffect(() => {
     if (!isOptimized) return;
@@ -260,11 +256,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       `}</style>
     </>
   );
-<<<<<<< HEAD
-=======
-  return <>{children}</>;
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-ad0b
 };
 
 export default PerformanceOptimizer;

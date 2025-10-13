@@ -289,6 +289,18 @@ const ImprovedNavigation = () => {
           icon: <BarChart3 className="w-4 h-4" />
         },
         { 
+          label: 'Cloud Migration Enterprise', 
+          href: '/cloud-migration-enterprise',
+          description: 'Professional cloud migration',
+          icon: <Cloud className="w-4 h-4" />
+        },
+        { 
+          label: 'Cybersecurity Enterprise Suite', 
+          href: '/cybersecurity-enterprise-suite',
+          description: 'Advanced security solutions',
+          icon: <Shield className="w-4 h-4" />
+        },
+        { 
           label: 'View All IT Services', 
           href: '/services',
           description: 'Explore all IT solutions',
@@ -440,6 +452,24 @@ const ImprovedNavigation = () => {
           href: '/zion-ai-testing-automation',
           description: 'Automated testing',
           icon: <CheckCircle className="w-4 h-4" />
+        },
+        { 
+          label: 'Zion AI Voice Cloning Pro', 
+          href: '/zion-ai-voice-cloning-pro',
+          description: 'Advanced voice synthesis',
+          icon: <Settings className="w-4 h-4" />
+        },
+        { 
+          label: 'Zion AI Code Reviewer Pro', 
+          href: '/zion-ai-code-reviewer-pro',
+          description: 'AI-powered code analysis',
+          icon: <Code className="w-4 h-4" />
+        },
+        { 
+          label: 'Zion AI Project Manager Pro', 
+          href: '/zion-ai-project-manager-pro',
+          description: 'Intelligent project management',
+          icon: <Calendar className="w-4 h-4" />
         },
         { 
           label: 'View All Micro SAAS', 

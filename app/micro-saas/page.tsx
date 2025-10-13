@@ -1,5 +1,3 @@
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-ad0b
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -1618,17 +1616,20 @@ const MicroSaasPage = () => {
                 className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
                 Get Started Today
-=======
-                Start Free Trial
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-=======
+                Watch Demo
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default MicroSaasPage;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-ad0b
