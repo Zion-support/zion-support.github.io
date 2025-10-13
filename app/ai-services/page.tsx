@@ -98,6 +98,105 @@ const AIServices = () => {
       link: "/ai-data-analytics",
       features: ["Predictive modeling", "Anomaly detection", "Automated reporting", "Data visualization"],
       featured: false
+    },
+    {
+      title: "AI Document Processing",
+      description: "Intelligent document analysis and processing with OCR, data extraction, and automated classification",
+      icon: <Database className="w-8 h-8" />,
+      price: "From $89/month",
+      link: "/ai-document-processing",
+      features: ["OCR & text extraction", "Document classification", "Data validation", "Automated workflows"],
+      featured: false
+    },
+    {
+      title: "AI Predictive Analytics",
+      description: "Forecast future trends and outcomes with advanced machine learning models and statistical analysis",
+      icon: <TrendingUp className="w-8 h-8" />,
+      price: "From $249/month",
+      link: "/ai-predictive-analytics",
+      features: ["Time series forecasting", "Risk assessment", "Demand prediction", "Scenario modeling"],
+      featured: false
+    },
+    {
+      title: "AI Voice Assistant",
+      description: "Deploy intelligent voice assistants with natural language understanding and multi-platform integration",
+      icon: <MessageSquare className="w-8 h-8" />,
+      price: "From $129/month",
+      link: "/ai-voice-assistant",
+      features: ["Voice recognition", "Natural language processing", "Multi-language support", "Custom training"],
+      featured: false
+    },
+    {
+      title: "AI Workflow Automation",
+      description: "Automate complex business processes with AI-powered workflow orchestration and decision making",
+      icon: <Settings className="w-8 h-8" />,
+      price: "From $179/month",
+      link: "/ai-workflow-automation",
+      features: ["Process automation", "Smart routing", "Exception handling", "Performance monitoring"],
+      featured: false
+    },
+    {
+      title: "AI Cybersecurity",
+      description: "Advanced AI-powered cybersecurity with threat detection, behavioral analysis, and automated response",
+      icon: <Shield className="w-8 h-8" />,
+      price: "From $299/month",
+      link: "/ai-cybersecurity",
+      features: ["Threat detection", "Behavioral analysis", "Automated response", "Compliance monitoring"],
+      featured: true
+    },
+    {
+      title: "AI Computer Vision",
+      description: "Advanced image and video analysis with object detection, facial recognition, and visual insights",
+      icon: <Eye className="w-8 h-8" />,
+      price: "From $159/month",
+      link: "/ai-computer-vision",
+      features: ["Object detection", "Facial recognition", "Image classification", "Video analysis"],
+      featured: false
+    },
+    {
+      title: "AI Code Assistant",
+      description: "Intelligent coding assistant with code generation, debugging, and automated testing capabilities",
+      icon: <Settings className="w-8 h-8" />,
+      price: "From $99/month",
+      link: "/ai-code-assistant",
+      features: ["Code generation", "Bug detection", "Test automation", "Code optimization"],
+      featured: false
+    },
+    {
+      title: "AI Content Moderation",
+      description: "Automated content moderation with AI-powered detection of inappropriate content and spam",
+      icon: <Shield className="w-8 h-8" />,
+      price: "From $79/month",
+      link: "/ai-content-moderation",
+      features: ["Content filtering", "Spam detection", "Sentiment analysis", "Automated actions"],
+      featured: false
+    },
+    {
+      title: "AI Blockchain Analytics",
+      description: "Advanced blockchain analysis with transaction monitoring, fraud detection, and compliance reporting",
+      icon: <Database className="w-8 h-8" />,
+      price: "From $199/month",
+      link: "/ai-blockchain-analytics",
+      features: ["Transaction analysis", "Fraud detection", "Compliance reporting", "Risk assessment"],
+      featured: false
+    },
+    {
+      title: "AI Climate Solutions",
+      description: "AI-powered climate monitoring and prediction with environmental data analysis and sustainability insights",
+      icon: <Globe className="w-8 h-8" />,
+      price: "From $149/month",
+      link: "/ai-climate-solutions",
+      features: ["Climate modeling", "Environmental monitoring", "Sustainability analytics", "Risk assessment"],
+      featured: false
+    },
+    {
+      title: "AI Agricultural Intelligence",
+      description: "Smart farming solutions with crop monitoring, yield prediction, and automated agricultural management",
+      icon: <Globe className="w-8 h-8" />,
+      price: "From $179/month",
+      link: "/ai-agricultural-intelligence",
+      features: ["Crop monitoring", "Yield prediction", "Soil analysis", "Pest detection"],
+      featured: false
     }
   ];
 
@@ -156,7 +255,7 @@ const AIServices = () => {
   ];
 
   const stats = [
-    { number: "500+", label: "AI Models Deployed", icon: <Brain className="w-6 h-6" /> },
+    { number: "20+", label: "AI Services Available", icon: <Brain className="w-6 h-6" /> },
     { number: "10,000+", label: "Businesses Transformed", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
     { number: "50%", label: "Average Cost Reduction", icon: <TrendingUp className="w-6 h-6" /> }

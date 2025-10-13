@@ -386,26 +386,271 @@ export default function MicroSaasServices() {
         "Automated quality assurance",
         "Complete DevOps automation"
       ]
+    },
+    {
+      id: "zion-ai-hr-assistant-pro",
+      name: "Zion AI HR Assistant Pro",
+      description: "Comprehensive AI-powered human resources management with automated recruitment, employee analytics, and performance tracking. Streamline your HR operations.",
+      icon: <Users className="w-8 h-8" />,
+      price: "From $189/month",
+      originalPrice: "$379/month",
+      features: [
+        "AI-Powered Resume Screening",
+        "Automated Interview Scheduling",
+        "Employee Performance Analytics",
+        "Payroll Management & Processing",
+        "Benefits Administration",
+        "Compliance Monitoring & Reporting",
+        "Employee Onboarding Automation",
+        "Advanced HR Analytics Dashboard"
+      ],
+      category: "Human Resources",
+      popular: false,
+      link: "/zion-ai-hr-assistant-pro",
+      benefits: [
+        "60% faster recruitment process",
+        "40% reduction in HR administrative tasks",
+        "Automated compliance monitoring",
+        "Complete HR automation"
+      ]
+    },
+    {
+      id: "zion-ai-invoice-generator-pro",
+      name: "Zion AI Invoice Generator Pro",
+      description: "Intelligent invoice generation with automated billing, payment tracking, and financial reporting. Simplify your billing process with AI precision.",
+      icon: <Receipt className="w-8 h-8" />,
+      price: "From $79/month",
+      originalPrice: "$159/month",
+      features: [
+        "AI-Powered Invoice Generation",
+        "Automated Payment Reminders",
+        "Multi-Currency Support",
+        "Tax Calculation & Compliance",
+        "Client Portal & Self-Service",
+        "Payment Gateway Integration",
+        "Financial Reporting & Analytics",
+        "Custom Branding & Templates"
+      ],
+      category: "Financial Management",
+      popular: false,
+      link: "/zion-ai-invoice-generator-pro",
+      benefits: [
+        "80% reduction in billing time",
+        "95% accuracy in calculations",
+        "Automated payment tracking",
+        "Complete billing automation"
+      ]
+    },
+    {
+      id: "zion-ai-customer-insights-pro",
+      name: "Zion AI Customer Insights Pro",
+      description: "Advanced customer analytics with behavioral tracking, predictive modeling, and personalized recommendations. Understand your customers like never before.",
+      icon: <Heart className="w-8 h-8" />,
+      price: "From $149/month",
+      originalPrice: "$299/month",
+      features: [
+        "Customer Behavior Analytics",
+        "Predictive Customer Modeling",
+        "Personalized Recommendation Engine",
+        "Churn Prediction & Prevention",
+        "Customer Lifetime Value Analysis",
+        "Segmentation & Targeting",
+        "Real-time Customer Scoring",
+        "Integration with CRM Systems"
+      ],
+      category: "Customer Analytics",
+      popular: false,
+      link: "/zion-ai-customer-insights-pro",
+      benefits: [
+        "35% increase in customer retention",
+        "50% improvement in personalization",
+        "Predictive customer insights",
+        "Complete customer intelligence"
+      ]
+    },
+    {
+      id: "zion-ai-video-generator-pro",
+      name: "Zion AI Video Generator Pro",
+      description: "AI-powered video creation platform with automated editing, voice synthesis, and multi-format output. Create professional videos at scale.",
+      icon: <Monitor className="w-8 h-8" />,
+      price: "From $199/month",
+      originalPrice: "$399/month",
+      features: [
+        "AI Video Generation & Editing",
+        "Voice Synthesis & Narration",
+        "Multi-Format Export Options",
+        "Template Library & Customization",
+        "Brand Consistency Controls",
+        "Automated Subtitles & Captions",
+        "Social Media Optimization",
+        "Team Collaboration Tools"
+      ],
+      category: "Content Creation",
+      popular: false,
+      link: "/zion-ai-video-generator-pro",
+      benefits: [
+        "90% reduction in video production time",
+        "Professional quality output",
+        "Automated editing and optimization",
+        "Complete video automation"
+      ]
+    },
+    {
+      id: "zion-ai-accounting-suite-pro",
+      name: "Zion AI Accounting Suite Pro",
+      description: "Comprehensive AI-powered accounting solution with automated bookkeeping, tax preparation, and financial reporting. Manage your finances with precision.",
+      icon: <Receipt className="w-8 h-8" />,
+      price: "From $159/month",
+      originalPrice: "$319/month",
+      features: [
+        "AI-Powered Bookkeeping Automation",
+        "Automated Tax Preparation",
+        "Financial Statement Generation",
+        "Expense Categorization & Tracking",
+        "Bank Reconciliation",
+        "Compliance Monitoring",
+        "Multi-Entity Management",
+        "Advanced Financial Analytics"
+      ],
+      category: "Financial Management",
+      popular: false,
+      link: "/zion-ai-accounting-suite-pro",
+      benefits: [
+        "85% reduction in manual bookkeeping",
+        "99% accuracy in calculations",
+        "Automated tax compliance",
+        "Complete financial automation"
+      ]
+    },
+    {
+      id: "zion-ai-inventory-manager-pro",
+      name: "Zion AI Inventory Manager Pro",
+      description: "Advanced inventory management with demand forecasting, automated reordering, and supply chain optimization. Optimize your inventory operations.",
+      icon: <Package className="w-8 h-8" />,
+      price: "From $179/month",
+      originalPrice: "$359/month",
+      features: [
+        "AI Demand Forecasting",
+        "Automated Reorder Management",
+        "Multi-Location Inventory Tracking",
+        "Supplier Performance Analytics",
+        "Waste Reduction Optimization",
+        "Integration with ERP Systems",
+        "Real-time Inventory Alerts",
+        "Advanced Reporting & Analytics"
+      ],
+      category: "Inventory Management",
+      popular: false,
+      link: "/zion-ai-inventory-manager-pro",
+      benefits: [
+        "30% reduction in inventory costs",
+        "50% fewer stockouts",
+        "Automated supply chain optimization",
+        "Complete inventory intelligence"
+      ]
+    },
+    {
+      id: "zion-ai-cybersecurity-suite-pro",
+      name: "Zion AI Cybersecurity Suite Pro",
+      description: "Comprehensive cybersecurity solution with AI threat detection, automated response, and compliance monitoring. Protect your business with advanced security.",
+      icon: <Shield className="w-8 h-8" />,
+      price: "From $299/month",
+      originalPrice: "$599/month",
+      features: [
+        "AI-Powered Threat Detection",
+        "Automated Incident Response",
+        "24/7 Security Monitoring",
+        "Vulnerability Assessment",
+        "Compliance Reporting (SOC2, GDPR)",
+        "Security Training Modules",
+        "Multi-Factor Authentication",
+        "Advanced Firewall Management"
+      ],
+      category: "Cybersecurity",
+      popular: true,
+      link: "/zion-ai-cybersecurity-suite-pro",
+      benefits: [
+        "99.9% threat detection accuracy",
+        "60% faster incident response",
+        "Complete compliance coverage",
+        "Advanced security automation"
+      ]
+    },
+    {
+      id: "zion-ai-voice-assistant-pro",
+      name: "Zion AI Voice Assistant Pro",
+      description: "Intelligent voice assistant with natural language processing, task automation, and multi-platform integration. Enhance productivity with voice commands.",
+      icon: <Smartphone className="w-8 h-8" />,
+      price: "From $129/month",
+      originalPrice: "$259/month",
+      features: [
+        "Natural Language Processing",
+        "Voice Command Automation",
+        "Multi-Platform Integration",
+        "Custom Voice Training",
+        "Task Scheduling & Reminders",
+        "Calendar Management",
+        "Email & Communication Control",
+        "Advanced Analytics & Insights"
+      ],
+      category: "Productivity Tools",
+      popular: false,
+      link: "/zion-ai-voice-assistant-pro",
+      benefits: [
+        "40% increase in productivity",
+        "Hands-free task management",
+        "Natural language interaction",
+        "Complete voice automation"
+      ]
+    },
+    {
+      id: "zion-ai-business-intelligence-pro",
+      name: "Zion AI Business Intelligence Pro",
+      description: "Advanced business intelligence platform with predictive analytics, automated reporting, and data visualization. Make data-driven decisions with confidence.",
+      icon: <BarChart3 className="w-8 h-8" />,
+      price: "From $249/month",
+      originalPrice: "$499/month",
+      features: [
+        "Predictive Analytics & Modeling",
+        "Automated Report Generation",
+        "Advanced Data Visualization",
+        "Real-time Dashboard Creation",
+        "Custom KPI Tracking",
+        "Data Integration & ETL",
+        "Mobile App Access",
+        "White-label Solutions"
+      ],
+      category: "AI Analytics",
+      popular: true,
+      link: "/zion-ai-business-intelligence-pro",
+      benefits: [
+        "50% faster decision making",
+        "Real-time business insights",
+        "Predictive trend analysis",
+        "Complete business intelligence"
+      ]
     }
   ];
 
   const categories = [
-    { name: "AI Analytics", icon: <AnalyticsIcon className="w-5 h-5" />, count: 2 },
-    { name: "Cybersecurity", icon: <ProtectionIcon className="w-5 h-5" />, count: 1 },
+    { name: "AI Analytics", icon: <AnalyticsIcon className="w-5 h-5" />, count: 3 },
+    { name: "Cybersecurity", icon: <ProtectionIcon className="w-5 h-5" />, count: 2 },
     { name: "Cloud Storage", icon: <CloudIcon className="w-5 h-5" />, count: 1 },
     { name: "CRM & Sales", icon: <TeamIcon className="w-5 h-5" />, count: 1 },
     { name: "Marketing Automation", icon: <MarketingIcon className="w-5 h-5" />, count: 1 },
     { name: "Project Management", icon: <ScheduleIcon className="w-5 h-5" />, count: 1 },
     { name: "Email Management", icon: <EmailIcon className="w-5 h-5" />, count: 1 },
-    { name: "Inventory Management", icon: <Package className="w-5 h-5" />, count: 1 },
-    { name: "Customer Analytics", icon: <Heart className="w-5 h-5" />, count: 1 },
-    { name: "Financial Management", icon: <Receipt className="w-5 h-5" />, count: 1 },
-    { name: "Content Creation", icon: <DocumentIcon className="w-5 h-5" />, count: 1 },
-    { name: "DevOps & Automation", icon: <ConfigIcon className="w-5 h-5" />, count: 1 }
+    { name: "Inventory Management", icon: <Package className="w-5 h-5" />, count: 2 },
+    { name: "Customer Analytics", icon: <Heart className="w-5 h-5" />, count: 2 },
+    { name: "Financial Management", icon: <Receipt className="w-5 h-5" />, count: 3 },
+    { name: "Content Creation", icon: <DocumentIcon className="w-5 h-5" />, count: 2 },
+    { name: "DevOps & Automation", icon: <ConfigIcon className="w-5 h-5" />, count: 1 },
+    { name: "Human Resources", icon: <Users className="w-5 h-5" />, count: 1 },
+    { name: "Productivity Tools", icon: <Smartphone className="w-5 h-5" />, count: 1 }
   ];
 
   const stats = [
-    { number: "12+", label: "Micro SAAS Solutions", icon: <Rocket className="w-6 h-6" /> },
+    { number: "22+", label: "Micro SAAS Solutions", icon: <Rocket className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <SupportIcon className="w-6 h-6" /> },
     { number: "50%", label: "Average Cost Savings", icon: <TrendingUp className="w-6 h-6" /> }
