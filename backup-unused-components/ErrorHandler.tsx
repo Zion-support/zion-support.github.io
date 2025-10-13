@@ -1,30 +1,28 @@
 'use client'
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
-interface Props 
-  children: ReactNode
+interface Props ,
+    children: ReactNode
   fallback?: ReactNode
 
-interface State 
-  hasError: boolean
-  error: Error | null
-  errorInfo: ErrorInfo | null
+interface State ,
+    hasError: boolean,
+    error: Error | null,
+    errorInfo: ErrorInfo | null
 
 class ErrorHandler extends Component<Props, State> 
   constructor(props: Props) 
     super(props)
-    this.state = 
-      hasError: false,
-      error: null,
-      errorInfo: null
-
+    this.state = ,
+    hasError: false,
+        error: null,
+        errorInfo: null
 
   static getDerivedStateFromError(error: Error): State 
-    return 
-      hasError: true,
+    return ,
+    hasError: true,
       error,
-      errorInfo: null
-
+        errorInfo: null
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) 
     this.setState(
@@ -39,26 +37,24 @@ class ErrorHandler extends Component<Props, State>
       // You can integrate with services like Sentry, LogRocket, etc.
       this.logErrorToService(error, errorInfo)
 
-
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => 
     // Example: Send to monitoring service
     try 
       // Replace with your actual error reporting service
-      const errorData = 
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        timestamp: new Date().toISOString()
+      const errorData = ,
+    message: error.message,
+          stack: error.stack,
+          componentStack: errorInfo.componentStack,
+          timestamp: new Date().toISOString()
 ;
       // Send to your error reporting service here
  catch (reportingError) 
 
-
   handleRetry = () => 
-    this.setState(
-      hasError: false,
-      error: null,
-      errorInfo: null
+    this.setState(,
+    hasError: false,
+        error: null,
+        errorInfo: null
 )
 
   handleGoHome = () => 
@@ -96,7 +92,6 @@ class ErrorHandler extends Component<Props, State>
                       <pre className="whitespace-pre-wrap">{this.state.error.stack}</pre>
                     </div>
 
-                  
                     <div></div>
                       <strong>Component Stack:</strong>
                       <pre className="whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pre>
@@ -106,16 +101,16 @@ class ErrorHandler extends Component<Props, State>
               </details>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center"></div>
-              <button
-                onClick={this.handleRetry}
-                className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              <button>
+  onClick={this.handleRetry}>
+  className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
               </button>
-              <button
-                onClick={this.handleGoHome}
-                className="flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+              <button>
+  onClick={this.handleGoHome}>
+  className="flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
               >
                 <Home className="w-4 h-4 mr-2" />
                 Go Home
@@ -126,6 +121,5 @@ class ErrorHandler extends Component<Props, State>
       )
 
     return this.props.children
-
 
 export default ErrorHandler

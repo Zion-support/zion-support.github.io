@@ -1,24 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface ImageOptimizerProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-=======
-import React from 'react';
 
-interface ImageoptimizerProps {
->>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
-=======
+
 import React, { useState, useRef, useEffect } from 'react';
 
-interface ImageOptimizerProps {
-  src: string;
-  alt: string;
+interface ImageOptimizerProps {,
+    src: string;,
+    alt: string;
   width?: number;
   height?: number;
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
+
   className?: string;
   priority?: boolean;
   onLoad?: () => void;
@@ -72,9 +61,9 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
 
   if (hasError) {
     return (
-      <div 
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={{ width, height }}
+      <div >
+  className={`bg-gray-200 flex items-center justify-center ${className}`}>
+  style={{ width, height }}
       >
         <span className="text-gray-500 text-sm">Failed to load image</span>
       </div>
@@ -89,20 +78,18 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       {isInView && (
         <img
           src={src}
-          alt={alt}
+  alt={alt}
           width={width}
-          height={height}
-          loading={priority ? 'eager' : 'lazy'}
-          onLoad={handleLoad}
-          onError={handleError}
-          className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+  height={height}>
+  loading={priority ? 'eager' : 'lazy'}>
+  onLoad={handleLoad}>
+  onError={handleError}>
+  className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
         />
       )}
     </div>
   );
 };
-<<<<<<< HEAD
-=======
 
 export default ImageOptimizer;
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
+

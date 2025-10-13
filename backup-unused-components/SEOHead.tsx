@@ -29,15 +29,15 @@ const SEOHead: React.FC<SEOHeadProps> = (
   const structuredData = 
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
-    description: 'Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.',
-    address: 
+      name: 'Zion Tech Group',
+      url: 'https://ziontechgroup.com',
+      logo: 'https://ziontechgroup.com/logo.png',
+      description: 'Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.',
+      address: 
       '@type': 'PostalAddress',
-      addressCountry: 'US'
+        addressCountry: 'US'
 ,
-    sameAs: [
+      sameAs: [
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
       'https://github.com/ziontechgroup'

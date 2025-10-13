@@ -1,40 +1,39 @@
 import React from "react";
 import { TrendingUp, Users, Award, Zap } from "lucide-react";
-interface StatItem 
-  value: string;
-  label: string;
-  icon: React.ReactNode;
-  color: string;
+interface StatItem ,
+    value: string;,
+    label: string;,
+    icon: React.ReactNode;,
+    color: string;
 
 interface ContentStatisticsProps 
   stats?: StatItem[];
   className?: string;
 
 const ContentStatistics: React.FC<ContentStatisticsProps> = (
-  stats = [
-    
-      value: "500+",
-      label: "Happy Clients",
-      icon: <Users className="w-8 h-8" />,</Users>
-      color: "text-blue-400",
+  stats = [,
+    value: "500+",
+        label: "Happy Clients",
+        icon: <Users className="w-8 h-8" />,</Users>,
+    color: "text-blue-400",
 ,
-    
-      value: "99.9%",
-      label: "Uptime",
-      icon: <Zap className="w-8 h-8" />,</Zap>
-      color: "text-green-400",
+    ,
+    value: "99.9%",
+        label: "Uptime",
+        icon: <Zap className="w-8 h-8" />,</Zap>,
+    color: "text-green-400",
 ,
-    
-      value: "50+",
-      label: "Awards Won",
-      icon: <Award className="w-8 h-8" />,</Award>
-      color: "text-yellow-400",
+    ,
+    value: "50+",
+        label: "Awards Won",
+        icon: <Award className="w-8 h-8" />,</Award>,
+    color: "text-yellow-400",
 ,
-    
-      value: "40%",
-      label: "Cost Savings",
-      icon: <TrendingUp className="w-8 h-8" />,</TrendingUp>
-      color: "text-purple-400",
+    ,
+    value: "40%",
+        label: "Cost Savings",
+        icon: <TrendingUp className="w-8 h-8" />,</TrendingUp>,
+    color: "text-purple-400",
 ,
   ],
   className = "",

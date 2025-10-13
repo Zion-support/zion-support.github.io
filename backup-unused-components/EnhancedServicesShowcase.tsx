@@ -9,49 +9,48 @@ import
  from "lucide-react";
 import { Link } from "react-router-dom";
 const EnhancedServicesShowcase: React.FC = () => 
-  const services = [
-    
-      icon: Brain,
-      title: "AI Solutions",
-      description:
+  const services = [,
+    icon: Brain,
+        title: "AI Solutions",
+        description:
         "Cutting-edge artificial intelligence solutions to automate and optimize your business processes.",
-      features: [
+        features: [
         "Machine Learning",
         "Natural Language Processing",
         "Computer Vision",
         "Predictive Analytics",
       ],
 ,
-    
-      icon: Shield,
-      title: "Cybersecurity",
-      description:
+    ,
+    icon: Shield,
+        title: "Cybersecurity",
+        description:
         "Comprehensive security solutions to protect your business from cyber threats and data breaches.",
-      features: [
+        features: [
         "Security Audits",
         "Threat Detection",
         "Data Protection",
         "Compliance Management",
       ],
 ,
-    
-      icon: Zap,
-      title: "Cloud Infrastructure",
-      description:
+    ,
+    icon: Zap,
+        title: "Cloud Infrastructure",
+        description:
         "Scalable and secure cloud solutions to modernize your infrastructure and reduce costs.",
-      features: [
+        features: [
         "Cloud Migration",
         "Infrastructure as Code",
         "Auto-scaling",
         "Disaster Recovery",
       ],
 ,
-    
-      icon: Globe,
-      title: "Digital Transformation",
-      description:
+    ,
+    icon: Globe,
+        title: "Digital Transformation",
+        description:
         "Complete digital transformation services to modernize your business and stay competitive.",
-      features: [
+        features: [
         "Strategy Development",
         "Technology Integration",
         "Change Management",
@@ -73,9 +72,9 @@ const EnhancedServicesShowcase: React.FC = () =>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
           
-            <div
-              key={index}
-              className="cyber-card p-8 group hover:scale-105 transition-transform"
+            <div>
+  key={index}>
+  className="cyber-card p-8 group hover:scale-105 transition-transform"
             >
               <div className="flex items-center mb-4"></div>
                 <service.icon className="h-12 w-12 text-cyan-400 mr-4" />
@@ -90,9 +89,9 @@ const EnhancedServicesShowcase: React.FC = () =>
                 </h4>
                 <ul className="space-y-2"></ul>
                   
-                    <li
-                      key={featureIndex}
-                      className="flex items-center text-sm text-gray-300"
+                    <li>
+  key={featureIndex}>
+  className="flex items-center text-sm text-gray-300"
                     >
                       <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
                       {feature}
@@ -108,9 +107,9 @@ const EnhancedServicesShowcase: React.FC = () =>
 
         </div>
         <div className="text-center mt-16"></div>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          <Link>
+  to="/contact">
+  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
           >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />

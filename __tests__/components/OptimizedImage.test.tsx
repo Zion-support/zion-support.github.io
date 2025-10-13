@@ -3,8 +3,8 @@ import { render, screen, waitFor } from '@testing-library/react';
 import OptimizedImage from '../../app/components/OptimizedImage';
 
 // Mock framer-motion
-jest.mock('framer-motion', () => ({
-  motion: {
+jest.mock('framer-motion', () => ({,
+    motion: {,
     img: ({ children, ...props }: any) => <img {...props}>{children}</img>,
   },
 }));
@@ -13,18 +13,18 @@ jest.mock('framer-motion', () => ({
 global.IntersectionObserver = jest.fn().mockImplementation((callback) => {
   // Trigger the callback immediately to simulate intersection
   setTimeout(() => callback([{ isIntersecting: true }]), 0);
-  return {
+  return {,
     observe: jest.fn(),
-    unobserve: jest.fn(),
-    disconnect: jest.fn(),
+      unobserve: jest.fn(),
+      disconnect: jest.fn(),
   };
 });
 
 describe('OptimizedImage', () => {
-  const defaultProps = {
+  const defaultProps = {,
     src: 'https://example.com/image.jpg',
-    alt: 'Test image',
-    priority: true, // Always render immediately in tests
+      alt: 'Test image',
+      priority: true, // Always render immediately in tests
   };
 
   it('renders with basic props', () => {

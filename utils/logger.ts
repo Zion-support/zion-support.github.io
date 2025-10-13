@@ -4,11 +4,11 @@ export function logger(message: string, level: 'info' | 'warn' | 'error' = 'info
   console[level](message);
 }
 
-const LOG_LEVELS: LogLevel = {
-  ERROR: 'error',
-  WARN: 'warn',
-  INFO: 'info',
-  DEBUG: 'debug',
+const LOG_LEVELS: LogLevel = {,
+    ERROR: 'error',
+    WARN: 'warn',
+    INFO: 'info',
+    DEBUG: 'debug',
 };
 
 type LogLevelType = LogLevel[keyof LogLevel];
@@ -50,9 +50,9 @@ class Logger {
         level,
         message,
         args,
-        timestamp: new Date().toISOString(),
-        url: window.location.href,
-        userAgent: navigator.userAgent,
+          timestamp: new Date().toISOString(),
+          url: window.location.href,
+          userAgent: navigator.userAgent,
       });
 
       // Keep only the last 100 logs
@@ -95,17 +95,17 @@ class Logger {
 }
 
 const logger = new Logger();
-=======
+
 export const logger = {
-  // Logger implementation
-  info: (message: string) => {
+  // Logger implementation,
+    info: (message: string) => {
     console.log(`[INFO] ${message}`);
   },
-  error: (message: string) => {
+    error: (message: string) => {
     console.error(`[ERROR] ${message}`);
   },
-  warn: (message: string) => {
+    warn: (message: string) => {
     console.warn(`[WARN] ${message}`);
   }
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-bd18
+

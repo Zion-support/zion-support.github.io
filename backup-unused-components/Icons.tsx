@@ -2,8 +2,8 @@ export const Icon = (
   name,
   className = "",
   ...props
-: 
-  name: string;
+: ,
+    name: string;
   className?: string;
   [key: string]: any;
 ) => 

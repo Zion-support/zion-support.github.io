@@ -11,9 +11,9 @@ const Breadcrumb: React.FC = () =>
 
   const breadcrumbItems = [
     { name: 'Home', path: '/' },
-    ...pathSegments.map()segment, index) => (
-      name: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
-      path: '/' + pathSegments.slice(0, index + 1).join('/')
+    ...pathSegments.map()segment, index) => (,
+    name: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
+        path: '/' + pathSegments.slice(0, index + 1).join('/')
 ()
   ];
   return (
@@ -25,10 +25,9 @@ const Breadcrumb: React.FC = () =>
               
                 <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
 
-              
-                <Link
-                  to={item.path}
-                  className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors"
+                <Link>
+  to={item.path}>
+  className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors"
                 >
                   <Home className="w-4 h-4 mr-1" />
                   {item.name}
@@ -38,9 +37,9 @@ const Breadcrumb: React.FC = () =>
                   {item.name}
                 </span>
               ) : (
-                <Link
-                  to={item.path}
-                  className="text-gray-300 hover:text-cyan-400 transition-colors"
+                <Link>
+  to={item.path}>
+  className="text-gray-300 hover:text-cyan-400 transition-colors"
                 >
                   {item.name}
                 </Link>

@@ -5,12 +5,12 @@ interface EnhancedHeroProps
   title?: string;
   subtitle?: string;
   description?: string;
-  primaryCta?: 
-    text: string;
+  primaryCta?: ,
+    text: string;,
     href: string;
 ;
-  secondaryCta?: 
-    text: string;
+  secondaryCta?: ,
+    text: string;,
     href: string;
 ;
   benefits?: string[];
@@ -21,13 +21,13 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = (
   title = "Transform Your Business with AI",
   subtitle = "Leading Provider of AI Solutions",
   description = "Revolutionize your operations with cutting-edge artificial intelligence technology. Our advanced solutions deliver measurable results and drive unprecedented growth.",
-  primaryCta = 
+  primaryCta = ,
     text: "Get Started",
-    href: "/contact",
+      href: "/contact",
 ,
-  secondaryCta = 
+  secondaryCta = ,
     text: "Learn More",
-    href: "/about",
+      href: "/about",
 ,
   benefits = [
     "Advanced AI technology integration",
@@ -40,36 +40,35 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = (
   backgroundImage = "/api/placeholder/1920/1080",
   className = "",
 ) => 
-  const contactInfo = [
-    
-      icon: Phone,
-      title: "Call Us",
-      details: "+1 (555) 123-4567",
-      description: "Mon-Fri 9 AM-6 PM PST",
+  const contactInfo = [,
+    icon: Phone,
+        title: "Call Us",
+        details: "+1 (555) 123-4567",
+        description: "Mon-Fri 9 AM-6 PM PST",
 ,
-    
-      icon: Mail,
-      title: "Email Us",
-      details: "info@ziontechgroup.com",
-      description: "We respond within 24 hours",
+    ,
+    icon: Mail,
+        title: "Email Us",
+        details: "info@ziontechgroup.com",
+        description: "We respond within 24 hours",
 ,
-    
-      icon: MapPin,
-      title: "Visit Us",
-      details: "123 Tech Street, San Francisco, CA",
-      description: "Schedule a meeting",
+    ,
+    icon: MapPin,
+        title: "Visit Us",
+        details: "123 Tech Street, San Francisco, CA",
+        description: "Schedule a meeting",
 ,
   ];
   return (
-    <div
-      className="{`relative" min-h-screen flex items-center justify-center overflow-hidden ${className}`}
+    <div>
+  className="{`relative" min-h-screen flex items-center justify-center overflow-hidden ${className}`}
     >
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-            style="{}" backgroundImage: `url(${backgroundImage})` {}
+          <div>
+  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20">
+  style="{}" backgroundImage: `url(${backgroundImage})` {}
           />
 
       </div>
@@ -89,16 +88,16 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = (
             </div>
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4"></div>
-              <Link
-                to={primaryCta.href}
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+              <Link>
+  to={primaryCta.href}>
+  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
                 {primaryCta.text}
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
-                to={secondaryCta.href}
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              <Link>
+  to={secondaryCta.href}>
+  className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 {secondaryCta.text}
               </Link>

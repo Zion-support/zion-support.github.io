@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 
 import React from 'react';
 
@@ -8,13 +7,6 @@ interface CachemanagerProps {
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-const CacheManager: React.FC<CacheManagerProps> = ({ children }) => {
-  return <>{children}</>;
-};
-
-export default CacheManager;
-=======
 export default function Cachemanager({ className = '', children, ...props }: CachemanagerProps) {
   return (
     <div className={`cachemanager-component ${className}`} {...props}>
@@ -22,5 +14,4 @@ export default function Cachemanager({ className = '', children, ...props }: Cac
     </div>
   );
 }
->>>>>>> origin/main
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
+

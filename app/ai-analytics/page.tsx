@@ -1,66 +1,66 @@
-<<<<<<< HEAD
+
 const testimonials = [
-  {
+  {,
     name: "Sarah Johnson",
-    role: "CEO",
-    content: "Zion Tech Group has transformed our business with their AI solutions.",
-    avatar: "/api/placeholder/60/60",
-    rating: 5,
-    company: "TechCorp"
+      role: "CEO",
+      content: "Zion Tech Group has transformed our business with their AI solutions.",
+      avatar: "/api/placeholder/60/60",
+      rating: 5,
+      company: "TechCorp"
   },
-  {
+  {,
     name: "Michael Chen",
-    role: "CTO", 
+      role: "CTO", ,
     content: "The performance improvements are remarkable. Highly recommended!",
-    avatar: "/api/placeholder/60/60",
-    rating: 5,
-    company: "InnovateLabs"
+      avatar: "/api/placeholder/60/60",
+      rating: 5,
+      company: "InnovateLabs"
   },
-  {
+  {,
     name: "Emily Rodriguez",
-    role: "Product Manager",
-    content: "Outstanding support and cutting-edge technology solutions.",
-    avatar: "/api/placeholder/60/60",
-    rating: 5,
-    company: "FutureTech"
+      role: "Product Manager",
+      content: "Outstanding support and cutting-edge technology solutions.",
+      avatar: "/api/placeholder/60/60",
+      rating: 5,
+      company: "FutureTech"
   }
 export default function AiAnalytics() {
   const features = [
-    {
-      title: "Real-time Data Processing",
-      description: "Process and analyze data in real-time with our advanced AI algorithms that provide instant insights and actionable intelligence.",
-      icon: <Zap className="w-8 h-8" />,
-      benefits: ["Instant data processing", "Real-time dashboards", "Live monitoring", "Immediate alerts"]
+    {,
+    title: "Real-time Data Processing",
+        description: "Process and analyze data in real-time with our advanced AI algorithms that provide instant insights and actionable intelligence.",
+        icon: <Zap className="w-8 h-8" />,
+        benefits: ["Instant data processing", "Real-time dashboards", "Live monitoring", "Immediate alerts"]
     },
-    {
-      title: "Predictive Analytics",
-      description: "Leverage machine learning models to predict future trends, behaviors, and outcomes with high accuracy.",
-      icon: <Brain className="w-8 h-8" />,
-      benefits: ["Trend forecasting", "Behavior prediction", "Risk assessment", "Opportunity identification"]
+    {,
+    title: "Predictive Analytics",
+        description: "Leverage machine learning models to predict future trends, behaviors, and outcomes with high accuracy.",
+        icon: <Brain className="w-8 h-8" />,
+        benefits: ["Trend forecasting", "Behavior prediction", "Risk assessment", "Opportunity identification"]
     },
-    {
-      title: "Advanced Data Visualization",
-      description: "Transform complex data into intuitive, interactive visualizations that make insights accessible to everyone.",
-      icon: <BarChart3 className="w-8 h-8" />,
-      benefits: ["Interactive charts", "Custom dashboards", "Mobile-responsive", "Export capabilities"]
+    {,
+    title: "Advanced Data Visualization",
+        description: "Transform complex data into intuitive, interactive visualizations that make insights accessible to everyone.",
+        icon: <BarChart3 className="w-8 h-8" />,
+        benefits: ["Interactive charts", "Custom dashboards", "Mobile-responsive", "Export capabilities"]
     },
-    {
-      title: "Automated Insights Generation",
-      description: "AI automatically generates insights and recommendations based on your data patterns and business context.",
-      icon: <Lightbulb className="w-8 h-8" />,
-      benefits: ["Smart recommendations", "Pattern recognition", "Anomaly detection", "Automated reporting"]
+    {,
+    title: "Automated Insights Generation",
+        description: "AI automatically generates insights and recommendations based on your data patterns and business context.",
+        icon: <Lightbulb className="w-8 h-8" />,
+        benefits: ["Smart recommendations", "Pattern recognition", "Anomaly detection", "Automated reporting"]
     },
-    {
-      title: "Multi-source Data Integration",
-      description: "Connect and analyze data from multiple sources including databases, APIs, files, and cloud services.",
-      icon: <Database className="w-8 h-8" />,
-      benefits: ["100+ integrations", "Data transformation", "Real-time sync", "Unified data model"]
+    {,
+    title: "Multi-source Data Integration",
+        description: "Connect and analyze data from multiple sources including databases, APIs, files, and cloud services.",
+        icon: <Database className="w-8 h-8" />,
+        benefits: ["100+ integrations", "Data transformation", "Real-time sync", "Unified data model"]
     },
-    {
-      title: "Custom AI Models",
-      description: "Build and deploy custom machine learning models tailored to your specific business needs and data patterns.",
-      icon: <Settings className="w-8 h-8" />,
-      benefits: ["Custom model training", "Model deployment", "Performance monitoring", "Continuous learning"]
+    {,
+    title: "Custom AI Models",
+        description: "Build and deploy custom machine learning models tailored to your specific business needs and data patterns.",
+        icon: <Settings className="w-8 h-8" />,
+        benefits: ["Custom model training", "Model deployment", "Performance monitoring", "Continuous learning"]
     }
   const analyticsStats = [
     { number: "40%", label: "Faster Decision Making", icon: <Zap className="w-6 h-6" /> },
@@ -68,12 +68,12 @@ export default function AiAnalytics() {
     { number: "60%", label: "Cost Reduction", icon: <TrendingDown className="w-6 h-6" /> },
     { number: "24/7", label: "Automated Monitoring", icon: <Monitor className="w-6 h-6" /> }
   const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$299",
-      period: "month",
-      description: "Perfect for small businesses getting started with AI analytics",
-      features: [
+    {,
+    name: "Starter",
+        price: "$299",
+        period: "month",
+        description: "Perfect for small businesses getting started with AI analytics",
+        features: [
         "Up to 5 data sources",
         "Basic dashboards",
         "Standard reports",
@@ -81,14 +81,14 @@ export default function AiAnalytics() {
         "1 user account",
         "Basic AI models"
       ],
-      popular: false
+        popular: false
     },
-    {
-      name: "Professional",
-      price: "$599",
-      period: "month",
-      description: "Ideal for growing businesses with advanced analytics needs",
-      features: [
+    {,
+    name: "Professional",
+        price: "$599",
+        period: "month",
+        description: "Ideal for growing businesses with advanced analytics needs",
+        features: [
         "Up to 25 data sources",
         "Advanced dashboards",
         "Custom reports",
@@ -98,14 +98,14 @@ export default function AiAnalytics() {
         "API access",
         "Mobile app"
       ],
-      popular: true
+        popular: true
     },
-    {
-      name: "Enterprise",
-      price: "$999",
-      period: "month",
-      description: "Complete solution for large organizations",
-      features: [
+    {,
+    name: "Enterprise",
+        price: "$999",
+        period: "month",
+        description: "Complete solution for large organizations",
+        features: [
         "Unlimited data sources",
         "Custom dashboards",
         "Advanced AI features",
@@ -115,19 +115,19 @@ export default function AiAnalytics() {
         "White-label options",
         "On-premise deployment"
       ],
-      popular: false
+        popular: false
     }
   return (
     <>
       <Helmet>
         <title>AI Analytics - Advanced Business Intelligence Platform | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Transform your business with AI Analytics - advanced business intelligence platform with real-time processing, predictive analytics, and automated insights. Starting at $299/month."
+        <meta>
+  name="description">
+  content="Transform your business with AI Analytics - advanced business intelligence platform with real-time processing, predictive analytics, and automated insights. Starting at $299/month."
         />
-        <meta
-          name="keywords"
-          content="AI analytics, business intelligence, predictive analytics, data visualization, machine learning, real-time analytics, automated insights, data processing"
+        <meta>
+  name="keywords">
+  content="AI analytics, business intelligence, predictive analytics, data visualization, machine learning, real-time analytics, automated insights, data processing"
         />
         <link rel="canonical" href="https://ziontechgroup.com/ai-analytics" />
       </Helmet>
@@ -154,16 +154,16 @@ export default function AiAnalytics() {
                   predictive analytics, and automated intelligence that drives growth and efficiency.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <Link
-                    to="/contact"
-                    className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-blue-500/25 hover:scale-105"
+                  <Link>
+  to="/contact">
+  className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-blue-500/25 hover:scale-105"
                   >
                     Start Free Trial
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Link>
-                  <Link
-                    to="/demo"
-                    className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+                  <Link>
+  to="/demo">
+  className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
                   >
                     Watch Demo
                     <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
@@ -210,9 +210,9 @@ export default function AiAnalytics() {
                     </div>
                   </div>
                   <div className="mt-6">
-                    <Link
-                      to="/contact"
-                      className="w-full bg-gradient-to-r from-blue-500 to-cyan-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group"
+                    <Link>
+  to="/contact">
+  className="w-full bg-gradient-to-r from-blue-500 to-cyan-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group"
                     >
                       Get Started Now
                       <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -238,9 +238,9 @@ export default function AiAnalytics() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
+                <div>
+  key={index}>
+  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
                 >
                   <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
                     {feature.icon}
@@ -279,10 +279,10 @@ export default function AiAnalytics() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
-                <div
-                  key={index}
-                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
-                    plan.popular 
+                <div>
+  key={index}>
+  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${>
+  plan.popular 
                       ? 'border-blue-500/50 shadow-blue-500/25' 
                       : 'border-white/20 hover:border-blue-500/30'
                   }`}
@@ -310,10 +310,10 @@ export default function AiAnalytics() {
                       </div>
                     ))}
                   </div>
-                  <Link
-                    to="/contact"
-                    className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center group ${
-                      plan.popular
+                  <Link>
+  to="/contact">
+  className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center group ${>
+  plan.popular
                         ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700'
                         : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900'
                     }`}
@@ -341,9 +341,9 @@ export default function AiAnalytics() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
+                <div>
+  key={index}>
+  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
                 >
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating || 5)].map((_, i) => (
@@ -400,16 +400,16 @@ export default function AiAnalytics() {
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="group bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-blue-500/25 hover:scale-105"
+                <Link>
+  to="/contact">
+  className="group bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-blue-500/25 hover:scale-105"
                 >
                   Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link
-                  to="/demo"
-                  className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
+                <Link>
+  to="/demo">
+  className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
                 >
                   Schedule Demo
                 </Link>
@@ -419,90 +419,16 @@ export default function AiAnalytics() {
         </section>
       </div>
     </>
-=======
+
 import React from 'react';
 // Removed unused imports
 
-<<<<<<< HEAD
-import {
-  BarChart3,
-  Zap,
-  Shield,
-  Target,
-  Brain,
-  Users,
-  Globe,
-  Mail,
-  Phone,
-  Database,
-  Settings,
-  Sparkles,
-  Lightbulb,
-  CheckCircle,
-  TrendingDown,
-  Monitor
-} from "lucide-react";
-
-export default function AIAnalyticsPage() {
-  const analyticsStats = [
-    { number: "40%", label: "Faster Decision Making", icon: <Zap className="w-6 h-6" /> },
-    { number: "85%", label: "Prediction Accuracy", icon: <Brain className="w-6 h-6" /> },
-    { number: "60%", label: "Cost Reduction", icon: <TrendingDown className="w-6 h-6" /> },
-    { number: "24/7", label: "Automated Monitoring", icon: <Monitor className="w-6 h-6" /> }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "Data Scientist",
-      company: "TechCorp",
-      content: "Zion's AI analytics platform has revolutionized our data processing capabilities.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      role: "CTO",
-      company: "DataFlow Inc",
-      content: "The real-time insights and predictive analytics are game-changing for our business.",
-      rating: 5,
-      avatar: "MC"
-    }
-  ];
-
-  const features = [
-    {
-      title: "Real-time Data Processing",
-      description: "Process and analyze data in real-time with our advanced AI algorithms that provide instant insights and actionable intelligence.",
-      icon: <Zap className="w-8 h-8" />,
-      benefits: ["Instant data processing", "Real-time dashboards", "Live monitoring", "Immediate alerts"]
-    },
-    {
-      title: "Predictive Analytics",
-      description: "Leverage machine learning models to predict future trends, behaviors, and outcomes with high accuracy.",
-      icon: <Brain className="w-8 h-8" />,
-      benefits: ["Trend forecasting", "Behavior prediction", "Risk assessment", "Opportunity identification"]
-    },
-    {
-      title: "Advanced Data Visualization",
-      description: "Transform complex data into intuitive, interactive visualizations that make insights accessible to everyone.",
-      icon: <BarChart3 className="w-8 h-8" />,
-      benefits: ["Interactive charts", "Custom dashboards", "Mobile-responsive", "Export capabilities"]
-    }
-  ];
-
-}
-=======
 export default function AIAnalyticsPage() {
   return (
     <div>
       <h1>Page Content</h1>
     </div>
   );
-<<<<<<< HEAD
+
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
-=======
->>>>>>> origin/main
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
+

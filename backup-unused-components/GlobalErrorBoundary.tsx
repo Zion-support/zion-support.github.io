@@ -1,9 +1,9 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-interface Props 
-  children: ReactNode;
+interface Props ,
+    children: ReactNode;
 
-interface State 
-  hasError: boolean;
+interface State ,
+    hasError: boolean;
   error?: Error;
 
 class GlobalErrorBoundary extends Component<Props, State> 
@@ -22,7 +22,6 @@ class GlobalErrorBoundary extends Component<Props, State>
     if (process.env.NODE_ENV === 'production') 
       // Here you would typically send the error to a logging service
 
-
   render() 
     if (this.state.hasError) 
       return (
@@ -39,8 +38,8 @@ class GlobalErrorBoundary extends Component<Props, State>
             <p className="text-gray-300 mb-6"></p>
               We're experiencing technical difficulties. Please try again later.
             </p>
-            <button
-              onClick="{()" => window.location.reload()}
+            <button>
+  onClick="{()" => window.location.reload()}
               className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
             >
               Try Again
@@ -50,6 +49,5 @@ class GlobalErrorBoundary extends Component<Props, State>
       );
 
     return this.props.children;
-
 
 export default GlobalErrorBoundary;

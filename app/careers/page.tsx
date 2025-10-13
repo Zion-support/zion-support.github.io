@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-const CareersPage = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <EnhancedSEO
-        title="Careers - Zion Tech Group | Join Our Team"
-        description="Join Zion Tech Group and be part of the future of technology. Explore exciting career opportunities in AI, cybersecurity, and digital transformation."
-        keywords="careers, jobs, technology careers, AI jobs, cybersecurity jobs, software development"
-        canonical="https://ziontechgroup.com/careers"
-      />
-      <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Join Our Team
-=======
+
 import React from 'react';
 
 export default function Page() {
@@ -22,17 +8,15 @@ export default function Page() {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             Page
->>>>>>> origin/main
+
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             This page is under development. Please check back later.
           </p>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>
-=======
+
     </div>
   );
 }
->>>>>>> origin/main
+

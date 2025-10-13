@@ -1,8 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-interface AdvancedSEOProps 
-  title: string;
-  description: string;
+interface AdvancedSEOProps ,
+    title: string;,
+    description: string;
   keywords?: string;
   canonical?: string;
   ogTitle?: string;

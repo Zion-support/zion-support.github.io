@@ -27,16 +27,16 @@ const SEOHead: React.FC<SEOHeadProps> = (
   const defaultStructuredData = 
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Zion Tech Group",
-    url: "https://ziontechgroup.com",
-    logo: "https://ziontechgroup.com/logo.png",
-    description: description,
-    address: 
+      name: "Zion Tech Group",
+      url: "https://ziontechgroup.com",
+      logo: "https://ziontechgroup.com/logo.png",
+      description: description,
+      address: 
       "@type": "PostalAddress",
-      addressCountry: "US",
-      addressRegion: "Delaware",
+        addressCountry: "US",
+        addressRegion: "Delaware",
 ,
-    sameAs: [
+      sameAs: [
       "https://linkedin.com/company/ziontechgroup",
       "https://twitter.com/ziontechgroup",
     ],
@@ -53,9 +53,9 @@ const SEOHead: React.FC<SEOHeadProps> = (
       <meta property="og:description" content="{description}" />
       <meta property="og:image" content="{ogImage}" />
       <meta property="og:type" content="{ogType}" />
-      <meta
-        property="og:url"
-        content="{canonical" || "https://ziontechgroup.com"}
+      <meta>
+  property="og:url">
+  content="{canonical" || "https://ziontechgroup.com"}
       />
       {/* Twitter Card */}
       <meta name="twitter:card" content="{twitterCard}" />
@@ -70,20 +70,20 @@ const SEOHead: React.FC<SEOHeadProps> = (
         {JSON.stringify(finalStructuredData)}
       </script>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossOrigin="anonymous"
+      <link>
+  rel="preconnect">
+  href="https://fonts.gstatic.com">
+  crossOrigin="anonymous"
       />
       <script type="application/ld+json"></script>
         
           "@context": "https://schema.org",
           "@type": "WebSite",
-          name: "Zion Tech Group",
-          url: "https://ziontechgroup.com",
-          potentialAction: 
+            name: "Zion Tech Group",
+            url: "https://ziontechgroup.com",
+            potentialAction: 
             "@type": "SearchAction",
-            target: "https://ziontechgroup.com/search?q={search_term_string}",
+              target: "https://ziontechgroup.com/search?q={search_term_string}",
             "query-input": "required name=search_term_string",
 ,
 

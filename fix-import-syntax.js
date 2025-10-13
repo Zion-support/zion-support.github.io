@@ -43,10 +43,10 @@ function fixImportSyntax(filePath) {
   }
 }
 
-// Function to recursively find all TypeScript files
-function findFiles(dir, fileList = []) {
+// Function to recursively find all TypeScript files>
+  function findFiles(dir, fileList = []) {>
   const files = fs.readdirSync(dir);
-  
+  >
   files.forEach(file => {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);

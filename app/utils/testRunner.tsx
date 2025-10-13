@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-interface TestrunnerxProps {
-}
-const Testrunnerx: React.FC<TestrunnerxProps> = ({ className = "" }) => {
-  return (
-    <div className={className}>
-      <h2>Testrunnerx</h2>
-    </div>
-=======
+
 import React from 'react';
 
 interface TestrunnerProps {
@@ -21,4 +13,4 @@ export default function Testrunner({ className = '', children, ...props }: Testr
     </div>
   );
 }
->>>>>>> origin/main
+

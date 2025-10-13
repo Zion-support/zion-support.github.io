@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-const AIServicesPage = () => {
-=======
+
 import React from 'react';
 
-<<<<<<< HEAD
-export default function AIServices() {
-=======
 export default function Page() {
->>>>>>> origin/main
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -48,9 +42,7 @@ export default function Page() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-}
-=======
+
   );
 }
->>>>>>> origin/main
+

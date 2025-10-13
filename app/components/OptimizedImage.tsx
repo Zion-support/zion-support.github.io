@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-interface OptimizedImageProps {
-  src: string;
-  alt: string;
+interface OptimizedImageProps {,
+    src: string;,
+    alt: string;
   width?: number;
   height?: number;
   className?: string;
@@ -62,9 +62,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   if (hasError) {
     return (
-      <div 
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={{ width, height }}
+      <div >
+  className={`bg-gray-200 flex items-center justify-center ${className}`}>
+  style={{ width, height }}
       >
         <span className="text-gray-500 text-sm">Failed to load image</span>
       </div>
@@ -79,16 +79,16 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       {isInView && (
         <motion.img
           src={src}
-          alt={alt}
+  alt={alt}
           width={width}
-          height={height}
+  height={height}
           loading={priority ? 'eager' : 'lazy'}
-          onLoad={handleLoad}
-          onError={handleError}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: isLoaded ? 1 : 0 }}
-          transition={{ duration: 0.3 }}
-          className="w-full h-full object-cover"
+  onLoad={handleLoad}
+          onError={handleError}>
+  initial={{ opacity: 0 }}>
+  animate={{ opacity: isLoaded ? 1 : 0 }}>
+  transition={{ duration: 0.3 }}>
+  className="w-full h-full object-cover"
         />
       )}
     </div>

@@ -1,15 +1,9 @@
-<<<<<<< HEAD
 
-export default function UtilsPage() {
-=======
-<<<<<<< HEAD
-export default function UtilsPage() {
-=======
+
 import React from 'react';
 
 export default function link() {
->>>>>>> origin/main
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
@@ -22,11 +16,8 @@ export default function link() {
           </p>
         </div>
       </div>
-<<<<<<< HEAD
-    </>
-}
-=======
+
     </div>
   );
 }
->>>>>>> origin/main
+

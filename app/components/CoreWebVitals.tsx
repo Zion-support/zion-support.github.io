@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-const CoreWebVitals: React.FC = () => {
-=======
+
 import React from 'react';
 
 interface CorewebvitalsProps {
@@ -15,4 +13,4 @@ export default function Corewebvitals({ className = '', children, ...props }: Co
     </div>
   );
 }
->>>>>>> origin/main
+

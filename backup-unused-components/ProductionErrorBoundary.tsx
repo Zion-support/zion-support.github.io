@@ -1,11 +1,11 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
-interface Props 
-  children: ReactNode;
+interface Props ,
+    children: ReactNode;
   fallback?: ReactNode;
 
-interface State 
-  hasError: boolean;
+interface State ,
+    hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
   errorId?: string;
@@ -17,10 +17,10 @@ class ProductionErrorBoundary extends Component<Props, State>
 
   static getDerivedStateFromError(error: Error): State 
     // Update state so the next render will show the fallback UI
-    return 
-      hasError: true, 
+    return ,
+    hasError: true, 
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+        errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
 ;
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) 
@@ -28,7 +28,7 @@ class ProductionErrorBoundary extends Component<Props, State>
     this.setState(
       error,
       errorInfo,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+        errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
 );
     // Log to console in development
     if (process.env.NODE_ENV === 'development') 
@@ -37,28 +37,27 @@ class ProductionErrorBoundary extends Component<Props, State>
     if (process.env.NODE_ENV === 'production') 
       this.logErrorToService(error, errorInfo);
 
-
   private logErrorToService = async (error: Error, errorInfo: ErrorInfo) => 
     try 
-      const errorData = 
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        errorId: this.state.errorId,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href,
-        userId: 'anonymous', // You would get this from your auth context
-        sessionId: this.getSessionId(),
+      const errorData = ,
+    message: error.message,
+          stack: error.stack,
+          componentStack: errorInfo.componentStack,
+          errorId: this.state.errorId,
+          timestamp: new Date().toISOString(),
+          userAgent: navigator.userAgent,
+          url: window.location.href,
+          userId: 'anonymous', // You would get this from your auth context,
+    sessionId: this.getSessionId(),
 ;
       // Send to your error reporting service
       // Example: Sentry, LogRocket, Bugsnag, etc.
-      await fetch('/api/errors', 
-        method: 'POST',
-        headers: 
+      await fetch('/api/errors', ,
+    method: 'POST',
+          headers: 
           'Content-Type': 'application/json',
 ,
-        body: JSON.stringify(errorData),
+          body: JSON.stringify(errorData),
 );
  catch (reportingError) 
       // Fallback: log to console if reporting fails
@@ -83,12 +82,12 @@ class ProductionErrorBoundary extends Component<Props, State>
     window.location.href = '/';
 ;
   private handleReportError = () => 
-    const errorDetails = 
-      errorId: this.state.errorId,
-      message: this.state.error?.message,
-      stack: this.state.error?.stack,
-      url: window.location.href,
-      timestamp: new Date().toISOString(),
+    const errorDetails = ,
+    errorId: this.state.errorId,
+        message: this.state.error?.message,
+        stack: this.state.error?.stack,
+        url: window.location.href,
+        timestamp: new Date().toISOString(),
 ;
     // Create mailto link with error details
     const subject = `Error Report - ${this.state.errorId}`;
@@ -133,30 +132,30 @@ class ProductionErrorBoundary extends Component<Props, State>
               </details>
 
             <div className="space-y-3"></div>
-              <button
-                onClick={this.handleRetry}
-                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
+              <button>
+  onClick={this.handleRetry}>
+  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <RefreshCw className="w-5 h-5" />
                 <span>Try Again</span>
               </button>
-              <button
-                onClick={this.handleReload}
-                className="w-full bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2"
+              <button>
+  onClick={this.handleReload}>
+  className="w-full bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <RefreshCw className="w-5 h-5" />
                 <span>Reload Page</span>
               </button>
-              <button
-                onClick={this.handleGoHome}
-                className="w-full bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2"
+              <button>
+  onClick={this.handleGoHome}>
+  className="w-full bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <Home className="w-5 h-5" />
                 <span>Go Home</span>
               </button>
-              <button
-                onClick={this.handleReportError}
-                className="w-full bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2"
+              <button>
+  onClick={this.handleReportError}>
+  className="w-full bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <Mail className="w-5 h-5" />
                 <span>Report Error</span>
@@ -172,6 +171,5 @@ class ProductionErrorBoundary extends Component<Props, State>
       );
 
     return this.props.children;
-
 
 export default ProductionErrorBoundary;

@@ -1,20 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
-=======
+
+
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
 
-interface Props {
-  children: ReactNode;
+interface Props {,
+    children: ReactNode;
   fallback?: ReactNode;
 }
 
-interface State {
-  hasError: boolean;
+interface State {,
+    hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
 }
@@ -26,8 +21,8 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return {
-      hasError: true,
+    return {,
+    hasError: true,
       error
     };
   }
@@ -72,16 +67,16 @@ class ErrorBoundary extends Component<Props, State> {
               We're sorry, but something unexpected happened. Please try again.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={this.handleRetry}
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
+              <button>
+  onClick={this.handleRetry}>
+  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
               >
                 <RefreshCw className="w-4 h-4 mr-2 group-hover:rotate-180 transition-transform duration-300" />
                 Try Again
               </button>
-              <button
-                onClick={this.handleGoHome}
-                className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
+              <button>
+  onClick={this.handleGoHome}>
+  className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
               >
                 <Home className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform duration-300" />
                 Go Home
