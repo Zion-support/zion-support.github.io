@@ -1,26 +1,15 @@
-// DataValidator utility functions
+// dataValidator - Validation utilities
 
-export class DataValidator {
-  private config: any;
-
-  constructor(config: any = {}) {
-    this.config = {
-      enabled: true,
-      ...config
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('DataValidator initialized');
-    }
-  }
-
-  // Add your utility methods here
-  public process(data: any): any {
-    return data;
-  }
+export function validateEmail(email: string): boolean {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
 }
 
-export const datavalidatorInstance = new DataValidator();
-export default datavalidatorInstance;
+export function validatePhone(phone: string): boolean {
+  const phoneRegex = /^\+?[1-9]\d{1,14}$/;
+  return phoneRegex.test(phone);
+}
+
+export function validateRequired(value: any): boolean {
+  return value !== null && value !== undefined && value !== '';
+}

@@ -1,38 +1,31 @@
-// Metadata utility functions
+// Metadata configuration
 
-export const siteMetadata = {
-  title: "Zion Tech Group - Advanced AI and IT Solutions",
-  description: "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
-  keywords: "AI solutions, IT services, digital transformation, business automation, technology consulting",
-  author: "Zion Tech Group",
+export const siteConfig = {
+  name: "Zion Tech Group",
+  description: "Advanced AI and IT Solutions",
   url: "https://ziontechgroup.com",
-  image: "https://ziontechgroup.com/og-image.jpg",
-  twitter: "@ziontechgroup",
-  linkedin: "https://linkedin.com/company/ziontechgroup",
-};
-
-export const defaultMetadata = {
-  title: siteMetadata.title,
-  description: siteMetadata.description,
-  keywords: siteMetadata.keywords,
-  openGraph: {
-    title: siteMetadata.title,
-    description: siteMetadata.description,
-    url: siteMetadata.url,
-    image: siteMetadata.image,
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteMetadata.title,
-    description: siteMetadata.description,
-    image: siteMetadata.image,
+  ogImage: "https://ziontechgroup.com/og-image.jpg",
+  links: {
+    twitter: "https://twitter.com/ziontechgroup",
+    github: "https://github.com/ziontechgroup",
   },
 };
 
 export const metadata = {
-  title: 'Zion - AI-Powered Technology Solutions',
-  description: 'Leading provider of AI-powered technology solutions',
+  title: siteConfig.name,
+  description: siteConfig.description,
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteConfig.url,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [siteConfig.ogImage],
+  },
 };
-
-export default siteMetadata;

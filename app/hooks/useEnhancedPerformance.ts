@@ -1,66 +1,27 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 
-interface PerformanceData {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  errorCount: number;
-}
-
-interface UseEnhancedPerformanceReturn {
-  data: PerformanceData | null;
-  loading: boolean;
-  error: string | null;
-  fetchData: () => Promise<void>;
-  processData: (input: any) => void;
-}
-
-export function useEnhancedPerformance(): UseEnhancedPerformanceReturn {
-  const [data, setData] = useState<PerformanceData | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-  const fetchData = useCallback(async () => {
-    setLoading(true);
-    try {
-      // Simulate performance data collection
-      const performanceData: PerformanceData = {
-        loadTime: performance.now(),
-        renderTime: 0,
-        memoryUsage: (performance as any).memory?.usedJSHeapSize || 0,
-        errorCount: 0
-      };
-      setData(performanceData);
-      setError(null);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred');
-    } finally {
-      setLoading(false);
-    }
-  }, []);
-
-  const processData = useCallback((input: any) => {
-    try {
-      setLoading(true);
-      // Process data logic here
-      setData(input);
-      setError(null);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "An error occurred");
-    } finally {
-      setLoading(false);
-    }
-  }, []);
+export function useEnhancedPerformance() {
+  const [performance, setPerformance] = useState({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0
+  });
 
   useEffect(() => {
-    fetchData();
-  }, [fetchData]);
+    // Basic performance monitoring
+    const startTime = window.performance.now();
+    
+    const measurePerformance = () => {
+      const endTime = window.performance.now();
+      setPerformance({
+        loadTime: endTime - startTime,
+        renderTime: endTime - startTime,
+        memoryUsage: (window.performance as any).memory?.usedJSHeapSize || 0
+      });
+    };
 
-  return {
-    data,
-    loading,
-    error,
-    fetchData,
-    processData
-  };
+    measurePerformance();
+  }, []);
+
+  return performance;
 }

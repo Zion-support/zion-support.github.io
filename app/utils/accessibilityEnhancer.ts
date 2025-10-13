@@ -1,26 +1,29 @@
-// AccessibilityEnhancer utility functions
+// accessibilityEnhancer - Accessibility utilities
 
-export class AccessibilityEnhancer {
-  private config: any;
-
-  constructor(config: any = {}) {
-    this.config = {
-      enabled: true,
-      ...config
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('AccessibilityEnhancer initialized');
-    }
-  }
-
-  // Add your utility methods here
-  public process(data: any): any {
-    return data;
-  }
+export interface AccessibilityIssue {
+  type: 'error' | 'warning' | 'info';
+  message: string;
+  element?: HTMLElement;
 }
 
-export const accessibilityenhancerInstance = new AccessibilityEnhancer();
-export default accessibilityenhancerInstance;
+export function checkAccessibility(): AccessibilityIssue[] {
+  const issues: AccessibilityIssue[] = [];
+  
+  // Check for missing alt text on images
+  const images = document.querySelectorAll('img');
+  images.forEach((img) => {
+    if (!img.alt) {
+      issues.push({
+        type: 'error',
+        message: 'Image missing alt text',
+        element: img
+      });
+    }
+  });
+  
+  return issues;
+}
+
+export function enhanceAccessibility(): void {
+  console.log('Enhancing accessibility...');
+}

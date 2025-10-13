@@ -1,26 +1,22 @@
-// PerformanceOptimizations utility functions
+// performanceOptimizations - Performance utilities
 
-export class PerformanceOptimizations {
-  private config: any;
-
-  constructor(config: any = {}) {
-    this.config = {
-      enabled: true,
-      ...config
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('PerformanceOptimizations initialized');
-    }
-  }
-
-  // Add your utility methods here
-  public process(data: any): any {
-    return data;
-  }
+export interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
 }
 
-export const performanceoptimizationsInstance = new PerformanceOptimizations();
-export default performanceoptimizationsInstance;
+export function measurePerformance(): PerformanceMetrics {
+  const startTime = performance.now();
+  const endTime = performance.now();
+  
+  return {
+    loadTime: endTime - startTime,
+    renderTime: endTime - startTime,
+    memoryUsage: (performance as any).memory?.usedJSHeapSize || 0
+  };
+}
+
+export function optimizePerformance(): void {
+  console.log('Optimizing performance...');
+}

@@ -1,26 +1,28 @@
-// AdvancedCaching utility functions
+// advancedCaching - Caching utilities
 
-export class AdvancedCaching {
-  private config: any;
-
-  constructor(config: any = {}) {
-    this.config = {
-      enabled: true,
-      ...config
-    };
+export class CacheManager {
+  private cache = new Map<string, any>();
+  
+  set(key: string, value: any, ttl?: number): void {
+    this.cache.set(key, {
+      value,
+      expires: ttl ? Date.now() + ttl : null
+    });
   }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('AdvancedCaching initialized');
+  
+  get(key: string): any {
+    const item = this.cache.get(key);
+    if (!item) return null;
+    
+    if (item.expires && Date.now() > item.expires) {
+      this.cache.delete(key);
+      return null;
     }
+    
+    return item.value;
   }
-
-  // Add your utility methods here
-  public process(data: any): any {
-    return data;
+  
+  clear(): void {
+    this.cache.clear();
   }
 }
-
-export const advancedcachingInstance = new AdvancedCaching();
-export default advancedcachingInstance;

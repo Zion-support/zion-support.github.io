@@ -1,26 +1,27 @@
-// Logger utility functions
+// logger - Logging utilities
 
-export class Logger {
-  private config: any;
-
-  constructor(config: any = {}) {
-    this.config = {
-      enabled: true,
-      ...config
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('Logger initialized');
-    }
-  }
-
-  // Add your utility methods here
-  public process(data: any): any {
-    return data;
-  }
+export enum LogLevel {
+  DEBUG = 'debug',
+  INFO = 'info',
+  WARN = 'warn',
+  ERROR = 'error'
 }
 
-export const loggerInstance = new Logger();
-export default loggerInstance;
+export class Logger {
+  private level: LogLevel;
+  
+  constructor(level: LogLevel = LogLevel.INFO) {
+    this.level = level;
+  }
+  
+  log(level: LogLevel, message: string, ...args: any[]): void {
+    if (this.shouldLog(level)) {
+      console[level](`[${level.toUpperCase()}] ${message}`, ...args);
+    }
+  }
+  
+  private shouldLog(level: LogLevel): boolean {
+    const levels = [LogLevel.DEBUG, LogLevel.INFO, LogLevel.WARN, LogLevel.ERROR];
+    return levels.indexOf(level) >= levels.indexOf(this.level);
+  }
+}

@@ -1,60 +1,31 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-export default function PagePage() {
+export default function Page() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
+    <div className="min-h-screen bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold mb-8">
+          Page
+        </h1>
+        <div className="prose prose-invert max-w-none">
+          <p className="text-lg mb-6">
+            Welcome to our page page. This page is currently under development.
           </p>
-        </div>
-=======
-export default function AccessibilityPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>Accessibility - Zion Tech Group</title>
-        <meta name="description" content="Accessibility information for Zion Tech Group website" />
-      </Helmet>
-
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Accessibility
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            We are committed to making our website accessible to all users.
-          </p>
-        </div>
-
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-lg shadow-md p-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Our Commitment</h2>
-            <p className="text-gray-600 mb-6">
-              We strive to ensure that our website is accessible to all users, including those with disabilities.
-            </p>
-            
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Accessibility Features</h2>
-            <ul className="list-disc list-inside text-gray-600 space-y-2">
-              <li>Keyboard navigation support</li>
-              <li>Screen reader compatibility</li>
-              <li>High contrast mode</li>
-              <li>Text size adjustment</li>
-            </ul>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h2 className="text-xl font-semibold mb-4">Feature 1</h2>
+              <p>Description of feature 1</p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h2 className="text-xl font-semibold mb-4">Feature 2</h2>
+              <p>Description of feature 2</p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h2 className="text-xl font-semibold mb-4">Feature 3</h2>
+              <p>Description of feature 3</p>
+            </div>
           </div>
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-5de4
       </div>
     </div>
   );

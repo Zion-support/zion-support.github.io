@@ -1,26 +1,15 @@
-// AnalyticsTracker utility functions
+// analyticsTracker - Analytics utilities
 
-export class AnalyticsTracker {
-  private config: any;
-
-  constructor(config: any = {}) {
-    this.config = {
-      enabled: true,
-      ...config
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('AnalyticsTracker initialized');
-    }
-  }
-
-  // Add your utility methods here
-  public process(data: any): any {
-    return data;
-  }
+export interface AnalyticsEvent {
+  name: string;
+  properties: Record<string, any>;
+  timestamp: number;
 }
 
-export const analyticstrackerInstance = new AnalyticsTracker();
-export default analyticstrackerInstance;
+export function trackEvent(event: AnalyticsEvent): void {
+  console.log('Tracking event:', event);
+}
+
+export function trackPageView(page: string): void {
+  console.log('Tracking page view:', page);
+}

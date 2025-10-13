@@ -1,26 +1,39 @@
-// ApiCache utility functions
+// apiCache - API utilities
 
-export class ApiCache {
-  private config: any;
-
-  constructor(config: any = {}) {
-    this.config = {
-      enabled: true,
-      ...config
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('ApiCache initialized');
-    }
-  }
-
-  // Add your utility methods here
-  public process(data: any): any {
-    return data;
-  }
+export interface ApiResponse<T = any> {
+  data: T;
+  status: number;
+  message?: string;
 }
 
-export const apicacheInstance = new ApiCache();
-export default apicacheInstance;
+export class ApiClient {
+  private baseUrl: string;
+  
+  constructor(baseUrl: string) {
+    this.baseUrl = baseUrl;
+  }
+  
+  async get<T>(endpoint: string): Promise<ApiResponse<T>> {
+    const response = await fetch(`${this.baseUrl}${endpoint}`);
+    const data = await response.json();
+    return {
+      data,
+      status: response.status
+    };
+  }
+  
+  async post<T>(endpoint: string, body: any): Promise<ApiResponse<T>> {
+    const response = await fetch(`${this.baseUrl}${endpoint}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    });
+    const data = await response.json();
+    return {
+      data,
+      status: response.status
+    };
+  }
+}

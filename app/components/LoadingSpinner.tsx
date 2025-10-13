@@ -1,34 +1,32 @@
 import React from 'react';
 
-interface LoadingSpinnerProps {
-<<<<<<< HEAD
-=======
-  size?: 'sm' | 'md' | 'lg';
->>>>>>> cursor/fix-errors-and-merge-to-main-5de4
-  className?: string;
-  children?: React.ReactNode;
-}
-
-<<<<<<< HEAD
-export default function LoadingSpinner({ className = '', children }: LoadingSpinnerProps) {
+export default function Loadingspinner() {
   return (
-    <div className={`${className}`}>
-      {children}
-=======
-export default function LoadingSpinner({ 
-  size = 'md', 
-  className = '' 
-}: LoadingSpinnerProps) {
-  const sizeClasses = {
-    sm: 'h-4 w-4',
-    md: 'h-8 w-8',
-    lg: 'h-12 w-12'
-  };
-
-  return (
-    <div className={`flex items-center justify-center ${className}`}>
-      <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 ${sizeClasses[size]}`}></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-5de4
+    <div className="min-h-screen bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold mb-8">
+          Loadingspinner
+        </h1>
+        <div className="prose prose-invert max-w-none">
+          <p className="text-lg mb-6">
+            Welcome to our LoadingSpinner page. This page is currently under development.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h2 className="text-xl font-semibold mb-4">Feature 1</h2>
+              <p>Description of feature 1</p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h2 className="text-xl font-semibold mb-4">Feature 2</h2>
+              <p>Description of feature 2</p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h2 className="text-xl font-semibold mb-4">Feature 3</h2>
+              <p>Description of feature 3</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

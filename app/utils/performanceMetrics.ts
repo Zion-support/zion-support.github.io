@@ -1,26 +1,22 @@
-// PerformanceMetrics utility functions
+// performanceMetrics - Performance utilities
 
-export class PerformanceMetrics {
-  private config: any;
-
-  constructor(config: any = {}) {
-    this.config = {
-      enabled: true,
-      ...config
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('PerformanceMetrics initialized');
-    }
-  }
-
-  // Add your utility methods here
-  public process(data: any): any {
-    return data;
-  }
+export interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
 }
 
-export const performancemetricsInstance = new PerformanceMetrics();
-export default performancemetricsInstance;
+export function measurePerformance(): PerformanceMetrics {
+  const startTime = performance.now();
+  const endTime = performance.now();
+  
+  return {
+    loadTime: endTime - startTime,
+    renderTime: endTime - startTime,
+    memoryUsage: (performance as any).memory?.usedJSHeapSize || 0
+  };
+}
+
+export function optimizePerformance(): void {
+  console.log('Optimizing performance...');
+}

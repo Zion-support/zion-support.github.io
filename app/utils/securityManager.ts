@@ -1,26 +1,13 @@
-// SecurityManager utility functions
+// securityManager - Security utilities
 
-export class SecurityManager {
-  private config: any;
-
-  constructor(config: any = {}) {
-    this.config = {
-      enabled: true,
-      ...config
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('SecurityManager initialized');
-    }
-  }
-
-  // Add your utility methods here
-  public process(data: any): any {
-    return data;
-  }
+export function sanitizeInput(input: string): string {
+  return input.replace(/[<>]/g, '');
 }
 
-export const securitymanagerInstance = new SecurityManager();
-export default securitymanagerInstance;
+export function validateInput(input: string): boolean {
+  return input.length > 0 && input.length < 1000;
+}
+
+export function generateToken(): string {
+  return Math.random().toString(36).substring(2);
+}

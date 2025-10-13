@@ -1,26 +1,16 @@
-// Monitoring utility functions
+// monitoring - Utility functions
 
-export class Monitoring {
-  private config: any;
-
-  constructor(config: any = {}) {
-    this.config = {
-      enabled: true,
-      ...config
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('Monitoring initialized');
-    }
-  }
-
-  // Add your utility methods here
-  public process(data: any): any {
-    return data;
-  }
+export function initializemonitoring(): void {
+  console.log('Initializing monitoring');
 }
 
-export const monitoringInstance = new Monitoring();
-export default monitoringInstance;
+export function cleanupmonitoring(): void {
+  console.log('Cleaning up monitoring');
+}
+
+export function getmonitoringConfig(): Record<string, any> {
+  return {
+    enabled: true,
+    version: '1.0.0'
+  };
+}
