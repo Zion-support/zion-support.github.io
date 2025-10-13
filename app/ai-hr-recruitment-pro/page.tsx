@@ -1,3 +1,7 @@
+"use client";
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import { 
   Users, 
   Target, 
@@ -14,8 +18,51 @@ import {
 } from 'lucide-react';
 
 const AIHRRecruitmentProPage = () => {
-  
-  
+  const features = [
+    {
+      icon: <Brain className="w-6 h-6 text-white" />,
+      title: "AI Candidate Matching",
+      description: "Intelligent matching algorithms connect the right candidates with the right roles",
+      color: "from-cyan-500 to-blue-600"
+    },
+    {
+      icon: <UserCheck className="w-6 h-6 text-white" />,
+      title: "Automated Screening",
+      description: "AI-powered resume screening and initial candidate assessment",
+      color: "from-purple-500 to-pink-600"
+    },
+    {
+      icon: <FileText className="w-6 h-6 text-white" />,
+      title: "Bias-Free Hiring",
+      description: "Eliminate unconscious bias with objective AI-driven evaluation processes",
+      color: "from-green-500 to-emerald-600"
+    },
+    {
+      icon: <Calendar className="w-6 h-6 text-white" />,
+      title: "Interview Scheduling",
+      description: "Automated interview scheduling and coordination for seamless hiring process",
+      color: "from-orange-500 to-red-600"
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: <Target className="w-8 h-8 text-cyan-400" />,
+      title: "Faster Hiring",
+      description: "Reduce time-to-hire by 60% with automated screening and matching"
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-purple-400" />,
+      title: "Better Matches",
+      description: "Find the perfect candidate fit with AI-powered compatibility analysis"
+    },
+    {
+      icon: <CheckCircle className="w-8 h-8 text-green-400" />,
+      title: "Reduced Bias",
+      description: "Ensure fair and objective hiring decisions with AI-driven evaluation"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>

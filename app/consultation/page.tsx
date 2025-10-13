@@ -1,4 +1,6 @@
+"use client";
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { 
   Calendar, 
   Clock, 
@@ -17,14 +19,32 @@ import {
   BarChart3
 } from 'lucide-react';
 
-export default function page() {
+export default function ConsultationPage() {
   const benefits = [
-    "Benefit 1",
-    "Benefit 2"
+    {
+      title: "Expert Guidance",
+      description: "Get insights from experienced AI and IT professionals",
+      icon: <Brain className="w-6 h-6 text-cyan-400" />
+    },
+    {
+      title: "No Obligation",
+      description: "Completely free consultation with no strings attached",
+      icon: <Shield className="w-6 h-6 text-purple-400" />
+    },
+    {
+      title: "Customized Solutions",
+      description: "Tailored recommendations based on your specific needs",
+      icon: <Zap className="w-6 h-6 text-yellow-400" />
+    },
+    {
+      title: "Actionable Insights",
+      description: "Clear roadmap and next steps for your technology journey",
+      icon: <Globe className="w-6 h-6 text-green-400" />
+    }
   ];
   const features = [
-    { title: "Feature 1", description: "Description 1" },
-    { title: "Feature 2", description: "Description 2" }
+    { title: "AI Strategy Planning", description: "Comprehensive AI implementation roadmap" },
+    { title: "Technology Assessment", description: "Current state analysis and optimization recommendations" }
   ];
   const [formData, setFormData] = useState({
     name: '',

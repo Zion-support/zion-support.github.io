@@ -1,15 +1,55 @@
+"use client";
 import React from "react";
-import SEOOptimizer from "../components/SEOOptimizer";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { 
+  Brain, 
+  ArrowRight, 
+  Monitor, 
+  Zap, 
+  CheckCircle, 
+  Award, 
+  DollarSign,
+  MessageSquare,
+  Phone,
+  Globe,
+  Star
+} from "lucide-react";
 
-export default function page() {
+export default function AIPoweredDevOpsPage() {
   const testimonials = [
     { name: "John Doe", role: "CEO", company: "Tech Corp", content: "Great service!", rating: 5 }
   ];
   const features = [
     { title: "Feature 1", description: "Description 1" },
     { title: "Feature 2", description: "Description 2" }
+  ];
+
+  const capabilities = [
+    {
+      title: "AI-Powered Testing",
+      description: "Automated test generation and execution with intelligent bug detection",
+      icon: <Brain className="w-8 h-8 text-white" />,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Intelligent Deployment",
+      description: "Smart deployment strategies with rollback capabilities and risk assessment",
+      icon: <Zap className="w-8 h-8 text-white" />,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Predictive Scaling",
+      description: "AI-driven resource scaling based on usage patterns and predictions",
+      icon: <Monitor className="w-8 h-8 text-white" />,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Smart Monitoring",
+      description: "Real-time monitoring with AI-powered anomaly detection and alerts",
+      icon: <CheckCircle className="w-8 h-8 text-white" />,
+      color: "from-orange-500 to-red-500"
+    }
   ];
   
   
@@ -88,10 +128,6 @@ export default function page() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/ai-powered-devops" />
       </Helmet>
-      <SEOOptimizer
-        title="AI-Powered DevOps - Intelligent Development Operations | Zion Tech Group"
-        description="Revolutionize your DevOps with AI. Automated testing, intelligent deployment, predictive scaling, and smart monitoring. Transform your development operations with Zion's AI-powered DevOps platform."
-      />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -321,7 +357,7 @@ export default function page() {
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
-                      {testimonial.avatar}
+                      {testimonial.name.charAt(0)}
                     </div>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>

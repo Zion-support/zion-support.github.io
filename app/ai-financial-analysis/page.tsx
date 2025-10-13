@@ -1,3 +1,7 @@
+"use client";
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import { 
   BarChart3, 
   TrendingUp, 
@@ -14,8 +18,51 @@ import {
 } from 'lucide-react';
 
 const AIFinancialAnalysisPage = () => {
-  
-  
+  const features = [
+    {
+      icon: <Brain className="w-6 h-6 text-white" />,
+      title: "AI Financial Modeling",
+      description: "Advanced machine learning models for accurate financial forecasting and risk assessment",
+      color: "from-cyan-500 to-blue-600"
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6 text-white" />,
+      title: "Investment Analysis",
+      description: "Comprehensive investment analysis with real-time market data and predictive insights",
+      color: "from-purple-500 to-pink-600"
+    },
+    {
+      icon: <DollarSign className="w-6 h-6 text-white" />,
+      title: "Portfolio Optimization",
+      description: "Optimize your investment portfolio with AI-driven recommendations and risk management",
+      color: "from-green-500 to-emerald-600"
+    },
+    {
+      icon: <Shield className="w-6 h-6 text-white" />,
+      title: "Risk Management",
+      description: "Advanced risk assessment and mitigation strategies for better financial security",
+      color: "from-orange-500 to-red-600"
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: <Target className="w-8 h-8 text-cyan-400" />,
+      title: "Better Investment Decisions",
+      description: "Make informed investment decisions with AI-powered analysis and recommendations"
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-purple-400" />,
+      title: "Real-time Monitoring",
+      description: "Monitor your financial performance in real-time with automated alerts and insights"
+    },
+    {
+      icon: <CheckCircle className="w-8 h-8 text-green-400" />,
+      title: "Risk Mitigation",
+      description: "Identify and mitigate financial risks before they impact your portfolio"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>

@@ -1,4 +1,30 @@
 
+"use client";
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { 
+  PenTool, 
+  Video, 
+  FileText, 
+  Sparkles, 
+  ArrowRight, 
+  CheckCircle, 
+  Star, 
+  Brain,
+  Target,
+  Users,
+  Award,
+  TrendingUp,
+  BarChart3,
+  Clock,
+  DollarSign,
+  MessageSquare,
+  Phone,
+  Mail,
+  MapPin
+} from "lucide-react";
+
 const AIContentStudioZionTechGroup = () => {
   const structuredData = {
     "@context": "https://schema.org",
@@ -42,7 +68,7 @@ const AIContentStudioZionTechGroup = () => {
     {
       title: "Image Creation",
       description: "Generate stunning visuals, graphics, and artwork using cutting-edge AI image models",
-      icon: <Image className="w-8 h-8" />,
+      icon: <FileText className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
@@ -130,18 +156,16 @@ const AIContentStudioZionTechGroup = () => {
   ];
 
   return (
-    <PerformanceOptimizer>
-      <EnhancedAccessibility>
-        <FuturisticBackgroundEnhanced>
-          <EnhancedSEO
-            title="Zion AI Content Studio Pro - AI-Powered Content Creation Platform | Zion Tech Group"
-            description="Advanced AI-powered content creation platform with automated writing, design, and video generation. Create professional content at scale with cutting-edge AI technology."
-            keywords="AI content creation, content generation, AI writing, video generation, image creation, content marketing, AI content studio"
-            canonical="https://ziontechgroup.com/ai-content-studio"
-            structuredData={structuredData}
-          />
-          
-          <StructuredData type="SoftwareApplication" data={structuredData} />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <Helmet>
+      <title>Zion AI Content Studio Pro - AI-Powered Content Creation Platform | Zion Tech Group</title>
+      <meta name="description" content="Advanced AI-powered content creation platform with automated writing, design, and video generation. Create professional content at scale with cutting-edge AI technology." />
+      <meta name="keywords" content="AI content creation, content generation, AI writing, video generation, image creation, content marketing, AI content studio" />
+      <link rel="canonical" href="https://ziontechgroup.com/ai-content-studio" />
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData)}
+      </script>
+    </Helmet>
 
           <main id="main-content" role="main" aria-label="Zion AI Content Studio Pro">
             {/* Hero Section */}
@@ -151,23 +175,15 @@ const AIContentStudioZionTechGroup = () => {
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               </div>
               
-              <ResponsiveContainer className="text-center relative z-10">
+              <div className="text-center relative z-10">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">
                   <Sparkles className="w-4 h-4 text-purple-400 mr-2" />
                   <span className="text-purple-400 text-sm font-medium">AI-Powered Content Creation</span>
                 </div>
                 
-                <FuturisticTextEnhanced
-                  variant="display"
-                  size="5xl"
-                  gradient={true}
-                  animated={true}
-                  glow={true}
-                  neon={true}
-                  className="mb-6 leading-tight"
-                >
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
                   Zion AI Content Studio Pro
-                </FuturisticTextEnhanced>
+                </h1>
                 
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
                   Create professional content at scale with AI-powered writing, design, and video generation. 
@@ -175,37 +191,27 @@ const AIContentStudioZionTechGroup = () => {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-                  <FuturisticButtonEnhanced
-                    href="#pricing"
-                    variant="primary"
-                    size="lg"
-                    icon={Sparkles}
-                    iconPosition="left"
-                    glowColor="purple"
-                    neon={true}
-                    animated={true}
+                  <Link
+                    to="#pricing"
+                    className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
                   >
+                    <Sparkles className="w-5 h-5 mr-2" />
                     Start Free Trial
-                  </FuturisticButtonEnhanced>
-                  <FuturisticButtonEnhanced
-                    href="#demo"
-                    variant="outline"
-                    size="lg"
-                    icon={ArrowRight}
-                    iconPosition="left"
-                    glowColor="pink"
-                    neon={true}
-                    animated={true}
+                  </Link>
+                  <Link
+                    to="#demo"
+                    className="border border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-pink-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
                   >
+                    <ArrowRight className="w-5 h-5 mr-2" />
                     Watch Demo
-                  </FuturisticButtonEnhanced>
+                  </Link>
                 </div>
-              </ResponsiveContainer>
+              </div>
             </section>
 
             {/* Features Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8">
-              <ResponsiveContainer>
+              <div>
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                     Powerful Content Creation Features
@@ -216,13 +222,9 @@ const AIContentStudioZionTechGroup = () => {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                   {features.map((feature, index) => (
-                    <FuturisticCardEnhanced
+                    <div
                       key={index}
-                      glowColor={index % 2 === 0 ? 'purple' : 'pink'}
-                      hoverEffect={true}
-                      animated={true}
-                      neon={true}
-                      className="text-center"
+                      className="text-center group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10"
                     >
                       <div
                         className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
@@ -236,10 +238,10 @@ const AIContentStudioZionTechGroup = () => {
                       <p className="text-gray-300 leading-relaxed text-sm md:text-base">
                         {feature.description}
                       </p>
-                    </FuturisticCardEnhanced>
+                    </div>
                   ))}
                 </div>
-              </ResponsiveContainer>
+              </div>
             </section>
 
             {/* Pricing Section */}
@@ -255,13 +257,9 @@ const AIContentStudioZionTechGroup = () => {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {pricingPlans.map((plan, index) => (
-                    <FuturisticCardEnhanced
+                    <div
                       key={index}
-                      glowColor={plan.popular ? 'purple' : 'pink'}
-                      hoverEffect={true}
-                      animated={true}
-                      neon={true}
-                      className={`relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}
+                      className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}
                     >
                       {plan.popular && (
                         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -285,20 +283,18 @@ const AIContentStudioZionTechGroup = () => {
                           </li>
                         ))}
                       </ul>
-                      <FuturisticButtonEnhanced
-                        href="/contact"
-                        variant={plan.popular ? "primary" : "outline"}
-                        size="lg"
-                        icon={ArrowRight}
-                        iconPosition="right"
-                        glowColor={plan.popular ? "purple" : "pink"}
-                        neon={true}
-                        animated={true}
-                        className="w-full"
+                      <Link
+                        to="/contact"
+                        className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 flex items-center justify-center ${
+                          plan.popular
+                            ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600"
+                            : "border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900"
+                        }`}
                       >
                         Get Started
-                      </FuturisticButtonEnhanced>
-                    </FuturisticCardEnhanced>
+                        <ArrowRight className="w-5 h-5 ml-2" />
+                      </Link>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -349,37 +345,25 @@ const AIContentStudioZionTechGroup = () => {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <FuturisticButtonEnhanced
-                    href="/contact"
-                    variant="primary"
-                    size="lg"
-                    icon={ArrowRight}
-                    iconPosition="right"
-                    glowColor="purple"
-                    neon={true}
-                    animated={true}
+                  <Link
+                    to="/contact"
+                    className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
                   >
                     Start Free Trial
-                  </FuturisticButtonEnhanced>
-                  <FuturisticButtonEnhanced
-                    href="/demo"
-                    variant="outline"
-                    size="lg"
-                    icon={Sparkles}
-                    iconPosition="right"
-                    glowColor="pink"
-                    neon={true}
-                    animated={true}
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
+                  <Link
+                    to="/demo"
+                    className="border border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-pink-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
                   >
                     Schedule Demo
-                  </FuturisticButtonEnhanced>
+                    <Sparkles className="w-5 h-5 ml-2" />
+                  </Link>
                 </div>
               </div>
             </section>
           </main>
-        </FuturisticBackgroundEnhanced>
-      </EnhancedAccessibility>
-    </PerformanceOptimizer>
+        </div>
   );
 };
 

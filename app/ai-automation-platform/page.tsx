@@ -1,3 +1,7 @@
+"use client";
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import { 
   Zap, 
   BarChart3, 
@@ -18,9 +22,74 @@ import {
 } from 'lucide-react';
 
 const AIAutomationPlatformPage = () => {
-  
-  
-  
+  const features = [
+    {
+      icon: <Zap className="w-6 h-6 text-white" />,
+      title: "Intelligent Workflow Automation",
+      description: "Automate complex business processes with AI-powered decision making and adaptive workflows",
+      color: "from-cyan-500 to-blue-600"
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6 text-white" />,
+      title: "Predictive Analytics",
+      description: "Leverage machine learning to predict outcomes and optimize processes in real-time",
+      color: "from-purple-500 to-pink-600"
+    },
+    {
+      icon: <Shield className="w-6 h-6 text-white" />,
+      title: "Enterprise Security",
+      description: "Bank-grade security with end-to-end encryption and compliance management",
+      color: "from-green-500 to-emerald-600"
+    },
+    {
+      icon: <Cloud className="w-6 h-6 text-white" />,
+      title: "Cloud Integration",
+      description: "Seamlessly integrate with existing cloud infrastructure and third-party services",
+      color: "from-orange-500 to-red-600"
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: <Users className="w-8 h-8 text-cyan-400" />,
+      title: "95% Process Efficiency",
+      description: "Dramatically reduce manual work and human error with intelligent automation"
+    },
+    {
+      icon: <Code className="w-8 h-8 text-purple-400" />,
+      title: "Rapid Deployment",
+      description: "Get up and running in days, not months, with our pre-built automation templates"
+    },
+    {
+      icon: <Database className="w-8 h-8 text-green-400" />,
+      title: "Data-Driven Insights",
+      description: "Transform raw data into actionable insights with advanced analytics and reporting"
+    }
+  ];
+
+  const useCases = [
+    {
+      title: "Customer Service Automation",
+      description: "Automate ticket routing, response generation, and escalation processes",
+      icon: <Bot className="w-6 h-6 text-cyan-400" />
+    },
+    {
+      title: "Financial Process Automation",
+      description: "Streamline invoicing, expense management, and financial reporting",
+      icon: <TrendingUp className="w-6 h-6 text-green-400" />
+    },
+    {
+      title: "HR & Recruitment",
+      description: "Automate candidate screening, onboarding, and employee lifecycle management",
+      icon: <Users className="w-6 h-6 text-purple-400" />
+    },
+    {
+      title: "Supply Chain Optimization",
+      description: "Optimize inventory management, demand forecasting, and logistics",
+      icon: <Workflow className="w-6 h-6 text-orange-400" />
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
@@ -155,7 +224,7 @@ const AIAutomationPlatformPage = () => {
                     {useCase.icon}
                   </div>
                   <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                    {useCase.industry}
+                    {useCase.title}
                   </h3>
                 </div>
                 <p className="text-gray-300 text-sm leading-relaxed">

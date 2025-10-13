@@ -1,3 +1,7 @@
+"use client";
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import { 
   BarChart3, 
   TrendingUp, 
@@ -14,8 +18,51 @@ import {
 } from 'lucide-react';
 
 const AIDataAnalyticsProPage = () => {
-  
-  
+  const features = [
+    {
+      icon: <Brain className="w-6 h-6 text-white" />,
+      title: "AI-Powered Insights",
+      description: "Advanced machine learning algorithms analyze your data to uncover hidden patterns and trends",
+      color: "from-cyan-500 to-blue-600"
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6 text-white" />,
+      title: "Real-time Analytics",
+      description: "Get instant insights with real-time data processing and visualization",
+      color: "from-purple-500 to-pink-600"
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6 text-white" />,
+      title: "Predictive Modeling",
+      description: "Forecast future trends and outcomes with advanced predictive analytics",
+      color: "from-green-500 to-emerald-600"
+    },
+    {
+      icon: <Database className="w-6 h-6 text-white" />,
+      title: "Data Integration",
+      description: "Connect and analyze data from multiple sources seamlessly",
+      color: "from-orange-500 to-red-600"
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: <Target className="w-8 h-8 text-cyan-400" />,
+      title: "Data-Driven Decisions",
+      description: "Make informed business decisions based on comprehensive data analysis"
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-purple-400" />,
+      title: "Faster Insights",
+      description: "Reduce analysis time from weeks to minutes with automated processing"
+    },
+    {
+      icon: <CheckCircle className="w-8 h-8 text-green-400" />,
+      title: "Accurate Predictions",
+      description: "Achieve 95%+ accuracy in forecasting with our advanced ML models"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
