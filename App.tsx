@@ -4,22 +4,22 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
 import "./app/styles/futuristic-enhanced.css";
+import "./app/styles/accessibility.css";
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
-import ErrorBoundary from "./app/components/ErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import EnhancedPerformanceOptimizer from "./app/components/EnhancedPerformanceOptimizer";
-import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
-import EnhancedSEO from "./app/components/EnhancedSEO";
 import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
 import ErrorHandler from "./app/components/ErrorHandler";
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -203,9 +203,9 @@ const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 function App() {
   return (
     <ErrorHandler>
-      <ErrorBoundary>
+      <EnhancedErrorBoundary>
         <HelmetProvider>
-          <AccessibilityEnhancer>
+          <EnhancedAccessibility>
             <Router>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                 <FuturisticBackground>
@@ -448,23 +448,20 @@ function App() {
                   </main>
                   <Footer />
                   <EnhancedPerformanceOptimizer />
-                  <EnhancedAccessibility>
-                    <div></div>
-                  </EnhancedAccessibility>
+                  <PerformanceOptimizer />
                 </FuturisticBackground>
                 <AnalyticsProvider>
                   <div>
                     <PerformanceMonitor />
                     <PerformanceEnhancer />
                     <SEOOptimizer />
-                    <EnhancedSEO />
                   </div>
                 </AnalyticsProvider>
               </div>
             </Router>
-          </AccessibilityEnhancer>
+          </EnhancedAccessibility>
         </HelmetProvider>
-      </ErrorBoundary>
+      </EnhancedErrorBoundary>
     </ErrorHandler>
   );
 }
