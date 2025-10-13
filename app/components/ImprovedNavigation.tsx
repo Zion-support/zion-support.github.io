@@ -1,5 +1,5 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 'use client';
 const ImprovedNavigation: React.FC = () => {
   return (
@@ -81,4 +81,4 @@ const ImprovedNavigation: React.FC = () => {
   );
 };
 
-export default ImprovedNavigation;
+export default Component;

@@ -1,6 +1,6 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
-import { Right, Play, User, Star, Circle, Clock } from 'lucide-react;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Right, Play, User, Star, Circle, Clock } from 'lucide-react';
 const TutorialsPage: React.FC = () => {
   const tutorials = [{
       id: 1,
@@ -195,4 +195,4 @@ const TutorialsPage: React.FC = () => {
   );
 };
 
-export default TutorialsPage;
+export default Component;

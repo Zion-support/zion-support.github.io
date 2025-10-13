@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 interface FuturisticButtonProps {
   children: React.ReactNode;
   className?: string;
@@ -43,4 +43,4 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   );
 };
 
-export default FuturisticButton;
+export default Component;

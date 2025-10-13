@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import React from 'react;
+import React from 'react';
 import { useEffect, Node } from 'react;
 interface EnhancedAccessibilityProps {
   children: Node;
@@ -319,4 +319,4 @@ const EnhancedAccessibility: React.FC = () => {
   );
 };
 
-export default EnhancedAccessibility;
+export default Component;

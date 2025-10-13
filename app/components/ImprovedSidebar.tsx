@@ -1,5 +1,5 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 'use client';
 const ImprovedSidebar: React.FC = () => {
   return (
@@ -82,4 +82,4 @@ const ImprovedSidebar: React.FC = () => {
   );
 };
 
-export default ImprovedSidebar;
+export default Component;

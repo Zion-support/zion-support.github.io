@@ -1,17 +1,15 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { ExclamationTriangleIcon, ArrowPathIcon } from '@heroicons/react/24/outline';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
-  errorId: string;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
@@ -20,16 +18,15 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     this.state = {
       hasError: false,
       error: null,
-      errorInfo: null,
-      errorId: ''
+      errorInfo: null
     };
   }
 
-  static getDerivedStateFromError(error: Error): Partial<State> {
+  static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      errorInfo: null
     };
   }
 
@@ -39,183 +36,77 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo
     });
 
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
-
-    // Call custom error handler
-    this.props.onError?.(error, errorInfo);
-
-    // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo);
-    }
+    // Log error to monitoring service
+    console.error('Error caught by boundary:', error, errorInfo);
   }
 
-  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // In a real application, you would send this to an error tracking service
-    // like Sentry, LogRocket, or Bugsnag
-    try {
-      const errorData = {
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        errorId: this.state.errorId,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href
-      };
-
-      // Example: Send to error tracking service
-      // errorTrackingService.captureException(error, { extra: errorData });
-      
-      console.error('Error logged to service:', errorData);
-    } catch (loggingError) {
-      console.error('Failed to log error to service:', loggingError);
-    }
-  };
-
-  private handleRetry = () => {
+  handleRetry = () => {
     this.setState({
       hasError: false,
       error: null,
-      errorInfo: null,
-      errorId: ''
+      errorInfo: null
     });
-  };
-
-  private handleReload = () => {
-    window.location.reload();
-  };
-
-  private handleGoHome = () => {
-    window.location.href = '/';
   };
 
   render() {
     if (this.state.hasError) {
-      // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
-      // Default error UI
       return (
-        <>
-          <Helmet>
-            <title>Error - Zion Tech Group</title>
-            <meta name="robots" content="noindex, nofollow" />
-          </Helmet>
-          
-          <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
-            <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">
-              {/* Error Icon */}
-              <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6">
-                <svg 
-                  className="w-8 h-8 text-red-400" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" 
-                  />
-                </svg>
-              </div>
-
-              {/* Error Title */}
-              <h1 className="text-2xl font-bold text-white mb-4">
-                Oops! Something went wrong
+        <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
+              <ExclamationTriangleIcon className="w-6 h-6 text-red-600" />
+            </div>
+            
+            <div className="text-center">
+              <h1 className="text-lg font-medium text-gray-900 mb-2">
+                Something went wrong
               </h1>
-
-              {/* Error Message */}
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                We're sorry, but something unexpected happened. Our team has been notified 
-                and is working to fix this issue.
+              <p className="text-sm text-gray-500 mb-6">
+                We're sorry, but something unexpected happened. Please try again or contact support if the problem persists.
               </p>
-
-              {/* Error ID for support */}
-              {this.state.errorId && (
-                <div className="bg-slate-700 rounded-lg p-3 mb-6">
-                  <p className="text-sm text-gray-400 mb-1">Error ID:</p>
-                  <code className="text-xs text-cyan-400 font-mono break-all">
-                    {this.state.errorId}
-                  </code>
-                </div>
-              )}
-
-              {/* Action Buttons */}
-              <div className="space-y-3">
-                <button
-                  onClick={this.handleRetry}
-                  className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-800"
-                >
-                  Try Again
-                </button>
-                
-                <div className="flex space-x-3">
-                  <button
-                    onClick={this.handleGoHome}
-                    className="flex-1 border border-slate-600 text-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-slate-700 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-800"
-                  >
-                    Go Home
-                  </button>
-                  
-                  <button
-                    onClick={this.handleReload}
-                    className="flex-1 border border-slate-600 text-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-slate-700 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-800"
-                  >
-                    Reload Page
-                  </button>
-                </div>
-              </div>
-
-              {/* Support Information */}
-              <div className="mt-8 pt-6 border-t border-slate-700">
-                <p className="text-sm text-gray-400 mb-2">
-                  Still having trouble? Contact our support team:
-                </p>
-                <div className="text-sm text-cyan-400">
-                  <p>Email: kleber@ziontechgroup.com</p>
-                  <p>Phone: +1-302-464-0950</p>
-                </div>
-              </div>
-
-              {/* Development Error Details */}
+              
               {process.env.NODE_ENV === 'development' && this.state.error && (
-                <details className="mt-6 text-left">
-                  <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
-                    Error Details (Development)
+                <details className="mb-6 text-left">
+                  <summary className="cursor-pointer text-sm font-medium text-gray-700 mb-2">
+                    Error Details
                   </summary>
-                  <div className="mt-2 p-3 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto max-h-40">
-                    <div className="mb-2">
-                      <strong>Error:</strong> {this.state.error.message}
+                  <div className="bg-gray-100 p-3 rounded text-xs text-gray-600 overflow-auto">
+                    <div className="font-mono">
+                      <div className="font-semibold text-red-600">Error:</div>
+                      <div className="mb-2">{this.state.error.toString()}</div>
+                      {this.state.errorInfo && (
+                        <>
+                          <div className="font-semibold text-red-600">Stack Trace:</div>
+                          <div>{this.state.errorInfo.componentStack}</div>
+                        </>
+                      )}
                     </div>
-                    <div className="mb-2">
-                      <strong>Stack:</strong>
-                      <pre className="whitespace-pre-wrap mt-1">
-                        {this.state.error.stack}
-                      </pre>
-                    </div>
-                    {this.state.errorInfo && (
-                      <div>
-                        <strong>Component Stack:</strong>
-                        <pre className="whitespace-pre-wrap mt-1">
-                          {this.state.errorInfo.componentStack}
-                        </pre>
-                      </div>
-                    )}
                   </div>
                 </details>
               )}
+              
+              <div className="flex flex-col sm:flex-row gap-3">
+                <button
+                  onClick={this.handleRetry}
+                  className="flex-1 inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                >
+                  <ArrowPathIcon className="w-4 h-4 mr-2" />
+                  Try Again
+                </button>
+                <a
+                  href="/contact"
+                  className="flex-1 inline-flex items-center justify-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                >
+                  Contact Support
+                </a>
+              </div>
             </div>
           </div>
-        </>
+        </div>
       );
     }
 
@@ -223,4 +114,4 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 }
 
-export default EnhancedErrorBoundary;
+export default Component;

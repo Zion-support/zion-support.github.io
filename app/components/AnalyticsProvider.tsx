@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 import { createContext, useContext, useEffect, ReactNode } from 'react;
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, any>) => void;
@@ -72,4 +72,4 @@ const  (): AnalyticsContextType => {
   return context;
 };
 
-export default AnalyticsProvider;
+export default Component;

@@ -175,4 +175,4 @@ const AIAutomationPlatform = () => {
   );
 };
 
-export default AIAutomationPlatform;
+export default Component;

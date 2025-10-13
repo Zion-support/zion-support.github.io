@@ -1,5 +1,5 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 'use client';
 const LazyImage: React.FC = () => {
   return (
@@ -82,4 +82,4 @@ const LazyImage: React.FC = () => {
   );
 };
 
-export default LazyImage;
+export default Component;

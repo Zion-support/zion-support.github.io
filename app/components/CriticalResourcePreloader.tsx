@@ -1,5 +1,5 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 'use client';
 const CriticalResourcePreloader: React.FC = () => {
   return (
@@ -82,4 +82,4 @@ const CriticalResourcePreloader: React.FC = () => {
   );
 };
 
-export default CriticalResourcePreloader;
+export default Component;

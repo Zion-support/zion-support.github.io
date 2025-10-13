@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 interface FuturisticCardProps {
   children: React.ReactNode;
   className?: string;
@@ -24,4 +24,4 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
   );
 };
 
-export default FuturisticCard;
+export default Component;

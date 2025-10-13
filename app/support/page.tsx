@@ -1,8 +1,8 @@
 <<<<<<< HEAD
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
-import { Link } from 'react-router-dom;
-import { Right, Circle } from 'lucide-react;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Right, Circle } from 'lucide-react';
 const SupportPage: React.FC = () => {
   const supportOptions = [{
       icon: 'Chat',';
@@ -192,4 +192,4 @@ const SupportPage: React.FC = () => {
   );
 };
 
-export default SupportPage;
+export default Component;

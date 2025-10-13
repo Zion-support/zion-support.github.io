@@ -55,4 +55,4 @@ const FuturisticBackground = () => {
   );
 };
 
-export default FuturisticBackground;
+export default Component;

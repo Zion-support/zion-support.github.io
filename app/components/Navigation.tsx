@@ -222,4 +222,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default Component;

@@ -1,5 +1,5 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 'use client';
 const : React.FC = () => {
   return (
@@ -81,4 +81,4 @@ const : React.FC = () => {
   );
 };
 
-export default ;
+export default Component;

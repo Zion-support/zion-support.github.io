@@ -1,5 +1,5 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 'use client';
 const StructuredData: React.FC = () => {
   return (
@@ -82,4 +82,4 @@ const StructuredData: React.FC = () => {
   );
 };
 
-export default StructuredData;
+export default Component;

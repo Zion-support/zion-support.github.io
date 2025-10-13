@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 const AdvancedPerformanceMonitor: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">;
@@ -11,4 +11,4 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     </div>;
   );
 };
-export default AdvancedPerformanceMonitor;
+export default Component;

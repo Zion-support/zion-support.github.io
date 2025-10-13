@@ -1,5 +1,5 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 'use client';
 const ErrorHandler: React.FC = () => {
   return (
@@ -82,4 +82,4 @@ const ErrorHandler: React.FC = () => {
   );
 };
 
-export default ErrorHandler;
+export default Component;

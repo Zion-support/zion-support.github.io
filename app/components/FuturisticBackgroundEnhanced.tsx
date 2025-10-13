@@ -1,5 +1,5 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 'use client';
 const FuturisticBackgroundEnhanced: React.FC = () => {
   return (
@@ -82,4 +82,4 @@ const FuturisticBackgroundEnhanced: React.FC = () => {
   );
 };
 
-export default FuturisticBackgroundEnhanced;
+export default Component;

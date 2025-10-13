@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 export default function MedicalRecordsManagerPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">;
