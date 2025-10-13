@@ -279,7 +279,7 @@ const AICodeAssistantProZionTechGroup = () => {
           </div>
 
           {/* Features Section */}
-            <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <section className="py-20 px-4 sm:px-6 lg:px-8">
               <ResponsiveContainer>
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">

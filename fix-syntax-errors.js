@@ -1,105 +1,45 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-}
-=======
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-// Function to fix syntax errors in a file
-function fixSyntaxErrors(filePath) {
-  try {
-    if (!fs.existsSync(filePath) || (!filePath.endsWith('.tsx') && !filePath.endsWith('.ts'))) {
-      return;
-    }
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-    const content = fs.readFileSync(filePath, 'utf8');
-    const lines = content.split('\n');
-    
-    // Fix common syntax errors
-    let fixed = false;
-    const newLines = [];
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      // Fix malformed import statements
-      if (line.trim() === 'import { ' && i + 1 < lines.length) {
-        const nextLine = lines[i + 1];
-        if (nextLine.trim().startsWith('import { ')) {
-          // Skip the malformed line and use the next one
-          continue;
-        }
-      }
-      
-      // Fix duplicate import statements
-      if (line.trim().startsWith('import { ') && i + 1 < lines.length) {
-        const nextLine = lines[i + 1];
-        if (nextLine.trim().startsWith('import { ') && line.trim() === nextLine.trim()) {
-          // Skip duplicate
-          continue;
-        }
-      }
-      
-      // Fix incomplete import statements
-      if (line.trim() === 'import { ' && i + 1 < lines.length) {
-        const nextLine = lines[i + 1];
-        if (nextLine.trim().startsWith('} from ')) {
-          // Merge the lines
-          newLines.push('import { ' + nextLine.trim().substring(1));
-          i++; // Skip the next line
-          continue;
-        }
-      }
-      
-      newLines.push(line);
-    }
-    
-    const newContent = newLines.join('\n');
-    
-    if (newContent !== content) {
-      fs.writeFileSync(filePath, newContent);
-      console.log(`Fixed syntax errors in: ${filePath}`);
-      fixed = true;
-    }
-    
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-  }
-}
+// Find all .tsx files in app/components
+const componentsDir = path.join(__dirname, 'app', 'components');
+const files = fs.readdirSync(componentsDir).filter(file => file.endsWith('.tsx'));
 
-// Function to recursively find all TypeScript files
-function findFiles(dir, fileList = []) {
-  const files = fs.readdirSync(dir);
-  
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory() && !file.includes('node_modules') && !file.includes('.git')) {
-      findFiles(filePath, fileList);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      fileList.push(filePath);
-    }
-  });
-  
-  return fileList;
-}
-
-// Main execution
-console.log('Starting to fix syntax errors...');
-
-const files = findFiles('/workspace/app');
 files.forEach(file => {
-  fixSyntaxErrors(file);
+  const filePath = path.join(componentsDir, file);
+  let content = fs.readFileSync(filePath, 'utf8');
+  
+  // Fix the pattern: export default ComponentName;\n  );\n}
+  const pattern = /export default \w+;\s*\n\s*\);\s*\n\}/g;
+  const replacement = 'export default ComponentName;';
+  
+  // More specific pattern matching
+  const lines = content.split('\n');
+  let modified = false;
+  
+  for (let i = 0; i < lines.length; i++) {
+    if (lines[i].trim() === 'export default' && i + 2 < lines.length) {
+      const nextLine = lines[i + 1];
+      const nextNextLine = lines[i + 2];
+      
+      if (nextLine.trim() === '  );' && nextNextLine.trim() === '}') {
+        // Remove the extra lines
+        lines.splice(i + 1, 2);
+        modified = true;
+        break;
+      }
+    }
+  }
+  
+  if (modified) {
+    const newContent = lines.join('\n');
+    fs.writeFileSync(filePath, newContent, 'utf8');
+    console.log(`Fixed: ${file}`);
+  }
 });
 
-console.log('Finished fixing syntax errors.');
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+console.log('Syntax error fixes completed');
