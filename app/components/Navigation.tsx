@@ -279,8 +279,13 @@ export default function Navigation() {
     {
       title: 'IT Services',
       href: '/it-services',
+<<<<<<< HEAD
       icon: <Database className="w-4 h-4" />,
       description: 'Comprehensive IT infrastructure services'
+=======
+      icon: Shield,
+      description: 'Information Technology Solutions'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0aab
     },
     {
       title: 'Cloud Services',
@@ -307,6 +312,7 @@ export default function Navigation() {
       description: 'Transform your digital presence'
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
     }
+<<<<<<< HEAD
   };
 
   const handleScroll = () => {
@@ -450,6 +456,9 @@ export default function Navigation() {
     { name: 'Online Learning Platform', href: '/online-learning-platform', icon: Users, description: 'Education' },
     { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer', icon: BarChart, description: 'Manufacturing' }
   ];
+=======
+  ]
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0aab
 
   const emergingTech = [
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions' },
@@ -648,6 +657,7 @@ export default function Navigation() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <nav className="bg-white shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
@@ -663,6 +673,9 @@ export default function Navigation() {
 =======
     <nav className="relative z-50 bg-black/20 backdrop-blur-md border-b border-cyan-500/20">
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-08bc
+=======
+    <nav className="bg-white/95 backdrop-blur-lg shadow-lg fixed w-full top-0 z-50">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0aab
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -850,6 +863,7 @@ export default function Navigation() {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
           </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
@@ -1376,6 +1390,72 @@ export default function Navigation() {
               <span>Get Started</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
+=======
+          {/* Desktop Navigation */}
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              <Link
+                to="/"
+                className="text-gray-900 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors"
+              >
+                Home
+              </Link>
+              <Link
+                to="/about"
+                className="text-gray-900 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors"
+              >
+                About
+              </Link>
+              
+              <div className="relative">
+                <button
+                  onClick={toggleServices}
+                  className="text-gray-900 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors flex items-center"
+                >
+                  Services
+                  <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {isServicesOpen && (
+                  <div className="absolute left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                    <div className="grid grid-cols-2 gap-2 p-4">
+                      {services.map((service) => {
+                        const IconComponent = service.icon
+                        return (
+                          <Link
+                            key={service.href}
+                            to={service.href}
+                            className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                            onClick={() => setIsServicesOpen(false)}
+                          >
+                            <IconComponent className="w-5 h-5 text-purple-600 mr-3" />
+                            <div>
+                              <div className="font-medium text-gray-900">{service.title}</div>
+                              <div className="text-sm text-gray-500">{service.description}</div>
+                            </div>
+                          </Link>
+                        )
+                      })}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              <Link
+                to="/contact"
+                className="text-gray-900 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors"
+              >
+                Contact
+              </Link>
+              
+              <Link 
+                to="/contact" 
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+              >
+                Get Started
+              </Link>
+            </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0aab
           </div>
 
           {/* Mobile menu button */}
@@ -1421,12 +1501,16 @@ export default function Navigation() {
             <button
 <<<<<<< HEAD
               onClick={toggleMenu}
+<<<<<<< HEAD
               className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all duration-300"
 <<<<<<< HEAD
               aria-label="Toggle menu"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0792
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-08bc
+=======
+              className="text-gray-900 hover:text-purple-600 p-2"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0aab
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 =======
@@ -1440,6 +1524,7 @@ export default function Navigation() {
           </div>
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2006,6 +2091,12 @@ Navigation.displayName = 'Navigation';
         {isOpen && (
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200 shadow-lg">
+=======
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0aab
               <Link
                 to="/"
                 className="text-gray-900 hover:text-purple-600 block px-3 py-2 text-base font-medium"
@@ -2070,6 +2161,7 @@ Navigation.displayName = 'Navigation';
               >
                 Contact
               </Link>
+<<<<<<< HEAD
             </div>
           </div>
         )}
@@ -2197,6 +2289,17 @@ Navigation.displayName = 'Navigation';
               </div>
             </div>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
+=======
+              
+              <Link 
+                to="/contact" 
+                className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-2 rounded-lg text-base font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center mt-4"
+                onClick={() => setIsOpen(false)}
+              >
+                Get Started
+              </Link>
+            </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0aab
           </div>
         )}
       </div>

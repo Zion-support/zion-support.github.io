@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 <<<<<<< HEAD
@@ -301,6 +302,38 @@ export default function Footer() {
     { name: "Tutorials", path: "/tutorials" },
     { name: "Support", path: "/support" },
   ];
+=======
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight } from 'lucide-react'
+
+export default function Footer() {
+  const quickLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'AI Services', path: '/ai-services' },
+    { name: 'IT Services', path: '/it-services' },
+    { name: 'Micro SAAS', path: '/micro-saas-services' },
+    { name: '5G Solutions', path: '/5g-implementation' },
+    { name: 'Contact', path: '/contact' }
+  ]
+
+  const services = [
+    { name: 'AI Services', path: '/ai-services' },
+    { name: 'IT Services', path: '/it-services' },
+    { name: 'Cloud Services', path: '/cloud-services' },
+    { name: 'Micro SAAS', path: '/micro-saas-services' },
+    { name: 'Digital Transformation', path: '/digital-transformation' },
+    { name: '5G Implementation', path: '/5g-implementation' }
+  ]
+
+  const legal = [
+    { name: 'Privacy Policy', path: '/privacy' },
+    { name: 'Terms of Service', path: '/terms' },
+    { name: 'Cookie Policy', path: '/cookies' },
+    { name: 'Compliance', path: '/compliance' }
+  ]
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0aab
 
   const aiServices = [
     { name: "AI Analytics", path: "/ai-analytics" },
@@ -359,6 +392,7 @@ export default function Footer() {
 
 const Footer: React.FC = () => {
   return (
+<<<<<<< HEAD
     <footer className="bg-gray-900/50 backdrop-blur-lg border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 <<<<<<< HEAD
@@ -753,6 +787,17 @@ const Footer: React.FC = () => {
                   <span className="text-white font-bold text-lg">Z</span>
                 </div>
                 <span className="ml-3 text-xl font-bold text-white">Zion Tech Group</span>
+=======
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          {/* Company Info */}
+          <div className="lg:col-span-2 space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">Z</span>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0aab
               </div>
               <p className="text-gray-300 mb-6 max-w-md">
                 Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses.
@@ -775,6 +820,7 @@ const Footer: React.FC = () => {
               </div>
               <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of AI-powered solutions, IT services, and digital transformation. 
@@ -807,6 +853,36 @@ const Footer: React.FC = () => {
             <p className="text-gray-300 text-sm">
               Leading provider of advanced AI and IT solutions for businesses worldwide.
             </p>
+=======
+            <p className="text-gray-400 mb-4">
+              Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.
+            </p>
+            <div className="flex space-x-4">
+              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+                <Github className="w-5 h-5" />
+              </a>
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+                <Twitter className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <ul className="space-y-2">
+              {services.map((service, index) => (
+                <li key={index}>
+                  <Link to={service.path} className="text-gray-400 hover:text-white transition-colors">
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0aab
           </div>
 
           {/* Quick Links */}
@@ -871,6 +947,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {resourcesLinks.map((link, index) => (
                 <li key={index}>
+<<<<<<< HEAD
                   <Link
                     to={link.url}
                     className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
@@ -994,11 +1071,16 @@ const Footer: React.FC = () => {
                     <ArrowRight className="w-4 h-4 mr-2" />
                     {item.name}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
+=======
+                  <Link to={link.path} className="text-gray-400 hover:text-white transition-colors">
+                    {link.name}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0aab
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
 
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">Enterprise</h3>
@@ -1273,6 +1355,33 @@ const Footer: React.FC = () => {
               <p>&copy; {currentYear} Zion Tech Group. All rights reserved.</p>
               <p className="mt-2">Transforming businesses with cutting-edge AI and technology solutions.</p>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
+=======
+        </div>
+
+        {/* Contact Info */}
+        <div className="border-t border-gray-800 mt-12 pt-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="flex items-center space-x-3">
+              <Mail className="w-5 h-5 text-blue-400" />
+              <div>
+                <p className="text-sm text-gray-400">Email</p>
+                <p className="text-white font-medium">kleber@ziontechgroup.com</p>
+              </div>
+            </div>
+            <div className="flex items-center space-x-3">
+              <Phone className="w-5 h-5 text-blue-400" />
+              <div>
+                <p className="text-sm text-gray-400">Phone</p>
+                <p className="text-white font-medium">+1 (302) 464-0950</p>
+              </div>
+            </div>
+            <div className="flex items-center space-x-3">
+              <MapPin className="w-5 h-5 text-blue-400" />
+              <div>
+                <p className="text-sm text-gray-400">Location</p>
+                <p className="text-white font-medium">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0aab
             </div>
           </div>
         </div>
@@ -1282,6 +1391,7 @@ const Footer: React.FC = () => {
 Footer.displayName = 'Footer
 =======
 
+<<<<<<< HEAD
         <div className="border-t border-slate-700 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
             © 2024 Zion Tech Group. All rights reserved.
@@ -1342,10 +1452,30 @@ export default Footer;
                   <span>364 E Main St STE 1008<br />Middletown, DE 19709</span>
                 </div>
               </div>
+=======
+        {/* Newsletter Signup */}
+        <div className="border-t border-gray-800 mt-12 pt-8">
+          <div className="max-w-md mx-auto text-center">
+            <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
+            <p className="text-gray-300 mb-4">
+              Get the latest updates on AI technology and IT solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-2">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              />
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                Subscribe
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </button>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0aab
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
@@ -1434,13 +1564,34 @@ export default Footer;
               <Link to="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">
                 Cookie Policy
               </Link>
+=======
+        {/* Bottom Footer */}
+        <div className="border-t border-gray-800 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
+              <p className="text-gray-400 text-sm">
+                © 2024 Zion Tech Group. All rights reserved.
+              </p>
+              <div className="flex space-x-6">
+                {legal.map((item, index) => (
+                  <Link key={index} to={item.path} className="text-gray-400 hover:text-white transition-colors text-sm">
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <div className="mt-4 md:mt-0">
+              <p className="text-gray-500 text-xs">
+                Built with ❤️ by Zion Tech Group
+              </p>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0aab
             </div>
           </div>
         </div>
       </div>
     </footer>
-<<<<<<< HEAD
   )
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
 =======
@@ -1451,6 +1602,8 @@ export default Footer;
 export default Footer;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0373
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0aab
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
 =======

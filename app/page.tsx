@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Shield, Users, Zap, Globe, Lock } from 'lucide-react';
@@ -185,12 +186,15 @@ import { ArrowRight, Brain, Cloud, Shield, Code, BarChart, Users, Zap, Sparkles,
 =======
 'use client'
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0aab
 import React from 'react'
 import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphone } from 'lucide-react'
 import { Link } from 'react-router-dom'
 =======
 import React, { Suspense } from 'react'
 import { Helmet } from 'react-helmet-async'
+<<<<<<< HEAD
 import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud } from 'lucide-react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
@@ -199,14 +203,29 @@ import LoadingSpinner from './components/LoadingSpinner'
 import PerformanceMonitor from './components/PerformanceMonitor'
 import AccessibilityEnhancer from './components/AccessibilityEnhancer'
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
+=======
+import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphone } from 'lucide-react'
+import { Link } from 'react-router-dom'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0aab
 
 export default function HomePage() {
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '50+', label: 'Happy Clients' },
+    { number: '99.9%', label: 'Uptime' },
+    { number: '24/7', label: 'Support' }
+  ]
+
   const features = [
     {
       icon: <Zap className="w-8 h-8 text-blue-500" />,
       title: 'AI-Powered Solutions',
       description: 'Transform your business with our comprehensive AI services including content generation, chatbots, and automation.',
+<<<<<<< HEAD
       benefits: ['AI Content Generation - $500/month', 'AI Chatbots - $300/month', 'Process Automation - $800/month', 'AI Analytics - $400/month'],
+=======
+      benefits: ['AI Content Generation - $500/month', 'AI Chatbots - $300/month', 'AI Automation - $800/month', 'AI Analytics - $400/month'],
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0aab
       link: '/ai-services'
     },
     {
@@ -271,6 +290,7 @@ export default function HomePage() {
 const HomePage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-92c8
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1306,6 +1326,19 @@ const HomePage: React.FC = () => {
 =======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+        <meta name="description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />
+        <meta name="keywords" content="AI solutions, IT services, cloud computing, digital transformation, 5G implementation, micro SaaS" />
+        <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta property="og:description" content="Transform your business with cutting-edge AI and IT solutions" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com" />
+      </Helmet>
+      
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0aab
       {/* Hero Section */}
       <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto">
@@ -1499,7 +1532,11 @@ const HomePage: React.FC = () => {
             </p>
           </div>
           
+<<<<<<< HEAD
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-20">
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0aab
             {features.map((feature, index) => (
               <a key={index} href={feature.link} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
                 <div className="mb-4 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
@@ -1558,17 +1595,28 @@ const HomePage: React.FC = () => {
                 Let's discuss how our AI and IT solutions can drive your success.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
                 <Link 
                   to="/contact" 
                   className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
+=======
+                <Link
+                  to="/contact"
+                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0aab
                 >
                   Get Free Consultation
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link 
                   to="/ai-services" 
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
+<<<<<<< HEAD
                   Our Services
+=======
+                  View Our Services
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0aab
                 </Link>
               </div>
             </div>
