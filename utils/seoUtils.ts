@@ -1,3 +1,35 @@
+interface SEOConfig {
+  title: string;
+  description: string;
+  keywords?: string[];
+  canonicalUrl?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  robots?: string;
+  viewport?: string;
+  charset?: string;
+  author?: string;
+  publisher?: string;
+  language?: string;
+  geo?: {
+    latitude?: string;
+    longitude?: string;
+    region?: string;
+    placename?: string;
+  };
+  alternate?: Array<{
+    hreflang: string;
+    href: string;
+  }>;
+  structuredData?: any;
+}
+
 export const defaultSEOConfig: SEOConfig = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of advanced AI and IT solutions for businesses worldwide. Expert services in artificial intelligence, cloud computing, cybersecurity, and digital transformation.',
@@ -29,7 +61,7 @@ export const generateMetaTags = (config: SEOConfig): string => {
   const tags = [
     `<title>${config.title}</title>`,
     `<meta name="description" content="${config.description}" />`,
-    `<meta name="keywords" content="${config.keywords.join(', ')}" />`,
+    `<meta name="keywords" content="${config.keywords?.join(', ') || ''}" />`,
     `<meta name="robots" content="${config.robots || 'index, follow'}" />`,
     `<meta name="viewport" content="${config.viewport || 'width=device-width, initial-scale=1'}" />`,
     `<meta charset="${config.charset || 'utf-8'}" />`,
@@ -85,7 +117,7 @@ export const generateMetaTags = (config: SEOConfig): string => {
 
   // Alternate language tags
   if (config.alternate && config.alternate.length > 0) {
-    config.alternate.forEach(alt => {
+    config.alternate.forEach((alt: any) => {
       tags.push(`<link rel="alternate" hreflang="${alt.hreflang}" href="${alt.href}" />`);
     });
   }
@@ -169,7 +201,7 @@ export const optimizeSEOConfig = (config: SEOConfig): SEOConfig => {
 
   // Ensure keywords are unique and lowercase
   if (optimized.keywords) {
-    optimized.keywords = [...new Set(optimized.keywords.map(k => k.toLowerCase()))];
+    optimized.keywords = [...new Set(optimized.keywords.map((k: any) => k.toLowerCase()))];
   }
 
   return optimized;

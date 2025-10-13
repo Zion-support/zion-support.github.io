@@ -6,13 +6,25 @@ import { ErrorBoundary } from 'react-error-boundary';
 // Components
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
-import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceOptimizer from './app/components/PerformanceOptimizer';
 import FuturisticBackground from './app/components/FuturisticBackground';
 import AnalyticsProvider from './app/components/AnalyticsProvider';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import LoadingSpinner from './app/components/LoadingSpinner';
+
+// Page Components
+import HomePage from './app/page';
+import AboutPage from './app/about/page';
+import ContactPage from './app/contact/page';
+import ServicesPage from './app/services/page';
+import BlogPage from './app/blog/page';
+import TutorialsPage from './app/tutorials/page';
+import DemoPage from './app/demo/page';
+import SupportPage from './app/support/page';
+import PrivacyPage from './app/privacy/page';
+import TermsPage from './app/terms/page';
+import PricingPage from './app/pricing/page';
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -50,7 +62,7 @@ function App() {
             <div className="min-h-screen bg-gray-900">
               <Navigation />
               <main className="relative z-10" id="main-content" role="main">
-                <Suspense fallback={<LoadingStates />}>
+                <Suspense fallback={<LoadingSpinner />}>
                   <Routes>
                     {/* Main Pages */}
                     <Route path="/" element={<HomePage />} />
