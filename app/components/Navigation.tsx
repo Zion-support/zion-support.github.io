@@ -62,8 +62,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
     }
   ];
 
-<<<<<<< HEAD
-=======
   const serviceDropdownItems = [
     {
       category: 'AI Solutions',
@@ -101,100 +99,81 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
     }
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
   return (
-    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-cyan-500/20 sticky top-0 z-50">
+    <nav className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Zion Tech Group
-              </span>
-            </Link>
-          </div>
+          <Link to="/" className="flex items-center space-x-2 text-white hover:text-purple-300 transition-colors duration-200">
+            <Brain className="w-8 h-8 text-purple-400" />
+            <span className="text-xl font-bold">Zion Tech Group</span>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navigationItems.map((item, index) => (
-              <div key={index} className="relative group">
-                <Link
-                  to={item.path}
-                  className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                    isActive(item.path)
-                      ? 'text-cyan-400 bg-cyan-500/10'
-                      : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'
-                  }`}
-                >
-                  {item.icon}
-                  <span>{item.name}</span>
-                  {item.hasDropdown && (
-                    <ChevronDown className="w-4 h-4" />
-                  )}
-                </Link>
-                
-<<<<<<< HEAD
-                {/* Dropdown Menu */}
-                {item.hasDropdown && item.dropdownItems && (
-                  <div className="absolute top-full left-0 mt-1 w-64 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    <div className="py-2">
-                      {item.dropdownItems.map((dropdownItem, index) => (
-                        <Link
-                          key={index}
-                          to={dropdownItem.path}
-                          className={`block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors ${
-                            isActive(dropdownItem.path) ? 'text-cyan-400 bg-cyan-500/10' : ''
-                          }`}
-                        >
-                          {dropdownItem.name}
-                        </Link>
-                      ))}
-=======
-                {/* Services Dropdown */}
-                {item.hasDropdown && (
-                  <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                    <div className="p-6">
-                      <h3 className="text-white font-semibold mb-4 text-lg">Our Services</h3>
-                      <div className="space-y-6">
-                        {serviceDropdownItems.map((category, categoryIndex) => (
-                          <div key={categoryIndex}>
-                            <h4 className="text-cyan-400 font-medium mb-3 text-sm uppercase tracking-wide">
-                              {category.category}
-                            </h4>
-                            <div className="space-y-2">
-                              {category.items.map((service, serviceIndex) => (
-                                <Link
-                                  key={serviceIndex}
-                                  to={service.path}
-                                  className="block p-3 rounded-lg hover:bg-cyan-500/10 transition-colors group"
-                                >
-                                  <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
-                                    {service.name}
-                                  </div>
-                                  <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
-                                    {service.description}
-                                  </div>
-                                </Link>
-                              ))}
-                            </div>
+            {navigationItems.map((item) => (
+              <div key={item.name} className="relative">
+                {item.hasDropdown ? (
+                  <div className="relative">
+                    <button
+                      onClick={toggleServices}
+                      className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                        isActive(item.path) || isServicesOpen
+                          ? 'text-purple-300 bg-purple-900/50'
+                          : 'text-gray-300 hover:text-white hover:bg-purple-900/30'
+                      }`}
+                    >
+                      {item.icon}
+                      <span>{item.name}</span>
+                      {isServicesOpen ? (
+                        <ChevronUp className="w-4 h-4" />
+                      ) : (
+                        <ChevronDown className="w-4 h-4" />
+                      )}
+                    </button>
+
+                    {/* Services Dropdown */}
+                    {isServicesOpen && (
+                      <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50">
+                        <div className="px-4">
+                          <h3 className="text-lg font-semibold text-gray-900 mb-4">Our Services</h3>
+                          <div className="grid grid-cols-2 gap-4">
+                            {serviceDropdownItems.map((category) => (
+                              <div key={category.category}>
+                                <h4 className="font-medium text-gray-900 mb-2">{category.category}</h4>
+                                <ul className="space-y-1">
+                                  {category.items.map((service) => (
+                                    <li key={service.name}>
+                                      <Link
+                                        to={service.path}
+                                        className="block px-3 py-2 text-sm text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors duration-200"
+                                        onClick={() => setIsServicesOpen(false)}
+                                      >
+                                        <div className="font-medium">{service.name}</div>
+                                        <div className="text-xs text-gray-500">{service.description}</div>
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ))}
                           </div>
-                        ))}
+                        </div>
                       </div>
-                      <div className="mt-6 pt-4 border-t border-cyan-500/20">
-                        <Link
-                          to="/services"
-                          className="block text-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
-                        >
-                          View All Services →
-                        </Link>
-                      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
-                    </div>
+                    )}
                   </div>
+                ) : (
+                  <Link
+                    to={item.path}
+                    className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                      isActive(item.path)
+                        ? 'text-purple-300 bg-purple-900/50'
+                        : 'text-gray-300 hover:text-white hover:bg-purple-900/30'
+                    }`}
+                  >
+                    {item.icon}
+                    <span>{item.name}</span>
+                  </Link>
                 )}
               </div>
             ))}
@@ -203,110 +182,69 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
-              onClick={toggleMenu}
-<<<<<<< HEAD
-              className="text-gray-300 hover:text-cyan-400 transition-colors"
-=======
-              className="text-gray-300 hover:text-cyan-400 transition-colors p-2"
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
+              onClick={onSidebarToggle}
+              className="text-gray-300 hover:text-white transition-colors duration-200"
               aria-label="Toggle menu"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              <Menu className="w-6 h-6" />
             </button>
           </div>
         </div>
+      </div>
 
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800/95 backdrop-blur-sm border-t border-cyan-500/20">
-<<<<<<< HEAD
-              {navigationItems.map((item) => (
-                <div key={item.name}>
-                  <Link
-                    to={item.path}
-                    className={`flex items-center justify-between px-3 py-2 rounded-md text-base font-medium transition-colors ${
-=======
-              {navigationItems.map((item, index) => (
-                <div key={index}>
-                  <Link
-                    to={item.path}
-                    className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-base font-medium transition-colors ${
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
-                      isActive(item.path)
-                        ? 'text-cyan-400 bg-cyan-500/10'
-                        : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'
-                    }`}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <div className="flex items-center space-x-2">
+      {/* Mobile Navigation */}
+      {isOpen && (
+        <div className="md:hidden bg-slate-900 border-t border-gray-700">
+          <div className="px-2 pt-2 pb-3 space-y-1">
+            {navigationItems.map((item) => (
+              <div key={item.name}>
+                {item.hasDropdown ? (
+                  <div>
+                    <button
+                      onClick={toggleServices}
+                      className="flex items-center space-x-2 w-full px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-purple-900/30 transition-colors duration-200"
+                    >
                       {item.icon}
                       <span>{item.name}</span>
-                    </div>
-                    {item.hasDropdown && (
-                      <button
-                        onClick={(e) => {
-                          e.preventDefault();
-                          toggleServices();
-                        }}
-<<<<<<< HEAD
-                        className="text-gray-400 hover:text-cyan-400"
-=======
-                        className="ml-auto"
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
-                      >
-                        {isServicesOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-                      </button>
+                      {isServicesOpen ? (
+                        <ChevronUp className="w-4 h-4 ml-auto" />
+                      ) : (
+                        <ChevronDown className="w-4 h-4 ml-auto" />
+                      )}
+                    </button>
+                    {isServicesOpen && (
+                      <div className="pl-6 space-y-1">
+                        {item.dropdownItems?.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            to={dropdownItem.path}
+                            className="block px-3 py-2 rounded-md text-sm text-gray-400 hover:text-white hover:bg-purple-900/30 transition-colors duration-200"
+                            onClick={() => {
+                              setIsOpen(false);
+                              setIsServicesOpen(false);
+                            }}
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        ))}
+                      </div>
                     )}
+                  </div>
+                ) : (
+                  <Link
+                    to={item.path}
+                    className="flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-purple-900/30 transition-colors duration-200"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.icon}
+                    <span>{item.name}</span>
                   </Link>
-                  
-<<<<<<< HEAD
-                  {/* Mobile Dropdown */}
-                  {item.hasDropdown && item.dropdownItems && isServicesOpen && (
-                    <div className="pl-6 space-y-1">
-                      {item.dropdownItems.map((dropdownItem, index) => (
-                        <Link
-                          key={index}
-                          to={dropdownItem.path}
-                          className={`block px-3 py-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors ${
-                            isActive(dropdownItem.path) ? 'text-cyan-400' : ''
-                          }`}
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {dropdownItem.name}
-                        </Link>
-=======
-                  {/* Mobile Services Dropdown */}
-                  {item.hasDropdown && isServicesOpen && (
-                    <div className="ml-4 mt-2 space-y-2">
-                      {serviceDropdownItems.map((category, categoryIndex) => (
-                        <div key={categoryIndex}>
-                          <h4 className="text-cyan-400 font-medium text-sm uppercase tracking-wide mb-2">
-                            {category.category}
-                          </h4>
-                          <div className="space-y-1">
-                            {category.items.map((service, serviceIndex) => (
-                              <Link
-                                key={serviceIndex}
-                                to={service.path}
-                                className="block px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-colors"
-                                onClick={() => setIsOpen(false)}
-                              >
-                                {service.name}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
+                )}
+              </div>
+            ))}
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </nav>
   );
 }

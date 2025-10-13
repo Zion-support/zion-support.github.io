@@ -1,28 +1,10 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "timestamp": "2025-10-13T10:35:44.609Z",
+  "timestamp": "2025-10-13T10:56:03.363Z",
   "buildStats": {
-    "totalFiles": 85,
-    "totalSize": 830641,
-    "jsFiles": 82,
-    "jsSize": 821458,
-=======
-  "timestamp": "2025-10-13T10:36:32.987Z",
-  "buildStats": {
-    "totalFiles": 16,
-    "totalSize": 825630,
-    "jsFiles": 13,
-    "jsSize": 816250,
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
-=======
-  "timestamp": "2025-10-13T10:41:07.440Z",
-  "buildStats": {
-    "totalFiles": 16,
-    "totalSize": 692015,
-    "jsFiles": 12,
-    "jsSize": 668684,
->>>>>>> cursor/fix-errors-and-merge-to-main-aec0
+    "totalFiles": 84,
+    "totalSize": 811011,
+    "jsFiles": 81,
+    "jsSize": 801908,
     "cssFiles": 1,
     "cssSize": 1811,
     "imageFiles": 0,
