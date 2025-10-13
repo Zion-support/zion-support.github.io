@@ -10,37 +10,6 @@ import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
 import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
-<<<<<<< HEAD
-<<<<<<< HEAD
-import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
-import AnalyticsProvider from "./app/components/AnalyticsProvider";
-import PerformanceMonitor from "./app/components/PerformanceMonitor";
-import AdvancedPerformanceMonitor from "./app/components/AdvancedPerformanceMonitor";
-import WebVitalsTracker from "./app/components/WebVitalsTracker";
-import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
-import CoreWebVitals from "./app/components/CoreWebVitals";
-import FuturisticBackground from "./app/components/FuturisticBackground";
-import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
-import Breadcrumb from "./app/components/Breadcrumb";
-import LoadingPageEnhanced from "./app/components/EnhancedLoading";
-<<<<<<< HEAD
-=======
-import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
-import ImprovedErrorBoundary from "./app/components/ImprovedErrorBoundary";
-import ImprovedLoading from "./app/components/ImprovedLoading";
-import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
-import Breadcrumb from "./app/components/Breadcrumb";
-import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
-import AnalyticsProvider from "./app/components/AnalyticsProvider";
-import PerformanceMonitor from "./app/components/PerformanceMonitor";
-import WebVitalsTracker from "./app/components/WebVitalsTracker";
-import CoreWebVitals from "./app/components/CoreWebVitals";
-import FuturisticBackground from "./app/components/FuturisticBackground";
-import EnhancedSEO from "./app/components/EnhancedSEO";
-import { performanceOptimizer } from "./utils/performanceUtils";
-import { accessibilityManager } from "./utils/accessibilityUtils";
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
-=======
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
@@ -50,25 +19,18 @@ import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import EnhancedSEO from "./app/components/EnhancedSEO";
->>>>>>> cursor/analyze-improve-and-deploy-application-da10
-=======
-import LoadingState from "./app/components/EnhancedLoading";
->>>>>>> cursor/analyze-improve-and-deploy-application-0571
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
 const ContactPage = React.lazy(() => import("./app/contact/page"));
 const ServicesPage = React.lazy(() => import("./app/services/page"));
 const BlogPage = React.lazy(() => import("./app/blog/page"));
-<<<<<<< HEAD
-=======
 const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
 const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
 const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
 const DemoPage = React.lazy(() => import("./app/demo/page"));
 const SupportPage = React.lazy(() => import("./app/support/page"));
->>>>>>> cursor/analyze-improve-and-deploy-application-da10
 const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
 
