@@ -9,6 +9,7 @@ import Footer from "./app/components/Footer";
 import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
 import ErrorBoundary from "./app/components/ErrorBoundary";
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import EnhancedPerformanceOptimizer from "./app/components/EnhancedPerformanceOptimizer";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
@@ -16,6 +17,7 @@ import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import EnhancedSEO from "./app/components/EnhancedSEO";
 import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
+import AdvancedPerformanceMonitor from "./app/components/AdvancedPerformanceMonitor";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
@@ -203,7 +205,7 @@ const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 function App() {
   return (
     <ErrorHandler>
-      <ErrorBoundary>
+      <EnhancedErrorBoundary>
         <HelmetProvider>
           <AccessibilityEnhancer>
             <Router>
@@ -455,6 +457,7 @@ function App() {
                 <AnalyticsProvider>
                   <div>
                     <PerformanceMonitor />
+                    <AdvancedPerformanceMonitor />
                     <PerformanceEnhancer />
                     <SEOOptimizer />
                     <EnhancedSEO />
@@ -464,7 +467,7 @@ function App() {
             </Router>
           </AccessibilityEnhancer>
         </HelmetProvider>
-      </ErrorBoundary>
+      </EnhancedErrorBoundary>
     </ErrorHandler>
   );
 }

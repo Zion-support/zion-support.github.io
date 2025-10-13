@@ -1,100 +1,122 @@
-import React, { useState, useCallback, useMemo } from 'react';
-import { ImageIcon, Loader2 } from 'lucide-react';
+import React, { useState, useRef, useEffect } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 interface ImageOptimizerProps {
   src: string;
   alt: string;
+  className?: string;
   width?: number;
   height?: number;
-  className?: string;
-  // placeholder?: string; // Available for future use
-  lazy?: boolean;
+  priority?: boolean;
+  placeholder?: string;
+  effect?: 'blur' | 'opacity' | 'black-and-white';
+  threshold?: number;
 }
 
-const ImageOptimizer = React.memo<ImageOptimizerProps>(({
+const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   src,
   alt,
+  className = '',
   width,
   height,
-  className = '',
-  lazy = true
+  priority = false,
+  placeholder,
+  effect = 'blur',
+  threshold = 100
 }) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
 
-  const handleLoad = useCallback(() => {
-    setIsLoading(false);
-  }, []);
-
-  const handleError = useCallback(() => {
-    setIsLoading(false);
-    setHasError(true);
-  }, []);
-
-  const optimizedSrc = useMemo(() => {
-    // Add WebP format support and quality optimization
-    if (src.includes('?')) {
-      return `${src}&format=webp&quality=80`;
+  // Generate optimized src with WebP support
+  const getOptimizedSrc = (originalSrc: string) => {
+    if (originalSrc.startsWith('http') || originalSrc.startsWith('data:')) {
+      return originalSrc;
     }
-    return `${src}?format=webp&quality=80`;
-  }, [src]);
+    
+    // Add WebP support for local images
+    const basePath = originalSrc.replace(/\.[^/.]+$/, '');
+    const extension = originalSrc.split('.').pop();
+    
+    return `${basePath}.webp`;
+  };
 
-  // Placeholder generation logic (currently unused but kept for future use)
-  // const placeholderSrc = useMemo(() => {
-  //   if (placeholder) return placeholder;
-  //   
-  //   // Generate a simple placeholder based on dimensions
-  //   const w = width || 300;
-  //   const h = height || 200;
-  //   return `data:image/svg+xml;base64,${btoa(`
-  //     <svg width="${w}" height="${h}" xmlns="http://www.w3.org/2000/svg">
-  //       <rect width="100%" height="100%" fill="#f3f4f6"/>
-  //       <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="#9ca3af" font-family="Arial, sans-serif" font-size="14">
-  //         Loading...
-  //       </text>
-  //     </svg>
-  //   `)}`;
-  // }, [placeholder, width, height]);
+  const handleLoad = () => {
+    setIsLoaded(true);
+  };
+
+  const handleError = () => {
+    setHasError(true);
+    setIsLoaded(true);
+  };
+
+  // Preload critical images
+  useEffect(() => {
+    if (priority && src) {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'image';
+      link.href = getOptimizedSrc(src);
+      document.head.appendChild(link);
+      
+      return () => {
+        document.head.removeChild(link);
+      };
+    }
+  }, [priority, src]);
 
   if (hasError) {
     return (
       <div 
-        className={`flex items-center justify-center bg-gray-200 ${className}`}
+        className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={{ width, height }}
       >
-        <ImageIcon className="w-8 h-8 text-gray-400" />
+        <span className="text-gray-400 text-sm">Image unavailable</span>
       </div>
     );
   }
 
-  return (
-    <div className={`relative ${className}`} style={{ width, height }}>
-      {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-200">
-          <Loader2 className="w-6 h-6 animate-spin text-gray-400" />
-        </div>
-      )}
-      
+  if (priority) {
+    return (
       <img
-        src={optimizedSrc}
+        ref={imgRef}
+        src={getOptimizedSrc(src)}
         alt={alt}
+        className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
         width={width}
         height={height}
-        loading={lazy ? 'lazy' : 'eager'}
         onLoad={handleLoad}
         onError={handleError}
-        className={`transition-opacity duration-300 ${
-          isLoading ? 'opacity-0' : 'opacity-100'
-        }`}
-        style={{
-          width: width ? `${width}px` : '100%',
-          height: height ? `${height}px` : 'auto',
-        }}
+        loading="eager"
+        decoding="async"
       />
-    </div>
-  );
-});
+    );
+  }
 
-ImageOptimizer.displayName = 'ImageOptimizer';
+  return (
+    <LazyLoadImage
+      src={getOptimizedSrc(src)}
+      alt={alt}
+      className={className}
+      width={width}
+      height={height}
+      effect={effect}
+      threshold={threshold}
+      placeholder={
+        placeholder ? (
+          <div 
+            className={`bg-gray-200 animate-pulse ${className}`}
+            style={{ width, height }}
+          />
+        ) : undefined
+      }
+      onLoad={handleLoad}
+      onError={handleError}
+      loading="lazy"
+      decoding="async"
+    />
+  );
+};
 
 export default ImageOptimizer;

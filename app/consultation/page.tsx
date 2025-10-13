@@ -1,25 +1,97 @@
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+'use client';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Users, Clock, Star, Award, Zap, Shield, Globe, Phone, Mail, MapPin } from 'lucide-react';
 
-export default function Consultation() {
+const ConsultationPage: React.FC = () => {
+  const [selectedService, setSelectedService] = useState('');
+
+  const consultationTypes = [
+    {
+      id: 'ai-strategy',
+      name: 'AI Strategy Consultation',
+      description: 'Develop a comprehensive AI roadmap for your business',
+      duration: '2-4 weeks',
+      price: '$5,000',
+      features: ['AI readiness assessment', 'Technology roadmap', 'Implementation strategy', 'ROI analysis'],
+      popular: true
+    },
+    {
+      id: 'cloud-migration',
+      name: 'Cloud Migration Planning',
+      description: 'Plan and execute your cloud transformation journey',
+      duration: '3-6 weeks',
+      price: '$8,000',
+      features: ['Current infrastructure audit', 'Migration strategy', 'Cost optimization', 'Security planning'],
+      popular: false
+    },
+    {
+      id: 'cybersecurity',
+      name: 'Cybersecurity Assessment',
+      description: 'Comprehensive security evaluation and recommendations',
+      duration: '1-2 weeks',
+      price: '$3,000',
+      features: ['Security audit', 'Vulnerability assessment', 'Compliance review', 'Remediation plan'],
+      popular: false
+    },
+    {
+      id: 'digital-transformation',
+      name: 'Digital Transformation',
+      description: 'Complete digital overhaul strategy and implementation',
+      duration: '6-12 weeks',
+      price: '$15,000',
+      features: ['Business process analysis', 'Technology stack review', 'Change management', 'Training programs'],
+      popular: false
+    }
+  ];
+
+  const experts = [
+    {
+      name: 'Dr. Sarah Chen',
+      role: 'Chief AI Strategist',
+      experience: '15+ years',
+      expertise: ['Machine Learning', 'AI Strategy', 'Data Science'],
+      rating: 5
+    },
+    {
+      name: 'Michael Rodriguez',
+      role: 'Cloud Solutions Architect',
+      experience: '12+ years',
+      expertise: ['AWS', 'Azure', 'Cloud Migration'],
+      rating: 5
+    },
+    {
+      name: 'Alex Thompson',
+      role: 'Cybersecurity Expert',
+      experience: '10+ years',
+      expertise: ['Security Architecture', 'Compliance', 'Risk Management'],
+      rating: 5
+    }
+  ];
+
+  const consultationServices = [
+    'AI Strategy & Implementation',
+    'Cloud Architecture & Migration',
+    'Cybersecurity Assessment',
+    'Digital Transformation',
+    'Technology Roadmapping',
+    'IT Infrastructure Planning'
+  ];
+
+  const handleBooking = (serviceId: string) => {
+    setSelectedService(serviceId);
+    // Handle booking logic here
+  };
+
   return (
     <>
       <Helmet>
-        <title>Consultation - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Professional consultation services from Zion Tech Group"
-        />
+        <title>Expert Consultation | Zion Tech Group</title>
+        <meta name="description" content="Get personalized guidance from our experienced team of IT experts. Transform your business with strategic technology solutions." />
+        <meta name="keywords" content="IT consultation, AI strategy, cloud migration, cybersecurity, digital transformation" />
       </Helmet>
-<<<<<<< HEAD
-
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Consultation</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional consultation services coming soon.
-=======
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -32,7 +104,7 @@ export default function Consultation() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <div className="flex items-center justify-center gap-4 text-white">
-                <Calendar className="w-8 h-8 text-purple-400" />
+                <Clock className="w-8 h-8 text-purple-400" />
                 <div className="text-left">
                   <div className="text-2xl font-bold">Flexible Scheduling</div>
                   <div className="text-gray-400">Book at your convenience</div>
@@ -168,122 +240,39 @@ export default function Consultation() {
                     <Phone className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
-                  <p className="text-gray-300">+1 (555) 123-4567</p>
+                  <p className="text-gray-300">+1 (302) 464-0950</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <Mail className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
-                  <p className="text-gray-300">consultation@ziontech.com</p>
+                  <p className="text-gray-300">kleber@ziontechgroup.com</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <MapPin className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
-                  <p className="text-gray-300">123 Tech Street, Silicon Valley</p>
+                  <p className="text-gray-300">364 E Main St STE 1008<br />Middletown, DE 19709</p>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-                >
+                <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                   Schedule Consultation
                   <ArrowRight className="w-5 h-5" />
-                </Link>
-                <Link
-                  to="/services"
-                  className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
-                >
+                </button>
+                <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
                   View All Services
-                </Link>
+                </button>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Consultation Services</h2>
-            <p className="text-xl text-gray-300">Comprehensive technology consulting tailored to your business needs</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {consultationServices.map((service, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                  <CheckCircle className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service}</h3>
-                <p className="text-gray-300">Expert guidance and strategic planning for your technology initiatives.</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="py-16 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Our Process</h2>
-            <p className="text-xl text-gray-300">How we deliver exceptional consultation services</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">1</span>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Discovery</h3>
-              <p className="text-gray-300">We analyze your current technology landscape and business objectives.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">2</span>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Strategy</h3>
-              <p className="text-gray-300">We develop a customized roadmap aligned with your goals.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">3</span>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Implementation</h3>
-              <p className="text-gray-300">We guide you through execution and provide ongoing support.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Schedule a consultation with our experts and discover how technology can drive your success.
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
-          </p>
-
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
+        </section>
       </div>
     </>
   );
-}
+};
+
+export default ConsultationPage;
