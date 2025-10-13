@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
-import { Linkedin, Twitter, Github } from "lucide-react";
+import { Linkedin, Twitter, Github, Mail, Phone, MapPin, ArrowRight, Sparkles } from "lucide-react";
 
 const Footer = React.memo(() => {
   const currentYear = new Date().getFullYear();
@@ -24,8 +24,92 @@ const Footer = React.memo(() => {
   ], []);
 
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <footer className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
+      {/* Enhanced Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
+      <div className="absolute inset-0 holographic-grid opacity-20"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
+        {/* Contact Information Banner */}
+        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 mb-12">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Get in touch with our experts for a personalized consultation and discover how our solutions can accelerate your growth.
+            </p>
+          </div>
+          
+          {/* Contact Details Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div className="text-center group">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Mail className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-white font-semibold mb-2">Email Us</h4>
+              <p className="text-cyan-400 mb-2">kleber@ziontechgroup.com</p>
+              <Link
+                to="/contact"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group"
+              >
+                Send Message
+                <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+            
+            <div className="text-center group">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Phone className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-white font-semibold mb-2">Call Us</h4>
+              <p className="text-cyan-400 mb-2">+1 302 464 0950</p>
+              <a
+                href="tel:+13024640950"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group"
+              >
+                Call Now
+                <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
+            
+            <div className="text-center group">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <MapPin className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-white font-semibold mb-2">Visit Us</h4>
+              <p className="text-cyan-400 mb-2">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <a
+                href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group"
+              >
+                Get Directions
+                <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
+          </div>
+          
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+            >
+              Get Started Today
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/consultation"
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105 flex items-center justify-center"
+            >
+              Free Consultation
+              <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+            </Link>
+          </div>
+        </div>
+
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-12">
           {/* Company Info */}
