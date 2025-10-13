@@ -394,7 +394,7 @@ export default function ITServices() {
         <link rel="canonical" href="https://ziontechgroup.com/it-services" />
       </Helmet>
       
-      <SEOOptimizer>
+      <SEOOptimizer></SEOOptimizer>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">

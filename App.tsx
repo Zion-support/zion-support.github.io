@@ -124,11 +124,11 @@ function App() {
   }, []);
 
   return (
-    <HelmetProvider>
-      <ErrorBoundary>
-        <AnalyticsProvider>
-          <EnhancedAnalytics>
-            <PerformanceOptimizer>
+    <HelmetProvider></HelmetProvider>
+      <ErrorBoundary></ErrorBoundary>
+        <AnalyticsProvider></AnalyticsProvider>
+          <EnhancedAnalytics></EnhancedAnalytics>
+            <PerformanceOptimizer></PerformanceOptimizer>
               <PerformanceMonitor showDetails={process.env.NODE_ENV === 'development'}>
                 <div>Performance monitoring active</div>
               </PerformanceMonitor>
