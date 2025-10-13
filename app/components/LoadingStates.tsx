@@ -1,45 +1,21 @@
 import React from 'react';
-import { Loader2 } from 'lucide-react';
+import { Loader2, Brain, Shield, Zap, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 interface LoadingPageProps {
   type?: 'loading' | 'ai' | 'security' | 'performance' | 'global';
   message?: string;
-<<<<<<< HEAD
   variant?: 'default' | 'futuristic' | 'minimal';
-}
-
-export const LoadingPage: React.FC<LoadingPageProps> = ({ 
-  message = "Loading...", 
-  variant = "futuristic" 
-}) => {
-  if (variant === 'minimal') {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-900">
-        <div className="flex items-center space-x-3">
-          <Loader2 className="w-6 h-6 animate-spin text-cyan-400" />
-          <span className="text-white text-lg">{message}</span>
-        </div>
-      </div>
-    );
-  }
-
-<<<<<<< HEAD
-export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
-  const getServiceIcon = (serviceName: string) => {
-    switch (serviceName.toLowerCase()) {
-=======
   size?: 'sm' | 'md' | 'lg';
 }
 
-const LoadingPage: React.FC<LoadingPageProps> = ({ 
+export const LoadingPage: React.FC<LoadingPageProps> = ({ 
   type = 'loading', 
   message = 'Loading...', 
-  size = 'md' 
+  variant = 'futuristic',
+  size = 'md'
 }) => {
   const getIcon = () => {
     switch (type) {
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
       case 'ai':
         return <Brain className="animate-pulse" />;
       case 'security':
@@ -63,29 +39,47 @@ const LoadingPage: React.FC<LoadingPageProps> = ({
         return 'w-8 h-8';
     }
   };
-=======
-  if (variant === 'default') {
+
+  if (variant === 'minimal') {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="text-center">
-          <Loader2 className="w-12 h-12 animate-spin text-cyan-400 mx-auto mb-4" />
-          <h2 className="text-xl font-semibold text-white mb-2">{message}</h2>
-          <p className="text-gray-400">Please wait while we load the content...</p>
+      <div className="min-h-screen flex items-center justify-center bg-slate-900">
+        <div className="flex items-center space-x-3">
+          <Loader2 className="w-6 h-6 animate-spin text-cyan-400" />
+          <span className="text-white text-lg">{message}</span>
         </div>
       </div>
     );
   }
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
+
+  if (variant === 'default') {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="text-center">
+          <div className={`${getSizeClasses()} text-blue-400 mx-auto mb-4`}>
+            {getIcon()}
+          </div>
+          <h2 className="text-xl font-semibold text-white mb-2">{message}</h2>
+          <p className="text-gray-400">Please wait while we load the content...</p>
+          <div className="mt-4 flex justify-center">
+            <div className="animate-pulse flex space-x-1">
+              <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+              <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+              <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   // Futuristic variant
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center relative overflow-hidden">
-      {/* Optimized animated background elements */}
+      {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse will-change-transform"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000 will-change-transform"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-pink-500/10 rounded-full blur-2xl animate-pulse delay-500 will-change-transform"></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-pink-500/10 rounded-full blur-2xl animate-pulse delay-500"></div>
       </div>
 
       <div className="relative z-10 text-center">
@@ -129,38 +123,23 @@ const LoadingPage: React.FC<LoadingPageProps> = ({
           </div>
           <p className="text-sm text-gray-400">Initializing advanced systems...</p>
         </div>
-=======
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="text-center">
-        <div className={`${getSizeClasses()} text-blue-400 mx-auto mb-4`}>
-          {getIcon()}
-        </div>
-        <p className="text-white text-lg font-medium">{message}</p>
-        <div className="mt-4 flex justify-center">
-          <div className="animate-pulse flex space-x-1">
-            <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-            <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-            <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-          </div>
-        </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
-=======
-export const LoadingPage: React.FC = () => {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="text-center">
-        <Loader2 className="w-12 h-12 text-blue-400 animate-spin mx-auto mb-4" />
-        <h2 className="text-xl font-semibold text-white mb-2">Loading...</h2>
-        <p className="text-gray-400">Please wait while we load the content</p>
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="text-center">
+        <Loader2 className="w-12 h-12 text-blue-400 animate-spin mx-auto mb-4" />
+        <h2 className="text-xl font-semibold text-white mb-2">Loading {service}...</h2>
+        <p className="text-gray-400">Preparing your {service} experience</p>
+      </div>
+    </div>
+  );
+};
+
 export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
   return (
     <div className="animate-pulse">
@@ -190,12 +169,4 @@ export const CardSkeleton: React.FC = () => {
   );
 };
 
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 export default LoadingPage;
-=======
-export { LoadingPage };
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
-=======
-export default LoadingPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
