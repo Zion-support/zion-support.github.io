@@ -8,10 +8,18 @@ import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
+=======
+import { LoadingPage } from "./app/components/LoadingStates";
+import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import Breadcrumb from "./app/components/Breadcrumb";
+import FuturisticBackground from "./app/components/FuturisticBackground";
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-4325
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
@@ -567,6 +575,10 @@ const ZionCrmIntelligencePage = React.lazy(() => import("./app/zion-crm-intellig
 const ZionCustomerInsightsPage = React.lazy(() => import("./app/zion-customer-insights/page"));
 
 
+// Micro SAAS Services
+const ZionAnalyticsProPage = React.lazy(() => import("./app/zion-analytics-pro/page"));
+const ZionSecurityShieldPage = React.lazy(() => import("./app/zion-security-shield/page"));
+
 // Main App Component
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
@@ -607,6 +619,27 @@ function App() {
                         <Route path="/terms" element={<TermsPage />} />
                         <Route path="/cookies" element={<CookiesPage />} />
                         <Route path="/sitemap" element={<SitemapPage />} />
+<<<<<<< HEAD
+=======
+                        
+                        {/* Additional routes */}
+                        <Route path="/case-studies" element={<CaseStudiesPage />} />
+                        <Route path="/consultation" element={<ConsultationPage />} />
+                        <Route path="/it-services" element={<ITServicesPage />} />
+                        <Route path="/cloud-services" element={<CloudServicesPage />} />
+                        <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                        <Route path="/custom-development" element={<CustomDevelopmentPage />} />
+                        <Route path="/web-development" element={<WebDevelopmentPage />} />
+                        <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                        <Route path="/database-management" element={<DatabaseManagementPage />} />
+                        <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
+                        <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+                        <Route path="/careers" element={<CareersPage />} />
+                        
+                        {/* Micro SAAS Services */}
+                        <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
+                        <Route path="/zion-security-shield" element={<ZionSecurityShieldPage />} />
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-4325
                       </Routes>
                     </Suspense>
                   </main>
@@ -616,6 +649,7 @@ function App() {
                   </EnhancedAccessibility>
                 </FuturisticBackground>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 <PerformanceMonitor />
                 <EnhancedSEO 
@@ -624,6 +658,8 @@ function App() {
                   keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
                 />
 >>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-4325
               </div>
               <EnhancedAccessibility>
                 <div></div>

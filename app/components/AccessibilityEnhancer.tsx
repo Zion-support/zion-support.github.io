@@ -222,10 +222,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
     
+=======
+  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
+    const root = document.documentElement;
+
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-4325
     // Large text mode
     if (newSettings.largeText) {
       root.classList.add('large-text');
@@ -268,7 +274,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     setSettings(defaultSettings);
     applyAccessibilitySettings(defaultSettings);
   };
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-4325
   return (
     <>
       {children}
