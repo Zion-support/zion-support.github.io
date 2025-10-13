@@ -19,24 +19,10 @@ const CacheManager = () => {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-<<<<<<< HEAD
-=======
-    // Service Worker registration for caching
-    const registerServiceWorker = async () => {
-      if ('serviceWorker' in navigator) {
-        try {
-          const registration = await navigator.serviceWorker.register('/sw.js');
-          console.log('Service Worker registered:', registration);
-<<<<<<< HEAD
-        } catch (error) {
-          console.error('Service Worker registration failed:', error);
->>>>>>> cursor/website-audit-and-update-with-deployment-3b6d
-=======
         } catch {
           // Handle error silently
         } catch (error) {
           console.error('Service Worker registration failed:', error);
->>>>>>> cursor/website-audit-and-update-with-deployment-df24
         }
       }
     }
@@ -58,14 +44,6 @@ const CacheManager = () => {
         try {
           const cache = await caches.open(CACHE_NAME);
           await cache.addAll(CACHE_URLS);
-<<<<<<< HEAD
-=======
-          console.log('Static assets cached successfully');
-        } catch (error) {
-          console.error('Failed to cache static assets:', error);
-        } catch {
-          // Handle error silently
->>>>>>> cursor/website-audit-and-update-with-deployment-df24
         }
       }
 
@@ -80,12 +58,6 @@ const CacheManager = () => {
           }
           
           return response
-<<<<<<< HEAD
-=======
-        } catch {
-        } catch (error) {
-          console.error('Failed to cache API response:', error);
->>>>>>> cursor/website-audit-and-update-with-deployment-df24
           return fetch(request);
         }
       }
@@ -143,41 +115,6 @@ const CacheManager = () => {
               imageObserver.unobserve(img)
             }
           }
-<<<<<<< HEAD
-    // Only run in development
-    if (process.env.NODE_ENV !== 'development') return
-
-    const updateStats = () => {
-      if ('caches' in window) {
-        caches.keys().then(cacheNames => {
-          let totalSize = 0
-          Promise.all(
-            cacheNames.map(cacheName =>
-              caches.open(cacheName).then(cache =>
-                cache.keys().then(requests =>
-                  Promise.all(
-                    requests.map(request =>
-                      cache.match(request).then(response => {
-                        if (response) {
-                          const contentLength = response.headers.get('content-length')
-                          if (contentLength) {
-                            totalSize += parseInt(contentLength, 10)
-                          }
-                        }
-                      })
-                    )
-                  )
-                )
-              )
-            )
-          ).then(() => {
-            setStats(prev => ({
-              ...prev,
-              size: totalSize
-            }))
-          })
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3b6d
         })
       }
     }

@@ -212,8 +212,3 @@ export default function Community() {
   );
 }
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-df24

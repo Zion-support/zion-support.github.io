@@ -1,130 +1,91 @@
-import { ArrowRight, Calendar, CheckCircle, Zap, Mail, Smartphone, Globe } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function Consultation() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    industry: '',
-    projectSize: '',
-    timeline: '',
-    message: '',
-    consultationType: ''
-  });
+const ConsultationPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Consultation - Zion Tech Group</title>
+        <meta name="description" content="Get expert consultation on AI, technology, and digital transformation for your business." />
+        <meta name="keywords" content="consultation, technology consulting, AI consulting, digital transformation" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Expert Consultation
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Get personalized advice from our technology experts to accelerate your digital transformation journey.
+            </p>
+          </div>
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-semibold text-white mb-4">AI Strategy</h3>
+              <p className="text-gray-300 mb-6">
+                Develop a comprehensive AI strategy tailored to your business needs and goals.
+              </p>
+              <ul className="text-gray-300 space-y-2 mb-6">
+                <li>• AI readiness assessment</li>
+                <li>• Technology roadmap</li>
+                <li>• Implementation planning</li>
+              </ul>
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Book Consultation
+              </button>
+            </div>
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitted(true);
-    // Handle form submission logic here
-  };
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-semibold text-white mb-4">Cloud Migration</h3>
+              <p className="text-gray-300 mb-6">
+                Plan and execute a seamless migration to the cloud with minimal disruption.
+              </p>
+              <ul className="text-gray-300 space-y-2 mb-6">
+                <li>• Cloud assessment</li>
+                <li>• Migration strategy</li>
+                <li>• Security planning</li>
+              </ul>
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Book Consultation
+              </button>
+            </div>
 
-  const consultationTypes = [
-    {
-      title: "AI Strategy",
-      description: "Strategic planning for AI implementation and digital transformation.",
-      price: "Free",
-      duration: "30 min",
-      color: "from-blue-500 to-cyan-500",
-      icon: <Zap className="w-8 h-8 text-white" />,
-      features: [
-        "AI readiness assessment",
-        "Technology roadmap",
-        "ROI analysis",
-        "Implementation timeline"
-      ]
-    },
-    {
-      title: "Cloud Migration",
-      description: "Expert guidance on cloud infrastructure and migration strategies.",
-      price: "Free",
-      duration: "45 min",
-      color: "from-purple-500 to-pink-500",
-      icon: <Globe className="w-8 h-8 text-white" />,
-      features: [
-        "Infrastructure audit",
-        "Migration strategy",
-        "Cost optimization",
-        "Security assessment"
-      ]
-    },
-    {
-      title: "Cybersecurity",
-      description: "Comprehensive security audit and protection strategy.",
-      price: "Free",
-      duration: "60 min",
-      color: "from-red-500 to-orange-500",
-      icon: <CheckCircle className="w-8 h-8 text-white" />,
-      features: [
-        "Security assessment",
-        "Vulnerability analysis",
-        "Compliance review",
-        "Protection strategy"
-      ]
-    },
-    {
-      title: "Digital Transformation",
-      description: "Complete digital strategy and modernization planning.",
-      price: "Free",
-      duration: "90 min",
-      color: "from-green-500 to-teal-500",
-      icon: <Calendar className="w-8 h-8 text-white" />,
-      features: [
-        "Digital audit",
-        "Technology stack review",
-        "Process optimization",
-        "Change management"
-      ]
-    }
-  ];
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-semibold text-white mb-4">Digital Transformation</h3>
+              <p className="text-gray-300 mb-6">
+                Transform your business processes with cutting-edge technology solutions.
+              </p>
+              <ul className="text-gray-300 space-y-2 mb-6">
+                <li>• Process analysis</li>
+                <li>• Technology selection</li>
+                <li>• Change management</li>
+              </ul>
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Book Consultation
+              </button>
+            </div>
+          </div>
 
-  const benefits = [
-    {
-      title: "Expert Guidance",
-      description: "Get insights from certified technology professionals with years of experience.",
-      icon: <CheckCircle className="w-8 h-8 text-cyan-400" />
-    },
-    {
-      title: "No Obligation",
-      description: "Completely free consultation with no strings attached or hidden costs.",
-      icon: <Zap className="w-8 h-8 text-purple-400" />
-    },
-    {
-      title: "Actionable Insights",
-      description: "Receive practical recommendations you can implement immediately.",
-      icon: <ArrowRight className="w-8 h-8 text-green-400" />
-    },
-    {
-      title: "Customized Solutions",
-      description: "Tailored advice based on your specific business needs and challenges.",
-      icon: <Globe className="w-8 h-8 text-blue-400" />
-    }
-  ];
-
-  const industries = [
-    "Technology", "Healthcare", "Finance", "Manufacturing", "Retail", "Education", "Government", "Other"
-  ];
-
-  const projectSizes = [
-    "Small (1-10 employees)", "Medium (11-100 employees)", "Large (101-1000 employees)", "Enterprise (1000+ employees)"
-  ];
-
-  const timelines = [
-    "Immediate (1-3 months)", "Short-term (3-6 months)", "Medium-term (6-12 months)", "Long-term (12+ months)"
-  ];
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Schedule a free consultation with our experts to discuss your technology needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Schedule Free Consultation
+              </button>
+              <button className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
-}
+};
+
+export default ConsultationPage;

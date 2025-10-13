@@ -24,12 +24,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
 
     } catch (error) {
       console.error('Failed to subscribe to newsletter:', error);
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> cursor/website-audit-and-update-with-deployment-3b6d
     } finally {
       setIsLoading(false);
     }
