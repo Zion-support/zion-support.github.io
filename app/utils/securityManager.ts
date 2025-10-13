@@ -1,7 +1,9 @@
-// securityManager utility
+// securityManager.ts - Utility functions
 export const securityManager = {
-  // Utility implementation
+  // Utility functions will be implemented here
   init: () => {
-    console.log('securityManager initialized');
+    console.log('securityManager.ts initialized');
   }
 };
+
+export default securityManager;

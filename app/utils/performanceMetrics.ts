@@ -1,7 +1,9 @@
-// performanceMetrics utility
+// performanceMetrics.ts - Utility functions
 export const performanceMetrics = {
-  // Utility implementation
+  // Utility functions will be implemented here
   init: () => {
-    console.log('performanceMetrics initialized');
+    console.log('performanceMetrics.ts initialized');
   }
 };
+
+export default performanceMetrics;

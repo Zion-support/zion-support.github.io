@@ -1,7 +1,9 @@
-// dataValidator utility
+// dataValidator.ts - Utility functions
 export const dataValidator = {
-  // Utility implementation
+  // Utility functions will be implemented here
   init: () => {
-    console.log('dataValidator initialized');
+    console.log('dataValidator.ts initialized');
   }
 };
+
+export default dataValidator;

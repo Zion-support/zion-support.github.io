@@ -1,7 +1,9 @@
-// apiCache utility
+// apiCache.ts - Utility functions
 export const apiCache = {
-  // Utility implementation
+  // Utility functions will be implemented here
   init: () => {
-    console.log('apiCache initialized');
+    console.log('apiCache.ts initialized');
   }
 };
+
+export default apiCache;

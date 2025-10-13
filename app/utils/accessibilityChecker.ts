@@ -1,7 +1,9 @@
-// accessibilityChecker utility
+// accessibilityChecker.ts - Utility functions
 export const accessibilityChecker = {
-  // Utility implementation
+  // Utility functions will be implemented here
   init: () => {
-    console.log('accessibilityChecker initialized');
+    console.log('accessibilityChecker.ts initialized');
   }
 };
+
+export default accessibilityChecker;

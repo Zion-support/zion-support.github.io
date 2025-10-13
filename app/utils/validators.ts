@@ -1,7 +1,9 @@
-// validators utility
+// validators.ts - Utility functions
 export const validators = {
-  // Utility implementation
+  // Utility functions will be implemented here
   init: () => {
-    console.log('validators initialized');
+    console.log('validators.ts initialized');
   }
 };
+
+export default validators;

@@ -1,62 +1,22 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-import { motion } from 'framer-motion';
-
-const SmartInventoryOptimizerPage = () => {
-  const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
-
-  const benefits: string[] = [];
-
-  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
-
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$49",
-      period: "/month",
-      description: "Perfect for small businesses",
-      features: [
-        "Up to 1,000 SKUs",
-        "Basic demand forecasting",
-        "Reorder point alerts",
-        "Basic analytics",
-        "Email support",
-        "1 warehouse location"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$149",
-      period: "/month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 10,000 SKUs",
-        "Advanced AI forecasting",
-        "Multi-location support",
-        "Advanced analytics",
-        "Priority support",
-        "API access",
-        "Supplier integration"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$399",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "Unlimited SKUs",
-        "Custom AI models",
-        "White-label solution",
-        "Advanced security",
-        "Dedicated support",
-        "Custom integrations",
-        "On-premise deployment"
-      ],
-      popular: false
-    }
-  ];
-
+export default function page() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page solutions by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-8">Page</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            This page is under development. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 }

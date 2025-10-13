@@ -1,7 +1,9 @@
-// performanceEnhancer utility
+// performanceEnhancer.ts - Utility functions
 export const performanceEnhancer = {
-  // Utility implementation
+  // Utility functions will be implemented here
   init: () => {
-    console.log('performanceEnhancer initialized');
+    console.log('performanceEnhancer.ts initialized');
   }
 };
+
+export default performanceEnhancer;

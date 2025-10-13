@@ -1,7 +1,9 @@
-// performanceUtils utility
+// performanceUtils.ts - Utility functions
 export const performanceUtils = {
-  // Utility implementation
+  // Utility functions will be implemented here
   init: () => {
-    console.log('performanceUtils initialized');
+    console.log('performanceUtils.ts initialized');
   }
 };
+
+export default performanceUtils;

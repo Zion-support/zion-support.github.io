@@ -1,16 +1,13 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
+interface ErrorBoundaryProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default function Errorboundary({ className = '', children, ...props }: ErrorboundaryProps) {
+export default function ErrorBoundary({ className = '', children }: ErrorBoundaryProps) {
   return (
-    <div className={`errorboundary-component ${className}`} {...props}>
+    <div className={`${className}`}>
       {children}
     </div>
   );

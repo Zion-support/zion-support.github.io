@@ -1,11 +1,13 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
 
-export default function UtilsPage() {
+interface imageProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function image({ className = '', children }: imageProps) {
   return (
-    <div className={`image-component ${className}`} {...props}>
+    <div className={`${className}`}>
       {children}
     </div>
   );

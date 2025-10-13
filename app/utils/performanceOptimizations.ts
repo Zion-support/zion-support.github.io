@@ -1,7 +1,9 @@
-// performanceOptimizations utility
+// performanceOptimizations.ts - Utility functions
 export const performanceOptimizations = {
-  // Utility implementation
+  // Utility functions will be implemented here
   init: () => {
-    console.log('performanceOptimizations initialized');
+    console.log('performanceOptimizations.ts initialized');
   }
 };
+
+export default performanceOptimizations;

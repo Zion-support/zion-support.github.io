@@ -1,7 +1,9 @@
-// apiClient utility
+// apiClient.ts - Utility functions
 export const apiClient = {
-  // Utility implementation
+  // Utility functions will be implemented here
   init: () => {
-    console.log('apiClient initialized');
+    console.log('apiClient.ts initialized');
   }
 };
+
+export default apiClient;

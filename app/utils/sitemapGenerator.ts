@@ -1,7 +1,9 @@
-// sitemapGenerator utility
+// sitemapGenerator.ts - Utility functions
 export const sitemapGenerator = {
-  // Utility implementation
+  // Utility functions will be implemented here
   init: () => {
-    console.log('sitemapGenerator initialized');
+    console.log('sitemapGenerator.ts initialized');
   }
 };
+
+export default sitemapGenerator;

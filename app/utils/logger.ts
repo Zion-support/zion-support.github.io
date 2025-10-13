@@ -1,7 +1,9 @@
-// logger utility
+// logger.ts - Utility functions
 export const logger = {
-  // Utility implementation
+  // Utility functions will be implemented here
   init: () => {
-    console.log('logger initialized');
+    console.log('logger.ts initialized');
   }
 };
+
+export default logger;

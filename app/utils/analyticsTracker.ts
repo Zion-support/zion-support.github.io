@@ -1,7 +1,9 @@
-// analyticsTracker utility
+// analyticsTracker.ts - Utility functions
 export const analyticsTracker = {
-  // Utility implementation
+  // Utility functions will be implemented here
   init: () => {
-    console.log('analyticsTracker initialized');
+    console.log('analyticsTracker.ts initialized');
   }
 };
+
+export default analyticsTracker;

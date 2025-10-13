@@ -1,8 +1,10 @@
+import React from 'react';
 
-const Pagebroken2Page = () => {
+export default function pagebroken2() {
   return (
-    <div className={`pagebroken2-component ${className}`} {...props}>
-      {children}
+    <div>
+      <h1>pagebroken2</h1>
+      <p>This component is under development.</p>
     </div>
   );
 }

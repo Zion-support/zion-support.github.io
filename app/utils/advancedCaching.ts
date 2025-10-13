@@ -1,7 +1,9 @@
-// advancedCaching utility
+// advancedCaching.ts - Utility functions
 export const advancedCaching = {
-  // Utility implementation
+  // Utility functions will be implemented here
   init: () => {
-    console.log('advancedCaching initialized');
+    console.log('advancedCaching.ts initialized');
   }
 };
+
+export default advancedCaching;
