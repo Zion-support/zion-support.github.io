@@ -39,11 +39,7 @@ export default defineConfig({
     assetsInlineLimit: 2048,
     // Enable compression
     reportCompressedSize: true,
-<<<<<<< HEAD
-    // Additional optimizations
-=======
     // Optimize for production
->>>>>>> cursor/analyze-improve-and-deploy-application-713a
     terserOptions: {
       compress: {
         drop_console: true,
@@ -55,48 +51,56 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Core React libraries
+          // Core React libraries - keep together for better caching
           if (id.includes('react') || id.includes('react-dom')) {
             return 'react-vendor'
           }
-          // Router
+          // Router - separate chunk
           if (id.includes('react-router')) {
             return 'router'
           }
-          // UI libraries
+          // UI libraries - group by functionality
           if (id.includes('framer-motion')) {
             return 'animations'
           }
           if (id.includes('lucide-react')) {
             return 'icons'
           }
-          // SEO and meta
+          // SEO and meta - lightweight
           if (id.includes('react-helmet')) {
             return 'seo'
           }
-          // Charts and data visualization
+          // Charts and data visualization - only load when needed
           if (id.includes('recharts')) {
             return 'charts'
           }
-          // Utility libraries
+          // Utility libraries - small and frequently used
           if (id.includes('clsx') || id.includes('tailwind-merge')) {
             return 'utils'
           }
-          // Performance monitoring
+          // Performance monitoring - separate chunk
           if (id.includes('web-vitals')) {
             return 'performance'
           }
-          // Error handling
+          // Error handling - lightweight
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
-          // Large page components (lazy load)
-          if (id.includes('/app/') && id.includes('/page.tsx')) {
-            return 'pages'
+          // AI service pages - group together
+          if (id.includes('/ai-')) {
+            return 'ai-services'
           }
-          // Service pages
-          if (id.includes('/ai-') || id.includes('/zion-')) {
-            return 'services'
+          // Zion micro SAAS pages - group together
+          if (id.includes('/zion-')) {
+            return 'micro-saas'
+          }
+          // 5G service pages - group together
+          if (id.includes('/5g-')) {
+            return '5g-services'
+          }
+          // Main pages - keep separate for better caching
+          if (id.includes('/app/') && id.includes('/page.tsx') && !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
+            return 'main-pages'
           }
           // Default chunk for other modules
           return 'vendor'
@@ -132,6 +136,12 @@ export default defineConfig({
       "react-helmet-async",
       "framer-motion",
       "lucide-react",
+      "clsx",
+      "tailwind-merge",
+      "web-vitals",
+    ],
+    exclude: [
+      "recharts", // Only load when needed
     ],
   },
   // CSS optimization
