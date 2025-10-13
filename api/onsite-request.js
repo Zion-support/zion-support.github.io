@@ -1,18 +1,9 @@
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
-// Simple wrapper function to replace withSentry
-// const withSentry = (handler) => handler;
-
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'onsite-requests.json');
+
 export default function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -20,53 +11,68 @@ export default function handler(req, res) {
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
-  const { name, email, company, phone, message, location } = req.body || {};
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
-  let existing = [];
+
   try {
+    const { name, email, company, phone, service, message, preferredDate, preferredTime } = req.body;
+
+    // Validate required fields
+    if (!name || !email || !service) {
+      res.statusCode = 400;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Name, email, and service are required' }));
+      return;
+    }
+
+    // Create data directory if it doesn't exist
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+
+    // Read existing requests
+    let requests = [];
     if (fs.existsSync(file)) {
       const data = fs.readFileSync(file, 'utf8');
-      existing = JSON.parse(data);
-      if (!Array.isArray(existing)) existing = [];
+      requests = JSON.parse(data);
     }
-  } catch {
-    existing = [];
-  }
-  const newRequest = {
-    id: Date.now().toString(),
-    name,
-    email,
-    company,
-    phone,
-    message,
-    location,
-    timestamp: new Date().toISOString(),
-    status: 'pending'
-  };
-  existing.push(newRequest);
-  try {
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+
+    // Add new request
+    const newRequest = {
+      id: Date.now().toString(),
+      name,
+      email,
+      company,
+      phone,
+      service,
+      message,
+      preferredDate,
+      preferredTime,
+      timestamp: new Date().toISOString(),
+      status: 'pending'
+    };
+
+    requests.push(newRequest);
+
+    // Save to file
+    fs.writeFileSync(file, JSON.stringify(requests, null, 2));
+
+    // Send confirmation email (in production, you would use a real email service)
+    console.log('Onsite request received:', newRequest);
+
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
-      success: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
-      message: 'Onsite request submitted successfully',
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-      id: newRequest.id
+      success: true, 
+      message: 'Onsite request submitted successfully!',
+      requestId: newRequest.id
     }));
-  } catch {
-    console.error('Error saving onsite request');
+
+  } catch (error) {
+    console.error('Error processing onsite request:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to save request' }));
+    res.end(JSON.stringify({ 
+      error: 'Internal server error',
+      message: 'Failed to submit onsite request. Please try again later.'
+    }));
   }
 }

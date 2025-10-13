@@ -1,17 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
 export default function ZionAIEmailAnalyzer() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -25,36 +15,25 @@ export default function ZionAIEmailAnalyzer() {
             Zion AI Email Analyzer <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Advanced AI-powered email analysis and management solutions for modern businesses.
+            AI-powered email analysis and management solutions for modern businesses.
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold text-white mb-4">Email Analysis</h3>
+            <h3 className="text-xl font-semibold text-white mb-4">Smart Email Analysis</h3>
             <p className="text-gray-300 mb-4">
-              AI-powered email content analysis and sentiment detection.
+              AI-powered email analysis and categorization capabilities.
             </p>
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• Sentiment analysis</li>
-              <li>• Content categorization</li>
-              <li>• Priority detection</li>
-            </ul>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold text-white mb-4">Smart Filtering</h3>
-            <p className="text-gray-300 mb-4">
-              Intelligent email filtering and organization capabilities.
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Priority classification</li>
               <li>• Spam detection</li>
-              <li>• Auto-categorization</li>
-              <li>• Smart routing</li>
             </ul>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold text-white mb-4">Response Suggestions</h3>
+            <h3 className="text-xl font-semibold text-white mb-4">Automated Responses</h3>
             <p className="text-gray-300 mb-4">
-              AI-generated response suggestions and templates.
+              Intelligent automated email responses and suggestions.
             </p>
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• Smart replies</li>
@@ -62,9 +41,21 @@ export default function ZionAIEmailAnalyzer() {
               <li>• Tone optimization</li>
             </ul>
           </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Email Management</h3>
+            <p className="text-gray-300 mb-4">
+              Comprehensive email management and organization tools.
+            </p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Smart folders</li>
+              <li>• Auto-tagging</li>
+              <li>• Search optimization</li>
+            </ul>
+          </div>
+        </div>
         <div className="text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Email Management?</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">Ready to Optimize Your Email?</h2>
             <p className="text-gray-300 mb-6">
               Our AI email analyzer experts are ready to help you optimize your email workflow.
             </p>
@@ -72,9 +63,8 @@ export default function ZionAIEmailAnalyzer() {
               Get Started Today
             </button>
           </div>
+        </div>
+      </div>
+    </div>
   );
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-529c

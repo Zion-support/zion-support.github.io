@@ -1,125 +1,110 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-29e3
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6c11
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
 import { Helmet } from 'react-helmet-async';
 
 export default function CloudInfrastructure() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Cloud Infrastructure | Zion Tech Group</title>
-        <meta name="description" content="Professional Cloud Infrastructure services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="cloud infrastructure, cloud services, IT services, Zion Tech Group, cloud computing" />
+        <title>Cloud Infrastructure - Zion Tech Group</title>
+        <meta name="description" content="Professional cloud infrastructure services by Zion Tech Group. Scalable, secure, and reliable cloud solutions for your business." />
       </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Cloud Infrastructure <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+
+      {/* Hero Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Cloud Infrastructure
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business with our advanced cloud infrastructure solutions designed for scalability, security, and performance.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Scalable, secure, and reliable cloud infrastructure solutions 
+            designed to power your business growth and digital transformation.
           </p>
         </div>
+      </section>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold text-white mb-4">Cloud Migration</h3>
-            <p className="text-gray-300 mb-4">
-              Seamlessly migrate your applications and data to the cloud with minimal downtime.
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li>• AWS, Azure, GCP expertise</li>
-              <li>• Zero-downtime migration</li>
-              <li>• Cost optimization</li>
-            </ul>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold text-white mb-4">Cloud Security</h3>
-            <p className="text-gray-300 mb-4">
-              Comprehensive security solutions to protect your cloud infrastructure.
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Identity and access management</li>
-              <li>• Data encryption</li>
-              <li>• Compliance monitoring</li>
-            </ul>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold text-white mb-4">Auto Scaling</h3>
-            <p className="text-gray-300 mb-4">
-              Automatically scale your infrastructure based on demand and usage patterns.
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Load balancing</li>
-              <li>• Resource optimization</li>
-              <li>• Cost efficiency</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="text-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Infrastructure?</h2>
-            <p className="text-gray-300 mb-6">
-              Our cloud infrastructure experts are ready to help you build a scalable, secure, and efficient cloud environment.
-            </p>
-            <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
-              Get Started Today
-            </button>
+      {/* Content Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Cloud Services</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                We provide comprehensive cloud infrastructure solutions 
+                tailored to your specific business needs and requirements.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Cloud migration and setup
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Infrastructure monitoring
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Security and compliance
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Cost optimization
+                </li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">
+                Ready to transform your business with our cloud infrastructure services?
+              </p>
+              <a
+                href="/contact"
+                className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Contact Us Today
+              </a>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Why Choose Our Cloud Infrastructure Services?
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">☁️</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Scalable Solutions</h3>
+              <p className="text-gray-600">
+                Cloud infrastructure that grows with your business needs and requirements.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🔒</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Secure & Compliant</h3>
+              <p className="text-gray-600">
+                Enterprise-grade security and compliance standards for your peace of mind.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">💰</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Cost Effective</h3>
+              <p className="text-gray-600">
+                Optimized cloud costs that deliver maximum value for your investment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-29e3
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6c11
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a

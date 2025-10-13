@@ -2,10 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
 const ErrorFallback: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -59,74 +55,52 @@ const ErrorFallback: React.FC = () => {
               </p>
               <a
                 href="/contact"
-                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+                className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Contact Us
+                Contact Us Today
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Get Started?
+      {/* Features Section */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Why Choose Our Error Fallback Services?
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our error fallback 
-            services can help you achieve your goals.
-          </p>
-          <a
-            href="/contact"
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
-          >
-            Get Started Today
-          </a>
-        </div>
-      </section>
-<<<<<<< HEAD
-=======
-interface ErrorFallbackProps {
-  error: Error;
-  resetErrorBoundary: () => void;
-}
-
-const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorBoundary }) => {
-  return (
-    <div className="min-h-screen bg-white">
-      <Helmet>
-        <title>Error - Zion Tech Group</title>
-        <meta name="description" content="An error occurred. Please try again." />
-      </Helmet>
-      
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-          <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
-            <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-            </svg>
-          </div>
-          <div className="mt-4 text-center">
-            <h1 className="text-lg font-medium text-gray-900">Something went wrong</h1>
-            <p className="mt-2 text-sm text-gray-500">
-              {error.message}
-            </p>
-            <div className="mt-6">
-              <button
-                onClick={resetErrorBoundary}
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-              >
-                Try again
-              </button>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🛡️</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Reliable Protection</h3>
+              <p className="text-gray-600">
+                Robust error handling that keeps your application running smoothly.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🔧</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Custom Solutions</h3>
+              <p className="text-gray-600">
+                Tailored approaches that meet your specific business requirements and goals.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">📈</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Results</h3>
+              <p className="text-gray-600">
+                Track record of successful implementations and measurable business improvements.
+              </p>
             </div>
           </div>
         </div>
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
+      </section>
     </div>
   );
 };

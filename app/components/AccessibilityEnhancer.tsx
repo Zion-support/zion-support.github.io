@@ -1,46 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-
-
 import React, { useEffect, useState } from 'react';
 
-import React, { useEffect, useState } from 'react';
-
-// Type definitions for browser APIs
-declare global {
-  interface MediaQueryListEvent extends Event {
-    matches: boolean;
-  }
-  
-  interface MediaQueryList {
-    matches: boolean;
-    addEventListener(type: 'change', listener: (event: MediaQueryListEvent) => void): void;
-    removeEventListener(type: 'change', listener: (event: MediaQueryListEvent) => void): void;
-  }
-
-import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-6c11
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
-import React, { useEffect, useState } from 'react';
-
-// Using built-in DOM types
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
-import React, { useEffect, useState } from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
@@ -90,74 +49,18 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
     if (isReducedMotion) {
       root.style.setProperty('--animation-duration', '0.01ms');
-      root.style.setProperty('--animation-iteration-count', '1');
+      root.style.setProperty('--transition-duration', '0.01ms');
     } else {
       root.style.removeProperty('--animation-duration');
-      root.style.removeProperty('--animation-iteration-count');
+      root.style.removeProperty('--transition-duration');
     }
 
     // Apply font size
     root.style.setProperty('--base-font-size', `${fontSize}px`);
   }, [isHighContrast, isReducedMotion, fontSize]);
 
-  // Keyboard navigation enhancements
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      // Skip to main content
-      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
-        const mainContent = document.querySelector('main, [role="main"]');
-        if (mainContent) {
-          (mainContent as HTMLElement).focus();
-          e.preventDefault();
-        }
-
-      // Skip to navigation
-      if (e.key === 'Tab' && !e.shiftKey && e.target === document.body) {
-        const navigation = document.querySelector('nav, [role="navigation"]');
-        if (navigation) {
-          (navigation as HTMLElement).focus();
-          e.preventDefault();
-        }
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
-  // Focus management
-  useEffect(() => {
-    const focusableElements = document.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
-
-    const handleFocus = (e: Event) => {
-      const target = e.target as HTMLElement;
-      target.style.outline = '2px solid #0066cc';
-      target.style.outlineOffset = '2px';
-    };
-
-    const handleBlur = (e: Event) => {
-      const target = e.target as HTMLElement;
-      target.style.outline = '';
-      target.style.outlineOffset = '';
-    };
-
-    focusableElements.forEach(element => {
-      element.addEventListener('focus', handleFocus);
-      element.addEventListener('blur', handleBlur);
-    });
-
-    return () => {
-      focusableElements.forEach(element => {
-        element.removeEventListener('focus', handleFocus);
-        element.removeEventListener('blur', handleBlur);
-      });
-    };
-  }, []);
-
   return (
-    <div 
+    <div
       className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}
       style={{ fontSize: `${fontSize}px` }}
     >
@@ -202,31 +105,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-29e3
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6c11
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
 };
 
 export default AccessibilityEnhancer;

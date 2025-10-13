@@ -1,147 +1,117 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-// Type definitions for browser APIs
-declare global {
-  interface PerformanceObserver {
-    observe(options: { entryTypes: string[] }): void;
-    disconnect(): void;
-  }
-=======
-
-
 import React, { useEffect, useState } from 'react';
 
-// Extend the global PerformanceEntry interface
-declare global {
-  interface PerformanceEntry {
-    // This extends the built-in PerformanceEntry
-  }
-}
-
-// Type definitions for browser APIs
-declare global {
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-  interface PerformanceNavigationTiming extends PerformanceEntry {
-    requestStart: number;
-    responseStart: number;
-  }
-<<<<<<< HEAD
-  const PerformanceObserver: {
-    new (callback: (list: { getEntries(): PerformanceEntry[] }) => void): PerformanceObserver;
-  };
-  const performance: {
-    getEntriesByType(type: string): PerformanceEntry[];
-  };
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-}
-import React, { useEffect, useState } from 'react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
-=======
-  interface PerformanceEntry {
-    name: string;
-    entryType: string;
-    startTime: number;
-    duration: number;
-  }
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
 interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
 }
+
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-  });
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isMonitoring, setIsMonitoring] = useState(false);
+
   useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'paint') {
-            if (entry.name === 'first-contentful-paint') {
-              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-            }
-          } else if (entry.entryType === 'largest-contentful-paint') {
-            setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
-          } else if (entry.entryType === 'first-input') {
-            const inputEntry = entry as any;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
+    if (typeof window === 'undefined') return;
 
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
+    const measurePerformance = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = performance.getEntriesByType('paint');
+      
+      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+      const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
+      
+      const newMetrics: PerformanceMetrics = {
+        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+        firstContentfulPaint: fcp ? fcp.startTime : 0,
+        largestContentfulPaint: lcp ? lcp.startTime : 0,
+        firstInputDelay: 0, // Would need to be measured with PerformanceObserver
+        cumulativeLayoutShift: 0 // Would need to be measured with PerformanceObserver
+      };
 
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
+      setMetrics(newMetrics);
+    };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-          } else if (entry.entryType === 'layout-shift') {
-            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
-          }
-        }
-      });
-      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
-      // Monitor TTFB
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigationEntry) {
-        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+    if (isMonitoring) {
+      // Wait for page to load before measuring
+      if (document.readyState === 'complete') {
+        measurePerformance();
+      } else {
+        window.addEventListener('load', measurePerformance);
+        return () => window.removeEventListener('load', measurePerformance);
       }
-      return () => observer.disconnect();
     }
+    
     return undefined;
-  }, []);
-  // Only show in development
-  if (process.env.NODE_ENV !== 'development') {
-    return null;
-  }
+  }, [isMonitoring]);
+
+  const startMonitoring = () => {
+    setIsMonitoring(true);
+  };
+
+  const stopMonitoring = () => {
+    setIsMonitoring(false);
+    setMetrics(null);
+  };
+
+  const formatTime = (time: number) => {
+    return `${time.toFixed(2)}ms`;
+  };
+
   return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
-      <h3 className="font-bold mb-2">Performance Metrics</h3>
-      <div className="space-y-1">
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>
-        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
+    <div className="p-6 bg-white rounded-lg shadow-lg">
+      <h2 className="text-2xl font-bold text-gray-900 mb-4">Performance Monitor</h2>
+      
+      <div className="mb-4">
+        <button
+          onClick={startMonitoring}
+          disabled={isMonitoring}
+          className="mr-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50"
+        >
+          Start Monitoring
+        </button>
+        <button
+          onClick={stopMonitoring}
+          disabled={!isMonitoring}
+          className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 disabled:opacity-50"
+        >
+          Stop Monitoring
+        </button>
       </div>
+
+      {metrics && (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="p-4 bg-gray-50 rounded">
+            <h3 className="font-semibold text-gray-700">Load Time</h3>
+            <p className="text-2xl font-bold text-blue-600">{formatTime(metrics.loadTime)}</p>
+          </div>
+          
+          <div className="p-4 bg-gray-50 rounded">
+            <h3 className="font-semibold text-gray-700">First Contentful Paint</h3>
+            <p className="text-2xl font-bold text-green-600">{formatTime(metrics.firstContentfulPaint)}</p>
+          </div>
+          
+          <div className="p-4 bg-gray-50 rounded">
+            <h3 className="font-semibold text-gray-700">Largest Contentful Paint</h3>
+            <p className="text-2xl font-bold text-purple-600">{formatTime(metrics.largestContentfulPaint)}</p>
+          </div>
+          
+          <div className="p-4 bg-gray-50 rounded">
+            <h3 className="font-semibold text-gray-700">First Input Delay</h3>
+            <p className="text-2xl font-bold text-orange-600">{formatTime(metrics.firstInputDelay)}</p>
+          </div>
+        </div>
+      )}
+
+      {isMonitoring && !metrics && (
+        <div className="text-center py-8">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
+          <p className="mt-2 text-gray-600">Monitoring performance...</p>
+        </div>
+      )}
     </div>
   );
 };
-export default PerformanceMonitor;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
+export default PerformanceMonitor;
