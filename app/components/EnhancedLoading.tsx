@@ -1,61 +1,69 @@
-import React from "react";
-import { Loader2 } from "lucide-react";
+import React from 'react';
+import { Loader2, Brain, Shield, Zap, Globe } from 'lucide-react';
 
-interface LoadingProps {
-  size?: "sm" | "md" | "lg";
+interface EnhancedLoadingProps {
+  type?: 'default' | 'ai' | 'security' | 'performance' | 'global';
   text?: string;
-  fullScreen?: boolean;
-  color?: string;
+  size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
 }
 
-const EnhancedLoading: React.FC<LoadingProps> = ({
-  size = "md",
-  text = "Loading...",
-  fullScreen = false,
-  color = "cyan",
-  className = "",
+const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
+  type = 'default',
+  text,
+  size = 'md',
+  className = ''
 }) => {
+  const icons = {
+    default: Loader2,
+    ai: Brain,
+    security: Shield,
+    performance: Zap,
+    global: Globe
+  };
+
+  const Icon = icons[type];
   const sizeClasses = {
-    sm: "w-4 h-4",
-    md: "w-8 h-8",
-    lg: "w-12 h-12",
+    sm: 'w-4 h-4',
+    md: 'w-6 h-6',
+    lg: 'w-8 h-8',
+    xl: 'w-12 h-12'
   };
 
-  const colorClasses = {
-    cyan: "text-cyan-500",
-    purple: "text-purple-500",
-    green: "text-green-500",
-    blue: "text-blue-500",
-    white: "text-white",
+  const getLoadingText = () => {
+    if (text) return text;
+    switch (type) {
+      case 'ai': return 'Loading AI solutions...';
+      case 'security': return 'Securing your data...';
+      case 'performance': return 'Optimizing performance...';
+      case 'global': return 'Connecting globally...';
+      default: return 'Loading...';
+    }
   };
 
-  const spinner = (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <Loader2
-        className={`${sizeClasses[size]} ${colorClasses[color as keyof typeof colorClasses]} animate-spin`}
-      />
-      {text && (
-        <p
-          className={`mt-2 text-sm ${colorClasses[color as keyof typeof colorClasses]}`}
-        >
-          {text}
+  return (
+    <div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>
+      <div className="relative">
+        <Icon 
+          className={`${sizeClasses[size]} animate-spin text-cyan-400`}
+          data-testid="loading-icon"
+        />
+        {type !== 'default' && (
+          <div className="absolute inset-0 animate-ping">
+            <Icon className={`${sizeClasses[size]} text-cyan-400/30`} />
+          </div>
+        )}
+      </div>
+      <div className="text-center">
+        <p className="text-gray-300 text-sm animate-pulse">
+          {getLoadingText()}
         </p>
-      )}
-    </div>
-  );
-
-  if (fullScreen) {
-    return (
-      <div className="fixed inset-0 bg-gray-900/80 backdrop-blur-sm flex items-center justify-center z-50">
-        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20">
-          {spinner}
+        <div className="mt-2 w-32 h-1 bg-gray-700 rounded-full overflow-hidden">
+          <div className="h-full bg-gradient-to-r from-cyan-400 to-purple-400 animate-pulse rounded-full"></div>
         </div>
       </div>
-    );
-  }
-
-  return spinner;
+    </div>
+  );
 };
 
 export default EnhancedLoading;
