@@ -65,4 +65,3 @@ const ImprovedFooter: React.FC<ImprovedfooterProps> = ({ className = '', childre
       {children}
     </div>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1

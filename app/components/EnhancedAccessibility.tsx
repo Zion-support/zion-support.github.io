@@ -1,15 +1,11 @@
 import React, { useEffect } from 'react';
 
-interface AccessibilityEnhancerProps {
+interface EnhancedAccessibilityProps {
   children: React.ReactNode;
-import React from 'react';
-interface EnhancedaccessibilityProps {
   className?: string;
-  children?: React.ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
 }
 
-const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+export default function EnhancedAccessibility({ children, className = '' }: EnhancedAccessibilityProps) {
   useEffect(() => {
     // Add keyboard navigation enhancements
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -86,9 +82,5 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
     };
   }, []);
 
-  return (
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
-      {children}
-    </div>
-  );
+  return <div className={className}>{children}</div>;
 }

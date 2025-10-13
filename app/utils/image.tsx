@@ -28,7 +28,6 @@ export default function UtilsPage() {
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
 
 export default function UtilsPage() {
   return (
@@ -37,4 +36,3 @@ export default function UtilsPage() {
     </div>
   );
 }
->>>>>>> origin/main

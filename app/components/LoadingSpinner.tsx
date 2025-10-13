@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   className?: string;
@@ -24,12 +23,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       {text && (
         <p className="mt-2 text-sm text-gray-600">{text}</p>
       )}
-=======
-const LoadingSpinner: React.FC = () => {
-  return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c22f
     </div>
   );
 };

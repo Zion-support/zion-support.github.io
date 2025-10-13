@@ -95,7 +95,6 @@ class Logger {
 }
 
 const logger = new Logger();
-<<<<<<< HEAD
 export const logger = {
   // Logger implementation
   info: (message: string) => {
@@ -108,8 +107,3 @@ export const logger = {
     console.warn(`[WARN] ${message}`);
   }
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-bd18
-=======
-
-export { logger };
->>>>>>> cursor/fix-errors-and-merge-to-main-c22f

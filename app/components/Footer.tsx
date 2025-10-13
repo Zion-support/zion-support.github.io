@@ -112,5 +112,3 @@ export default function Footer({ className = '', children, ...props }: FooterPro
 
 export default Footer;
 
-}
->>>>>>> origin/main

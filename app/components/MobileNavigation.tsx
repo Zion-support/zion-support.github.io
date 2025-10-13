@@ -109,7 +109,6 @@ const MobileNavigation: React.FC = () => {
     </>
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
 
 interface MobilenavigationProps {
   className?: string;
@@ -125,4 +124,3 @@ export default function Mobilenavigation({ className = '', children, ...props }:
 };
 
 }
->>>>>>> origin/main
