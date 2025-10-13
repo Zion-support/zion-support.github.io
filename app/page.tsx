@@ -1,15 +1,7 @@
 'use client';
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import SEO from './components/SEO';
-=======
-import EnhancedSEO from './components/EnhancedSEO';
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
-=======
 import SEOHead from './components/SEOHead';
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
 import { 
   ArrowRightIcon, 
   ShieldCheckIcon, 
@@ -42,9 +34,9 @@ export default function HomePage() {
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+1-555-0123",
+        "telephone": "+1-302-464-0950",
         "contactType": "customer service",
-        "email": "info@ziontechgroup.com"
+        "email": "kleber@ziontechgroup.com"
       },
       "sameAs": [
         "https://linkedin.com/company/ziontechgroup",
@@ -56,28 +48,11 @@ export default function HomePage() {
 
   return (
     <>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <SEO 
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
-        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
-        url="/"
-=======
-      <EnhancedSEO
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
-        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
-        canonicalUrl="/"
-        ogImage="/api/placeholder/1200/630"
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
-=======
       <SEOHead 
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
         keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions, Zion Tech Group"
         structuredData={structuredData}
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
       />
       
       {/* Hero Section */}
@@ -283,7 +258,7 @@ export default function HomePage() {
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="flex items-center justify-center gap-4 text-gray-300">
                 <PhoneIcon className="w-6 h-6 text-purple-400" />
-                <span>+1-302-464-0950</span>
+                <span>+1 302 464 0950</span>
               </div>
               <div className="flex items-center justify-center gap-4 text-gray-300">
                 <EnvelopeIcon className="w-6 h-6 text-purple-400" />
@@ -291,7 +266,7 @@ export default function HomePage() {
               </div>
               <div className="flex items-center justify-center gap-4 text-gray-300">
                 <MapPinIcon className="w-6 h-6 text-purple-400" />
-                <span>Middletown, DE</span>
+                <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
             
