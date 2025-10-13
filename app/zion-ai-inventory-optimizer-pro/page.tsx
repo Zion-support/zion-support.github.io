@@ -6,16 +6,7 @@ import {
   BarChart3, 
   Target, 
   ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Clock,
-  Zap, 
-  Sparkles,
-  Cpu,
-  Globe,
-  AlertTriangle,
-  ShoppingCart,
-  Truck
+  CheckCircle
 } from 'lucide-react';
 
 const ZionAIInventoryOptimizerProPage: React.FC = () => {
