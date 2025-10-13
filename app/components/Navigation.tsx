@@ -1,10 +1,11 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Users, FileText, DollarSign, BookOpen, Phone } from 'lucide-react'
 
 const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const [isCompanyOpen, setIsCompanyOpen] = useState(false)
   
   const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen)
@@ -14,8 +15,12 @@ const Navigation = React.memo(() => {
     setIsServicesOpen(!isServicesOpen)
   }, [isServicesOpen])
 
+  const toggleCompany = useCallback(() => {
+    setIsCompanyOpen(!isCompanyOpen)
+  }, [isCompanyOpen])
+
   const services = useMemo(() => [
-    { name: 'AI & Machine Learning', path: '/ai-services', icon: <Zap className="w-4 h-4" /> },
+    { name: 'AI & Machine Learning', path: '/ai-services', icon: <Brain className="w-4 h-4" /> },
     { name: 'Cloud Solutions', path: '/cloud-services', icon: <Cloud className="w-4 h-4" /> },
     { name: 'Cybersecurity', path: '/cybersecurity', icon: <Shield className="w-4 h-4" /> },
     { name: '5G Implementation', path: '/5g-implementation', icon: <Globe className="w-4 h-4" /> },
@@ -24,12 +29,17 @@ const Navigation = React.memo(() => {
     { name: 'Mobile Solutions', path: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> }
   ], [])
 
+  const companyItems = useMemo(() => [
+    { name: 'About Us', path: '/about', icon: <Users className="w-4 h-4" /> },
+    { name: 'Careers', path: '/careers', icon: <Users className="w-4 h-4" /> },
+    { name: 'Case Studies', path: '/case-studies', icon: <FileText className="w-4 h-4" /> },
+    { name: 'Blog', path: '/blog', icon: <FileText className="w-4 h-4" /> }
+  ], [])
+
   const mainNavItems = useMemo(() => [
     { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
-    { name: 'Case Studies', path: '/case-studies' },
-    { name: 'Blog', path: '/blog' },
+    { name: 'Pricing', path: '/pricing' },
     { name: 'Contact', path: '/contact' }
   ], [])
 
@@ -73,6 +83,33 @@ const Navigation = React.memo(() => {
                     >
                       {service.icon}
                       <span>{service.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Company Dropdown */}
+            <div className="relative">
+              <button
+                onClick={toggleCompany}
+                className="flex items-center space-x-1 hover:text-blue-400 transition-colors"
+              >
+                <span>Company</span>
+                <ChevronDown className={`w-4 h-4 transition-transform ${isCompanyOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {isCompanyOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 z-50">
+                  {companyItems.map((item) => (
+                    <Link
+                      key={item.name}
+                      to={item.path}
+                      className="flex items-center space-x-3 px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
+                      onClick={() => setIsCompanyOpen(false)}
+                    >
+                      {item.icon}
+                      <span>{item.name}</span>
                     </Link>
                   ))}
                 </div>
@@ -137,6 +174,36 @@ const Navigation = React.memo(() => {
                       >
                         {service.icon}
                         <span>{service.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Mobile Company */}
+              <div>
+                <button
+                  onClick={toggleCompany}
+                  className="flex items-center space-x-1 hover:text-blue-400 transition-colors"
+                >
+                  <span>Company</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${isCompanyOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {isCompanyOpen && (
+                  <div className="ml-4 mt-2 space-y-2">
+                    {companyItems.map((item) => (
+                      <Link
+                        key={item.name}
+                        to={item.path}
+                        className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors"
+                        onClick={() => {
+                          setIsCompanyOpen(false)
+                          toggleMenu()
+                        }}
+                      >
+                        {item.icon}
+                        <span>{item.name}</span>
                       </Link>
                     ))}
                   </div>
