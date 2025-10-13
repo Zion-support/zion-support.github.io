@@ -165,9 +165,17 @@ const MicroSaasPage = () => {
           {services.map((service) => {
             const IconComponent = service.icon;
             return (
-              <div key={service.id} className="bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700 hover:border-blue-500 transition-colors p-6">
+              <div key={service.id} className="cyber-card p-6 group hover:scale-105 transition-all duration-300 relative">
+                {service.featured && (
+                  <div className="absolute -top-2 -right-2 z-10">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold neon-glow">
+                      Featured
+                    </span>
+                  </div>
+                )}
+                
                 <div className="flex items-center justify-between mb-4">
-                  <IconComponent className="w-12 h-12 text-blue-400" />
+                  <IconComponent className="w-12 h-12 text-cyan-400 cyber-pulse" />
                   <div className="flex items-center space-x-1">
                     <Star className="w-4 h-4 text-yellow-400 fill-current" />
                     <Star className="w-4 h-4 text-yellow-400 fill-current" />
@@ -177,12 +185,18 @@ const MicroSaasPage = () => {
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-3 neon-text">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
+                
+                <div className="mb-4">
+                  <span className="inline-block bg-gradient-to-r from-purple-500/20 to-cyan-500/20 text-purple-400 px-3 py-1 rounded-full text-sm font-medium">
+                    {service.category}
+                  </span>
+                </div>
                 
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-sm text-gray-400">
+                    <li key={index} className="flex items-center text-sm text-cyan-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {feature}
                     </li>
@@ -190,7 +204,7 @@ const MicroSaasPage = () => {
                 </ul>
                 
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-lg font-bold text-blue-400">{service.price}</span>
+                  <span className="text-lg font-bold text-cyan-400">{service.price}</span>
                   <div className="flex items-center text-sm text-gray-400">
                     <Cloud className="w-4 h-4 mr-1" />
                     <span>Cloud Hosted</span>
@@ -199,7 +213,7 @@ const MicroSaasPage = () => {
                 
                 <Link 
                   to={`/${service.id}`}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
+                  className="w-full cyber-button flex items-center justify-center gap-2"
                 >
                   Learn More <ArrowRight className="w-4 h-4" />
                 </Link>
