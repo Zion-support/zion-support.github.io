@@ -1,5 +1,19 @@
-import { Link } from 'react-router-dom';
-import { ArrowRight, FileText, Download, Settings, Sparkles, CheckCircle, Star, Users, Brain, Mail, Smartphone, Globe, Database, BarChart3, Target, Headphones, Layout, CreditCard, Calculator, Play } from 'lucide-react';
+import React from "react";
 import { Helmet } from 'react-helmet-async';
 
-const ZionAIInvoiceGeneratorPage = () => {
+const ZionAiInvoiceGenerator = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <Helmet>
+        <title>ZionAiInvoiceGenerator - Zion Tech Group</title>
+        <meta name="description" content="Advanced zionaiinvoicegenerator service coming soon." />
+      </Helmet>
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-white mb-4">ZionAiInvoiceGenerator</h1>
+        <p className="text-xl text-gray-300">Coming Soon</p>
+      </div>
+    </div>
+  );
+};
+
+export default ZionAiInvoiceGenerator;

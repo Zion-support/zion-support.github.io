@@ -51,7 +51,7 @@ const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-auto
 
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(() => import("./app/cloud-infrastructure/page"));
-const CybersecuritySolutionsPage = React.lazy(() => import("./app/cybersecurity-solutions/page"));
+// const CybersecuritySolutionsPage = React.lazy(() => import("./app/cybersecurity-solutions/page"));
 const WebDevelopmentPage = React.lazy(() => import("./app/web-development/page"));
 const MobileDevelopmentPage = React.lazy(() => import("./app/mobile-development/page"));
 const DatabaseManagementPage = React.lazy(() => import("./app/database-management/page"));
@@ -177,7 +177,7 @@ function App() {
 
                                   {/* IT Services */}
                                   <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
-                                  <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
+                                  {/* <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} /> */}
                                   <Route path="/web-development" element={<WebDevelopmentPage />} />
                                   <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
                                   <Route path="/database-management" element={<DatabaseManagementPage />} />
