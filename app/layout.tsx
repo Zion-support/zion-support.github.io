@@ -1,3 +1,23 @@
+import React from 'react';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Zion Tech Group",
+  "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
+  "url": "https://ziontechgroup.com",
+  "logo": "https://ziontechgroup.com/logo.png",
+  "sameAs": [
+    "https://twitter.com/ziontechgroup",
+    "https://linkedin.com/company/ziontechgroup"
+  ]
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang='en'>
       <head>
@@ -65,8 +85,10 @@
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+      </head>
       <body className='antialiased'>
         {children}
+      </body>
+    </html>
   );
 }
-</li></li></li></li></li></li></li></li></li></li>

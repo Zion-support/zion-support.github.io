@@ -41,6 +41,51 @@ const AdAnalytics: React.FC<AdAnalyticsProps> = ({
   const [isLoading, setIsLoading] = useState(true);
   const [selectedMetric, setSelectedMetric] = useState<'impressions' | 'clicks' | 'conversions' | 'revenue'>('impressions');
 
+  // Calculate totals from analytics data
+  const totals = analyticsData.reduce((acc, day) => ({
+    impressions: acc.impressions + day.impressions,
+    clicks: acc.clicks + day.clicks,
+    conversions: acc.conversions + day.conversions,
+    spent: acc.spent + day.spent,
+    revenue: acc.revenue + day.revenue
+  }), { impressions: 0, clicks: 0, conversions: 0, spent: 0, revenue: 0 });
+
+  // Define metrics for display
+  const metrics = [
+    {
+      key: 'impressions',
+      label: 'Impressions',
+      value: totals.impressions.toLocaleString(),
+      trend: 12.5,
+      color: 'blue',
+      icon: Eye
+    },
+    {
+      key: 'clicks',
+      label: 'Clicks',
+      value: totals.clicks.toLocaleString(),
+      trend: 8.3,
+      color: 'green',
+      icon: MousePointer
+    },
+    {
+      key: 'conversions',
+      label: 'Conversions',
+      value: totals.conversions.toLocaleString(),
+      trend: -2.1,
+      color: 'purple',
+      icon: Target
+    },
+    {
+      key: 'revenue',
+      label: 'Revenue',
+      value: `$${totals.revenue.toLocaleString()}`,
+      trend: 15.7,
+      color: 'orange',
+      icon: DollarSign
+    }
+  ];
+
   // Mock data - in real app, this would come from an API
   useEffect(() => {
     const generateMockData = () => {
@@ -177,12 +222,16 @@ const AdAnalytics: React.FC<AdAnalyticsProps> = ({
       <div className={`ad-analytics ${className}`}>
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
           <div className="animate-pulse">
-            <div className="h-8 bg-gray-200 rounded w-1/4 mb-6">
+            <div className="h-8 bg-gray-200 rounded w-1/4 mb-6"></div>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
               {[...Array(4)].map((_, i) => (
-                <div key={i} className="h-24 bg-gray-200 rounded">
+                <div key={i} className="h-24 bg-gray-200 rounded"></div>
               ))}
-            <div className="h-64 bg-gray-200 rounded">
+            </div>
+            <div className="h-64 bg-gray-200 rounded"></div>
+          </div>
+        </div>
+      </div>
     );
   }
 
@@ -191,25 +240,33 @@ const AdAnalytics: React.FC<AdAnalyticsProps> = ({
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-bold text-gray-900">Ad Analytics
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900">Ad Analytics</h2>
             <p className="text-gray-600">
               Performance insights for {dateRange === '7d' ? 'last 7 days' : 
               dateRange === '30d' ? 'last 30 days' : 
               dateRange === '90d' ? 'last 90 days' : 'last year'}
+            </p>
+          </div>
           <div className="flex items-center gap-3">
             <select
               value={dateRange}
               onChange={(e) => {/* Handle date range change */}}
               className="px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
-              <option value="7d">Last 7 days
-              <option value="30d">Last 30 days
-              <option value="90d">Last 90 days
-              <option value="1y">Last year
+              <option value="7d">Last 7 days</option>
+              <option value="30d">Last 30 days</option>
+              <option value="90d">Last 90 days</option>
+              <option value="1y">Last year</option>
+            </select>
             <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">
               <RefreshCw className="w-5 h-5" />
+            </button>
             <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">
               <Download className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
         {/* Metrics Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {metrics.map((metric) => (
@@ -222,17 +279,23 @@ const AdAnalytics: React.FC<AdAnalyticsProps> = ({
               <div className="flex items-center justify-between mb-4">
                 <div className={`p-2 rounded-lg ${getColorClasses(metric.color)}`}>
                   <metric.icon className="w-6 h-6" />
+                </div>
                 <div className="flex items-center gap-1">
                   {getTrendIcon(metric.trend)}
                   <span className={`text-sm font-medium ${getTrendColor(metric.trend)}`}>
                     {Math.abs(metric.trend).toFixed(1)}%
-                <p className="text-2xl font-bold text-gray-900">{metric.value}
-                <p className="text-sm text-gray-600">{metric.label}
+                  </span>
+                </div>
+              </div>
+              <p className="text-2xl font-bold text-gray-900">{metric.value}</p>
+              <p className="text-sm text-gray-600">{metric.label}</p>
+            </motion.div>
           ))}
+        </div>
         {/* Chart Section */}
         <div className="mb-8">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold text-gray-900">Performance Over Time
+            <h3 className="text-lg font-semibold text-gray-900">Performance Over Time</h3>
             <div className="flex items-center gap-2">
               <Filter className="w-4 h-4 text-gray-400" />
               <select
@@ -240,10 +303,13 @@ const AdAnalytics: React.FC<AdAnalyticsProps> = ({
                 onChange={(e) => setSelectedMetric(e.target.value as any)}
                 className="px-3 py-1 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
-                <option value="impressions">Impressions
-                <option value="clicks">Clicks
-                <option value="conversions">Conversions
-                <option value="revenue">Revenue
+                <option value="impressions">Impressions</option>
+                <option value="clicks">Clicks</option>
+                <option value="conversions">Conversions</option>
+                <option value="revenue">Revenue</option>
+              </select>
+            </div>
+          </div>
           {/* Simple Bar Chart */}
           <div className="h-64 flex items-end justify-between gap-1 bg-gray-50 rounded-lg p-4">
             {analyticsData.slice(-14).map((day, index) => {
@@ -261,58 +327,81 @@ const AdAnalytics: React.FC<AdAnalyticsProps> = ({
                 />
               );
             })}
+          </div>
+        </div>
         {/* Additional Metrics */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-gray-50 p-6 rounded-lg">
-            <h4 className="font-semibold text-gray-900 mb-4">Conversion Funnel
+            <h4 className="font-semibold text-gray-900 mb-4">Conversion Funnel</h4>
             <div className="space-y-3">
               <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-600">Impressions
-                <span className="font-semibold">{totals.impressions.toLocaleString()}
+                <span className="text-sm text-gray-600">Impressions</span>
+                <span className="font-semibold">{totals.impressions.toLocaleString()}</span>
+              </div>
               <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-600">Clicks
-                <span className="font-semibold">{totals.clicks.toLocaleString()}
+                <span className="text-sm text-gray-600">Clicks</span>
+                <span className="font-semibold">{totals.clicks.toLocaleString()}</span>
+              </div>
               <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-600">Conversions
-                <span className="font-semibold">{totals.conversions.toLocaleString()}
+                <span className="text-sm text-gray-600">Conversions</span>
+                <span className="font-semibold">{totals.conversions.toLocaleString()}</span>
+              </div>
               <div className="border-t pt-3">
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-600">CTR
+                  <span className="text-sm text-gray-600">CTR</span>
                   <span className="font-semibold">
                     {((totals.clicks / totals.impressions) * 100).toFixed(2)}%
+                  </span>
+                </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-600">Conversion Rate
+                  <span className="text-sm text-gray-600">Conversion Rate</span>
                   <span className="font-semibold">
                     {((totals.conversions / totals.clicks) * 100).toFixed(2)}%
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="bg-gray-50 p-6 rounded-lg">
-            <h4 className="font-semibold text-gray-900 mb-4">Financial Summary
+            <h4 className="font-semibold text-gray-900 mb-4">Financial Summary</h4>
             <div className="space-y-3">
               <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-600">Total Spent
-                <span className="font-semibold">${totals.spent.toLocaleString()}
+                <span className="text-sm text-gray-600">Total Spent</span>
+                <span className="font-semibold">${totals.spent.toLocaleString()}</span>
+              </div>
               <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-600">Revenue Generated
-                <span className="font-semibold">${totals.revenue.toLocaleString()}
+                <span className="text-sm text-gray-600">Revenue Generated</span>
+                <span className="font-semibold">${totals.revenue.toLocaleString()}</span>
+              </div>
               <div className="border-t pt-3">
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-600">ROI
+                  <span className="text-sm text-gray-600">ROI</span>
                   <span className={`font-semibold ${totals.spent > 0 ? (totals.revenue > totals.spent ? 'text-green-600' : 'text-red-600') : 'text-gray-600'}`}>
                     {totals.spent > 0 ? (((totals.revenue - totals.spent) / totals.spent) * 100).toFixed(1) : 0}%
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-600">Cost per Click
-                  <span className="font-semibold">
-                    ${totals.clicks > 0 ? (totals.spent / totals.clicks).toFixed(2) : '0.00'}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="bg-gray-50 p-6 rounded-lg">
-            <h4 className="font-semibold text-gray-900 mb-4">Performance Trends
+            <h4 className="font-semibold text-gray-900 mb-4">Performance Trends</h4>
             <div className="space-y-3">
               {metrics.map((metric) => (
                 <div key={metric.key} className="flex justify-between items-center">
-                  <span className="text-sm text-gray-600">{metric.label}
+                  <span className="text-sm text-gray-600">{metric.label}</span>
                   <div className="flex items-center gap-1">
                     {getTrendIcon(metric.trend)}
                     <span className={`text-sm font-medium ${getTrendColor(metric.trend)}`}>
                       {metric.trend > 0 ? '+' : ''}{metric.trend.toFixed(1)}%
+                    </span>
+                  </div>
+                </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

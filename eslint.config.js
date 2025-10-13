@@ -47,6 +47,7 @@ export default [
       '*.disabled/**',
       '*.broken',
       '*.backup',
+      'app-broken/**',
       'temp-files/**',
       'cache/**',
       'analyze-*.js',
