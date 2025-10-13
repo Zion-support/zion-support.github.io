@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-717a
 
@@ -52,6 +53,10 @@ import React, { useEffect, useState } from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-8341
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
+=======
+import React, { useEffect, useState } from 'react';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
@@ -121,6 +126,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           (mainContent as HTMLElement).focus();
           e.preventDefault();
         }
+      }
 
       // Skip to navigation
       if (e.key === 'Tab' && !e.shiftKey && e.target === document.body) {
@@ -222,6 +228,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -245,6 +252,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
 };
 
 export default AccessibilityEnhancer;

@@ -24,6 +24,7 @@ export default function handler(req, res) {
       timestamp: new Date().toISOString()
     });
     res.status(200).json({ success: true });
+<<<<<<< HEAD
   } catch (error) {
     console.error('Error processing error report:', error);
     res.status(500).json({ error: 'Failed to process error report' });
@@ -52,3 +53,10 @@ export default function handler(req, res) {
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
+=======
+  } catch (_error) {
+    console.error('Error processing error report:', _error);
+    res.status(500).json({ error: 'Failed to process error report' });
+  }
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fb5a

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+
 interface EnhancedSEOProps {
   title?: string;
   description?: string;
@@ -7,6 +8,7 @@ interface EnhancedSEOProps {
   canonical?: string;
   children?: React.ReactNode;
 }
+
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   title,
   description,
@@ -26,4 +28,9 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
     </>
   );
 };
+<<<<<<< HEAD
 export default EnhancedSEO;
+=======
+
+export default EnhancedSEO;
+>>>>>>> cursor/fix-errors-and-merge-to-main-fb5a

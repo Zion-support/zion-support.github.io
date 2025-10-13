@@ -71,7 +71,7 @@ const CriticalResourcePreloader: React.FC = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let&apos;s discuss how our critical resource preloader 
+            Let's discuss how our critical resource preloader 
             services can help you achieve your goals.
           </p>
           <a

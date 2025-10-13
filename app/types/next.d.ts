@@ -8,9 +8,15 @@ declare module 'next' {
     [key: string]: unknown;
   }
 }
+
 // Export a utility function
 export const nextUtil = () => {
   // Implementation
   return true;
 };
+<<<<<<< HEAD
 export default nextUtil;
+=======
+
+export default nextUtil;
+>>>>>>> cursor/fix-errors-and-merge-to-main-fb5a

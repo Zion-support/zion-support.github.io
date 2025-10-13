@@ -73,6 +73,7 @@ export default function handler(req, res) {
 <<<<<<< HEAD
 <<<<<<< HEAD
     res.json({ paymentIntent });
+<<<<<<< HEAD
   } catch (error) {
 =======
     res.setHeader('Content-Type', 'application/json');
@@ -84,6 +85,9 @@ export default function handler(req, res) {
     res.json({ paymentIntent });
   } catch (_error) {
 >>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
+=======
+  } catch (_error) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
