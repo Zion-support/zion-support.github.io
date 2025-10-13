@@ -186,18 +186,22 @@ export default function HomePage() {
               and achieve unprecedented growth.
             </p>
             
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="grid md:grid-cols-4 gap-8 mb-12">
               <div className="text-center">
-                <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
+                <div className="text-4xl font-bold text-purple-400 mb-2">100+</div>
                 <div className="text-gray-300">Projects Completed</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">25+</div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
                 <div className="text-gray-300">Happy Clients</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-green-400 mb-2">99%</div>
                 <div className="text-gray-300">Success Rate</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-yellow-400 mb-2">24/7</div>
+                <div className="text-gray-300">Support Available</div>
               </div>
             </div>
             
@@ -225,7 +229,7 @@ export default function HomePage() {
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="flex items-center justify-center gap-4 text-gray-300">
                 <PhoneIcon className="w-6 h-6 text-purple-400" />
-                <span>+1-302-464-0950</span>
+                <span>+1 302 464 0950</span>
               </div>
               <div className="flex items-center justify-center gap-4 text-gray-300">
                 <EnvelopeIcon className="w-6 h-6 text-purple-400" />
@@ -233,7 +237,7 @@ export default function HomePage() {
               </div>
               <div className="flex items-center justify-center gap-4 text-gray-300">
                 <MapPinIcon className="w-6 h-6 text-purple-400" />
-                <span>Middletown, DE</span>
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
             

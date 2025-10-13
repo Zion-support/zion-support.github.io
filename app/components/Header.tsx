@@ -16,12 +16,27 @@ const Header: React.FC = () => {
         { name: 'AI Services', href: '/ai-services' },
         { name: 'IT Services', href: '/it-services' },
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
-        { name: 'Digital Transformation', href: '/digital-transformation' }
+        { name: 'Digital Transformation', href: '/digital-transformation' },
+        { name: 'Cybersecurity', href: '/cybersecurity' },
+        { name: '5G Solutions', href: '/5g-solutions' }
       ]
     },
-    { name: 'Solutions', href: '/solutions' },
+    { 
+      name: 'Solutions', 
+      href: '/solutions',
+      submenu: [
+        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
+        { name: 'AI Solutions', href: '/ai-solutions' },
+        { name: 'IT Solutions', href: '/it-solutions' },
+        { name: '5G Solutions', href: '/5g-solutions' },
+        { name: 'Cloud Solutions', href: '/cloud-solutions' },
+        { name: 'Security Solutions', href: '/security-solutions' }
+      ]
+    },
+    { name: 'Pricing', href: '/pricing' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
+    { name: 'Support', href: '/support' },
     { name: 'Contact', href: '/contact' }
   ];
 

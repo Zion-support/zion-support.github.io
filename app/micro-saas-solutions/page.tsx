@@ -247,6 +247,177 @@ export default function MicroSaaSSolutionsPage() {
       benefits: ["40% open rates", "Personalized content", "Optimized timing"],
       useCases: ["Email campaigns", "Newsletter management", "Lead nurturing"],
       href: "/ai-email-marketing"
+    },
+    {
+      title: "AI Lead Generation Engine",
+      description: "Intelligent lead generation system with AI-powered prospecting, qualification, and nurturing automation.",
+      icon: RocketLaunchIcon,
+      features: [
+        "AI prospecting",
+        "Lead scoring",
+        "Automated outreach",
+        "CRM integration",
+        "Performance tracking",
+        "Multi-channel campaigns"
+      ],
+      color: "from-indigo-500 to-purple-500",
+      price: "$349/month",
+      setupFee: "$1,800",
+      benefits: ["300% more leads", "Automated qualification", "Higher conversion"],
+      useCases: ["B2B sales", "Lead generation", "Prospecting automation"],
+      href: "/ai-lead-generation"
+    },
+    {
+      title: "AI Customer Analytics Pro",
+      description: "Advanced customer analytics platform with AI-powered insights, behavior prediction, and segmentation.",
+      icon: ChartBarIcon,
+      features: [
+        "Customer segmentation",
+        "Behavior prediction",
+        "Churn analysis",
+        "Lifetime value calculation",
+        "Personalization insights",
+        "Real-time dashboards"
+      ],
+      color: "from-emerald-500 to-teal-500",
+      price: "$279/month",
+      setupFee: "$1,200",
+      benefits: ["25% retention increase", "Predictive insights", "Better segmentation"],
+      useCases: ["Customer insights", "Retention strategies", "Personalization"],
+      href: "/ai-customer-analytics"
+    },
+    {
+      title: "AI Workflow Automation",
+      description: "Intelligent workflow automation platform that streamlines business processes with AI-powered decision making.",
+      icon: CogIcon,
+      features: [
+        "Process automation",
+        "AI decision making",
+        "Integration management",
+        "Workflow optimization",
+        "Error handling",
+        "Performance monitoring"
+      ],
+      color: "from-violet-500 to-purple-500",
+      price: "$199/month",
+      setupFee: "$900",
+      benefits: ["80% time savings", "Error reduction", "Process optimization"],
+      useCases: ["Business automation", "Process optimization", "Workflow management"],
+      href: "/ai-workflow-automation"
+    },
+    {
+      title: "AI SEO Optimizer Pro",
+      description: "Comprehensive SEO optimization platform with AI-powered content analysis, keyword research, and ranking tracking.",
+      icon: GlobeAltIcon,
+      features: [
+        "AI content analysis",
+        "Keyword research",
+        "Ranking tracking",
+        "Competitor analysis",
+        "Technical SEO audit",
+        "Performance reporting"
+      ],
+      color: "from-green-500 to-emerald-500",
+      price: "$149/month",
+      setupFee: "$600",
+      benefits: ["50% traffic increase", "Better rankings", "Automated optimization"],
+      useCases: ["SEO management", "Content optimization", "Ranking improvement"],
+      href: "/ai-seo-optimizer"
+    },
+    {
+      title: "AI Sales Forecasting",
+      description: "Advanced sales forecasting platform with AI-powered predictions, pipeline analysis, and revenue optimization.",
+      icon: ChartBarIcon,
+      features: [
+        "Sales forecasting",
+        "Pipeline analysis",
+        "Revenue prediction",
+        "Trend analysis",
+        "Risk assessment",
+        "Performance tracking"
+      ],
+      color: "from-blue-500 to-indigo-500",
+      price: "$229/month",
+      setupFee: "$1,100",
+      benefits: ["90% forecast accuracy", "Better planning", "Revenue optimization"],
+      useCases: ["Sales planning", "Revenue forecasting", "Pipeline management"],
+      href: "/ai-sales-forecasting"
+    },
+    {
+      title: "AI Document Intelligence",
+      description: "Intelligent document processing platform with AI-powered extraction, classification, and analysis capabilities.",
+      icon: DocumentTextIcon,
+      features: [
+        "Document extraction",
+        "AI classification",
+        "Data validation",
+        "Workflow automation",
+        "Compliance checking",
+        "Search & retrieval"
+      ],
+      color: "from-rose-500 to-pink-500",
+      price: "$179/month",
+      setupFee: "$800",
+      benefits: ["95% accuracy", "80% time savings", "Automated processing"],
+      useCases: ["Document management", "Data extraction", "Compliance processing"],
+      href: "/ai-document-intelligence"
+    },
+    {
+      title: "AI Performance Monitoring",
+      description: "Real-time performance monitoring platform with AI-powered insights, alerts, and optimization recommendations.",
+      icon: ChartBarIcon,
+      features: [
+        "Real-time monitoring",
+        "AI insights",
+        "Automated alerts",
+        "Performance optimization",
+        "Trend analysis",
+        "Custom dashboards"
+      ],
+      color: "from-cyan-500 to-blue-500",
+      price: "$159/month",
+      setupFee: "$700",
+      benefits: ["Proactive monitoring", "Performance insights", "Automated optimization"],
+      useCases: ["System monitoring", "Performance tracking", "Optimization"],
+      href: "/ai-performance-monitoring"
+    },
+    {
+      title: "AI Compliance Manager",
+      description: "Automated compliance management platform with AI-powered monitoring, reporting, and risk assessment.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Compliance monitoring",
+        "Risk assessment",
+        "Automated reporting",
+        "Policy management",
+        "Audit preparation",
+        "Regulatory updates"
+      ],
+      color: "from-red-500 to-orange-500",
+      price: "$299/month",
+      setupFee: "$1,500",
+      benefits: ["100% compliance", "Risk mitigation", "Automated reporting"],
+      useCases: ["Compliance management", "Risk assessment", "Audit preparation"],
+      href: "/ai-compliance-manager"
+    },
+    {
+      title: "AI Resource Optimizer",
+      description: "Intelligent resource optimization platform that maximizes efficiency and reduces costs through AI analysis.",
+      icon: CogIcon,
+      features: [
+        "Resource analysis",
+        "Cost optimization",
+        "Efficiency tracking",
+        "Capacity planning",
+        "Usage forecasting",
+        "Optimization recommendations"
+      ],
+      color: "from-yellow-500 to-orange-500",
+      price: "$219/month",
+      setupFee: "$1,000",
+      benefits: ["30% cost reduction", "Better efficiency", "Optimized resources"],
+      useCases: ["Resource management", "Cost optimization", "Efficiency improvement"],
+      href: "/ai-resource-optimizer"
     }
   ];
 

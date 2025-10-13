@@ -3,11 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-<<<<<<< HEAD
-import Navigation from './app/components/Navigation';
-=======
 import Header from './app/components/Header';
->>>>>>> cursor/website-audit-and-update-with-deployment-7db2
 import Footer from './app/components/Footer';
 
 // Page Components
@@ -26,6 +22,8 @@ import SolutionsPage from './app/pages/SolutionsPage';
 import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
 import AISolutionsPage from './app/ai-solutions/page';
 import ITSolutionsPage from './app/it-solutions/page';
+import FiveGSolutionsPage from './app/5g-solutions/page';
+import CybersecurityPage from './app/cybersecurity/page';
 
 // Service Pages
 import AIServicesPage from './app/pages/AIServicesPage';
@@ -66,13 +64,8 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
-<<<<<<< HEAD
-        <div className="min-h-screen bg-slate-900">
-          <Navigation />
-=======
         <div className="min-h-screen bg-gray-900">
           <Header />
->>>>>>> cursor/website-audit-and-update-with-deployment-7db2
           <main className="relative z-10" id="main-content" role="main">
             <Routes>
               {/* Main Pages */}
@@ -83,6 +76,8 @@ function App() {
               <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
               <Route path="/ai-solutions" element={<AISolutionsPage />} />
               <Route path="/it-solutions" element={<ITSolutionsPage />} />
+              <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+              <Route path="/cybersecurity" element={<CybersecurityPage />} />
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/tutorials" element={<TutorialsPage />} />
               <Route path="/demo" element={<DemoPage />} />

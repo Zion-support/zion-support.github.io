@@ -239,6 +239,168 @@ export default function AISolutionsPage() {
       benefits: ["Strategic insights", "Market intelligence", "ROI optimization"],
       useCases: ["Strategic planning", "Market analysis", "Competitive research"],
       href: "/ai-business-intelligence"
+    },
+    {
+      title: "AI Supply Chain Optimization",
+      description: "Intelligent supply chain management with AI-powered demand forecasting, inventory optimization, and logistics planning.",
+      icon: CogIcon,
+      features: [
+        "Demand forecasting",
+        "Inventory optimization",
+        "Logistics planning",
+        "Supplier management",
+        "Risk assessment",
+        "Cost optimization"
+      ],
+      color: "from-orange-500 to-red-500",
+      price: "Starting at $3,500/month",
+      benefits: ["30% cost reduction", "Optimized inventory", "Better forecasting"],
+      useCases: ["Supply chain management", "Inventory optimization", "Logistics planning"],
+      href: "/ai-supply-chain"
+    },
+    {
+      title: "AI Quality Assurance",
+      description: "Automated quality assurance solutions with AI-powered testing, defect detection, and quality optimization.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Automated testing",
+        "Defect detection",
+        "Quality metrics",
+        "Performance analysis",
+        "Regression testing",
+        "Quality reporting"
+      ],
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $2,200/month",
+      benefits: ["95% defect detection", "Automated testing", "Quality improvement"],
+      useCases: ["Software testing", "Quality control", "Defect prevention"],
+      href: "/ai-quality-assurance"
+    },
+    {
+      title: "AI Energy Management",
+      description: "Smart energy management system with AI-powered optimization, consumption analysis, and cost reduction.",
+      icon: LightBulbIcon,
+      features: [
+        "Energy optimization",
+        "Consumption analysis",
+        "Cost reduction",
+        "Predictive maintenance",
+        "Renewable integration",
+        "Carbon footprint tracking"
+      ],
+      color: "from-yellow-500 to-orange-500",
+      price: "Starting at $1,800/month",
+      benefits: ["25% energy savings", "Cost reduction", "Sustainability"],
+      useCases: ["Energy optimization", "Cost management", "Sustainability"],
+      href: "/ai-energy-management"
+    },
+    {
+      title: "AI Healthcare Analytics",
+      description: "Advanced healthcare analytics with AI-powered patient insights, treatment optimization, and outcome prediction.",
+      icon: ChartBarIcon,
+      features: [
+        "Patient analytics",
+        "Treatment optimization",
+        "Outcome prediction",
+        "Risk assessment",
+        "Clinical insights",
+        "Compliance monitoring"
+      ],
+      color: "from-red-500 to-pink-500",
+      price: "Starting at $4,500/month",
+      benefits: ["Better outcomes", "Risk reduction", "Treatment optimization"],
+      useCases: ["Healthcare analytics", "Patient care", "Clinical research"],
+      href: "/ai-healthcare-analytics"
+    },
+    {
+      title: "AI Financial Risk Management",
+      description: "Comprehensive financial risk management with AI-powered risk assessment, fraud detection, and compliance monitoring.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Risk assessment",
+        "Fraud detection",
+        "Compliance monitoring",
+        "Credit scoring",
+        "Market analysis",
+        "Regulatory reporting"
+      ],
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $3,800/month",
+      benefits: ["Risk mitigation", "Fraud prevention", "Compliance assurance"],
+      useCases: ["Financial risk", "Fraud prevention", "Compliance"],
+      href: "/ai-financial-risk"
+    },
+    {
+      title: "AI Real Estate Analytics",
+      description: "Intelligent real estate analytics with AI-powered market analysis, property valuation, and investment insights.",
+      icon: ChartBarIcon,
+      features: [
+        "Market analysis",
+        "Property valuation",
+        "Investment insights",
+        "Trend forecasting",
+        "Risk assessment",
+        "Portfolio optimization"
+      ],
+      color: "from-blue-500 to-cyan-500",
+      price: "Starting at $2,500/month",
+      benefits: ["Better valuations", "Investment insights", "Market intelligence"],
+      useCases: ["Real estate analysis", "Property valuation", "Investment planning"],
+      href: "/ai-real-estate"
+    },
+    {
+      title: "AI Manufacturing Optimization",
+      description: "Smart manufacturing solutions with AI-powered process optimization, predictive maintenance, and quality control.",
+      icon: CogIcon,
+      features: [
+        "Process optimization",
+        "Predictive maintenance",
+        "Quality control",
+        "Production planning",
+        "Equipment monitoring",
+        "Efficiency analysis"
+      ],
+      color: "from-gray-500 to-slate-500",
+      price: "Starting at $3,200/month",
+      benefits: ["20% efficiency gain", "Reduced downtime", "Quality improvement"],
+      useCases: ["Manufacturing", "Process optimization", "Quality control"],
+      href: "/ai-manufacturing"
+    },
+    {
+      title: "AI Legal Document Analysis",
+      description: "Intelligent legal document analysis with AI-powered contract review, compliance checking, and risk assessment.",
+      icon: DocumentTextIcon,
+      features: [
+        "Contract analysis",
+        "Compliance checking",
+        "Risk assessment",
+        "Document review",
+        "Legal research",
+        "Due diligence"
+      ],
+      color: "from-purple-500 to-indigo-500",
+      price: "Starting at $2,800/month",
+      benefits: ["90% time savings", "Risk reduction", "Compliance assurance"],
+      useCases: ["Legal analysis", "Contract review", "Compliance"],
+      href: "/ai-legal-analysis"
+    },
+    {
+      title: "AI Environmental Monitoring",
+      description: "Smart environmental monitoring with AI-powered data analysis, pollution detection, and sustainability insights.",
+      icon: GlobeAltIcon,
+      features: [
+        "Environmental monitoring",
+        "Pollution detection",
+        "Sustainability analysis",
+        "Climate modeling",
+        "Compliance tracking",
+        "Impact assessment"
+      ],
+      color: "from-green-500 to-teal-500",
+      price: "Starting at $2,200/month",
+      benefits: ["Environmental protection", "Compliance", "Sustainability insights"],
+      useCases: ["Environmental monitoring", "Sustainability", "Compliance"],
+      href: "/ai-environmental"
     }
   ];
 

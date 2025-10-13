@@ -241,6 +241,168 @@ export default function ITSolutionsPage() {
       benefits: ["Full compliance", "Risk mitigation", "Audit readiness"],
       useCases: ["SOX compliance", "GDPR compliance", "HIPAA compliance"],
       href: "/it-compliance"
+    },
+    {
+      title: "DevOps & CI/CD Pipeline",
+      description: "Complete DevOps solutions with automated CI/CD pipelines, containerization, and deployment automation.",
+      icon: CogIcon,
+      features: [
+        "CI/CD pipeline setup",
+        "Container orchestration",
+        "Automated deployments",
+        "Infrastructure as code",
+        "Monitoring & logging",
+        "Performance optimization"
+      ],
+      color: "from-purple-500 to-pink-500",
+      price: "Starting at $3,500/month",
+      benefits: ["Faster deployments", "Reduced errors", "Better scalability"],
+      useCases: ["Software deployment", "DevOps automation", "Container management"],
+      href: "/devops-cicd"
+    },
+    {
+      title: "API Development & Management",
+      description: "Comprehensive API development and management services for modern application integration and scalability.",
+      icon: ServerIcon,
+      features: [
+        "API design & development",
+        "API gateway management",
+        "Rate limiting & security",
+        "Documentation & testing",
+        "Version control",
+        "Performance monitoring"
+      ],
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $2,200/month",
+      benefits: ["Better integration", "Enhanced security", "Improved performance"],
+      useCases: ["API development", "Integration services", "Microservices"],
+      href: "/api-development"
+    },
+    {
+      title: "Mobile App Development",
+      description: "Native and cross-platform mobile app development with modern frameworks and best practices.",
+      icon: PhoneIcon,
+      features: [
+        "Native iOS & Android apps",
+        "Cross-platform development",
+        "UI/UX design",
+        "App store optimization",
+        "Performance optimization",
+        "Maintenance & support"
+      ],
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $4,500/month",
+      benefits: ["Modern apps", "Cross-platform", "Optimized performance"],
+      useCases: ["Mobile development", "App modernization", "Cross-platform apps"],
+      href: "/mobile-development"
+    },
+    {
+      title: "E-commerce Solutions",
+      description: "Complete e-commerce platform development with payment integration, inventory management, and analytics.",
+      icon: GlobeAltIcon,
+      features: [
+        "E-commerce platform setup",
+        "Payment gateway integration",
+        "Inventory management",
+        "Order processing",
+        "Analytics & reporting",
+        "SEO optimization"
+      ],
+      color: "from-orange-500 to-red-500",
+      price: "Starting at $3,200/month",
+      benefits: ["Complete solution", "Payment integration", "Analytics included"],
+      useCases: ["Online stores", "E-commerce platforms", "Marketplace development"],
+      href: "/ecommerce-solutions"
+    },
+    {
+      title: "Blockchain Development",
+      description: "Blockchain and cryptocurrency solutions including smart contracts, DApps, and blockchain integration.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Smart contract development",
+        "DApp creation",
+        "Blockchain integration",
+        "Cryptocurrency solutions",
+        "Security auditing",
+        "Token development"
+      ],
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $5,000/month",
+      benefits: ["Secure solutions", "Blockchain expertise", "Future-ready"],
+      useCases: ["Blockchain apps", "Smart contracts", "Cryptocurrency solutions"],
+      href: "/blockchain-development"
+    },
+    {
+      title: "IoT Solutions",
+      description: "Internet of Things solutions including device management, data collection, and real-time monitoring.",
+      icon: WifiIcon,
+      features: [
+        "IoT device management",
+        "Data collection & analysis",
+        "Real-time monitoring",
+        "Edge computing",
+        "Security implementation",
+        "Scalable architecture"
+      ],
+      color: "from-teal-500 to-green-500",
+      price: "Starting at $3,800/month",
+      benefits: ["Connected devices", "Real-time data", "Scalable solution"],
+      useCases: ["IoT implementation", "Device management", "Data analytics"],
+      href: "/iot-solutions"
+    },
+    {
+      title: "Data Science & Analytics",
+      description: "Advanced data science solutions with machine learning, predictive analytics, and business intelligence.",
+      icon: ChartBarIcon,
+      features: [
+        "Data analysis & visualization",
+        "Machine learning models",
+        "Predictive analytics",
+        "Business intelligence",
+        "Data warehousing",
+        "Custom dashboards"
+      ],
+      color: "from-rose-500 to-pink-500",
+      price: "Starting at $4,200/month",
+      benefits: ["Data insights", "Predictive analytics", "Custom solutions"],
+      useCases: ["Data analysis", "Business intelligence", "Predictive modeling"],
+      href: "/data-science"
+    },
+    {
+      title: "Legacy System Modernization",
+      description: "Modernization of legacy systems with cloud migration, API integration, and performance optimization.",
+      icon: WrenchScrewdriverIcon,
+      features: [
+        "Legacy system analysis",
+        "Cloud migration",
+        "API integration",
+        "Performance optimization",
+        "Security updates",
+        "User training"
+      ],
+      color: "from-gray-500 to-slate-500",
+      price: "Starting at $3,000/month",
+      benefits: ["Modern systems", "Better performance", "Reduced maintenance"],
+      useCases: ["System modernization", "Cloud migration", "Legacy updates"],
+      href: "/legacy-modernization"
+    },
+    {
+      title: "IT Training & Consulting",
+      description: "Comprehensive IT training and consulting services to upskill your team and optimize technology usage.",
+      icon: UserGroupIcon,
+      features: [
+        "Technical training programs",
+        "Certification preparation",
+        "Best practices consulting",
+        "Technology assessment",
+        "Process optimization",
+        "Change management"
+      ],
+      color: "from-yellow-500 to-orange-500",
+      price: "Starting at $1,500/month",
+      benefits: ["Skilled team", "Best practices", "Optimized processes"],
+      useCases: ["Team training", "Technology consulting", "Process improvement"],
+      href: "/it-training"
     }
   ];
 
