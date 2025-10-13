@@ -10,9 +10,10 @@ interface PerformanceMetrics {
   timeToFirstByte?: number;
 }
 
-const PerformanceMonitor: React.FC = () => {
+const OptimizedPerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [isOptimized, setIsOptimized] = useState(false);
 
   const updateMetric = useCallback((metric: any) => {
     setMetrics(prev => {
@@ -36,9 +37,60 @@ const PerformanceMonitor: React.FC = () => {
     });
   }, []);
 
+  const optimizePerformance = useCallback(() => {
+    // Preload critical resources
+    const criticalResources = [
+      { href: "/fonts/inter-var.woff2", as: "font", type: "font/woff2", crossorigin: "anonymous" },
+      { href: "/images/hero-bg.webp", as: "image" },
+      { href: "/images/logo.webp", as: "image" },
+    ];
+
+    criticalResources.forEach((resource) => {
+      const link = document.createElement("link");
+      link.rel = "preload";
+      link.href = resource.href;
+      link.as = resource.as;
+      if (resource.type) link.type = resource.type;
+      if (resource.crossorigin) link.crossOrigin = resource.crossorigin;
+      document.head.appendChild(link);
+    });
+
+    // Optimize images
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      if (!img.loading) {
+        img.loading = 'lazy';
+      }
+      if (!img.decoding) {
+        img.decoding = 'async';
+      }
+    });
+
+    // Add resource hints
+    const resourceHints = [
+      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
+    ];
+
+    resourceHints.forEach((hint) => {
+      const link = document.createElement("link");
+      link.rel = hint.rel;
+      link.href = hint.href;
+      if (hint.crossorigin) link.crossOrigin = hint.crossorigin;
+      document.head.appendChild(link);
+    });
+
+    setIsOptimized(true);
+  }, []);
+
   useEffect(() => {
     // Only run in browser environment
     if (typeof window === 'undefined') return;
+
+    // Run optimizations immediately
+    optimizePerformance();
 
     // Measure Core Web Vitals
     onCLS(updateMetric);
@@ -78,7 +130,7 @@ const PerformanceMonitor: React.FC = () => {
     return () => {
       window.removeEventListener('load', measurePerformance);
     };
-  }, [updateMetric]);
+  }, [updateMetric, optimizePerformance]);
 
   // Only show in development
   if (process.env.NODE_ENV !== 'development' || !metrics) {
@@ -98,7 +150,7 @@ const PerformanceMonitor: React.FC = () => {
         className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg"
         aria-label="Toggle performance metrics"
       >
-        Performance
+        Performance {isOptimized && '✓'}
       </button>
       
       {isVisible && (
@@ -167,4 +219,4 @@ const PerformanceMonitor: React.FC = () => {
   );
 };
 
-export default PerformanceMonitor;
+export default OptimizedPerformanceMonitor;

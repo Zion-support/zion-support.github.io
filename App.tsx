@@ -7,19 +7,15 @@ import "./app/styles/futuristic-enhanced.css";
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import HomePage from "./app/page";
-import { LoadingPage } from "./app/components/LoadingStates";
-import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import { LoadingPage } from "./app/components/EnhancedLoadingStates";
+import OptimizedErrorBoundary from "./app/components/OptimizedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
-import EnhancedPerformanceOptimizer from "./app/components/EnhancedPerformanceOptimizer";
+import OptimizedPerformanceMonitor from "./app/components/OptimizedPerformanceMonitor";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
-import EnhancedSEO from "./app/components/EnhancedSEO";
+import EnhancedSEOComponent from "./app/components/EnhancedSEOComponent";
 import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
-import PerformanceMonitor from "./app/components/PerformanceMonitor";
-import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import FuturisticBackground from "./app/components/FuturisticBackground";
-import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
-import SEOOptimizer from "./app/components/SEOOptimizer";
 import ErrorHandler from "./app/components/ErrorHandler";
 import { usePerformanceOptimization } from "./hooks/usePerformanceOptimization";
 
@@ -214,7 +210,7 @@ function App() {
 
   return (
     <ErrorHandler>
-      <EnhancedErrorBoundary>
+      <OptimizedErrorBoundary>
         <HelmetProvider>
           <AccessibilityEnhancer>
             <Router>
@@ -458,25 +454,25 @@ function App() {
                     </Suspense>
                   </main>
                   <Footer />
-                  <EnhancedPerformanceOptimizer />
+                  <OptimizedPerformanceMonitor />
                   <EnhancedAccessibility>
                     <div></div>
                   </EnhancedAccessibility>
                 </FuturisticBackground>
                 <AnalyticsProvider>
                   <div>
-                    <PerformanceMonitor />
-                    <WebVitalsTracker />
-                    <PerformanceEnhancer />
-                    <SEOOptimizer />
-                    <EnhancedSEO />
+                    <EnhancedSEOComponent
+                      title="Zion Tech Group - Advanced AI and IT Solutions"
+                      description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses."
+                      keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
+                    />
                   </div>
                 </AnalyticsProvider>
               </div>
             </Router>
           </AccessibilityEnhancer>
         </HelmetProvider>
-      </EnhancedErrorBoundary>
+      </OptimizedErrorBoundary>
     </ErrorHandler>
   );
 }

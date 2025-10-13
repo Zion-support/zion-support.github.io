@@ -6,6 +6,8 @@ interface PerformanceOptimizationOptions {
   enableImageOptimization?: boolean;
   enableCodeSplitting?: boolean;
   enableCaching?: boolean;
+  enableResourceHints?: boolean;
+  enableCriticalCSS?: boolean;
 }
 
 export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {
@@ -15,204 +17,226 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     enableImageOptimization = true,
     enableCodeSplitting = true,
     enableCaching = true,
+    enableResourceHints = true,
+    enableCriticalCSS = true
   } = options;
 
-  const observerRef = useRef<IntersectionObserver | null>(null);
+  const initialized = useRef(false);
 
-  // Lazy loading for images
-  const setupLazyLoading = useCallback(() => {
-    if (!enableLazyLoading || typeof window === 'undefined') return;
+  const optimizeImages = useCallback(() => {
+    if (!enableImageOptimization) return;
 
-    const images = document.querySelectorAll('img[data-src]');
-    
-    if (observerRef.current) {
-      observerRef.current.disconnect();
-    }
-
-    observerRef.current = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            const src = img.getAttribute('data-src');
-            if (src) {
-              img.src = src;
-              img.removeAttribute('data-src');
-              img.classList.add('loaded');
-              observerRef.current?.unobserve(img);
-            }
-          }
-        });
-      },
-      {
-        rootMargin: '50px 0px',
-        threshold: 0.01,
-      }
-    );
-
+    const images = document.querySelectorAll('img');
     images.forEach((img) => {
-      observerRef.current?.observe(img);
+      // Add lazy loading
+      if (!img.loading) {
+        img.loading = 'lazy';
+      }
+      
+      // Add async decoding
+      if (!img.decoding) {
+        img.decoding = 'async';
+      }
+      
+      // Add fetchpriority for above-the-fold images
+      if (img.getBoundingClientRect().top < window.innerHeight) {
+        img.fetchPriority = 'high';
+      }
     });
-  }, [enableLazyLoading]);
+  }, [enableImageOptimization]);
 
-  // Preload critical resources
+  const addResourceHints = useCallback(() => {
+    if (!enableResourceHints) return;
+
+    const hints = [
+      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
+      { rel: 'preconnect', href: 'https://api.ziontechgroup.com' },
+    ];
+
+    hints.forEach((hint) => {
+      const link = document.createElement('link');
+      link.rel = hint.rel;
+      link.href = hint.href;
+      if (hint.crossorigin) link.crossOrigin = hint.crossorigin;
+      
+      // Check if already exists
+      if (!document.querySelector(`link[rel="${hint.rel}"][href="${hint.href}"]`)) {
+        document.head.appendChild(link);
+      }
+    });
+  }, [enableResourceHints]);
+
   const preloadCriticalResources = useCallback(() => {
-    if (!enablePreloading || typeof window === 'undefined') return;
+    if (!enablePreloading) return;
 
     const criticalResources = [
-      '/fonts/inter.woff2',
-      '/images/hero-bg.jpg',
-      '/images/logo.svg',
+      { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
+      { href: '/images/hero-bg.webp', as: 'image' },
+      { href: '/images/logo.webp', as: 'image' },
     ];
 
     criticalResources.forEach((resource) => {
       const link = document.createElement('link');
       link.rel = 'preload';
-      link.href = resource;
+      link.href = resource.href;
+      link.as = resource.as;
+      if (resource.type) link.type = resource.type;
+      if (resource.crossorigin) link.crossOrigin = resource.crossorigin;
       
-      if (resource.endsWith('.woff2')) {
-        link.as = 'font';
-        link.type = 'font/woff2';
-        link.crossOrigin = 'anonymous';
-      } else if (resource.endsWith('.jpg') || resource.endsWith('.png')) {
-        link.as = 'image';
+      // Check if already exists
+      if (!document.querySelector(`link[rel="preload"][href="${resource.href}"]`)) {
+        document.head.appendChild(link);
       }
-      
-      document.head.appendChild(link);
     });
   }, [enablePreloading]);
 
-  // Image optimization
-  const optimizeImages = useCallback(() => {
-    if (!enableImageOptimization || typeof window === 'undefined') return;
+  const optimizeCriticalCSS = useCallback(() => {
+    if (!enableCriticalCSS) return;
 
-    const images = document.querySelectorAll('img');
+    // Add critical CSS inline
+    const criticalCSS = `
+      .critical-loading {
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+      .critical-loaded {
+        opacity: 1;
+      }
+    `;
+
+    const style = document.createElement('style');
+    style.textContent = criticalCSS;
+    style.setAttribute('data-critical', 'true');
     
-    images.forEach((img) => {
-      // Add loading="lazy" for non-critical images
-      if (!img.hasAttribute('loading')) {
-        img.setAttribute('loading', 'lazy');
-      }
-      
-      // Add decoding="async" for better performance
-      if (!img.hasAttribute('decoding')) {
-        img.setAttribute('decoding', 'async');
-      }
-      
-      // Add proper alt text if missing
-      if (!img.hasAttribute('alt')) {
-        img.setAttribute('alt', '');
-      }
-    });
-  }, [enableImageOptimization]);
-
-  // Service Worker registration for caching
-  const registerServiceWorker = useCallback(() => {
-    if (!enableCaching || typeof window === 'undefined' || !('serviceWorker' in navigator)) return;
-
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-          .then((registration) => {
-            console.log('SW registered: ', registration);
-          })
-          .catch((registrationError) => {
-            console.log('SW registration failed: ', registrationError);
-          });
-      });
+    if (!document.querySelector('style[data-critical="true"]')) {
+      document.head.appendChild(style);
     }
-  }, [enableCaching]);
+  }, [enableCriticalCSS]);
 
-  // Performance monitoring
-  const setupPerformanceMonitoring = useCallback(() => {
-    if (typeof window === 'undefined') return;
+  const setupIntersectionObserver = useCallback(() => {
+    if (!enableLazyLoading) return;
 
-    // Monitor long tasks
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.duration > 50) {
-            console.warn('Long task detected:', entry);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const element = entry.target as HTMLElement;
+          
+          // Lazy load images
+          if (element.tagName === 'IMG') {
+            const img = element as HTMLImageElement;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+            }
           }
+          
+          // Lazy load background images
+          if (element.dataset.bgSrc) {
+            element.style.backgroundImage = `url(${element.dataset.bgSrc})`;
+            element.removeAttribute('data-bg-src');
+          }
+          
+          // Add loaded class
+          element.classList.add('loaded');
+          
+          observer.unobserve(element);
         }
       });
-      
-      try {
-        observer.observe({ entryTypes: ['longtask'] });
-      } catch (e) {
-        // Long task observer not supported
-      }
-    }
+    }, {
+      rootMargin: '50px 0px',
+      threshold: 0.1
+    });
 
-    // Monitor memory usage
-    if ('memory' in performance) {
-      const checkMemory = () => {
-        const memory = (performance as any).memory;
-        const usedMB = Math.round(memory.usedJSHeapSize / 1048576);
-        const totalMB = Math.round(memory.totalJSHeapSize / 1048576);
-        
-        if (usedMB / totalMB > 0.8) {
-          console.warn('High memory usage detected:', { usedMB, totalMB });
-        }
-      };
-      
-      setInterval(checkMemory, 30000); // Check every 30 seconds
+    // Observe all elements with lazy loading attributes
+    const lazyElements = document.querySelectorAll('[data-src], [data-bg-src]');
+    lazyElements.forEach((element) => observer.observe(element));
+
+    return () => observer.disconnect();
+  }, [enableLazyLoading]);
+
+  const setupPerformanceMonitoring = useCallback(() => {
+    // Monitor Core Web Vitals
+    if ('web-vitals' in window) {
+      import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
+        onCLS((metric) => {
+          console.log('CLS:', metric.value);
+        });
+        onFID((metric) => {
+          console.log('FID:', metric.value);
+        });
+        onFCP((metric) => {
+          console.log('FCP:', metric.value);
+        });
+        onLCP((metric) => {
+          console.log('LCP:', metric.value);
+        });
+        onTTFB((metric) => {
+          console.log('TTFB:', metric.value);
+        });
+      });
     }
   }, []);
 
-  // Resource hints
-  const addResourceHints = useCallback(() => {
-    if (typeof window === 'undefined') return;
+  const optimizeScrollPerformance = useCallback(() => {
+    let ticking = false;
+    
+    const updateScrollPosition = () => {
+      // Throttle scroll events
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          // Update scroll-dependent elements
+          const scrollY = window.scrollY;
+          document.documentElement.style.setProperty('--scroll-y', `${scrollY}px`);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
 
-    const hints = [
-      { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: '//www.google-analytics.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' },
-    ];
-
-    hints.forEach((hint) => {
-      const link = document.createElement('link');
-      Object.entries(hint).forEach(([key, value]) => {
-        if (key === 'crossOrigin') {
-          link.setAttribute('crossorigin', value as string);
-        } else {
-          link.setAttribute(key, value as string);
-        }
-      });
-      document.head.appendChild(link);
-    });
+    window.addEventListener('scroll', updateScrollPosition, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', updateScrollPosition);
+    };
   }, []);
 
   useEffect(() => {
-    // Initialize all optimizations
-    setupLazyLoading();
-    preloadCriticalResources();
-    optimizeImages();
-    registerServiceWorker();
-    setupPerformanceMonitoring();
-    addResourceHints();
+    if (initialized.current) return;
+    initialized.current = true;
 
-    // Cleanup
+    // Run optimizations
+    optimizeImages();
+    addResourceHints();
+    preloadCriticalResources();
+    optimizeCriticalCSS();
+    setupPerformanceMonitoring();
+    optimizeScrollPerformance();
+
+    // Setup intersection observer for lazy loading
+    const cleanup = setupIntersectionObserver();
+
+    // Cleanup on unmount
     return () => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
+      if (cleanup) cleanup();
     };
   }, [
-    setupLazyLoading,
-    preloadCriticalResources,
     optimizeImages,
-    registerServiceWorker,
-    setupPerformanceMonitoring,
     addResourceHints,
+    preloadCriticalResources,
+    optimizeCriticalCSS,
+    setupIntersectionObserver,
+    setupPerformanceMonitoring,
+    optimizeScrollPerformance
   ]);
 
+  // Return optimization utilities
   return {
-    setupLazyLoading,
-    preloadCriticalResources,
     optimizeImages,
-    registerServiceWorker,
-    setupPerformanceMonitoring,
+    addResourceHints,
+    preloadCriticalResources,
+    setupIntersectionObserver
   };
 };
