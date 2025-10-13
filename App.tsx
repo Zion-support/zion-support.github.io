@@ -14,12 +14,8 @@ import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import ErrorBoundary from "./app/components/ErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
-<<<<<<< HEAD
-import EnhancedSEO from "./app/components/EnhancedSEO";
-=======
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 import EnhancedAnalytics from "./app/components/EnhancedAnalytics";
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -35,6 +31,7 @@ const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
 const DemoPage = React.lazy(() => import("./app/demo/page"));
 const ConsultationPage = React.lazy(() => import("./app/consultation/page"));
 const SupportPage = React.lazy(() => import("./app/support/page"));
+const PricingPage = React.lazy(() => import("./app/pricing/page"));
 
 // AI Services Pages
 const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
@@ -47,6 +44,8 @@ const AIMarketingAutomationPage = React.lazy(() => import("./app/ai-marketing-au
 const AIPredictiveAnalyticsPage = React.lazy(() => import("./app/ai-predictive-analytics/page"));
 const AIVoiceAssistantPage = React.lazy(() => import("./app/ai-voice-assistant/page"));
 const AIWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
+const AIPredictiveAnalyticsProPage = React.lazy(() => import("./app/ai-predictive-analytics-pro/page"));
+const AIAutomationPlatformPage = React.lazy(() => import("./app/ai-automation-platform/page"));
 
 // IT Services Pages
 const CloudMigrationPage = React.lazy(() => import("./app/cloud-migration/page"));
@@ -100,6 +99,8 @@ const ZionAITranslatorProPage = React.lazy(() => import("./app/zion-ai-translato
 const ZionAIDataCleanerPage = React.lazy(() => import("./app/zion-ai-data-cleaner/page"));
 const ZionAITaskSchedulerPage = React.lazy(() => import("./app/zion-ai-task-scheduler/page"));
 const ZionAICustomerSupportProPage = React.lazy(() => import("./app/zion-ai-customer-support-pro/page"));
+const ZionAIInventoryManagerPage = React.lazy(() => import("./app/zion-ai-inventory-manager/page"));
+const ZionAIHrAssistantProPage = React.lazy(() => import("./app/zion-ai-hr-assistant-pro/page"));
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -158,6 +159,7 @@ function App() {
                             <Route path="/demo" element={<DemoPage />} />
                             <Route path="/consultation" element={<ConsultationPage />} />
                             <Route path="/support" element={<SupportPage />} />
+                            <Route path="/pricing" element={<PricingPage />} />
 
                             {/* AI Services Routes */}
                             <Route path="/ai-analytics" element={<AIAnalyticsPage />} />
@@ -170,6 +172,8 @@ function App() {
                             <Route path="/ai-predictive-analytics" element={<AIPredictiveAnalyticsPage />} />
                             <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
                             <Route path="/ai-workflow-automation" element={<AIWorkflowAutomationPage />} />
+                            <Route path="/ai-predictive-analytics-pro" element={<AIPredictiveAnalyticsProPage />} />
+                            <Route path="/ai-automation-platform" element={<AIAutomationPlatformPage />} />
 
                             {/* IT Services Routes */}
                             <Route path="/cloud-migration" element={<CloudMigrationPage />} />
@@ -223,6 +227,8 @@ function App() {
                             <Route path="/zion-ai-data-cleaner" element={<ZionAIDataCleanerPage />} />
                             <Route path="/zion-ai-task-scheduler" element={<ZionAITaskSchedulerPage />} />
                             <Route path="/zion-ai-customer-support-pro" element={<ZionAICustomerSupportProPage />} />
+                            <Route path="/zion-ai-inventory-manager" element={<ZionAIInventoryManagerPage />} />
+                            <Route path="/zion-ai-hr-assistant-pro" element={<ZionAIHrAssistantProPage />} />
                           </Routes>
                         </Suspense>
                           </main>

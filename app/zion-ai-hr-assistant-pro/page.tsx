@@ -1,74 +1,76 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Package, 
-  BarChart3, 
-  AlertTriangle, 
+  Users, 
+  Brain, 
+  Clock, 
   CheckCircle, 
   ArrowRight,
-  Brain,
   Zap,
   Globe,
-  Users,
-  Clock,
+  BarChart3,
   Award,
   Star,
   Activity,
-  Database,
   Settings,
   TrendingUp,
   DollarSign,
   Target,
   Shield,
   Smartphone,
-  Monitor
+  Monitor,
+  FileText,
+  Calendar,
+  MessageSquare,
+  UserCheck,
+  GraduationCap
 } from 'lucide-react';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAiInventoryManager = () => {
+const ZionAiHrAssistantPro = () => {
   const features = [
     {
-      title: "AI-Powered Demand Forecasting",
-      description: "Advanced machine learning algorithms predict inventory needs with 95% accuracy, reducing stockouts and overstock",
+      title: "AI-Powered Resume Screening",
+      description: "Advanced AI algorithms screen resumes in seconds, identifying the best candidates with 90% accuracy",
       icon: <Brain className="w-6 h-6" />,
-      stats: "95% accuracy"
+      stats: "90% accuracy"
     },
     {
-      title: "Real-Time Inventory Tracking",
-      description: "Track inventory across multiple locations with real-time updates and automated reorder points",
-      icon: <Activity className="w-6 h-6" />,
-      stats: "Real-time sync"
+      title: "Intelligent Interview Scheduling",
+      description: "Automated interview scheduling with calendar integration and candidate preference matching",
+      icon: <Calendar className="w-6 h-6" />,
+      stats: "Auto-scheduling"
     },
     {
-      title: "Automated Reordering",
-      description: "AI-driven automatic purchase orders based on consumption patterns, lead times, and supplier reliability",
-      icon: <Zap className="w-6 h-6" />,
-      stats: "Auto-reorder"
+      title: "Performance Analytics",
+      description: "Comprehensive employee performance tracking with AI-driven insights and recommendations",
+      icon: <BarChart3 className="w-6 h-6" />,
+      stats: "Real-time insights"
     },
     {
-      title: "Multi-Channel Integration",
-      description: "Seamlessly integrate with e-commerce platforms, POS systems, and warehouse management systems",
-      icon: <Globe className="w-6 h-6" />,
-      stats: "50+ integrations"
+      title: "Employee Engagement",
+      description: "AI-powered engagement tracking and personalized recommendations to improve workplace satisfaction",
+      icon: <Users className="w-6 h-6" />,
+      stats: "25% higher engagement"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$99",
+      price: "$149",
       period: "/month",
-      description: "Perfect for small businesses with basic inventory needs",
+      description: "Perfect for small businesses with basic HR needs",
       features: [
-        "Up to 1,000 SKUs",
-        "Basic AI forecasting",
-        "Real-time tracking",
-        "Mobile app access",
+        "Up to 50 employees",
+        "AI resume screening",
+        "Basic interview scheduling",
+        "Performance tracking",
         "Email support",
-        "Basic reporting",
-        "1 warehouse location",
+        "Basic analytics",
+        "1 HR admin",
         "30-day data retention"
       ],
       popular: false,
@@ -76,37 +78,37 @@ const ZionAiInventoryManager = () => {
     },
     {
       name: "Professional",
-      price: "$299",
+      price: "$399",
       period: "/month",
-      description: "Advanced features for growing businesses with complex inventory",
+      description: "Advanced features for growing companies with complex HR requirements",
       features: [
-        "Up to 10,000 SKUs",
-        "Advanced AI forecasting",
-        "Multi-location tracking",
-        "Automated reordering",
+        "Up to 200 employees",
+        "Advanced AI screening",
+        "Smart interview scheduling",
+        "Comprehensive analytics",
         "Priority support",
-        "Advanced analytics",
-        "5 warehouse locations",
+        "Employee engagement tools",
+        "5 HR admins",
         "90-day data retention",
         "API access",
-        "Custom integrations"
+        "Custom workflows"
       ],
       popular: true,
       cta: "Start Free Trial"
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$999",
       period: "/month",
-      description: "Complete inventory management for large enterprises",
+      description: "Complete HR solution for large organizations with advanced needs",
       features: [
-        "Unlimited SKUs",
+        "Unlimited employees",
         "AI-powered optimization",
-        "Global inventory tracking",
         "Advanced automation",
+        "Real-time analytics",
         "24/7 phone support",
         "Custom reporting",
-        "Unlimited locations",
+        "Unlimited admins",
         "Unlimited data retention",
         "White-label solution",
         "Dedicated account manager",
@@ -119,108 +121,108 @@ const ZionAiInventoryManager = () => {
 
   const capabilities = [
     {
-      title: "Smart Forecasting",
-      description: "AI-powered demand prediction using historical data, seasonality, and market trends",
+      title: "Smart Recruitment",
+      description: "AI-powered candidate sourcing, screening, and matching for optimal hiring decisions",
+      icon: <UserCheck className="w-8 h-8" />,
+      benefits: ["90% faster screening", "Better candidate matches", "Reduced bias", "Improved quality of hire"]
+    },
+    {
+      title: "Performance Management",
+      description: "Comprehensive performance tracking with AI-driven insights and goal setting",
       icon: <TrendingUp className="w-8 h-8" />,
-      benefits: ["Reduce stockouts by 80%", "Minimize overstock by 60%", "Improve cash flow", "Optimize storage costs"]
+      benefits: ["Real-time feedback", "Goal tracking", "Performance insights", "Career development"]
     },
     {
-      title: "Automated Reordering",
-      description: "Intelligent purchase order generation based on consumption patterns and supplier lead times",
-      icon: <Package className="w-8 h-8" />,
-      benefits: ["Never run out of stock", "Optimize order quantities", "Reduce manual work", "Improve supplier relationships"]
+      title: "Employee Onboarding",
+      description: "Automated onboarding workflows with personalized experiences for new hires",
+      icon: <GraduationCap className="w-8 h-8" />,
+      benefits: ["Faster onboarding", "Consistent experience", "Reduced paperwork", "Higher retention"]
     },
     {
-      title: "Multi-Location Management",
-      description: "Centralized control of inventory across multiple warehouses, stores, and distribution centers",
-      icon: <Globe className="w-8 h-8" />,
-      benefits: ["Centralized visibility", "Transfer optimization", "Location-based analytics", "Unified reporting"]
+      title: "Engagement Analytics",
+      description: "AI-powered employee engagement tracking with actionable insights and recommendations",
+      icon: <Activity className="w-8 h-8" />,
+      benefits: ["Engagement insights", "Retention prediction", "Satisfaction tracking", "Improvement recommendations"]
     },
     {
-      title: "Integration Hub",
-      description: "Connect with 50+ popular e-commerce, POS, and ERP systems for seamless data flow",
-      icon: <Settings className="w-8 h-8" />,
-      benefits: ["One-click integrations", "Real-time sync", "Data consistency", "Reduced manual entry"]
+      title: "Compliance Management",
+      description: "Automated compliance tracking and reporting for labor laws and regulations",
+      icon: <Shield className="w-8 h-8" />,
+      benefits: ["Automated compliance", "Risk reduction", "Audit preparation", "Legal updates"]
     },
     {
-      title: "Advanced Analytics",
-      description: "Comprehensive reporting and analytics to optimize inventory performance and reduce costs",
-      icon: <BarChart3 className="w-8 h-8" />,
-      benefits: ["Performance insights", "Cost optimization", "Trend analysis", "ROI tracking"]
-    },
-    {
-      title: "Mobile Management",
-      description: "Full-featured mobile app for inventory management on the go with barcode scanning",
-      icon: <Smartphone className="w-8 h-8" />,
-      benefits: ["Mobile barcode scanning", "Real-time updates", "Offline capability", "Push notifications"]
+      title: "Learning & Development",
+      description: "Personalized learning paths and skill development recommendations for employees",
+      icon: <GraduationCap className="w-8 h-8" />,
+      benefits: ["Personalized learning", "Skill tracking", "Career paths", "Progress monitoring"]
     }
   ];
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      company: "Retail Plus Inc",
-      role: "Operations Manager",
-      content: "Zion AI Inventory Manager has revolutionized our inventory control. We've reduced stockouts by 85% and improved our cash flow significantly.",
+      name: "Jennifer Martinez",
+      company: "Tech Innovations Inc",
+      role: "HR Director",
+      content: "Zion AI HR Assistant Pro has transformed our recruitment process. We've reduced time-to-hire by 60% and improved candidate quality significantly.",
       rating: 5,
-      avatar: "SJ"
+      avatar: "JM"
     },
     {
-      name: "Michael Chen",
-      company: "E-commerce Solutions",
-      role: "Supply Chain Director",
-      content: "The AI forecasting is incredibly accurate. It predicted our holiday season demand perfectly, saving us thousands in lost sales.",
+      name: "David Thompson",
+      company: "Global Solutions Corp",
+      role: "People Operations Manager",
+      content: "The AI-powered performance analytics give us insights we never had before. Our employee engagement scores have improved by 40%.",
       rating: 5,
-      avatar: "MC"
+      avatar: "DT"
     },
     {
-      name: "Emily Rodriguez",
-      company: "Manufacturing Corp",
-      role: "Inventory Controller",
-      content: "The automated reordering feature has eliminated our stockout issues completely. Our suppliers love the predictable ordering patterns.",
+      name: "Lisa Chen",
+      company: "Startup Ventures",
+      role: "Head of People",
+      content: "This platform has made HR management so much easier. The automated workflows save us hours every week, and the insights are incredibly valuable.",
       rating: 5,
-      avatar: "ER"
+      avatar: "LC"
     }
   ];
 
   const stats = [
-    { number: "5,000+", label: "Businesses Using", icon: <Users className="w-6 h-6" /> },
-    { number: "95%", label: "Forecast Accuracy", icon: <Award className="w-6 h-6" /> },
-    { number: "80%", label: "Reduction in Stockouts", icon: <Target className="w-6 h-6" /> },
-    { number: "50+", label: "Integrations Available", icon: <Settings className="w-6 h-6" /> }
+    { number: "2,500+", label: "Companies Using", icon: <Users className="w-6 h-6" /> },
+    { number: "90%", label: "Screening Accuracy", icon: <Award className="w-6 h-6" /> },
+    { number: "60%", label: "Faster Time-to-Hire", icon: <Clock className="w-6 h-6" /> },
+    { number: "40%", label: "Higher Engagement", icon: <TrendingUp className="w-6 h-6" /> }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Zion AI Inventory Manager - Smart Inventory Management Platform | Zion Tech Group</title>
-        <meta name="description" content="Transform your inventory management with Zion AI Inventory Manager. AI-powered forecasting, automated reordering, and real-time tracking. Reduce costs and improve efficiency." />
-        <meta name="keywords" content="inventory management, AI forecasting, automated reordering, supply chain, warehouse management, stock optimization, demand planning" />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-inventory-manager" />
+        <title>Zion AI HR Assistant Pro - AI-Powered Human Resources Platform | Zion Tech Group</title>
+        <meta name="description" content="Transform your HR operations with Zion AI HR Assistant Pro. AI-powered recruitment, performance management, and employee engagement. Streamline HR processes with intelligent automation." />
+        <meta name="keywords" content="HR software, AI recruitment, performance management, employee engagement, HR automation, talent management, human resources" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-hr-assistant-pro" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         
         <ResponsiveContainer className="text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
-            <Package className="w-4 h-4 text-blue-400 mr-2" />
-            <span className="text-blue-400 text-sm font-medium">AI-Powered Inventory Management</span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">
+            <Users className="w-4 h-4 text-purple-400 mr-2" />
+            <span className="text-purple-400 text-sm font-medium">AI-Powered HR Management</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400">
-              Zion AI Inventory Manager
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400">
+              Zion AI HR Assistant Pro
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your inventory management with AI-powered forecasting, automated reordering, and real-time tracking. 
-            Reduce costs, eliminate stockouts, and optimize your supply chain.
+            Transform your human resources operations with AI-powered recruitment, performance management, 
+            and employee engagement. Streamline HR processes and improve workplace satisfaction.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -228,7 +230,7 @@ const ZionAiInventoryManager = () => {
               href="#pricing"
               variant="primary"
               size="lg"
-              icon={<Package className="w-5 h-5" />}
+              icon={<Users className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -246,7 +248,7 @@ const ZionAiInventoryManager = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   {stat.icon}
                 </div>
                 <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
@@ -262,10 +264,10 @@ const ZionAiInventoryManager = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Smart Inventory Management Features
+              Intelligent HR Management Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Our AI-powered platform provides comprehensive inventory management solutions that adapt to your business needs
+              Our AI-powered platform provides comprehensive HR solutions that adapt to your organization's needs
             </p>
           </div>
           
@@ -275,17 +277,17 @@ const ZionAiInventoryManager = () => {
                 key={index}
                 className="group hover:scale-105 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-blue-400 transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-purple-400 transition-colors">
                   {feature.title}
                 </h3>
                 <p className="text-gray-300 text-center mb-4 leading-relaxed">
                   {feature.description}
                 </p>
                 <div className="text-center">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-400">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-purple-500/20 to-pink-500/20 text-purple-400">
                     {feature.stats}
                   </span>
                 </div>
@@ -296,14 +298,14 @@ const ZionAiInventoryManager = () => {
       </section>
 
       {/* Capabilities Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Inventory Capabilities
+              Comprehensive HR Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to optimize your inventory management and supply chain operations
+              Everything you need to manage your workforce effectively and efficiently
             </p>
           </div>
           
@@ -313,10 +315,10 @@ const ZionAiInventoryManager = () => {
                 key={index}
                 className="group hover:scale-105 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   {capability.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-blue-400 transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-purple-400 transition-colors">
                   {capability.title}
                 </h3>
                 <p className="text-gray-300 text-center mb-6 leading-relaxed">
@@ -341,10 +343,10 @@ const ZionAiInventoryManager = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Flexible Pricing Plans
+              Flexible HR Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that matches your business size and inventory complexity
+              Choose the plan that matches your organization size and HR complexity
             </p>
           </div>
           
@@ -353,12 +355,12 @@ const ZionAiInventoryManager = () => {
               <FuturisticCard
                 key={index}
                 className={`relative group hover:scale-105 transition-all duration-300 ${
-                  plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''
+                  plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -397,14 +399,14 @@ const ZionAiInventoryManager = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Inventory Managers
+              Trusted by HR Professionals
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how businesses are using Zion AI Inventory Manager to optimize their supply chain
+              See how organizations are using Zion AI HR Assistant Pro to transform their HR operations
             </p>
           </div>
           
@@ -423,7 +425,7 @@ const ZionAiInventoryManager = () => {
                   "{testimonial.content}"
                 </p>
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
+                  <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
                     {testimonial.avatar}
                   </div>
                   <div>
@@ -438,15 +440,15 @@ const ZionAiInventoryManager = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-pink-900/30">
         <ResponsiveContainer>
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Optimize Your Inventory Today
+              Transform Your HR Operations Today
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Join thousands of businesses using AI to transform their inventory management. 
-              Start your free trial and see the difference AI can make.
+              Join thousands of organizations using AI to revolutionize their human resources management. 
+              Start your free trial and experience the future of HR.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -454,7 +456,7 @@ const ZionAiInventoryManager = () => {
                 href="#signup"
                 variant="primary"
                 size="lg"
-                icon={<Package className="w-5 h-5" />}
+                icon={<Users className="w-5 h-5" />}
               >
                 Start Free Trial
               </FuturisticButton>
@@ -478,4 +480,4 @@ const ZionAiInventoryManager = () => {
   );
 };
 
-export default ZionAiInventoryManager;
+export default ZionAiHrAssistantPro;

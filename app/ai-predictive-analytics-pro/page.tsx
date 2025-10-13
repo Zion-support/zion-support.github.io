@@ -1,13 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Cloud, 
-  Shield, 
+  Brain, 
+  BarChart3, 
   Clock, 
   CheckCircle, 
   ArrowRight,
   Globe,
-  BarChart3,
   Award,
   Star,
   Activity,
@@ -15,6 +14,7 @@ import {
   TrendingUp,
   DollarSign,
   Target,
+  Shield,
   Smartphone,
   Monitor,
   FileText,
@@ -27,97 +27,100 @@ import {
   Network,
   Server,
   Zap,
-  Lock
+  Lock,
+  Eye,
+  PieChart,
+  Users,
+  ShoppingCart
 } from 'lucide-react';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const CloudInfrastructure = () => {
+const AiPredictiveAnalyticsPro = () => {
   const features = [
     {
-      title: "Scalable Cloud Architecture",
-      description: "Build and deploy scalable cloud infrastructure that grows with your business needs",
-      icon: <Cloud className="w-6 h-6" />,
-      stats: "99.9% uptime"
+      title: "Advanced Machine Learning",
+      description: "State-of-the-art ML algorithms that learn from your data to predict future trends with 95% accuracy",
+      icon: <Brain className="w-6 h-6" />,
+      stats: "95% accuracy"
     },
     {
-      title: "Advanced Security",
-      description: "Enterprise-grade security with encryption, access controls, and compliance monitoring",
-      icon: <Shield className="w-6 h-6" />,
-      stats: "SOC 2 compliant"
+      title: "Real-Time Predictions",
+      description: "Generate predictions in real-time as data flows in, enabling instant decision-making",
+      icon: <Clock className="w-6 h-6" />,
+      stats: "Real-time processing"
     },
     {
-      title: "24/7 Monitoring",
-      description: "Continuous monitoring and alerting with proactive issue resolution and optimization",
-      icon: <Activity className="w-6 h-6" />,
-      stats: "24/7 support"
+      title: "Multi-Dimensional Analysis",
+      description: "Analyze complex datasets across multiple dimensions to uncover hidden patterns and insights",
+      icon: <PieChart className="w-6 h-6" />,
+      stats: "Unlimited dimensions"
     },
     {
-      title: "Cost Optimization",
-      description: "AI-powered cost optimization to reduce cloud spending while maintaining performance",
-      icon: <TrendingUp className="w-6 h-6" />,
-      stats: "30% cost savings"
+      title: "Automated Model Selection",
+      description: "AI automatically selects the best algorithms and parameters for your specific use case",
+      icon: <Settings className="w-6 h-6" />,
+      stats: "Auto-optimization"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$299",
+      price: "$399",
       period: "/month",
-      description: "Perfect for small businesses starting their cloud journey",
+      description: "Perfect for small businesses starting their predictive analytics journey",
       features: [
-        "Up to 10 servers",
-        "Basic monitoring",
+        "Up to 10 data sources",
+        "Basic ML models",
         "Email support",
-        "Standard security",
-        "1 TB storage",
-        "1 backup location",
-        "Basic analytics",
-        "8/5 support"
+        "Standard predictions",
+        "1 user",
+        "30-day data retention",
+        "Basic visualizations",
+        "Monthly reports"
       ],
       popular: false,
       cta: "Start Free Trial"
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$999",
       period: "/month",
-      description: "Advanced cloud infrastructure for growing businesses",
+      description: "Advanced predictive analytics for growing businesses with complex data needs",
       features: [
-        "Up to 50 servers",
-        "Advanced monitoring",
+        "Up to 50 data sources",
+        "Advanced ML models",
         "Priority support",
-        "Enhanced security",
-        "10 TB storage",
-        "3 backup locations",
-        "Advanced analytics",
-        "24/7 support",
-        "Auto-scaling",
-        "Load balancing"
+        "Real-time predictions",
+        "10 users",
+        "90-day data retention",
+        "Advanced visualizations",
+        "Custom dashboards",
+        "API access",
+        "Custom models"
       ],
       popular: true,
       cta: "Start Free Trial"
     },
     {
       name: "Enterprise",
-      price: "$2,499",
+      price: "$2,999",
       period: "/month",
-      description: "Complete cloud infrastructure for large organizations",
+      description: "Complete predictive analytics platform for large organizations",
       features: [
-        "Unlimited servers",
-        "Real-time monitoring",
+        "Unlimited data sources",
+        "Custom ML models",
         "24/7 phone support",
-        "Enterprise security",
-        "Unlimited storage",
-        "Global backup",
-        "Custom analytics",
-        "Dedicated support",
-        "Custom scaling",
-        "Multi-region deployment",
+        "Real-time streaming",
+        "Unlimited users",
+        "Unlimited data retention",
+        "Custom visualizations",
         "White-label solution",
-        "Dedicated account manager"
+        "Dedicated account manager",
+        "On-premise deployment",
+        "Custom integrations"
       ],
       popular: false,
       cta: "Contact Sales"
@@ -126,135 +129,135 @@ const CloudInfrastructure = () => {
 
   const capabilities = [
     {
-      title: "Cloud Migration",
-      description: "Seamless migration of applications and data to the cloud with zero downtime",
-      icon: <Cloud className="w-8 h-8" />,
-      benefits: ["Zero downtime migration", "Data integrity", "Performance optimization", "Cost reduction"]
+      title: "Demand Forecasting",
+      description: "Predict future demand for products and services with advanced time series analysis",
+      icon: <TrendingUp className="w-8 h-8" />,
+      benefits: ["Reduce inventory costs", "Improve planning", "Increase revenue", "Optimize resources"]
     },
     {
-      title: "Infrastructure as Code",
-      description: "Automated infrastructure provisioning and management using Infrastructure as Code",
-      icon: <Settings className="w-8 h-8" />,
-      benefits: ["Consistent deployments", "Version control", "Automated scaling", "Disaster recovery"]
+      title: "Customer Behavior Analysis",
+      description: "Analyze customer patterns to predict churn, lifetime value, and purchasing behavior",
+      icon: <Users className="w-8 h-8" />,
+      benefits: ["Reduce churn by 40%", "Increase LTV", "Personalize experiences", "Improve retention"]
     },
     {
-      title: "Container Orchestration",
-      description: "Kubernetes and Docker container management for scalable microservices",
-      icon: <Server className="w-8 h-8" />,
-      benefits: ["Microservices architecture", "Auto-scaling", "Service discovery", "Load balancing"]
-    },
-    {
-      title: "Database Management",
-      description: "Managed database services with automated backups, scaling, and monitoring",
-      icon: <Database className="w-8 h-8" />,
-      benefits: ["Automated backups", "Performance tuning", "High availability", "Security hardening"]
-    },
-    {
-      title: "Network Security",
-      description: "Advanced network security with firewalls, VPNs, and intrusion detection",
-      icon: <Lock className="w-8 h-8" />,
-      benefits: ["DDoS protection", "VPN access", "Firewall management", "Threat detection"]
-    },
-    {
-      title: "Disaster Recovery",
-      description: "Comprehensive disaster recovery and business continuity solutions",
+      title: "Risk Assessment",
+      description: "Identify and predict potential risks across financial, operational, and market domains",
       icon: <Shield className="w-8 h-8" />,
-      benefits: ["RTO < 1 hour", "RPO < 15 minutes", "Multi-region backup", "Automated failover"]
+      benefits: ["Early risk detection", "Reduce losses", "Compliance monitoring", "Fraud prevention"]
+    },
+    {
+      title: "Performance Optimization",
+      description: "Predict system performance issues and optimize operations before problems occur",
+      icon: <Activity className="w-8 h-8" />,
+      benefits: ["Prevent downtime", "Optimize performance", "Reduce costs", "Improve efficiency"]
+    },
+    {
+      title: "Market Trend Analysis",
+      description: "Analyze market trends and predict future movements to inform strategic decisions",
+      icon: <Globe className="w-8 h-8" />,
+      benefits: ["Market insights", "Competitive advantage", "Strategic planning", "Investment guidance"]
+    },
+    {
+      title: "Anomaly Detection",
+      description: "Automatically detect unusual patterns and anomalies in your data streams",
+      icon: <Eye className="w-8 h-8" />,
+      benefits: ["Early detection", "Quality assurance", "Security monitoring", "Process optimization"]
     }
   ];
 
-  const services = [
+  const useCases = [
     {
-      title: "Cloud Strategy & Planning",
-      description: "Comprehensive cloud strategy development and migration planning",
-      icon: <Target className="w-6 h-6" />,
-      duration: "2-4 weeks"
+      title: "Retail Sales Forecasting",
+      description: "Predict product demand and optimize inventory management",
+      icon: <ShoppingCart className="w-6 h-6" />,
+      results: "30% inventory reduction"
     },
     {
-      title: "Infrastructure Setup",
-      description: "Complete cloud infrastructure setup and configuration",
+      title: "Financial Risk Management",
+      description: "Predict credit risk and market volatility for better investment decisions",
+      icon: <DollarSign className="w-6 h-6" />,
+      results: "25% risk reduction"
+    },
+    {
+      title: "Manufacturing Quality Control",
+      description: "Predict equipment failures and quality issues before they occur",
       icon: <Settings className="w-6 h-6" />,
-      duration: "1-2 weeks"
+      results: "50% defect reduction"
     },
     {
-      title: "Security Implementation",
-      description: "Enterprise-grade security implementation and compliance setup",
-      icon: <Shield className="w-6 h-6" />,
-      duration: "1-3 weeks"
-    },
-    {
-      title: "Monitoring & Optimization",
-      description: "24/7 monitoring setup and ongoing performance optimization",
+      title: "Healthcare Patient Outcomes",
+      description: "Predict patient health outcomes and treatment effectiveness",
       icon: <Activity className="w-6 h-6" />,
-      duration: "Ongoing"
+      results: "40% better outcomes"
     }
   ];
 
   const testimonials = [
     {
       name: "Jennifer Martinez",
-      company: "Tech Solutions Inc",
-      role: "CTO",
-      content: "Zion's cloud infrastructure has been rock solid. We've achieved 99.99% uptime and reduced our infrastructure costs by 40%.",
+      company: "Retail Analytics Inc",
+      role: "Data Science Director",
+      content: "Zion AI Predictive Analytics Pro has transformed our forecasting accuracy. We've reduced inventory costs by 35% and improved our planning significantly.",
       rating: 5,
       avatar: "JM"
     },
     {
       name: "David Thompson",
-      company: "E-commerce Platform",
-      role: "Infrastructure Director",
-      content: "The migration was seamless and the ongoing support is exceptional. Our applications run faster and more reliably than ever.",
+      company: "Financial Services Corp",
+      role: "Risk Management Director",
+      content: "The predictive models are incredibly sophisticated. We've been able to identify risks months before they materialize, saving us millions.",
       rating: 5,
       avatar: "DT"
     },
     {
       name: "Lisa Chen",
-      company: "Financial Services",
-      role: "IT Director",
-      content: "The security implementation exceeded our expectations. We passed our compliance audit with flying colors.",
+      company: "Manufacturing Solutions",
+      role: "Operations Manager",
+      content: "This platform has revolutionized our quality control. We can now predict equipment failures with 95% accuracy, preventing costly downtime.",
       rating: 5,
       avatar: "LC"
     }
   ];
 
   const stats = [
-    { number: "500+", label: "Infrastructure Deployments", icon: <Cloud className="w-6 h-6" /> },
-    { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
+    { number: "500+", label: "Predictive Models", icon: <Brain className="w-6 h-6" /> },
+    { number: "95%", label: "Prediction Accuracy", icon: <Award className="w-6 h-6" /> },
     { number: "40%", label: "Cost Reduction", icon: <DollarSign className="w-6 h-6" /> },
-    { number: "24/7", label: "Expert Support", icon: <Shield className="w-6 h-6" /> }
+    { number: "Real-time", label: "Processing Speed", icon: <Zap className="w-6 h-6" /> }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Cloud Infrastructure Services - Enterprise Cloud Solutions | Zion Tech Group</title>
-        <meta name="description" content="Transform your business with Zion's cloud infrastructure services. Scalable, secure, and cost-effective cloud solutions with 99.9% uptime SLA and 24/7 support." />
-        <meta name="keywords" content="cloud infrastructure, cloud migration, AWS, Azure, Google Cloud, cloud services, infrastructure as code, cloud security, cloud monitoring" />
-        <link rel="canonical" href="https://ziontechgroup.com/cloud-infrastructure" />
+        <title>AI Predictive Analytics Pro - Advanced Predictive Intelligence Platform | Zion Tech Group</title>
+        <meta name="description" content="Transform your business with Zion AI Predictive Analytics Pro. Advanced machine learning, real-time predictions, and automated insights. Predict the future with 95% accuracy." />
+        <meta name="keywords" content="predictive analytics, machine learning, AI predictions, data science, forecasting, business intelligence, predictive modeling, data analysis" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-predictive-analytics-pro" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         
         <ResponsiveContainer className="text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
-            <Cloud className="w-4 h-4 text-blue-400 mr-2" />
-            <span className="text-blue-400 text-sm font-medium">Enterprise Cloud Infrastructure</span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">
+            <Brain className="w-4 h-4 text-purple-400 mr-2" />
+            <span className="text-purple-400 text-sm font-medium">AI-Powered Predictive Intelligence</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400">
-              Cloud Infrastructure Services
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400">
+              AI Predictive Analytics Pro
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Build, deploy, and manage scalable cloud infrastructure with enterprise-grade security, 
-            monitoring, and support. Transform your business with reliable cloud solutions.
+            Predict the future with confidence using advanced AI and machine learning. 
+            Transform your data into actionable insights and make smarter business decisions.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -262,9 +265,9 @@ const CloudInfrastructure = () => {
               href="#pricing"
               variant="primary"
               size="lg"
-              icon={<Cloud className="w-5 h-5" />}
+              icon={<Brain className="w-5 h-5" />}
             >
-              Get Started
+              Start Free Trial
             </FuturisticButton>
             <FuturisticButton
               href="#demo"
@@ -280,7 +283,7 @@ const CloudInfrastructure = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   {stat.icon}
                 </div>
                 <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
@@ -296,10 +299,10 @@ const CloudInfrastructure = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Enterprise Cloud Features
+              Advanced Predictive Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Our cloud infrastructure services provide everything you need for reliable, scalable, and secure cloud operations
+              Our AI-powered platform provides cutting-edge predictive analytics capabilities for every business need
             </p>
           </div>
           
@@ -309,17 +312,17 @@ const CloudInfrastructure = () => {
                 key={index}
                 className="group hover:scale-105 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-blue-400 transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-purple-400 transition-colors">
                   {feature.title}
                 </h3>
                 <p className="text-gray-300 text-center mb-4 leading-relaxed">
                   {feature.description}
                 </p>
                 <div className="text-center">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-400">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-purple-500/20 to-pink-500/20 text-purple-400">
                     {feature.stats}
                   </span>
                 </div>
@@ -330,14 +333,14 @@ const CloudInfrastructure = () => {
       </section>
 
       {/* Capabilities Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Cloud Capabilities
+              Comprehensive Predictive Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              End-to-end cloud infrastructure solutions for every aspect of your business
+              Everything you need to transform your data into powerful predictions and insights
             </p>
           </div>
           
@@ -347,10 +350,10 @@ const CloudInfrastructure = () => {
                 key={index}
                 className="group hover:scale-105 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   {capability.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-blue-400 transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-purple-400 transition-colors">
                   {capability.title}
                 </h3>
                 <p className="text-gray-300 text-center mb-6 leading-relaxed">
@@ -370,36 +373,36 @@ const CloudInfrastructure = () => {
         </ResponsiveContainer>
       </section>
 
-      {/* Services Section */}
+      {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Cloud Services
+              Real-World Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Complete cloud infrastructure services from strategy to ongoing management
+              See how businesses across industries are using predictive analytics to achieve remarkable results
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
+            {useCases.map((useCase, index) => (
               <FuturisticCard
                 key={index}
                 className="group hover:scale-105 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  {service.icon}
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  {useCase.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3 text-center group-hover:text-blue-400 transition-colors">
-                  {service.title}
+                <h3 className="text-lg font-semibold text-white mb-3 text-center group-hover:text-purple-400 transition-colors">
+                  {useCase.title}
                 </h3>
                 <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm">
-                  {service.description}
+                  {useCase.description}
                 </p>
                 <div className="text-center">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-400">
-                    {service.duration}
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-purple-500/20 to-pink-500/20 text-purple-400">
+                    {useCase.results}
                   </span>
                 </div>
               </FuturisticCard>
@@ -409,14 +412,14 @@ const CloudInfrastructure = () => {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
+      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Flexible Cloud Plans
+              Flexible Analytics Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the cloud infrastructure plan that matches your business needs and scale
+              Choose the predictive analytics plan that matches your data needs and business scale
             </p>
           </div>
           
@@ -425,12 +428,12 @@ const CloudInfrastructure = () => {
               <FuturisticCard
                 key={index}
                 className={`relative group hover:scale-105 transition-all duration-300 ${
-                  plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''
+                  plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -473,10 +476,10 @@ const CloudInfrastructure = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Cloud Leaders
+              Trusted by Data Leaders
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how organizations are using our cloud infrastructure services to transform their operations
+              See how organizations are using our predictive analytics platform to transform their operations
             </p>
           </div>
           
@@ -495,7 +498,7 @@ const CloudInfrastructure = () => {
                   "{testimonial.content}"
                 </p>
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
+                  <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
                     {testimonial.avatar}
                   </div>
                   <div>
@@ -510,15 +513,15 @@ const CloudInfrastructure = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-pink-900/30">
         <ResponsiveContainer>
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Transform Your Infrastructure Today
+              Predict Your Future Today
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Join thousands of businesses using our cloud infrastructure services to achieve 
-              scalability, security, and cost optimization. Start your cloud transformation today.
+              Join thousands of businesses using AI to predict the future and make smarter decisions. 
+              Start your predictive analytics journey today.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -526,9 +529,9 @@ const CloudInfrastructure = () => {
                 href="#signup"
                 variant="primary"
                 size="lg"
-                icon={<Cloud className="w-5 h-5" />}
+                icon={<Brain className="w-5 h-5" />}
               >
-                Get Started
+                Start Free Trial
               </FuturisticButton>
               <FuturisticButton
                 href="/contact"
@@ -541,7 +544,7 @@ const CloudInfrastructure = () => {
             </div>
             
             <div className="mt-8 text-sm text-gray-400">
-              <p>Free consultation • No setup fees • 30-day money-back guarantee</p>
+              <p>14-day free trial • No credit card required • Cancel anytime</p>
             </div>
           </div>
         </ResponsiveContainer>
@@ -550,4 +553,4 @@ const CloudInfrastructure = () => {
   );
 };
 
-export default CloudInfrastructure;
+export default AiPredictiveAnalyticsPro;

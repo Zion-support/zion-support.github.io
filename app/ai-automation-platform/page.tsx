@@ -1,8 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Cloud, 
-  Shield, 
+  Zap, 
+  Brain, 
   Clock, 
   CheckCircle, 
   ArrowRight,
@@ -15,6 +15,7 @@ import {
   TrendingUp,
   DollarSign,
   Target,
+  Shield,
   Smartphone,
   Monitor,
   FileText,
@@ -24,100 +25,96 @@ import {
   Workflow,
   Bot,
   Database,
-  Network,
-  Server,
-  Zap,
-  Lock
+  Network
 } from 'lucide-react';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const CloudInfrastructure = () => {
+const AiAutomationPlatform = () => {
   const features = [
     {
-      title: "Scalable Cloud Architecture",
-      description: "Build and deploy scalable cloud infrastructure that grows with your business needs",
-      icon: <Cloud className="w-6 h-6" />,
-      stats: "99.9% uptime"
+      title: "No-Code Workflow Builder",
+      description: "Create complex automation workflows with our intuitive drag-and-drop interface - no coding required",
+      icon: <Workflow className="w-6 h-6" />,
+      stats: "No coding needed"
     },
     {
-      title: "Advanced Security",
-      description: "Enterprise-grade security with encryption, access controls, and compliance monitoring",
-      icon: <Shield className="w-6 h-6" />,
-      stats: "SOC 2 compliant"
+      title: "AI-Powered Process Discovery",
+      description: "AI analyzes your business processes and suggests optimal automation opportunities",
+      icon: <Brain className="w-6 h-6" />,
+      stats: "90% efficiency gain"
     },
     {
-      title: "24/7 Monitoring",
-      description: "Continuous monitoring and alerting with proactive issue resolution and optimization",
-      icon: <Activity className="w-6 h-6" />,
-      stats: "24/7 support"
+      title: "Multi-System Integration",
+      description: "Connect and automate across 200+ business applications and systems seamlessly",
+      icon: <Network className="w-6 h-6" />,
+      stats: "200+ integrations"
     },
     {
-      title: "Cost Optimization",
-      description: "AI-powered cost optimization to reduce cloud spending while maintaining performance",
-      icon: <TrendingUp className="w-6 h-6" />,
-      stats: "30% cost savings"
+      title: "Intelligent Decision Making",
+      description: "AI-powered decision trees that adapt and learn from your business patterns",
+      icon: <Bot className="w-6 h-6" />,
+      stats: "Smart decisions"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$299",
+      price: "$199",
       period: "/month",
-      description: "Perfect for small businesses starting their cloud journey",
+      description: "Perfect for small businesses starting their automation journey",
       features: [
-        "Up to 10 servers",
-        "Basic monitoring",
+        "Up to 10 workflows",
+        "Basic AI suggestions",
+        "50 integrations",
         "Email support",
-        "Standard security",
-        "1 TB storage",
-        "1 backup location",
         "Basic analytics",
-        "8/5 support"
+        "1 user",
+        "30-day data retention",
+        "Standard templates"
       ],
       popular: false,
       cta: "Start Free Trial"
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$599",
       period: "/month",
-      description: "Advanced cloud infrastructure for growing businesses",
+      description: "Advanced automation for growing businesses with complex processes",
       features: [
-        "Up to 50 servers",
-        "Advanced monitoring",
+        "Up to 100 workflows",
+        "Advanced AI optimization",
+        "200+ integrations",
         "Priority support",
-        "Enhanced security",
-        "10 TB storage",
-        "3 backup locations",
         "Advanced analytics",
-        "24/7 support",
-        "Auto-scaling",
-        "Load balancing"
+        "10 users",
+        "90-day data retention",
+        "Custom templates",
+        "API access",
+        "Advanced scheduling"
       ],
       popular: true,
       cta: "Start Free Trial"
     },
     {
       name: "Enterprise",
-      price: "$2,499",
+      price: "$1,999",
       period: "/month",
-      description: "Complete cloud infrastructure for large organizations",
+      description: "Complete automation platform for large organizations with enterprise needs",
       features: [
-        "Unlimited servers",
-        "Real-time monitoring",
+        "Unlimited workflows",
+        "AI-powered optimization",
+        "All integrations",
         "24/7 phone support",
-        "Enterprise security",
-        "Unlimited storage",
-        "Global backup",
-        "Custom analytics",
-        "Dedicated support",
-        "Custom scaling",
-        "Multi-region deployment",
+        "Real-time analytics",
+        "Unlimited users",
+        "Unlimited data retention",
         "White-label solution",
-        "Dedicated account manager"
+        "Dedicated account manager",
+        "Custom AI models",
+        "On-premise deployment"
       ],
       popular: false,
       cta: "Contact Sales"
@@ -126,135 +123,135 @@ const CloudInfrastructure = () => {
 
   const capabilities = [
     {
-      title: "Cloud Migration",
-      description: "Seamless migration of applications and data to the cloud with zero downtime",
-      icon: <Cloud className="w-8 h-8" />,
-      benefits: ["Zero downtime migration", "Data integrity", "Performance optimization", "Cost reduction"]
+      title: "Process Automation",
+      description: "Automate repetitive tasks and complex business processes with intelligent workflows",
+      icon: <Workflow className="w-8 h-8" />,
+      benefits: ["Reduce manual work by 80%", "Eliminate human errors", "Faster processing", "24/7 operation"]
     },
     {
-      title: "Infrastructure as Code",
-      description: "Automated infrastructure provisioning and management using Infrastructure as Code",
-      icon: <Settings className="w-8 h-8" />,
-      benefits: ["Consistent deployments", "Version control", "Automated scaling", "Disaster recovery"]
-    },
-    {
-      title: "Container Orchestration",
-      description: "Kubernetes and Docker container management for scalable microservices",
-      icon: <Server className="w-8 h-8" />,
-      benefits: ["Microservices architecture", "Auto-scaling", "Service discovery", "Load balancing"]
-    },
-    {
-      title: "Database Management",
-      description: "Managed database services with automated backups, scaling, and monitoring",
+      title: "Data Integration",
+      description: "Seamlessly connect and synchronize data across all your business systems",
       icon: <Database className="w-8 h-8" />,
-      benefits: ["Automated backups", "Performance tuning", "High availability", "Security hardening"]
+      benefits: ["Real-time data sync", "Eliminate data silos", "Improved accuracy", "Single source of truth"]
     },
     {
-      title: "Network Security",
-      description: "Advanced network security with firewalls, VPNs, and intrusion detection",
-      icon: <Lock className="w-8 h-8" />,
-      benefits: ["DDoS protection", "VPN access", "Firewall management", "Threat detection"]
+      title: "AI Decision Engine",
+      description: "Intelligent decision-making system that learns and adapts to your business rules",
+      icon: <Brain className="w-8 h-8" />,
+      benefits: ["Smart routing", "Predictive decisions", "Risk assessment", "Continuous learning"]
     },
     {
-      title: "Disaster Recovery",
-      description: "Comprehensive disaster recovery and business continuity solutions",
-      icon: <Shield className="w-8 h-8" />,
-      benefits: ["RTO < 1 hour", "RPO < 15 minutes", "Multi-region backup", "Automated failover"]
+      title: "Customer Service Automation",
+      description: "Automate customer interactions with AI-powered chatbots and response systems",
+      icon: <MessageSquare className="w-8 h-8" />,
+      benefits: ["Instant responses", "24/7 availability", "Consistent service", "Reduced costs"]
+    },
+    {
+      title: "Financial Automation",
+      description: "Automate financial processes including invoicing, payments, and reporting",
+      icon: <DollarSign className="w-8 h-8" />,
+      benefits: ["Faster payments", "Reduced errors", "Compliance automation", "Real-time reporting"]
+    },
+    {
+      title: "Marketing Automation",
+      description: "Automate marketing campaigns, lead nurturing, and customer engagement",
+      icon: <Target className="w-8 h-8" />,
+      benefits: ["Personalized campaigns", "Lead scoring", "Automated follow-ups", "ROI optimization"]
     }
   ];
 
-  const services = [
+  const useCases = [
     {
-      title: "Cloud Strategy & Planning",
-      description: "Comprehensive cloud strategy development and migration planning",
-      icon: <Target className="w-6 h-6" />,
-      duration: "2-4 weeks"
+      title: "E-commerce Automation",
+      description: "Automate order processing, inventory management, and customer communications",
+      icon: <Globe className="w-6 h-6" />,
+      results: "50% faster order processing"
     },
     {
-      title: "Infrastructure Setup",
-      description: "Complete cloud infrastructure setup and configuration",
-      icon: <Settings className="w-6 h-6" />,
-      duration: "1-2 weeks"
+      title: "HR Process Automation",
+      description: "Streamline recruitment, onboarding, and employee management workflows",
+      icon: <UserCheck className="w-6 h-6" />,
+      results: "60% reduction in HR workload"
     },
     {
-      title: "Security Implementation",
-      description: "Enterprise-grade security implementation and compliance setup",
-      icon: <Shield className="w-6 h-6" />,
-      duration: "1-3 weeks"
+      title: "Financial Process Automation",
+      description: "Automate invoicing, expense management, and financial reporting",
+      icon: <DollarSign className="w-6 h-6" />,
+      results: "70% faster financial close"
     },
     {
-      title: "Monitoring & Optimization",
-      description: "24/7 monitoring setup and ongoing performance optimization",
-      icon: <Activity className="w-6 h-6" />,
-      duration: "Ongoing"
+      title: "Customer Support Automation",
+      description: "Automate ticket routing, response generation, and escalation processes",
+      icon: <MessageSquare className="w-6 h-6" />,
+      results: "80% faster response times"
     }
   ];
 
   const testimonials = [
     {
-      name: "Jennifer Martinez",
-      company: "Tech Solutions Inc",
+      name: "Robert Kim",
+      company: "E-commerce Solutions",
+      role: "Operations Director",
+      content: "Zion AI Automation Platform has transformed our operations. We've automated 80% of our manual processes and reduced errors by 95%.",
+      rating: 5,
+      avatar: "RK"
+    },
+    {
+      name: "Sarah Williams",
+      company: "Financial Services Inc",
+      role: "Process Manager",
+      content: "The AI-powered process discovery identified automation opportunities we never considered. Our efficiency has improved dramatically.",
+      rating: 5,
+      avatar: "SW"
+    },
+    {
+      name: "Michael Chen",
+      company: "TechStart Corp",
       role: "CTO",
-      content: "Zion's cloud infrastructure has been rock solid. We've achieved 99.99% uptime and reduced our infrastructure costs by 40%.",
+      content: "This platform has revolutionized how we handle customer service. The AI chatbots handle 90% of inquiries without human intervention.",
       rating: 5,
-      avatar: "JM"
-    },
-    {
-      name: "David Thompson",
-      company: "E-commerce Platform",
-      role: "Infrastructure Director",
-      content: "The migration was seamless and the ongoing support is exceptional. Our applications run faster and more reliably than ever.",
-      rating: 5,
-      avatar: "DT"
-    },
-    {
-      name: "Lisa Chen",
-      company: "Financial Services",
-      role: "IT Director",
-      content: "The security implementation exceeded our expectations. We passed our compliance audit with flying colors.",
-      rating: 5,
-      avatar: "LC"
+      avatar: "MC"
     }
   ];
 
   const stats = [
-    { number: "500+", label: "Infrastructure Deployments", icon: <Cloud className="w-6 h-6" /> },
-    { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "40%", label: "Cost Reduction", icon: <DollarSign className="w-6 h-6" /> },
-    { number: "24/7", label: "Expert Support", icon: <Shield className="w-6 h-6" /> }
+    { number: "5,000+", label: "Workflows Automated", icon: <Workflow className="w-6 h-6" /> },
+    { number: "80%", label: "Process Efficiency Gain", icon: <TrendingUp className="w-6 h-6" /> },
+    { number: "200+", label: "System Integrations", icon: <Network className="w-6 h-6" /> },
+    { number: "95%", label: "Error Reduction", icon: <Shield className="w-6 h-6" /> }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       <Helmet>
-        <title>Cloud Infrastructure Services - Enterprise Cloud Solutions | Zion Tech Group</title>
-        <meta name="description" content="Transform your business with Zion's cloud infrastructure services. Scalable, secure, and cost-effective cloud solutions with 99.9% uptime SLA and 24/7 support." />
-        <meta name="keywords" content="cloud infrastructure, cloud migration, AWS, Azure, Google Cloud, cloud services, infrastructure as code, cloud security, cloud monitoring" />
-        <link rel="canonical" href="https://ziontechgroup.com/cloud-infrastructure" />
+        <title>AI Automation Platform - Intelligent Business Process Automation | Zion Tech Group</title>
+        <meta name="description" content="Transform your business with Zion AI Automation Platform. No-code workflow automation, AI-powered process optimization, and seamless system integration. Automate everything." />
+        <meta name="keywords" content="business automation, workflow automation, process automation, AI automation, no-code automation, business process management, RPA" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-automation-platform" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-green-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-green-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         
         <ResponsiveContainer className="text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
-            <Cloud className="w-4 h-4 text-blue-400 mr-2" />
-            <span className="text-blue-400 text-sm font-medium">Enterprise Cloud Infrastructure</span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-cyan-500/20 border border-green-500/30 mb-6">
+            <Zap className="w-4 h-4 text-green-400 mr-2" />
+            <span className="text-green-400 text-sm font-medium">AI-Powered Business Automation</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400">
-              Cloud Infrastructure Services
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-cyan-400 to-blue-400">
+              AI Automation Platform
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Build, deploy, and manage scalable cloud infrastructure with enterprise-grade security, 
-            monitoring, and support. Transform your business with reliable cloud solutions.
+            Transform your business with intelligent automation. Create powerful workflows, integrate systems, 
+            and automate complex processes with our no-code AI-powered platform.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -262,9 +259,9 @@ const CloudInfrastructure = () => {
               href="#pricing"
               variant="primary"
               size="lg"
-              icon={<Cloud className="w-5 h-5" />}
+              icon={<Zap className="w-5 h-5" />}
             >
-              Get Started
+              Start Free Trial
             </FuturisticButton>
             <FuturisticButton
               href="#demo"
@@ -280,7 +277,7 @@ const CloudInfrastructure = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-green-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   {stat.icon}
                 </div>
                 <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
@@ -296,10 +293,10 @@ const CloudInfrastructure = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Enterprise Cloud Features
+              Powerful Automation Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Our cloud infrastructure services provide everything you need for reliable, scalable, and secure cloud operations
+              Our AI-powered platform provides everything you need to automate and optimize your business processes
             </p>
           </div>
           
@@ -309,17 +306,17 @@ const CloudInfrastructure = () => {
                 key={index}
                 className="group hover:scale-105 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-blue-400 transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-green-400 transition-colors">
                   {feature.title}
                 </h3>
                 <p className="text-gray-300 text-center mb-4 leading-relaxed">
                   {feature.description}
                 </p>
                 <div className="text-center">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-400">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-green-500/20 to-cyan-500/20 text-green-400">
                     {feature.stats}
                   </span>
                 </div>
@@ -330,14 +327,14 @@ const CloudInfrastructure = () => {
       </section>
 
       {/* Capabilities Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-green-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Cloud Capabilities
+              Comprehensive Automation Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              End-to-end cloud infrastructure solutions for every aspect of your business
+              Automate every aspect of your business with our comprehensive suite of automation tools
             </p>
           </div>
           
@@ -347,10 +344,10 @@ const CloudInfrastructure = () => {
                 key={index}
                 className="group hover:scale-105 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   {capability.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-blue-400 transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-green-400 transition-colors">
                   {capability.title}
                 </h3>
                 <p className="text-gray-300 text-center mb-6 leading-relaxed">
@@ -370,36 +367,36 @@ const CloudInfrastructure = () => {
         </ResponsiveContainer>
       </section>
 
-      {/* Services Section */}
+      {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Cloud Services
+              Real-World Use Cases
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Complete cloud infrastructure services from strategy to ongoing management
+              See how businesses across industries are using our platform to achieve remarkable results
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
+            {useCases.map((useCase, index) => (
               <FuturisticCard
                 key={index}
                 className="group hover:scale-105 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  {service.icon}
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  {useCase.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3 text-center group-hover:text-blue-400 transition-colors">
-                  {service.title}
+                <h3 className="text-lg font-semibold text-white mb-3 text-center group-hover:text-green-400 transition-colors">
+                  {useCase.title}
                 </h3>
                 <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm">
-                  {service.description}
+                  {useCase.description}
                 </p>
                 <div className="text-center">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-400">
-                    {service.duration}
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-green-500/20 to-cyan-500/20 text-green-400">
+                    {useCase.results}
                   </span>
                 </div>
               </FuturisticCard>
@@ -409,14 +406,14 @@ const CloudInfrastructure = () => {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
+      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-green-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Flexible Cloud Plans
+              Flexible Automation Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the cloud infrastructure plan that matches your business needs and scale
+              Choose the plan that matches your automation needs and business size
             </p>
           </div>
           
@@ -425,12 +422,12 @@ const CloudInfrastructure = () => {
               <FuturisticCard
                 key={index}
                 className={`relative group hover:scale-105 transition-all duration-300 ${
-                  plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''
+                  plan.popular ? 'ring-2 ring-green-500 scale-105' : ''
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-green-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -473,10 +470,10 @@ const CloudInfrastructure = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Cloud Leaders
+              Trusted by Business Leaders
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how organizations are using our cloud infrastructure services to transform their operations
+              See how organizations are using our platform to transform their operations
             </p>
           </div>
           
@@ -495,7 +492,7 @@ const CloudInfrastructure = () => {
                   "{testimonial.content}"
                 </p>
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
+                  <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
                     {testimonial.avatar}
                   </div>
                   <div>
@@ -510,15 +507,15 @@ const CloudInfrastructure = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/30 to-cyan-900/30">
         <ResponsiveContainer>
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Transform Your Infrastructure Today
+              Automate Your Business Today
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Join thousands of businesses using our cloud infrastructure services to achieve 
-              scalability, security, and cost optimization. Start your cloud transformation today.
+              Join thousands of businesses using AI automation to transform their operations. 
+              Start your free trial and see the power of intelligent automation.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -526,9 +523,9 @@ const CloudInfrastructure = () => {
                 href="#signup"
                 variant="primary"
                 size="lg"
-                icon={<Cloud className="w-5 h-5" />}
+                icon={<Zap className="w-5 h-5" />}
               >
-                Get Started
+                Start Free Trial
               </FuturisticButton>
               <FuturisticButton
                 href="/contact"
@@ -541,7 +538,7 @@ const CloudInfrastructure = () => {
             </div>
             
             <div className="mt-8 text-sm text-gray-400">
-              <p>Free consultation • No setup fees • 30-day money-back guarantee</p>
+              <p>14-day free trial • No credit card required • Cancel anytime</p>
             </div>
           </div>
         </ResponsiveContainer>
@@ -550,4 +547,4 @@ const CloudInfrastructure = () => {
   );
 };
 
-export default CloudInfrastructure;
+export default AiAutomationPlatform;

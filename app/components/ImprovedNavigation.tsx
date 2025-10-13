@@ -25,7 +25,9 @@ import {
   Users,
   Award,
   Clock,
-  CheckCircle
+  CheckCircle,
+  DollarSign,
+  Monitor
 } from 'lucide-react';
 
 const ImprovedNavigation = () => {
@@ -565,7 +567,7 @@ const ImprovedNavigation = () => {
 
   const quickLinks = [
     { label: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4" /> },
-    { label: 'Demo', href: '/demo', icon: <Play className="w-4 h-4" /> },
+    { label: 'Demo', href: '/demo', icon: <Monitor className="w-4 h-4" /> },
     { label: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },
     { label: 'Consultation', href: '/consultation', icon: <Users className="w-4 h-4" /> }
   ];
