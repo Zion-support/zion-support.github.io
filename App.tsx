@@ -5,6 +5,7 @@ import "./app/styles/futuristic.css";
 import "./app/styles/accessibility-enhanced.css";
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
+import EnhancedFooter from "./app/components/EnhancedFooter";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
@@ -26,6 +27,11 @@ const ServicesPage = React.lazy(() => import("./app/services/page"));
 const BlogPage = React.lazy(() => import("./app/blog/page"));
 const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
+
+// New Service Pages
+const MicroSaaSServicesPage = React.lazy(() => import("./app/micro-saas-services/page"));
+const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
+const ITServicesPage = React.lazy(() => import("./app/it-services/page"));
 
 // AI Services Pages
 const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
@@ -60,7 +66,7 @@ const FiveGDataAnalyticsPage = React.lazy(() => import("./app/5g-data-analytics/
 const FiveGImplementationPage = React.lazy(() => import("./app/5g-implementation/page"));
 
 // Micro SAAS Services Pages
-const MicroSaaSServicesPage = React.lazy(() => import("./app/zion-content-studio/page"));
+const ZionContentStudioPage = React.lazy(() => import("./app/zion-content-studio/page"));
 const ProjectManagementToolPage = React.lazy(() => import("./app/project-management-pro/page"));
 const CustomerRelationshipManagerPage = React.lazy(() => import("./app/zion-ai-crm-pro/page"));
 const InventoryManagementSystemPage = React.lazy(() => import("./app/zion-inventory-smart/page"));
@@ -125,6 +131,11 @@ function App() {
                                     <Route path="/privacy" element={<PrivacyPage />} />
                                     <Route path="/terms" element={<TermsPage />} />
 
+                                    {/* New Service Pages */}
+                                    <Route path="/micro-saas-services" element={<MicroSaaSServicesPage />} />
+                                    <Route path="/ai-services" element={<AIServicesPage />} />
+                                    <Route path="/it-services" element={<ITServicesPage />} />
+
                                     {/* AI Services */}
                                     <Route path="/ai-analytics" element={<AIAnalyticsPage />} />
                                     <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
@@ -159,6 +170,7 @@ function App() {
 
                                     {/* Micro SAAS Services */}
                                     <Route path="/micro-saas-services" element={<MicroSaaSServicesPage />} />
+                                    <Route path="/zion-content-studio" element={<ZionContentStudioPage />} />
                                     <Route path="/project-management-tool" element={<ProjectManagementToolPage />} />
                                     <Route path="/customer-relationship-manager" element={<CustomerRelationshipManagerPage />} />
                                     <Route path="/inventory-management-system" element={<InventoryManagementSystemPage />} />
@@ -189,7 +201,7 @@ function App() {
                                 </Suspense>
                               </main>
                               
-                              <Footer />
+                              <EnhancedFooter />
                             </FuturisticBackground>
                           </div>
                         </Router>

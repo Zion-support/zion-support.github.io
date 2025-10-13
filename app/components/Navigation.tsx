@@ -89,6 +89,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
           name: 'AI Services',
           icon: <Brain className="w-4 h-4" />,
           items: [
+            { name: 'AI Services Overview', path: '/ai-services', icon: <Brain className="w-4 h-4" /> },
             { name: 'AI Analytics', path: '/ai-analytics', icon: <BarChart3 className="w-4 h-4" /> },
             { name: 'AI Content Generation', path: '/ai-content-generation', icon: <Code className="w-4 h-4" /> },
             { name: 'AI Customer Support', path: '/ai-customer-support', icon: <Users className="w-4 h-4" /> },
@@ -105,6 +106,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
           name: 'IT Services',
           icon: <Monitor className="w-4 h-4" />,
           items: [
+            { name: 'IT Services Overview', path: '/it-services', icon: <Monitor className="w-4 h-4" /> },
             { name: 'Cloud Migration', path: '/cloud-migration', icon: <Cloud className="w-4 h-4" /> },
             { name: 'DevOps Services', path: '/devops-services', icon: <Code className="w-4 h-4" /> },
             { name: 'IT Consulting', path: '/it-consulting', icon: <Users className="w-4 h-4" /> },
