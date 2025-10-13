@@ -107,9 +107,9 @@ const Footer: React.FC = () => {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
-          <div className="md:col-span-1">
+          <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
@@ -153,9 +153,9 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">AI Services</h3>
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.name}>
@@ -171,8 +171,41 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Micro SAAS */}
           <div>
+            <h3 className="text-lg font-semibold text-white mb-4">Micro SAAS</h3>
+            <ul className="space-y-2">
+              {microSaasServices.map((service) => (
+                <li key={service.name}>
+                  <Link
+                    to={service.path}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"
+                  >
+                    <ArrowRight className="w-4 h-4 mr-2" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* 5G Solutions & Contact */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">5G Solutions</h3>
+            <ul className="space-y-2 mb-6">
+              {fiveGServices.map((service) => (
+                <li key={service.name}>
+                  <Link
+                    to={service.path}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"
+                  >
+                    <ArrowRight className="w-4 h-4 mr-2" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            
             <h3 className="text-lg font-semibold text-white mb-4">Contact Info</h3>
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
