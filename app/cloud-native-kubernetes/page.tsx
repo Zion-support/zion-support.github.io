@@ -1,30 +1,30 @@
-import { ArrowRight, Mic, Headphones, MessageCircle, Zap, Shield, Globe, BarChart3, Users, Clock, CheckCircle, Star } from "lucide-react";
+import { ArrowRight, Cloud, Server, Shield, Zap, BarChart3, Users, Clock, CheckCircle, Star, Globe, Database } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AiVoiceAssistant() {
+export default function CloudNativeKubernetes() {
   const features = [
     {
-      title: "Natural Language Processing",
-      description: "Advanced NLP capabilities for human-like conversations",
-      icon: <MessageCircle className="w-6 h-6" />,
+      title: "Kubernetes Orchestration",
+      description: "Advanced container orchestration with auto-scaling and load balancing",
+      icon: <Server className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-Language Support",
-      description: "Support for 50+ languages with real-time translation",
+      title: "Microservices Architecture",
+      description: "Design and deploy scalable microservices with service mesh",
       icon: <Globe className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Voice Recognition",
-      description: "Accurate voice recognition with noise cancellation",
-      icon: <Mic className="w-6 h-6" />,
+      title: "DevOps Automation",
+      description: "CI/CD pipelines with GitOps and automated deployments",
+      icon: <Zap className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Real-time Analytics",
-      description: "Track performance and user interactions",
+      title: "Monitoring & Observability",
+      description: "Comprehensive monitoring with Prometheus, Grafana, and Jaeger",
       icon: <BarChart3 className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     }
@@ -33,93 +33,107 @@ export default function AiVoiceAssistant() {
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$29",
+      price: "$2,499",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for small teams",
       features: [
-        "Up to 1,000 voice interactions/month",
-        "Basic NLP capabilities",
-        "5 language support",
+        "Up to 10 nodes",
+        "Basic monitoring",
+        "Standard support",
+        "Documentation",
         "Email support",
-        "Basic analytics dashboard"
+        "Basic security"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$79",
+      price: "$4,999",
       period: "/month",
       description: "Ideal for growing businesses",
       features: [
-        "Up to 10,000 voice interactions/month",
-        "Advanced NLP with sentiment analysis",
-        "20 language support",
+        "Up to 50 nodes",
+        "Advanced monitoring",
         "Priority support",
-        "Advanced analytics & reporting",
-        "Custom voice training",
+        "Custom configurations",
+        "Phone & email support",
+        "Advanced security",
+        "24/7 monitoring",
         "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$199",
+      price: "$9,999",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited voice interactions",
-        "Premium NLP with emotion detection",
-        "50+ language support",
-        "24/7 dedicated support",
-        "Custom analytics & insights",
-        "White-label solution",
-        "Advanced integrations",
-        "SLA guarantee"
+        "Unlimited nodes",
+        "Premium monitoring",
+        "Dedicated support team",
+        "Custom solutions",
+        "24/7 phone support",
+        "Enterprise security",
+        "SLA guarantee",
+        "Custom integrations"
       ],
       popular: false
     }
   ];
 
-  const useCases = [
+  const services = [
     {
-      title: "Customer Support",
-      description: "Handle customer inquiries 24/7 with intelligent voice responses",
-      icon: <Users className="w-8 h-8" />,
+      title: "Kubernetes Migration",
+      description: "Migrate your applications to Kubernetes with zero downtime",
+      icon: <Cloud className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Sales Automation",
-      description: "Qualify leads and schedule appointments automatically",
-      icon: <Zap className="w-8 h-8" />,
+      title: "Service Mesh Implementation",
+      description: "Implement Istio or Linkerd for advanced traffic management",
+      icon: <Globe className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Healthcare Triage",
-      description: "Initial patient screening and appointment scheduling",
-      icon: <Shield className="w-8 h-8" />,
+      title: "CI/CD Pipeline Setup",
+      description: "Automate your deployment process with GitOps workflows",
+      icon: <Zap className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Education Assistant",
-      description: "Interactive learning and student support",
-      icon: <MessageCircle className="w-8 h-8" />,
+      title: "Security Hardening",
+      description: "Implement security best practices and compliance",
+      icon: <Shield className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
+    },
+    {
+      title: "Performance Optimization",
+      description: "Optimize cluster performance and resource utilization",
+      icon: <BarChart3 className="w-8 h-8" />,
+      color: "from-teal-500 to-cyan-500"
+    },
+    {
+      title: "Disaster Recovery",
+      description: "Implement backup and disaster recovery solutions",
+      icon: <Database className="w-8 h-8" />,
+      color: "from-indigo-500 to-purple-500"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Zion Tech Group | Intelligent Voice Solutions</title>
+        <title>Cloud Native Kubernetes Solutions - Zion Tech Group | Container Orchestration</title>
         <meta
           name="description"
-          content="Advanced AI voice assistant with natural language processing, multi-language support, and real-time analytics. Perfect for customer support, sales automation, and business communication."
+          content="Expert Kubernetes solutions for cloud-native applications. Container orchestration, microservices architecture, DevOps automation, and comprehensive monitoring. Scale your applications with confidence."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, voice AI, natural language processing, voice recognition, customer support automation, voice analytics, multi-language support"
+          content="Kubernetes, cloud native, container orchestration, microservices, DevOps, CI/CD, service mesh, monitoring, cloud migration, containerization"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-voice-assistant" />
+        <link rel="canonical" href="https://ziontechgroup.com/cloud-native-kubernetes" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -128,20 +142,20 @@ export default function AiVoiceAssistant() {
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
           <div className="max-w-7xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Mic className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI Voice Technology</span>
+              <Cloud className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">Cloud Native Solutions</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              AI Voice
+              Cloud Native
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Assistant
+                {" "}Kubernetes
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your business communication with our advanced AI voice assistant. 
-              Natural conversations, multi-language support, and intelligent automation for customer support, sales, and more.
+              Transform your applications with expert Kubernetes solutions. Container orchestration, 
+              microservices architecture, and DevOps automation for modern cloud-native applications.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -149,15 +163,15 @@ export default function AiVoiceAssistant() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Free Trial
+                Get Started
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                Watch Demo
-                <Headphones className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                Schedule Demo
+                <Server className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>
@@ -168,11 +182,11 @@ export default function AiVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Powerful Voice AI Features
+                Comprehensive Kubernetes Solutions
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Our AI voice assistant combines cutting-edge technology with intuitive design 
-                to deliver exceptional voice experiences for your business.
+                Our expert team provides end-to-end Kubernetes solutions that enable you to 
+                build, deploy, and scale cloud-native applications with confidence.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -198,33 +212,34 @@ export default function AiVoiceAssistant() {
           </div>
         </section>
 
-        {/* Use Cases Section */}
+        {/* Services Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Real-World Applications
+                Our Kubernetes Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how our AI voice assistant can transform your business operations across various industries.
+                From migration to optimization, we provide comprehensive Kubernetes services 
+                tailored to your specific needs and requirements.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
                 >
                   <div
-                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${useCase.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
                   >
-                    {useCase.icon}
+                    {service.icon}
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {useCase.title}
+                    {service.title}
                   </h3>
                   <p className="text-gray-300 text-sm leading-relaxed">
-                    {useCase.description}
+                    {service.description}
                   </p>
                 </div>
               ))}
@@ -237,10 +252,10 @@ export default function AiVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Simple, Transparent Pricing
+                Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your business needs. All plans include our core AI voice technology.
+                Choose the perfect plan for your Kubernetes needs. All plans include our expert support and monitoring.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -297,11 +312,11 @@ export default function AiVoiceAssistant() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Voice Communication?
+              Ready to Go Cloud Native?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses using our AI voice assistant to enhance customer experience, 
-              automate processes, and drive growth. Start your free trial today.
+              Transform your applications with our expert Kubernetes solutions. 
+              Scale with confidence and embrace the future of cloud-native computing.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -309,14 +324,14 @@ export default function AiVoiceAssistant() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Free Trial
+                Start Your Journey
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                Schedule Demo
+                Schedule Consultation
                 <Clock className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
