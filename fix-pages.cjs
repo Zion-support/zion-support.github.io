@@ -1,23 +1,45 @@
-'use client';
+const fs = require('fs');
+const path = require('path');
+
+const filesToFix = [
+  'app/zion-ai-inventory-manager/page.tsx',
+  'app/zion-ai-performance-optimizer/page.tsx',
+  'app/zion-ai-social-media-manager/page.tsx',
+  'app/zion-ai-voice-assistant-pro/page.tsx',
+  'app/zion-smart-expense-categorizer/page.tsx',
+  'app/zion-smart-inventory-optimizer/page.tsx'
+];
+
+filesToFix.forEach(filePath => {
+  const fullPath = path.join(__dirname, filePath);
+  
+  if (fs.existsSync(fullPath)) {
+    let content = fs.readFileSync(fullPath, 'utf8');
+    
+    // Fix the broken structure
+    if (content.includes("'use client';\nimport React from 'react';\n\n      <Helmet>")) {
+      const pageName = filePath.split('/').pop().replace('.tsx', '').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+      
+      content = `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function PagePage() {
+export default function ${pageName.replace(/\s+/g, '')}Page() {
   return (
     <>
       <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services by Zion Tech Group." />
+        <title>${pageName} - Zion Tech Group</title>
+        <meta name="description" content="Professional ${pageName.toLowerCase()} services by Zion Tech Group." />
       </Helmet>
       
       <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-8">
-              Page
+              ${pageName}
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Professional page solutions tailored to your business needs.
+              Professional ${pageName.toLowerCase()} solutions tailored to your business needs.
             </p>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
@@ -26,7 +48,7 @@ export default function PagePage() {
                   Expert Solutions
                 </h3>
                 <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge page solutions.
+                  Our team of experts delivers cutting-edge ${pageName.toLowerCase()} solutions.
                 </p>
               </div>
               
@@ -35,7 +57,7 @@ export default function PagePage() {
                   Custom Implementation
                 </h3>
                 <p className="text-green-700">
-                  Tailored page implementations for your specific requirements.
+                  Tailored ${pageName.toLowerCase()} implementations for your specific requirements.
                 </p>
               </div>
               
@@ -44,7 +66,7 @@ export default function PagePage() {
                   24/7 Support
                 </h3>
                 <p className="text-purple-700">
-                  Round-the-clock support for all your page needs.
+                  Round-the-clock support for all your ${pageName.toLowerCase()} needs.
                 </p>
               </div>
             </div>
@@ -59,4 +81,12 @@ export default function PagePage() {
       </div>
     </>
   );
-}
+}`;
+      
+      fs.writeFileSync(fullPath, content);
+      console.log(`Fixed ${filePath}`);
+    }
+  }
+});
+
+console.log('Page fixing completed!');

@@ -1,3 +1,9 @@
+import { useState, useEffect } from 'react';
+
+interface PerformanceMetrics {
+  [key: string]: number;
+}
+
 export function usePerformanceMetrics() {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isSupported, setIsSupported] = useState(false);
