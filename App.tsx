@@ -8,20 +8,16 @@ import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
-import AdvancedPerformanceEnhancer from "./app/components/AdvancedPerformanceEnhancer";
-import EnhancedAccessibilityManager from "./app/components/EnhancedAccessibilityManager";
 import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import UnifiedErrorBoundary from "./app/components/UnifiedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
-import EnhancedPerformanceOptimizer from "./app/components/EnhancedPerformanceOptimizer";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
-import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
-import EnhancedSEO from "./app/components/EnhancedSEO";
 import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
+import PerformanceTracker from "./app/components/PerformanceTracker";
 import FuturisticBackground from "./app/components/FuturisticBackground";
-import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
 import ErrorHandler from "./app/components/ErrorHandler";
 import { usePerformanceOptimization } from "./hooks/usePerformanceOptimization";
@@ -43,6 +39,7 @@ const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
 const CookiesPage = React.lazy(() => import("./app/cookies/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
+const NotFoundPage = React.lazy(() => import("./app/404/page"));
 
 // AI Service Pages
 const AiAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
@@ -219,6 +216,7 @@ function App() {
     <GlobalErrorBoundary>
       <ErrorHandler>
         <EnhancedErrorBoundary>
+          <UnifiedErrorBoundary>
           <HelmetProvider>
             <AccessibilityEnhancer>
               <Router>
@@ -458,42 +456,29 @@ function App() {
                     path="/5g-solutions"
                     element={<FiveGSolutionsPage />}
                   />
+                  
+                  {/* 404 Route - Must be last */}
+                  <Route path="*" element={<NotFoundPage />} />
                       </Routes>
                     </Suspense>
                   </main>
                   <Footer />
-                  <EnhancedPerformanceOptimizer />
-                  <AdvancedPerformanceEnhancer 
-                    enableImageOptimization={true}
-                    enablePreloading={true}
-                    enableCaching={true}
-                    enableCompression={true}
-                  />
-                  <EnhancedAccessibilityManager
-                    enableKeyboardNavigation={true}
-                    enableScreenReader={true}
-                    enableHighContrast={true}
-                    enableFocusManagement={true}
-                  />
-                  <EnhancedAccessibility>
-                    <div></div>
-                  </EnhancedAccessibility>
                 </FuturisticBackground>
                 <AnalyticsProvider>
                   <div>
                     <PerformanceMonitor />
                     <WebVitalsTracker />
-                    <PerformanceEnhancer />
+                    <PerformanceTracker />
                     <SEOOptimizer />
-                    <EnhancedSEO />
                   </div>
                 </AnalyticsProvider>
               </div>
             </Router>
           </AccessibilityEnhancer>
         </HelmetProvider>
-      </EnhancedErrorBoundary>
-    </ErrorHandler>
+          </UnifiedErrorBoundary>
+        </EnhancedErrorBoundary>
+      </ErrorHandler>
     </GlobalErrorBoundary>
   );
 }

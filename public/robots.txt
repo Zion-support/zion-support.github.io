@@ -9,66 +9,30 @@ Crawl-delay: 1
 
 # Disallow admin and private areas
 Disallow: /admin/
-Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /static/
+Disallow: /private/
 
 # Allow important pages
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /contact
+Allow: /pricing
+Allow: /blog
+Allow: /consultation
 Allow: /ai-services/
-Allow: /services/
 Allow: /micro-saas/
 Allow: /5g-solutions/
-Allow: /about/
-Allow: /contact/
-Allow: /pricing/
-Allow: /case-studies/
-Allow: /careers/
-Allow: /tutorials/
-Allow: /consultation/
-Allow: /demo/
-Allow: /support/
-
-# Block specific file types
-Disallow: /*.json$
-Disallow: /*.xml$
-Disallow: /*.txt$
-Disallow: /*.log$
-
-# Allow search engines to access CSS and JS files
-Allow: /assets/
-Allow: /*.css$
-Allow: /*.js$
 
 # Block common bot traps
-Disallow: /search?
-Disallow: /?*
-Disallow: /tag/
-Disallow: /category/
-Disallow: /archive/
-
-# Allow social media crawlers
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: LinkedInBot
-Allow: /
-
-User-agent: WhatsApp
-Allow: /
-
-# Block bad bots
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: DotBot
-Disallow: /
-
-User-agent: SemrushBot
-Disallow: /
+Disallow: /*.json$
+Disallow: /*?*
+Disallow: /*#
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.docx$
+Disallow: /*.xls$
+Disallow: /*.xlsx$
+Disallow: /*.ppt$
+Disallow: /*.pptx$

@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Calendar, User } from 'lucide-react';
-=======
 import { useState } from "react";
 import { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
->>>>>>> cursor/analyze-improve-and-deploy-application-462b
 
 interface BlogPost {
   id: string;
