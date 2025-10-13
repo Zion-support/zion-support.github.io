@@ -1,10 +1,6 @@
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-import { Brain, Shield, Zap, Globe, ArrowRight } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
-=======
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, CheckCircle, Users, Award, TrendingUp, BarChart3, Cloud, Lock, Sparkles } from "lucide-react";
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8391
 
 const HomePage = () => {
   const features = [
@@ -99,26 +95,12 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
       <EnhancedSEO
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
-        keywords="AI solutions, IT services, digital transformation, business automation, technology consulting, machine learning, 5G solutions, micro SaaS"
+        title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
+        description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
+        keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
         canonical="https://ziontechgroup.com"
       />
-=======
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company</title>
-        <meta
-          name="description"
-          content="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
-        />
-        <meta
-          name="keywords"
-          content="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
-        />
-      </Helmet>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8391
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">

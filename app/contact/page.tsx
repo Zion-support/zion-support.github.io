@@ -1,6 +1,5 @@
-import { ArrowRight, Phone, Mail, MapPin, Clock, MessageCircle, Star, CheckCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, MessageCircle, Star, CheckCircle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 
 export default function Contact() {
   const contactInfo = [
