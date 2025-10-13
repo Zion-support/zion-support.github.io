@@ -90,12 +90,40 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
+      name: "Zion AI Blockchain Analytics",
+      description: "Advanced AI-powered blockchain analytics platform for DeFi protocols, cryptocurrency analysis, and smart contract auditing",
+      price: "From $2,500/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/zion-ai-blockchain-analytics",
+      featured: true,
+      category: "Blockchain"
+    },
+    {
+      name: "Zion AI Quantum Computing",
+      description: "Revolutionary AI-powered quantum computing platform for optimization, machine learning, and scientific research",
+      price: "From $2,999/month",
+      icon: <Cpu className="w-6 h-6" />,
+      link: "/zion-ai-quantum-computing",
+      featured: true,
+      category: "Quantum"
+    },
+    {
+      name: "Zion AI Space Technology",
+      description: "Next-generation space technology platform for satellite management, space debris tracking, and Earth observation",
+      price: "From $1,999/month",
+      icon: <Rocket className="w-6 h-6" />,
+      link: "/zion-ai-space-technology",
+      featured: true,
+      category: "Space"
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
       price: "From $299/month",
       icon: <BarChart3 className="w-6 h-6" />,
       link: "/zion-analytics-pro",
-      featured: true
+      featured: true,
+      category: "Analytics"
     },
     {
       name: "Zion Security Shield",
@@ -103,7 +131,8 @@ const HomePage = () => {
       price: "From $499/month",
       icon: <Shield className="w-6 h-6" />,
       link: "/zion-security-shield",
-      featured: true
+      featured: true,
+      category: "Security"
     },
     {
       name: "Zion Cloud Vault",
@@ -111,7 +140,8 @@ const HomePage = () => {
       price: "From $99/month",
       icon: <Cloud className="w-6 h-6" />,
       link: "/zion-cloud-vault",
-      featured: true
+      featured: true,
+      category: "Storage"
     },
     {
       name: "Zion AI CRM Pro",
@@ -119,7 +149,8 @@ const HomePage = () => {
       price: "From $199/month",
       icon: <Users className="w-6 h-6" />,
       link: "/zion-ai-crm-pro",
-      featured: true
+      featured: true,
+      category: "CRM"
     },
     {
       name: "Zion AI Marketing Automation Pro",
@@ -127,7 +158,8 @@ const HomePage = () => {
       price: "From $149/month",
       icon: <Target className="w-6 h-6" />,
       link: "/zion-ai-marketing-automation-pro",
-      featured: true
+      featured: true,
+      category: "Marketing"
     },
     {
       name: "Zion AI Project Manager Pro",
@@ -135,7 +167,8 @@ const HomePage = () => {
       price: "From $99/month",
       icon: <Calendar className="w-6 h-6" />,
       link: "/zion-ai-project-manager-pro",
-      featured: true
+      featured: true,
+      category: "Productivity"
     }
   ];
 
@@ -194,11 +227,16 @@ const HomePage = () => {
             <span className="text-cyan-400 text-sm font-medium">#1 Technology Solutions Provider 2024</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Welcome to Zion Tech Group
-            </span>
-          </h1>
+          <FuturisticText
+            variant="heading"
+            gradient="from-cyan-400 via-purple-400 to-pink-400"
+            animate={true}
+            glow={true}
+            neon={true}
+            className="mb-6 leading-tight"
+          >
+            Welcome to Zion Tech Group
+          </FuturisticText>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
             Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. 
@@ -211,6 +249,8 @@ const HomePage = () => {
               variant="primary"
               size="lg"
               icon={<Sparkles className="w-5 h-5" />}
+              glow={true}
+              neon={true}
             >
               Get Started Today
             </FuturisticButton>
@@ -219,6 +259,8 @@ const HomePage = () => {
               variant="outline"
               size="lg"
               icon={<Monitor className="w-5 h-5" />}
+              glow={true}
+              neon={true}
             >
               Watch Demo
             </FuturisticButton>
@@ -299,37 +341,42 @@ const HomePage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasHighlights.map((saas, index) => (
-              <Link
+              <FuturisticCard
                 key={index}
-                to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                hover={true}
+                glow={true}
+                neon={true}
+                delay={index * 0.1}
+                className="group cursor-pointer"
               >
-                {saas.featured && (
-                  <div className="absolute top-4 right-4">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                      Featured
-                    </span>
+                <Link to={saas.link} className="block">
+                  {saas.featured && (
+                    <div className="absolute top-4 right-4 z-20">
+                      <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg">
+                        {saas.category}
+                      </span>
+                    </div>
+                  )}
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform shadow-lg">
+                      {saas.icon}
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                        {saas.name}
+                      </h3>
+                      <p className="text-cyan-400 font-medium">{saas.price}</p>
+                    </div>
                   </div>
-                )}
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
-                    {saas.icon}
+                  <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                    {saas.description}
+                  </p>
+                  <div className="flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                      {saas.name}
-                    </h3>
-                    <p className="text-cyan-400 font-medium">{saas.price}</p>
-                  </div>
-                </div>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {saas.description}
-                </p>
-                <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </Link>
+                </Link>
+              </FuturisticCard>
             ))}
           </div>
           <div className="text-center mt-12">

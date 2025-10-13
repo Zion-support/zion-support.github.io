@@ -1,45 +1,74 @@
 import React from 'react';
-import { cn } from '../lib/utils';
+import { motion } from 'framer-motion';
 
 interface FuturisticCardProps {
   children: React.ReactNode;
   className?: string;
-  glowColor?: 'cyan' | 'purple' | 'pink' | 'blue' | 'green' | 'orange' | 'red' | 'yellow';
   hover?: boolean;
+  glow?: boolean;
+  neon?: boolean;
+  gradient?: string;
+  delay?: number;
 }
 
-const FuturisticCard = ({ 
-  children, 
-  className, 
-  glowColor = 'cyan',
-  hover = true 
-}: FuturisticCardProps) => {
-  const glowColors = {
-    cyan: 'hover:shadow-cyan-500/25',
-    purple: 'hover:shadow-purple-500/25',
-    pink: 'hover:shadow-pink-500/25',
-    blue: 'hover:shadow-blue-500/25',
-    green: 'hover:shadow-green-500/25',
-    orange: 'hover:shadow-orange-500/25',
-    red: 'hover:shadow-red-500/25',
-    yellow: 'hover:shadow-yellow-500/25',
-  };
-
+const FuturisticCard: React.FC<FuturisticCardProps> = ({
+  children,
+  className = '',
+  hover = true,
+  glow = true,
+  neon = true,
+  gradient = 'from-cyan-500/20 to-purple-500/20',
+  delay = 0
+}) => {
   return (
-    <div
-      className={cn(
-        'relative bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 transition-all duration-300',
-        hover && 'hover:bg-white/20 hover:scale-105 hover:shadow-2xl',
-        hover && glowColors[glowColor],
-        'before:absolute before:inset-0 before:rounded-xl before:p-[1px] before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300',
-        'after:absolute after:inset-0 after:rounded-xl after:bg-gradient-to-r after:from-transparent after:via-white/5 after:to-transparent after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300',
-        className
-      )}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay }}
+      whileHover={hover ? { 
+        scale: 1.05, 
+        y: -5,
+        transition: { duration: 0.3 }
+      } : {}}
+      className={`
+        relative group bg-gradient-to-br from-slate-800/50 to-slate-900/50 
+        backdrop-blur-sm rounded-2xl p-6 border border-white/10 
+        hover:border-white/20 transition-all duration-300
+        ${glow ? 'hover:shadow-2xl hover:shadow-cyan-500/10' : ''}
+        ${neon ? 'hover:shadow-[0_0_20px_rgba(0,255,255,0.3)]' : ''}
+        ${className}
+      `}
+      style={{
+        background: `linear-gradient(135deg, rgba(15, 23, 42, 0.5) 0%, rgba(30, 41, 59, 0.5) 100%)`,
+        backdropFilter: 'blur(10px)',
+        border: '1px solid rgba(255, 255, 255, 0.1)',
+        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)'
+      }}
     >
+      {/* Animated border gradient */}
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-sm"></div>
+      
+      {/* Inner glow effect */}
+      <div className="absolute inset-1 rounded-xl bg-gradient-to-br from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      
+      {/* Animated particles */}
+      <div className="absolute inset-0 rounded-2xl overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-2 left-2 w-1 h-1 bg-cyan-400 rounded-full animate-ping opacity-60"></div>
+          <div className="absolute top-4 right-3 w-1 h-1 bg-purple-400 rounded-full animate-ping opacity-40" style={{ animationDelay: '0.5s' }}></div>
+          <div className="absolute bottom-3 left-4 w-1 h-1 bg-pink-400 rounded-full animate-ping opacity-50" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-2 right-2 w-1 h-1 bg-green-400 rounded-full animate-ping opacity-30" style={{ animationDelay: '1.5s' }}></div>
+        </div>
+      </div>
+
+      {/* Content */}
       <div className="relative z-10">
         {children}
       </div>
-    </div>
+
+      {/* Hover effect overlay */}
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/0 via-purple-500/0 to-pink-500/0 group-hover:from-cyan-500/5 group-hover:via-purple-500/5 group-hover:to-pink-500/5 transition-all duration-300 pointer-events-none"></div>
+    </motion.div>
   );
 };
 

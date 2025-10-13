@@ -82,6 +82,9 @@ const EnhancedNavigation = () => {
       href: '/micro-saas',
       icon: <Zap className="w-4 h-4" />,
       dropdown: [
+        { label: 'Zion AI Blockchain Analytics', href: '/zion-ai-blockchain-analytics' },
+        { label: 'Zion AI Quantum Computing', href: '/zion-ai-quantum-computing' },
+        { label: 'Zion AI Space Technology', href: '/zion-ai-space-technology' },
         { label: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
         { label: 'Zion Security Shield', href: '/zion-security-shield' },
         { label: 'Zion Cloud Vault', href: '/zion-cloud-vault' },
