@@ -1,1 +1,1 @@
-/* global describe, test, expect, it, beforeEach */
+// AI Load Testing Page
