@@ -16,6 +16,7 @@ Allow: /
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
+<<<<<<< HEAD
 # Crawl-delay
 Crawl-delay: 1
 
@@ -95,3 +96,7 @@ Allow: /enterprise
 =======
 Disallow: /private/
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
+=======
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ca8
