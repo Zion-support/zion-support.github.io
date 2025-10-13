@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900/95 backdrop-blur-sm border-t border-cyan-500/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
@@ -28,14 +28,25 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">AI Services</h3>
             <ul className="space-y-2">
-              <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Solutions</Link></li>
-              <li><Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors">IT Services</Link></li>
-              <li><Link to="/micro-saas" className="text-gray-300 hover:text-cyan-400 transition-colors">Micro SAAS</Link></li>
-              <li><Link to="/5g-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">5G Solutions</Link></li>
+              <li><Link to="/ai-voice-assistant-pro" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">AI Voice Assistant Pro</Link></li>
+              <li><Link to="/ai-image-recognition-pro" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">AI Image Recognition Pro</Link></li>
+              <li><Link to="/ai-fraud-detection-pro" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">AI Fraud Detection Pro</Link></li>
+              <li><Link to="/ai-services" className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium">View All AI Services →</Link></li>
+            </ul>
+          </div>
+
+          {/* Micro SAAS */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">Micro SAAS</h3>
+            <ul className="space-y-2">
+              <li><Link to="/smart-inventory-optimizer-pro" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">Smart Inventory Optimizer Pro</Link></li>
+              <li><Link to="/zion-analytics-pro" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">Zion Analytics Pro</Link></li>
+              <li><Link to="/zion-security-shield" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">Zion Security Shield</Link></li>
+              <li><Link to="/micro-saas" className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium">View All Micro SAAS →</Link></li>
             </ul>
           </div>
 

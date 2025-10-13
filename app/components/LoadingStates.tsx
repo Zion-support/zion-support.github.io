@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Loader2, Brain, Shield, Zap, Globe } from 'lucide-react';
 
 interface LoadingPageProps {
@@ -29,21 +28,11 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({
           <Loader2 className="w-5 h-5 text-cyan-400 animate-spin" />
           <span className="text-gray-300">Please wait...</span>
         </div>
-=======
-
-export const LoadingPage: React.FC = () => {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="text-center">
-        <div className="w-16 h-16 border-4 border-cyan-500/20 border-t-cyan-500 rounded-full animate-spin mx-auto mb-4"></div>
-        <p className="text-cyan-400 text-lg">Loading Zion Tech Group...</p>
->>>>>>> cursor/analyze-improve-and-deploy-application-da10
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
 export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
   const getServiceIcon = (serviceName: string) => {
     switch (serviceName.toLowerCase()) {
@@ -144,6 +133,4 @@ export const CardSkeleton: React.FC = () => {
   );
 };
 
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-da10
 export default LoadingPage;
