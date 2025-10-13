@@ -1,9 +1,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function EnhancedPerformanceMonitorPage() {
+=======
+
+interface EnhancedPerformanceMonitorProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function EnhancedPerformanceMonitor({ className = '', children }: EnhancedPerformanceMonitorProps) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -23,6 +33,7 @@ export default function EnhancedPerformanceMonitorPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 =======
 import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'react-helmet-async';';';
@@ -234,3 +245,6 @@ export default EnhancedPerformanceMonitorPage;
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

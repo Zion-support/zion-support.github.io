@@ -16,13 +16,13 @@ export class PerformanceUtils {
     };
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('performanceUtils initialized');
-    }
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
   }
 }
 
+<<<<<<< HEAD
 export const performanceUtils = new PerformanceUtils();
 export default performanceUtils;
 =======
@@ -523,3 +523,7 @@ export const preloadImages = (srcs: string[]): Promise<void[]> => {
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+// Export default instance
+export const performanceUtils = new PerformanceUtils();
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

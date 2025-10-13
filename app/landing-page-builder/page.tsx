@@ -62,6 +62,7 @@ const benefits = [
     'Enterprise-grade security and compliance','
     'Scalable and flexible solutions','
 
+<<<<<<< HEAD
     '24/7 technical support','
 
     'Easy integration with existing systems','
@@ -247,6 +248,23 @@ export default function LandingPageBuilderPage() {
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Create high-converting landing pages with our AI-powered landing page builder.
+=======
+export default function LandingPageBuilderPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>Landing Page Builder - Zion Tech Group</title>
+        <meta name="description" content="Advanced landing page builder solutions by Zion Tech Group" />
+      </Helmet>
+
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Landing Page Builder
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced AI and IT solutions for your business needs.
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </p>
         </div>
 
@@ -270,6 +288,7 @@ export default function LandingPageBuilderPage() {
             </p>
           </div>
         </div>
+<<<<<<< HEAD
       </div>
     </div>
   );
@@ -280,3 +299,15 @@ export default function LandingPageBuilderPage() {
 
 export default LandingPageBuilderPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-a070
+=======
+
+        <div className="text-center mt-12">
+          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+            Get Started
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

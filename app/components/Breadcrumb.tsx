@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function BreadcrumbPage() {
@@ -136,3 +137,18 @@ const Breadcrumb: React.FC = () => {
 
 export default Breadcrumb;
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+
+interface BreadcrumbProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Breadcrumb({ className = '', children }: BreadcrumbProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

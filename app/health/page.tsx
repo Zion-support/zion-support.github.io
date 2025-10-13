@@ -4,6 +4,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 export default function PagePage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -41,6 +42,23 @@ const HealthPage: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl">
             Professional health services by Zion Tech Group.
+=======
+export default function HealthPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>Health - Zion Tech Group</title>
+        <meta name="description" content="Advanced health solutions by Zion Tech Group" />
+      </Helmet>
+
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Health
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced AI and IT solutions for your business needs.
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </p>
           
           <div className="bg-slate-800 p-8 rounded-lg">
@@ -55,6 +73,7 @@ const HealthPage: React.FC = () => {
       </div>
     </>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -233,3 +252,6 @@ export default PagePage;
 
 export default HealthPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-a070
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

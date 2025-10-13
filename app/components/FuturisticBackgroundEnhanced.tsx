@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 
 export default function FuturisticBackgroundEnhancedPage() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>FuturisticBackgroundEnhanced - Zion Tech Group</title>
@@ -26,3 +27,10 @@ export default function FuturisticBackgroundEnhancedPage() {
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

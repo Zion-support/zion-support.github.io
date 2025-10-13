@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
 
 export default function StructuredDataPage() {
   return (
@@ -23,6 +26,7 @@ export default function StructuredDataPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 =======
 'use client';';
@@ -195,3 +199,6 @@ export default StructuredData;
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 =======
@@ -105,6 +108,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 >>>>>>> cursor/fix-errors-and-merge-to-main-a070
 
+<<<<<<< HEAD
 return (
   // TODO: Add parameters
 )
@@ -261,11 +265,29 @@ export default function PagePage() {
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             This page is under development. Please check back later.
+=======
+export default function CaseStudiesPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>Case Studies - Zion Tech Group</title>
+        <meta name="description" content="Advanced case studies solutions by Zion Tech Group" />
+      </Helmet>
+
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Case Studies
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced AI and IT solutions for your business needs.
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </p>
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 =======
   // TODO: Add parameters
@@ -673,3 +695,6 @@ export default CaseStudiesPage;
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

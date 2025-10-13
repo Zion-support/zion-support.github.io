@@ -16,13 +16,13 @@ export class AccessibilityChecker {
     };
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('accessibilityChecker initialized');
-    }
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
   }
 }
 
+<<<<<<< HEAD
 export const accessibilityChecker = new AccessibilityChecker();
 export default accessibilityChecker;
 =======
@@ -140,3 +140,7 @@ export default AccessibilityCheckerPage;
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+// Export default instance
+export const accessibilityChecker = new AccessibilityChecker();
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

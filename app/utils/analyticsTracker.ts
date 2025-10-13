@@ -16,13 +16,13 @@ export class AnalyticsTracker {
     };
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('analyticsTracker initialized');
-    }
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
   }
 }
 
+<<<<<<< HEAD
 export const analyticsTracker = new AnalyticsTracker();
 export default analyticsTracker;
 =======
@@ -149,3 +149,7 @@ export default AnalyticsTrackerPage;
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+// Export default instance
+export const analyticsTracker = new AnalyticsTracker();
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

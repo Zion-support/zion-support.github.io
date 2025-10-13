@@ -16,13 +16,13 @@ export class Logger {
     };
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('logger initialized');
-    }
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
   }
 }
 
+<<<<<<< HEAD
 export const logger = new Logger();
 export default logger;
 =======
@@ -480,3 +480,7 @@ export const logger = new Logger();
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+// Export default instance
+export const logger = new Logger();
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

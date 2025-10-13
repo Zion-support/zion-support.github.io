@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet-async';
 =======
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -364,3 +365,18 @@ const Footer = () => {
 
 export default Footer;
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+
+interface FooterProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Footer({ className = '', children }: FooterProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

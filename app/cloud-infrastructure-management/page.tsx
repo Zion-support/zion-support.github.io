@@ -3,6 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function PagePage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -21,6 +22,8 @@ export default function PagePage() {
           </p>
         </div>
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
 export default function CloudInfrastructureManagementPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -34,8 +37,13 @@ export default function CloudInfrastructureManagementPage() {
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Cloud Infrastructure Management
           </h1>
+<<<<<<< HEAD
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Optimize and manage your cloud infrastructure with our comprehensive management solutions.
+=======
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced AI and IT solutions for your business needs.
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </p>
         </div>
 
@@ -63,6 +71,7 @@ export default function CloudInfrastructureManagementPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 =======
 'use client';
@@ -102,3 +111,6 @@ const CloudInfrastructureManagementPage: React.FC = () => {
 
 export default CloudInfrastructureManagementPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-a070
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

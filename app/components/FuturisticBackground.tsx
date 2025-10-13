@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
 import React from 'react';
 
 interface FuturisticBackgroundProps {
@@ -14,6 +17,7 @@ export default function FuturisticBackground({ className = '', children }: Futur
       {children}
     </div>
   );
+<<<<<<< HEAD
 =======
 'use client'';
 import React, { useEffect, useRef } from 'react';';';
@@ -266,3 +270,6 @@ export default FuturisticBackgroundPage;
 =======
 export default FuturisticBackground;
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

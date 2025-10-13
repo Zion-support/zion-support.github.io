@@ -16,13 +16,13 @@ export class ApiCache {
     };
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('apiCache initialized');
-    }
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
   }
 }
 
+<<<<<<< HEAD
 export const apiCache = new ApiCache();
 export default apiCache;
 =======
@@ -246,3 +246,7 @@ export default ApiCachePage</span></button>;
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+// Export default instance
+export const apiCache = new ApiCache();
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

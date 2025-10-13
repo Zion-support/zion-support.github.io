@@ -16,13 +16,13 @@ export class PerformanceOptimizations {
     };
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('performanceOptimizations initialized');
-    }
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
   }
 }
 
+<<<<<<< HEAD
 export const performanceOptimizations = new PerformanceOptimizations();
 export default performanceOptimizations;
 =======
@@ -563,3 +563,7 @@ export default {/* TODO: Fix JSX expression */,}}}
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+// Export default instance
+export const performanceOptimizations = new PerformanceOptimizations();
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

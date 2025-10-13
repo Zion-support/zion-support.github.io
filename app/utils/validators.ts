@@ -16,13 +16,13 @@ export class Validators {
     };
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('validators initialized');
-    }
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
   }
 }
 
+<<<<<<< HEAD
 export const validators = new Validators();
 export default validators;
 =======
@@ -981,3 +981,7 @@ export async function validateAsync(validator: (val: string) => Promise<Validati
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+// Export default instance
+export const validators = new Validators();
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

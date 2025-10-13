@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function ImprovedNavigationPage() {
@@ -26,3 +27,18 @@ export default function ImprovedNavigationPage() {
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+
+interface ImprovedNavigationProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function ImprovedNavigation({ className = '', children }: ImprovedNavigationProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

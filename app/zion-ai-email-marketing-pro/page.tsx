@@ -19,11 +19,19 @@ import {
   Send,
   Heart,
 <<<<<<< HEAD
+<<<<<<< HEAD
   MousePointer
 =======
   MousePointer,
   Shield
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+  MessageCircle,
+  ThumbsUp,
+  Eye,
+  MousePointer,
+  Shield
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
 } from 'lucide-react';
 
 const ZionAIEmailMarketingProPage: React.FC = () => {

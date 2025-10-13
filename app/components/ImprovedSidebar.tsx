@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function ImprovedSidebarPage() {
@@ -26,3 +27,18 @@ export default function ImprovedSidebarPage() {
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+
+interface ImprovedSidebarProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function ImprovedSidebar({ className = '', children }: ImprovedSidebarProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

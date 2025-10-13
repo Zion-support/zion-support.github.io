@@ -14,6 +14,7 @@ export class FormValidation {
       enabled: true,
       ...config
     };
+<<<<<<< HEAD
 =======
   validate: (value: T) => boolean;
   message: string;}
@@ -645,16 +646,18 @@ export function debounce<T extends (...arg)
     timeout = setTimeout(later, wait);
   };
 >>>>>>> cursor/delete-records-a75e
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('formValidation initialized');
-    }
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
   }
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 export const formValidation = new FormValidation();
 export default formValidation;
 =======
@@ -663,3 +666,7 @@ export default formValidation;
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+// Export default instance
+export const formValidation = new FormValidation();
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

@@ -13,6 +13,7 @@ export default function LoadingSpinner({ className = '', children }: LoadingSpin
       {children}
     </div>
   );
+<<<<<<< HEAD
 }
 =======
   text?: string;
@@ -55,3 +56,6 @@ export default LoadingSpinner</div></div>;
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function EnhancedLoadingSpinnerPage() {
@@ -26,3 +27,18 @@ export default function EnhancedLoadingSpinnerPage() {
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+
+interface EnhancedLoadingSpinnerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function EnhancedLoadingSpinner({ className = '', children }: EnhancedLoadingSpinnerProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

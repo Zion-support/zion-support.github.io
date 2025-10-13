@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function EnhancedErrorBoundaryPage() {
@@ -235,3 +236,18 @@ export default EnhancedErrorBoundaryPage;
 =======
 export default EnhancedErrorBoundary;
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+
+interface EnhancedErrorBoundaryProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function EnhancedErrorBoundary({ className = '', children }: EnhancedErrorBoundaryProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

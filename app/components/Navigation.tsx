@@ -1,9 +1,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function NavigationPage() {
+=======
+
+interface NavigationProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Navigation({ className = '', children }: NavigationProps) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -23,6 +33,7 @@ export default function NavigationPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 =======
 'use client';
@@ -257,3 +268,6 @@ export default Navigation;
 =======
 export default Navigation;
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

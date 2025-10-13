@@ -16,13 +16,13 @@ export class DataValidator {
     };
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('dataValidator initialized');
-    }
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
   }
 }
 
+<<<<<<< HEAD
 export const dataValidator = new DataValidator();
 export default dataValidator;
 =======
@@ -593,3 +593,7 @@ export async function validateAsync(validato,;)
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+// Export default instance
+export const dataValidator = new DataValidator();
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

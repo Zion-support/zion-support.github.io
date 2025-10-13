@@ -23,6 +23,7 @@ export default function SEOHeadPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 =======
   structuredData;}}) => {}const fullTitle = title.includes('Zion Tech Group') ? title : `${title}| Zion Tech Group`;';
@@ -128,3 +129,6 @@ export default SEOHead;
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

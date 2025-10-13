@@ -16,13 +16,13 @@ export class PerformanceMonitoring {
     };
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('performanceMonitoring initialized');
-    }
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
   }
 }
 
+<<<<<<< HEAD
 export const performanceMonitoring = new PerformanceMonitoring();
 export default performanceMonitoring;
 =======
@@ -994,3 +994,7 @@ export const getRecommendations = (): string[] => {/* TODO: Fix JSX expression *
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+// Export default instance
+export const performanceMonitoring = new PerformanceMonitoring();
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

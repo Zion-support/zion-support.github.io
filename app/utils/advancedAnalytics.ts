@@ -16,13 +16,13 @@ export class AdvancedAnalytics {
     };
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('advancedAnalytics initialized');
-    }
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
   }
 }
 
+<<<<<<< HEAD
 export const advancedAnalytics = new AdvancedAnalytics();
 export default advancedAnalytics;
 =======
@@ -155,3 +155,7 @@ export default AdvancedAnalyticsPage;
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+// Export default instance
+export const advancedAnalytics = new AdvancedAnalytics();
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

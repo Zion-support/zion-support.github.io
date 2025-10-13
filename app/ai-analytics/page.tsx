@@ -12,6 +12,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 >>>>>>> cursor/fix-errors-and-merge-to-main-a070
 
+<<<<<<< HEAD
 export default function PagePage() {
 <<<<<<< HEAD
   return (
@@ -45,6 +46,23 @@ export default function PagePage() {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl">
             Professional ai analytics services by Zion Tech Group.
+=======
+export default function AiAnalyticsPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>Ai Analytics - Zion Tech Group</title>
+        <meta name="description" content="Advanced ai analytics solutions by Zion Tech Group" />
+      </Helmet>
+
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Ai Analytics
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced AI and IT solutions for your business needs.
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </p>
           
           <div className="bg-slate-800 p-8 rounded-lg">
@@ -59,6 +77,7 @@ export default function PagePage() {
       </div>
     </>
   );
+<<<<<<< HEAD
 }
 =======
 'use client';';
@@ -344,3 +363,6 @@ export default AiAnalyticsPage;
   );
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

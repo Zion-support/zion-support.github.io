@@ -16,13 +16,13 @@ export class PerformanceEnhancer {
     };
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('performanceEnhancer initialized');
-    }
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
   }
 }
 
+<<<<<<< HEAD
 export const performanceEnhancer = new PerformanceEnhancer();
 export default performanceEnhancer;
 =======
@@ -419,3 +419,7 @@ export const initializePerformanceEnhancements = () => {/* TODO: Fix JSX express
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+// Export default instance
+export const performanceEnhancer = new PerformanceEnhancer();
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

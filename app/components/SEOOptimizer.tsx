@@ -1,15 +1,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 =======
 'use client';';
 import React, { useEffect } from 'react';';';
 import Head from 'next/head';';'
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
 
 interface SEOOptimizerProps {
   // TODO: Add properties
 }
+<<<<<<< HEAD
   // TODO: Add properties
 }
   title?: string;
@@ -320,3 +325,13 @@ export default SEOOptimizer;
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+
+export default function SEOOptimizer({ className = '', children }: SEOOptimizerProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

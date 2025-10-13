@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
 import React from 'react';
 
 interface LoadingStatesProps {
@@ -17,6 +20,7 @@ export default function LoadingStates({ className = '', children }: LoadingState
       {children}
     </div>
   );
+<<<<<<< HEAD
 }
 =======
 'use client';
@@ -84,3 +88,6 @@ export const LoadingSkeleton: React.FC = () => {
   );
 };
 >>>>>>> cursor/fix-errors-and-merge-to-main-a070
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

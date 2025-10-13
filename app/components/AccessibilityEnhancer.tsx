@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
 import React from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -14,6 +17,7 @@ export default function AccessibilityEnhancer({ className = '', children }: Acce
       {children}
     </div>
   );
+<<<<<<< HEAD
 }
 =======
 import React, { useEffect, useState } from 'react';';'
@@ -347,3 +351,6 @@ export default AccessibilityEnhancer;
 
 export default AccessibilityEnhancer;
 >>>>>>> cursor/fix-errors-and-merge-to-main-a070
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

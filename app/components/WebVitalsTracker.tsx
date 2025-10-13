@@ -2,10 +2,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 export default function WebVitalsTrackerPage() {
 =======
 import React, { useEffect } from 'react';
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
 interface WebVitalsTrackerProps {
   className?: string;
   children?: React.ReactNode;

@@ -2,6 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 export default function FuturisticCardEnhancedPage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -26,3 +27,17 @@ export default function FuturisticCardEnhancedPage() {
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+interface FuturisticCardEnhancedProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function FuturisticCardEnhanced({ className = '', children }: FuturisticCardEnhancedProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

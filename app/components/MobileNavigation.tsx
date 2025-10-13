@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function MobileNavigationPage() {
@@ -26,3 +27,18 @@ export default function MobileNavigationPage() {
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+
+interface MobileNavigationProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function MobileNavigation({ className = '', children }: MobileNavigationProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

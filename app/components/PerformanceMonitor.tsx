@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet-async';
 
 export default function PerformanceMonitorPage() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>PerformanceMonitor - Zion Tech Group</title>
@@ -100,11 +101,17 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ className = '',
   }, []);
 
   return (
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
     <div className={`${className}`}>
       {children}
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default PerformanceMonitor;
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

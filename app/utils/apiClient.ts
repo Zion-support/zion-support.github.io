@@ -16,13 +16,13 @@ export class ApiClient {
     };
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('apiClient initialized');
-    }
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
   }
 }
 
+<<<<<<< HEAD
 export const apiClient = new ApiClient();
 export default apiClient;
 =======
@@ -463,3 +463,7 @@ async delete<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'>
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+// Export default instance
+export const apiClient = new ApiClient();
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

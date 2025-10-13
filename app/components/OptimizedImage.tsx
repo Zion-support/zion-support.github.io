@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function OptimizedImagePage() {
@@ -334,3 +335,18 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
 export default OptimizedImage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-f13c
+=======
+
+interface OptimizedImageProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function OptimizedImage({ className = '', children }: OptimizedImageProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

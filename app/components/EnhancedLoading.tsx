@@ -69,6 +69,7 @@ const benefits = [
 export default function EnhancedLoadingPage() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>EnhancedLoading - Zion Tech Group</title>
@@ -199,3 +200,10 @@ export default EnhancedLoadingPage;
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

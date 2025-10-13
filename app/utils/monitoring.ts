@@ -16,13 +16,13 @@ export class Monitoring {
     };
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('monitoring initialized');
-    }
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
   }
 }
 
+<<<<<<< HEAD
 export const monitoring = new Monitoring();
 export default monitoring;
 =======
@@ -173,3 +173,7 @@ export default monitoring;
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+// Export default instance
+export const monitoring = new Monitoring();
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

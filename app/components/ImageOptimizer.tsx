@@ -2,16 +2,20 @@ import React from 'react';
 
 interface ImageOptimizerProps {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   src: string;
   alt: string;
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
   className?: string;
   children?: React.ReactNode;
 }
 
 <<<<<<< HEAD
 export default function ImageOptimizer({ className = '', children }: ImageOptimizerProps) {
+<<<<<<< HEAD
 =======
 export default function ImageOptimizer({
   src,
@@ -21,6 +25,8 @@ export default function ImageOptimizer({
   placeholder
 }: ImageOptimizerProps) {
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
   return (
     <img
       src={src}

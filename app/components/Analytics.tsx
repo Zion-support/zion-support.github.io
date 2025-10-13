@@ -1,10 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
 
 export default function AnalyticsPage() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>Analytics - Zion Tech Group</title>
@@ -209,3 +213,10 @@ return null
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

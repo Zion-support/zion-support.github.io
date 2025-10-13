@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface LogLevel {
   ERROR: 'error';
   WARN: 'warn';
@@ -109,3 +110,29 @@ export default logger;
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+// logger utility functions
+
+export interface LoggerConfig {
+  enabled: boolean;
+}
+
+export class Logger {
+  private config: LoggerConfig;
+
+  constructor(config: Partial<LoggerConfig> = {}) {
+    this.config = {
+      enabled: true,
+      ...config
+    };
+  }
+
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
+  }
+}
+
+// Export default instance
+export const logger = new Logger();
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

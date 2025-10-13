@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { 
   ArrowRight, 
   Home, 
@@ -124,9 +125,14 @@ export default function CybersecuritySolutionsPage() {
       popular: false,
     }
   ];
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
 
 <<<<<<< HEAD
 export default function CybersecuritySolutionsPage() {
+<<<<<<< HEAD
   const capabilities = [
     {
       title: "AI-Powered Security",
@@ -161,16 +167,27 @@ export default function CybersecuritySolutionsPage() {
       <Helmet>
         <title>Cybersecurity Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive cybersecurity solutions to protect your business from threats and ensure compliance." />
+=======
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>Cybersecurity Solutions - Zion Tech Group</title>
+        <meta name="description" content="Advanced cybersecurity solutions solutions by Zion Tech Group" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
       </Helmet>
 <<<<<<< HEAD
 
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Cybersecurity Solutions
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced AI and IT solutions for your business needs.
+          </p>
         </div>
 
+<<<<<<< HEAD
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 mb-6">
             <Shield className="w-4 h-4 text-red-400 mr-2" />
@@ -252,91 +269,32 @@ export default function CybersecuritySolutionsPage() {
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Our advanced security technologies and expert team provide comprehensive protection against the most sophisticated cyber threats
+=======
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
+            <p className="text-gray-600">
+              Comprehensive solution for your business requirements.
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {capabilities.map((capability, index) => (
-              <FuturisticCard
-                key={index}
-                className="group hover:scale-105 transition-all duration-300"
-              >
-                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  {capability.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-red-400 transition-colors">
-                  {capability.title}
-                </h3>
-                <p className="text-gray-300 text-center mb-4 leading-relaxed">
-                  {capability.description}
-                </p>
-                <div className="text-center">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-red-500/20 to-orange-500/20 text-red-400">
-                    {capability.stats}
-                  </span>
-                </div>
-              </FuturisticCard>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Cybersecurity Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive security solutions designed to protect your business from all types of cyber threats
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
+            <p className="text-gray-600">
+              Advanced technology integration and optimization.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <FuturisticCard
-                key={index}
-                className="group hover:scale-105 transition-all duration-300"
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-red-400 transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-gray-300 text-center mb-6 leading-relaxed">
-                  {service.description}
-                </p>
-                <div className="space-y-2 mb-6">
-                  {service.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-                <div className="text-center">
-                  <span className="text-red-400 font-semibold text-lg">{service.price}</span>
-                </div>
-              </FuturisticCard>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Security Plans
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the security plan that provides the right level of protection for your organization
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
+            <p className="text-gray-600">
+              Scalable and secure implementation.
             </p>
           </div>
+        </div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <FuturisticCard
@@ -480,6 +438,14 @@ export default function CybersecuritySolutionsPage() {
           </div>
         </ResponsiveContainer>
       </section>
+=======
+        <div className="text-center mt-12">
+          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+            Get Started
+          </button>
+        </div>
+      </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
     </div>
 =======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -503,6 +469,7 @@ export default function CybersecuritySolutionsPage() {
     </>
 >>>>>>> cursor/fix-errors-and-merge-to-main-a070
   );
+<<<<<<< HEAD
 };
 
 export default CybersecuritySolutions;
@@ -625,3 +592,6 @@ export default CybersecuritySolutionsPage;
   );
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

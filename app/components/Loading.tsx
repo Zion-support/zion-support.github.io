@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 =======
@@ -15,6 +16,13 @@ const features = [
 ]
     {
   // TODO: Add properties
+=======
+import React from 'react';
+
+interface LoadingProps {
+  className?: string;
+  children?: React.ReactNode;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
 }
   // TODO: Add properties
 }
@@ -40,6 +48,7 @@ const benefits = [
     'Enterprise-grade security and compliance','
     'Scalable and flexible solutions','
 
+<<<<<<< HEAD
     '24/7 technical support','
 
     'Easy integration with existing systems','
@@ -177,3 +186,12 @@ export default LoadingPage;
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+export default function Loading({ className = '', children }: LoadingProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

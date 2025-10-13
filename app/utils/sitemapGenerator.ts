@@ -16,6 +16,7 @@ export class SitemapGenerator {
     };
   }
 
+<<<<<<< HEAD
   init(): void {
     if (this.config.enabled) {
       console.log('sitemapGenerator initialized');
@@ -252,10 +253,16 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
   y: 0.3,
 >>>>>>> cursor/delete-records-a75e
     }
+=======
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
   }
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 export const sitemapGenerator = new SitemapGenerator();
 export default sitemapGenerator;
 =======
@@ -265,3 +272,7 @@ export default sitemapGenerator;
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+// Export default instance
+export const sitemapGenerator = new SitemapGenerator();
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

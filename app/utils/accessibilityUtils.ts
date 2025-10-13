@@ -16,10 +16,9 @@ export class AccessibilityUtils {
     };
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('accessibilityUtils initialized');
-    }
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
   }
 =======
 export const announceToScreenReader = (message: string): void => {,;
@@ -154,8 +153,13 @@ const skipLink = createSkipLink('main-content');'
 >>>>>>> cursor/delete-records-a75e
 }
 
+<<<<<<< HEAD
 export const accessibilityUtils = new AccessibilityUtils();
 export default accessibilityUtils;
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+// Export default instance
+export const accessibilityUtils = new AccessibilityUtils();
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

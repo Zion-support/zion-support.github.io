@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 =======
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';';';
 const AiWorkflowAutomationPage: React.FC = () => {,;
@@ -295,6 +296,24 @@ export default function PagePage() {
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Advanced  solutions by Zion Tech Group
+=======
+
+export default function AiWorkflowAutomationPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>Ai Workflow Automation - Zion Tech Group</title>
+        <meta name="description" content="Advanced ai workflow automation solutions by Zion Tech Group" />
+      </Helmet>
+
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Ai Workflow Automation
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced AI and IT solutions for your business needs.
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </p>
         </div>
 
@@ -328,6 +347,7 @@ export default function PagePage() {
           </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-a070
         </div>
+<<<<<<< HEAD
       </div>
     </div>
   );
@@ -408,3 +428,15 @@ export default PagePage;
 =======
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+
+        <div className="text-center mt-12">
+          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+            Get Started
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

@@ -3,6 +3,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 export default function AdvancedPerformanceMonitorPage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -508,6 +509,8 @@ export default AdvancedPerformanceMonitor;
 =======
 import React from 'react';
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
 interface AdvancedPerformanceMonitorProps {
   className?: string;
   children?: React.ReactNode;
@@ -519,5 +522,9 @@ export default function AdvancedPerformanceMonitor({ className = '', children }:
       {children}
     </div>
   );
+<<<<<<< HEAD
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

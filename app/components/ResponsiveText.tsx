@@ -12,7 +12,11 @@ export default function ResponsiveText({ className = '', children }: ResponsiveT
       {children}
     </div>
   );
+<<<<<<< HEAD
 }
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

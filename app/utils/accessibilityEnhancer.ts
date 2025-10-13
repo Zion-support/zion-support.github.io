@@ -3,9 +3,12 @@
 // accessibilityEnhancer utility functions
 
 export interface AccessibilityEnhancerConfig {
+<<<<<<< HEAD
 =======
 interface AccessibilityConfig {
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
   enabled: boolean;
   highContrast: boolean;
   fontSize: 'small' | 'medium' | 'large';
@@ -13,16 +16,22 @@ interface AccessibilityConfig {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
 export class AccessibilityEnhancer {
   private config: AccessibilityEnhancerConfig;
 
   constructor(config: Partial<AccessibilityEnhancerConfig> = {}) {
+<<<<<<< HEAD
 =======
 class AccessibilityEnhancer {
   private config: AccessibilityConfig;
 
   constructor() {
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
     this.config = {
       enabled: true,
       highContrast: false,
@@ -31,11 +40,17 @@ class AccessibilityEnhancer {
     };
   }
 
+<<<<<<< HEAD
   init(): void {
     if (this.config.enabled) {
       console.log('Accessibility enhancer initialized');
       this.applyAccessibilitySettings();
     }
+=======
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
   }
 
   private applyAccessibilitySettings(): void {
@@ -59,6 +74,7 @@ class AccessibilityEnhancer {
   }
 }
 
+<<<<<<< HEAD
 export const accessibilityEnhancer = new AccessibilityEnhancer();
 <<<<<<< HEAD
 export default accessibilityEnhancer;
@@ -1235,3 +1251,7 @@ export const focusLastElement = () => {
 =======
 export default accessibilityEnhancer;
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+// Export default instance
+export const accessibilityEnhancer = new AccessibilityEnhancer();
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

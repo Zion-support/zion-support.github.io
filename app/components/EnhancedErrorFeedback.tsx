@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 
 export default function EnhancedErrorFeedbackPage() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>EnhancedErrorFeedback - Zion Tech Group</title>
@@ -108,3 +109,10 @@ export class GlobalErrorBoundary extends Component<Props, State> {
 
 export default GlobalErrorBoundary;
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

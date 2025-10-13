@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -12,6 +13,12 @@ import { Helmet } from 'react-helmet-async';
 
 const AiSocialMediaManagerPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-a070
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function AiSocialMediaManagerPage() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -26,7 +33,11 @@ const AiSocialMediaManagerPage: React.FC = () => {
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
+<<<<<<< HEAD
             This page is under development. Please check back later.
+=======
+            Advanced AI and IT solutions for your business needs.
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </p>
 =======
         <title>Ai Social Media Manager - Zion Tech Group</title>
@@ -55,6 +66,7 @@ const AiSocialMediaManagerPage: React.FC = () => {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 =======
 'use client';';
@@ -249,3 +261,6 @@ export default AiSocialMediaManagerPage;
 
 export default AiSocialMediaManagerPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-a070
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

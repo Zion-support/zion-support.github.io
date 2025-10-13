@@ -1,10 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function AnalyticsProviderPage() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>AnalyticsProvider - Zion Tech Group</title>
@@ -338,10 +342,17 @@ declare global {
 
   return (
     <AnalyticsContext.Provider value={value}>
+=======
+    <div className={`${className}`}>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
       {children}
-    </AnalyticsContext.Provider>
+    </div>
   );
+<<<<<<< HEAD
 };
 
 export default AnalyticsProvider;
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -165,3 +166,19 @@ const identify = useCallback((userId: string, traits?: Record<string, any>) => {
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+import React from 'react';
+
+interface EnhancedAnalyticsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function EnhancedAnalytics({ className = '', children }: EnhancedAnalyticsProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

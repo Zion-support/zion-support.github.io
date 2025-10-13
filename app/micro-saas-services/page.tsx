@@ -4,6 +4,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 export default function PagePage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -133,6 +134,23 @@ export default function MicroSaasServices() {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Ready-to-use software solutions that can transform your business operations immediately. 
             No setup required, no complex configurations - just powerful tools that work out of the box.
+=======
+export default function MicroSaasServicesPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>Micro Saas Services - Zion Tech Group</title>
+        <meta name="description" content="Advanced micro saas services solutions by Zion Tech Group" />
+      </Helmet>
+
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Micro Saas Services
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced AI and IT solutions for your business needs.
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </p>
           <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium">
             <Sparkles className="w-4 h-4 mr-2" />
@@ -152,6 +170,7 @@ export default function MicroSaasServices() {
             </div>
           ))}
         </div>
+<<<<<<< HEAD
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
@@ -1294,3 +1313,9 @@ export const contactInfo = {phone: '+1 302 464 0950','
 
 export default MicroSaasServicesPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-a070
+=======
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

@@ -4,6 +4,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 export default function PagePage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -44,6 +45,23 @@ const AiChatbotBuilderPage: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl">
             Professional ai chatbot builder services by Zion Tech Group.
+=======
+export default function AiChatbotBuilderPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>Ai Chatbot Builder - Zion Tech Group</title>
+        <meta name="description" content="Advanced ai chatbot builder solutions by Zion Tech Group" />
+      </Helmet>
+
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Ai Chatbot Builder
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced AI and IT solutions for your business needs.
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </p>
           
           <div className="bg-slate-800 p-8 rounded-lg">
@@ -69,6 +87,7 @@ import {MessageCircle, Bot, Zap, Shield, CheckCircle, Star, ArrowRight, Brain, G
 const AIChatbotBuilder: React.FC = () => {,;
 const [isLoaded, setIsLoaded] = useState(false);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   useEffect(() => {
   // TODO: Implement
@@ -469,12 +488,22 @@ export default function AiChatbotBuilderPage() {
               Track performance and optimize your chatbot with detailed analytics.
             </p>
           </div>
+=======
+        <div className="text-center mt-12">
+          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+            Get Started
+          </button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 =======
 export default AiChatbotBuilderPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-a070
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

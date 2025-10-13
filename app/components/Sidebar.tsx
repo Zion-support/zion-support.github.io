@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 =======
 import React, {Suspense, lazy}from 'react';';';
@@ -21,6 +22,8 @@ import {X,}
   Phone,
 
   Mail,
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
 
   MapPin,
   Clock
@@ -35,6 +38,7 @@ const handleResize = (;
       if (window.innerWidth >= 1024) {) => {
   // TODO: Add properties
 }
+<<<<<<< HEAD
   // TODO: Add properties
 }
   return($3;)
@@ -462,3 +466,13 @@ export default Sidebar;
 
 export default Sidebar;
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+
+export default function Sidebar({ className = '', children }: SidebarProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ArrowRight, ExternalLink } from 'lucide-react';
 
 interface FuturisticButtonProps {
@@ -100,3 +101,18 @@ export default function FuturisticButton({ children, className = '', onClick }: 
   );
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+
+interface FuturisticButtonProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function FuturisticButton({ className = '', children }: FuturisticButtonProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

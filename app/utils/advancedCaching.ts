@@ -16,13 +16,13 @@ export class AdvancedCaching {
     };
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('advancedCaching initialized');
-    }
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
   }
 }
 
+<<<<<<< HEAD
 export const advancedCaching = new AdvancedCaching();
 export default advancedCaching;
 =======
@@ -155,3 +155,7 @@ export default AdvancedCachingPage;
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+// Export default instance
+export const advancedCaching = new AdvancedCaching();
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

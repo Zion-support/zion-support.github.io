@@ -16,13 +16,13 @@ export class PerformanceOptimizer {
     };
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('performanceOptimizer initialized');
-    }
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
   }
 }
 
+<<<<<<< HEAD
 export const performanceOptimizer = new PerformanceOptimizer();
 export default performanceOptimizer;
 =======
@@ -446,3 +446,7 @@ export {PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig}}`
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+// Export default instance
+export const performanceOptimizer = new PerformanceOptimizer();
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

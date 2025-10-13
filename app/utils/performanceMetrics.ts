@@ -16,13 +16,13 @@ export class PerformanceMetrics {
     };
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('performanceMetrics initialized');
-    }
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
   }
 }
 
+<<<<<<< HEAD
 export const performanceMetrics = new PerformanceMetrics();
 export default performanceMetrics;
 =======
@@ -595,3 +595,7 @@ export default PerformanceMetrics;
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+// Export default instance
+export const performanceMetrics = new PerformanceMetrics();
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

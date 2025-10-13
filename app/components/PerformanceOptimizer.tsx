@@ -13,6 +13,7 @@ export default function PerformanceOptimizer({ className = '', children }: Perfo
       {children}
     </div>
   );
+<<<<<<< HEAD
 }
 =======
   const optimizeMemory = useCallback(() => {if ('memory' in performance) {;';
@@ -274,3 +275,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
 
 export default PerformanceOptimizer;
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

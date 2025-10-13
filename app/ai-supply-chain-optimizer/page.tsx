@@ -3,6 +3,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 export default function PagePage() {
 =======
 'use client';
@@ -11,6 +12,9 @@ import { Helmet } from 'react-helmet-async';
 
 const AiSupplyChainOptimizerPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-a070
+=======
+export default function AiSupplyChainOptimizerPage() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -25,12 +29,17 @@ const AiSupplyChainOptimizerPage: React.FC = () => {
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
+<<<<<<< HEAD
             This page is under development. Please check back later.
+=======
+            Advanced AI and IT solutions for your business needs.
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
           </p>
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 =======
 
@@ -65,3 +74,6 @@ const AiSupplyChainOptimizerPage: React.FC = () => {
 
 export default AiSupplyChainOptimizerPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-a070
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053

@@ -23,6 +23,7 @@ export default function EnhancedSEOPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 =======
 import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'react-helmet-async';';';
@@ -261,3 +262,6 @@ export default EnhancedSEOPage;
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6053
