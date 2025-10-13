@@ -1,14 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-
-// Mock component for testing
-const OptimizedImage = ({ className = '', children }: { className?: string; children?: React.ReactNode }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
+import OptimizedImage from '../../app/components/OptimizedImage';
 
 describe('OptimizedImage Component', () => {
   it('renders with default props', () => {
