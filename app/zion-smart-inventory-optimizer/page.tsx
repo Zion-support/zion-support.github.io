@@ -1,107 +1,119 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Play, 
+  Package, 
   Upload, 
   Download, 
   Sparkles, 
   Clock, 
-  Users, 
+  BarChart3, 
   Star, 
   CheckCircle, 
   ArrowRight,
-  Video,
-  Image,
-  Music,
+  TrendingUp,
   Zap,
   Globe,
   Shield,
-  BarChart3,
   Heart,
   Award,
-  TrendingUp
+  Target,
+  Brain,
+  PieChart,
+  Activity,
+  Smartphone,
+  DollarSign,
+  Eye,
+  AlertTriangle,
+  CheckCircle2,
+  XCircle,
+  Warehouse,
+  Truck,
+  ShoppingCart,
+  Percent
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAIVideoGeneratorPage = () => {
+const ZionSmartInventoryOptimizerPage = () => {
   const features = [
     {
-      title: "AI-Powered Script Generation",
-      description: "Generate engaging video scripts using advanced AI that understands your brand voice and target audience",
-      icon: <Sparkles className="w-6 h-6" />,
-      stats: "95% accuracy rate"
+      title: "AI-Powered Demand Forecasting",
+      description: "Predict inventory needs with 95% accuracy using machine learning and historical data analysis",
+      icon: <Brain className="w-6 h-6" />,
+      stats: "95% accuracy"
     },
     {
-      title: "Multi-Language Support",
-      description: "Create videos in 50+ languages with perfect pronunciation and cultural adaptation",
-      icon: <Globe className="w-6 h-6" />,
-      stats: "50+ languages"
+      title: "Automated Reorder Points",
+      description: "Set intelligent reorder points that automatically trigger purchase orders when stock runs low",
+      icon: <AlertTriangle className="w-6 h-6" />,
+      stats: "Zero stockouts"
     },
     {
-      title: "Real-Time Collaboration",
-      description: "Work with your team in real-time to create, edit, and approve video content",
-      icon: <Users className="w-6 h-6" />,
-      stats: "Unlimited collaborators"
+      title: "Multi-Location Management",
+      description: "Manage inventory across multiple warehouses, stores, and distribution centers seamlessly",
+      icon: <Warehouse className="w-6 h-6" />,
+      stats: "Unlimited locations"
     },
     {
-      title: "Advanced Analytics",
-      description: "Track video performance with detailed analytics and engagement metrics",
+      title: "Real-Time Analytics",
+      description: "Get instant insights into inventory performance, turnover rates, and optimization opportunities",
       icon: <BarChart3 className="w-6 h-6" />,
-      stats: "Real-time insights"
+      stats: "Real-time updates"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$49",
+      price: "$99",
       period: "/month",
-      description: "Perfect for small businesses and content creators",
+      description: "Perfect for small businesses with basic inventory needs",
       features: [
-        "10 videos per month",
-        "HD quality (1080p)",
-        "Basic AI voice generation",
-        "5-minute max video length",
-        "Standard templates",
-        "Email support"
+        "Up to 1,000 SKUs",
+        "Basic demand forecasting",
+        "Reorder point alerts",
+        "Email support",
+        "Basic reports",
+        "Standard integrations",
+        "Mobile app access"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$149",
+      price: "$299",
       period: "/month",
-      description: "Ideal for marketing teams and agencies",
+      description: "Ideal for growing businesses with complex inventory",
       features: [
-        "50 videos per month",
-        "4K quality available",
-        "Advanced AI voice generation",
-        "15-minute max video length",
-        "Premium templates",
-        "Custom branding",
+        "Up to 10,000 SKUs",
+        "Advanced demand forecasting",
+        "Automated reordering",
         "Priority support",
-        "Analytics dashboard"
+        "Advanced analytics",
+        "Custom integrations",
+        "Multi-location support",
+        "API access",
+        "Team collaboration"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$399",
+      price: "$799",
       period: "/month",
-      description: "For large organizations with high-volume needs",
+      description: "For large organizations with complex supply chains",
       features: [
-        "Unlimited videos",
-        "4K & 8K quality",
-        "Premium AI voices",
-        "Unlimited video length",
-        "Custom templates",
+        "Unlimited SKUs",
+        "AI-powered optimization",
         "White-label solution",
         "Dedicated support",
-        "Advanced analytics",
-        "API access"
+        "Custom integrations",
+        "Advanced reporting",
+        "Data export",
+        "SLA guarantee",
+        "Custom training"
       ],
       popular: false
     }
@@ -109,38 +121,69 @@ const ZionAIVideoGeneratorPage = () => {
 
   const testimonials = [
     {
-      name: "Sarah Chen",
-      company: "Digital Marketing Pro",
-      role: "Marketing Director",
-      content: "Zion AI Video Generator has revolutionized our content creation process. We've increased our video output by 300% while maintaining quality.",
+      name: "David Park",
+      company: "Retail Chain",
+      role: "Operations Manager",
+      content: "Zion Smart Inventory Optimizer has reduced our stockouts by 90% and improved cash flow by 25%. It's a game-changer for our business.",
       rating: 5,
-      avatar: "SC"
+      avatar: "DP"
     },
     {
-      name: "Michael Rodriguez",
-      company: "TechStart Inc.",
-      role: "CEO",
-      content: "The AI script generation is incredibly accurate and saves us hours of work. The final videos look professional and engaging.",
+      name: "Sarah Williams",
+      company: "E-commerce Platform",
+      role: "Supply Chain Director",
+      content: "The demand forecasting is incredibly accurate. We've optimized our inventory levels and reduced carrying costs significantly.",
       rating: 5,
-      avatar: "MR"
+      avatar: "SW"
     },
     {
-      name: "Emily Johnson",
-      company: "Creative Agency",
-      role: "Creative Director",
-      content: "The multi-language feature is a game-changer for our international clients. The quality is consistently excellent.",
+      name: "Michael Chen",
+      company: "Manufacturing Company",
+      role: "Inventory Manager",
+      content: "Managing inventory across multiple locations has never been easier. The real-time analytics help us make better decisions.",
       rating: 5,
-      avatar: "EJ"
+      avatar: "MC"
+    }
+  ];
+
+  const benefits = [
+    {
+      title: "Reduce Stockouts",
+      description: "Minimize lost sales with intelligent demand forecasting and automated reordering",
+      icon: <XCircle className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500",
+      metric: "90% reduction"
+    },
+    {
+      title: "Optimize Cash Flow",
+      description: "Reduce carrying costs and free up working capital with smart inventory management",
+      icon: <DollarSign className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      metric: "25% improvement"
+    },
+    {
+      title: "Increase Efficiency",
+      description: "Automate inventory processes and reduce manual work with AI-powered optimization",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      metric: "60% time savings"
+    },
+    {
+      title: "Improve Accuracy",
+      description: "Maintain accurate inventory levels with real-time tracking and automated updates",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      metric: "99.5% accuracy"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
-        title="Zion AI Video Generator - Create Professional Videos with AI | Zion Tech Group"
-        description="Transform your ideas into stunning videos with our AI-powered video generator. Create professional content in minutes with advanced AI script generation, voice synthesis, and multi-language support."
-        keywords="AI video generator, video creation, AI script generation, video marketing, content creation, AI voice synthesis, video automation, professional videos"
-        canonical="https://ziontechgroup.com/zion-ai-video-generator"
+        title="Zion Smart Inventory Optimizer - AI-Powered Inventory Management | Zion Tech Group"
+        description="Optimize your inventory with AI-powered demand forecasting and automated reordering. Reduce stockouts, improve cash flow, and maximize efficiency with smart inventory management."
+        keywords="inventory optimization, demand forecasting, inventory management, stock optimization, supply chain, automated reordering, inventory analytics, warehouse management"
+        canonical="https://ziontechgroup.com/zion-smart-inventory-optimizer"
       />
 
       {/* Hero Section */}
@@ -152,19 +195,19 @@ const ZionAIVideoGeneratorPage = () => {
         
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Video className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI-Powered Video Creation</span>
+            <Package className="w-4 h-4 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">AI-Powered Inventory Intelligence</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Create Stunning Videos with AI
+              Optimize Your Inventory
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your ideas into professional videos in minutes. Our AI-powered platform generates scripts, 
-            creates voiceovers, and produces high-quality videos that engage your audience and drive results.
+            Transform your inventory management with AI-powered optimization. Predict demand, automate reordering, 
+            and maximize efficiency with intelligent inventory solutions.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -172,31 +215,68 @@ const ZionAIVideoGeneratorPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Play className="w-5 h-5" />}
+              icon={<Package className="w-5 h-5" />}
             >
-              Start Creating Videos
+              Start Optimizing
             </FuturisticButton>
             <FuturisticButton
               href="#demo"
               variant="outline"
               size="lg"
-              icon={<Video className="w-5 h-5" />}
+              icon={<BarChart3 className="w-5 h-5" />}
             >
-              Watch Demo
+              View Demo
             </FuturisticButton>
           </div>
         </ResponsiveContainer>
       </section>
 
-      {/* Features Section */}
+      {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Powerful AI Features
+              Why Choose Smart Inventory?
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Everything you need to create professional videos with the power of artificial intelligence
+              Transform your inventory management with AI-powered optimization and automation
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <FuturisticCard
+                key={index}
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
+              >
+                <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${benefit.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}>
+                  {benefit.icon}
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  {benefit.title}
+                </h3>
+                <p className="text-gray-300 leading-relaxed text-sm mb-4">
+                  {benefit.description}
+                </p>
+                <div className="text-center">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400">
+                    {benefit.metric}
+                  </span>
+                </div>
+              </FuturisticCard>
+            ))}
+          </div>
+        </ResponsiveContainer>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <ResponsiveContainer>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+              Advanced Inventory Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Everything you need to optimize your inventory management
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -226,14 +306,14 @@ const ZionAIVideoGeneratorPage = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple, Transparent Pricing
+              Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your video creation needs. All plans include our core AI features.
+              Select the plan that fits your inventory management needs
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -285,14 +365,14 @@ const ZionAIVideoGeneratorPage = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Content Creators Worldwide
+              Trusted by Inventory Managers
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our customers say about Zion AI Video Generator
+              See what our customers say about Zion Smart Inventory Optimizer
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -327,11 +407,11 @@ const ZionAIVideoGeneratorPage = () => {
         <ResponsiveContainer>
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Create Amazing Videos?
+              Ready to Optimize Your Inventory?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-              Join thousands of content creators, marketers, and businesses who trust Zion AI Video Generator 
-              to create professional videos that engage and convert.
+              Join thousands of businesses who trust Zion Smart Inventory Optimizer to streamline their 
+              inventory management and improve profitability.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <FuturisticButton
@@ -340,15 +420,15 @@ const ZionAIVideoGeneratorPage = () => {
                 size="lg"
                 icon={<Sparkles className="w-5 h-5" />}
               >
-                Start Your Free Trial
+                Start Free Trial
               </FuturisticButton>
               <FuturisticButton
                 href="/demo"
                 variant="outline"
                 size="lg"
-                icon={<Play className="w-5 h-5" />}
+                icon={<BarChart3 className="w-5 h-5" />}
               >
-                Watch Demo
+                View Demo
               </FuturisticButton>
             </div>
           </div>
@@ -358,4 +438,4 @@ const ZionAIVideoGeneratorPage = () => {
   );
 };
 
-export default ZionAIVideoGeneratorPage;
+export default ZionSmartInventoryOptimizerPage;

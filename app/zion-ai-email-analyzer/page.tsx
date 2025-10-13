@@ -1,107 +1,116 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Play, 
+  Mail, 
   Upload, 
   Download, 
   Sparkles, 
   Clock, 
-  Users, 
+  BarChart3, 
   Star, 
   CheckCircle, 
   ArrowRight,
-  Video,
-  Image,
-  Music,
+  Search,
+  TrendingUp,
   Zap,
   Globe,
   Shield,
-  BarChart3,
   Heart,
   Award,
-  TrendingUp
+  Target,
+  Brain,
+  PieChart,
+  Activity,
+  Smartphone,
+  DollarSign,
+  Eye,
+  AlertTriangle,
+  CheckCircle2,
+  XCircle
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAIVideoGeneratorPage = () => {
+const ZionAIEmailAnalyzerPage = () => {
   const features = [
     {
-      title: "AI-Powered Script Generation",
-      description: "Generate engaging video scripts using advanced AI that understands your brand voice and target audience",
-      icon: <Sparkles className="w-6 h-6" />,
-      stats: "95% accuracy rate"
+      title: "AI-Powered Email Analysis",
+      description: "Analyze email content, sentiment, and effectiveness using advanced natural language processing",
+      icon: <Brain className="w-6 h-6" />,
+      stats: "98% accuracy"
     },
     {
-      title: "Multi-Language Support",
-      description: "Create videos in 50+ languages with perfect pronunciation and cultural adaptation",
-      icon: <Globe className="w-6 h-6" />,
-      stats: "50+ languages"
-    },
-    {
-      title: "Real-Time Collaboration",
-      description: "Work with your team in real-time to create, edit, and approve video content",
-      icon: <Users className="w-6 h-6" />,
-      stats: "Unlimited collaborators"
-    },
-    {
-      title: "Advanced Analytics",
-      description: "Track video performance with detailed analytics and engagement metrics",
-      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Sentiment Analysis",
+      description: "Understand customer emotions and reactions to your email campaigns in real-time",
+      icon: <Heart className="w-6 h-6" />,
       stats: "Real-time insights"
+    },
+    {
+      title: "Spam Detection",
+      description: "Identify potential spam triggers and optimize email deliverability automatically",
+      icon: <Shield className="w-6 h-6" />,
+      stats: "99.5% detection rate"
+    },
+    {
+      title: "Performance Optimization",
+      description: "Get AI recommendations to improve open rates, click-through rates, and conversions",
+      icon: <TrendingUp className="w-6 h-6" />,
+      stats: "40% improvement"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$49",
+      price: "$29",
       period: "/month",
-      description: "Perfect for small businesses and content creators",
+      description: "Perfect for small businesses and email marketers",
       features: [
-        "10 videos per month",
-        "HD quality (1080p)",
-        "Basic AI voice generation",
-        "5-minute max video length",
-        "Standard templates",
-        "Email support"
+        "1,000 emails per month",
+        "Basic sentiment analysis",
+        "Spam detection",
+        "Email support",
+        "Basic reports",
+        "Standard integrations",
+        "Mobile app access"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$149",
+      price: "$79",
       period: "/month",
       description: "Ideal for marketing teams and agencies",
       features: [
-        "50 videos per month",
-        "4K quality available",
-        "Advanced AI voice generation",
-        "15-minute max video length",
-        "Premium templates",
-        "Custom branding",
+        "10,000 emails per month",
+        "Advanced sentiment analysis",
+        "Performance optimization",
         "Priority support",
-        "Analytics dashboard"
+        "Advanced reports",
+        "Custom integrations",
+        "Team collaboration",
+        "API access",
+        "A/B testing insights"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$399",
+      price: "$199",
       period: "/month",
-      description: "For large organizations with high-volume needs",
+      description: "For large organizations with high-volume email needs",
       features: [
-        "Unlimited videos",
-        "4K & 8K quality",
-        "Premium AI voices",
-        "Unlimited video length",
-        "Custom templates",
+        "Unlimited emails",
+        "Advanced AI models",
         "White-label solution",
         "Dedicated support",
+        "Custom integrations",
         "Advanced analytics",
-        "API access"
+        "Data export",
+        "SLA guarantee",
+        "Custom training"
       ],
       popular: false
     }
@@ -109,38 +118,69 @@ const ZionAIVideoGeneratorPage = () => {
 
   const testimonials = [
     {
-      name: "Sarah Chen",
-      company: "Digital Marketing Pro",
+      name: "Jennifer Lee",
+      company: "Email Marketing Agency",
+      role: "Campaign Manager",
+      content: "Zion AI Email Analyzer has transformed our email campaigns. We've increased open rates by 45% and reduced spam complaints by 80%.",
+      rating: 5,
+      avatar: "JL"
+    },
+    {
+      name: "Mark Thompson",
+      company: "E-commerce Platform",
       role: "Marketing Director",
-      content: "Zion AI Video Generator has revolutionized our content creation process. We've increased our video output by 300% while maintaining quality.",
+      content: "The sentiment analysis is incredibly accurate. We can now understand how our customers feel about our emails and adjust accordingly.",
       rating: 5,
-      avatar: "SC"
+      avatar: "MT"
     },
     {
-      name: "Michael Rodriguez",
-      company: "TechStart Inc.",
-      role: "CEO",
-      content: "The AI script generation is incredibly accurate and saves us hours of work. The final videos look professional and engaging.",
+      name: "Lisa Garcia",
+      company: "SaaS Company",
+      role: "Growth Manager",
+      content: "The performance optimization recommendations are spot-on. Our click-through rates have improved significantly since using this tool.",
       rating: 5,
-      avatar: "MR"
+      avatar: "LG"
+    }
+  ];
+
+  const analytics = [
+    {
+      title: "Open Rate Analysis",
+      description: "Understand what makes emails get opened and optimize subject lines",
+      icon: <Eye className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      metric: "35% increase"
     },
     {
-      name: "Emily Johnson",
-      company: "Creative Agency",
-      role: "Creative Director",
-      content: "The multi-language feature is a game-changer for our international clients. The quality is consistently excellent.",
-      rating: 5,
-      avatar: "EJ"
+      title: "Click-Through Optimization",
+      description: "Analyze email content and layout to maximize click-through rates",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      metric: "50% improvement"
+    },
+    {
+      title: "Spam Prevention",
+      description: "Identify and eliminate spam triggers to improve deliverability",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500",
+      metric: "90% reduction"
+    },
+    {
+      title: "Sentiment Tracking",
+      description: "Monitor customer sentiment and adjust messaging accordingly",
+      icon: <Heart className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      metric: "Real-time insights"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
-        title="Zion AI Video Generator - Create Professional Videos with AI | Zion Tech Group"
-        description="Transform your ideas into stunning videos with our AI-powered video generator. Create professional content in minutes with advanced AI script generation, voice synthesis, and multi-language support."
-        keywords="AI video generator, video creation, AI script generation, video marketing, content creation, AI voice synthesis, video automation, professional videos"
-        canonical="https://ziontechgroup.com/zion-ai-video-generator"
+        title="Zion AI Email Analyzer - Advanced Email Analytics | Zion Tech Group"
+        description="Analyze email performance with AI-powered insights. Optimize open rates, click-through rates, and deliverability with advanced email analytics and sentiment analysis."
+        keywords="email analyzer, email analytics, email optimization, sentiment analysis, spam detection, email marketing, open rates, click-through rates, deliverability"
+        canonical="https://ziontechgroup.com/zion-ai-email-analyzer"
       />
 
       {/* Hero Section */}
@@ -152,19 +192,19 @@ const ZionAIVideoGeneratorPage = () => {
         
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Video className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI-Powered Video Creation</span>
+            <Mail className="w-4 h-4 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">AI-Powered Email Intelligence</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Create Stunning Videos with AI
+              Analyze & Optimize Emails
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your ideas into professional videos in minutes. Our AI-powered platform generates scripts, 
-            creates voiceovers, and produces high-quality videos that engage your audience and drive results.
+            Transform your email marketing with AI-powered analysis. Optimize open rates, click-through rates, 
+            and deliverability with advanced email intelligence and sentiment analysis.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -172,31 +212,68 @@ const ZionAIVideoGeneratorPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Play className="w-5 h-5" />}
+              icon={<Search className="w-5 h-5" />}
             >
-              Start Creating Videos
+              Start Analyzing Emails
             </FuturisticButton>
             <FuturisticButton
               href="#demo"
               variant="outline"
               size="lg"
-              icon={<Video className="w-5 h-5" />}
+              icon={<BarChart3 className="w-5 h-5" />}
             >
-              Watch Demo
+              View Demo
             </FuturisticButton>
           </div>
         </ResponsiveContainer>
       </section>
 
-      {/* Features Section */}
+      {/* Analytics Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Powerful AI Features
+              Advanced Email Analytics
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Everything you need to create professional videos with the power of artificial intelligence
+              Get deep insights into your email performance and optimize for better results
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {analytics.map((analytic, index) => (
+              <FuturisticCard
+                key={index}
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
+              >
+                <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${analytic.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}>
+                  {analytic.icon}
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  {analytic.title}
+                </h3>
+                <p className="text-gray-300 leading-relaxed text-sm mb-4">
+                  {analytic.description}
+                </p>
+                <div className="text-center">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400">
+                    {analytic.metric}
+                  </span>
+                </div>
+              </FuturisticCard>
+            ))}
+          </div>
+        </ResponsiveContainer>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <ResponsiveContainer>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+              Powerful Email Analysis Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Everything you need to optimize your email marketing campaigns
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -226,14 +303,14 @@ const ZionAIVideoGeneratorPage = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple, Transparent Pricing
+              Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your video creation needs. All plans include our core AI features.
+              Select the plan that fits your email analysis needs
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -285,14 +362,14 @@ const ZionAIVideoGeneratorPage = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Content Creators Worldwide
+              Trusted by Email Marketers
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our customers say about Zion AI Video Generator
+              See what our customers say about Zion AI Email Analyzer
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -327,11 +404,11 @@ const ZionAIVideoGeneratorPage = () => {
         <ResponsiveContainer>
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Create Amazing Videos?
+              Ready to Optimize Your Emails?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-              Join thousands of content creators, marketers, and businesses who trust Zion AI Video Generator 
-              to create professional videos that engage and convert.
+              Join thousands of email marketers who trust Zion AI Email Analyzer to improve their 
+              email performance and drive better results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <FuturisticButton
@@ -340,15 +417,15 @@ const ZionAIVideoGeneratorPage = () => {
                 size="lg"
                 icon={<Sparkles className="w-5 h-5" />}
               >
-                Start Your Free Trial
+                Start Free Trial
               </FuturisticButton>
               <FuturisticButton
                 href="/demo"
                 variant="outline"
                 size="lg"
-                icon={<Play className="w-5 h-5" />}
+                icon={<BarChart3 className="w-5 h-5" />}
               >
-                Watch Demo
+                View Demo
               </FuturisticButton>
             </div>
           </div>
@@ -358,4 +435,4 @@ const ZionAIVideoGeneratorPage = () => {
   );
 };
 
-export default ZionAIVideoGeneratorPage;
+export default ZionAIEmailAnalyzerPage;

@@ -10,24 +10,22 @@ interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
+  retryCount: number;
 }
 
 export class GlobalErrorBoundary extends Component<Props, State> {
+  private maxRetries = 3;
+
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false, retryCount: 0 };
   }
 
-<<<<<<< HEAD
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error
     };
-=======
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -39,16 +37,15 @@ export class GlobalErrorBoundary extends Component<Props, State> {
   }
 
   handleReset = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined, retryCount: 0 });
   };
 
-<<<<<<< HEAD
   private handleRetry = () => {
     if (this.state.retryCount < this.maxRetries) {
       this.setState(prevState => ({
         hasError: false,
-        error: null,
-        errorInfo: null,
+        error: undefined,
+        errorInfo: undefined,
         retryCount: prevState.retryCount + 1
       }));
     }
@@ -58,12 +55,6 @@ export class GlobalErrorBoundary extends Component<Props, State> {
     window.location.href = '/';
   };
 
-  private handleReload = () => {
-    window.location.reload();
-  };
-
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
@@ -72,11 +63,9 @@ export class GlobalErrorBoundary extends Component<Props, State> {
 
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-2xl w-full bg-slate-800/50 backdrop-blur-md border border-red-500/20 rounded-2xl p-8 text-center">
-            <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center">
-                <AlertTriangle className="w-8 h-8 text-red-400" />
-              </div>
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 p-8 text-center">
+            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
             
             <h1 className="text-2xl font-bold text-white mb-4">
@@ -88,48 +77,59 @@ export class GlobalErrorBoundary extends Component<Props, State> {
             </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="bg-slate-900/50 border border-red-500/30 rounded-lg p-4 mb-6 text-left">
-                <h3 className="text-red-400 font-semibold mb-2 flex items-center">
-                  <Bug className="w-4 h-4 mr-2" />
+              <details className="mb-6 text-left">
+                <summary className="cursor-pointer text-sm text-gray-400 hover:text-white transition-colors mb-2">
                   Error Details (Development)
-                </h3>
-                <pre className="text-xs text-gray-300 overflow-auto">
-                  {this.state.error.toString()}
-                </pre>
-                {this.state.errorInfo && (
-                  <pre className="text-xs text-gray-400 mt-2 overflow-auto">
-                    {this.state.errorInfo.componentStack}
-                  </pre>
-                )}
-              </div>
+                </summary>
+                <div className="bg-black/20 rounded-lg p-4 text-xs font-mono text-red-400 overflow-auto max-h-32">
+                  <div className="mb-2">
+                    <strong>Error:</strong> {this.state.error.message}
+                  </div>
+                  <div className="mb-2">
+                    <strong>Stack:</strong>
+                    <pre className="whitespace-pre-wrap mt-1">
+                      {this.state.error.stack}
+                    </pre>
+                  </div>
+                  {this.state.errorInfo && (
+                    <div>
+                      <strong>Component Stack:</strong>
+                      <pre className="whitespace-pre-wrap mt-1">
+                        {this.state.errorInfo.componentStack}
+                      </pre>
+                    </div>
+                  )}
+                </div>
+              </details>
             )}
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <button
-                onClick={this.handleReset}
-                className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-colors duration-300 flex items-center justify-center"
+                onClick={this.handleRetry}
+                disabled={this.state.retryCount >= this.maxRetries}
+                className="flex items-center justify-center px-4 py-2 bg-cyan-500 hover:bg-cyan-600 disabled:bg-gray-500 disabled:cursor-not-allowed text-white rounded-lg transition-colors"
               >
                 <RefreshCw className="w-4 h-4 mr-2" />
-                Try Again
+                {this.state.retryCount >= this.maxRetries ? 'Max Retries Reached' : 'Try Again'}
               </button>
               
               <button
-                onClick={() => window.location.href = '/'}
-                className="px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-lg transition-colors duration-300 flex items-center justify-center"
+                onClick={this.handleGoHome}
+                className="flex items-center justify-center px-4 py-2 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 rounded-lg transition-colors"
               >
                 <Home className="w-4 h-4 mr-2" />
                 Go Home
               </button>
             </div>
 
-            <div className="mt-8 text-sm text-gray-400">
+            <div className="mt-6 text-sm text-gray-400">
               <p>If this problem persists, please contact our support team.</p>
               <p className="mt-2">
                 <a 
-                  href="mailto:support@ziontechgroup.com" 
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+                  href="mailto:kleber@ziontechgroup.com" 
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
-                  support@ziontechgroup.com
+                  kleber@ziontechgroup.com
                 </a>
               </p>
             </div>
@@ -142,40 +142,4 @@ export class GlobalErrorBoundary extends Component<Props, State> {
   }
 }
 
-<<<<<<< HEAD
-// Functional error boundary for specific components
-export const ErrorBoundary: React.FC<{
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error) => void;
-}> = ({ children, fallback, onError }) => {
-  const [hasError, setHasError] = React.useState(false);
-  const [error, setError] = React.useState<Error | null>(null);
-
-  React.useEffect(() => {
-    const handleError = (event: ErrorEvent) => {
-      setHasError(true);
-      setError(new Error(event.message));
-      if (onError) {
-        onError(new Error(event.message));
-      }
-    };
-
-    window.addEventListener('error', handleError);
-    return () => window.removeEventListener('error', handleError);
-  }, [onError]);
-
-  if (hasError) {
-    return fallback || (
-      <div className="p-4 bg-red-500/20 border border-red-500/30 rounded-lg">
-        <p className="text-red-300">Something went wrong: {error?.message}</p>
-      </div>
-    );
-  }
-
-  return <>{children}</>;
-};
-
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 export default GlobalErrorBoundary;
