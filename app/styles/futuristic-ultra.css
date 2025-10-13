@@ -1,0 +1,801 @@
+/* Ultra Advanced Futuristic Design System */
+:root {
+  /* Ultra Color Palette */
+  --primary-purple: #8b5cf6;
+  --primary-pink: #ec4899;
+  --primary-cyan: #06b6d4;
+  --primary-blue: #3b82f6;
+  --primary-green: #10b981;
+  --primary-orange: #f59e0b;
+  --primary-red: #ef4444;
+  --primary-yellow: #eab308;
+  --primary-indigo: #6366f1;
+  --primary-violet: #8b5cf6;
+  --primary-emerald: #10b981;
+  --primary-rose: #f43f5e;
+  --primary-teal: #14b8a6;
+  --primary-lime: #84cc16;
+  --primary-amber: #f59e0b;
+  --primary-sky: #0ea5e9;
+  
+  /* Ultra Dark Theme */
+  --ultra-dark-bg: #000000;
+  --dark-bg: #0a0a0a;
+  --darker-bg: #000000;
+  --card-bg: rgba(15, 23, 42, 0.95);
+  --border-color: rgba(148, 163, 184, 0.4);
+  --border-glow: rgba(139, 92, 246, 0.6);
+  
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #e2e8f0;
+  --text-muted: #94a3b8;
+  --text-accent: #06b6d4;
+  --text-glow: #ffffff;
+  
+  /* Ultra Glow Effects */
+  --glow-purple: 0 0 30px rgba(139, 92, 246, 0.8), 0 0 60px rgba(139, 92, 246, 0.4), 0 0 90px rgba(139, 92, 246, 0.2);
+  --glow-pink: 0 0 30px rgba(236, 72, 153, 0.8), 0 0 60px rgba(236, 72, 153, 0.4), 0 0 90px rgba(236, 72, 153, 0.2);
+  --glow-cyan: 0 0 30px rgba(6, 182, 212, 0.8), 0 0 60px rgba(6, 182, 212, 0.4), 0 0 90px rgba(6, 182, 212, 0.2);
+  --glow-green: 0 0 30px rgba(16, 185, 129, 0.8), 0 0 60px rgba(16, 185, 129, 0.4), 0 0 90px rgba(16, 185, 129, 0.2);
+  --glow-blue: 0 0 30px rgba(59, 130, 246, 0.8), 0 0 60px rgba(59, 130, 246, 0.4), 0 0 90px rgba(59, 130, 246, 0.2);
+  
+  /* Animation Variables */
+  --animation-speed: 0.4s;
+  --animation-easing: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ultra-animation-speed: 0.6s;
+}
+
+/* Ultra Enhanced Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.1) 0%, transparent 50%),
+    linear-gradient(135deg, var(--ultra-dark-bg) 0%, #1e1b4b 50%, var(--darker-bg) 100%);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Ultra Cyber Grid Background */
+.cyber-grid-ultra {
+  background-image: 
+    linear-gradient(rgba(139, 92, 246, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.3) 1px, transparent 1px),
+    linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+  position: relative;
+  animation: ultraGridPulse 6s ease-in-out infinite;
+}
+
+@keyframes ultraGridPulse {
+  0%, 100% { 
+    opacity: 0.4; 
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.8; 
+    transform: scale(1.02);
+  }
+}
+
+.cyber-grid-ultra::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(236, 72, 153, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 40% 60%, rgba(6, 182, 212, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 60% 40%, rgba(16, 185, 129, 0.2) 0%, transparent 50%);
+  pointer-events: none;
+  animation: ultraNeuralPulse 20s ease-in-out infinite;
+}
+
+@keyframes ultraNeuralPulse {
+  0%, 100% { 
+    opacity: 0.3; 
+    transform: scale(1) rotate(0deg);
+  }
+  25% { 
+    opacity: 0.6; 
+    transform: scale(1.05) rotate(1deg);
+  }
+  50% { 
+    opacity: 0.8; 
+    transform: scale(1.1) rotate(0deg);
+  }
+  75% { 
+    opacity: 0.6; 
+    transform: scale(1.05) rotate(-1deg);
+  }
+}
+
+/* Ultra Matrix Rain Effect */
+.matrix-rain-ultra {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.matrix-rain-ultra::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(16, 185, 129, 0.05) 2px,
+      rgba(16, 185, 129, 0.05) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(6, 182, 212, 0.03) 2px,
+      rgba(6, 182, 212, 0.03) 4px
+    );
+  animation: ultraMatrixRain 15s linear infinite;
+}
+
+@keyframes ultraMatrixRain {
+  0% { 
+    transform: translateY(-100vh) translateX(0px);
+    opacity: 0;
+  }
+  10% { 
+    opacity: 1;
+  }
+  90% { 
+    opacity: 1;
+  }
+  100% { 
+    transform: translateY(100vh) translateX(50px);
+    opacity: 0;
+  }
+}
+
+/* Ultra Neon Effects */
+.neon-ultra {
+  color: var(--primary-cyan);
+  text-shadow: 
+    0 0 5px currentColor,
+    0 0 10px currentColor,
+    0 0 15px currentColor,
+    0 0 20px currentColor,
+    0 0 35px currentColor,
+    0 0 40px currentColor,
+    0 0 50px currentColor;
+  animation: ultraNeonFlicker 4s ease-in-out infinite alternate;
+}
+
+@keyframes ultraNeonFlicker {
+  0%, 100% { 
+    opacity: 1;
+    filter: brightness(1);
+  }
+  25% { 
+    opacity: 0.8;
+    filter: brightness(1.2);
+  }
+  50% { 
+    opacity: 0.9;
+    filter: brightness(0.8);
+  }
+  75% { 
+    opacity: 0.7;
+    filter: brightness(1.1);
+  }
+}
+
+.neon-purple-ultra {
+  color: var(--primary-purple);
+  text-shadow: 
+    0 0 5px var(--primary-purple),
+    0 0 10px var(--primary-purple),
+    0 0 15px var(--primary-purple),
+    0 0 20px var(--primary-purple),
+    0 0 35px var(--primary-purple),
+    0 0 40px var(--primary-purple);
+  animation: ultraNeonPulse 4s ease-in-out infinite;
+}
+
+.neon-pink-ultra {
+  color: var(--primary-pink);
+  text-shadow: 
+    0 0 5px var(--primary-pink),
+    0 0 10px var(--primary-pink),
+    0 0 15px var(--primary-pink),
+    0 0 20px var(--primary-pink),
+    0 0 35px var(--primary-pink),
+    0 0 40px var(--primary-pink);
+  animation: ultraNeonPulse 4s ease-in-out infinite 0.5s;
+}
+
+.neon-cyan-ultra {
+  color: var(--primary-cyan);
+  text-shadow: 
+    0 0 5px var(--primary-cyan),
+    0 0 10px var(--primary-cyan),
+    0 0 15px var(--primary-cyan),
+    0 0 20px var(--primary-cyan),
+    0 0 35px var(--primary-cyan),
+    0 0 40px var(--primary-cyan);
+  animation: ultraNeonPulse 4s ease-in-out infinite 1s;
+}
+
+.neon-green-ultra {
+  color: var(--primary-green);
+  text-shadow: 
+    0 0 5px var(--primary-green),
+    0 0 10px var(--primary-green),
+    0 0 15px var(--primary-green),
+    0 0 20px var(--primary-green),
+    0 0 35px var(--primary-green),
+    0 0 40px var(--primary-green);
+  animation: ultraNeonPulse 4s ease-in-out infinite 1.5s;
+}
+
+@keyframes ultraNeonPulse {
+  0%, 100% { 
+    text-shadow: 
+      0 0 5px currentColor,
+      0 0 10px currentColor,
+      0 0 15px currentColor,
+      0 0 20px currentColor;
+  }
+  50% { 
+    text-shadow: 
+      0 0 2px currentColor,
+      0 0 5px currentColor,
+      0 0 8px currentColor,
+      0 0 12px currentColor,
+      0 0 18px currentColor,
+      0 0 25px currentColor;
+  }
+}
+
+/* Ultra Holographic Effects */
+.holographic-ultra {
+  background: linear-gradient(
+    45deg,
+    rgba(139, 92, 246, 0.2) 0%,
+    rgba(236, 72, 153, 0.2) 14.28%,
+    rgba(6, 182, 212, 0.2) 28.57%,
+    rgba(16, 185, 129, 0.2) 42.85%,
+    rgba(245, 158, 11, 0.2) 57.14%,
+    rgba(239, 68, 68, 0.2) 71.42%,
+    rgba(139, 92, 246, 0.2) 85.71%,
+    rgba(139, 92, 246, 0.2) 100%
+  );
+  background-size: 400% 400%;
+  animation: ultraHolographicShift 6s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.holographic-ultra::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.1) 2px,
+    rgba(255, 255, 255, 0.1) 4px
+  );
+  animation: ultraCyberScan 3s linear infinite;
+}
+
+@keyframes ultraHolographicShift {
+  0%, 100% { 
+    background-position: 0% 50%;
+    filter: hue-rotate(0deg);
+  }
+  25% { 
+    background-position: 100% 50%;
+    filter: hue-rotate(90deg);
+  }
+  50% { 
+    background-position: 100% 100%;
+    filter: hue-rotate(180deg);
+  }
+  75% { 
+    background-position: 0% 100%;
+    filter: hue-rotate(270deg);
+  }
+}
+
+@keyframes ultraCyberScan {
+  0% { 
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% { 
+    opacity: 1;
+  }
+  100% { 
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Ultra Glass Morphism */
+.glass-ultra {
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 0 0 1px rgba(139, 92, 246, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-ultra::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 70%
+  );
+  animation: ultraGlassShine 4s ease-in-out infinite;
+}
+
+@keyframes ultraGlassShine {
+  0%, 100% { 
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  50% { 
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+/* Ultra Button Styles */
+.btn-ultra {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    var(--primary-purple),
+    var(--primary-cyan),
+    var(--primary-pink)
+  );
+  border: none;
+  color: white;
+  padding: 20px 40px;
+  border-radius: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  overflow: hidden;
+  transition: all var(--ultra-animation-speed) var(--animation-easing);
+  box-shadow: var(--glow-purple);
+  cursor: pointer;
+}
+
+.btn-ultra::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  transition: left 1s ease;
+}
+
+.btn-ultra:hover::before {
+  left: 100%;
+}
+
+.btn-ultra:hover {
+  transform: translateY(-6px) scale(1.08);
+  box-shadow: 
+    0 25px 50px rgba(139, 92, 246, 0.6),
+    0 0 40px rgba(139, 92, 246, 0.8),
+    0 0 60px rgba(139, 92, 246, 0.4);
+  animation: ultraEnergyPulse 0.8s ease-in-out;
+}
+
+@keyframes ultraEnergyPulse {
+  0%, 100% { 
+    transform: translateY(-6px) scale(1.08);
+  }
+  50% { 
+    transform: translateY(-8px) scale(1.12);
+  }
+}
+
+/* Ultra Card Styles */
+.card-ultra {
+  background: var(--card-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 24px;
+  padding: 48px;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--ultra-animation-speed) var(--animation-easing);
+  backdrop-filter: blur(20px);
+}
+
+.card-ultra::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-purple),
+    var(--primary-pink),
+    var(--primary-cyan),
+    var(--primary-green),
+    var(--primary-orange),
+    var(--primary-red)
+  );
+  background-size: 300% 100%;
+  animation: ultraBorderGradient 6s ease infinite;
+}
+
+@keyframes ultraBorderGradient {
+  0% { 
+    background-position: 0% 50%;
+  }
+  25% { 
+    background-position: 50% 50%;
+  }
+  50% { 
+    background-position: 100% 50%;
+  }
+  75% { 
+    background-position: 50% 50%;
+  }
+  100% { 
+    background-position: 0% 50%;
+  }
+}
+
+.card-ultra:hover {
+  transform: translateY(-15px) scale(1.03);
+  border-color: var(--primary-purple);
+  box-shadow: 
+    0 30px 60px rgba(139, 92, 246, 0.4),
+    0 0 0 2px rgba(139, 92, 246, 0.3),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Ultra Particle System */
+.particles-ultra {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.particle-ultra {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--primary-cyan);
+  border-radius: 50%;
+  animation: ultraParticleFloat 20s linear infinite;
+  box-shadow: 0 0 10px currentColor;
+}
+
+.particle-ultra:nth-child(2n) {
+  background: var(--primary-purple);
+  animation-delay: -5s;
+}
+
+.particle-ultra:nth-child(3n) {
+  background: var(--primary-pink);
+  animation-delay: -10s;
+}
+
+.particle-ultra:nth-child(4n) {
+  background: var(--primary-green);
+  animation-delay: -15s;
+}
+
+@keyframes ultraParticleFloat {
+  0% { 
+    transform: translateY(100vh) translateX(0px) rotate(0deg);
+    opacity: 0;
+  }
+  10% { 
+    opacity: 1;
+  }
+  90% { 
+    opacity: 1;
+  }
+  100% { 
+    transform: translateY(-100px) translateX(200px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Ultra Glitch Effect */
+.glitch-ultra {
+  position: relative;
+  animation: ultraGlitch 4s infinite;
+}
+
+.glitch-ultra::before,
+.glitch-ultra::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.glitch-ultra::before {
+  animation: ultraGlitch1 0.8s infinite;
+  color: #ff0000;
+  z-index: -1;
+}
+
+.glitch-ultra::after {
+  animation: ultraGlitch2 0.8s infinite;
+  color: #00ff00;
+  z-index: -2;
+}
+
+@keyframes ultraGlitch {
+  0%, 100% { 
+    transform: translate(0);
+  }
+  20% { 
+    transform: translate(-4px, 4px);
+  }
+  40% { 
+    transform: translate(-4px, -4px);
+  }
+  60% { 
+    transform: translate(4px, 4px);
+  }
+  80% { 
+    transform: translate(4px, -4px);
+  }
+}
+
+@keyframes ultraGlitch1 {
+  0%, 100% { 
+    transform: translate(0);
+  }
+  20% { 
+    transform: translate(4px, -4px);
+  }
+  40% { 
+    transform: translate(-4px, 4px);
+  }
+  60% { 
+    transform: translate(-4px, -4px);
+  }
+  80% { 
+    transform: translate(4px, 4px);
+  }
+}
+
+@keyframes ultraGlitch2 {
+  0%, 100% { 
+    transform: translate(0);
+  }
+  20% { 
+    transform: translate(-4px, 4px);
+  }
+  40% { 
+    transform: translate(4px, -4px);
+  }
+  60% { 
+    transform: translate(4px, 4px);
+  }
+  80% { 
+    transform: translate(-4px, -4px);
+  }
+}
+
+/* Ultra Text Effects */
+.text-gradient-ultra {
+  background: linear-gradient(
+    45deg,
+    var(--primary-purple),
+    var(--primary-pink),
+    var(--primary-cyan),
+    var(--primary-green),
+    var(--primary-orange),
+    var(--primary-red)
+  );
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: ultraTextGradientShift 6s ease infinite;
+}
+
+@keyframes ultraTextGradientShift {
+  0% { 
+    background-position: 0% 50%;
+  }
+  25% { 
+    background-position: 100% 50%;
+  }
+  50% { 
+    background-position: 100% 100%;
+  }
+  75% { 
+    background-position: 0% 100%;
+  }
+  100% { 
+    background-position: 0% 50%;
+  }
+}
+
+/* Ultra Hover Effects */
+.hover-ultra-lift {
+  transition: all var(--ultra-animation-speed) var(--animation-easing);
+}
+
+.hover-ultra-lift:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(139, 92, 246, 0.5),
+    0 0 60px rgba(6, 182, 212, 0.3);
+}
+
+.hover-ultra-glow:hover {
+  box-shadow: 
+    0 0 20px currentColor,
+    0 0 40px currentColor,
+    0 0 60px currentColor,
+    0 0 80px currentColor;
+  transform: scale(1.1);
+}
+
+/* Ultra Loading Animation */
+.loader-ultra {
+  width: 80px;
+  height: 80px;
+  border: 4px solid transparent;
+  border-top: 4px solid var(--primary-cyan);
+  border-right: 4px solid var(--primary-purple);
+  border-bottom: 4px solid var(--primary-pink);
+  border-left: 4px solid var(--primary-green);
+  border-radius: 50%;
+  animation: ultraCyberSpin 2s linear infinite;
+  position: relative;
+}
+
+.loader-ultra::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  border: 2px solid transparent;
+  border-top: 2px solid var(--primary-orange);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: ultraCyberSpin 1.5s linear infinite reverse;
+}
+
+@keyframes ultraCyberSpin {
+  0% { 
+    transform: rotate(0deg);
+  }
+  100% { 
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cyber-grid-ultra {
+    background-size: 25px 25px, 25px 25px, 12px 12px, 12px 12px;
+  }
+  
+  .matrix-rain-ultra::before {
+    background-size: 50px 50px;
+  }
+  
+  .text-cyber {
+    letter-spacing: 1px;
+  }
+  
+  .card-ultra {
+    padding: 32px;
+  }
+  
+  .btn-ultra {
+    padding: 16px 32px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .card-ultra {
+    border: 3px solid var(--text-primary);
+  }
+  
+  .neon-ultra,
+  .neon-purple-ultra,
+  .neon-pink-ultra,
+  .neon-cyan-ultra,
+  .neon-green-ultra {
+    text-shadow: none;
+    color: var(--text-primary);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .cyber-grid-ultra,
+  .neural-network-bg,
+  .matrix-rain-ultra,
+  .particles-ultra {
+    display: none;
+  }
+  
+  .card-ultra {
+    background: white;
+    color: black;
+    border: 1px solid black;
+  }
+}

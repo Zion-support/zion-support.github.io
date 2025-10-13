@@ -159,7 +159,7 @@ const HomePage = () => {
       price: "From $299/month",
       icon: <Globe className="w-6 h-6" />,
       link: "/ai-climate-prediction-engine",
-      featured: false
+      featured: true
     },
     {
       name: "Neural Memory Assistant",
