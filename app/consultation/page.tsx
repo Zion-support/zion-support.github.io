@@ -1,162 +1,15 @@
+<<<<<<< HEAD
 import { ArrowRight, Calendar, Users, CheckCircle, Brain, Shield, Zap, Mail, Smartphone, Globe, Target, Award, TrendingUp } from "lucide-react";
+=======
+import { ArrowRight } from "lucide-react";
+>>>>>>> cursor/fix-errors-and-merge-to-main-f2e0
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 export default function Consultation() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    consultationType: '',
-    industry: '',
-    projectSize: '',
-    timeline: '',
-    message: ''
-  });
-
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        consultationType: '',
-        industry: '',
-        projectSize: '',
-        timeline: '',
-        message: ''
-      });
-    }, 3000);
-  };
-
-  const consultationTypes = [
-    {
-      title: "AI Strategy & Implementation",
-      description: "Comprehensive AI strategy development and implementation roadmap",
-      duration: "2-4 hours",
-      price: "Free",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500",
-      features: [
-        "AI readiness assessment",
-        "Technology stack recommendations",
-        "Implementation roadmap",
-        "ROI projections"
-      ]
-    },
-    {
-      title: "Digital Transformation",
-      description: "Complete digital transformation strategy and execution plan",
-      duration: "3-5 hours",
-      price: "Free",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500",
-      features: [
-        "Current state analysis",
-        "Digital maturity assessment",
-        "Transformation roadmap",
-        "Change management strategy"
-      ]
-    },
-    {
-      title: "Cybersecurity Audit",
-      description: "Comprehensive security assessment and improvement plan",
-      duration: "2-3 hours",
-      price: "Free",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-red-500 to-orange-500",
-      features: [
-        "Security vulnerability assessment",
-        "Compliance review",
-        "Risk mitigation strategies",
-        "Security roadmap"
-      ]
-    },
-    {
-      title: "Cloud Migration Planning",
-      description: "Strategic cloud migration planning and execution",
-      duration: "2-4 hours",
-      price: "Free",
-      icon: <Globe className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500",
-      features: [
-        "Cloud readiness assessment",
-        "Migration strategy",
-        "Cost optimization plan",
-        "Implementation timeline"
-      ]
-    }
-  ];
-
-  const industries = [
-    "Manufacturing",
-    "Healthcare",
-    "Financial Services",
-    "E-commerce",
-    "Logistics",
-    "Government",
-    "Education",
-    "Retail",
-    "Technology",
-    "Energy",
-    "Other"
-  ];
-
-  const projectSizes = [
-    "Small (1-10 employees)",
-    "Medium (11-100 employees)",
-    "Large (101-500 employees)",
-    "Enterprise (500+ employees)"
-  ];
-
-  const timelines = [
-    "Immediate (within 1 month)",
-    "Short-term (1-3 months)",
-    "Medium-term (3-6 months)",
-    "Long-term (6+ months)"
-  ];
-
-  const benefits = [
-    {
-      icon: <Target className="w-6 h-6" />,
-      title: "Strategic Planning",
-      description: "Get a clear roadmap for your technology initiatives"
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "ROI Optimization",
-      description: "Maximize your technology investment returns"
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Expert Guidance",
-      description: "Access to our team of technology experts"
-    },
-    {
-      icon: <Award className="w-6 h-6" />,
-      title: "Proven Results",
-      description: "Based on 500+ successful implementations"
-    }
-  ];
 
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Free Consultation - Zion Tech Group | Expert Technology Advisory</title>
         <meta
@@ -168,6 +21,7 @@ export default function Consultation() {
           content="free consultation, technology advisory, AI strategy, digital transformation, cybersecurity audit, cloud migration, technology planning"
         />
       </Helmet>
+<<<<<<< HEAD
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Consultation Types */}
@@ -499,7 +353,25 @@ export default function Consultation() {
             </div>
           </div>
         </section>
+=======
+
+      <div className="flex items-center justify-center">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Consultation</h1>
+          <p className="text-lg text-gray-300 mb-8">
+            Professional consultation services coming soon.
+          </p>
+
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f2e0
       </div>
-    </>
+    </div>
   );
 }

@@ -173,7 +173,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   };
 
   // Removed unused functions - functionality is handled by updateSetting directly
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f2e0
   return (
     <>
       {children}

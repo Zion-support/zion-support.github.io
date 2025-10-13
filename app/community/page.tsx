@@ -27,3 +27,7 @@ export default function CommunityZionTechGroup() {
     </>
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-f2e0
