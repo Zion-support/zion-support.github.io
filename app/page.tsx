@@ -8,6 +8,10 @@ import FuturisticText from "./components/FuturisticText";
 import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
 import ResponsiveText from "./components/ResponsiveText";
+import LazyImage from "./components/LazyImage";
+import EnhancedLoadingSpinner from "./components/EnhancedLoadingSpinner";
+import EnhancedAccessibility from "./components/EnhancedAccessibility";
+import PerformanceOptimizer from "./components/PerformanceOptimizer";
 
 const HomePage = () => {
   const structuredData = {
@@ -171,16 +175,20 @@ const HomePage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      <EnhancedSEO
-        title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
-        description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
-        keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
-        canonical="https://ziontechgroup.com"
-      />
+    <PerformanceOptimizer>
+      <EnhancedAccessibility>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+          <EnhancedSEO
+            title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
+            description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
+            keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
+            canonical="https://ziontechgroup.com"
+          />
 
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Main Content */}
+      <main id="main-content" role="main" aria-label="Main content">
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -430,7 +438,10 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-    </div>
+      </main>
+        </div>
+      </EnhancedAccessibility>
+    </PerformanceOptimizer>
   );
 };
 
