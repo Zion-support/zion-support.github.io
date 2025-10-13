@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react";
 import { ArrowRight, Calendar, User } from "lucide-react";
 import { ArrowRight, Search, Calendar, Clock, User, Zap } from "lucide-react";
@@ -9,10 +10,93 @@ import { Link } from "react-router-dom";
       <Helmet>
         <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Latest insights and updates from Zion Tech Group" />
+=======
+import React, { useState } from "react";
+import { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+
+export default function Blog() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("all");
+
+  const categories = [
+    { id: "all", name: "All Posts", count: 12 },
+    { id: "ai", name: "Artificial Intelligence", count: 5 },
+    { id: "technology", name: "Technology", count: 4 },
+    { id: "business", name: "Business", count: 3 }
+  ];
+
+  const blogPosts = [
+    {
+      id: '1',
+      title: 'The Future of AI in Enterprise Solutions',
+      excerpt: 'Exploring how artificial intelligence is transforming business operations and decision-making processes.',
+      content: 'Full article content...',
+      author: 'Zion Tech Team',
+      date: '2024-01-15',
+      category: 'AI',
+      featured: true,
+      image: '/images/blog/ai-enterprise.jpg',
+      readTime: '5 min read'
+    },
+    {
+      id: '2',
+      title: 'Cloud Migration Best Practices',
+      excerpt: 'A comprehensive guide to successfully migrating your infrastructure to the cloud.',
+      content: 'Full article content...',
+      author: 'Cloud Team',
+      date: '2024-01-10',
+      category: 'Cloud',
+      featured: false,
+      image: '/images/blog/cloud-migration.jpg',
+      readTime: '8 min read'
+    },
+    {
+      id: '3',
+      title: 'Cybersecurity Trends for 2024',
+      excerpt: 'Stay ahead of the latest cybersecurity threats and protection strategies.',
+      content: 'Full article content...',
+      author: 'Security Team',
+      date: '2024-01-05',
+      category: 'Security',
+      featured: true,
+      image: '/images/blog/cybersecurity.jpg',
+      readTime: '6 min read'
+    },
+    {
+      id: '4',
+      title: 'Building Scalable Web Applications',
+      excerpt: 'Learn the key principles for creating web applications that can handle growth.',
+      content: 'Full article content...',
+      author: 'Development Team',
+      date: '2024-01-01',
+      category: 'Technology',
+      featured: false,
+      image: '/images/blog/scalable-web.jpg',
+      readTime: '7 min read'
+    }
+  ];
+
+  const filteredPosts = blogPosts.filter(post => {
+    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === "all" || post.category.toLowerCase() === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+
+  return (
+    <>
+      <Helmet>
+        <title>Blog - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Stay updated with the latest insights on AI, technology, and business solutions from Zion Tech Group experts." />
+        <meta name="keywords" content="AI blog, technology insights, business solutions, enterprise AI, cloud computing" />
+>>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
+<<<<<<< HEAD
         <section className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center">
@@ -39,6 +123,46 @@ import { Link } from "react-router-dom";
                   </button>
                 ))}
               </div>
+=======
+        <div className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Blog</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Stay updated with the latest insights on AI, technology, and business solutions from our expert team.
+            </p>
+            
+            {/* Search Bar */}
+            <div className="max-w-2xl mx-auto mb-12">
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search articles..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+            </div>
+
+            {/* Category Filter */}
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-6 py-3 rounded-full transition-all duration-300 ${
+                    selectedCategory === category.id
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                  }`}
+                >
+                  {category.name} ({category.count})
+                </button>
+              ))}
+>>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
             </div>
           </div>
         </section>
@@ -47,6 +171,7 @@ import { Link } from "react-router-dom";
         {featuredPost && (
           <section className="py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-white mb-8">Featured Article</h2>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden border border-white/20">
                 <div className="md:flex">
@@ -126,6 +251,14 @@ import { Link } from "react-router-dom";
         {filteredPosts.filter(post => post.featured).length > 0 && (
           <div className="py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
+=======
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured Articles</h2>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {filteredPosts.filter(post => post.featured).map((post) => (
+                  <article key={post.id} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 group">
+                    <div className="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl mb-6 flex items-center justify-center">
+                      <BookOpen className="w-16 h-16 text-blue-400" />
+>>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
                     </div>
                     <div className="flex items-center gap-4 mb-4 text-sm text-gray-400">
                       <span className="flex items-center gap-1">
@@ -228,7 +361,11 @@ import { Link } from "react-router-dom";
       </div>
     </>
   );
+<<<<<<< HEAD
 };
 
 export default BlogPage;
 
+=======
+}
+>>>>>>> cursor/analyze-improve-and-deploy-application-6f9f

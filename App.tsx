@@ -7,6 +7,7 @@ import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
+<<<<<<< HEAD
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
@@ -14,6 +15,16 @@ import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
+=======
+import { LoadingPage } from "./app/components/LoadingStates";
+import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import Breadcrumb from "./app/components/Breadcrumb";
+import FuturisticBackground from "./app/components/FuturisticBackground";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
+import PerformanceMonitor from "./app/components/PerformanceMonitor";
+import EnhancedSEO from "./app/components/EnhancedSEO";
+>>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -604,6 +615,15 @@ function App() {
                     <div></div>
                   </EnhancedAccessibility>
                 </FuturisticBackground>
+<<<<<<< HEAD
+=======
+                <PerformanceMonitor />
+                <EnhancedSEO 
+                  title="Zion Tech Group - Advanced AI and IT Solutions"
+                  description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses."
+                  keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
+                />
+>>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
               </div>
               <EnhancedAccessibility>
                 <div></div>
