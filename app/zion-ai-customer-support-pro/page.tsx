@@ -1,21 +1,21 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const SupplyChainOptimizerPage = () => {
+const CustomerSupportProPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Zion AI Supply Chain Optimizer - Coming Soon</title>
-        <meta name="description" content="Zion AI Supply Chain Optimizer - Advanced AI-powered solution coming soon." />
+        <title>Zion AI Customer Support Pro - Coming Soon</title>
+        <meta name="description" content="Zion AI Customer Support Pro - Advanced AI-powered solution coming soon." />
       </Helmet>
       
       <div className="container mx-auto px-4 py-12">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-            Zion AI Supply Chain Optimizer
+            Zion AI Customer Support Pro
           </h1>
           <p className="text-xl text-gray-300 mb-8">
-            Coming Soon - Advanced AI-powered supply chain optimizer solution
+            Coming Soon - Advanced AI-powered customer support pro solution
           </p>
           <div className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
             <p className="text-gray-300">
@@ -43,4 +43,4 @@ const SupplyChainOptimizerPage = () => {
   );
 };
 
-export default SupplyChainOptimizerPage;
+export default CustomerSupportProPage;

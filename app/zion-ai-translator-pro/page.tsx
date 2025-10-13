@@ -1,31 +1,46 @@
-import { ArrowRight } from "lucide-react";
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
-export default function ZionAiTranslatorProZionTechGroup() {
+const TranslatorProPage = () => {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>ZionAiTranslatorPro - Zion Tech Group</title>
+        <title>Zion AI Translator Pro - Coming Soon</title>
+        <meta name="description" content="Zion AI Translator Pro - Advanced AI-powered solution coming soon." />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
+      
+      <div className="container mx-auto px-4 py-12">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            ZionAiTranslatorPro
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+            Zion AI Translator Pro
           </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional zionaitranslatorpro services coming soon.
+          <p className="text-xl text-gray-300 mb-8">
+            Coming Soon - Advanced AI-powered translator pro solution
           </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+          <div className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+            <p className="text-gray-300">
+              This innovative AI service is currently in development. 
+              Contact us to learn more about upcoming features and early access.
+            </p>
+            <div className="mt-6">
+              <a 
+                href="tel:+13024640950" 
+                className="text-cyan-400 hover:text-cyan-300 transition-colors mr-6"
+              >
+                +1 302 464 0950
+              </a>
+              <a 
+                href="mailto:kleber@ziontechgroup.com" 
+                className="text-cyan-400 hover:text-cyan-300 transition-colors"
+              >
+                kleber@ziontechgroup.com
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
-}
+};
+
+export default TranslatorProPage;

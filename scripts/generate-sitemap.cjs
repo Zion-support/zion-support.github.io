@@ -1,12 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Define all the routes
-=======
-// Define all routes for the sitemap
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
 const routes = [
   // Main pages
   { url: '/', priority: '1.0', changefreq: 'daily' },
@@ -133,9 +127,6 @@ function writeSitemap() {
 }
 
 // Generate robots.txt
-<<<<<<< HEAD
-const robotsTxt = `User-agent: *
->>>>>>> cursor/analyze-improve-and-deploy-application-c69e
 =======
 // Generate sitemap.xml for better SEO
 const generateSitemap = () => {
@@ -236,44 +227,6 @@ function generateRobotsTxt() {
 Allow: /
 
 Sitemap: https://ziontechgroup.com/sitemap.xml
-<<<<<<< HEAD
-
-# Disallow admin and private areas
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /static/
-
-# Allow important pages
-Allow: /
-Allow: /about
-Allow: /contact
-Allow: /services
-Allow: /ai-services
-Allow: /it-services
-Allow: /micro-saas
-Allow: /5g-solutions
-Allow: /blog
-Allow: /pricing
-`;
-
-  const outputPath = path.join(__dirname, '..', 'dist', 'robots.txt');
-  fs.writeFileSync(outputPath, robotsTxt, 'utf8');
-  console.log('Robots.txt generated successfully at:', outputPath);
-}
-
-// Run the generation
-try {
-  writeSitemap();
-  generateRobotsTxt();
-  console.log('Sitemap and robots.txt generation completed successfully!');
-} catch (error) {
-  console.error('Error generating sitemap:', error);
-  process.exit(1);
-<<<<<<< HEAD
-}
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 =======
 # Host
 Host: https://ziontechgroup.com`;
