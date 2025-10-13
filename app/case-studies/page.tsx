@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -71,9 +66,134 @@ const CaseStudiesPage: React.FC = () => {
     { label: 'Team Members', value: '50+', icon: Users },
     { label: 'Industry Awards', value: '25+', icon: Award }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
 
-export default function CaseStudies() {
+  return (
+    <>
+      <Helmet>
+        <title>Case Studies - Zion Tech Group</title>
+        <meta name="description" content="Explore our successful projects and case studies showcasing our expertise in AI, cloud computing, and IT solutions." />
+        <meta name="keywords" content="case studies, projects, AI solutions, cloud migration, IT consulting, success stories" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <Navigation />
+        
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Our <span className="text-blue-400">Success</span> Stories
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Discover how we've helped businesses transform their operations with cutting-edge technology solutions.
+            </p>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <stat.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                  <div className="text-gray-300">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Case Studies */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">Featured Case Studies</h2>
+              <p className="text-xl text-gray-300">Real projects, real results</p>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {caseStudies.map((study, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-colors">
+                  <div className="flex items-center mb-4">
+                    <div className="bg-blue-600 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                      <study.icon className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white">{study.title}</h3>
+                      <p className="text-blue-400">{study.client}</p>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-300 mb-6">{study.description}</p>
+                  
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div>
+                      <div className="text-sm text-gray-400">Duration</div>
+                      <div className="text-white font-semibold">{study.duration}</div>
+                    </div>
+                    <div>
+                      <div className="text-sm text-gray-400">Team Size</div>
+                      <div className="text-white font-semibold">{study.teamSize}</div>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <div className="text-sm text-gray-400">Technologies Used:</div>
+                    <div className="flex flex-wrap gap-2">
+                      {study.technologies.map((tech, techIndex) => (
+                        <span key={techIndex} className="bg-blue-600/20 text-blue-300 text-xs px-2 py-1 rounded">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="mt-6 pt-6 border-t border-gray-700">
+                    <div className="text-sm text-gray-400 mb-2">Results:</div>
+                    <ul className="space-y-1">
+                      {study.results.map((result, resultIndex) => (
+                        <li key={resultIndex} className="text-gray-300 text-sm flex items-center">
+                          <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                          {result}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Start Your Success Story?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how we can help transform your business with our proven solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+                Start Your Project
+              </button>
+              <button className="px-8 py-3 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-colors">
+                View All Projects
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <Footer />
+      </div>
+    </>
+  );
+};
+
+export default CaseStudiesPage;
   return (
     <>
       <Helmet>
@@ -84,24 +204,7 @@ export default function CaseStudies() {
         />
       </Helmet>
 
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Case Studies</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Success stories and case studies coming soon.
-          </p>
-
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
 
         {/* Hero Section */}
@@ -231,7 +334,6 @@ export default function CaseStudies() {
         </section>
 
         <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
       </div>
     </>
   );

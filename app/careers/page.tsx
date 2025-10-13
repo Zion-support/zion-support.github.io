@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -101,33 +96,10 @@ const CareersPage: React.FC = () => {
     'Team building events and company retreats',
     'Mentorship and career growth opportunities'
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
 
-export default function Careers() {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-        <title>Careers - Zion Tech Group</title>
-        <meta name="description" content="Join our team at Zion Tech Group" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Careers</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Join our team and build the future with us.
-          </p>
-
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-=======
         <title>Careers | Zion Tech Group</title>
         <meta name="description" content="Join our team of innovators at Zion Tech Group. Explore career opportunities in AI, cloud computing, and IT solutions." />
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, software developer, tech jobs" />
@@ -135,107 +107,91 @@ export default function Careers() {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <Navigation />
-
+        
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Join Our <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Team</span>
+        <section className="pt-20 pb-16 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Join Our <span className="text-blue-400">Innovation</span> Team
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Be part of a team that's shaping the future of AI and IT solutions. 
-              Work on challenging projects and make a real impact.
+              Build the future with cutting-edge technology. We're looking for passionate individuals 
+              who want to make a real impact in AI, cloud computing, and IT solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center">
+              <button className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
                 View Open Positions
-                <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn About Us
+              <button className="px-8 py-3 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-colors">
+                Learn About Our Culture
               </button>
             </div>
           </div>
         </section>
 
-        {/* Values Section */}
+        {/* Open Positions */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Why Work With Us?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We're building the future of technology, and we want you to be part of it.
-              </p>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">Open Positions</h2>
+              <p className="text-xl text-gray-300">Find your perfect role and grow with us</p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <value.icon className="w-8 h-8 text-white" />
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {positions.map((position, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
+                  <div className="flex items-start justify-between mb-4">
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-2">{position.title}</h3>
+                      <p className="text-blue-400 text-sm">{position.department}</p>
+                    </div>
+                    <span className="bg-blue-600 text-white text-xs px-2 py-1 rounded-full">
+                      {position.type}
+                    </span>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
-                  <p className="text-gray-300">{value.description}</p>
+                  
+                  <div className="space-y-2 mb-4">
+                    <div className="flex items-center text-gray-300 text-sm">
+                      <MapPin className="h-4 w-4 mr-2" />
+                      {position.location}
+                    </div>
+                    <div className="flex items-center text-gray-300 text-sm">
+                      <Clock className="h-4 w-4 mr-2" />
+                      {position.experience}
+                    </div>
+                    <div className="flex items-center text-gray-300 text-sm">
+                      <Users className="h-4 w-4 mr-2" />
+                      Posted {position.posted}
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-300 text-sm mb-4">{position.description}</p>
+                  
+                  <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
+                    Apply Now
+                  </button>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Open Positions Section */}
-        <section className="py-16 px-4 bg-white/5">
+        {/* Company Values */}
+        <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Open Positions
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Find your next career opportunity with us.
-              </p>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">Why Work With Us?</h2>
+              <p className="text-xl text-gray-300">Our values drive everything we do</p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {positions.map((position, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-400 transition-all duration-300 group">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm font-semibold">
-                      {position.department}
-                    </span>
-                    <span className="text-gray-400 text-sm">{position.type}</span>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {values.map((value, index) => (
+                <div key={index} className="text-center">
+                  <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <value.icon className="h-8 w-8 text-white" />
                   </div>
-
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
-                    {position.title}
-                  </h3>
-
-                  <p className="text-gray-300 mb-6 text-sm">
-                    {position.description}
-                  </p>
-
-                  <div className="flex items-center gap-4 mb-6 text-sm text-gray-400">
-                    <div className="flex items-center gap-1">
-                      <MapPin className="w-4 h-4" />
-                      <span>{position.location}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      <span>{position.experience}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Users className="w-4 h-4" />
-                      <span>Posted {position.posted}</span>
-                    </div>
-                  </div>
-
-                  <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group">
-                    Apply Now
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  <h3 className="text-xl font-semibold text-white mb-2">{value.title}</h3>
+                  <p className="text-gray-300">{value.description}</p>
                 </div>
               ))}
             </div>
@@ -245,20 +201,16 @@ export default function Careers() {
         {/* Benefits Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Benefits & Perks
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We offer comprehensive benefits to support your personal and professional growth.
-              </p>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">Benefits & Perks</h2>
+              <p className="text-xl text-gray-300">We take care of our team</p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
+                <div key={index} className="flex items-center text-gray-300">
+                  <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
+                  <span>{benefit}</span>
                 </div>
               ))}
             </div>
@@ -268,28 +220,26 @@ export default function Careers() {
         {/* CTA Section */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Don't See Your Dream Job?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                We're always looking for talented individuals. Send us your resume and let us know how you can contribute to our mission.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
-                  Send Your Resume
-                </button>
-                <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Make an Impact?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join our team and help us build the future of technology. We're always looking for 
+              talented individuals who share our passion for innovation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+                View All Positions
+              </button>
+              <button className="px-8 py-3 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-colors">
+                Contact HR
+              </button>
             </div>
           </div>
         </section>
 
         <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
       </div>
     </>
   );
-}
+};
+
+export default CareersPage;

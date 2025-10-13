@@ -12,15 +12,7 @@ export default function Consultation() {
           content="Professional consultation services from Zion Tech Group"
         />
       </Helmet>
-<<<<<<< HEAD
-
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Consultation</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional consultation services coming soon.
-=======
-        {/* Hero Section */}
+{/* Hero Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -272,7 +264,6 @@ export default function Consultation() {
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Schedule a consultation with our experts and discover how technology can drive your success.
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
           </p>
 
           <Link

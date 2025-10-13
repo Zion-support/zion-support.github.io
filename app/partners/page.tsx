@@ -1,31 +1,9 @@
-import { ArrowRight } from "lucide-react";
-
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 
 export default function PartnersZionTechGroup() {
   return (
     <>
-<<<<<<< HEAD
-      <Helmet>
-        <title>Partners - Zion Tech Group</title>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Partners</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional partners services coming soon.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Helmet>
           <title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
           <meta name="description" content="Explore our strategic partnerships with leading technology companies. We work with Microsoft, AWS, Google Cloud, and more to deliver cutting-edge solutions." />
@@ -171,7 +149,6 @@ export default function PartnersZionTechGroup() {
             </div>
           </div>
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
       </div>
     </>
   );
