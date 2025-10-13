@@ -7,14 +7,12 @@ import Footer from "./app/components/Footer";
 import LoadingPage from "./app/components/Loading";
 import HomePage from "./app/page";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
-import PerformanceMonitor from "./app/components/PerformanceMonitor";
+import OptimizedPerformanceMonitor from "./app/components/OptimizedPerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
-import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import ErrorBoundary from "./app/components/ErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
-import EnhancedSEO from "./app/components/EnhancedSEO";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -117,7 +115,7 @@ function App() {
     <HelmetProvider>
       <ErrorBoundary>
         <AnalyticsProvider>
-          <PerformanceMonitor showDetails={process.env.NODE_ENV === 'development'}>
+          <OptimizedPerformanceMonitor showDetails={process.env.NODE_ENV === 'development'}>
             <WebVitalsTracker>
               <AccessibilityEnhancer>
                 <Router>
@@ -224,7 +222,7 @@ function App() {
                 </Router>
               </AccessibilityEnhancer>
             </WebVitalsTracker>
-          </PerformanceMonitor>
+          </OptimizedPerformanceMonitor>
         </AnalyticsProvider>
       </ErrorBoundary>
     </HelmetProvider>

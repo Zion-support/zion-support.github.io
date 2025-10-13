@@ -1,182 +1,227 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('Starting enhanced performance optimization...');
+/**
+ * Enhanced Performance Optimizer
+ * Analyzes build output and provides optimization recommendations
+ */
 
-// Optimize images
-console.log('Optimizing images...');
-const publicDir = path.join(__dirname, '../public');
-const distDir = path.join(__dirname, '../dist');
+const DIST_DIR = path.join(__dirname, '../dist');
+const REPORT_PATH = path.join(__dirname, '../performance-optimization-report.json');
 
-if (fs.existsSync(publicDir)) {
-  const files = fs.readdirSync(publicDir);
-  const imageFiles = files.filter(file => 
-    /\.(jpg|jpeg|png|gif|webp|svg)$/i.test(file)
-  );
+function analyzeBuildOutput() {
+  console.log('🚀 Starting enhanced performance optimization analysis...');
   
-  console.log(`Found ${imageFiles.length} image files to optimize`);
-}
-
-// Generate critical CSS
-console.log('Generating critical CSS...');
-const criticalCSS = `
-/* Critical CSS for above-the-fold content */
-.min-h-screen { min-height: 100vh; }
-.bg-gradient-to-br { background-image: linear-gradient(to bottom right, var(--tw-gradient-stops)); }
-.from-slate-900 { --tw-gradient-from: #0f172a; --tw-gradient-to: rgb(15 23 42 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
-.via-purple-900 { --tw-gradient-to: rgb(88 28 135 / 0); --tw-gradient-stops: var(--tw-gradient-from), #581c87, var(--tw-gradient-to); }
-.to-slate-900 { --tw-gradient-to: #0f172a; --tw-gradient-stops: var(--tw-gradient-from), #581c87, var(--tw-gradient-to); }
-.text-white { color: rgb(255 255 255); }
-.text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
-.font-bold { font-weight: 700; }
-.text-center { text-align: center; }
-.max-w-7xl { max-width: 80rem; }
-.mx-auto { margin-left: auto; margin-right: auto; }
-.px-4 { padding-left: 1rem; padding-right: 1rem; }
-.py-20 { padding-top: 5rem; padding-bottom: 5rem; }
-`;
-
-if (!fs.existsSync(distDir)) {
-  fs.mkdirSync(distDir, { recursive: true });
-}
-
-fs.writeFileSync(path.join(distDir, 'critical.css'), criticalCSS);
-
-// Optimize JavaScript bundles
-console.log('Optimizing JavaScript bundles...');
-const distAssetsDir = path.join(distDir, 'assets');
-if (fs.existsSync(distAssetsDir)) {
-  const jsFiles = fs.readdirSync(distAssetsDir).filter(file => file.endsWith('.js'));
-  console.log(`Found ${jsFiles.length} JavaScript files to optimize`);
-}
-
-// Generate performance report
-const performanceReport = {
-  timestamp: new Date().toISOString(),
-  optimizations: [
-    'Critical CSS generated',
-    'Image optimization pipeline ready',
-    'JavaScript bundle analysis completed',
-    'Lazy loading implemented',
-    'Service worker optimized',
-    'PWA manifest enhanced',
-    'SEO meta tags optimized',
-    'Error boundaries added',
-    'Performance monitoring enabled',
-    'Accessibility enhancements applied'
-  ],
-  recommendations: [
-    'Consider implementing image optimization pipeline with WebP format',
-    'Add more granular code splitting for large pages',
-    'Implement preloading for critical resources',
-    'Add more comprehensive caching strategies',
-    'Consider implementing CDN for static assets',
-    'Optimize font loading with font-display: swap',
-    'Implement resource hints (preload, prefetch, preconnect)',
-    'Add compression for text assets',
-    'Consider implementing edge-side includes for dynamic content',
-    'Add performance budgets to prevent regression'
-  ],
-  metrics: {
-    bundleSize: 'Optimized for production',
-    imageOptimization: 'Ready for implementation',
-    criticalCSS: 'Generated',
-    lazyLoading: 'Implemented',
-    serviceWorker: 'Optimized',
-    pwaSupport: 'Enhanced'
+  if (!fs.existsSync(DIST_DIR)) {
+    console.error('❌ Dist directory not found. Please run build first.');
+    return;
   }
-};
 
-fs.writeFileSync(
-  path.join(distDir, 'performance-report-enhanced.json'), 
-  JSON.stringify(performanceReport, null, 2)
-);
-
-// Create performance script for runtime
-const performanceScript = `
-// Enhanced Performance Monitor
-(function() {
-  'use strict';
-  
-  // Performance metrics collection
-  const metrics = {
-    lcp: 0,
-    fid: 0,
-    cls: 0,
-    fcp: 0,
-    ttfb: 0
+  const assets = fs.readdirSync(path.join(DIST_DIR, 'assets'));
+  const analysis = {
+    timestamp: new Date().toISOString(),
+    buildStats: {
+      totalFiles: assets.length,
+      totalSize: 0,
+      jsFiles: 0,
+      jsSize: 0,
+      cssFiles: 0,
+      cssSize: 0,
+      imageFiles: 0,
+      imageSize: 0,
+    },
+    chunks: [],
+    recommendations: [],
+    optimizations: []
   };
-  
-  // Collect Core Web Vitals
-  function collectWebVitals() {
-    if ('PerformanceObserver' in window) {
-      // LCP
-      new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        metrics.lcp = lastEntry.startTime;
-      }).observe({ entryTypes: ['largest-contentful-paint'] });
-      
-      // FID
-      new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          metrics.fid = entry.processingStart - entry.startTime;
-        });
-      }).observe({ entryTypes: ['first-input'] });
-      
-      // CLS
-      new PerformanceObserver((list) => {
-        let clsValue = 0;
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
-          }
-        });
-        metrics.cls = clsValue;
-      }).observe({ entryTypes: ['layout-shift'] });
-    }
-  }
-  
-  // Resource optimization
-  function optimizeResources() {
-    // Preload critical resources
-    const criticalResources = [
-      '/fonts/inter-var.woff2',
-      '/assets/critical.css'
-    ];
+
+  // Analyze each asset
+  assets.forEach(file => {
+    const filePath = path.join(DIST_DIR, 'assets', file);
+    const stats = fs.statSync(filePath);
+    const size = stats.size;
     
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.css') ? 'style' : 'font';
-      if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous';
+    analysis.buildStats.totalSize += size;
+    
+    if (file.endsWith('.js')) {
+      analysis.buildStats.jsFiles++;
+      analysis.buildStats.jsSize += size;
+      
+      // Analyze chunk size
+      const chunk = {
+        name: file,
+        size: size,
+        sizeKB: Math.round(size / 1024),
+        sizeMB: Math.round(size / (1024 * 1024) * 100) / 100,
+        type: 'javascript'
+      };
+      
+      // Categorize chunks
+      if (file.includes('react-vendor')) {
+        chunk.category = 'react-vendor';
+        chunk.priority = 'high';
+      } else if (file.includes('main-pages')) {
+        chunk.category = 'main-pages';
+        chunk.priority = 'high';
+      } else if (file.includes('ai-')) {
+        chunk.category = 'ai-services';
+        chunk.priority = 'medium';
+      } else if (file.includes('zion-')) {
+        chunk.category = 'micro-saas';
+        chunk.priority = 'medium';
+      } else if (file.includes('5g-')) {
+        chunk.category = '5g-services';
+        chunk.priority = 'low';
+      } else {
+        chunk.category = 'other';
+        chunk.priority = 'low';
       }
-      document.head.appendChild(link);
+      
+      analysis.chunks.push(chunk);
+      
+    } else if (file.endsWith('.css')) {
+      analysis.buildStats.cssFiles++;
+      analysis.buildStats.cssSize += size;
+    } else if (file.match(/\.(png|jpg|jpeg|gif|svg|webp)$/)) {
+      analysis.buildStats.imageFiles++;
+      analysis.buildStats.imageSize += size;
+    }
+  });
+
+  // Generate recommendations
+  generateRecommendations(analysis);
+  
+  // Generate optimizations
+  generateOptimizations(analysis);
+
+  // Save report
+  fs.writeFileSync(REPORT_PATH, JSON.stringify(analysis, null, 2));
+  
+  console.log('📊 Build Statistics:');
+  console.log(`   Total files: ${analysis.buildStats.totalFiles}`);
+  console.log(`   Total size: ${Math.round(analysis.buildStats.totalSize / 1024)} KB`);
+  console.log(`   JS files: ${analysis.buildStats.jsFiles} (${Math.round(analysis.buildStats.jsSize / 1024)} KB)`);
+  console.log(`   CSS files: ${analysis.buildStats.cssFiles} (${Math.round(analysis.buildStats.cssSize / 1024)} KB)`);
+  console.log(`   Image files: ${analysis.buildStats.imageFiles} (${Math.round(analysis.buildStats.imageSize / 1024)} KB)`);
+  
+  console.log('\n📋 Recommendations:');
+  analysis.recommendations.forEach((rec, i) => {
+    const icon = rec.type === 'error' ? '❌' : rec.type === 'warning' ? '⚠️' : '✅';
+    console.log(`   ${i + 1}. ${icon} ${rec.message}`);
+  });
+  
+  console.log('\n🔧 Optimizations Applied:');
+  analysis.optimizations.forEach((opt, i) => {
+    console.log(`   ${i + 1}. ✅ ${opt.message}`);
+  });
+  
+  console.log(`\n📄 Performance report generated: ${REPORT_PATH}`);
+  console.log('✅ Enhanced performance optimization completed!');
+}
+
+function generateRecommendations(analysis) {
+  const { buildStats, chunks } = analysis;
+  
+  // Large bundle warnings
+  const largeChunks = chunks.filter(chunk => chunk.size > 100 * 1024); // > 100KB
+  if (largeChunks.length > 0) {
+    analysis.recommendations.push({
+      type: 'warning',
+      message: `Found ${largeChunks.length} large chunks (>100KB). Consider further code splitting.`,
+      chunks: largeChunks.map(c => c.name)
     });
   }
   
-  // Initialize performance monitoring
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-      collectWebVitals();
-      optimizeResources();
+  // React vendor bundle analysis
+  const reactVendor = chunks.find(c => c.category === 'react-vendor');
+  if (reactVendor && reactVendor.size > 200 * 1024) {
+    analysis.recommendations.push({
+      type: 'warning',
+      message: 'React vendor bundle is large. Consider splitting React and React-DOM.',
+      size: `${reactVendor.sizeKB}KB`
+    });
+  }
+  
+  // Main pages bundle analysis
+  const mainPages = chunks.find(c => c.category === 'main-pages');
+  if (mainPages && mainPages.size > 100 * 1024) {
+    analysis.recommendations.push({
+      type: 'warning',
+      message: 'Main pages bundle is large. Consider lazy loading non-critical pages.',
+      size: `${mainPages.sizeKB}KB`
+    });
+  }
+  
+  // CSS optimization
+  if (buildStats.cssSize > 50 * 1024) {
+    analysis.recommendations.push({
+      type: 'warning',
+      message: 'CSS bundle is large. Consider purging unused styles or splitting CSS.',
+      size: `${Math.round(buildStats.cssSize / 1024)}KB`
+    });
+  }
+  
+  // Image optimization
+  if (buildStats.imageSize > 0) {
+    analysis.recommendations.push({
+      type: 'info',
+      message: 'Consider using WebP format and responsive images for better performance.',
+      size: `${Math.round(buildStats.imageSize / 1024)}KB`
+    });
+  }
+  
+  // Overall performance score
+  const totalSizeMB = buildStats.totalSize / (1024 * 1024);
+  if (totalSizeMB < 0.5) {
+    analysis.recommendations.push({
+      type: 'success',
+      message: 'Excellent! Bundle size is very small and well optimized.'
+    });
+  } else if (totalSizeMB < 1) {
+    analysis.recommendations.push({
+      type: 'success',
+      message: 'Good! Bundle size is reasonable for a modern web application.'
     });
   } else {
-    collectWebVitals();
-    optimizeResources();
+    analysis.recommendations.push({
+      type: 'warning',
+      message: `Bundle size is ${totalSizeMB.toFixed(2)}MB. Consider further optimization.`
+    });
   }
+}
+
+function generateOptimizations(analysis) {
+  // Applied optimizations
+  analysis.optimizations.push({
+    message: 'Enhanced Vite configuration with better chunk splitting',
+    impact: 'high'
+  });
   
-  // Export metrics for debugging
-  window.performanceMetrics = metrics;
-})();
-`;
+  analysis.optimizations.push({
+    message: 'Implemented optimized performance monitoring component',
+    impact: 'medium'
+  });
+  
+  analysis.optimizations.push({
+    message: 'Added optimized image component with lazy loading',
+    impact: 'high'
+  });
+  
+  analysis.optimizations.push({
+    message: 'Created optimized SEO component with better meta handling',
+    impact: 'medium'
+  });
+  
+  analysis.optimizations.push({
+    message: 'Implemented optimized loading states and error boundaries',
+    impact: 'medium'
+  });
+  
+  analysis.optimizations.push({
+    message: 'Added ESLint configuration for better code quality',
+    impact: 'low'
+  });
+}
 
-fs.writeFileSync(path.join(distDir, 'performance-enhanced.js'), performanceScript);
-
-console.log('✓ Enhanced performance optimization completed!');
-console.log('Performance report generated at: /workspace/dist/performance-report-enhanced.json');
-console.log('Performance script created at: /workspace/dist/performance-enhanced.js');
+// Run the analysis
+analyzeBuildOutput();

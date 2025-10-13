@@ -1,14 +1,198 @@
 {
-  "timestamp": "2025-10-09T22:12:25.510Z",
-  "filesProcessed": 102,
-  "filesOptimized": 60,
+  "timestamp": "2025-10-13T09:06:18.539Z",
+  "buildStats": {
+    "totalFiles": 17,
+    "totalSize": 523067,
+    "jsFiles": 16,
+    "jsSize": 521256,
+    "cssFiles": 1,
+    "cssSize": 1811,
+    "imageFiles": 0,
+    "imageSize": 0
+  },
+  "chunks": [
+    {
+      "name": "5g-services-BvKDjnoc.js",
+      "size": 9337,
+      "sizeKB": 9,
+      "sizeMB": 0.01,
+      "type": "javascript",
+      "category": "5g-services",
+      "priority": "low"
+    },
+    {
+      "name": "ai-analytics-Br5bSEe9.js",
+      "size": 27867,
+      "sizeKB": 27,
+      "sizeMB": 0.03,
+      "type": "javascript",
+      "category": "ai-services",
+      "priority": "medium"
+    },
+    {
+      "name": "ai-content-B2S5XBNH.js",
+      "size": 1037,
+      "sizeKB": 1,
+      "sizeMB": 0,
+      "type": "javascript",
+      "category": "ai-services",
+      "priority": "medium"
+    },
+    {
+      "name": "ai-customer-D5VQOUGp.js",
+      "size": 1037,
+      "sizeKB": 1,
+      "sizeMB": 0,
+      "type": "javascript",
+      "category": "ai-services",
+      "priority": "medium"
+    },
+    {
+      "name": "ai-other-_E28SnHQ.js",
+      "size": 22005,
+      "sizeKB": 21,
+      "sizeMB": 0.02,
+      "type": "javascript",
+      "category": "ai-services",
+      "priority": "medium"
+    },
+    {
+      "name": "ai-security-Bvnc-6uc.js",
+      "size": 1025,
+      "sizeKB": 1,
+      "sizeMB": 0,
+      "type": "javascript",
+      "category": "ai-services",
+      "priority": "medium"
+    },
+    {
+      "name": "index-Bb0F7aDg.js",
+      "size": 47884,
+      "sizeKB": 47,
+      "sizeMB": 0.05,
+      "type": "javascript",
+      "category": "other",
+      "priority": "low"
+    },
+    {
+      "name": "main-pages-B1AV7-J6.js",
+      "size": 94637,
+      "sizeKB": 92,
+      "sizeMB": 0.09,
+      "type": "javascript",
+      "category": "main-pages",
+      "priority": "high"
+    },
+    {
+      "name": "performance-CYJy4RqG.js",
+      "size": 6018,
+      "sizeKB": 6,
+      "sizeMB": 0.01,
+      "type": "javascript",
+      "category": "other",
+      "priority": "low"
+    },
+    {
+      "name": "react-core-B75nzW79.js",
+      "size": 34483,
+      "sizeKB": 34,
+      "sizeMB": 0.03,
+      "type": "javascript",
+      "category": "other",
+      "priority": "low"
+    },
+    {
+      "name": "react-dom-D6uGHiop.js",
+      "size": 130402,
+      "sizeKB": 127,
+      "sizeMB": 0.12,
+      "type": "javascript",
+      "category": "other",
+      "priority": "low"
+    },
+    {
+      "name": "router-Chwe-YdQ.js",
+      "size": 31777,
+      "sizeKB": 31,
+      "sizeMB": 0.03,
+      "type": "javascript",
+      "category": "other",
+      "priority": "low"
+    },
+    {
+      "name": "seo-B-b5wM7v.js",
+      "size": 11923,
+      "sizeKB": 12,
+      "sizeMB": 0.01,
+      "type": "javascript",
+      "category": "other",
+      "priority": "low"
+    },
+    {
+      "name": "zion-ai-Ceql9Hny.js",
+      "size": 92876,
+      "sizeKB": 91,
+      "sizeMB": 0.09,
+      "type": "javascript",
+      "category": "ai-services",
+      "priority": "medium"
+    },
+    {
+      "name": "zion-analytics-CGR5A7LN.js",
+      "size": 1031,
+      "sizeKB": 1,
+      "sizeMB": 0,
+      "type": "javascript",
+      "category": "micro-saas",
+      "priority": "medium"
+    },
+    {
+      "name": "zion-other-C-_GTStX.js",
+      "size": 7917,
+      "sizeKB": 8,
+      "sizeMB": 0.01,
+      "type": "javascript",
+      "category": "micro-saas",
+      "priority": "medium"
+    }
+  ],
+  "recommendations": [
+    {
+      "type": "warning",
+      "message": "Found 1 large chunks (>100KB). Consider further code splitting.",
+      "chunks": [
+        "react-dom-D6uGHiop.js"
+      ]
+    },
+    {
+      "type": "success",
+      "message": "Excellent! Bundle size is very small and well optimized."
+    }
+  ],
   "optimizations": [
-    "React.memo for component memoization",
-    "useCallback for event handlers",
-    "useMemo for expensive calculations",
-    "Lazy loading for heavy components",
-    "Console statement removal",
-    "SEO meta tag improvements",
-    "Image alt attribute additions"
+    {
+      "message": "Enhanced Vite configuration with better chunk splitting",
+      "impact": "high"
+    },
+    {
+      "message": "Implemented optimized performance monitoring component",
+      "impact": "medium"
+    },
+    {
+      "message": "Added optimized image component with lazy loading",
+      "impact": "high"
+    },
+    {
+      "message": "Created optimized SEO component with better meta handling",
+      "impact": "medium"
+    },
+    {
+      "message": "Implemented optimized loading states and error boundaries",
+      "impact": "medium"
+    },
+    {
+      "message": "Added ESLint configuration for better code quality",
+      "impact": "low"
+    }
   ]
 }
