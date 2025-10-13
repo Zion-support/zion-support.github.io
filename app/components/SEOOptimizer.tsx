@@ -1,8 +1,9 @@
-'use client'
-import { useEffect } from 'react'
-import { Helmet } from 'react-helmet-async'
+import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 
 interface SEOOptimizerProps {
+<<<<<<< HEAD
   title?: string
   description?: string
   keywords?: string
@@ -10,17 +11,72 @@ interface SEOOptimizerProps {
   ogImage?: string
   structuredData?: any
   noIndex?: boolean
+=======
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  noIndex?: boolean;
+  structuredData?: any;
+>>>>>>> 21551cb181cdeee46dca6404d5278e39d7edab72
 }
 
-const SEOOptimizer = ({ 
-  title = "Zion Tech Group - AI & IT Solutions",
-  description = "Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology.",
-  keywords = "AI solutions, IT services, cybersecurity, cloud computing, digital transformation, technology services, Zion Tech Group",
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  title = "Zion Tech Group - Advanced AI and IT Solutions",
+  description = "Leading provider of AI-powered solutions, cybersecurity, cloud computing, and digital transformation services. Transform your business with cutting-edge technology.",
+  keywords = "AI solutions, IT services, cybersecurity, cloud computing, digital transformation, technology services, Zion Tech Group, machine learning, 5G solutions, micro SaaS",
   canonical,
   ogImage = "https://ziontechgroup.com/og-image.jpg",
+<<<<<<< HEAD
   structuredData,
   noIndex = false
 }: SEOOptimizerProps) => {
+=======
+  noIndex = false,
+  structuredData
+}) => {
+  const location = useLocation();
+  const currentUrl = `https://ziontechgroup.com${location.pathname}`;
+  const finalCanonical = canonical || currentUrl;
+
+  // Generate breadcrumb structured data
+  const generateBreadcrumbData = () => {
+    const pathSegments = location.pathname.split('/').filter(Boolean);
+    const breadcrumbs = [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ziontechgroup.com"
+      }
+    ];
+
+    let currentPath = '';
+    pathSegments.forEach((segment, index) => {
+      currentPath += `/${segment}`;
+      const name = segment
+        .split('-')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+      
+      breadcrumbs.push({
+        "@type": "ListItem",
+        "position": index + 2,
+        "name": name,
+        "item": `https://ziontechgroup.com${currentPath}`
+      });
+    });
+
+    return {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": breadcrumbs
+    };
+  };
+
+  // Default structured data
+>>>>>>> 21551cb181cdeee46dca6404d5278e39d7edab72
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -49,6 +105,7 @@ const SEOOptimizer = ({
       "https://linkedin.com/company/ziontechgroup",
       "https://twitter.com/ziontechgroup",
       "https://github.com/ziontechgroup"
+<<<<<<< HEAD
     ],
     "service": [
       {
@@ -92,6 +149,70 @@ const SEOOptimizer = ({
       }
     }
   }, [finalStructuredData])
+=======
+    ]
+  };
+
+  // Page-specific structured data
+  const getPageStructuredData = () => {
+    const path = location.pathname;
+    
+    if (path === '/') {
+      return {
+        ...defaultStructuredData,
+        "@type": "WebSite",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://ziontechgroup.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      };
+    }
+    
+    if (path === '/about') {
+      return {
+        ...defaultStructuredData,
+        "@type": "AboutPage"
+      };
+    }
+    
+    if (path === '/contact') {
+      return {
+        ...defaultStructuredData,
+        "@type": "ContactPage"
+      };
+    }
+    
+    if (path.startsWith('/services') || path.startsWith('/ai-') || path.startsWith('/zion-')) {
+      return {
+        ...defaultStructuredData,
+        "@type": "Service",
+        "name": title,
+        "description": description,
+        "provider": {
+          "@type": "Organization",
+          "name": "Zion Tech Group"
+        }
+      };
+    }
+    
+    return defaultStructuredData;
+  };
+
+  const finalStructuredData = structuredData || getPageStructuredData();
+  const breadcrumbData = generateBreadcrumbData();
+
+  // Track page views
+  useEffect(() => {
+    // Track page view in analytics
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: title,
+        page_location: currentUrl,
+      });
+    }
+  }, [title, currentUrl]);
+>>>>>>> 21551cb181cdeee46dca6404d5278e39d7edab72
 
   return (
     <Helmet>
@@ -102,6 +223,7 @@ const SEOOptimizer = ({
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />
       <meta name="googlebot" content={noIndex ? "noindex, nofollow" : "index, follow"} />
+<<<<<<< HEAD
       
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical} />}
@@ -109,6 +231,15 @@ const SEOOptimizer = ({
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={canonical || "https://ziontechgroup.com"} />
+=======
+      
+      {/* Canonical URL */}
+      <link rel="canonical" href={finalCanonical} />
+      
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={finalCanonical} />
+>>>>>>> 21551cb181cdeee46dca6404d5278e39d7edab72
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
@@ -120,7 +251,11 @@ const SEOOptimizer = ({
       
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
+<<<<<<< HEAD
       <meta name="twitter:url" content={canonical || "https://ziontechgroup.com"} />
+=======
+      <meta name="twitter:url" content={finalCanonical} />
+>>>>>>> 21551cb181cdeee46dca6404d5278e39d7edab72
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
@@ -134,8 +269,41 @@ const SEOOptimizer = ({
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+<<<<<<< HEAD
+=======
+      
+      {/* Language and Geo Tags */}
+      <meta name="language" content="en-US" />
+      <meta name="geo.region" content="US-DE" />
+      <meta name="geo.placename" content="Middletown" />
+      <meta name="geo.position" content="39.4496;-75.7163" />
+      <meta name="ICBM" content="39.4496, -75.7163" />
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(finalStructuredData)}
+      </script>
+      
+      {/* Breadcrumb Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(breadcrumbData)}
+      </script>
+      
+      {/* Additional Page-specific Meta Tags */}
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="application-name" content="Zion Tech Group" />
+      
+      {/* Preload critical resources */}
+      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      
+      {/* DNS prefetch for performance */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+>>>>>>> 21551cb181cdeee46dca6404d5278e39d7edab72
     </Helmet>
-  )
-}
+  );
+};
 
-export default SEOOptimizer
+export default SEOOptimizer;

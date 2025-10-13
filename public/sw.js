@@ -1,56 +1,62 @@
 const CACHE_NAME = 'zion-tech-group-v1';
-const STATIC_CACHE = 'static-v1';
-const DYNAMIC_CACHE = 'dynamic-v1';
+const STATIC_CACHE = 'zion-static-v1';
+const DYNAMIC_CACHE = 'zion-dynamic-v1';
 
-// Static assets to cache
-const STATIC_ASSETS = [
+// Files to cache for offline functionality
+const STATIC_FILES = [
   '/',
-  '/index.html',
+  '/about',
+  '/contact',
+  '/services',
+  '/ai-services',
   '/manifest.json',
-  '/offline.html',
-  '/images/logo.webp',
-  '/images/hero-bg.webp',
+  '/offline.html'
 ];
 
-// Install event - cache static assets
+// Install event - cache static files
 self.addEventListener('install', (event) => {
+  console.log('Service Worker installing...');
+  
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
-        console.log('Caching static assets');
-        return cache.addAll(STATIC_ASSETS);
+        console.log('Caching static files');
+        return cache.addAll(STATIC_FILES);
       })
       .then(() => {
-        console.log('Static assets cached');
+        console.log('Static files cached successfully');
         return self.skipWaiting();
+      })
+      .catch((error) => {
+        console.error('Error caching static files:', error);
       })
   );
 });
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
+  console.log('Service Worker activating...');
+  
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
-          cacheNames
-            .filter((cacheName) => {
-              return cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE;
-            })
-            .map((cacheName) => {
+          cacheNames.map((cacheName) => {
+            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
               console.log('Deleting old cache:', cacheName);
               return caches.delete(cacheName);
-            })
+            }
+          })
         );
       })
       .then(() => {
-        console.log('Service worker activated');
+        console.log('Service Worker activated');
         return self.clients.claim();
       })
   );
 });
 
-// Fetch event - serve from cache, fallback to network
+// Fetch event - serve from cache or network
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
@@ -70,13 +76,14 @@ self.addEventListener('fetch', (event) => {
       .then((cachedResponse) => {
         // Return cached version if available
         if (cachedResponse) {
+          console.log('Serving from cache:', request.url);
           return cachedResponse;
         }
 
-        // Otherwise, fetch from network
+        // Otherwise fetch from network
         return fetch(request)
           .then((response) => {
-            // Don't cache non-successful responses
+            // Don't cache if not a valid response
             if (!response || response.status !== 200 || response.type !== 'basic') {
               return response;
             }
@@ -92,11 +99,22 @@ self.addEventListener('fetch', (event) => {
 
             return response;
           })
-          .catch(() => {
+          .catch((error) => {
+            console.log('Network request failed:', error);
+            
             // Return offline page for navigation requests
-            if (request.mode === 'navigate') {
+            if (request.destination === 'document') {
               return caches.match('/offline.html');
             }
+            
+            // Return a fallback response for other requests
+            return new Response('Offline content not available', {
+              status: 503,
+              statusText: 'Service Unavailable',
+              headers: new Headers({
+                'Content-Type': 'text/plain'
+              })
+            });
           });
       })
   );
@@ -105,15 +123,15 @@ self.addEventListener('fetch', (event) => {
 // Background sync for offline form submissions
 self.addEventListener('sync', (event) => {
   if (event.tag === 'background-sync') {
-    event.waitUntil(
-      // Handle offline form submissions
-      handleOfflineSubmissions()
-    );
+    console.log('Background sync triggered');
+    event.waitUntil(doBackgroundSync());
   }
 });
 
-// Push notifications
+// Push notification handling
 self.addEventListener('push', (event) => {
+  console.log('Push notification received');
+  
   const options = {
     body: event.data ? event.data.text() : 'New update available',
     icon: '/images/icon-192x192.png',
@@ -126,7 +144,7 @@ self.addEventListener('push', (event) => {
     actions: [
       {
         action: 'explore',
-        title: 'View Details',
+        title: 'Explore',
         icon: '/images/checkmark.png'
       },
       {
@@ -142,8 +160,10 @@ self.addEventListener('push', (event) => {
   );
 });
 
-// Notification click handler
+// Notification click handling
 self.addEventListener('notificationclick', (event) => {
+  console.log('Notification clicked');
+  
   event.notification.close();
 
   if (event.action === 'explore') {
@@ -153,42 +173,23 @@ self.addEventListener('notificationclick', (event) => {
   }
 });
 
-// Helper function for offline form submissions
-async function handleOfflineSubmissions() {
+// Helper function for background sync
+async function doBackgroundSync() {
   try {
-    // Get stored form data from IndexedDB
-    const submissions = await getStoredSubmissions();
-    
-    for (const submission of submissions) {
-      try {
-        // Attempt to submit the form
-        const response = await fetch('/api/contact', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(submission.data)
-        });
-
-        if (response.ok) {
-          // Remove from storage if successful
-          await removeStoredSubmission(submission.id);
-        }
-      } catch (error) {
-        console.log('Failed to submit offline form:', error);
-      }
-    }
+    // Implement background sync logic here
+    console.log('Performing background sync...');
   } catch (error) {
-    console.log('Error handling offline submissions:', error);
+    console.error('Background sync failed:', error);
   }
 }
 
-// IndexedDB helpers (simplified)
-async function getStoredSubmissions() {
-  // Implementation would depend on your IndexedDB setup
-  return [];
-}
-
-async function removeStoredSubmission(id) {
-  // Implementation would depend on your IndexedDB setup
-}
+// Message handling for communication with main thread
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+  
+  if (event.data && event.data.type === 'GET_VERSION') {
+    event.ports[0].postMessage({ version: CACHE_NAME });
+  }
+});
