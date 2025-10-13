@@ -4,28 +4,60 @@ import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Find all TypeScript and JavaScript files
-const files = await glob('app/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
-
-let totalRemoved = 0;
-
-for (const file of files) {
-  const filePath = path.join(process.cwd(), file);
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Remove console.log, console.warn, console.error statements
-  const originalContent = content;
-  content = content.replace(/console\.(log|warn|error|info|debug)\([^)]*\);?\s*/g, '');
-  
-  // Remove empty lines that might be left behind
-  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-  
-  if (content !== originalContent) {
-    fs.writeFileSync(filePath, content);
-    const removed = (originalContent.match(/console\.(log|warn|error|info|debug)/g) || []).length;
-    totalRemoved += removed;
-    console.log(`Removed ${removed} console statements from ${file}`);
+// Function to remove console.log statements from a file
+function removeConsoleLogs(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Remove console.log, console.warn, console.error, console.info, console.debug
+    const consoleRegex = /console\.(log|warn|error|info|debug)\s*\([^)]*\)\s*;?\s*/g;
+    const originalContent = content;
+    content = content.replace(consoleRegex, '');
+    
+    // Remove empty lines that might be left behind
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      modified = true;
+      console.log(`Cleaned console statements from: ${filePath}`);
+    }
+    
+    return modified;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-console.log(`\nTotal console statements removed: ${totalRemoved}`);
+// Find all TypeScript and JavaScript files
+const patterns = [
+  'app/**/*.{ts,tsx,js,jsx}',
+  'components/**/*.{ts,tsx,js,jsx}',
+  'utils/**/*.{ts,tsx,js,jsx}',
+  'hooks/**/*.{ts,tsx,js,jsx}',
+  '*.{ts,tsx,js,jsx}'
+];
+
+async function main() {
+  let totalFiles = 0;
+  let modifiedFiles = 0;
+
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { ignore: ['node_modules/**', 'dist/**', '.next/**'] });
+    
+    for (const file of files) {
+      totalFiles++;
+      if (removeConsoleLogs(file)) {
+        modifiedFiles++;
+      }
+    }
+  }
+
+  console.log(`\nConsole log removal complete!`);
+  console.log(`Total files processed: ${totalFiles}`);
+  console.log(`Files modified: ${modifiedFiles}`);
+}
+
+main().catch(console.error);

@@ -28,13 +28,14 @@ export default defineConfig({
   build: {
     outDir: "dist",
     sourcemap: false,
-    minify: "terser",
+    minify: "esbuild",
     target: "es2020",
     cssCodeSplit: true,
     modulePreload: {
       polyfill: false,
     },
     // Performance optimizations
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -52,21 +53,25 @@ export default defineConfig({
     chunkSizeWarningLimit: 150, // Reduced warning threshold for better performance
     assetsInlineLimit: 1024, // Reduced for better caching and faster initial load
 >>>>>>> cursor/website-audit-and-update-with-deployment-4146
+=======
+    chunkSizeWarningLimit: 100, // Reduced warning threshold for better performance
+    assetsInlineLimit: 2048, // Increased for better caching of small assets
+>>>>>>> cursor/analyze-improve-and-deploy-application-9867
     // Enable compression
     reportCompressedSize: true,
-    // Better compression settings
+    // Optimize for production
     terserOptions: {
       compress: {
-        drop_console: true, // Remove console.log in production
+        drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
-        passes: 2,
-        unsafe: false,
-        unsafe_comps: false,
-        unsafe_math: false,
-        unsafe_proto: false,
-        unsafe_regexp: false,
-        unsafe_undefined: false,
+        passes: 3, // More passes for better optimization
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        unsafe_regexp: true,
+        unsafe_undefined: true,
         conditionals: true,
         dead_code: true,
         evaluate: true,
@@ -78,8 +83,8 @@ export default defineConfig({
         unused: true,
       },
       mangle: {
-        safari10: true,
-        toplevel: false,
+        safari10: true, // Better Safari compatibility
+        toplevel: true,
         properties: {
           regex: /^_/
         }
@@ -98,22 +103,22 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
-          // Core React libraries - keep together for better caching
+          // Core React libraries
           if (id.includes('react') || id.includes('react-dom')) {
             return 'react-vendor'
           }
-          // Router - separate chunk
+          // Router
           if (id.includes('react-router')) {
             return 'router'
           }
-          // UI libraries - group by functionality
+          // UI libraries
           if (id.includes('framer-motion')) {
             return 'animations'
           }
           if (id.includes('lucide-react')) {
             return 'icons'
           }
-          // SEO and meta - lightweight
+          // SEO and meta
           if (id.includes('react-helmet')) {
             return 'seo'
           }
@@ -125,7 +130,7 @@ export default defineConfig({
           if (id.includes('clsx') || id.includes('tailwind-merge')) {
             return 'utils'
           }
-          // Performance monitoring - separate for lazy loading
+          // Performance monitoring
           if (id.includes('web-vitals')) {
             return 'performance'
           }
@@ -133,9 +138,10 @@ export default defineConfig({
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
-          // AI service pages - more granular splitting
+          // AI service pages - split into smaller chunks
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/ai-')[1]?.split('/')[0];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -153,10 +159,14 @@ export default defineConfig({
               return 'ai-customer'
             }
             return 'ai-other'
+=======
+            return `ai-${serviceName || 'services'}`
+>>>>>>> cursor/analyze-improve-and-deploy-application-9867
           }
-          // Zion service pages - group by category
+          // Zion service pages
           if (id.includes('/zion-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/zion-')[1]?.split('/')[0];
+<<<<<<< HEAD
             if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
               return 'zion-analytics'
             }
@@ -192,9 +202,16 @@ export default defineConfig({
           }
 >>>>>>> cursor/website-audit-and-update-with-deployment-4146
           // 5G service pages - group together
-          if (id.includes('/5g-') && id.includes('/page.tsx')) {
-            return '5g-services'
+=======
+            return `zion-${serviceName || 'services'}`
           }
+          // 5G service pages
+>>>>>>> cursor/analyze-improve-and-deploy-application-9867
+          if (id.includes('/5g-') && id.includes('/page.tsx')) {
+            const serviceName = id.split('/5g-')[1]?.split('/')[0];
+            return `5g-${serviceName || 'services'}`
+          }
+<<<<<<< HEAD
 <<<<<<< HEAD
           // Micro SAAS pages
           if (id.includes('/micro-') && id.includes('/page.tsx')) {
@@ -236,6 +253,12 @@ export default defineConfig({
               return 'date-utils'
             }
             return 'vendor'
+=======
+          // Other service pages
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
+            return 'pages'
+>>>>>>> cursor/analyze-improve-and-deploy-application-9867
           }
           // Default chunk for other modules
           return 'vendor'

@@ -200,26 +200,19 @@ class WebsiteAuditor {
 
   // Generate comprehensive audit report
   generateAuditReport() {
-    console.log('🔍 Starting comprehensive website audit...\n');
-    
     // Check navigation consistency
-    console.log('📋 Checking navigation consistency...');
     this.checkNavigationConsistency();
     
     // Check missing pages
-    console.log('📄 Checking for missing pages...');
     this.checkMissingPages();
     
     // Check orphaned pages
-    console.log('🔗 Checking for orphaned pages...');
     this.checkOrphanedPages();
     
     // Check footer links
-    console.log('🦶 Checking footer links...');
     this.checkFooterLinks();
     
     // Check SEO issues
-    console.log('🔍 Checking SEO issues...');
     this.checkSEOIssues();
     
     // Generate report
@@ -243,36 +236,20 @@ class WebsiteAuditor {
     );
     
     // Print summary
-    console.log('\n📊 AUDIT SUMMARY:');
-    console.log('==');
-    console.log(`Total Routes: ${report.summary.totalRoutes}`);
-    console.log(`Total Pages: ${report.summary.totalPages}`);
-    console.log(`Missing Pages: ${report.summary.missingPages}`);
-    console.log(`Navigation Issues: ${report.summary.navigationIssues}`);
-    console.log(`SEO Issues: ${report.summary.seoIssues}`);
-    
     if (report.summary.missingPages > 0) {
-      console.log('\n❌ MISSING PAGES:');
       report.details.missingPages.forEach(page => {
-        console.log(`  - ${page.link || page.route}: ${page.description || 'Missing page'}`);
-      });
+        });
     }
     
     if (report.summary.navigationIssues > 0) {
-      console.log('\n⚠️  NAVIGATION ISSUES:');
       report.details.navigationIssues.forEach(issue => {
-        console.log(`  - ${issue.page}: ${issue.description}`);
-      });
+        });
     }
     
     if (report.summary.seoIssues > 0) {
-      console.log('\n🔍 SEO ISSUES:');
       report.details.seoIssues.forEach(issue => {
-        console.log(`  - ${issue.type}: ${issue.description}`);
-      });
+        });
     }
-    
-    console.log('\n✅ Audit completed! Report saved to website-audit-report.json');
     
     return report;
   }

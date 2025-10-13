@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Brain, Code, Database, Mail, Users, Clock, DollarSign, Globe, Smartphone, Lock, TrendingUp, Target, Settings, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Cpu, Wifi, Battery, Camera, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Receipt, ClipboardList, Workflow } from "lucide-react";
 import { Helmet } from "react-helmet-async";
@@ -394,54 +395,62 @@ const MicroSaasPage: React.FC = () => {
           </div>
         </div>
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-9867
 import React from 'react';
-import { ArrowRight, CheckCircle, Star, Package, Shield, BarChart3, Cloud, Users, Zap, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Zap, ArrowRight, CheckCircle, Star, Cloud, BarChart3, Users, Clock, DollarSign, Shield, Code, Database, Mail, Settings } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
-import FuturisticBackground from '../components/FuturisticBackground';
 
-const MicroSaasPage: React.FC = () => {
-  const microSaasProducts = [
+const MicroSaasPage = () => {
+  const services = [
     {
-      title: 'Zion Analytics Pro',
-      description: 'Advanced analytics platform for data-driven decision making.',
-      features: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'API integration'],
-      price: '$299/month',
-      icon: <BarChart3 className="w-8 h-8" />
+      id: 'project-management-tool',
+      title: 'Project Management Tool',
+      description: 'Streamline your project workflows with our intelligent project management solution.',
+      icon: Settings,
+      features: ['Task Tracking', 'Team Collaboration', 'Progress Analytics'],
+      price: '$29/month'
     },
     {
-      title: 'Zion Security Shield',
-      description: 'Comprehensive cybersecurity solution for small to medium businesses.',
-      features: ['Threat detection', 'Vulnerability scanning', 'Security monitoring', 'Incident response'],
-      price: '$199/month',
-      icon: <Shield className="w-8 h-8" />
+      id: 'customer-relationship-manager',
+      title: 'Customer Relationship Manager',
+      description: 'Manage your customer relationships with our AI-powered CRM system.',
+      icon: Users,
+      features: ['Contact Management', 'Sales Pipeline', 'Customer Analytics'],
+      price: '$39/month'
     },
     {
-      title: 'Zion Cloud Vault',
-      description: 'Secure cloud storage and file management solution.',
-      features: ['Encrypted storage', 'File sharing', 'Version control', 'Collaboration tools'],
-      price: '$99/month',
-      icon: <Cloud className="w-8 h-8" />
+      id: 'inventory-management-system',
+      title: 'Inventory Management System',
+      description: 'Optimize your inventory with smart tracking and automated reordering.',
+      icon: Database,
+      features: ['Stock Tracking', 'Automated Reordering', 'Analytics Dashboard'],
+      price: '$49/month'
     },
     {
-      title: 'Zion AI CRM Pro',
-      description: 'AI-powered customer relationship management system.',
-      features: ['Lead management', 'Sales automation', 'Customer insights', 'AI recommendations'],
-      price: '$399/month',
-      icon: <Users className="w-8 h-8" />
+      id: 'financial-reporting-tool',
+      title: 'Financial Reporting Tool',
+      description: 'Generate comprehensive financial reports and insights automatically.',
+      icon: BarChart3,
+      features: ['Automated Reports', 'Financial Analytics', 'Budget Tracking'],
+      price: '$59/month'
     },
     {
-      title: 'Zion AI Marketing Automation Pro',
-      description: 'Intelligent marketing automation platform.',
-      features: ['Email campaigns', 'Social media management', 'Lead nurturing', 'Performance tracking'],
-      price: '$249/month',
-      icon: <Zap className="w-8 h-8" />
+      id: 'employee-time-tracker',
+      title: 'Employee Time Tracker',
+      description: 'Track employee time and productivity with our advanced time management system.',
+      icon: Clock,
+      features: ['Time Tracking', 'Productivity Analytics', 'Payroll Integration'],
+      price: '$19/month'
     },
     {
-      title: 'Zion AI Project Manager Pro',
-      description: 'AI-enhanced project management and team collaboration.',
-      features: ['Task automation', 'Resource planning', 'Progress tracking', 'Team collaboration'],
-      price: '$179/month',
-      icon: <Package className="w-8 h-8" />
+      id: 'social-media-scheduler',
+      title: 'Social Media Scheduler',
+      description: 'Schedule and manage your social media content across all platforms.',
+      icon: Mail,
+      features: ['Multi-Platform', 'Content Calendar', 'Analytics'],
+      price: '$25/month'
     }
   ];
 
@@ -449,6 +458,7 @@ const MicroSaasPage: React.FC = () => {
 
 >>>>>>> cursor/website-audit-and-update-with-deployment-4146
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <FuturisticBackground />
       <EnhancedSEO
@@ -457,83 +467,88 @@ const MicroSaasPage: React.FC = () => {
         description="Discover our comprehensive suite of micro SAAS solutions designed to streamline business operations and drive growth."
         keywords="micro SAAS, software as a service, business solutions, productivity tools, cloud software"
         canonical="https://ziontechgroup.com/micro-saas"
+=======
+    <div className="min-h-screen">
+      <EnhancedSEO 
+        title="Micro SAAS Solutions - Zion Tech Group"
+        description="Custom micro software-as-a-service solutions designed to streamline your business operations and boost productivity."
+        keywords="micro SAAS, software as a service, business tools, productivity, automation, project management, CRM"
+>>>>>>> cursor/analyze-improve-and-deploy-application-9867
       />
-
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative">
-        <div className="max-w-7xl mx-auto text-center">
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Header */}
+        <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Micro SAAS Solutions
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Powerful, focused software solutions designed to solve specific business challenges and drive operational efficiency.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Custom micro software-as-a-service solutions designed to streamline your business operations and boost productivity.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-              Explore Solutions
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
-            <button className="px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300">
-              Free Trial
-            </button>
+            <Link 
+              to="/contact" 
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors flex items-center justify-center gap-2"
+            >
+              Get Started <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link 
+              to="/demo" 
+              className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-3 px-8 rounded-lg transition-colors"
+            >
+              View Demo
+            </Link>
           </div>
         </div>
-      </section>
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
-      {/* Products Grid */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 relative">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Micro SAAS Products
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Specialized tools designed to enhance your business operations
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microSaasProducts.map((product, index) => (
-              <div
-                key={index}
-                className="bg-slate-800/50 backdrop-blur-md border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-300 group"
-              >
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
-                    {product.icon}
+        {/* Services Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {services.map((service) => {
+            const IconComponent = service.icon;
+            return (
+              <div key={service.id} className="bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700 hover:border-blue-500 transition-colors p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <IconComponent className="w-12 h-12 text-blue-400" />
+                  <div className="flex items-center space-x-1">
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
                   </div>
                 </div>
                 
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  {product.title}
-                </h3>
-                
-                <p className="text-gray-300 mb-6">
-                  {product.description}
-                </p>
+                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
                 
                 <ul className="space-y-2 mb-6">
-                  {product.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                  {service.features.map((feature, index) => (
+                    <li key={index} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {feature}
                     </li>
                   ))}
                 </ul>
                 
-                <div className="flex items-center justify-between">
-                  <span className="text-cyan-400 font-semibold text-xl">
-                    {product.price}
-                  </span>
-                  <button className="px-4 py-2 bg-cyan-500/20 text-cyan-400 rounded-lg hover:bg-cyan-500/30 transition-colors duration-300">
-                    Start Free Trial
-                  </button>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-lg font-bold text-blue-400">{service.price}</span>
+                  <div className="flex items-center text-sm text-gray-400">
+                    <Cloud className="w-4 h-4 mr-1" />
+                    <span>Cloud Hosted</span>
+                  </div>
                 </div>
+                
+                <Link 
+                  to={`/${service.id}`}
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
+                >
+                  Learn More <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* CTA Section */}
@@ -753,9 +768,33 @@ const MicroSaasPage: React.FC = () => {
               </FuturisticButton>
             </div>
 <<<<<<< HEAD
+=======
+
+        {/* CTA Section */}
+        <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 rounded-lg p-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Streamline Your Business?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Let's discuss how our micro SAAS solutions can help you automate processes and increase efficiency.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact" 
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
+            >
+              <Zap className="w-5 h-5" />
+              Start Your SAAS Journey
+            </Link>
+            <Link 
+              to="/pricing" 
+              className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-colors"
+            >
+              View Pricing
+            </Link>
+>>>>>>> cursor/analyze-improve-and-deploy-application-9867
           </div>
-        </section>
+        </div>
       </div>
+<<<<<<< HEAD
     </>
 =======
 =======
@@ -763,7 +802,10 @@ const MicroSaasPage: React.FC = () => {
         </ResponsiveContainer>
 >>>>>>> cursor/website-audit-and-update-with-deployment-4146
       </section>
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-9867
     </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
   );
-}
+};
+
+export default MicroSaasPage;

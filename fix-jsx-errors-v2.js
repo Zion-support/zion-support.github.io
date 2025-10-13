@@ -114,18 +114,15 @@ function processFile(filePath) {
           content.includes("has no corresponding closing tag")));
 
     if (hasParsingErrors) {
-      console.log(`Fixing corrupted file: ${filePath}`);
       const newContent = createProperPageStructure(
         pageName,
         title,
         description,
       );
       fs.writeFileSync(filePath, newContent);
-      console.log(`Fixed: ${filePath}`);
-    }
+      }
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-  }
+    }
 }
 
 // Function to recursively find all .tsx files
@@ -159,12 +156,9 @@ function findTsxFiles(dir) {
 const appDir = path.join(__dirname, "app");
 const tsxFiles = findTsxFiles(appDir);
 
-console.log(`Found ${tsxFiles.length} .tsx files to process`);
-
 let fixedCount = 0;
 for (const file of tsxFiles) {
   processFile(file);
   fixedCount++;
 }
 
-console.log(`Processed ${fixedCount} files`);

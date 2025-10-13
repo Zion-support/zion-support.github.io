@@ -11,7 +11,6 @@ interface WebVitalsData {
 
 const WebVitalsTracker: React.FC = () => {
   useEffect(() => {
-<<<<<<< HEAD
     const sendToAnalytics = (metric: WebVitalsData) => {
       // Send to Google Analytics or other analytics service
       if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -36,8 +35,7 @@ const WebVitalsTracker: React.FC = () => {
 
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
-        console.log('Web Vital:', metric);
-      }
+        }
     };
 
     // Track Core Web Vitals
@@ -77,16 +75,6 @@ const WebVitalsTracker: React.FC = () => {
         });
       }
     }
-=======
-    // Track Core Web Vitals
-    const trackWebVitals = () => {
-      // This is a placeholder for web vitals tracking
-      // In a real implementation, you would use libraries like web-vitals
-      console.log('Web Vitals tracking initialized');
-    };
-
-    trackWebVitals();
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
   }, []);
 
   return null;

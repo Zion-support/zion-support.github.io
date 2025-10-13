@@ -162,12 +162,8 @@ class SimpleWebsiteAnalyzer {
 
   async analyzeRoutes() {
     const routes = this.getCommonRoutes();
-    console.log(`Analyzing ${routes.length} routes...`);
-
     for (const route of routes) {
       const fullUrl = `${this.baseUrl}${route}`;
-      console.log(`Checking: ${fullUrl}`);
-      
       const result = await this.checkUrl(fullUrl);
       
       if (result.success) {
@@ -176,7 +172,7 @@ class SimpleWebsiteAnalyzer {
           route: route,
           status: result.status
         });
-        console.log(`✓ ${route} (${result.status})`);
+        `);
       } else {
         this.brokenLinks.push({
           url: fullUrl,
@@ -184,7 +180,7 @@ class SimpleWebsiteAnalyzer {
           status: result.status,
           error: result.error
         });
-        console.log(`✗ ${route} (${result.status || 'ERROR'}) - ${result.error || 'Not found'}`);
+        - ${result.error || 'Not found'}`);
       }
       
       // Small delay to be respectful
@@ -237,36 +233,23 @@ class SimpleWebsiteAnalyzer {
   }
 
   async runAnalysis() {
-    console.log('Starting simple website analysis...');
-    
     await this.analyzeRoutes();
     
     const report = this.generateReport();
     
-    console.log('\n=== ANALYSIS REPORT ===');
-    console.log(`Total Routes: ${report.summary.totalRoutes}`);
-    console.log(`Working Links: ${report.summary.workingLinks}`);
-    console.log(`Broken Links: ${report.summary.brokenLinks}`);
-    console.log(`Success Rate: ${report.summary.successRate}`);
-    
     if (report.brokenLinks.length > 0) {
-      console.log('\n=== BROKEN LINKS ===');
       report.brokenLinks.forEach(link => {
-        console.log(`✗ ${link.route} (${link.status || 'ERROR'}) - ${link.error || 'Not found'}`);
+        - ${link.error || 'Not found'}`);
       });
     }
     
     if (report.recommendations.length > 0) {
-      console.log('\n=== RECOMMENDATIONS ===');
       report.recommendations.forEach(rec => {
-        console.log(`${rec.priority}: ${rec.issue} - ${rec.description}`);
-      });
+        });
     }
     
     // Save report
     fs.writeFileSync('simple-analysis-report.json', JSON.stringify(report, null, 2));
-    console.log('\nReport saved to simple-analysis-report.json');
-    
     return report;
   }
 }

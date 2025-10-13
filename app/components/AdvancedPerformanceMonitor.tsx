@@ -59,8 +59,7 @@ const AdvancedPerformanceMonitor = () => {
       const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigationEntry) {
         setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }))
-        console.warn('Failed to load web-vitals:', error);
-      }
+        }
 
       // Measure memory usage
       if ('memory' in performance) {
@@ -92,8 +91,7 @@ const AdvancedPerformanceMonitor = () => {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'measure') {
-            console.log('Custom Performance Measure:', entry.name, entry.duration)
-          }
+            }
         }
       })
     </div>
@@ -128,8 +126,7 @@ const AdvancedPerformanceMonitor = () => {
           reportMetric('TTFB', metric.value)
         })
       } catch (error) {
-        console.error('Failed to measure web vitals:', error);
-      }
+        }
 
       // Measure memory usage
       const measureMemory = () => {
@@ -170,9 +167,7 @@ const AdvancedPerformanceMonitor = () => {
 
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
-        console.log(`Performance Metric: ${name} = ${value}`);
-
-      }
+        }
 
       measureWebVitals()
       measureMemory()
@@ -184,8 +179,7 @@ const AdvancedPerformanceMonitor = () => {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'measure') {
-            console.log('Custom Performance Measure:', entry.name, entry.duration)
-          }
+            }
         }
       })
       observer.observe({ entryTypes: ['measure'] })
