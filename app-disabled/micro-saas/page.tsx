@@ -50,67 +50,67 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { } from 'react-router-dom';
 import { Right, Circle, Star, } from 'lucide-react';
-      users: &apos;Up to 50 users&apos;,
+      users: 'Up to 50 users',
       popular: true,
-      category: &apos;Analytics
-      category: &apos;Analytics});)},
+      category: 'Analytics
+      category: 'Analytics});)},
     {
-      id: &apos;2,
-      icon: &apos;👥,
+      id: '2,
+      icon: '👥,
       title: 'AI-Powered CRM,
       description: 'Intelligent customer relationship management with automated lead scoring and personalized interactions,
-      features: [&apos;Lead management&apos;, &apos;Email automation&apos;, &apos;Sales forecasting&apos;, &apos;Integration APIs&apos;, &apos;Custom fields],
-      price: &apos;$149/month,
-      users: &apos;Up to 100 users,
-      category: &apos;CRM});)},
+      features: ['Lead management', 'Email automation', 'Sales forecasting', 'Integration APIs', 'Custom fields],
+      price: '$149/month,
+      users: 'Up to 100 users,
+      category: 'CRM});)},
     {
-      id: &apos;3,
-      icon: &apos;🔒,
+      id: '3,
+      icon: '🔒,
       title: 'Monitoring Suite,
       description: 'Comprehensive cybersecurity monitoring and threat detection for growing businesses,
-      features: [&apos;Threat detection&apos;, &apos;Vulnerability scanning&apos;, &apos;Compliance reporting&apos;, &apos;24/7 monitoring&apos;, &apos;Incident response],
-      price: &apos;$199/month,
-      users: &apos;Up to 200 users,
-      category: &apos;});)},
+      features: ['Threat detection', 'Vulnerability scanning', 'Compliance reporting', '24/7 monitoring', 'Incident response],
+      price: '$199/month,
+      users: 'Up to 200 users,
+      category: '});)},
     {
-      id: &apos;4,
-      icon: &apos;☁️,
+      id: '4,
+      icon: '☁️,
       title: 'Infrastructure Manager,
       description: 'Automated cloud resource management and cost optimization for multi-cloud environments,
-      features: [&apos;Resource optimization&apos;, &apos;Cost tracking&apos;, &apos;Auto-scaling&apos;, &apos;Multi-cloud support&apos;, &apos;Backup management],
-      price: &apos;$299/month,
-      users: &apos;Unlimited users,
+      features: ['Resource optimization', 'Cost tracking', 'Auto-scaling', 'Multi-cloud support', 'Backup management],
+      price: '$299/month,
+      users: 'Unlimited users,
     {
-      id: &apos;5,
+      id: '5,
     {
-      id: &apos;6,
-  const benefits = [    &apos;No upfront costs or setup fees,;
-    &apos;Quick deployment in 24-48 hours,
-    &apos;Scalable solutions that grow with you,
-    &apos;Regular updates and new features,
-    &apos;24/7 technical support,
-    &apos;Easy integration with existing tools,
-    &apos;Free trial for all products,
+      id: '6,
+  const benefits = [    'No upfront costs or setup fees,;
+    'Quick deployment in 24-48 hours,
+    'Scalable solutions that grow with you,
+    'Regular updates and new features,
+    '24/7 technical support,
+    'Easy integration with existing tools,
+    'Free trial for all products,
     Cancel anytime, no long-term contracts
     {
     {}
-      icon: value: &apos;10,000+,
-      label: &apos;Active description: Growing community of satisfied customers
+      icon: value: '10,000+,
+      label: 'Active description: Growing community of satisfied customers
     },
     {}
-      icon: value: &apos;99.9%,
-      label: &apos;Uptime,
+      icon: value: '99.9%,
+      label: 'Uptime,
       description: Reliable service you can count on
     },
     {}
       icon: Star,
-      value: &apos;4.8/5,
-      label: &apos;Rating,
+      value: '4.8/5,
+      label: 'Rating,
       description: Highly rated by our customers
     },
     {}
-      icon: value: &apos;24/7,
-      label: &apos;Support,
+      icon: value: '24/7,
+      label: 'Support,
       description: Always here when you need us
   const features = [;;
 
@@ -124,7 +124,7 @@ import { Right, Circle, Star, } from 'lucide-react';
     },
     {
       icon: Rocket,
-      title: &apos;Rapid Innovation,
+      title: 'Rapid Innovation,
       description: Frequent updates and new features based on user feedback and market needs
     }
 

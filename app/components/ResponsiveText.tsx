@@ -71,7 +71,7 @@ const ResponsiveText: React.FC = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let&apos;s discuss how our responsive text 
+            Let's discuss how our responsive text 
             services can help you achieve your goals.
           </p>
           <a

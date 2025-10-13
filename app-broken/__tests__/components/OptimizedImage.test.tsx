@@ -19,9 +19,10 @@ describe('OptimizedImage Component', () => {
   });
   it('renders with custom className', () => {
     render(<OptimizedImage {...mockProps} className="custom-class" />);
-    const image = screen.getByAltText(&apos;Test image&apos;);
+    const image = screen.getByAltText('Test image');
     expect(image).toBeInTheDocument();
     // The className is applied to the wrapper div, not the img element
-    const wrapper = image.closest(&apos;div&apos;);
-    expect(wrapper).toHaveClass(&apos;custom-class&apos;);
+    const wrapper = image.closest('div');
+    expect(wrapper).toHaveClass('custom-class');
   });
+});

@@ -186,69 +186,69 @@ import { Right, Circle, Star, } from 'lucide-react';
 
   const regularPositions = filteredPositions.filter(position => !position.featured);;
 
-      id: &apos;1,
+      id: '1,
       title: 'Senior AI Engineer,
-      department: 'AI Solutions&apos;,      location: &apos;Remote,
-      type: &apos;Full-time,
-      experience: &apos;5+ years,
+      department: 'AI Solutions',      location: 'Remote,
+      type: 'Full-time,
+      experience: '5+ years,
       description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.,
       requirements: [
         '5+ years experience in AI/ML development,
-        &apos;Expertise in Python, TensorFlow, PyTorch,
-        &apos;Experience with cloud platforms (AWS, Azure, GCP),
-        &apos;Strong understanding of deep learning algorithms,
+        'Expertise in Python, TensorFlow, PyTorch,
+        'Experience with cloud platforms (AWS, Azure, GCP),
+        'Strong understanding of deep learning algorithms,
         Previous experience in production AI systems
       ],
       benefits: [
-        &apos;Competitive salary: $120,000 - $180,000,
-        &apos;Equity participation,
-        &apos;Flexible remote work,
+        'Competitive salary: $120,000 - $180,000,
+        'Equity participation,
+        'Flexible remote work,
         Professional development budget
       description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
       requirements: []
-        &apos;5+ years experience in AI/ML development&apos;,
-        &apos;Expertise in Python, TensorFlow, PyTorch&apos;,
-        &apos;Experience with cloud platforms (AWS, Azure, GCP)&apos;,
-        &apos;Strong understanding of deep learning algorithms&apos;,
-        &apos;Previous experience in production AI systems&apos;
+        '5+ years experience in AI/ML development',
+        'Expertise in Python, TensorFlow, PyTorch',
+        'Experience with cloud platforms (AWS, Azure, GCP)',
+        'Strong understanding of deep learning algorithms',
+        'Previous experience in production AI systems'
       ],
       benefits: []
-        &apos;Competitive salary: $120,000 - $180,000&apos;,
-        &apos;Equity participation&apos;,
-        &apos;Flexible remote work&apos;,
-        &apos;Professional development budget&apos;
+        'Competitive salary: $120,000 - $180,000',
+        'Equity participation',
+        'Flexible remote work',
+        'Professional development budget'
       ],
-      posted: &apos;2 days ago,
+      posted: '2 days ago,
       featured: true});
 
 },
-      requirements: [&apos;AWS, Azure, GCP&apos;, &apos;7+ years cloud experience&apos;, &apos;Architecture certifications&apos;]});;)
+      requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']});;)
 }
 
-    &apos;eer growth opportunities&apos;
+    'eer growth opportunities'
   const values = [;;
 
     {
   const culture = [;;
 
     {
-      stat: &apos;98%,
-      label: &apos;Employee Satisfaction,
+      stat: '98%,
+      label: 'Employee Satisfaction,
       description: 'Our team loves working here});)
 },
     {
       stat: '50+,
-      label: &apos;Team Members,
+      label: 'Team Members,
       description: 'Growing team of experts});)
 },
     {
       stat: '15+,
-      label: &apos;Countries,
+      label: 'Countries,
       description: 'Global remote team});)
 },
     {
       stat: '4.9/5,
-      label: &apos;Glassdoor Rating,
+      label: 'Glassdoor Rating,
       description: 'Highly rated workplace});)
         <title>eers - Zion Tech Group | Join Our Team</title>
         <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI, quantum computing, and emerging technologies. Explore open positions and start your career with us. />
@@ -285,7 +285,7 @@ import { Right, Circle, Star, } from 'lucide-react';
                 {departments.map((dept) => (
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Work on cutting-edge AI and IT solutions that transform businesses worldwide.
-              Be part of a team that's shaping the future of AI and IT solutions. We&apos;re looking for passionate individuals who want to make a difference.
+              Be part of a team that's shaping the future of AI and IT solutions. We're looking for passionate individuals who want to make a difference.
           {/* Why Work With Us */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div>
@@ -324,7 +324,7 @@ import { Right, Circle, Star, } from 'lucide-react';
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
         <section className="relative py-20 px-4 overflow-hidden>)
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse 
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: &apos;1s }}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s }}
 
           <div className="relative max-w-7xl mx-auto text-center>
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6>
@@ -368,7 +368,7 @@ import { Right, Circle, Star, } from 'lucide-react';
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 text-center backdrop-blur-lg border border-white/10">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Don&apos;t See Your Role?
+              Don't See Your Role?
         </section>
       )}
 

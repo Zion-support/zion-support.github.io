@@ -8,13 +8,14 @@ import reactRefresh from 'eslint-plugin-react-refresh';
 export default [
   js.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
     ignores: [
       'node_modules/**',
       'dist/**',
       'build/**',
       '.next/**',
       'out/**',
+      'app-disabled/**',
+      'app-broken/**',
       '*.config.js',
       '*.config.ts',
       '*.config.mjs',
@@ -41,11 +42,15 @@ export default [
       '*.broken',
       '*.backup',
       'temp-*.js',
-      'analyze-*.js',
-      'check-*.js',
-      'clean-*.js',
-      'jest.setup.js'
+      'jest.setup.js',
+      'fix-html-entities.js',
+      'check_missing_pages.*',
+      'cleanup_merge_conflicts.*',
+      'close_duplicate_prs.*',
+      'comprehensive-fix.*',
+      'create_remaining_pages.*'
     ],
+    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
@@ -72,7 +77,17 @@ export default [
         require: 'readonly',
         module: 'readonly',
         exports: 'readonly',
-        fs: 'readonly'
+        fs: 'readonly',
+        // Jest globals
+        describe: 'readonly',
+        test: 'readonly',
+        it: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+        jest: 'readonly'
       },
       parser: typescriptParser,
       parserOptions: {

@@ -12,9 +12,9 @@ const ServicesPage: React.FC = () => {const services = [;
     {      ico,
     n: title: 'AI Solutions,
       description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.,
-      features: [&apos;Machine Learning&apos;, &apos;Natural Language Processing&apos;, &apos;Computer Vision&apos;, &apos;Predictive Analytics&apos;, &apos;AI Consulting],
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting],
       price: Starting at $1,500
-      category: &apos;AI Services,
+      category: 'AI Services,
       <Helmet>
         <title>Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI and IT services by Zion Tech Group" />

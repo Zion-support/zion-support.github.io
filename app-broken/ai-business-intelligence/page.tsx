@@ -18,5 +18,9 @@ export default function AiBusinessIntelligence() {
           </p>
         </div>
         <div className="text-center">
-          <p className="text-gray-300">Coming Soon - AiBusinessIntelligence Solutions</p>
-
+          <p className="text-gray-300">Coming Soon - AI Business Intelligence Solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+}
