@@ -1,21 +1,12 @@
-<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
-=======
-import React, { useEffect } from 'react';
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c22b
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [isOptimized, setIsOptimized] = useState(false);
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-568e
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c22b
+
   // Preload critical resources
   useEffect(() => {
     const preloadCriticalResources = () => {
@@ -29,16 +20,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       // Preload critical images
       const criticalImages = [
         '/logo.svg',
-<<<<<<< HEAD
-<<<<<<< HEAD
-        '/og-image.svg'        '/og-image.svg',
-=======
-        '/og-image.svg'
-=======
         '/og-image.svg',
         '/api/placeholder/1200/630', // Hero image
         '/api/placeholder/800/600',  // Service images
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c22b
       ];
 
       criticalImages.forEach(src => {
@@ -50,7 +34,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       });
     };
 
-<<<<<<< HEAD
     preloadCriticalResources();
   }, []);
 
@@ -70,117 +53,30 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     }
   }, []);
 
+  // Handle resize events
+  const handleResize = useCallback(() => {
+    // Optimize for different screen sizes
+    const viewport = {
+      width: window.innerWidth,
+      height: window.innerHeight
+    };
+    
+    // Add responsive optimizations here
+    console.log('Viewport changed:', viewport);
+  }, []);
+
+  // Add scroll listener
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
-  // Optimize resize performance
-  const handleResize = useCallback(() => {
-    let ticking = false;
-    
-    const updateLayout = () => {
-      // Add resize-based optimizations here
-      ticking = false;
-    };
-
-    if (!ticking) {
-      requestAnimationFrame(updateLayout);
-      ticking = true;
-    }
-  }, []);
-
+  // Add resize listener
   useEffect(() => {
     window.addEventListener('resize', handleResize, { passive: true });
     return () => window.removeEventListener('resize', handleResize);
   }, [handleResize]);
 
-  const [isOptimized, setIsOptimized] = useState(false);
-
-  useEffect(() => {
-    // Preload critical resources
-    const preloadCriticalResources = () => {
-      const criticalImages = [
->>>>>>> cursor/analyze-improve-and-deploy-application-568e
-        '/api/placeholder/1200/630', // Hero image
-        '/api/placeholder/800/600',  // Service images
-      ];
-
-      criticalImages.forEach(src => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = src;
-        link.as = 'image';
-        document.head.appendChild(link);
-      });
-    };
-
-<<<<<<< HEAD>>>>>>> cursor/analyze-improve-and-deploy-application-ad0b
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c22b
-    // Optimize images
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        // Add loading="lazy" for non-critical images
-        if (!img.hasAttribute('loading')) {
-          img.setAttribute('loading', 'lazy');
-        }
-        
-        // Add decoding="async" for better performance
-        if (!img.hasAttribute('decoding')) {
-          img.setAttribute('decoding', 'async');
-        }
-      });
-    };
-
-    // Initialize optimizations
-    preloadCriticalResources();
-<<<<<<< HEAD
-  }, []);
-
-  // Optimize scroll performance
-  const handleScroll = useCallback(() => {
-    // Throttle scroll events
-    let ticking = false;
-    
-    const updateScrollPosition = () => {
-      // Add scroll-based optimizations here
-      ticking = false;
-    };
-
-    if (!ticking) {
-      requestAnimationFrame(updateScrollPosition);
-      ticking = true;
-    }
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [handleScroll]);
-
-  // Optimize resize performance
-  const handleResize = useCallback(() => {
-    let ticking = false;
-    
-    const updateLayout = () => {
-      // Add resize-based optimizations here
-      ticking = false;
-    };
-
-    if (!ticking) {
-      requestAnimationFrame(updateLayout);
-      ticking = true;
-    }
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener('resize', handleResize, { passive: true });
-    return () => window.removeEventListener('resize', handleResize);
-  }, [handleResize]);
-
-<<<<<<< HEAD>>>>>>> cursor/analyze-improve-and-deploy-application-ad0b
   // Intersection Observer for lazy loading
   useEffect(() => {
     if (!isOptimized) return;
@@ -205,52 +101,51 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       });
     }, observerOptions);
 
-    // Observe elements with data-lazy attribute
+    // Observe all elements with data-lazy attribute
     const lazyElements = document.querySelectorAll('[data-lazy]');
     lazyElements.forEach(el => observer.observe(el));
 
     return () => observer.disconnect();
   }, [isOptimized]);
 
-  // Resource hints for better performance
+  // Optimize images
   useEffect(() => {
-    if (!isOptimized) return;
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {
+        // Add loading="lazy" for non-critical images
+        if (!img.hasAttribute('loading')) {
+          img.setAttribute('loading', 'lazy');
+        }
+        
+        // Add decoding="async" for better performance
+        if (!img.hasAttribute('decoding')) {
+          img.setAttribute('decoding', 'async');
+        }
+      });
+    };
 
-    // DNS prefetch for external resources
-    const dnsPrefetchDomains = [
-      '//fonts.googleapis.com',
-      '//fonts.gstatic.com',
-      '//www.google-analytics.com'
-    ];
+    optimizeImages();
+  }, []);
 
-    dnsPrefetchDomains.forEach(domain => {
-      const link = document.createElement('link');
-      link.rel = 'dns-prefetch';
-      link.href = domain;
-      document.head.appendChild(link);
-    });
+  // Set optimized state after initial load
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsOptimized(true);
+    }, 1000);
 
-    // Module preload for critical JavaScript
-    const criticalModules = [
-      '/assets/react-vendor',
-      '/assets/main-pages'
-    ];
-
-    criticalModules.forEach(module => {
-      const link = document.createElement('link');
-      link.rel = 'modulepreload';
-      link.href = `${module}.js`;
-      document.head.appendChild(link);
-    });
-  }, [isOptimized]);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
       {children}
-      
-      {/* Performance monitoring styles */}
-      <style jsx>{`
-        @keyframes fade-in {
+      <style>{`
+        .animate-fade-in {
+          animation: fadeIn 0.6s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
           from {
             opacity: 0;
             transform: translateY(20px);
@@ -261,40 +156,21 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
           }
         }
         
-        .animate-fade-in {
-          animation: fade-in 0.6s ease-out forwards;
+        /* Performance optimizations */
+        * {
+          box-sizing: border-box;
         }
         
-        /* Optimize font loading */
-        @font-face {
-          font-family: 'Inter';
-          font-style: normal;
-          font-weight: 400;
-          font-display: swap;
-          src: local('Inter'), url('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2') format('woff2');
-        }
-        
-        /* Critical CSS for above-the-fold content */
-        .hero-section {
-          contain: layout style paint;
-        }
-        
-        .navigation {
-          contain: layout style;
-        }
-        
-        /* Optimize animations for better performance */
-        .transition-transform {
-          will-change: transform;
-        }
-        
-        .transition-opacity {
-          will-change: opacity;
+        img {
+          max-width: 100%;
+          height: auto;
         }
         
         /* Reduce motion for users who prefer it */
         @media (prefers-reduced-motion: reduce) {
-          * {
+          *,
+          *::before,
+          *::after {
             animation-duration: 0.01ms !important;
             animation-iteration-count: 1 !important;
             transition-duration: 0.01ms !important;
@@ -303,20 +179,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       `}</style>
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  return <>{children}</>;
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-ad0b
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-568e
-=======
-    optimizeImages();
-  }, []);
-
-  return <>{children}</>;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c22b
 };
 
 export default PerformanceOptimizer;
