@@ -1,11 +1,7 @@
 import {
   Mic, 
   Play, 
-  Pause, 
-  Download, 
-  Upload, 
   Settings, 
-  Star, 
   Users, 
   Zap, 
   Shield, 
