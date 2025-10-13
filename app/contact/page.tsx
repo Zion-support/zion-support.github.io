@@ -1,46 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced page solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Advanced page solutions by Zion Tech Group
-          </p>
-        </div>
-        <div className="max-w-4xl mx-auto">
-      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-        <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-        <p className="text-gray-300">
-          This page is under development. Please check back later for updates.
-        </p>
-      </div>
-=======
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
-        <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for your AI and IT solutions needs" />
-=======
-export default function Contact() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
         <title>Contact - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for your AI and IT solutions" />
->>>>>>> cursor/fix-errors-and-merge-to-main-4df1
+        <meta name="description" content="Get in touch with Zion Tech Group for your AI and IT solutions needs." />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -48,40 +14,33 @@ export default function Contact() {
             Contact Us
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
             Get in touch with our team for your AI and IT solutions needs.
-=======
-            Get in touch with Zion Tech Group for your AI and IT solutions
->>>>>>> cursor/fix-errors-and-merge-to-main-4df1
           </p>
         </div>
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-lg shadow-md p-8">
-<<<<<<< HEAD
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Get In Touch</h2>
-            <p className="text-gray-600">
-              Contact information and form will be added here.
-            </p>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Get in Touch</h3>
+              <p className="text-gray-600 mb-4">
+                Ready to transform your business with AI? Contact us today.
+              </p>
+              <div className="space-y-2">
+                <p className="text-gray-600">Email: contact@ziontechgroup.com</p>
+                <p className="text-gray-600">Phone: +1 (555) 123-4567</p>
+                <p className="text-gray-600">Address: 123 Tech Street, Innovation City</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Business Hours</h3>
+              <div className="space-y-2">
+                <p className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                <p className="text-gray-600">Saturday: 10:00 AM - 4:00 PM</p>
+                <p className="text-gray-600">Sunday: Closed</p>
+              </div>
+            </div>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-82b8
-=======
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Coming Soon</h2>
-            <p className="text-gray-600">
-              Our contact page is under development. Please check back later for updates.
-            </p>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-4df1
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-82b8
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-4df1
