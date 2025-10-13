@@ -1,6 +1,5 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
 import { 
   Brain, 
   Shield, 
@@ -26,487 +25,262 @@ import {
   SidebarIcon
 } from 'lucide-react'
 import FuturisticButton from './FuturisticButton'
-=======
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Globe, Cpu, Link as LinkIcon, Sidebar as SidebarIcon } from 'lucide-react'
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
 
 interface NavigationProps {
-  onSidebarToggle?: () => void
+  onSidebarToggle: () => void
 }
 
-const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isServicesOpen, setIsServicesOpen] = useState(false)
-  const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false)
-  const [isItServicesOpen, setIsItServicesOpen] = useState(false)
-  
+const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+
   const toggleMenu = useCallback(() => {
-    setIsOpen(!isOpen)
-  }, [isOpen])
+    setIsMenuOpen(prev => !prev)
+  }, [])
 
-  const toggleServices = useCallback(() => {
-    setIsServicesOpen(!isServicesOpen)
-  }, [isServicesOpen])
+  const toggleDropdown = useCallback((dropdown: string) => {
+    setActiveDropdown(prev => prev === dropdown ? null : dropdown)
+  }, [])
 
-  const toggleMicroSaas = useCallback(() => {
-    setIsMicroSaasOpen(!isMicroSaasOpen)
-  }, [isMicroSaasOpen])
+  const closeDropdowns = useCallback(() => {
+    setActiveDropdown(null)
+  }, [])
 
-  const toggleItServices = useCallback(() => {
-    setIsItServicesOpen(!isItServicesOpen)
-  }, [isItServicesOpen])
-
-<<<<<<< HEAD
-=======
-  const aiServices = useMemo(() => [
-    { name: 'AI Quantum Computing', path: '/ai-quantum-computing', icon: <Cpu className="w-4 h-4" />, featured: true },
-    { name: 'AI Blockchain Solutions', path: '/ai-blockchain-solutions', icon: <LinkIcon className="w-4 h-4" />, featured: true },
-    { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
-    { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Brain className="w-4 h-4" /> },
-    { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> },
-    { name: 'AI Customer Support', path: '/ai-customer-support-chatbot', icon: <Zap className="w-4 h-4" /> },
-    { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> },
-    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> },
-    { name: 'AI Marketing Automation', path: '/ai-marketing', icon: <Zap className="w-4 h-4" /> },
-    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
-  ], [])
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
-  const itServices = useMemo(() => [
-    { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions', icon: <Shield className="w-4 h-4" /> },
-    { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> },
-    { name: 'Mobile Development', path: '/mobile-development', icon: <Code className="w-4 h-4" /> },
-    { name: 'Database Management', path: '/database-management', icon: <Database className="w-4 h-4" /> },
-    { name: 'Custom Software', path: '/custom-software', icon: <Code className="w-4 h-4" /> },
-    { name: 'Network Infrastructure', path: '/network-infrastructure', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
-  ], [])
-
-  const microSaasServices = useMemo(() => [
-    { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
-    { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
-    { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },
-    { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> },
-    { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
-    { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
-    { name: 'Zion Project Master', path: '/zion-project-master', icon: <Code className="w-4 h-4" /> },
-    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> }
-  ], [])
-
-  const mainNavItems = useMemo(() => [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
-    { name: 'AI Services', path: '/ai-services' },
-    { name: 'IT Services', path: '/it-services' },
-    { name: 'Micro SAAS', path: '/micro-saas' },
-    { name: 'Pricing', path: '/pricing' },
-    { name: 'Case Studies', path: '/case-studies' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'Contact', path: '/contact' }
-  ], [])
-
-  const serviceCategories = useMemo(() => [
+  const navigationItems = useMemo(() => [
     {
-      name: 'AI Services',
-      path: '/ai-services',
+      label: 'Home',
+      href: '/',
+      icon: <Star className="w-4 h-4" />
+    },
+    {
+      label: 'AI Services',
+      href: '/ai-services',
       icon: <Brain className="w-4 h-4" />,
-      services: [
-        { name: 'AI Analytics', path: '/ai-analytics' },
-        { name: 'AI Automation', path: '/ai-automation' },
-        { name: 'AI Content Generation', path: '/ai-content-generation' },
-        { name: 'AI Customer Support', path: '/ai-customer-support' },
-        { name: 'AI Marketing Automation', path: '/ai-marketing-automation' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' }
+      dropdown: [
+        { label: 'AI Analytics', href: '/ai-analytics' },
+        { label: 'AI Automation', href: '/ai-automation' },
+        { label: 'AI Business Intelligence', href: '/ai-business-intelligence' },
+        { label: 'AI Content Generation', href: '/ai-content-generation' },
+        { label: 'AI Customer Service', href: '/ai-customer-service' },
+        { label: 'AI Data Analytics', href: '/ai-data-analytics' },
+        { label: 'AI Email Automation', href: '/ai-email-automation' },
+        { label: 'AI Fraud Detection', href: '/ai-fraud-detection' },
+        { label: 'AI Healthcare', href: '/ai-healthcare' },
+        { label: 'AI Marketing', href: '/ai-marketing' },
+        { label: 'AI Predictive Analytics', href: '/ai-predictive-analytics' },
+        { label: 'AI Project Management', href: '/ai-project-management' },
+        { label: 'AI Recommendation Engine', href: '/ai-recommendation-engine' },
+        { label: 'AI Sales Automation', href: '/ai-sales-automation' },
+        { label: 'AI Workflow Automation', href: '/ai-workflow-automation' }
       ]
     },
     {
-      name: 'IT Services',
-      path: '/it-services',
+      label: 'IT Services',
+      href: '/services',
       icon: <Shield className="w-4 h-4" />,
-      services: [
-        { name: 'Cloud Services', path: '/cloud-services' },
-        { name: 'Cybersecurity', path: '/cybersecurity' },
-        { name: 'Custom Development', path: '/custom-development' },
-        { name: 'Web Development', path: '/web-development' },
-        { name: 'Mobile Development', path: '/mobile-development' },
-        { name: 'Database Management', path: '/database-management' }
+      dropdown: [
+        { label: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
+        { label: 'Cybersecurity Solutions', href: '/cybersecurity-solutions' },
+        { label: 'Web Development', href: '/web-development' },
+        { label: 'Mobile Development', href: '/mobile-development' },
+        { label: 'Database Management', href: '/database-management' },
+        { label: 'Custom Software', href: '/custom-software' },
+        { label: 'Network Infrastructure', href: '/network-infrastructure' }
       ]
     },
     {
-      name: '5G Solutions',
-      path: '/5g-solutions',
-      icon: <Globe className="w-4 h-4" />,
-      services: [
-        { name: '5G Implementation', path: '/5g-implementation' },
-        { name: '5G Edge Computing', path: '/5g-edge-computing' },
-        { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
-        { name: '5G Smart Cities', path: '/5g-smart-city-solutions' },
-        { name: '5G Private Networks', path: '/5g-private-networks' },
-        { name: '5G Data Analytics', path: '/5g-data-analytics' }
+      label: 'Micro SAAS',
+      href: '/micro-saas',
+      icon: <Zap className="w-4 h-4" />,
+      dropdown: [
+        { label: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
+        { label: 'Zion Security Shield', href: '/zion-security-shield' },
+        { label: 'Zion Cloud Vault', href: '/zion-cloud-vault' },
+        { label: 'Zion Content Studio', href: '/zion-content-studio' }
       ]
+    },
+    {
+      label: '5G Solutions',
+      href: '/5g-solutions',
+      icon: <Globe className="w-4 h-4" />,
+      dropdown: [
+        { label: '5G Data Analytics', href: '/5g-data-analytics' },
+        { label: '5G Edge Computing', href: '/5g-edge-computing' },
+        { label: '5G Implementation', href: '/5g-implementation' },
+        { label: '5G Mobile Applications', href: '/5g-mobile-applications' },
+        { label: '5G Network Infrastructure', href: '/5g-network-infrastructure' },
+        { label: '5G Private Networks', href: '/5g-private-networks' },
+        { label: '5G Smart City Solutions', href: '/5g-smart-city-solutions' },
+        { label: '5G IoT Solutions', href: '/5g-iot-solutions' }
+      ]
+    },
+    {
+      label: 'About',
+      href: '/about',
+      icon: <Users className="w-4 h-4" />
+    },
+    {
+      label: 'Contact',
+      href: '/contact',
+      icon: <Mail className="w-4 h-4" />
     }
   ], [])
 
   return (
-    <nav 
-      className="bg-gradient-to-r from-slate-900/95 via-purple-900/95 to-slate-900/95 text-white shadow-2xl border-b border-cyan-500/20 backdrop-blur-md sticky top-0 z-50"
-      role="navigation"
-      aria-label="Main navigation"
-    >
-      {/* Contact Bar */}
-      <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row items-center justify-between py-2 text-sm">
-            <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-6">
-              <div className="flex items-center text-cyan-400">
-                <Phone className="w-4 h-4 mr-2" />
-                <a href="tel:+13024640950" className="hover:text-cyan-300 transition-colors">
-                  +1 302 464 0950
-                </a>
-              </div>
-              <div className="flex items-center text-cyan-400">
-                <Mail className="w-4 h-4 mr-2" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-300 transition-colors">
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-              <div className="flex items-center text-cyan-400">
-                <MapPin className="w-4 h-4 mr-2" />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
-              </div>
-            </div>
-            <div className="flex items-center space-x-4">
-              <FuturisticButton
-                href="/contact"
-                variant="ghost"
-                size="sm"
-                className="text-cyan-400 hover:text-white"
-              >
-                Get Quote
-              </FuturisticButton>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
-          <Link 
-            to="/" 
-            className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent hover:from-cyan-300 hover:to-purple-300 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded"
-            aria-label="Zion Tech Group - Go to homepage"
-          >
-            Zion Tech Group
-          </Link>
-
-          <div className="hidden lg:flex space-x-8 items-center">
-            {/* Sidebar Toggle Button */}
-            <button
-              onClick={onSidebarToggle}
-              className="text-gray-300 hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10"
-              aria-label="Toggle sidebar"
-            >
-              <SidebarIcon className="w-5 h-5" />
-            </button>
-            
-            {mainNavItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className="relative group hover:text-cyan-400 transition-all duration-300 font-medium"
-              >
-                {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
-              </Link>
-            ))}
-            
-            {/* Services Dropdown */}
-            <div className="relative">
-              <button
-                onClick={toggleServices}
-                className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group"
-              >
-                <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              
-              {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-cyan-500/20">
-                  <div className="px-4 py-2 border-b border-gray-700 mb-2">
-                    <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider">Our Services</h3>
-                  </div>
-                  <div className="grid grid-cols-1 gap-4 px-4">
-                    {serviceCategories.map((category) => (
-                      <div key={category.name} className="space-y-2">
-                        <div className="flex items-center space-x-2 text-cyan-300 font-semibold text-sm">
-                          {category.icon}
-                          <span>{category.name}</span>
-                        </div>
-                        <div className="ml-6 space-y-1">
-                          {category.services.slice(0, 3).map((service) => (
-                            <Link
-                              key={service.name}
-                              to={service.path}
-                              className="block text-gray-300 hover:text-cyan-400 transition-colors text-sm py-1"
-                              onClick={() => setIsServicesOpen(false)}
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
-                          {category.services.length > 3 && (
-                            <Link
-                              to={category.path}
-                              className="block text-cyan-400 hover:text-cyan-300 transition-colors text-xs font-medium py-1"
-                              onClick={() => setIsServicesOpen(false)}
-                            >
-                              View All →
-                            </Link>
-                          )}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* IT Services Dropdown */}
-            <div className="relative">
-              <button
-                onClick={toggleItServices}
-                className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group"
-              >
-                <span>IT Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isItServicesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              
-              {isItServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-green-500/20">
-                  <div className="px-4 py-2 border-b border-gray-700 mb-2">
-                    <h3 className="text-sm font-semibold text-green-400 uppercase tracking-wider">IT Services</h3>
-                  </div>
-                  {itServices.map((service) => (
-                    <Link
-                      key={service.name}
-                      to={service.path}
-                      className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-green-500/10 hover:text-green-400 transition-all duration-300 group"
-                      onClick={() => setIsItServicesOpen(false)}
-                    >
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-green-500/20 to-blue-500/20 flex items-center justify-center group-hover:from-green-500/30 group-hover:to-blue-500/30 transition-all duration-300">
-                        {service.icon}
-                      </div>
-                      <span className="font-medium">{service.name}</span>
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Micro SAAS Dropdown */}
-            <div className="relative">
-              <button
-                onClick={toggleMicroSaas}
-                className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group"
-              >
-                <span>Micro SAAS</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMicroSaasOpen ? 'rotate-180' : ''}`} />
-              </button>
-              
-              {isMicroSaasOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-purple-500/20">
-                  <div className="px-4 py-2 border-b border-gray-700 mb-2">
-                    <h3 className="text-sm font-semibold text-purple-400 uppercase tracking-wider">Micro SAAS Solutions</h3>
-                  </div>
-                  {microSaasServices.map((service) => (
-                    <Link
-                      key={service.name}
-                      to={service.path}
-                      className={`flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 group ${
-                        service.featured ? 'bg-gradient-to-r from-purple-500/5 to-cyan-500/5 border-l-2 border-purple-400' : ''
-                      }`}
-                      onClick={() => setIsMicroSaasOpen(false)}
-                    >
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-500/20 to-cyan-500/20 flex items-center justify-center group-hover:from-purple-500/30 group-hover:to-cyan-500/30 transition-all duration-300">
-                        {service.icon}
-                      </div>
-                      <div className="flex-1">
-                        <span className="font-medium">{service.name}</span>
-                        {service.featured && (
-                          <div className="flex items-center mt-1">
-                            <Star className="w-3 h-3 text-yellow-400 fill-current mr-1" />
-                            <span className="text-xs text-yellow-400">Featured</span>
-                          </div>
-                        )}
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-white/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <div className="flex items-center">
             <Link
-              to="/consultation"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-6 py-3 rounded-lg transition-all duration-300 flex items-center space-x-2 font-semibold shadow-lg hover:shadow-cyan-500/25 group"
+              to="/"
+              className="flex items-center space-x-2 text-white hover:text-cyan-400 transition-colors"
             >
-              <span>Get Started</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <Brain className="w-5 h-5 text-white" />
+              </div>
+              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Zion Tech Group
+              </span>
             </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="lg:hidden">
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
+            {navigationItems.map((item) => (
+              <div key={item.label} className="relative group">
+                <Link
+                  to={item.href}
+                  className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors py-2"
+                  onMouseEnter={() => item.dropdown && setActiveDropdown(item.label)}
+                  onMouseLeave={() => item.dropdown && setActiveDropdown(null)}
+                >
+                  {item.icon}
+                  <span>{item.label}</span>
+                  {item.dropdown && (
+                    <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+                  )}
+                </Link>
+                
+                {/* Dropdown Menu */}
+                {item.dropdown && activeDropdown === item.label && (
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm rounded-lg border border-white/10 shadow-xl z-50">
+                    <div className="py-2">
+                      {item.dropdown.map((dropdownItem) => (
+                        <Link
+                          key={dropdownItem.label}
+                          to={dropdownItem.href}
+                          className="flex items-center px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/5 transition-colors"
+                          onClick={closeDropdowns}
+                        >
+                          <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                          {dropdownItem.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <FuturisticButton
+              href="/demo"
+              variant="outline"
+              size="sm"
+              icon={<Monitor className="w-4 h-4" />}
+            >
+              Demo
+            </FuturisticButton>
+            <FuturisticButton
+              href="/contact"
+              variant="primary"
+              size="sm"
+              icon={<Sparkles className="w-4 h-4" />}
+            >
+              Get Started
+            </FuturisticButton>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="lg:hidden flex items-center space-x-2">
+            <button
+              onClick={onSidebarToggle}
+              className="p-2 text-gray-300 hover:text-cyan-400 transition-colors"
+              aria-label="Toggle sidebar"
+            >
+              <SidebarIcon className="w-6 h-6" />
+            </button>
             <button
               onClick={toggleMenu}
-              className="text-white hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10"
+              className="p-2 text-gray-300 hover:text-cyan-400 transition-colors"
+              aria-label="Toggle menu"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
 
-        {/* Mobile menu */}
-        {isOpen && (
-          <div className="lg:hidden py-4 border-t border-cyan-500/20">
-            <div className="flex flex-col space-y-2">
-              {mainNavItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className="px-4 py-3 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 font-medium"
-                  onClick={toggleMenu}
-                >
-                  {item.name}
-                </Link>
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="lg:hidden border-t border-white/10 mt-4 pt-4 pb-4">
+            <div className="space-y-2">
+              {navigationItems.map((item) => (
+                <div key={item.label}>
+                  <Link
+                    to={item.href}
+                    className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors py-2 px-3 rounded-lg hover:bg-white/5"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.icon}
+                    <span>{item.label}</span>
+                  </Link>
+                  {item.dropdown && (
+                    <div className="ml-6 space-y-1">
+                      {item.dropdown.map((dropdownItem) => (
+                        <Link
+                          key={dropdownItem.label}
+                          to={dropdownItem.href}
+                          className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1 px-3 rounded-lg hover:bg-white/5"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          {dropdownItem.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
-              
-              {/* Mobile Services */}
-              <div>
-                <button
-                  onClick={toggleServices}
-                  className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 font-medium"
-                >
-                  <span>Services</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                
-                {isServicesOpen && (
-                  <div className="ml-4 mt-2 space-y-4">
-                    {serviceCategories.map((category) => (
-                      <div key={category.name} className="space-y-2">
-                        <div className="flex items-center space-x-2 text-cyan-300 font-semibold text-sm">
-                          {category.icon}
-                          <span>{category.name}</span>
-                        </div>
-                        <div className="ml-4 space-y-1">
-                          {category.services.slice(0, 3).map((service) => (
-                            <Link
-                              key={service.name}
-                              to={service.path}
-                              className="block text-gray-300 hover:text-cyan-400 transition-colors text-sm py-1"
-                              onClick={() => {
-                                setIsServicesOpen(false)
-                                toggleMenu()
-                              }}
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
-                          {category.services.length > 3 && (
-                            <Link
-                              to={category.path}
-                              className="block text-cyan-400 hover:text-cyan-300 transition-colors text-xs font-medium py-1"
-                              onClick={() => {
-                                setIsServicesOpen(false)
-                                toggleMenu()
-                              }}
-                            >
-                              View All →
-                            </Link>
-                          )}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Mobile IT Services */}
-              <div>
-                <button
-                  onClick={toggleItServices}
-                  className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-green-500/10 hover:text-green-400 transition-all duration-300 font-medium"
-                >
-                  <span>IT Services</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isItServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                
-                {isItServicesOpen && (
-                  <div className="ml-4 mt-2 space-y-1">
-                    {itServices.map((service) => (
-                      <Link
-                        key={service.name}
-                        to={service.path}
-                        className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-green-400 transition-colors rounded-lg hover:bg-green-500/10"
-                        onClick={() => {
-                          setIsItServicesOpen(false)
-                          toggleMenu()
-                        }}
-                      >
-                        {service.icon}
-                        <span>{service.name}</span>
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Mobile Micro SAAS */}
-              <div>
-                <button
-                  onClick={toggleMicroSaas}
-                  className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 font-medium"
-                >
-                  <span>Micro SAAS</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMicroSaasOpen ? 'rotate-180' : ''}`} />
-                </button>
-                
-                {isMicroSaasOpen && (
-                  <div className="ml-4 mt-2 space-y-1">
-                    {microSaasServices.map((service) => (
-                      <Link
-                        key={service.name}
-                        to={service.path}
-                        className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-purple-400 transition-colors rounded-lg hover:bg-purple-500/10"
-                        onClick={() => {
-                          setIsMicroSaasOpen(false)
-                          toggleMenu()
-                        }}
-                      >
-                        {service.icon}
-                        <span>{service.name}</span>
-                        {service.featured && <Star className="w-3 h-3 text-yellow-400 fill-current ml-auto" />}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              <Link
-                to="/consultation"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-4 py-3 rounded-lg transition-all duration-300 text-center font-semibold mt-4 flex items-center justify-center space-x-2"
-                onClick={toggleMenu}
+            </div>
+            
+            {/* Mobile CTA Buttons */}
+            <div className="mt-6 space-y-2">
+              <FuturisticButton
+                href="/demo"
+                variant="outline"
+                size="sm"
+                icon={<Monitor className="w-4 h-4" />}
+                className="w-full"
               >
-                <span>Get Started</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+                Demo
+              </FuturisticButton>
+              <FuturisticButton
+                href="/contact"
+                variant="primary"
+                size="sm"
+                icon={<Sparkles className="w-4 h-4" />}
+                className="w-full"
+              >
+                Get Started
+              </FuturisticButton>
             </div>
           </div>
         )}
       </div>
     </nav>
   )
-})
-
-Navigation.displayName = 'Navigation'
+}
 
 export default Navigation
