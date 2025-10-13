@@ -7,7 +7,7 @@ interface AnalyticsContextType {
   isEnabled: boolean;
 }
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-const  ({ children }) => {
+const AnalyticsProvider = ({ children }: { children: React.ReactNode }) => {
   const [isEnabled, setIsEnabled] = useState(false);
   const [userId, setUserId] = useState<string | null>(null);
   useEffect(() => {
@@ -40,4 +40,12 @@ const  ({ children }) => {
     </AnalyticsContext.Provider>
   );
 };
-export { AnalyticsContext };
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (context === undefined) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+};
+
+export default AnalyticsProvider;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Right, User, Calendar } from 'lucide-react';
+import { ArrowRight, User, Calendar } from 'lucide-react';
 
 const BlogPage: React.FC = () => {
   const categories = [
@@ -140,7 +140,7 @@ const BlogPage: React.FC = () => {
                     <span className="text-cyan-400 text-sm font-medium">{post.readTime}</span>
                     <button className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
                       Read More
-                      <Right className="w-4 h-4 ml-1" />
+                      <ArrowRight className="w-4 h-4 ml-1" />
                     </button>
                   </div>
                 </article>

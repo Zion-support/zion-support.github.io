@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Right, Wifi, Circle, Zap, Globe, Smartphone } from 'lucide-react';
+import { ArrowRight, Wifi, Circle, Zap, Globe, Smartphone } from 'lucide-react';
 
 const FiveGSolutionsPage: React.FC = () => {
   const features = [
@@ -78,7 +78,7 @@ const FiveGSolutionsPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center">
                 Get Started
-                <Right className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="border border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">
                 Learn More

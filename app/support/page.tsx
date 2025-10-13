@@ -1,59 +1,35 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Right, Circle } from 'lucide-react';
-=======
-import { Right, Circle, MessageCircle, Mail, Phone, BookOpen } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
+import { ArrowRight, MessageCircle, Mail, Phone, BookOpen, Clock, Shield, Users } from 'lucide-react';
 
 const SupportPage: React.FC = () => {
   const supportOptions = [
     {
-<<<<<<< HEAD
-      icon: 'Chat',
-=======
       icon: MessageCircle,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'Live Chat',
       description: 'Get instant help from our support team',
       action: 'Start Chat',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-<<<<<<< HEAD
-      icon: 'Phone',
-      title: 'Phone Support',
-=======
       icon: Mail,
       title: 'Email Support',
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
-      description: 'Call us for immediate assistance',
-      action: 'Call Now',
+      description: 'Send us a detailed message and we\'ll respond within 24 hours',
+      action: 'Send Email',
       color: 'from-green-500 to-emerald-500'
     },
     {
-<<<<<<< HEAD
-      icon: 'Email',
-      title: 'Email Support',
-      description: 'Send us a detailed message',
-      action: 'Send Email',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: 'Book',
-=======
       icon: Phone,
       title: 'Phone Support',
-      description: 'Call us for immediate assistance',
+      description: 'Speak directly with our technical experts',
       action: 'Call Now',
       color: 'from-purple-500 to-pink-500'
     },
     {
       icon: BookOpen,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'Documentation',
-      description: 'Browse our comprehensive guides',
+      description: 'Browse our comprehensive knowledge base',
       action: 'View Docs',
       color: 'from-orange-500 to-red-500'
     }
@@ -61,20 +37,49 @@ const SupportPage: React.FC = () => {
 
   const faqs = [
     {
-      question: 'How do I get started with your AI services?',
-      answer: 'Getting started is easy! Contact our team for a consultation, and we\'ll help you identify the best AI solutions for your business needs.'
+      question: 'How quickly can you respond to support requests?',
+      answer: 'We typically respond to support requests within 2-4 hours during business hours, and within 24 hours for non-urgent requests.'
     },
     {
-      question: 'What is your response time for support requests?',
-      answer: 'We typically respond to support requests within 2-4 hours during business hours, and within 24 hours for non-urgent matters.'
+      question: 'Do you offer 24/7 support?',
+      answer: 'Yes, we provide 24/7 emergency support for critical issues. Standard support is available Monday-Friday 9AM-6PM PST.'
     },
     {
-      question: 'Do you offer training for your solutions?',
-      answer: 'Yes! We provide comprehensive training programs for all our solutions, including documentation, video tutorials, and live training sessions.'
+      question: 'What types of support do you provide?',
+      answer: 'We provide technical support, implementation assistance, troubleshooting, training, and consultation for all our AI and IT solutions.'
     },
     {
-      question: 'What if I need custom development?',
-      answer: 'We offer custom development services for unique requirements. Contact our team to discuss your specific needs and get a quote.'
+      question: 'Is there a cost for support?',
+      answer: 'Basic support is included with all our services. Premium support plans are available for enhanced response times and dedicated resources.'
+    },
+    {
+      question: 'How do I escalate a support issue?',
+      answer: 'You can escalate issues through our support portal, by calling our priority support line, or by contacting your account manager directly.'
+    },
+    {
+      question: 'Do you provide training for your solutions?',
+      answer: 'Yes, we offer comprehensive training programs including online tutorials, documentation, webinars, and hands-on workshops.'
+    }
+  ];
+
+  const supportStats = [
+    {
+      icon: Clock,
+      title: 'Response Time',
+      value: '< 2 hours',
+      description: 'Average response time'
+    },
+    {
+      icon: Shield,
+      title: 'Uptime',
+      value: '99.9%',
+      description: 'Service availability'
+    },
+    {
+      icon: Users,
+      title: 'Expert Team',
+      value: '50+',
+      description: 'Support specialists'
     }
   ];
 
@@ -82,10 +87,10 @@ const SupportPage: React.FC = () => {
     <>
       <Helmet>
         <title>Support - Get Help | Zion Tech Group</title>
-        <meta name="description" content="Get help and support for Zion Tech Group's AI and IT solutions. Live chat, phone support, documentation, and more." />
-        <meta name="keywords" content="support, help, customer service, technical support, documentation, FAQ" />
+        <meta name="description" content="Get comprehensive support for your AI and IT solutions. 24/7 support, documentation, and expert assistance from Zion Tech Group." />
+        <meta name="keywords" content="support, help, technical support, AI support, IT support, documentation, troubleshooting" />
       </Helmet>
-
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4">
@@ -97,7 +102,7 @@ const SupportPage: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              We're here to help! Get support for our AI and IT solutions through multiple channels.
+              We're here to help you succeed. Get the support you need with our comprehensive help resources and expert assistance.
             </p>
           </div>
         </section>
@@ -112,15 +117,14 @@ const SupportPage: React.FC = () => {
               {supportOptions.map((option, index) => {
                 const Icon = option.icon;
                 return (
-                  <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center group">
-                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${option.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group text-center">
+                    <div className={`w-16 h-16 bg-gradient-to-r ${option.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                       <Icon className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2">{option.title}</h3>
-                    <p className="text-gray-300 mb-4">{option.description}</p>
-                    <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                    <p className="text-gray-300 mb-4 text-sm">{option.description}</p>
+                    <button className={`w-full bg-gradient-to-r ${option.color} text-white py-3 rounded-lg font-semibold hover:opacity-90 transition-all duration-300`}>
                       {option.action}
-                      <Right className="w-4 h-4 ml-2 inline" />
                     </button>
                   </div>
                 );
@@ -129,8 +133,32 @@ const SupportPage: React.FC = () => {
           </div>
         </section>
 
-        {/* FAQ Section */}
+        {/* Support Stats */}
         <section className="py-20 px-4 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl font-bold text-white text-center mb-16">
+              Our Support Performance
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {supportStats.map((stat, index) => {
+                const Icon = stat.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
+                    <div className="text-lg font-semibold text-cyan-400 mb-1">{stat.title}</div>
+                    <div className="text-gray-300 text-sm">{stat.description}</div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-white text-center mb-16">
               Frequently Asked Questions
@@ -138,7 +166,7 @@ const SupportPage: React.FC = () => {
             <div className="space-y-6">
               {faqs.map((faq, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
-                  <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
+                  <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
                   <p className="text-gray-300">{faq.answer}</p>
                 </div>
               ))}
@@ -146,31 +174,26 @@ const SupportPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Contact Info */}
+        {/* CTA Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-white text-center mb-16">
-              Contact Information
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Still Need Help?
             </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 text-center">
-                <Circle className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2"></h3>
-                <p className="text-cyan-400 font-medium">+1 (555) 123-4567</p>
-                <p className="text-gray-400 text-sm">Mon-Fri 9AM-6PM EST</p>
-              </div>
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 text-center">
-                <Circle className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
-                <p className="text-cyan-400 font-medium">support@ziontechgroup.com</p>
-                <p className="text-gray-400 text-sm">24/7 Support</p>
-              </div>
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 text-center">
-                <Circle className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
-                <p className="text-cyan-400 font-medium">123 Tech Street</p>
-                <p className="text-gray-400 text-sm">San Francisco, CA 94105</p>
-              </div>
+            <p className="text-xl text-gray-300 mb-8">
+              Can't find what you're looking for? Our support team is ready to assist you.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25"
+              >
+                Contact Support
+                <ArrowRight className="w-5 h-5 ml-2 inline" />
+              </Link>
+              <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
+                Schedule Call
+              </button>
             </div>
           </div>
         </section>
