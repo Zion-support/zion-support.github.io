@@ -1,82 +1,82 @@
 import React from 'react';
-import { Mic, Zap, BarChart3, Users, Clock, CheckCircle, Star, ArrowRight, Mail, Phone, MapPin, Brain } from 'lucide-react';
+import { Wifi, Zap, BarChart3, Users, Clock, CheckCircle, Star, ArrowRight, Mail, Phone, MapPin, Cpu } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const AIVoiceAssistant = () => {
+const ZionIoTPlatform = () => {
   const features = [
     {
-      icon: <Mic className="w-6 h-6" />,
-      title: "Natural Voice Recognition",
-      description: "Advanced speech-to-text with 99.9% accuracy in 50+ languages and dialects for seamless communication"
+      icon: <Wifi className="w-6 h-6" />,
+      title: "Device Management",
+      description: "Centralized management of IoT devices with real-time monitoring, remote configuration, and automated updates"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Real-time Processing",
-      description: "Ultra-low latency voice processing with sub-200ms response times for natural conversation flow"
+      title: "Edge Computing",
+      description: "Process data at the edge with low-latency processing and real-time decision making capabilities"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Conversation Analytics",
-      description: "Deep insights into conversation patterns, sentiment analysis, and performance metrics"
+      title: "Data Analytics",
+      description: "Advanced analytics and machine learning for predictive maintenance and operational optimization"
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Multi-user Support",
-      description: "Personalized voice profiles with user recognition and context-aware responses"
+      title: "Multi-tenant Support",
+      description: "Secure multi-tenant architecture with role-based access control and isolated data processing"
     },
     {
       icon: <Clock className="w-6 h-6" />,
-      title: "24/7 Availability",
-      description: "Always-on voice assistant with continuous learning and adaptation capabilities"
+      title: "Real-time Monitoring",
+      description: "24/7 device monitoring with instant alerts, anomaly detection, and automated response systems"
     },
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Intelligence",
-      description: "Advanced NLP and machine learning for contextual understanding and intelligent responses"
+      icon: <Cpu className="w-6 h-6" />,
+      title: "Protocol Support",
+      description: "Support for all major IoT protocols including MQTT, CoAP, HTTP, and custom protocols"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Personal",
-      price: "$19",
+      name: "Starter",
+      price: "$99",
       period: "per month",
-      description: "Perfect for individual users and small teams",
+      description: "Perfect for small IoT deployments",
       features: [
-        "Up to 5 users",
-        "Basic voice commands",
+        "Up to 100 devices",
+        "Basic analytics",
         "Email support",
-        "2 languages",
-        "1GB storage"
+        "2 protocols",
+        "1GB data storage"
       ],
       popular: false
     },
     {
-      name: "Business",
-      price: "$79",
+      name: "Professional",
+      price: "$299",
       period: "per month",
-      description: "Ideal for growing businesses and teams",
+      description: "Ideal for growing IoT businesses",
       features: [
-        "Up to 25 users",
-        "Advanced voice features",
+        "Up to 1,000 devices",
+        "Advanced analytics",
         "Priority support",
-        "10 languages",
-        "10GB storage",
-        "Analytics dashboard"
+        "5 protocols",
+        "10GB data storage",
+        "Edge computing"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$199",
+      price: "$799",
       period: "per month",
-      description: "For large organizations and call centers",
+      description: "For large-scale IoT deployments",
       features: [
-        "Unlimited users",
-        "Full voice capabilities",
+        "Unlimited devices",
+        "Full analytics suite",
         "24/7 phone support",
-        "50+ languages",
+        "All protocols",
         "Unlimited storage",
         "Custom integrations",
         "White-label options"
@@ -87,24 +87,24 @@ const AIVoiceAssistant = () => {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      company: "Customer Service Corp",
-      role: "VP of Operations",
-      content: "Zion AI Voice Assistant has transformed our customer service. Response times improved by 60% and customer satisfaction is at an all-time high.",
+      name: "Robert Chen",
+      company: "Smart City Solutions",
+      role: "CTO",
+      content: "Zion IoT Platform has revolutionized our smart city infrastructure. The edge computing capabilities are exceptional and the device management is seamless.",
       rating: 5
     },
     {
-      name: "Michael Chen",
-      company: "TechStart Inc.",
-      role: "CEO",
-      content: "The natural language processing is incredible. Our team can now handle complex queries in multiple languages seamlessly.",
-      rating: 5
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Healthcare Solutions",
+      name: "Maria Garcia",
+      company: "Industrial IoT Corp",
       role: "Operations Director",
-      content: "The voice recognition accuracy is outstanding. It's like having a human assistant available 24/7 with perfect memory.",
+      content: "The real-time monitoring and analytics have helped us prevent equipment failures and optimize our operations significantly.",
+      rating: 5
+    },
+    {
+      name: "John Smith",
+      company: "AgTech Innovations",
+      role: "CEO",
+      content: "Best IoT platform we've used. The multi-tenant support and protocol flexibility make it perfect for our diverse agricultural sensors.",
       rating: 5
     }
   ];
@@ -112,10 +112,10 @@ const AIVoiceAssistant = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer
-        title="AI Voice Assistant - Advanced Speech Recognition & NLP | Zion Tech Group"
-        description="Revolutionary AI voice assistant with 99.9% accuracy, real-time processing, and multi-language support. Transform customer service and business operations. Starting from $19/month."
-        keywords="AI voice assistant, speech recognition, voice AI, natural language processing, voice automation, conversational AI"
-        canonical="https://ziontechgroup.com/ai-voice-assistant"
+        title="Zion IoT Platform - Enterprise IoT Management & Analytics | Zion Tech Group"
+        description="Comprehensive IoT platform for device management, edge computing, and data analytics. Scale your IoT deployments with enterprise-grade security and monitoring. Starting from $99/month."
+        keywords="IoT platform, device management, edge computing, IoT analytics, smart devices, industrial IoT, IoT monitoring"
+        canonical="https://ziontechgroup.com/zion-iot-platform"
       />
 
       {/* Hero Section */}
@@ -128,19 +128,19 @@ const AIVoiceAssistant = () => {
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Star className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">#1 AI Voice Platform 2024</span>
+            <span className="text-cyan-400 text-sm font-medium">#1 Enterprise IoT Platform 2024</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            AI Voice
+            Zion IoT
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              {" "}Assistant
+              {" "}Platform
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            The most advanced AI voice assistant with 99.9% accuracy, real-time processing, and multi-language support. 
-            Transform your customer service and business operations with intelligent voice automation.
+            The most comprehensive IoT platform for enterprise device management, edge computing, and data analytics. 
+            Scale your IoT deployments with confidence and security.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -156,7 +156,7 @@ const AIVoiceAssistant = () => {
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               Watch Demo
-              <Mic className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+              <Wifi className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
           </div>
         </div>
@@ -167,10 +167,10 @@ const AIVoiceAssistant = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Advanced Voice AI Features
+              Comprehensive IoT Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Cutting-edge voice technology designed to understand, process, and respond with human-like intelligence.
+              Everything you need to manage, monitor, and optimize your IoT deployments at scale.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -199,10 +199,10 @@ const AIVoiceAssistant = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Voice AI Pricing
+              Scalable Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your voice AI needs. All plans include core voice recognition features.
+              Choose the perfect plan for your IoT deployment size. All plans include core device management features.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -259,10 +259,10 @@ const AIVoiceAssistant = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Voice AI Leaders
+              Trusted by IoT Leaders
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our clients say about our AI Voice Assistant
+              See what our clients say about Zion IoT Platform
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -291,10 +291,10 @@ const AIVoiceAssistant = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform with Voice AI?
+            Ready to Scale Your IoT Operations?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join leading companies using our AI Voice Assistant to revolutionize customer service and business operations.
+            Join leading companies using Zion IoT Platform for secure, scalable IoT deployments.
           </p>
           
           {/* Contact Information */}
@@ -335,7 +335,7 @@ const AIVoiceAssistant = () => {
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               Schedule Demo
-              <Mic className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+              <Wifi className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
           </div>
         </div>
@@ -344,4 +344,4 @@ const AIVoiceAssistant = () => {
   );
 };
 
-export default AIVoiceAssistant;
+export default ZionIoTPlatform;

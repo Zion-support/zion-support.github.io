@@ -1,82 +1,82 @@
 import React from 'react';
-import { Mic, Zap, BarChart3, Users, Clock, CheckCircle, Star, ArrowRight, Mail, Phone, MapPin, Brain } from 'lucide-react';
+import { Atom, Zap, BarChart3, Users, Clock, CheckCircle, Star, ArrowRight, Mail, Phone, MapPin, Cpu } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const AIVoiceAssistant = () => {
+const ZionQuantumComputingSimulator = () => {
   const features = [
     {
-      icon: <Mic className="w-6 h-6" />,
-      title: "Natural Voice Recognition",
-      description: "Advanced speech-to-text with 99.9% accuracy in 50+ languages and dialects for seamless communication"
+      icon: <Atom className="w-6 h-6" />,
+      title: "Quantum Circuit Design",
+      description: "Visual quantum circuit designer with drag-and-drop interface for creating complex quantum algorithms"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Real-time Processing",
-      description: "Ultra-low latency voice processing with sub-200ms response times for natural conversation flow"
+      title: "Real-time Simulation",
+      description: "High-performance quantum simulation engine with support for up to 40 qubits in real-time"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Conversation Analytics",
-      description: "Deep insights into conversation patterns, sentiment analysis, and performance metrics"
+      title: "Quantum Analytics",
+      description: "Advanced analytics and visualization tools for quantum state analysis and algorithm optimization"
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Multi-user Support",
-      description: "Personalized voice profiles with user recognition and context-aware responses"
+      title: "Collaborative Workspace",
+      description: "Multi-user quantum development environment with version control and team collaboration features"
     },
     {
       icon: <Clock className="w-6 h-6" />,
-      title: "24/7 Availability",
-      description: "Always-on voice assistant with continuous learning and adaptation capabilities"
+      title: "Cloud Processing",
+      description: "Access to quantum cloud resources with scalable processing power for complex simulations"
     },
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Intelligence",
-      description: "Advanced NLP and machine learning for contextual understanding and intelligent responses"
+      icon: <Cpu className="w-6 h-6" />,
+      title: "Hardware Integration",
+      description: "Integration with real quantum hardware including IBM Q, Google Quantum, and other quantum computers"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Personal",
-      price: "$19",
+      name: "Researcher",
+      price: "$199",
       period: "per month",
-      description: "Perfect for individual users and small teams",
+      description: "Perfect for quantum researchers and students",
       features: [
-        "Up to 5 users",
-        "Basic voice commands",
+        "Up to 20 qubits",
+        "Basic quantum gates",
         "Email support",
-        "2 languages",
-        "1GB storage"
+        "2 team members",
+        "10GB storage"
       ],
       popular: false
     },
     {
-      name: "Business",
-      price: "$79",
+      name: "Professional",
+      price: "$499",
       period: "per month",
-      description: "Ideal for growing businesses and teams",
+      description: "Ideal for quantum development teams",
       features: [
-        "Up to 25 users",
-        "Advanced voice features",
+        "Up to 30 qubits",
+        "Advanced quantum gates",
         "Priority support",
-        "10 languages",
-        "10GB storage",
-        "Analytics dashboard"
+        "10 team members",
+        "50GB storage",
+        "Hardware integration"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$199",
+      price: "$1299",
       period: "per month",
-      description: "For large organizations and call centers",
+      description: "For large quantum computing projects",
       features: [
-        "Unlimited users",
-        "Full voice capabilities",
+        "Up to 40 qubits",
+        "All quantum features",
         "24/7 phone support",
-        "50+ languages",
+        "Unlimited team members",
         "Unlimited storage",
         "Custom integrations",
         "White-label options"
@@ -87,24 +87,24 @@ const AIVoiceAssistant = () => {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      company: "Customer Service Corp",
-      role: "VP of Operations",
-      content: "Zion AI Voice Assistant has transformed our customer service. Response times improved by 60% and customer satisfaction is at an all-time high.",
+      name: "Dr. Sarah Kim",
+      company: "Quantum Research Institute",
+      role: "Principal Researcher",
+      content: "Zion Quantum Simulator has revolutionized our research capabilities. The real-time simulation and analytics are incredibly powerful.",
       rating: 5
     },
     {
       name: "Michael Chen",
-      company: "TechStart Inc.",
-      role: "CEO",
-      content: "The natural language processing is incredible. Our team can now handle complex queries in multiple languages seamlessly.",
+      company: "Quantum Computing Corp",
+      role: "CTO",
+      content: "The collaborative workspace and hardware integration features have accelerated our quantum algorithm development significantly.",
       rating: 5
     },
     {
-      name: "Emily Rodriguez",
-      company: "Healthcare Solutions",
-      role: "Operations Director",
-      content: "The voice recognition accuracy is outstanding. It's like having a human assistant available 24/7 with perfect memory.",
+      name: "Dr. Emily Rodriguez",
+      company: "Advanced Quantum Labs",
+      role: "Research Director",
+      content: "Best quantum simulation platform available. The cloud processing capabilities make complex simulations accessible and affordable.",
       rating: 5
     }
   ];
@@ -112,10 +112,10 @@ const AIVoiceAssistant = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer
-        title="AI Voice Assistant - Advanced Speech Recognition & NLP | Zion Tech Group"
-        description="Revolutionary AI voice assistant with 99.9% accuracy, real-time processing, and multi-language support. Transform customer service and business operations. Starting from $19/month."
-        keywords="AI voice assistant, speech recognition, voice AI, natural language processing, voice automation, conversational AI"
-        canonical="https://ziontechgroup.com/ai-voice-assistant"
+        title="Zion Quantum Computing Simulator - Advanced Quantum Development Platform | Zion Tech Group"
+        description="Professional quantum computing simulator with real-time simulation, circuit design, and hardware integration. Develop quantum algorithms with up to 40 qubits. Starting from $199/month."
+        keywords="quantum computing, quantum simulator, quantum algorithms, quantum circuits, quantum development, quantum research"
+        canonical="https://ziontechgroup.com/zion-quantum-computing-simulator"
       />
 
       {/* Hero Section */}
@@ -128,19 +128,19 @@ const AIVoiceAssistant = () => {
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Star className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">#1 AI Voice Platform 2024</span>
+            <span className="text-cyan-400 text-sm font-medium">#1 Quantum Development Platform 2024</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            AI Voice
+            Zion Quantum
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              {" "}Assistant
+              {" "}Simulator
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            The most advanced AI voice assistant with 99.9% accuracy, real-time processing, and multi-language support. 
-            Transform your customer service and business operations with intelligent voice automation.
+            The most advanced quantum computing simulator for researchers, developers, and enterprises. 
+            Design, simulate, and optimize quantum algorithms with unprecedented power and precision.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -156,7 +156,7 @@ const AIVoiceAssistant = () => {
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               Watch Demo
-              <Mic className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+              <Atom className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
           </div>
         </div>
@@ -167,10 +167,10 @@ const AIVoiceAssistant = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Advanced Voice AI Features
+              Advanced Quantum Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Cutting-edge voice technology designed to understand, process, and respond with human-like intelligence.
+              Comprehensive quantum computing tools designed for the next generation of quantum applications.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -199,10 +199,10 @@ const AIVoiceAssistant = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Voice AI Pricing
+              Quantum Computing Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your voice AI needs. All plans include core voice recognition features.
+              Choose the perfect plan for your quantum computing needs. All plans include core simulation features.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -259,10 +259,10 @@ const AIVoiceAssistant = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Voice AI Leaders
+              Trusted by Quantum Leaders
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our clients say about our AI Voice Assistant
+              See what our clients say about Zion Quantum Simulator
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -291,10 +291,10 @@ const AIVoiceAssistant = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform with Voice AI?
+            Ready to Explore Quantum Computing?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join leading companies using our AI Voice Assistant to revolutionize customer service and business operations.
+            Join leading researchers and developers using Zion Quantum Simulator for cutting-edge quantum applications.
           </p>
           
           {/* Contact Information */}
@@ -335,7 +335,7 @@ const AIVoiceAssistant = () => {
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               Schedule Demo
-              <Mic className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+              <Atom className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
           </div>
         </div>
@@ -344,4 +344,4 @@ const AIVoiceAssistant = () => {
   );
 };
 
-export default AIVoiceAssistant;
+export default ZionQuantumComputingSimulator;

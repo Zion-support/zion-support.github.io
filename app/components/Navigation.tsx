@@ -25,7 +25,8 @@ const Navigation = React.memo(() => {
     { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> },
     { name: 'AI Customer Support', path: '/ai-customer-support-chatbot', icon: <Zap className="w-4 h-4" /> },
     { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> },
-    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> }
+    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> },
+    { name: 'AI Voice Assistant', path: '/ai-voice-assistant', icon: <Zap className="w-4 h-4" /> }
   ], [])
 
 
@@ -37,7 +38,11 @@ const Navigation = React.memo(() => {
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
     { name: 'Zion Project Master', path: '/zion-project-master', icon: <Code className="w-4 h-4" /> },
-    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> }
+    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion AI Assistant Pro', path: '/zion-ai-assistant-pro', icon: <Brain className="w-4 h-4" />, featured: true },
+    { name: 'Zion Blockchain Manager', path: '/zion-blockchain-manager', icon: <Shield className="w-4 h-4" /> },
+    { name: 'Zion IoT Platform', path: '/zion-iot-platform', icon: <Cloud className="w-4 h-4" /> },
+    { name: 'Zion Quantum Simulator', path: '/zion-quantum-computing-simulator', icon: <Zap className="w-4 h-4" /> }
   ], [])
 
   const mainNavItems = useMemo(() => [

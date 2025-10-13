@@ -27,7 +27,7 @@ const Footer = React.memo(() => {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-2">
@@ -56,64 +56,9 @@ const Footer = React.memo(() => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* AI Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/ai-services"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  AI Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/cloud-services"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Cloud Solutions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/cybersecurity"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Cybersecurity
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/5g-solutions"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  5G Solutions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/data-analytics"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Data Analytics
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/web-development"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Web Development
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Solutions */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Solutions</h4>
+            <h4 className="text-lg font-semibold mb-4">AI Services</h4>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -129,6 +74,14 @@ const Footer = React.memo(() => {
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   AI Automation
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-voice-assistant"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  AI Voice Assistant
                 </Link>
               </li>
               <li>
@@ -149,10 +102,57 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/ai-marketing"
+                  to="/ai-cybersecurity"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  AI Marketing
+                  AI Cybersecurity
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* IT Services */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">IT Services</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/cloud-infrastructure"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Cloud Infrastructure
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/cybersecurity-solutions"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Cybersecurity
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/web-development"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Web Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/mobile-development"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Mobile Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/edge-computing-solutions"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Edge Computing
                 </Link>
               </li>
               <li>
@@ -163,12 +163,59 @@ const Footer = React.memo(() => {
                   Data Analytics
                 </Link>
               </li>
+            </ul>
+          </div>
+
+          {/* Micro SAAS */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Micro SAAS</h4>
+            <ul className="space-y-2">
               <li>
                 <Link
-                  to="/custom-development"
+                  to="/zion-analytics-pro"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Custom Development
+                  Zion Analytics Pro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-security-shield"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Zion Security Shield
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-assistant-pro"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Zion AI Assistant Pro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-blockchain-manager"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Zion Blockchain Manager
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-iot-platform"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Zion IoT Platform
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-quantum-computing-simulator"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Zion Quantum Simulator
                 </Link>
               </li>
             </ul>
