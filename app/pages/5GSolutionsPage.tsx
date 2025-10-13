@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 import { 
   SignalIcon,
   CpuChipIcon,
@@ -11,8 +11,7 @@ import {
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 export default function FiveGSolutionsPage() {
   const services = [
     {
@@ -39,8 +38,7 @@ export default function FiveGSolutionsPage() {
       description: 'Next-generation mobile applications designed to leverage 5G capabilities and performance.',
       features: ['AR/VR apps', 'Real-time streaming', 'High-bandwidth apps', 'Cloud integration']
     }
-  ];
-
+  ]
   const applications = [
     { name: 'Autonomous Vehicles', description: 'Real-time communication for self-driving cars' },
     { name: 'Remote Surgery', description: 'Ultra-low latency medical procedures' },
@@ -48,8 +46,7 @@ export default function FiveGSolutionsPage() {
     { name: 'Virtual Reality', description: 'Immersive VR experiences' },
     { name: 'Smart Grids', description: 'Energy management systems' },
     { name: 'Telemedicine', description: 'Remote healthcare services' }
-  ];
-
+  ]
   return (
     <>
       <SEO 
@@ -239,5 +236,4 @@ export default function FiveGSolutionsPage() {
         </div>
       </section>
     </>
-  );
-}
+  )}

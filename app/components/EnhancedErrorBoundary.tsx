@@ -1,56 +1,57 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React, { Component, ErrorInfo, ReactNode } from 'react'
+import { Helmet } from 'react-helmet-async'
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-}
+  children: ReactNode
+  fallback?: ReactNode
+  onError?: (error: Error, errorInfo: ErrorInfo) => void}
 
 interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
-}
+  hasError: boolean
+  error: Error | null
+  errorInfo: ErrorInfo | null
+  errorId: string}
 
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
+    super(props)
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null,
       errorId: ''
+<<<<<<< HEAD
     }
   }
+=======
+    }}
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+<<<<<<< HEAD
     }
   }
+=======
+    }}
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
-    });
-
+    })
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
+      console.error('Error caught by boundary:', error, errorInfo)}
 
     // Call custom error handler
-    this.props.onError?.(error, errorInfo);
-
+    this.props.onError?.(error, errorInfo)
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo);
-    }
+      this.logErrorToService(error, errorInfo)}
   }
 
   private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
@@ -67,12 +68,18 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         url: window.location.href
       }
       // Example: Send to error tracking service
+<<<<<<< HEAD
       // errorTrackingService.captureException(error, { extra: errorData });
       
       console.error('Error logged to service:', errorData);
     } catch (loggingError) {
       console.error('Failed to log error to service:', loggingError);
     }
+=======
+      // errorTrackingService.captureException(error, { extra: errorData })
+      console.error('Error logged to service:', errorData)} catch (loggingError) {
+      console.error('Failed to log error to service:', loggingError)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   }
   private handleRetry = () => {
     this.setState({
@@ -80,6 +87,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error: null,
       errorInfo: null,
       errorId: ''
+<<<<<<< HEAD
     });
   }
   private handleReload = () => {
@@ -88,12 +96,18 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   private handleGoHome = () => {
     window.location.href = '/';
   }
+=======
+    })}
+  private handleReload = () => {
+    window.location.reload()}
+  private handleGoHome = () => {
+    window.location.href = '/'}
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {
-        return this.props.fallback;
-      }
+        return this.props.fallback}
 
       // Default error UI
       return (
@@ -211,11 +225,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </>
-      );
-    }
+      )}
 
-    return this.props.children;
-  }
+    return this.props.children}
 }
 
-export default EnhancedErrorBoundary;
+export default EnhancedErrorBoundary

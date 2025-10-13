@@ -1,4 +1,8 @@
 'use client';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -17,48 +21,42 @@ const HomePage: React.FC = () => {
     {
       icon: CpuChipIcon,
       title: 'AI Solutions',
-      description: 'Advanced artificial intelligence and machine learning solutions to transform your business.',
+      description: 'Cutting-edge artificial intelligence solutions to transform your business.',
       href: '/ai-solutions'
-    },
-    {
-      icon: ShieldCheckIcon,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets and infrastructure.',
-      href: '/cybersecurity'
     },
     {
       icon: CloudIcon,
       title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions and infrastructure management for modern businesses.',
-      href: '/cloud-solutions'
+      description: 'Scalable and secure cloud infrastructure solutions for modern businesses.',
+      href: '/cloud-infrastructure'
+    },
+    {
+      icon: ShieldCheckIcon,
+      title: 'Cybersecurity',
+      description: 'Comprehensive cybersecurity solutions to protect your digital assets.',
+      href: '/cybersecurity'
     },
     {
       icon: RocketLaunchIcon,
       title: 'Digital Transformation',
-      description: 'Complete digital transformation strategies to modernize your operations.',
+      description: 'Complete digital transformation services to modernize your business.',
       href: '/digital-transformation'
     }
   ];
 
   const features = [
     '24/7 Expert Support',
-    'Cutting-edge Technology',
-    'Scalable Solutions',
-    'Industry Expertise',
-    'Proven Results',
-    'Custom Implementation'
-  ];
-
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '24/7', label: 'Support Available' }
+    'Custom Solutions',
+    'Scalable Architecture',
+    'Security First',
+    'Performance Optimized',
+    'Cost Effective'
   ];
 
   return (
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>Zion Tech Group - Advanced AI & IT Solutions</title>
         <meta name="description" content="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology." />
         <meta name="keywords" content="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, technology consulting, Zion Tech Group" />
@@ -89,32 +87,40 @@ const HomePage: React.FC = () => {
           <div className="max-w-4xl mx-auto">
             <h1 className="text-6xl md:text-7xl font-bold mb-6 gradient-text neon-text">
               Zion Tech Group
+=======
+        <title>Zion Tech Group - AI & IT Solutions</title>
+        <meta name="description" content="Leading provider of AI and IT solutions. Transform your business with cutting-edge technology." />
+        <meta name="keywords" content="AI solutions, IT services, cloud infrastructure, cybersecurity, digital transformation" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              Transform Your Business with AI & IT Solutions
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Advanced AI and IT Solutions for Modern Businesses
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              We deliver cutting-edge artificial intelligence and information technology solutions 
+              that drive growth, efficiency, and innovation for businesses of all sizes.
             </p>
-            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
-              Empowering businesses with cutting-edge artificial intelligence, cybersecurity solutions, 
-              cloud infrastructure, and digital transformation services to drive innovation and growth.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
-                className="group bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 hover-lift hover-glow flex items-center gap-2 glow-effect"
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
               >
-                Get Started Today
-                <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                Get Started
               </Link>
               <Link 
                 to="/services" 
-                className="group border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 hover-lift hover-glow flex items-center gap-2 glass"
+                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
               >
-                Explore Services
-                <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                Learn More
               </Link>
             </div>
           </div>
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -308,24 +314,32 @@ const HomePage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+=======
+        </section>
+
+        {/* Services Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              Our Services
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
               {services.map((service, index) => (
-                <Link
-                  key={index}
+                <Link 
+                  key={index} 
                   to={service.href}
-                  className="group bg-slate-800/50 p-8 rounded-xl hover:bg-slate-700/50 transition-all duration-300 transform hover:scale-105 border border-slate-700 hover:border-purple-500"
+                  className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-8 h-8 text-white" />
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <service.icon className="w-6 h-6 text-blue-600" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-4 group-hover:text-purple-400 transition-colors">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-gray-300 text-sm leading-relaxed">
-                    {service.description}
-                  </p>
-                  <div className="mt-4 flex items-center text-purple-400 group-hover:text-purple-300 transition-colors">
-                    <span className="text-sm font-medium">Learn More</span>
-                    <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <div className="flex items-center text-blue-600 font-medium">
+                    Learn More <ArrowRightIcon className="w-4 h-4 ml-1" />
                   </div>
                 </Link>
               ))}
@@ -334,22 +348,16 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-                Why Choose <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Zion Tech Group</span>?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We deliver exceptional results through innovative technology and expert guidance.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section className="py-20 px-4 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              Why Choose Us?
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-center space-x-4 p-6 bg-slate-800/30 rounded-lg hover:bg-slate-700/30 transition-colors">
-                  <CheckCircleIcon className="w-6 h-6 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300 font-medium">{feature}</span>
+                <div key={index} className="flex items-center">
+                  <CheckCircleIcon className="w-6 h-6 text-green-500 mr-3" />
+                  <span className="text-gray-700">{feature}</span>
                 </div>
               ))}
             </div>
@@ -357,26 +365,26 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our technology solutions can accelerate your growth and innovation.
+            <p className="text-lg text-gray-600 mb-8">
+              Let's discuss how our AI and IT solutions can help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+              <Link 
+                to="/contact" 
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
               >
-                Start Your Project
+                Contact Us
               </Link>
-              <Link
-                to="/demo"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
+              <Link 
+                to="/about" 
+                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
               >
-                Schedule Demo
+                About Us
               </Link>
             </div>
           </div>
@@ -384,5 +392,11 @@ const HomePage: React.FC = () => {
       </div>
     </>
   );
+<<<<<<< HEAD
 }
 export default HomePage;
+=======
+};
+
+export default HomePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

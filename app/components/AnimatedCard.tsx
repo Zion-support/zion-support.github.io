@@ -1,11 +1,9 @@
-import React from 'react';
-
+import React from 'react'
 interface AnimatedCardProps {
-  children: React.ReactNode;
-  className?: string;
-  glowColor?: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow';
-  hoverEffect?: boolean;
-}
+  children: React.ReactNode
+  className?: string
+  glowColor?: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow'
+  hoverEffect?: boolean}
 
 const AnimatedCard: React.FC<AnimatedCardProps> = ({
   children,
@@ -49,6 +47,11 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
         {children}
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
 export default AnimatedCard;
+=======
+  )}
+export default AnimatedCard
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

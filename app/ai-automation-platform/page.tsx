@@ -1,9 +1,8 @@
-import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-
+import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react'
+import EnhancedSEO from '../components/EnhancedSEO'
+import ResponsiveContainer from '../components/ResponsiveContainer'
+import FuturisticCard from '../components/FuturisticCard'
+import FuturisticButton from '../components/FuturisticButton'
 const AIAutomationPlatform = () => {
   const features = [
     {
@@ -16,25 +15,33 @@ const AIAutomationPlatform = () => {
       title: "Smart Decision Making",
       description: "AI-driven decision making for automated business processes",
 
+<<<<<<< HEAD
       icon: <Brain className="w-6 h-6" />,
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
       color: "from-green-500 to-emerald-500"
     },
     {
       title: "Process Optimization",
       description: "Continuously optimize processes using machine learning",
 
+<<<<<<< HEAD
       icon: <Settings className="w-6 h-6" />,
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
       color: "from-purple-500 to-pink-500"
     },
     {
       title: "Integration Hub",
       description: "Connect and automate across all your business systems",
 
+<<<<<<< HEAD
       icon: <Zap className="w-6 h-6" />,
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
       color: "from-orange-500 to-red-500"
     }
-  ];
-
+  ]
   const benefits = [
     "70% process efficiency gain",
     "Automated decision making",
@@ -42,8 +49,7 @@ const AIAutomationPlatform = () => {
     "Real-time optimization",
     "Scalable workflows",
     "Cost reduction"
-  ];
-
+  ]
   return (
     <>
       <EnhancedSEO
@@ -60,7 +66,10 @@ const AIAutomationPlatform = () => {
             <div className="relative z-10 text-center py-20">
               <div className="flex items-center justify-center mb-6">
 
+<<<<<<< HEAD
                 <Brain className="w-4 h-4 text-cyan-400 mr-2" />
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
                 <span className="text-cyan-400 text-sm font-medium">Intelligent Automation</span>
               </div>
               
@@ -82,7 +91,10 @@ const AIAutomationPlatform = () => {
                 <FuturisticButton
                   variant="outline"
 
+<<<<<<< HEAD
                   icon={<Play className="w-5 h-5" />}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
                 >
                   View Demo
                 </FuturisticButton>
@@ -157,7 +169,10 @@ const AIAutomationPlatform = () => {
               <FuturisticButton
                 size="lg"
 
+<<<<<<< HEAD
                 icon={<Zap className="w-6 h-6" />}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
               >
                 Start Your Automation Journey
               </FuturisticButton>
@@ -166,6 +181,11 @@ const AIAutomationPlatform = () => {
         </section>
       </div>
     </>
+<<<<<<< HEAD
   );
 }
 export default AIAutomationPlatform;
+=======
+  )}
+export default AIAutomationPlatform
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

@@ -9,8 +9,12 @@ interface Props {
 
 interface State {
   hasError: boolean;
+<<<<<<< HEAD
 error: Error | null;
   errorInfo: ErrorInfo | null;  error: Error | null;
+=======
+  error: Error | null;
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   errorInfo: ErrorInfo | null;
 }
 
@@ -33,6 +37,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     
     if (this.props.onError) {
@@ -41,30 +46,44 @@ class ErrorBoundary extends Component<Props, State> {
       errorInfo
     });
 // Log error to console in development    if (process.env.NODE_ENV === 'development') {
+=======
+    this.setState({
+      error,
+      errorInfo
+    });
+
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
-    // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      // Here you would typically send the error to a service like Sentry
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
+    // In production, you might want to log this to an error reporting service
+    // Example: logErrorToService(error, errorInfo);
   }
 
-  handleRetry = () => {
+  handleReset = () => {
     this.setState({
       hasError: false,
       error: null,
       errorInfo: null
     });
+<<<<<<< HEAD
   }
+=======
+  };
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   render() {
     if (this.state.hasError) {
+      // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
+      // Default error UI
       return (
+<<<<<<< HEAD
         <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
           <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">
             <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6">
@@ -124,7 +143,51 @@ className="flex items-center justify-center gap-2 border-2 border-purple-400 tex
                 <Link to="/contact" className="text-purple-400 hover:text-purple-300">
                   contact our support team
                 </Link>
+=======
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
+              <AlertTriangle className="w-6 h-6 text-red-600" />
+            </div>
+            
+            <div className="text-center">
+              <h1 className="text-lg font-medium text-gray-900 mb-2">
+                Something went wrong
+              </h1>
+              <p className="text-sm text-gray-500 mb-6">
+                We're sorry, but something unexpected happened. Please try refreshing the page.
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
               </p>
+              
+              {process.env.NODE_ENV === 'development' && this.state.error && (
+                <details className="mb-4 text-left">
+                  <summary className="cursor-pointer text-sm text-gray-600 hover:text-gray-800">
+                    Error Details
+                  </summary>
+                  <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
+                    {this.state.error.toString()}
+                    {this.state.errorInfo?.componentStack}
+                  </pre>
+                </details>
+              )}
+              
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <button
+                  onClick={this.handleReset}
+                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                >
+                  <RefreshCw className="w-4 h-4 mr-2" />
+                  Try Again
+                </button>
+                
+                <Link
+                  to="/"
+                  className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                >
+                  <Home className="w-4 h-4 mr-2" />
+                  Go Home
+                </Link>
+              </div>
             </div>
           </div>
         </div>

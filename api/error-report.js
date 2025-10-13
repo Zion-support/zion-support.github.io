@@ -1,11 +1,16 @@
-export default function handler(req, res)   {
+export default function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
+<<<<<<< HEAD
 
     const { error, stack, url, userAgent } = req.body;    console.error('Client Error Report:', { error, stack, url, userAgent });
+=======
+    const { error, stack, url, userAgent } = req.body;
+    console.error('Client Error Report:', { error, stack, url, userAgent });
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
     console.log('Error report received:', new Date().toISOString());
     
     res.status(200).json({ success: true, message: 'Error report received' });

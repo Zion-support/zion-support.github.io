@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
@@ -11,6 +12,9 @@ import {
   CheckIcon,
   StarIcon
 } from '@heroicons/react/24/outline';
+=======
+import React from 'react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {
@@ -87,8 +91,7 @@ const ServicesPage: React.FC = () => {
         { name: '5G Applications', price: '$2,200/month', description: 'Custom applications designed for 5G networks', features: ['App Development', '5G Optimization', 'Performance Tuning', 'User Experience'] }
       ]
     }
-  ];
-
+  ]
   return (
     <>
       <EnhancedSEO
@@ -134,7 +137,7 @@ const ServicesPage: React.FC = () => {
           </div>
 
           {serviceCategories.map((category, categoryIndex) => {
-            const Icon = category.icon;
+            const Icon = category.icon
             return (
               <div key={categoryIndex} className="mb-20">
                 <div className="flex items-center mb-12">
@@ -179,8 +182,7 @@ const ServicesPage: React.FC = () => {
                   ))}
                 </div>
               </div>
-            );
-          })}
+            )})}
         </div>
       </section>
 
@@ -215,6 +217,11 @@ const ServicesPage: React.FC = () => {
         </div>
       </section>
     </>
+<<<<<<< HEAD
   );
 }
 export default ServicesPage;
+=======
+  )}
+export default ServicesPage
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

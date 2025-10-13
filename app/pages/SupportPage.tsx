@@ -1,6 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 const SupportPage: React.FC = () => {
   return (
     <>
@@ -17,6 +16,11 @@ const SupportPage: React.FC = () => {
         </div>
       </div>
     </>
+<<<<<<< HEAD
   );
 }
 export default SupportPage;
+=======
+  )}
+export default SupportPage
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

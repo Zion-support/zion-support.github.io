@@ -1,6 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 const SolutionsPage: React.FC = () => {
   return (
     <>
@@ -17,6 +16,11 @@ const SolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
+<<<<<<< HEAD
   );
 }
 export default SolutionsPage;
+=======
+  )}
+export default SolutionsPage
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

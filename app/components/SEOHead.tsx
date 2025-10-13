@@ -1,15 +1,13 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOHeadProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product';
-  structuredData?: any;
-}
+  title?: string
+  description?: string
+  keywords?: string
+  image?: string
+  url?: string
+  type?: 'website' | 'article' | 'product'
+  structuredData?: any}
 
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -65,8 +63,12 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       ]
     }
   }
+<<<<<<< HEAD
   const finalStructuredData = structuredData || defaultStructuredData;
 
+=======
+  const finalStructuredData = structuredData || defaultStructuredData
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -126,6 +128,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
     </Helmet>
+<<<<<<< HEAD
   );
 }
 export default SEOHead;
+=======
+  )}
+export default SEOHead
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

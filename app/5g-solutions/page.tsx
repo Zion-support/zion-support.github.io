@@ -1,7 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Right, Wifi, Circle, Zap, Globe, Smartphone } from 'lucide-react';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Right, Wifi, Circle, Zap, Globe, Smartphone } from 'lucide-react'
 const FiveGSolutionsPage: React.FC = () => {
   const features = [
     {
@@ -25,16 +24,22 @@ const FiveGSolutionsPage: React.FC = () => {
     {
       icon: Wifi,
 
+<<<<<<< HEAD
       title: 'IoT Connectivity',
       description: 'Connect thousands of IoT devices with 5G technology',
       benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
     }
-  ];
-
+  ]
   const solutions = [
     {
 
+<<<<<<< HEAD
       title: '5G Network Infrastructure',      description: 'Complete 5G network setup and optimization',
+=======
+      description: 'Complete 5G network setup and optimization',
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
       price: 'Starting at $50,000',
       features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']
     },
@@ -49,9 +54,12 @@ const FiveGSolutionsPage: React.FC = () => {
       description: 'IoT device connectivity and management platform',
       price: 'Starting at $35,000',
       features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']
-    }
-  ];
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+    }
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
@@ -106,7 +114,7 @@ const FiveGSolutionsPage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => {
-              const IconComponent = feature.icon;
+              const IconComponent = feature.icon
               return (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300">
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg mb-4">
@@ -123,8 +131,7 @@ const FiveGSolutionsPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -178,6 +185,11 @@ const FiveGSolutionsPage: React.FC = () => {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   );
 }
 export default FiveGSolutionsPage;
+=======
+  )}
+export default FiveGSolutionsPage
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

@@ -1,20 +1,18 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React, { useState, useRef, useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  placeholder?: string;
-  sizes?: string;
-  quality?: number;
-  loading?: 'lazy' | 'eager';
-  onLoad?: () => void;
-  onError?: () => void;
-}
+  src: string
+  alt: string
+  width?: number
+  height?: number
+  className?: string
+  priority?: boolean
+  placeholder?: string
+  sizes?: string
+  quality?: number
+  loading?: 'lazy' | 'eager'
+  onLoad?: () => void
+  onError?: () => void}
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
@@ -30,35 +28,29 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   onLoad,
   onError
 }) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isError, setIsError] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
-  const imgRef = useRef<HTMLImageElement>(null);
-
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [isError, setIsError] = useState(false)
+  const [isInView, setIsInView] = useState(priority)
+  const imgRef = useRef<HTMLImageElement>(null)
   useEffect(() => {
-    if (priority) return;
-
+    if (priority) return
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
-        }
+          setIsInView(true)
+          observer.disconnect()}
       },
       {
         threshold: 0.1,
         rootMargin: '50px'
       }
-    );
-
+    )
     if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
+      observer.observe(imgRef.current)}
 
-    return () => observer.disconnect();
-  }, [priority]);
-
+    return () => observer.disconnect()}, [priority])
   const handleLoad = () => {
+<<<<<<< HEAD
     setIsLoaded(true);
     onLoad?.();
   }
@@ -66,22 +58,32 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     setIsError(true);
     onError?.();
   }
+=======
+    setIsLoaded(true)
+    onLoad?.()}
+  const handleError = () => {
+    setIsError(true)
+    onError?.()}
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   // Generate WebP src if supported
   const getOptimizedSrc = (originalSrc: string) => {
     if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {
-      return originalSrc;
-    }
+      return originalSrc}
     
     // For external images, return as-is
     if (originalSrc.startsWith('http')) {
-      return originalSrc;
-    }
+      return originalSrc}
     
     // For local images, you could implement WebP conversion here
+<<<<<<< HEAD
     return originalSrc;
   }
   const optimizedSrc = getOptimizedSrc(src);
 
+=======
+    return originalSrc}
+  const optimizedSrc = getOptimizedSrc(src)
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   return (
     <>
       {priority && (
@@ -140,6 +142,11 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         )}
       </div>
     </>
+<<<<<<< HEAD
   );
 }
 export default OptimizedImage;
+=======
+  )}
+export default OptimizedImage
+>>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
