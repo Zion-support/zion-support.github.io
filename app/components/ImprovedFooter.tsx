@@ -152,7 +152,7 @@ const ImprovedFooter = () => {
     { label: 'API Reference', href: '/api' },
     { label: 'Tutorials', href: '/tutorials' },
     { label: 'Webinars', href: '/webinars' },
-    { label: 'White Papers', href: '/whitepapers' }
+    { label: 'Whitepapers', href: '/whitepapers' }
   ];
 
   const legalLinks = [

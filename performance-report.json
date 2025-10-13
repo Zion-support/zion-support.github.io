@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "timestamp": "2025-10-13T09:02:12.194Z",
 =======
   "timestamp": "2025-10-13T09:23:16.492Z",
@@ -14,10 +15,14 @@
     "jsSize": 522390,
 =======
   "timestamp": "2025-10-13T09:04:40.055Z",
+=======
+  "timestamp": "2025-10-13T09:34:20.801Z",
+>>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
   "buildStats": {
     "totalFiles": 18,
-    "totalSize": 576758,
+    "totalSize": 580301,
     "jsFiles": 14,
+<<<<<<< HEAD
     "jsSize": 555173,
 >>>>>>> cursor/analyze-improve-and-deploy-application-c4da
 =======
@@ -31,6 +36,9 @@
 =======
     "jsSize": 564892,
 >>>>>>> cursor/analyze-improve-and-deploy-application-6099
+=======
+    "jsSize": 557304,
+>>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
     "cssFiles": 1,
     "cssSize": 1811,
     "imageFiles": 1,

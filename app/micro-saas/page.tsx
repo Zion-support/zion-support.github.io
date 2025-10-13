@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-6099
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -674,6 +677,7 @@ const MicroSaasPage = () => {
 
 export default MicroSaasPage;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-c4da
 =======
                 Watch Demo
@@ -872,3 +876,5 @@ export default MicroSaasPage;
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-6099
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-f4a2

@@ -455,8 +455,13 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       </main>
       </div>
+=======
+          </main>
+        </div>
+>>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
       </EnhancedAccessibility>
     </PerformanceOptimizer>
   );
