@@ -85,17 +85,10 @@ const CaseStudiesPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900">
+    <>
       <Helmet>
-        <title>Case Studies - Zion Tech Group | Success Stories & Client Results</title>
-        <meta
-          name="description"
-          content="Explore our success stories and case studies. See how Zion Tech Group has helped businesses achieve remarkable results with AI, technology, and digital transformation solutions."
-        />
-        <meta
-          name="keywords"
-          content="case studies, success stories, client results, AI implementation, digital transformation, technology solutions, business outcomes"
-        />
+        <title>Case Studies - Zion Tech Group</title>
+        <meta name="description" content="Explore our successful projects and client transformations across various industries." />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900">

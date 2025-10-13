@@ -62,19 +62,13 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       url: window.location.href,
     };
 
+
+    console.error('Error data:', errorData);
 <<<<<<< HEAD
 
-    // Log the error data for debugging
-    console.error('Error data:', errorData);
 
 
 
-
-=======
-    // Log the error data for debugging
-    console.error('Error data:', errorData);
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6877
     // Example: Send to your error reporting service
     // You could send this to your backend:
     // fetch('/api/error-report', {
@@ -84,7 +78,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     // });
     
     // For now, just log to console
-    console.error('Error data:', errorData);
+    // Error data logged
   };
 
   handleReset = () => {

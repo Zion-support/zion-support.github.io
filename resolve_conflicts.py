@@ -4,70 +4,59 @@ import re
 import glob
 
 def resolve_merge_conflicts(file_path):
-    """Resolve merge conflicts by accepting the latest version (after the last =======)"""
+    """Resolve merge conflicts by keeping the HEAD version"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         # Pattern to match merge conflict markers
-        conflict_pattern = r'<<<<<<< HEAD.*?=======.*?>>>>>>> [^\n]+'
+        conflict_pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n'
         
-        # Find all conflicts
-        conflicts = re.findall(conflict_pattern, content, re.DOTALL)
+        # Replace conflicts with HEAD version
+        resolved_content = re.sub(conflict_pattern, r'\1\n', content, flags=re.DOTALL)
         
-        if not conflicts:
-            return False
+        # Also handle cases where there might be multiple conflict markers in one block
+        conflict_pattern2 = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+'
+        resolved_content = re.sub(conflict_pattern2, r'\1', resolved_content, flags=re.DOTALL)
         
-        print(f"Resolving {len(conflicts)} conflicts in {file_path}")
+        # Remove any remaining conflict markers
+        resolved_content = re.sub(r'<<<<<<< HEAD\n', '', resolved_content)
+        resolved_content = re.sub(r'=======\n', '', resolved_content)
+        resolved_content = re.sub(r'>>>>>>> [^\n]+\n', '', resolved_content)
         
-        # For each conflict, extract the part after the last =======
-        def resolve_conflict(match):
-            conflict_text = match.group(0)
-            # Split by ======= and take the last part (after the last =======)
-            parts = conflict_text.split('=======')
-            if len(parts) >= 2:
-                # Take the last part and remove the >>>>>>> line
-                resolved = parts[-1]
-                # Remove the >>>>>>> branch-name line
-                resolved = re.sub(r'>>>>>>> [^\n]+\n?', '', resolved)
-                return resolved
-            return conflict_text
-        
-        # Replace all conflicts
-        resolved_content = re.sub(conflict_pattern, resolve_conflict, content, flags=re.DOTALL)
-        
-        # Write back the resolved content
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(resolved_content)
-        
-        return True
+        if content != resolved_content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(resolved_content)
+            print(f"Resolved conflicts in {file_path}")
+            return True
+        return False
     except Exception as e:
         print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    # Find all TypeScript/TSX files with merge conflicts
-    files_with_conflicts = []
+    # Find all TypeScript and JavaScript files
+    patterns = [
+        '**/*.tsx',
+        '**/*.ts',
+        '**/*.jsx',
+        '**/*.js'
+    ]
     
-    for pattern in ['**/*.ts', '**/*.tsx']:
+    files_processed = 0
+    files_resolved = 0
+    
+    for pattern in patterns:
         for file_path in glob.glob(pattern, recursive=True):
-            if os.path.isfile(file_path):
-                try:
-                    with open(file_path, 'r', encoding='utf-8') as f:
-                        content = f.read()
-                    if '<<<<<<< HEAD' in content:
-                        files_with_conflicts.append(file_path)
-                except:
-                    continue
+            # Skip node_modules and dist directories
+            if 'node_modules' in file_path or 'dist' in file_path:
+                continue
+                
+            files_processed += 1
+            if resolve_merge_conflicts(file_path):
+                files_resolved += 1
     
-    print(f"Found {len(files_with_conflicts)} files with merge conflicts")
-    
-    resolved_count = 0
-    for file_path in files_with_conflicts:
-        if resolve_merge_conflicts(file_path):
-            resolved_count += 1
-    
-    print(f"Resolved conflicts in {resolved_count} files")
+    print(f"Processed {files_processed} files, resolved conflicts in {files_resolved} files")
 
 if __name__ == "__main__":
     main()

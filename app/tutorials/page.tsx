@@ -1,32 +1,17 @@
-import { ArrowRight } from "lucide-react";
+import React from "react";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 
 export default function Tutorials() {
   return (
     <>
       <Helmet>
-        <title>Tutorials - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Tutorials and guides from Zion Tech Group"
-        />
+        <title>Tutorials - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Learn from our comprehensive tutorials on AI, cybersecurity, and cloud computing." />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Tutorials</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Tutorials and guides coming soon.
-          </p>
-
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Tutorials</h1>
+          <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
     </>

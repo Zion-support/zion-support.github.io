@@ -16,10 +16,6 @@ const CacheManager = () => {
 
 
 
-=======
-        } catch {
-          // Handle error silently
->>>>>>> cursor/fix-errors-and-merge-to-main-6877
         }
       }
     }
@@ -49,10 +45,6 @@ const CacheManager = () => {
 
 
 
-=======
-        } catch {
-          // Handle error silently
->>>>>>> cursor/fix-errors-and-merge-to-main-6877
         }
       }
 
@@ -74,9 +66,6 @@ const CacheManager = () => {
 
 
 
-=======
-        } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-6877
           return fetch(request);
         }
       }

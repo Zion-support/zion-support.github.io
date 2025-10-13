@@ -2,10 +2,15 @@ import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Globe } from 'lucide-react'
 
-const Navigation = React.memo(() => {
+interface NavigationProps {
+  onSidebarToggle?: () => void
+}
+
+const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false)
+  const [isItServicesOpen, setIsItServicesOpen] = useState(false)
   
   const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen)
@@ -19,13 +24,20 @@ const Navigation = React.memo(() => {
     setIsMicroSaasOpen(!isMicroSaasOpen)
   }, [isMicroSaasOpen])
 
-  const aiServices = useMemo(() => [
-    { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
-    { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Brain className="w-4 h-4" /> },
-    { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> },
-    { name: 'AI Customer Support', path: '/ai-customer-support-chatbot', icon: <Zap className="w-4 h-4" /> },
-    { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> },
-    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> }
+  const toggleItServices = useCallback(() => {
+    setIsItServicesOpen(!isItServicesOpen)
+  }, [isItServicesOpen])
+
+
+  const itServices = useMemo(() => [
+    { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },
+    { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions', icon: <Shield className="w-4 h-4" /> },
+    { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> },
+    { name: 'Mobile Development', path: '/mobile-development', icon: <Code className="w-4 h-4" /> },
+    { name: 'Database Management', path: '/database-management', icon: <Database className="w-4 h-4" /> },
+    { name: 'Custom Software', path: '/custom-software', icon: <Code className="w-4 h-4" /> },
+    { name: 'Network Infrastructure', path: '/network-infrastructure', icon: <Cloud className="w-4 h-4" /> },
+    { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
   ], [])
 
   const microSaasServices = useMemo(() => [
@@ -108,6 +120,15 @@ const Navigation = React.memo(() => {
           </Link>
 
           <div className="hidden lg:flex space-x-8 items-center">
+            {/* Sidebar Toggle Button */}
+            <button
+              onClick={onSidebarToggle}
+              className="text-gray-300 hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10"
+              aria-label="Toggle sidebar"
+            >
+              <SidebarIcon className="w-5 h-5" />
+            </button>
+            
             {mainNavItems.map((item) => (
               <Link
                 key={item.name}
@@ -165,6 +186,38 @@ const Navigation = React.memo(() => {
                       </div>
                     ))}
                   </div>
+                </div>
+              )}
+            </div>
+
+            {/* IT Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={toggleItServices}
+                className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group"
+              >
+                <span>IT Services</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isItServicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {isItServicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-green-500/20">
+                  <div className="px-4 py-2 border-b border-gray-700 mb-2">
+                    <h3 className="text-sm font-semibold text-green-400 uppercase tracking-wider">IT Services</h3>
+                  </div>
+                  {itServices.map((service) => (
+                    <Link
+                      key={service.name}
+                      to={service.path}
+                      className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-green-500/10 hover:text-green-400 transition-all duration-300 group"
+                      onClick={() => setIsItServicesOpen(false)}
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-green-500/20 to-blue-500/20 flex items-center justify-center group-hover:from-green-500/30 group-hover:to-blue-500/30 transition-all duration-300">
+                        {service.icon}
+                      </div>
+                      <span className="font-medium">{service.name}</span>
+                    </Link>
+                  ))}
                 </div>
               )}
             </div>
@@ -292,6 +345,36 @@ const Navigation = React.memo(() => {
                           )}
                         </div>
                       </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Mobile IT Services */}
+              <div>
+                <button
+                  onClick={toggleItServices}
+                  className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-green-500/10 hover:text-green-400 transition-all duration-300 font-medium"
+                >
+                  <span>IT Services</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isItServicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {isItServicesOpen && (
+                  <div className="ml-4 mt-2 space-y-1">
+                    {itServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.path}
+                        className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-green-400 transition-colors rounded-lg hover:bg-green-500/10"
+                        onClick={() => {
+                          setIsItServicesOpen(false)
+                          toggleMenu()
+                        }}
+                      >
+                        {service.icon}
+                        <span>{service.name}</span>
+                      </Link>
                     ))}
                   </div>
                 )}

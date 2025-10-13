@@ -220,12 +220,32 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="twitter:creator" content="@ziontechgroup" />
       
       {/* Additional SEO Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
       <meta name="theme-color" content="#8b5cf6" />
       <meta name="msapplication-TileColor" content="#8b5cf6" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      
+      {/* Enhanced SEO Meta Tags */}
+      <meta name="rating" content="General" />
+      <meta name="distribution" content="global" />
+      <meta name="revisit-after" content="1 days" />
+      <meta name="expires" content="never" />
+      <meta name="coverage" content="worldwide" />
+      <meta name="target" content="all" />
+      <meta name="HandheldFriendly" content="true" />
+      <meta name="MobileOptimized" content="320" />
+      <meta name="apple-touch-fullscreen" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="application-name" content="Zion Tech Group" />
+      <meta name="msapplication-tooltip" content="Zion Tech Group - Advanced AI and IT Solutions" />
+      <meta name="msapplication-starturl" content="/" />
+      <meta name="msapplication-navbutton-color" content="#8b5cf6" />
+      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+      <meta name="msapplication-config" content="/browserconfig.xml" />
       
       {/* Language and Geo Tags */}
       <meta name="language" content="en-US" />

@@ -35,8 +35,8 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 500,
-    assetsInlineLimit: 4096, // Increased for better performance
+    chunkSizeWarningLimit: 200, // Reduced warning threshold
+    assetsInlineLimit: 2048, // Reduced for better caching
     // Enable compression
     reportCompressedSize: true,
     // Optimize for production
@@ -44,12 +44,35 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug'],
-        passes: 2, // Multiple passes for better optimization
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+        passes: 3, // More passes for better optimization
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        unsafe_regexp: true,
+        unsafe_undefined: true,
+        conditionals: true,
+        dead_code: true,
+        evaluate: true,
+        if_return: true,
+        join_vars: true,
+        loops: true,
+        sequences: true,
+        side_effects: false,
+        unused: true,
       },
       mangle: {
         safari10: true, // Better Safari compatibility
+        toplevel: true,
+        properties: {
+          regex: /^_/
+        }
       },
+      format: {
+        comments: false,
+        ascii_only: true
+      }
     },
     // Enhanced build optimizations
     rollupOptions: {
@@ -95,13 +118,25 @@ export default defineConfig({
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
-          // Large page components (lazy load)
-          if (id.includes('/app/') && id.includes('/page.tsx')) {
-            return 'pages'
+          // AI service pages - split into smaller chunks
+          if (id.includes('/ai-') && id.includes('/page.tsx')) {
+            const serviceName = id.split('/ai-')[1]?.split('/')[0];
+            return `ai-${serviceName || 'services'}`
           }
-          // Service pages
-          if (id.includes('/ai-') || id.includes('/zion-')) {
-            return 'services'
+          // Zion service pages
+          if (id.includes('/zion-') && id.includes('/page.tsx')) {
+            const serviceName = id.split('/zion-')[1]?.split('/')[0];
+            return `zion-${serviceName || 'services'}`
+          }
+          // 5G service pages
+          if (id.includes('/5g-') && id.includes('/page.tsx')) {
+            const serviceName = id.split('/5g-')[1]?.split('/')[0];
+            return `5g-${serviceName || 'services'}`
+          }
+          // Other service pages
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
+            return 'pages'
           }
           // Default chunk for other modules
           return 'vendor'

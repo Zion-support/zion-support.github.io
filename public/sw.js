@@ -1,66 +1,62 @@
 const CACHE_NAME = 'zion-tech-group-v1.0.0';
-const STATIC_CACHE = 'static-v1.0.0';
-const DYNAMIC_CACHE = 'dynamic-v1.0.0';
+const STATIC_CACHE_NAME = 'zion-static-v1.0.0';
+const DYNAMIC_CACHE_NAME = 'zion-dynamic-v1.0.0';
 
-// Assets to cache immediately
+// Static assets to cache
 const STATIC_ASSETS = [
   '/',
-  '/index.html',
+  '/about',
+  '/services',
+  '/contact',
+  '/ai-services',
+  '/micro-saas',
+  '/5g-solutions',
+  '/assets/index-Dq8n7JAm.css',
+  '/assets/index-DApGEc-z.js',
+  '/assets/react-vendor-sX78JqvJ.js',
+  '/assets/pages-4g43vfXl.js',
   '/manifest.json',
-  '/favicon.ico',
-  '/favicon.svg',
-  '/apple-touch-icon.png',
-  '/android-chrome-192x192.png',
-  '/android-chrome-512x512.png',
-];
-
-// Assets to cache on demand
-const CACHE_PATTERNS = [
-  /\.(?:png|jpg|jpeg|svg|gif|webp)$/,
-  /\.(?:js|css)$/,
-  /\.(?:woff|woff2|ttf|eot)$/,
+  '/favicon.ico'
 ];
 
 // Install event - cache static assets
 self.addEventListener('install', (event) => {
-  console.log('Service Worker: Installing...');
+  console.log('Service Worker installing...');
   
   event.waitUntil(
-    caches.open(STATIC_CACHE)
+    caches.open(STATIC_CACHE_NAME)
       .then((cache) => {
-        console.log('Service Worker: Caching static assets');
+        console.log('Caching static assets...');
         return cache.addAll(STATIC_ASSETS);
       })
       .then(() => {
-        console.log('Service Worker: Installation complete');
+        console.log('Static assets cached successfully');
         return self.skipWaiting();
       })
       .catch((error) => {
-        console.error('Service Worker: Installation failed', error);
+        console.error('Failed to cache static assets:', error);
       })
   );
 });
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-  console.log('Service Worker: Activating...');
+  console.log('Service Worker activating...');
   
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
-          cacheNames
-            .filter((cacheName) => {
-              return cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE;
-            })
-            .map((cacheName) => {
-              console.log('Service Worker: Deleting old cache', cacheName);
+          cacheNames.map((cacheName) => {
+            if (cacheName !== STATIC_CACHE_NAME && cacheName !== DYNAMIC_CACHE_NAME) {
+              console.log('Deleting old cache:', cacheName);
               return caches.delete(cacheName);
-            })
+            }
+          })
         );
       })
       .then(() => {
-        console.log('Service Worker: Activation complete');
+        console.log('Service Worker activated');
         return self.clients.claim();
       })
   );
@@ -86,45 +82,39 @@ self.addEventListener('fetch', (event) => {
       .then((cachedResponse) => {
         // Return cached version if available
         if (cachedResponse) {
-          console.log('Service Worker: Serving from cache', request.url);
+          console.log('Serving from cache:', request.url);
           return cachedResponse;
         }
 
         // Otherwise fetch from network
         return fetch(request)
           .then((response) => {
-            // Don't cache if not a valid response
+            // Don't cache non-successful responses
             if (!response || response.status !== 200 || response.type !== 'basic') {
               return response;
             }
 
-            // Check if this asset should be cached
-            const shouldCache = CACHE_PATTERNS.some(pattern => pattern.test(request.url));
+            // Clone the response for caching
+            const responseToCache = response.clone();
 
-            if (shouldCache) {
-              const responseToCache = response.clone();
-              
-              caches.open(DYNAMIC_CACHE)
-                .then((cache) => {
-                  console.log('Service Worker: Caching dynamic asset', request.url);
-                  cache.put(request, responseToCache);
-                });
-            }
+            // Cache dynamic content
+            caches.open(DYNAMIC_CACHE_NAME)
+              .then((cache) => {
+                cache.put(request, responseToCache);
+                console.log('Cached dynamic content:', request.url);
+              });
 
             return response;
           })
           .catch((error) => {
-            console.error('Service Worker: Fetch failed', error);
+            console.error('Fetch failed:', error);
             
             // Return offline page for navigation requests
             if (request.mode === 'navigate') {
-              return caches.match('/') || new Response('Offline', {
-                status: 503,
-                statusText: 'Service Unavailable',
-                headers: new Headers({
-                  'Content-Type': 'text/plain',
-                }),
-              });
+              return caches.match('/offline.html') || new Response(
+                '<html><body><h1>Offline</h1><p>Please check your internet connection.</p></body></html>',
+                { headers: { 'Content-Type': 'text/html' } }
+              );
             }
             
             throw error;
@@ -135,47 +125,49 @@ self.addEventListener('fetch', (event) => {
 
 // Background sync for offline actions
 self.addEventListener('sync', (event) => {
-  if (event.tag === 'background-sync') {
-    console.log('Service Worker: Background sync triggered');
-    event.waitUntil(doBackgroundSync());
+  console.log('Background sync triggered:', event.tag);
+  
+  if (event.tag === 'contact-form') {
+    event.waitUntil(syncContactForm());
   }
 });
 
 // Push notifications
 self.addEventListener('push', (event) => {
-  if (event.data) {
-    const data = event.data.json();
-    const options = {
-      body: data.body,
-      icon: '/android-chrome-192x192.png',
-      badge: '/android-chrome-192x192.png',
-      vibrate: [100, 50, 100],
-      data: {
-        dateOfArrival: Date.now(),
-        primaryKey: data.primaryKey,
+  console.log('Push notification received:', event);
+  
+  const options = {
+    body: event.data ? event.data.text() : 'New update available!',
+    icon: '/icon-192x192.png',
+    badge: '/badge-72x72.png',
+    vibrate: [100, 50, 100],
+    data: {
+      dateOfArrival: Date.now(),
+      primaryKey: 1
+    },
+    actions: [
+      {
+        action: 'explore',
+        title: 'View Details',
+        icon: '/icon-192x192.png'
       },
-      actions: [
-        {
-          action: 'explore',
-          title: 'Explore',
-          icon: '/android-chrome-192x192.png',
-        },
-        {
-          action: 'close',
-          title: 'Close',
-          icon: '/android-chrome-192x192.png',
-        },
-      ],
-    };
+      {
+        action: 'close',
+        title: 'Close',
+        icon: '/icon-192x192.png'
+      }
+    ]
+  };
 
-    event.waitUntil(
-      self.registration.showNotification(data.title, options)
-    );
-  }
+  event.waitUntil(
+    self.registration.showNotification('Zion Tech Group', options)
+  );
 });
 
 // Notification click handler
 self.addEventListener('notificationclick', (event) => {
+  console.log('Notification clicked:', event);
+  
   event.notification.close();
 
   if (event.action === 'explore') {
@@ -185,28 +177,92 @@ self.addEventListener('notificationclick', (event) => {
   }
 });
 
-// Background sync function
-async function doBackgroundSync() {
+// Helper function to sync contact form data
+async function syncContactForm() {
   try {
-    // Implement background sync logic here
-    console.log('Service Worker: Background sync completed');
+    // Get stored form data from IndexedDB
+    const formData = await getStoredFormData();
+    
+    if (formData) {
+      // Send form data to server
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        console.log('Contact form synced successfully');
+        // Clear stored form data
+        await clearStoredFormData();
+      }
+    }
   } catch (error) {
-    console.error('Service Worker: Background sync failed', error);
+    console.error('Failed to sync contact form:', error);
   }
 }
 
-// Periodic background sync
-self.addEventListener('periodicsync', (event) => {
-  if (event.tag === 'content-sync') {
-    event.waitUntil(doPeriodicSync());
+// Helper function to get stored form data from IndexedDB
+async function getStoredFormData() {
+  return new Promise((resolve) => {
+    const request = indexedDB.open('ZionTechGroupDB', 1);
+    
+    request.onsuccess = (event) => {
+      const db = event.target.result;
+      const transaction = db.transaction(['formData'], 'readonly');
+      const store = transaction.objectStore('formData');
+      const getRequest = store.get('contactForm');
+      
+      getRequest.onsuccess = () => {
+        resolve(getRequest.result);
+      };
+    };
+    
+    request.onerror = () => {
+      resolve(null);
+    };
+  });
+}
+
+// Helper function to clear stored form data
+async function clearStoredFormData() {
+  return new Promise((resolve) => {
+    const request = indexedDB.open('ZionTechGroupDB', 1);
+    
+    request.onsuccess = (event) => {
+      const db = event.target.result;
+      const transaction = db.transaction(['formData'], 'readwrite');
+      const store = transaction.objectStore('formData');
+      store.delete('contactForm');
+      
+      transaction.oncomplete = () => {
+        resolve(true);
+      };
+    };
+    
+    request.onerror = () => {
+      resolve(false);
+    };
+  });
+}
+
+// Cache management
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+  
+  if (event.data && event.data.type === 'CACHE_URLS') {
+    const urlsToCache = event.data.urls;
+    event.waitUntil(
+      caches.open(DYNAMIC_CACHE_NAME)
+        .then((cache) => {
+          return cache.addAll(urlsToCache);
+        })
+    );
   }
 });
 
-async function doPeriodicSync() {
-  try {
-    // Implement periodic sync logic here
-    console.log('Service Worker: Periodic sync completed');
-  } catch (error) {
-    console.error('Service Worker: Periodic sync failed', error);
-  }
-}
+console.log('Service Worker loaded successfully');
