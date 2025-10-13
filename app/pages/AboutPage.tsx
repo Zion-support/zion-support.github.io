@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import { 
@@ -20,14 +16,14 @@ import {
 } from '@heroicons/react/24/outline';
 
 export default function AboutPage() {
-<<<<<<< HEAD
   return (
     <>
-      <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and expertise in AI and IT solutions. Discover our team and company culture." />
-        <meta name="keywords" content="about us, company, team, mission, values, AI solutions, IT services" />
-      </Helmet>
+      <SEO 
+        title="About Us - Zion Tech Group"
+        description="Learn about Zion Tech Group's mission, values, and expertise in AI and IT solutions. Discover our team and company culture."
+        keywords="about us, company, team, mission, values, AI solutions, IT services"
+        url="/about"
+      />
       
 =======
   const values = [

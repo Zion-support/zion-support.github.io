@@ -11,19 +11,13 @@ export default async function handler(req, res) {
     return;
   }
 
-<<<<<<< HEAD
-  const { address, type, userId } = req.body;
-  
-=======
   const { address, type, name, userId } = req.body;
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
   if (!address || !type) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Address and type are required' }));
     return;
   }
 
-<<<<<<< HEAD
   try {
     // Ensure data directory exists
     if (!fs.existsSync(dir)) {
@@ -37,11 +31,19 @@ export default async function handler(req, res) {
       data = JSON.parse(fileData);
     }
 
+    // Check if wallet address already exists
+    if (data.find(wallet => wallet.address === address)) {
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Wallet address already exists' }));
+      return;
+    }
+
     // Add new wallet
     const newWallet = {
       id: Date.now(),
       address,
       type,
+      name: name || '',
       userId: userId || null,
       status: 'active',
       createdAt: new Date().toISOString()
@@ -55,48 +57,10 @@ export default async function handler(req, res) {
       success: true, 
       message: 'Wallet added successfully',
       walletId: newWallet.id
-=======
-  let wallets = [];
-  try {
-    const data = fs.readFileSync(file, 'utf8');
-    wallets = JSON.parse(data);
-  } catch (error) {
-    console.error('Error:', error);
-  }
-
-  if (wallets.find(wallet => wallet.address === address)) {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Wallet address already exists' }));
-    return;
-  }
-
-  const newWallet = {
-    id: Date.now().toString(),
-    address,
-    type,
-    name: name || '',
-    userId: userId || '',
-    status: 'active',
-    createdAt: new Date().toISOString()
-  };
-
-  try {
-    wallets.push(newWallet);
-    fs.writeFileSync(file, JSON.stringify(wallets, null, 2));
-
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true,
-      message: 'Wallet added successfully' 
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
     }));
   } catch (error) {
     console.error('Error:', error);
     res.setHeader('Content-Type', 'application/json');
-<<<<<<< HEAD
     res.end(JSON.stringify({ error: 'Failed to add wallet' }));
-=======
-    res.end(JSON.stringify({ error: 'Failed to save wallet' }));
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
   }
 }
