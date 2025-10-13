@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import React, { useState, useCallback, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-=======
-import React, { useState, useCallback, useMemo } from 'react'
-import { Link } from 'react-router-dom'
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
 import { 
   Brain, 
   Shield, 
@@ -27,7 +22,6 @@ import {
   ChevronDown,
   Menu,
   X,
-<<<<<<< HEAD
   SidebarIcon,
   Package,
   Heart,
