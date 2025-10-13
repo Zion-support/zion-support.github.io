@@ -1,373 +1,378 @@
-import { ArrowRight, Shield, Lock, Eye, AlertTriangle, CheckCircle, Star, Zap, Brain } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Shield, ArrowRight, CheckCircle, Star, Cloud, Users, Clock, DollarSign, Code, Database, Mail, Settings, AlertTriangle, Lock, Eye, Zap, Globe, Smartphone, Activity } from 'lucide-react';
+import EnhancedSEO from '../components/EnhancedSEO';
 
-export default function ZionSecurityShield() {
+const ZionSecurityShield = () => {
   const features = [
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Advanced Threat Detection",
-      description: "AI-powered threat detection with 99.9% accuracy using machine learning algorithms"
-    },
-    {
-      icon: <Lock className="w-6 h-6" />,
-      title: "Zero-Trust Architecture",
-      description: "Implement zero-trust security model with continuous verification and monitoring"
-    },
-    {
-      icon: <Eye className="w-6 h-6" />,
-      title: "Real-time Monitoring",
-      description: "24/7 security monitoring with instant alerts and automated response systems"
-    },
-    {
-      icon: <AlertTriangle className="w-6 h-6" />,
-      title: "Vulnerability Assessment",
-      description: "Comprehensive security audits and vulnerability scanning for all your assets"
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Automated Incident Response",
-      description: "AI-driven incident response with automated containment and recovery procedures"
-    },
-    {
-      icon: <Brain className="w-6 h-6" />,
-      title: "Behavioral Analytics",
-      description: "Advanced user behavior analysis to detect insider threats and anomalies"
-    }
+    'AI-Powered Threat Detection',
+    'Real-time Security Monitoring',
+    'Automated Incident Response',
+    'Advanced Firewall Protection',
+    'Intrusion Detection System',
+    'Malware & Virus Scanning',
+    'DDoS Attack Prevention',
+    'SSL Certificate Management',
+    'Vulnerability Assessment',
+    'Security Compliance Reports',
+    '24/7 Security Operations Center',
+    'Multi-factor Authentication'
   ];
 
-  const securityFeatures = [
-    "Multi-factor Authentication (MFA)",
-    "End-to-end Encryption",
-    "DDoS Protection",
-    "Web Application Firewall (WAF)",
-    "Intrusion Detection System (IDS)",
-    "Security Information and Event Management (SIEM)",
-    "Penetration Testing",
-    "Compliance Reporting (SOC 2, ISO 27001, GDPR)",
-    "Data Loss Prevention (DLP)",
-    "Mobile Device Management (MDM)",
-    "Email Security Gateway",
-    "Cloud Security Posture Management"
-  ];
-
-  const pricingPlans = [
+  const pricingTiers = [
     {
-      name: "Essential",
-      price: "$49",
-      period: "/month",
-      description: "Perfect for small businesses",
+      name: 'Essential',
+      price: '$49',
+      period: '/month',
+      description: 'Basic security for small businesses',
       features: [
-        "Basic threat detection",
-        "Email security",
-        "Firewall protection",
-        "Monthly security reports",
-        "Email support",
-        "Up to 10 users"
+        'Basic firewall protection',
+        'Malware scanning',
+        'SSL certificates',
+        'Email support',
+        'Monthly security reports',
+        'Up to 5 websites'
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$149",
-      period: "/month",
-      description: "Most popular for growing businesses",
+      name: 'Professional',
+      price: '$149',
+      period: '/month',
+      description: 'Advanced security for growing companies',
       features: [
-        "Advanced threat detection",
-        "Real-time monitoring",
-        "Vulnerability scanning",
-        "Incident response",
-        "Priority support",
-        "Up to 50 users",
-        "Compliance reporting"
+        'AI threat detection',
+        'Real-time monitoring',
+        'Automated response',
+        'Priority support',
+        'Weekly security reports',
+        'Up to 25 websites',
+        'DDoS protection',
+        'Vulnerability scanning'
       ],
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$399",
-      period: "/month",
-      description: "For large organizations",
+      name: 'Enterprise',
+      price: '$399',
+      period: '/month',
+      description: 'Complete security for large organizations',
       features: [
-        "AI-powered security",
-        "24/7 SOC monitoring",
-        "Custom security policies",
-        "Dedicated security team",
-        "White-label reporting",
-        "Unlimited users",
-        "Advanced compliance",
-        "Custom integrations"
+        'Advanced AI protection',
+        '24/7 SOC monitoring',
+        'Custom security policies',
+        'Dedicated support',
+        'Unlimited websites',
+        'Compliance reporting',
+        'Penetration testing',
+        'Security training'
       ],
       popular: false
     }
   ];
 
-  const testimonials = [
+  const securityFeatures = [
     {
-      name: "David Martinez",
-      company: "Financial Services Corp",
-      role: "CISO",
-      content: "Zion Security Shield has been a game-changer for our security posture. We've seen a 90% reduction in security incidents since implementation.",
-      rating: 5
+      icon: <Shield className="w-8 h-8" />,
+      title: 'AI Threat Detection',
+      description: 'Advanced machine learning algorithms detect and prevent sophisticated cyber threats in real-time.',
+      color: 'from-blue-500 to-cyan-500'
     },
     {
-      name: "Lisa Thompson",
-      company: "Healthcare Solutions",
-      role: "IT Director",
-      content: "The AI threat detection is incredibly accurate. It caught several sophisticated attacks that other systems missed.",
-      rating: 5
+      icon: <Activity className="w-8 h-8" />,
+      title: 'Real-time Monitoring',
+      description: '24/7 monitoring of your systems with instant alerts and automated response capabilities.',
+      color: 'from-green-500 to-emerald-500'
     },
     {
-      name: "James Wilson",
-      company: "E-commerce Platform",
-      role: "Security Manager",
-      content: "Outstanding support and comprehensive security features. Our compliance audit passed with flying colors.",
-      rating: 5
+      icon: <Lock className="w-8 h-8" />,
+      title: 'Data Encryption',
+      description: 'End-to-end encryption for all data transmission and storage with military-grade security.',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      icon: <Eye className="w-8 h-8" />,
+      title: 'Vulnerability Scanning',
+      description: 'Regular automated scans to identify and patch security vulnerabilities before they can be exploited.',
+      color: 'from-orange-500 to-red-500'
+    },
+    {
+      icon: <AlertTriangle className="w-8 h-8" />,
+      title: 'Incident Response',
+      description: 'Automated incident response with immediate threat containment and recovery procedures.',
+      color: 'from-red-500 to-pink-500'
+    },
+    {
+      icon: <Globe className="w-8 h-8" />,
+      title: 'Global CDN Protection',
+      description: 'Worldwide content delivery network with built-in security features and DDoS protection.',
+      color: 'from-cyan-500 to-blue-500'
     }
   ];
 
+  const complianceStandards = [
+    'SOC 2 Type II',
+    'ISO 27001',
+    'GDPR Compliant',
+    'HIPAA Ready',
+    'PCI DSS Level 1',
+    'NIST Framework'
+  ];
+
   return (
-    <>
-      <Helmet>
-        <title>Zion Security Shield - Advanced Cybersecurity Platform | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Protect your business with Zion Security Shield - the ultimate AI-powered cybersecurity platform. Advanced threat detection, real-time monitoring, and automated incident response."
-        />
-        <meta
-          name="keywords"
-          content="cybersecurity, threat detection, security monitoring, AI security, zero trust, compliance, SOC 2, GDPR, security platform"
-        />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 mb-6">
-              <Shield className="w-4 h-4 text-red-400 mr-2" />
-              <span className="text-red-400 text-sm font-medium">Enterprise-Grade Security</span>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <EnhancedSEO 
+        title="Zion Security Shield - Advanced Cybersecurity Protection | Zion Tech Group"
+        description="Protect your business with Zion Security Shield. AI-powered threat detection, real-time monitoring, and automated incident response. Starting at $49/month."
+        keywords="cybersecurity, threat detection, security monitoring, firewall protection, DDoS protection, vulnerability scanning, compliance"
+        canonical="https://ziontechgroup.com/zion-security-shield"
+      />
+      
+      {/* Hero Section */}
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10 animate-pulse"></div>
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 mb-6">
+            <Shield className="w-4 h-4 text-red-400 mr-2" />
+            <span className="text-red-400 text-sm font-medium">Enterprise-Grade Security</span>
+          </div>
+          
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400">
+              Zion Security Shield
+            </span>
+          </h1>
+          
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Advanced AI-powered cybersecurity protection that keeps your business safe from evolving threats. 
+            Real-time monitoring, automated response, and enterprise-grade security features.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-red-500/25 hover:scale-105"
+            >
+              Get Protected Now
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/demo"
+              className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+            >
+              Security Demo
+              <Shield className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+            </Link>
+          </div>
+          
+          {/* Security Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-red-400 mb-2">99.9%</div>
+              <div className="text-gray-300 text-sm">Threat Block Rate</div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">
-                Zion Security Shield
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Protect your business with the most advanced AI-powered cybersecurity platform. 
-              Real-time threat detection, automated incident response, and comprehensive compliance management.
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">24/7</div>
+              <div className="text-gray-300 text-sm">SOC Monitoring</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">&lt;1min</div>
+              <div className="text-gray-300 text-sm">Response Time</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">100%</div>
+              <div className="text-gray-300 text-sm">Uptime SLA</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Security Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+              Advanced Security Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Comprehensive protection against all types of cyber threats with AI-powered detection and response.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300 flex items-center justify-center group"
-              >
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/demo"
-                className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Watch Demo
-              </Link>
-            </div>
-            
-            {/* Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-red-400 mb-2">99.9%</div>
-                <div className="text-gray-300">Threat Detection Accuracy</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
-                <div className="text-gray-300">Security Monitoring</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">5,000+</div>
-                <div className="text-gray-300">Protected Organizations</div>
-              </div>
-            </div>
           </div>
-        </section>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {securityFeatures.map((feature, index) => (
+              <div
+                key={index}
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10 text-center"
+              >
+                <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}>
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-red-300 transition-colors">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        {/* Features Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Comprehensive Security Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to protect your business from modern cyber threats.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
-                >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-red-500 to-orange-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
-                    {feature.icon}
+      {/* Features List Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-red-800/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Complete Security Coverage
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Everything you need to protect your business from cyber threats and ensure compliance.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10"
+              >
+                <div className="flex items-center">
+                  <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />
+                  <span className="text-white font-medium group-hover:text-red-300 transition-colors">
+                    {feature}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Compliance Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Industry Compliance Standards
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Meet regulatory requirements with our compliance-ready security solutions.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {complianceStandards.map((standard, index) => (
+              <div
+                key={index}
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-110 text-center"
+              >
+                <div className="text-white font-semibold group-hover:text-red-300 transition-colors">
+                  {standard}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-red-800/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Security Plans for Every Business
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the security level that matches your business needs. All plans include 30-day free trial.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingTiers.map((tier, index) => (
+              <div
+                key={index}
+                className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
+                  tier.popular 
+                    ? 'border-red-500/50 shadow-red-500/20' 
+                    : 'border-white/20 hover:border-red-500/30'
+                }`}
+              >
+                {tier.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300">
-                    {feature.description}
-                  </p>
+                )}
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                  <p className="text-gray-300 mb-4">{tier.description}</p>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-red-400">{tier.price}</span>
+                    <span className="text-gray-300 ml-1">{tier.period}</span>
+                  </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Security Features List */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Complete Security Suite
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                All the security tools you need in one comprehensive platform.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {securityFeatures.map((feature, index) => (
-                <div
-                  key={index}
-                  className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
-                >
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{feature}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Flexible Security Plans
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the security level that matches your business needs. All plans include 30-day free trial.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
-                <div
-                  key={index}
-                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
-                    plan.popular
-                      ? 'border-red-400 bg-gradient-to-br from-red-500/10 to-orange-500/10'
-                      : 'border-white/20 hover:border-red-400'
+                
+                <ul className="space-y-4 mb-8">
+                  {tier.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <Link
+                  to="/contact"
+                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center group ${
+                    tier.popular
+                      ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700 shadow-lg hover:shadow-red-500/25'
+                      : 'border border-red-400 text-red-400 hover:bg-red-400 hover:text-slate-900'
                   }`}
                 >
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-300 mb-4">{plan.description}</p>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
-                      <span className="text-gray-300 ml-1">{plan.period}</span>
-                    </div>
-                  </div>
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    to="/contact"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700'
-                        : 'border border-red-400 text-red-400 hover:bg-red-400 hover:text-slate-900'
-                    }`}
-                  >
-                    Start Free Trial
-                  </Link>
-                </div>
-              ))}
-            </div>
+                  Get Protected
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Testimonials Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Security Leaders
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what security professionals say about Zion Security Shield
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
-                >
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                  <div>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-900/30 to-orange-900/30">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+            Don't Wait for a Security Breach
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            Protect your business today with enterprise-grade security. Join thousands of companies 
+            that trust Zion Security Shield to keep their data and systems safe.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-red-500/25 hover:scale-105"
+            >
+              Start Free Trial
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/pricing"
+              className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+            >
+              View All Plans
+              <Shield className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+            </Link>
           </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Secure Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of organizations protected by Zion Security Shield.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Start Your Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                to="/demo"
-                className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Schedule Security Demo
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+    </div>
   );
-}
+};
+
+export default ZionSecurityShield;
