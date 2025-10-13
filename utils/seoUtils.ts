@@ -2,15 +2,17 @@ export interface SEOConfig {
   title: string;
   description: string;
   keywords: string[];
+<<<<<<< HEAD
 
 
   canonicalUrl?: string;
   ogImage?: string;
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-88d4
   canonicalUrl: string;
   ogImage?: string;
   ogType?: string;
-
   twitterCard?: string;
 
   canonical?: string;
@@ -45,15 +47,6 @@ export class SEOUtils {
       'twitter:image': this.config.ogImage,
     };
   }
-
-  generateStructuredData() {
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      description: this.config.description,
-      url: this.config.canonicalUrl,
-    };
 
   updateTitle(title: string) {
     document.title = title;
@@ -147,7 +140,6 @@ export class SEOUtils {
     this.updateOpenGraphTags();
     this.updateTwitterCard();
     this.generateStructuredData();
-
   }
 
       canonical: this.config.canonical,

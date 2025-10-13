@@ -35,6 +35,7 @@ export default tseslint.config(
       "backup*/**",
       "backup-problematic*/**",
       "backup-unused-components/**",
+<<<<<<< HEAD
 
 
       "corrupted-src-backup/**",
@@ -42,6 +43,9 @@ export default tseslint.config(
 
 
 
+=======
+      "corrupted-src-backup/**",
+>>>>>>> cursor/fix-errors-and-merge-to-main-88d4
       "cleanup-*.cjs",
       "comprehensive-*.cjs",
       "fix-*.cjs",
@@ -52,8 +56,11 @@ export default tseslint.config(
       "src/**",
       "utils/**",
       "*.cjs",
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-88d4
       "*.js",
       "*.py",
       "*.sh",
@@ -69,11 +76,14 @@ export default tseslint.config(
       "ci-cd-reports/**",
       "content/**",
       "contracts/**"
+<<<<<<< HEAD
 
 
 
       "*.js"
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-88d4
     ],
   }
 );

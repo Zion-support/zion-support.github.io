@@ -15,9 +15,13 @@ export default function ImageOptimizer({
   src, 
   alt, 
   className = '', 
-
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  quality = 80,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  format = 'webp',
   lazy = true,
   placeholder
+<<<<<<< HEAD
 
   lazy = true
 
@@ -31,22 +35,27 @@ export default function ImageOptimizer({
   placeholder
 
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-88d4
 }: ImageOptimizerProps) {
+  // Note: quality and format parameters are reserved for future image optimization features
   return (
     <img
       src={src}
       alt={alt}
       className={className}
       loading={lazy ? 'lazy' : 'eager'}
-
       style={{
         backgroundColor: placeholder || '#f3f4f6'
       }}
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-88d4
     />
   );
 }

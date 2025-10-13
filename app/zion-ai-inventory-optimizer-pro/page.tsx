@@ -9,18 +9,21 @@ import {
   CheckCircle, 
   Star, 
   Clock, 
-
   Zap, 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-88d4
   Sparkles,
   Cpu,
   Globe,
   AlertTriangle,
   ShoppingCart,
+<<<<<<< HEAD
   Truck,
 
   Globe
@@ -30,6 +33,9 @@ import {
 
 
 
+=======
+  Truck
+>>>>>>> cursor/fix-errors-and-merge-to-main-88d4
 } from 'lucide-react';
 
 const ZionAIInventoryOptimizerProPage: React.FC = () => {
