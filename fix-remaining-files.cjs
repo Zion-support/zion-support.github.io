@@ -1,36 +1,30 @@
-'use client';
+const fs = require('fs');
+const path = require('path');
+
+const filesToFix = [
+  'app/zion-ai-performance-optimizer/page.tsx',
+  'app/zion-ai-social-media-manager/page.tsx',
+  'app/zion-ai-voice-assistant-pro/page.tsx',
+  'app/zion-smart-expense-categorizer/page.tsx',
+  'app/zion-smart-inventory-optimizer/page.tsx'
+];
+
+const componentTemplate = (name, title, description) => `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-const ZionSmartInventoryOptimizerPage = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Zion Smart Inventory Optimizer - Zion Tech Group</title>
-        <meta name="description" content="Professional smart inventory optimizer services by Zion Tech Group." />
-      </Helmet>
-      <div className="min-h-screen flex items-center justify-center">
-        <h1 className="text-4xl font-bold text-white">Zion Smart Inventory Optimizer Page</h1>
-      </div>
-    </>
-  );
-};
-
-export default ZionSmartInventoryOptimizerPage;
-=======
-export default function ZionSmartInventoryOptimizer() {
+export default function ${name}() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Zion Smart Inventory Optimizer | Zion Tech Group</title>
-        <meta name="description" content="Professional Smart Inventory Optimizer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <title>${title} | Zion Tech Group</title>
+        <meta name="description" content="${description}" />
       </Helmet>
       
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
-            Zion Smart Inventory Optimizer <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+            ${title} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Advanced AI-powered solutions for modern businesses.
@@ -89,5 +83,43 @@ export default function ZionSmartInventoryOptimizer() {
       </div>
     </div>
   );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-0bb0
+}`;
+
+const componentData = {
+  'app/zion-ai-performance-optimizer/page.tsx': {
+    name: 'ZionAIPerformanceOptimizer',
+    title: 'Zion AI Performance Optimizer',
+    description: 'Professional AI Performance Optimizer services by Zion Tech Group. Advanced AI and IT solutions for your business.'
+  },
+  'app/zion-ai-social-media-manager/page.tsx': {
+    name: 'ZionAISocialMediaManager',
+    title: 'Zion AI Social Media Manager',
+    description: 'Professional AI Social Media Manager services by Zion Tech Group. Advanced AI and IT solutions for your business.'
+  },
+  'app/zion-ai-voice-assistant-pro/page.tsx': {
+    name: 'ZionAIVoiceAssistantPro',
+    title: 'Zion AI Voice Assistant Pro',
+    description: 'Professional AI Voice Assistant Pro services by Zion Tech Group. Advanced AI and IT solutions for your business.'
+  },
+  'app/zion-smart-expense-categorizer/page.tsx': {
+    name: 'ZionSmartExpenseCategorizer',
+    title: 'Zion Smart Expense Categorizer',
+    description: 'Professional Smart Expense Categorizer services by Zion Tech Group. Advanced AI and IT solutions for your business.'
+  },
+  'app/zion-smart-inventory-optimizer/page.tsx': {
+    name: 'ZionSmartInventoryOptimizer',
+    title: 'Zion Smart Inventory Optimizer',
+    description: 'Professional Smart Inventory Optimizer services by Zion Tech Group. Advanced AI and IT solutions for your business.'
+  }
+};
+
+filesToFix.forEach(filePath => {
+  const data = componentData[filePath];
+  if (data) {
+    const content = componentTemplate(data.name, data.title, data.description);
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed ${filePath}`);
+  }
+});
+
+console.log('All files fixed!');
