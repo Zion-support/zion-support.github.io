@@ -1,6 +1,33 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
+#!/usr/bin/env python3
+import os
+
+# List of missing pages that need to be created
+missing_pages = [
+    "zion-ai-performance-optimizer",
+    "zion-ai-customer-churn-predictor", 
+    "zion-ai-supply-chain-optimizer",
+    "zion-ai-financial-forecaster",
+    "zion-ai-content-moderator",
+    "zion-ai-translator-pro",
+    "zion-ai-task-scheduler",
+    "zion-ai-customer-support-pro",
+    "zion-ai-voice-assistant-pro",
+    "zion-ai-contract-analyzer",
+    "zion-ai-invoice-generator",
+    "zion-ai-video-generator"
+]
+
+def create_page_template(page_name):
+    """Create a basic page template for the given page name"""
+    page_dir = f"/workspace/app/{page_name}"
+    os.makedirs(page_dir, exist_ok=True)
+    
+    # Convert page name to title
+    title = page_name.replace("-", " ").replace("zion ", "Zion ").title()
+    
+    template = f'''import React from 'react';
+import {{ Helmet }} from 'react-helmet-async';
+import {{ 
   Brain, 
   BarChart3, 
   Zap, 
@@ -11,21 +38,21 @@ import {
   Target,
   Clock,
   Shield
-} from 'lucide-react';
+}} from 'lucide-react';
 
-const ZionaicontractanalyzerPage: React.FC = () => {
+const {page_name.replace("-", "").title()}Page: React.FC = () => {{
   return (
     <>
       <Helmet>
-        <title>Zion Ai Contract Analyzer - AI-Powered Solution</title>
-        <meta name="description" content="Transform your business with Zion Ai Contract Analyzer. AI-powered automation and intelligent insights for better performance and efficiency." />
-        <meta name="keywords" content="AI solution, automation, business intelligence, zion ai contract analyzer" />
-        <meta property="og:title" content="Zion Ai Contract Analyzer - AI-Powered Solution" />
-        <meta property="og:description" content="Transform your business with Zion Ai Contract Analyzer. AI-powered automation and intelligent insights." />
+        <title>{title} - AI-Powered Solution</title>
+        <meta name="description" content="Transform your business with {title}. AI-powered automation and intelligent insights for better performance and efficiency." />
+        <meta name="keywords" content="AI solution, automation, business intelligence, {page_name.replace("-", " ")}" />
+        <meta property="og:title" content="{title} - AI-Powered Solution" />
+        <meta property="og:description" content="Transform your business with {title}. AI-powered automation and intelligent insights." />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Ai Contract Analyzer - AI-Powered Solution" />
-        <meta name="twitter:description" content="Transform your business with Zion Ai Contract Analyzer. AI-powered automation and intelligent insights." />
+        <meta name="twitter:title" content="{title} - AI-Powered Solution" />
+        <meta name="twitter:description" content="Transform your business with {title}. AI-powered automation and intelligent insights." />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -38,7 +65,7 @@ const ZionaicontractanalyzerPage: React.FC = () => {
               </div>
               
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                Zion Ai Contract Analyzer
+                {title}
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -125,6 +152,21 @@ const ZionaicontractanalyzerPage: React.FC = () => {
       </div>
     </>
   );
-};
+}};
 
-export default ZionaicontractanalyzerPage;
+export default {page_name.replace("-", "").title()}Page;
+'''
+    
+    with open(f"{page_dir}/page.tsx", "w") as f:
+        f.write(template)
+    
+    print(f"Created page: {page_name}")
+
+def main():
+    for page in missing_pages:
+        create_page_template(page)
+    
+    print(f"Created {len(missing_pages)} missing pages")
+
+if __name__ == "__main__":
+    main()

@@ -13,19 +13,19 @@ import {
   Shield
 } from 'lucide-react';
 
-const ZionaicontractanalyzerPage: React.FC = () => {
+const ZionaifinancialforecasterPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Zion Ai Contract Analyzer - AI-Powered Solution</title>
-        <meta name="description" content="Transform your business with Zion Ai Contract Analyzer. AI-powered automation and intelligent insights for better performance and efficiency." />
-        <meta name="keywords" content="AI solution, automation, business intelligence, zion ai contract analyzer" />
-        <meta property="og:title" content="Zion Ai Contract Analyzer - AI-Powered Solution" />
-        <meta property="og:description" content="Transform your business with Zion Ai Contract Analyzer. AI-powered automation and intelligent insights." />
+        <title>Zion Ai Financial Forecaster - AI-Powered Solution</title>
+        <meta name="description" content="Transform your business with Zion Ai Financial Forecaster. AI-powered automation and intelligent insights for better performance and efficiency." />
+        <meta name="keywords" content="AI solution, automation, business intelligence, zion ai financial forecaster" />
+        <meta property="og:title" content="Zion Ai Financial Forecaster - AI-Powered Solution" />
+        <meta property="og:description" content="Transform your business with Zion Ai Financial Forecaster. AI-powered automation and intelligent insights." />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Ai Contract Analyzer - AI-Powered Solution" />
-        <meta name="twitter:description" content="Transform your business with Zion Ai Contract Analyzer. AI-powered automation and intelligent insights." />
+        <meta name="twitter:title" content="Zion Ai Financial Forecaster - AI-Powered Solution" />
+        <meta name="twitter:description" content="Transform your business with Zion Ai Financial Forecaster. AI-powered automation and intelligent insights." />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -38,7 +38,7 @@ const ZionaicontractanalyzerPage: React.FC = () => {
               </div>
               
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                Zion Ai Contract Analyzer
+                Zion Ai Financial Forecaster
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -127,4 +127,4 @@ const ZionaicontractanalyzerPage: React.FC = () => {
   );
 };
 
-export default ZionaicontractanalyzerPage;
+export default ZionaifinancialforecasterPage;
