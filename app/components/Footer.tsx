@@ -40,6 +40,11 @@ const Footer = React.memo(() => {
               Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. 
               We help businesses transform with cutting-edge technology and innovative solutions.
             </p>
+            <div className="space-y-2 text-sm text-gray-400">
+              <div>📞 <a href="tel:+13024640950" className="hover:text-white transition-colors">+1 302 464 0950</a></div>
+              <div>✉️ <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">kleber@ziontechgroup.com</a></div>
+              <div>📍 364 E Main St STE 1008<br />&nbsp;&nbsp;&nbsp;&nbsp;Middletown DE 19709</div>
+            </div>
             <div className="flex space-x-4">
               {socialLinks.map((link) => (
                 <a
@@ -70,6 +75,22 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
+                  to="/ai-voice-synthesis"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                >
+                  AI Voice Synthesis
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-predictive-analytics"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                >
+                  AI Predictive Analytics
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/ai-analytics"
                   className="text-gray-400 hover:text-cyan-400 transition-colors"
                 >
@@ -92,22 +113,6 @@ const Footer = React.memo(() => {
                   AI Content Generation
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/ai-customer-service"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
-                >
-                  AI Customer Service
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/ai-cybersecurity"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
-                >
-                  AI Cybersecurity
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -115,6 +120,22 @@ const Footer = React.memo(() => {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-green-400">IT Services</h4>
             <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/blockchain-development"
+                  className="text-gray-400 hover:text-green-400 transition-colors"
+                >
+                  Blockchain Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/quantum-computing-solutions"
+                  className="text-gray-400 hover:text-green-400 transition-colors"
+                >
+                  Quantum Computing
+                </Link>
+              </li>
               <li>
                 <Link
                   to="/cloud-infrastructure"
@@ -147,22 +168,6 @@ const Footer = React.memo(() => {
                   Mobile Development
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/database-management"
-                  className="text-gray-400 hover:text-green-400 transition-colors"
-                >
-                  Database Management
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/custom-software"
-                  className="text-gray-400 hover:text-green-400 transition-colors"
-                >
-                  Custom Software
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -170,6 +175,30 @@ const Footer = React.memo(() => {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-purple-400">Micro SAAS</h4>
             <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/zion-ai-video-generator"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  AI Video Generator
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-code-assistant-pro"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  AI Code Assistant Pro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-marketing-automation-pro"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  AI Marketing Automation Pro
+                </Link>
+              </li>
               <li>
                 <Link
                   to="/zion-analytics-pro"
@@ -192,30 +221,6 @@ const Footer = React.memo(() => {
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
                   Zion Cloud Vault
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/zion-content-studio"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion Content Studio
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/zion-data-sync"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion Data Sync
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/zion-project-master"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion Project Master
                 </Link>
               </li>
             </ul>

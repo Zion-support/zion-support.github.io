@@ -40,6 +40,30 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
+      name: "Zion AI Video Generator",
+      description: "AI-powered video creation from text prompts",
+      price: "From $29/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/zion-ai-video-generator",
+      featured: true
+    },
+    {
+      name: "Zion AI Code Assistant Pro",
+      description: "AI-powered code generation and review",
+      price: "From $39/month",
+      icon: <Code className="w-6 h-6" />,
+      link: "/zion-ai-code-assistant-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Marketing Automation Pro",
+      description: "AI-powered marketing campaigns and automation",
+      price: "From $49/month",
+      icon: <Zap className="w-6 h-6" />,
+      link: "/zion-ai-marketing-automation-pro",
+      featured: true
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform",
       price: "From $29/month",
@@ -220,8 +244,18 @@ const HomePage = () => {
               <Link
                 key={index}
                 to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300 hover:scale-105 ${
+                  saas.featured 
+                    ? 'border-purple-500/50 bg-gradient-to-r from-purple-500/10 to-cyan-500/10' 
+                    : 'border-white/20 hover:bg-white/20'
+                }`}
               >
+                {saas.featured && (
+                  <div className="flex items-center mb-2">
+                    <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />
+                    <span className="text-yellow-400 text-sm font-medium">Featured</span>
+                  </div>
+                )}
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
                     {saas.icon}

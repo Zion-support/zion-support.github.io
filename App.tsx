@@ -12,7 +12,6 @@ import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import FuturisticBackground from "./app/components/FuturisticBackground";
-<<<<<<< HEAD
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
@@ -21,8 +20,6 @@ import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
 import EnhancedSEO from "./app/components/EnhancedSEO";
 import EnhancedSEOOptimizer from "./app/components/EnhancedSEOOptimizer";
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-102c
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 
 // Lazy load pages for better performance
@@ -53,6 +50,19 @@ const DatabaseManagementPage = React.lazy(() => import("./app/database-managemen
 const NetworkInfrastructurePage = React.lazy(() => import("./app/network-infrastructure/page"));
 const DataAnalyticsPage = React.lazy(() => import("./app/data-analytics/page"));
 const CareersPage = React.lazy(() => import("./app/careers/page"));
+
+// New Micro SAAS Services
+const ZionAIVideoGeneratorPage = React.lazy(() => import("./app/zion-ai-video-generator/page"));
+const ZionAICodeAssistantProPage = React.lazy(() => import("./app/zion-ai-code-assistant-pro/page"));
+const ZionAIMarketingAutomationProPage = React.lazy(() => import("./app/zion-ai-marketing-automation-pro/page"));
+
+// New IT Services
+const BlockchainDevelopmentPage = React.lazy(() => import("./app/blockchain-development/page"));
+const QuantumComputingSolutionsPage = React.lazy(() => import("./app/quantum-computing-solutions/page"));
+
+// New AI Services
+const AIVoiceSynthesisPage = React.lazy(() => import("./app/ai-voice-synthesis/page"));
+const AIPredictiveAnalyticsPage = React.lazy(() => import("./app/ai-predictive-analytics/page"));
 
 // Main App Component
 function App() {
@@ -104,12 +114,24 @@ function App() {
                         <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
                         <Route path="/data-analytics" element={<DataAnalyticsPage />} />
                         <Route path="/careers" element={<CareersPage />} />
+                        
+                        {/* New Micro SAAS Services */}
+                        <Route path="/zion-ai-video-generator" element={<ZionAIVideoGeneratorPage />} />
+                        <Route path="/zion-ai-code-assistant-pro" element={<ZionAICodeAssistantProPage />} />
+                        <Route path="/zion-ai-marketing-automation-pro" element={<ZionAIMarketingAutomationProPage />} />
+                        
+                        {/* New IT Services */}
+                        <Route path="/blockchain-development" element={<BlockchainDevelopmentPage />} />
+                        <Route path="/quantum-computing-solutions" element={<QuantumComputingSolutionsPage />} />
+                        
+                        {/* New AI Services */}
+                        <Route path="/ai-voice-synthesis" element={<AIVoiceSynthesisPage />} />
+                        <Route path="/ai-predictive-analytics" element={<AIPredictiveAnalyticsPage />} />
                       </Routes>
                     </Suspense>
                   </main>
                   <Footer />
                 </FuturisticBackground>
-<<<<<<< HEAD
                 <EnhancedAccessibility>
                   <div></div>
                 </EnhancedAccessibility>
@@ -123,8 +145,6 @@ function App() {
                     <EnhancedSEOOptimizer />
                   </div>
                 </AnalyticsProvider>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-102c
               </div>
             </Router>
           </AccessibilityEnhancer>

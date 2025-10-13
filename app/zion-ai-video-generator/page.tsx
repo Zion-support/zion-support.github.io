@@ -1,32 +1,32 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Mic, Zap, Star, ArrowRight, CheckCircle, Users, Clock, Shield, Brain, Volume2, Sparkles, BarChart3, Globe, Smartphone } from 'lucide-react';
+import { Play, Zap, Star, ArrowRight, CheckCircle, Users, Clock, Shield, Brain, Video, Sparkles, BarChart3, Globe, Smartphone } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const AIVoiceSynthesis = () => {
+const ZionAIVideoGenerator = () => {
   const features = [
     {
-      title: "Natural Voice Generation",
-      description: "Create human-like voices with emotional expression and natural intonation",
-      icon: <Mic className="w-6 h-6" />,
+      title: "AI-Powered Video Creation",
+      description: "Generate professional videos from text prompts using advanced AI technology",
+      icon: <Brain className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Multi-Language Support",
-      description: "Generate voices in 100+ languages with native pronunciation and accents",
-      icon: <Globe className="w-6 h-6" />,
+      title: "Multiple Video Formats",
+      description: "Create videos in various formats: social media, marketing, educational, and more",
+      icon: <Video className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Real-time Synthesis",
-      description: "Ultra-low latency voice generation for live applications and streaming",
+      title: "Voice Synthesis",
+      description: "Generate natural-sounding voiceovers in multiple languages and accents",
       icon: <Zap className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Voice Cloning",
-      description: "Clone any voice with just a few seconds of audio sample",
-      icon: <Volume2 className="w-6 h-6" />,
+      title: "Auto-Editing",
+      description: "Intelligent video editing with automatic cuts, transitions, and effects",
+      icon: <Sparkles className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -34,15 +34,15 @@ const AIVoiceSynthesis = () => {
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$19",
+      price: "$29",
       period: "/month",
-      description: "Perfect for content creators",
+      description: "Perfect for individuals and small businesses",
       features: [
-        "10,000 characters per month",
-        "5 voice models",
-        "Standard quality",
-        "Email support",
-        "Basic API access"
+        "10 video generations per month",
+        "HD quality (1080p)",
+        "Basic templates",
+        "Standard voice synthesis",
+        "Email support"
       ],
       popular: false
     },
@@ -50,28 +50,29 @@ const AIVoiceSynthesis = () => {
       name: "Professional",
       price: "$79",
       period: "/month",
-      description: "Ideal for businesses and agencies",
+      description: "Ideal for content creators and agencies",
       features: [
-        "100,000 characters per month",
-        "20 voice models",
-        "High quality synthesis",
-        "Priority support",
-        "Advanced API access",
-        "Voice cloning"
+        "50 video generations per month",
+        "4K quality available",
+        "Premium templates",
+        "Advanced voice synthesis",
+        "Custom branding",
+        "Priority support"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$299",
+      price: "$199",
       period: "/month",
-      description: "For large organizations",
+      description: "For large organizations and teams",
       features: [
-        "Unlimited characters",
-        "Unlimited voice models",
-        "Premium quality",
+        "Unlimited video generations",
+        "4K and 8K quality",
+        "Custom templates",
+        "Multi-language support",
+        "API access",
         "Dedicated support",
-        "Custom voice training",
         "White-label options"
       ],
       popular: false
@@ -80,38 +81,38 @@ const AIVoiceSynthesis = () => {
 
   const useCases = [
     {
-      title: "Audiobook Production",
-      description: "Generate high-quality audiobooks with natural-sounding narrators",
-      icon: <Volume2 className="w-8 h-8" />
+      title: "Marketing Videos",
+      description: "Create engaging promotional content for social media and advertising campaigns",
+      icon: <BarChart3 className="w-8 h-8" />
     },
     {
-      title: "Podcast Creation",
-      description: "Create engaging podcasts with AI-generated voices and hosts",
-      icon: <Mic className="w-8 h-8" />
+      title: "Educational Content",
+      description: "Generate instructional videos and training materials for your team",
+      icon: <Users className="w-8 h-8" />
     },
     {
-      title: "E-learning Content",
-      description: "Develop educational content with clear, engaging voice narration",
-      icon: <Brain className="w-8 h-8" />
-    },
-    {
-      title: "Voice Assistants",
-      description: "Build custom voice assistants with unique personality and tone",
+      title: "Social Media",
+      description: "Produce viral content for TikTok, Instagram, YouTube, and other platforms",
       icon: <Smartphone className="w-8 h-8" />
+    },
+    {
+      title: "Product Demos",
+      description: "Create compelling product demonstration videos for sales and marketing",
+      icon: <Play className="w-8 h-8" />
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer
-        title="AI Voice Synthesis - Natural Voice Generation & Voice Cloning | Zion Tech Group"
-        description="Create natural-sounding voices with our AI voice synthesis platform. Generate audiobooks, podcasts, and voice assistants. Voice cloning available. Starting from $19/month."
-        keywords="AI voice synthesis, voice generation, voice cloning, text to speech, natural voice, voice AI, audio generation"
+        title="Zion AI Video Generator - AI-Powered Video Creation Platform | Zion Tech Group"
+        description="Create professional videos from text prompts with our AI video generator. Generate marketing videos, educational content, and social media videos in minutes. Starting from $29/month."
+        keywords="AI video generator, video creation, automated video, marketing videos, social media content, video AI, content creation"
       />
       
       <Helmet>
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-voice-synthesis" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-video-generator" />
       </Helmet>
 
       {/* Hero Section */}
@@ -119,46 +120,46 @@ const AIVoiceSynthesis = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-8">
-              <Mic className="w-5 h-5 text-purple-400 mr-2" />
-              <span className="text-purple-400 font-medium">AI Voice Synthesis Platform</span>
+              <Sparkles className="w-5 h-5 text-purple-400 mr-2" />
+              <span className="text-purple-400 font-medium">AI Video Generation Platform</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Voice Synthesis
+              Zion AI Video Generator
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Create natural-sounding voices with our advanced AI voice synthesis technology. 
-              Generate audiobooks, podcasts, voice assistants, and more with human-like quality.
+              Transform your ideas into stunning videos with our AI-powered video generation platform. 
+              Create professional marketing videos, educational content, and social media videos in minutes.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center">
-                <Mic className="w-5 h-5 mr-2" />
+                <Play className="w-5 h-5 mr-2" />
                 Start Free Trial
               </button>
               <button className="border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300 flex items-center justify-center">
-                <Volume2 className="w-5 h-5 mr-2" />
-                Listen to Samples
+                <Video className="w-5 h-5 mr-2" />
+                Watch Demo
               </button>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">100+</div>
-                <div className="text-gray-400">Languages</div>
+                <div className="text-3xl font-bold text-white mb-2">10,000+</div>
+                <div className="text-gray-400">Videos Generated</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white mb-2">50+</div>
+                <div className="text-gray-400">Languages Supported</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-white mb-2">99.9%</div>
-                <div className="text-gray-400">Natural Quality</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">50ms</div>
-                <div className="text-gray-400">Latency</div>
+                <div className="text-gray-400">Uptime</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-white mb-2">24/7</div>
-                <div className="text-gray-400">API Access</div>
+                <div className="text-gray-400">Support</div>
               </div>
             </div>
           </div>
@@ -170,10 +171,10 @@ const AIVoiceSynthesis = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Voice Synthesis Features
+              Powerful AI Video Generation Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              State-of-the-art AI technology for creating natural, expressive voices
+              Our advanced AI technology makes video creation simple, fast, and professional
             </p>
           </div>
 
@@ -196,10 +197,10 @@ const AIVoiceSynthesis = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Perfect for Every Voice Application
+              Perfect for Every Use Case
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From content creation to voice assistants, our AI voices deliver exceptional quality
+              Whether you're creating marketing content, educational materials, or social media videos
             </p>
           </div>
 
@@ -225,7 +226,7 @@ const AIVoiceSynthesis = () => {
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your voice synthesis needs
+              Choose the plan that fits your video creation needs
             </p>
           </div>
 
@@ -277,10 +278,10 @@ const AIVoiceSynthesis = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-500/10 to-pink-500/10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Create Amazing Voices?
+            Ready to Create Amazing Videos?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join thousands of creators who are already using our AI voice synthesis to bring their content to life
+            Join thousands of creators who are already using Zion AI Video Generator to create stunning content
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center">
@@ -322,4 +323,4 @@ const AIVoiceSynthesis = () => {
   );
 };
 
-export default AIVoiceSynthesis;
+export default ZionAIVideoGenerator;

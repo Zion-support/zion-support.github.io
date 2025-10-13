@@ -1,32 +1,32 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Mic, Zap, Star, ArrowRight, CheckCircle, Users, Clock, Shield, Brain, Volume2, Sparkles, BarChart3, Globe, Smartphone } from 'lucide-react';
+import { Target, Zap, Star, ArrowRight, CheckCircle, Users, Clock, Shield, Brain, Mail, Sparkles, BarChart3, Globe, Smartphone } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const AIVoiceSynthesis = () => {
+const ZionAIMarketingAutomationPro = () => {
   const features = [
     {
-      title: "Natural Voice Generation",
-      description: "Create human-like voices with emotional expression and natural intonation",
-      icon: <Mic className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
+      title: "AI-Powered Campaigns",
+      description: "Create and optimize marketing campaigns automatically using advanced AI algorithms",
+      icon: <Brain className="w-6 h-6" />,
+      color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Multi-Language Support",
-      description: "Generate voices in 100+ languages with native pronunciation and accents",
+      title: "Multi-Channel Marketing",
+      description: "Manage email, social media, SMS, and web push notifications from one platform",
       icon: <Globe className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Real-time Synthesis",
-      description: "Ultra-low latency voice generation for live applications and streaming",
-      icon: <Zap className="w-6 h-6" />,
-      color: "from-green-500 to-emerald-500"
+      title: "Customer Segmentation",
+      description: "Automatically segment customers based on behavior, preferences, and demographics",
+      icon: <Users className="w-6 h-6" />,
+      color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Voice Cloning",
-      description: "Clone any voice with just a few seconds of audio sample",
-      icon: <Volume2 className="w-6 h-6" />,
+      title: "Predictive Analytics",
+      description: "Predict customer behavior and optimize campaigns for maximum ROI",
+      icon: <BarChart3 className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -34,131 +34,131 @@ const AIVoiceSynthesis = () => {
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$19",
+      price: "$49",
       period: "/month",
-      description: "Perfect for content creators",
+      description: "Perfect for small businesses",
       features: [
-        "10,000 characters per month",
-        "5 voice models",
-        "Standard quality",
+        "1,000 contacts",
+        "5 email campaigns per month",
+        "Basic automation",
         "Email support",
-        "Basic API access"
+        "Standard templates"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$79",
+      price: "$149",
       period: "/month",
-      description: "Ideal for businesses and agencies",
+      description: "Ideal for growing businesses",
       features: [
-        "100,000 characters per month",
-        "20 voice models",
-        "High quality synthesis",
+        "10,000 contacts",
+        "Unlimited email campaigns",
+        "Advanced automation",
         "Priority support",
-        "Advanced API access",
-        "Voice cloning"
+        "Custom templates",
+        "A/B testing"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$299",
+      price: "$399",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited characters",
-        "Unlimited voice models",
-        "Premium quality",
+        "Unlimited contacts",
+        "All marketing channels",
+        "AI-powered optimization",
         "Dedicated support",
-        "Custom voice training",
+        "Custom integrations",
         "White-label options"
       ],
       popular: false
     }
   ];
 
-  const useCases = [
+  const capabilities = [
     {
-      title: "Audiobook Production",
-      description: "Generate high-quality audiobooks with natural-sounding narrators",
-      icon: <Volume2 className="w-8 h-8" />
+      title: "Email Marketing",
+      description: "Create personalized email campaigns with AI-generated content and optimal send times",
+      icon: <Mail className="w-8 h-8" />
     },
     {
-      title: "Podcast Creation",
-      description: "Create engaging podcasts with AI-generated voices and hosts",
-      icon: <Mic className="w-8 h-8" />
+      title: "Social Media",
+      description: "Automatically post and engage across all major social media platforms",
+      icon: <Globe className="w-8 h-8" />
     },
     {
-      title: "E-learning Content",
-      description: "Develop educational content with clear, engaging voice narration",
-      icon: <Brain className="w-8 h-8" />
+      title: "Lead Scoring",
+      description: "Automatically score and prioritize leads based on engagement and behavior",
+      icon: <Target className="w-8 h-8" />
     },
     {
-      title: "Voice Assistants",
-      description: "Build custom voice assistants with unique personality and tone",
-      icon: <Smartphone className="w-8 h-8" />
+      title: "ROI Optimization",
+      description: "Continuously optimize campaigns for maximum return on investment",
+      icon: <BarChart3 className="w-8 h-8" />
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       <SEOOptimizer
-        title="AI Voice Synthesis - Natural Voice Generation & Voice Cloning | Zion Tech Group"
-        description="Create natural-sounding voices with our AI voice synthesis platform. Generate audiobooks, podcasts, and voice assistants. Voice cloning available. Starting from $19/month."
-        keywords="AI voice synthesis, voice generation, voice cloning, text to speech, natural voice, voice AI, audio generation"
+        title="Zion AI Marketing Automation Pro - AI-Powered Marketing Platform | Zion Tech Group"
+        description="Automate your marketing with AI-powered campaigns, customer segmentation, and predictive analytics. Increase ROI by 300%. Starting from $49/month."
+        keywords="AI marketing automation, marketing AI, automated campaigns, customer segmentation, marketing ROI, email automation"
       />
       
       <Helmet>
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-voice-synthesis" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-marketing-automation-pro" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-8">
-              <Mic className="w-5 h-5 text-purple-400 mr-2" />
-              <span className="text-purple-400 font-medium">AI Voice Synthesis Platform</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 mb-8">
+              <Target className="w-5 h-5 text-green-400 mr-2" />
+              <span className="text-green-400 font-medium">AI Marketing Automation Platform</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Voice Synthesis
+              Zion AI Marketing Automation Pro
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Create natural-sounding voices with our advanced AI voice synthesis technology. 
-              Generate audiobooks, podcasts, voice assistants, and more with human-like quality.
+              Transform your marketing with AI-powered automation. Create personalized campaigns, 
+              segment customers intelligently, and maximize ROI with predictive analytics.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center">
-                <Mic className="w-5 h-5 mr-2" />
+              <button className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300 flex items-center justify-center">
+                <Target className="w-5 h-5 mr-2" />
                 Start Free Trial
               </button>
-              <button className="border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300 flex items-center justify-center">
-                <Volume2 className="w-5 h-5 mr-2" />
-                Listen to Samples
+              <button className="border border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300 flex items-center justify-center">
+                <BarChart3 className="w-5 h-5 mr-2" />
+                View Demo
               </button>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">100+</div>
-                <div className="text-gray-400">Languages</div>
+                <div className="text-3xl font-bold text-white mb-2">300%</div>
+                <div className="text-gray-400">Average ROI Increase</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white mb-2">50+</div>
+                <div className="text-gray-400">Integrations</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-white mb-2">99.9%</div>
-                <div className="text-gray-400">Natural Quality</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">50ms</div>
-                <div className="text-gray-400">Latency</div>
+                <div className="text-gray-400">Uptime</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-white mb-2">24/7</div>
-                <div className="text-gray-400">API Access</div>
+                <div className="text-gray-400">AI Optimization</div>
               </div>
             </div>
           </div>
@@ -170,16 +170,16 @@ const AIVoiceSynthesis = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Voice Synthesis Features
+              Powerful Marketing Automation Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              State-of-the-art AI technology for creating natural, expressive voices
+              Everything you need to automate and optimize your marketing campaigns
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300">
                 <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4`}>
                   {feature.icon}
                 </div>
@@ -191,26 +191,26 @@ const AIVoiceSynthesis = () => {
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Perfect for Every Voice Application
+              Advanced Marketing Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From content creation to voice assistants, our AI voices deliver exceptional quality
+              Our AI understands your customers and optimizes every touchpoint for maximum engagement
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+            {capabilities.map((capability, index) => (
               <div key={index} className="text-center group">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  {useCase.icon}
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  {capability.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{useCase.title}</h3>
-                <p className="text-gray-300">{useCase.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{capability.title}</h3>
+                <p className="text-gray-300">{capability.description}</p>
               </div>
             ))}
           </div>
@@ -222,21 +222,21 @@ const AIVoiceSynthesis = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple, Transparent Pricing
+              Choose Your Marketing Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your voice synthesis needs
+              Scale your marketing automation as your business grows
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                plan.popular ? 'border-purple-500 scale-105' : 'border-gray-700'
-              } hover:border-purple-500/50 transition-all duration-300`}>
+                plan.popular ? 'border-green-500 scale-105' : 'border-gray-700'
+              } hover:border-green-500/50 transition-all duration-300`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </div>
                   </div>
@@ -262,8 +262,8 @@ const AIVoiceSynthesis = () => {
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
-                    ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
-                    : 'border border-purple-500 text-purple-400 hover:bg-purple-500/10'
+                    ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:from-green-600 hover:to-emerald-600'
+                    : 'border border-green-500 text-green-400 hover:bg-green-500/10'
                 }`}>
                   Get Started
                 </button>
@@ -274,20 +274,20 @@ const AIVoiceSynthesis = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-500/10 to-pink-500/10">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-500/10 to-emerald-500/10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Create Amazing Voices?
+            Ready to Automate Your Marketing?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join thousands of creators who are already using our AI voice synthesis to bring their content to life
+            Join thousands of businesses who are already using Zion AI Marketing Automation Pro to increase their ROI
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center">
+            <button className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300 flex items-center justify-center">
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
-            <button className="border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300">
+            <button className="border border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300">
               Contact Sales
             </button>
           </div>
@@ -301,13 +301,13 @@ const AIVoiceSynthesis = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-gray-300">
             <div>
               <div className="font-semibold text-white mb-2">Phone</div>
-              <a href="tel:+13024640950" className="hover:text-purple-400 transition-colors">
+              <a href="tel:+13024640950" className="hover:text-green-400 transition-colors">
                 +1 302 464 0950
               </a>
             </div>
             <div>
               <div className="font-semibold text-white mb-2">Email</div>
-              <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-400 transition-colors">
+              <a href="mailto:kleber@ziontechgroup.com" className="hover:text-green-400 transition-colors">
                 kleber@ziontechgroup.com
               </a>
             </div>
@@ -322,4 +322,4 @@ const AIVoiceSynthesis = () => {
   );
 };
 
-export default AIVoiceSynthesis;
+export default ZionAIMarketingAutomationPro;
