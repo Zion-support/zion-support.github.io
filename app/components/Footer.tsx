@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Linkedin, Twitter, Github } from "lucide-react";
+import { Linkedin, Twitter, Github, ArrowRight, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -20,6 +20,39 @@ export default function Footer() {
       url: "https://github.com/ziontechgroup",
       icon: <Github className="w-5 h-5" />,
     },
+  ];
+
+  const quickLinks = [
+    { name: "About Us", path: "/about" },
+    { name: "Our Team", path: "/team" },
+    { name: "Careers", path: "/careers" },
+    { name: "Contact", path: "/contact" },
+    { name: "Blog", path: "/blog" },
+    { name: "News", path: "/news" }
+  ];
+
+  const services = [
+    { name: "AI Services", path: "/ai-services" },
+    { name: "Cloud Infrastructure", path: "/cloud-infrastructure" },
+    { name: "Cybersecurity Solutions", path: "/cybersecurity-solutions" },
+    { name: "Web Development", path: "/web-development" },
+    { name: "5G Implementation", path: "/5g-implementation" },
+    { name: "Data Analytics", path: "/data-analytics" }
+  ];
+
+  const resources = [
+    { name: "Documentation", path: "/docs" },
+    { name: "API Reference", path: "/api" },
+    { name: "Support", path: "/support" },
+    { name: "Community", path: "/community" },
+    { name: "Case Studies", path: "/case-studies" },
+    { name: "White Papers", path: "/white-papers" }
+  ];
+
+  const legal = [
+    { name: "Privacy Policy", path: "/privacy" },
+    { name: "Terms of Service", path: "/terms" },
+    { name: "Cookie Policy", path: "/cookies" }
   ];
 
   return (
@@ -54,81 +87,6 @@ export default function Footer() {
             </div>
           </div>
 
-<<<<<<< HEAD
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/ai-services"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  AI Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/cloud-infrastructure"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Cloud Infrastructure
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/cybersecurity-solutions"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Cybersecurity
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/web-development"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Web Development
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Company</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/about"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/team"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Our Team
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/careers"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/contact"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Contact
-                </Link>
-              </li>
-=======
           {/* Quick Links */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Quick Links</h3>
@@ -171,17 +129,10 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-011b
             </ul>
           </div>
         </div>
 
-<<<<<<< HEAD
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
-            © {currentYear} Zion Tech Group. All rights reserved.
-          </p>
-=======
         {/* Contact Info Section */}
         <div className="bg-gray-800/50 rounded-lg p-6 mb-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -239,7 +190,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
               <p className="text-gray-400 text-sm">
-                © 2024 Zion Tech Group. All rights reserved.
+                © {currentYear} Zion Tech Group. All rights reserved.
               </p>
               <div className="flex space-x-6">
                 {legal.map((item, index) => (
@@ -255,7 +206,6 @@ export default function Footer() {
               </p>
             </div>
           </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-011b
         </div>
       </div>
     </footer>
