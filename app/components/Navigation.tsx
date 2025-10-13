@@ -71,17 +71,41 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
       name: 'Services',
       path: '/services',
       icon: <Shield className="w-4 h-4" />,
-      hasDropdown: true
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'AI Services', path: '/ai-services', icon: <Brain className="w-4 h-4" /> },
+        { name: 'IT Services', path: '/services', icon: <Shield className="w-4 h-4" /> },
+        { name: '5G Solutions', path: '/5g-solutions', icon: <Globe className="w-4 h-4" /> },
+        { name: 'Micro SAAS', path: '/micro-saas', icon: <Zap className="w-4 h-4" /> }
+      ]
     },
     {
       name: 'AI Services',
       path: '/ai-services',
-      icon: <Brain className="w-4 h-4" />
+      icon: <Brain className="w-4 h-4" />,
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'AI Analytics', path: '/ai-analytics', icon: <BarChart3 className="w-4 h-4" /> },
+        { name: 'AI Content Generation', path: '/ai-content-generation', icon: <FileText className="w-4 h-4" /> },
+        { name: 'AI Customer Support', path: '/ai-customer-support', icon: <Users className="w-4 h-4" /> },
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', icon: <Shield className="w-4 h-4" /> },
+        { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
+        { name: 'AI Voice Assistant', path: '/ai-voice-assistant', icon: <Mic className="w-4 h-4" /> }
+      ]
     },
     {
       name: 'Micro SAAS',
       path: '/micro-saas',
-      icon: <Zap className="w-4 h-4" />
+      icon: <Zap className="w-4 h-4" />,
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'AI Meeting Assistant', path: '/zion-ai-meeting-assistant', icon: <Video className="w-4 h-4" /> },
+        { name: 'AI Document Analyzer', path: '/zion-ai-document-analyzer', icon: <FileText className="w-4 h-4" /> },
+        { name: 'AI Social Media Optimizer', path: '/zion-ai-social-media-optimizer', icon: <Share2 className="w-4 h-4" /> },
+        { name: 'AI Email Optimizer', path: '/zion-ai-email-optimizer', icon: <Mail className="w-4 h-4" /> },
+        { name: 'AI Website Optimizer', path: '/zion-ai-website-optimizer', icon: <Globe className="w-4 h-4" /> },
+        { name: 'AI Code Generator', path: '/zion-ai-code-generator', icon: <Code className="w-4 h-4" /> }
+      ]
     },
     {
       name: '5G Solutions',
@@ -96,7 +120,7 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
   ];
 
   return (
-    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-cyan-500/20 sticky top-0 z-50">
+    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-cyan-500/20 sticky top-0 z-50 animate-glow">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}

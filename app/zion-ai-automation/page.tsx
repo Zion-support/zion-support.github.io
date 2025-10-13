@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Video, 
+  Settings, 
   Zap, 
   BarChart3, 
   Target, 
@@ -14,81 +14,92 @@ import {
   TrendingUp,
   Shield,
   Eye,
-  Scissors,
-  Play
+  Workflow,
+  Cpu
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAIVideoEditorPage = () => {
+const ZionAIAutomationPage = () => {
   const features = [
     {
-      title: "AI Video Editing",
-      description: "Automatically edit videos with AI-powered scene detection and cutting",
-      icon: <Brain className="w-6 h-6" />,
+      title: "Workflow Automation",
+      description: "Automate complex business processes with AI-powered workflow orchestration",
+      icon: <Workflow className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Auto Transitions",
-      description: "Intelligent transition suggestions and automatic application",
-      icon: <Scissors className="w-6 h-6" />,
+      title: "Smart Triggers",
+      description: "AI-powered triggers that automatically start processes based on conditions",
+      icon: <Brain className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Smart Cropping",
-      description: "AI-powered smart cropping to focus on important content",
-      icon: <Target className="w-6 h-6" />,
+      title: "Data Integration",
+      description: "Seamlessly integrate with 500+ apps and services for complete automation",
+      icon: <Cpu className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Audio Enhancement",
-      description: "Automatically enhance audio quality and remove background noise",
-      icon: <Play className="w-6 h-6" />,
+      title: "Error Handling",
+      description: "Intelligent error detection and automatic recovery for robust automation",
+      icon: <Shield className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Color Correction",
-      description: "AI-powered color correction and grading for professional results",
-      icon: <Eye className="w-6 h-6" />,
+      title: "Performance Analytics",
+      description: "Monitor automation performance with detailed analytics and insights",
+      icon: <BarChart3 className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Text & Subtitles",
-      description: "Automatically generate and sync subtitles with AI speech recognition",
-      icon: <Video className="w-6 h-6" />,
+      title: "Custom Logic",
+      description: "Create custom automation logic with visual programming interface",
+      icon: <Settings className="w-6 h-6" />,
       color: "from-cyan-500 to-blue-500"
     }
   ];
 
+  const automationTypes = [
+    { name: "Marketing", icon: "📈", color: "from-blue-500 to-cyan-500" },
+    { name: "Sales", icon: "💰", color: "from-green-500 to-emerald-500" },
+    { name: "HR", icon: "👥", color: "from-purple-500 to-violet-500" },
+    { name: "Finance", icon: "💳", color: "from-orange-500 to-amber-500" },
+    { name: "Operations", icon: "⚙️", color: "from-gray-500 to-slate-500" },
+    { name: "Customer Service", icon: "🎧", color: "from-pink-500 to-rose-500" },
+    { name: "IT", icon: "💻", color: "from-indigo-500 to-purple-500" },
+    { name: "Analytics", icon: "📊", color: "from-cyan-500 to-blue-500" }
+  ];
+
   const pricingPlans = [
     {
-      name: "Creator",
+      name: "Starter",
       price: "$49",
       period: "per month",
-      description: "Perfect for content creators",
+      description: "Perfect for small teams",
       features: [
-        "Up to 10 hours of video/month",
-        "Basic AI editing",
-        "Standard resolution",
+        "Up to 100 automations/month",
+        "Basic AI features",
+        "50 app integrations",
         "Email support",
-        "5 export formats"
+        "Standard templates"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$129",
+      price: "$149",
       period: "per month",
-      description: "Most popular for professionals",
+      description: "Most popular for growing businesses",
       features: [
-        "Up to 50 hours of video/month",
-        "Advanced AI editing",
-        "4K resolution",
+        "Up to 1,000 automations/month",
+        "Advanced AI features",
+        "500+ app integrations",
         "Priority support",
-        "All export formats",
-        "Batch processing"
+        "Custom workflows",
+        "Analytics dashboard"
       ],
       popular: true
     },
@@ -98,9 +109,9 @@ const ZionAIVideoEditorPage = () => {
       period: "per month",
       description: "For large organizations",
       features: [
-        "Unlimited video processing",
+        "Unlimited automations",
         "Custom AI models",
-        "8K resolution",
+        "All integrations",
         "API access",
         "Dedicated support",
         "White-label options"
@@ -111,24 +122,24 @@ const ZionAIVideoEditorPage = () => {
 
   const testimonials = [
     {
-      name: "Mark Thompson",
-      company: "Video Production",
-      role: "Video Editor",
-      content: "Zion AI Video Editor has cut our editing time by 80%. The AI suggestions are incredibly accurate and save us hours.",
+      name: "David Kim",
+      company: "E-commerce Platform",
+      role: "Operations Director",
+      content: "Zion AI Automation has reduced our manual work by 80%. The workflow automation is incredibly powerful and easy to use.",
       rating: 5
     },
     {
-      name: "Sarah Kim",
-      company: "Content Agency",
-      role: "Creative Director",
-      content: "The auto transitions and smart cropping features are game-changers. We can produce more content in less time.",
+      name: "Maria Garcia",
+      company: "Marketing Agency",
+      role: "Campaign Manager",
+      content: "The smart triggers have revolutionized our campaign management. We can now respond to customer actions instantly.",
       rating: 5
     },
     {
-      name: "David Rodriguez",
-      company: "Marketing Team",
-      role: "Video Marketing Manager",
-      content: "The subtitle generation is perfect. We can create multilingual content automatically without manual work.",
+      name: "James Wilson",
+      company: "SaaS Company",
+      role: "CTO",
+      content: "The data integration capabilities are outstanding. We've connected all our tools and created seamless workflows.",
       rating: 5
     }
   ];
@@ -136,10 +147,10 @@ const ZionAIVideoEditorPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Video Editor - AI-Powered Video Editing | Zion Tech Group"
-        description="Edit videos with AI-powered automation, smart transitions, and intelligent cropping. Cut editing time by 80% with intelligent video editing."
-        keywords="AI video editor, video editing, automated editing, video production, content creation, video automation"
-        canonical="https://ziontechgroup.com/zion-ai-video-editor"
+        title="Zion AI Automation - AI-Powered Business Automation | Zion Tech Group"
+        description="Automate business processes with AI-powered workflow automation, smart triggers, and data integration. Reduce manual work by 80% with intelligent automation."
+        keywords="AI automation, workflow automation, business process automation, smart triggers, data integration, process optimization"
+        canonical="https://ziontechgroup.com/zion-ai-automation"
       />
 
       <main className="relative z-10">
@@ -152,19 +163,19 @@ const ZionAIVideoEditorPage = () => {
           
           <ResponsiveContainer className="text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Video className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Video Intelligence</span>
+              <Settings className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Automation Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Video Editor
+                Zion AI Automation
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Edit videos with AI-powered automation, smart transitions, and intelligent cropping. 
-              Cut editing time by 80% with intelligent video editing.
+              Automate business processes with AI-powered workflow automation, smart triggers, 
+              and data integration. Reduce manual work by 80% with intelligent automation.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -180,7 +191,7 @@ const ZionAIVideoEditorPage = () => {
                 href="#demo"
                 variant="outline"
                 size="lg"
-                icon={<Video className="w-5 h-5" />}
+                icon={<Settings className="w-5 h-5" />}
               >
                 Watch Demo
               </FuturisticButton>
@@ -190,20 +201,45 @@ const ZionAIVideoEditorPage = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
-                <div className="text-gray-300 text-sm">Faster Editing</div>
+                <div className="text-gray-300 text-sm">Less Manual Work</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">8K</div>
-                <div className="text-gray-300 text-sm">Resolution</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">500+</div>
+                <div className="text-gray-300 text-sm">Integrations</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">50+</div>
-                <div className="text-gray-300 text-sm">Export Formats</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">8</div>
+                <div className="text-gray-300 text-sm">Business Areas</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
                 <div className="text-gray-300 text-sm">AI Processing</div>
               </div>
+            </div>
+          </ResponsiveContainer>
+        </section>
+
+        {/* Automation Types */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <ResponsiveContainer>
+            <div className="text-center mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                Automate Any Business Process
+              </h2>
+              <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+                From marketing to finance, automate processes across all business areas.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-4 md:grid-cols-8 gap-6 max-w-5xl mx-auto">
+              {automationTypes.map((type, index) => (
+                <div key={index} className="text-center group">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${type.color} rounded-lg flex items-center justify-center mb-3 mx-auto group-hover:scale-110 transition-transform`}>
+                    <span className="text-2xl">{type.icon}</span>
+                  </div>
+                  <div className="text-white font-medium text-sm">{type.name}</div>
+                </div>
+              ))}
             </div>
           </ResponsiveContainer>
         </section>
@@ -216,7 +252,7 @@ const ZionAIVideoEditorPage = () => {
                 Powerful AI Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to edit videos with AI-powered automation.
+                Everything you need to automate business processes with AI.
               </p>
             </div>
             
@@ -249,7 +285,7 @@ const ZionAIVideoEditorPage = () => {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your video editing needs. All plans include our core AI features.
+                Choose the plan that fits your automation needs. All plans include our core AI features.
               </p>
             </div>
             
@@ -308,10 +344,10 @@ const ZionAIVideoEditorPage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Video Creators
+                Trusted by Business Leaders
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Video Editor
+                See what our customers say about Zion AI Automation
               </p>
             </div>
             
@@ -341,10 +377,10 @@ const ZionAIVideoEditorPage = () => {
           <ResponsiveContainer>
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Edit Videos with AI?
+                Ready to Automate Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Join thousands of creators already using Zion AI Video Editor to produce amazing videos faster.
+                Join thousands of businesses already using Zion AI Automation to streamline their processes.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -360,7 +396,7 @@ const ZionAIVideoEditorPage = () => {
                   href="/demo"
                   variant="outline"
                   size="lg"
-                  icon={<Video className="w-5 h-5" />}
+                  icon={<Settings className="w-5 h-5" />}
                 >
                   Schedule Demo
                 </FuturisticButton>
@@ -373,4 +409,4 @@ const ZionAIVideoEditorPage = () => {
   );
 };
 
-export default ZionAIVideoEditorPage;
+export default ZionAIAutomationPage;

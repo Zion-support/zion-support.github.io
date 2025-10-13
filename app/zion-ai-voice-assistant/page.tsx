@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Video, 
+  Mic, 
   Zap, 
   BarChart3, 
   Target, 
@@ -14,93 +14,93 @@ import {
   TrendingUp,
   Shield,
   Eye,
-  Scissors,
-  Play
+  Volume2,
+  Headphones
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAIVideoEditorPage = () => {
+const ZionAIVoiceAssistantPage = () => {
   const features = [
     {
-      title: "AI Video Editing",
-      description: "Automatically edit videos with AI-powered scene detection and cutting",
-      icon: <Brain className="w-6 h-6" />,
+      title: "Natural Voice Recognition",
+      description: "Advanced speech recognition with 99% accuracy in multiple languages",
+      icon: <Mic className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Auto Transitions",
-      description: "Intelligent transition suggestions and automatic application",
-      icon: <Scissors className="w-6 h-6" />,
+      title: "Intelligent Responses",
+      description: "AI-powered responses that understand context and provide helpful answers",
+      icon: <Brain className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Smart Cropping",
-      description: "AI-powered smart cropping to focus on important content",
-      icon: <Target className="w-6 h-6" />,
+      title: "Multi-Platform Support",
+      description: "Works across devices, apps, and platforms with seamless integration",
+      icon: <Headphones className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Audio Enhancement",
-      description: "Automatically enhance audio quality and remove background noise",
-      icon: <Play className="w-6 h-6" />,
+      title: "Custom Commands",
+      description: "Create custom voice commands for your specific business needs",
+      icon: <Target className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Color Correction",
-      description: "AI-powered color correction and grading for professional results",
-      icon: <Eye className="w-6 h-6" />,
+      title: "Voice Analytics",
+      description: "Track usage patterns and optimize voice interactions with analytics",
+      icon: <BarChart3 className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Text & Subtitles",
-      description: "Automatically generate and sync subtitles with AI speech recognition",
-      icon: <Video className="w-6 h-6" />,
+      title: "Privacy & Security",
+      description: "Enterprise-grade security with encrypted voice data processing",
+      icon: <Shield className="w-6 h-6" />,
       color: "from-cyan-500 to-blue-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Creator",
-      price: "$49",
+      name: "Personal",
+      price: "$29",
       period: "per month",
-      description: "Perfect for content creators",
+      description: "Perfect for individuals",
       features: [
-        "Up to 10 hours of video/month",
-        "Basic AI editing",
-        "Standard resolution",
+        "Up to 1,000 voice commands/month",
+        "Basic AI features",
+        "5 languages",
         "Email support",
-        "5 export formats"
+        "Standard accuracy"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$129",
+      name: "Business",
+      price: "$99",
       period: "per month",
-      description: "Most popular for professionals",
+      description: "Most popular for businesses",
       features: [
-        "Up to 50 hours of video/month",
-        "Advanced AI editing",
-        "4K resolution",
+        "Up to 10,000 voice commands/month",
+        "Advanced AI features",
+        "20+ languages",
         "Priority support",
-        "All export formats",
-        "Batch processing"
+        "High accuracy",
+        "Custom commands"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$399",
+      price: "$299",
       period: "per month",
       description: "For large organizations",
       features: [
-        "Unlimited video processing",
+        "Unlimited voice commands",
         "Custom AI models",
-        "8K resolution",
+        "All languages",
         "API access",
         "Dedicated support",
         "White-label options"
@@ -111,24 +111,24 @@ const ZionAIVideoEditorPage = () => {
 
   const testimonials = [
     {
-      name: "Mark Thompson",
-      company: "Video Production",
-      role: "Video Editor",
-      content: "Zion AI Video Editor has cut our editing time by 80%. The AI suggestions are incredibly accurate and save us hours.",
+      name: "Sarah Johnson",
+      company: "Smart Home Company",
+      role: "Product Manager",
+      content: "Zion AI Voice Assistant has transformed our smart home ecosystem. Users love the natural voice interactions and accuracy.",
       rating: 5
     },
     {
-      name: "Sarah Kim",
-      company: "Content Agency",
-      role: "Creative Director",
-      content: "The auto transitions and smart cropping features are game-changers. We can produce more content in less time.",
+      name: "Michael Chen",
+      company: "Healthcare Provider",
+      role: "IT Director",
+      content: "The voice analytics help us understand patient interactions better. The custom commands feature is incredibly powerful.",
       rating: 5
     },
     {
-      name: "David Rodriguez",
-      company: "Marketing Team",
-      role: "Video Marketing Manager",
-      content: "The subtitle generation is perfect. We can create multilingual content automatically without manual work.",
+      name: "Lisa Rodriguez",
+      company: "Automotive Company",
+      role: "UX Designer",
+      content: "Integrating the voice assistant into our vehicles was seamless. The multi-platform support made deployment effortless.",
       rating: 5
     }
   ];
@@ -136,10 +136,10 @@ const ZionAIVideoEditorPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Video Editor - AI-Powered Video Editing | Zion Tech Group"
-        description="Edit videos with AI-powered automation, smart transitions, and intelligent cropping. Cut editing time by 80% with intelligent video editing."
-        keywords="AI video editor, video editing, automated editing, video production, content creation, video automation"
-        canonical="https://ziontechgroup.com/zion-ai-video-editor"
+        title="Zion AI Voice Assistant - AI-Powered Voice Technology | Zion Tech Group"
+        description="Create intelligent voice assistants with 99% accuracy speech recognition, natural language processing, and multi-platform support. Transform user interactions with voice AI."
+        keywords="AI voice assistant, voice recognition, speech processing, voice AI, conversational AI, voice technology"
+        canonical="https://ziontechgroup.com/zion-ai-voice-assistant"
       />
 
       <main className="relative z-10">
@@ -152,19 +152,19 @@ const ZionAIVideoEditorPage = () => {
           
           <ResponsiveContainer className="text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Video className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Video Intelligence</span>
+              <Mic className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Voice Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Video Editor
+                Zion AI Voice Assistant
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Edit videos with AI-powered automation, smart transitions, and intelligent cropping. 
-              Cut editing time by 80% with intelligent video editing.
+              Create intelligent voice assistants with 99% accuracy speech recognition, natural language processing, 
+              and multi-platform support. Transform user interactions with voice AI.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -180,7 +180,7 @@ const ZionAIVideoEditorPage = () => {
                 href="#demo"
                 variant="outline"
                 size="lg"
-                icon={<Video className="w-5 h-5" />}
+                icon={<Mic className="w-5 h-5" />}
               >
                 Watch Demo
               </FuturisticButton>
@@ -189,16 +189,16 @@ const ZionAIVideoEditorPage = () => {
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
-                <div className="text-gray-300 text-sm">Faster Editing</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">99%</div>
+                <div className="text-gray-300 text-sm">Accuracy</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">8K</div>
-                <div className="text-gray-300 text-sm">Resolution</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">20+</div>
+                <div className="text-gray-300 text-sm">Languages</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">50+</div>
-                <div className="text-gray-300 text-sm">Export Formats</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">Multi-Platform</div>
+                <div className="text-gray-300 text-sm">Support</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
@@ -216,7 +216,7 @@ const ZionAIVideoEditorPage = () => {
                 Powerful AI Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to edit videos with AI-powered automation.
+                Everything you need to create intelligent voice assistants with AI.
               </p>
             </div>
             
@@ -249,7 +249,7 @@ const ZionAIVideoEditorPage = () => {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your video editing needs. All plans include our core AI features.
+                Choose the plan that fits your voice assistant needs. All plans include our core AI features.
               </p>
             </div>
             
@@ -308,10 +308,10 @@ const ZionAIVideoEditorPage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Video Creators
+                Trusted by Technology Leaders
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Video Editor
+                See what our customers say about Zion AI Voice Assistant
               </p>
             </div>
             
@@ -341,10 +341,10 @@ const ZionAIVideoEditorPage = () => {
           <ResponsiveContainer>
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Edit Videos with AI?
+                Ready to Create Voice AI?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Join thousands of creators already using Zion AI Video Editor to produce amazing videos faster.
+                Join thousands of companies already using Zion AI Voice Assistant to transform user interactions.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -360,7 +360,7 @@ const ZionAIVideoEditorPage = () => {
                   href="/demo"
                   variant="outline"
                   size="lg"
-                  icon={<Video className="w-5 h-5" />}
+                  icon={<Mic className="w-5 h-5" />}
                 >
                   Schedule Demo
                 </FuturisticButton>
@@ -373,4 +373,4 @@ const ZionAIVideoEditorPage = () => {
   );
 };
 
-export default ZionAIVideoEditorPage;
+export default ZionAIVoiceAssistantPage;

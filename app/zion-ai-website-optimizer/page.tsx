@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Video, 
+  Globe, 
   Zap, 
   BarChart3, 
   Target, 
@@ -14,81 +14,81 @@ import {
   TrendingUp,
   Shield,
   Eye,
-  Scissors,
-  Play
+  Search,
+  Smartphone
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAIVideoEditorPage = () => {
+const ZionAIWebsiteOptimizerPage = () => {
   const features = [
     {
-      title: "AI Video Editing",
-      description: "Automatically edit videos with AI-powered scene detection and cutting",
-      icon: <Brain className="w-6 h-6" />,
+      title: "AI Performance Analysis",
+      description: "Comprehensive website performance analysis with AI-powered recommendations",
+      icon: <BarChart3 className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Auto Transitions",
-      description: "Intelligent transition suggestions and automatic application",
-      icon: <Scissors className="w-6 h-6" />,
+      title: "SEO Optimization",
+      description: "AI-powered SEO analysis and optimization for better search rankings",
+      icon: <Search className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Smart Cropping",
-      description: "AI-powered smart cropping to focus on important content",
-      icon: <Target className="w-6 h-6" />,
+      title: "Mobile Optimization",
+      description: "Automatic mobile optimization and responsive design improvements",
+      icon: <Smartphone className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Audio Enhancement",
-      description: "Automatically enhance audio quality and remove background noise",
-      icon: <Play className="w-6 h-6" />,
+      title: "Speed Optimization",
+      description: "AI-powered speed optimization to improve Core Web Vitals scores",
+      icon: <Zap className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Color Correction",
-      description: "AI-powered color correction and grading for professional results",
-      icon: <Eye className="w-6 h-6" />,
+      title: "User Experience Analysis",
+      description: "AI analysis of user behavior and experience optimization recommendations",
+      icon: <Users className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Text & Subtitles",
-      description: "Automatically generate and sync subtitles with AI speech recognition",
-      icon: <Video className="w-6 h-6" />,
+      title: "Conversion Rate Optimization",
+      description: "AI-powered CRO analysis and A/B testing recommendations",
+      icon: <Target className="w-6 h-6" />,
       color: "from-cyan-500 to-blue-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Creator",
+      name: "Starter",
       price: "$49",
       period: "per month",
-      description: "Perfect for content creators",
+      description: "Perfect for small websites",
       features: [
-        "Up to 10 hours of video/month",
-        "Basic AI editing",
-        "Standard resolution",
+        "Up to 5 websites",
+        "Basic AI analysis",
+        "Standard optimization",
         "Email support",
-        "5 export formats"
+        "Monthly reports"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$129",
+      price: "$149",
       period: "per month",
-      description: "Most popular for professionals",
+      description: "Most popular for growing businesses",
       features: [
-        "Up to 50 hours of video/month",
-        "Advanced AI editing",
-        "4K resolution",
+        "Up to 25 websites",
+        "Advanced AI analysis",
+        "Comprehensive optimization",
         "Priority support",
-        "All export formats",
-        "Batch processing"
+        "Weekly reports",
+        "A/B testing"
       ],
       popular: true
     },
@@ -98,9 +98,9 @@ const ZionAIVideoEditorPage = () => {
       period: "per month",
       description: "For large organizations",
       features: [
-        "Unlimited video processing",
+        "Unlimited websites",
         "Custom AI models",
-        "8K resolution",
+        "Advanced analytics",
         "API access",
         "Dedicated support",
         "White-label options"
@@ -111,24 +111,24 @@ const ZionAIVideoEditorPage = () => {
 
   const testimonials = [
     {
-      name: "Mark Thompson",
-      company: "Video Production",
-      role: "Video Editor",
-      content: "Zion AI Video Editor has cut our editing time by 80%. The AI suggestions are incredibly accurate and save us hours.",
+      name: "Alex Johnson",
+      company: "E-commerce Store",
+      role: "CEO",
+      content: "Zion AI Website Optimizer increased our website speed by 60% and conversion rates by 35%. The AI insights are incredibly valuable!",
       rating: 5
     },
     {
-      name: "Sarah Kim",
-      company: "Content Agency",
-      role: "Creative Director",
-      content: "The auto transitions and smart cropping features are game-changers. We can produce more content in less time.",
+      name: "Sarah Williams",
+      company: "Digital Agency",
+      role: "Technical Director",
+      content: "The SEO optimization features have helped our clients achieve top rankings. The AI recommendations are spot-on and easy to implement.",
       rating: 5
     },
     {
-      name: "David Rodriguez",
-      company: "Marketing Team",
-      role: "Video Marketing Manager",
-      content: "The subtitle generation is perfect. We can create multilingual content automatically without manual work.",
+      name: "Michael Chen",
+      company: "SaaS Company",
+      role: "Growth Manager",
+      content: "The conversion rate optimization has been a game-changer. We've seen a 40% increase in conversions with the AI recommendations.",
       rating: 5
     }
   ];
@@ -136,10 +136,10 @@ const ZionAIVideoEditorPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Video Editor - AI-Powered Video Editing | Zion Tech Group"
-        description="Edit videos with AI-powered automation, smart transitions, and intelligent cropping. Cut editing time by 80% with intelligent video editing."
-        keywords="AI video editor, video editing, automated editing, video production, content creation, video automation"
-        canonical="https://ziontechgroup.com/zion-ai-video-editor"
+        title="Zion AI Website Optimizer - AI-Powered Website Performance | Zion Tech Group"
+        description="Boost website performance with AI-powered optimization, SEO analysis, speed improvements, and conversion rate optimization. Increase conversions by 35%."
+        keywords="AI website optimizer, website performance, SEO optimization, speed optimization, conversion rate optimization, web analytics"
+        canonical="https://ziontechgroup.com/zion-ai-website-optimizer"
       />
 
       <main className="relative z-10">
@@ -152,19 +152,19 @@ const ZionAIVideoEditorPage = () => {
           
           <ResponsiveContainer className="text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Video className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Video Intelligence</span>
+              <Globe className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Website Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Video Editor
+                Zion AI Website Optimizer
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Edit videos with AI-powered automation, smart transitions, and intelligent cropping. 
-              Cut editing time by 80% with intelligent video editing.
+              Boost website performance with AI-powered optimization, SEO analysis, speed improvements, 
+              and conversion rate optimization. Increase conversions by 35%.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -180,7 +180,7 @@ const ZionAIVideoEditorPage = () => {
                 href="#demo"
                 variant="outline"
                 size="lg"
-                icon={<Video className="w-5 h-5" />}
+                icon={<Globe className="w-5 h-5" />}
               >
                 Watch Demo
               </FuturisticButton>
@@ -189,20 +189,20 @@ const ZionAIVideoEditorPage = () => {
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
-                <div className="text-gray-300 text-sm">Faster Editing</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">60%</div>
+                <div className="text-gray-300 text-sm">Faster Loading</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">8K</div>
-                <div className="text-gray-300 text-sm">Resolution</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">35%</div>
+                <div className="text-gray-300 text-sm">More Conversions</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">50+</div>
-                <div className="text-gray-300 text-sm">Export Formats</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">90+</div>
+                <div className="text-gray-300 text-sm">Performance Score</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
-                <div className="text-gray-300 text-sm">AI Processing</div>
+                <div className="text-gray-300 text-sm">AI Monitoring</div>
               </div>
             </div>
           </ResponsiveContainer>
@@ -216,7 +216,7 @@ const ZionAIVideoEditorPage = () => {
                 Powerful AI Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to edit videos with AI-powered automation.
+                Everything you need to optimize your website performance and boost conversions.
               </p>
             </div>
             
@@ -249,7 +249,7 @@ const ZionAIVideoEditorPage = () => {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your video editing needs. All plans include our core AI features.
+                Choose the plan that fits your website optimization needs. All plans include our core AI features.
               </p>
             </div>
             
@@ -308,10 +308,10 @@ const ZionAIVideoEditorPage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Video Creators
+                Trusted by Businesses Worldwide
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Video Editor
+                See what our customers say about Zion AI Website Optimizer
               </p>
             </div>
             
@@ -341,10 +341,10 @@ const ZionAIVideoEditorPage = () => {
           <ResponsiveContainer>
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Edit Videos with AI?
+                Ready to Optimize Your Website?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Join thousands of creators already using Zion AI Video Editor to produce amazing videos faster.
+                Join thousands of businesses already using Zion AI Website Optimizer to boost their website performance and conversions.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -360,7 +360,7 @@ const ZionAIVideoEditorPage = () => {
                   href="/demo"
                   variant="outline"
                   size="lg"
-                  icon={<Video className="w-5 h-5" />}
+                  icon={<Globe className="w-5 h-5" />}
                 >
                   Schedule Demo
                 </FuturisticButton>
@@ -373,4 +373,4 @@ const ZionAIVideoEditorPage = () => {
   );
 };
 
-export default ZionAIVideoEditorPage;
+export default ZionAIWebsiteOptimizerPage;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Video, 
+  Code, 
   Zap, 
   BarChart3, 
   Target, 
@@ -14,81 +14,92 @@ import {
   TrendingUp,
   Shield,
   Eye,
-  Scissors,
-  Play
+  FileText,
+  Cpu
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAIVideoEditorPage = () => {
+const ZionAICodeGeneratorPage = () => {
   const features = [
     {
-      title: "AI Video Editing",
-      description: "Automatically edit videos with AI-powered scene detection and cutting",
+      title: "AI Code Generation",
+      description: "Generate high-quality code from natural language descriptions with 95% accuracy",
       icon: <Brain className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Auto Transitions",
-      description: "Intelligent transition suggestions and automatic application",
-      icon: <Scissors className="w-6 h-6" />,
+      title: "Multi-Language Support",
+      description: "Support for 50+ programming languages including Python, JavaScript, Java, C++, and more",
+      icon: <Code className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Smart Cropping",
-      description: "AI-powered smart cropping to focus on important content",
-      icon: <Target className="w-6 h-6" />,
+      title: "Code Optimization",
+      description: "Automatically optimize generated code for performance and best practices",
+      icon: <Zap className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Audio Enhancement",
-      description: "Automatically enhance audio quality and remove background noise",
-      icon: <Play className="w-6 h-6" />,
+      title: "Bug Detection",
+      description: "AI-powered bug detection and fixing suggestions for generated code",
+      icon: <Shield className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Color Correction",
-      description: "AI-powered color correction and grading for professional results",
-      icon: <Eye className="w-6 h-6" />,
+      title: "Documentation Generation",
+      description: "Automatically generate comprehensive documentation for your code",
+      icon: <FileText className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Text & Subtitles",
-      description: "Automatically generate and sync subtitles with AI speech recognition",
-      icon: <Video className="w-6 h-6" />,
+      title: "Code Review",
+      description: "AI-powered code review with suggestions for improvements",
+      icon: <Eye className="w-6 h-6" />,
       color: "from-cyan-500 to-blue-500"
     }
   ];
 
+  const supportedLanguages = [
+    { name: "Python", icon: "🐍", color: "from-yellow-500 to-orange-500" },
+    { name: "JavaScript", icon: "🟨", color: "from-yellow-400 to-yellow-600" },
+    { name: "Java", icon: "☕", color: "from-red-500 to-red-700" },
+    { name: "C++", icon: "⚡", color: "from-blue-600 to-blue-800" },
+    { name: "C#", icon: "🔷", color: "from-purple-500 to-purple-700" },
+    { name: "Go", icon: "🐹", color: "from-cyan-500 to-cyan-700" },
+    { name: "Rust", icon: "🦀", color: "from-orange-600 to-orange-800" },
+    { name: "TypeScript", icon: "🔷", color: "from-blue-500 to-blue-700" }
+  ];
+
   const pricingPlans = [
     {
-      name: "Creator",
+      name: "Developer",
       price: "$49",
       period: "per month",
-      description: "Perfect for content creators",
+      description: "Perfect for individual developers",
       features: [
-        "Up to 10 hours of video/month",
-        "Basic AI editing",
-        "Standard resolution",
+        "Up to 1,000 code generations/month",
+        "Basic AI features",
+        "10 programming languages",
         "Email support",
-        "5 export formats"
+        "Standard documentation"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$129",
+      name: "Team",
+      price: "$149",
       period: "per month",
-      description: "Most popular for professionals",
+      description: "Most popular for development teams",
       features: [
-        "Up to 50 hours of video/month",
-        "Advanced AI editing",
-        "4K resolution",
+        "Up to 10,000 code generations/month",
+        "Advanced AI features",
+        "All programming languages",
         "Priority support",
-        "All export formats",
-        "Batch processing"
+        "Advanced documentation",
+        "Team collaboration"
       ],
       popular: true
     },
@@ -98,9 +109,9 @@ const ZionAIVideoEditorPage = () => {
       period: "per month",
       description: "For large organizations",
       features: [
-        "Unlimited video processing",
+        "Unlimited code generations",
         "Custom AI models",
-        "8K resolution",
+        "Advanced analytics",
         "API access",
         "Dedicated support",
         "White-label options"
@@ -111,24 +122,24 @@ const ZionAIVideoEditorPage = () => {
 
   const testimonials = [
     {
-      name: "Mark Thompson",
-      company: "Video Production",
-      role: "Video Editor",
-      content: "Zion AI Video Editor has cut our editing time by 80%. The AI suggestions are incredibly accurate and save us hours.",
+      name: "Alex Chen",
+      company: "Tech Startup",
+      role: "Lead Developer",
+      content: "Zion AI Code Generator has increased our development speed by 70%. The code quality is excellent and it saves us hours every day.",
       rating: 5
     },
     {
-      name: "Sarah Kim",
-      company: "Content Agency",
-      role: "Creative Director",
-      content: "The auto transitions and smart cropping features are game-changers. We can produce more content in less time.",
+      name: "Sarah Johnson",
+      company: "Software Agency",
+      role: "Senior Developer",
+      content: "The multi-language support is incredible. We can generate code in any language we need, and the optimization features are top-notch.",
       rating: 5
     },
     {
-      name: "David Rodriguez",
-      company: "Marketing Team",
-      role: "Video Marketing Manager",
-      content: "The subtitle generation is perfect. We can create multilingual content automatically without manual work.",
+      name: "Michael Rodriguez",
+      company: "Enterprise Corp",
+      role: "CTO",
+      content: "The bug detection and code review features have significantly improved our code quality. It's like having a senior developer reviewing every line.",
       rating: 5
     }
   ];
@@ -136,10 +147,10 @@ const ZionAIVideoEditorPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Video Editor - AI-Powered Video Editing | Zion Tech Group"
-        description="Edit videos with AI-powered automation, smart transitions, and intelligent cropping. Cut editing time by 80% with intelligent video editing."
-        keywords="AI video editor, video editing, automated editing, video production, content creation, video automation"
-        canonical="https://ziontechgroup.com/zion-ai-video-editor"
+        title="Zion AI Code Generator - AI-Powered Code Generation | Zion Tech Group"
+        description="Generate high-quality code with AI-powered code generation, multi-language support, and optimization. Increase development speed by 70% with intelligent code generation."
+        keywords="AI code generator, code generation, programming, software development, AI coding assistant, code optimization"
+        canonical="https://ziontechgroup.com/zion-ai-code-generator"
       />
 
       <main className="relative z-10">
@@ -152,19 +163,19 @@ const ZionAIVideoEditorPage = () => {
           
           <ResponsiveContainer className="text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Video className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Video Intelligence</span>
+              <Code className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Code Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Video Editor
+                Zion AI Code Generator
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Edit videos with AI-powered automation, smart transitions, and intelligent cropping. 
-              Cut editing time by 80% with intelligent video editing.
+              Generate high-quality code with AI-powered code generation, multi-language support, 
+              and optimization. Increase development speed by 70% with intelligent code generation.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -180,7 +191,7 @@ const ZionAIVideoEditorPage = () => {
                 href="#demo"
                 variant="outline"
                 size="lg"
-                icon={<Video className="w-5 h-5" />}
+                icon={<Code className="w-5 h-5" />}
               >
                 Watch Demo
               </FuturisticButton>
@@ -189,21 +200,46 @@ const ZionAIVideoEditorPage = () => {
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
-                <div className="text-gray-300 text-sm">Faster Editing</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">70%</div>
+                <div className="text-gray-300 text-sm">Faster Development</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">8K</div>
-                <div className="text-gray-300 text-sm">Resolution</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
+                <div className="text-gray-300 text-sm">Languages</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">50+</div>
-                <div className="text-gray-300 text-sm">Export Formats</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">95%</div>
+                <div className="text-gray-300 text-sm">Accuracy</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
                 <div className="text-gray-300 text-sm">AI Processing</div>
               </div>
+            </div>
+          </ResponsiveContainer>
+        </section>
+
+        {/* Supported Languages */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <ResponsiveContainer>
+            <div className="text-center mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                Supports 50+ Programming Languages
+              </h2>
+              <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+                Generate code in any programming language with our advanced AI engine.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-4 md:grid-cols-8 gap-6 max-w-5xl mx-auto">
+              {supportedLanguages.map((lang, index) => (
+                <div key={index} className="text-center group">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${lang.color} rounded-lg flex items-center justify-center mb-3 mx-auto group-hover:scale-110 transition-transform`}>
+                    <span className="text-2xl">{lang.icon}</span>
+                  </div>
+                  <div className="text-white font-medium text-sm">{lang.name}</div>
+                </div>
+              ))}
             </div>
           </ResponsiveContainer>
         </section>
@@ -216,7 +252,7 @@ const ZionAIVideoEditorPage = () => {
                 Powerful AI Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to edit videos with AI-powered automation.
+                Everything you need to generate, optimize, and review code with AI.
               </p>
             </div>
             
@@ -249,7 +285,7 @@ const ZionAIVideoEditorPage = () => {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your video editing needs. All plans include our core AI features.
+                Choose the plan that fits your development needs. All plans include our core AI features.
               </p>
             </div>
             
@@ -308,10 +344,10 @@ const ZionAIVideoEditorPage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Video Creators
+                Trusted by Developers Worldwide
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Video Editor
+                See what our customers say about Zion AI Code Generator
               </p>
             </div>
             
@@ -341,10 +377,10 @@ const ZionAIVideoEditorPage = () => {
           <ResponsiveContainer>
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Edit Videos with AI?
+                Ready to Generate Code with AI?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Join thousands of creators already using Zion AI Video Editor to produce amazing videos faster.
+                Join thousands of developers already using Zion AI Code Generator to accelerate their development process.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -360,7 +396,7 @@ const ZionAIVideoEditorPage = () => {
                   href="/demo"
                   variant="outline"
                   size="lg"
-                  icon={<Video className="w-5 h-5" />}
+                  icon={<Code className="w-5 h-5" />}
                 >
                   Schedule Demo
                 </FuturisticButton>
@@ -373,4 +409,4 @@ const ZionAIVideoEditorPage = () => {
   );
 };
 
-export default ZionAIVideoEditorPage;
+export default ZionAICodeGeneratorPage;

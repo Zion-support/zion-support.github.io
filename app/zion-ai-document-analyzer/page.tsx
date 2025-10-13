@@ -1,94 +1,105 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Video, 
-  Zap, 
+  FileText, 
+  Search, 
   BarChart3, 
-  Target, 
+  Shield, 
+  Zap, 
   ArrowRight, 
   Star, 
   Brain,
   CheckCircle,
+  AlertTriangle,
   Clock,
   Users,
-  TrendingUp,
-  Shield,
-  Eye,
-  Scissors,
-  Play
+  Database,
+  Cloud,
+  Eye
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAIVideoEditorPage = () => {
+const ZionAIDocumentAnalyzerPage = () => {
   const features = [
     {
-      title: "AI Video Editing",
-      description: "Automatically edit videos with AI-powered scene detection and cutting",
-      icon: <Brain className="w-6 h-6" />,
+      title: "Intelligent Document Processing",
+      description: "AI-powered extraction and analysis of text, tables, and images from any document format",
+      icon: <FileText className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Auto Transitions",
-      description: "Intelligent transition suggestions and automatic application",
-      icon: <Scissors className="w-6 h-6" />,
+      title: "Advanced Search & Discovery",
+      description: "Semantic search across all documents with natural language queries",
+      icon: <Search className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Smart Cropping",
-      description: "AI-powered smart cropping to focus on important content",
-      icon: <Target className="w-6 h-6" />,
+      title: "Content Analysis",
+      description: "Sentiment analysis, key phrase extraction, and document classification",
+      icon: <Brain className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Audio Enhancement",
-      description: "Automatically enhance audio quality and remove background noise",
-      icon: <Play className="w-6 h-6" />,
+      title: "Compliance Monitoring",
+      description: "Automated compliance checking and risk assessment for regulatory requirements",
+      icon: <Shield className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Color Correction",
-      description: "AI-powered color correction and grading for professional results",
-      icon: <Eye className="w-6 h-6" />,
+      title: "Document Comparison",
+      description: "AI-powered document comparison with change detection and version control",
+      icon: <BarChart3 className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Text & Subtitles",
-      description: "Automatically generate and sync subtitles with AI speech recognition",
-      icon: <Video className="w-6 h-6" />,
+      title: "Automated Summarization",
+      description: "Generate executive summaries and key insights from complex documents",
+      icon: <Eye className="w-6 h-6" />,
       color: "from-cyan-500 to-blue-500"
     }
   ];
 
+  const supportedFormats = [
+    { name: "PDF", icon: "📄" },
+    { name: "Word", icon: "📝" },
+    { name: "Excel", icon: "📊" },
+    { name: "PowerPoint", icon: "📈" },
+    { name: "Images", icon: "🖼️" },
+    { name: "Text", icon: "📄" },
+    { name: "HTML", icon: "🌐" },
+    { name: "XML", icon: "📋" }
+  ];
+
   const pricingPlans = [
     {
-      name: "Creator",
+      name: "Starter",
       price: "$49",
       period: "per month",
-      description: "Perfect for content creators",
+      description: "Perfect for small teams",
       features: [
-        "Up to 10 hours of video/month",
-        "Basic AI editing",
-        "Standard resolution",
+        "Up to 1,000 documents/month",
+        "Basic AI analysis",
+        "Standard search",
         "Email support",
-        "5 export formats"
+        "5GB storage"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$129",
+      price: "$149",
       period: "per month",
-      description: "Most popular for professionals",
+      description: "Most popular for growing teams",
       features: [
-        "Up to 50 hours of video/month",
-        "Advanced AI editing",
-        "4K resolution",
+        "Up to 10,000 documents/month",
+        "Advanced AI analysis",
+        "Semantic search",
+        "Compliance monitoring",
         "Priority support",
-        "All export formats",
-        "Batch processing"
+        "50GB storage"
       ],
       popular: true
     },
@@ -98,12 +109,12 @@ const ZionAIVideoEditorPage = () => {
       period: "per month",
       description: "For large organizations",
       features: [
-        "Unlimited video processing",
+        "Unlimited documents",
         "Custom AI models",
-        "8K resolution",
+        "Advanced analytics",
         "API access",
         "Dedicated support",
-        "White-label options"
+        "Unlimited storage"
       ],
       popular: false
     }
@@ -111,24 +122,24 @@ const ZionAIVideoEditorPage = () => {
 
   const testimonials = [
     {
-      name: "Mark Thompson",
-      company: "Video Production",
-      role: "Video Editor",
-      content: "Zion AI Video Editor has cut our editing time by 80%. The AI suggestions are incredibly accurate and save us hours.",
+      name: "David Kim",
+      company: "Legal Firm Partners",
+      role: "Managing Partner",
+      content: "Zion AI Document Analyzer has revolutionized our document review process. We're 60% faster at finding relevant information.",
       rating: 5
     },
     {
-      name: "Sarah Kim",
-      company: "Content Agency",
-      role: "Creative Director",
-      content: "The auto transitions and smart cropping features are game-changers. We can produce more content in less time.",
+      name: "Lisa Thompson",
+      company: "Research Institute",
+      role: "Research Director",
+      content: "The AI-powered search and analysis capabilities are incredible. We can now process research papers 10x faster.",
       rating: 5
     },
     {
-      name: "David Rodriguez",
-      company: "Marketing Team",
-      role: "Video Marketing Manager",
-      content: "The subtitle generation is perfect. We can create multilingual content automatically without manual work.",
+      name: "Robert Martinez",
+      company: "Financial Services",
+      role: "Compliance Officer",
+      content: "The compliance monitoring feature has saved us countless hours and helped us avoid potential regulatory issues.",
       rating: 5
     }
   ];
@@ -136,10 +147,10 @@ const ZionAIVideoEditorPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Video Editor - AI-Powered Video Editing | Zion Tech Group"
-        description="Edit videos with AI-powered automation, smart transitions, and intelligent cropping. Cut editing time by 80% with intelligent video editing."
-        keywords="AI video editor, video editing, automated editing, video production, content creation, video automation"
-        canonical="https://ziontechgroup.com/zion-ai-video-editor"
+        title="Zion AI Document Analyzer - Intelligent Document Processing | Zion Tech Group"
+        description="Transform document management with AI-powered analysis, semantic search, compliance monitoring, and automated summarization. Process documents 10x faster with our intelligent analyzer."
+        keywords="AI document analyzer, document processing, semantic search, compliance monitoring, document analysis, AI text extraction"
+        canonical="https://ziontechgroup.com/zion-ai-document-analyzer"
       />
 
       <main className="relative z-10">
@@ -152,19 +163,19 @@ const ZionAIVideoEditorPage = () => {
           
           <ResponsiveContainer className="text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Video className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Video Intelligence</span>
+              <Brain className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">Intelligent Document Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Video Editor
+                Zion AI Document Analyzer
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Edit videos with AI-powered automation, smart transitions, and intelligent cropping. 
-              Cut editing time by 80% with intelligent video editing.
+              Transform your document management with AI-powered analysis, semantic search, compliance monitoring, 
+              and automated summarization. Process documents 10x faster with intelligent insights.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -180,7 +191,7 @@ const ZionAIVideoEditorPage = () => {
                 href="#demo"
                 variant="outline"
                 size="lg"
-                icon={<Video className="w-5 h-5" />}
+                icon={<FileText className="w-5 h-5" />}
               >
                 Watch Demo
               </FuturisticButton>
@@ -189,21 +200,46 @@ const ZionAIVideoEditorPage = () => {
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
-                <div className="text-gray-300 text-sm">Faster Editing</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">10x</div>
+                <div className="text-gray-300 text-sm">Faster Processing</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">8K</div>
-                <div className="text-gray-300 text-sm">Resolution</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
+                <div className="text-gray-300 text-sm">Accuracy</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-pink-400 mb-2">50+</div>
-                <div className="text-gray-300 text-sm">Export Formats</div>
+                <div className="text-gray-300 text-sm">File Formats</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
-                <div className="text-gray-300 text-sm">AI Processing</div>
+                <div className="text-gray-300 text-sm">Processing</div>
               </div>
+            </div>
+          </ResponsiveContainer>
+        </section>
+
+        {/* Supported Formats */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <ResponsiveContainer>
+            <div className="text-center mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                Supports All Major Document Formats
+              </h2>
+              <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+                Upload and analyze documents in any format with our advanced AI processing engine.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-4 md:grid-cols-8 gap-6 max-w-4xl mx-auto">
+              {supportedFormats.map((format, index) => (
+                <div key={index} className="text-center group">
+                  <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center mb-3 mx-auto group-hover:scale-110 transition-transform">
+                    <span className="text-2xl">{format.icon}</span>
+                  </div>
+                  <div className="text-white font-medium text-sm">{format.name}</div>
+                </div>
+              ))}
             </div>
           </ResponsiveContainer>
         </section>
@@ -216,7 +252,7 @@ const ZionAIVideoEditorPage = () => {
                 Powerful AI Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to edit videos with AI-powered automation.
+                Everything you need to analyze, search, and manage your documents intelligently.
               </p>
             </div>
             
@@ -249,7 +285,7 @@ const ZionAIVideoEditorPage = () => {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your video editing needs. All plans include our core AI features.
+                Choose the plan that fits your document processing needs. All plans include our core AI features.
               </p>
             </div>
             
@@ -308,10 +344,10 @@ const ZionAIVideoEditorPage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Video Creators
+                Trusted by Organizations Worldwide
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Video Editor
+                See what our customers say about Zion AI Document Analyzer
               </p>
             </div>
             
@@ -341,10 +377,10 @@ const ZionAIVideoEditorPage = () => {
           <ResponsiveContainer>
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Edit Videos with AI?
+                Ready to Transform Your Document Management?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Join thousands of creators already using Zion AI Video Editor to produce amazing videos faster.
+                Join thousands of organizations already using Zion AI Document Analyzer to process documents faster and smarter.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -360,7 +396,7 @@ const ZionAIVideoEditorPage = () => {
                   href="/demo"
                   variant="outline"
                   size="lg"
-                  icon={<Video className="w-5 h-5" />}
+                  icon={<FileText className="w-5 h-5" />}
                 >
                   Schedule Demo
                 </FuturisticButton>
@@ -373,4 +409,4 @@ const ZionAIVideoEditorPage = () => {
   );
 };
 
-export default ZionAIVideoEditorPage;
+export default ZionAIDocumentAnalyzerPage;

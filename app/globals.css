@@ -107,6 +107,38 @@
   .animate-bounce-slow {
     animation: bounce 2s infinite;
   }
+  
+  .animate-spin-slow {
+    animation: spin 20s linear infinite;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .animate-neon-pulse {
+    animation: neonPulse 2s ease-in-out infinite alternate;
+  }
+  
+  .animate-gradient-x {
+    animation: gradientX 15s ease infinite;
+  }
+  
+  .animate-gradient-y {
+    animation: gradientY 15s ease infinite;
+  }
+  
+  .animate-shimmer {
+    animation: shimmer 2s linear infinite;
+  }
+  
+  .animate-cyber-grid {
+    animation: cyberGrid 10s linear infinite;
+  }
 }
 
 @keyframes fadeIn {
@@ -126,6 +158,69 @@
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px #06b6d4, 0 0 30px #06b6d4, 0 0 40px #06b6d4;
+  }
+  to {
+    box-shadow: 0 0 10px #06b6d4, 0 0 20px #06b6d4, 0 0 30px #06b6d4;
+  }
+}
+
+@keyframes neonPulse {
+  from {
+    text-shadow: 0 0 5px #06b6d4, 0 0 10px #06b6d4, 0 0 15px #06b6d4, 0 0 20px #06b6d4;
+  }
+  to {
+    text-shadow: 0 0 2px #06b6d4, 0 0 5px #06b6d4, 0 0 8px #06b6d4, 0 0 12px #06b6d4;
+  }
+}
+
+@keyframes gradientX {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes gradientY {
+  0%, 100% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes cyberGrid {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
   }
 }
 

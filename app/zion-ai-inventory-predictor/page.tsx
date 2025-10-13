@@ -1,106 +1,105 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Video, 
-  Zap, 
+  Package, 
   BarChart3, 
   Target, 
+  Zap, 
   ArrowRight, 
   Star, 
   Brain,
   CheckCircle,
   Clock,
-  Users,
   TrendingUp,
-  Shield,
+  AlertTriangle,
   Eye,
-  Scissors,
-  Play
+  ShoppingCart,
+  DollarSign
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAIVideoEditorPage = () => {
+const ZionAIInventoryPredictorPage = () => {
   const features = [
     {
-      title: "AI Video Editing",
-      description: "Automatically edit videos with AI-powered scene detection and cutting",
+      title: "Demand Forecasting",
+      description: "AI-powered demand forecasting to predict inventory needs with 95% accuracy",
       icon: <Brain className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Auto Transitions",
-      description: "Intelligent transition suggestions and automatic application",
-      icon: <Scissors className="w-6 h-6" />,
+      title: "Stock Optimization",
+      description: "Optimize stock levels to reduce carrying costs while preventing stockouts",
+      icon: <Package className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Smart Cropping",
-      description: "AI-powered smart cropping to focus on important content",
-      icon: <Target className="w-6 h-6" />,
+      title: "Seasonal Analysis",
+      description: "Analyze seasonal patterns and trends to optimize inventory for peak seasons",
+      icon: <TrendingUp className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Audio Enhancement",
-      description: "Automatically enhance audio quality and remove background noise",
-      icon: <Play className="w-6 h-6" />,
+      title: "Supplier Management",
+      description: "AI-powered supplier performance analysis and lead time optimization",
+      icon: <Target className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Color Correction",
-      description: "AI-powered color correction and grading for professional results",
-      icon: <Eye className="w-6 h-6" />,
+      title: "Cost Optimization",
+      description: "Reduce inventory costs by up to 30% with AI-powered optimization recommendations",
+      icon: <DollarSign className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Text & Subtitles",
-      description: "Automatically generate and sync subtitles with AI speech recognition",
-      icon: <Video className="w-6 h-6" />,
+      title: "Real-time Alerts",
+      description: "Get instant alerts for low stock, overstock, and demand spikes",
+      icon: <AlertTriangle className="w-6 h-6" />,
       color: "from-cyan-500 to-blue-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Creator",
-      price: "$49",
+      name: "Starter",
+      price: "$79",
       period: "per month",
-      description: "Perfect for content creators",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 10 hours of video/month",
-        "Basic AI editing",
-        "Standard resolution",
+        "Up to 1,000 SKUs",
+        "Basic forecasting",
+        "Standard reporting",
         "Email support",
-        "5 export formats"
+        "Monthly optimization"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$129",
+      price: "$199",
       period: "per month",
-      description: "Most popular for professionals",
+      description: "Most popular for growing businesses",
       features: [
-        "Up to 50 hours of video/month",
-        "Advanced AI editing",
-        "4K resolution",
+        "Up to 10,000 SKUs",
+        "Advanced forecasting",
+        "Comprehensive reporting",
         "Priority support",
-        "All export formats",
-        "Batch processing"
+        "Real-time optimization",
+        "Supplier analytics"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$399",
+      price: "$499",
       period: "per month",
       description: "For large organizations",
       features: [
-        "Unlimited video processing",
+        "Unlimited SKUs",
         "Custom AI models",
-        "8K resolution",
+        "Advanced analytics",
         "API access",
         "Dedicated support",
         "White-label options"
@@ -111,24 +110,24 @@ const ZionAIVideoEditorPage = () => {
 
   const testimonials = [
     {
-      name: "Mark Thompson",
-      company: "Video Production",
-      role: "Video Editor",
-      content: "Zion AI Video Editor has cut our editing time by 80%. The AI suggestions are incredibly accurate and save us hours.",
+      name: "Robert Johnson",
+      company: "Retail Chain",
+      role: "Supply Chain Director",
+      content: "Zion AI Inventory Predictor reduced our stockouts by 80% and carrying costs by 35%. The forecasting accuracy is incredible!",
       rating: 5
     },
     {
-      name: "Sarah Kim",
-      company: "Content Agency",
-      role: "Creative Director",
-      content: "The auto transitions and smart cropping features are game-changers. We can produce more content in less time.",
+      name: "Maria Garcia",
+      company: "E-commerce Store",
+      role: "Operations Manager",
+      content: "The seasonal analysis feature helped us prepare for Black Friday perfectly. We had the right inventory at the right time.",
       rating: 5
     },
     {
-      name: "David Rodriguez",
-      company: "Marketing Team",
-      role: "Video Marketing Manager",
-      content: "The subtitle generation is perfect. We can create multilingual content automatically without manual work.",
+      name: "James Wilson",
+      company: "Manufacturing Co.",
+      role: "Procurement Manager",
+      content: "The supplier management insights have been game-changing. We've optimized our supplier relationships and reduced lead times significantly.",
       rating: 5
     }
   ];
@@ -136,10 +135,10 @@ const ZionAIVideoEditorPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Video Editor - AI-Powered Video Editing | Zion Tech Group"
-        description="Edit videos with AI-powered automation, smart transitions, and intelligent cropping. Cut editing time by 80% with intelligent video editing."
-        keywords="AI video editor, video editing, automated editing, video production, content creation, video automation"
-        canonical="https://ziontechgroup.com/zion-ai-video-editor"
+        title="Zion AI Inventory Predictor - AI-Powered Inventory Management | Zion Tech Group"
+        description="Optimize inventory with AI-powered demand forecasting, stock optimization, and supplier management. Reduce costs by 30% and stockouts by 80%."
+        keywords="AI inventory predictor, demand forecasting, inventory optimization, stock management, supply chain, inventory analytics"
+        canonical="https://ziontechgroup.com/zion-ai-inventory-predictor"
       />
 
       <main className="relative z-10">
@@ -152,19 +151,19 @@ const ZionAIVideoEditorPage = () => {
           
           <ResponsiveContainer className="text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Video className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Video Intelligence</span>
+              <Package className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Inventory Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Video Editor
+                Zion AI Inventory Predictor
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Edit videos with AI-powered automation, smart transitions, and intelligent cropping. 
-              Cut editing time by 80% with intelligent video editing.
+              Optimize inventory with AI-powered demand forecasting, stock optimization, and supplier management. 
+              Reduce costs by 30% and stockouts by 80%.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -180,7 +179,7 @@ const ZionAIVideoEditorPage = () => {
                 href="#demo"
                 variant="outline"
                 size="lg"
-                icon={<Video className="w-5 h-5" />}
+                icon={<Package className="w-5 h-5" />}
               >
                 Watch Demo
               </FuturisticButton>
@@ -189,20 +188,20 @@ const ZionAIVideoEditorPage = () => {
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
-                <div className="text-gray-300 text-sm">Faster Editing</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">95%</div>
+                <div className="text-gray-300 text-sm">Forecasting Accuracy</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">8K</div>
-                <div className="text-gray-300 text-sm">Resolution</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">80%</div>
+                <div className="text-gray-300 text-sm">Fewer Stockouts</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">50+</div>
-                <div className="text-gray-300 text-sm">Export Formats</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">30%</div>
+                <div className="text-gray-300 text-sm">Cost Reduction</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
-                <div className="text-gray-300 text-sm">AI Processing</div>
+                <div className="text-gray-300 text-sm">AI Monitoring</div>
               </div>
             </div>
           </ResponsiveContainer>
@@ -216,7 +215,7 @@ const ZionAIVideoEditorPage = () => {
                 Powerful AI Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to edit videos with AI-powered automation.
+                Everything you need to optimize your inventory and reduce costs.
               </p>
             </div>
             
@@ -249,7 +248,7 @@ const ZionAIVideoEditorPage = () => {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your video editing needs. All plans include our core AI features.
+                Choose the plan that fits your inventory management needs. All plans include our core AI features.
               </p>
             </div>
             
@@ -308,10 +307,10 @@ const ZionAIVideoEditorPage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Video Creators
+                Trusted by Supply Chain Teams
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Video Editor
+                See what our customers say about Zion AI Inventory Predictor
               </p>
             </div>
             
@@ -341,10 +340,10 @@ const ZionAIVideoEditorPage = () => {
           <ResponsiveContainer>
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Edit Videos with AI?
+                Ready to Optimize Your Inventory?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Join thousands of creators already using Zion AI Video Editor to produce amazing videos faster.
+                Join thousands of businesses already using Zion AI Inventory Predictor to optimize their supply chain and reduce costs.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -360,7 +359,7 @@ const ZionAIVideoEditorPage = () => {
                   href="/demo"
                   variant="outline"
                   size="lg"
-                  icon={<Video className="w-5 h-5" />}
+                  icon={<Package className="w-5 h-5" />}
                 >
                   Schedule Demo
                 </FuturisticButton>
@@ -373,4 +372,4 @@ const ZionAIVideoEditorPage = () => {
   );
 };
 
-export default ZionAIVideoEditorPage;
+export default ZionAIInventoryPredictorPage;

@@ -1,106 +1,118 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Video, 
-  Zap, 
+  Share2, 
+  TrendingUp, 
+  Users, 
   BarChart3, 
-  Target, 
+  Zap, 
   ArrowRight, 
   Star, 
   Brain,
   CheckCircle,
   Clock,
-  Users,
-  TrendingUp,
-  Shield,
-  Eye,
-  Scissors,
-  Play
+  Target,
+  MessageSquare,
+  Camera,
+  Hash,
+  Heart,
+  Eye
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAIVideoEditorPage = () => {
+const ZionAISocialMediaOptimizerPage = () => {
   const features = [
     {
-      title: "AI Video Editing",
-      description: "Automatically edit videos with AI-powered scene detection and cutting",
+      title: "AI Content Generation",
+      description: "Generate engaging posts, captions, and hashtags optimized for each platform",
       icon: <Brain className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Auto Transitions",
-      description: "Intelligent transition suggestions and automatic application",
-      icon: <Scissors className="w-6 h-6" />,
+      title: "Optimal Posting Times",
+      description: "AI analyzes your audience to determine the best times to post for maximum engagement",
+      icon: <Clock className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Smart Cropping",
-      description: "AI-powered smart cropping to focus on important content",
-      icon: <Target className="w-6 h-6" />,
+      title: "Hashtag Optimization",
+      description: "Smart hashtag suggestions based on trending topics and your content",
+      icon: <Hash className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Audio Enhancement",
-      description: "Automatically enhance audio quality and remove background noise",
-      icon: <Play className="w-6 h-6" />,
+      title: "Visual Content Creation",
+      description: "AI-powered image and video generation tailored for social media platforms",
+      icon: <Camera className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Color Correction",
-      description: "AI-powered color correction and grading for professional results",
-      icon: <Eye className="w-6 h-6" />,
+      title: "Engagement Analytics",
+      description: "Comprehensive analytics and insights to track performance and ROI",
+      icon: <BarChart3 className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Text & Subtitles",
-      description: "Automatically generate and sync subtitles with AI speech recognition",
-      icon: <Video className="w-6 h-6" />,
+      title: "Multi-Platform Management",
+      description: "Manage all your social media accounts from one unified dashboard",
+      icon: <Share2 className="w-6 h-6" />,
       color: "from-cyan-500 to-blue-500"
     }
   ];
 
+  const platforms = [
+    { name: "Facebook", icon: "📘", color: "from-blue-600 to-blue-800" },
+    { name: "Instagram", icon: "📷", color: "from-pink-500 to-purple-600" },
+    { name: "Twitter", icon: "🐦", color: "from-blue-400 to-blue-600" },
+    { name: "LinkedIn", icon: "💼", color: "from-blue-700 to-blue-900" },
+    { name: "TikTok", icon: "🎵", color: "from-gray-800 to-gray-900" },
+    { name: "YouTube", icon: "📺", color: "from-red-500 to-red-700" },
+    { name: "Pinterest", icon: "📌", color: "from-red-400 to-red-600" },
+    { name: "Snapchat", icon: "👻", color: "from-yellow-400 to-yellow-600" }
+  ];
+
   const pricingPlans = [
     {
-      name: "Creator",
-      price: "$49",
+      name: "Starter",
+      price: "$39",
       period: "per month",
-      description: "Perfect for content creators",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 10 hours of video/month",
-        "Basic AI editing",
-        "Standard resolution",
+        "Up to 3 social accounts",
+        "Basic AI content generation",
+        "Standard analytics",
         "Email support",
-        "5 export formats"
+        "5 posts per day"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$129",
+      price: "$99",
       period: "per month",
-      description: "Most popular for professionals",
+      description: "Most popular for growing brands",
       features: [
-        "Up to 50 hours of video/month",
-        "Advanced AI editing",
-        "4K resolution",
+        "Up to 10 social accounts",
+        "Advanced AI content generation",
+        "Comprehensive analytics",
         "Priority support",
-        "All export formats",
-        "Batch processing"
+        "Unlimited posts",
+        "Visual content creation"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$399",
+      price: "$299",
       period: "per month",
       description: "For large organizations",
       features: [
-        "Unlimited video processing",
+        "Unlimited social accounts",
         "Custom AI models",
-        "8K resolution",
+        "Advanced analytics",
         "API access",
         "Dedicated support",
         "White-label options"
@@ -111,24 +123,24 @@ const ZionAIVideoEditorPage = () => {
 
   const testimonials = [
     {
-      name: "Mark Thompson",
-      company: "Video Production",
-      role: "Video Editor",
-      content: "Zion AI Video Editor has cut our editing time by 80%. The AI suggestions are incredibly accurate and save us hours.",
+      name: "Maria Rodriguez",
+      company: "Fashion Brand Co.",
+      role: "Marketing Director",
+      content: "Zion AI Social Media Optimizer increased our engagement by 150% in just 2 months. The AI content suggestions are spot-on!",
       rating: 5
     },
     {
-      name: "Sarah Kim",
-      company: "Content Agency",
-      role: "Creative Director",
-      content: "The auto transitions and smart cropping features are game-changers. We can produce more content in less time.",
+      name: "James Wilson",
+      company: "Tech Startup",
+      role: "CEO",
+      content: "The optimal posting times feature has been a game-changer. We're reaching 3x more people with the same content.",
       rating: 5
     },
     {
-      name: "David Rodriguez",
-      company: "Marketing Team",
-      role: "Video Marketing Manager",
-      content: "The subtitle generation is perfect. We can create multilingual content automatically without manual work.",
+      name: "Sarah Chen",
+      company: "E-commerce Store",
+      role: "Social Media Manager",
+      content: "Managing multiple platforms used to be overwhelming. Now it's effortless with Zion AI. Highly recommended!",
       rating: 5
     }
   ];
@@ -136,10 +148,10 @@ const ZionAIVideoEditorPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Video Editor - AI-Powered Video Editing | Zion Tech Group"
-        description="Edit videos with AI-powered automation, smart transitions, and intelligent cropping. Cut editing time by 80% with intelligent video editing."
-        keywords="AI video editor, video editing, automated editing, video production, content creation, video automation"
-        canonical="https://ziontechgroup.com/zion-ai-video-editor"
+        title="Zion AI Social Media Optimizer - AI-Powered Social Media Management | Zion Tech Group"
+        description="Boost your social media presence with AI-powered content generation, optimal posting times, hashtag optimization, and comprehensive analytics. Increase engagement by 150%."
+        keywords="AI social media optimizer, social media management, content generation, social media analytics, hashtag optimization, social media automation"
+        canonical="https://ziontechgroup.com/zion-ai-social-media-optimizer"
       />
 
       <main className="relative z-10">
@@ -152,19 +164,19 @@ const ZionAIVideoEditorPage = () => {
           
           <ResponsiveContainer className="text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Video className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Video Intelligence</span>
+              <TrendingUp className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Social Media Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Video Editor
+                Zion AI Social Media Optimizer
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Edit videos with AI-powered automation, smart transitions, and intelligent cropping. 
-              Cut editing time by 80% with intelligent video editing.
+              Boost your social media presence with AI-powered content generation, optimal posting times, 
+              hashtag optimization, and comprehensive analytics. Increase engagement by 150%.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -180,7 +192,7 @@ const ZionAIVideoEditorPage = () => {
                 href="#demo"
                 variant="outline"
                 size="lg"
-                icon={<Video className="w-5 h-5" />}
+                icon={<Share2 className="w-5 h-5" />}
               >
                 Watch Demo
               </FuturisticButton>
@@ -189,21 +201,46 @@ const ZionAIVideoEditorPage = () => {
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
-                <div className="text-gray-300 text-sm">Faster Editing</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">150%</div>
+                <div className="text-gray-300 text-sm">Engagement Boost</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">8K</div>
-                <div className="text-gray-300 text-sm">Resolution</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">8</div>
+                <div className="text-gray-300 text-sm">Platforms</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">50+</div>
-                <div className="text-gray-300 text-sm">Export Formats</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">3x</div>
+                <div className="text-gray-300 text-sm">Reach Increase</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
-                <div className="text-gray-300 text-sm">AI Processing</div>
+                <div className="text-gray-300 text-sm">AI Monitoring</div>
               </div>
+            </div>
+          </ResponsiveContainer>
+        </section>
+
+        {/* Supported Platforms */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <ResponsiveContainer>
+            <div className="text-center mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                Supports All Major Social Media Platforms
+              </h2>
+              <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+                Manage and optimize your presence across all major social media platforms from one dashboard.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-4 md:grid-cols-8 gap-6 max-w-5xl mx-auto">
+              {platforms.map((platform, index) => (
+                <div key={index} className="text-center group">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${platform.color} rounded-lg flex items-center justify-center mb-3 mx-auto group-hover:scale-110 transition-transform`}>
+                    <span className="text-2xl">{platform.icon}</span>
+                  </div>
+                  <div className="text-white font-medium text-sm">{platform.name}</div>
+                </div>
+              ))}
             </div>
           </ResponsiveContainer>
         </section>
@@ -216,7 +253,7 @@ const ZionAIVideoEditorPage = () => {
                 Powerful AI Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to edit videos with AI-powered automation.
+                Everything you need to optimize your social media presence and boost engagement.
               </p>
             </div>
             
@@ -249,7 +286,7 @@ const ZionAIVideoEditorPage = () => {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your video editing needs. All plans include our core AI features.
+                Choose the plan that fits your social media needs. All plans include our core AI features.
               </p>
             </div>
             
@@ -308,10 +345,10 @@ const ZionAIVideoEditorPage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Video Creators
+                Trusted by Brands Worldwide
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Video Editor
+                See what our customers say about Zion AI Social Media Optimizer
               </p>
             </div>
             
@@ -341,10 +378,10 @@ const ZionAIVideoEditorPage = () => {
           <ResponsiveContainer>
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Edit Videos with AI?
+                Ready to Boost Your Social Media Presence?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Join thousands of creators already using Zion AI Video Editor to produce amazing videos faster.
+                Join thousands of brands already using Zion AI Social Media Optimizer to increase engagement and grow their audience.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -360,7 +397,7 @@ const ZionAIVideoEditorPage = () => {
                   href="/demo"
                   variant="outline"
                   size="lg"
-                  icon={<Video className="w-5 h-5" />}
+                  icon={<Share2 className="w-5 h-5" />}
                 >
                   Schedule Demo
                 </FuturisticButton>
@@ -373,4 +410,4 @@ const ZionAIVideoEditorPage = () => {
   );
 };
 
-export default ZionAIVideoEditorPage;
+export default ZionAISocialMediaOptimizerPage;

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Video, 
-  Zap, 
+  MessageSquare, 
   BarChart3, 
   Target, 
+  Zap, 
   ArrowRight, 
   Star, 
   Brain,
@@ -14,93 +14,93 @@ import {
   TrendingUp,
   Shield,
   Eye,
-  Scissors,
-  Play
+  ThumbsUp,
+  AlertTriangle
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAIVideoEditorPage = () => {
+const ZionAICustomerFeedbackAnalyzerPage = () => {
   const features = [
     {
-      title: "AI Video Editing",
-      description: "Automatically edit videos with AI-powered scene detection and cutting",
+      title: "Sentiment Analysis",
+      description: "AI-powered sentiment analysis to understand customer emotions and satisfaction levels",
       icon: <Brain className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Auto Transitions",
-      description: "Intelligent transition suggestions and automatic application",
-      icon: <Scissors className="w-6 h-6" />,
+      title: "Topic Extraction",
+      description: "Automatically identify key topics and themes from customer feedback",
+      icon: <Target className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Smart Cropping",
-      description: "AI-powered smart cropping to focus on important content",
-      icon: <Target className="w-6 h-6" />,
+      title: "Priority Scoring",
+      description: "AI-powered priority scoring to identify the most critical feedback items",
+      icon: <AlertTriangle className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Audio Enhancement",
-      description: "Automatically enhance audio quality and remove background noise",
-      icon: <Play className="w-6 h-6" />,
+      title: "Trend Analysis",
+      description: "Track feedback trends over time and identify patterns in customer satisfaction",
+      icon: <TrendingUp className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Color Correction",
-      description: "AI-powered color correction and grading for professional results",
-      icon: <Eye className="w-6 h-6" />,
+      title: "Actionable Insights",
+      description: "Generate actionable insights and recommendations based on feedback analysis",
+      icon: <CheckCircle className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Text & Subtitles",
-      description: "Automatically generate and sync subtitles with AI speech recognition",
-      icon: <Video className="w-6 h-6" />,
+      title: "Multi-Channel Support",
+      description: "Analyze feedback from surveys, reviews, social media, and support tickets",
+      icon: <MessageSquare className="w-6 h-6" />,
       color: "from-cyan-500 to-blue-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Creator",
-      price: "$49",
+      name: "Starter",
+      price: "$39",
       period: "per month",
-      description: "Perfect for content creators",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 10 hours of video/month",
-        "Basic AI editing",
-        "Standard resolution",
+        "Up to 1,000 feedback items/month",
+        "Basic sentiment analysis",
+        "Standard reporting",
         "Email support",
-        "5 export formats"
+        "5 data sources"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$129",
+      price: "$99",
       period: "per month",
-      description: "Most popular for professionals",
+      description: "Most popular for growing teams",
       features: [
-        "Up to 50 hours of video/month",
-        "Advanced AI editing",
-        "4K resolution",
+        "Up to 10,000 feedback items/month",
+        "Advanced sentiment analysis",
+        "Comprehensive reporting",
         "Priority support",
-        "All export formats",
-        "Batch processing"
+        "Unlimited data sources",
+        "Custom dashboards"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$399",
+      price: "$299",
       period: "per month",
       description: "For large organizations",
       features: [
-        "Unlimited video processing",
+        "Unlimited feedback items",
         "Custom AI models",
-        "8K resolution",
+        "Advanced analytics",
         "API access",
         "Dedicated support",
         "White-label options"
@@ -111,24 +111,24 @@ const ZionAIVideoEditorPage = () => {
 
   const testimonials = [
     {
-      name: "Mark Thompson",
-      company: "Video Production",
-      role: "Video Editor",
-      content: "Zion AI Video Editor has cut our editing time by 80%. The AI suggestions are incredibly accurate and save us hours.",
+      name: "Jennifer Martinez",
+      company: "Retail Chain",
+      role: "Customer Experience Manager",
+      content: "Zion AI Customer Feedback Analyzer helped us identify key issues 3x faster. Our customer satisfaction increased by 25% in just 2 months.",
       rating: 5
     },
     {
-      name: "Sarah Kim",
-      company: "Content Agency",
-      role: "Creative Director",
-      content: "The auto transitions and smart cropping features are game-changers. We can produce more content in less time.",
+      name: "David Kim",
+      company: "SaaS Company",
+      role: "Product Manager",
+      content: "The sentiment analysis is incredibly accurate. We can now prioritize product improvements based on real customer feedback data.",
       rating: 5
     },
     {
-      name: "David Rodriguez",
-      company: "Marketing Team",
-      role: "Video Marketing Manager",
-      content: "The subtitle generation is perfect. We can create multilingual content automatically without manual work.",
+      name: "Lisa Thompson",
+      company: "Hospitality Group",
+      role: "Operations Director",
+      content: "The trend analysis feature has been invaluable. We can now predict customer satisfaction issues before they become problems.",
       rating: 5
     }
   ];
@@ -136,10 +136,10 @@ const ZionAIVideoEditorPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Video Editor - AI-Powered Video Editing | Zion Tech Group"
-        description="Edit videos with AI-powered automation, smart transitions, and intelligent cropping. Cut editing time by 80% with intelligent video editing."
-        keywords="AI video editor, video editing, automated editing, video production, content creation, video automation"
-        canonical="https://ziontechgroup.com/zion-ai-video-editor"
+        title="Zion AI Customer Feedback Analyzer - AI-Powered Feedback Analysis | Zion Tech Group"
+        description="Transform customer feedback into actionable insights with AI-powered sentiment analysis, topic extraction, and trend analysis. Increase customer satisfaction by 25%."
+        keywords="AI customer feedback analyzer, sentiment analysis, feedback analysis, customer satisfaction, feedback insights, customer experience"
+        canonical="https://ziontechgroup.com/zion-ai-customer-feedback-analyzer"
       />
 
       <main className="relative z-10">
@@ -152,19 +152,19 @@ const ZionAIVideoEditorPage = () => {
           
           <ResponsiveContainer className="text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Video className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Video Intelligence</span>
+              <MessageSquare className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Feedback Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Video Editor
+                Zion AI Customer Feedback Analyzer
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Edit videos with AI-powered automation, smart transitions, and intelligent cropping. 
-              Cut editing time by 80% with intelligent video editing.
+              Transform customer feedback into actionable insights with AI-powered sentiment analysis, 
+              topic extraction, and trend analysis. Increase customer satisfaction by 25%.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -180,7 +180,7 @@ const ZionAIVideoEditorPage = () => {
                 href="#demo"
                 variant="outline"
                 size="lg"
-                icon={<Video className="w-5 h-5" />}
+                icon={<MessageSquare className="w-5 h-5" />}
               >
                 Watch Demo
               </FuturisticButton>
@@ -189,16 +189,16 @@ const ZionAIVideoEditorPage = () => {
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
-                <div className="text-gray-300 text-sm">Faster Editing</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">25%</div>
+                <div className="text-gray-300 text-sm">Higher Satisfaction</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">8K</div>
-                <div className="text-gray-300 text-sm">Resolution</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">3x</div>
+                <div className="text-gray-300 text-sm">Faster Analysis</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">50+</div>
-                <div className="text-gray-300 text-sm">Export Formats</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">95%</div>
+                <div className="text-gray-300 text-sm">Accuracy</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
@@ -216,7 +216,7 @@ const ZionAIVideoEditorPage = () => {
                 Powerful AI Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to edit videos with AI-powered automation.
+                Everything you need to analyze customer feedback and improve satisfaction.
               </p>
             </div>
             
@@ -249,7 +249,7 @@ const ZionAIVideoEditorPage = () => {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your video editing needs. All plans include our core AI features.
+                Choose the plan that fits your feedback analysis needs. All plans include our core AI features.
               </p>
             </div>
             
@@ -308,10 +308,10 @@ const ZionAIVideoEditorPage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Video Creators
+                Trusted by Customer Experience Teams
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Video Editor
+                See what our customers say about Zion AI Customer Feedback Analyzer
               </p>
             </div>
             
@@ -341,10 +341,10 @@ const ZionAIVideoEditorPage = () => {
           <ResponsiveContainer>
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Edit Videos with AI?
+                Ready to Analyze Your Customer Feedback?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Join thousands of creators already using Zion AI Video Editor to produce amazing videos faster.
+                Join thousands of teams already using Zion AI Customer Feedback Analyzer to improve customer satisfaction and drive growth.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -360,7 +360,7 @@ const ZionAIVideoEditorPage = () => {
                   href="/demo"
                   variant="outline"
                   size="lg"
-                  icon={<Video className="w-5 h-5" />}
+                  icon={<MessageSquare className="w-5 h-5" />}
                 >
                   Schedule Demo
                 </FuturisticButton>
@@ -373,4 +373,4 @@ const ZionAIVideoEditorPage = () => {
   );
 };
 
-export default ZionAIVideoEditorPage;
+export default ZionAICustomerFeedbackAnalyzerPage;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Video, 
+  Languages, 
   Zap, 
   BarChart3, 
   Target, 
@@ -14,93 +14,104 @@ import {
   TrendingUp,
   Shield,
   Eye,
-  Scissors,
-  Play
+  Globe,
+  MessageSquare
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAIVideoEditorPage = () => {
+const ZionAITranslatorPage = () => {
   const features = [
     {
-      title: "AI Video Editing",
-      description: "Automatically edit videos with AI-powered scene detection and cutting",
-      icon: <Brain className="w-6 h-6" />,
+      title: "100+ Languages",
+      description: "Translate between 100+ languages with 99% accuracy using advanced AI",
+      icon: <Globe className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Auto Transitions",
-      description: "Intelligent transition suggestions and automatic application",
-      icon: <Scissors className="w-6 h-6" />,
+      title: "Context-Aware Translation",
+      description: "AI understands context and provides culturally appropriate translations",
+      icon: <Brain className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Smart Cropping",
-      description: "AI-powered smart cropping to focus on important content",
-      icon: <Target className="w-6 h-6" />,
+      title: "Real-time Translation",
+      description: "Instant translation for conversations, documents, and live content",
+      icon: <Zap className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Audio Enhancement",
-      description: "Automatically enhance audio quality and remove background noise",
-      icon: <Play className="w-6 h-6" />,
+      title: "Document Translation",
+      description: "Translate entire documents while preserving formatting and layout",
+      icon: <MessageSquare className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Color Correction",
-      description: "AI-powered color correction and grading for professional results",
-      icon: <Eye className="w-6 h-6" />,
+      title: "Voice Translation",
+      description: "Translate spoken language in real-time with voice recognition",
+      icon: <Target className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Text & Subtitles",
-      description: "Automatically generate and sync subtitles with AI speech recognition",
-      icon: <Video className="w-6 h-6" />,
+      title: "Custom Dictionaries",
+      description: "Create custom dictionaries for industry-specific terminology",
+      icon: <Eye className="w-6 h-6" />,
       color: "from-cyan-500 to-blue-500"
     }
   ];
 
+  const supportedLanguages = [
+    { name: "English", icon: "🇺🇸", color: "from-blue-500 to-blue-700" },
+    { name: "Spanish", icon: "🇪🇸", color: "from-red-500 to-red-700" },
+    { name: "French", icon: "🇫🇷", color: "from-blue-600 to-blue-800" },
+    { name: "German", icon: "🇩🇪", color: "from-yellow-500 to-yellow-700" },
+    { name: "Chinese", icon: "🇨🇳", color: "from-red-600 to-red-800" },
+    { name: "Japanese", icon: "🇯🇵", color: "from-red-500 to-red-700" },
+    { name: "Arabic", icon: "🇸🇦", color: "from-green-500 to-green-700" },
+    { name: "Portuguese", icon: "🇵🇹", color: "from-green-600 to-green-800" }
+  ];
+
   const pricingPlans = [
     {
-      name: "Creator",
-      price: "$49",
+      name: "Personal",
+      price: "$19",
       period: "per month",
-      description: "Perfect for content creators",
+      description: "Perfect for individuals",
       features: [
-        "Up to 10 hours of video/month",
-        "Basic AI editing",
-        "Standard resolution",
+        "Up to 10,000 words/month",
+        "50 languages",
+        "Basic AI features",
         "Email support",
-        "5 export formats"
+        "Standard accuracy"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$129",
+      price: "$49",
       period: "per month",
-      description: "Most popular for professionals",
+      description: "Most popular for businesses",
       features: [
-        "Up to 50 hours of video/month",
-        "Advanced AI editing",
-        "4K resolution",
+        "Up to 100,000 words/month",
+        "100+ languages",
+        "Advanced AI features",
         "Priority support",
-        "All export formats",
-        "Batch processing"
+        "High accuracy",
+        "Custom dictionaries"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$399",
+      price: "$149",
       period: "per month",
       description: "For large organizations",
       features: [
-        "Unlimited video processing",
+        "Unlimited words",
+        "All languages",
         "Custom AI models",
-        "8K resolution",
         "API access",
         "Dedicated support",
         "White-label options"
@@ -111,24 +122,24 @@ const ZionAIVideoEditorPage = () => {
 
   const testimonials = [
     {
-      name: "Mark Thompson",
-      company: "Video Production",
-      role: "Video Editor",
-      content: "Zion AI Video Editor has cut our editing time by 80%. The AI suggestions are incredibly accurate and save us hours.",
+      name: "Anna Petrov",
+      company: "Global Marketing",
+      role: "Marketing Director",
+      content: "Zion AI Translator has enabled us to reach global markets. The context-aware translation is incredibly accurate and natural.",
       rating: 5
     },
     {
-      name: "Sarah Kim",
-      company: "Content Agency",
-      role: "Creative Director",
-      content: "The auto transitions and smart cropping features are game-changers. We can produce more content in less time.",
+      name: "Hiroshi Tanaka",
+      company: "Tech Startup",
+      role: "CEO",
+      content: "The real-time translation feature has been a game-changer for our international meetings. Communication is seamless now.",
       rating: 5
     },
     {
-      name: "David Rodriguez",
-      company: "Marketing Team",
-      role: "Video Marketing Manager",
-      content: "The subtitle generation is perfect. We can create multilingual content automatically without manual work.",
+      name: "Maria Santos",
+      company: "Publishing House",
+      role: "Editor",
+      content: "Document translation with formatting preservation has saved us countless hours. The quality is exceptional.",
       rating: 5
     }
   ];
@@ -136,10 +147,10 @@ const ZionAIVideoEditorPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Video Editor - AI-Powered Video Editing | Zion Tech Group"
-        description="Edit videos with AI-powered automation, smart transitions, and intelligent cropping. Cut editing time by 80% with intelligent video editing."
-        keywords="AI video editor, video editing, automated editing, video production, content creation, video automation"
-        canonical="https://ziontechgroup.com/zion-ai-video-editor"
+        title="Zion AI Translator - AI-Powered Translation | Zion Tech Group"
+        description="Translate between 100+ languages with 99% accuracy using AI-powered translation. Real-time translation for conversations, documents, and live content."
+        keywords="AI translator, language translation, real-time translation, document translation, voice translation, multilingual support"
+        canonical="https://ziontechgroup.com/zion-ai-translator"
       />
 
       <main className="relative z-10">
@@ -152,19 +163,19 @@ const ZionAIVideoEditorPage = () => {
           
           <ResponsiveContainer className="text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Video className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Video Intelligence</span>
+              <Languages className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Language Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Video Editor
+                Zion AI Translator
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Edit videos with AI-powered automation, smart transitions, and intelligent cropping. 
-              Cut editing time by 80% with intelligent video editing.
+              Translate between 100+ languages with 99% accuracy using AI-powered translation. 
+              Real-time translation for conversations, documents, and live content.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -180,7 +191,7 @@ const ZionAIVideoEditorPage = () => {
                 href="#demo"
                 variant="outline"
                 size="lg"
-                icon={<Video className="w-5 h-5" />}
+                icon={<Languages className="w-5 h-5" />}
               >
                 Watch Demo
               </FuturisticButton>
@@ -189,21 +200,46 @@ const ZionAIVideoEditorPage = () => {
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
-                <div className="text-gray-300 text-sm">Faster Editing</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">100+</div>
+                <div className="text-gray-300 text-sm">Languages</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">8K</div>
-                <div className="text-gray-300 text-sm">Resolution</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">99%</div>
+                <div className="text-gray-300 text-sm">Accuracy</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">50+</div>
-                <div className="text-gray-300 text-sm">Export Formats</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">Real-time</div>
+                <div className="text-gray-300 text-sm">Translation</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
                 <div className="text-gray-300 text-sm">AI Processing</div>
               </div>
+            </div>
+          </ResponsiveContainer>
+        </section>
+
+        {/* Supported Languages */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <ResponsiveContainer>
+            <div className="text-center mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                Support for 100+ Languages
+              </h2>
+              <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+                Translate between any language with our advanced AI translation engine.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-4 md:grid-cols-8 gap-6 max-w-5xl mx-auto">
+              {supportedLanguages.map((lang, index) => (
+                <div key={index} className="text-center group">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${lang.color} rounded-lg flex items-center justify-center mb-3 mx-auto group-hover:scale-110 transition-transform`}>
+                    <span className="text-2xl">{lang.icon}</span>
+                  </div>
+                  <div className="text-white font-medium text-sm">{lang.name}</div>
+                </div>
+              ))}
             </div>
           </ResponsiveContainer>
         </section>
@@ -216,7 +252,7 @@ const ZionAIVideoEditorPage = () => {
                 Powerful AI Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to edit videos with AI-powered automation.
+                Everything you need to translate content with AI-powered accuracy.
               </p>
             </div>
             
@@ -249,7 +285,7 @@ const ZionAIVideoEditorPage = () => {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your video editing needs. All plans include our core AI features.
+                Choose the plan that fits your translation needs. All plans include our core AI features.
               </p>
             </div>
             
@@ -308,10 +344,10 @@ const ZionAIVideoEditorPage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Video Creators
+                Trusted by Global Teams
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Video Editor
+                See what our customers say about Zion AI Translator
               </p>
             </div>
             
@@ -341,10 +377,10 @@ const ZionAIVideoEditorPage = () => {
           <ResponsiveContainer>
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Edit Videos with AI?
+                Ready to Break Language Barriers?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Join thousands of creators already using Zion AI Video Editor to produce amazing videos faster.
+                Join thousands of global teams already using Zion AI Translator to communicate across languages.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -360,7 +396,7 @@ const ZionAIVideoEditorPage = () => {
                   href="/demo"
                   variant="outline"
                   size="lg"
-                  icon={<Video className="w-5 h-5" />}
+                  icon={<Languages className="w-5 h-5" />}
                 >
                   Schedule Demo
                 </FuturisticButton>
@@ -373,4 +409,4 @@ const ZionAIVideoEditorPage = () => {
   );
 };
 
-export default ZionAIVideoEditorPage;
+export default ZionAITranslatorPage;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Video, 
+  MessageSquare, 
   Zap, 
   BarChart3, 
   Target, 
@@ -14,93 +14,93 @@ import {
   TrendingUp,
   Shield,
   Eye,
-  Scissors,
-  Play
+  Bot,
+  Settings
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAIVideoEditorPage = () => {
+const ZionAIChatbotBuilderPage = () => {
   const features = [
     {
-      title: "AI Video Editing",
-      description: "Automatically edit videos with AI-powered scene detection and cutting",
-      icon: <Brain className="w-6 h-6" />,
+      title: "No-Code Builder",
+      description: "Build intelligent chatbots without coding using our drag-and-drop interface",
+      icon: <Settings className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Auto Transitions",
-      description: "Intelligent transition suggestions and automatic application",
-      icon: <Scissors className="w-6 h-6" />,
+      title: "Natural Language Processing",
+      description: "Advanced NLP to understand and respond to customer queries naturally",
+      icon: <Brain className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Smart Cropping",
-      description: "AI-powered smart cropping to focus on important content",
-      icon: <Target className="w-6 h-6" />,
+      title: "Multi-Channel Support",
+      description: "Deploy chatbots across websites, social media, and messaging platforms",
+      icon: <MessageSquare className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Audio Enhancement",
-      description: "Automatically enhance audio quality and remove background noise",
-      icon: <Play className="w-6 h-6" />,
+      title: "AI Training",
+      description: "Automatically train your chatbot with your business data and knowledge base",
+      icon: <Bot className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Color Correction",
-      description: "AI-powered color correction and grading for professional results",
-      icon: <Eye className="w-6 h-6" />,
+      title: "Analytics Dashboard",
+      description: "Comprehensive analytics to track performance and optimize conversations",
+      icon: <BarChart3 className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Text & Subtitles",
-      description: "Automatically generate and sync subtitles with AI speech recognition",
-      icon: <Video className="w-6 h-6" />,
+      title: "Human Handoff",
+      description: "Seamlessly transfer complex queries to human agents when needed",
+      icon: <Users className="w-6 h-6" />,
       color: "from-cyan-500 to-blue-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Creator",
-      price: "$49",
+      name: "Starter",
+      price: "$29",
       period: "per month",
-      description: "Perfect for content creators",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 10 hours of video/month",
-        "Basic AI editing",
-        "Standard resolution",
+        "Up to 1,000 conversations/month",
+        "Basic AI features",
+        "1 chatbot",
         "Email support",
-        "5 export formats"
+        "Standard templates"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$129",
+      price: "$99",
       period: "per month",
-      description: "Most popular for professionals",
+      description: "Most popular for growing businesses",
       features: [
-        "Up to 50 hours of video/month",
-        "Advanced AI editing",
-        "4K resolution",
+        "Up to 10,000 conversations/month",
+        "Advanced AI features",
+        "5 chatbots",
         "Priority support",
-        "All export formats",
-        "Batch processing"
+        "Custom integrations",
+        "Analytics dashboard"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$399",
+      price: "$299",
       period: "per month",
       description: "For large organizations",
       features: [
-        "Unlimited video processing",
+        "Unlimited conversations",
         "Custom AI models",
-        "8K resolution",
+        "Unlimited chatbots",
         "API access",
         "Dedicated support",
         "White-label options"
@@ -111,24 +111,24 @@ const ZionAIVideoEditorPage = () => {
 
   const testimonials = [
     {
-      name: "Mark Thompson",
-      company: "Video Production",
-      role: "Video Editor",
-      content: "Zion AI Video Editor has cut our editing time by 80%. The AI suggestions are incredibly accurate and save us hours.",
+      name: "Jennifer Adams",
+      company: "E-commerce Store",
+      role: "Customer Success Manager",
+      content: "Zion AI Chatbot Builder increased our customer satisfaction by 40% and reduced response time by 90%. Amazing tool!",
       rating: 5
     },
     {
-      name: "Sarah Kim",
-      company: "Content Agency",
-      role: "Creative Director",
-      content: "The auto transitions and smart cropping features are game-changers. We can produce more content in less time.",
+      name: "Michael Chen",
+      company: "SaaS Company",
+      role: "Support Director",
+      content: "The no-code builder is incredibly intuitive. We built a sophisticated chatbot in just a few hours without any coding.",
       rating: 5
     },
     {
-      name: "David Rodriguez",
-      company: "Marketing Team",
-      role: "Video Marketing Manager",
-      content: "The subtitle generation is perfect. We can create multilingual content automatically without manual work.",
+      name: "Sarah Wilson",
+      company: "Real Estate Agency",
+      role: "Operations Manager",
+      content: "The multi-channel support has been a game-changer. We can now engage customers across all platforms seamlessly.",
       rating: 5
     }
   ];
@@ -136,10 +136,10 @@ const ZionAIVideoEditorPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Video Editor - AI-Powered Video Editing | Zion Tech Group"
-        description="Edit videos with AI-powered automation, smart transitions, and intelligent cropping. Cut editing time by 80% with intelligent video editing."
-        keywords="AI video editor, video editing, automated editing, video production, content creation, video automation"
-        canonical="https://ziontechgroup.com/zion-ai-video-editor"
+        title="Zion AI Chatbot Builder - No-Code AI Chatbot Creation | Zion Tech Group"
+        description="Build intelligent chatbots without coding using our no-code builder. Increase customer satisfaction by 40% and reduce response time by 90% with AI-powered chatbots."
+        keywords="AI chatbot builder, no-code chatbot, customer service automation, conversational AI, chatbot creation, customer support"
+        canonical="https://ziontechgroup.com/zion-ai-chatbot-builder"
       />
 
       <main className="relative z-10">
@@ -152,19 +152,19 @@ const ZionAIVideoEditorPage = () => {
           
           <ResponsiveContainer className="text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Video className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Video Intelligence</span>
+              <Bot className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">No-Code AI Chatbot Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Video Editor
+                Zion AI Chatbot Builder
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Edit videos with AI-powered automation, smart transitions, and intelligent cropping. 
-              Cut editing time by 80% with intelligent video editing.
+              Build intelligent chatbots without coding using our no-code builder. 
+              Increase customer satisfaction by 40% and reduce response time by 90% with AI-powered chatbots.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -180,7 +180,7 @@ const ZionAIVideoEditorPage = () => {
                 href="#demo"
                 variant="outline"
                 size="lg"
-                icon={<Video className="w-5 h-5" />}
+                icon={<Bot className="w-5 h-5" />}
               >
                 Watch Demo
               </FuturisticButton>
@@ -189,20 +189,20 @@ const ZionAIVideoEditorPage = () => {
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
-                <div className="text-gray-300 text-sm">Faster Editing</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">40%</div>
+                <div className="text-gray-300 text-sm">Higher Satisfaction</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">8K</div>
-                <div className="text-gray-300 text-sm">Resolution</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">90%</div>
+                <div className="text-gray-300 text-sm">Faster Response</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">50+</div>
-                <div className="text-gray-300 text-sm">Export Formats</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">24/7</div>
+                <div className="text-gray-300 text-sm">Availability</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
-                <div className="text-gray-300 text-sm">AI Processing</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">No-Code</div>
+                <div className="text-gray-300 text-sm">Easy Setup</div>
               </div>
             </div>
           </ResponsiveContainer>
@@ -216,7 +216,7 @@ const ZionAIVideoEditorPage = () => {
                 Powerful AI Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to edit videos with AI-powered automation.
+                Everything you need to build intelligent chatbots without coding.
               </p>
             </div>
             
@@ -249,7 +249,7 @@ const ZionAIVideoEditorPage = () => {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your video editing needs. All plans include our core AI features.
+                Choose the plan that fits your chatbot needs. All plans include our core AI features.
               </p>
             </div>
             
@@ -308,10 +308,10 @@ const ZionAIVideoEditorPage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Video Creators
+                Trusted by Businesses Worldwide
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Video Editor
+                See what our customers say about Zion AI Chatbot Builder
               </p>
             </div>
             
@@ -341,10 +341,10 @@ const ZionAIVideoEditorPage = () => {
           <ResponsiveContainer>
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Edit Videos with AI?
+                Ready to Build Your AI Chatbot?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Join thousands of creators already using Zion AI Video Editor to produce amazing videos faster.
+                Join thousands of businesses already using Zion AI Chatbot Builder to automate customer service.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -360,7 +360,7 @@ const ZionAIVideoEditorPage = () => {
                   href="/demo"
                   variant="outline"
                   size="lg"
-                  icon={<Video className="w-5 h-5" />}
+                  icon={<Bot className="w-5 h-5" />}
                 >
                   Schedule Demo
                 </FuturisticButton>
@@ -373,4 +373,4 @@ const ZionAIVideoEditorPage = () => {
   );
 };
 
-export default ZionAIVideoEditorPage;
+export default ZionAIChatbotBuilderPage;

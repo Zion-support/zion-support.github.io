@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Video, 
+  FileText, 
   Zap, 
   BarChart3, 
   Target, 
@@ -14,93 +14,104 @@ import {
   TrendingUp,
   Shield,
   Eye,
-  Scissors,
-  Play
+  PenTool,
+  BookOpen
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAIVideoEditorPage = () => {
+const ZionAIContentGeneratorPage = () => {
   const features = [
     {
-      title: "AI Video Editing",
-      description: "Automatically edit videos with AI-powered scene detection and cutting",
+      title: "AI Content Creation",
+      description: "Generate high-quality content for any purpose with advanced AI writing",
       icon: <Brain className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Auto Transitions",
-      description: "Intelligent transition suggestions and automatic application",
-      icon: <Scissors className="w-6 h-6" />,
+      title: "Multiple Formats",
+      description: "Create blogs, articles, social media posts, emails, and more",
+      icon: <FileText className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Smart Cropping",
-      description: "AI-powered smart cropping to focus on important content",
+      title: "SEO Optimization",
+      description: "AI-powered SEO optimization for better search rankings",
       icon: <Target className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Audio Enhancement",
-      description: "Automatically enhance audio quality and remove background noise",
-      icon: <Play className="w-6 h-6" />,
+      title: "Tone & Style",
+      description: "Customize content tone and style to match your brand voice",
+      icon: <PenTool className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Color Correction",
-      description: "AI-powered color correction and grading for professional results",
-      icon: <Eye className="w-6 h-6" />,
+      title: "Plagiarism Check",
+      description: "Ensure originality with built-in plagiarism detection",
+      icon: <Shield className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Text & Subtitles",
-      description: "Automatically generate and sync subtitles with AI speech recognition",
-      icon: <Video className="w-6 h-6" />,
+      title: "Content Analytics",
+      description: "Track content performance with detailed analytics and insights",
+      icon: <BarChart3 className="w-6 h-6" />,
       color: "from-cyan-500 to-blue-500"
     }
   ];
 
+  const contentTypes = [
+    { name: "Blog Posts", icon: "📝", color: "from-blue-500 to-cyan-500" },
+    { name: "Articles", icon: "📄", color: "from-green-500 to-emerald-500" },
+    { name: "Social Media", icon: "📱", color: "from-purple-500 to-violet-500" },
+    { name: "Emails", icon: "📧", color: "from-orange-500 to-amber-500" },
+    { name: "Product Descriptions", icon: "🛍️", color: "from-pink-500 to-rose-500" },
+    { name: "Ad Copy", icon: "📢", color: "from-red-500 to-pink-500" },
+    { name: "Press Releases", icon: "📰", color: "from-indigo-500 to-purple-500" },
+    { name: "Web Content", icon: "🌐", color: "from-cyan-500 to-blue-500" }
+  ];
+
   const pricingPlans = [
     {
-      name: "Creator",
-      price: "$49",
+      name: "Writer",
+      price: "$29",
       period: "per month",
-      description: "Perfect for content creators",
+      description: "Perfect for individual writers",
       features: [
-        "Up to 10 hours of video/month",
-        "Basic AI editing",
-        "Standard resolution",
+        "Up to 10,000 words/month",
+        "Basic AI features",
+        "5 content types",
         "Email support",
-        "5 export formats"
+        "Standard templates"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$129",
+      price: "$79",
       period: "per month",
-      description: "Most popular for professionals",
+      description: "Most popular for content teams",
       features: [
-        "Up to 50 hours of video/month",
-        "Advanced AI editing",
-        "4K resolution",
+        "Up to 50,000 words/month",
+        "Advanced AI features",
+        "All content types",
         "Priority support",
-        "All export formats",
-        "Batch processing"
+        "Custom templates",
+        "SEO optimization"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$399",
+      price: "$199",
       period: "per month",
       description: "For large organizations",
       features: [
-        "Unlimited video processing",
+        "Unlimited words",
         "Custom AI models",
-        "8K resolution",
+        "Advanced analytics",
         "API access",
         "Dedicated support",
         "White-label options"
@@ -111,24 +122,24 @@ const ZionAIVideoEditorPage = () => {
 
   const testimonials = [
     {
-      name: "Mark Thompson",
-      company: "Video Production",
-      role: "Video Editor",
-      content: "Zion AI Video Editor has cut our editing time by 80%. The AI suggestions are incredibly accurate and save us hours.",
+      name: "Emma Wilson",
+      company: "Content Marketing Agency",
+      role: "Content Director",
+      content: "Zion AI Content Generator has increased our content production by 300%. The quality is exceptional and saves us hours every day.",
       rating: 5
     },
     {
-      name: "Sarah Kim",
-      company: "Content Agency",
-      role: "Creative Director",
-      content: "The auto transitions and smart cropping features are game-changers. We can produce more content in less time.",
+      name: "James Chen",
+      company: "E-commerce Store",
+      role: "Marketing Manager",
+      content: "The SEO optimization feature has been a game-changer. Our content now ranks higher and drives more organic traffic.",
       rating: 5
     },
     {
-      name: "David Rodriguez",
-      company: "Marketing Team",
-      role: "Video Marketing Manager",
-      content: "The subtitle generation is perfect. We can create multilingual content automatically without manual work.",
+      name: "Sarah Rodriguez",
+      company: "Tech Blog",
+      role: "Editor",
+      content: "The tone and style customization is perfect. We can maintain our brand voice while scaling content production significantly.",
       rating: 5
     }
   ];
@@ -136,10 +147,10 @@ const ZionAIVideoEditorPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Video Editor - AI-Powered Video Editing | Zion Tech Group"
-        description="Edit videos with AI-powered automation, smart transitions, and intelligent cropping. Cut editing time by 80% with intelligent video editing."
-        keywords="AI video editor, video editing, automated editing, video production, content creation, video automation"
-        canonical="https://ziontechgroup.com/zion-ai-video-editor"
+        title="Zion AI Content Generator - AI-Powered Content Creation | Zion Tech Group"
+        description="Generate high-quality content with AI-powered writing, SEO optimization, and multiple formats. Increase content production by 300% with intelligent content generation."
+        keywords="AI content generator, content creation, AI writing, SEO optimization, content marketing, automated content"
+        canonical="https://ziontechgroup.com/zion-ai-content-generator"
       />
 
       <main className="relative z-10">
@@ -152,19 +163,19 @@ const ZionAIVideoEditorPage = () => {
           
           <ResponsiveContainer className="text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Video className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Video Intelligence</span>
+              <FileText className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Content Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Video Editor
+                Zion AI Content Generator
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Edit videos with AI-powered automation, smart transitions, and intelligent cropping. 
-              Cut editing time by 80% with intelligent video editing.
+              Generate high-quality content with AI-powered writing, SEO optimization, 
+              and multiple formats. Increase content production by 300% with intelligent content generation.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -180,7 +191,7 @@ const ZionAIVideoEditorPage = () => {
                 href="#demo"
                 variant="outline"
                 size="lg"
-                icon={<Video className="w-5 h-5" />}
+                icon={<FileText className="w-5 h-5" />}
               >
                 Watch Demo
               </FuturisticButton>
@@ -189,21 +200,46 @@ const ZionAIVideoEditorPage = () => {
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
-                <div className="text-gray-300 text-sm">Faster Editing</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">300%</div>
+                <div className="text-gray-300 text-sm">More Content</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">8K</div>
-                <div className="text-gray-300 text-sm">Resolution</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">8</div>
+                <div className="text-gray-300 text-sm">Content Types</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">50+</div>
-                <div className="text-gray-300 text-sm">Export Formats</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">SEO</div>
+                <div className="text-gray-300 text-sm">Optimized</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
-                <div className="text-gray-300 text-sm">AI Processing</div>
+                <div className="text-gray-300 text-sm">AI Writing</div>
               </div>
+            </div>
+          </ResponsiveContainer>
+        </section>
+
+        {/* Content Types */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <ResponsiveContainer>
+            <div className="text-center mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                Create Any Type of Content
+              </h2>
+              <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+                Generate high-quality content for any purpose with our AI-powered writing engine.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-4 md:grid-cols-8 gap-6 max-w-5xl mx-auto">
+              {contentTypes.map((type, index) => (
+                <div key={index} className="text-center group">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${type.color} rounded-lg flex items-center justify-center mb-3 mx-auto group-hover:scale-110 transition-transform`}>
+                    <span className="text-2xl">{type.icon}</span>
+                  </div>
+                  <div className="text-white font-medium text-sm">{type.name}</div>
+                </div>
+              ))}
             </div>
           </ResponsiveContainer>
         </section>
@@ -216,7 +252,7 @@ const ZionAIVideoEditorPage = () => {
                 Powerful AI Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to edit videos with AI-powered automation.
+                Everything you need to create high-quality content with AI.
               </p>
             </div>
             
@@ -249,7 +285,7 @@ const ZionAIVideoEditorPage = () => {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your video editing needs. All plans include our core AI features.
+                Choose the plan that fits your content creation needs. All plans include our core AI features.
               </p>
             </div>
             
@@ -308,10 +344,10 @@ const ZionAIVideoEditorPage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Video Creators
+                Trusted by Content Creators
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Video Editor
+                See what our customers say about Zion AI Content Generator
               </p>
             </div>
             
@@ -341,10 +377,10 @@ const ZionAIVideoEditorPage = () => {
           <ResponsiveContainer>
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Edit Videos with AI?
+                Ready to Create Amazing Content?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Join thousands of creators already using Zion AI Video Editor to produce amazing videos faster.
+                Join thousands of content creators already using Zion AI Content Generator to scale their content production.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -360,7 +396,7 @@ const ZionAIVideoEditorPage = () => {
                   href="/demo"
                   variant="outline"
                   size="lg"
-                  icon={<Video className="w-5 h-5" />}
+                  icon={<FileText className="w-5 h-5" />}
                 >
                   Schedule Demo
                 </FuturisticButton>
@@ -373,4 +409,4 @@ const ZionAIVideoEditorPage = () => {
   );
 };
 
-export default ZionAIVideoEditorPage;
+export default ZionAIContentGeneratorPage;

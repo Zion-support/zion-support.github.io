@@ -95,6 +95,30 @@ const ZionAIDataCleanerPage = React.lazy(() => import("./app/zion-ai-data-cleane
 const ZionAITaskSchedulerPage = React.lazy(() => import("./app/zion-ai-task-scheduler/page"));
 const ZionAICustomerSupportProPage = React.lazy(() => import("./app/zion-ai-customer-support-pro/page"));
 
+// New Innovative Micro SAAS Services - Batch 1
+const ZionAIMeetingAssistantPage = React.lazy(() => import("./app/zion-ai-meeting-assistant/page"));
+const ZionAIDocumentAnalyzerPage = React.lazy(() => import("./app/zion-ai-document-analyzer/page"));
+const ZionAISocialMediaOptimizerPage = React.lazy(() => import("./app/zion-ai-social-media-optimizer/page"));
+const ZionAIEmailOptimizerPage = React.lazy(() => import("./app/zion-ai-email-optimizer/page"));
+const ZionAIWebsiteOptimizerPage = React.lazy(() => import("./app/zion-ai-website-optimizer/page"));
+const ZionAICustomerFeedbackAnalyzerPage = React.lazy(() => import("./app/zion-ai-customer-feedback-analyzer/page"));
+const ZionAIInventoryPredictorPage = React.lazy(() => import("./app/zion-ai-inventory-predictor/page"));
+const ZionAISalesForecasterPage = React.lazy(() => import("./app/zion-ai-sales-forecaster/page"));
+const ZionAIHRAssistantPage = React.lazy(() => import("./app/zion-ai-hr-assistant/page"));
+const ZionAIFinancialPlannerPage = React.lazy(() => import("./app/zion-ai-financial-planner/page"));
+
+// New Innovative Micro SAAS Services - Batch 2
+const ZionAICodeGeneratorPage = React.lazy(() => import("./app/zion-ai-code-generator/page"));
+const ZionAIImageGeneratorPage = React.lazy(() => import("./app/zion-ai-image-generator/page"));
+const ZionAIVideoEditorPage = React.lazy(() => import("./app/zion-ai-video-editor/page"));
+const ZionAIChatbotBuilderPage = React.lazy(() => import("./app/zion-ai-chatbot-builder/page"));
+const ZionAIDataVisualizerPage = React.lazy(() => import("./app/zion-ai-data-visualizer/page"));
+const ZionAITranslatorPage = React.lazy(() => import("./app/zion-ai-translator/page"));
+const ZionAIVoiceAssistantPage = React.lazy(() => import("./app/zion-ai-voice-assistant/page"));
+const ZionAIAutomationPage = React.lazy(() => import("./app/zion-ai-automation/page"));
+const ZionAIPredictiveAnalyticsPage = React.lazy(() => import("./app/zion-ai-predictive-analytics/page"));
+const ZionAIContentGeneratorPage = React.lazy(() => import("./app/zion-ai-content-generator/page"));
+
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -214,6 +238,30 @@ function App() {
                             <Route path="/zion-ai-data-cleaner" element={<ZionAIDataCleanerPage />} />
                             <Route path="/zion-ai-task-scheduler" element={<ZionAITaskSchedulerPage />} />
                             <Route path="/zion-ai-customer-support-pro" element={<ZionAICustomerSupportProPage />} />
+
+                            {/* New Innovative Micro SAAS Services Routes - Batch 1 */}
+                            <Route path="/zion-ai-meeting-assistant" element={<ZionAIMeetingAssistantPage />} />
+                            <Route path="/zion-ai-document-analyzer" element={<ZionAIDocumentAnalyzerPage />} />
+                            <Route path="/zion-ai-social-media-optimizer" element={<ZionAISocialMediaOptimizerPage />} />
+                            <Route path="/zion-ai-email-optimizer" element={<ZionAIEmailOptimizerPage />} />
+                            <Route path="/zion-ai-website-optimizer" element={<ZionAIWebsiteOptimizerPage />} />
+                            <Route path="/zion-ai-customer-feedback-analyzer" element={<ZionAICustomerFeedbackAnalyzerPage />} />
+                            <Route path="/zion-ai-inventory-predictor" element={<ZionAIInventoryPredictorPage />} />
+                            <Route path="/zion-ai-sales-forecaster" element={<ZionAISalesForecasterPage />} />
+                            <Route path="/zion-ai-hr-assistant" element={<ZionAIHRAssistantPage />} />
+                            <Route path="/zion-ai-financial-planner" element={<ZionAIFinancialPlannerPage />} />
+
+                            {/* New Innovative Micro SAAS Services Routes - Batch 2 */}
+                            <Route path="/zion-ai-code-generator" element={<ZionAICodeGeneratorPage />} />
+                            <Route path="/zion-ai-image-generator" element={<ZionAIImageGeneratorPage />} />
+                            <Route path="/zion-ai-video-editor" element={<ZionAIVideoEditorPage />} />
+                            <Route path="/zion-ai-chatbot-builder" element={<ZionAIChatbotBuilderPage />} />
+                            <Route path="/zion-ai-data-visualizer" element={<ZionAIDataVisualizerPage />} />
+                            <Route path="/zion-ai-translator" element={<ZionAITranslatorPage />} />
+                            <Route path="/zion-ai-voice-assistant" element={<ZionAIVoiceAssistantPage />} />
+                            <Route path="/zion-ai-automation" element={<ZionAIAutomationPage />} />
+                            <Route path="/zion-ai-predictive-analytics" element={<ZionAIPredictiveAnalyticsPage />} />
+                            <Route path="/zion-ai-content-generator" element={<ZionAIContentGeneratorPage />} />
                           </Routes>
                         </Suspense>
                       </main>
