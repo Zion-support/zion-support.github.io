@@ -11,14 +11,9 @@ import { LoadingPage } from "./app/components/LoadingStates";
 import ErrorBoundary from "./app/components/ErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import EnhancedPerformanceOptimizer from "./app/components/EnhancedPerformanceOptimizer";
-import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
-import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
-import EnhancedSEO from "./app/components/EnhancedSEO";
 import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import FuturisticBackground from "./app/components/FuturisticBackground";
-import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
-import SEOOptimizer from "./app/components/SEOOptimizer";
 import ErrorHandler from "./app/components/ErrorHandler";
 
 // Lazy load pages for better performance
@@ -205,8 +200,7 @@ function App() {
     <ErrorHandler>
       <ErrorBoundary>
         <HelmetProvider>
-          <AccessibilityEnhancer>
-            <Router>
+          <Router>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                 <FuturisticBackground>
                   <Navigation />
@@ -448,21 +442,12 @@ function App() {
                   </main>
                   <Footer />
                   <EnhancedPerformanceOptimizer />
-                  <EnhancedAccessibility>
-                    <div></div>
-                  </EnhancedAccessibility>
                 </FuturisticBackground>
                 <AnalyticsProvider>
-                  <div>
-                    <PerformanceMonitor />
-                    <PerformanceEnhancer />
-                    <SEOOptimizer />
-                    <EnhancedSEO />
-                  </div>
+                  <PerformanceMonitor />
                 </AnalyticsProvider>
               </div>
             </Router>
-          </AccessibilityEnhancer>
         </HelmetProvider>
       </ErrorBoundary>
     </ErrorHandler>

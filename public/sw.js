@@ -1,140 +1,51 @@
+// Service Worker for Zion Tech Group
 const CACHE_NAME = 'zion-tech-group-v1';
-const STATIC_CACHE = 'static-v1';
-const DYNAMIC_CACHE = 'dynamic-v1';
-
-const STATIC_ASSETS = [
+const urlsToCache = [
   '/',
   '/about',
-  '/contact',
   '/services',
-  '/manifest.json',
-  '/favicon.svg'
+  '/contact',
+  '/assets/index-Dq8n7JAm.css',
+  '/assets/index-CYmZS0So.js',
+  '/assets/react-vendor-CByNqczl.js',
+  '/assets/pages-DUi2KyV9.js',
+  '/manifest.json'
 ];
 
-// Install event - cache static assets
+// Install event
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(STATIC_CACHE)
+    caches.open(CACHE_NAME)
       .then((cache) => {
-        return cache.addAll(STATIC_ASSETS);
-      })
-      .then(() => {
-        return self.skipWaiting();
+        console.log('Opened cache');
+        return cache.addAll(urlsToCache);
       })
   );
 });
 
-// Activate event - clean up old caches
+// Fetch event
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        // Return cached version or fetch from network
+        return response || fetch(event.request);
+      })
+  );
+});
+
+// Activate event
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
-          if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
+          if (cacheName !== CACHE_NAME) {
+            console.log('Deleting old cache:', cacheName);
             return caches.delete(cacheName);
           }
         })
       );
-    }).then(() => {
-      return self.clients.claim();
     })
   );
 });
-
-// Fetch event - serve from cache, fallback to network
-self.addEventListener('fetch', (event) => {
-  const { request } = event;
-  const url = new URL(request.url);
-
-  // Skip non-GET requests
-  if (request.method !== 'GET') {
-    return;
-  }
-
-  // Skip external requests
-  if (url.origin !== location.origin) {
-    return;
-  }
-
-  event.respondWith(
-    caches.match(request)
-      .then((cachedResponse) => {
-        if (cachedResponse) {
-          return cachedResponse;
-        }
-
-        return fetch(request)
-          .then((response) => {
-            // Don't cache if not a valid response
-            if (!response || response.status !== 200 || response.type !== 'basic') {
-              return response;
-            }
-
-            // Clone the response
-            const responseToCache = response.clone();
-
-            // Cache dynamic content
-            caches.open(DYNAMIC_CACHE)
-              .then((cache) => {
-                cache.put(request, responseToCache);
-              });
-
-            return response;
-          })
-          .catch(() => {
-            // Return offline page for navigation requests
-            if (request.mode === 'navigate') {
-              return caches.match('/');
-            }
-          });
-      })
-  );
-});
-
-// Background sync for form submissions
-self.addEventListener('sync', (event) => {
-  if (event.tag === 'contact-form') {
-    event.waitUntil(
-      // Handle form submission sync
-      handleFormSync()
-    );
-  }
-});
-
-async function handleFormSync() {
-  try {
-    // Get pending form data from IndexedDB
-    const pendingForms = await getPendingForms();
-    
-    for (const form of pendingForms) {
-      try {
-        const response = await fetch('/api/contact', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(form.data)
-        });
-
-        if (response.ok) {
-          // Remove from pending forms
-          await removePendingForm(form.id);
-        }
-      } catch (error) {
-        console.error('Failed to sync form:', error);
-      }
-    }
-  } catch (error) {
-    console.error('Form sync failed:', error);
-  }
-}
-
-// Helper functions for IndexedDB
-async function getPendingForms() {
-  // Implementation would go here
-  return [];
-}
-
-async function removePendingForm(id) {
-  // Implementation would go here
-}

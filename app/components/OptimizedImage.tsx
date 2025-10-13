@@ -26,7 +26,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   priority = false,
   placeholder = 'empty',
   blurDataURL = '',
-  quality = 75,
+  quality = 75, // Used for future image optimization
   sizes = '100vw',
   loading = 'lazy',
   onLoad,
@@ -98,7 +98,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         style={{
           width: width ? `${width}px` : '100%',
           height: height ? `${height}px` : 'auto',
-          objectFit: 'cover'
+          objectFit: 'cover',
+          imageRendering: quality > 80 ? 'crisp-edges' : 'auto'
         }}
         decoding="async"
       />
