@@ -100,6 +100,11 @@ export default function Partners() {
         <meta name="description" content="Join our partner ecosystem and unlock new opportunities for growth. Strategic partnerships with leading technology companies." />
         <meta name="keywords" content="partners, partnerships, technology partners, cloud partners, strategic alliances" />
       </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-white text-center mb-8">Our Partners</h1>
+          <p className="text-gray-300 text-center mb-12">Strategic partnerships that drive innovation and growth.</p>
+        </div>
       </div>
     </>
   );
