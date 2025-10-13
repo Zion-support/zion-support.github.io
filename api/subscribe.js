@@ -12,7 +12,6 @@ export default async function handler(req, res) {
   }
 
   const { email, name } = req.body;
-
   if (!email) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Email is required' }));
@@ -24,7 +23,6 @@ export default async function handler(req, res) {
     const data = fs.readFileSync(file, 'utf8');
     subscribers = JSON.parse(data);
   } catch (error) {
-    console.error('Error:', error);
     console.error('Error reading existing subscribers:', error);
   }
 
@@ -49,6 +47,11 @@ export default async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true,
-
+      message: 'Successfully subscribed to newsletter' 
+    }));
+  } catch (error) {
+    console.error('Error saving subscriber:', error);
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to save subscription' }));
   }
 }

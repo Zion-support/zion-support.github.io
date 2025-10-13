@@ -6,7 +6,6 @@ jest.mock('react-router-dom', () => {
   const actual = jest.requireActual('react-router-dom');
   return {
     ...actual,
-
     useLocation: () => ({
       pathname: '/',
       search: '',
@@ -15,8 +14,7 @@ jest.mock('react-router-dom', () => {
       key: 'default'
     }),
 
-    useNavigate: () => jest.fn(),
-    Link: ({ to, children, ...props }) => React.createElement('a', { href: to, ...props }, children),
+    useNavigate: () => jest.fn(),    Link: ({ to, children, ...props }) => React.createElement('a', { href: to, ...props }, children),
     NavLink: ({ to, children, ...props }) => React.createElement('a', { href: to, ...props }, children),
     BrowserRouter: ({ children }) => React.createElement('div', { 'data-testid': 'browser-router' }, children),
     MemoryRouter: ({ children }) => React.createElement('div', { 'data-testid': 'memory-router' }, children)
@@ -24,7 +22,6 @@ jest.mock('react-router-dom', () => {
 });
 
 // Suppress console warnings
-
 const originalError = console.error;
 beforeAll(() => {
   console.error = (...args) => {

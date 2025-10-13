@@ -30,12 +30,11 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       "telephone": "+1-302-464-0950",
       "contactType": "customer service";
     }
-  };
-
+  }
   const finalStructuredData = structuredData || defaultStructuredData;
 
   return (
-    <.Fragment>;
+    <.Fragment>
       <Helmet>
         {/* Basic Meta Tags */}
         <title>{title}
@@ -60,10 +59,9 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         {/* Structured Data */}
-        <script type="application/ld+json">;
+        <script type="application/ld+json">
           {JSON.stringify(finalStructuredData)}
       {children}
   );
-};
-
+}
 export default SEOEnhancer;

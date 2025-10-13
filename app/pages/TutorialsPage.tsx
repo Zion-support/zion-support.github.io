@@ -1,27 +1,20 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 const TutorialsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Tutorials - Zion Tech Group</title>
-        <meta name="description" content="Learn AI and technology with our comprehensive tutorials and guides." />
-        <meta name="keywords" content="tutorials, learning, AI, technology, guides, education" />
+        <title>TutorialsPage - Zion Tech Group</title>
+        <meta name="description" content="TutorialsPage page for Zion Tech Group" />
       </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Tutorials</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Coming Soon - Comprehensive tutorials and guides to help you master AI and technology.
+      <div className="min-h-screen bg-slate-900 text-white p-8">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl font-bold mb-8">TutorialsPage</h1>
+          <p className="text-lg text-gray-300">
+            This is the TutorialsPage page for Zion Tech Group.
           </p>
         </div>
       </div>
-    </div>
-  );
-};
-
-export default TutorialsPage;
+    </>
+  )}
+export default TutorialsPage

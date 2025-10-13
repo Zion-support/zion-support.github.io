@@ -1,4 +1,3 @@
-
 #!/usr/bin/env node
 
 import fs from 'fs';
@@ -15,15 +14,13 @@ function fixHtmlEntities(filePath) {
     
     // Fix common HTML entities
     const fixes = [
-
       { from: /&apos;/g, to: "'" },
       { from: /&quot;/g, to: '"' },
       { from: /&lt;/g, to: '<' },
       { from: /&gt;/g, to: '>' },
       { from: /&amp;/g, to: '&' },
 
-      { from: /&rbrace;/g, to: '}' },
-      { from: /&lbrace;/g, to: '{' }
+      { from: /&rbrace;/g, to: '}' },      { from: /&lbrace;/g, to: '{' }
     ];
     
     let hasChanges = false;
@@ -35,14 +32,12 @@ function fixHtmlEntities(filePath) {
     });
     
     if (hasChanges) {
-
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed HTML entities in: ${filePath}`);
       return true;
     }
 
     
-
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
@@ -86,4 +81,3 @@ files.forEach(file => {
 });
 
 console.log(`Fixed HTML entities in ${fixedCount} files.`);
-

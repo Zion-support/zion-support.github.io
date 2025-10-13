@@ -11,7 +11,7 @@ function fixMergeConflicts(filePath) {
     
     // Check if file has merge conflicts
     if (!content.includes(')
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)
+    content = content.replace(/[\s\S]*?([\s\S]*?)
     
     // Remove any remaining conflict markers
     content = content.replace(/[\s\S]*?
@@ -43,7 +43,7 @@ function findFilesWithConflicts(dir) {
       } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<< HEAD')) {
+          if (content.includes('')) {
             files.push(fullPath);
           }
         } catch (error) {

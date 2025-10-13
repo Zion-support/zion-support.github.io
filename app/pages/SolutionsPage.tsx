@@ -1,27 +1,20 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 const SolutionsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive technology solutions for modern businesses." />
-        <meta name="keywords" content="solutions, technology, business solutions" />
+        <title>SolutionsPage - Zion Tech Group</title>
+        <meta name="description" content="SolutionsPage page for Zion Tech Group" />
       </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Solutions</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive technology solutions designed to solve your business challenges.
+      <div className="min-h-screen bg-slate-900 text-white p-8">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl font-bold mb-8">SolutionsPage</h1>
+          <p className="text-lg text-gray-300">
+            This is the SolutionsPage page for Zion Tech Group.
           </p>
         </div>
       </div>
-    </div>
-  );
-};
-
-export default SolutionsPage;
+    </>
+  )}
+export default SolutionsPage

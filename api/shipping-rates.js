@@ -12,7 +12,6 @@ export default async function handler(req, res) {
   }
 
   const { destination, weight } = req.body;
-
   if (!destination || !weight) {
     return res.status(400).json({ error: 'Destination and weight are required' });
   }
@@ -47,13 +46,10 @@ export default async function handler(req, res) {
       success: true,
       rate: rate,
       message: 'Shipping rate calculated successfully' 
-
     }));
   } catch (error) {
     console.error('Error:', error);
     res.setHeader('Content-Type', 'application/json');
-
     res.end(JSON.stringify({ error: 'Failed to save rate' }));
-
   }
 }

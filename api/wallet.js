@@ -12,7 +12,6 @@ export default async function handler(req, res) {
   }
 
   const { address, type, name, userId } = req.body;
-
   if (!address || !type) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Address and type are required' }));
@@ -51,13 +50,10 @@ export default async function handler(req, res) {
     res.end(JSON.stringify({ 
       success: true,
       message: 'Wallet added successfully' 
-
     }));
   } catch (error) {
     console.error('Error:', error);
     res.setHeader('Content-Type', 'application/json');
-
     res.end(JSON.stringify({ error: 'Failed to save wallet' }));
-
   }
 }

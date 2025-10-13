@@ -1,19 +1,17 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'profile';
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-}
+  title?: string
+  description?: string
+  keywords?: string
+  image?: string
+  url?: string
+  type?: 'website' | 'article' | 'profile'
+  author?: string
+  publishedTime?: string
+  modifiedTime?: string
+  section?: string
+  tags?: string[]}
 
 const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -28,10 +26,9 @@ const SEO: React.FC<SEOProps> = ({
   section,
   tags = []
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
-  const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
-
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
+  const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`
+  const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -67,48 +64,8 @@ const SEO: React.FC<SEOProps> = ({
       'https://www.linkedin.com/company/zion-tech-group',
       'https://twitter.com/ziontechgroup',
       'https://github.com/ziontechgroup'
-    ],
-    serviceArea: {
-      '@type': 'GeoCircle',
-      geoMidpoint: {
-        '@type': 'GeoCoordinates',
-        latitude: 39.4496,
-        longitude: -75.7163
-      },
-      geoRadius: '50000'
-    },
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Technology Services',
-      itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'AI Solutions',
-            description: 'Advanced artificial intelligence services including machine learning, natural language processing, and predictive analytics.'
-          }
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Cybersecurity',
-            description: 'Comprehensive security solutions to protect your digital assets, data, and infrastructure from evolving threats.'
-          }
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Cloud Infrastructure',
-            description: 'Scalable cloud solutions and infrastructure management to optimize performance and reduce operational costs.'
-          }
-        }
-      ]
-    }
-  };
-
+    ]
+  }
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -169,7 +126,5 @@ const SEO: React.FC<SEOProps> = ({
         {JSON.stringify(structuredData)}
       </script>
     </Helmet>
-  );
-};
-
-export default SEO;
+  )}
+export default SEO

@@ -35,6 +35,5 @@ export default async function handler(req, res) {
     console.error('Error saving onsite request:', error);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save request' }));
-
   }
 }
