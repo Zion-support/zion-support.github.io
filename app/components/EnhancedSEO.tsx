@@ -11,6 +11,17 @@ interface EnhancedSEOProps {
   twitterCard?: string;
   noIndex?: boolean;
   structuredData?: object;
+  article?: {
+    publishedTime?: string;
+    modifiedTime?: string;
+    author?: string;
+    section?: string;
+    tags?: string[];
+  };
+  breadcrumbs?: Array<{
+    name: string;
+    url: string;
+  }>;
 }
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
@@ -18,16 +29,48 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   description,
   keywords = '',
   canonical = '',
-  ogImage = '/api/placeholder/1200/630',
+  ogImage = '/og-image.svg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
   noIndex = false,
-  structuredData
+  structuredData,
+  article,
+  breadcrumbs
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const siteUrl = 'https://ziontechgroup.com';
   const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+  
+  // Enhanced structured data
+  const defaultStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": siteUrl,
+    "logo": `${siteUrl}/logo.svg`,
+    "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"
+    },
+    "sameAs": [
+      "https://twitter.com/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup"
+    ]
+  };
+
+  const finalStructuredData = structuredData || defaultStructuredData;
 
   return (
     <Helmet>
@@ -55,16 +98,57 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <meta name="twitter:image" content={fullOgImage} />
       
       {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
       <meta name="theme-color" content="#06b6d4" />
       <meta name="author" content="Zion Tech Group" />
+      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      <meta name="googlebot" content="index, follow" />
+      <meta name="bingbot" content="index, follow" />
       
-      {/* Structured Data */}
-      {structuredData && (
+      {/* Article specific meta tags */}
+      {article && (
+        <>
+          <meta property="article:published_time" content={article.publishedTime} />
+          <meta property="article:modified_time" content={article.modifiedTime} />
+          <meta property="article:author" content={article.author} />
+          <meta property="article:section" content={article.section} />
+          {article.tags?.map((tag, index) => (
+            <meta key={index} property="article:tag" content={tag} />
+          ))}
+        </>
+      )}
+      
+      {/* Breadcrumbs structured data */}
+      {breadcrumbs && (
         <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": breadcrumbs.map((crumb, index) => ({
+              "@type": "ListItem",
+              "position": index + 1,
+              "name": crumb.name,
+              "item": `${siteUrl}${crumb.url}`
+            }))
+          })}
         </script>
       )}
+      
+      {/* Enhanced Open Graph */}
+      <meta property="og:locale" content="en_US" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={title} />
+      
+      {/* Twitter enhanced */}
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+      <meta name="twitter:image:alt" content={title} />
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(finalStructuredData)}
+      </script>
     </Helmet>
   );
 };

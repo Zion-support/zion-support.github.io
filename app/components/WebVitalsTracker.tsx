@@ -8,8 +8,15 @@ interface WebVitalsTrackerProps {
 export default function WebVitalsTracker({ children }: WebVitalsTrackerProps) {
   useEffect(() => {
     const sendToAnalytics = (metric: any) => {
-      console.log('Web Vital:', metric.name, metric.value);
-      // Add actual analytics tracking here
+      // Send to Google Analytics or other analytics service
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', metric.name, {
+          event_category: 'Web Vitals',
+          event_label: metric.id,
+          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+          non_interaction: true,
+        });
+      }
     };
 
     onCLS(sendToAnalytics);

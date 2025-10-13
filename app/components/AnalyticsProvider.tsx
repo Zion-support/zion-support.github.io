@@ -22,17 +22,24 @@ interface AnalyticsProviderProps {
 export default function AnalyticsProvider({ children }: AnalyticsProviderProps) {
   useEffect(() => {
     // Initialize analytics
-    console.log('Analytics initialized');
+    if (typeof window !== 'undefined' && window.gtag) {
+      // Analytics already initialized
+    }
   }, []);
 
   const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-    console.log('Analytics Event:', eventName, properties);
-    // Add actual analytics tracking here
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', eventName, properties);
+    }
   };
 
   const trackPageView = (pageName: string) => {
-    console.log('Page View:', pageName);
-    // Add actual page view tracking here
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: pageName,
+        page_location: window.location.href,
+      });
+    }
   };
 
   const value = {

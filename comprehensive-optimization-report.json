@@ -1,0 +1,116 @@
+{
+  "timestamp": "2025-10-13T09:12:39.313Z",
+  "buildStats": {
+    "totalFiles": 15,
+    "totalSize": 527343,
+    "jsFiles": 14,
+    "jsSize": 525532,
+    "cssFiles": 1,
+    "cssSize": 1811,
+    "imageFiles": 0,
+    "imageSize": 0
+  },
+  "chunks": {
+    "5g": {
+      "count": 1,
+      "size": 9267
+    },
+    "ai": {
+      "count": 5,
+      "size": 52626
+    },
+    "index": {
+      "count": 1,
+      "size": 51971
+    },
+    "main": {
+      "count": 1,
+      "size": 93539
+    },
+    "performance": {
+      "count": 1,
+      "size": 6018
+    },
+    "react": {
+      "count": 2,
+      "size": 210497
+    },
+    "zion": {
+      "count": 3,
+      "size": 101614
+    }
+  },
+  "recommendations": [
+    {
+      "type": "warning",
+      "message": "Large JS file: react-dom-YAim1YWk.js (127.34 KB)"
+    }
+  ],
+  "optimizations": [
+    {
+      "type": "performance",
+      "priority": "high",
+      "title": "Bundle Size Optimization",
+      "description": "JavaScript bundle is large. Consider further code splitting.",
+      "actions": [
+        "Implement dynamic imports for route-based code splitting",
+        "Use React.lazy() for component-level lazy loading",
+        "Consider removing unused dependencies",
+        "Implement tree shaking for better dead code elimination"
+      ]
+    },
+    {
+      "type": "performance",
+      "priority": "medium",
+      "title": "Large Chunk: react",
+      "description": "Chunk react is 205.56 KB",
+      "actions": [
+        "Split react chunk into smaller modules",
+        "Use dynamic imports for non-critical features",
+        "Consider vendor chunk optimization"
+      ]
+    },
+    {
+      "type": "performance",
+      "priority": "high",
+      "title": "Core Web Vitals Optimization",
+      "description": "Implement Core Web Vitals monitoring and optimization",
+      "actions": [
+        "Add LCP optimization with image preloading",
+        "Implement CLS prevention with proper image dimensions",
+        "Optimize FCP with critical CSS inlining",
+        "Add INP monitoring for interaction responsiveness"
+      ]
+    },
+    {
+      "type": "seo",
+      "priority": "high",
+      "title": "SEO Enhancement",
+      "description": "Improve search engine optimization",
+      "actions": [
+        "Add structured data for better rich snippets",
+        "Implement proper meta tags for all pages",
+        "Add canonical URLs and sitemap optimization",
+        "Implement breadcrumb navigation"
+      ]
+    },
+    {
+      "type": "accessibility",
+      "priority": "high",
+      "title": "Accessibility Improvements",
+      "description": "Enhance accessibility compliance",
+      "actions": [
+        "Add proper ARIA labels and landmarks",
+        "Implement keyboard navigation support",
+        "Add screen reader announcements",
+        "Ensure color contrast compliance"
+      ]
+    }
+  ],
+  "summary": {
+    "totalOptimizations": 5,
+    "highPriority": 4,
+    "mediumPriority": 1,
+    "lowPriority": 0
+  }
+}
