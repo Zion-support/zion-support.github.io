@@ -3,6 +3,30 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 export default function AIMarketingAutomation() {
+
+  const benefits = [
+    {
+        "title": "Increased Efficiency",
+        "description": "Streamline your operations with our advanced automation solutions.",
+        "icon": "⚡"
+    },
+    {
+        "title": "Cost Reduction",
+        "description": "Reduce operational costs by up to 40% with our optimized solutions.",
+        "icon": "💰"
+    },
+    {
+        "title": "Enhanced Security",
+        "description": "Enterprise-grade security measures to protect your valuable data.",
+        "icon": "🔒"
+    },
+    {
+        "title": "Scalable Solutions",
+        "description": "Grow your business with solutions that scale with your needs.",
+        "icon": "📈"
+    }
+];
+
   const features = [
     {
       title: "Email Marketing Automation",

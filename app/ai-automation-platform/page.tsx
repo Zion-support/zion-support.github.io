@@ -8,10 +8,22 @@ import {
   Sparkles,
   CheckCircle,
   Workflow,
-  Target
+  Target,
+  TrendingUp,
+  Settings,
+  Users
 } from 'lucide-react';
 
 const AIAutomationPlatformPage = () => {
+  const benefits = [
+    "Increased Efficiency",
+    "Cost Reduction", 
+    "Enhanced Security",
+    "Scalable Solutions",
+    "24/7 Support",
+    "Expert Guidance"
+  ];
+
   const features = [
     {
       title: "Intelligent Workflow Automation",

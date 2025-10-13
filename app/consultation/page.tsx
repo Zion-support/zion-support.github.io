@@ -4,6 +4,30 @@ import { Link } from 'react-router-dom';
 import { Calendar, Clock, CheckCircle, ArrowRight, Brain, Shield, Zap, Globe, Mail, Smartphone, MapPin, Star, Users, Award } from 'lucide-react';
 
 export default function ConsultationPage() {
+
+  const benefits = [
+    {
+        "title": "Increased Efficiency",
+        "description": "Streamline your operations with our advanced automation solutions.",
+        "icon": "⚡"
+    },
+    {
+        "title": "Cost Reduction",
+        "description": "Reduce operational costs by up to 40% with our optimized solutions.",
+        "icon": "💰"
+    },
+    {
+        "title": "Enhanced Security",
+        "description": "Enterprise-grade security measures to protect your valuable data.",
+        "icon": "🔒"
+    },
+    {
+        "title": "Scalable Solutions",
+        "description": "Grow your business with solutions that scale with your needs.",
+        "icon": "📈"
+    }
+];
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',

@@ -4,6 +4,30 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, CheckCircle, FileText, Lock, Users, Globe, Award, Clock } from 'lucide-react';
 
 export default function Compliance() {
+
+  const benefits = [
+    {
+        "title": "Increased Efficiency",
+        "description": "Streamline your operations with our advanced automation solutions.",
+        "icon": "⚡"
+    },
+    {
+        "title": "Cost Reduction",
+        "description": "Reduce operational costs by up to 40% with our optimized solutions.",
+        "icon": "💰"
+    },
+    {
+        "title": "Enhanced Security",
+        "description": "Enterprise-grade security measures to protect your valuable data.",
+        "icon": "🔒"
+    },
+    {
+        "title": "Scalable Solutions",
+        "description": "Grow your business with solutions that scale with your needs.",
+        "icon": "📈"
+    }
+];
+
   const complianceFrameworks = [
     {
       name: "SOC 2 Type II",

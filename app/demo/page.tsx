@@ -4,6 +4,49 @@ import { Link } from 'react-router-dom';
 import { Play, Pause, SkipForward, SkipBack, Volume2, VolumeX, Maximize, ArrowRight, CheckCircle, Star, Users, Award, BarChart3, Brain, Shield, Zap, Globe, Mail, Smartphone, MapPin, Calendar } from 'lucide-react';
 
 export default function DemoPage() {
+
+  const stats = [
+    {
+        "number": "500+",
+        "label": "Projects Completed"
+    },
+    {
+        "number": "50+",
+        "label": "Happy Clients"
+    },
+    {
+        "number": "99%",
+        "label": "Success Rate"
+    },
+    {
+        "number": "24/7",
+        "label": "Support"
+    }
+];
+
+  const benefits = [
+    {
+        "title": "Increased Efficiency",
+        "description": "Streamline your operations with our advanced automation solutions.",
+        "icon": "⚡"
+    },
+    {
+        "title": "Cost Reduction",
+        "description": "Reduce operational costs by up to 40% with our optimized solutions.",
+        "icon": "💰"
+    },
+    {
+        "title": "Enhanced Security",
+        "description": "Enterprise-grade security measures to protect your valuable data.",
+        "icon": "🔒"
+    },
+    {
+        "title": "Scalable Solutions",
+        "description": "Grow your business with solutions that scale with your needs.",
+        "icon": "📈"
+    }
+];
+
   const [currentDemo, setCurrentDemo] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
 

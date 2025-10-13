@@ -4,6 +4,26 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Users, MessageCircle, Calendar, Award, Globe, Star } from 'lucide-react';
 
 export default function Community() {
+
+  const stats = [
+    {
+        "number": "500+",
+        "label": "Projects Completed"
+    },
+    {
+        "number": "50+",
+        "label": "Happy Clients"
+    },
+    {
+        "number": "99%",
+        "label": "Success Rate"
+    },
+    {
+        "number": "24/7",
+        "label": "Support"
+    }
+];
+
   const events = [
     {
       title: "AI Innovation Summit 2024",

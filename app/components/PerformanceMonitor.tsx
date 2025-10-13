@@ -47,9 +47,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children, showD
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
+            const fidEntry = entry as PerformanceEventTiming;
             setMetrics(prev => ({ 
               ...prev, 
-              firstInputDelay: entry.processingStart - entry.startTime 
+              firstInputDelay: fidEntry.processingStart - fidEntry.startTime 
             }));
           }
         });

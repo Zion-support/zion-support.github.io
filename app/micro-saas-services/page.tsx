@@ -62,6 +62,49 @@ import {
 } from "lucide-react";
 
 export default function MicroSaasServices() {
+
+  const stats = [
+    {
+        "number": "500+",
+        "label": "Projects Completed"
+    },
+    {
+        "number": "50+",
+        "label": "Happy Clients"
+    },
+    {
+        "number": "99%",
+        "label": "Success Rate"
+    },
+    {
+        "number": "24/7",
+        "label": "Support"
+    }
+];
+
+  const categories = [
+    {
+        "name": "AI Solutions",
+        "count": 15,
+        "description": "Advanced AI-powered applications"
+    },
+    {
+        "name": "Cloud Services",
+        "count": 12,
+        "description": "Scalable cloud infrastructure"
+    },
+    {
+        "name": "Data Analytics",
+        "count": 8,
+        "description": "Business intelligence tools"
+    },
+    {
+        "name": "Cybersecurity",
+        "count": 10,
+        "description": "Enterprise security solutions"
+    }
+];
+
   const microSaasServices = [
     {
       id: "zion-ai-analytics-pro",

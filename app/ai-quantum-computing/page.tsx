@@ -2,9 +2,36 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, CheckCircle, Star, Cpu, Brain, Atom, Users, Award, Globe, Lock, TrendingUp, Monitor, MessageSquare, Phone } from 'lucide-react';
 import { Link } from "react-router-dom";
-import SEOOptimizer from "../../components/SEOOptimizer";
+import SEOOptimizer from "../components/SEOOptimizer";
 
 export default function AiQuantumComputing() {
+  const testimonials = [
+    {
+        "name": "Sarah Johnson",
+        "role": "CEO, TechCorp",
+        "company": "TechCorp",
+        "content": "Zion Tech Group transformed our business operations with their innovative AI solutions. The results exceeded our expectations.",
+        "rating": 5,
+        "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+    },
+    {
+        "name": "Michael Chen",
+        "role": "CTO, InnovateLabs",
+        "company": "InnovateLabs",
+        "content": "Outstanding technical expertise and exceptional customer service. They delivered exactly what we needed.",
+        "rating": 5,
+        "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+    },
+    {
+        "name": "Emily Rodriguez",
+        "role": "Director, DataFlow Inc",
+        "company": "DataFlow Inc",
+        "content": "The team's attention to detail and commitment to quality is unmatched. Highly recommended!",
+        "rating": 5,
+        "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+    }
+];
+
   const features = [
     "Quantum machine learning algorithms for complex optimization",
     "Quantum simulation for drug discovery and materials science",
