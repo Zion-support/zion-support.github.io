@@ -34,11 +34,4 @@ if ("serviceWorker" in navigator) {
         // Service worker registration failed
       });
   });
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-a28c
