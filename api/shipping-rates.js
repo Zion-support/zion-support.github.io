@@ -1,8 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const dir = path.join(process.cwd(), 'data');
-const file = path.join(dir, 'shipping-rates.json');
+// Shipping rates calculation
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
