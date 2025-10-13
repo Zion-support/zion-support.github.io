@@ -1,78 +1,77 @@
-import { ArrowRight, Play, Scissors, Upload, Download, Zap, Star, CheckCircle, Users, Award, Clock, Sparkles } from "lucide-react";
+import { ArrowRight, Calendar, Clock, Users, Zap, Star, CheckCircle, Bell, Smartphone, Globe, Award, TrendingUp } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ZionAIVideoEditor() {
+export default function ZionSmartScheduler() {
   const features = [
     {
-      title: "AI-Powered Auto-Editing",
-      description: "Automatically edit videos with AI that understands content, pacing, and visual appeal",
-      icon: <Zap className="w-6 h-6" />,
-      benefits: ["90% faster editing", "Professional quality", "No technical skills needed"]
+      title: "AI-Powered Scheduling",
+      description: "Intelligent scheduling that learns from your preferences and optimizes meeting times",
+      icon: <Calendar className="w-6 h-6" />,
+      benefits: ["Smart time optimization", "Conflict resolution", "Timezone handling"]
     },
     {
-      title: "Smart Scene Detection",
-      description: "Intelligently detect and separate scenes for seamless transitions",
-      icon: <Scissors className="w-6 h-6" />,
-      benefits: ["Automatic cuts", "Smooth transitions", "Context-aware editing"]
+      title: "Multi-Platform Integration",
+      description: "Seamlessly integrates with Google Calendar, Outlook, Slack, and 50+ other platforms",
+      icon: <Globe className="w-6 h-6" />,
+      benefits: ["Universal sync", "Real-time updates", "Cross-platform access"]
     },
     {
-      title: "Voice & Music Sync",
-      description: "Automatically sync background music with video content and voice patterns",
-      icon: <Play className="w-6 h-6" />,
-      benefits: ["Perfect timing", "Mood matching", "Audio enhancement"]
+      title: "Automated Reminders",
+      description: "Smart reminder system that adapts to participant preferences and meeting types",
+      icon: <Bell className="w-6 h-6" />,
+      benefits: ["Customizable timing", "Multi-channel alerts", "Follow-up automation"]
     },
     {
-      title: "One-Click Export",
-      description: "Export to multiple formats optimized for different platforms",
-      icon: <Download className="w-6 h-6" />,
-      benefits: ["Platform optimization", "Quality presets", "Batch processing"]
+      title: "Team Collaboration",
+      description: "Advanced team scheduling with availability views and group coordination",
+      icon: <Users className="w-6 h-6" />,
+      benefits: ["Team availability", "Group scheduling", "Resource booking"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$19",
+      name: "Individual",
+      price: "$12",
       period: "/month",
-      description: "Perfect for content creators and small businesses",
+      description: "Perfect for freelancers and individual professionals",
       features: [
-        "Up to 10 hours of video processing",
-        "HD export quality",
-        "Basic AI editing features",
-        "5GB cloud storage",
-        "Email support"
+        "Unlimited personal scheduling",
+        "Basic AI optimization",
+        "2 calendar integrations",
+        "Email support",
+        "Mobile app access"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$49",
+      name: "Team",
+      price: "$29",
       period: "/month",
-      description: "Ideal for professional content creators and agencies",
+      description: "Ideal for small teams and growing businesses",
       features: [
-        "Unlimited video processing",
-        "4K export quality",
+        "Up to 10 team members",
         "Advanced AI features",
-        "50GB cloud storage",
+        "Unlimited integrations",
+        "Team collaboration tools",
         "Priority support",
-        "Custom branding",
-        "API access"
+        "Custom branding"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$99",
+      price: "$79",
       period: "/month",
-      description: "For large teams and organizations",
+      description: "For large organizations with complex scheduling needs",
       features: [
-        "Everything in Professional",
-        "Team collaboration tools",
-        "Unlimited cloud storage",
-        "Dedicated account manager",
+        "Unlimited team members",
+        "Advanced analytics",
         "Custom integrations",
-        "White-label options",
+        "Dedicated support",
+        "SSO integration",
+        "API access",
         "SLA guarantee"
       ],
       popular: false
@@ -81,21 +80,21 @@ export default function ZionAIVideoEditor() {
 
   const testimonials = [
     {
-      name: "Sarah Martinez",
-      company: "Digital Marketing Agency",
-      content: "Zion AI Video Editor cut our video production time by 80%. The AI understands our brand voice perfectly.",
+      name: "Jennifer Walsh",
+      company: "Marketing Agency",
+      content: "Zion Smart Scheduler saved us 10 hours per week. The AI finds the perfect meeting times for all participants.",
       rating: 5
     },
     {
-      name: "Mike Chen",
-      company: "YouTube Creator",
-      content: "The auto-editing feature is incredible. I can focus on content creation while AI handles the technical editing.",
+      name: "David Kim",
+      company: "Consulting Firm",
+      content: "The team collaboration features are incredible. We can coordinate complex multi-person meetings effortlessly.",
       rating: 5
     },
     {
-      name: "Emily Rodriguez",
-      company: "E-learning Platform",
-      content: "Perfect for creating educational content. The voice sync feature makes our courses much more engaging.",
+      name: "Lisa Thompson",
+      company: "Remote Team Lead",
+      content: "Perfect for our distributed team. Timezone handling and automated reminders keep everyone on track.",
       rating: 5
     }
   ];
@@ -103,14 +102,14 @@ export default function ZionAIVideoEditor() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
-        <title>Zion AI Video Editor - AI-Powered Video Editing Platform | Zion Tech Group</title>
+        <title>Zion Smart Scheduler - AI-Powered Meeting Scheduling Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Revolutionary AI-powered video editing platform that automatically edits videos with professional quality. Perfect for content creators, marketers, and businesses. Starting at $19/month."
+          content="Revolutionary AI-powered scheduling platform that automates meeting coordination, optimizes time slots, and integrates with 50+ platforms. Starting at $12/month."
         />
         <meta
           name="keywords"
-          content="AI video editor, video editing software, automated video editing, content creation, video marketing, AI video tools, video production"
+          content="AI scheduler, meeting scheduling, calendar automation, team scheduling, appointment booking, time optimization, calendar integration"
         />
       </Helmet>
 
@@ -122,20 +121,20 @@ export default function ZionAIVideoEditor() {
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">Revolutionary AI Video Editing</span>
+            <Zap className="w-4 h-4 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">Intelligent Scheduling Made Simple</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Zion AI
+            Zion Smart
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-              {" "}Video Editor
+              {" "}Scheduler
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            The world's first AI-powered video editing platform that automatically creates professional-quality videos. 
-            No technical skills required - just upload and let AI do the magic.
+            The most intelligent scheduling platform that automates meeting coordination, optimizes time slots, 
+            and eliminates scheduling conflicts. Let AI handle the complexity while you focus on what matters.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -151,7 +150,7 @@ export default function ZionAIVideoEditor() {
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               Watch Demo
-              <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+              <Calendar className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
             </Link>
           </div>
           
@@ -161,29 +160,29 @@ export default function ZionAIVideoEditor() {
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Clock className="w-6 h-6 text-cyan-400" />
               </div>
-              <div className="text-2xl md:text-3xl font-bold text-white mb-2">90%</div>
-              <div className="text-gray-300 text-sm">Faster Editing</div>
+              <div className="text-2xl md:text-3xl font-bold text-white mb-2">10hrs</div>
+              <div className="text-gray-300 text-sm">Saved Per Week</div>
             </div>
             <div className="text-center group">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Users className="w-6 h-6 text-cyan-400" />
               </div>
-              <div className="text-2xl md:text-3xl font-bold text-white mb-2">50K+</div>
+              <div className="text-2xl md:text-3xl font-bold text-white mb-2">25K+</div>
               <div className="text-gray-300 text-sm">Active Users</div>
             </div>
             <div className="text-center group">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Award className="w-6 h-6 text-cyan-400" />
               </div>
-              <div className="text-2xl md:text-3xl font-bold text-white mb-2">4.9/5</div>
-              <div className="text-gray-300 text-sm">User Rating</div>
+              <div className="text-2xl md:text-3xl font-bold text-white mb-2">99.9%</div>
+              <div className="text-gray-300 text-sm">Uptime</div>
             </div>
             <div className="text-center group">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Zap className="w-6 h-6 text-cyan-400" />
+                <Globe className="w-6 h-6 text-cyan-400" />
               </div>
-              <div className="text-2xl md:text-3xl font-bold text-white mb-2">1M+</div>
-              <div className="text-gray-300 text-sm">Videos Created</div>
+              <div className="text-2xl md:text-3xl font-bold text-white mb-2">50+</div>
+              <div className="text-gray-300 text-sm">Integrations</div>
             </div>
           </div>
         </div>
@@ -194,11 +193,11 @@ export default function ZionAIVideoEditor() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Powerful AI Features
+              Powerful Scheduling Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Our advanced AI technology understands your content and automatically creates professional-quality videos 
-              that engage your audience and drive results.
+              Our AI-powered platform understands your scheduling patterns and automatically optimizes 
+              meeting coordination for maximum efficiency and minimal conflicts.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -238,7 +237,7 @@ export default function ZionAIVideoEditor() {
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your needs. All plans include our core AI features with no hidden fees.
+              Choose the plan that fits your team size and scheduling needs. All plans include core AI features.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -295,10 +294,10 @@ export default function ZionAIVideoEditor() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Loved by Content Creators
+              Trusted by Teams Worldwide
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our users say about Zion AI Video Editor
+              See what our users say about Zion Smart Scheduler
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -327,10 +326,10 @@ export default function ZionAIVideoEditor() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Create Amazing Videos?
+            Ready to Simplify Your Scheduling?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of creators using AI to produce professional videos in minutes, not hours. 
+            Join thousands of teams using AI to eliminate scheduling headaches and maximize productivity. 
             Start your free trial today.
           </p>
           
@@ -347,7 +346,7 @@ export default function ZionAIVideoEditor() {
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               Watch Demo
-              <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+              <Calendar className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
             </Link>
           </div>
         </div>
