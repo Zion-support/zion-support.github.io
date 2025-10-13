@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -33,27 +32,10 @@ export default tseslint.config(
       "dist", 
       "node_modules", 
       "*.config.js",
-<<<<<<< HEAD
       "backup*/**",
       "backup-problematic*/**",
       "backup-unused-components/**",
       "corrupted-src-backup/**",
-=======
-"backup*/**",
-      "backup-problematic*/**",
-      "backup-unused-components/**",
->>>>>>> origin/clean-main-20251013-145848
-      "cleanup-*.cjs",
-      "comprehensive-*.cjs",
-      "fix-*.cjs",
-      "fix-*.js",
-      "create-*.cjs",
-      "create-*.js",
-      "scripts/**",
-      "src/**",
-      "utils/**",
-      "*.cjs",
-<<<<<<< HEAD
       "*.js",
       "*.py",
       "*.sh",
@@ -72,13 +54,3 @@ export default tseslint.config(
     ],
   }
 );
-=======
-      "*.js"
-    ],
-  }
-);
->>>>>>> origin/clean-main-20251013-145848
-=======
-      'jest.setup.js'
-    ],
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

@@ -1,20 +1,4 @@
 
-<<<<<<< HEAD
-=======
-export const Accessibilitychecker = {
-  init: () => {
-    },
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
-
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-      description: 'Bank-level security with encryption and compliance standards'
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
-
-<<<<<<< HEAD
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -31,10 +15,3 @@ export const Accessibilitychecker = {
         </section>
             )</div>
         </section>
-=======
-  cleanup: () => {
-    },
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
-};
-
-export default AccessibilityCheckerPage;
