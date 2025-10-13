@@ -23,9 +23,6 @@ class GlobalErrorBoundary extends Component<Props, State> {
       hasError: true,
       error
     };
-=======
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -33,7 +30,6 @@ class GlobalErrorBoundary extends Component<Props, State> {
       error,
       errorInfo
     });
-=======
     
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -46,17 +42,8 @@ class GlobalErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null,
-      retryCount: prevState.retryCount + 1
+      retryCount: (prevState as any).retryCount + 1
     }));
-  };
-
-  handleReset = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      retryCount: 0
-    });
   };
 
   render() {
@@ -66,55 +53,63 @@ class GlobalErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="max-w-lg mx-auto text-center p-8">
-            <div className="mb-6">
-              <Bug className="w-20 h-20 text-red-400 mx-auto" />
-            </div>
-            
-            <h1 className="text-3xl font-bold text-white mb-4">
-              Oops! Something went wrong
-            </h1>
-            
-            <p className="text-gray-300 mb-6">
-              We encountered an unexpected error. Our team has been notified and is working to fix it.
-            </p>
-            
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mb-6 text-left">
-                <summary className="text-sm text-gray-400 cursor-pointer mb-2">
-                  Error Details (Development)
-                </summary>
-                <pre className="text-xs text-red-300 bg-gray-800 p-3 rounded overflow-auto max-h-40">
-                  {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
-                </pre>
-              </details>
-            )}
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={this.handleRetry}
-                className="flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
-              >
-                <RefreshCw className="w-4 h-4 mr-2" />
-                Try Again
-              </button>
-              
-              <button
-                onClick={() => window.location.href = '/'}
-                className="flex items-center justify-center px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-medium rounded-lg transition-colors"
-              >
-                <Home className="w-4 h-4 mr-2" />
-                Go Home
-              </button>
-            </div>
-            
-            {this.state.retryCount > 0 && (
-              <p className="text-sm text-gray-400 mt-4">
-                Retry attempt: {this.state.retryCount}
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+          <div className="max-w-2xl w-full">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center">
+              {/* Error Icon */}
+              <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <AlertTriangle className="w-10 h-10 text-red-400" />
+              </div>
+
+              {/* Error Title */}
+              <h1 className="text-3xl font-bold text-white mb-4">
+                Something went wrong
+              </h1>
+
+              {/* Error Message */}
+              <p className="text-gray-300 mb-6 text-lg">
+                We encountered an unexpected error. Please try again or contact support if the problem persists.
               </p>
-            )}
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                  onClick={this.handleRetry}
+                  className="flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+                >
+                  <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform duration-300" />
+                  Try Again
+                </button>
+
+                <button
+                  onClick={() => window.location.href = '/'}
+                  className="flex items-center justify-center px-6 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group"
+                >
+                  <Home className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
+                  Go Home
+                </button>
+              </div>
+
+              {/* Development Error Details */}
+              {process.env.NODE_ENV === 'development' && this.state.error && (
+                <details className="mt-6 text-left">
+                  <summary className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-200">
+                    Error Details (Development Only)
+                  </summary>
+                  <div className="mt-4 p-4 bg-slate-800/50 rounded-lg">
+                    <pre className="text-sm text-red-400 overflow-auto">
+                      {this.state.error.toString()}
+                      {this.state.errorInfo && (
+                        <>
+                          {'\n\nComponent Stack:'}
+                          {this.state.errorInfo.componentStack}
+                        </>
+                      )}
+                    </pre>
+                  </div>
+                </details>
+              )}
+            </div>
           </div>
         </div>
       );
@@ -124,6 +119,5 @@ class GlobalErrorBoundary extends Component<Props, State> {
   }
 }
 
-export default GlobalErrorBoundary;
-=======
 export { GlobalErrorBoundary };
+export default GlobalErrorBoundary;
