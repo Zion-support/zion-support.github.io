@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 'use client';
-=======
-
-'use client';
-
->>>>>>> origin/main
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -463,6 +457,348 @@ export default function MicroSaaSSolutionsPage()   {
       benefits: ["Better engagement", "Optimized planning", "Success metrics"],
       useCases: ["Conferences", "Webinars", "Corporate events"],
       href: "/ai-event-management"
+    },
+    {
+      title: "AI Code Review Assistant",
+      description: "Automated code review and quality assurance with AI-powered suggestions, security scanning, and performance optimization.",
+      icon: CpuChipIcon,
+      features: [
+        "Automated code review",
+        "Security vulnerability detection",
+        "Performance optimization suggestions",
+        "Code quality metrics",
+        "Best practices enforcement",
+        "Team collaboration tools"
+      ],
+      color: "from-indigo-500 to-purple-500",
+      price: "$199/month",
+      setupFee: "$800",
+      benefits: ["50% faster reviews", "Better code quality", "Security enhancement"],
+      useCases: ["Software development", "Code quality", "Security audits"],
+      href: "/ai-code-review"
+    },
+    {
+      title: "AI Meeting Transcription & Insights",
+      description: "Advanced meeting transcription with AI-powered insights, action items extraction, and follow-up automation.",
+      icon: DocumentTextIcon,
+      features: [
+        "Real-time transcription",
+        "Speaker identification",
+        "Action items extraction",
+        "Meeting summaries",
+        "Follow-up automation",
+        "Integration with calendars"
+      ],
+      color: "from-cyan-500 to-blue-500",
+      price: "$149/month",
+      setupFee: "$600",
+      benefits: ["100% accuracy", "Time savings", "Better follow-ups"],
+      useCases: ["Meeting management", "Documentation", "Team collaboration"],
+      href: "/ai-meeting-transcription"
+    },
+    {
+      title: "AI Expense Management",
+      description: "Intelligent expense tracking and management with receipt scanning, categorization, and compliance monitoring.",
+      icon: CurrencyDollarIcon,
+      features: [
+        "Receipt scanning & OCR",
+        "Automatic categorization",
+        "Policy compliance checking",
+        "Expense reporting",
+        "Approval workflows",
+        "Analytics dashboard"
+      ],
+      color: "from-emerald-500 to-teal-500",
+      price: "$129/month",
+      setupFee: "$500",
+      benefits: ["90% time savings", "Policy compliance", "Cost insights"],
+      useCases: ["Expense tracking", "Financial management", "Compliance"],
+      href: "/ai-expense-management"
+    },
+    {
+      title: "AI Lead Scoring & Qualification",
+      description: "Intelligent lead scoring and qualification system with behavioral analysis and automated nurturing workflows.",
+      icon: ChartBarIcon,
+      features: [
+        "Behavioral analysis",
+        "Lead scoring algorithms",
+        "Automated qualification",
+        "Nurturing workflows",
+        "CRM integration",
+        "Performance analytics"
+      ],
+      color: "from-orange-500 to-red-500",
+      price: "$179/month",
+      setupFee: "$700",
+      benefits: ["40% better conversion", "Automated qualification", "Higher quality leads"],
+      useCases: ["Sales automation", "Lead generation", "CRM optimization"],
+      href: "/ai-lead-scoring"
+    },
+    {
+      title: "AI Time Tracking & Productivity",
+      description: "Smart time tracking with AI-powered productivity insights, distraction blocking, and work pattern analysis.",
+      icon: ClockIcon,
+      features: [
+        "Automatic time tracking",
+        "Productivity insights",
+        "Distraction blocking",
+        "Work pattern analysis",
+        "Goal setting & tracking",
+        "Team productivity reports"
+      ],
+      color: "from-violet-500 to-purple-500",
+      price: "$99/month",
+      setupFee: "$400",
+      benefits: ["25% productivity increase", "Better focus", "Insightful analytics"],
+      useCases: ["Time management", "Productivity tracking", "Team optimization"],
+      href: "/ai-time-tracking"
+    },
+    {
+      title: "AI Customer Feedback Analysis",
+      description: "Comprehensive customer feedback analysis with sentiment tracking, trend identification, and actionable insights.",
+      icon: ChatBubbleLeftRightIcon,
+      features: [
+        "Multi-channel feedback collection",
+        "Sentiment analysis",
+        "Trend identification",
+        "Actionable insights",
+        "Competitor analysis",
+        "ROI tracking"
+      ],
+      color: "from-rose-500 to-pink-500",
+      price: "$159/month",
+      setupFee: "$600",
+      benefits: ["Real-time insights", "Better decisions", "Customer satisfaction"],
+      useCases: ["Customer research", "Product development", "Market analysis"],
+      href: "/ai-customer-feedback"
+    },
+    {
+      title: "AI Website Performance Optimizer",
+      description: "Automated website performance optimization with AI-powered speed improvements, SEO enhancements, and user experience analysis.",
+      icon: GlobeAltIcon,
+      features: [
+        "Speed optimization",
+        "SEO improvements",
+        "User experience analysis",
+        "Mobile optimization",
+        "Core Web Vitals monitoring",
+        "Automated fixes"
+      ],
+      color: "from-blue-500 to-indigo-500",
+      price: "$189/month",
+      setupFee: "$800",
+      benefits: ["50% faster loading", "Better SEO", "Higher conversions"],
+      useCases: ["Website optimization", "SEO improvement", "Performance monitoring"],
+      href: "/ai-website-optimizer"
+    },
+    {
+      title: "AI Contract Management System",
+      description: "Intelligent contract management with automated review, risk assessment, renewal tracking, and compliance monitoring.",
+      icon: DocumentTextIcon,
+      features: [
+        "Contract review & analysis",
+        "Risk assessment",
+        "Renewal tracking",
+        "Compliance monitoring",
+        "Automated alerts",
+        "Template management"
+      ],
+      color: "from-slate-500 to-gray-500",
+      price: "$299/month",
+      setupFee: "$1,500",
+      benefits: ["Risk reduction", "Time savings", "Better compliance"],
+      useCases: ["Legal management", "Contract tracking", "Risk assessment"],
+      href: "/ai-contract-management"
+    },
+    {
+      title: "AI Social Media Scheduler",
+      description: "Intelligent social media management with optimal posting times, content suggestions, and engagement optimization.",
+      icon: GlobeAltIcon,
+      features: [
+        "Optimal posting times",
+        "Content suggestions",
+        "Hashtag optimization",
+        "Engagement tracking",
+        "Multi-platform management",
+        "Analytics dashboard"
+      ],
+      color: "from-pink-500 to-rose-500",
+      price: "$119/month",
+      setupFee: "$500",
+      benefits: ["300% engagement increase", "Time savings", "Better reach"],
+      useCases: ["Social media marketing", "Content planning", "Brand management"],
+      href: "/ai-social-scheduler"
+    },
+    {
+      title: "AI Password Manager & Security",
+      description: "Advanced password management with AI-powered security analysis, breach monitoring, and automated password generation.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Password generation",
+        "Security analysis",
+        "Breach monitoring",
+        "Team sharing",
+        "Compliance reporting",
+        "Multi-factor authentication"
+      ],
+      color: "from-red-500 to-orange-500",
+      price: "$89/month",
+      setupFee: "$300",
+      benefits: ["Enhanced security", "Convenience", "Compliance"],
+      useCases: ["Password security", "Team management", "Compliance"],
+      href: "/ai-password-manager"
+    },
+    {
+      title: "AI Invoice Generation & Management",
+      description: "Automated invoice generation and management with AI-powered data extraction, payment tracking, and financial reporting.",
+      icon: DocumentTextIcon,
+      features: [
+        "Automated invoice generation",
+        "Payment tracking",
+        "Financial reporting",
+        "Client management",
+        "Tax calculations",
+        "Integration with accounting"
+      ],
+      color: "from-green-500 to-emerald-500",
+      price: "$139/month",
+      setupFee: "$600",
+      benefits: ["90% time savings", "Faster payments", "Better tracking"],
+      useCases: ["Invoice management", "Financial tracking", "Client billing"],
+      href: "/ai-invoice-management"
+    },
+    {
+      title: "AI Employee Onboarding System",
+      description: "Streamlined employee onboarding with AI-powered workflows, document management, and progress tracking.",
+      icon: UserGroupIcon,
+      features: [
+        "Automated workflows",
+        "Document management",
+        "Progress tracking",
+        "Training modules",
+        "Compliance checking",
+        "Integration with HR systems"
+      ],
+      color: "from-teal-500 to-cyan-500",
+      price: "$169/month",
+      setupFee: "$800",
+      benefits: ["Faster onboarding", "Better experience", "Compliance"],
+      useCases: ["HR management", "Employee onboarding", "Training"],
+      href: "/ai-employee-onboarding"
+    },
+    {
+      title: "AI Inventory Forecasting",
+      description: "Advanced inventory forecasting with AI-powered demand prediction, stock optimization, and automated reordering.",
+      icon: CloudIcon,
+      features: [
+        "Demand forecasting",
+        "Stock optimization",
+        "Automated reordering",
+        "Supplier management",
+        "Cost analysis",
+        "Real-time alerts"
+      ],
+      color: "from-purple-500 to-violet-500",
+      price: "$219/month",
+      setupFee: "$1,000",
+      benefits: ["30% cost reduction", "Zero stockouts", "Optimized inventory"],
+      useCases: ["Inventory management", "Supply chain", "Retail optimization"],
+      href: "/ai-inventory-forecasting"
+    },
+    {
+      title: "AI Customer Churn Prediction",
+      description: "Predictive customer churn analysis with early warning systems, retention strategies, and automated interventions.",
+      icon: ChartBarIcon,
+      features: [
+        "Churn prediction models",
+        "Early warning systems",
+        "Retention strategies",
+        "Automated interventions",
+        "Customer segmentation",
+        "ROI tracking"
+      ],
+      color: "from-red-500 to-pink-500",
+      price: "$249/month",
+      setupFee: "$1,200",
+      benefits: ["25% churn reduction", "Better retention", "Cost savings"],
+      useCases: ["Customer retention", "Churn prevention", "Lifetime value"],
+      href: "/ai-churn-prediction"
+    },
+    {
+      title: "AI API Management Platform",
+      description: "Comprehensive API management with AI-powered monitoring, security, documentation, and performance optimization.",
+      icon: CogIcon,
+      features: [
+        "API monitoring",
+        "Security management",
+        "Documentation generation",
+        "Performance optimization",
+        "Rate limiting",
+        "Analytics dashboard"
+      ],
+      color: "from-indigo-500 to-blue-500",
+      price: "$199/month",
+      setupFee: "$900",
+      benefits: ["Better performance", "Enhanced security", "Easy management"],
+      useCases: ["API development", "Microservices", "Integration"],
+      href: "/ai-api-management"
+    },
+    {
+      title: "AI Email Signature Generator",
+      description: "Professional email signature generator with AI-powered design, compliance checking, and brand consistency.",
+      icon: EnvelopeIcon,
+      features: [
+        "AI-powered design",
+        "Compliance checking",
+        "Brand consistency",
+        "Mobile optimization",
+        "Team management",
+        "Analytics tracking"
+      ],
+      color: "from-amber-500 to-orange-500",
+      price: "$79/month",
+      setupFee: "$300",
+      benefits: ["Professional appearance", "Brand consistency", "Time savings"],
+      useCases: ["Email branding", "Team management", "Professional image"],
+      href: "/ai-email-signature"
+    },
+    {
+      title: "AI Meeting Room Booking System",
+      description: "Smart meeting room management with AI-powered scheduling, conflict resolution, and resource optimization.",
+      icon: ClockIcon,
+      features: [
+        "Smart scheduling",
+        "Conflict resolution",
+        "Resource optimization",
+        "Integration with calendars",
+        "Usage analytics",
+        "Mobile app"
+      ],
+      color: "from-cyan-500 to-teal-500",
+      price: "$129/month",
+      setupFee: "$500",
+      benefits: ["Better utilization", "Conflict reduction", "Easy management"],
+      useCases: ["Office management", "Resource planning", "Meeting optimization"],
+      href: "/ai-meeting-rooms"
+    },
+    {
+      title: "AI Customer Support Ticket Routing",
+      description: "Intelligent ticket routing and prioritization with AI-powered categorization, sentiment analysis, and automated responses.",
+      icon: PhoneIcon,
+      features: [
+        "Smart ticket routing",
+        "Priority classification",
+        "Sentiment analysis",
+        "Automated responses",
+        "Escalation management",
+        "Performance analytics"
+      ],
+      color: "from-blue-500 to-indigo-500",
+      price: "$179/month",
+      setupFee: "$700",
+      benefits: ["Faster resolution", "Better routing", "Improved satisfaction"],
+      useCases: ["Customer support", "Ticket management", "Service optimization"],
+      href: "/ai-ticket-routing"
     }
   ];
 
