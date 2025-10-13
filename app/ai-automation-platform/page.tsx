@@ -1,7 +1,7 @@
-import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';'
-import EnhancedSEO from '../components/EnhancedSEO';'
-import ResponsiveContainer from '../components/ResponsiveContainer';'
-import FuturisticCard from '../components/FuturisticCard';'
+import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';
+import EnhancedSEO from '../components/EnhancedSEO';
+import ResponsiveContainer from '../components/ResponsiveContainer';
+import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 
 const AIAutomationPlatform = () => {
@@ -15,56 +15,23 @@ const AIAutomationPlatform = () => {
     {
       title: "Smart Decision Making",
       description: "AI-driven decision making for automated business processes",
-<<<<<<< HEAD
 
-      icon: <Brain className="w-6 h-6" />,
-
-<<<<<<< HEAD
-=======
-icon: <Brain className="w-6 h-6" />,
-icon: <Circle className="w-6 h-6" />,
-icon: <div className="w-6 h-6" />,
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       color: "from-green-500 to-emerald-500"
-=======
-      color: "from-green-500 to-emerald-500"}
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
+
     },
     {
       title: "Process Optimization",
       description: "Continuously optimize processes using machine learning",
-<<<<<<< HEAD
 
-      icon: <Settings className="w-6 h-6" />,
-
-<<<<<<< HEAD
-=======
-icon: <Settings className="w-6 h-6" />,
-icon: <Circle className="w-6 h-6" />,
-icon: <div className="w-6 h-6" />,
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       color: "from-purple-500 to-pink-500"
-=======
-      color: "from-purple-500 to-pink-500"}
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
+
     },
     {
       title: "Integration Hub",
       description: "Connect and automate across all your business systems",
-<<<<<<< HEAD
 
-      icon: <Zap className="w-6 h-6" />,
-
-<<<<<<< HEAD
-=======
-icon: <Zap className="w-6 h-6" />,
-icon: <Circle className="w-6 h-6" />,
-icon: <div className="w-6 h-6" />,
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       color: "from-orange-500 to-red-500"
-=======
-      color: "from-orange-500 to-red-500"}
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
+
     }
   ];
 
@@ -92,15 +59,7 @@ icon: <div className="w-6 h-6" />,
           <ResponsiveContainer>
             <div className="relative z-10 text-center py-20">
               <div className="flex items-center justify-center mb-6">
-<<<<<<< HEAD
 
-                <Brain className="w-4 h-4 text-cyan-400 mr-2" />
-
-=======
-<Brain className="w-4 h-4 text-cyan-400 mr-2" />
-<Circle className="w-4 h-4 text-cyan-400 mr-2" />
-<div className="w-4 h-4 text-cyan-400 mr-2" />
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
                 <span className="text-cyan-400 text-sm font-medium">Intelligent Automation</span>
               </div>
               
@@ -121,15 +80,7 @@ icon: <div className="w-6 h-6" />,
                 </FuturisticButton>
                 <FuturisticButton
                   variant="outline"
-<<<<<<< HEAD
 
-                  icon={<Play className="w-5 h-5" />}
-
-=======
-icon={<Play className="w-5 h-5" />}
-icon={<Circle className="w-5 h-5" />}
-icon={<div className="w-5 h-5" />}
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
                 >
                   View Demo
                 </FuturisticButton>
@@ -203,15 +154,7 @@ icon={<div className="w-5 h-5" />}
               </p>
               <FuturisticButton
                 size="lg"
-<<<<<<< HEAD
 
-                icon={<Zap className="w-6 h-6" />}
-
-=======
-icon={<Zap className="w-6 h-6" />}
-icon={<Circle className="w-6 h-6" />}
-icon={<div className="w-6 h-6" />}
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
               >
                 Start Your Automation Journey
               </FuturisticButton>

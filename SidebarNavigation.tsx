@@ -1,13 +1,13 @@
-import React from 'react';'
+import React from 'react';
 import { User, X  } from 'lucide-react';
 interface SidebarNavigationProps {
   isOpen: boolean;
   onClose: () => void;}
 }
 '
-const navigationItems = [{ name: 'Home', href: '/', icon: User },';'
-  { name: 'Profile', href: '/profile', icon: User },';'
-  { name: 'Settings', href: '/settings', icon: User },';'
+const navigationItems = [{ name: 'Home', href: '/', icon: User },';
+  { name: 'Profile', href: '/profile', icon: User },';
+  { name: 'Settings', href: '/settings', icon: User },';
   { name: 'Help', href: '/help', icon: User },';
 ];
 
@@ -21,7 +21,7 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
           <button onClick={onClose} className="p-2 hover:bg-gray-100 rounded">;
             <X className="w-5 h-5" />;
           </button>;
-        </div>;
+        </div>
         <nav className="p-4">;
           {navigationItems.map((item) => (
             <a;}
@@ -34,8 +34,8 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
             </a>;
           ))}
         </nav>;
-      </div>;
-    </div>;
+      </div>
+    </div>
   );
 };
 

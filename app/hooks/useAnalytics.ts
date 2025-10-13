@@ -1,4 +1,4 @@
-{ useContext } from 'react';'
+{ useContext } from 'react';
 { AnalyticsContext } from '../contexts/AnalyticsContext';
 export const useAnalytics = () => {
   

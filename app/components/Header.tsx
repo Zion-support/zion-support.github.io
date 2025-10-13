@@ -1,24 +1,24 @@
-import React from 'react';'
-{ useState } from 'react';'
+import React from 'react';
+{ useState } from 'react';
 import { Link  , Menu,  X,  ChevronDown   } from 'lucide-react';
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 '}
-  const navigationItems = [{ name: 'Home', href: '/' },';'
+  const navigationItems = [{ name: 'Home', href: '/' },';
     { name: 'About', href: '/about' },';
     { '
-      name: 'Services',';'
+      name: 'Services',';
       href: '/services',';'}
-      submenu: [{ name: 'AI Services', href: '/ai-services' },';'
-        { name: 'IT Services', href: '/it-services' },';'
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },';'
+      submenu: [{ name: 'AI Services', href: '/ai-services' },';
+        { name: 'IT Services', href: '/it-services' },';
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },';
         { name: 'Digital Transformation', href: '/digital-transformation' }';
       ];
     },'
-    { name: 'Solutions', href: '/solutions' },';'
-    { name: 'Case Studies', href: '/case-studies' },';'
-    { name: 'Blog', href: '/blog' },';'
+    { name: 'Solutions', href: '/solutions' },';
+    { name: 'Case Studies', href: '/case-studies' },';
+    { name: 'Blog', href: '/blog' },';
     { name: 'Contact', href: '/contact' }';
   ];
 
@@ -31,7 +31,7 @@ const Header: React.FC = () => {
             <Link to="/" className="text-2xl font-bold text-white">;
               Zion Tech Group;
             </Link>;
-          </div>;
+          </div>
           {/* Desktop Navigation */}
           <div className="hidden md:block">;
             <div className="ml-10 flex items-baseline space-x-4">;
@@ -58,12 +58,12 @@ const Header: React.FC = () => {
                           {subItem.name}
                         </Link>;
                       ))}
-                    </div>;
+                    </div>
                   )}
-                </div>;
+                </div>
               ))}
-            </div>;
-          </div>;
+            </div>
+          </div>
           {/* CTA Button */}
           <div className="hidden md:block">;
             <Link;
@@ -72,7 +72,7 @@ const Header: React.FC = () => {
             >;
               Get Started;
             </Link>;
-          </div>;
+          </div>
           {/* Mobile menu button */}
           <div className="md:hidden">;
             <button;
@@ -81,8 +81,8 @@ const Header: React.FC = () => {
             >;
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>;
-          </div>;
-        </div>;
+          </div>
+        </div>
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">;
@@ -108,9 +108,9 @@ const Header: React.FC = () => {
                           {subItem.name}
                         </Link>;
                       ))}
-                    </div>;
+                    </div>
                   )}
-                </div>;
+                </div>
               ))}
               <div className="pt-4">;
                 <Link;
@@ -120,11 +120,11 @@ const Header: React.FC = () => {
                 >;
                   Get Started;
                 </Link>;
-              </div>;
-            </div>;
-          </div>;
+              </div>
+            </div>
+          </div>
         )}
-      </div>;
+      </div>
     </nav>;
   );
 };

@@ -1,5 +1,5 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
 import { 
   ArrowRightIcon, 
@@ -14,20 +14,13 @@ import {
   RocketLaunchIcon,
   SparklesIcon,
   BoltIcon;'}
-} from '@heroicons/react/24/outline';'
-import FuturisticBackground from '../components/FuturisticBackground';'
-import NeonButton from '../components/NeonButton';'
-import AnimatedCard from '../components/AnimatedCard';'
+} from '@heroicons/react/24/outline';
+import FuturisticBackground from '../components/FuturisticBackground';
+import NeonButton from '../components/NeonButton';
+import AnimatedCard from '../components/AnimatedCard';
 import { services } from '../data/servicesData';
 
-<<<<<<< HEAD
-export default function HomePage()  {
 
-  const structuredData = {
-=======
-export default function HomePage() {
-const structuredData = {
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Zion Tech Group",

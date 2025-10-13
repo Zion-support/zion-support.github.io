@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet , Right,  Wifi,  Circle,  Zap,  Globe,  Smartphone  } from 'lucide-react';
 
 const FiveGSolutionsPage: React.FC = () => {
@@ -23,47 +23,18 @@ const FiveGSolutionsPage: React.FC = () => {
     },
     {
       icon: Wifi,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-      title: 'IoT Connectivity',
-      description: 'Connect thousands of IoT devices with 5G technology',
-      benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
 
-=======
-title: 'IoT Connectivity',
-      description: 'Connect thousands of IoT devices with 5G technology',
-      benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
-'
-      title: 'IoT Connectivity','
-      description: 'Connect thousands of IoT devices with 5G technology','
-      benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
     }
   ];
 
   const solutions = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-      title: '5G Network Infrastructure',
-=======
-title: '5G Network Infrastructure',
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       description: 'Complete 5G network setup and optimization',
       price: 'Starting at $50,000',
       features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']
-=======
-'
-      title: '5G Network Infrastructure','
-      description: 'Complete 5G network setup and optimization','
-      price: 'Starting at $50,000','
-      features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']}
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
+
     },
     {'
       title: '5G Mobile Applications','
@@ -76,14 +47,8 @@ title: '5G Network Infrastructure',
       description: 'IoT device connectivity and management platform','
       price: 'Starting at $35,000','
       features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
+
     }
   ];
 

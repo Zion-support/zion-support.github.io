@@ -1,9 +1,9 @@
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 'use client';
 const EnhancedFooter: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">;
+    <div className="min-h-screen bg-white">
       <Helmet>
         <title>Enhanced Footer - Zion Tech Group</title>
         <meta name="description" content="Professional enhanced footer services by Zion Tech Group." />
@@ -18,9 +18,9 @@ const EnhancedFooter: React.FC = () => {
             Professional enhanced footer services;
             designed to help your business grow and succeed.;
           </p>;
-        </div>;
+        </div>
       </section>;
-    </div>;
+    </div>
   );
 };
 

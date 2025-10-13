@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet , Right,  Play,  User,  Star,  Circle,  Clock   } from 'lucide-react';
 const TutorialsPage: React.FC = () => {
   const tutorials = [{
@@ -106,8 +106,8 @@ const TutorialsPage: React.FC = () => {
               <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">;
                 Browse All;
               </button>;
-            </div>;
-          </div>;
+            </div>
+          </div>
         </section>;
         {/* Categories */}
         <section className="py-10 px-4">;
@@ -121,8 +121,8 @@ const TutorialsPage: React.FC = () => {
                   {category.name} ({category.count})
                 </button>;
               ))}
-            </div>;
-          </div>;
+            </div>
+          </div>
         </section>;
         {/* Tutorials Grid */}
         <section className="py-20 px-4">;
@@ -133,7 +133,7 @@ const TutorialsPage: React.FC = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {tutorials.map((tutorial) => (}
                 <div key={tutorial.id} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">;
-                  <div className="text-4xl mb-4">{tutorial.thumbnail}</div>;
+                  <div className="text-4xl mb-4">{tutorial.thumbnail}</div>
                   <div className="flex items-center justify-between mb-3">;
                     <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-medium">;
                       {tutorial.level}
@@ -141,8 +141,8 @@ const TutorialsPage: React.FC = () => {
                     <div className="flex items-center text-yellow-400">;
                       <Star className="w-4 h-4 fill-current" />;
                       <span className="ml-1 text-sm">{tutorial.rating}</span>;
-                    </div>;
-                  </div>;
+                    </div>
+                  </div>
                   <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">;
                     {tutorial.title}
                   </h3>;
@@ -156,18 +156,18 @@ const TutorialsPage: React.FC = () => {
                       <User className="w-4 h-4 mr-1" />;
                       {tutorial.students} students;
                     </span>;
-                  </div>;
+                  </div>
                   <div className="flex items-center justify-between">;
                     <span className="text-cyan-400 text-sm font-medium">{tutorial.instructor}</span>;
                     <button className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">;
                       Start Tutorial;
                       <Right className="w-4 h-4 ml-1" />;
                     </button>;
-                  </div>;
-                </div>;
+                  </div>
+                </div>
               ))}
-            </div>;
-          </div>;
+            </div>
+          </div>
         </section>;
         {/* CTA Section */}
         <section className="py-20 px-4 bg-slate-800/30">;
@@ -186,10 +186,10 @@ const TutorialsPage: React.FC = () => {
               <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">;
                 View All Tutorials;
               </button>;
-            </div>;
-          </div>;
+            </div>
+          </div>
         </section>;
-      </div>;
+      </div>
     </>
   );
 };

@@ -1,9 +1,9 @@
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 'use client';
 const Main: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">;
+    <div className="min-h-screen bg-white">
       <Helmet>
         <title>Main - Zion Tech Group</title>
         <meta name="description" content="Professional main services by Zion Tech Group." />
@@ -18,7 +18,7 @@ const Main: React.FC = () => {
             Professional main services;
             designed to help your business grow and succeed.;
           </p>;
-        </div>;
+        </div>
       </section>;
       {/* Content Section */}
       <section className="py-16 px-4">;
@@ -44,7 +44,7 @@ const Main: React.FC = () => {
                   Ongoing support;
                 </li>;
               </ul>;
-            </div>;
+            </div>
             <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">;
               <h3 className="text-2xl font-bold mb-4">Get Started</h3>;
               <p className="mb-6">;
@@ -56,9 +56,9 @@ const Main: React.FC = () => {
               >;
                 Contact Us;
               </a>;
-            </div>;
-          </div>;
-        </div>;
+            </div>
+          </div>
+        </div>
       </section>;
       {/* CTA Section */}
       <section className="py-16 px-4 bg-blue-600">;
@@ -76,9 +76,9 @@ const Main: React.FC = () => {
           >;
             Get Started Today;
           </a>;
-        </div>;
+        </div>
       </section>;
-    </div>;
+    </div>
   );
 };
 

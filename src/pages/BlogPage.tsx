@@ -18,7 +18,7 @@ const BlogPage: React.FC = () => {
                     <span>January 15, 2024</span>;
                     <span>•</span>;
                     <span>AI Solutions</span>;
-                  </div>;
+                  </div>
                   <h2 className="text-xl font-semibold mb-3">The Future of AI in Business</h2>;
                   <p className="text-gray-300 mb-4">;
                     Exploring how artificial intelligence is transforming modern business operations.;
@@ -28,9 +28,9 @@ const BlogPage: React.FC = () => {
                     <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition-colors">;
                       Read Article;
                     </button>;
-                  </div>;
+                  </div>
                 </article>;
-              </div>;
+              </div>
             </section>;
             <section>;
               <h2 className="text-2xl font-semibold mb-6">Stay Updated</h2>;
@@ -46,11 +46,11 @@ const BlogPage: React.FC = () => {
                 <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md transition-colors">;
                   Subscribe;
                 </button>;
-              </div>;
+              </div>
             </section>;
-          </div>;
-        </div>;
-      </div>;
+          </div>
+        </div>
+      </div>
     </>
   );
 };

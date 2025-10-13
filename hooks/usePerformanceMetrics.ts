@@ -1,28 +1,4 @@
-import { useState, useEffect } from 'react;
-interface PerformanceMetrics {
-  fcp?: number;
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  ttfb?: number;
-  fmp?: number;
-  tti?: number;
-  tbt?: number;
-}
-
-interface PerformanceEntryExtended extends PerformanceEntry {
-  processingStart?: number;
-  hadRecentInput?: boolean;
-  value?: number;
-  responseStart?: number;
-  requestStart?: number;
-}
-
-export function usePerformanceMetrics() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
-  const [isSupported, setIsSupported] = useState(false);
-
-  useEffect(() => {
+import { useState, useEffect  } from 'lucide-react';
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {';
       return;
     }

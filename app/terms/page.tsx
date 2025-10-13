@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const TermsPage: React.FC = () => {
   return (
@@ -21,7 +21,7 @@ const TermsPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
               Please read these terms carefully before using our services.;
             </p>;
-          </div>;
+          </div>
         </section>;
         {/* Content Section */}
         <section className="py-20 px-4">;
@@ -74,11 +74,11 @@ const TermsPage: React.FC = () => {
                 <p className="text-gray-400 text-sm mt-8">;
                   Last updated: {new Date().toLocaleDateString()}
                 </p>;
-              </div>;
-            </div>;
-          </div>;
+              </div>
+            </div>
+          </div>
         </section>;
-      </div>;
+      </div>
     </>
   );
 };

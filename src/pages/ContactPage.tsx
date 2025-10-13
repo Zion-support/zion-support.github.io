@@ -20,15 +20,15 @@ const ContactPage: React.FC = () => {
                     <a href="mailto:info@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">;
                       info@ziontechgroup.com;
                     </a>;
-                  </div>;
+                  </div>
                   <div>;
                     <h3 className="text-lg font-semibold"></h3>;
                     <a href="tel:+1234567890" className="text-blue-400 hover:text-blue-300">;
                       +1 (234) 567-890;
                     </a>;
-                  </div>;
-                </div>;
-              </div>;
+                  </div>
+                </div>
+              </div>
               <div>;
                 <h2 className="text-2xl font-semibold mb-6">Send us a Message</h2>;
                 <form className="space-y-4">;
@@ -43,7 +43,7 @@ const ContactPage: React.FC = () => {
                       className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500";
                       required;
                     />;
-                  </div>;
+                  </div>
                   <div>;
                     <label htmlFor="email" className="block text-sm font-medium mb-2">;
                       Email;
@@ -55,7 +55,7 @@ const ContactPage: React.FC = () => {
                       className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500";
                       required;
                     />;
-                  </div>;
+                  </div>
                   <div>;
                     <label htmlFor="message" className="block text-sm font-medium mb-2">;
                       Message;
@@ -67,7 +67,7 @@ const ContactPage: React.FC = () => {
                       className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500";
                       required;
                     ></textarea>;
-                  </div>;
+                  </div>
                   <button;
                     type="submit";
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition-colors";
@@ -75,11 +75,11 @@ const ContactPage: React.FC = () => {
                     Send Message;
                   </button>;
                 </form>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

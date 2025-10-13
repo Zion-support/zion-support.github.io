@@ -1,9 +1,9 @@
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 'use client';
 export default function Page() {
   return (
-    <div className="min-h-screen bg-white">;
+    <div className="min-h-screen bg-white">
       <Helmet>
         <title>- Zion Tech Group</title>
         <meta name="description" content="Professional navigation services by Zion Tech Group." />
@@ -23,7 +23,7 @@ export default function Page() {
               <p className="text-blue-700">;
                 Our team of experts delivers cutting-edge navigation solutions.;
               </p>;
-            </div>;
+            </div>
             <div className="bg-green-50 border border-green-200 rounded-lg p-6">;
               <h3 className="text-lg font-semibold text-green-900 mb-2">;
                 Custom Implementation;
@@ -31,7 +31,7 @@ export default function Page() {
               <p className="text-green-700">;
                 Tailored navigation implementations for your specific requirements.;
               </p>;
-            </div>;
+            </div>
             <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">;
               <h3 className="text-lg font-semibold text-purple-900 mb-2">;
                 24/7 Support;
@@ -39,15 +39,15 @@ export default function Page() {
               <p className="text-purple-700">;
                 Round-the-clock support for all your navigation needs.;
               </p>;
-            </div>;
-          </div>;
+            </div>
+          </div>
           <div className="mt-12">;
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
               Get Started Today;
             </button>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
+          </div>
+        </div>
+      </div>
+    </div>
   );}
 }'

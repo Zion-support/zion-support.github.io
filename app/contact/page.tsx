@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { Helmet , Circle,  Send,  Phone,  Mail,  MapPin,  Clock  } from 'lucide-react';
 
 export default function ContactPage()    {
@@ -34,23 +34,11 @@ export default function ContactPage()    {
 
   const contactInfo = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-      icon: 'Phone',
-=======
-icon: 'Phone',
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       title: 'Phone',
       value: '+1 (555) 123-4567',
       description: 'Mon-Fri 9AM-6PM EST'
-=======
-'
-      icon: 'Phone','
-      title: 'Phone','
-      value: '+1 (555) 123-4567','
-      description: 'Mon-Fri 9AM-6PM EST'}
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
+
     },
     {'
       icon: 'Email','
@@ -66,40 +54,11 @@ icon: 'Phone',
     },
     {'
       icon: 'Clock',
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
-=======
-icon: Phone,
-      title: 'Phone',
-      value: '+1 (555) 123-4567',
-      description: 'Mon-Fri 9AM-6PM EST'
-    },
-    {
-      icon: Mail,
-      title: 'Email',
-      value: 'contact@ziontechgroup.com',
-      description: 'We respond within 24 hours'
-    },
-    {
-      icon: MapPin,
-      title: 'Address',
-      value: '123 Tech Street, Suite 100',
-      description: 'San Francisco, CA 94105'
-    },
-    {
-      icon: Clock,
-      title: 'Business Hours',
-      value: 'Monday - Friday',
-value: 'Monday - Friday',
-value: 'Monday - Friday',
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       description: '9:00 AM - 6:00 PM EST'
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e'
+
       description: '9:00 AM - 6:00 PM EST'}
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
+
     }
   ];
 

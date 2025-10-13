@@ -117,4 +117,4 @@ const App: React.FC = () => {
             </Routes>;
           </Suspense>;
           <Footer />;
-        </div>;
+        </div>

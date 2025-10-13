@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 'use client';
       {/* Content Section */}
       <section className="py-16 px-4">;
@@ -24,7 +24,7 @@ import React from 'react';'
                   Ongoing support;
                 </li>;
               </ul>;
-            </div>;
+            </div>
             <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">;
               <h3 className="text-2xl font-bold mb-4">Get Started</h3>;
               <p className="mb-6">;
@@ -36,7 +36,7 @@ import React from 'react';'
               >;
                 Contact Us;
               </a>;
-            </div>;
-          </div>;
-        </div>;
+            </div>
+          </div>
+        </div>
       </section>;'

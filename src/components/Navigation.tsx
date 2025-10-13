@@ -1,18 +1,7 @@
 import React from 'react';
-import { useState, useEffect } from 'react;
-import { } from 'react-router-dom;
-import { ChevronDown, Menu, X, Right, Star, Square, } from 'lucide-react;
-const : React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [aiServicesOpen, setAiServicesOpen] = useState(false);
-  const [itServicesOpen, setItServicesOpen] = useState(false);
-  const [microSaasOpen, setMicroSaasOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-      setIsScrolled(window.scrollY > 50);
-    };
-
+import { useState, useEffect  } from 'lucide-react';
+import {   } from 'lucide-react';
+import { ChevronDown, Menu, X, Right, Star, Square,  } from 'lucide-react';
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
     return () => {

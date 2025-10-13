@@ -1,23 +1,7 @@
-<<<<<<< HEAD
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
-import { Link } from 'react-router-dom';
-import { ExclamationTriangleIcon, ArrowPathIcon } from '@heroicons/react/24/outline';
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
-=======
-import { Link } from 'react-router-dom';
-import { ExclamationTriangleIcon, ArrowPathIcon } from '@heroicons/react/24/outline';
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
-=======
-import React, { Component, ErrorInfo, ReactNode } from 'react';'
-import { AlertTriangle,  RefreshCw,  Home , Link  } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
+
+
+
+
 
 interface Props {
   children: ReactNode;
@@ -26,27 +10,10 @@ interface Props {
 
 interface State {
   hasError: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-error: Error | null;
-<<<<<<< HEAD
-  errorInfo: ErrorInfo | null;
-=======
-error?: Error;
-  errorInfo?: ErrorInfo;
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
-=======
-  error?: Error;
-  errorInfo?: ErrorInfo;
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
-=======
-  errorInfo: ErrorInfo | null;}
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
+
+
+
+
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -54,13 +21,7 @@ class ErrorBoundary extends Component<Props, State> {
     super(props);
     this.state = {
       hasError: false,
-<<<<<<< HEAD
-      error: undefined,
-      errorInfo: undefined
-=======
-      error: null,
-      errorInfo: null}
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
+
     };
   }
 
@@ -68,37 +29,16 @@ class ErrorBoundary extends Component<Props, State> {
     return {
       hasError: true,
       error,
-<<<<<<< HEAD
-      errorInfo: undefined
-    };
-  }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-<<<<<<< HEAD
-    
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
+
     this.setState({
       error,
       errorInfo
     });
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Log error to console in development
-=======
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
+
 
     // Log error to console in development
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
+
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
@@ -111,28 +51,9 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   handleRetry = () => {
-<<<<<<< HEAD
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null
-    });
-<<<<<<< HEAD
-=======
-this.setState({
-      error,
-      errorInfo
-    });
-}
 
-  handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
-=======
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
+
+
   };
 
   render() {
@@ -145,19 +66,9 @@ this.setState({
         <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
           <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">
             <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<AlertTriangle className="w-8 h-8 text-red-400" />
-=======
-<ExclamationTriangleIcon className="w-8 h-8 text-red-400" />
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
-              <AlertTriangle className="w-8 h-8 text-red-400" />
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
-=======
-              <ExclamationTriangleIcon className="w-8 h-8 text-red-400" />
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
+
+
+
             </div>
             
             <h1 className="text-2xl font-bold text-white mb-4">
@@ -165,46 +76,17 @@ this.setState({
             </h1>
             
             <p className="text-gray-300 mb-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-=======
-              We're sorry, but something unexpected happened. Please try refreshing the page.
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
-=======
-We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
-We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
-=======
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
-=======
-      errorInfo: null}
-    };
-  }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {'
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
 
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
+
+
+
             </p>
 '
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
                 <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-Error Details (Development Only)
-=======
-                  Error Details (Development Only)
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
+
                 </summary>
                 <div className="mt-2 p-4 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto">
                   <div className="mb-2">}
@@ -228,12 +110,7 @@ Error Details (Development Only)
                 className="flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
               >
                 <RefreshCw className="w-4 h-4" />
-<<<<<<< HEAD
-=======
-Error Details (Development)
-=======
-                  Error Details (Development)
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
+
                 </summary>
                 <pre className="mt-2 text-xs text-red-300 bg-slate-900 p-3 rounded overflow-auto">
                   {this.state.error.toString()}
@@ -248,24 +125,14 @@ Error Details (Development)
                 className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <ArrowPathIcon className="w-5 h-5" />
-<<<<<<< HEAD
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
+
+
                 Try Again
               </button>
               
               <Link
                 to="/"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-className="flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
-=======
-                className="flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
+
               >
                 <Home className="w-4 h-4" />
                 Go Home
@@ -280,22 +147,13 @@ className="flex items-center justify-center gap-2 border-2 border-purple-400 tex
                 </Link>
               </p>
             </div>
-<<<<<<< HEAD
-=======
-className="block w-full border-2 border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
-=======
-                className="block w-full border-2 border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
+
               >
                 Go Home
               </Link>
             </div>
-<<<<<<< HEAD
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
+
+
           </div>
         </div>
       );
@@ -305,8 +163,4 @@ className="block w-full border-2 border-purple-400 text-purple-300 px-6 py-3 rou
   }
 }
 
-<<<<<<< HEAD
-export default ErrorBoundary;
-=======
-export default ErrorBoundary;'
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
+

@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
@@ -26,7 +26,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   noIndex = false,
   noFollow = false}
 }) => {'
-  const siteName = 'Zion Tech Group';'
+  const siteName = 'Zion Tech Group';
   const siteUrl = 'https://ziontechgroup.com';}
   const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl;'
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;

@@ -1,4 +1,4 @@
-{ createContext, useContext, useState, useEffect } from 'react';'
+{ createContext, useContext, useState, useEffect } from 'react';
 'use client';
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void;

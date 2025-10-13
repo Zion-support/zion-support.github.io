@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 interface NeonButtonProps {
@@ -6,7 +6,7 @@ interface NeonButtonProps {
   to?: string;
   href?: string;
   onClick?: () => void;'
-  variant?: 'primary' | 'secondary' | 'accent';'
+  variant?: 'primary' | 'secondary' | 'accent';
   size?: 'sm' | 'md' | 'lg';
   className?: string;}
 }

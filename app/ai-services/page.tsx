@@ -1,109 +1,38 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';'react-helmet-async;
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react;
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react;
-import FuturisticBackground from '../components/FuturisticBackground;
-=======
-import React from 'react';'
-import { Helmet , Right,  Star,  Brain,  BarChart3,  Zap,  FileText,  MessageSquare,  Shield   } from 'lucide-react';'
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield  } from 'lucide-react';'
-FuturisticBackground from '../components/FuturisticBackground';
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
+
 const AiServicesPage: React.FC = () => {
   const services = [{
       icon: Brain,'
-      title: 'AI Consulting',';'
-      description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.',';'
+      title: 'AI Consulting',';
+      description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.',';
       color: 'from-purple-500 to-pink-500'';}
     },
     {
       icon: BarChart3,'
-      title: 'AI Analytics',';'
-      description: 'Advanced analytics solutions powered by machine learning and AI algorithms.',';'
+      title: 'AI Analytics',';
+      description: 'Advanced analytics solutions powered by machine learning and AI algorithms.',';
       color: 'from-blue-500 to-cyan-500'';}
     },
     {
       icon: Zap,'
-      title: 'AI Automation',';'
-      description: 'Intelligent automation solutions to streamline your business processes.',';'
+      title: 'AI Automation',';
+      description: 'Intelligent automation solutions to streamline your business processes.',';
       color: 'from-green-500 to-emerald-500'';}
     },
     {
       icon: FileText,'
-      title: 'AI Content Generation',';'
-      description: 'AI-powered content creation for marketing, documentation, and communication.',';'
+      title: 'AI Content Generation',';
+      description: 'AI-powered content creation for marketing, documentation, and communication.',';
       color: 'from-orange-500 to-red-500'';}
     },
     {
       icon: MessageSquare,'
-      title: 'AI Customer Service',';'
-      description: 'Intelligent chatbots and customer service solutions powered by AI.',';'
+      title: 'AI Customer Service',';
+      description: 'Intelligent chatbots and customer service solutions powered by AI.',';
       color: 'from-indigo-500 to-purple-500'';}
     },
     {
-<<<<<<< HEAD
-      icon: icon: Shield,
-      title: 'AI Security',';
-      description: 'AI-powered security solutions to protect your business and data.',';
-      color: 'from-cyan-500 to-blue-500'';
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Right, Star, Zap } from 'lucide-react';
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react';
-import FuturisticBackground from '../components/FuturisticBackground';
 
-const AiServicesPage: React.FC = () => {
-  const services = [
-    {
-icon: Star,
-icon: Brain,
-      title: 'AI Consulting',
-      description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-icon: Zap,
-icon: BarChart3,
-      title: 'AI Analytics',
-      description: 'Advanced analytics solutions powered by machine learning and AI algorithms.',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-icon: Star,
-icon: Zap,
-      title: 'AI Automation',
-      description: 'Intelligent automation solutions to streamline your business processes.',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-icon: Zap,
-icon: FileText,
-      title: 'AI Content Generation',
-      description: 'AI-powered content creation for marketing, documentation, and communication.',
-      color: 'from-orange-500 to-red-500'
-    },
-    {
-icon: Star,
-icon: MessageCircle,
-      title: 'AI Customer Service',
-      description: 'Intelligent chatbots and customer service solutions powered by AI.',
-      color: 'from-indigo-500 to-purple-500'
-    },
-    {
-icon: Zap,
-icon: Shield,
-      title: 'AI Security',
-      description: 'AI-powered security solutions to protect your business and data.',
-      color: 'from-cyan-500 to-blue-500'
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
-      icon: Shield,'
-      title: 'AI Security',';'
-      description: 'AI-powered security solutions to protect your business and data.',';'
-      color: 'from-cyan-500 to-blue-500'';}
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
+
     }
   ];
 
@@ -161,8 +90,8 @@ icon: Shield,
                 <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">;
                   Learn More;
                 </button>;
-              </div>;
-            </div>;
+              </div>
+            </div>
           </section>;
           {/* Services Grid */}
           <section className="py-20 px-4">;
@@ -177,13 +106,13 @@ icon: Shield,
                       aria-hidden="true";
                     >;
                       <service.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />;
-                    </div>;
+                    </div>
                     <h3 className="text-lg font-semibold text-white mb-2 text-center">{service.title}</h3>;
                     <p className="text-gray-300 text-sm text-center">{service.description}</p>;
-                  </div>;
+                  </div>
                 ))}
-              </div>;
-            </div>;
+              </div>
+            </div>
           </section>;
           {/* Testimonials Section */}
           <section className="py-20 px-4 bg-slate-800/30">;
@@ -198,16 +127,16 @@ icon: Shield,
                       {[...Array(testimonial.rating)].map((_, i) => (}
                         <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />;
                       ))}
-                    </div>;
+                    </div>
                     <p className="text-gray-300 mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>;
                     <div>;
                       <p className="text-white font-semibold">{testimonial.name}</p>;
                       <p className="text-cyan-400 text-sm">{testimonial.role}, {testimonial.company}</p>;
-                    </div>;
-                  </div>;
+                    </div>
+                  </div>
                 ))}
-              </div>;
-            </div>;
+              </div>
+            </div>
           </section>;
           {/* CTA Section */}
           <section className="py-20 px-4">;
@@ -226,10 +155,10 @@ icon: Shield,
                 <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">;
                   Schedule Consultation;
                 </button>;
-              </div>;
-            </div>;
+              </div>
+            </div>
           </section>;
-        </div>;
+        </div>
       </FuturisticBackground>;
     </>
   );

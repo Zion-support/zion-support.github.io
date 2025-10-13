@@ -5,27 +5,18 @@ const AccessibilityEnhancer: React.FC = () => {
     // Skip to main content functionality
     const addSkipLink = () => {'
       const skipLink = document.createElement('a');'
-      skipLink.href = '#main-content';'
-      skipLink.textContent = 'Skip to main content';'
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded z-50';'
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded z-50';
       skipLink.style.zIndex = '9999';
       document.body.insertBefore(skipLink, document.body.firstChild);}
     };
 
-<<<<<<< HEAD
-// Focus management for keyboard navigation
-<<<<<<< HEAD
-=======
-    // Focus management for keyboard navigation
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
+
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation');
-=======
-    const handleKeyDown = (event: KeyboardEvent) => {'
-      if (event.key === 'Tab') {'
-        document.body.classList.add('keyboard-navigation');}
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
+
       }
     };
 
@@ -60,91 +51,12 @@ const AccessibilityEnhancer: React.FC = () => {
         main.setAttribute('role', 'main');}
       }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // Reduced motion mode
-    if (isReducedMotion) {'
-      root.classList.add('reduced-motion');}
-    } else {'
-      root.classList.remove('reduced-motion');}
-    }
 
-    // Font size adjustment'
-    root.style.setProperty('--font-size-multiplier', '
-      fontSize === 'large' ? '1.2' : '
-      fontSize === 'extra-large' ? '1.4' : '
-      fontSize === 'small' ? '0.9' : '1'
-    );
-  }, [isHighContrast, isReducedMotion, fontSize]);
-
-  // Keyboard navigation enhancement
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      // Skip to main content'
-      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
-        e.preventDefault();'
-        const mainContent = document.getElementById('main-content');
-        if (mainContent) {
-          mainContent.focus();}
-        }
-      }
-
-      // Escape key to close modals/dropdowns'
-      if (e.key === 'Escape') {
-        const activeElement = document.activeElement as HTMLElement;
-        if (activeElement && activeElement.blur) {
-          activeElement.blur();}
-        }
-      }
-    };
-'
-    document.addEventListener('keydown', handleKeyDown);'
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
-  // Focus management
-  useEffect(() => {
-    const handleFocusIn = (e: FocusEvent) => {
-      const target = e.target as HTMLElement;
-      if (target) {'
-        target.classList.add('focus-visible');}
-      }
-    };
-
-    const handleFocusOut = (e: FocusEvent) => {
-      const target = e.target as HTMLElement;
-      if (target) {'
-        target.classList.remove('focus-visible');}
-      }
-    };
-'
-    document.addEventListener('focusin', handleFocusIn);'
-    document.addEventListener('focusout', handleFocusOut);
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
-
-<<<<<<< HEAD
-    return () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      focusableElements.forEach(element => {
-        element.removeEventListener('focus', handleFocus);
-        element.removeEventListener('blur', handleBlur);
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
       const nav = document.querySelector('nav');
-=======
-const nav = document.querySelector('nav');
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
+
       if (nav && !nav.getAttribute('role')) {
         nav.setAttribute('role', 'navigation');
-=======
-      focusableElements.forEach(element => {'
-        element.removeEventListener('focus', handleFocus);'
-        element.removeEventListener('blur', handleBlur);'
-      const nav = document.querySelector('nav');'
-      if (nav && !nav.getAttribute('role')) {'
-        nav.setAttribute('role', 'navigation');}
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
+
       }
 '
       const footer = document.querySelector('footer');'
@@ -160,13 +72,8 @@ const nav = document.querySelector('nav');
         if (!img.getAttribute('alt')) {'}
           img.setAttribute('alt', `Image ${index + 1}`);
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
+
       });
     };
 
@@ -187,21 +94,8 @@ const nav = document.querySelector('nav');
     };
   }, []);
 
-<<<<<<< HEAD
-return null;
-=======
-import React from 'react';
 
-const AccessibilityEnhancer: React.FC = () => {
-  return null;
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
-=======
-  return null;
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
+
 };
 
-<<<<<<< HEAD
-export default AccessibilityEnhancer;
-=======
-export default AccessibilityEnhancer;'
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
+

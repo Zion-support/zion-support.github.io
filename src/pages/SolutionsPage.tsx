@@ -19,7 +19,7 @@ const SolutionsPage: React.FC = () => {
                 <div className="bg-gray-800 p-6 rounded-lg">;
                   <div className="h-12 w-12 bg-blue-600 rounded-lg mb-4 flex items-center justify-center">;
                     <span className="text-white font-bold">AI</span>;
-                  </div>;
+                  </div>
                   <h3 className="text-xl font-semibold mb-4">AI Solutions</h3>;
                   <p className="text-gray-300 mb-4">;
                     Advanced artificial intelligence solutions for automation and optimization.;
@@ -29,8 +29,8 @@ const SolutionsPage: React.FC = () => {
                     <li>• Natural Language Processing</li>;
                     <li>• Computer Vision</li>;
                   </ul>;
-                </div>;
-              </div>;
+                </div>
+              </div>
             </section>;
             <section>;
               <h2 className="text-2xl font-semibold mb-6">Ready to Get Started?</h2>;
@@ -50,11 +50,11 @@ const SolutionsPage: React.FC = () => {
                 >;
                   Request Demo;
                 </a>;
-              </div>;
+              </div>
             </section>;
-          </div>;
-        </div>;
-      </div>;
+          </div>
+        </div>
+      </div>
     </>
   );
 };

@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';'
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface Props {

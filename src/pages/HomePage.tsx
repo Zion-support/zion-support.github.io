@@ -32,7 +32,7 @@ const Page: React.FC = () => {
               >;
                 Our Solutions;
               </a>;
-            </div>;
+            </div>
           </section>;
           <section className="mb-16">;
             <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>;
@@ -42,20 +42,20 @@ const Page: React.FC = () => {
                 <p className="text-gray-300">;
                   Advanced artificial intelligence solutions for your business needs.;
                 </p>;
-              </div>;
+              </div>
               <div className="bg-gray-800 p-6 rounded-lg">;
                 <h3 className="text-xl font-semibold mb-4">Computing</h3>;
                 <p className="text-gray-300">;
                   Scalable cloud infrastructure and migration services.;
                 </p>;
-              </div>;
+              </div>
               <div className="bg-gray-800 p-6 rounded-lg">;
                 <h3 className="text-xl font-semibold mb-4">Cybersecurity</h3>;
                 <p className="text-gray-300">;
                   Comprehensive security solutions to protect your data.;
                 </p>;
-              </div>;
-            </div>;
+              </div>
+            </div>
           </section>;
           <section className="text-center">;
             <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h2>;
@@ -70,7 +70,7 @@ const Page: React.FC = () => {
             </a>;
           </section>;
         </main>;
-      </div>;
+      </div>
     </>
   );
 };
