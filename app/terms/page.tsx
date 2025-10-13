@@ -1,114 +1,93 @@
 import React from 'react';
-
-<<<<<<< HEAD
-export default function TermsPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Terms</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
-    </div>
-  );
-}
-=======
-export default function Terms() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>Terms of Service - Zion Tech Group</title>
-        <meta name="description" content="Terms of service of Zion Tech Group" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            Terms of Service
-          </h1>
-          <div className="prose prose-lg max-w-none">
-            <p className="text-gray-600 mb-6">
-              These terms of service govern your use of Zion Tech Group's services and website.
-            </p>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Acceptance of Terms</h2>
-            <p className="text-gray-600 mb-6">
-              By accessing and using our services, you accept and agree to be bound by the terms
-              and provision of this agreement.
-            </p>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Use License</h2>
-            <p className="text-gray-600 mb-6">
-              Permission is granted to temporarily download one copy of the materials on our website
-              for personal, non-commercial transitory viewing only.
-            </p>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Contact Information</h2>
-            <p className="text-gray-600 mb-6">
-              If you have any questions about these terms, please contact us at legal@ziontechgroup.com.
-            </p>
-          </div>
-'use client';
-import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const TermsPage: React.FC = () => {
-          <div></div>
-            <Calendar className="h-4 w-4 mr-2" />
-            Last updated: {lastUpdated}
+  return (
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Terms of Service - Zion Tech Group</title>
+        <meta name="description" content="Read the terms of service for Zion Tech Group's AI and IT solutions. Understand your rights and obligations when using our services." />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+        <div className="max-w-4xl mx-auto px-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Terms of Service
+          </h1>
+          <p className="text-xl text-gray-600">
+            Last updated: January 1, 2024
+          </p>
+        </div>
+      </section>
+
+      {/* Content */}
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="prose prose-lg max-w-none">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">1. Acceptance of Terms</h2>
+            <p className="text-gray-600 mb-6">
+              By accessing and using Zion Tech Group's services, you accept and agree to be bound by 
+              the terms and provision of this agreement.
+            </p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">2. Use License</h2>
+            <p className="text-gray-600 mb-6">
+              Permission is granted to temporarily download one copy of the materials on Zion Tech Group's 
+              website for personal, non-commercial transitory viewing only.
+            </p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">3. Disclaimer</h2>
+            <p className="text-gray-600 mb-6">
+              The materials on Zion Tech Group's website are provided on an 'as is' basis. Zion Tech Group 
+              makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties.
+            </p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">4. Limitations</h2>
+            <p className="text-gray-600 mb-6">
+              In no event shall Zion Tech Group or its suppliers be liable for any damages arising out of 
+              the use or inability to use the materials on Zion Tech Group's website.
+            </p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">5. Accuracy of Materials</h2>
+            <p className="text-gray-600 mb-6">
+              The materials appearing on Zion Tech Group's website could include technical, typographical, 
+              or photographic errors. Zion Tech Group does not warrant that any of the materials on its 
+              website are accurate, complete, or current.
+            </p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">6. Links</h2>
+            <p className="text-gray-600 mb-6">
+              Zion Tech Group has not reviewed all of the sites linked to our website and is not responsible 
+              for the contents of any such linked site.
+            </p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">7. Modifications</h2>
+            <p className="text-gray-600 mb-6">
+              Zion Tech Group may revise these terms of service for its website at any time without notice. 
+              By using this website, you are agreeing to be bound by the then current version of these terms.
+            </p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">8. Governing Law</h2>
+            <p className="text-gray-600 mb-6">
+              These terms and conditions are governed by and construed in accordance with the laws of Delaware 
+              and you irrevocably submit to the exclusive jurisdiction of the courts in that state or location.
+            </p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
+            <p className="text-gray-600 mb-6">
+              If you have any questions about these Terms of Service, please contact us at:
+            </p>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <p className="text-gray-600 mb-2">Email: legal@ziontechgroup.com</p>
+              <p className="text-gray-600 mb-2">Phone: +1-302-464-0950</p>
+              <p className="text-gray-600">Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+    </div>
+  );
+};
 
-      <div></div>
-        <div></div>
-          <div></div>
-            <div className="space-y-8"></div>
-              {sections.map((section, index) => (</div>
-                <div></div>
-                  <div></div>
-                    <div></div>
-                      <section.icon className="h-6 w-6 text-blue-600" />
-        </section>
-                    </div>
-                    <div></div>
-                      <h2 className="text-2xl font-bold text-gray-900 mb-3"></h2>
-                        {index + 1}. {section.title}
-                      </h2>
-                      <p className="text-gray-700 leading-relaxed"></p>
-                        {section.content}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ));
-            </div>
-
-            <div></div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4"></h>Contact Information</h3>
-              <p className="text-gray-700 mb-6"></p>
-                If you have any questions about these Terms of Service, please contact us:
-              </p>
-              <div></div>
-                <div></div>
-                  <Mail className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700"></spa>legal@ziontechgroup.com</span>
-                </div>
-                <div></div>
-                  <Phone className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700"></spa>(302) 464-0950</span>
-                </div>
-                <div></div>
-                  <Globe className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700"></spa>ziontechgroup.com</span>
-                </div>
-                <div></div>
-                  <User className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700"></spa>Zion Tech Group Legal Team</span>
-                </div>
-              </div>
-            </div>
-
-            <div></div>
-              <p className="text-sm text-gray-500"></p>
-                By using our services, you acknowledge that you have read and understood these terms.
-              </p>
-            </div>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
+export default TermsPage;

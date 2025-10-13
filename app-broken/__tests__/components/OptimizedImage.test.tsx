@@ -4,12 +4,7 @@ import OptimizedImage from '../../app/components/OptimizedImage';
 // Mock framer-motion
 jest.mock('framer-motion', () => ({
   motion: {
-<<<<<<< HEAD:__tests__/components/OptimizedImage.test.tsx
-    div: ({ children, ...props }: any) => <div {...props}>{children}</div>,
-    img: ({ children, ...props }: any) => <img {...props}>{children}</img>,
-=======
     img: ({ children, ...props }: React.ImgHTMLAttributes<HTMLImageElement> & { children?: React.ReactNode }) => <img {...props}>{children}</img>,
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea:app-broken/__tests__/components/OptimizedImage.test.tsx
   },
 }));
 const mockProps = {
@@ -31,9 +26,6 @@ describe('OptimizedImage Component', () => {
     const wrapper = image.closest('div');
     expect(wrapper).toHaveClass('custom-class');
   });
-<<<<<<< HEAD:__tests__/components/OptimizedImage.test.tsx
-});
-=======
 
   it('renders with width and height', () => {
     render(<OptimizedImage {...defaultProps} width={300} height={200} />);
@@ -90,4 +82,3 @@ describe('OptimizedImage Component', () => {
     expect(img).toHaveAttribute('loading', 'lazy');
   });
 });
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea:app-broken/__tests__/components/OptimizedImage.test.tsx
