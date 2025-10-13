@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Brain, Code, Database, Mail, Users, Clock, DollarSign, Globe, Smartphone, Lock, TrendingUp, Target, Settings, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Cpu, Wifi, Battery, Camera, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Brain, Code, Database, Mail, Users, Clock, DollarSign, Globe, Smartphone, Lock, TrendingUp, Target, Settings, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Cpu, Wifi, Battery, Camera, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Receipt, ClipboardList, Workflow } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
@@ -36,6 +36,626 @@ export default function MicroSaas() {
       reviews: 1247,
       link: "/zion-analytics-pro",
       featured: true
+    },
+    {
+      id: "zion-ai-inventory-manager",
+      name: "Zion AI Inventory Manager",
+      description: "Intelligent inventory management with demand forecasting, automated reordering, and real-time tracking",
+      price: "From $39/month",
+      originalPrice: "$65/month",
+      discount: "40% OFF",
+      icon: <Package className="w-8 h-8" />,
+      color: "from-indigo-500 to-blue-500",
+      features: [
+        "AI demand forecasting",
+        "Automated reorder points",
+        "Real-time inventory tracking",
+        "Multi-location support",
+        "Barcode scanning integration",
+        "Supplier management",
+        "Cost optimization",
+        "Mobile app access"
+      ],
+      benefits: [
+        "Reduce stockouts by 60%",
+        "Lower inventory costs by 25%",
+        "Improve cash flow",
+        "Eliminate manual counting"
+      ],
+      category: "Inventory",
+      rating: 4.8,
+      reviews: 892,
+      link: "/zion-ai-inventory-manager",
+      featured: true
+    },
+    {
+      id: "zion-hr-assistant-pro",
+      name: "Zion HR Assistant Pro",
+      description: "AI-powered HR management with recruitment automation, employee analytics, and performance tracking",
+      price: "From $45/month",
+      originalPrice: "$75/month",
+      discount: "40% OFF",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      features: [
+        "AI resume screening",
+        "Automated interview scheduling",
+        "Employee performance analytics",
+        "Payroll integration",
+        "Benefits management",
+        "Time tracking & attendance",
+        "Employee self-service portal",
+        "Compliance monitoring"
+      ],
+      benefits: [
+        "Reduce hiring time by 50%",
+        "Improve employee retention",
+        "Streamline HR processes",
+        "Ensure compliance"
+      ],
+      category: "HR",
+      rating: 4.7,
+      reviews: 1156,
+      link: "/zion-hr-assistant-pro",
+      featured: true
+    },
+    {
+      id: "zion-ai-accounting-suite",
+      name: "Zion AI Accounting Suite",
+      description: "Complete accounting solution with automated bookkeeping, tax preparation, and financial insights",
+      price: "From $35/month",
+      originalPrice: "$58/month",
+      discount: "40% OFF",
+      icon: <Calculator className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      features: [
+        "Automated bookkeeping",
+        "AI expense categorization",
+        "Tax preparation assistance",
+        "Financial reporting",
+        "Invoice generation",
+        "Bank reconciliation",
+        "Multi-currency support",
+        "Audit trail"
+      ],
+      benefits: [
+        "Save 15+ hours weekly",
+        "Reduce accounting errors",
+        "Ensure tax compliance",
+        "Improve cash flow"
+      ],
+      category: "Finance",
+      rating: 4.9,
+      reviews: 1347,
+      link: "/zion-ai-accounting-suite",
+      featured: true
+    },
+    {
+      id: "zion-ecommerce-optimizer",
+      name: "Zion E-commerce Optimizer",
+      description: "AI-powered e-commerce platform with conversion optimization, inventory management, and analytics",
+      price: "From $49/month",
+      originalPrice: "$82/month",
+      discount: "40% OFF",
+      icon: <ShoppingCart className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+      features: [
+        "AI conversion optimization",
+        "Dynamic pricing engine",
+        "Inventory management",
+        "Customer behavior analytics",
+        "A/B testing automation",
+        "SEO optimization",
+        "Multi-channel selling",
+        "Mobile commerce"
+      ],
+      benefits: [
+        "Increase conversions by 35%",
+        "Boost average order value",
+        "Reduce cart abandonment",
+        "Scale online sales"
+      ],
+      category: "E-commerce",
+      rating: 4.8,
+      reviews: 987,
+      link: "/zion-ecommerce-optimizer",
+      featured: true
+    },
+    {
+      id: "zion-ai-customer-insights",
+      name: "Zion AI Customer Insights",
+      description: "Advanced customer analytics platform with sentiment analysis, churn prediction, and personalization",
+      price: "From $42/month",
+      originalPrice: "$70/month",
+      discount: "40% OFF",
+      icon: <Eye className="w-8 h-8" />,
+      color: "from-cyan-500 to-teal-500",
+      features: [
+        "Customer sentiment analysis",
+        "Churn prediction modeling",
+        "Behavioral analytics",
+        "Personalization engine",
+        "Customer journey mapping",
+        "Lifetime value prediction",
+        "Segmentation automation",
+        "Real-time insights"
+      ],
+      benefits: [
+        "Reduce churn by 30%",
+        "Increase customer lifetime value",
+        "Improve personalization",
+        "Boost customer satisfaction"
+      ],
+      category: "Analytics",
+      rating: 4.9,
+      reviews: 1456,
+      link: "/zion-ai-customer-insights",
+      featured: false
+    },
+    {
+      id: "zion-ai-lead-scoring",
+      name: "Zion AI Lead Scoring",
+      description: "Intelligent lead qualification with predictive scoring, automated nurturing, and conversion optimization",
+      price: "From $28/month",
+      originalPrice: "$47/month",
+      discount: "40% OFF",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-violet-500 to-purple-500",
+      features: [
+        "AI lead scoring",
+        "Behavioral tracking",
+        "Automated nurturing campaigns",
+        "Conversion prediction",
+        "Lead source analysis",
+        "ROI tracking",
+        "CRM integration",
+        "Custom scoring models"
+      ],
+      benefits: [
+        "Increase conversion rates by 45%",
+        "Reduce sales cycle time",
+        "Improve lead quality",
+        "Boost sales productivity"
+      ],
+      category: "Sales",
+      rating: 4.7,
+      reviews: 1123,
+      link: "/zion-ai-lead-scoring",
+      featured: false
+    },
+    {
+      id: "zion-ai-document-processor",
+      name: "Zion AI Document Processor",
+      description: "Intelligent document processing with OCR, data extraction, and automated workflow management",
+      price: "From $32/month",
+      originalPrice: "$53/month",
+      discount: "40% OFF",
+      icon: <FileText className="w-8 h-8" />,
+      color: "from-amber-500 to-orange-500",
+      features: [
+        "Advanced OCR technology",
+        "Data extraction & validation",
+        "Document classification",
+        "Workflow automation",
+        "Multi-format support",
+        "Batch processing",
+        "API integration",
+        "Compliance tracking"
+      ],
+      benefits: [
+        "Process documents 10x faster",
+        "Reduce manual data entry",
+        "Improve accuracy by 95%",
+        "Streamline workflows"
+      ],
+      category: "Productivity",
+      rating: 4.8,
+      reviews: 876,
+      link: "/zion-ai-document-processor",
+      featured: false
+    },
+    {
+      id: "zion-ai-social-listener",
+      name: "Zion AI Social Listener",
+      description: "Social media monitoring and analytics with sentiment analysis, trend detection, and engagement optimization",
+      price: "From $25/month",
+      originalPrice: "$42/month",
+      discount: "40% OFF",
+      icon: <Share className="w-8 h-8" />,
+      color: "from-pink-500 to-rose-500",
+      features: [
+        "Multi-platform monitoring",
+        "Sentiment analysis",
+        "Trend detection",
+        "Influencer identification",
+        "Crisis management alerts",
+        "Competitor analysis",
+        "Engagement optimization",
+        "Custom reporting"
+      ],
+      benefits: [
+        "Monitor brand mentions 24/7",
+        "Identify trending topics",
+        "Improve social engagement",
+        "Protect brand reputation"
+      ],
+      category: "Social Media",
+      rating: 4.6,
+      reviews: 743,
+      link: "/zion-ai-social-listener",
+      featured: false
+    },
+    {
+      id: "zion-ai-email-optimizer",
+      name: "Zion AI Email Optimizer",
+      description: "Advanced email marketing with AI optimization, deliverability improvement, and performance analytics",
+      price: "From $38/month",
+      originalPrice: "$63/month",
+      discount: "40% OFF",
+      icon: <Mail className="w-8 h-8" />,
+      color: "from-blue-500 to-indigo-500",
+      features: [
+        "AI subject line optimization",
+        "Send time optimization",
+        "Deliverability monitoring",
+        "A/B testing automation",
+        "Segmentation intelligence",
+        "Performance analytics",
+        "Template optimization",
+        "Spam score reduction"
+      ],
+      benefits: [
+        "Increase open rates by 40%",
+        "Boost click-through rates",
+        "Improve deliverability",
+        "Maximize email ROI"
+      ],
+      category: "Marketing",
+      rating: 4.8,
+      reviews: 1098,
+      link: "/zion-ai-email-optimizer",
+      featured: false
+    },
+    {
+      id: "zion-ai-meeting-assistant",
+      name: "Zion AI Meeting Assistant",
+      description: "Intelligent meeting management with transcription, action items, and follow-up automation",
+      price: "From $24/month",
+      originalPrice: "$40/month",
+      discount: "40% OFF",
+      icon: <Video className="w-8 h-8" />,
+      color: "from-teal-500 to-cyan-500",
+      features: [
+        "Real-time transcription",
+        "Action item extraction",
+        "Meeting summaries",
+        "Calendar integration",
+        "Follow-up automation",
+        "Multi-language support",
+        "Speaker identification",
+        "Meeting analytics"
+      ],
+      benefits: [
+        "Save 5+ hours weekly",
+        "Never miss action items",
+        "Improve meeting productivity",
+        "Enhance collaboration"
+      ],
+      category: "Productivity",
+      rating: 4.7,
+      reviews: 934,
+      link: "/zion-ai-meeting-assistant",
+      featured: false
+    },
+    {
+      id: "zion-ai-expense-tracker",
+      name: "Zion AI Expense Tracker",
+      description: "Smart expense management with receipt scanning, categorization, and reimbursement automation",
+      price: "From $19/month",
+      originalPrice: "$32/month",
+      discount: "40% OFF",
+      icon: <Receipt className="w-8 h-8" />,
+      color: "from-emerald-500 to-green-500",
+      features: [
+        "Receipt scanning & OCR",
+        "Automatic categorization",
+        "Policy compliance checking",
+        "Reimbursement automation",
+        "Expense reporting",
+        "Mobile app",
+        "Multi-currency support",
+        "Integration with accounting"
+      ],
+      benefits: [
+        "Reduce expense processing time",
+        "Eliminate manual data entry",
+        "Ensure policy compliance",
+        "Improve accuracy"
+      ],
+      category: "Finance",
+      rating: 4.6,
+      reviews: 678,
+      link: "/zion-ai-expense-tracker",
+      featured: false
+    },
+    {
+      id: "zion-ai-survey-builder",
+      name: "Zion AI Survey Builder",
+      description: "Intelligent survey creation with AI optimization, response analysis, and actionable insights",
+      price: "From $31/month",
+      originalPrice: "$52/month",
+      discount: "40% OFF",
+      icon: <ClipboardList className="w-8 h-8" />,
+      color: "from-rose-500 to-pink-500",
+      features: [
+        "AI survey optimization",
+        "Question recommendation",
+        "Response analysis",
+        "Sentiment analysis",
+        "Custom branding",
+        "Multi-channel distribution",
+        "Real-time analytics",
+        "Export capabilities"
+      ],
+      benefits: [
+        "Create better surveys",
+        "Increase response rates",
+        "Get actionable insights",
+        "Save time on analysis"
+      ],
+      category: "Research",
+      rating: 4.5,
+      reviews: 567,
+      link: "/zion-ai-survey-builder",
+      featured: false
+    },
+    {
+      id: "zion-ai-chatbot-builder",
+      name: "Zion AI Chatbot Builder",
+      description: "No-code chatbot creation with AI training, multi-channel deployment, and conversation analytics",
+      price: "From $36/month",
+      originalPrice: "$60/month",
+      discount: "40% OFF",
+      icon: <MessageSquare className="w-8 h-8" />,
+      color: "from-indigo-500 to-purple-500",
+      features: [
+        "No-code chatbot builder",
+        "AI training & learning",
+        "Multi-channel deployment",
+        "Conversation analytics",
+        "Integration capabilities",
+        "Custom branding",
+        "Human handoff",
+        "Performance monitoring"
+      ],
+      benefits: [
+        "Reduce support costs by 60%",
+        "Improve response times",
+        "Scale customer service",
+        "Enhance user experience"
+      ],
+      category: "Support",
+      rating: 4.8,
+      reviews: 1234,
+      link: "/zion-ai-chatbot-builder",
+      featured: false
+    },
+    {
+      id: "zion-ai-workflow-automation",
+      name: "Zion AI Workflow Automation",
+      description: "Visual workflow automation with AI optimization, 500+ integrations, and intelligent routing",
+      price: "From $44/month",
+      originalPrice: "$73/month",
+      discount: "40% OFF",
+      icon: <Workflow className="w-8 h-8" />,
+      color: "from-amber-500 to-yellow-500",
+      features: [
+        "Visual workflow builder",
+        "AI process optimization",
+        "500+ app integrations",
+        "Conditional logic",
+        "Error handling",
+        "Performance analytics",
+        "Team collaboration",
+        "Custom triggers"
+      ],
+      benefits: [
+        "Automate 80% of repetitive tasks",
+        "Reduce errors by 95%",
+        "Save 20+ hours weekly",
+        "Improve efficiency"
+      ],
+      category: "Automation",
+      rating: 4.9,
+      reviews: 1456,
+      link: "/zion-ai-workflow-automation",
+      featured: false
+    },
+    {
+      id: "zion-ai-seo-optimizer",
+      name: "Zion AI SEO Optimizer",
+      description: "Comprehensive SEO platform with AI content optimization, keyword research, and ranking tracking",
+      price: "From $41/month",
+      originalPrice: "$68/month",
+      discount: "40% OFF",
+      icon: <Search className="w-8 h-8" />,
+      color: "from-green-500 to-teal-500",
+      features: [
+        "AI content optimization",
+        "Keyword research & analysis",
+        "Ranking tracking",
+        "Technical SEO audit",
+        "Competitor analysis",
+        "Link building tools",
+        "Local SEO optimization",
+        "Performance reporting"
+      ],
+      benefits: [
+        "Increase organic traffic by 50%",
+        "Improve search rankings",
+        "Optimize content automatically",
+        "Beat competitors"
+      ],
+      category: "SEO",
+      rating: 4.7,
+      reviews: 987,
+      link: "/zion-ai-seo-optimizer",
+      featured: false
+    },
+    {
+      id: "zion-ai-data-warehouse",
+      name: "Zion AI Data Warehouse",
+      description: "Cloud-based data warehouse with AI-powered analytics, ETL automation, and real-time processing",
+      price: "From $67/month",
+      originalPrice: "$112/month",
+      discount: "40% OFF",
+      icon: <Database className="w-8 h-8" />,
+      color: "from-slate-500 to-gray-500",
+      features: [
+        "Cloud data warehouse",
+        "AI-powered analytics",
+        "ETL automation",
+        "Real-time processing",
+        "Data governance",
+        "Scalable infrastructure",
+        "API access",
+        "Custom dashboards"
+      ],
+      benefits: [
+        "Centralize all data sources",
+        "Enable real-time analytics",
+        "Reduce data silos",
+        "Scale with business growth"
+      ],
+      category: "Data",
+      rating: 4.8,
+      reviews: 756,
+      link: "/zion-ai-data-warehouse",
+      featured: false
+    },
+    {
+      id: "zion-ai-mobile-app-builder",
+      name: "Zion AI Mobile App Builder",
+      description: "No-code mobile app development with AI assistance, cross-platform deployment, and analytics",
+      price: "From $58/month",
+      originalPrice: "$97/month",
+      discount: "40% OFF",
+      icon: <Smartphone className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      features: [
+        "No-code app builder",
+        "AI design assistance",
+        "Cross-platform deployment",
+        "Push notifications",
+        "User analytics",
+        "App store optimization",
+        "Custom integrations",
+        "White-label options"
+      ],
+      benefits: [
+        "Build apps without coding",
+        "Deploy to iOS & Android",
+        "Reduce development costs",
+        "Faster time to market"
+      ],
+      category: "Development",
+      rating: 4.6,
+      reviews: 823,
+      link: "/zion-ai-mobile-app-builder",
+      featured: false
+    },
+    {
+      id: "zion-ai-api-manager",
+      name: "Zion AI API Manager",
+      description: "Comprehensive API management with AI monitoring, security, and performance optimization",
+      price: "From $52/month",
+      originalPrice: "$87/month",
+      discount: "40% OFF",
+      icon: <Globe className="w-8 h-8" />,
+      color: "from-violet-500 to-purple-500",
+      features: [
+        "API gateway management",
+        "AI performance monitoring",
+        "Security & authentication",
+        "Rate limiting",
+        "Documentation generation",
+        "Analytics & reporting",
+        "Developer portal",
+        "Version control"
+      ],
+      benefits: [
+        "Secure API endpoints",
+        "Monitor performance 24/7",
+        "Improve developer experience",
+        "Scale API infrastructure"
+      ],
+      category: "Development",
+      rating: 4.7,
+      reviews: 645,
+      link: "/zion-ai-api-manager",
+      featured: false
+    },
+    {
+      id: "zion-ai-backup-manager",
+      name: "Zion AI Backup Manager",
+      description: "Intelligent backup solution with automated scheduling, version control, and disaster recovery",
+      price: "From $26/month",
+      originalPrice: "$43/month",
+      discount: "40% OFF",
+      icon: <HardDrive className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500",
+      features: [
+        "Automated backup scheduling",
+        "Version control & history",
+        "Disaster recovery",
+        "Cross-platform support",
+        "Encryption & security",
+        "Cloud storage integration",
+        "Restore testing",
+        "Compliance monitoring"
+      ],
+      benefits: [
+        "Protect critical data",
+        "Automate backup processes",
+        "Ensure business continuity",
+        "Meet compliance requirements"
+      ],
+      category: "Security",
+      rating: 4.8,
+      reviews: 892,
+      link: "/zion-ai-backup-manager",
+      featured: false
+    },
+    {
+      id: "zion-ai-testing-automation",
+      name: "Zion AI Testing Automation",
+      description: "AI-powered testing platform with automated test generation, execution, and reporting",
+      price: "From $47/month",
+      originalPrice: "$78/month",
+      discount: "40% OFF",
+      icon: <CheckCircle className="w-8 h-8" />,
+      color: "from-emerald-500 to-green-500",
+      features: [
+        "AI test generation",
+        "Automated test execution",
+        "Cross-browser testing",
+        "Performance testing",
+        "API testing",
+        "Visual regression testing",
+        "Test reporting",
+        "CI/CD integration"
+      ],
+      benefits: [
+        "Reduce testing time by 70%",
+        "Improve test coverage",
+        "Catch bugs early",
+        "Ensure quality releases"
+      ],
+      category: "Development",
+      rating: 4.9,
+      reviews: 1123,
+      link: "/zion-ai-testing-automation",
+      featured: false
     },
     {
       id: "zion-security-shield",

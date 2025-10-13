@@ -84,17 +84,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         <Link to="/ai-cybersecurity" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                           Cybersecurity
                         </Link>
-                        <Link to="/ai-marketing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          Marketing Automation
+                        <Link to="/ai-voice-assistant-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Voice AI Assistant
+                        </Link>
+                        <Link to="/ai-image-recognition-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Image Recognition
+                        </Link>
+                        <Link to="/ai-fraud-detection-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Fraud Detection
                         </Link>
                         <Link to="/ai-services" className="block text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">
                           View All AI Services →
-                        </Link>
-                        <Link to="/ai-data-analytics" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          AI Data Analytics
-                        </Link>
-                        <Link to="/ai-marketing-automation" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          AI Marketing Automation
                         </Link>
                       </div>
                     </div>
@@ -106,45 +106,51 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         <Link to="/cloud-infrastructure" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                           Cloud Infrastructure
                         </Link>
-                        <Link to="/5g-solutions" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          5G Solutions
+                        <Link to="/blockchain-development" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Blockchain Development
                         </Link>
-                        <Link to="/ai-code-assistant" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          AI Code Assistant
+                        <Link to="/iot-solutions" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          IoT Solutions
                         </Link>
-                        <Link to="/ai-document-processing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          Document Processing
-                        </Link>
-                        <Link to="/ai-crm-assistant" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          CRM Assistant
-                        </Link>
-                        <Link to="/ai-financial-analytics" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          Financial Analytics
-                        </Link>
-                      </div>
-                    </div>
-
-                    {/* IT Services */}
-                    <div className="space-y-4">
-                      <h4 className="text-lg font-semibold text-white">IT Services</h4>
-                      <div className="space-y-3">
-                        <Link to="/cloud-infrastructure" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          Cloud Infrastructure
-                        </Link>
-                        <Link to="/cybersecurity-solutions" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          Cybersecurity
-                        </Link>
-                        <Link to="/web-development" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          Web Development
-                        </Link>
-                        <Link to="/mobile-development" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          Mobile Development
+                        <Link to="/ar-vr-development" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          AR/VR Development
                         </Link>
                         <Link to="/devops-solutions" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                           DevOps Solutions
                         </Link>
+                        <Link to="/mobile-development" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Mobile Development
+                        </Link>
                         <Link to="/services" className="block text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">
                           View All IT Services →
+                        </Link>
+                      </div>
+                    </div>
+
+                    {/* Micro SAAS */}
+                    <div className="space-y-4">
+                      <h4 className="text-lg font-semibold text-white">Micro SAAS</h4>
+                      <div className="space-y-3">
+                        <Link to="/zion-analytics-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Zion Analytics Pro
+                        </Link>
+                        <Link to="/zion-security-shield" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Zion Security Shield
+                        </Link>
+                        <Link to="/zion-inventory-manager-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Inventory Manager
+                        </Link>
+                        <Link to="/zion-hr-management-suite" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          HR Management Suite
+                        </Link>
+                        <Link to="/zion-ecommerce-optimizer" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          E-commerce Optimizer
+                        </Link>
+                        <Link to="/zion-ai-chatbot-builder" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          AI Chatbot Builder
+                        </Link>
+                        <Link to="/micro-saas" className="block text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">
+                          View All Micro SAAS →
                         </Link>
                       </div>
                     </div>

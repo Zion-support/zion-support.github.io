@@ -1,109 +1,92 @@
-import React from "react";
-import { Loader2, Zap, Brain, Shield, Globe } from "lucide-react";
+import React from 'react';
+import { Loader2, Zap, Brain, Shield, Globe } from 'lucide-react';
 
 interface LoadingSpinnerProps {
-  size?: "sm" | "md" | "lg";
+  size?: 'sm' | 'md' | 'lg';
   className?: string;
 }
 
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = "md",
-  className = "",
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  size = 'md', 
+  className = '' 
 }) => {
   const sizeClasses = {
-    sm: "w-4 h-4",
-    md: "w-6 h-6",
-    lg: "w-8 h-8",
+    sm: 'w-4 h-4',
+    md: 'w-6 h-6',
+    lg: 'w-8 h-8'
   };
 
   return (
-    <div className="flex items-center justify-center">
-      <Loader2 
-        className={`${sizeClasses[size]} animate-spin text-cyan-400 ${className}`} 
-        aria-label="Loading"
-      />
-    </div>
+    <Loader2 
+      className={`animate-spin text-cyan-400 ${sizeClasses[size]} ${className}`} 
+    />
   );
 };
 
 interface LoadingPageProps {
   message?: string;
   showProgress?: boolean;
+  progress?: number;
 }
 
 export const LoadingPage: React.FC<LoadingPageProps> = ({ 
-  message = "Loading Zion Tech Group...", 
-  showProgress = false 
+  message = "Loading...", 
+  showProgress = false,
+  progress = 0 
 }) => {
-  const [progress, setProgress] = React.useState(0);
-
-  React.useEffect(() => {
-    if (showProgress) {
-      const interval = setInterval(() => {
-        setProgress(prev => {
-          if (prev >= 100) return 100;
-          return prev + Math.random() * 15;
-        });
-      }, 200);
-
-      return () => clearInterval(interval);
-    }
-    return undefined;
-  }, [showProgress]);
+  const icons = [Zap, Brain, Shield, Globe];
+  const randomIcon = icons[Math.floor(Math.random() * icons.length)];
+  const IconComponent = randomIcon;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
-        {/* Animated Background Elements */}
+        {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
 
         <div className="relative z-10">
-          {/* Logo Animation */}
-          <div className="mb-8">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 animate-pulse">
-              <Zap className="w-10 h-10 text-white" />
-            </div>
+          {/* Icon with animation */}
+          <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center animate-pulse">
+            <IconComponent className="w-10 h-10 text-cyan-400 animate-bounce" />
           </div>
 
-          {/* Loading Text */}
-          <h3 className="text-2xl font-bold text-white mb-4 animate-pulse">
-            {message}
-          </h3>
+          {/* Loading spinner */}
+          <div className="mb-6">
+            <LoadingSpinner size="lg" />
+          </div>
 
-          {/* Progress Bar */}
+          {/* Message */}
+          <h2 className="text-2xl font-semibold text-white mb-2">
+            {message}
+          </h2>
+          <p className="text-gray-300 mb-6">
+            Please wait while we prepare everything for you...
+          </p>
+
+          {/* Progress bar */}
           {showProgress && (
-            <div className="w-64 mx-auto mb-6">
-              <div className="bg-gray-700 rounded-full h-2 overflow-hidden">
+            <div className="w-64 mx-auto mb-4">
+              <div className="w-full bg-white/10 rounded-full h-2">
                 <div 
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 h-full transition-all duration-300 ease-out"
-                  style={{ width: `${Math.min(progress, 100)}%` }}
-                />
+                  className="bg-gradient-to-r from-cyan-500 to-purple-600 h-2 rounded-full transition-all duration-300 ease-out"
+                  style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
+                ></div>
               </div>
               <p className="text-sm text-gray-400 mt-2">
-                {Math.round(progress)}% Complete
+                {Math.round(progress)}% complete
               </p>
             </div>
           )}
 
-          {/* Loading Spinner */}
-          <div className="flex justify-center mb-6">
-            <LoadingSpinner size="lg" className="text-cyan-400" />
+          {/* Loading dots animation */}
+          <div className="flex justify-center space-x-2">
+            <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div>
+            <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce delay-100"></div>
+            <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce delay-200"></div>
           </div>
-
-          {/* Service Icons Animation */}
-          <div className="flex justify-center space-x-4 opacity-50">
-            <Brain className="w-6 h-6 text-cyan-400 animate-bounce" style={{ animationDelay: '0ms' }} />
-            <Shield className="w-6 h-6 text-purple-400 animate-bounce" style={{ animationDelay: '200ms' }} />
-            <Globe className="w-6 h-6 text-pink-400 animate-bounce" style={{ animationDelay: '400ms' }} />
-          </div>
-
-          {/* Loading Message */}
-          <p className="text-gray-300 text-sm mt-4">
-            Initializing advanced AI systems...
-          </p>
         </div>
       </div>
     </div>
@@ -111,78 +94,47 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({
 };
 
 interface LoadingCardProps {
-  title?: string;
-  description?: string;
-  icon?: React.ReactNode;
+  className?: string;
+  children?: React.ReactNode;
 }
 
 export const LoadingCard: React.FC<LoadingCardProps> = ({ 
-  title = 'Loading...',
-  description = 'Please wait',
-  icon
+  className = '', 
+  children 
 }) => {
   return (
-    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">
-      <div className="flex items-center mb-4">
-        {icon && (
-          <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center mr-4">
-            {icon}
-          </div>
-        )}
+    <div className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse ${className}`}>
+      <div className="flex items-center space-x-4 mb-4">
+        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg"></div>
         <div className="flex-1">
-          <h3 className="text-lg font-semibold text-white mb-1">
-            {title}
-          </h3>
-          <p className="text-gray-300 text-sm">
-            {description}
-          </p>
+          <div className="h-4 bg-white/20 rounded w-3/4 mb-2"></div>
+          <div className="h-3 bg-white/10 rounded w-1/2"></div>
         </div>
-        <LoadingSpinner size="sm" className="text-cyan-400" />
       </div>
-      
       <div className="space-y-2">
-        <div className="h-2 bg-white/10 rounded-full"></div>
-        <div className="h-2 bg-white/10 rounded-full w-3/4"></div>
-        <div className="h-2 bg-white/10 rounded-full w-1/2"></div>
+        <div className="h-3 bg-white/20 rounded"></div>
+        <div className="h-3 bg-white/20 rounded w-5/6"></div>
+        <div className="h-3 bg-white/20 rounded w-4/6"></div>
       </div>
+      {children}
     </div>
   );
 };
 
 interface LoadingGridProps {
   count?: number;
-  title?: string;
+  className?: string;
 }
 
 export const LoadingGrid: React.FC<LoadingGridProps> = ({ 
-  count = 6,
-  title = 'Loading services...'
+  count = 6, 
+  className = '' 
 }) => {
-  const icons = [Zap, Brain, Shield, Globe, Zap, Brain];
-  
   return (
-    <div className="space-y-8">
-      <div className="text-center">
-        <h2 className="text-3xl font-bold text-white mb-4">
-          {title}
-        </h2>
-        <div className="flex justify-center">
-          <LoadingSpinner size="md" className="text-cyan-400" />
-        </div>
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {Array.from({ length: count }).map((_, index) => (
-          <LoadingCard
-            key={index}
-            title={`Service ${index + 1}`}
-            description="Loading service details..."
-            icon={React.createElement(icons[index % icons.length], { 
-              className: "w-6 h-6 text-cyan-400" 
-            })}
-          />
-        ))}
-      </div>
+    <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ${className}`}>
+      {Array.from({ length: count }).map((_, index) => (
+        <LoadingCard key={index} />
+      ))}
     </div>
   );
 };
@@ -206,21 +158,10 @@ export const LoadingButton: React.FC<LoadingButtonProps> = ({
     <button
       onClick={onClick}
       disabled={disabled || loading}
-      className={`relative flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-        loading || disabled 
-          ? 'opacity-50 cursor-not-allowed' 
-          : 'hover:scale-105'
-      } ${className}`}
+      className={`flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed ${className}`}
     >
-      {loading && (
-        <LoadingSpinner 
-          size="sm" 
-          className="absolute left-3 text-current" 
-        />
-      )}
-      <span className={loading ? 'ml-6' : ''}>
-        {children}
-      </span>
+      {loading && <LoadingSpinner size="sm" className="mr-2" />}
+      {children}
     </button>
   );
 };
