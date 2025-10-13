@@ -202,6 +202,7 @@ export default function AIEcommerceOptimizerPro() {
                 Get instant insights from your data with real-time processing and visualization
               </p>
             </div>
+          </div>
 
           {/* Pricing Section */}
           <div className="mb-16">
@@ -269,8 +270,8 @@ export default function AIEcommerceOptimizerPro() {
             </div>
           </div>
         </div>
-      </div>
-</div>
+      </section>
+    </div>
   );
 };
 
