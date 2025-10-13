@@ -1,4 +1,3 @@
-import { useEffect, useCallback, useRef } from 'react';
 
 interface PerformanceOptimizationOptions {
   enableLazyLoading?: boolean;

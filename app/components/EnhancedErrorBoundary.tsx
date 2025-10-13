@@ -1,8 +1,3 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Home } from 'lucide-react';
-import { AlertTriangle } from 'lucide-react';
-=======
-import React from 'react';
 
 interface EnhancederrorboundaryProps {
   className?: string;

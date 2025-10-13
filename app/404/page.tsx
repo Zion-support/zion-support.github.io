@@ -1,15 +1,3 @@
-import React from 'react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import { Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
-import { Home } from 'lucide-react';
-import { Search } from 'lucide-react';
-import { AlertTriangle } from 'lucide-react';
-import { Mic } from 'lucide-react';
-
-const NotFoundPage = () => {
-=======
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function NotFoundPage() {

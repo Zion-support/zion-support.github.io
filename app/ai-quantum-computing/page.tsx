@@ -1,28 +1,9 @@
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, CheckCircle, Star, Cpu, Brain, Atom, Users, Award, Globe, Lock, TrendingUp, Monitor, MessageSquare, Phone } from 'lucide-react';
-import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import React from "react";
-import SEOOptimizer from "../../components/SEOOptimizer";
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Cpu } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
 import { TrendingUp } from 'lucide-react';
 import { Brain } from 'lucide-react';
-import { Globe } from 'lucide-react';
 import { Lock } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { MessageSquare } from 'lucide-react';
-import { Phone } from 'lucide-react';
-=======
-import { ArrowRight } from 'lucide-react';
-import { Atom, ArrowRight, Monitor, Cpu, Users, Award, CheckCircle, MessageSquare, Phone, Globe, Star } from 'lucide-react';
 
 export default function AIQuantumComputingPage() {
   const testimonials = [

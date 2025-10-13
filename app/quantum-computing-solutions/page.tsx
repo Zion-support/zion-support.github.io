@@ -1,4 +1,3 @@
-import React from 'react';
 import { 
   Cpu, 
   Zap, 
@@ -11,14 +10,8 @@ import {
   Lock,
   Gauge
 } from 'lucide-react';
-=======
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Cpu, Zap, Shield, Brain, Target, CheckCircle, Globe, Activity, Lock, Gauge } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
 import { ArrowRight } from 'lucide-react';
 import { Clock } from 'lucide-react';
 import { Users } from 'lucide-react';
@@ -195,6 +188,5 @@ export default function QuantumComputingSolutionsPage() {
     </div>
   );
 };
-
 
 }

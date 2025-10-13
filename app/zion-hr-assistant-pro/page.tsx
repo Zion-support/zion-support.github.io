@@ -1,12 +1,7 @@
-import React from 'react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import { Clock } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
 import { TrendingUp } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Calendar } from 'lucide-react';
@@ -133,8 +128,6 @@ const ZionHRAssistantPro = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-=======
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function ZionHrAssistantProPage() {

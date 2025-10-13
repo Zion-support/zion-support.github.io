@@ -1,20 +1,7 @@
-import EnhancedSEO from "../components/EnhancedSEO";
-import StructuredData from "../components/StructuredData";
-import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
-import FuturisticCardEnhanced from "../components/FuturisticCardEnhanced";
-import FuturisticButtonEnhanced from "../components/FuturisticButtonEnhanced";
-import FuturisticTextEnhanced from "../components/FuturisticTextEnhanced";
-import ResponsiveContainer from "../components/ResponsiveContainer";
-import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight } from 'lucide-react';
-import PerformanceOptimizer from "../components/PerformanceOptimizer";
-import { ArrowRight } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
 import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Code } from 'lucide-react';
 

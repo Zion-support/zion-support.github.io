@@ -1,8 +1,4 @@
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
 import { Shield } from 'lucide-react';
-import { Database } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
@@ -56,7 +52,6 @@ const CloudServicesPage: React.FC = () => {
     "Faster time to market",
     "Disaster recovery and backup"
   ];
-=======
 import { Helmet } from 'react-helmet-async';
 
 export default function CloudServicesPage() {

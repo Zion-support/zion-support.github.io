@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-
 export default function SoftwareDevelopmentZionTechGroup() {
   return (
     <>
@@ -26,11 +25,8 @@ export default function SoftwareDevelopmentZionTechGroup() {
           </Link>
         </div>
       </div>
-=======
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { Code, Clock, Award, ArrowRight, CheckCircle, BarChart3, Users, Settings, Zap, Globe, Smartphone, Monitor } from 'lucide-react';
 
 const SoftwareDevelopmentPage: React.FC = () => {
   const services = [

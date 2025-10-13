@@ -1,6 +1,4 @@
-import { Star } from 'lucide-react';
 import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { Target } from 'lucide-react';
@@ -181,8 +179,6 @@ export default function Page() {
     </div>
   );
 }
-=======
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function AiFinancialAnalyticsProPage() {

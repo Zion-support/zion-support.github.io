@@ -1,5 +1,3 @@
-import React from 'react';
-import { Monitor } from 'lucide-react';
 
 interface AdvancedperformancemonitorProps {
   className?: string;

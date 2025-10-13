@@ -1,17 +1,8 @@
-import React from 'react';
-import EnhancedSEO from '../components/EnhancedSEO';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { AlertTriangle } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
 import { Zap } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Smartphone } from 'lucide-react';
-import { Package } from 'lucide-react';
 
 const ZionAIInventoryManager = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];

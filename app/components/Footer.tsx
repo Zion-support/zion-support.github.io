@@ -1,18 +1,13 @@
-import React, { useMemo } from "react";
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Clock } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Award } from 'lucide-react';
-import { Star } from 'lucide-react';
 import { MapPin } from 'lucide-react';
 import { Shield } from 'lucide-react';
-import { Database } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Globe } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Mic } from 'lucide-react';
@@ -45,8 +40,6 @@ const microSaasServices = [
     { name: "Cloud Solutions", href: "/cloud-services" },
     { name: "DevOps", href: "/devops" }
   ];
-=======
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { 

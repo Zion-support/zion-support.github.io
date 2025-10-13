@@ -1,7 +1,3 @@
-import React from 'react';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 import { AlertTriangle } from 'lucide-react';
@@ -10,11 +6,7 @@ import { Star } from 'lucide-react';
 import { Shield } from 'lucide-react';
 import { Database } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Lock } from 'lucide-react';
 import { Monitor } from 'lucide-react';
-import { Activity } from 'lucide-react';
-import { FileText } from 'lucide-react';
 
 const CybersecuritySolutions = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
@@ -111,12 +103,9 @@ const CybersecuritySolutions = () => {
       cta: "Contact Sales"
     }
   ];
-=======
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { ArrowRight, Shield, CheckCircle } from 'lucide-react';
 
 export default function CybersecuritySolutionsPage() {
   const capabilities = [

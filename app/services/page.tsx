@@ -1,6 +1,4 @@
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import { Search } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -20,20 +18,14 @@ import { Code } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
-import { Mail } from 'lucide-react';
 import { Wifi } from 'lucide-react';
 import { Headphones } from 'lucide-react';
 import { Phone } from 'lucide-react';
-import { Smartphone } from 'lucide-react';
 import { FileText } from 'lucide-react';
 import { Hand } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
-=======
-import React from 'react';
-import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Laptop, Headphones } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 
 export default function Services() {
   const services = [

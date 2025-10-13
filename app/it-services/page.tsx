@@ -1,5 +1,3 @@
-import React from "react";
-import SEOOptimizer from "../components/SEOOptimizer";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';

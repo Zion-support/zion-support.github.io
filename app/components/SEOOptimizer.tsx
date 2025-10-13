@@ -1,10 +1,6 @@
-import { Code } from 'lucide-react';
-import { Cloud } from 'lucide-react';
 
 interface SEOOptimizerProps {
   children: React.ReactNode;
-=======
-import React from 'react';
 
 interface SeooptimizerProps {
   className?: string;

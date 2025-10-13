@@ -5,7 +5,6 @@ import { Monitor } from 'lucide-react';
 export const Monitoring = {
   init: () => {
     },
-=======
 // Monitoring utility functions
 
 export function monitoring() {

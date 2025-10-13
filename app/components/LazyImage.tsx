@@ -1,11 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react';
 
 interface LazyImageProps {
   src: string;
   alt: string;
-=======
 import { lazy } from 'react';
-import React from 'react';
 
 interface LazyimageProps {
   className?: string;

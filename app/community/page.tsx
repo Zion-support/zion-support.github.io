@@ -1,6 +1,4 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Award } from 'lucide-react';
 import { Globe } from 'lucide-react';
@@ -69,7 +67,6 @@ export default function Community() {
       participants: "100+ contributors"
     }
   ];
-=======
 
 export default function CommunityPage() {
   return (

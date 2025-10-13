@@ -1,18 +1,5 @@
-import React from 'react';
-import { ArrowRight, Camera, Users, CheckCircle, Eye, Image, Target, Scan } from 'lucide-react';
-=======
-import React from 'react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import FuturisticCard from '../components/FuturisticCard';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight } from 'lucide-react';
-import FuturisticButton from '../components/FuturisticButton';
-import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Target } from 'lucide-react';
 
 const AIImageRecognitionPro = () => {
   const features = [
@@ -93,6 +80,5 @@ export default function AiImageRecognitionProPage() {
     </div>
   );
 };
-
 
 }

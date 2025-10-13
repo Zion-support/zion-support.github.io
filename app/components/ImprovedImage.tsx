@@ -1,8 +1,3 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Cloud } from 'lucide-react';
-=======
-import React, { useRef, useState, useEffect } from 'react';
-import { ImageIcon } from 'lucide-react';
 
 interface ImprovedimageProps {
   className?: string;

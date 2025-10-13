@@ -1,13 +1,7 @@
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
-
-
-=======
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 export default function CloudNativeSecurityZionTechGroup() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">

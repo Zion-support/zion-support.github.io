@@ -1,15 +1,4 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
 import { Receipt } from 'lucide-react';
 
 const SmartExpenseCategorizerPage = () => {
@@ -68,7 +57,6 @@ const SmartExpenseCategorizerPage = () => {
       popular: false
     }
   ];
-=======
 
 export default function SmartExpenseCategorizerPage() {
   return (

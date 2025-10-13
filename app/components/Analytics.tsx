@@ -1,5 +1,3 @@
-import React, { useEffect } from 'react';
-import { Star } from 'lucide-react';
 
 declare global {
   interface Window {
@@ -7,8 +5,6 @@ declare global {
     dataLayer: any[];
   }
 }
-=======
-import React from 'react';
 
 interface AnalyticsProps {
   className?: string;

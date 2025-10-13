@@ -1,4 +1,3 @@
-import React from 'react';
 import { 
   Rocket, 
   Satellite, 
@@ -11,14 +10,8 @@ import {
   Navigation,
   Gauge
 } from 'lucide-react';
-=======
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Rocket, Satellite, Orbit, Zap, Target, CheckCircle, Globe, Activity, Navigation, Gauge } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
 import { ArrowRight } from 'lucide-react';
 import { Clock } from 'lucide-react';
 import { Users } from 'lucide-react';
@@ -193,6 +186,5 @@ export default function AiSpaceMissionOptimizerPage() {
     </div>
   );
 };
-
 
 }

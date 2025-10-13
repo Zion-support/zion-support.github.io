@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Clock } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -449,6 +448,3 @@ export default function ConsultationPage() {
 </div>
   );
 }
-=======
-import { Link } from 'react-router-dom';
-import { Calendar, Clock, CheckCircle, Brain, Shield, Zap, Globe, Mail, Smartphone, MapPin, Star } from 'lucide-react';

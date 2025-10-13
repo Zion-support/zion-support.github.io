@@ -1,13 +1,7 @@
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import { Database } from 'lucide-react';
 
-
-
-=======
 export default function GDataAnalyticsZionTechGroupPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">

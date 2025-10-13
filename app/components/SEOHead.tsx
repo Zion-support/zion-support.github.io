@@ -1,4 +1,3 @@
-import React from 'react';
 
 interface SeoheadProps {
   className?: string;

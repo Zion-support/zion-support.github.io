@@ -1,18 +1,11 @@
-import React from 'react';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { Shield } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { Settings } from 'lucide-react';
-import { Globe } from 'lucide-react';
 import { Network } from 'lucide-react';
-import { Lock } from 'lucide-react';
 import { Code } from 'lucide-react';
-import { Monitor } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Activity } from 'lucide-react';
 import { Cloud } from 'lucide-react';
@@ -156,12 +149,9 @@ const CloudInfrastructure = () => {
       cta: "Contact Sales"
     }
   ];
-=======
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { ArrowRight, Activity, BarChart3, CheckCircle } from 'lucide-react';
 
 export default function CloudInfrastructurePage() {
   const stats = [

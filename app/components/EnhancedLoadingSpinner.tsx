@@ -1,10 +1,7 @@
-import React from 'react';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   text?: string;
-=======
-import React from 'react';
 
 interface EnhancedloadingspinnerProps {
   className?: string;

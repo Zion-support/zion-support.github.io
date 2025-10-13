@@ -1,11 +1,5 @@
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { PieChart } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
 import { TrendingUp } from 'lucide-react';
-import { Zap } from 'lucide-react';
 import { Brain } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
 
 const AIDataAnalyticsProPage = () => {
   const benefits: string[] = [];
@@ -45,10 +39,6 @@ const AIDataAnalyticsProPage = () => {
     "Scale to handle any data volume",
     "Integrate with existing systems"
   ];
-=======
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import { TrendingUp, Zap, Brain, PieChart, Sparkles, ArrowRight, CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 export default function AiDataAnalyticsProPage() {

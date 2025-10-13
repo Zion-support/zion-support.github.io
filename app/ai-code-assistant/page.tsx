@@ -1,14 +1,7 @@
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import { Code } from 'lucide-react';
 
-
-
-
-=======
 export default function AICodeAssistantZionTechGroup() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">

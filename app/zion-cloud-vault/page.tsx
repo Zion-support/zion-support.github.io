@@ -1,19 +1,14 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import { Search } from 'lucide-react';
-import { Star } from 'lucide-react';
 import { Shield } from 'lucide-react';
 import { Database } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Lock } from 'lucide-react';
 import { Filter } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
-
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 const features = [

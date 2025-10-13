@@ -1,11 +1,7 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Award } from 'lucide-react';
-import { Star } from 'lucide-react';
 import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Lock } from 'lucide-react';
 import { Monitor } from 'lucide-react';
@@ -77,7 +73,6 @@ export default function page() {
       features: ["Regular Assessments", "Policy Updates", "Training Programs", "Incident Response"]
     }
   ];
-=======
 
 export default function CompliancePage() {
   return (

@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
 import { Pause } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
 import { Network } from 'lucide-react';
 import { Calendar } from 'lucide-react';
 import { Monitor } from 'lucide-react';
@@ -13,9 +9,6 @@ import { Hand } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
 import { useState } from 'react';
-=======
-import { ArrowRight } from 'lucide-react';
-import { Play, Pause, SkipForward, SkipBack, Maximize, ArrowRight, CheckCircle, Star, Calendar, Users, Award } from 'lucide-react';
 
 export default function Page() {
   const [currentDemo, setCurrentDemo] = useState(0);
