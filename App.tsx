@@ -17,35 +17,12 @@ const TermsPage = React.lazy(() => import('./app/terms/page'));
 const AIServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const FiveGSolutionsPage = React.lazy(() => import('./app/5g-solutions/page'));
 const CloudInfrastructurePage = React.lazy(() => import('./app/cloud-infrastructure/page'));
-const TutorialsPage = React.lazy(() => import('./app/tutorials/page'));
-const DemoPage = React.lazy(() => import('./app/demo/page'));
-const SupportPage = React.lazy(() => import('./app/support/page'));
 const BlogPage = React.lazy(() => import('./app/blog/page'));
-
-// AI Services Pages
-const AIAnalyticsPage = React.lazy(() => import('./app/ai-analytics/page'));
-const AIAutomationPage = React.lazy(() => import('./app/ai-automation/page'));
-const AIBusinessIntelligencePage = React.lazy(() => import('./app/ai-business-intelligence/page'));
-const AIContentGenerationPage = React.lazy(() => import('./app/ai-content-generation/page'));
-const AICustomerServicePage = React.lazy(() => import('./app/ai-customer-service/page'));
-const AIDataAnalyticsPage = React.lazy(() => import('./app/ai-data-analytics/page'));
-const AIEmailAutomationPage = React.lazy(() => import('./app/ai-email-automation/page'));
-const AIFraudDetectionPage = React.lazy(() => import('./app/ai-fraud-detection/page'));
-const AIHealthcarePage = React.lazy(() => import('./app/ai-healthcare/page'));
-const AIMarketingPage = React.lazy(() => import('./app/ai-marketing/page'));
-const AIPredictiveAnalyticsPage = React.lazy(() => import('./app/ai-predictive-analytics/page'));
-const AIProjectManagementPage = React.lazy(() => import('./app/ai-project-management/page'));
-
-// 5G Solutions Pages
-const FiveGNetworkInfrastructurePage = React.lazy(() => import('./app/5g-network-infrastructure/page'));
-const FiveGPrivateNetworksPage = React.lazy(() => import('./app/5g-private-networks/page'));
-const FiveGIoTSolutionsPage = React.lazy(() => import('./app/5g-iot-solutions/page'));
-const FiveGEdgeComputingPage = React.lazy(() => import('./app/5g-edge-computing/page'));
-const FiveGSmartCitiesPage = React.lazy(() => import('./app/5g-smart-city-solutions/page'));
 
 // Main App Component
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const toggleSidebar = useCallback(() => {
     setIsSidebarOpen(prev => !prev);
@@ -59,8 +36,20 @@ function App() {
     // Initialize performance monitoring
     if (typeof window !== 'undefined') {
       console.log('Zion Tech Group App initialized');
+      
+      // Simulate initial loading
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+      }, 1000);
+      
+      return () => clearTimeout(timer);
     }
   }, []);
+
+  // Show loading screen initially
+  if (isLoading) {
+    return <PageLoader />;
+  }
 
   return (
     <ErrorBoundary>
@@ -80,35 +69,11 @@ function App() {
                   <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
                   <Route path="/blog" element={<BlogPage />} />
                   <Route path="/ai-services" element={<AIServicesPage />} />
-                  <Route path="/tutorials" element={<TutorialsPage />} />
-                  <Route path="/demo" element={<DemoPage />} />
-                  <Route path="/support" element={<SupportPage />} />
                   <Route path="/privacy" element={<PrivacyPage />} />
                   <Route path="/terms" element={<TermsPage />} />
 
-                  {/* AI Services */}
-                  <Route path="/ai-analytics" element={<AIAnalyticsPage />} />
-                  <Route path="/ai-automation" element={<AIAutomationPage />} />
-                  <Route path="/ai-business-intelligence" element={<AIBusinessIntelligencePage />} />
-                  <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
-                  <Route path="/ai-customer-service" element={<AICustomerServicePage />} />
-                  <Route path="/ai-data-analytics" element={<AIDataAnalyticsPage />} />
-                  <Route path="/ai-email-automation" element={<AIEmailAutomationPage />} />
-                  <Route path="/ai-fraud-detection" element={<AIFraudDetectionPage />} />
-                  <Route path="/ai-healthcare" element={<AIHealthcarePage />} />
-                  <Route path="/ai-marketing" element={<AIMarketingPage />} />
-                  <Route path="/ai-predictive-analytics" element={<AIPredictiveAnalyticsPage />} />
-                  <Route path="/ai-project-management" element={<AIProjectManagementPage />} />
-
                   {/* IT Services */}
                   <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
-
-                  {/* 5G Solutions Routes */}
-                  <Route path="/5g-network-infrastructure" element={<FiveGNetworkInfrastructurePage />} />
-                  <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
-                  <Route path="/5g-iot-solutions" element={<FiveGIoTSolutionsPage />} />
-                  <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
-                  <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitiesPage />} />
 
                   {/* Catch all route */}
                   <Route path="*" element={

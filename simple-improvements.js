@@ -3,232 +3,11 @@
 import fs from 'fs';
 import path from 'path';
 
-// Function to remove corrupted files
-function removeCorruptedFiles() {
-  const corruptedPatterns = [
-    'app/accessibility-page',
-    'app/accessibility',
-    'app/about/page.tsx',
-    'app/contact/page.tsx',
-    'app/services/page.tsx',
-    'app/privacy/page.tsx',
-    'app/terms/page.tsx',
-    'app/tutorials/page.tsx',
-    'app/demo/page.tsx',
-    'app/support/page.tsx',
-    'app/blog/page.tsx',
-    'app/cloud-infrastructure/page.tsx'
-  ];
+console.log('🔧 Starting simple improvements...');
 
-  corruptedPatterns.forEach(pattern => {
-    const fullPath = `/workspace/${pattern}`;
-    try {
-      if (fs.existsSync(fullPath)) {
-        if (fs.statSync(fullPath).isDirectory()) {
-          fs.rmSync(fullPath, { recursive: true, force: true });
-          console.log(`🗑️  Removed corrupted directory: ${pattern}`);
-        } else {
-          fs.unlinkSync(fullPath);
-          console.log(`🗑️  Removed corrupted file: ${pattern}`);
-        }
-      }
-    } catch (error) {
-      console.log(`⚠️  Could not remove ${pattern}: ${error.message}`);
-    }
-  });
-}
-
-// Function to create minimal working pages
-function createMinimalPages() {
-  const pages = [
-    {
-      path: 'app/about/page.tsx',
-      content: `import React from 'react';
-
-export default function AboutPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-white mb-8">About Us</h1>
-        <p className="text-gray-300 text-lg">
-          Zion Tech Group is a leading provider of AI and IT solutions.
-        </p>
-      </div>
-    </div>
-  );
-}`
-    },
-    {
-      path: 'app/contact/page.tsx',
-      content: `import React from 'react';
-
-export default function ContactPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-white mb-8">Contact Us</h1>
-        <p className="text-gray-300 text-lg">
-          Get in touch with our team for your AI and IT needs.
-        </p>
-      </div>
-    </div>
-  );
-}`
-    },
-    {
-      path: 'app/services/page.tsx',
-      content: `import React from 'react';
-
-export default function ServicesPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-white mb-8">Our Services</h1>
-        <p className="text-gray-300 text-lg">
-          Comprehensive AI and IT solutions for modern businesses.
-        </p>
-      </div>
-    </div>
-  );
-}`
-    },
-    {
-      path: 'app/privacy/page.tsx',
-      content: `import React from 'react';
-
-export default function PrivacyPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-white mb-8">Privacy Policy</h1>
-        <p className="text-gray-300 text-lg">
-          Your privacy is important to us.
-        </p>
-      </div>
-    </div>
-  );
-}`
-    },
-    {
-      path: 'app/terms/page.tsx',
-      content: `import React from 'react';
-
-export default function TermsPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-white mb-8">Terms of Service</h1>
-        <p className="text-gray-300 text-lg">
-          Terms and conditions for using our services.
-        </p>
-      </div>
-    </div>
-  );
-}`
-    },
-    {
-      path: 'app/tutorials/page.tsx',
-      content: `import React from 'react';
-
-export default function TutorialsPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-white mb-8">Tutorials</h1>
-        <p className="text-gray-300 text-lg">
-          Learn about AI and IT technologies with our tutorials.
-        </p>
-      </div>
-    </div>
-  );
-}`
-    },
-    {
-      path: 'app/demo/page.tsx',
-      content: `import React from 'react';
-
-export default function DemoPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-white mb-8">Demo</h1>
-        <p className="text-gray-300 text-lg">
-          Experience our solutions with interactive demos.
-        </p>
-      </div>
-    </div>
-  );
-}`
-    },
-    {
-      path: 'app/support/page.tsx',
-      content: `import React from 'react';
-
-export default function SupportPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-white mb-8">Support</h1>
-        <p className="text-gray-300 text-lg">
-          Get help and support for our services.
-        </p>
-      </div>
-    </div>
-  );
-}`
-    },
-    {
-      path: 'app/blog/page.tsx',
-      content: `import React from 'react';
-
-export default function BlogPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-white mb-8">Blog</h1>
-        <p className="text-gray-300 text-lg">
-          Latest insights and updates from our team.
-        </p>
-      </div>
-    </div>
-  );
-}`
-    },
-    {
-      path: 'app/cloud-infrastructure/page.tsx',
-      content: `import React from 'react';
-
-export default function CloudInfrastructurePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-white mb-8">Cloud Infrastructure</h1>
-        <p className="text-gray-300 text-lg">
-          Scalable and secure cloud solutions for your business.
-        </p>
-      </div>
-    </div>
-  );
-}`
-    }
-  ];
-
-  pages.forEach(({ path: filePath, content }) => {
-    const fullPath = `/workspace/${filePath}`;
-    const dir = path.dirname(fullPath);
-    
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
-    
-    fs.writeFileSync(fullPath, content);
-    console.log(`✅ Created ${filePath}`);
-  });
-}
-
-// Function to create a clean App.tsx
-function createCleanApp() {
-  const content = `import React, { useState, useCallback, useEffect, Suspense } from 'react';
+// Function to enhance the main App component
+function enhanceAppComponent() {
+  const enhancedApp = `import React, { useState, useCallback, useEffect, Suspense } from 'react';
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import './app/globals.css';
@@ -276,6 +55,7 @@ const FiveGSmartCitiesPage = React.lazy(() => import('./app/5g-smart-city-soluti
 // Main App Component
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const toggleSidebar = useCallback(() => {
     setIsSidebarOpen(prev => !prev);
@@ -289,8 +69,20 @@ function App() {
     // Initialize performance monitoring
     if (typeof window !== 'undefined') {
       console.log('Zion Tech Group App initialized');
+      
+      // Simulate initial loading
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+      }, 1000);
+      
+      return () => clearTimeout(timer);
     }
   }, []);
+
+  // Show loading screen initially
+  if (isLoading) {
+    return <PageLoader />;
+  }
 
   return (
     <ErrorBoundary>
@@ -366,20 +158,196 @@ function App() {
 
 export default App;`;
 
-  fs.writeFileSync('/workspace/App.tsx', content);
-  console.log('✅ Created clean App.tsx');
+  fs.writeFileSync('/workspace/App.tsx', enhancedApp);
+  console.log('✅ Enhanced App component with loading states');
+}
+
+// Function to create performance monitoring utilities
+function createPerformanceUtils() {
+  const utilsDir = '/workspace/utils';
+  if (!fs.existsSync(utilsDir)) {
+    fs.mkdirSync(utilsDir, { recursive: true });
+  }
+
+  const performanceUtils = `// Performance monitoring utilities
+export class PerformanceMonitor {
+  static measurePageLoad() {
+    if (typeof window !== 'undefined' && window.performance) {
+      const navigation = window.performance.getEntriesByType('navigation')[0];
+      return {
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+        loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+        totalTime: navigation.loadEventEnd - navigation.fetchStart
+      };
+    }
+    return null;
+  }
+
+  static measureResourceTiming() {
+    if (typeof window !== 'undefined' && window.performance) {
+      const resources = window.performance.getEntriesByType('resource');
+      return resources.map(resource => ({
+        name: resource.name,
+        duration: resource.duration,
+        size: resource.transferSize || 0
+      }));
+    }
+    return [];
+  }
+
+  static logWebVitals() {
+    if (typeof window !== 'undefined' && window.webVitals) {
+      window.webVitals.getCLS(console.log);
+      window.webVitals.getFID(console.log);
+      window.webVitals.getFCP(console.log);
+      window.webVitals.getLCP(console.log);
+      window.webVitals.getTTFB(console.log);
+    }
+  }
+}
+
+export class SEOOptimizer {
+  static updateMetaTags(title, description, keywords) {
+    if (typeof document !== 'undefined') {
+      document.title = title;
+      
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', description);
+      } else {
+        const meta = document.createElement('meta');
+        meta.name = 'description';
+        meta.content = description;
+        document.head.appendChild(meta);
+      }
+
+      if (keywords) {
+        const metaKeywords = document.querySelector('meta[name="keywords"]');
+        if (metaKeywords) {
+          metaKeywords.setAttribute('content', keywords);
+        } else {
+          const meta = document.createElement('meta');
+          meta.name = 'keywords';
+          meta.content = keywords;
+          document.head.appendChild(meta);
+        }
+      }
+    }
+  }
+
+  static generateStructuredData(type, data) {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': type,
+      ...data
+    });
+    document.head.appendChild(script);
+  }
+}`;
+
+  fs.writeFileSync('/workspace/utils/performanceUtils.ts', performanceUtils);
+  console.log('✅ Created performance monitoring utilities');
+}
+
+// Function to create enhanced error handling
+function createErrorHandling() {
+  const errorHandling = `import React from 'react';
+
+interface ErrorBoundaryState {
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: React.ErrorInfo;
+}
+
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+  fallback?: React.ComponentType<{ error?: Error; resetError: () => void }>;
+  onError?: (error: Error, errorInfo: React.ErrorInfo) => void;
+}
+
+class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    
+    // Log error to monitoring service
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    // Store error info for debugging
+    this.setState({ errorInfo });
+  }
+
+  render() {
+    if (this.state.hasError) {
+      const FallbackComponent = this.props.fallback || DefaultErrorFallback;
+      return (
+        <FallbackComponent 
+          error={this.state.error} 
+          resetError={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })} 
+        />
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+function DefaultErrorFallback({ error, resetError }) {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-red-50">
+      <div className="text-center max-w-md mx-auto p-6">
+        <div className="text-red-600 text-6xl mb-4">⚠️</div>
+        <h1 className="text-2xl font-bold text-red-600 mb-4">Something went wrong</h1>
+        <p className="text-gray-600 mb-6">
+          {error?.message || 'An unexpected error occurred. Please try refreshing the page.'}
+        </p>
+        <div className="space-y-3">
+          <button
+            onClick={resetError}
+            className="w-full bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors"
+          >
+            Try Again
+          </button>
+          <button
+            onClick={() => window.location.reload()}
+            className="w-full bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition-colors"
+          >
+            Refresh Page
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default ErrorBoundary;`;
+
+  fs.writeFileSync('/workspace/app/components/ErrorBoundary.tsx', errorHandling);
+  console.log('✅ Enhanced error handling component');
 }
 
 // Main execution
-console.log('🧹 Starting aggressive cleanup...');
+console.log('🔧 Starting simple improvements...');
 
 try {
-  removeCorruptedFiles();
-  createMinimalPages();
-  createCleanApp();
+  enhanceAppComponent();
+  createPerformanceUtils();
+  createErrorHandling();
   
-  console.log('✅ Aggressive cleanup completed successfully!');
+  console.log('✅ All improvements completed successfully!');
 } catch (error) {
-  console.error('❌ Error during cleanup:', error);
+  console.error('❌ Error during improvements:', error);
   process.exit(1);
 }
