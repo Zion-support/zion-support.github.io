@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
+=======
+import React, { useState, useCallback } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-c22f
 
 interface OptimizedImageProps {
   src: string;
@@ -12,7 +16,11 @@ interface OptimizedImageProps {
   onError?: () => void;
 }
 
+<<<<<<< HEAD
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
+=======
+export default function OptimizedImage({
+>>>>>>> cursor/fix-errors-and-merge-to-main-c22f
   src,
   alt,
   width,
@@ -21,6 +29,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   priority = false,
   onLoad,
   onError
+<<<<<<< HEAD
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
@@ -59,12 +68,31 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     setHasError(true);
     onError?.();
   };
+=======
+}: OptimizedImageProps) {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [hasError, setHasError] = useState(false);
+
+  const handleLoad = useCallback(() => {
+    setIsLoaded(true);
+    onLoad?.();
+  }, [onLoad]);
+
+  const handleError = useCallback(() => {
+    setHasError(true);
+    onError?.();
+  }, [onError]);
+>>>>>>> cursor/fix-errors-and-merge-to-main-c22f
 
   if (hasError) {
     return (
       <div 
         className={`bg-gray-200 flex items-center justify-center ${className}`}
+<<<<<<< HEAD
         style={{ width, height }}
+=======
+        style={{ width: width ? `${width}px` : 'auto', height: height ? `${height}px` : 'auto' }}
+>>>>>>> cursor/fix-errors-and-merge-to-main-c22f
       >
         <span className="text-gray-500 text-sm">Failed to load image</span>
       </div>
@@ -72,6 +100,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   }
 
   return (
+<<<<<<< HEAD
     <div ref={imgRef} className={`relative ${className}`} style={{ width, height }}>
       {!isLoaded && isInView && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse rounded"></div>
@@ -91,6 +120,22 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           className="w-full h-full object-cover"
         />
       )}
+=======
+    <div className={`relative ${className}`} style={{ width: width ? `${width}px` : 'auto', height: height ? `${height}px` : 'auto' }}>
+      {!isLoaded && (
+        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
+      )}
+      <img
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        loading={priority ? 'eager' : 'lazy'}
+        onLoad={handleLoad}
+        onError={handleError}
+        className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+      />
+>>>>>>> cursor/fix-errors-and-merge-to-main-c22f
     </div>
   );
 };
