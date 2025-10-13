@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -8,32 +8,31 @@ import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-<<<<<<< HEAD
 
 // Page Components
 import HomePage from './app/page';
-import AboutPage from './app/pages/AboutPage';
-import ContactPage from './app/pages/ContactPage';
-import ServicesPage from './app/pages/ServicesPage';
-import BlogPage from './app/pages/BlogPage';
-import TutorialsPage from './app/pages/TutorialsPage';
-import DemoPage from './app/pages/DemoPage';
-import SupportPage from './app/pages/SupportPage';
-import PrivacyPage from './app/pages/PrivacyPage';
-import TermsPage from './app/pages/TermsPage';
-import PricingPage from './app/pages/PricingPage';
-import SolutionsPage from './app/pages/SolutionsPage';
+import AboutPage from './app/about/page';
+import ContactPage from './app/contact/page';
+import ServicesPage from './app/services/page';
+import BlogPage from './app/blog/page';
+import TutorialsPage from './app/tutorials/page';
+import DemoPage from './app/demo/page';
+import SupportPage from './app/support/page';
+import PrivacyPage from './app/privacy/page';
+import TermsPage from './app/terms/page';
+import PricingPage from './app/pricing/page';
+import SolutionsPage from './app/solutions/page';
 import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
 import AISolutionsPage from './app/ai-solutions/page';
 import ITSolutionsPage from './app/it-solutions/page';
 
 // Service Pages
-import AIServicesPage from './app/pages/AIServicesPage';
-import ITServicesPage from './app/pages/ITServicesPage';
-import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
-import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
-import CaseStudiesPage from './app/pages/CaseStudiesPage';
-import CareersPage from './app/pages/CareersPage';
+import AIServicesPage from './app/ai-services/page';
+import ITServicesPage from './app/it-services/page';
+import CloudInfrastructurePage from './app/cloud-infrastructure/page';
+import DigitalTransformationPage from './app/digital-transformation/page';
+import CaseStudiesPage from './app/case-studies/page';
+import CareersPage from './app/careers/page';
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -119,12 +118,6 @@ function App() {
         </Router>
       </HelmetProvider>
     </ErrorBoundary>
-=======
-=======
-import EnhancedAccessibility from './app/components/EnhancedAccessibility';
-import LoadingSpinner from './app/components/LoadingSpinner';
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
->>>>>>> origin/main
   );
 }
 
