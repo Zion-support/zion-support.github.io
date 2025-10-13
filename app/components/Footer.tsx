@@ -51,26 +51,19 @@ const Footer: React.FC = () => {
     { name: "Micro SAAS", path: "/micro-saas" },
     { name: "5G Solutions", path: "/5g-solutions" },
     { name: "Contact", path: "/contact" },
-<<<<<<< HEAD
     { name: "Demo", path: "/demo" },
-    { name: "Consultation", path: "/consultation" },
-=======
-    { name: "Blog", path: "/blog" },
+    { name: "Consultation", path: "/consultation" },    { name: "Blog", path: "/blog" },
     { name: "Tutorials", path: "/tutorials" },
     { name: "Demo", path: "/demo" },
     { name: "Support", path: "/support" },
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
   ];
 
   const aiServices = [
     { name: "AI Analytics", path: "/ai-analytics" },
-<<<<<<< HEAD
     { name: "AI Cybersecurity", path: "/ai-cybersecurity" },
     { name: "AI Content Generation", path: "/ai-content-generation" },
     { name: "AI Customer Support", path: "/ai-customer-support" },
-<<<<<<< HEAD
-=======
-    { name: "AI Content Generation", path: "/ai-content-generation" },
+<<<<<<< HEAD    { name: "AI Content Generation", path: "/ai-content-generation" },
     { name: "AI Customer Support", path: "/ai-customer-support" },
     { name: "AI Cybersecurity", path: "/ai-cybersecurity" },
     { name: "AI Data Analytics", path: "/ai-data-analytics" },
@@ -95,7 +88,6 @@ const Footer: React.FC = () => {
   ];
 
   const itServices = [
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
 =======
     { name: "AI Data Analytics", path: "/ai-data-analytics" },
     { name: "AI Workflow Automation", path: "/ai-workflow-automation" },
@@ -109,7 +101,6 @@ const Footer: React.FC = () => {
     { name: "Web Development", path: "/web-development" },
     { name: "DevOps", path: "/devops" },
     { name: "IT Consulting", path: "/it-consulting" },
-<<<<<<< HEAD
     { name: "Network Security", path: "/network-security" },
     { name: "Custom Software", path: "/custom-software" },
     { name: "System Integration", path: "/system-integration" },
@@ -123,13 +114,10 @@ const Footer: React.FC = () => {
     { name: "5G Private Networks", path: "/5g-private-networks" },
     { name: "5G Mobile Applications", path: "/5g-mobile-applications" },
     { name: "5G Data Analytics", path: "/5g-data-analytics" },
-    { name: "5G Implementation", path: "/5g-implementation" },
-=======
-    { name: "System Integration", path: "/system-integration" },
+    { name: "5G Implementation", path: "/5g-implementation" },    { name: "System Integration", path: "/system-integration" },
     { name: "Network Security", path: "/network-security" },
     { name: "Custom Software", path: "/custom-software" },
     { name: "Software Development", path: "/software-development" },
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
   ];
 
   const microSaasServices = [
@@ -175,19 +163,6 @@ const Footer: React.FC = () => {
           ))}
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
-=======
-        <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-8">
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
-          {/* Company Info */}
-          <div className="lg:col-span-1">
-=======
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-2">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
@@ -301,10 +276,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          {/* IT Services */}
+<<<<<<< HEAD          {/* IT Services */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">IT Services</h3>
             <ul className="space-y-2">
@@ -322,7 +294,6 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
           {/* Micro SAAS */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">Micro SAAS</h3>
@@ -351,7 +322,6 @@ const Footer: React.FC = () => {
                   </Link>
                 </li>
               ))}
-<<<<<<< HEAD
             </ul>
           </div>
 
@@ -376,9 +346,7 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
                 <Mail className="w-5 h-5 mr-3 text-cyan-400" />
-                <span>kleber@ziontechgroup.com</span>
-=======
-              <li>
+                <span>kleber@ziontechgroup.com</span>              <li>
                 <Link
                   to="/5g-solutions"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
@@ -408,7 +376,6 @@ const Footer: React.FC = () => {
                   <MapPin className="w-5 h-5 mr-3 text-cyan-400 mt-0.5" />
                   <span>364 E Main St STE 1008<br />Middletown, DE 19709</span>
                 </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
               </div>
             </div>
             
