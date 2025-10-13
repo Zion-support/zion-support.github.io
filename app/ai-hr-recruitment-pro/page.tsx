@@ -1,20 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Users, 
-  Target, 
-  Brain, 
+import {
   ArrowRight,
-  Sparkles,
-  CheckCircle,
-  UserCheck,
   FileText,
-  Calendar,
-  TrendingUp,
-  Shield,
-  Zap
+  Target,
+  Sparkles
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const AIHRRecruitmentProPage = () => {
   const features = [

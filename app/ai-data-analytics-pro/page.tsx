@@ -1,20 +1,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  Database, 
+import {
   ArrowRight,
-  Sparkles,
   CheckCircle,
-  Target,
+  TrendingUp,
   Zap,
   Brain,
   PieChart,
-  Activity,
-  LineChart
+  Sparkles
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const AIDataAnalyticsProPage = () => {
   const features = [

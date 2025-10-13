@@ -1,20 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  Clock, 
-  CheckCircle,
-  Star,
+import {
   ArrowRight,
+  Globe,
   Brain,
-  Target,
-  Globe
+  Zap,
+  Shield,
+  BarChart3
 } from 'lucide-react';
 
 const AIPoweredEmailAnalyzerPage = () => {

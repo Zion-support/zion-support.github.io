@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { Sparkles, PenTool, Video, Image, FileText, CheckCircle, ArrowRight, Star, Users, Award, Clock, Globe, Smartphone, Mail } from "lucide-react";
+import { Sparkles, PenTool, Image, FileText, CheckCircle, ArrowRight} from "lucide-react";
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
@@ -18,7 +17,7 @@ const AIContentStudioZionTechGroup = () => {
     "description": "AI-powered content creation platform with automated writing, design, and video generation",
     "url": "https://ziontechgroup.com/ai-content-studio",
     "applicationCategory": "ContentCreationApplication",
-    "operatingSystem": "Web, Windows, macOS, Linux",
+    "operatingSystem": "Webows, macOS, Linux",
     "offers": {
       "@type": "Offer",
       "price": "149",
@@ -190,7 +189,7 @@ const AIContentStudioZionTechGroup = () => {
                     href="#pricing"
                     variant="primary"
                     size="lg"
-                    icon={Sparkles}
+                    icon={}
                     iconPosition="left"
                     glowColor="purple"
                     neon={true}
@@ -376,7 +375,7 @@ const AIContentStudioZionTechGroup = () => {
                     href="/demo"
                     variant="outline"
                     size="lg"
-                    icon={Sparkles}
+                    icon={}
                     iconPosition="right"
                     glowColor="pink"
                     neon={true}

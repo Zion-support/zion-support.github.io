@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { Brain, Code, Zap, Shield, CheckCircle, ArrowRight, Star, Users, Award, Clock, Globe, Smartphone, Mail } from "lucide-react";
+import { Brain, CheckCircle, ArrowRight, Globe} from "lucide-react";
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
@@ -18,7 +17,7 @@ const AICodeAssistantProZionTechGroup = () => {
     "description": "AI-powered code generation, debugging, and optimization with support for 50+ programming languages",
     "url": "https://ziontechgroup.com/ai-code-assistant-pro",
     "applicationCategory": "DeveloperApplication",
-    "operatingSystem": "Web, Windows, macOS, Linux",
+    "operatingSystem": "Webows, macOS, Linux",
     "offers": {
       "@type": "Offer",
       "price": "199",
@@ -187,7 +186,7 @@ const AICodeAssistantProZionTechGroup = () => {
                     href="#pricing"
                     variant="primary"
                     size="lg"
-                    icon={Code}
+                    icon={}
                     iconPosition="left"
                     glowColor="blue"
                     neon={true}
@@ -374,7 +373,7 @@ const AICodeAssistantProZionTechGroup = () => {
                     href="/demo"
                     variant="outline"
                     size="lg"
-                    icon={Code}
+                    icon={}
                     iconPosition="right"
                     glowColor="cyan"
                     neon={true}
