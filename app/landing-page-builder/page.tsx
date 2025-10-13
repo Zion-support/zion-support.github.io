@@ -1,13 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-82b8
-=======
 
->>>>>>> 0da0de9a40ceae2cf98b043331c5936c6960e4fa
+
 export default function LandingPageBuilder() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">

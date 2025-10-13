@@ -1,9 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-=======
->>>>>>> 0da0de9a40ceae2cf98b043331c5936c6960e4fa
+
 export default function Pricing() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -27,9 +25,7 @@ export default function Pricing() {
               This page is under development. Please check back later for updates.
             </p>
           </div>
-<<<<<<< HEAD
-=======
-          <div className="grid md:grid-cols-3 gap-8">
+<div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Basic</h3>
               <p className="text-3xl font-bold text-gray-900 mb-4">$99<span className="text-lg text-gray-600">/month</span></p>
@@ -61,7 +57,6 @@ export default function Pricing() {
               </ul>
             </div>
           </div>
->>>>>>> 0da0de9a40ceae2cf98b043331c5936c6960e4fa
         </div>
       </div>
     </div>

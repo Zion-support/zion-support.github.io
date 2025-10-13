@@ -3,11 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Shield, Users } from 'lucide-react';
 
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-errors-and-merge-to-main-82b8
-=======
->>>>>>> 0da0de9a40ceae2cf98b043331c5936c6960e4fa
 export default function AboutPage() {
   const teamMembers = [
     {
