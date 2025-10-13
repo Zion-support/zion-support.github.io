@@ -1,137 +1,251 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Target, Star, Globe, Shield, CheckCircle } from 'lucide-react';
+import { ArrowRight, ExternalLink, TrendingUp, Users, Clock, Award } from 'lucide-react';
+import EnhancedSEO from '../components/EnhancedSEO';
+import FuturisticButton from '../components/FuturisticButton';
 
-import { ArrowRight, TrendingUp, Zap, BarChart3, Clock, CheckCircle } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
-export default function CaseStudies() {
+const CaseStudiesPage = () => {
   const caseStudies = [
     {
-      id: 1,
-      title: "E-commerce Platform AI Transformation",
-      company: "TechStart Inc.",
-      industry: "E-commerce",
-      challenge: "Manual inventory management and customer service bottlenecks",
-      solution: "AI-powered inventory optimization and automated customer support",
+      title: 'E-commerce Platform Transformation',
+      client: 'TechStart Inc.',
+      industry: 'E-commerce',
+      challenge: 'Legacy system causing 40% cart abandonment and poor user experience',
+      solution: 'Implemented AI-powered recommendation engine and modernized the entire platform',
       results: [
-        "60% reduction in inventory costs",
-        "40% increase in customer satisfaction",
-        "80% faster response times",
-        "35% increase in sales"
+        '60% increase in conversion rate',
+        '45% reduction in cart abandonment',
+        '80% improvement in page load speed',
+        '200% increase in customer engagement'
       ],
-      image: "/images/case-studies/ecommerce-ai.jpg",
-      duration: "6 months",
-      services: ["AI Analytics", "AI Customer Support", "Data Analytics"],
-      image: "/api/placeholder/600/400",
-      featured: true
+      duration: '6 months',
+      team: '8 developers',
+      image: '/api/placeholder/600/400',
+      icon: <TrendingUp className="w-8 h-8" />
     },
     {
-      id: 2,
-      title: "Healthcare Data Analytics Implementation",
-      company: "MedTech Solutions",
-      industry: "Healthcare",
-      challenge: "Complex patient data analysis and treatment optimization",
-      solution: "Advanced AI analytics platform for predictive healthcare insights",
+      title: 'Healthcare AI Implementation',
+      client: 'MedTech Solutions',
+      industry: 'Healthcare',
+      challenge: 'Manual patient data analysis taking 8+ hours per case',
+      solution: 'Developed AI-powered diagnostic assistant with 95% accuracy',
       results: [
-        "45% improvement in diagnosis accuracy",
-        "30% reduction in treatment costs",
-        "50% faster data processing",
-        "25% increase in patient outcomes"
+        '90% reduction in analysis time',
+        '95% diagnostic accuracy',
+        '50% cost savings',
+        'Improved patient outcomes'
       ],
-      duration: "8 months",
-      services: ["AI Analytics", "Data Engineering", "Machine Learning"],
-      image: "/api/placeholder/600/400",
-      featured: false
+      duration: '12 months',
+      team: '12 developers',
+      image: '/api/placeholder/600/400',
+      icon: <Award className="w-8 h-8" />
     },
     {
-      id: 3,
-      title: "Manufacturing Process Automation",
-      company: "Industrial Corp",
-      industry: "Manufacturing",
-      challenge: "Inefficient production processes and quality control issues",
-      solution: "AI-driven process optimization and automated quality monitoring",
+      title: 'Financial Services Automation',
+      client: 'FinanceCorp',
+      industry: 'Financial Services',
+      challenge: 'Manual fraud detection missing 30% of fraudulent transactions',
+      solution: 'Implemented AI-powered fraud detection system with real-time monitoring',
       results: [
-        "55% increase in production efficiency",
-        "70% reduction in defects",
-        "40% decrease in downtime",
-        "25% cost savings"
+        '95% fraud detection accuracy',
+        '70% reduction in false positives',
+        'Real-time transaction monitoring',
+        '50% reduction in manual review time'
       ],
-      duration: "10 months",
-      services: ["AI Automation", "IoT Solutions", "Process Optimization"],
-      image: "/api/placeholder/600/400",
-      featured: false
+      duration: '8 months',
+      team: '10 developers',
+      image: '/api/placeholder/600/400',
+      icon: <Users className="w-8 h-8" />
     },
     {
-      id: 4,
-      title: "Financial Services Risk Management",
-      company: "FinanceFirst",
-      industry: "Financial Services",
-      challenge: "Manual fraud detection and risk assessment processes",
-      solution: "AI-powered fraud detection and real-time risk analysis",
+      title: 'Manufacturing IoT Integration',
+      client: 'ManufacturingPro',
+      industry: 'Manufacturing',
+      challenge: 'Equipment downtime causing $2M+ in annual losses',
+      solution: 'Deployed IoT sensors with AI-powered predictive maintenance',
       results: [
-        "85% improvement in fraud detection",
-        "60% reduction in false positives",
-        "90% faster risk assessment",
-        "50% decrease in financial losses"
+        '75% reduction in unplanned downtime',
+        '40% increase in equipment efficiency',
+        '60% reduction in maintenance costs',
+        'Real-time equipment monitoring'
       ],
-      duration: "7 months",
-      services: ["AI Fraud Detection", "Risk Analytics", "Cybersecurity"],
-      image: "/api/placeholder/600/400",
-      featured: false
-    },
-    {
-      id: 5,
-      title: "Retail Customer Experience Enhancement",
-      company: "RetailMax",
-      industry: "Retail",
-      challenge: "Personalized customer experience and inventory management",
-      solution: "AI-driven personalization and demand forecasting",
-      results: [
-        "65% increase in customer engagement",
-        "40% improvement in inventory turnover",
-        "50% boost in average order value",
-        "30% increase in customer retention"
-      ],
-      duration: "5 months",
-      services: ["AI Marketing", "Recommendation Engine", "Data Analytics"],
-      image: "/api/placeholder/600/400",
-      featured: false
-    },
-    {
-      id: 6,
-      title: "Logistics Optimization with 5G",
-      company: "LogiTech",
-      industry: "Logistics",
-      challenge: "Real-time tracking and route optimization challenges",
-      solution: "5G-enabled IoT network with AI-powered route optimization",
-      results: [
-        "45% reduction in delivery times",
-        "35% decrease in fuel costs",
-        "80% improvement in tracking accuracy",
-        "25% increase in customer satisfaction"
-      ],
-      duration: "9 months",
-      services: ["5G Solutions", "IoT Integration", "AI Analytics"],
-      image: "/api/placeholder/600/400",
-      featured: false
+      duration: '10 months',
+      team: '15 developers',
+      image: '/api/placeholder/600/400',
+      icon: <Clock className="w-8 h-8" />
     }
   ];
 
   const stats = [
-    { number: "50+", label: "Projects Completed", icon: <CheckCircle className="w-6 h-6" /> },
-    { number: "95%", label: "Client Satisfaction", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "40%", label: "Average Cost Reduction", icon: <BarChart3 className="w-6 h-6" /> },
-    { number: "60%", label: "Average Efficiency Gain", icon: <Zap className="w-6 h-6" /> }
+    { number: '100+', label: 'Projects Completed', icon: <Award className="w-8 h-8" /> },
+    { number: '95%', label: 'Client Satisfaction', icon: <Users className="w-8 h-8" /> },
+    { number: '50+', label: 'Industries Served', icon: <TrendingUp className="w-8 h-8" /> },
+    { number: '24/7', label: 'Support Available', icon: <Clock className="w-8 h-8" /> }
   ];
 
-              </Link>
-            </div>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <EnhancedSEO
+        title="Case Studies - Zion Tech Group | Success Stories"
+        description="Explore our success stories and case studies. See how we've helped businesses transform with AI and technology solutions."
+        keywords="case studies, success stories, AI implementation, business transformation, client results"
+        canonical="https://ziontechgroup.com/case-studies"
+      />
+
+      {/* Hero Section */}
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+              Success Stories
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Discover how we've helped businesses across industries transform with cutting-edge AI and technology solutions.
+          </p>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center group">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  {stat.icon}
+                </div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
+            ))}
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+
+      {/* Case Studies */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Featured Case Studies
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Real projects, real results. See how we've delivered measurable value to our clients.
+            </p>
+          </div>
+
+          <div className="space-y-16">
+            {caseStudies.map((study, index) => (
+              <div
+                key={index}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-8 items-center ${
+                  index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
+                }`}
+              >
+                <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                    <div className="flex items-center mb-6">
+                      <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center text-white mr-4">
+                        {study.icon}
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-bold text-white">{study.title}</h3>
+                        <p className="text-cyan-400 font-medium">{study.client} • {study.industry}</p>
+                      </div>
+                    </div>
+
+                    <div className="space-y-6">
+                      <div>
+                        <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
+                        <p className="text-gray-300">{study.challenge}</p>
+                      </div>
+
+                      <div>
+                        <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
+                        <p className="text-gray-300">{study.solution}</p>
+                      </div>
+
+                      <div>
+                        <h4 className="text-lg font-semibold text-white mb-4">Results</h4>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                          {study.results.map((result, resultIndex) => (
+                            <div key={resultIndex} className="flex items-center">
+                              <ArrowRight className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                              <span className="text-gray-300 text-sm">{result}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div className="flex flex-wrap gap-4 text-sm text-gray-400">
+                        <div className="flex items-center">
+                          <Clock className="w-4 h-4 mr-2" />
+                          Duration: {study.duration}
+                        </div>
+                        <div className="flex items-center">
+                          <Users className="w-4 h-4 mr-2" />
+                          Team: {study.team}
+                        </div>
+                      </div>
+
+                      <FuturisticButton
+                        variant="outline"
+                        size="md"
+                        to="/contact"
+                      >
+                        Learn More
+                        <ExternalLink className="w-4 h-4 ml-2" />
+                      </FuturisticButton>
+                    </div>
+                  </div>
+                </div>
+
+                <div className={`${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
+                  <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl p-8 h-full flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center text-white">
+                        {study.icon}
+                      </div>
+                      <h4 className="text-xl font-semibold text-white mb-2">Project Overview</h4>
+                      <p className="text-gray-300">Click "Learn More" to see detailed project information and technical implementation.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Start Your Success Story?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let us help you achieve similar results. Contact us today to discuss your project.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <FuturisticButton
+              variant="primary"
+              size="lg"
+              to="/contact"
+            >
+              Start Your Project
+            </FuturisticButton>
+            <FuturisticButton
+              variant="outline"
+              size="lg"
+              to="/demo"
+            >
+              Schedule a Demo
+            </FuturisticButton>
+          </div>
+        </div>
+      </section>
+    </div>
   );
-}
+};
+
+export default CaseStudiesPage;
