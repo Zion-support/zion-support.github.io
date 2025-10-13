@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
 
   "timestamp": "2025-10-13T01:36:07.248Z",
 
@@ -12,6 +13,9 @@ ursor/fix-errors-and-merge-to-main-14a9
   "timestamp": "2025-10-13T01:01:20.937Z",
 origin/cursor/fix-errors-and-merge-to-main-09fd
 
+=======
+  "timestamp": "2025-10-13T01:37:01.798Z",
+>>>>>>> cursor/fix-errors-and-merge-to-main-f6dd
   "optimizations": [
     "Icon imports optimized",
     "Bundle splitting improved",
