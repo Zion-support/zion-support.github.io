@@ -1,3 +1,5 @@
+import React, { useEffect } from 'react';
+
 interface AccessibilityConfig {
   enabled: boolean;
   highContrast: boolean;
@@ -5,7 +7,7 @@ interface AccessibilityConfig {
   screenReader: boolean;
 }
 
-class AccessibilityEnhancer {
+class AccessibilityEnhancerClass {
   private config: AccessibilityConfig;
 
   constructor() {
@@ -36,5 +38,17 @@ class AccessibilityEnhancer {
   }
 }
 
-export const accessibilityEnhancer = new AccessibilityEnhancer();
-export default accessibilityEnhancer;
+export const accessibilityEnhancer = new AccessibilityEnhancerClass();
+
+// React component wrapper
+interface AccessibilityEnhancerProps {
+  children?: React.ReactNode;
+}
+
+export default function AccessibilityEnhancer({ children }: AccessibilityEnhancerProps) {
+  useEffect(() => {
+    accessibilityEnhancer.init();
+  }, []);
+
+  return React.createElement(React.Fragment, null, children);
+}
