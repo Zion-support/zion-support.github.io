@@ -1,7 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-
-<<<<<<< HEAD
 // Define all routes for the sitemap
 const routes = [
   // Main pages
@@ -203,23 +201,11 @@ User-agent: SemrushBot
 Disallow: /`;
 }
 
-// Write sitemap to public directory
-const sitemapContent = generateSitemap();
-const robotsContent = generateRobotsTxt();
-
 // Ensure public directory exists
 const publicDir = path.join(__dirname, '..', 'public');
 if (!fs.existsSync(publicDir)) {
   fs.mkdirSync(publicDir, { recursive: true });
 }
-
-// Write files
-fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemapContent);
-fs.writeFileSync(path.join(publicDir, 'robots.txt'), robotsContent);
-
-console.log(`Generated sitemap with ${routes.length} routes`);
-console.log('Generated robots.txt');
-=======
 // Get all page routes from the app directory
 function getRoutes(dir, basePath = '') {
   const routes = [];
@@ -282,7 +268,17 @@ ${routes.map(route => {
   fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
   console.log('Sitemap generated successfully!');
   console.log(`Found ${routes.length} routes`);
+  
+  return sitemap;
 }
 
-generateSitemap();
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
+// Write sitemap to public directory
+const sitemapContent = generateSitemap();
+const robotsContent = generateRobotsTxt();
+
+// Write files
+fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemapContent);
+fs.writeFileSync(path.join(publicDir, 'robots.txt'), robotsContent);
+
+console.log(`Generated sitemap with ${routes.length} routes`);
+console.log('Generated robots.txt');

@@ -353,6 +353,64 @@ export default function AIServices() {
       reviews: 432,
       link: "/ai-supply-chain-optimizer",
       featured: false
+    },
+    {
+      id: "ai-quantum-computing",
+      name: "AI Quantum Computing",
+      description: "Revolutionary quantum computing solutions with AI. Solve complex problems 1000x faster with breakthrough discoveries",
+      price: "From $2,999/month",
+      icon: <Cpu className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      features: [
+        "Quantum machine learning algorithms",
+        "Quantum optimization for complex problems",
+        "Quantum cryptography for ultra-security",
+        "Quantum simulation for drug discovery",
+        "Quantum neural networks",
+        "Quantum annealing optimization",
+        "Quantum error correction",
+        "Hybrid classical-quantum solutions"
+      ],
+      benefits: [
+        "Solve problems 1000x faster",
+        "Breakthrough discoveries",
+        "Unbreakable encryption",
+        "Revolutionary optimization"
+      ],
+      category: "Quantum Computing",
+      rating: 4.9,
+      reviews: 156,
+      link: "/ai-quantum-computing",
+      featured: true
+    },
+    {
+      id: "ai-powered-devops",
+      name: "AI-Powered DevOps",
+      description: "Revolutionize DevOps with AI. Automated testing, intelligent deployment, predictive scaling, and smart monitoring",
+      price: "From $999/month",
+      icon: <Settings className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+      features: [
+        "AI-powered automated testing",
+        "Intelligent deployment optimization",
+        "Predictive infrastructure scaling",
+        "Automated incident detection",
+        "AI-driven code review",
+        "Smart monitoring and alerting",
+        "Automated performance optimization",
+        "Intelligent log analysis"
+      ],
+      benefits: [
+        "Reduce deployment time by 80%",
+        "Decrease incidents by 90%",
+        "Improve reliability by 99.9%",
+        "Cut costs by 40%"
+      ],
+      category: "DevOps",
+      rating: 4.8,
+      reviews: 892,
+      link: "/ai-powered-devops",
+      featured: true
     }
   ];
 
@@ -369,7 +427,9 @@ export default function AIServices() {
     { name: "Marketing", count: aiServices.filter(s => s.category === "Marketing").length, active: false },
     { name: "HR & Recruitment", count: aiServices.filter(s => s.category === "HR & Recruitment").length, active: false },
     { name: "Finance", count: aiServices.filter(s => s.category === "Finance").length, active: false },
-    { name: "Supply Chain", count: aiServices.filter(s => s.category === "Supply Chain").length, active: false }
+    { name: "Supply Chain", count: aiServices.filter(s => s.category === "Supply Chain").length, active: false },
+    { name: "Quantum Computing", count: aiServices.filter(s => s.category === "Quantum Computing").length, active: false },
+    { name: "DevOps", count: aiServices.filter(s => s.category === "DevOps").length, active: false }
   ];
 
   const stats = [

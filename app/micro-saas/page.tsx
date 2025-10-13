@@ -377,6 +377,99 @@ export default function MicroSaas() {
       reviews: 1234,
       link: "/zion-social-scheduler",
       featured: false
+    },
+    {
+      id: "zion-ai-video-generator",
+      name: "Zion AI Video Generator",
+      description: "Create professional videos instantly with AI. Generate marketing videos, tutorials, and social media content from text prompts",
+      price: "From $29/month",
+      originalPrice: "$49/month",
+      discount: "41% OFF",
+      icon: <Video className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      features: [
+        "AI-powered video generation from text",
+        "500+ video templates and styles",
+        "50+ languages voice synthesis",
+        "4K/8K video output quality",
+        "Advanced editing tools and filters",
+        "Social media optimization",
+        "Real-time collaboration",
+        "Brand customization options"
+      ],
+      benefits: [
+        "Create videos 10x faster",
+        "Reduce production costs by 80%",
+        "No technical skills required",
+        "Scale content production infinitely"
+      ],
+      category: "Video Creation",
+      rating: 4.8,
+      reviews: 2156,
+      link: "/zion-ai-video-generator",
+      featured: true
+    },
+    {
+      id: "zion-ai-customer-insights",
+      name: "Zion AI Customer Insights",
+      description: "Transform customer data into actionable insights with AI. Predict churn, analyze sentiment, and boost retention",
+      price: "From $49/month",
+      originalPrice: "$79/month",
+      discount: "38% OFF",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      features: [
+        "AI-powered customer behavior analysis",
+        "Real-time sentiment analysis",
+        "Predictive customer lifetime value",
+        "Automated customer segmentation",
+        "Cross-channel journey mapping",
+        "Intelligent churn prediction",
+        "Personalized recommendations",
+        "Advanced customer scoring"
+      ],
+      benefits: [
+        "Increase retention by 40%",
+        "Boost lifetime value by 60%",
+        "Reduce churn by 50%",
+        "Improve satisfaction by 35%"
+      ],
+      category: "Analytics",
+      rating: 4.9,
+      reviews: 1892,
+      link: "/zion-ai-customer-insights",
+      featured: true
+    },
+    {
+      id: "zion-ai-accounting-assistant",
+      name: "Zion AI Accounting Assistant",
+      description: "Automate your accounting with AI. Track expenses, process invoices, generate reports, and ensure tax compliance",
+      price: "From $29/month",
+      originalPrice: "$49/month",
+      discount: "41% OFF",
+      icon: <Calculator className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      features: [
+        "AI-powered expense categorization",
+        "Automated invoice processing with OCR",
+        "Real-time financial reporting",
+        "Smart receipt scanning",
+        "Automated bank reconciliation",
+        "Tax preparation assistance",
+        "Budget planning and forecasting",
+        "Multi-currency support"
+      ],
+      benefits: [
+        "Save 20+ hours per week",
+        "Reduce errors by 95%",
+        "Ensure tax compliance",
+        "Get real-time insights"
+      ],
+      category: "Finance",
+      rating: 4.7,
+      reviews: 1456,
+      link: "/zion-ai-accounting-assistant",
+      featured: false
     }
   ];
 
@@ -393,7 +486,8 @@ export default function MicroSaas() {
     { name: "Support", count: microSaasServices.filter(s => s.category === "Support").length, active: false },
     { name: "Automation", count: microSaasServices.filter(s => s.category === "Automation").length, active: false },
     { name: "Finance", count: microSaasServices.filter(s => s.category === "Finance").length, active: false },
-    { name: "Social Media", count: microSaasServices.filter(s => s.category === "Social Media").length, active: false }
+    { name: "Social Media", count: microSaasServices.filter(s => s.category === "Social Media").length, active: false },
+    { name: "Video Creation", count: microSaasServices.filter(s => s.category === "Video Creation").length, active: false }
   ];
 
   const stats = [

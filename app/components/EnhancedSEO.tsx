@@ -10,13 +10,8 @@ interface EnhancedSEOProps {
   ogType?: string;
   twitterCard?: string;
   structuredData?: object;
-<<<<<<< HEAD
   noIndex?: boolean;
   lang?: string;
-=======
-  noindex?: boolean;
-  nofollow?: boolean;
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
 }
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
@@ -24,26 +19,16 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   description,
   keywords,
   canonical,
-<<<<<<< HEAD
-  ogImage = '/og-image.svg',
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData,
   noIndex = false,
   lang = 'en',
-=======
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData,
-  noindex = false,
-  nofollow = false
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
 }) => {
   const siteUrl = 'https://ziontechgroup.com';
   const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
-<<<<<<< HEAD
 
   const defaultKeywords = 'AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology, Zion Tech Group';
   const finalKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords;
@@ -74,15 +59,12 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       "https://linkedin.com/company/ziontechgroup"
     ]
   };
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
 
   const mergedStructuredData = structuredData ? { ...defaultStructuredData, ...structuredData } : defaultStructuredData;
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-<<<<<<< HEAD
       <html lang={lang} />
       <title>{title}</title>
       <meta name="description" content={description} />
@@ -94,24 +76,16 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <meta name="color-scheme" content="dark light" />
       
       {/* Canonical URL */}
-=======
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
       <link rel="canonical" href={fullCanonical} />
       
       {/* Robots */}
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
+      <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
       
       {/* Open Graph */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={fullCanonical} />
-<<<<<<< HEAD
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
       <meta property="og:image" content={fullOgImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
@@ -119,19 +93,9 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
-      {/* Twitter */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:url" content={fullCanonical} />
-=======
-      <meta property="og:image" content={fullOgImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      
       {/* Twitter Card */}
       <meta name="twitter:card" content={twitterCard} />
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
+      <meta name="twitter:url" content={fullCanonical} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={fullOgImage} />
@@ -139,10 +103,16 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <meta name="twitter:creator" content="@ziontechgroup" />
       
       {/* Additional SEO Meta Tags */}
-<<<<<<< HEAD
       <meta name="format-detection" content="telephone=no,address=no,email=no" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="referrer" content="origin-when-cross-origin" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="publisher" content="Zion Tech Group" />
+      <meta name="copyright" content="Zion Tech Group" />
+      <meta name="language" content="en" />
+      <meta name="revisit-after" content="7 days" />
+      <meta name="rating" content="general" />
+      <meta name="distribution" content="global" />
       
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -154,14 +124,6 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <script type="application/ld+json">
         {JSON.stringify(mergedStructuredData)}
       </script>
-=======
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="publisher" content="Zion Tech Group" />
-      <meta name="copyright" content="Zion Tech Group" />
-      <meta name="language" content="en" />
-      <meta name="revisit-after" content="7 days" />
-      <meta name="rating" content="general" />
-      <meta name="distribution" content="global" />
       
       {/* Mobile Optimization */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
@@ -212,7 +174,6 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
           })}
         </script>
       )}
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
     </Helmet>
   );
 };
