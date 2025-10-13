@@ -535,23 +535,6 @@ import {
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-<<<<<<< HEAD
-  return (
-    <footer className="relative bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-t border-purple-500/20">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/5 via-blue-600/5 to-purple-600/5 animate-pulse"></div>
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="space-y-6">
-            <div className="flex items-center space-x-2">
-              <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
-                  <Zap className="w-6 h-6 text-white" />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg blur opacity-30"></div>
-=======
   const socialLinks = [
     {
       name: "Twitter",
@@ -568,6 +551,21 @@ const Footer = () => {
       url: "https://github.com/ziontechgroup",
       icon: <Github className="w-5 h-5" />,
     },
+    {
+      name: "Facebook",
+      url: "https://facebook.com/ziontechgroup",
+      icon: <Facebook className="w-5 h-5" />,
+    },
+    {
+      name: "Instagram",
+      url: "https://instagram.com/ziontechgroup",
+      icon: <Instagram className="w-5 h-5" />,
+    },
+    {
+      name: "YouTube",
+      url: "https://youtube.com/ziontechgroup",
+      icon: <Youtube className="w-5 h-5" />,
+    }
   ];
 
   const quickLinks = [
@@ -580,26 +578,40 @@ const Footer = () => {
     { name: "Contact", path: "/contact" },
     { name: "Demo", path: "/demo" },
     { name: "Consultation", path: "/consultation" },
+    { name: "Blog", path: "/blog" }
   ];
 
-  const services = [
+  const aiServices = [
     { name: "AI Analytics", path: "/ai-analytics" },
     { name: "AI Cybersecurity", path: "/ai-cybersecurity" },
     { name: "AI Content Generation", path: "/ai-content-generation" },
     { name: "AI Customer Support", path: "/ai-customer-support" },
+    { name: "AI Data Analytics", path: "/ai-data-analytics" },
+    { name: "AI Workflow Automation", path: "/ai-workflow-automation" },
+    { name: "AI Voice Assistant", path: "/ai-voice-assistant" },
+    { name: "AI Document Processing", path: "/ai-document-processing" }
+  ];
+
+  const itServices = [
     { name: "Cloud Migration", path: "/cloud-migration" },
     { name: "Web Development", path: "/web-development" },
     { name: "DevOps", path: "/devops" },
     { name: "IT Consulting", path: "/it-consulting" },
+    { name: "Network Security", path: "/network-security" },
+    { name: "System Integration", path: "/system-integration" },
+    { name: "Custom Software", path: "/custom-software" },
+    { name: "Data Management", path: "/data-management" }
   ];
 
   const microSaasServices = [
     { name: "Zion Analytics Pro", path: "/zion-analytics-pro" },
-    { name: "Zion Security Shield", path: "/zion-security-shield-pro" },
+    { name: "Zion Security Shield", path: "/zion-security-shield" },
     { name: "Zion AI CRM Pro", path: "/zion-ai-crm-pro" },
-    { name: "Zion Cloud Vault", path: "/zion-cloud-vault-pro" },
+    { name: "Zion Cloud Vault", path: "/zion-cloud-vault" },
     { name: "Zion AI Marketing", path: "/zion-ai-marketing-automation" },
     { name: "Zion AI Video Generator", path: "/zion-ai-video-generator" },
+    { name: "Zion AI Invoice Generator", path: "/zion-ai-invoice-generator" },
+    { name: "Zion AI Customer Insights", path: "/zion-ai-customer-insights" }
   ];
 
   const fiveGServices = [
@@ -609,6 +621,8 @@ const Footer = () => {
     { name: "5G Smart City", path: "/5g-smart-city-solutions" },
     { name: "5G Private Networks", path: "/5g-private-networks" },
     { name: "5G Mobile Apps", path: "/5g-mobile-applications" },
+    { name: "5G Data Analytics", path: "/5g-data-analytics" },
+    { name: "5G Implementation", path: "/5g-implementation" }
   ];
 
   const stats = [
@@ -619,13 +633,16 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-slate-900/95 backdrop-blur-sm border-t border-cyan-500/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="relative bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-t border-purple-500/20">
+      {/* Animated background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/5 via-blue-600/5 to-purple-600/5 animate-pulse"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+            <div key={index} className="text-center group">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
                 {stat.icon}
               </div>
               <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
@@ -634,26 +651,26 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
->>>>>>> main
+              <div className="relative">
+                <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg blur opacity-30"></div>
               </div>
               <span className="text-2xl font-bold bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
                 Zion Tech Group
               </span>
             </div>
             
-            <p className="text-gray-300 text-sm leading-relaxed">
+            <p className="text-gray-300 text-sm leading-relaxed mb-6">
               Leading technology solutions provider specializing in AI, cybersecurity, 
               cloud infrastructure, and digital transformation services.
             </p>
-<<<<<<< HEAD
             
-=======
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <a
@@ -661,10 +678,12 @@ const Footer = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-cyan-400 transition-colors"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 group"
                   aria-label={social.name}
                 >
-                  {social.icon}
+                  <div className="group-hover:scale-110 transition-transform duration-300">
+                    {social.icon}
+                  </div>
                 </a>
               ))}
             </div>
@@ -672,15 +691,18 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+              <Globe className="w-5 h-5 mr-2 text-cyan-400" />
+              Quick Links
+            </h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.path}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center group"
                   >
-                    <ArrowRight className="w-4 h-4 mr-2" />
+                    <ArrowRight className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
                     {link.name}
                   </Link>
                 </li>
@@ -690,233 +712,95 @@ const Footer = () => {
 
           {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">AI Services</h3>
-            <ul className="space-y-2">
-              {services.map((service) => (
-                <li key={service.name}>
-                  <Link
-                    to={service.path}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"
-                  >
-                    <ArrowRight className="w-4 h-4 mr-2" />
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Micro SAAS */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Micro SAAS</h3>
-            <ul className="space-y-2">
-              {microSaasServices.map((service) => (
-                <li key={service.name}>
-                  <Link
-                    to={service.path}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"
-                  >
-                    <ArrowRight className="w-4 h-4 mr-2" />
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* 5G Solutions & Contact */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4">5G Solutions</h3>
-            <ul className="space-y-2 mb-6">
-              {fiveGServices.map((service) => (
-                <li key={service.name}>
-                  <Link
-                    to={service.path}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"
-                  >
-                    <ArrowRight className="w-4 h-4 mr-2" />
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            
-            <h3 className="text-lg font-semibold text-white mb-4">Contact Info</h3>
->>>>>>> main
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Mail className="w-4 h-4 text-purple-400" />
-                <span className="text-sm">kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Phone className="w-4 h-4 text-purple-400" />
-                <span className="text-sm">+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <MapPin className="w-4 h-4 text-purple-400" />
-                <span className="text-sm">364 E Main St STE 1008<br />Middletown DE 19709</span>
-              </div>
-            </div>
-            
-            {/* Social Links */}
-            <div className="flex space-x-4">
-              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-purple-400 transition-colors duration-300">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-purple-400 transition-colors duration-300">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-purple-400 transition-colors duration-300">
-                <Github className="w-5 h-5" />
-              </a>
-              <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover:text-purple-400 transition-colors duration-300">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="https://instagram.com/ziontechgroup" className="text-gray-400 hover:text-purple-400 transition-colors duration-300">
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a href="https://youtube.com/ziontechgroup" className="text-gray-400 hover:text-purple-400 transition-colors duration-300">
-                <Youtube className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-
-          {/* AI Services */}
-          <div className="space-y-6">
-            <h3 className="text-lg font-semibold text-white flex items-center">
+            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
               <Brain className="w-5 h-5 mr-2 text-purple-400" />
               AI Services
             </h3>
-            <ul className="space-y-3">
-              <li>
-                <Link to="/ai-analytics" className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm flex items-center">
-                  <ArrowRight className="w-3 h-3 mr-2" />
-                  AI Analytics Dashboard
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-content-generation" className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm flex items-center">
-                  <ArrowRight className="w-3 h-3 mr-2" />
-                  AI Content Generation
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-customer-support" className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm flex items-center">
-                  <ArrowRight className="w-3 h-3 mr-2" />
-                  AI Customer Support
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-cybersecurity" className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm flex items-center">
-                  <ArrowRight className="w-3 h-3 mr-2" />
-                  AI Cybersecurity
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-data-analytics" className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm flex items-center">
-                  <ArrowRight className="w-3 h-3 mr-2" />
-                  AI Data Analytics
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-workflow-automation" className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm flex items-center">
-                  <ArrowRight className="w-3 h-3 mr-2" />
-                  AI Workflow Automation
-                </Link>
-              </li>
+            <ul className="space-y-2">
+              {aiServices.map((service) => (
+                <li key={service.name}>
+                  <Link
+                    to={service.path}
+                    className="text-gray-300 hover:text-purple-400 transition-colors duration-300 flex items-center group"
+                  >
+                    <ArrowRight className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* IT Services */}
-          <div className="space-y-6">
-            <h3 className="text-lg font-semibold text-white flex items-center">
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
               <Settings className="w-5 h-5 mr-2 text-blue-400" />
               IT Services
             </h3>
-            <ul className="space-y-3">
-              <li>
-                <Link to="/cloud-infrastructure" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm flex items-center">
-                  <ArrowRight className="w-3 h-3 mr-2" />
-                  Cloud Infrastructure
-                </Link>
-              </li>
-              <li>
-                <Link to="/cybersecurity" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm flex items-center">
-                  <ArrowRight className="w-3 h-3 mr-2" />
-                  Cybersecurity Solutions
-                </Link>
-              </li>
-              <li>
-                <Link to="/data-management" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm flex items-center">
-                  <ArrowRight className="w-3 h-3 mr-2" />
-                  Data Management
-                </Link>
-              </li>
-              <li>
-                <Link to="/network-solutions" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm flex items-center">
-                  <ArrowRight className="w-3 h-3 mr-2" />
-                  Network Solutions
-                </Link>
-              </li>
-              <li>
-                <Link to="/it-consulting" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm flex items-center">
-                  <ArrowRight className="w-3 h-3 mr-2" />
-                  IT Consulting
-                </Link>
-              </li>
-              <li>
-                <Link to="/system-integration" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm flex items-center">
-                  <ArrowRight className="w-3 h-3 mr-2" />
-                  System Integration
-                </Link>
-              </li>
+            <ul className="space-y-2">
+              {itServices.map((service) => (
+                <li key={service.name}>
+                  <Link
+                    to={service.path}
+                    className="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center group"
+                  >
+                    <ArrowRight className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Micro SAAS & 5G */}
-          <div className="space-y-6">
-            <h3 className="text-lg font-semibold text-white flex items-center">
+          {/* Micro SAAS & 5G Solutions */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
               <Package className="w-5 h-5 mr-2 text-green-400" />
               Micro SAAS & 5G
             </h3>
-            <ul className="space-y-3">
-              <li>
-                <Link to="/project-management-tool" className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm flex items-center">
-                  <ArrowRight className="w-3 h-3 mr-2" />
-                  Project Management
-                </Link>
-              </li>
-              <li>
-                <Link to="/team-collaboration" className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm flex items-center">
-                  <ArrowRight className="w-3 h-3 mr-2" />
-                  Team Collaboration
-                </Link>
-              </li>
-              <li>
-                <Link to="/analytics-dashboard" className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm flex items-center">
-                  <ArrowRight className="w-3 h-3 mr-2" />
-                  Analytics Dashboard
-                </Link>
-              </li>
-              <li>
-                <Link to="/5g-network-infrastructure" className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm flex items-center">
-                  <ArrowRight className="w-3 h-3 mr-2" />
-                  5G Network Infrastructure
-                </Link>
-              </li>
-              <li>
-                <Link to="/5g-iot-solutions" className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm flex items-center">
-                  <ArrowRight className="w-3 h-3 mr-2" />
-                  5G IoT Solutions
-                </Link>
-              </li>
-              <li>
-                <Link to="/5g-smart-city" className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm flex items-center">
-                  <ArrowRight className="w-3 h-3 mr-2" />
-                  5G Smart City
-                </Link>
-              </li>
+            <ul className="space-y-2 mb-6">
+              {microSaasServices.slice(0, 4).map((service) => (
+                <li key={service.name}>
+                  <Link
+                    to={service.path}
+                    className="text-gray-300 hover:text-green-400 transition-colors duration-300 flex items-center group"
+                  >
+                    <ArrowRight className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+              {fiveGServices.slice(0, 4).map((service) => (
+                <li key={service.name}>
+                  <Link
+                    to={service.path}
+                    className="text-gray-300 hover:text-green-400 transition-colors duration-300 flex items-center group"
+                  >
+                    <ArrowRight className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
+            
+            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+              <Mail className="w-5 h-5 mr-2 text-cyan-400" />
+              Contact Info
+            </h3>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3 text-gray-300">
+                <Mail className="w-4 h-4 text-cyan-400" />
+                <span className="text-sm">kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-300">
+                <Phone className="w-4 h-4 text-cyan-400" />
+                <span className="text-sm">+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-300">
+                <MapPin className="w-4 h-4 text-cyan-400" />
+                <span className="text-sm">364 E Main St STE 1008<br />Middletown DE 19709</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -928,13 +812,13 @@ const Footer = () => {
             </div>
             
             <div className="flex space-x-6">
-              <Link to="/privacy" className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm">
+              <Link to="/privacy" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm">
+              <Link to="/terms" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">
                 Terms of Service
               </Link>
-              <Link to="/accessibility" className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm">
+              <Link to="/accessibility" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">
                 Accessibility
               </Link>
             </div>
