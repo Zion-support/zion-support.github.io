@@ -250,6 +250,215 @@ export default function MicroSaaSSolutionsPage() {
       benefits: ["40% open rates", "Personalized content", "Optimized timing"],
       useCases: ["Email campaigns", "Newsletter management", "Lead nurturing"],
       href: "/ai-email-marketing"
+    },
+    {
+      title: "AI Video Content Creator",
+      description: "Automated video content generation with AI-powered editing, voice synthesis, and multi-platform optimization.",
+      icon: GlobeAltIcon,
+      features: [
+        "AI video generation",
+        "Voice synthesis",
+        "Auto-editing",
+        "Multi-platform optimization",
+        "Thumbnail generation",
+        "Performance analytics"
+      ],
+      color: "from-purple-500 to-indigo-500",
+      price: "$199/month",
+      setupFee: "$800",
+      benefits: ["90% time savings", "Professional quality", "Multi-platform ready"],
+      useCases: ["Social media content", "Marketing videos", "Training materials"],
+      href: "/ai-video-creator"
+    },
+    {
+      title: "AI Code Review Assistant",
+      description: "Intelligent code review and quality assurance with automated testing, security scanning, and performance optimization.",
+      icon: CogIcon,
+      features: [
+        "Automated code review",
+        "Security vulnerability detection",
+        "Performance optimization",
+        "Best practices enforcement",
+        "Automated testing",
+        "Code quality metrics"
+      ],
+      color: "from-green-500 to-teal-500",
+      price: "$149/month",
+      setupFee: "$600",
+      benefits: ["50% faster reviews", "Zero security issues", "Improved code quality"],
+      useCases: ["Software development", "Code quality", "Security auditing"],
+      href: "/ai-code-review"
+    },
+    {
+      title: "AI Customer Feedback Analyzer",
+      description: "Advanced sentiment analysis and feedback processing with actionable insights and trend identification.",
+      icon: ChartBarIcon,
+      features: [
+        "Sentiment analysis",
+        "Trend identification",
+        "Actionable insights",
+        "Multi-channel support",
+        "Real-time processing",
+        "Custom reporting"
+      ],
+      color: "from-rose-500 to-pink-500",
+      price: "$129/month",
+      setupFee: "$500",
+      benefits: ["Real-time insights", "Improved satisfaction", "Data-driven decisions"],
+      useCases: ["Customer feedback", "Product improvement", "Service optimization"],
+      href: "/ai-feedback-analyzer"
+    },
+    {
+      title: "AI Meeting Assistant",
+      description: "Intelligent meeting management with transcription, action item extraction, and automated follow-ups.",
+      icon: UserGroupIcon,
+      features: [
+        "Live transcription",
+        "Action item extraction",
+        "Meeting summaries",
+        "Automated follow-ups",
+        "Integration capabilities",
+        "Search functionality"
+      ],
+      color: "from-blue-500 to-cyan-500",
+      price: "$89/month",
+      setupFee: "$300",
+      benefits: ["100% accuracy", "Time savings", "Better follow-ups"],
+      useCases: ["Meeting management", "Note taking", "Action tracking"],
+      href: "/ai-meeting-assistant"
+    },
+    {
+      title: "AI Expense Tracker",
+      description: "Smart expense management with receipt scanning, categorization, and automated reporting for businesses.",
+      icon: CurrencyDollarIcon,
+      features: [
+        "Receipt scanning",
+        "Auto-categorization",
+        "Expense approval workflows",
+        "Tax preparation",
+        "Budget tracking",
+        "Compliance reporting"
+      ],
+      color: "from-emerald-500 to-green-500",
+      price: "$79/month",
+      setupFee: "$250",
+      benefits: ["90% automation", "Tax ready", "Compliance assured"],
+      useCases: ["Expense management", "Tax preparation", "Budget tracking"],
+      href: "/ai-expense-tracker"
+    },
+    {
+      title: "AI Lead Scoring Engine",
+      description: "Intelligent lead qualification and scoring with predictive analytics and automated nurturing workflows.",
+      icon: LightBulbIcon,
+      features: [
+        "Predictive scoring",
+        "Behavioral analysis",
+        "Automated nurturing",
+        "CRM integration",
+        "Performance tracking",
+        "Custom algorithms"
+      ],
+      color: "from-orange-500 to-red-500",
+      price: "$179/month",
+      setupFee: "$700",
+      benefits: ["40% conversion increase", "Automated nurturing", "Better targeting"],
+      useCases: ["Lead qualification", "Sales optimization", "Marketing automation"],
+      href: "/ai-lead-scoring"
+    },
+    {
+      title: "AI Website Optimizer",
+      description: "Comprehensive website optimization with AI-powered A/B testing, performance monitoring, and conversion optimization.",
+      icon: GlobeAltIcon,
+      features: [
+        "AI A/B testing",
+        "Performance monitoring",
+        "Conversion optimization",
+        "SEO recommendations",
+        "User behavior analysis",
+        "Automated improvements"
+      ],
+      color: "from-indigo-500 to-purple-500",
+      price: "$159/month",
+      setupFee: "$600",
+      benefits: ["25% conversion increase", "Better performance", "SEO optimized"],
+      useCases: ["Website optimization", "Conversion rate", "Performance improvement"],
+      href: "/ai-website-optimizer"
+    },
+    {
+      title: "AI Inventory Predictor",
+      description: "Advanced inventory forecasting with demand prediction, stock optimization, and automated reordering.",
+      icon: CloudIcon,
+      features: [
+        "Demand forecasting",
+        "Stock optimization",
+        "Automated reordering",
+        "Seasonal adjustments",
+        "Supplier management",
+        "Cost optimization"
+      ],
+      color: "from-teal-500 to-cyan-500",
+      price: "$139/month",
+      setupFee: "$550",
+      benefits: ["30% cost reduction", "Zero stockouts", "Optimized inventory"],
+      useCases: ["Inventory management", "Supply chain", "Cost optimization"],
+      href: "/ai-inventory-predictor"
+    },
+    {
+      title: "AI Social Media Scheduler",
+      description: "Intelligent social media management with optimal posting times, content suggestions, and engagement optimization.",
+      icon: GlobeAltIcon,
+      features: [
+        "Optimal timing",
+        "Content suggestions",
+        "Engagement optimization",
+        "Multi-platform support",
+        "Analytics dashboard",
+        "Hashtag optimization"
+      ],
+      color: "from-pink-500 to-rose-500",
+      price: "$119/month",
+      setupFee: "$400",
+      benefits: ["200% engagement increase", "Optimal timing", "Content suggestions"],
+      useCases: ["Social media marketing", "Content planning", "Engagement growth"],
+      href: "/ai-social-scheduler"
+    },
+    {
+      title: "AI Document Analyzer",
+      description: "Intelligent document processing with extraction, analysis, and automated workflow management for business documents.",
+      icon: DocumentTextIcon,
+      features: [
+        "Document extraction",
+        "Content analysis",
+        "Workflow automation",
+        "Compliance checking",
+        "Version control",
+        "Search functionality"
+      ],
+      color: "from-violet-500 to-purple-500",
+      price: "$169/month",
+      setupFee: "$650",
+      benefits: ["95% accuracy", "80% time savings", "Automated workflows"],
+      useCases: ["Document management", "Compliance", "Workflow automation"],
+      href: "/ai-document-analyzer"
+    },
+    {
+      title: "AI Performance Monitor",
+      description: "Comprehensive performance monitoring with AI-powered insights, anomaly detection, and automated optimization recommendations.",
+      icon: ChartBarIcon,
+      features: [
+        "Real-time monitoring",
+        "Anomaly detection",
+        "Performance insights",
+        "Automated alerts",
+        "Optimization recommendations",
+        "Custom dashboards"
+      ],
+      color: "from-yellow-500 to-orange-500",
+      price: "$189/month",
+      setupFee: "$750",
+      benefits: ["Proactive monitoring", "Performance insights", "Automated optimization"],
+      useCases: ["Performance monitoring", "System optimization", "Issue prevention"],
+      href: "/ai-performance-monitor"
     }
   ];
 

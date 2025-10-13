@@ -244,6 +244,204 @@ export default function ITSolutionsPage() {
       benefits: ["Full compliance", "Risk mitigation", "Audit readiness"],
       useCases: ["SOX compliance", "GDPR compliance", "HIPAA compliance"],
       href: "/it-compliance"
+    },
+    {
+      title: "DevOps & CI/CD Pipeline",
+      description: "Complete DevOps implementation with continuous integration, deployment automation, and infrastructure as code.",
+      icon: CogIcon,
+      features: [
+        "CI/CD pipeline setup",
+        "Infrastructure as code",
+        "Container orchestration",
+        "Automated testing",
+        "Deployment automation",
+        "Monitoring & alerting"
+      ],
+      color: "from-orange-500 to-red-500",
+      price: "Starting at $3,500/month",
+      benefits: ["Faster deployments", "Reduced errors", "Automated processes"],
+      useCases: ["Software development", "Deployment automation", "Infrastructure management"],
+      href: "/devops-cicd"
+    },
+    {
+      title: "API Development & Management",
+      description: "Comprehensive API development, management, and integration services for modern applications.",
+      icon: ServerIcon,
+      features: [
+        "API design & development",
+        "API gateway management",
+        "Rate limiting & security",
+        "Documentation generation",
+        "Version control",
+        "Performance monitoring"
+      ],
+      color: "from-blue-500 to-indigo-500",
+      price: "Starting at $2,200/month",
+      benefits: ["Scalable APIs", "Security", "Performance optimization"],
+      useCases: ["API development", "Integration", "Microservices"],
+      href: "/api-development"
+    },
+    {
+      title: "Mobile App Development",
+      description: "Native and cross-platform mobile application development with modern frameworks and best practices.",
+      icon: GlobeAltIcon,
+      features: [
+        "Native iOS & Android",
+        "Cross-platform development",
+        "UI/UX design",
+        "App store optimization",
+        "Performance optimization",
+        "Maintenance & support"
+      ],
+      color: "from-purple-500 to-pink-500",
+      price: "Starting at $4,500/month",
+      benefits: ["Modern apps", "Cross-platform", "App store ready"],
+      useCases: ["Mobile apps", "Cross-platform", "App store"],
+      href: "/mobile-development"
+    },
+    {
+      title: "E-commerce Solutions",
+      description: "Complete e-commerce platform development with payment integration, inventory management, and analytics.",
+      icon: CurrencyDollarIcon,
+      features: [
+        "E-commerce platform",
+        "Payment integration",
+        "Inventory management",
+        "Order processing",
+        "Analytics dashboard",
+        "Mobile optimization"
+      ],
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $3,800/month",
+      benefits: ["Complete solution", "Payment ready", "Mobile optimized"],
+      useCases: ["Online stores", "E-commerce", "Payment processing"],
+      href: "/ecommerce-solutions"
+    },
+    {
+      title: "Blockchain Development",
+      description: "Blockchain application development with smart contracts, DApps, and cryptocurrency integration.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Smart contract development",
+        "DApp development",
+        "Cryptocurrency integration",
+        "Blockchain consulting",
+        "Security auditing",
+        "Token development"
+      ],
+      color: "from-yellow-500 to-orange-500",
+      price: "Starting at $5,000/month",
+      benefits: ["Blockchain expertise", "Security", "Innovation"],
+      useCases: ["Blockchain apps", "Smart contracts", "Cryptocurrency"],
+      href: "/blockchain-development"
+    },
+    {
+      title: "IoT Solutions",
+      description: "Internet of Things development with device connectivity, data processing, and real-time monitoring.",
+      icon: WifiIcon,
+      features: [
+        "Device connectivity",
+        "Data processing",
+        "Real-time monitoring",
+        "Edge computing",
+        "Security implementation",
+        "Analytics dashboard"
+      ],
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $3,200/month",
+      benefits: ["Connected devices", "Real-time data", "Edge computing"],
+      useCases: ["IoT devices", "Smart systems", "Data monitoring"],
+      href: "/iot-solutions"
+    },
+    {
+      title: "Machine Learning Infrastructure",
+      description: "Complete ML infrastructure setup with data pipelines, model training, and deployment automation.",
+      icon: CpuChipIcon,
+      features: [
+        "Data pipeline setup",
+        "Model training infrastructure",
+        "Deployment automation",
+        "Model monitoring",
+        "A/B testing framework",
+        "Scalable architecture"
+      ],
+      color: "from-violet-500 to-purple-500",
+      price: "Starting at $4,200/month",
+      benefits: ["ML ready", "Scalable", "Automated deployment"],
+      useCases: ["Machine learning", "Data science", "AI infrastructure"],
+      href: "/ml-infrastructure"
+    },
+    {
+      title: "Microservices Architecture",
+      description: "Modern microservices architecture design and implementation with containerization and orchestration.",
+      icon: ServerIcon,
+      features: [
+        "Microservices design",
+        "Containerization",
+        "Service orchestration",
+        "API gateway",
+        "Service discovery",
+        "Monitoring & logging"
+      ],
+      color: "from-teal-500 to-green-500",
+      price: "Starting at $3,600/month",
+      benefits: ["Scalable architecture", "Independent services", "Easy maintenance"],
+      useCases: ["Microservices", "Containerization", "Service architecture"],
+      href: "/microservices-architecture"
+    },
+    {
+      title: "Data Engineering Solutions",
+      description: "Complete data engineering with ETL pipelines, data warehousing, and real-time processing.",
+      icon: CircleStackIcon,
+      features: [
+        "ETL pipeline development",
+        "Data warehousing",
+        "Real-time processing",
+        "Data quality management",
+        "Data governance",
+        "Analytics infrastructure"
+      ],
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $3,800/month",
+      benefits: ["Data ready", "Real-time processing", "Quality assurance"],
+      useCases: ["Data pipelines", "Data warehousing", "Analytics"],
+      href: "/data-engineering"
+    },
+    {
+      title: "Cloud Security Solutions",
+      description: "Comprehensive cloud security implementation with identity management, encryption, and compliance.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Identity & access management",
+        "Data encryption",
+        "Security monitoring",
+        "Compliance management",
+        "Threat detection",
+        "Incident response"
+      ],
+      color: "from-red-500 to-pink-500",
+      price: "Starting at $2,800/month",
+      benefits: ["Enhanced security", "Compliance", "Threat protection"],
+      useCases: ["Cloud security", "Identity management", "Compliance"],
+      href: "/cloud-security"
+    },
+    {
+      title: "Digital Transformation Consulting",
+      description: "Strategic digital transformation consulting with technology assessment, roadmap development, and implementation.",
+      icon: LightBulbIcon,
+      features: [
+        "Technology assessment",
+        "Digital roadmap",
+        "Change management",
+        "Process optimization",
+        "Technology selection",
+        "Implementation support"
+      ],
+      color: "from-amber-500 to-orange-500",
+      price: "Starting at $2,500/month",
+      benefits: ["Strategic guidance", "Digital readiness", "Process optimization"],
+      useCases: ["Digital transformation", "Technology strategy", "Change management"],
+      href: "/digital-transformation"
     }
   ];
 
