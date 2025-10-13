@@ -1,3 +1,45 @@
+#!/bin/bash
+
+# List of missing pages that need to be created
+missing_pages=(
+  "zion-smart-inventory-optimizer"
+  "zion-ai-customer-sentiment-tracker"
+  "zion-smart-expense-categorizer"
+  "zion-ai-voice-assistant-pro"
+  "zion-ai-code-reviewer"
+  "zion-ai-social-media-manager"
+  "zion-ai-contract-analyzer"
+  "zion-ai-performance-optimizer"
+  "zion-ai-customer-churn-predictor"
+  "zion-ai-supply-chain-optimizer"
+  "zion-ai-financial-forecaster"
+  "zion-ai-content-moderator"
+  "zion-ai-translator-pro"
+  "zion-ai-data-cleaner"
+  "zion-ai-task-scheduler"
+  "zion-ai-customer-support-pro"
+  "zion-ai-video-generator"
+  "zion-ai-invoice-generator"
+  "zion-ai-customer-insights"
+  "ai-services"
+  "micro-saas"
+  "5g-solutions"
+  "tutorials"
+  "demo"
+  "support"
+  "services"
+  "blog"
+  "privacy"
+  "terms"
+)
+
+# Create directories and basic page files
+for page in "${missing_pages[@]}"; do
+  echo "Creating page: $page"
+  mkdir -p "/workspace/app/$page"
+  
+  # Create a basic page.tsx file
+  cat > "/workspace/app/$page/page.tsx" << 'PAGEEOF'
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -50,3 +92,7 @@ export default function Page() {
     </>
   );
 }
+PAGEEOF
+done
+
+echo "All missing pages created successfully!"
