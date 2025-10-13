@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useMemo } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { 
   Brain, 
   Shield, 
@@ -22,9 +22,7 @@ import {
   ChevronDown,
   Menu,
   X,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  SidebarIcon,
+  Sidebar as SidebarIcon,
   Package,
   Heart,
   Receipt,
@@ -33,19 +31,8 @@ import {
   Network,
   FileText,
   Clock
-} from 'lucide-react';
-<<<<<<< HEAD
-import FuturisticButton from './FuturisticButton';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-=======
-} from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
-=======
-  Sidebar as SidebarIcon
 } from 'lucide-react'
 import FuturisticButton from './FuturisticButton'
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
 
 interface NavigationProps {
   onSidebarToggle?: () => void
