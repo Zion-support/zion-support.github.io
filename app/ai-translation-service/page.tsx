@@ -1,14 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Languages, Brain, FileText, Clock, Target } from 'lucide-react';
-import Layout from '../layout';
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Brain, FileText, Clock, Target, Languages } from 'lucide-react'
-import Layout from '../layout'
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Brain, FileText, Clock, Target, CheckCircle } from 'lucide-react';
+import { Languages, Brain, FileText, Clock, Target, CheckCircle } from 'lucide-react';
 import Layout from '../layout';
 
 export default function AITranslationService() {
@@ -34,8 +26,6 @@ export default function AITranslationService() {
       description: 'Specialized translation models for legal, medical, technical, and business content'
     }
   ];
-  ]
-  ];
 
   const translationFeatures = [
     {
@@ -55,8 +45,6 @@ export default function AITranslationService() {
       items: ['API Access', 'CMS Integration', 'Website Widgets', 'Mobile Apps', 'Desktop Software', 'Cloud Storage']
     }
   ];
-  ]
-  ];
 
   const pricingPlans = [
     {
@@ -70,7 +58,7 @@ export default function AITranslationService() {
         '50+ languages',
         'Basic document translation',
         'Email support',
-        'API access'
+        'API access',
         'Web interface'
       ],
       popular: false
@@ -86,7 +74,7 @@ export default function AITranslationService() {
         'Advanced document processing',
         'Priority support',
         'Custom terminology',
-        'Quality assurance'
+        'Quality assurance',
         'Advanced document translation',
         'API access',
         'Priority support',
@@ -109,17 +97,10 @@ export default function AITranslationService() {
       ],
       popular: false
     }
-        'White-label options',
-        'Dedicated support',
-        'Advanced security'
-      ],
-      popular: false
-    }
   ];
 
   const testimonials = [
     {
-      name: 'Maria Santos',
       name: 'Sarah Johnson',
       company: 'Global Marketing Agency',
       content: 'The AI translation service has revolutionized our international campaigns. The quality is incredible and saves us weeks of work.',
@@ -138,7 +119,9 @@ export default function AITranslationService() {
       rating: 5
     }
   ];
-  ]
+
+  const testimonials = [
+    {
       name: 'Dr. Michael Chen',
       company: 'Medical Research Institute',
       content: 'Translating complex medical documents has never been easier. The specialized terminology handling is outstanding.',
@@ -196,9 +179,10 @@ export default function AITranslationService() {
             <Link to="#demo" className="bg-cyan-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-cyan-600 transition-colors">
               Start Free Trial
             </Link>
-            Break down language barriers with our advanced AI translation service. 
-            Translate documents, websites, and conversations in real-time with 99% accuracy.
-          </p>
+            <p className="text-gray-300 text-center mb-8">
+              Break down language barriers with our advanced AI translation service. 
+              Translate documents, websites, and conversations in real-time with 99% accuracy.
+            </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all">
               Start Free Trial
@@ -244,17 +228,29 @@ export default function AITranslationService() {
               Advanced Translation Features
             </h2>
             <p className="text-gray-300 text-lg">
-              Powered by cutting-edge AI to deliver accurate, contextually-aware translations
               Powered by state-of-the-art AI for accurate, context-aware translations
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-cyan-500 transition-colors">
-      </div>
+                <div className="text-cyan-400 mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      {/* Features Section */}
-      <div className="py-20 bg-gray-900">
+      {/* Translation Features Section */}
+      <section className="py-20 bg-gray-900">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 text-center">
             Advanced Translation Capabilities
@@ -278,6 +274,9 @@ export default function AITranslationService() {
 
       {/* Translation Features Section */}
       <section className="py-20 bg-black">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
               <div key={index} className="bg-gray-800 p-6 rounded-lg">
                 <div className="flex items-center mb-4">
                   {feature.icon}
@@ -301,7 +300,8 @@ export default function AITranslationService() {
               Everything you need for professional translation services
             </p>
           </div>
-      </div>
+        </div>
+      </section>
 
       {/* Translation Features Grid */}
       <div className="py-20 bg-slate-900">
@@ -320,7 +320,19 @@ export default function AITranslationService() {
                   {category.items.map((item, itemIndex) => (
                     <li key={itemIndex} className="text-gray-300 flex items-center">
                       <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
-                      <Languages className="w-4 h-4 text-blue-400 mr-2" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Translation Features Grid */}
+      <section className="py-20 bg-gray-800">
+        <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {translationFeatures.map((category, index) => (
               <div key={index} className="bg-gray-900 p-6 rounded-lg">
@@ -572,6 +584,7 @@ export default function AITranslationService() {
           </div>
         </div>
       </div>
+      </section>
     </Layout>
-  )
+  );
 }

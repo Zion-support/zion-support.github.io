@@ -14,13 +14,11 @@ export default function CloudMigrationProPage() {
     {
       icon: <Cloud className="w-6 h-6 text-cyan-400" />,
       title: 'Seamless Migration',
-      description: 'Zero-downtime migration with automated testing and rollback capabilities'
       description: 'Zero-downtime migration to cloud platforms with minimal business disruption'
     },
     {
       icon: <Shield className="w-6 h-6 text-purple-400" />,
       title: 'Security First',
-      description: 'Enterprise-grade security with compliance validation and data protection'
       description: 'Enterprise-grade security protocols throughout the migration process'
     },
     {
@@ -100,6 +98,11 @@ export default function CloudMigrationProPage() {
         'White-label solution'
       ],
       popular: false
+    }
+  ];
+
+  const features = [
+    {
       icon: <Database className="w-6 h-6 text-green-400" />,
       title: 'Data Migration',
       description: 'Safe and secure migration of databases and data warehouses'
@@ -280,7 +283,10 @@ export default function CloudMigrationPro() {
                   <div className="text-4xl font-bold text-cyan-400 mb-4">{step.step}</div>
                   <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
                   <p className="text-gray-300">{step.description}</p>
-        </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
         {/* Features Section */}
         <div className="py-20">

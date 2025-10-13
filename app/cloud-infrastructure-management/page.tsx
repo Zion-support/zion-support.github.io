@@ -53,6 +53,10 @@ export default function CloudInfrastructureManagement() {
       items: ['24/7 Support', 'Proactive Monitoring', 'Incident Response', 'Performance Tuning', 'Capacity Planning', 'Health Checks']
     }
   ];
+
+  const features = [
+    {
+      icon: <Zap className="w-6 h-6 text-cyan-400" />,
       title: 'Auto-Scaling',
       description: 'Automatically scale resources based on demand to ensure optimal performance and cost efficiency'
     },
@@ -65,10 +69,6 @@ export default function CloudInfrastructureManagement() {
       icon: <BarChart3 className="w-6 h-6 text-pink-400" />,
       title: 'Analytics & Insights',
       description: 'Advanced analytics to optimize infrastructure performance and make data-driven decisions'
-    }
-  ]
-      title: 'Automated Scaling',
-      description: 'Auto-scale resources based on demand to ensure optimal performance and cost efficiency'
     }
   ];
 
@@ -106,7 +106,7 @@ export default function CloudInfrastructureManagement() {
         'Basic monitoring',
         'Email support',
         'Standard integrations',
-        'Cost optimization reports'
+        'Cost optimization reports',
         'Standard templates',
         'Monthly reports'
       ],
@@ -124,7 +124,7 @@ export default function CloudInfrastructureManagement() {
         'Priority support',
         'Custom integrations',
         'Automated scaling',
-        'Security compliance'
+        'Security compliance',
         'Custom configurations',
         'Weekly reports',
         'API access'
@@ -168,8 +168,9 @@ export default function CloudInfrastructureManagement() {
       rating: 5
     }
   ];
-  ]
-        'Unlimited servers',
+
+  const enterpriseFeatures = [
+    'Unlimited servers',
         'Custom monitoring',
         'Dedicated support',
         'White-label options',
