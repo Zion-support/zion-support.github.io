@@ -1,32 +1,29 @@
-import React, { useEffect, ReactNode } from 'react';
+import React, { useEffect } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface WebVitalsTrackerProps {
-  children: ReactNode;
+  children: React.ReactNode;
+}
+
+interface WebVitalsData {
+  name: string;
+  value: number;
+  delta: number;
+  id: string;
+  navigationType: string;
 }
 
 const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ children }) => {
   useEffect(() => {
-<<<<<<< HEAD
     const sendToAnalytics = (metric: WebVitalsData) => {
       // Send to Google Analytics or other analytics service
-      if (typeof window !== 'undefined' && 'gtag' in window) {
+      if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('event', metric.name, {
           event_category: 'Web Vitals',
           event_label: metric.id,
           value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
           non_interaction: true,
         });
-      }
-
-      // Send to custom analytics endpoint
-      if (process.env.NODE_ENV === 'production') {
-        fetch('/api/analytics/web-vitals', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(metric),
-        }).catch(console.error);
       }
 
       // Log to console in development
@@ -41,66 +38,30 @@ const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ children }) => {
     onFCP(sendToAnalytics);
     onLCP(sendToAnalytics);
     onTTFB(sendToAnalytics);
-<<<<<<< HEAD
 
     // Track additional performance metrics
     if (typeof window !== 'undefined' && 'performance' in window) {
-      // Track page load time
-      window.addEventListener('load', () => {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (navigation) {
-          const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-          sendToAnalytics({
-            name: 'LOAD_TIME',
-            value: loadTime,
-            delta: loadTime,
-            id: 'load-time',
-            navigationType: navigation.type,
-          });
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'navigation') {
+            const navEntry = entry as PerformanceNavigationTiming;
+            sendToAnalytics({
+              name: 'DOMContentLoaded',
+              value: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
+              delta: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
+              id: 'dom-content-loaded',
+              navigationType: navEntry.type,
+            });
+          }
         }
       });
 
-      // Track memory usage (if available)
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
-        sendToAnalytics({
-          name: 'MEMORY_USAGE',
-          value: memoryUsage,
-          delta: memoryUsage,
-          id: 'memory-usage',
-          navigationType: 'reload',
-        });
-      }
-    }
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
-    // Track Core Web Vitals
-    const trackWebVitals = () => {
-      if ('web-vitals' in window) {
-        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-          getCLS((metric) => {
-            console.log('CLS:', metric);
-          });
-          getFID((metric) => {
-            console.log('FID:', metric);
-          });
-          getFCP((metric) => {
-            console.log('FCP:', metric);
-          });
-          getLCP((metric) => {
-            console.log('LCP:', metric);
-          });
-          getTTFB((metric) => {
-            console.log('TTFB:', metric);
-          });
-        });
-      }
-    };
+      observer.observe({ entryTypes: ['navigation'] });
 
-    trackWebVitals();
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
+      return () => {
+        observer.disconnect();
+      };
+    }
   }, []);
 
   return <>{children}</>;

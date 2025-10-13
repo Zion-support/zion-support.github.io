@@ -4,7 +4,7 @@
     <loc>https://ziontechgroup.com/</loc>
     <lastmod>2025-10-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/about</loc>
@@ -25,13 +25,25 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/pricing</loc>
+    <loc>https://ziontechgroup.com/blog</loc>
     <lastmod>2025-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/blog</loc>
+    <loc>https://ziontechgroup.com/demo</loc>
+    <lastmod>2025-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/privacy</loc>
+    <lastmod>2025-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/terms</loc>
     <lastmod>2025-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -55,25 +67,19 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/privacy</loc>
+    <loc>https://ziontechgroup.com/tutorials</loc>
     <lastmod>2025-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/terms</loc>
+    <loc>https://ziontechgroup.com/support</loc>
     <lastmod>2025-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/cookies</loc>
-    <lastmod>2025-10-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/sitemap</loc>
+    <loc>https://ziontechgroup.com/web-development</loc>
     <lastmod>2025-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -91,19 +97,49 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ziontechgroup.com/ai-customer-support</loc>
+    <lastmod>2025-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ziontechgroup.com/ai-cybersecurity</loc>
     <lastmod>2025-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/ai-customer-service</loc>
+    <loc>https://ziontechgroup.com/ai-data-analytics</loc>
     <lastmod>2025-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/ai-data-analytics</loc>
+    <loc>https://ziontechgroup.com/ai-document-processing</loc>
+    <lastmod>2025-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/ai-marketing-automation</loc>
+    <lastmod>2025-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/ai-predictive-analytics</loc>
+    <lastmod>2025-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/ai-voice-assistant</loc>
+    <lastmod>2025-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/ai-workflow-automation</loc>
     <lastmod>2025-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
