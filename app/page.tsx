@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, TrendingUp, Package } from "lucide-react";
 import SEOOptimizer from "./components/SEOOptimizer";
 
 const HomePage = () => {
@@ -40,25 +40,25 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
-      name: "Zion Analytics Pro",
-      description: "AI-powered business intelligence platform",
-      price: "From $29/month",
-      icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-analytics-pro"
-    },
-    {
-      name: "Zion Security Shield",
-      description: "Advanced cybersecurity protection",
+      name: "Zion AI Sales Predictor",
+      description: "AI-powered sales forecasting with 95% accuracy",
       price: "From $49/month",
-      icon: <Shield className="w-6 h-6" />,
-      link: "/zion-security-shield"
+      icon: <TrendingUp className="w-6 h-6" />,
+      link: "/zion-ai-sales-predictor"
     },
     {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution",
-      price: "From $9/month",
-      icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault"
+      name: "Zion Smart Inventory",
+      description: "AI-powered inventory optimization",
+      price: "From $29/month",
+      icon: <Package className="w-6 h-6" />,
+      link: "/zion-smart-inventory"
+    },
+    {
+      name: "Zion AI Customer Insights",
+      description: "Advanced customer segmentation and analytics",
+      price: "From $79/month",
+      icon: <Users className="w-6 h-6" />,
+      link: "/zion-ai-customer-insights"
     }
   ];
 

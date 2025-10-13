@@ -1,118 +1,95 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Atom, Cpu, Zap, Shield, Target, BarChart3, Users, DollarSign, Clock, CheckCircle, Star, Sparkles, Brain } from "lucide-react";
+import { ArrowRight, TrendingUp, Target, BarChart3, Brain, Zap, Shield, Users, DollarSign, Clock, CheckCircle, Star } from "lucide-react";
 
-export default function AIQuantumComputing() {
+export default function ZionAISalesPredictor() {
   const features = [
     {
-      icon: <Atom className="w-6 h-6" />,
-      title: "Quantum AI Algorithms",
-      description: "Revolutionary quantum machine learning algorithms that solve complex problems exponentially faster"
+      icon: <Brain className="w-6 h-6" />,
+      title: "AI-Powered Forecasting",
+      description: "Advanced machine learning algorithms predict sales trends with 95% accuracy"
     },
     {
-      icon: <Cpu className="w-6 h-6" />,
-      title: "Quantum Processing",
-      description: "Leverage quantum computing power for optimization, simulation, and cryptography applications"
+      icon: <Target className="w-6 h-6" />,
+      title: "Lead Scoring",
+      description: "Automatically score and prioritize leads based on conversion probability"
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Quantum Speedup",
-      description: "Achieve quantum advantage with algorithms that outperform classical computers by orders of magnitude"
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Real-time Analytics",
+      description: "Live dashboards with actionable insights and performance metrics"
     },
     {
-      icon: <Shield className="w-6 h-8" />,
-      title: "Quantum Security",
-      description: "Unbreakable quantum encryption and secure communication protocols for ultimate data protection"
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Revenue Optimization",
+      description: "Identify opportunities to increase revenue and improve conversion rates"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Research",
-      price: "$4,999",
+      name: "Starter",
+      price: "$49",
       period: "/month",
-      description: "For quantum research projects",
+      description: "Perfect for small businesses",
       features: [
-        "Quantum simulator access",
-        "Basic quantum algorithms",
-        "Research support",
-        "API access"
+        "Up to 1,000 leads/month",
+        "Basic forecasting",
+        "Email support",
+        "Standard analytics"
       ],
       popular: false
     },
     {
-      name: "Enterprise",
-      price: "$19,999",
+      name: "Professional",
+      price: "$149",
       period: "/month",
-      description: "For production quantum applications",
+      description: "Ideal for growing companies",
       features: [
-        "Full quantum computing access",
-        "Custom quantum algorithms",
-        "24/7 technical support",
-        "Quantum security suite",
-        "SLA guarantees"
+        "Up to 10,000 leads/month",
+        "Advanced AI forecasting",
+        "Priority support",
+        "Custom dashboards",
+        "API access"
       ],
       popular: true
     },
     {
-      name: "Government",
-      price: "Custom",
-      period: "pricing",
-      description: "For government and defense",
+      name: "Enterprise",
+      price: "$399",
+      period: "/month",
+      description: "For large organizations",
       features: [
-        "Classified quantum systems",
-        "Dedicated quantum hardware",
-        "Security clearance support",
-        "Custom development",
-        "On-premise deployment"
+        "Unlimited leads",
+        "Custom AI models",
+        "24/7 support",
+        "White-label options",
+        "Advanced integrations"
       ],
       popular: false
-    }
-  ];
-
-  const applications = [
-    {
-      icon: <Brain className="w-8 h-8" />,
-      title: "Drug Discovery",
-      description: "Quantum AI accelerates molecular simulation and drug discovery by 1000x compared to classical methods"
-    },
-    {
-      icon: <Target className="w-8 h-8" />,
-      title: "Financial Modeling",
-      description: "Quantum algorithms for portfolio optimization, risk analysis, and high-frequency trading strategies"
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8" />,
-      title: "Climate Simulation",
-      description: "Complex climate modeling and weather prediction with unprecedented accuracy and speed"
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Cryptography",
-      description: "Quantum-resistant encryption and secure communication protocols for the quantum era"
     }
   ];
 
   const testimonials = [
     {
-      name: "Dr. Maria Santos",
-      company: "Quantum Research Labs",
-      role: "Chief Quantum Scientist",
-      content: "Zion's quantum AI platform has revolutionized our research. We've achieved breakthroughs in molecular simulation that would take years with classical computers.",
+      name: "Sarah Johnson",
+      company: "TechStart Inc.",
+      role: "Sales Director",
+      content: "Zion AI Sales Predictor increased our conversion rate by 40% in just 3 months. The forecasting accuracy is incredible!",
       rating: 5
     },
     {
-      name: "James Thompson",
-      company: "Quantum Finance Corp",
-      role: "Head of Quantum Computing",
-      content: "The quantum algorithms for portfolio optimization are incredible. We've improved our trading strategies by 500% while reducing risk significantly.",
+      name: "Michael Chen",
+      company: "E-commerce Solutions",
+      role: "VP of Sales",
+      content: "The lead scoring feature has revolutionized our sales process. We now focus on the most promising prospects.",
       rating: 5
     },
     {
-      name: "Dr. Lisa Wang",
-      company: "Pharmaceutical Innovations",
-      role: "Director of AI Research",
-      content: "Outstanding quantum AI capabilities for drug discovery. We've accelerated our research timeline by 10x and discovered promising new compounds.",
+      name: "Emily Rodriguez",
+      company: "Digital Marketing Agency",
+      role: "Sales Manager",
+      content: "Outstanding ROI! The revenue optimization insights helped us increase sales by 60% year-over-year.",
       rating: 5
     }
   ];
@@ -120,14 +97,14 @@ export default function AIQuantumComputing() {
   return (
     <>
       <Helmet>
-        <title>AI Quantum Computing - Quantum AI Solutions | Zion Tech Group</title>
+        <title>Zion AI Sales Predictor - AI-Powered Sales Forecasting & Lead Scoring | Zion Tech Group</title>
         <meta
           name="description"
-          content="Revolutionary AI quantum computing solutions. Quantum machine learning, optimization, and cryptography. Achieve quantum advantage with our cutting-edge quantum AI platform."
+          content="Transform your sales with Zion AI Sales Predictor. Advanced AI forecasting, lead scoring, and revenue optimization. Increase conversion rates by 40% with 95% accuracy predictions."
         />
         <meta
           name="keywords"
-          content="quantum computing, quantum AI, quantum machine learning, quantum algorithms, quantum cryptography, quantum optimization, quantum simulation"
+          content="AI sales predictor, sales forecasting, lead scoring, revenue optimization, sales analytics, machine learning sales, predictive analytics, sales automation"
         />
       </Helmet>
 
@@ -140,20 +117,20 @@ export default function AIQuantumComputing() {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Atom className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">Next-Generation Quantum AI</span>
+              <Zap className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Sales Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              AI Quantum
+              Zion AI
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                {" "}Computing
+                {" "}Sales Predictor
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Harness the power of quantum computing with AI. Revolutionary quantum algorithms that solve complex problems 
-              exponentially faster than classical computers. Experience the future of computing today.
+              Transform your sales process with AI-powered forecasting, intelligent lead scoring, and revenue optimization. 
+              Increase conversion rates by 40% with 95% accuracy predictions.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -161,7 +138,7 @@ export default function AIQuantumComputing() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Quantum Journey
+                Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -169,27 +146,27 @@ export default function AIQuantumComputing() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Atom className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Brain className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
 
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">1000x</div>
-                <div className="text-gray-300 text-sm">Speed Improvement</div>
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">95%</div>
+                <div className="text-gray-300 text-sm">Forecasting Accuracy</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-                <div className="text-gray-300 text-sm">Accuracy Rate</div>
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">40%</div>
+                <div className="text-gray-300 text-sm">Conversion Increase</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">50+</div>
-                <div className="text-gray-300 text-sm">Quantum Algorithms</div>
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">60%</div>
+                <div className="text-gray-300 text-sm">Revenue Growth</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">24/7</div>
-                <div className="text-gray-300 text-sm">Quantum Access</div>
+                <div className="text-gray-300 text-sm">AI Monitoring</div>
               </div>
             </div>
           </div>
@@ -201,11 +178,11 @@ export default function AIQuantumComputing() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Quantum AI Capabilities
+                  Powerful AI Features
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the revolutionary power of quantum computing combined with artificial intelligence.
+                Leverage cutting-edge artificial intelligence to revolutionize your sales process and drive unprecedented growth.
               </p>
             </div>
             
@@ -230,52 +207,17 @@ export default function AIQuantumComputing() {
           </div>
         </section>
 
-        {/* Applications Section */}
+        {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Quantum Applications
+                  Simple, Transparent Pricing
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how quantum AI is transforming industries and solving previously impossible problems.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {applications.map((application, index) => (
-                <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
-                >
-                  <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                    {application.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-300 transition-colors">
-                    {application.title}
-                  </h3>
-                  <p className="text-gray-300 text-center leading-relaxed">
-                    {application.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Quantum Computing Plans
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect quantum computing plan for your research and production needs.
+                Choose the perfect plan for your business. All plans include our core AI features with no hidden fees.
               </p>
             </div>
             
@@ -332,16 +274,16 @@ export default function AIQuantumComputing() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Quantum Research Leaders
+                  Trusted by Sales Teams
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how leading researchers and organizations are advancing science with our quantum AI platform.
+                See how sales professionals are transforming their results with Zion AI Sales Predictor.
               </p>
             </div>
             
@@ -371,11 +313,10 @@ export default function AIQuantumComputing() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Enter the Quantum Era?
+              Ready to Transform Your Sales?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the quantum revolution with our cutting-edge AI quantum computing platform. 
-              Solve impossible problems and achieve quantum advantage today.
+              Join thousands of sales teams already using Zion AI Sales Predictor to increase revenue and improve forecasting accuracy.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -383,7 +324,7 @@ export default function AIQuantumComputing() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Quantum Journey
+                Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -391,7 +332,7 @@ export default function AIQuantumComputing() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Schedule Demo
-                <Atom className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Brain className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>

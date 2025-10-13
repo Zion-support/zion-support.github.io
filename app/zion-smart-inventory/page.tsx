@@ -1,118 +1,118 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Atom, Cpu, Zap, Shield, Target, BarChart3, Users, DollarSign, Clock, CheckCircle, Star, Sparkles, Brain } from "lucide-react";
+import { ArrowRight, Package, TrendingUp, AlertTriangle, BarChart3, Zap, Shield, Users, DollarSign, Clock, CheckCircle, Star, Smartphone } from "lucide-react";
 
-export default function AIQuantumComputing() {
+export default function ZionSmartInventory() {
   const features = [
     {
-      icon: <Atom className="w-6 h-6" />,
-      title: "Quantum AI Algorithms",
-      description: "Revolutionary quantum machine learning algorithms that solve complex problems exponentially faster"
+      icon: <Package className="w-6 h-6" />,
+      title: "AI Inventory Optimization",
+      description: "Smart algorithms automatically optimize stock levels and reduce carrying costs by 30%"
     },
     {
-      icon: <Cpu className="w-6 h-6" />,
-      title: "Quantum Processing",
-      description: "Leverage quantum computing power for optimization, simulation, and cryptography applications"
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Demand Forecasting",
+      description: "Predict future demand with 92% accuracy using machine learning and historical data"
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Quantum Speedup",
-      description: "Achieve quantum advantage with algorithms that outperform classical computers by orders of magnitude"
+      icon: <AlertTriangle className="w-6 h-6" />,
+      title: "Stock Alerts",
+      description: "Real-time notifications for low stock, overstock, and reorder points"
     },
     {
-      icon: <Shield className="w-6 h-8" />,
-      title: "Quantum Security",
-      description: "Unbreakable quantum encryption and secure communication protocols for ultimate data protection"
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Analytics Dashboard",
+      description: "Comprehensive insights into inventory performance, turnover rates, and profitability"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Research",
-      price: "$4,999",
+      name: "Basic",
+      price: "$29",
       period: "/month",
-      description: "For quantum research projects",
+      description: "Perfect for small businesses",
       features: [
-        "Quantum simulator access",
-        "Basic quantum algorithms",
-        "Research support",
-        "API access"
+        "Up to 1,000 SKUs",
+        "Basic forecasting",
+        "Email alerts",
+        "Mobile app access"
       ],
       popular: false
     },
     {
-      name: "Enterprise",
-      price: "$19,999",
+      name: "Professional",
+      price: "$99",
       period: "/month",
-      description: "For production quantum applications",
+      description: "Ideal for growing companies",
       features: [
-        "Full quantum computing access",
-        "Custom quantum algorithms",
-        "24/7 technical support",
-        "Quantum security suite",
-        "SLA guarantees"
+        "Up to 10,000 SKUs",
+        "Advanced AI forecasting",
+        "Real-time alerts",
+        "API integrations",
+        "Custom reports"
       ],
       popular: true
     },
     {
-      name: "Government",
-      price: "Custom",
-      period: "pricing",
-      description: "For government and defense",
+      name: "Enterprise",
+      price: "$299",
+      period: "/month",
+      description: "For large organizations",
       features: [
-        "Classified quantum systems",
-        "Dedicated quantum hardware",
-        "Security clearance support",
-        "Custom development",
-        "On-premise deployment"
+        "Unlimited SKUs",
+        "Custom AI models",
+        "Multi-location support",
+        "White-label options",
+        "Dedicated support"
       ],
       popular: false
     }
   ];
 
-  const applications = [
+  const benefits = [
     {
-      icon: <Brain className="w-8 h-8" />,
-      title: "Drug Discovery",
-      description: "Quantum AI accelerates molecular simulation and drug discovery by 1000x compared to classical methods"
+      icon: <DollarSign className="w-8 h-8" />,
+      title: "Reduce Costs",
+      description: "Lower inventory carrying costs by 30% through optimized stock levels"
     },
     {
-      icon: <Target className="w-8 h-8" />,
-      title: "Financial Modeling",
-      description: "Quantum algorithms for portfolio optimization, risk analysis, and high-frequency trading strategies"
+      icon: <Zap className="w-8 h-8" />,
+      title: "Increase Efficiency",
+      description: "Automate reorder processes and eliminate stockouts with 95% accuracy"
     },
     {
-      icon: <BarChart3 className="w-8 h-8" />,
-      title: "Climate Simulation",
-      description: "Complex climate modeling and weather prediction with unprecedented accuracy and speed"
+      icon: <Shield className="w-8 h-8" />,
+      title: "Prevent Losses",
+      description: "Minimize dead stock and reduce waste through intelligent demand planning"
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Cryptography",
-      description: "Quantum-resistant encryption and secure communication protocols for the quantum era"
+      title: "Team Collaboration",
+      description: "Enable seamless collaboration across departments with role-based access"
     }
   ];
 
   const testimonials = [
     {
-      name: "Dr. Maria Santos",
-      company: "Quantum Research Labs",
-      role: "Chief Quantum Scientist",
-      content: "Zion's quantum AI platform has revolutionized our research. We've achieved breakthroughs in molecular simulation that would take years with classical computers.",
+      name: "David Martinez",
+      company: "Retail Plus",
+      role: "Operations Manager",
+      content: "Zion Smart Inventory reduced our carrying costs by 35% and eliminated stockouts completely. Game changer!",
       rating: 5
     },
     {
-      name: "James Thompson",
-      company: "Quantum Finance Corp",
-      role: "Head of Quantum Computing",
-      content: "The quantum algorithms for portfolio optimization are incredible. We've improved our trading strategies by 500% while reducing risk significantly.",
+      name: "Lisa Thompson",
+      company: "E-commerce Solutions",
+      role: "Inventory Director",
+      content: "The AI forecasting is incredibly accurate. We've improved our inventory turnover by 40% in just 6 months.",
       rating: 5
     },
     {
-      name: "Dr. Lisa Wang",
-      company: "Pharmaceutical Innovations",
-      role: "Director of AI Research",
-      content: "Outstanding quantum AI capabilities for drug discovery. We've accelerated our research timeline by 10x and discovered promising new compounds.",
+      name: "Robert Kim",
+      company: "Manufacturing Corp",
+      role: "Supply Chain Manager",
+      content: "Outstanding platform! The real-time alerts and analytics have transformed our inventory management process.",
       rating: 5
     }
   ];
@@ -120,14 +120,14 @@ export default function AIQuantumComputing() {
   return (
     <>
       <Helmet>
-        <title>AI Quantum Computing - Quantum AI Solutions | Zion Tech Group</title>
+        <title>Zion Smart Inventory - AI-Powered Inventory Management & Optimization | Zion Tech Group</title>
         <meta
           name="description"
-          content="Revolutionary AI quantum computing solutions. Quantum machine learning, optimization, and cryptography. Achieve quantum advantage with our cutting-edge quantum AI platform."
+          content="Revolutionize inventory management with Zion Smart Inventory. AI-powered optimization, demand forecasting, and real-time analytics. Reduce costs by 30% and eliminate stockouts."
         />
         <meta
           name="keywords"
-          content="quantum computing, quantum AI, quantum machine learning, quantum algorithms, quantum cryptography, quantum optimization, quantum simulation"
+          content="inventory management, AI inventory optimization, demand forecasting, stock management, inventory analytics, supply chain, warehouse management, stock optimization"
         />
       </Helmet>
 
@@ -140,20 +140,20 @@ export default function AIQuantumComputing() {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Atom className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">Next-Generation Quantum AI</span>
+              <Package className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Inventory Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              AI Quantum
+              Zion Smart
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                {" "}Computing
+                {" "}Inventory
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Harness the power of quantum computing with AI. Revolutionary quantum algorithms that solve complex problems 
-              exponentially faster than classical computers. Experience the future of computing today.
+              Transform your inventory management with AI-powered optimization, intelligent demand forecasting, and real-time analytics. 
+              Reduce carrying costs by 30% and eliminate stockouts with 95% accuracy.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -161,7 +161,7 @@ export default function AIQuantumComputing() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Quantum Journey
+                Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -169,27 +169,27 @@ export default function AIQuantumComputing() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Atom className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Package className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
 
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">1000x</div>
-                <div className="text-gray-300 text-sm">Speed Improvement</div>
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">30%</div>
+                <div className="text-gray-300 text-sm">Cost Reduction</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-                <div className="text-gray-300 text-sm">Accuracy Rate</div>
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">95%</div>
+                <div className="text-gray-300 text-sm">Forecasting Accuracy</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">50+</div>
-                <div className="text-gray-300 text-sm">Quantum Algorithms</div>
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">40%</div>
+                <div className="text-gray-300 text-sm">Turnover Improvement</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">24/7</div>
-                <div className="text-gray-300 text-sm">Quantum Access</div>
+                <div className="text-gray-300 text-sm">AI Monitoring</div>
               </div>
             </div>
           </div>
@@ -201,11 +201,11 @@ export default function AIQuantumComputing() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Quantum AI Capabilities
+                  Smart Inventory Features
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the revolutionary power of quantum computing combined with artificial intelligence.
+                Leverage artificial intelligence to optimize your inventory management and maximize profitability.
               </p>
             </div>
             
@@ -230,34 +230,34 @@ export default function AIQuantumComputing() {
           </div>
         </section>
 
-        {/* Applications Section */}
+        {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Quantum Applications
+                  Why Choose Zion Smart Inventory?
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how quantum AI is transforming industries and solving previously impossible problems.
+                Transform your inventory management with proven benefits and measurable results.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {applications.map((application, index) => (
+              {benefits.map((benefit, index) => (
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
                   <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                    {application.icon}
+                    {benefit.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-300 transition-colors">
-                    {application.title}
+                    {benefit.title}
                   </h3>
                   <p className="text-gray-300 text-center leading-relaxed">
-                    {application.description}
+                    {benefit.description}
                   </p>
                 </div>
               ))}
@@ -271,11 +271,11 @@ export default function AIQuantumComputing() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Quantum Computing Plans
+                  Flexible Pricing Plans
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect quantum computing plan for your research and production needs.
+                Choose the perfect plan for your business size and inventory needs.
               </p>
             </div>
             
@@ -337,11 +337,11 @@ export default function AIQuantumComputing() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Quantum Research Leaders
+                  Success Stories
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how leading researchers and organizations are advancing science with our quantum AI platform.
+                See how businesses are transforming their inventory management with Zion Smart Inventory.
               </p>
             </div>
             
@@ -371,11 +371,10 @@ export default function AIQuantumComputing() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Enter the Quantum Era?
+              Ready to Optimize Your Inventory?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the quantum revolution with our cutting-edge AI quantum computing platform. 
-              Solve impossible problems and achieve quantum advantage today.
+              Join thousands of businesses already using Zion Smart Inventory to reduce costs and improve efficiency.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -383,7 +382,7 @@ export default function AIQuantumComputing() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Quantum Journey
+                Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -391,7 +390,7 @@ export default function AIQuantumComputing() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Schedule Demo
-                <Atom className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Package className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>
