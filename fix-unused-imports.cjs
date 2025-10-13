@@ -1,52 +1,43 @@
 const fs = require('fs');
+const path = require('path');
 
-// Files to fix
-const files = [
+// List of files with unused imports/variables
+const filesToFix = [
   'app/about/page.tsx',
-  'app/ai-analytics/page.tsx',
+  'app/ai-analytics/page.tsx', 
   'app/ai-automation-platform/page.tsx',
   'app/ai-code-assistant-pro/page.tsx',
   'app/ai-content-studio/page.tsx',
   'app/ai-customer-sentiment-tracker/page.tsx',
+  'app/ai-customer-support-chatbot/page.tsx',
   'app/contact/page.tsx',
-  'app/pricing/page.tsx'
+  'app/pricing/page.tsx',
+  'app/services/page.tsx'
 ];
 
-function fixUnusedImports(filePath) {
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Remove unused lucide-react imports
+    // Remove unused imports - keep only React and Helmet if they exist
     content = content.replace(/import\s*{\s*[^}]*}\s*from\s*['"]lucide-react['"];?\s*\n/g, '');
-    
-    // Remove unused react-router-dom imports
     content = content.replace(/import\s*{\s*[^}]*}\s*from\s*['"]react-router-dom['"];?\s*\n/g, '');
     
     // Remove unused component imports
     content = content.replace(/import\s*{\s*[^}]*}\s*from\s*['"]\.\.\/components\/[^'"]*['"];?\s*\n/g, '');
     
-    // Remove unused variable declarations (simple cases)
+    // Remove unused variable declarations
     const lines = content.split('\n');
-    const filteredLines = [];
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      // Skip lines that declare unused variables
+    const filteredLines = lines.filter(line => {
+      // Remove lines that declare unused variables
       if (line.includes('const ') && line.includes(' = [')) {
         const varName = line.match(/const\s+(\w+)\s*=/)?.[1];
-        if (varName) {
-          // Check if this variable is used elsewhere in the file
-          const restOfFile = lines.slice(i + 1).join('\n');
-          if (!restOfFile.includes(varName + '[') && !restOfFile.includes(varName + '.')) {
-            // Skip this variable declaration
-            continue;
-          }
+        if (varName && !content.includes(varName + '[') && !content.includes(varName + '.')) {
+          return false;
         }
       }
-      
-      filteredLines.push(line);
-    }
+      return true;
+    });
     
     content = filteredLines.join('\n');
     
@@ -61,5 +52,5 @@ function fixUnusedImports(filePath) {
 }
 
 // Fix all files
-files.forEach(fixUnusedImports);
+filesToFix.forEach(fixFile);
 console.log('All files fixed!');
