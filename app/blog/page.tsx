@@ -1,6 +1,4 @@
-import React from 'react';
-import { ArrowRight, Calendar, User, Tag  } from 'lucide-react';
-
+import { ArrowRight, Calendar, User, Tag } from 'lucide-react';
 const BlogPage = () => {
   const blogPosts = [
     {

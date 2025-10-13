@@ -1,5 +1,3 @@
-import React from 'react';
-import EnhancedSEO from '../components/EnhancedSEO';
 export default function CaseStudies() {
   const caseStudies = [
     {

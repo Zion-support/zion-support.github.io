@@ -1,5 +1,4 @@
-import { Helmet  } from 'react-helmet-async';
-
+import { Helmet } from 'react-helmet-async';
 const features = [
     {
       title: "Predictive Analytics",
@@ -134,7 +133,6 @@ const testimonials = [
   ShoppingCart,
   Store
 } from 'lucide-react';
-import { Helmet  } from 'react-helmet-async';
 
 const ZionSmartInventoryOptimizerPage = () => {
   const [selectedPlan, setSelectedPlan] = useState('pro');

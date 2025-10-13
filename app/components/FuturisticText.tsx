@@ -1,4 +1,3 @@
-import React from 'react';
 interface FuturisticTextProps {
   children: React.ReactNode;
   variant?: 'heading' | 'subheading' | 'body' | 'caption';

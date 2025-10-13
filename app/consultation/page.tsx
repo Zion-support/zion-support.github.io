@@ -1,5 +1,10 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
+  ArrowRight,
+  Star,
+  Users,
+  Award,
+  BarChart3
+} from 'lucide-react';
 
 const benefits = [
     "Advanced AI algorithms for accurate predictions",

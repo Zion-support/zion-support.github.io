@@ -1,6 +1,4 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
-
+import { Helmet } from 'react-helmet-async';
 const benefits = [
     "Advanced AI algorithms for accurate predictions",
     "Real-time risk assessment and monitoring",

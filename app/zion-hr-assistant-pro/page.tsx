@@ -1,6 +1,4 @@
-import React from 'react';
 import { Users, Brain, Clock, Shield, Zap, ArrowRight, CheckCircle, Star, DollarSign, Smartphone, Globe, Database, Settings, FileText, TrendingUp, AlertCircle, Calendar, Heart } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
 const features = [
     {
       title: "Predictive Analytics",

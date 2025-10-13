@@ -1,6 +1,4 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-
 const benefits = [
     "Advanced AI algorithms for accurate predictions",
     "Real-time risk assessment and monitoring",

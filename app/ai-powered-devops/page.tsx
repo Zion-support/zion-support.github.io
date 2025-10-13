@@ -1,7 +1,4 @@
-import React from 'react';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Helmet  } from 'react-helmet-async';
-
+import { Helmet } from 'react-helmet-async';
 const features = [
     {
       title: "Predictive Analytics",

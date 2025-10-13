@@ -1,6 +1,4 @@
-import React from 'react';
-import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe as GlobeIcon  } from 'lucide-react';
-
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe as GlobeIcon } from 'lucide-react';
 const stats = [
     { label: "Accuracy Rate", value: "95%", icon: "Target" },
     { label: "Time Saved", value: "80%", icon: "Clock" },

@@ -1,6 +1,4 @@
-import React from 'react';
-import { ArrowRight, Shield, CheckCircle, FileText, Lock, Users, Globe, Award, Clock  } from 'lucide-react';
-
+import { ArrowRight, Shield, CheckCircle, FileText, Lock, Users, Globe, Award, Clock } from 'lucide-react';
 const benefits = [
     "Advanced AI algorithms for accurate predictions",
     "Real-time risk assessment and monitoring",

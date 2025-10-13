@@ -1,6 +1,4 @@
-import React from 'react';
-import { motion  } from 'framer-motion';
-
+import { motion } from 'framer-motion';
 const benefits = [
     "Advanced AI algorithms for accurate predictions",
     "Real-time risk assessment and monitoring",

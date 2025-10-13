@@ -1,6 +1,4 @@
-import React from 'react';
-import { ChevronRight, Home  } from 'lucide-react';
-
+import { ChevronRight, Home } from 'lucide-react';
 const Breadcrumb: React.FC = () => {
   const location = useLocation();
   const pathnames = location.pathname.split('/').filter((x) => x);

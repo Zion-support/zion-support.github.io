@@ -1,15 +1,4 @@
-import React from 'react';
-import { Link, useLocation, } from 'react-router-dom';
-  Menu, 
-  X, 
-  Brain, 
-  Shield, 
-  Zap, 
-  Globe,
-  ChevronDown,
-  ChevronUp
-} from 'lucide-react';
-
+import { Link, useLocation } from 'react-router-dom';
 interface NavigationProps {
   onSidebarToggle?: () => void;
 }

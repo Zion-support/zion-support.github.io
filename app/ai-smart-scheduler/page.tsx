@@ -1,6 +1,4 @@
-import React from 'react';
 import { Brain, Users, Zap, Globe, Clock, CheckCircle } from 'lucide-react';
-import Layout from '../layout';
 const features = [
     {
       title: "Predictive Analytics",

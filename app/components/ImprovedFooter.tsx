@@ -1,5 +1,4 @@
-import React from 'react';
-import { Link, } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 const stats = [
     { label: "Accuracy Rate", value: "95%", icon: "Target" },
     { label: "Time Saved", value: "80%", icon: "Clock" },

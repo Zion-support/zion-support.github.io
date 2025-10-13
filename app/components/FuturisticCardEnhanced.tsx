@@ -1,4 +1,3 @@
-import React from 'react';
 interface FuturisticCardEnhancedProps {
   children: React.ReactNode;
   className?: string;

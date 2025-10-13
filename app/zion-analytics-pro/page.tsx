@@ -1,6 +1,4 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import SEOOptimizer from '../components/SEOOptimizer';
 const features = [
     {
       title: "Predictive Analytics",

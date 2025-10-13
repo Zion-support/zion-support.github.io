@@ -1,5 +1,4 @@
-import { Helmet  } from 'react-helmet-async';
-
+import { Helmet } from 'react-helmet-async';
 const features = [
     {
       title: "Predictive Analytics",
@@ -120,7 +119,6 @@ const testimonials = [
   SignalHigh,
   SignalMedium
 } from 'lucide-react';
-import { Helmet  } from 'react-helmet-async';
 
 const ZionAIVideoGeneratorPage = () => {
   const [selectedPlan, setSelectedPlan] = useState('pro');

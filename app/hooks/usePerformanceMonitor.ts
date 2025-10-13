@@ -1,4 +1,3 @@
-import React, { useEffect, useRef } from 'react';
 interface PerformanceMetrics {
   loadTime: number
   firstContentfulPaint: number

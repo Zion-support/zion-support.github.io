@@ -1,6 +1,4 @@
-import React from 'react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import { Link, } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 const features = [
     {
       title: "Predictive Analytics",

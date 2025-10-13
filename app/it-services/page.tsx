@@ -1,6 +1,4 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import SEOOptimizer from '../components/SEOOptimizer';
 export default function ITServices() {
   const itServices = [
     {

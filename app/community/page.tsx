@@ -1,6 +1,4 @@
-import React from 'react';
-import { ArrowRight, Users, MessageCircle, Calendar, Award, Globe, Star  } from 'lucide-react';
-
+import { ArrowRight, Users, MessageCircle, Calendar, Award, Globe, Star } from 'lucide-react';
 const stats = [
     { label: "Accuracy Rate", value: "95%", icon: "Target" },
     { label: "Time Saved", value: "80%", icon: "Clock" },
