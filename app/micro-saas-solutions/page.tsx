@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -19,7 +16,9 @@ import {
   CurrencyDollarIcon,
   ClockIcon,
   UserGroupIcon,
-  CogIcon
+  CogIcon,
+  PlayIcon,
+  ChatBubbleLeftRightIcon
 } from '@heroicons/react/24/outline';
 
 export default function MicroSaaSSolutionsPage() {
@@ -251,6 +250,177 @@ export default function MicroSaaSSolutionsPage() {
       benefits: ["40% open rates", "Personalized content", "Optimized timing"],
       useCases: ["Email campaigns", "Newsletter management", "Lead nurturing"],
       href: "/ai-email-marketing"
+    },
+    {
+      title: "AI Video Analytics Platform",
+      description: "Intelligent video content analysis with AI-powered insights, engagement tracking, and optimization recommendations.",
+      icon: PlayIcon,
+      features: [
+        "Video content analysis",
+        "Engagement tracking",
+        "AI-powered insights",
+        "Performance optimization",
+        "Audience behavior analysis",
+        "Content recommendations"
+      ],
+      color: "from-violet-500 to-purple-500",
+      price: "$399/month",
+      setupFee: "$1,500",
+      benefits: ["50% engagement increase", "AI insights", "Optimized content"],
+      useCases: ["Video marketing", "Content optimization", "Audience analysis"],
+      href: "/ai-video-analytics"
+    },
+    {
+      title: "AI Lead Scoring Engine",
+      description: "Intelligent lead scoring system that uses AI to identify and prioritize high-value prospects automatically.",
+      icon: ChartBarIcon,
+      features: [
+        "AI lead scoring",
+        "Behavioral analysis",
+        "Predictive modeling",
+        "CRM integration",
+        "Real-time scoring",
+        "Custom scoring models"
+      ],
+      color: "from-emerald-500 to-teal-500",
+      price: "$299/month",
+      setupFee: "$1,200",
+      benefits: ["35% conversion increase", "Automated scoring", "Better lead quality"],
+      useCases: ["Sales optimization", "Lead qualification", "CRM enhancement"],
+      href: "/ai-lead-scoring"
+    },
+    {
+      title: "AI Customer Feedback Analyzer",
+      description: "Advanced sentiment analysis and feedback processing to extract actionable insights from customer feedback.",
+      icon: ChatBubbleLeftRightIcon,
+      features: [
+        "Sentiment analysis",
+        "Feedback categorization",
+        "Trend identification",
+        "Actionable insights",
+        "Multi-channel support",
+        "Real-time processing"
+      ],
+      color: "from-rose-500 to-pink-500",
+      price: "$199/month",
+      setupFee: "$800",
+      benefits: ["90% accuracy", "Real-time insights", "Automated analysis"],
+      useCases: ["Customer feedback", "Sentiment tracking", "Product improvement"],
+      href: "/ai-feedback-analyzer"
+    },
+    {
+      title: "AI Inventory Optimization",
+      description: "Smart inventory management with AI-powered demand forecasting and automated reordering systems.",
+      icon: CloudIcon,
+      features: [
+        "Demand forecasting",
+        "Automated reordering",
+        "Stock optimization",
+        "Supplier management",
+        "Cost analysis",
+        "Real-time tracking"
+      ],
+      color: "from-cyan-500 to-blue-500",
+      price: "$349/month",
+      setupFee: "$1,500",
+      benefits: ["30% cost reduction", "Zero stockouts", "Optimized inventory"],
+      useCases: ["Retail management", "Manufacturing", "Supply chain"],
+      href: "/ai-inventory-optimization"
+    },
+    {
+      title: "AI Social Media Scheduler",
+      description: "Intelligent social media management with AI-powered content scheduling and optimal posting times.",
+      icon: GlobeAltIcon,
+      features: [
+        "AI content scheduling",
+        "Optimal timing",
+        "Engagement optimization",
+        "Multi-platform support",
+        "Performance analytics",
+        "Content suggestions"
+      ],
+      color: "from-indigo-500 to-purple-500",
+      price: "$149/month",
+      setupFee: "$600",
+      benefits: ["200% engagement increase", "Optimal timing", "Multi-platform"],
+      useCases: ["Social media marketing", "Content management", "Brand building"],
+      href: "/ai-social-scheduler"
+    },
+    {
+      title: "AI Expense Tracker Pro",
+      description: "Advanced expense management with AI-powered categorization, receipt processing, and financial insights.",
+      icon: CurrencyDollarIcon,
+      features: [
+        "AI categorization",
+        "Receipt processing",
+        "Expense insights",
+        "Budget tracking",
+        "Tax preparation",
+        "Financial reporting"
+      ],
+      color: "from-green-500 to-emerald-500",
+      price: "$79/month",
+      setupFee: "$300",
+      benefits: ["90% accuracy", "Time savings", "Tax ready"],
+      useCases: ["Expense management", "Tax preparation", "Financial tracking"],
+      href: "/ai-expense-tracker"
+    },
+    {
+      title: "AI Meeting Assistant",
+      description: "Intelligent meeting management with AI-powered transcription, action items, and follow-up automation.",
+      icon: UserGroupIcon,
+      features: [
+        "AI transcription",
+        "Action item extraction",
+        "Meeting summaries",
+        "Follow-up automation",
+        "Integration support",
+        "Real-time notes"
+      ],
+      color: "from-orange-500 to-red-500",
+      price: "$129/month",
+      setupFee: "$500",
+      benefits: ["100% accuracy", "Time savings", "Automated follow-ups"],
+      useCases: ["Meeting management", "Note taking", "Action tracking"],
+      href: "/ai-meeting-assistant"
+    },
+    {
+      title: "AI Website Optimizer",
+      description: "Comprehensive website optimization with AI-powered performance analysis and conversion optimization.",
+      icon: CogIcon,
+      features: [
+        "Performance analysis",
+        "Conversion optimization",
+        "SEO recommendations",
+        "Speed optimization",
+        "User experience analysis",
+        "A/B testing"
+      ],
+      color: "from-blue-500 to-indigo-500",
+      price: "$249/month",
+      setupFee: "$1,000",
+      benefits: ["40% conversion increase", "Faster loading", "Better SEO"],
+      useCases: ["Website optimization", "Conversion rate", "Performance improvement"],
+      href: "/ai-website-optimizer"
+    },
+    {
+      title: "AI Data Visualization Studio",
+      description: "Advanced data visualization platform with AI-powered chart generation and interactive dashboards.",
+      icon: ChartBarIcon,
+      features: [
+        "AI chart generation",
+        "Interactive dashboards",
+        "Real-time data",
+        "Custom visualizations",
+        "Export capabilities",
+        "Collaboration tools"
+      ],
+      color: "from-purple-500 to-pink-500",
+      price: "$179/month",
+      setupFee: "$700",
+      benefits: ["Beautiful visualizations", "Real-time data", "Easy sharing"],
+      useCases: ["Data visualization", "Business intelligence", "Reporting"],
+      href: "/ai-data-visualization"
     }
   ];
 
@@ -263,10 +433,10 @@ export default function MicroSaaSSolutionsPage() {
       </Helmet>
       
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 matrix-bg cyber-grid">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 gradient-text neon-text">
               Micro SaaS Solutions
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -289,7 +459,7 @@ export default function MicroSaaSSolutionsPage() {
               return (
                 <div 
                   key={product.title}
-                  className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105"
+                  className="group glass-morphism p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105 neon-border"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-r ${product.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                     <Icon className="w-8 h-8 text-white" />

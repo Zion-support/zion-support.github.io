@@ -239,6 +239,168 @@ export default function AISolutionsPage() {
       benefits: ["Strategic insights", "Market intelligence", "ROI optimization"],
       useCases: ["Strategic planning", "Market analysis", "Competitive research"],
       href: "/ai-business-intelligence"
+    },
+    {
+      title: "AI Medical Diagnosis Assistant",
+      description: "Advanced AI-powered medical diagnosis support with image analysis and symptom assessment capabilities.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Medical image analysis",
+        "Symptom assessment",
+        "Diagnosis suggestions",
+        "Risk stratification",
+        "Treatment recommendations",
+        "Clinical decision support"
+      ],
+      color: "from-red-500 to-pink-500",
+      price: "Starting at $5,000/month",
+      benefits: ["95% accuracy", "Faster diagnosis", "Reduced errors"],
+      useCases: ["Medical imaging", "Diagnosis support", "Clinical workflows"],
+      href: "/ai-medical-diagnosis"
+    },
+    {
+      title: "AI Legal Document Analyzer",
+      description: "Intelligent legal document processing with contract analysis, risk assessment, and compliance checking.",
+      icon: DocumentTextIcon,
+      features: [
+        "Contract analysis",
+        "Risk assessment",
+        "Compliance checking",
+        "Document summarization",
+        "Legal research",
+        "Due diligence"
+      ],
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $3,500/month",
+      benefits: ["90% accuracy", "Time savings", "Risk reduction"],
+      useCases: ["Legal research", "Contract review", "Compliance"],
+      href: "/ai-legal-analyzer"
+    },
+    {
+      title: "AI Supply Chain Optimizer",
+      description: "Comprehensive supply chain optimization with AI-powered demand forecasting and logistics management.",
+      icon: CloudIcon,
+      features: [
+        "Demand forecasting",
+        "Inventory optimization",
+        "Route optimization",
+        "Supplier management",
+        "Risk assessment",
+        "Cost optimization"
+      ],
+      color: "from-blue-500 to-cyan-500",
+      price: "Starting at $4,500/month",
+      benefits: ["25% cost reduction", "Improved efficiency", "Risk mitigation"],
+      useCases: ["Supply chain management", "Logistics optimization", "Inventory control"],
+      href: "/ai-supply-chain"
+    },
+    {
+      title: "AI Energy Management System",
+      description: "Smart energy management with AI-powered consumption optimization and renewable energy integration.",
+      icon: LightBulbIcon,
+      features: [
+        "Energy consumption analysis",
+        "Optimization algorithms",
+        "Renewable integration",
+        "Cost optimization",
+        "Predictive maintenance",
+        "Carbon footprint tracking"
+      ],
+      color: "from-yellow-500 to-orange-500",
+      price: "Starting at $2,800/month",
+      benefits: ["30% energy savings", "Cost reduction", "Sustainability"],
+      useCases: ["Energy management", "Sustainability", "Cost optimization"],
+      href: "/ai-energy-management"
+    },
+    {
+      title: "AI Real Estate Analyzer",
+      description: "Advanced real estate market analysis with AI-powered property valuation and investment insights.",
+      icon: ChartBarIcon,
+      features: [
+        "Property valuation",
+        "Market analysis",
+        "Investment insights",
+        "Risk assessment",
+        "Trend prediction",
+        "ROI optimization"
+      ],
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $2,200/month",
+      benefits: ["Accurate valuations", "Market insights", "Investment guidance"],
+      useCases: ["Property investment", "Market analysis", "Valuation"],
+      href: "/ai-real-estate"
+    },
+    {
+      title: "AI Agricultural Intelligence",
+      description: "Smart farming solutions with AI-powered crop monitoring, yield prediction, and resource optimization.",
+      icon: GlobeAltIcon,
+      features: [
+        "Crop monitoring",
+        "Yield prediction",
+        "Resource optimization",
+        "Pest detection",
+        "Weather analysis",
+        "Precision farming"
+      ],
+      color: "from-green-600 to-green-400",
+      price: "Starting at $3,200/month",
+      benefits: ["20% yield increase", "Resource efficiency", "Crop protection"],
+      useCases: ["Precision farming", "Crop management", "Resource optimization"],
+      href: "/ai-agriculture"
+    },
+    {
+      title: "AI Manufacturing Optimizer",
+      description: "Intelligent manufacturing optimization with AI-powered quality control and production efficiency.",
+      icon: CogIcon,
+      features: [
+        "Quality control",
+        "Production optimization",
+        "Predictive maintenance",
+        "Defect detection",
+        "Process optimization",
+        "Resource allocation"
+      ],
+      color: "from-gray-500 to-gray-700",
+      price: "Starting at $4,800/month",
+      benefits: ["15% efficiency gain", "Quality improvement", "Cost reduction"],
+      useCases: ["Manufacturing", "Quality control", "Process optimization"],
+      href: "/ai-manufacturing"
+    },
+    {
+      title: "AI Financial Trading Bot",
+      description: "Advanced algorithmic trading with AI-powered market analysis and automated trading strategies.",
+      icon: CurrencyDollarIcon,
+      features: [
+        "Market analysis",
+        "Trading strategies",
+        "Risk management",
+        "Portfolio optimization",
+        "Real-time execution",
+        "Performance tracking"
+      ],
+      color: "from-green-600 to-green-400",
+      price: "Starting at $6,000/month",
+      benefits: ["Higher returns", "Risk management", "24/7 trading"],
+      useCases: ["Algorithmic trading", "Portfolio management", "Risk control"],
+      href: "/ai-trading-bot"
+    },
+    {
+      title: "AI Climate Prediction Engine",
+      description: "Advanced climate modeling with AI-powered weather prediction and environmental impact analysis.",
+      icon: CloudIcon,
+      features: [
+        "Weather prediction",
+        "Climate modeling",
+        "Environmental impact",
+        "Disaster forecasting",
+        "Resource planning",
+        "Sustainability analysis"
+      ],
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $3,800/month",
+      benefits: ["Accurate predictions", "Risk mitigation", "Planning support"],
+      useCases: ["Weather forecasting", "Climate research", "Disaster planning"],
+      href: "/ai-climate-prediction"
     }
   ];
 
@@ -251,10 +413,10 @@ export default function AISolutionsPage() {
       </Helmet>
       
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 matrix-bg cyber-grid">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 gradient-text neon-text">
               AI Solutions
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -277,7 +439,7 @@ export default function AISolutionsPage() {
               return (
                 <div 
                   key={service.title}
-                  className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105"
+                  className="group glass-morphism p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105 neon-border"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                     <Icon className="w-8 h-8 text-white" />

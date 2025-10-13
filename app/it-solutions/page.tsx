@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -245,6 +242,168 @@ export default function ITSolutionsPage() {
       benefits: ["Full compliance", "Risk mitigation", "Audit readiness"],
       useCases: ["SOX compliance", "GDPR compliance", "HIPAA compliance"],
       href: "/it-compliance"
+    },
+    {
+      title: "5G Network Implementation",
+      description: "Complete 5G network deployment and optimization services for ultra-fast connectivity and IoT applications.",
+      icon: WifiIcon,
+      features: [
+        "5G network design",
+        "Infrastructure deployment",
+        "Performance optimization",
+        "IoT integration",
+        "Edge computing setup",
+        "Network monitoring"
+      ],
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $8,000/month",
+      benefits: ["Ultra-fast speeds", "Low latency", "IoT ready"],
+      useCases: ["5G deployment", "IoT networks", "Edge computing"],
+      href: "/5g-implementation"
+    },
+    {
+      title: "Blockchain Solutions",
+      description: "Enterprise blockchain implementation with smart contracts, cryptocurrency integration, and decentralized applications.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Blockchain architecture",
+        "Smart contracts",
+        "Cryptocurrency integration",
+        "DApp development",
+        "Security implementation",
+        "Consensus mechanisms"
+      ],
+      color: "from-yellow-500 to-orange-500",
+      price: "Starting at $6,500/month",
+      benefits: ["Enhanced security", "Transparency", "Decentralization"],
+      useCases: ["Cryptocurrency", "Smart contracts", "DApps"],
+      href: "/blockchain-solutions"
+    },
+    {
+      title: "IoT Platform Development",
+      description: "Comprehensive IoT platform development with device management, data analytics, and real-time monitoring.",
+      icon: GlobeAltIcon,
+      features: [
+        "IoT device management",
+        "Data analytics",
+        "Real-time monitoring",
+        "Protocol integration",
+        "Security implementation",
+        "Scalable architecture"
+      ],
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $4,200/month",
+      benefits: ["Device connectivity", "Real-time data", "Scalable platform"],
+      useCases: ["Smart cities", "Industrial IoT", "Connected devices"],
+      href: "/iot-platform"
+    },
+    {
+      title: "Quantum Computing Services",
+      description: "Advanced quantum computing solutions for complex problem solving and optimization challenges.",
+      icon: CpuChipIcon,
+      features: [
+        "Quantum algorithm development",
+        "Optimization problems",
+        "Cryptography solutions",
+        "Quantum simulation",
+        "Performance analysis",
+        "Hybrid computing"
+      ],
+      color: "from-purple-500 to-pink-500",
+      price: "Starting at $12,000/month",
+      benefits: ["Exponential speed", "Complex optimization", "Future-ready"],
+      useCases: ["Optimization", "Cryptography", "Simulation"],
+      href: "/quantum-computing"
+    },
+    {
+      title: "Edge Computing Infrastructure",
+      description: "Distributed edge computing solutions for low-latency applications and real-time data processing.",
+      icon: ServerIcon,
+      features: [
+        "Edge server deployment",
+        "Low-latency processing",
+        "Real-time analytics",
+        "Distributed architecture",
+        "Bandwidth optimization",
+        "Security implementation"
+      ],
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $3,500/month",
+      benefits: ["Ultra-low latency", "Real-time processing", "Bandwidth efficiency"],
+      useCases: ["Real-time apps", "IoT processing", "Content delivery"],
+      href: "/edge-computing"
+    },
+    {
+      title: "DevOps & CI/CD Pipeline",
+      description: "Complete DevOps implementation with automated CI/CD pipelines, containerization, and deployment automation.",
+      icon: CogIcon,
+      features: [
+        "CI/CD pipeline setup",
+        "Container orchestration",
+        "Automated testing",
+        "Deployment automation",
+        "Monitoring & logging",
+        "Infrastructure as code"
+      ],
+      color: "from-orange-500 to-red-500",
+      price: "Starting at $2,800/month",
+      benefits: ["Faster deployment", "Automated testing", "Scalable infrastructure"],
+      useCases: ["Software development", "Deployment automation", "Infrastructure management"],
+      href: "/devops-pipeline"
+    },
+    {
+      title: "API Gateway & Management",
+      description: "Comprehensive API management platform with security, monitoring, and developer portal capabilities.",
+      icon: GlobeAltIcon,
+      features: [
+        "API gateway setup",
+        "Security implementation",
+        "Rate limiting",
+        "Developer portal",
+        "Analytics & monitoring",
+        "Version management"
+      ],
+      color: "from-blue-500 to-indigo-500",
+      price: "Starting at $1,800/month",
+      benefits: ["API security", "Developer experience", "Performance monitoring"],
+      useCases: ["API management", "Microservices", "Developer tools"],
+      href: "/api-management"
+    },
+    {
+      title: "Data Lake & Warehouse",
+      description: "Enterprise data lake and warehouse solutions with advanced analytics and business intelligence capabilities.",
+      icon: CircleStackIcon,
+      features: [
+        "Data lake architecture",
+        "Data warehouse design",
+        "ETL/ELT processes",
+        "Data governance",
+        "Analytics platform",
+        "Business intelligence"
+      ],
+      color: "from-teal-500 to-cyan-500",
+      price: "Starting at $4,500/month",
+      benefits: ["Scalable storage", "Advanced analytics", "Data governance"],
+      useCases: ["Big data", "Analytics", "Business intelligence"],
+      href: "/data-lake-warehouse"
+    },
+    {
+      title: "Microservices Architecture",
+      description: "Modern microservices architecture implementation with service mesh, API management, and containerization.",
+      icon: ServerIcon,
+      features: [
+        "Microservices design",
+        "Service mesh implementation",
+        "Container orchestration",
+        "API management",
+        "Monitoring & logging",
+        "Scalable deployment"
+      ],
+      color: "from-violet-500 to-purple-500",
+      price: "Starting at $5,200/month",
+      benefits: ["Scalable architecture", "Independent deployment", "Technology diversity"],
+      useCases: ["Modern applications", "Scalable systems", "Cloud-native development"],
+      href: "/microservices-architecture"
     }
   ];
 
@@ -257,10 +416,10 @@ export default function ITSolutionsPage() {
       </Helmet>
       
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 matrix-bg cyber-grid">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 gradient-text neon-text">
               IT Solutions
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -283,7 +442,7 @@ export default function ITSolutionsPage() {
               return (
                 <div 
                   key={service.title}
-                  className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105"
+                  className="group glass-morphism p-8 rounded-xl border border-slate-600 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105 neon-border"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                     <Icon className="w-8 h-8 text-white" />

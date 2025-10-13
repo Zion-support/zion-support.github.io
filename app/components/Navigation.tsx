@@ -14,7 +14,10 @@ import {
   ShieldCheckIcon,
   CurrencyDollarIcon,
   CogIcon,
-  ChevronDownIcon
+  ChevronDownIcon,
+  CpuChipIcon,
+  ServerIcon,
+  GlobeAltIcon
 } from '@heroicons/react/24/outline';
 
 const Navigation = () => {
@@ -26,46 +29,74 @@ const Navigation = () => {
     { name: 'Home', href: '/', icon: HomeIcon },
     { name: 'About', href: '/about', icon: InformationCircleIcon },
     { 
-      name: 'Services', 
-      href: '/services', 
-      icon: BriefcaseIcon,
+      name: 'AI Solutions', 
+      href: '/ai-solutions', 
+      icon: CpuChipIcon,
       submenu: [
-        { name: 'AI Solutions', href: '/ai-solutions' },
-        { name: 'Cybersecurity', href: '/cybersecurity' },
-        { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
-        { name: 'Digital Transformation', href: '/digital-transformation' },
-        { name: 'Micro SaaS', href: '/micro-saas' },
-        { name: '5G Solutions', href: '/5g-solutions' }
+        { name: 'Machine Learning', href: '/ai-machine-learning' },
+        { name: 'Natural Language Processing', href: '/ai-nlp' },
+        { name: 'Computer Vision', href: '/ai-computer-vision' },
+        { name: 'Predictive Analytics', href: '/ai-predictive-analytics' },
+        { name: 'AI Chatbots', href: '/ai-chatbots' },
+        { name: 'AI Content Generation', href: '/ai-content-generation' },
+        { name: 'AI Business Intelligence', href: '/ai-business-intelligence' },
+        { name: 'AI Medical Diagnosis', href: '/ai-medical-diagnosis' },
+        { name: 'AI Legal Analyzer', href: '/ai-legal-analyzer' },
+        { name: 'AI Supply Chain', href: '/ai-supply-chain' }
       ]
     },
-<<<<<<< HEAD
-    { name: 'Solutions', href: '/solutions', icon: CogIcon },
+    { 
+      name: 'IT Solutions', 
+      href: '/it-solutions', 
+      icon: ServerIcon,
+      submenu: [
+        { name: 'Infrastructure Management', href: '/it-infrastructure' },
+        { name: 'Cloud Migration', href: '/cloud-migration' },
+        { name: 'Cybersecurity Solutions', href: '/cybersecurity-solutions' },
+        { name: 'Database Management', href: '/database-management' },
+        { name: 'Network Security', href: '/network-security' },
+        { name: 'IT Support', href: '/it-support' },
+        { name: 'Software Development', href: '/software-development' },
+        { name: '5G Implementation', href: '/5g-implementation' },
+        { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
+        { name: 'IoT Platform', href: '/iot-platform' }
+      ]
+    },
+    { 
+      name: 'Micro SaaS', 
+      href: '/micro-saas-solutions', 
+      icon: GlobeAltIcon,
+      submenu: [
+        { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' },
+        { name: 'AI Content Management', href: '/ai-content-management' },
+        { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot' },
+        { name: 'AI Project Management', href: '/ai-project-management' },
+        { name: 'AI E-commerce Optimizer', href: '/ai-ecommerce-optimizer' },
+        { name: 'AI HR Management', href: '/ai-hr-management' },
+        { name: 'AI Financial Analytics', href: '/ai-financial-analytics' },
+        { name: 'AI Marketing Automation', href: '/ai-marketing-automation' },
+        { name: 'AI Inventory Management', href: '/ai-inventory-management' },
+        { name: 'AI Document Processing', href: '/ai-document-processing' }
+      ]
+    },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
     { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
     { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
     { name: 'Demo', href: '/demo', icon: PlayIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
-=======
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Tutorials', href: '/tutorials' },
-    { name: 'Support', href: '/support' },
-    { name: 'Contact', href: '/contact' }
->>>>>>> cursor/website-audit-and-update-with-deployment-936a
   ];
 
   return (
-    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 sticky top-0 z-50">
+    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 sticky top-0 z-50 glass-morphism">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
+          <Link to="/" className="flex items-center space-x-2 group">
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform hologram-effect">
               <span className="text-white font-bold text-lg">Z</span>
             </div>
-            <span className="text-xl font-bold text-white">Zion Tech Group</span>
+            <span className="text-xl font-bold text-white gradient-text">Zion Tech Group</span>
           </Link>
 
           {/* Desktop Navigation */}
