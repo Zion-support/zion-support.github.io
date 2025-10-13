@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Users, 
+  Mail, 
   BarChart3, 
   TrendingUp, 
   Eye, 
@@ -22,7 +22,6 @@ import {
   Receipt,
   CreditCard,
   Smartphone,
-  Mail,
   Calendar,
   Edit3,
   Save,
@@ -34,57 +33,60 @@ import {
   AlertCircle,
   PieChart,
   Activity,
-  ShoppingCart,
-  Cloud,
-  Store,
-  ShoppingBag,
-  DollarSign
+  Filter,
+  Search,
+  Tag,
+  Clock,
+  Users,
+  FileText,
+  Database,
+  Cpu
 } from 'lucide-react';
 
-const ZionAICustomerInsightsPage: React.FC = () => {
+const ZionAIEmailAnalyzerPage: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI Customer Analysis",
-      description: "Deep insights into customer behavior, preferences, and purchasing patterns using advanced AI"
+      title: "AI Email Analysis",
+      description: "Advanced AI analyzes email content, sentiment, and engagement patterns automatically"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Real-time Analytics",
-      description: "Live dashboards showing customer engagement, satisfaction scores, and conversion metrics"
+      title: "Performance Analytics",
+      description: "Track open rates, click-through rates, and conversion metrics in real-time"
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: "Predictive Modeling",
-      description: "Forecast customer lifetime value, churn risk, and future purchasing behavior"
+      title: "Audience Insights",
+      description: "Understand your audience better with detailed demographic and behavioral analysis"
     },
     {
       icon: <MessageSquare className="w-6 h-6" />,
       title: "Sentiment Analysis",
-      description: "Analyze customer feedback, reviews, and social media mentions for sentiment trends"
+      description: "Analyze email sentiment and tone to optimize your communication strategy"
     },
     {
-      icon: <Users className="w-6 h-6" />,
-      title: "Customer Segmentation",
-      description: "Automatically group customers by behavior, demographics, and value for targeted marketing"
+      icon: <Filter className="w-6 h-6" />,
+      title: "Smart Segmentation",
+      description: "Automatically segment your email list based on engagement and behavior patterns"
     },
     {
       icon: <TrendingUp className="w-6 h-6" />,
-      title: "Growth Insights",
-      description: "Identify opportunities for upselling, cross-selling, and customer retention strategies"
+      title: "Optimization Recommendations",
+      description: "Get AI-powered suggestions to improve your email performance and engagement"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$39",
+      price: "$29",
       period: "/month",
-      description: "Perfect for small businesses and startups",
+      description: "Perfect for small businesses and marketers",
       features: [
-        "Up to 1,000 customers",
+        "Up to 10,000 emails analyzed",
         "Basic analytics dashboard",
-        "Customer segmentation",
+        "Email performance tracking",
         "Email support",
         "Monthly reports",
         "Basic integrations",
@@ -94,31 +96,31 @@ const ZionAICustomerInsightsPage: React.FC = () => {
     },
     {
       name: "Professional",
-      price: "$99",
+      price: "$79",
       period: "/month",
       description: "Ideal for growing businesses and agencies",
       features: [
-        "Up to 10,000 customers",
-        "Advanced analytics & AI insights",
-        "Predictive modeling",
-        "Priority support",
+        "Up to 100,000 emails analyzed",
+        "Advanced AI analytics",
         "Real-time dashboards",
-        "Advanced integrations",
+        "Priority support",
         "Custom reporting",
+        "Advanced integrations",
         "API access",
+        "A/B testing insights",
         "Extended data retention"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$199",
+      price: "$149",
       period: "/month",
-      description: "For large organizations and enterprises",
+      description: "For large organizations and email marketing agencies",
       features: [
-        "Unlimited customers",
+        "Unlimited email analysis",
         "Full AI suite & machine learning",
-        "Custom predictive models",
+        "Custom AI models",
         "24/7 phone support",
         "White-label solution",
         "Custom integrations",
@@ -133,78 +135,78 @@ const ZionAICustomerInsightsPage: React.FC = () => {
 
   const useCases = [
     {
-      title: "E-commerce",
-      description: "Understand customer buying patterns and optimize product recommendations",
-      icon: <ShoppingCart className="w-8 h-8" />
+      title: "Email Marketing",
+      description: "Optimize email campaigns and improve engagement rates",
+      icon: <Mail className="w-8 h-8" />
     },
     {
-      title: "SaaS Companies",
-      description: "Reduce churn and increase customer lifetime value with predictive insights",
-      icon: <Cloud className="w-8 h-8" />
+      title: "Customer Support",
+      description: "Analyze support emails to improve response quality",
+      icon: <MessageSquare className="w-8 h-8" />
     },
     {
-      title: "Retail",
-      description: "Personalize customer experiences and improve inventory management",
-      icon: <Store className="w-8 h-8" />
+      title: "Sales Teams",
+      description: "Track email performance and optimize sales outreach",
+      icon: <Target className="w-8 h-8" />
     },
     {
       title: "Marketing Agencies",
-      description: "Deliver data-driven insights to clients for better campaign performance",
-      icon: <Target className="w-8 h-8" />
+      description: "Provide data-driven insights to clients",
+      icon: <BarChart3 className="w-8 h-8" />
     }
   ];
 
   const insights = [
     {
-      title: "Customer Lifetime Value Prediction",
-      description: "Predict which customers will generate the most revenue over time",
-      icon: <DollarSign className="w-6 h-6" />
+      title: "Open Rate Optimization",
+      description: "Identify factors that improve email open rates",
+      icon: <Eye className="w-6 h-6" />
     },
     {
-      title: "Churn Risk Analysis",
-      description: "Identify customers at risk of leaving and take proactive action",
-      icon: <AlertCircle className="w-6 h-6" />
+      title: "Content Performance",
+      description: "Analyze which content types perform best",
+      icon: <FileText className="w-6 h-6" />
     },
     {
-      title: "Purchase Behavior Patterns",
-      description: "Understand when, what, and how customers prefer to buy",
-      icon: <ShoppingBag className="w-6 h-6" />
+      title: "Timing Analysis",
+      description: "Find the optimal times to send emails",
+      icon: <Clock className="w-6 h-6" />
     },
     {
-      title: "Satisfaction Scoring",
-      description: "Track customer satisfaction across all touchpoints automatically",
-      icon: <Heart className="w-6 h-6" />
+      title: "Audience Engagement",
+      description: "Understand how different segments engage",
+      icon: <Users className="w-6 h-6" />
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Customer Insights - Advanced Customer Analytics | Zion Tech Group</title>
+        <title>Zion AI Email Analyzer - Advanced Email Analytics | Zion Tech Group</title>
         <meta 
           name="description" 
-          content="Unlock deep customer insights with AI-powered analytics. Predict behavior, reduce churn, and increase lifetime value. Starting at $39/month." 
+          content="Analyze email performance with AI-powered insights. Track engagement, optimize campaigns, and improve deliverability. Starting at $29/month." 
         />
         <meta 
           name="keywords" 
-          content="customer insights, customer analytics, AI customer analysis, predictive analytics, customer segmentation, churn prediction" 
+          content="email analytics, email marketing, AI email analysis, email performance, email optimization, email insights" 
         />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
-            "name": "Zion AI Customer Insights",
-            "description": "AI-powered customer analytics and insights platform for businesses",
-            "url": "https://ziontechgroup.com/zion-ai-customer-insights",
+            "name": "Zion AI Email Analyzer",
+            "description": "AI-powered email analytics and optimization platform",
+            "url": "https://ziontechgroup.com/zion-ai-email-analyzer",
             "applicationCategory": "BusinessApplication",
             "operatingSystem": "Web",
             "offers": {
               "@type": "Offer",
-              "price": "39",
+              "price": "29",
               "priceCurrency": "USD",
               "priceSpecification": {
                 "@type": "PriceSpecification",
-                "price": "39",
+                "price": "29",
                 "priceCurrency": "USD",
                 "billingIncrement": "Monthly"
               }
@@ -229,18 +231,18 @@ const ZionAICustomerInsightsPage: React.FC = () => {
             <div className="text-center mb-12">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
                 <Brain className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">AI-Powered Customer Intelligence</span>
+                <span className="text-cyan-400 text-sm font-medium">AI-Powered Email Intelligence</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  Zion AI Customer Insights
+                  Zion AI Email Analyzer
                 </span>
               </h1>
               
               <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Unlock the power of your customer data with AI-driven insights. Predict behavior, 
-                reduce churn, and maximize customer lifetime value with our advanced analytics platform.
+                Transform your email marketing with AI-powered analytics. Track performance, 
+                optimize campaigns, and boost engagement with intelligent insights and recommendations.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -263,12 +265,12 @@ const ZionAICustomerInsightsPage: React.FC = () => {
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-cyan-400 mb-2">25%</div>
-                  <div className="text-gray-300 text-sm">Average Churn Reduction</div>
+                  <div className="text-2xl md:text-3xl font-bold text-cyan-400 mb-2">35%</div>
+                  <div className="text-gray-300 text-sm">Average Open Rate Increase</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-cyan-400 mb-2">40%</div>
-                  <div className="text-gray-300 text-sm">Increase in CLV</div>
+                  <div className="text-2xl md:text-3xl font-bold text-cyan-400 mb-2">50%</div>
+                  <div className="text-gray-300 text-sm">Click-Through Rate Boost</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl md:text-3xl font-bold text-cyan-400 mb-2">95%</div>
@@ -276,7 +278,7 @@ const ZionAICustomerInsightsPage: React.FC = () => {
                 </div>
                 <div className="text-center">
                   <div className="text-2xl md:text-3xl font-bold text-cyan-400 mb-2">24/7</div>
-                  <div className="text-gray-300 text-sm">Real-time Monitoring</div>
+                  <div className="text-gray-300 text-sm">Real-time Analysis</div>
                 </div>
               </div>
             </div>
@@ -288,10 +290,10 @@ const ZionAICustomerInsightsPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Advanced Customer Intelligence Features
+                Advanced Email Analytics Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Transform raw customer data into actionable insights that drive business growth and customer satisfaction.
+                Everything you need to understand and optimize your email performance with AI-powered insights.
               </p>
             </div>
             
@@ -324,7 +326,7 @@ const ZionAICustomerInsightsPage: React.FC = () => {
                 Key Insights You'll Discover
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI analyzes your customer data to reveal patterns and opportunities you never knew existed.
+                Our AI analyzes your email data to reveal patterns and opportunities for improvement.
               </p>
             </div>
             
@@ -354,10 +356,10 @@ const ZionAICustomerInsightsPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Perfect for Every Industry
+                Perfect for Every Email Strategy
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Whether you're in e-commerce, SaaS, retail, or any other industry, our insights adapt to your business model.
+                Whether you're running marketing campaigns, support operations, or sales outreach.
               </p>
             </div>
             
@@ -390,7 +392,7 @@ const ZionAICustomerInsightsPage: React.FC = () => {
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Start with our free trial and scale as your business grows. All plans include core AI features.
+                Start with our free trial and scale as your email volume grows.
               </p>
             </div>
             
@@ -451,10 +453,10 @@ const ZionAICustomerInsightsPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Unlock Customer Insights?
+                Ready to Optimize Your Emails?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of businesses using Zion AI Customer Insights to understand their customers better. 
+                Join thousands of marketers using Zion AI Email Analyzer to boost their email performance. 
                 Start your free trial today!
               </p>
               
@@ -471,7 +473,7 @@ const ZionAICustomerInsightsPage: React.FC = () => {
                     <BarChart3 className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Real-time Analytics</h3>
-                  <p className="text-cyan-400 text-sm">Live insights and dashboards</p>
+                  <p className="text-cyan-400 text-sm">Live performance tracking</p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
@@ -505,4 +507,4 @@ const ZionAICustomerInsightsPage: React.FC = () => {
   );
 };
 
-export default ZionAICustomerInsightsPage;
+export default ZionAIEmailAnalyzerPage;

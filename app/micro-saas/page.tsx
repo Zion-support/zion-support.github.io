@@ -15,45 +15,124 @@ import {
   CheckCircle,
   Star,
   Award,
-  Globe
+  Globe,
+  Video,
+  FileText,
+  Mail,
+  Package,
+  Mic,
+  Code,
+  Share2
 } from 'lucide-react';
 
 const MicroSaasPage: React.FC = () => {
   const microSaasProducts = [
     {
-      title: 'Zion Analytics Pro',
-      description: 'Advanced analytics dashboard with real-time insights and customizable reports.',
-      icon: <BarChart3 className="w-8 h-8" />,
-      path: '/zion-analytics-pro',
-      features: ['Real-time dashboards', 'Custom reports', 'Data visualization'],
+      title: 'Zion AI Video Generator',
+      description: 'Create professional videos from text prompts using advanced AI technology. Perfect for marketing, training, and social media content.',
+      icon: <Video className="w-8 h-8" />,
+      path: '/zion-ai-video-generator',
+      features: ['AI video generation', '50+ video styles', 'Multi-language support', '4K quality', 'Custom branding'],
       price: '$29/month',
       featured: true
     },
     {
-      title: 'Zion Security Shield',
-      description: 'Comprehensive security monitoring and threat detection for your applications.',
-      icon: <Shield className="w-8 h-8" />,
-      path: '/zion-security-shield',
-      features: ['Threat detection', 'Security monitoring', 'Incident response'],
-      price: '$49/month',
+      title: 'Zion AI Invoice Generator',
+      description: 'Automated invoice creation with AI-powered calculations, custom branding, and payment tracking for businesses of all sizes.',
+      icon: <FileText className="w-8 h-8" />,
+      path: '/zion-ai-invoice-generator',
+      features: ['AI invoice generation', 'Smart calculations', 'Custom branding', 'Automated sending', 'Payment tracking'],
+      price: '$19/month',
       featured: true
     },
     {
+      title: 'Zion AI Customer Insights',
+      description: 'Unlock deep customer insights with AI-powered analytics. Predict behavior, reduce churn, and maximize customer lifetime value.',
+      icon: <Users className="w-8 h-8" />,
+      path: '/zion-ai-customer-insights',
+      features: ['AI customer analysis', 'Predictive modeling', 'Sentiment analysis', 'Customer segmentation', 'Growth insights'],
+      price: '$39/month',
+      featured: true
+    },
+    {
+      title: 'Zion AI Email Analyzer',
+      description: 'Analyze email performance with AI-powered insights. Track engagement, optimize campaigns, and improve deliverability.',
+      icon: <Mail className="w-8 h-8" />,
+      path: '/zion-ai-email-analyzer',
+      features: ['AI email analysis', 'Performance analytics', 'Audience insights', 'Sentiment analysis', 'Optimization recommendations'],
+      price: '$29/month',
+      featured: true
+    },
+    {
+      title: 'Zion Analytics Pro',
+      description: 'Advanced analytics dashboard with real-time insights and customizable reports for data-driven decision making.',
+      icon: <BarChart3 className="w-8 h-8" />,
+      path: '/zion-analytics-pro',
+      features: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'API integration', 'Mobile app'],
+      price: '$99/month',
+      featured: false
+    },
+    {
+      title: 'Zion Security Shield',
+      description: 'Comprehensive security monitoring and threat detection for your applications with AI-powered protection.',
+      icon: <Shield className="w-8 h-8" />,
+      path: '/zion-security-shield',
+      features: ['Threat detection', 'Security monitoring', 'Incident response', 'Compliance reporting', '24/7 monitoring'],
+      price: '$149/month',
+      featured: false
+    },
+    {
       title: 'Zion Cloud Vault',
-      description: 'Secure cloud storage solution with advanced encryption and backup features.',
+      description: 'Secure cloud storage solution with advanced encryption, automated backups, and unlimited scalability.',
       icon: <Cloud className="w-8 h-8" />,
       path: '/zion-cloud-vault',
-      features: ['End-to-end encryption', 'Automated backups', 'File sharing'],
-      price: '$19/month',
+      features: ['End-to-end encryption', 'Automated backups', 'File sharing', 'Version control', 'Team collaboration'],
+      price: '$49/month',
       featured: false
     },
     {
       title: 'Zion Content Studio',
-      description: 'AI-powered content creation and management platform for marketing teams.',
+      description: 'AI-powered content creation and management platform for marketing teams with SEO optimization and brand voice training.',
       icon: <Sparkles className="w-8 h-8" />,
       path: '/zion-content-studio',
-      features: ['AI content generation', 'Content calendar', 'Team collaboration'],
-      price: '$39/month',
+      features: ['AI content generation', 'Content calendar', 'Team collaboration', 'SEO optimization', 'Brand voice training'],
+      price: '$79/month',
+      featured: false
+    },
+    {
+      title: 'Zion Smart Inventory Optimizer',
+      description: 'AI-powered inventory management with demand forecasting, automated reordering, and cost optimization for retail and e-commerce.',
+      icon: <Package className="w-8 h-8" />,
+      path: '/zion-smart-inventory-optimizer',
+      features: ['Demand forecasting', 'Automated reordering', 'Cost optimization', 'Stock alerts', 'Analytics dashboard'],
+      price: '$89/month',
+      featured: false
+    },
+    {
+      title: 'Zion AI Voice Assistant Pro',
+      description: 'Advanced AI voice assistant for businesses with natural language processing, task automation, and multi-language support.',
+      icon: <Mic className="w-8 h-8" />,
+      path: '/zion-ai-voice-assistant-pro',
+      features: ['Natural language processing', 'Task automation', 'Multi-language support', 'Voice commands', 'Integration APIs'],
+      price: '$59/month',
+      featured: false
+    },
+    {
+      title: 'Zion AI Code Reviewer',
+      description: 'Automated code review and quality analysis with AI-powered suggestions, security scanning, and performance optimization.',
+      icon: <Code className="w-8 h-8" />,
+      path: '/zion-ai-code-reviewer',
+      features: ['Automated code review', 'Security scanning', 'Performance optimization', 'Best practices', 'Team collaboration'],
+      price: '$69/month',
+      featured: false
+    },
+    {
+      title: 'Zion AI Social Media Manager',
+      description: 'AI-powered social media management with content scheduling, engagement analysis, and automated posting across platforms.',
+      icon: <Share2 className="w-8 h-8" />,
+      path: '/zion-ai-social-media-manager',
+      features: ['Content scheduling', 'Engagement analysis', 'Automated posting', 'Multi-platform support', 'Analytics dashboard'],
+      price: '$49/month',
       featured: false
     }
   ];
@@ -115,7 +194,7 @@ const MicroSaasPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {microSaasProducts.map((product, index) => (
                 <div
                   key={index}
