@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 require("@testing-library/jest-dom");
 
 // Polyfill for TextEncoder/TextDecoder
@@ -41,3 +42,6 @@ global.gtag = jest.fn();
 
 // Mock window.dataLayer
 global.dataLayer = [];
+=======
+require('@testing-library/jest-dom');
+>>>>>>> cursor/fix-errors-and-merge-to-main-1dc1
