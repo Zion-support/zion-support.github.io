@@ -2,7 +2,7 @@ import React from "react";
 import EnhancedSEO from '../components/EnhancedSEO';
 
 export default function CaseStudies() {
-  const caseStudies = [
+  const _caseStudies = [
     {
       id: 1,
       title: "E-commerce Platform AI Transformation",

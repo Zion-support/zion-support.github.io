@@ -28,7 +28,7 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
 
   useEffect(() => {
     // Report metrics to analytics
-    const reportMetric = (name: string, value: number) => {
+    const _reportMetric = (name: string, value: number) => {
       console.log(`Metric ${name}: ${value}`);
       
       // Send to Google Analytics

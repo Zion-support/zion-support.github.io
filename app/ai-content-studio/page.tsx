@@ -1,14 +1,6 @@
 
 import React from 'react';
-import { 
-  PenTool, 
-  Video, 
-  FileText, 
-  Sparkles, 
-  CheckCircle, 
-  ArrowRight, 
-  Star 
-} from 'lucide-react';
+import { PenTool, Video, FileText, Sparkles, CheckCircle, ArrowRight, Star } from 'lucide-react';
 
 // Placeholder components
 const PerformanceOptimizer = ({ children }: { children: React.ReactNode }) => <div>{children}</div>;
@@ -219,12 +211,6 @@ const AIContentStudioZionTechGroup = () => {
                 </div>
                 
                 <FuturisticTextEnhanced
-                  variant="display"
-                  size="5xl"
-                  gradient={true}
-                  animated={true}
-                  glow={true}
-                  neon={true}
                   className="mb-6 leading-tight"
                 >
                   Zion AI Content Studio Pro
@@ -237,27 +223,11 @@ const AIContentStudioZionTechGroup = () => {
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <FuturisticButtonEnhanced
-                    href="#pricing"
-                    variant="primary"
-                    size="lg"
-                    icon={<Sparkles className="w-5 h-5" />}
-                    iconPosition="left"
-                    glowColor="purple"
-                    neon={true}
-                    animated={true}
-                  >
+                    >
                     Start Free Trial
                   </FuturisticButtonEnhanced>
                   <FuturisticButtonEnhanced
-                    href="#demo"
-                    variant="outline"
-                    size="lg"
-                    icon={<ArrowRight className="w-5 h-5" />}
-                    iconPosition="left"
-                    glowColor="pink"
-                    neon={true}
-                    animated={true}
-                  >
+                    >
                     Watch Demo
                   </FuturisticButtonEnhanced>
                 </div>
@@ -281,8 +251,6 @@ const AIContentStudioZionTechGroup = () => {
                       key={index}
                       glowColor={index % 2 === 0 ? 'purple' : 'pink'}
                       hoverEffect={true}
-                      animated={true}
-                      neon={true}
                       className="text-center"
                     >
                       <div
@@ -320,8 +288,6 @@ const AIContentStudioZionTechGroup = () => {
                       key={index}
                       glowColor={plan.popular ? 'purple' : 'pink'}
                       hoverEffect={true}
-                      animated={true}
-                      neon={true}
                       className={`relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}
                     >
                       {plan.popular && (
@@ -342,19 +308,13 @@ const AIContentStudioZionTechGroup = () => {
                         {plan.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center text-gray-300">
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                            {feature}
+                            {feature.title}
                           </li>
                         ))}
                       </ul>
                       <FuturisticButtonEnhanced
-                        href="/contact"
                         variant={plan.popular ? "primary" : "outline"}
-                        size="lg"
-                        icon={<ArrowRight className="w-5 h-5" />}
-                        iconPosition="right"
                         glowColor={plan.popular ? "purple" : "pink"}
-                        neon={true}
-                        animated={true}
                         className="w-full"
                       >
                         Get Started
@@ -411,27 +371,11 @@ const AIContentStudioZionTechGroup = () => {
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
-                    href="/contact"
-                    variant="primary"
-                    size="lg"
-                    icon={<ArrowRight className="w-5 h-5" />}
-                    iconPosition="right"
-                    glowColor="purple"
-                    neon={true}
-                    animated={true}
-                  >
+                    >
                     Start Free Trial
                   </FuturisticButtonEnhanced>
                   <FuturisticButtonEnhanced
-                    href="/demo"
-                    variant="outline"
-                    size="lg"
-                    icon={<Sparkles className="w-5 h-5" />}
-                    iconPosition="right"
-                    glowColor="pink"
-                    neon={true}
-                    animated={true}
-                  >
+                    >
                     Schedule Demo
                   </FuturisticButtonEnhanced>
                 </div>

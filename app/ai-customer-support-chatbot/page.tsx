@@ -224,7 +224,7 @@ export default function AICustomerSupportChatbot() {
                         className="text-gray-300 flex items-center"
                       >
                         <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
-                        {feature}
+                        {feature.title}
                       </li>
                     ))}
                   </ul>

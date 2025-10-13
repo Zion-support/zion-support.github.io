@@ -1,4 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Brain } from 'lucide-react';
+
 
 interface SidebarProps {
   isOpen: boolean;

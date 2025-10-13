@@ -1,13 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { Target, Users, MessageSquare, Brain, Zap, Target, ArrowRight, Play, CheckCircle, CheckCircle, ArrowRight, Mail, Phone, Globe, ArrowRight } from 'lucide-react';
+
 
 export default function page() {
   const stats = [
     { label: "Stat 1", value: "100%" }
   ];
   const testimonials = [
-    { name: "John Doe", role: "CEO", company: "Tech Corp", content: "Great service!", rating: 5 }
+    { name: "John Doe", role: "CEO", company: "Tech Corp", content: "Great service!", avatar: "/placeholder-avatar.jpg", rating: 5 }
   ];
   const benefits = [
     "Benefit 1",
@@ -307,7 +309,7 @@ export default function page() {
                     {plan.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span>{feature}</span>
+                        <span>{feature.title}</span>
                       </div>
                     ))}
                   </div>

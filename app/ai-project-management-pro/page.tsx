@@ -279,7 +279,7 @@ export default function AIProjectManagementPro() {
                         className="text-gray-300 flex items-center"
                       >
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
+                        {feature.title}
                       </li>
                     ))}
                   </ul>

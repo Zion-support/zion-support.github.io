@@ -1,6 +1,14 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Brain, Shield, Cloud, Zap, Globe, Sparkles, Sparkles, ArrowRight, Monitor, ArrowRight, ArrowRight, Mail, ArrowRight, Target, ArrowRight } from 'lucide-react';
+
 
 const HomePage = () => {
+  const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
+
+  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -179,7 +187,7 @@ const HomePage = () => {
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></div>
-                        {feature}
+                        {feature.title}
                       </li>
                     ))}
                   </ul>

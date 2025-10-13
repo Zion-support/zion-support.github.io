@@ -1,93 +1,16 @@
 import React, { useState } from 'react';
-import { 
-  ArrowRight, 
-  FileText, 
-  Download, 
-  Upload, 
-  Edit, 
-  Settings, 
-  Sparkles, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Clock, 
-  Zap, 
-  Brain, 
-  Mail, 
-  Smartphone, 
-  Globe, 
-  Award, 
-  Shield, 
-  Lock, 
-  Cloud, 
-  Database, 
-  BarChart3, 
-  TrendingUp, 
-  Target, 
-  MessageSquare, 
-  Headphones, 
-  ExternalLink, 
-  ChevronRight, 
-  RefreshCw, 
-  RotateCcw, 
-  Save, 
-  Trash2, 
-  Plus, 
-  Minus, 
-  X, 
-  Menu, 
-  MoreHorizontal, 
-  MoreVertical, 
-  Grid, 
-  List, 
-  Layout, 
-  Maximize, 
-  Minimize, 
-  Move, 
-  Copy, 
-  Scissors, 
-  Clipboard, 
-  Bookmark, 
-  Tag, 
-  Flag, 
-  Bell, 
-  BellOff, 
-  Volume2, 
-  VolumeX, 
-  Mic, 
-  MicOff, 
-  Camera, 
-  CameraOff, 
-  Wifi, 
-  WifiOff, 
-  Battery, 
-  BatteryLow, 
-  Signal, 
-  SignalLow, 
-  SignalZero, 
-  SignalHigh, 
-  SignalMedium,
-  DollarSign,
-  CreditCard,
-  Receipt,
-  Calculator,
-  PieChart,
-  LineChart,
-  BarChart,
-  TrendingDown,
-  AlertCircle,
-  Info,
-  HelpCircle,
-  Play,
-  Pause,
-  Stop,
-  Eye,
-  Heart,
-  ThumbsUp,
-  Share
-} from 'lucide-react';
+import { ArrowRight, FileText, Download, Upload, Edit, Settings, Sparkles, CheckCircle, Star, Users, Clock, Zap, Brain, Mail, Smartphone, Globe, Award, Shield, Lock, Cloud, Database, BarChart3, TrendingUp, Target, MessageSquare, Headphones, ExternalLink, ChevronRight, RefreshCw, RotateCcw, Save, Trash2, Plus, Minus, X, Menu, MoreHorizontal, MoreVertical, Grid, List, Layout, Maximize, Minimize, Move, Copy, Scissors, Clipboard, Bookmark, Tag, Flag, Bell, BellOff, Volume2, VolumeX, Mic, MicOff, Camera, CameraOff, Wifi, WifiOff, Battery, BatteryLow, Signal, SignalLow, SignalZero, SignalHigh, SignalMedium, DollarSign, CreditCard, Receipt, Calculator, PieChart, LineChart, BarChart, TrendingDown, AlertCircle, Info, HelpCircle, Play, Pause, Stop, Eye, Heart, ThumbsUp, Share } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+
 
 const ZionAIInvoiceGeneratorPage = () => {
+  const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
+
+  const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
+
+  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+
   const [selectedPlan, setSelectedPlan] = useState('pro');
 
   
@@ -376,7 +299,7 @@ const ZionAIInvoiceGeneratorPage = () => {
                     {plan.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span>{feature}</span>
+                        <span>{feature.title}</span>
                       </div>
                     ))}
                   </div>

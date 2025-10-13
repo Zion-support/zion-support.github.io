@@ -13,7 +13,7 @@ export const siteMetadata = {
   linkedin: "https://linkedin.com/company/ziontechgroup",
 };
 
-export const defaultMetadata = {
+export const _defaultMetadata = {
   title: siteMetadata.title,
   description: siteMetadata.description,
   keywords: siteMetadata.keywords,

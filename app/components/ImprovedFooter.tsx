@@ -1,32 +1,11 @@
-import { 
-  ArrowRight, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Globe, 
-  Twitter, 
-  Linkedin, 
-  Github, 
-  Facebook, 
-  Instagram,
-  Youtube,
-  Star,
-  Award,
-  Users,
-  Shield,
-  Zap,
-  Brain,
-  BarChart3,
-  Cloud,
-  Settings,
-  HelpCircle,
-  ExternalLink,
-  CheckCircle,
-  TrendingUp,
-  Clock
-} from 'lucide-react';
+import React from 'react';
+import { ArrowRight, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Star, Award, Users, Shield, Zap, Brain, BarChart3, Cloud, Settings, HelpCircle, ExternalLink, CheckCircle, TrendingUp, Clock } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 
 const ImprovedFooter = () => {
+  const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
+
   const currentYear = new Date().getFullYear();
 
   const serviceCategories = [

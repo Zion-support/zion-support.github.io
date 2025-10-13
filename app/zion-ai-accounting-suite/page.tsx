@@ -1,7 +1,16 @@
 import React from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';
+import { Link } from 'react-router-dom';
+import { Brain, ArrowRight, CheckCircle, CheckCircle, ArrowRight } from 'lucide-react';
+
 
 const ZionAIAccountingSuite = () => {
+  const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
+
+  const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
+
+  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+
   
   const pricingPlans = [
     {
@@ -236,7 +245,7 @@ const ZionAIAccountingSuite = () => {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      {feature.title}
                     </li>
                   ))}
                 </ul>

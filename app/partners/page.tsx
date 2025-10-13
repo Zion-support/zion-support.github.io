@@ -1,9 +1,11 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
 
 export default function Partners() {
   
   
-  const tiers = [
+  const _tiers = [
     {
       name: "Platinum",
       color: "from-gray-400 to-gray-600",

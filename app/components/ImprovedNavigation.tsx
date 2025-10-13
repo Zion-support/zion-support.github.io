@@ -1,33 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  ArrowRight, 
-  ChevronDown, 
-  Menu, 
-  X, 
-  Brain, 
-  Shield, 
-  Zap, 
-  Globe, 
-  BarChart3, 
-  Cloud, 
-  Sparkles,
-  Search,
-  User,
-  Settings,
-  HelpCircle,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Star,
-  TrendingUp,
-  Users,
-  Award,
-  Clock,
-  CheckCircle,
-  DollarSign,
-  Play
-} from 'lucide-react';
+import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3, Cloud, Sparkles, Search, User, Settings, HelpCircle, Phone, Mail, MapPin, ExternalLink, Star, TrendingUp, Users, Award, Clock, CheckCircle, DollarSign, Play } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 
 const ImprovedNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);

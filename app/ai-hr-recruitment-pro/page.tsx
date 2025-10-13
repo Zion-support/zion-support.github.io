@@ -1,19 +1,14 @@
-import { 
-  Users, 
-  Target, 
-  Brain, 
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
-  UserCheck,
-  FileText,
-  Calendar,
-  TrendingUp,
-  Shield,
-  Zap
-} from 'lucide-react';
+import React from 'react';
+import { Users, Target, Brain, ArrowRight, Sparkles, CheckCircle, UserCheck, FileText, Calendar, TrendingUp, Shield, Zap } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+
 
 const AIHRRecruitmentProPage = () => {
+  const benefits: string[] = [];
+
+  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+
   
   
   return (

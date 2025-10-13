@@ -1,28 +1,8 @@
 import React, { useState } from 'react';
-import { 
-  Play, 
-  Pause, 
-  SkipForward, 
-  SkipBack, 
-  Volume2, 
-  VolumeX,
-  Maximize,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Award,
-  BarChart3,
-  Brain,
-  Shield,
-  Zap,
-  Globe,
-  Mail,
-  Smartphone,
-  MapPin,
-  Calendar,
-  Clock
-} from 'lucide-react';
+import { Play, Pause, SkipForward, SkipBack, Volume2, VolumeX, Maximize, ArrowRight, CheckCircle, Star, Users, Award, BarChart3, Brain, Shield, Zap, Globe, Mail, Smartphone, MapPin, Calendar, Clock } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+
 
 export default function page() {
   const stats = [
@@ -283,7 +263,7 @@ export default function page() {
                   {demos[currentDemo].features.map((feature, index) => (
                     <div key={index} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                      {feature}
+                      {feature.title}
                     </div>
                   ))}
                 </div>

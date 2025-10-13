@@ -1,19 +1,14 @@
-import { 
-  Mic, 
-  Brain, 
-  Zap, 
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
-  Volume2,
-  MessageSquare,
-  Settings,
-  Shield,
-  Users,
-  Globe
-} from 'lucide-react';
+import React from 'react';
+import { Mic, Brain, Zap, ArrowRight, Sparkles, CheckCircle, Volume2, MessageSquare, Settings, Shield, Users, Globe } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+
 
 const AIVoiceAssistantProPage = () => {
+  const benefits: string[] = [];
+
+  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+
   
   
   return (

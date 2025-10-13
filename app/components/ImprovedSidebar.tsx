@@ -1,39 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  ArrowRight, 
-  ChevronDown, 
-  ChevronRight,
-  Brain, 
-  Shield, 
-  Zap, 
-  Globe, 
-  BarChart3, 
-  Cloud, 
-  Settings,
-  Search,
-  Star,
-  TrendingUp,
-  Users,
-  Award,
-  Clock,
-  CheckCircle,
-  HelpCircle,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  X,
-  Menu,
-  Home,
-  BookOpen,
-  FileText,
-  MessageSquare,
-  Calendar,
-  DollarSign,
-  Play,
-  Download,
-  Share2
-} from 'lucide-react';
+import { ArrowRight, ChevronDown, ChevronRight, Brain, Shield, Zap, Globe, BarChart3, Cloud, Settings, Search, Star, TrendingUp, Users, Award, Clock, CheckCircle, HelpCircle, Phone, Mail, MapPin, ExternalLink, X, Menu, Home, BookOpen, FileText, MessageSquare, Calendar, DollarSign, Play, Download, Share2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 
 interface SidebarProps {
   isOpen: boolean;

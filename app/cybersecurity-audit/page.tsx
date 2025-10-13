@@ -1,19 +1,14 @@
-import { 
-  Shield, 
-  Search, 
-  AlertTriangle, 
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
-  Target,
-  Brain,
-  Lock,
-  Eye,
-  Settings,
-  Zap
-} from 'lucide-react';
+import React from 'react';
+import { Shield, Search, AlertTriangle, ArrowRight, Sparkles, CheckCircle, Target, Brain, Lock, Eye, Settings, Zap } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+
 
 const CybersecurityAuditPage = () => {
+  const benefits: string[] = [];
+
+  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+
   
   
   return (

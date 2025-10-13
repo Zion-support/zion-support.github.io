@@ -1,19 +1,14 @@
-import { 
-  Package, 
-  BarChart3, 
-  Zap, 
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
-  Target,
-  Brain,
-  Users,
-  Globe,
-  Settings,
-  Shield
-} from 'lucide-react';
+import React from 'react';
+import { Package, BarChart3, Zap, ArrowRight, Sparkles, CheckCircle, Target, Brain, Users, Globe, Settings, Shield } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+
 
 const AssetManagementPage = () => {
+  const benefits: string[] = [];
+
+  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+
   
   
   return (

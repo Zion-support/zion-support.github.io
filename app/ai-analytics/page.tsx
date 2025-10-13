@@ -1,26 +1,15 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { 
-  ArrowRight, 
-  BarChart3, 
-  Brain, 
-  CheckCircle, 
-  Star, 
-  Zap, 
-  Globe, 
-  Mail, 
-  Phone, 
-  TrendingUp,
-  Database,
-  Settings,
-  Sparkles,
-  Lightbulb
-} from "lucide-react";
+import { ArrowRight, BarChart3, Brain, CheckCircle, Star, Zap, Globe, Mail, Phone, TrendingUp, Database, Settings, Sparkles, Lightbulb } from 'lucide-react';
 
 export default function page() {
+  const benefits: string[] = [];
+  
   const analyticsStats = [
-    { label: "Data Points Processed", value: "2.5M+", icon: <BarChart3 className="w-6 h-6" /> },
+    {
+      label: "Data Points Processed", value: "2.5M+", icon: <BarChart3 className="w-6 h-6" />
+    },
     { label: "Real-time Updates", value: "99.9%", icon: <Zap className="w-6 h-6" /> },
     { label: "Accuracy Rate", value: "98.5%", icon: <CheckCircle className="w-6 h-6" /> },
     { label: "Processing Speed", value: "50ms", icon: <TrendingUp className="w-6 h-6" /> }

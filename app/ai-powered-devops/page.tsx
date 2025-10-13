@@ -2,14 +2,21 @@ import React from "react";
 import SEOOptimizer from "../components/SEOOptimizer";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { Brain, ArrowRight, Monitor, Zap, CheckCircle, Award, DollarSign, MessageSquare, Phone, Globe, Star } from 'lucide-react';
+
 
 export default function page() {
+  const capabilities: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+  const applications: string[] = [];
+  
   const testimonials = [
-    { name: "John Doe", role: "CEO", company: "Tech Corp", content: "Great service!", rating: 5 }
+    {
+      name: "John Doe", role: "CEO", company: "Tech Corp", content: "Great service!", rating: 5, avatar: "/placeholder-avatar.jpg"
+    }
   ];
-  const features = [
-    { title: "Feature 1", description: "Description 1" },
-    { title: "Feature 2", description: "Description 2" }
+  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [
+    { title: "Feature 1", description: "Description 1", icon: <CheckCircle className="w-6 h-6" />, color: "from-blue-500 to-purple-600" },
+    { title: "Feature 2", description: "Description 2", icon: <CheckCircle className="w-6 h-6" />, color: "from-green-500 to-blue-600" }
   ];
   
   
@@ -75,7 +82,7 @@ export default function page() {
   
   
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>AI-Powered DevOps - Intelligent Development Operations | Zion Tech Group</title>
         <meta
@@ -88,10 +95,6 @@ export default function page() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/ai-powered-devops" />
       </Helmet>
-      <SEOOptimizer
-        title="AI-Powered DevOps - Intelligent Development Operations | Zion Tech Group"
-        description="Revolutionize your DevOps with AI. Automated testing, intelligent deployment, predictive scaling, and smart monitoring. Transform your development operations with Zion's AI-powered DevOps platform."
-      />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -189,7 +192,7 @@ export default function page() {
                 >
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />
-                    <span className="text-white font-medium">{feature}</span>
+                    <span className="text-white font-medium">{feature.title}</span>
                   </div>
                 </div>
               ))}
@@ -389,6 +392,6 @@ export default function page() {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 }

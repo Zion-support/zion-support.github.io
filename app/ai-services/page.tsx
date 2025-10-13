@@ -1,19 +1,14 @@
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  BarChart3, 
-  Cloud, 
-  Code, 
-  Database, 
-  Users, 
-  ArrowRight,
-  Sparkles,
-  Target,
-  TrendingUp
-} from 'lucide-react';
+import React from 'react';
+import { Brain, Zap, Shield, BarChart3, Cloud, Code, Database, Users, ArrowRight, Sparkles, Target, TrendingUp } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+
 
 const AIServicesPage = () => {
+  const benefits: string[] = [];
+
+  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+
   const aiServices = [
     {
       title: "AI Analytics",
@@ -132,7 +127,7 @@ const AIServicesPage = () => {
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                     <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
-                    {feature}
+                    {feature.title}
                   </li>
                 ))}
               </ul>

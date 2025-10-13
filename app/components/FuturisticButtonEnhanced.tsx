@@ -1,4 +1,7 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { Icon, Icon } from 'lucide-react';
+
 
 interface FuturisticButtonEnhancedProps {
   children: React.ReactNode;
@@ -77,7 +80,7 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
     }
   };
 
-  const rippleVariants = {
+  const _rippleVariants = {
     initial: { scale: 0, opacity: 1 },
     animate: { 
       scale: 4, 

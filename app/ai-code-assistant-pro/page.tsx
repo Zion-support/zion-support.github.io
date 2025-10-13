@@ -1,15 +1,6 @@
 
 import React from 'react';
-import { 
-  Code, 
-  Shield, 
-  Zap, 
-  Globe, 
-  Brain, 
-  Star, 
-  CheckCircle, 
-  ArrowRight 
-} from 'lucide-react';
+import { Code, Shield, Zap, Globe, Brain, Star, CheckCircle, ArrowRight } from 'lucide-react';
 
 // Placeholder components - these would need to be imported from actual component files
 const PerformanceOptimizer = ({ children }: { children: React.ReactNode }) => <div>{children}</div>;
@@ -210,12 +201,6 @@ const AICodeAssistantProZionTechGroup = () => {
                 </div>
                 
                 <FuturisticTextEnhanced
-                  variant="display"
-                  size="5xl"
-                  gradient={true}
-                  animated={true}
-                  glow={true}
-                  neon={true}
                   className="mb-6 leading-tight"
                 >
                   Zion AI Code Assistant Pro
@@ -228,27 +213,11 @@ const AICodeAssistantProZionTechGroup = () => {
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <FuturisticButtonEnhanced
-                    href="#pricing"
-                    variant="primary"
-                    size="lg"
-                    icon={<Code className="w-5 h-5" />}
-                    iconPosition="left"
-                    glowColor="blue"
-                    neon={true}
-                    animated={true}
-                  >
+                    >
                     Start Free Trial
                   </FuturisticButtonEnhanced>
                   <FuturisticButtonEnhanced
-                    href="#demo"
-                    variant="outline"
-                    size="lg"
-                    icon={<ArrowRight className="w-5 h-5" />}
-                    iconPosition="left"
-                    glowColor="cyan"
-                    neon={true}
-                    animated={true}
-                  >
+                    >
                     Watch Demo
                   </FuturisticButtonEnhanced>
                 </div>
@@ -273,8 +242,6 @@ const AICodeAssistantProZionTechGroup = () => {
                       key={index}
                       glowColor={index % 2 === 0 ? 'blue' : 'purple'}
                       hoverEffect={true}
-                      animated={true}
-                      neon={true}
                       className="text-center"
                     >
                       <div
@@ -312,8 +279,6 @@ const AICodeAssistantProZionTechGroup = () => {
                       key={index}
                       glowColor={plan.popular ? 'blue' : 'purple'}
                       hoverEffect={true}
-                      animated={true}
-                      neon={true}
                       className={`relative ${plan.popular ? 'ring-2 ring-blue-500' : ''}`}
                     >
                       {plan.popular && (
@@ -334,19 +299,13 @@ const AICodeAssistantProZionTechGroup = () => {
                         {plan.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center text-gray-300">
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                            {feature}
+                            {feature.title}
                           </li>
                         ))}
                       </ul>
                       <FuturisticButtonEnhanced
-                        href="/contact"
                         variant={plan.popular ? "primary" : "outline"}
-                        size="lg"
-                        icon={<ArrowRight className="w-5 h-5" />}
-                        iconPosition="right"
                         glowColor={plan.popular ? "blue" : "purple"}
-                        neon={true}
-                        animated={true}
                         className="w-full"
                       >
                         Get Started
@@ -403,27 +362,11 @@ const AICodeAssistantProZionTechGroup = () => {
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
-                    href="/contact"
-                    variant="primary"
-                    size="lg"
-                    icon={<ArrowRight className="w-5 h-5" />}
-                    iconPosition="right"
-                    glowColor="blue"
-                    neon={true}
-                    animated={true}
-                  >
+                    >
                     Start Free Trial
                   </FuturisticButtonEnhanced>
                   <FuturisticButtonEnhanced
-                    href="/demo"
-                    variant="outline"
-                    size="lg"
-                    icon={<Code className="w-5 h-5" />}
-                    iconPosition="right"
-                    glowColor="cyan"
-                    neon={true}
-                    animated={true}
-                  >
+                    >
                     Schedule Demo
                   </FuturisticButtonEnhanced>
                 </div>

@@ -1,16 +1,8 @@
 import React from 'react';
-import { 
-  ArrowRight, 
-  Brain, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  Sparkles,
-  CheckCircle,
-  Star,
-  TrendingUp
-} from 'lucide-react';
+import { ArrowRight, Brain, Shield, Zap, BarChart3, Users, Sparkles, CheckCircle, Star, TrendingUp } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+
 
 export default function page() {
   const benefits = [
@@ -178,7 +170,7 @@ export default function page() {
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                        {feature}
+                        {feature.title}
                       </li>
                     ))}
                   </ul>

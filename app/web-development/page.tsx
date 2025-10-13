@@ -1,7 +1,12 @@
 import React from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';
+import { Link } from 'react-router-dom';
+import { ArrowRight, IconComponent, Star, Star, Star, Star, Star, CheckCircle, Clock, ArrowRight, Code } from 'lucide-react';
+
 
 const WebDevelopmentPage = () => {
+  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+
   const services = [
     {
       id: 'frontend-development',
@@ -111,7 +116,7 @@ const WebDevelopmentPage = () => {
                   {service.features.map((feature, index) => (
                     <li key={index} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {feature}
+                      {feature.title}
                     </li>
                   ))}
                 </ul>

@@ -254,7 +254,7 @@ export default function AIEmailAssistant() {
                         className="text-gray-300 flex items-center"
                       >
                         <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
-                        {feature}
+                        {feature.title}
                       </li>
                     ))}
                   </ul>

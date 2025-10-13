@@ -334,7 +334,7 @@ const ZionHRAssistantPro = () => {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      {feature.title}
                     </li>
                   ))}
                 </ul>

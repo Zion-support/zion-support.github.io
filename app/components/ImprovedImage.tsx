@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { ImageIcon, ImageIcon } from 'lucide-react';
+
 
 interface ImprovedImageProps {
   src: string;

@@ -1,19 +1,14 @@
-import { 
-  Server, 
-  Shield, 
-  Zap, 
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
-  Target,
-  Brain,
-  Users,
-  Globe,
-  Settings,
-  Database
-} from 'lucide-react';
+import React from 'react';
+import { Server, Shield, Zap, ArrowRight, Sparkles, CheckCircle, Target, Brain, Users, Globe, Settings, Database } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+
 
 const DataCenterServicesPage = () => {
+  const benefits: string[] = [];
+
+  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+
   
   
   return (

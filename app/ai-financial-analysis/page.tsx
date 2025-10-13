@@ -1,19 +1,14 @@
-import { 
-  BarChart3, 
-  TrendingUp, 
-  DollarSign, 
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
-  Target,
-  Zap,
-  Brain,
-  PieChart,
-  Activity,
-  Shield
-} from 'lucide-react';
+import React from 'react';
+import { BarChart3, TrendingUp, DollarSign, ArrowRight, Sparkles, CheckCircle, Target, Zap, Brain, PieChart, Activity, Shield } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+
 
 const AIFinancialAnalysisPage = () => {
+  const benefits: string[] = [];
+
+  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+
   
   
   return (

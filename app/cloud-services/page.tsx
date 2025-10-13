@@ -1,20 +1,12 @@
 import React from 'react';
-import { 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Globe, 
-  ArrowRight, 
-  CheckCircle, 
-  BarChart3, 
-  Database, 
-  Lock, 
-  Users, 
-  Settings, 
-  Monitor 
-} from 'lucide-react';
+import { Cloud, Shield, Zap, Globe, ArrowRight, CheckCircle, BarChart3, Database, Lock, Users, Settings, Monitor } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 
 const CloudServicesPage: React.FC = () => {
+  const benefits: string[] = [];
+  const services: string[] = [];
+
   
   
   return (
@@ -96,7 +88,7 @@ const CloudServicesPage: React.FC = () => {
                   {benefit.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
-                  {benefit.title}
+                  {benefit}
                 </h3>
                 <p className="text-gray-300">
                   {benefit.description}

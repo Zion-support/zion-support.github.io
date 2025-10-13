@@ -1,47 +1,15 @@
 import React from 'react';
-import { 
-  Shield, 
-  Brain, 
-  Lock, 
-  Zap, 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Award, 
-  BarChart3,
-  Clock,
-  Target,
-  Sparkles,
-  TrendingUp,
-  Globe,
-  Smartphone,
-  Monitor,
-  AlertTriangle,
-  Eye,
-  Search,
-  Database,
-  Network,
-  Shield as FileShield,
-  Key,
-  Bug,
-  Activity,
-  Server,
-  Wifi,
-  HardDrive,
-  Cloud,
-  Settings,
-  Users,
-  Bell,
-  FileText,
-  Download,
-  Upload
-} from 'lucide-react';
+import { Shield, Brain, Lock, Zap, ArrowRight, CheckCircle, Star, Award, BarChart3, Clock, Target, Sparkles, TrendingUp, Globe, Smartphone, Monitor, AlertTriangle, Eye, Search, Database, Network, Shield as FileShield, Key, Bug, Activity, Server, Wifi, HardDrive, Cloud, Settings, Users, Bell, FileText, Download, Upload } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
 const ZionAICybersecuritySuiteProPage = () => {
+  const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
+
+  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+
   
   const pricingPlans = [
     {
@@ -142,19 +110,11 @@ const ZionAICybersecuritySuiteProPage = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <FuturisticButton
-              href="/contact"
-              variant="primary"
-              size="lg"
-              icon={<Sparkles className="w-5 h-5" />}
-            >
+              >
               Get Security Assessment
             </FuturisticButton>
             <FuturisticButton
-              href="#demo"
-              variant="outline"
-              size="lg"
-              icon={<Monitor className="w-5 h-5" />}
-            >
+              >
               Watch Demo
             </FuturisticButton>
           </div>
@@ -336,14 +296,12 @@ const ZionAICybersecuritySuiteProPage = () => {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                      <span className="text-sm">{feature}</span>
+                      <span className="text-sm">{feature.title}</span>
                     </li>
                   ))}
                 </ul>
                 <FuturisticButton
-                  href="/contact"
                   variant={plan.popular ? "primary" : "outline"}
-                  size="lg"
                   className="w-full"
                 >
                   Get Started
@@ -405,19 +363,11 @@ const ZionAICybersecuritySuiteProPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <FuturisticButton
-                href="/contact"
-                variant="primary"
-                size="lg"
-                icon={<Sparkles className="w-5 h-5" />}
-              >
+                >
                 Get Security Assessment
               </FuturisticButton>
               <FuturisticButton
-                href="/demo"
-                variant="outline"
-                size="lg"
-                icon={<Monitor className="w-5 h-5" />}
-              >
+                >
                 Schedule Demo
               </FuturisticButton>
             </div>

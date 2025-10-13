@@ -1,24 +1,16 @@
 import React from 'react';
-import { 
-  Package, 
-  TrendingUp, 
-  AlertTriangle, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  Clock, 
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Brain,
-  Target,
-  Globe,
-  DollarSign,
-  Truck,
-  Shield
-} from 'lucide-react';
+import { Package, TrendingUp, AlertTriangle, Zap, BarChart3, Users, Clock, CheckCircle, Star, ArrowRight, Brain, Target, Globe, DollarSign, Truck, Shield } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
+
 
 const SmartInventoryOptimizerPage = () => {
+  const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
+
+  const benefits: string[] = [];
+
+  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+
   
   const pricingPlans = [
     {
@@ -84,8 +76,8 @@ const SmartInventoryOptimizerPage = () => {
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 20 }}
+            animate={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -132,8 +124,8 @@ const SmartInventoryOptimizerPage = () => {
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 20 }}
+                animate={{ opacity: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
@@ -153,8 +145,8 @@ const SmartInventoryOptimizerPage = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 20 }}
+            animate={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -171,8 +163,8 @@ const SmartInventoryOptimizerPage = () => {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 20 }}
+                animate={{ opacity: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
@@ -195,8 +187,8 @@ const SmartInventoryOptimizerPage = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 20 }}
+            animate={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -212,8 +204,8 @@ const SmartInventoryOptimizerPage = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 20 }}
+                animate={{ opacity: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300"
               >
@@ -236,8 +228,8 @@ const SmartInventoryOptimizerPage = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 20 }}
+            animate={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -254,8 +246,8 @@ const SmartInventoryOptimizerPage = () => {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 20 }}
+                animate={{ opacity: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-xl p-8 ${
                   plan.popular 
@@ -284,7 +276,7 @@ const SmartInventoryOptimizerPage = () => {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
+                      <span className="text-gray-300">{feature.title}</span>
                     </li>
                   ))}
                 </ul>
@@ -310,8 +302,8 @@ const SmartInventoryOptimizerPage = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 20 }}
+            animate={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-12 text-center"
           >

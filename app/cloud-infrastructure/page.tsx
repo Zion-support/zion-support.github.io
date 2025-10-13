@@ -1,29 +1,20 @@
-import { 
-  Cloud, 
-  Server, 
-  Database, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight,
-  Globe,
-  Users,
-  BarChart3,
-  Settings,
-  Clock,
-  Award,
-  Star,
-  Activity,
-  Lock,
-  Cpu,
-  HardDrive,
-  Network
-} from 'lucide-react';
+import React from 'react';
+import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight, Globe, Users, BarChart3, Settings, Clock, Award, Star, Activity, Lock, Cpu, HardDrive, Network } from 'lucide-react';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
+import { Helmet } from 'react-helmet-async';
+
 
 const CloudInfrastructure = () => {
+  const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
+
+  const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
+
+  const capabilities: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+
+  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+
   const services = [
     {
       title: "Cloud Migration",
@@ -120,7 +111,7 @@ const CloudInfrastructure = () => {
         <title>Cloud Infrastructure Services - Enterprise Cloud Solutions | Zion Tech Group</title>
         <meta name="description" content="Transform your business with our comprehensive cloud infrastructure services. Migration, security, auto-scaling, and 24/7 monitoring. Get started today!" />
         <meta name="keywords" content="cloud infrastructure, cloud migration, cloud security, auto scaling, infrastructure as code, cloud consulting, AWS, Azure, GCP" />
-        <link rel="canonical" href="https://ziontechgroup.com/cloud-infrastructure" />
+        <link rel="canonical" />
       </Helmet>
 
       {/* Hero Section */}
@@ -149,19 +140,11 @@ const CloudInfrastructure = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <FuturisticButton
-              href="#pricing"
-              variant="primary"
-              size="lg"
-              icon={<Cloud className="w-5 h-5" />}
-            >
+              >
               Get Started
             </FuturisticButton>
             <FuturisticButton
-              href="#services"
-              variant="outline"
-              size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
-            >
+              >
               Explore Services
             </FuturisticButton>
           </div>
@@ -250,7 +233,7 @@ const CloudInfrastructure = () => {
                   {service.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
+                      {feature.title}
                     </div>
                   ))}
                 </div>
@@ -304,7 +287,7 @@ const CloudInfrastructure = () => {
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      {feature.title}
                     </li>
                   ))}
                 </ul>
@@ -312,7 +295,6 @@ const CloudInfrastructure = () => {
                 <FuturisticButton
                   href={plan.cta === "Contact Sales" ? "/contact" : "#contact"}
                   variant={plan.popular ? "primary" : "outline"}
-                  size="lg"
                   className="w-full"
                 >
                   {plan.cta}
@@ -377,19 +359,11 @@ const CloudInfrastructure = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <FuturisticButton
-                href="/contact"
-                variant="primary"
-                size="lg"
-                icon={<Cloud className="w-5 h-5" />}
-              >
+                >
                 Get Started Today
               </FuturisticButton>
               <FuturisticButton
-                href="/demo"
-                variant="outline"
-                size="lg"
-                icon={<ArrowRight className="w-5 h-5" />}
-              >
+                >
                 Schedule Demo
               </FuturisticButton>
             </div>

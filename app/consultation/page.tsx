@@ -1,21 +1,7 @@
 import React, { useState } from 'react';
-import { 
-  Calendar, 
-  Clock, 
-  CheckCircle, 
-  ArrowRight, 
-  Brain, 
-  Shield, 
-  Zap, 
-  Globe,
-  Mail,
-  Smartphone,
-  MapPin,
-  Star,
-  Users,
-  Award,
-  BarChart3
-} from 'lucide-react';
+import { Calendar, Clock, CheckCircle, ArrowRight, Brain, Shield, Zap, Globe, Mail, Smartphone, MapPin, Star, Users, Award, BarChart3 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+
 
 export default function page() {
   const benefits = [
@@ -220,7 +206,7 @@ export default function page() {
                       {type.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                          {feature}
+                          {feature.title}
                         </li>
                       ))}
                     </ul>

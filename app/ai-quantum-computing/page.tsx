@@ -2,14 +2,18 @@ import React from "react";
 import SEOOptimizer from "../components/SEOOptimizer";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { Atom, ArrowRight, Monitor, Cpu, Users, Award, CheckCircle, MessageSquare, Phone, Globe, Star } from 'lucide-react';
+
 
 export default function page() {
+  const applications: string[] = [];
+  
   const testimonials = [
-    { name: "John Doe", role: "CEO", company: "Tech Corp", content: "Great service!", rating: 5 }
+    { name: "John Doe", role: "CEO", company: "Tech Corp", content: "Great service!", avatar: "/placeholder-avatar.jpg", rating: 5 }
   ];
-  const features = [
-    { title: "Feature 1", description: "Description 1" },
-    { title: "Feature 2", description: "Description 2" }
+  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [
+    { title: "Feature 1", description: "Description 1", icon: <Atom className="w-6 h-6" />, color: "from-blue-500 to-purple-600" },
+    { title: "Feature 2", description: "Description 2", icon: <Atom className="w-6 h-6" />, color: "from-green-500 to-blue-600" }
   ];
   
   
@@ -75,7 +79,7 @@ export default function page() {
   
   
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>AI Quantum Computing - Revolutionary Quantum Solutions | Zion Tech Group</title>
         <meta
@@ -88,10 +92,6 @@ export default function page() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/ai-quantum-computing" />
       </Helmet>
-      <SEOOptimizer
-        title="AI Quantum Computing - Revolutionary Quantum Solutions | Zion Tech Group"
-        description="Harness the power of quantum computing with AI. Zion's quantum platform offers quantum machine learning, simulation, and optimization for breakthrough discoveries and solutions."
-      />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -390,6 +390,6 @@ export default function page() {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 }
