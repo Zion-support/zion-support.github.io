@@ -1,11 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Target, Star, Globe, Shield, CheckCircle } from 'lucide-react';
-
-import { ArrowRight, TrendingUp, Zap, BarChart3, Clock, CheckCircle } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { ArrowRight, Target, Star, Globe, Shield, CheckCircle, TrendingUp, Zap, BarChart3, Clock } from 'lucide-react';
 
 export default function CaseStudies() {
   const caseStudies = [
@@ -127,10 +123,59 @@ export default function CaseStudies() {
     { number: "60%", label: "Average Efficiency Gain", icon: <Zap className="w-6 h-6" /> }
   ];
 
+  return (
+    <>
+      <Helmet>
+        <title>Case Studies - Zion Tech Group</title>
+        <meta name="description" content="Explore our successful AI and IT solutions case studies. See how we've helped businesses transform with cutting-edge technology." />
+      </Helmet>
+      <div className="min-h-screen bg-slate-900 text-white">
+        <div className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Our <span className="text-cyan-400">Success Stories</span>
+              </h1>
+              <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
+                Discover how we've helped businesses transform with AI and IT solutions
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              {caseStudies.map((study) => (
+                <div key={study.id} className="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-colors">
+                  <h3 className="text-xl font-semibold mb-2">{study.title}</h3>
+                  <p className="text-slate-300 mb-4">{study.company} - {study.industry}</p>
+                  <div className="space-y-2">
+                    <h4 className="font-semibold text-cyan-400">Challenge:</h4>
+                    <p className="text-sm text-slate-300">{study.challenge}</p>
+                    <h4 className="font-semibold text-cyan-400">Solution:</h4>
+                    <p className="text-sm text-slate-300">{study.solution}</p>
+                    <h4 className="font-semibold text-cyan-400">Results:</h4>
+                    <ul className="text-sm text-slate-300 space-y-1">
+                      {study.results.map((result, index) => (
+                        <li key={index} className="flex items-center">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {result}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <Link
+                to="/contact"
+                className="bg-cyan-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-300 transition-all duration-300 group hover:scale-105 inline-flex items-center"
+              >
+                Start Your Project
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </>
   );

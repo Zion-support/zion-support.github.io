@@ -124,6 +124,97 @@ export default function Consultation() {
   const timelines = [
     "Immediate (1-3 months)", "Short-term (3-6 months)", "Medium-term (6-12 months)", "Long-term (12+ months)"
   ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Free Consultation - Zion Tech Group</title>
+        <meta name="description" content="Get a free consultation for your AI and IT needs. Expert advice tailored to your business." />
+      </Helmet>
+      <div className="min-h-screen bg-slate-900 text-white">
+        <div className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Free <span className="text-cyan-400">Consultation</span>
+              </h1>
+              <p className="text-xl text-slate-300 mb-8">
+                Get expert advice on your AI and IT needs
+              </p>
+            </div>
+            
+            <div className="bg-slate-800 rounded-lg p-8">
+              <h2 className="text-2xl font-semibold mb-6">Schedule Your Consultation</h2>
+              <p className="text-slate-300 mb-8">
+                Fill out the form below and we'll get back to you within 24 hours to schedule your free consultation.
+              </p>
+              
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-slate-300 mb-2">Name</label>
+                    <input
+                      type="text"
+                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                      placeholder="Your name"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-slate-300 mb-2">Email</label>
+                    <input
+                      type="email"
+                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                      placeholder="your@email.com"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-slate-300 mb-2">Company</label>
+                  <input
+                    type="text"
+                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                    placeholder="Your company name"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-slate-300 mb-2">Project Size</label>
+                  <select className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-transparent">
+                    {projectSizes.map((size, index) => (
+                      <option key={index} value={size}>{size}</option>
+                    ))}
+                  </select>
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-slate-300 mb-2">Timeline</label>
+                  <select className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-transparent">
+                    {timelines.map((timeline, index) => (
+                      <option key={index} value={timeline}>{timeline}</option>
+                    ))}
+                  </select>
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-slate-300 mb-2">Message</label>
+                  <textarea
+                    rows={4}
+                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                    placeholder="Tell us about your project..."
+                  ></textarea>
+                </div>
+                
+                <button
+                  type="submit"
+                  className="w-full bg-cyan-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-300 transition-all duration-300"
+                >
+                  Schedule Consultation
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

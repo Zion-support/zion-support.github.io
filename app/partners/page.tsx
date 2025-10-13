@@ -112,12 +112,20 @@ export default function Partners() {
               Strategic partnerships that drive innovation and deliver exceptional value to our clients.
             </p>
           </div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">Our Partners</h1>
-          <p className="text-xl text-gray-300 text-center mb-12">
-            Strategic partnerships that drive innovation and growth
-          </p>
+          
+          <div className="mt-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {partners.map((partner, index) => (
+                <div key={index} className="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-colors">
+                  <h3 className="text-xl font-semibold mb-2">{partner.name}</h3>
+                  <p className="text-slate-300 mb-4">{partner.description}</p>
+                  <div className="flex items-center">
+                    <span className="text-cyan-400 font-semibold">{partner.category}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </>

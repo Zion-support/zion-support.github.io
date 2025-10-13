@@ -7,13 +7,8 @@ import {
   Brain, 
   TrendingUp, 
   Database, 
-  Zap, 
-  Shield, 
   CheckCircle,
-  Star,
-  Users,
-  Clock,
-  Award
+  Users
 } from "lucide-react";
 
 export default function AiAnalytics() {
