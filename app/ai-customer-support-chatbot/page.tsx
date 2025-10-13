@@ -1,7 +1,5 @@
+import { Brain, Clock, Star, Database, Target, Target, BarChart3 } from 'lucide-react';
 "use client";
-import { Brain, Clock, Target, BarChart3 } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 
 export default function AICustomerSupportChatbot() {
   const chatbotFeatures = [
@@ -13,7 +11,29 @@ export default function AICustomerSupportChatbot() {
         "Context Awareness",
         "Real-time Responses",
       ],
-    },
+    
+
+  const testimonials = [
+  {
+    "name": "John Smith",
+    "role": "CEO, TechCorp",
+    "content": "Zion Tech Group transformed our business with their innovative AI solutions. The results exceeded our expectations.",
+    "rating": 5
+  },
+  {
+    "name": "Sarah Johnson",
+    "role": "CTO, InnovateLabs",
+    "content": "Outstanding service and cutting-edge technology. Our productivity increased by 300% after implementing their solutions.",
+    "rating": 5
+  },
+  {
+    "name": "Mike Chen",
+    "role": "Director, DataFlow Inc",
+    "content": "Professional, reliable, and innovative. Zion Tech Group delivered exactly what they promised and more.",
+    "rating": 5
+  }
+];
+},
     {
       category: "Integration",
       items: [

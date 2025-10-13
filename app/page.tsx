@@ -1,7 +1,5 @@
+import { ArrowRight, Brain, Shield, Mail, Globe, Sparkles, Star, Mic, Target, Target, BarChart3, Cloud, Code } from 'lucide-react';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, BarChart3, Cloud, Sparkles, Mail, Monitor, Target } from "lucide-react";
 
 const HomePage = () => {
   const structuredData = {

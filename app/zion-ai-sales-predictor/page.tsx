@@ -1,7 +1,5 @@
+import { ArrowRight, TrendingUp, CheckCircle, Star, Power, Circle, Calendar } from 'lucide-react';
 import React from "react";
-import { ArrowRight, CheckCircle, Star, TrendingUp, Target, DollarSign, BarChart3, Brain, Zap, Clock, Globe, Smartphone, Lock, Settings, Users, Award, Shield, Mail, Headphones, Video, Calendar, MessageSquare, Download, Share2, Search, Filter, Edit, Trash2, Plus, Minus, Play, Pause, Stop, Volume2, VolumeX, Wifi, WifiOff, Signal, Bluetooth, Battery, BatteryLow, Power, RefreshCw, RotateCcw, RotateCw, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
 
 export default function ZionAISalesPredictor() {
@@ -37,7 +35,51 @@ export default function ZionAISalesPredictor() {
       description: "Perfect for small sales teams",
       features: ["Up to 1,000 leads/month", "Basic predictions", "Email support", "1 user", "Standard accuracy"],
       popular: false
-    },
+    
+
+  const testimonials = [
+  {
+    "name": "John Smith",
+    "role": "CEO, TechCorp",
+    "content": "Zion Tech Group transformed our business with their innovative AI solutions. The results exceeded our expectations.",
+    "rating": 5
+  },
+  {
+    "name": "Sarah Johnson",
+    "role": "CTO, InnovateLabs",
+    "content": "Outstanding service and cutting-edge technology. Our productivity increased by 300% after implementing their solutions.",
+    "rating": 5
+  },
+  {
+    "name": "Mike Chen",
+    "role": "Director, DataFlow Inc",
+    "content": "Professional, reliable, and innovative. Zion Tech Group delivered exactly what they promised and more.",
+    "rating": 5
+  }
+];
+  const benefits = [
+  {
+    "icon": "🚀",
+    "title": "Increased Efficiency",
+    "description": "Streamline your operations with our AI-powered automation tools."
+  },
+  {
+    "icon": "🔒",
+    "title": "Enhanced Security",
+    "description": "Protect your data with enterprise-grade security measures."
+  },
+  {
+    "icon": "📈",
+    "title": "Better Analytics",
+    "description": "Make data-driven decisions with our advanced analytics platform."
+  },
+  {
+    "icon": "⚡",
+    "title": "Faster Performance",
+    "description": "Optimize your systems for maximum speed and reliability."
+  }
+];
+},
     {
       name: "Professional",
       price: "$99",

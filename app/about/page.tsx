@@ -1,6 +1,4 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone } from 'lucide-react';
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe, Star } from 'lucide-react';
 
 export default function AboutPage() {
 
@@ -8,7 +6,7 @@ export default function AboutPage() {
     {
       icon: <Brain className="w-8 h-8" />,
       title: "Innovation",
-      description: "We constantly push the boundaries of technology to deliver cutting-edge solutions."
+      description: "We]; constantly push the boundaries of technology to deliver cutting-edge solutions."
     },
     {
       icon: <Shield className="w-8 h-8" />,
@@ -25,6 +23,13 @@ export default function AboutPage() {
       title: "Excellence",
       description: "We strive for excellence in every project, ensuring the highest quality deliverables."
     }
+  ];
+
+  const stats = [
+    { number: "500+", label: "Projects Completed" },
+    { number: "50+", label: "Happy Clients" },
+    { number: "5+", label: "Years Experience" },
+    { number: "24/7", label: "Support Available" }
   ];
 
   return (

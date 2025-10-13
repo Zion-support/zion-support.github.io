@@ -1,7 +1,5 @@
+import { ArrowRight, Brain, Shield, Users, Globe, CheckCircle, Star, Target, Power, Circle, Target, BarChart3 } from 'lucide-react';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { Package, TrendingUp, AlertTriangle, Zap, BarChart3, Users, CheckCircle, ArrowRight, Brain, Target, Globe, DollarSign, Truck, Shield } from 'lucide-react';
 
 const SmartInventoryOptimizerPage = () => {
   const features = [

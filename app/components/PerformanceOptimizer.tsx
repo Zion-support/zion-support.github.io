@@ -1,3 +1,4 @@
+import { Hand } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceOptimizerProps {

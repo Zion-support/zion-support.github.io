@@ -1,7 +1,5 @@
+import { ArrowRight, Shield, Sparkles, CheckCircle, Star, Target, Circle, Target, BarChart3 } from 'lucide-react';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Package, BarChart3, ArrowRight, Sparkles, CheckCircle, Target, Shield } from 'lucide-react';
 
 const AssetManagementPage = () => {
   const features = [

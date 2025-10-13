@@ -1,6 +1,5 @@
+import { ArrowRight, Users, Mail, Smartphone, Globe, TrendingUp, Settings, Sparkles, CheckCircle, Star, Target, Play, Power, Circle, DollarSign, Settings, Target, Headphones, BarChart3, Cloud } from 'lucide-react';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 
 const ZionAICustomerInsightsPage = () => {
   const [selectedPlan, setSelectedPlan] = useState('pro');
@@ -38,7 +37,7 @@ const ZionAICustomerInsightsPage = () => {
     },
     {
       title: 'ROI Tracking',
-      description: 'Measure the return on investment of your customer engagement strategies',
+      description: 'Measure the]; return on investment of your customer engagement strategies',
       icon: <DollarSign className="w-6 h-6" />,
       included: true
     },

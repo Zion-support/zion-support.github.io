@@ -1,6 +1,5 @@
+import { Brain, Shield, Users, Award, TrendingUp, Sparkles, CheckCircle, Star, Target, Power, Square, Circle, Timer, FileText, Target, MessageSquare, Calendar, BarChart3 } from 'lucide-react';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Calendar, Brain, Users, Zap, CheckCircle, Star, Award, BarChart3, Target, Sparkles, TrendingUp, Monitor, FileText, MessageSquare, Workflow, Shield, Lightbulb, GitBranch, Timer } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -126,7 +125,7 @@ const ZionAIProjectManagerProPage = () => {
     },
     {
       title: "Construction Projects",
-      description: "Manage construction timelines, resource allocation, and compliance tracking with industry-specific AI models",
+      description: "Manage]; construction timelines, resource allocation, and compliance tracking with industry-specific AI models",
       icon: <Workflow className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },

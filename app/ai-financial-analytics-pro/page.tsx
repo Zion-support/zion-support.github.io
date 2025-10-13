@@ -1,7 +1,5 @@
+import { Brain, Shield, CheckCircle, Star, Target, Power, Circle, Target, BarChart3 } from 'lucide-react';
 "use client";
-import { Brain, Shield, CheckCircle, Star, Target, BarChart3 } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 
 export default function AiFinancialAnalyticsProPage() {
   const features = [
@@ -16,7 +14,51 @@ export default function AiFinancialAnalyticsProPage() {
         "Trend identification",
         "Anomaly detection",
       ],
-    },
+    
+
+  const testimonials = [
+  {
+    "name": "John Smith",
+    "role": "CEO, TechCorp",
+    "content": "Zion Tech Group transformed our business with their innovative AI solutions. The results exceeded our expectations.",
+    "rating": 5
+  },
+  {
+    "name": "Sarah Johnson",
+    "role": "CTO, InnovateLabs",
+    "content": "Outstanding service and cutting-edge technology. Our productivity increased by 300% after implementing their solutions.",
+    "rating": 5
+  },
+  {
+    "name": "Mike Chen",
+    "role": "Director, DataFlow Inc",
+    "content": "Professional, reliable, and innovative. Zion Tech Group delivered exactly what they promised and more.",
+    "rating": 5
+  }
+];
+  const benefits = [
+  {
+    "icon": "🚀",
+    "title": "Increased Efficiency",
+    "description": "Streamline your operations with our AI-powered automation tools."
+  },
+  {
+    "icon": "🔒",
+    "title": "Enhanced Security",
+    "description": "Protect your data with enterprise-grade security measures."
+  },
+  {
+    "icon": "📈",
+    "title": "Better Analytics",
+    "description": "Make data-driven decisions with our advanced analytics platform."
+  },
+  {
+    "icon": "⚡",
+    "title": "Faster Performance",
+    "description": "Optimize your systems for maximum speed and reliability."
+  }
+];
+},
     {
       icon: <BarChart3 className="w-8 h-8 text-green-400" />,
       title: "Real-time Analytics",

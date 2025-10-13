@@ -1,6 +1,4 @@
-import { ArrowRight, Target, Mail, Share2, BarChart3, Users, Zap, Mail as Email, Smartphone, Globe } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { ArrowRight, Users, Mail, Smartphone, Globe, Star, Target, Power, Target, Share2, BarChart3 } from 'lucide-react';
 
 export default function AIMarketingAutomation() {
   const features = [
@@ -10,7 +8,31 @@ export default function AIMarketingAutomation() {
       icon: <Mail className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500",
       benefits: ["Personalized Content", "Behavioral Triggers", "A/B Testing", "Analytics Dashboard"]
-    },
+    
+
+  const benefits = [
+  {
+    "icon": "🚀",
+    "title": "Increased Efficiency",
+    "description": "Streamline your operations with our AI-powered automation tools."
+  },
+  {
+    "icon": "🔒",
+    "title": "Enhanced Security",
+    "description": "Protect your data with enterprise-grade security measures."
+  },
+  {
+    "icon": "📈",
+    "title": "Better Analytics",
+    "description": "Make data-driven decisions with our advanced analytics platform."
+  },
+  {
+    "icon": "⚡",
+    "title": "Faster Performance",
+    "description": "Optimize your systems for maximum speed and reliability."
+  }
+];
+},
     {
       title: "Social Media Management",
       description: "Automated social media posting, content scheduling, and engagement tracking across all major platforms with AI-powered content optimization.",

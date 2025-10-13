@@ -1,6 +1,5 @@
+import { ArrowRight, Shield, Globe, Settings, Sparkles, CheckCircle, Star, Circle, Settings, Server, Cloud } from 'lucide-react';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 
 const DataCenterServicesPage = () => {
   const features = [

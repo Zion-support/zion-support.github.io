@@ -1,6 +1,5 @@
+import { Brain, Shield, Mail, Smartphone, Globe, CheckCircle, Clock, Star, MapPin, Circle, Calendar, MapPin } from 'lucide-react';
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 
 export default function ConsultationPage() {
   const [formData, setFormData] = useState({
@@ -13,6 +12,29 @@ export default function ConsultationPage() {
     timeline: '',
     message: ''
   });
+
+  const benefits = [
+  {
+    "icon": "🚀",
+    "title": "Increased Efficiency",
+    "description": "Streamline your operations with our AI-powered automation tools."
+  },
+  {
+    "icon": "🔒",
+    "title": "Enhanced Security",
+    "description": "Protect your data with enterprise-grade security measures."
+  },
+  {
+    "icon": "📈",
+    "title": "Better Analytics",
+    "description": "Make data-driven decisions with our advanced analytics platform."
+  },
+  {
+    "icon": "⚡",
+    "title": "Faster Performance",
+    "description": "Optimize your systems for maximum speed and reliability."
+  }
+];
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 

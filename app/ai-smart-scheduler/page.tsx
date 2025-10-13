@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { Brain, Users, Zap, Globe, Clock, CheckCircle } from "lucide-react";
+import { Brain, Users, Globe, CheckCircle, Clock, Star, Power, Circle, Calendar } from 'lucide-react';
 import Layout from "../layout";
 
 export default function AISmartScheduler() {
@@ -8,8 +7,30 @@ export default function AISmartScheduler() {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
       title: "AI-Powered Scheduling",
       description:
-        "Intelligent scheduling that learns from your patterns and preferences",
-    },
+        "Intelligent scheduling that learns from your patterns and preferences",];
+    
+
+  const testimonials = [
+  {
+    "name": "John Smith",
+    "role": "CEO, TechCorp",
+    "content": "Zion Tech Group transformed our business with their innovative AI solutions. The results exceeded our expectations.",
+    "rating": 5
+  },
+  {
+    "name": "Sarah Johnson",
+    "role": "CTO, InnovateLabs",
+    "content": "Outstanding service and cutting-edge technology. Our productivity increased by 300% after implementing their solutions.",
+    "rating": 5
+  },
+  {
+    "name": "Mike Chen",
+    "role": "Director, DataFlow Inc",
+    "content": "Professional, reliable, and innovative. Zion Tech Group delivered exactly what they promised and more.",
+    "rating": 5
+  }
+];
+},
     {
       icon: <Users className="w-6 h-6 text-purple-400" />,
       title: "Team Coordination",

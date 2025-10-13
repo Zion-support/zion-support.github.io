@@ -1,6 +1,5 @@
+import { ArrowRight, Brain, Users, Globe, CheckCircle, Star, Cpu, Target, Circle, Target, Hand } from 'lucide-react';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Brain, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Users, Clock, Award, Target, TrendingUp, Cpu, Database, Globe, Mic, Eye, Hand } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const ZionAINeuralInterface = () => {

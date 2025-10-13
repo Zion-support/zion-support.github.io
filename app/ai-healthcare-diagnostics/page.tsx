@@ -1,6 +1,4 @@
-import { ArrowRight, Brain, Shield, Users, BarChart3, CheckCircle, Sparkles, Mail, Smartphone, Globe } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { ArrowRight, Brain, Shield, Users, Mail, Smartphone, Globe, Sparkles, CheckCircle, Star, Circle, BarChart3 } from 'lucide-react';
 
 export default function AIHealthcareDiagnostics() {
   const features = [
@@ -9,7 +7,31 @@ export default function AIHealthcareDiagnostics() {
       description: "Advanced AI algorithms analyze X-rays, MRIs, CT scans, and ultrasounds with 99.2% accuracy",
       icon: <Brain className="w-6 h-6" />,
       benefits: ["Early Disease Detection", "Reduced False Positives", "Faster Diagnosis", "Cost Savings"]
-    },
+    
+
+  const benefits = [
+  {
+    "icon": "🚀",
+    "title": "Increased Efficiency",
+    "description": "Streamline your operations with our AI-powered automation tools."
+  },
+  {
+    "icon": "🔒",
+    "title": "Enhanced Security",
+    "description": "Protect your data with enterprise-grade security measures."
+  },
+  {
+    "icon": "📈",
+    "title": "Better Analytics",
+    "description": "Make data-driven decisions with our advanced analytics platform."
+  },
+  {
+    "icon": "⚡",
+    "title": "Faster Performance",
+    "description": "Optimize your systems for maximum speed and reliability."
+  }
+];
+},
     {
       title: "Symptom Assessment Engine",
       description: "Intelligent symptom analysis with differential diagnosis and treatment recommendations",

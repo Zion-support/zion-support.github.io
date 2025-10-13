@@ -1,25 +1,5 @@
+import { ArrowRight, Brain, Shield, Users, Mail, Settings, Star, Database, Mic, MapPin, Settings, MapPin, BarChart3, Cloud, Code, ChevronDown } from 'lucide-react';
 import React, { useState, useCallback, useMemo } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import { 
-  X, 
-  ChevronDown, 
-  ChevronRight,
-  Home,
-  Users,
-  Settings,
-  BarChart3,
-  Shield,
-  Cloud,
-  Code,
-  Brain,
-  Zap,
-  Database,
-  Star,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react'
 
 interface SidebarProps {
   isOpen: boolean

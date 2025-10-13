@@ -1,7 +1,5 @@
+import { Brain, Shield, Users, TrendingUp, CheckCircle, Star, Power, Circle, DollarSign, BarChart3 } from 'lucide-react';
 "use client";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { Receipt, Bot, Brain, Shield, CheckCircle, Star, BarChart3, TrendingUp, DollarSign } from 'lucide-react';
 
 export default function AIExpenseTracker() {
   const features = [
@@ -9,8 +7,30 @@ export default function AIExpenseTracker() {
       icon: <Brain className="w-12 h-12 text-cyan-400" />,
       title: "AI-Powered Analysis",
       description:
-        "Advanced AI algorithms analyze your spending patterns and provide intelligent insights.",
-    },
+        "Advanced AI algorithms analyze your spending patterns and provide intelligent insights.",];
+    
+
+  const testimonials = [
+  {
+    "name": "John Smith",
+    "role": "CEO, TechCorp",
+    "content": "Zion Tech Group transformed our business with their innovative AI solutions. The results exceeded our expectations.",
+    "rating": 5
+  },
+  {
+    "name": "Sarah Johnson",
+    "role": "CTO, InnovateLabs",
+    "content": "Outstanding service and cutting-edge technology. Our productivity increased by 300% after implementing their solutions.",
+    "rating": 5
+  },
+  {
+    "name": "Mike Chen",
+    "role": "Director, DataFlow Inc",
+    "content": "Professional, reliable, and innovative. Zion Tech Group delivered exactly what they promised and more.",
+    "rating": 5
+  }
+];
+},
     {
       icon: <TrendingUp className="w-12 h-12 text-purple-400" />,
       title: "Real-time Tracking",

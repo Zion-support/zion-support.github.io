@@ -1,5 +1,5 @@
+import { Star, Wind } from 'lucide-react';
 import React, { useEffect, useCallback } from 'react';
-import { useLocation } from 'react-router-dom';
 
 declare global {
   interface Window {

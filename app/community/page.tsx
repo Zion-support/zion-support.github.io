@@ -1,7 +1,5 @@
+import { ArrowRight, Users, Award, Globe, Circle, Calendar, Hand, Cloud } from 'lucide-react';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Users, MessageCircle, Calendar, Award, Globe, Star } from 'lucide-react';
 
 export default function Community() {
   const events = [
@@ -11,8 +9,28 @@ export default function Community() {
       time: "9:00 AM - 5:00 PM",
       location: "Virtual Event",
       description: "Join industry leaders as we explore the latest trends in artificial intelligence and machine learning.",
-      attendees: 500
-    },
+      attendees: 500];
+    
+
+  const stats = [
+  {
+    "number": "500+",
+    "label": "Projects Completed"
+  },
+  {
+    "number": "50+",
+    "label": "Happy Clients"
+  },
+  {
+    "number": "5+",
+    "label": "Years Experience"
+  },
+  {
+    "number": "24/7",
+    "label": "Support Available"
+  }
+];
+},
     {
       title: "Tech Talk: Cloud Security Best Practices",
       date: "March 22, 2024",

@@ -1,25 +1,5 @@
+import { Award, Globe, CheckCircle, Star, Target, Circle, Gauge, Target, Activity, Rocket } from 'lucide-react';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Rocket, 
-  Satellite, 
-  Orbit, 
-  Zap, 
-  Target, 
-  CheckCircle, 
-  ArrowRight,
-  Cpu,
-  Globe,
-  Clock,
-  Users,
-  Award,
-  Star,
-  Activity,
-  PieChart,
-  Navigation,
-  MapPin,
-  Gauge
-} from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -41,7 +21,7 @@ const AISpaceMissionOptimizerPage = () => {
     },
     {
       title: "Satellite Management",
-      description: "Comprehensive satellite constellation management and coordination",
+      description: "Comprehensive satellite]; constellation management and coordination",
       icon: <Satellite className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },

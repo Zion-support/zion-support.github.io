@@ -1,6 +1,4 @@
-import { ArrowRight, Shield, Lock, Eye, AlertTriangle, Users, Database, Mail, Smartphone, Globe } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { ArrowRight, Shield, Users, Mail, Smartphone, Globe, Star, Database, Triangle, Lock } from 'lucide-react';
 
 export default function Cybersecurity() {
   const services = [

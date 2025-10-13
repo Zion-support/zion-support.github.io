@@ -1,6 +1,5 @@
+import { ArrowRight, Smartphone, Globe, TrendingUp, CheckCircle, Star, Power, Circle, Triangle, BarChart3 } from 'lucide-react';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { BarChart3, Package, TrendingUp, AlertTriangle, Clock, Shield, Zap, ArrowRight, CheckCircle, Star, Smartphone, Globe } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const ZionAIInventoryManager = () => {

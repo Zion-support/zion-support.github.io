@@ -1,6 +1,4 @@
-import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Smartphone as Phone, Laptop, Headphones } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { ArrowRight, Brain, Shield, Users, Mail, Smartphone, Globe, TrendingUp, Settings, Star, Cpu, Database, Target, Wifi, Power, FileText, Lock, Settings, Target, Headphones, Search, Calendar, BarChart3, Hand, Server, Cloud, Code } from 'lucide-react';
 
 export default function Services() {
   const services = [

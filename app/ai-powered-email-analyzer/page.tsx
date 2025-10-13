@@ -1,6 +1,5 @@
+import { ArrowRight, Brain, Shield, Users, Mail, Globe, CheckCircle, Star, Target, Power, Circle, Target, BarChart3 } from 'lucide-react';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
 
 const AIPoweredEmailAnalyzerPage = () => {
   const features = [

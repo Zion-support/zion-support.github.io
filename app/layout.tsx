@@ -1,12 +1,8 @@
 import React, { useState } from "react";
-import { BrowserRouter } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
 import AnalyticsProvider from "./components/AnalyticsProvider";
 import EnhancedPerformanceMonitor from "./components/EnhancedPerformanceMonitor";
 // import LoadingSpinner from "./components/LoadingSpinner"; // Removed unused import
-import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallback from "./components/ErrorFallback";
-import { Helmet } from "react-helmet-async";
 import ImprovedNavigation from "./components/ImprovedNavigation";
 import ImprovedFooter from "./components/ImprovedFooter";
 import ImprovedSidebar from "./components/ImprovedSidebar";

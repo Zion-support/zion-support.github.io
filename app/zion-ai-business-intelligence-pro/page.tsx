@@ -1,5 +1,5 @@
+import { ArrowRight, Brain, Users, Globe, TrendingUp, CheckCircle, Star, Database, Power, Circle, Plus, Activity, BarChart3 } from 'lucide-react';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';

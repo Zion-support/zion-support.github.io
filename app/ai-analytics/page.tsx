@@ -1,22 +1,4 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { 
-  ArrowRight, 
-  BarChart3, 
-  Brain, 
-  CheckCircle, 
-  Star, 
-  Zap, 
-  Globe, 
-  Mail, 
-  Phone, 
-  Database,
-  Settings,
-  Monitor,
-  Sparkles,
-  Lightbulb,
-  TrendingDown
-} from "lucide-react";
+import { ArrowRight, Brain, Mail, Globe, Settings, Sparkles, CheckCircle, Star, Database, Power, Circle, BarChart3, Zap } from 'lucide-react';
 
 export default function AiAnalytics() {
   const features = [
@@ -25,7 +7,53 @@ export default function AiAnalytics() {
       description: "Process and analyze data in real-time with our advanced AI algorithms that provide instant insights and actionable intelligence.",
       icon: <Zap className="w-8 h-8" />,
       benefits: ["Instant data processing", "Real-time dashboards", "Live monitoring", "Immediate alerts"]
-    },
+    }
+  ];
+
+  const testimonials = [
+  {
+    "name": "John Smith",
+    "role": "CEO, TechCorp",
+    "content": "Zion Tech Group transformed our business with their innovative AI solutions. The results exceeded our expectations.",
+    "rating": 5
+  },
+  {
+    "name": "Sarah Johnson",
+    "role": "CTO, InnovateLabs",
+    "content": "Outstanding service and cutting-edge technology. Our productivity increased by 300% after implementing their solutions.",
+    "rating": 5
+  },
+  {
+    "name": "Mike Chen",
+    "role": "Director, DataFlow Inc",
+    "content": "Professional, reliable, and innovative. Zion Tech Group delivered exactly what they promised and more.",
+    "rating": 5
+  }
+];
+  const benefits = [
+  {
+    "icon": "🚀",
+    "title": "Increased Efficiency",
+    "description": "Streamline your operations with our AI-powered automation tools."
+  },
+  {
+    "icon": "🔒",
+    "title": "Enhanced Security",
+    "description": "Protect your data with enterprise-grade security measures."
+  },
+  {
+    "icon": "📈",
+    "title": "Better Analytics",
+    "description": "Make data-driven decisions with our advanced analytics platform."
+  },
+  {
+    "icon": "⚡",
+    "title": "Faster Performance",
+    "description": "Optimize your systems for maximum speed and reliability."
+  }
+];
+
+  const additionalFeatures = [
     {
       title: "Predictive Analytics",
       description: "Leverage machine learning models to predict future trends, behaviors, and outcomes with high accuracy.",

@@ -1,7 +1,5 @@
+import { ArrowRight, Sparkles, CheckCircle, Star, Target, Circle, Target, Search } from 'lucide-react';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Search, ArrowRight, Sparkles, CheckCircle, Target, Zap } from 'lucide-react';
 
 const CybersecurityAuditPage = () => {
   const features = [

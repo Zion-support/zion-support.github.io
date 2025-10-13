@@ -1,8 +1,5 @@
 "use client";
 
-import { Suspense, lazy } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
 import ErrorBoundary from "./components/ErrorBoundary";
 import PerformanceMonitor from "./components/PerformanceMonitor";
 import AccessibilityEnhancer from "./components/AccessibilityEnhancer";
@@ -50,12 +47,12 @@ function App() {
     <HelmetProvider>
       <BrowserRouter>
         <ErrorBoundary>
-          <PerformanceMonitor>
-            <AccessibilityEnhancer>
-              <CriticalResourcePreloader />
-              <CacheManager />
-              <AdvancedPerformanceMonitor />
-            <Suspense fallback={<LoadingSpinner />}>
+          <PerformanceMonitor />
+          <AccessibilityEnhancer />
+          <CriticalResourcePreloader />
+          <CacheManager />
+          <AdvancedPerformanceMonitor />
+          <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
@@ -106,8 +103,6 @@ function App() {
               <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
             </Routes>
             </Suspense>
-            </AccessibilityEnhancer>
-          </PerformanceMonitor>
         </ErrorBoundary>
       </BrowserRouter>
     </HelmetProvider>

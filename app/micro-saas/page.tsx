@@ -1,18 +1,5 @@
+import { ArrowRight, Brain, Shield, Users, TrendingUp, Sparkles, CheckCircle, Star, Mic, Circle, BarChart3 } from 'lucide-react';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Brain, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  Sparkles,
-  CheckCircle,
-  Star,
-  TrendingUp
-} from 'lucide-react';
 
 export default function MicroSaas() {
   const microSaasServices = [
@@ -24,7 +11,31 @@ export default function MicroSaas() {
       link: '/zion-ai-analytics-pro',
       price: '$99/month',
       popular: true
-    },
+    }
+  ];
+
+  const testimonials = [
+  {
+    "name": "John Smith",
+    "role": "CEO, TechCorp",
+    "content": "Zion Tech Group transformed our business with their innovative AI solutions. The results exceeded our expectations.",
+    "rating": 5
+  },
+  {
+    "name": "Sarah Johnson",
+    "role": "CTO, InnovateLabs",
+    "content": "Outstanding service and cutting-edge technology. Our productivity increased by 300% after implementing their solutions.",
+    "rating": 5
+  },
+  {
+    "name": "Mike Chen",
+    "role": "Director, DataFlow Inc",
+    "content": "Professional, reliable, and innovative. Zion Tech Group delivered exactly what they promised and more.",
+    "rating": 5
+  }
+];
+
+  const additionalServices = [
     {
       icon: <Shield className="w-8 h-8" />,
       title: 'AI CRM Pro',
@@ -87,21 +98,6 @@ export default function MicroSaas() {
       icon: <Users className="w-6 h-6" />,
       title: '24/7 Support',
       description: 'Round-the-clock support from our expert team.'
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechStart Inc.',
-      content: 'Zion\'s AI Analytics Pro transformed our data analysis. We saw 300% improvement in insights quality.',
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
-      company: 'GrowthCorp',
-      content: 'The AI CRM Pro is a game-changer. Our sales team productivity increased by 150%.',
-      rating: 5
     }
   ];
 

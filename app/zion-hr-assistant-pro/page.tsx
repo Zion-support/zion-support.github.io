@@ -1,6 +1,5 @@
+import { ArrowRight, Brain, Shield, Users, TrendingUp, CheckCircle, Clock, Star, Power, Circle, FileText, Calendar } from 'lucide-react';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Users, Brain, Clock, Shield, ArrowRight, CheckCircle, Star, FileText, TrendingUp, Calendar, Heart } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const ZionHRAssistantPro = () => {

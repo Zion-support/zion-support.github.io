@@ -1,6 +1,5 @@
+import { ArrowRight, Shield, Users, CheckCircle, Star, Circle, BarChart3, Hand } from 'lucide-react';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Monitor, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Users, Clock, Award, Target, TrendingUp, Cpu, Database, Globe, Mic, Eye, Hand, Layers, Box } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const AIHolographicWorkspace = () => {

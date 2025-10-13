@@ -1,4 +1,4 @@
-import { Sparkles, PenTool, Video, Image, FileText, CheckCircle, ArrowRight, Star } from "lucide-react";
+import { ArrowRight, Sparkles, CheckCircle, Star, Power, Circle, Wind, FileText } from 'lucide-react';
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";

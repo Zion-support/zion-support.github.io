@@ -1,4 +1,4 @@
-import { Brain, Code, Zap, Shield, CheckCircle, ArrowRight, Star, Globe } from "lucide-react";
+import { ArrowRight, Brain, Shield, Globe, CheckCircle, Star, Power, Circle, Wind, Code } from 'lucide-react';
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";

@@ -1,7 +1,5 @@
+import { ArrowRight, Brain, Award, Globe, TrendingUp, CheckCircle, Star, Power, Square, Circle, DollarSign, MessageSquare, Plus, Cloud, Rocket } from 'lucide-react';
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { ArrowRight, CheckCircle, Star, Brain, Zap, Award, DollarSign, Globe, TrendingUp, Monitor, MessageSquare, Eye, Rocket, Phone } from 'lucide-react';
-import { Link } from "react-router-dom";
 import SEOOptimizer from "../../components/SEOOptimizer";
 
 export default function AiPoweredDevops() {
@@ -36,7 +34,29 @@ export default function AiPoweredDevops() {
         "Cloud deployment only"
       ],
       popular: false
-    },
+    
+
+  const testimonials = [
+  {
+    "name": "John Smith",
+    "role": "CEO, TechCorp",
+    "content": "Zion Tech Group transformed our business with their innovative AI solutions. The results exceeded our expectations.",
+    "rating": 5
+  },
+  {
+    "name": "Sarah Johnson",
+    "role": "CTO, InnovateLabs",
+    "content": "Outstanding service and cutting-edge technology. Our productivity increased by 300% after implementing their solutions.",
+    "rating": 5
+  },
+  {
+    "name": "Mike Chen",
+    "role": "Director, DataFlow Inc",
+    "content": "Professional, reliable, and innovative. Zion Tech Group delivered exactly what they promised and more.",
+    "rating": 5
+  }
+];
+},
     {
       name: "Enterprise",
       price: "$1,999",

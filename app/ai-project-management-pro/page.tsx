@@ -1,7 +1,5 @@
+import { Brain, CheckCircle, Clock, Star, Target, Power, Circle, Target, BarChart3, Cloud } from 'lucide-react';
 "use client";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { CheckCircle, Star, Brain, Clock, Target, BarChart3 } from 'lucide-react';
 
 export default function AIProjectManagementPro() {
   const features = [
@@ -9,8 +7,30 @@ export default function AIProjectManagementPro() {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
       title: "AI-Powered Planning",
       description:
-        "Intelligent project planning with automated task breakdown and resource allocation",
-    },
+        "Intelligent project planning with automated task breakdown and resource allocation",];
+    
+
+  const testimonials = [
+  {
+    "name": "John Smith",
+    "role": "CEO, TechCorp",
+    "content": "Zion Tech Group transformed our business with their innovative AI solutions. The results exceeded our expectations.",
+    "rating": 5
+  },
+  {
+    "name": "Sarah Johnson",
+    "role": "CTO, InnovateLabs",
+    "content": "Outstanding service and cutting-edge technology. Our productivity increased by 300% after implementing their solutions.",
+    "rating": 5
+  },
+  {
+    "name": "Mike Chen",
+    "role": "Director, DataFlow Inc",
+    "content": "Professional, reliable, and innovative. Zion Tech Group delivered exactly what they promised and more.",
+    "rating": 5
+  }
+];
+},
     {
       icon: <Clock className="w-6 h-6 text-purple-400" />,
       title: "Smart Scheduling",

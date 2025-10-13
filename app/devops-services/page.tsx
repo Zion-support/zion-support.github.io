@@ -1,6 +1,5 @@
+import { ArrowRight, Users, Award, Globe, Settings, CheckCircle, Clock, Star, Database, Circle, Lock, Settings, BarChart3, Server, Cloud, Code } from 'lucide-react';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Server, Clock, Award, ArrowRight, CheckCircle, BarChart3, Database, Lock, Users, Settings, Zap, Globe } from 'lucide-react';
 
 const DevOpsServicesPage: React.FC = () => {
   const services = [

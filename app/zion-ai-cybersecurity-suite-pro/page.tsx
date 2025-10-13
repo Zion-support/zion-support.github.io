@@ -1,5 +1,5 @@
+import { Brain, Shield, Users, Award, Smartphone, Globe, Sparkles, CheckCircle, Star, Power, Circle, Triangle, Lock, BarChart3, Cloud } from 'lucide-react';
 import React from 'react';
-import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';

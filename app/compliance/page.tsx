@@ -1,7 +1,5 @@
+import { ArrowRight, Shield, Users, Award, Globe, CheckCircle, Star, Circle, FileText, Lock } from 'lucide-react';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Shield, CheckCircle, FileText, Lock, Users, Globe, Award, Clock } from 'lucide-react';
 
 export default function Compliance() {
   const complianceFrameworks = [
@@ -9,8 +7,32 @@ export default function Compliance() {
       name: "SOC 2 Type II",
       description: "Security, availability, and confidentiality controls for service organizations",
       status: "Certified",
-      icon: <Shield className="w-8 h-8" />
-    },
+      icon: <Shield className="w-8 h-8" />];
+    
+
+  const benefits = [
+  {
+    "icon": "🚀",
+    "title": "Increased Efficiency",
+    "description": "Streamline your operations with our AI-powered automation tools."
+  },
+  {
+    "icon": "🔒",
+    "title": "Enhanced Security",
+    "description": "Protect your data with enterprise-grade security measures."
+  },
+  {
+    "icon": "📈",
+    "title": "Better Analytics",
+    "description": "Make data-driven decisions with our advanced analytics platform."
+  },
+  {
+    "icon": "⚡",
+    "title": "Faster Performance",
+    "description": "Optimize your systems for maximum speed and reliability."
+  }
+];
+},
     {
       name: "ISO 27001",
       description: "Information security management system certification",

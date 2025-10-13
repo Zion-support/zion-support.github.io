@@ -1,6 +1,5 @@
+import { ArrowRight, Brain, Users, Mail, Smartphone, Globe, Settings, Sparkles, CheckCircle, Star, Database, Target, Download, Play, Power, Circle, FileText, Settings, Target, Headphones, BarChart3, Hand } from 'lucide-react';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 
 const ZionAIInvoiceGeneratorPage = () => {
   const [selectedPlan, setSelectedPlan] = useState('pro');

@@ -1,24 +1,5 @@
+import { Brain, Shield, Globe, CheckCircle, Star, Cpu, Target, Power, Circle, Gauge, Lock, Target, Activity } from 'lucide-react';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Cpu, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Target, 
-  CheckCircle, 
-  ArrowRight,
-  Globe,
-  Clock,
-  Users,
-  Award,
-  Star,
-  Activity,
-  PieChart,
-  Database,
-  Lock,
-  Gauge
-} from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';

@@ -1,6 +1,5 @@
+import { ArrowRight, Shield, Globe, Settings, CheckCircle, Star, Circle, Lock, Settings, Activity, BarChart3, Cloud, Code } from 'lucide-react';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Cloud, Server, Shield, CheckCircle, ArrowRight, Globe, BarChart3, Settings, Clock, Award, Star, Activity, Lock } from 'lucide-react';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';

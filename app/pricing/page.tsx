@@ -1,6 +1,4 @@
-import { ArrowRight, CheckCircle, Zap, Shield, Cloud, Brain, Mail, Smartphone, Globe } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { ArrowRight, Brain, Shield, Mail, Smartphone, Globe, CheckCircle, Star, Mic, Circle, Calendar, Hand, Cloud } from 'lucide-react';
 
 export default function Pricing() {
   const aiServicesPricing = [

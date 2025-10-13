@@ -1,6 +1,5 @@
+import { ArrowRight, CheckCircle, Star, Pause, Play, SkipBack, SkipForward, Maximize, Circle, Calendar, Hand, Cloud } from 'lucide-react';
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 
 export default function DemoPage() {
   const [currentDemo, setCurrentDemo] = useState(0);
@@ -16,7 +15,51 @@ export default function DemoPage() {
       features: ['Real-time Data Processing', 'Predictive Analytics', 'Interactive Dashboards', 'Automated Reporting'],
       thumbnail: '/api/placeholder/800/450',
       videoUrl: '#'
-    },
+    }
+  ];
+
+  const benefits = [
+  {
+    "icon": "🚀",
+    "title": "Increased Efficiency",
+    "description": "Streamline your operations with our AI-powered automation tools."
+  },
+  {
+    "icon": "🔒",
+    "title": "Enhanced Security",
+    "description": "Protect your data with enterprise-grade security measures."
+  },
+  {
+    "icon": "📈",
+    "title": "Better Analytics",
+    "description": "Make data-driven decisions with our advanced analytics platform."
+  },
+  {
+    "icon": "⚡",
+    "title": "Faster Performance",
+    "description": "Optimize your systems for maximum speed and reliability."
+  }
+];
+  const stats = [
+  {
+    "number": "500+",
+    "label": "Projects Completed"
+  },
+  {
+    "number": "50+",
+    "label": "Happy Clients"
+  },
+  {
+    "number": "5+",
+    "label": "Years Experience"
+  },
+  {
+    "number": "24/7",
+    "label": "Support Available"
+  }
+];
+
+  const additionalDemos = [
     {
       id: 'ai-customer-support',
       title: 'AI Customer Support Bot',

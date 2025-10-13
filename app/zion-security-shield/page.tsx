@@ -1,14 +1,34 @@
-import { ArrowRight, Shield, Lock, Eye, AlertTriangle, CheckCircle, Star, Zap, Brain } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { ArrowRight, Brain, Shield, CheckCircle, Star, Circle, Triangle, Lock, Cloud } from 'lucide-react';
 
 export default function ZionSecurityShield() {
   const features = [
     {
       icon: <Shield className="w-6 h-6" />,
       title: "Advanced Threat Detection",
-      description: "AI-powered threat detection with 99.9% accuracy using machine learning algorithms"
-    },
+      description: "AI-powered threat detection with 99.9% accuracy using machine learning algorithms"];
+    
+
+  const testimonials = [
+  {
+    "name": "John Smith",
+    "role": "CEO, TechCorp",
+    "content": "Zion Tech Group transformed our business with their innovative AI solutions. The results exceeded our expectations.",
+    "rating": 5
+  },
+  {
+    "name": "Sarah Johnson",
+    "role": "CTO, InnovateLabs",
+    "content": "Outstanding service and cutting-edge technology. Our productivity increased by 300% after implementing their solutions.",
+    "rating": 5
+  },
+  {
+    "name": "Mike Chen",
+    "role": "Director, DataFlow Inc",
+    "content": "Professional, reliable, and innovative. Zion Tech Group delivered exactly what they promised and more.",
+    "rating": 5
+  }
+];
+},
     {
       icon: <Lock className="w-6 h-6" />,
       title: "Zero-Trust Architecture",

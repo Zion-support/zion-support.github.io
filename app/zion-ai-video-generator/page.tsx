@@ -1,6 +1,5 @@
+import { ArrowRight, Brain, Users, Mail, Smartphone, Globe, Settings, Sparkles, CheckCircle, Star, Mic, Target, Play, Power, Circle, Settings, Target, Headphones, Edit, BarChart3, Cloud } from 'lucide-react';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 
 const ZionAIVideoGeneratorPage = () => {
   const [selectedPlan, setSelectedPlan] = useState('pro');

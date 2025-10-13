@@ -1,6 +1,5 @@
+import { ArrowRight, Brain, Shield, TrendingUp, CheckCircle, Star, PieChart, Power, Circle, FileText, BarChart3 } from 'lucide-react';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Calculator, Brain, Shield, ArrowRight, CheckCircle, Star, FileText, TrendingUp, Receipt, BarChart3, CreditCard, PieChart, Clock } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const ZionAIAccountingSuite = () => {

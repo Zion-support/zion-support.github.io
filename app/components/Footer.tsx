@@ -1,21 +1,5 @@
+import { Brain, Shield, Users, Award, Mail, Clock, Mic, MapPin, MapPin, Cloud } from 'lucide-react';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Mail, 
-  Phone, 
-  MapPin,
-  Clock, 
-  ArrowRight,
-  Shield,
-  Zap,
-  Globe,
-  Twitter,
-  Linkedin,
-  Github,
-  Award,
-  Users
-} from "lucide-react";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();

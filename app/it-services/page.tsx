@@ -1,6 +1,5 @@
+import { ArrowRight, Shield, Smartphone, Settings, Star, Database, Target, Minimize, Settings, Target, Headphones, BarChart3, Cloud, Code } from 'lucide-react';
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
 
 export default function ITServices() {

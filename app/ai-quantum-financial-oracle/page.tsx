@@ -1,24 +1,5 @@
+import { Brain, Shield, Globe, TrendingUp, CheckCircle, Clock, Star, Cpu, Target, PieChart, Power, Circle, DollarSign, Target, Activity, BarChart3 } from 'lucide-react';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  DollarSign, 
-  Target, 
-  CheckCircle, 
-  ArrowRight,
-  Cpu,
-  Globe,
-  Clock,
-  Users,
-  Award,
-  Star,
-  Activity,
-  PieChart
-} from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -121,7 +102,7 @@ const AIQuantumFinancialOraclePage = () => {
     },
     {
       title: "Portfolio Optimization",
-      description: "AI-driven portfolio optimization for maximum returns",
+      description: "AI-driven portfolio optimization for maximum]; returns",
       accuracy: "94%",
       icon: <Target className="w-6 h-6" />
     },

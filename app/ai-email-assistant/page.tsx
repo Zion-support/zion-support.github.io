@@ -1,7 +1,5 @@
+import { Brain, Shield, Users, Mail, Settings, Star, Square, Settings, MessageSquare, BarChart3, Hand } from 'lucide-react';
 "use client";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { MessageSquare, Brain, Shield, Zap, Star, Mail, BarChart3, Settings, Users } from 'lucide-react';
 
 export default function AIEmailAssistant() {
   const features = [
@@ -9,8 +7,30 @@ export default function AIEmailAssistant() {
       icon: <Mail className="w-6 h-6 text-cyan-400" />,
       title: "Smart Classification",
       description:
-        "Automatically categorize and prioritize emails based on content and sender.",
-    },
+        "Automatically categorize and prioritize emails based on content and sender.",];
+    
+
+  const testimonials = [
+  {
+    "name": "John Smith",
+    "role": "CEO, TechCorp",
+    "content": "Zion Tech Group transformed our business with their innovative AI solutions. The results exceeded our expectations.",
+    "rating": 5
+  },
+  {
+    "name": "Sarah Johnson",
+    "role": "CTO, InnovateLabs",
+    "content": "Outstanding service and cutting-edge technology. Our productivity increased by 300% after implementing their solutions.",
+    "rating": 5
+  },
+  {
+    "name": "Mike Chen",
+    "role": "Director, DataFlow Inc",
+    "content": "Professional, reliable, and innovative. Zion Tech Group delivered exactly what they promised and more.",
+    "rating": 5
+  }
+];
+},
     {
       icon: <MessageSquare className="w-6 h-6 text-purple-400" />,
       title: "Auto-Responses",

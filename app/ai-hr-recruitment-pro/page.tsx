@@ -1,7 +1,5 @@
+import { ArrowRight, Shield, TrendingUp, Sparkles, CheckCircle, Star, Target, Circle, FileText, Target } from 'lucide-react';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Target, ArrowRight, Sparkles, CheckCircle, FileText, TrendingUp, Shield } from 'lucide-react';
 
 const AIHRRecruitmentProPage = () => {
   const features = [

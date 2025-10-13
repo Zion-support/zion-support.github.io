@@ -1,14 +1,34 @@
-import { ArrowRight, Cloud, Lock, Shield, Zap, Globe, CheckCircle, Star, Database } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { ArrowRight, Shield, Globe, CheckCircle, Star, Database, Circle, Lock, Search, Filter, Cloud } from 'lucide-react';
 
 export default function ZionCloudVault() {
   const features = [
     {
       icon: <Cloud className="w-6 h-6" />,
       title: "Secure Cloud Storage",
-      description: "Enterprise-grade cloud storage with 99.999999999% durability and 99.9% availability"
-    },
+      description: "Enterprise-grade cloud storage with 99.999999999% durability and 99.9% availability"];
+    
+
+  const testimonials = [
+  {
+    "name": "John Smith",
+    "role": "CEO, TechCorp",
+    "content": "Zion Tech Group transformed our business with their innovative AI solutions. The results exceeded our expectations.",
+    "rating": 5
+  },
+  {
+    "name": "Sarah Johnson",
+    "role": "CTO, InnovateLabs",
+    "content": "Outstanding service and cutting-edge technology. Our productivity increased by 300% after implementing their solutions.",
+    "rating": 5
+  },
+  {
+    "name": "Mike Chen",
+    "role": "Director, DataFlow Inc",
+    "content": "Professional, reliable, and innovative. Zion Tech Group delivered exactly what they promised and more.",
+    "rating": 5
+  }
+];
+},
     {
       icon: <Lock className="w-6 h-6" />,
       title: "End-to-End Encryption",

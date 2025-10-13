@@ -1,5 +1,5 @@
+import { Search, Code } from 'lucide-react';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 interface StructuredDataProps {
   type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'FAQPage' | 'BreadcrumbList' | 'SoftwareApplication';

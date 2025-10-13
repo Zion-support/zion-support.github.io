@@ -1,7 +1,5 @@
+import { ArrowRight, Brain, Globe, Sparkles, CheckCircle, Star, Mic, Box, Circle } from 'lucide-react';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Eye, Box, ArrowRight, Sparkles, CheckCircle, Brain, Globe } from 'lucide-react';
 
 const ARVRDevelopmentPage = () => {
   const features = [

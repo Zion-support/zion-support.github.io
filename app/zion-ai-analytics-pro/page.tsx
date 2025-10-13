@@ -1,6 +1,5 @@
+import { ArrowRight, Brain, Users, Mail, Settings, Sparkles, CheckCircle, Star, Database, Mic, Target, MapPin, Play, Power, Circle, FileText, Settings, Target, MapPin, BarChart3, Cloud } from 'lucide-react';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 
 const ZionAIAnalyticsProPage = () => {
   const features = [

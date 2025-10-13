@@ -1,6 +1,4 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Cloud, Globe, Calendar, Phone, CheckCircle, Award, Rocket, Sparkles, TrendingUp, Heart, Receipt, Package, Code, Globe as WebIcon, Calendar as ScheduleIcon, Cloud as CloudIcon, Shield as ProtectionIcon } from 'lucide-react';
+import { ArrowRight, Shield, Globe, Sparkles, CheckCircle, Star, Mic, Power, Circle, Filter, Calendar, Cloud, Code } from 'lucide-react';
 
 export default function MicroSaasServices() {
   const microSaasServices = [
@@ -30,7 +28,27 @@ export default function MicroSaasServices() {
         "Real-time business insights",
         "Predictive trend analysis"
       ]
-    },
+    
+
+  const stats = [
+  {
+    "number": "500+",
+    "label": "Projects Completed"
+  },
+  {
+    "number": "50+",
+    "label": "Happy Clients"
+  },
+  {
+    "number": "5+",
+    "label": "Years Experience"
+  },
+  {
+    "number": "24/7",
+    "label": "Support Available"
+  }
+];
+},
     {
       id: "zion-security-shield-pro",
       name: "Zion Security Shield Pro",

@@ -1,6 +1,5 @@
+import { ArrowRight, Shield, Users, Award, Globe, CheckCircle, Star, Mic, Circle, Lock } from 'lucide-react';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Shield, ArrowRight, CheckCircle, Star, Zap, Lock, BarChart3, Users, Clock, Award, Target, TrendingUp, Cpu, Database, Globe, Mic, Eye, Hand, Layers, Box, Key } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const QuantumDataEncryptionVault = () => {

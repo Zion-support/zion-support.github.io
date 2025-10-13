@@ -1,6 +1,5 @@
+import { ArrowRight, Brain, Shield, Users, Mail, Globe, TrendingUp, Settings, CheckCircle, Clock, Star, Mic, MapPin, Play, Square, Circle, FileText, DollarSign, Settings, MessageSquare, Search, Calendar, MapPin, BarChart3, Cloud, Code, ChevronDown } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { ArrowRight, ChevronDown, ChevronRight, Brain, Shield, Zap, Globe, BarChart3, Cloud, Settings, Search, Star, TrendingUp, Users, Clock, CheckCircle, HelpCircle, Phone, Mail, MapPin, X, Home, BookOpen, FileText, MessageSquare, Calendar, DollarSign, Play } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
