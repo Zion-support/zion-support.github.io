@@ -1,37 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-
-
-export default function PageTsxPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page.Tsx - Zion Tech Group</title>
-        <meta name="description" content="Advanced page.tsx solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page.Tsx</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Advanced page.tsx solutions by Zion Tech Group
-          </p>
-        </div>
-        
-        <div className="max-w-4xl mx-auto">
-          
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-          <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-          <p className="text-gray-300">
-            This page is under development. Please check back later for updates.
-          </p>
-        </div>
-      
-
-
-
-
 export default function AiMobileAppBuilder() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -53,27 +22,22 @@ export default function AiMobileAppBuilder() {
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">AI-Powered Development</h3>
               <p className="text-gray-600">
-                Leverage AI to accelerate mobile app development and deployment.
+                Leverage AI to accelerate mobile app development and reduce time to market.
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Cross-Platform</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Cross-Platform Support</h3>
               <p className="text-gray-600">
-                Build once, deploy everywhere with our cross-platform solutions.
+                Build apps for iOS and Android with a single codebase using our platform.
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Smart Features</h3>
               <p className="text-gray-600">
-                Integrate AI features like voice recognition and predictive analytics.
+                Integrate AI features like natural language processing and machine learning.
               </p>
             </div>
           </div>
-
-
-
-
-
         </div>
       </div>
     </div>

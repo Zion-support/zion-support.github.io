@@ -1,22 +1,17 @@
-
 export interface SEOConfig {
   title: string;
   description: string;
   keywords: string[];
-
-
   canonicalUrl?: string;
   ogImage?: string;
-
-  canonicalUrl: string;
-  ogImage?: string;
   ogType?: string;
-
   twitterCard?: string;
+}
 
-  canonical?: string;
-  ogImage?: string;
-
+export interface SeoConfig {
+  enabled: boolean;
+  metaTags: boolean;
+  structuredData: boolean;
 }
 
 export class SEOUtils {
@@ -26,24 +21,11 @@ export class SEOUtils {
     this.config = config;
   }
 
-interface SeoConfig {
-  enabled: boolean;
-  metaTags: boolean;
-  structuredData: boolean;
-}
-
-
-
-
-
-
-
   generateMetaTags() {
     return {
       title: this.config.title,
       description: this.config.description,
       keywords: this.config.keywords.join(', '),
-
       canonical: this.config.canonicalUrl,
       'og:title': this.config.title,
       'og:description': this.config.description,
@@ -63,6 +45,7 @@ interface SeoConfig {
       description: this.config.description,
       url: this.config.canonicalUrl,
     };
+  }
 
   updateTitle(title: string) {
     document.title = title;
@@ -97,92 +80,4 @@ interface SeoConfig {
     }
     canonical.setAttribute('href', url);
   }
-
-  updateOpenGraphTags() {
-    const ogTags = [
-      { property: 'og:title', content: this.config.title },
-      { property: 'og:description', content: this.config.description },
-      { property: 'og:url', content: this.config.canonicalUrl },
-      { property: 'og:type', content: this.config.ogType || 'website' },
-    ];
-
-    if (this.config.ogImage) {
-      ogTags.push({ property: 'og:image', content: this.config.ogImage });
-    }
-
-    ogTags.forEach(tag => {
-      let meta = document.querySelector(`meta[property="${tag.property}"]`);
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.setAttribute('property', tag.property);
-        document.head.appendChild(meta);
-      }
-      meta.setAttribute('content', tag.content);
-    });
-  }
-
-  updateTwitterCard() {
-    if (this.config.twitterCard) {
-      let meta = document.querySelector('meta[name="twitter:card"]');
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.setAttribute('name', 'twitter:card');
-        document.head.appendChild(meta);
-      }
-      meta.setAttribute('content', this.config.twitterCard);
-
-  constructor(config: Partial<SeoConfig> = {}) {
-    this.config = {
-      enabled: true,
-      metaTags: true,
-      structuredData: true,
-      ...config
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('SEO utils initialized');
-
-    }
-  }
-
-  generateStructuredData() {
-    const structuredData = {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "description": this.config.description,
-      "url": this.config.canonicalUrl,
-    };
-
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData);
-    document.head.appendChild(script);
-  }
-
-  applySEO() {
-    this.updateTitle(this.config.title);
-    this.updateMetaDescription(this.config.description);
-    this.updateMetaKeywords(this.config.keywords);
-    this.updateCanonicalUrl(this.config.canonicalUrl);
-    this.updateOpenGraphTags();
-    this.updateTwitterCard();
-    this.generateStructuredData();
-
-  }
-
-
-      canonical: this.config.canonical,
-      'og:title': this.config.title,
-      'og:description': this.config.description,
-      'og:image': this.config.ogImage,
-    };
-  }
-
-
-
 }
-
-export default SEOUtils;
