@@ -75,6 +75,187 @@ const MicroSaasPage = () => {
       color: "from-yellow-500 to-orange-500",
       link: "/zion-ai-project-manager-pro",
       features: ["Task Automation", "Resource Optimization", "Progress Tracking", "Team Collaboration"]
+    },
+    {
+      name: "Zion AI Inventory Manager",
+      description: "Smart inventory tracking with predictive restocking and automated supply chain optimization",
+      price: "From $179/month",
+      icon: <BarChart3 className="w-8 h-8" />,
+      color: "from-teal-500 to-cyan-500",
+      link: "/zion-ai-inventory-manager",
+      features: ["Predictive Restocking", "Supply Chain Optimization", "Real-time Tracking", "Cost Analysis"],
+      popular: true
+    },
+    {
+      name: "Zion HR Assistant Pro",
+      description: "AI-powered human resources automation with intelligent candidate screening and employee management",
+      price: "From $249/month",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-pink-500 to-rose-500",
+      link: "/zion-hr-assistant-pro",
+      features: ["Candidate Screening", "Employee Onboarding", "Performance Tracking", "Payroll Integration"]
+    },
+    {
+      name: "Zion AI Accounting Suite",
+      description: "Automated accounting with AI-powered expense categorization and financial reporting",
+      price: "From $199/month",
+      icon: <BarChart3 className="w-8 h-8" />,
+      color: "from-emerald-500 to-green-500",
+      link: "/zion-ai-accounting-suite",
+      features: ["Expense Categorization", "Financial Reporting", "Tax Preparation", "Invoice Automation"]
+    },
+    {
+      name: "Zion E-commerce Optimizer",
+      description: "AI-powered e-commerce optimization with dynamic pricing and customer behavior analysis",
+      price: "From $299/month",
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: "from-violet-500 to-purple-500",
+      link: "/zion-ecommerce-optimizer",
+      features: ["Dynamic Pricing", "Customer Analytics", "Conversion Optimization", "Inventory Management"]
+    },
+    {
+      name: "Zion AI Customer Insights",
+      description: "Advanced customer analytics with sentiment analysis and behavioral prediction",
+      price: "From $179/month",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-amber-500 to-yellow-500",
+      link: "/zion-ai-customer-insights",
+      features: ["Sentiment Analysis", "Behavioral Prediction", "Customer Segmentation", "Churn Prevention"]
+    },
+    {
+      name: "Zion AI Lead Scoring",
+      description: "Intelligent lead qualification with automated scoring and conversion prediction",
+      price: "From $149/month",
+      icon: <Star className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500",
+      link: "/zion-ai-lead-scoring",
+      features: ["Lead Qualification", "Conversion Prediction", "Scoring Automation", "CRM Integration"]
+    },
+    {
+      name: "Zion AI Document Processor",
+      description: "Automated document processing with OCR, data extraction, and intelligent categorization",
+      price: "From $199/month",
+      icon: <Settings className="w-8 h-8" />,
+      color: "from-slate-500 to-gray-500",
+      link: "/zion-ai-document-processor",
+      features: ["OCR Processing", "Data Extraction", "Document Categorization", "Workflow Automation"]
+    },
+    {
+      name: "Zion AI Social Listener",
+      description: "Social media monitoring with sentiment analysis and brand reputation management",
+      price: "From $129/month",
+      icon: <Globe className="w-8 h-8" />,
+      color: "from-indigo-500 to-blue-500",
+      link: "/zion-ai-social-listener",
+      features: ["Social Monitoring", "Sentiment Analysis", "Brand Reputation", "Trend Detection"]
+    },
+    {
+      name: "Zion AI Email Optimizer",
+      description: "Email marketing optimization with AI-powered subject line generation and send time optimization",
+      price: "From $99/month",
+      icon: <Mail className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+      link: "/zion-ai-email-optimizer",
+      features: ["Subject Line AI", "Send Time Optimization", "A/B Testing", "Performance Analytics"]
+    },
+    {
+      name: "Zion AI Meeting Assistant",
+      description: "Intelligent meeting automation with transcription, action items, and follow-up reminders",
+      price: "From $179/month",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-teal-500 to-emerald-500",
+      link: "/zion-ai-meeting-assistant",
+      features: ["Meeting Transcription", "Action Item Extraction", "Follow-up Automation", "Calendar Integration"]
+    },
+    {
+      name: "Zion AI Expense Tracker",
+      description: "Smart expense management with receipt scanning and automated categorization",
+      price: "From $79/month",
+      icon: <BarChart3 className="w-8 h-8" />,
+      color: "from-green-500 to-teal-500",
+      link: "/zion-ai-expense-tracker",
+      features: ["Receipt Scanning", "Expense Categorization", "Policy Compliance", "Reporting Dashboard"]
+    },
+    {
+      name: "Zion AI Survey Builder",
+      description: "Intelligent survey creation with question optimization and response analysis",
+      price: "From $89/month",
+      icon: <Settings className="w-8 h-8" />,
+      color: "from-purple-500 to-violet-500",
+      link: "/zion-ai-survey-builder",
+      features: ["Question Optimization", "Response Analysis", "Survey Templates", "Data Visualization"]
+    },
+    {
+      name: "Zion AI Chatbot Builder",
+      description: "No-code chatbot creation with natural language processing and multi-channel deployment",
+      price: "From $199/month",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-blue-500 to-indigo-500",
+      link: "/zion-ai-chatbot-builder",
+      features: ["No-code Builder", "NLP Processing", "Multi-channel Deployment", "Analytics Dashboard"]
+    },
+    {
+      name: "Zion AI Workflow Automation",
+      description: "Process automation with intelligent workflow design and execution monitoring",
+      price: "From $249/month",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-yellow-500 to-orange-500",
+      link: "/zion-ai-workflow-automation",
+      features: ["Workflow Design", "Process Automation", "Execution Monitoring", "Performance Analytics"]
+    },
+    {
+      name: "Zion AI SEO Optimizer",
+      description: "AI-powered SEO optimization with content analysis and ranking improvement",
+      price: "From $149/month",
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: "from-emerald-500 to-green-500",
+      link: "/zion-ai-seo-optimizer",
+      features: ["Content Analysis", "Keyword Optimization", "Ranking Tracking", "Competitor Analysis"]
+    },
+    {
+      name: "Zion AI Data Warehouse",
+      description: "Cloud-based data storage with intelligent organization and query optimization",
+      price: "From $199/month",
+      icon: <Cloud className="w-8 h-8" />,
+      color: "from-sky-500 to-blue-500",
+      link: "/zion-ai-data-warehouse",
+      features: ["Data Organization", "Query Optimization", "Real-time Sync", "Advanced Analytics"]
+    },
+    {
+      name: "Zion AI Mobile App Builder",
+      description: "No-code mobile app creation with AI-powered design suggestions and deployment",
+      price: "From $299/month",
+      icon: <Settings className="w-8 h-8" />,
+      color: "from-pink-500 to-rose-500",
+      link: "/zion-ai-mobile-app-builder",
+      features: ["No-code Builder", "AI Design Suggestions", "Cross-platform Deployment", "App Store Publishing"]
+    },
+    {
+      name: "Zion AI API Manager",
+      description: "API management platform with intelligent monitoring and security enforcement",
+      price: "From $179/month",
+      icon: <Settings className="w-8 h-8" />,
+      color: "from-cyan-500 to-teal-500",
+      link: "/zion-ai-api-manager",
+      features: ["API Monitoring", "Security Enforcement", "Rate Limiting", "Analytics Dashboard"]
+    },
+    {
+      name: "Zion AI Backup Manager",
+      description: "Automated backup solution with intelligent scheduling and disaster recovery",
+      price: "From $129/month",
+      icon: <Cloud className="w-8 h-8" />,
+      color: "from-gray-500 to-slate-500",
+      link: "/zion-ai-backup-manager",
+      features: ["Automated Scheduling", "Disaster Recovery", "Version Control", "Cloud Storage"]
+    },
+    {
+      name: "Zion AI Testing Automation",
+      description: "Automated testing platform with intelligent test case generation and execution",
+      price: "From $199/month",
+      icon: <CheckCircle className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      link: "/zion-ai-testing-automation",
+      features: ["Test Case Generation", "Automated Execution", "Bug Detection", "Performance Testing"]
     }
   ];
 
@@ -142,7 +323,7 @@ const MicroSaasPage = () => {
         </div>
 
         {/* Micro SAAS Products Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {microSaasProducts.map((product, index) => (
             <Link
               key={index}
