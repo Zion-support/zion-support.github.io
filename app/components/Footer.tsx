@@ -1,28 +1,31 @@
 import React from 'react';
-import { } from 'react-router-dom';
-import { Right, Facebook, Twitter, edin, Github } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
     services: [
-      { name: 'AI Services', href: '/ai-services' },
-      { name: 'IT Services', href: '/it-services' },
-      { name: 'Solutions', href: '/cloud-infrastructure' },
-      { name: 'Digital Transformation', href: '/digital-transformation' }
+      { name: 'AI Analytics', href: '/ai-analytics' },
+      { name: 'AI Automation', href: '/ai-automation' },
+      { name: 'AI Cybersecurity', href: '/ai-cybersecurity' },
+      { name: '5G Solutions', href: '/5g-solutions' },
+      { name: 'Blockchain & Web3', href: '/blockchain-web3' },
+      { name: 'Business Intelligence', href: '/business-intelligence' }
     ],
     company: [
       { name: 'About Us', href: '/about' },
-      { name: 'Case Studies', href: '/case-studies' },
+      { name: 'Solutions', href: '/solutions' },
+      { name: 'Pricing', href: '/pricing' },
       { name: 'Blog', href: '/blog' },
-      { name: 'eers', href: '/careers' }
+      { name: 'Team', href: '/team' }
     ],
     support: [
       { name: 'Contact', href: '/contact' },
       { name: 'Support', href: '/support' },
-      { name: 'Documentation', href: '/docs' },
-      { name: 'Tutorials', href: '/tutorials' }
+      { name: 'Tutorials', href: '/tutorials' },
+      { name: 'Demo', href: '/demo' }
     ],
     legal: [
       { name: 'Privacy Policy', href: '/privacy' },
@@ -32,10 +35,10 @@ const Footer: React.FC = () => {
   };
 
   const socialLinks = [
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'edIn', href: '#', icon: edin },
-    { name: 'GitHub', href: '#', icon: Github }
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
   ];
 
   return (
@@ -44,13 +47,18 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <to="/" className="text-2xl font-bold text-white mb-4 block">
+            <Link to="/" className="text-2xl font-bold text-white mb-4 block">
               Zion Tech Group
-            </>
+            </Link>
             <p className="text-gray-300 mb-6 max-w-md">
               Transforming businesses through cutting-edge AI and IT solutions. 
               We help companies innovate and grow in the digital age.
             </p>
+            <div className="text-gray-300 mb-4">
+              <p className="mb-2">📧 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400">kleber@ziontechgroup.com</a></p>
+              <p className="mb-2">📞 <a href="tel:+13024640950" className="hover:text-cyan-400">+1 302 464 0950</a></p>
+              <p className="text-sm">📍 364 E Main St STE 1008, Middletown, DE 19709</p>
+            </div>
             <div className="flex space-x-4">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
@@ -74,11 +82,11 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <to={link.href}
+                  <Link to={link.href}
                     className="text-gray-300 hover:text-cyan-400 transition-colors"
                   >
                     {link.name}
-                  </>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -90,11 +98,11 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <to={link.href}
+                  <Link to={link.href}
                     className="text-gray-300 hover:text-cyan-400 transition-colors"
                   >
                     {link.name}
-                  </>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -106,11 +114,11 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {footerLinks.support.map((link) => (
                 <li key={link.name}>
-                  <to={link.href}
+                  <Link to={link.href}
                     className="text-gray-300 hover:text-cyan-400 transition-colors"
                   >
                     {link.name}
-                  </>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -132,22 +140,22 @@ const Footer: React.FC = () => {
               />
               <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-r-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Subscribe
-                <Right className="w-4 h-4 ml-2" />
+                <ArrowRight className="w-4 h-4 ml-2" />
               </button>
             </div>
           </div>
         </div>
 
-        {/* tom Bar */}
+        {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-slate-700/50 flex flex-col md:flex-row justify-between items-center">
           <div className="flex flex-wrap gap-6 mb-4 md:mb-0">
             {footerLinks.legal.map((link) => (
-              <key={link.name}
+              <Link key={link.name}
                 to={link.href}
                 className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
               >
                 {link.name}
-              </>
+              </Link>
             ))}
           </div>
           <p className="text-gray-400 text-sm">

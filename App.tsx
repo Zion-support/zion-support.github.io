@@ -2,6 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
+// Components
+import Navigation from './app/components/Navigation';
+import Footer from './app/components/Footer';
+
 // Page Components
 import HomePage from './app/pages/HomePage';
 import AboutPage from './app/pages/AboutPage';
@@ -15,6 +19,14 @@ import PrivacyPage from './app/pages/PrivacyPage';
 import TermsPage from './app/pages/TermsPage';
 import PricingPage from './app/pages/PricingPage';
 import SolutionsPage from './app/pages/SolutionsPage';
+
+// Service Pages
+import AIAnalyticsPage from './app/ai-analytics/page';
+import AIAutomationPage from './app/ai-automation/page';
+import AICybersecurityPage from './app/ai-cybersecurity/page';
+import FiveGSolutionsPage from './app/5g-solutions/page';
+import BusinessIntelligencePage from './app/business-intelligence/page';
+import BlockchainWeb3Page from './app/blockchain-web3/page';
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -47,7 +59,8 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
-        <div className="min-h-screen bg-gray-900">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <Navigation />
           <main className="relative z-10" id="main-content" role="main">
             <Routes>
               {/* Main Pages */}
@@ -64,6 +77,14 @@ function App() {
               <Route path="/pricing" element={<PricingPage />} />
               <Route path="/solutions" element={<SolutionsPage />} />
               
+              {/* Service Pages */}
+              <Route path="/ai-analytics" element={<AIAnalyticsPage />} />
+              <Route path="/ai-automation" element={<AIAutomationPage />} />
+              <Route path="/ai-cybersecurity" element={<AICybersecurityPage />} />
+              <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+              <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
+              <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />
+              
               {/* Catch all route */}
               <Route path="*" element={
                 <div className="min-h-screen flex items-center justify-center">
@@ -78,6 +99,7 @@ function App() {
               } />
             </Routes>
           </main>
+          <Footer />
         </div>
       </Router>
     </HelmetProvider>
