@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react';
 
-const AccessibilityEnhancer: React.FC = () => {
+interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
+}
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   useEffect(() => {
     // Skip to main content functionality
     const addSkipLink = () => {
@@ -12,7 +16,7 @@ const AccessibilityEnhancer: React.FC = () => {
       document.body.insertBefore(skipLink, document.body.firstChild);
     };
 
-// Focus management for keyboard navigation
+    // Focus management for keyboard navigation
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation');
@@ -50,6 +54,7 @@ const AccessibilityEnhancer: React.FC = () => {
         main.setAttribute('role', 'main');
       }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Reduced motion mode
     if (isReducedMotion) {
@@ -117,6 +122,8 @@ const AccessibilityEnhancer: React.FC = () => {
       focusableElements.forEach(element => {
         element.removeEventListener('focus', handleFocus);
         element.removeEventListener('blur', handleBlur);
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-10fb
       const nav = document.querySelector('nav');
 =======
 const nav = document.querySelector('nav');
@@ -139,9 +146,12 @@ const nav = document.querySelector('nav');
           img.setAttribute('alt', `Image ${index + 1}`);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-10fb
       });
     };
 
@@ -162,7 +172,7 @@ const nav = document.querySelector('nav');
     };
   }, []);
 
-return null;
+  return <>{children}</>;
 };
 
 export default AccessibilityEnhancer;

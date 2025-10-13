@@ -15,7 +15,11 @@ interface Props {
 interface State {
   hasError: boolean;
 <<<<<<< HEAD
+<<<<<<< HEAD
 error: Error | null;
+=======
+  error: Error | null;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-10fb
   errorInfo: ErrorInfo | null;
 =======
 error?: Error;
@@ -44,15 +48,13 @@ class ErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 <<<<<<< HEAD
     console.error('ErrorBoundary caught an error:', error, errorInfo);
-<<<<<<< HEAD
     
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
     this.setState({
       error,
       errorInfo
     });
-// Log error to console in development
+
+    // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
@@ -107,6 +109,7 @@ this.setState({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               We're sorry, but something unexpected happened. Please try refreshing the page.
 =======
               We're sorry, but something unexpected happened. Please try refreshing the page.
@@ -115,6 +118,9 @@ this.setState({
 We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
 We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
+=======
+              We're sorry, but something unexpected happened. Please try refreshing the page.
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-10fb
             </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
@@ -168,7 +174,11 @@ Error Details (Development)
               <Link
                 to="/"
 <<<<<<< HEAD
+<<<<<<< HEAD
 className="flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
+=======
+                className="flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-10fb
               >
                 <Home className="w-4 h-4" />
                 Go Home

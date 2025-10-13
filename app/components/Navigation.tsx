@@ -51,6 +51,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       ]
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
     { name: 'Solutions', href: '/solutions', icon: CogIcon },
 =======
         { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
@@ -87,6 +88,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 >>>>>>> origin/main
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-10fb
   ];
 
   const isActive = (path: string) => {

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
 import { 
@@ -22,10 +23,20 @@ import {
 } from '@heroicons/react/24/outline';
 import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
+=======
+import { 
+  PhoneIcon, 
+  EnvelopeIcon, 
+  MapPinIcon, 
+  ArrowRightIcon,
+  HeartIcon
+} from '@heroicons/react/24/outline';
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-10fb
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -43,15 +54,32 @@ const Footer: React.FC = () => {
 =======
 
 <<<<<<< HEAD
+=======
+  const services = [
+    { name: 'AI Solutions', href: '/ai-solutions' },
+    { name: 'Cybersecurity', href: '/cybersecurity' },
+    { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
+    { name: 'Digital Transformation', href: '/digital-transformation' },
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-10fb
     { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
     { name: '5G Solutions', href: '/5g-solutions' },
   ];
 
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
 >>>>>>> origin/main
 =======
     { name: 'Micro SaaS', href: '/micro-saas' },
     { name: '5G Solutions', href: '/5g-solutions' }
+=======
+  const company = [
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'News', href: '/news' },
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-10fb
   ];
 
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
@@ -81,6 +109,7 @@ const Footer: React.FC = () => {
     { name: 'Security', href: '/security' },
     { name: 'Compliance', href: '/compliance' },
 <<<<<<< HEAD
+<<<<<<< HEAD
   ];
 
   const socialLinks = [
@@ -101,6 +130,8 @@ const Footer: React.FC = () => {
 =======
     { name: 'Terms of Service', href: '/terms' }
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-10fb
   ];
 
   return (
@@ -113,11 +144,14 @@ const Footer: React.FC = () => {
             <Link to="/" className="flex items-center space-x-3 mb-6 group">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             <Link to="/" className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-10fb
                 <span className="text-white font-bold text-xl">Z</span>
 =======
           <div className="lg:col-span-1">
@@ -134,11 +168,16 @@ const Footer: React.FC = () => {
             </p>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             
             {/* Contact Info */}
 =======
 {/* Contact Info */}
 >>>>>>> origin/main
+=======
+            
+            {/* Contact Info */}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-10fb
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3 text-gray-300">
                 <PhoneIcon className="w-5 h-5 text-purple-400" />
@@ -192,13 +231,15 @@ const Footer: React.FC = () => {
 
           {/* Services */}
           <div>
-<<<<<<< HEAD
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Services</h3>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             <h3 className="text-white font-semibold text-lg mb-6">Services</h3>
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-10fb
             <ul className="space-y-3">
 =======
             <h3 className="text-white font-semibold text-lg mb-4">Services</h3>
@@ -220,13 +261,15 @@ const Footer: React.FC = () => {
 
           {/* Company */}
           <div>
-<<<<<<< HEAD
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Company</h3>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             <h3 className="text-white font-semibold text-lg mb-6">Company</h3>
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-10fb
             <ul className="space-y-3">
 =======
             <h3 className="text-white font-semibold text-lg mb-4">Company</h3>
@@ -248,13 +291,15 @@ const Footer: React.FC = () => {
 
           {/* Support & Legal */}
           <div>
-<<<<<<< HEAD
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Resources</h3>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             <h3 className="text-white font-semibold text-lg mb-6">Resources</h3>
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-10fb
             <ul className="space-y-3 mb-8">
               {resources.map((resource) => (
                 <li key={resource.name}>
@@ -337,6 +382,7 @@ className="flex-1 px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text
             <HeartIcon className="w-4 h-4 text-red-400" />
             <span>by Zion Tech Group</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           <div className="flex flex-wrap gap-6 mb-4 md:mb-0">
             {legal.map((link) => (
@@ -378,6 +424,8 @@ className="flex-1 px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text
               <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
             </div>
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-10fb
           </div>
         </div>
       </div>
