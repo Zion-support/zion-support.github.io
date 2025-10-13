@@ -1,70 +1,71 @@
 #!/usr/bin/env python3
+"""
+Comprehensive script to fix all merge conflicts
+"""
 import os
 import re
 import glob
 
 def fix_merge_conflicts(file_path):
-    """Fix merge conflicts by removing all conflict markers and keeping the content"""
+    """Fix merge conflicts in a file by removing all conflict markers and keeping content"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Check if file has merge conflicts
-        if '<<<<<<< HEAD' not in content and '=======' not in content and '>>>>>>> ' not in content:
+        # Skip if no merge conflicts
+        if '<<<<<<< HEAD' not in content:
             return False
         
-        # Remove all merge conflict markers and their content
-        # Pattern to match from <<<<<<< to >>>>>>> 
-        pattern = r'<<<<<<< HEAD.*?=======.*?>>>>>>> [^\n]*\n?'
-        content = re.sub(pattern, '', content, flags=re.DOTALL)
+        # Remove all merge conflict markers and keep the content
+        # Pattern to match merge conflict blocks
+        pattern = r'<<<<<<< HEAD.*?=======.*?>>>>>>> [^\n]*'
         
-        # Remove any remaining ======= lines
-        content = re.sub(r'=======\n?', '', content)
+        # Replace with empty string to remove conflicts
+        cleaned_content = re.sub(pattern, '', content, flags=re.DOTALL)
         
-        # Remove any remaining >>>>>>> lines
-        content = re.sub(r'>>>>>>> [^\n]*\n?', '', content)
+        # Also remove any remaining conflict markers
+        cleaned_content = re.sub(r'<<<<<<< HEAD.*?\n', '', cleaned_content)
+        cleaned_content = re.sub(r'=======.*?\n', '', cleaned_content)
+        cleaned_content = re.sub(r'>>>>>>> [^\n]*\n?', '', cleaned_content)
         
-        # Remove any remaining <<<<<<< lines
-        content = re.sub(r'<<<<<<< [^\n]*\n?', '', content)
+        # Clean up any double newlines
+        cleaned_content = re.sub(r'\n\s*\n\s*\n', '\n\n', cleaned_content)
         
-        # Clean up multiple empty lines
-        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
+        # Only write if content changed
+        if cleaned_content != content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(cleaned_content)
+            print(f"Fixed conflicts in: {file_path}")
+            return True
         
-        # Write cleaned content
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(content)
-        
-        print(f"Fixed conflicts in {file_path}")
-        return True
+        return False
         
     except Exception as e:
-        print(f"Error fixing conflicts in {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    # Find all TypeScript/JavaScript files
+    """Main function to fix all merge conflicts"""
+    # Get all TypeScript/JavaScript files
     patterns = [
-        '**/*.tsx',
-        '**/*.ts',
-        '**/*.jsx',
-        '**/*.js'
+        'app/**/*.tsx',
+        'app/**/*.ts',
+        'components/**/*.tsx',
+        'components/**/*.ts'
     ]
     
     files_processed = 0
-    conflicts_fixed = 0
+    files_fixed = 0
     
     for pattern in patterns:
         for file_path in glob.glob(pattern, recursive=True):
-            # Skip node_modules and other directories
-            if 'node_modules' in file_path or '.git' in file_path or 'backup' in file_path:
-                continue
-                
-            files_processed += 1
-            if fix_merge_conflicts(file_path):
-                conflicts_fixed += 1
+            if os.path.isfile(file_path):
+                files_processed += 1
+                if fix_merge_conflicts(file_path):
+                    files_fixed += 1
     
-    print(f"Processed {files_processed} files")
-    print(f"Fixed conflicts in {conflicts_fixed} files")
+    print(f"\nProcessed {files_processed} files")
+    print(f"Fixed conflicts in {files_fixed} files")
 
 if __name__ == "__main__":
     main()
