@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function AIAnalyticsDashboardProZionTechGroup() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Analytics Dashboard Pro - Zion Tech Group</title>
       </Helmet>
@@ -25,6 +25,6 @@ export default function AIAnalyticsDashboardProZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

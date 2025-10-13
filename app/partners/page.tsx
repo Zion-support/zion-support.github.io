@@ -1,7 +1,4 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Users, Globe, Shield, Zap } from 'lucide-react';
 
 export default function Partners() {
   const partners = [
@@ -71,7 +68,7 @@ export default function Partners() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Partners - Zion Tech Group | Strategic Partnerships</title>
         <meta name="description" content="Join our partner ecosystem and unlock new opportunities for growth. Strategic partnerships with leading technology companies." />
@@ -91,6 +88,6 @@ export default function Partners() {
           </div>
         </div>
       </div>
-    </>
+</div>
   );
 }

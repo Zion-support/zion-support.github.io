@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function AiBlockchainSolutionsZionTechGroup() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>AiBlockchainSolutions - Zion Tech Group</title>
       </Helmet>
@@ -25,6 +25,6 @@ export default function AiBlockchainSolutionsZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

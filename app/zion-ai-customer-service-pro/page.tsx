@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function ZionAiCustomerServiceProZionTechGroup() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>ZionAiCustomerServicePro - Zion Tech Group</title>
       </Helmet>
@@ -26,6 +26,6 @@ export default function ZionAiCustomerServiceProZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

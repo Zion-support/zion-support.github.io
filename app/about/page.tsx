@@ -28,7 +28,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>About - Zion Tech Group | AI & IT Solutions</title>
         <meta
@@ -249,6 +249,6 @@ export default function AboutPage() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

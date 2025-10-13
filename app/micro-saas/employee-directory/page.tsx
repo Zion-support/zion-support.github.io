@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function EmployeeDirectoryZionTechGroup() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>EmployeeDirectory - Zion Tech Group</title>
       </Helmet>
@@ -26,6 +26,6 @@ export default function EmployeeDirectoryZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

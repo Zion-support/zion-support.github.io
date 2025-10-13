@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import { ArrowRight, Target, Brain, BarChart3, CheckCircle, Star, Zap, Mail, MessageSquare, Users, Globe, Play, Address } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -95,7 +99,7 @@ export default function ZionAiMarketingAutomationPro() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion AI Marketing Automation Pro - AI-Powered Marketing Platform | Zion Tech Group</title>
         <meta
@@ -410,6 +414,6 @@ export default function ZionAiMarketingAutomationPro() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

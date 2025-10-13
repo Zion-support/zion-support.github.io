@@ -1,4 +1,8 @@
 import React from "react";
+<<<<<<< HEAD
+=======
+import { ArrowRight, Star, Shield, Cloud, Database, Code, Network, Smartphone, Monitor, Headphones, Settings, Zap, BarChart3, Target, HardDrive, Minimize } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
@@ -383,7 +387,7 @@ export default function ITServices() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>IT Services - Zion Tech Group | Professional IT Solutions</title>
         <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, software development, and system integration. Expert solutions for modern businesses." />
@@ -534,6 +538,6 @@ export default function ITServices() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+import { Play, Pause, SkipForward, SkipBack, Maximize, ArrowRight, CheckCircle, Star, Calendar } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
 
 export default function DemoPage() {
   const [currentDemo, setCurrentDemo] = useState(0);
@@ -84,7 +87,7 @@ export default function DemoPage() {
   };
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Live Demos - Zion Tech Group | Interactive AI & IT Solutions</title>
         <meta
@@ -336,6 +339,6 @@ export default function DemoPage() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

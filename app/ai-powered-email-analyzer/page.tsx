@@ -1,6 +1,20 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
+=======
+import { 
+  Mail, 
+  Shield, 
+  Zap, 
+  BarChart3, 
+  Users, 
+  CheckCircle,
+  ArrowRight,
+  Brain,
+  Target,
+  Globe
+} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
 
 const AIPoweredEmailAnalyzerPage = () => {
   const features = [

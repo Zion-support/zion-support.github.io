@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { LucideIcon } from 'lucide-react';
 
 interface FuturisticButtonEnhancedProps {
@@ -85,7 +84,7 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
   };
 
   const content = (
-    <>
+    <div>
       {/* Animated background */}
       {animated && (
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -120,7 +119,7 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
       {/* Corner accents */}
       <div className="absolute top-1 right-1 w-1 h-1 bg-cyan-400 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
       <div className="absolute bottom-1 left-1 w-1 h-1 bg-purple-400 rounded-full opacity-40 group-hover:opacity-80 transition-opacity duration-300" />
-    </>
+</div>
   );
 
   const buttonClasses = `

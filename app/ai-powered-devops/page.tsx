@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, CheckCircle, Star, Brain, Zap, Award, DollarSign, Globe, TrendingUp, Monitor, MessageSquare, Eye, Rocket, Phone } from 'lucide-react';
 import { Link } from "react-router-dom";
@@ -20,6 +19,10 @@ export default function AiPoweredDevops() {
     "AI-driven continuous integration and deployment"
   ];
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
   const pricingPlans = [
     {
       name: "Startup",
@@ -107,7 +110,7 @@ export default function AiPoweredDevops() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI-Powered DevOps - Intelligent Development Operations | Zion Tech Group</title>
         <meta
@@ -421,6 +424,6 @@ export default function AiPoweredDevops() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

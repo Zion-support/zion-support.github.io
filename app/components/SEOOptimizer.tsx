@@ -118,7 +118,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
   }, []);
 
   return (
-    <>
+    <div>
       <Helmet>
         {/* Additional meta tags for better SEO */}
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -141,7 +141,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
         <meta httpEquiv="Cache-Control" content="public, max-age=31536000" />
       </Helmet>
       {children}
-    </>
+</div>
   );
 };
 

@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, CheckCircle, Star, Cpu, Brain, Atom, Users, Award, Globe, Lock, TrendingUp, Monitor, MessageSquare, Phone } from 'lucide-react';
 import { Link } from "react-router-dom";
@@ -20,6 +19,10 @@ export default function AiQuantumComputing() {
     "Custom quantum circuit design and optimization"
   ];
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
   const pricingPlans = [
     {
       name: "Research",
@@ -107,7 +110,7 @@ export default function AiQuantumComputing() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Quantum Computing - Revolutionary Quantum Solutions | Zion Tech Group</title>
         <meta
@@ -422,6 +425,6 @@ export default function AiQuantumComputing() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

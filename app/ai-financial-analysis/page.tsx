@@ -1,6 +1,9 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+import { TrendingUp, ArrowRight, Sparkles, CheckCircle, PieChart, Activity, Shield } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
 
 const AIFinancialAnalysisPage = () => {
   const features = [

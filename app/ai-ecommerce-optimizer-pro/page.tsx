@@ -129,7 +129,7 @@ export default function AIEcommerceOptimizerPro() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI E-commerce Optimizer Pro - Zion Tech Group</title>
         <meta
@@ -329,6 +329,6 @@ export default function AIEcommerceOptimizerPro() {
           </div>
         </div>
       </div>
-    </>
+</div>
   );
 }

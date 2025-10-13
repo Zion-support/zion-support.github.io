@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function AccessibilityPage() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Accessibility - Zion Tech Group</title>
         <meta
@@ -29,6 +29,6 @@ export default function AccessibilityPage() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

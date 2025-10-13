@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Zionsmartexpensecategorizerpro() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion Smart Expense Categorizer Pro - Zion Tech Group</title>
         <meta
@@ -29,6 +29,6 @@ export default function Zionsmartexpensecategorizerpro() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

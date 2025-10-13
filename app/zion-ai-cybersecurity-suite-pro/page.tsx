@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
+=======
+import { Shield, Brain, Lock, Zap, CheckCircle, Star, Award, BarChart3, Sparkles, Globe, Smartphone, Monitor, AlertTriangle, Eye, Network, Key, Bug, Cloud, Users } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';

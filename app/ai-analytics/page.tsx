@@ -118,7 +118,7 @@ export default function AiAnalytics() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Analytics - Advanced Business Intelligence Platform | Zion Tech Group</title>
         <meta
@@ -439,6 +439,6 @@ export default function AiAnalytics() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

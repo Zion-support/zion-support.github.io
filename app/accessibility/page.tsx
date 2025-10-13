@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function AccessibilityZionTechGroup() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Accessibility - Zion Tech Group</title>
       </Helmet>
@@ -23,6 +23,6 @@ export default function AccessibilityZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }
