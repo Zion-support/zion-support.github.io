@@ -35,8 +35,6 @@ try {
   appContent = fs.readFileSync(appFilePath, 'utf8');
 
 } catch (error) {
-  console.error('Error:', error);
-} catch (error) {
   console.error('Error reading App.tsx:', error);
   process.exit(1);
 }
@@ -69,8 +67,6 @@ try {
   fs.writeFileSync(appFilePath, finalContent);
   console.log('Successfully added missing routes to App.tsx');
 
-} catch (error) {
-  console.error('Error:', error);
 } catch (error) {
   console.error('Error writing to App.tsx:', error);
   process.exit(1);

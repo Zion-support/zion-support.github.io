@@ -44,9 +44,9 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <to="/" className="text-2xl font-bold text-white mb-4 block">
+            <a href="/" className="text-2xl font-bold text-white mb-4 block">
               Zion Tech Group
-            </>
+            </a>
             <p className="text-gray-300 mb-6 max-w-md">
               Transforming businesses through cutting-edge AI and IT solutions. 
               We help companies innovate and grow in the digital age.
@@ -74,11 +74,11 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <to={link.href}
+                  <a href={link.href}
                     className="text-gray-300 hover:text-cyan-400 transition-colors"
                   >
                     {link.name}
-                  </>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -90,11 +90,11 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <to={link.href}
+                  <a href={link.href}
                     className="text-gray-300 hover:text-cyan-400 transition-colors"
                   >
                     {link.name}
-                  </>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -106,11 +106,11 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {footerLinks.support.map((link) => (
                 <li key={link.name}>
-                  <to={link.href}
+                  <a href={link.href}
                     className="text-gray-300 hover:text-cyan-400 transition-colors"
                   >
                     {link.name}
-                  </>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -142,12 +142,12 @@ const Footer: React.FC = () => {
         <div className="mt-12 pt-8 border-t border-slate-700/50 flex flex-col md:flex-row justify-between items-center">
           <div className="flex flex-wrap gap-6 mb-4 md:mb-0">
             {footerLinks.legal.map((link) => (
-              <key={link.name}
-                to={link.href}
+              <a key={link.name}
+                href={link.href}
                 className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
               >
                 {link.name}
-              </>
+              </a>
             ))}
           </div>
           <p className="text-gray-400 text-sm">

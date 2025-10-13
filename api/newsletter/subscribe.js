@@ -3,13 +3,8 @@ const isValidEmail = (email) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 };
-async function handler(req, res) {
-export default function handler(req, res) {
 
 export default async function handler(req, res) {
-
-export default async function handler(req, res) {
-
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
@@ -18,11 +13,7 @@ export default async function handler(req, res) {
   }
   
   try {
-
-    const { email 
-} catch (error) {
-  console.error('Error:', error);
-} = req.body || {};
+    const { email } = req.body || {};
     
     if (!email) {
       res.statusCode = 400;
@@ -32,8 +23,7 @@ export default async function handler(req, res) {
     }
     
     // Simple email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
+    if (!isValidEmail(email)) {
       res.statusCode = 400;
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Invalid email format' }));
@@ -49,10 +39,7 @@ export default async function handler(req, res) {
       email: req.body.email,
       timestamp: new Date().toISOString()
     });
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ success: true, message: 'Successfully subscribed to newsletter' }));
-
+    
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
@@ -69,8 +56,3 @@ export default async function handler(req, res) {
     }));
   }
 }
-
-export default handler;
-
-
-}}}

@@ -18,15 +18,11 @@ export default function handler(req, res) {
   }
   let existing = [];
   try {
-
     if (fs.existsSync(file)) {
       const data = fs.readFileSync(file, 'utf8');
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
-    
-} catch (error) {
-  console.error('Error:', error);
-}
+    }
   } catch (error) {
     console.error('Error reading existing rates:', error);
     existing = [];
@@ -54,13 +50,9 @@ export default function handler(req, res) {
       success: true, 
       rate: totalRate,
       id: newRate.id
-    
-} catch (error) {
-  console.error('Error:', error);
-}));
-  } catch (error) {
-
-    // console.error('Error saving shipping rate:', error);
+    }));
+  } catch {
+    // console.error('Error saving shipping rate');
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save rate' }));
