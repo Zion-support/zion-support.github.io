@@ -63,6 +63,27 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
                       </Link>
                       <Link
+                        to="/ai-services"
+                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
+                      >
+                        AI Services
+                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
+                      </Link>
+                      <Link
+                        to="/micro-saas"
+                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
+                      >
+                        Micro SAAS
+                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
+                      </Link>
+                      <Link
+                        to="/5g-solutions"
+                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
+                      >
+                        5G Solutions
+                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
+                      </Link>
+                      <Link
                         to="/contact"
                         className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
                       >
@@ -116,6 +137,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         <Link to="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
                           Our Services
                         </Link>
+                        <Link to="/ai-services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                          AI Services
+                        </Link>
+                        <Link to="/micro-saas" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                          Micro SAAS
+                        </Link>
+                        <Link to="/5g-solutions" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                          5G Solutions
+                        </Link>
                         <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
                           Contact
                         </Link>
@@ -127,7 +157,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
                     {/* Services */}
                     <div className="space-y-4">
-                      <h4 className="text-lg font-semibold text-white">Services</h4>
+                      <h4 className="text-lg font-semibold text-white">Popular Services</h4>
                       <div className="space-y-2">
                         <Link to="/ai-business-intelligence" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                           AI Business Intelligence
@@ -140,6 +170,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         </Link>
                         <Link to="/ai-cybersecurity" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                           AI Cybersecurity
+                        </Link>
+                        <Link to="/zion-analytics-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Zion Analytics Pro
+                        </Link>
+                        <Link to="/zion-security-shield" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Zion Security Shield
+                        </Link>
+                        <Link to="/pricing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Pricing Plans
                         </Link>
                       </div>
                     </div>

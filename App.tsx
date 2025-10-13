@@ -36,6 +36,16 @@ const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
 const CookiesPage = React.lazy(() => import("./app/cookies/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
+const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
+const ConsultationPage = React.lazy(() => import("./app/consultation/page"));
+const ZionAnalyticsProPage = React.lazy(() => import("./app/zion-analytics-pro/page"));
+const ZionSecurityShieldPage = React.lazy(() => import("./app/zion-security-shield/page"));
+const ZionCloudVaultPage = React.lazy(() => import("./app/zion-cloud-vault/page"));
+const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
+const AIBusinessIntelligencePage = React.lazy(() => import("./app/ai-business-intelligence/page"));
+const AICustomerSupportPage = React.lazy(() => import("./app/ai-customer-support/page"));
+const AIContentGenerationPage = React.lazy(() => import("./app/ai-content-generation/page"));
+const AICybersecurityPage = React.lazy(() => import("./app/ai-cybersecurity/page"));
 
 // Main App Component
 function App() {
@@ -73,6 +83,16 @@ function App() {
                         <Route path="/terms" element={<TermsPage />} />
                         <Route path="/cookies" element={<CookiesPage />} />
                         <Route path="/sitemap" element={<SitemapPage />} />
+                        <Route path="/micro-saas" element={<MicroSaasPage />} />
+                        <Route path="/consultation" element={<ConsultationPage />} />
+                        <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
+                        <Route path="/zion-security-shield" element={<ZionSecurityShieldPage />} />
+                        <Route path="/zion-cloud-vault" element={<ZionCloudVaultPage />} />
+                        <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                        <Route path="/ai-business-intelligence" element={<AIBusinessIntelligencePage />} />
+                        <Route path="/ai-customer-support" element={<AICustomerSupportPage />} />
+                        <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
+                        <Route path="/ai-cybersecurity" element={<AICybersecurityPage />} />
                       </Routes>
                     </Suspense>
                   </main>
