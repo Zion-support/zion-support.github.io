@@ -1,37 +1,19 @@
 {
-  "timestamp": "2025-10-10T07:28:42.185Z",
-  "baseUrl": "https://ziontechgroup.com",
-  "summary": {
-    "totalLinks": 1,
-    "workingLinks": 1,
-    "brokenLinks": 0,
-    "missingPages": 0,
-    "errors": []
-  },
+  "totalLinks": 0,
   "workingLinks": [
     {
       "url": "https://ziontechgroup.com",
-      "statusCode": 200,
+      "status": 200,
       "depth": 0
     }
   ],
   "brokenLinks": [],
-  "missingPages": [],
-  "errors": []
-  "timestamp": "2025-10-09T17:00:53.717Z",
+  "missingPages": 0,
+  "externalLinks": [],
+  "analysisDate": "2025-10-13T05:26:09.812Z",
   "baseUrl": "https://ziontechgroup.com",
-  "statistics": {
-    "totalPages": 1,
-    "totalLinks": 0,
-    "brokenLinks": 0
-  },
-  "brokenLinks": [],
-  "pages": [
-    {
-      "url": "https://ziontechgroup.com",
-      "title": "Zion Tech Group - Technology Solutions",
-      "linkCount": 0,
-      "links": []
-    }
-  ]
+  "visitedPages": [
+    "https://ziontechgroup.com"
+  ],
+  "recommendations": []
 }
