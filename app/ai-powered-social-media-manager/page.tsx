@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Package, 
+  Share2, 
   Brain, 
   BarChart3, 
   TrendingUp, 
@@ -30,53 +30,73 @@ import {
   Network,
   Award,
   Sparkles,
-  ShoppingCart,
-  Truck,
-  Warehouse,
-  DollarSign,
+  Instagram,
+  Twitter,
+  Facebook,
+  Linkedin,
+  Youtube,
+  MessageSquare,
+  Calendar,
+  Image,
+  Video,
+  Hash,
+  Heart,
+  ThumbsUp,
+  Share,
   Activity,
   PieChart,
   LineChart,
-  Calendar,
-  RefreshCw
+  RefreshCw,
+  Bell,
+  Shield,
+  Camera,
+  Mic,
+  Edit,
+  Plus,
+  Minus,
+  Equal,
+  Play,
+  Pause,
+  Volume2,
+  VolumeX
 } from 'lucide-react';
 
-const SmartInventoryOptimizerPage = () => {
+const AIPoweredSocialMediaManagerPage = () => {
   const features = [
     {
-      title: "AI-Powered Demand Forecasting",
-      description: "Advanced machine learning algorithms predict demand patterns with 95% accuracy, reducing stockouts and overstock",
+      title: "AI Content Generation",
+      description: "Generate engaging posts, captions, and hashtags using advanced AI that understands your brand voice and audience",
       icon: <Brain className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Real-time Inventory Tracking",
-      description: "Monitor inventory levels across multiple locations with real-time updates and automated alerts",
-      icon: <Activity className="w-8 h-8" />,
+      title: "Multi-Platform Scheduling",
+      description: "Schedule and publish content across all major social media platforms from one unified dashboard",
+      icon: <Calendar className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Automated Reorder Points",
-      description: "Smart reorder suggestions based on lead times, demand patterns, and supplier reliability",
-      icon: <Zap className="w-8 h-8" />,
+      title: "Smart Analytics & Insights",
+      description: "Get detailed analytics with AI-powered insights on performance, engagement, and audience behavior",
+      icon: <BarChart3 className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Cost Optimization",
-      description: "Reduce inventory costs by up to 30% with intelligent purchasing recommendations and bulk order optimization",
-      icon: <DollarSign className="w-8 h-8" />,
+      title: "Automated Engagement",
+      description: "AI-powered auto-responses, comment management, and engagement optimization to grow your community",
+      icon: <Zap className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Supplier Performance Analytics",
-      description: "Track supplier reliability, quality metrics, and delivery performance to make informed decisions",
-      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Visual Content Creation",
+      description: "Create stunning visuals, videos, and graphics with AI-powered design tools and templates",
+      icon: <Image className="w-8 h-8" />,
       color: "from-indigo-500 to-blue-500"
     },
     {
-      title: "Multi-location Management",
-      description: "Centralized control of inventory across warehouses, stores, and distribution centers",
-      icon: <Warehouse className="w-8 h-8" />,
+      title: "Hashtag Optimization",
+      description: "AI analyzes trending hashtags and suggests the best ones to maximize reach and engagement",
+      icon: <Hash className="w-8 h-8" />,
       color: "from-teal-500 to-cyan-500"
     }
   ];
@@ -84,46 +104,46 @@ const SmartInventoryOptimizerPage = () => {
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$79",
+      price: "$39",
       period: "per month",
-      description: "Perfect for small businesses with basic inventory needs",
+      description: "Perfect for individuals and small businesses",
       features: [
-        "Up to 1,000 SKUs",
-        "Basic demand forecasting",
-        "Real-time tracking",
-        "Reorder notifications",
+        "Up to 3 social accounts",
+        "Basic AI content generation",
+        "Scheduling for 2 weeks",
         "Basic analytics",
+        "Mobile app access",
         "Email support"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$199",
+      price: "$99",
       period: "per month",
-      description: "Ideal for growing businesses with complex inventory operations",
+      description: "Ideal for growing businesses and agencies",
       features: [
-        "Up to 10,000 SKUs",
-        "Advanced AI forecasting",
-        "Multi-location support",
-        "Supplier analytics",
-        "Cost optimization",
-        "API integrations",
+        "Up to 10 social accounts",
+        "Advanced AI content generation",
+        "Unlimited scheduling",
+        "Advanced analytics & insights",
+        "Visual content creation",
+        "Team collaboration",
         "Priority support",
-        "Custom reports"
+        "API integrations"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$499",
+      price: "$249",
       period: "per month",
-      description: "Complete solution for large organizations with extensive inventory networks",
+      description: "Complete solution for large organizations",
       features: [
-        "Unlimited SKUs",
+        "Unlimited social accounts",
         "Full AI suite capabilities",
-        "Custom model training",
-        "Advanced analytics",
+        "Custom AI model training",
+        "Advanced reporting",
         "White-label options",
         "Dedicated account manager",
         "24/7 phone support",
@@ -136,61 +156,70 @@ const SmartInventoryOptimizerPage = () => {
 
   const testimonials = [
     {
-      name: "David Martinez",
-      company: "Retail Solutions Inc.",
-      role: "Operations Manager",
-      content: "Smart Inventory Optimizer reduced our stockouts by 60% and cut inventory costs by 25%. The AI forecasting is incredibly accurate.",
+      name: "Sarah Johnson",
+      company: "Digital Marketing Agency",
+      role: "Social Media Manager",
+      content: "The AI content generation is incredible. We've increased our engagement by 150% and saved 20 hours per week on content creation.",
       rating: 5,
-      avatar: "DM"
+      avatar: "SJ"
     },
     {
-      name: "Lisa Thompson",
-      company: "E-commerce Plus",
-      role: "Supply Chain Director",
-      content: "The multi-location management feature is a game-changer. We can now track inventory across all our warehouses seamlessly.",
+      name: "Mike Chen",
+      company: "E-commerce Brand",
+      role: "Marketing Director",
+      content: "The multi-platform scheduling and analytics have transformed our social media strategy. We can now track ROI across all channels.",
       rating: 5,
-      avatar: "LT"
+      avatar: "MC"
     },
     {
-      name: "James Wilson",
-      company: "Manufacturing Corp",
-      role: "Procurement Manager",
-      content: "The supplier analytics help us make better purchasing decisions. We've improved supplier relationships and reduced costs significantly.",
+      name: "Emily Rodriguez",
+      company: "Tech Startup",
+      role: "Growth Manager",
+      content: "The automated engagement features help us maintain a consistent presence even during busy periods. Our community has grown 300%.",
       rating: 5,
-      avatar: "JW"
+      avatar: "ER"
     }
   ];
 
   const stats = [
-    { number: "30%", label: "Cost Reduction", icon: <DollarSign className="w-6 h-6" /> },
-    { number: "95%", label: "Forecast Accuracy", icon: <Target className="w-6 h-6" /> },
-    { number: "60%", label: "Fewer Stockouts", icon: <Package className="w-6 h-6" /> },
-    { number: "1,800+", label: "Happy Customers", icon: <Users className="w-6 h-6" /> }
+    { number: "150%", label: "Engagement Increase", icon: <TrendingUp className="w-6 h-6" /> },
+    { number: "20hrs", label: "Time Saved Weekly", icon: <Clock className="w-6 h-6" /> },
+    { number: "300%", label: "Community Growth", icon: <Users className="w-6 h-6" /> },
+    { number: "8,500+", label: "Happy Customers", icon: <Star className="w-6 h-6" /> }
+  ];
+
+  const platforms = [
+    { name: "Instagram", icon: <Instagram className="w-6 h-6" />, color: "text-pink-400" },
+    { name: "Twitter", icon: <Twitter className="w-6 h-6" />, color: "text-blue-400" },
+    { name: "Facebook", icon: <Facebook className="w-6 h-6" />, color: "text-blue-600" },
+    { name: "LinkedIn", icon: <Linkedin className="w-6 h-6" />, color: "text-blue-700" },
+    { name: "YouTube", icon: <Youtube className="w-6 h-6" />, color: "text-red-500" },
+    { name: "TikTok", icon: <Video className="w-6 h-6" />, color: "text-black" }
   ];
 
   const benefits = [
     {
-      title: "Reduce Inventory Costs",
-      description: "Optimize stock levels and reduce carrying costs by up to 30%",
-      icon: <DollarSign className="w-6 h-6" />,
+      title: "Save Time",
+      description: "Automate content creation and scheduling to focus on strategy",
+      icon: <Clock className="w-6 h-6" />,
       color: "text-green-400"
     },
     {
-      title: "Eliminate Stockouts",
-      description: "AI-powered forecasting prevents stockouts and lost sales",
-      icon: <AlertTriangle className="w-6 h-6" />,
+      title: "Increase Engagement",
+      description: "AI-optimized content and timing boost engagement rates",
+      icon: <Heart className="w-6 h-6" />,
       color: "text-red-400"
     },
     {
-      title: "Improve Cash Flow",
-      description: "Better inventory turnover and reduced working capital requirements",
-      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Grow Your Audience",
+      description: "Smart targeting and content optimization attract more followers",
+      icon: <Users className="w-6 h-6" />,
       color: "text-blue-400"
     },
     {
-      title: "Enhance Efficiency",
-      description: "Automated processes reduce manual work and human errors",
-      icon: <Zap className="w-6 h-6" />,
+      title: "Measure Success",
+      description: "Comprehensive analytics help you understand what works",
+      icon: <BarChart3 className="w-6 h-6" />,
       color: "text-purple-400"
     }
   ];
@@ -198,14 +227,14 @@ const SmartInventoryOptimizerPage = () => {
   return (
     <>
       <Helmet>
-        <title>Smart Inventory Optimizer - Zion Tech Group | AI-Powered Inventory Management</title>
+        <title>AI-Powered Social Media Manager - Zion Tech Group | Intelligent Social Media Management</title>
         <meta
           name="description"
-          content="Optimize your inventory with AI-powered demand forecasting, real-time tracking, and cost optimization. Reduce stockouts and cut inventory costs by up to 30%."
+          content="Manage all your social media accounts with AI-powered content generation, scheduling, and analytics. Increase engagement, save time, and grow your audience with our intelligent platform."
         />
         <meta
           name="keywords"
-          content="inventory management, demand forecasting, inventory optimization, stock management, supply chain, AI inventory, warehouse management, inventory analytics"
+          content="social media management, AI content generation, social media scheduling, social media analytics, social media automation, Instagram management, Twitter management, Facebook management"
         />
       </Helmet>
 
@@ -219,19 +248,19 @@ const SmartInventoryOptimizerPage = () => {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Inventory Intelligence</span>
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Social Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Smart Inventory Optimizer
+                AI-Powered Social Media Manager
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your inventory management with AI-powered demand forecasting, real-time tracking, 
-              and intelligent optimization. Reduce costs, eliminate stockouts, and boost efficiency with 
-              our cutting-edge inventory platform.
+              Manage all your social media accounts with AI-powered content generation, intelligent scheduling, 
+              and advanced analytics. Increase engagement, save time, and grow your audience with our 
+              cutting-edge social media platform.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -266,15 +295,45 @@ const SmartInventoryOptimizerPage = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {/* Platforms Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Why Choose Smart Inventory Optimizer?
+                Manage All Your Social Platforms
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Transform your inventory management with proven benefits and measurable results
+                Connect and manage all your social media accounts from one powerful dashboard
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {platforms.map((platform, index) => (
+                <div
+                  key={index}
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
+                >
+                  <div className={`w-12 h-12 mx-auto mb-3 ${platform.color}`}>
+                    {platform.icon}
+                  </div>
+                  <h3 className="text-white font-semibold group-hover:text-cyan-300 transition-colors">
+                    {platform.name}
+                  </h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Why Choose AI Social Media Manager?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                Transform your social media presence with proven benefits and measurable results
               </p>
             </div>
             
@@ -302,14 +361,14 @@ const SmartInventoryOptimizerPage = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Advanced AI Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Leverage cutting-edge artificial intelligence to optimize your inventory operations
+                Leverage cutting-edge artificial intelligence to optimize your social media strategy
               </p>
             </div>
             
@@ -337,7 +396,7 @@ const SmartInventoryOptimizerPage = () => {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -401,14 +460,14 @@ const SmartInventoryOptimizerPage = () => {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Trusted by Industry Leaders
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Smart Inventory Optimizer
+                See what our customers say about AI Social Media Manager
               </p>
             </div>
             
@@ -443,17 +502,17 @@ const SmartInventoryOptimizerPage = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Optimize Your Inventory?
+              Ready to Transform Your Social Media?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses already using Smart Inventory Optimizer to reduce costs and improve efficiency.
+              Join thousands of businesses already using AI Social Media Manager to grow their audience and engagement.
             </p>
             
             {/* Contact Information */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Mail className="w-6 h-6 text-white" />
+                  <Share2 className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Email</h3>
                 <p className="text-cyan-400">kleber@ziontechgroup.com</p>
@@ -497,4 +556,4 @@ const SmartInventoryOptimizerPage = () => {
   );
 };
 
-export default SmartInventoryOptimizerPage;
+export default AIPoweredSocialMediaManagerPage;

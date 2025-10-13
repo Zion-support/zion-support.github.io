@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, Package, Heart, Receipt } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
@@ -90,51 +90,51 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
+      name: "AI Email Analyzer",
+      description: "AI-powered email analysis with sentiment tracking, automated responses, and priority classification",
+      price: "From $49/month",
+      icon: <Mail className="w-6 h-6" />,
+      link: "/ai-powered-email-analyzer",
+      featured: true
+    },
+    {
+      name: "Smart Inventory Optimizer",
+      description: "AI-powered inventory management with demand forecasting, cost optimization, and real-time tracking",
+      price: "From $79/month",
+      icon: <Package className="w-6 h-6" />,
+      link: "/smart-inventory-optimizer",
+      featured: true
+    },
+    {
+      name: "AI Customer Sentiment Tracker",
+      description: "Real-time customer sentiment analysis across all channels with predictive insights and alerts",
+      price: "From $99/month",
+      icon: <Heart className="w-6 h-6" />,
+      link: "/ai-customer-sentiment-tracker",
+      featured: true
+    },
+    {
+      name: "Smart Expense Categorizer",
+      description: "AI-powered expense management with automatic categorization, receipt scanning, and budget tracking",
+      price: "From $29/month",
+      icon: <Receipt className="w-6 h-6" />,
+      link: "/smart-expense-categorizer",
+      featured: true
+    },
+    {
+      name: "AI Social Media Manager",
+      description: "AI-powered social media management with content generation, scheduling, and analytics",
+      price: "From $39/month",
+      icon: <Globe className="w-6 h-6" />,
+      link: "/ai-powered-social-media-manager",
+      featured: true
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
       price: "From $299/month",
       icon: <BarChart3 className="w-6 h-6" />,
       link: "/zion-analytics-pro",
-      featured: true
-    },
-    {
-      name: "Zion Security Shield",
-      description: "Advanced cybersecurity protection with AI-powered threat detection and automated response",
-      price: "From $499/month",
-      icon: <Shield className="w-6 h-6" />,
-      link: "/zion-security-shield",
-      featured: true
-    },
-    {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution with end-to-end encryption and unlimited scalability",
-      price: "From $99/month",
-      icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault",
-      featured: true
-    },
-    {
-      name: "Zion AI CRM Pro",
-      description: "AI-powered customer relationship management with intelligent lead scoring and automation",
-      price: "From $199/month",
-      icon: <Users className="w-6 h-6" />,
-      link: "/zion-ai-crm-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Marketing Automation Pro",
-      description: "AI-powered marketing automation with predictive content generation and multi-channel orchestration",
-      price: "From $149/month",
-      icon: <Target className="w-6 h-6" />,
-      link: "/zion-ai-marketing-automation-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Project Manager Pro",
-      description: "AI-powered project management with intelligent task prioritization and resource allocation",
-      price: "From $99/month",
-      icon: <Calendar className="w-6 h-6" />,
-      link: "/zion-ai-project-manager-pro",
       featured: true
     }
   ];

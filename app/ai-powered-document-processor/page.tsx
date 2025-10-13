@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Package, 
+  FileText, 
   Brain, 
   BarChart3, 
   TrendingUp, 
@@ -16,7 +16,7 @@ import {
   Smartphone,
   Globe,
   Database,
-  FileText,
+  FileText as DocumentIcon,
   AlertTriangle,
   Send,
   Filter,
@@ -30,53 +30,144 @@ import {
   Network,
   Award,
   Sparkles,
-  ShoppingCart,
-  Truck,
-  Warehouse,
-  DollarSign,
+  Upload,
+  Download as DownloadIcon,
+  Save,
+  Edit,
+  Trash2,
+  Plus,
+  Minus,
+  Equal,
+  File,
+  FileImage,
+  FileSpreadsheet,
+  FileVideo,
+  FileAudio,
+  Archive,
+  Folder,
+  FolderOpen,
+  Copy,
+  Scissors,
+  Clipboard,
+  BookOpen,
+  Book,
+  Scroll,
+  PenTool,
+  Type,
+  AlignLeft,
+  AlignCenter,
+  AlignRight,
+  Bold,
+  Italic,
+  Underline,
+  List,
+  Hash,
+  Quote,
+  Link as LinkIcon,
+  Image,
+  Video,
+  Mic,
+  Camera,
+  Headphones,
+  Volume2,
+  VolumeX,
+  Play,
+  Pause,
+  Square,
+  RotateCcw,
+  RotateCw,
+  Maximize,
+  Minimize,
+  Move,
+  Crop,
+  Palette,
+  Paintbrush,
+  Eraser,
+  Highlighter,
+  StickyNote,
+  Tag,
+  Flag,
+  Bookmark,
+  Star as StarIcon,
+  Heart,
+  ThumbsUp,
+  ThumbsDown,
+  MessageSquare,
+  Share,
+  Mail,
+  Phone,
+  MapPin,
+  Calendar,
+  Clock as ClockIcon,
+  User,
+  UserCheck,
+  UserX,
+  Shield,
+  Key,
+  Lock as LockIcon,
+  Unlock,
+  Eye as EyeIcon,
+  EyeOff,
   Activity,
   PieChart,
   LineChart,
-  Calendar,
-  RefreshCw
+  RefreshCw,
+  Bell,
+  AlertCircle,
+  CheckCircle2,
+  XCircle,
+  Info,
+  HelpCircle,
+  ExternalLink,
+  ChevronRight,
+  ChevronLeft,
+  ChevronUp,
+  ChevronDown,
+  MoreHorizontal,
+  MoreVertical,
+  Menu,
+  X,
+  Plus as PlusIcon,
+  Minus as MinusIcon,
+  Equal as EqualIcon
 } from 'lucide-react';
 
-const SmartInventoryOptimizerPage = () => {
+const AIPoweredDocumentProcessorPage = () => {
   const features = [
     {
-      title: "AI-Powered Demand Forecasting",
-      description: "Advanced machine learning algorithms predict demand patterns with 95% accuracy, reducing stockouts and overstock",
-      icon: <Brain className="w-8 h-8" />,
+      title: "AI-Powered OCR & Text Extraction",
+      description: "Advanced optical character recognition extracts text from any document with 99.5% accuracy, supporting 100+ languages",
+      icon: <FileText className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Real-time Inventory Tracking",
-      description: "Monitor inventory levels across multiple locations with real-time updates and automated alerts",
-      icon: <Activity className="w-8 h-8" />,
+      title: "Intelligent Document Classification",
+      description: "Automatically categorize and organize documents by type, content, and importance using machine learning",
+      icon: <Folder className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Automated Reorder Points",
-      description: "Smart reorder suggestions based on lead times, demand patterns, and supplier reliability",
-      icon: <Zap className="w-8 h-8" />,
+      title: "Smart Data Extraction",
+      description: "Extract structured data from unstructured documents including forms, invoices, contracts, and reports",
+      icon: <Database className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Cost Optimization",
-      description: "Reduce inventory costs by up to 30% with intelligent purchasing recommendations and bulk order optimization",
-      icon: <DollarSign className="w-8 h-8" />,
+      title: "Automated Workflow Processing",
+      description: "Create custom workflows to process documents automatically with approval chains and notifications",
+      icon: <Zap className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Supplier Performance Analytics",
-      description: "Track supplier reliability, quality metrics, and delivery performance to make informed decisions",
-      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Advanced Search & Retrieval",
+      description: "Find any document instantly with AI-powered semantic search across all your document repositories",
+      icon: <Search className="w-8 h-8" />,
       color: "from-indigo-500 to-blue-500"
     },
     {
-      title: "Multi-location Management",
-      description: "Centralized control of inventory across warehouses, stores, and distribution centers",
-      icon: <Warehouse className="w-8 h-8" />,
+      title: "Document Analytics & Insights",
+      description: "Get insights into document usage, processing times, and content trends with comprehensive analytics",
+      icon: <BarChart3 className="w-8 h-8" />,
       color: "from-teal-500 to-cyan-500"
     }
   ];
@@ -84,51 +175,51 @@ const SmartInventoryOptimizerPage = () => {
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$79",
+      price: "$59",
       period: "per month",
-      description: "Perfect for small businesses with basic inventory needs",
+      description: "Perfect for small teams with basic document needs",
       features: [
-        "Up to 1,000 SKUs",
-        "Basic demand forecasting",
-        "Real-time tracking",
-        "Reorder notifications",
-        "Basic analytics",
-        "Email support"
+        "Up to 1,000 documents/month",
+        "Basic OCR & text extraction",
+        "Document classification",
+        "Basic search functionality",
+        "Email support",
+        "Mobile app access"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$199",
+      price: "$149",
       period: "per month",
-      description: "Ideal for growing businesses with complex inventory operations",
+      description: "Ideal for growing businesses with complex document workflows",
       features: [
-        "Up to 10,000 SKUs",
-        "Advanced AI forecasting",
-        "Multi-location support",
-        "Supplier analytics",
-        "Cost optimization",
+        "Up to 10,000 documents/month",
+        "Advanced AI processing",
+        "Custom data extraction",
+        "Workflow automation",
+        "Advanced analytics",
         "API integrations",
         "Priority support",
-        "Custom reports"
+        "Team collaboration"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$499",
+      price: "$399",
       period: "per month",
-      description: "Complete solution for large organizations with extensive inventory networks",
+      description: "Complete solution for large organizations with extensive document needs",
       features: [
-        "Unlimited SKUs",
+        "Unlimited documents",
         "Full AI suite capabilities",
         "Custom model training",
-        "Advanced analytics",
+        "Advanced security",
         "White-label options",
         "Dedicated account manager",
         "24/7 phone support",
         "Custom integrations",
-        "Advanced security"
+        "Compliance features"
       ],
       popular: false
     }
@@ -136,76 +227,85 @@ const SmartInventoryOptimizerPage = () => {
 
   const testimonials = [
     {
-      name: "David Martinez",
-      company: "Retail Solutions Inc.",
-      role: "Operations Manager",
-      content: "Smart Inventory Optimizer reduced our stockouts by 60% and cut inventory costs by 25%. The AI forecasting is incredibly accurate.",
-      rating: 5,
-      avatar: "DM"
-    },
-    {
-      name: "Lisa Thompson",
-      company: "E-commerce Plus",
-      role: "Supply Chain Director",
-      content: "The multi-location management feature is a game-changer. We can now track inventory across all our warehouses seamlessly.",
-      rating: 5,
-      avatar: "LT"
-    },
-    {
-      name: "James Wilson",
-      company: "Manufacturing Corp",
-      role: "Procurement Manager",
-      content: "The supplier analytics help us make better purchasing decisions. We've improved supplier relationships and reduced costs significantly.",
+      name: "Jennifer Walsh",
+      company: "Legal Services Inc.",
+      role: "Document Manager",
+      content: "The AI document processor has revolutionized our document management. We've reduced processing time by 80% and improved accuracy significantly.",
       rating: 5,
       avatar: "JW"
+    },
+    {
+      name: "Robert Kim",
+      company: "Financial Services Group",
+      role: "Operations Director",
+      content: "The automated data extraction from invoices and contracts has saved us countless hours. The accuracy is remarkable.",
+      rating: 5,
+      avatar: "RK"
+    },
+    {
+      name: "Maria Santos",
+      company: "Healthcare Systems",
+      role: "Records Manager",
+      content: "The document classification and search features have made our records management so much more efficient. Highly recommended.",
+      rating: 5,
+      avatar: "MS"
     }
   ];
 
   const stats = [
-    { number: "30%", label: "Cost Reduction", icon: <DollarSign className="w-6 h-6" /> },
-    { number: "95%", label: "Forecast Accuracy", icon: <Target className="w-6 h-6" /> },
-    { number: "60%", label: "Fewer Stockouts", icon: <Package className="w-6 h-6" /> },
-    { number: "1,800+", label: "Happy Customers", icon: <Users className="w-6 h-6" /> }
+    { number: "99.5%", label: "OCR Accuracy", icon: <Target className="w-6 h-6" /> },
+    { number: "80%", label: "Time Savings", icon: <Clock className="w-6 h-6" /> },
+    { number: "100+", label: "Languages Supported", icon: <Globe className="w-6 h-6" /> },
+    { number: "4,200+", label: "Happy Customers", icon: <Users className="w-6 h-6" /> }
   ];
 
   const benefits = [
     {
-      title: "Reduce Inventory Costs",
-      description: "Optimize stock levels and reduce carrying costs by up to 30%",
-      icon: <DollarSign className="w-6 h-6" />,
+      title: "Save Time",
+      description: "Automate document processing and eliminate manual data entry",
+      icon: <Clock className="w-6 h-6" />,
       color: "text-green-400"
     },
     {
-      title: "Eliminate Stockouts",
-      description: "AI-powered forecasting prevents stockouts and lost sales",
-      icon: <AlertTriangle className="w-6 h-6" />,
-      color: "text-red-400"
-    },
-    {
-      title: "Improve Cash Flow",
-      description: "Better inventory turnover and reduced working capital requirements",
-      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Improve Accuracy",
+      description: "AI-powered processing reduces human errors and inconsistencies",
+      icon: <Target className="w-6 h-6" />,
       color: "text-blue-400"
     },
     {
-      title: "Enhance Efficiency",
-      description: "Automated processes reduce manual work and human errors",
-      icon: <Zap className="w-6 h-6" />,
+      title: "Enhance Security",
+      description: "Advanced security features protect sensitive documents",
+      icon: <Shield className="w-6 h-6" />,
       color: "text-purple-400"
+    },
+    {
+      title: "Boost Productivity",
+      description: "Streamlined workflows and automated processes increase efficiency",
+      icon: <TrendingUp className="w-6 h-6" />,
+      color: "text-orange-400"
     }
+  ];
+
+  const documentTypes = [
+    { name: "PDFs", icon: <FileText className="w-6 h-6" />, color: "text-red-400" },
+    { name: "Images", icon: <FileImage className="w-6 h-6" />, color: "text-blue-400" },
+    { name: "Spreadsheets", icon: <FileSpreadsheet className="w-6 h-6" />, color: "text-green-400" },
+    { name: "Word Docs", icon: <FileText className="w-6 h-6" />, color: "text-blue-600" },
+    { name: "Presentations", icon: <FileVideo className="w-6 h-6" />, color: "text-orange-400" },
+    { name: "Audio Files", icon: <FileAudio className="w-6 h-6" />, color: "text-purple-400" }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Smart Inventory Optimizer - Zion Tech Group | AI-Powered Inventory Management</title>
+        <title>AI-Powered Document Processor - Zion Tech Group | Intelligent Document Management</title>
         <meta
           name="description"
-          content="Optimize your inventory with AI-powered demand forecasting, real-time tracking, and cost optimization. Reduce stockouts and cut inventory costs by up to 30%."
+          content="Transform your document management with AI-powered OCR, text extraction, classification, and workflow automation. Process documents 80% faster with 99.5% accuracy."
         />
         <meta
           name="keywords"
-          content="inventory management, demand forecasting, inventory optimization, stock management, supply chain, AI inventory, warehouse management, inventory analytics"
+          content="document processing, OCR, text extraction, document management, AI documents, workflow automation, document classification, data extraction"
         />
       </Helmet>
 
@@ -219,19 +319,19 @@ const SmartInventoryOptimizerPage = () => {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Inventory Intelligence</span>
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Document Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Smart Inventory Optimizer
+                AI-Powered Document Processor
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your inventory management with AI-powered demand forecasting, real-time tracking, 
-              and intelligent optimization. Reduce costs, eliminate stockouts, and boost efficiency with 
-              our cutting-edge inventory platform.
+              Transform your document management with AI-powered OCR, intelligent text extraction, 
+              automated classification, and workflow processing. Process documents 80% faster with 
+              99.5% accuracy using our cutting-edge platform.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -266,15 +366,45 @@ const SmartInventoryOptimizerPage = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {/* Document Types Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Why Choose Smart Inventory Optimizer?
+                Process Any Document Type
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Transform your inventory management with proven benefits and measurable results
+                Support for all major document formats with intelligent processing
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {documentTypes.map((type, index) => (
+                <div
+                  key={index}
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
+                >
+                  <div className={`w-12 h-12 mx-auto mb-3 ${type.color}`}>
+                    {type.icon}
+                  </div>
+                  <h3 className="text-white font-semibold group-hover:text-cyan-300 transition-colors">
+                    {type.name}
+                  </h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Why Choose AI Document Processor?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                Transform your document management with proven benefits and measurable results
               </p>
             </div>
             
@@ -302,14 +432,14 @@ const SmartInventoryOptimizerPage = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Advanced AI Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Leverage cutting-edge artificial intelligence to optimize your inventory operations
+                Leverage cutting-edge artificial intelligence to streamline your document processing
               </p>
             </div>
             
@@ -337,7 +467,7 @@ const SmartInventoryOptimizerPage = () => {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -401,14 +531,14 @@ const SmartInventoryOptimizerPage = () => {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Trusted by Industry Leaders
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Smart Inventory Optimizer
+                See what our customers say about AI Document Processor
               </p>
             </div>
             
@@ -443,17 +573,17 @@ const SmartInventoryOptimizerPage = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Optimize Your Inventory?
+              Ready to Transform Your Document Processing?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses already using Smart Inventory Optimizer to reduce costs and improve efficiency.
+              Join thousands of businesses already using AI Document Processor to streamline their workflows.
             </p>
             
             {/* Contact Information */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Mail className="w-6 h-6 text-white" />
+                  <FileText className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Email</h3>
                 <p className="text-cyan-400">kleber@ziontechgroup.com</p>
@@ -497,4 +627,4 @@ const SmartInventoryOptimizerPage = () => {
   );
 };
 
-export default SmartInventoryOptimizerPage;
+export default AIPoweredDocumentProcessorPage;

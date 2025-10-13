@@ -45,14 +45,14 @@ const Footer = React.memo(() => {
   ], []);
 
   const services = useMemo(() => [
-    { name: "AI Services", path: "/ai-services", icon: <Brain className="w-4 h-4" /> },
-    { name: "IT Services", path: "/it-services", icon: <Shield className="w-4 h-4" /> },
-    { name: "Micro SAAS", path: "/micro-saas", icon: <Zap className="w-4 h-4" /> },
+    { name: "AI Services", path: "/services", icon: <Brain className="w-4 h-4" /> },
+    { name: "IT Services", path: "/services", icon: <Shield className="w-4 h-4" /> },
+    { name: "Micro SAAS", path: "/micro-saas-services", icon: <Zap className="w-4 h-4" /> },
     { name: "5G Solutions", path: "/5g-solutions", icon: <Globe className="w-4 h-4" /> },
-    { name: "Cloud Services", path: "/cloud-services", icon: <Cloud className="w-4 h-4" /> },
-    { name: "Cybersecurity", path: "/cybersecurity", icon: <Shield className="w-4 h-4" /> },
+    { name: "Cloud Infrastructure", path: "/cloud-infrastructure-management", icon: <Cloud className="w-4 h-4" /> },
+    { name: "Cybersecurity", path: "/ai-cybersecurity", icon: <Shield className="w-4 h-4" /> },
     { name: "Web Development", path: "/web-development", icon: <Code className="w-4 h-4" /> },
-    { name: "Data Analytics", path: "/data-analytics", icon: <BarChart3 className="w-4 h-4" /> }
+    { name: "Data Analytics", path: "/ai-data-analytics", icon: <BarChart3 className="w-4 h-4" /> }
   ], []);
 
   const companyLinks = useMemo(() => [
@@ -239,18 +239,26 @@ const Footer = React.memo(() => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/cloud-infrastructure"
+                  to="/cloud-infrastructure-management"
                   className="text-gray-400 hover:text-green-400 transition-colors"
                 >
-                  Cloud Infrastructure
+                  Cloud Infrastructure Management
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/cybersecurity-solutions"
+                  to="/cloud-migration"
                   className="text-gray-400 hover:text-green-400 transition-colors"
                 >
-                  Cybersecurity Solutions
+                  Cloud Migration
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/devops-services"
+                  className="text-gray-400 hover:text-green-400 transition-colors"
+                >
+                  DevOps Services
                 </Link>
               </li>
               <li>
@@ -263,26 +271,18 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/mobile-development"
+                  to="/network-security"
                   className="text-gray-400 hover:text-green-400 transition-colors"
                 >
-                  Mobile Development
+                  Network Security
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/database-management"
+                  to="/it-consulting"
                   className="text-gray-400 hover:text-green-400 transition-colors"
                 >
-                  Database Management
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/custom-software"
-                  className="text-gray-400 hover:text-green-400 transition-colors"
-                >
-                  Custom Software
+                  IT Consulting
                 </Link>
               </li>
             </ul>
@@ -294,50 +294,50 @@ const Footer = React.memo(() => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/zion-analytics-pro"
+                  to="/ai-powered-email-analyzer"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
-                  Zion Analytics Pro
+                  AI Email Analyzer
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/zion-security-shield"
+                  to="/smart-inventory-optimizer"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
-                  Zion Security Shield
+                  Smart Inventory Optimizer
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/zion-cloud-vault"
+                  to="/ai-customer-sentiment-tracker"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
-                  Zion Cloud Vault
+                  AI Customer Sentiment Tracker
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/zion-content-studio"
+                  to="/smart-expense-categorizer"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
-                  Zion Content Studio
+                  Smart Expense Categorizer
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/zion-data-sync"
+                  to="/ai-powered-social-media-manager"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
-                  Zion Data Sync
+                  AI Social Media Manager
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/zion-project-master"
+                  to="/ai-powered-document-processor"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
-                  Zion Project Master
+                  AI Document Processor
                 </Link>
               </li>
             </ul>

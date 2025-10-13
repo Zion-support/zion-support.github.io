@@ -28,7 +28,8 @@ import {
   Receipt,
   TrendingUp,
   Cpu,
-  Network
+  Network,
+  FileText
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -104,6 +105,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
           name: 'IT Services',
           icon: <Monitor className="w-4 h-4" />,
           items: [
+            { name: 'Cloud Infrastructure Management', path: '/cloud-infrastructure-management', icon: <Cloud className="w-4 h-4" /> },
             { name: 'Cloud Migration', path: '/cloud-migration', icon: <Cloud className="w-4 h-4" /> },
             { name: 'DevOps Services', path: '/devops-services', icon: <Code className="w-4 h-4" /> },
             { name: 'IT Consulting', path: '/it-consulting', icon: <Users className="w-4 h-4" /> },
@@ -143,7 +145,9 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
             { name: 'AI Email Analyzer', path: '/ai-powered-email-analyzer', icon: <Mail className="w-4 h-4" /> },
             { name: 'Customer Sentiment Tracker', path: '/ai-customer-sentiment-tracker', icon: <Heart className="w-4 h-4" /> },
             { name: 'Smart Expense Categorizer', path: '/smart-expense-categorizer', icon: <Receipt className="w-4 h-4" /> },
-            { name: 'Smart Inventory Optimizer', path: '/smart-inventory-optimizer', icon: <Package className="w-4 h-4" /> }
+            { name: 'Smart Inventory Optimizer', path: '/smart-inventory-optimizer', icon: <Package className="w-4 h-4" /> },
+            { name: 'AI Social Media Manager', path: '/ai-powered-social-media-manager', icon: <Globe className="w-4 h-4" /> },
+            { name: 'AI Document Processor', path: '/ai-powered-document-processor', icon: <FileText className="w-4 h-4" /> }
           ]
         },
         {

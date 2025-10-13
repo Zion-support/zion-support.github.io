@@ -78,6 +78,9 @@ const AIPoweredEmailAnalyzerPage = React.lazy(() => import("./app/ai-powered-ema
 const SmartInventoryOptimizerPage = React.lazy(() => import("./app/smart-inventory-optimizer/page"));
 const AICustomerSentimentTrackerPage = React.lazy(() => import("./app/ai-customer-sentiment-tracker/page"));
 const SmartExpenseCategorizerPage = React.lazy(() => import("./app/smart-expense-categorizer/page"));
+const AIPoweredSocialMediaManagerPage = React.lazy(() => import("./app/ai-powered-social-media-manager/page"));
+const AIPoweredDocumentProcessorPage = React.lazy(() => import("./app/ai-powered-document-processor/page"));
+const CloudInfrastructureManagementPage = React.lazy(() => import("./app/cloud-infrastructure-management/page"));
 
 function App() {
   useEffect(() => {
@@ -165,6 +168,9 @@ function App() {
                               <Route path="/smart-inventory-optimizer" element={<SmartInventoryOptimizerPage />} />
                               <Route path="/ai-customer-sentiment-tracker" element={<AICustomerSentimentTrackerPage />} />
                               <Route path="/smart-expense-categorizer" element={<SmartExpenseCategorizerPage />} />
+                              <Route path="/ai-powered-social-media-manager" element={<AIPoweredSocialMediaManagerPage />} />
+                              <Route path="/ai-powered-document-processor" element={<AIPoweredDocumentProcessorPage />} />
+                              <Route path="/cloud-infrastructure-management" element={<CloudInfrastructureManagementPage />} />
 
                               {/* Additional AI Services Routes */}
                               <Route path="/ai-chatbot-builder" element={React.createElement(React.lazy(() => import("./app/ai-chatbot-builder/page")))} />
