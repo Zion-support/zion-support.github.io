@@ -1,33 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-
-export default function PageTsxPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page.Tsx - Zion Tech Group</title>
-        <meta name="description" content="Advanced page.tsx solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page.Tsx</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Advanced page.tsx solutions by Zion Tech Group
-          </p>
-        </div>
-        
-        <div className="max-w-4xl mx-auto">
-          
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-          <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-          <p className="text-gray-300">
-            This page is under development. Please check back later for updates.
-          </p>
-        </div>
-      
-
 import { Eye, AlertTriangle, Users, Database, CheckCircle } from 'lucide-react';
 
 export default function CybersecuritySolutions() {
@@ -37,28 +9,28 @@ export default function CybersecuritySolutions() {
       description: "Comprehensive security audits to identify vulnerabilities and assess your current security posture",
       icon: <Eye className="w-8 h-8" />,
       features: ["Vulnerability scanning", "Penetration testing", "Risk assessment", "Compliance audit"],
-      price: "From $2,499/assessment",
+      price: "From $2,499/assessment"
     },
     {
       title: "Threat Detection",
       description: "Advanced threat detection and response systems to identify and neutralize security threats in real-time",
       icon: <AlertTriangle className="w-8 h-8" />,
       features: ["AI-powered detection", "Real-time monitoring", "Automated response", "Threat intelligence"],
-      price: "From $1,999/month",
+      price: "From $1,999/month"
     },
     {
       title: "Identity Management",
       description: "Secure identity and access management solutions to control user access and prevent unauthorized access",
       icon: <Users className="w-8 h-8" />,
       features: ["Multi-factor authentication", "Single sign-on", "Access governance", "Privileged access"],
-      price: "From $1,299/month",
+      price: "From $1,299/month"
     },
     {
       title: "Data Protection",
       description: "Comprehensive data protection solutions to secure sensitive information and ensure compliance",
       icon: <Database className="w-8 h-8" />,
       features: ["Data encryption", "Backup security", "Data loss prevention", "Compliance monitoring"],
-      price: "From $1,799/month",
+      price: "From $1,799/month"
     }
   ];
 
@@ -77,7 +49,7 @@ export default function CybersecuritySolutions() {
         "Monthly reports"
       ],
       popular: false,
-      cta: "Get Started",
+      cta: "Get Started"
     },
     {
       name: "Professional",
@@ -95,7 +67,7 @@ export default function CybersecuritySolutions() {
         "Security training"
       ],
       popular: true,
-      cta: "Get Started",
+      cta: "Get Started"
     },
     {
       name: "Enterprise",
@@ -114,7 +86,7 @@ export default function CybersecuritySolutions() {
         "Compliance management"
       ],
       popular: false,
-      cta: "Contact Sales",
+      cta: "Contact Sales"
     }
   ];
 
@@ -225,8 +197,6 @@ export default function CybersecuritySolutions() {
               </button>
             </div>
           ))}
-
-
         </div>
       </div>
     </div>

@@ -1,178 +1,98 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix common syntax errors in a file
-function fixSyntaxErrors(filePath) {
+// List of files with syntax errors
+const filesToFix = [
+  'app/ai-chatbot-builder/page.tsx',
+  'app/ai-mobile-app-builder/page.tsx',
+  'app/ai-mobile-builder/page.tsx',
+  'app/ai-website-builder/page.tsx',
+  'app/cloud-infrastructure-management/page.tsx',
+  'app/cybersecurity-solutions/page.tsx',
+  'app/landing-page-builder/page.tsx',
+  'app/micro-saas-services/ai-chatbot-builder/page.tsx',
+  'app/pricing/page.tsx',
+  'app/quantum-data-encryption-vault/page.tsx',
+  'app/zion-ai-analytics-pro/page.tsx',
+  'app/zion-ai-crm-pro/page.tsx',
+  'app/zion-ai-customer-churn-predictor-pro/page.tsx',
+  'app/zion-ai-email-marketing-pro/page.tsx',
+  'app/zion-ai-inventory-manager/page.tsx',
+  'app/zion-ai-inventory-optimizer-pro/page.tsx',
+  'app/zion-ai-survey-builder/page.tsx',
+  'app/components/ImageOptimizer.tsx'
+];
+
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
     
-    // Fix unclosed JSX div tags
-    const divMatches = content.match(/<div[^>]*>(?!.*<\/div>)/g);
-    if (divMatches) {
-      // Add closing div tags at the end of the file
-      const openDivs = content.match(/<div[^>]*>/g) || [];
-      const closeDivs = content.match(/<\/div>/g) || [];
+    // Fix duplicate function declarations
+    content = content.replace(/export default function PageTsxPage\(\) \{[^}]*\}\s*export default function/g, 'export default function');
+    
+    // Fix malformed JSX - remove incomplete div tags and fix structure
+    content = content.replace(/<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">[\s\S]*?<\/div>\s*export default function/g, 'export default function');
+    
+    // Fix missing closing tags by ensuring proper JSX structure
+    content = content.replace(/(<div[^>]*>)([\s\S]*?)(?=\s*export default function)/g, (match, openTag, content) => {
+      // Count opening and closing div tags
+      const openDivs = (content.match(/<div/g) || []).length;
+      const closeDivs = (content.match(/<\/div>/g) || []).length;
+      const missingDivs = openDivs - closeDivs;
       
-      if (openDivs.length > closeDivs.length) {
-        const missingDivs = openDivs.length - closeDivs.length;
-        content += '\n' + '</div>'.repeat(missingDivs);
-        modified = true;
+      let fixedContent = content;
+      for (let i = 0; i < missingDivs; i++) {
+        fixedContent += '\n      </div>';
       }
-    }
+      
+      return openTag + fixedContent;
+    });
     
-    // Fix missing closing braces
-    const openBraces = (content.match(/\{/g) || []).length;
-    const closeBraces = (content.match(/\}/g) || []).length;
-    
-    if (openBraces > closeBraces) {
-      const missingBraces = openBraces - closeBraces;
-      content += '\n' + '}'.repeat(missingBraces);
-      modified = true;
-    }
-    
-    // Fix missing closing parentheses
-    const openParens = (content.match(/\(/g) || []).length;
-    const closeParens = (content.match(/\)/g) || []).length;
-    
-    if (openParens > closeParens) {
-      const missingParens = openParens - closeParens;
-      content += '\n' + ')'.repeat(missingParens);
-      modified = true;
-    }
-    
-    // Fix common JSX syntax issues
-    content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1></div>');
-    
-    // Fix missing semicolons
-    content = content.replace(/([^;}])\s*$/gm, '$1;');
+    // Fix specific syntax errors
+    content = content.replace(/,\s*\)/g, ')');
+    content = content.replace(/,\s*}/g, '}');
+    content = content.replace(/,\s*]/g, ']');
     
     // Fix missing commas in object literals
-    content = content.replace(/(\w+)\s*\n\s*(\w+)/g, '$1,\n$2');
+    content = content.replace(/(\w+):\s*([^,}\n]+)\n\s*(\w+):/g, '$1: $2,\n    $3:');
     
-    // Fix missing return statements
-    content = content.replace(/export default function\s+(\w+)\s*\([^)]*\)\s*{\s*$/gm, 'export default function $1() {\n  return (');
+    // Fix malformed arrow functions
+    content = content.replace(/=>\s*\{[\s\S]*?\n\s*\}\s*\)/g, (match) => {
+      return match.replace(/\n\s*\)/g, '\n  )');
+    });
     
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors in: ${filePath}`);
-    }
-    
-    return modified;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-      return true;
-    }
-    
-    return false;
-  } catch (error) {
-    console.error(`  ❌ Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Function to create a basic page component
-function createBasicPageComponent(filePath) {
-  const fileName = path.basename(filePath, '.tsx');
-  const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-([a-z])/g, (g) => g[1].toUpperCase());
-  
-  const content = `import React from 'react';
-
-export default function ${componentName}() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">
-          ${componentName.replace(/([A-Z])/g, ' $1').trim()}
-        </h1>
-        <p className="text-lg text-gray-600">
-          This page is under development. Please check back later.
-        </p>
-      </div>
-    </div>
-  );
-}`;
-
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log(`Created basic component: ${filePath}`);
-}
-
-// Function to find all problematic files
-function findProblematicFiles(dir) {
-  const files = [];
-  
-  function scanDirectory(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
+    // Ensure proper closing of JSX elements
+    content = content.replace(/(<div[^>]*>)([\s\S]*?)(?=\s*<\/div>\s*$)/g, (match, openTag, content) => {
+      const lines = content.split('\n');
+      let fixedLines = [];
+      let divCount = 0;
       
-      if (stat.isDirectory()) {
-        if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
-          scanDirectory(fullPath);
+      for (let line of lines) {
+        if (line.includes('<div')) {
+          divCount++;
         }
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
-        try {
-          const content = fs.readFileSync(fullPath, 'utf8');
-          // Check for common syntax issues
-          if (content.includes('<div') && !content.includes('</div>') ||
-              content.includes('{') && !content.includes('}') ||
-              content.includes('(') && !content.includes(')') ||
-              content.length < 100) { // Very short files might be incomplete
-            files.push(fullPath);
-          }
-        } catch (error) {
-          // Skip files that can't be read
+        if (line.includes('</div>')) {
+          divCount--;
         }
+        fixedLines.push(line);
       }
-    } catch (error) {
-      // Skip directories that can't be read
+      
+      // Add missing closing divs
+      for (let i = 0; i < divCount; i++) {
+        fixedLines.push('      </div>');
+      }
+      
+      return openTag + fixedLines.join('\n');
+    });
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+}
+
 // Fix all files
-let fixedCount = 0;
-filesToFix.forEach(filePath => {
-  if (fs.existsSync(filePath)) {
-    if (fixFile(filePath)) {
-      fixedCount++;
-    }
-  } else {
-    console.log(`File not found: ${filePath}`);
-  }
-  
-  scanDirectory(dir);
-  return files;
-}
+filesToFix.forEach(fixFile);
 
-// Main execution
-console.log('Starting syntax error fixes...');
-
-const workspaceDir = process.cwd();
-const problematicFiles = findProblematicFiles(workspaceDir);
-
-console.log(`Found ${problematicFiles.length} files with potential syntax issues`);
-
-let fixedCount = 0;
-for (const file of problematicFiles) {
-  // Skip test files and backup files
-  if (file.includes('__tests__') || file.includes('.original') || file.includes('backup')) {
-    continue;
-  }
-  
-  // For page components, create basic components
-  if (file.includes('/page.tsx') && fs.statSync(file).size < 200) {
-    createBasicPageComponent(file);
-    fixedCount++;
-  } else {
-    if (fixSyntaxErrors(file)) {
-      fixedCount++;
-    }
-  }
-}
-
-console.log(`Fixed syntax errors in ${fixedCount} files`);
 console.log('Syntax error fixes completed!');
-});
-
-console.log(`Fixed ${fixedCount} files`);

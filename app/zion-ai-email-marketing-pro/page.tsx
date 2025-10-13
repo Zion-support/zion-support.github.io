@@ -9,7 +9,7 @@ import {
   CheckCircle, 
   Star, 
   Clock, 
-
+  Users,
   Sparkles,
   Cpu,
   Send,
@@ -18,18 +18,6 @@ import {
   Shield,
   Zap,
   TrendingUp
-
-
-  Zap, 
-  Sparkles,
-  TrendingUp,
-  Cpu,
-  Send,
-  MousePointer,
-  Shield,
-  Heart
-
-
 } from 'lucide-react';
 
 const ZionAIEmailMarketingProPage: React.FC = () => {
@@ -138,24 +126,21 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
       role: "Marketing Manager",
       content: "Zion AI Email Marketing Pro increased our email ROI by 400%. The AI content generation is absolutely game-changing!",
       rating: 5,
-      avatar: "RG",
-    },
+      avatar: "RG"},
     {
       name: "Mark Johnson",
       company: "SaaS Startup",
       role: "Growth Manager",
       content: "The segmentation and automation features helped us achieve 35% higher open rates. Our conversion rates have never been better.",
       rating: 5,
-      avatar: "MJ",
-    },
+      avatar: "MJ"},
     {
       name: "Sarah Wilson",
       company: "Retail Brand",
       role: "Digital Marketing Director",
       content: "We manage 50+ email campaigns effortlessly. The AI optimization suggestions have transformed our email strategy.",
       rating: 5,
-      avatar: "SW",
-    }
+      avatar: "SW"}
   ];
 
   return (

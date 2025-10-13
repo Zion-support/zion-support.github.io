@@ -9,27 +9,14 @@ import {
   CheckCircle, 
   Star, 
   Clock, 
-
+  Users,
   Zap, 
-
-
-
-
-
   Sparkles,
   Cpu,
   Globe,
   AlertTriangle,
   ShoppingCart,
-  Truck,
-
-  Globe
-
-
-  Zap
-
-
-
+  Truck
 } from 'lucide-react';
 
 const ZionAIInventoryOptimizerProPage: React.FC = () => {
@@ -138,24 +125,21 @@ const ZionAIInventoryOptimizerProPage: React.FC = () => {
       role: "Operations Director",
       content: "Zion AI Inventory Optimizer Pro reduced our inventory costs by 30% and eliminated stockouts completely. The ROI was immediate!",
       rating: 5,
-      avatar: "JR",
-    },
+      avatar: "JR"},
     {
       name: "Lisa Chen",
       company: "E-commerce Plus",
       role: "Supply Chain Manager",
       content: "The demand forecasting is incredibly accurate. We've reduced overstock by 45% while maintaining 99% service levels.",
       rating: 5,
-      avatar: "LC",
-    },
+      avatar: "LC"},
     {
       name: "Michael Thompson",
       company: "Manufacturing Corp",
       role: "Inventory Manager",
       content: "Managing inventory across 15 locations is now effortless. The AI recommendations have transformed our operations.",
       rating: 5,
-      avatar: "MT",
-    }
+      avatar: "MT"}
   ];
 
   return (

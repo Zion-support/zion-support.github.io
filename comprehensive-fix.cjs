@@ -1,142 +1,125 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Starting comprehensive fix...');
+// List of files with syntax errors
+const filesToFix = [
+  'app/ai-chatbot-builder/page.tsx',
+  'app/ai-mobile-app-builder/page.tsx',
+  'app/ai-mobile-builder/page.tsx',
+  'app/ai-website-builder/page.tsx',
+  'app/cloud-infrastructure-management/page.tsx',
+  'app/cybersecurity-solutions/page.tsx',
+  'app/landing-page-builder/page.tsx',
+  'app/micro-saas-services/ai-chatbot-builder/page.tsx',
+  'app/pricing/page.tsx',
+  'app/quantum-data-encryption-vault/page.tsx',
+  'app/zion-ai-analytics-pro/page.tsx',
+  'app/zion-ai-crm-pro/page.tsx',
+  'app/zion-ai-customer-churn-predictor-pro/page.tsx',
+  'app/zion-ai-email-marketing-pro/page.tsx',
+  'app/zion-ai-inventory-manager/page.tsx',
+  'app/zion-ai-inventory-optimizer-pro/page.tsx',
+  'app/zion-ai-survey-builder/page.tsx',
+  'app/components/ImageOptimizer.tsx'
+];
 
-// Function to fix a specific file
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
     
-    // Remove all merge conflict markers and branch names
-    content = content.replace(/^<<<<<<< .*$/gm, '');
-    content = content.replace(/^.*$/gm, '');
-    content = content.replace(/^    content = content.replace(/^ origin\/main$/gm, '');
-    content = content.replace(/^ cursor\/fix-errors-and-merge-to-main-[a-z0-9]+$/gm, '');
-    content = content.replace(/^ cursor\/fix-errors-and-merge-to-main-[a-z0-9]+$/gm, '');
+    // Extract the correct function name from the file path
+    const fileName = path.basename(filePath, '.tsx');
+    const functionName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-([a-z])/g, (g) => g[1].toUpperCase());
     
-    // Fix incomplete lazy imports - add missing closing parentheses and commas
-    content = content.replace(/lazy\(\s*\(\s*\)\s*=>\s*import\("([^"]+)"\)\s*\n\s*const/g, 'lazy(() => import("$1")),\nconst');
-    content = content.replace(/lazy\(\s*\(\s*\)\s*=>\s*import\("([^"]+)"\)\s*\n\s*\/\//g, 'lazy(() => import("$1")),\n//');
-    content = content.replace(/lazy\(\s*\(\s*\)\s*=>\s*import\("([^"]+)"\)\s*\n\s*$/gm, 'lazy(() => import("$1")),');
+    // Remove the malformed first function declaration
+    content = content.replace(/export default function PageTsxPage\(\) \{\s*return\s*\(\s*export default function/g, 'export default function');
     
-    // Fix incomplete function calls
-    content = content.replace(/lazy\(\s*\(\s*\)\s*=>\s*import\("([^"]+)"\)\s*\n\s*([a-zA-Z_$])/g, 'lazy(() => import("$1")),\n$2');
+    // Fix the malformed structure where function declaration is inside return statement
+    content = content.replace(/return\s*\(\s*export default function/g, 'return (');
     
-    // Fix missing closing parentheses in multi-line lazy imports
-    content = content.replace(/lazy\(\s*\(\s*\)\s*=>\s*import\("([^"]+)"\)\s*\n\s*\)\s*$/gm, 'lazy(() => import("$1"))');
+    // Fix missing closing tags and malformed JSX
+    const lines = content.split('\n');
+    let fixedLines = [];
+    let inJSX = false;
+    let divCount = 0;
+    let braceCount = 0;
+    let inFunction = false;
     
-    // Fix object literal syntax errors
-    content = content.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*\s*:\s*[^,\n}]+)\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1,\n  $2');
-    
-    // Fix missing commas in arrays
-    content = content.replace(/([^,\n])\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1,\n  $2');
-    
-    // Fix JSX syntax errors
-    content = content.replace(/(<[^>]+)\n\s*([a-zA-Z_$])/g, '$1>\n  $2');
-    
-    // Fix incomplete JSX elements
-    content = content.replace(/(<[^>]+)\n\s*<\/[^>]+>/g, '$1>\n  </div>');
-    
-    // Fix missing closing tags
-    content = content.replace(/(<[^>]+)\n\s*([a-zA-Z_$])/g, '$1>\n  $2');
-    
-    // Fix function declarations
-    content = content.replace(/function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*\)\s*{\s*\n\s*return\s*\(\s*\n\s*<[^>]*>\s*\n\s*\)\s*;\s*\n\s*}\s*\n\s*([a-zA-Z_$])/g, 
-      'function $1() {\n  return (\n    <div>\n      {/* Content */}\n    </div>\n  );\n}\n\n$2');
-    
-    // Fix export statements
-    content = content.replace(/}\s*\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '}\n\nexport { $1');
-    
-    // Clean up multiple empty lines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
-    // Remove any remaining orphaned markers
-    content = content.replace(/^<<<<<<<|^|^>>>>>>>/gm, '');
-    
-    // Fix specific patterns for React components
-    if (filePath.includes('.tsx') || filePath.includes('.jsx')) {
-      // Fix missing closing tags in JSX
-      content = content.replace(/(<[^>]+)\n\s*([a-zA-Z_$])/g, '$1>\n  $2');
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
       
-      // Fix incomplete JSX elements
-      content = content.replace(/(<[^>]+)\n\s*<\/[^>]+>/g, '$1>\n  </div>');
-    }
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      return true;
-    }
-    
-    return false;
-  } catch (error) {
-    console.error(`  ❌ Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Function to find all TypeScript/JavaScript files
-function findSourceFiles(dir) {
-  const files = [];
-  
-  function scanDirectory(currentDir) {
-    try {
-      const items = fs.readdirSync(currentDir);
+      // Track function start
+      if (line.includes('export default function') && !inFunction) {
+        inFunction = true;
+        fixedLines.push(line);
+        continue;
+      }
       
-      for (const item of items) {
-        const fullPath = path.join(currentDir, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory()) {
-          // Skip node_modules, .git, and other irrelevant directories
-          if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {
-            scanDirectory(fullPath);
-          }
-        } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
-          files.push(fullPath);
+      // Track JSX start
+      if (line.includes('return (') && inFunction) {
+        inJSX = true;
+        fixedLines.push(line);
+        continue;
+      }
+      
+      // Track div tags
+      if (inJSX) {
+        if (line.includes('<div')) {
+          divCount++;
         }
+        if (line.includes('</div>')) {
+          divCount--;
+        }
+        
+        // Track braces
+        if (line.includes('{')) {
+          braceCount++;
+        }
+        if (line.includes('}')) {
+          braceCount--;
+        }
+        
+        fixedLines.push(line);
+        
+        // Check if we're at the end of the function
+        if (line.includes(');') && braceCount === 0 && divCount === 0) {
+          inJSX = false;
+          inFunction = false;
+        }
+      } else {
+        fixedLines.push(line);
       }
-    } catch (error) {
-      // Skip directories that can't be read
     }
+    
+    // Add missing closing divs and braces
+    while (divCount > 0) {
+      fixedLines.push('      </div>');
+      divCount--;
+    }
+    
+    // Ensure proper function closing
+    if (inFunction && !fixedLines[fixedLines.length - 1].includes('}')) {
+      fixedLines.push('}');
+    }
+    
+    content = fixedLines.join('\n');
+    
+    // Clean up any remaining syntax issues
+    content = content.replace(/,\s*\)/g, ')');
+    content = content.replace(/,\s*}/g, '}');
+    content = content.replace(/,\s*]/g, ']');
+    
+    // Fix missing commas in object literals
+    content = content.replace(/(\w+):\s*([^,}\n]+)\n\s*(\w+):/g, '$1: $2,\n    $3:');
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
-  
-  scanDirectory(dir);
-  return files;
 }
 
-// Main execution
-try {
-  const workspaceDir = process.cwd();
-  console.log(`📁 Scanning workspace: ${workspaceDir}`);
-  
-  const sourceFiles = findSourceFiles(workspaceDir);
-  console.log(`🔍 Found ${sourceFiles.length} source files`);
-  
-  let fixedCount = 0;
-  let errorCount = 0;
-  
-  for (const file of sourceFiles) {
-    try {
-      if (fixFile(file)) {
-        fixedCount++;
-        console.log(`  ✅ Fixed: ${file}`);
-      }
-    } catch (error) {
-      console.error(`❌ Failed to fix ${file}:`, error.message);
-      errorCount++;
-    }
-  }
-  
-  console.log(`\n📊 Fix Summary:`);
-  console.log(`  ✅ Successfully fixed: ${fixedCount} files`);
-  console.log(`  ❌ Failed to fix: ${errorCount} files`);
-  console.log(`  📁 Total files processed: ${sourceFiles.length}`);
-  
-} catch (error) {
-  console.error('💥 Script failed:', error.message);
-  process.exit(1);
-}
+// Fix all files
+filesToFix.forEach(fixFile);
+
+console.log('Comprehensive syntax error fixes completed!');
