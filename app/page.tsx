@@ -9,6 +9,9 @@ import FuturisticText from "./components/FuturisticText";import FuturisticBackgr
 import FuturisticCardEnhanced from "./components/FuturisticCardEnhanced";
 import FuturisticButtonEnhanced from "./components/FuturisticButtonEnhanced";
 import FuturisticTextEnhanced from "./components/FuturisticTextEnhanced";
+import FuturisticBackgroundAdvanced from "./components/FuturisticBackgroundAdvanced";
+import FuturisticNavigation from "./components/FuturisticNavigation";
+import FuturisticFooter from "./components/FuturisticFooter";
 import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
 import ResponsiveText from "./components/ResponsiveText";
@@ -150,7 +153,7 @@ const HomePage = () => {
   const stats = [
     { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "60+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "50+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
   ];
 
@@ -181,7 +184,9 @@ const HomePage = () => {
   return (
     <PerformanceOptimizer>
       <EnhancedAccessibility>
-        <FuturisticBackgroundEnhanced>
+        <FuturisticBackgroundAdvanced variant="quantum" intensity="high" animated={true}>
+          <FuturisticNavigation />
+          
           <EnhancedSEO
             title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
             description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
@@ -495,6 +500,9 @@ const HomePage = () => {
         </div>
       </section>
       </main>
+      
+      <FuturisticFooter />
+      </FuturisticBackgroundAdvanced>
       </EnhancedAccessibility>
     </PerformanceOptimizer>
   );
