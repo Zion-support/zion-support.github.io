@@ -90,32 +90,53 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
-      name: "Zion Analytics Pro",
-      description: "AI-powered business intelligence platform",
+      name: "AI Voice Assistant Pro",
+      description: "Advanced voice AI with 100+ language support",
+      price: "From $199/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/ai-voice-assistant-pro"
+    },
+    {
+      name: "AI Blockchain Analytics Pro",
+      description: "Comprehensive crypto and DeFi analytics",
       price: "From $299/month",
       icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-analytics-pro"
+      link: "/ai-blockchain-analytics-pro"
     },
     {
-      name: "Zion Security Shield",
-      description: "Advanced cybersecurity protection",
-      price: "From $499/month",
-      icon: <Shield className="w-6 h-6" />,
-      link: "/zion-security-shield"
-    },
-    {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution",
-      price: "From $99/month",
+      name: "AI Climate Prediction Engine",
+      description: "Advanced weather and climate forecasting",
+      price: "From $399/month",
       icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault"
+      link: "/ai-climate-prediction-engine"
+    },
+    {
+      name: "AI 3D Generation Pro",
+      description: "Transform ideas into stunning 3D models",
+      price: "From $199/month",
+      icon: <Sparkles className="w-6 h-6" />,
+      link: "/ai-3d-generation-pro"
+    },
+    {
+      name: "AI Supply Chain Optimizer",
+      description: "Intelligent supply chain management",
+      price: "From $499/month",
+      icon: <Globe className="w-6 h-6" />,
+      link: "/ai-supply-chain-optimizer"
+    },
+    {
+      name: "Zion Analytics Pro",
+      description: "AI-powered business intelligence platform",
+      price: "From $29/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/zion-analytics-pro"
     }
   ];
 
   const stats = [
-    { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "15,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "50+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "75+", label: "AI & SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
   ];
 
@@ -287,7 +308,7 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}

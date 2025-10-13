@@ -1,164 +1,163 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Globe, Truck, Package, TrendingUp, BarChart3, Cloud, Brain, Code, Database, Mail, Users, Clock, DollarSign, Smartphone, Monitor, Settings, Target, Cpu, Wifi, Battery, Camera, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Box, Camera, Image, Video, Palette, Layers, Zap, BarChart3, Cloud, Brain, Code, Database, Mail, Users, Clock, DollarSign, Globe, Smartphone, Monitor, Settings, Target, TrendingUp, Cpu, Wifi, Battery, Headphones, Mic, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
 
-export default function AISupplyChainOptimizer() {
+export default function AI3DGenerationPro() {
   const features = [
-    "AI-powered demand forecasting",
-    "Inventory optimization algorithms",
-    "Route optimization & logistics planning",
-    "Supplier risk assessment & monitoring",
-    "Real-time supply chain visibility",
-    "Cost optimization analysis",
-    "Sustainability tracking & reporting",
-    "Integration with ERP systems",
-    "Predictive maintenance scheduling",
-    "Quality control automation",
-    "Compliance monitoring",
-    "Multi-tier supplier management",
-    "Dynamic pricing optimization",
-    "Capacity planning & allocation",
-    "Custom analytics dashboards",
-    "API integration & webhooks"
+    "AI-powered 3D model generation",
+    "Text-to-3D conversion",
+    "Image-to-3D reconstruction",
+    "Real-time 3D rendering",
+    "Multiple format support (OBJ, FBX, STL, GLTF)",
+    "High-resolution texture generation",
+    "Animation & rigging automation",
+    "3D scene composition",
+    "Virtual reality optimization",
+    "Augmented reality integration",
+    "3D printing optimization",
+    "Custom material generation",
+    "Lighting & shading automation",
+    "Batch processing capabilities",
+    "API integration & webhooks",
+    "Cloud-based processing"
   ];
 
   const benefits = [
-    "Reduce inventory costs by 25%",
-    "Improve demand accuracy by 40%",
-    "Optimize logistics efficiency by 35%",
-    "Minimize supply chain risks by 60%",
-    "Increase supplier performance by 45%",
-    "Reduce carbon footprint by 30%",
-    "Improve customer satisfaction by 50%",
-    "Save 20+ hours weekly on planning"
+    "Reduce 3D creation time by 90%",
+    "Lower production costs by 70%",
+    "Increase design iteration speed by 10x",
+    "Enable non-technical users to create 3D content",
+    "Accelerate product development cycles",
+    "Improve design quality and consistency",
+    "Scale 3D content production",
+    "Reduce dependency on 3D artists"
   ];
 
-  const optimizationAreas = [
+  const applications = [
     {
-      title: "Demand Forecasting",
-      description: "AI-powered demand prediction using historical data, market trends, and external factors",
-      icon: <TrendingUp className="w-8 h-8" />,
+      title: "Product Design",
+      description: "Generate 3D prototypes and visualizations for product development and marketing",
+      icon: <Box className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Inventory Management",
-      description: "Optimize stock levels, reduce carrying costs, and prevent stockouts with intelligent algorithms",
-      icon: <Package className="w-8 h-8" />,
+      title: "Architecture & Real Estate",
+      description: "Create 3D building models, interior designs, and virtual property tours",
+      icon: <Layers className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Logistics Optimization",
-      description: "Route planning, carrier selection, and delivery optimization for maximum efficiency",
-      icon: <Truck className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+      title: "Gaming & Entertainment",
+      description: "Generate 3D assets, characters, and environments for games and media",
+      icon: <Gamepad2 className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Supplier Intelligence",
-      description: "Risk assessment, performance monitoring, and supplier relationship management",
-      icon: <Globe className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
+      title: "E-commerce & Marketing",
+      description: "Create 3D product showcases and interactive shopping experiences",
+      icon: <ShoppingCart className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$499/month",
-      description: "For small businesses",
+      name: "Creator",
+      price: "$199/month",
+      description: "For individual creators",
       features: [
-        "Up to 5 locations",
-        "Basic forecasting",
-        "Standard integrations",
+        "Up to 100 3D models/month",
+        "Standard resolution output",
+        "Basic materials & textures",
         "Email support",
-        "Monthly reports"
+        "Standard formats"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$1,299/month",
-      description: "For growing companies",
+      price: "$599/month",
+      description: "For creative agencies",
       features: [
-        "Up to 25 locations",
-        "Advanced forecasting",
+        "Up to 1,000 3D models/month",
+        "High-resolution output",
+        "Advanced materials & lighting",
         "Priority support",
-        "Real-time monitoring",
-        "Custom dashboards",
+        "All format support",
         "API access",
-        "Weekly reports"
+        "Batch processing"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$3,999/month",
+      price: "$1,999/month",
       description: "For large organizations",
       features: [
-        "Unlimited locations",
-        "Full optimization suite",
+        "Unlimited 3D models",
+        "Ultra-high resolution",
+        "Custom AI training",
         "Dedicated support",
-        "Custom integrations",
         "White-label options",
-        "Compliance reporting",
-        "Real-time alerts",
-        "Custom AI models"
+        "Custom integrations",
+        "Real-time processing",
+        "On-premise deployment"
       ],
       popular: false
     }
   ];
 
-  const industries = [
-    "Manufacturing", "Retail", "E-commerce", "Healthcare", "Automotive", 
-    "Food & Beverage", "Pharmaceuticals", "Electronics", "Fashion", 
-    "Logistics", "Construction", "Energy", "Aerospace", "Agriculture"
+  const supportedFormats = [
+    "OBJ", "FBX", "STL", "GLTF", "GLB", "PLY", "3DS", "DAE", 
+    "BLEND", "MA", "MB", "MAX", "C4D", "USD", "USDZ", "ABC"
   ];
 
   const testimonials = [
     {
-      name: "Jennifer Adams",
-      company: "Global Manufacturing Corp",
-      role: "Supply Chain Director",
-      content: "AI Supply Chain Optimizer has transformed our operations. We've reduced inventory costs by 30% while improving delivery times by 25%.",
+      name: "Alex Chen",
+      company: "Digital Design Studio",
+      role: "Creative Director",
+      content: "AI 3D Generation Pro has revolutionized our workflow. We can now create 3D models 10x faster while maintaining high quality standards.",
       rating: 5,
-      avatar: "JA"
+      avatar: "AC"
     },
     {
-      name: "Robert Kim",
-      company: "Retail Chain International",
-      role: "Operations Manager",
-      content: "The demand forecasting is incredibly accurate. We've reduced stockouts by 80% and overstock by 60% across all our stores.",
-      rating: 5,
-      avatar: "RK"
-    },
-    {
-      name: "Maria Santos",
+      name: "Sarah Martinez",
       company: "E-commerce Platform",
-      role: "Logistics Coordinator",
-      content: "The route optimization has saved us thousands in shipping costs. Our delivery efficiency has improved by 40%.",
+      role: "Product Manager",
+      content: "The 3D product visualization has increased our conversion rates by 45%. Customers love the interactive 3D experience.",
       rating: 5,
-      avatar: "MS"
+      avatar: "SM"
+    },
+    {
+      name: "David Kim",
+      company: "Architecture Firm",
+      role: "Lead Architect",
+      content: "Creating 3D building models used to take weeks. Now we can generate them in hours with incredible detail and accuracy.",
+      rating: 5,
+      avatar: "DK"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Supply Chain Optimizer - Zion Tech Group | Advanced Supply Chain Intelligence</title>
+        <title>AI 3D Generation Pro - Zion Tech Group | Advanced 3D Content Creation</title>
         <meta
           name="description"
-          content="Transform your supply chain with AI-powered optimization. Demand forecasting, inventory management, logistics optimization, and supplier intelligence for maximum efficiency."
+          content="Transform your ideas into stunning 3D models with AI 3D Generation Pro. Text-to-3D, image-to-3D, and automated 3D content creation for all industries."
         />
         <meta
           name="keywords"
-          content="supply chain optimization, demand forecasting, inventory management, logistics optimization, supplier intelligence, supply chain AI, procurement optimization"
+          content="AI 3D generation, 3D modeling, text-to-3D, image-to-3D, 3D content creation, virtual reality, augmented reality, 3D printing, product design"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-supply-chain-optimizer" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-3d-generation-pro" />
       </Helmet>
       <SEOOptimizer
-        title="AI Supply Chain Optimizer - Zion Tech Group | Advanced Supply Chain Intelligence"
-        description="Transform your supply chain with AI-powered optimization. Demand forecasting, inventory management, logistics optimization, and supplier intelligence for maximum efficiency."
+        title="AI 3D Generation Pro - Zion Tech Group | Advanced 3D Content Creation"
+        description="Transform your ideas into stunning 3D models with AI 3D Generation Pro. Text-to-3D, image-to-3D, and automated 3D content creation for all industries."
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -174,36 +173,36 @@ export default function AISupplyChainOptimizer() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-                <Globe className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">Advanced Supply Chain Intelligence</span>
+                <Box className="w-4 h-4 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 text-sm font-medium">Advanced 3D AI Technology</span>
               </div>
               
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  AI Supply Chain Optimizer
+                  AI 3D Generation Pro
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Revolutionize your supply chain with AI-powered optimization. Demand forecasting, inventory management, 
-                logistics optimization, and supplier intelligence for maximum efficiency and cost savings.
+                Transform your ideas into stunning 3D models with AI-powered generation. Text-to-3D, image-to-3D, 
+                and automated 3D content creation for product design, architecture, gaming, and more.
               </p>
               
               <div className="flex flex-wrap justify-center gap-4 mb-12">
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">25% cost reduction</span>
+                  <span className="text-sm">90% faster creation</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">40% accuracy improvement</span>
+                  <span className="text-sm">16+ format support</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">Real-time optimization</span>
+                  <span className="text-sm">Real-time rendering</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">Multi-industry support</span>
+                  <span className="text-sm">Cloud processing</span>
                 </div>
               </div>
 
@@ -212,7 +211,7 @@ export default function AISupplyChainOptimizer() {
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
-                  Get Supply Chain Demo
+                  Get 3D Demo
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
                 <Link
@@ -233,11 +232,11 @@ export default function AISupplyChainOptimizer() {
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Advanced Optimization Features
+                  Advanced 3D Generation Features
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Comprehensive supply chain intelligence powered by cutting-edge AI technology
+                Comprehensive 3D content creation powered by cutting-edge AI technology
               </p>
             </div>
 
@@ -257,39 +256,8 @@ export default function AISupplyChainOptimizer() {
           </div>
         </div>
 
-        {/* Optimization Areas */}
+        {/* Applications */}
         <div className="py-16 bg-black/20 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Optimization Areas
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Comprehensive supply chain optimization across all critical areas
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {optimizationAreas.map((area, index) => (
-                <div
-                  key={index}
-                  className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
-                >
-                  <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${area.color} rounded-xl mb-6`}>
-                    <div className="text-white">{area.icon}</div>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{area.title}</h3>
-                  <p className="text-gray-300">{area.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Industries */}
-        <div className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -298,17 +266,48 @@ export default function AISupplyChainOptimizer() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Proven solutions across diverse industries and supply chain models
+                Transform your industry with AI-powered 3D content creation
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-4">
-              {industries.map((industry, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {applications.map((app, index) => (
+                <div
+                  key={index}
+                  className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
+                >
+                  <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${app.color} rounded-xl mb-6`}>
+                    <div className="text-white">{app.icon}</div>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{app.title}</h3>
+                  <p className="text-gray-300">{app.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Supported Formats */}
+        <div className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                  Supported 3D Formats
+                </span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Export to all major 3D formats for seamless integration
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+              {supportedFormats.map((format, index) => (
                 <div
                   key={index}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-lg p-4 border border-white/10 text-center hover:border-white/20 transition-all duration-300"
                 >
-                  <div className="text-white font-medium text-sm">{industry}</div>
+                  <div className="text-white font-medium text-sm">{format}</div>
                 </div>
               ))}
             </div>
@@ -325,7 +324,7 @@ export default function AISupplyChainOptimizer() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Measurable results that drive supply chain excellence
+                Measurable results that drive creative and business success
               </p>
             </div>
 
@@ -355,7 +354,7 @@ export default function AISupplyChainOptimizer() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Choose the perfect plan for your supply chain optimization needs
+                Choose the perfect plan for your 3D content creation needs
               </p>
             </div>
 
@@ -415,11 +414,11 @@ export default function AISupplyChainOptimizer() {
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Customer Success Stories
+                  Creative Success Stories
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                See how companies are optimizing their supply chains with AI
+                See how creators are revolutionizing their 3D workflows
               </p>
             </div>
 
@@ -456,10 +455,10 @@ export default function AISupplyChainOptimizer() {
         <div className="py-16 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Optimize Your Supply Chain?
+              Ready to Create Stunning 3D Content?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start your free trial today and experience the power of AI supply chain optimization. 
+              Start your free trial today and experience the power of AI 3D generation. 
               No setup fees, cancel anytime.
             </p>
             

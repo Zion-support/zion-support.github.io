@@ -192,18 +192,42 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/ai-analytics"
+                  to="/ai-voice-assistant-pro"
                   className="text-gray-400 hover:text-cyan-400 transition-colors"
                 >
-                  AI Analytics
+                  AI Voice Assistant Pro
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/ai-automation"
+                  to="/ai-blockchain-analytics-pro"
                   className="text-gray-400 hover:text-cyan-400 transition-colors"
                 >
-                  AI Automation
+                  AI Blockchain Analytics Pro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-climate-prediction-engine"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                >
+                  AI Climate Prediction Engine
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-3d-generation-pro"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                >
+                  AI 3D Generation Pro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-supply-chain-optimizer"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                >
+                  AI Supply Chain Optimizer
                 </Link>
               </li>
               <li>
@@ -220,14 +244,6 @@ const Footer = React.memo(() => {
                   className="text-gray-400 hover:text-cyan-400 transition-colors"
                 >
                   AI Customer Service
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/ai-cybersecurity"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
-                >
-                  AI Cybersecurity
                 </Link>
               </li>
             </ul>
@@ -338,6 +354,22 @@ const Footer = React.memo(() => {
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
                   Zion Project Master
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-email-automation"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Zion Email Automation
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-crm-intelligence"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Zion CRM Intelligence
                 </Link>
               </li>
             </ul>

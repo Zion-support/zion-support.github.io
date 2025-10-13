@@ -12,6 +12,11 @@ const EnhancedNavigation = () => {
       href: '/ai-services',
       icon: <Brain className="w-4 h-4" />,
       dropdown: [
+        { label: 'AI Voice Assistant Pro', href: '/ai-voice-assistant-pro' },
+        { label: 'AI Blockchain Analytics Pro', href: '/ai-blockchain-analytics-pro' },
+        { label: 'AI Climate Prediction Engine', href: '/ai-climate-prediction-engine' },
+        { label: 'AI 3D Generation Pro', href: '/ai-3d-generation-pro' },
+        { label: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer' },
         { label: 'Business Intelligence', href: '/ai-business-intelligence' },
         { label: 'Content Generation', href: '/ai-content-generation' },
         { label: 'Customer Support', href: '/ai-customer-support' },
@@ -51,6 +56,12 @@ const EnhancedNavigation = () => {
         { label: 'Zion Data Sync', href: '/zion-data-sync' },
         { label: 'Zion Lead Magnet', href: '/zion-lead-magnet' },
         { label: 'Zion Project Master', href: '/zion-project-master' },
+        { label: 'Zion Email Automation', href: '/zion-email-automation' },
+        { label: 'Zion CRM Intelligence', href: '/zion-crm-intelligence' },
+        { label: 'Zion AI Customer Service Pro', href: '/zion-ai-customer-service-pro' },
+        { label: 'Zion Workflow Automation', href: '/zion-workflow-automation' },
+        { label: 'Zion AI Accounting Assistant', href: '/zion-ai-accounting-assistant' },
+        { label: 'Zion Social Scheduler', href: '/zion-social-scheduler' },
         { label: 'View All Micro SAAS', href: '/micro-saas' }
       ]
     },

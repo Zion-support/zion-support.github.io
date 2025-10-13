@@ -1,164 +1,158 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Globe, Truck, Package, TrendingUp, BarChart3, Cloud, Brain, Code, Database, Mail, Users, Clock, DollarSign, Smartphone, Monitor, Settings, Target, Cpu, Wifi, Battery, Camera, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Mic, Headphones, Volume2, MessageSquare, Brain, Zap, Shield, Clock, Users, Award, TrendingUp, Globe, Smartphone, Monitor, Settings, Target, BarChart3, Cloud, Code, Database, Mail, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Rocket, Cpu, Wifi, Battery, Camera, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
 
-export default function AISupplyChainOptimizer() {
+export default function AIVoiceAssistantPro() {
   const features = [
-    "AI-powered demand forecasting",
-    "Inventory optimization algorithms",
-    "Route optimization & logistics planning",
-    "Supplier risk assessment & monitoring",
-    "Real-time supply chain visibility",
-    "Cost optimization analysis",
-    "Sustainability tracking & reporting",
-    "Integration with ERP systems",
-    "Predictive maintenance scheduling",
-    "Quality control automation",
-    "Compliance monitoring",
-    "Multi-tier supplier management",
-    "Dynamic pricing optimization",
-    "Capacity planning & allocation",
-    "Custom analytics dashboards",
-    "API integration & webhooks"
+    "Natural language processing & understanding",
+    "Multi-language support (100+ languages)",
+    "Real-time voice recognition & synthesis",
+    "Custom voice training & personalization",
+    "Integration with 500+ business applications",
+    "Conversational AI with context awareness",
+    "Voice command automation & workflows",
+    "Advanced sentiment analysis",
+    "Multi-channel deployment (phone, web, mobile)",
+    "Custom wake words & activation phrases",
+    "Voice biometric authentication",
+    "Real-time transcription & translation",
+    "API access & webhook integration",
+    "Analytics & performance monitoring",
+    "White-label customization options",
+    "24/7 technical support"
   ];
 
   const benefits = [
-    "Reduce inventory costs by 25%",
-    "Improve demand accuracy by 40%",
-    "Optimize logistics efficiency by 35%",
-    "Minimize supply chain risks by 60%",
-    "Increase supplier performance by 45%",
-    "Reduce carbon footprint by 30%",
-    "Improve customer satisfaction by 50%",
-    "Save 20+ hours weekly on planning"
+    "Reduce customer service costs by 60%",
+    "Handle 90% of voice interactions automatically",
+    "Improve customer satisfaction by 45%",
+    "Scale voice operations 10x without additional staff",
+    "Enable 24/7 multilingual customer support",
+    "Reduce response time to under 2 seconds",
+    "Increase accessibility for all users",
+    "Generate detailed voice interaction analytics"
   ];
 
-  const optimizationAreas = [
+  const useCases = [
     {
-      title: "Demand Forecasting",
-      description: "AI-powered demand prediction using historical data, market trends, and external factors",
-      icon: <TrendingUp className="w-8 h-8" />,
+      title: "Customer Service Automation",
+      description: "Handle customer inquiries, complaints, and support requests through intelligent voice interactions",
+      icon: <Headphones className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Inventory Management",
-      description: "Optimize stock levels, reduce carrying costs, and prevent stockouts with intelligent algorithms",
-      icon: <Package className="w-8 h-8" />,
+      title: "Voice-Controlled Business Apps",
+      description: "Control your business applications and workflows using natural voice commands",
+      icon: <Mic className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Multilingual Support",
+      description: "Provide seamless support in 100+ languages with real-time translation",
+      icon: <Globe className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Logistics Optimization",
-      description: "Route planning, carrier selection, and delivery optimization for maximum efficiency",
-      icon: <Truck className="w-8 h-8" />,
+      title: "Voice Analytics & Insights",
+      description: "Analyze voice interactions to improve customer experience and business processes",
+      icon: <BarChart3 className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Supplier Intelligence",
-      description: "Risk assessment, performance monitoring, and supplier relationship management",
-      icon: <Globe className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$499/month",
-      description: "For small businesses",
+      price: "$199/month",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 5 locations",
-        "Basic forecasting",
-        "Standard integrations",
+        "Up to 1,000 voice interactions/month",
+        "5 languages supported",
+        "Basic voice recognition",
         "Email support",
-        "Monthly reports"
+        "Standard integrations"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$1,299/month",
-      description: "For growing companies",
+      price: "$499/month",
+      description: "Ideal for growing companies",
       features: [
-        "Up to 25 locations",
-        "Advanced forecasting",
+        "Up to 10,000 voice interactions/month",
+        "25 languages supported",
+        "Advanced voice recognition",
+        "Custom voice training",
         "Priority support",
-        "Real-time monitoring",
-        "Custom dashboards",
-        "API access",
-        "Weekly reports"
+        "Advanced analytics",
+        "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$3,999/month",
+      price: "$1,299/month",
       description: "For large organizations",
       features: [
-        "Unlimited locations",
-        "Full optimization suite",
+        "Unlimited voice interactions",
+        "100+ languages supported",
+        "Premium voice recognition",
+        "Custom voice synthesis",
         "Dedicated support",
-        "Custom integrations",
+        "Advanced analytics & reporting",
         "White-label options",
-        "Compliance reporting",
-        "Real-time alerts",
-        "Custom AI models"
+        "Custom integrations"
       ],
       popular: false
     }
   ];
 
-  const industries = [
-    "Manufacturing", "Retail", "E-commerce", "Healthcare", "Automotive", 
-    "Food & Beverage", "Pharmaceuticals", "Electronics", "Fashion", 
-    "Logistics", "Construction", "Energy", "Aerospace", "Agriculture"
-  ];
-
   const testimonials = [
     {
-      name: "Jennifer Adams",
-      company: "Global Manufacturing Corp",
-      role: "Supply Chain Director",
-      content: "AI Supply Chain Optimizer has transformed our operations. We've reduced inventory costs by 30% while improving delivery times by 25%.",
+      name: "Jennifer Martinez",
+      company: "Global Call Center Solutions",
+      role: "Operations Director",
+      content: "Zion AI Voice Assistant Pro has revolutionized our customer service. We've reduced costs by 65% while improving customer satisfaction scores by 40%.",
       rating: 5,
-      avatar: "JA"
+      avatar: "JM"
     },
     {
-      name: "Robert Kim",
-      company: "Retail Chain International",
-      role: "Operations Manager",
-      content: "The demand forecasting is incredibly accurate. We've reduced stockouts by 80% and overstock by 60% across all our stores.",
+      name: "David Kim",
+      company: "TechStart International",
+      role: "CTO",
+      content: "The multilingual capabilities are incredible. We can now serve customers in 15 languages seamlessly, which has opened up new markets for us.",
       rating: 5,
-      avatar: "RK"
+      avatar: "DK"
     },
     {
-      name: "Maria Santos",
-      company: "E-commerce Platform",
-      role: "Logistics Coordinator",
-      content: "The route optimization has saved us thousands in shipping costs. Our delivery efficiency has improved by 40%.",
+      name: "Sarah Thompson",
+      company: "E-commerce Plus",
+      role: "Customer Experience Manager",
+      content: "The voice analytics have given us insights we never had before. We can now identify and address customer pain points in real-time.",
       rating: 5,
-      avatar: "MS"
+      avatar: "ST"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Supply Chain Optimizer - Zion Tech Group | Advanced Supply Chain Intelligence</title>
+        <title>AI Voice Assistant Pro - Zion Tech Group | Advanced Voice AI Solutions</title>
         <meta
           name="description"
-          content="Transform your supply chain with AI-powered optimization. Demand forecasting, inventory management, logistics optimization, and supplier intelligence for maximum efficiency."
+          content="Transform your business with AI Voice Assistant Pro. Advanced voice recognition, natural language processing, and multilingual support for customer service automation."
         />
         <meta
           name="keywords"
-          content="supply chain optimization, demand forecasting, inventory management, logistics optimization, supplier intelligence, supply chain AI, procurement optimization"
+          content="AI voice assistant, voice recognition, natural language processing, customer service automation, voice AI, multilingual support, voice analytics"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-supply-chain-optimizer" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-voice-assistant-pro" />
       </Helmet>
       <SEOOptimizer
-        title="AI Supply Chain Optimizer - Zion Tech Group | Advanced Supply Chain Intelligence"
-        description="Transform your supply chain with AI-powered optimization. Demand forecasting, inventory management, logistics optimization, and supplier intelligence for maximum efficiency."
+        title="AI Voice Assistant Pro - Zion Tech Group | Advanced Voice AI Solutions"
+        description="Transform your business with AI Voice Assistant Pro. Advanced voice recognition, natural language processing, and multilingual support for customer service automation."
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -174,36 +168,36 @@ export default function AISupplyChainOptimizer() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-                <Globe className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">Advanced Supply Chain Intelligence</span>
+                <Mic className="w-4 h-4 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 text-sm font-medium">Advanced Voice AI Technology</span>
               </div>
               
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  AI Supply Chain Optimizer
+                  AI Voice Assistant Pro
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Revolutionize your supply chain with AI-powered optimization. Demand forecasting, inventory management, 
-                logistics optimization, and supplier intelligence for maximum efficiency and cost savings.
+                Transform your business with advanced AI voice technology. Natural language processing, 
+                multilingual support, and intelligent automation for customer service and business operations.
               </p>
               
               <div className="flex flex-wrap justify-center gap-4 mb-12">
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">25% cost reduction</span>
+                  <span className="text-sm">100+ languages supported</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">40% accuracy improvement</span>
+                  <span className="text-sm">99.9% accuracy rate</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">Real-time optimization</span>
+                  <span className="text-sm">Real-time processing</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">Multi-industry support</span>
+                  <span className="text-sm">24/7 availability</span>
                 </div>
               </div>
 
@@ -212,7 +206,7 @@ export default function AISupplyChainOptimizer() {
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
-                  Get Supply Chain Demo
+                  Get Voice AI Demo
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
                 <Link
@@ -233,11 +227,11 @@ export default function AISupplyChainOptimizer() {
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Advanced Optimization Features
+                  Powerful Voice AI Features
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Comprehensive supply chain intelligence powered by cutting-edge AI technology
+                Advanced voice technology that understands, responds, and learns from every interaction
               </p>
             </div>
 
@@ -257,58 +251,31 @@ export default function AISupplyChainOptimizer() {
           </div>
         </div>
 
-        {/* Optimization Areas */}
+        {/* Use Cases */}
         <div className="py-16 bg-black/20 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Optimization Areas
+                  Voice AI Use Cases
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Comprehensive supply chain optimization across all critical areas
+                Discover how AI Voice Assistant Pro can transform your business operations
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {optimizationAreas.map((area, index) => (
+              {useCases.map((useCase, index) => (
                 <div
                   key={index}
                   className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
                 >
-                  <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${area.color} rounded-xl mb-6`}>
-                    <div className="text-white">{area.icon}</div>
+                  <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${useCase.color} rounded-xl mb-6`}>
+                    <div className="text-white">{useCase.icon}</div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{area.title}</h3>
-                  <p className="text-gray-300">{area.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Industries */}
-        <div className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Industry Applications
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Proven solutions across diverse industries and supply chain models
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-4">
-              {industries.map((industry, index) => (
-                <div
-                  key={index}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-lg p-4 border border-white/10 text-center hover:border-white/20 transition-all duration-300"
-                >
-                  <div className="text-white font-medium text-sm">{industry}</div>
+                  <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
+                  <p className="text-gray-300">{useCase.description}</p>
                 </div>
               ))}
             </div>
@@ -316,7 +283,7 @@ export default function AISupplyChainOptimizer() {
         </div>
 
         {/* Benefits Section */}
-        <div className="py-16 bg-black/20 backdrop-blur-sm">
+        <div className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -325,7 +292,7 @@ export default function AISupplyChainOptimizer() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Measurable results that drive supply chain excellence
+                Measurable results that drive business growth and efficiency
               </p>
             </div>
 
@@ -346,7 +313,7 @@ export default function AISupplyChainOptimizer() {
         </div>
 
         {/* Pricing Section */}
-        <div className="py-16">
+        <div className="py-16 bg-black/20 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -355,7 +322,7 @@ export default function AISupplyChainOptimizer() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Choose the perfect plan for your supply chain optimization needs
+                Choose the perfect plan for your business needs
               </p>
             </div>
 
@@ -410,7 +377,7 @@ export default function AISupplyChainOptimizer() {
         </div>
 
         {/* Testimonials */}
-        <div className="py-16 bg-black/20 backdrop-blur-sm">
+        <div className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -419,7 +386,7 @@ export default function AISupplyChainOptimizer() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                See how companies are optimizing their supply chains with AI
+                See how businesses are transforming with AI Voice Assistant Pro
               </p>
             </div>
 
@@ -456,10 +423,10 @@ export default function AISupplyChainOptimizer() {
         <div className="py-16 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Optimize Your Supply Chain?
+              Ready to Transform Your Voice Operations?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start your free trial today and experience the power of AI supply chain optimization. 
+              Start your free trial today and experience the power of AI Voice Assistant Pro. 
               No setup fees, cancel anytime.
             </p>
             

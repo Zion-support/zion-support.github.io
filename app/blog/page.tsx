@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react';
-import { Link } from 'react-router-dom';
-import { Calendar, User, ArrowRight, Search, Filter } from 'lucide-react';
-
-const BlogPage = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const categories = [
-    { id: 'all', name: 'All', count: 12 },
-    { id: 'ai', name: 'AI & Machine Learning', count: 5 },
-    { id: 'cybersecurity', name: 'Cybersecurity', count: 3 },
-    { id: 'cloud', name: 'Cloud Computing', count: 2 },
-    { id: 'development', name: 'Development', count: 2 }
-=======
 import React, { useState } from "react";
 import { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from "lucide-react";
 import { Helmet } from "react-helmet-async";
