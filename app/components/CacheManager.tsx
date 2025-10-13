@@ -8,7 +8,7 @@ const CacheManager = () => {
       if ('serviceWorker' in navigator) {
         try {
           const registration = await navigator.serviceWorker.register('/sw.js');
-          console.log('Service Worker registered:', registration);
+          // Service Worker registered successfully
         } catch (error) {
           console.error('Service Worker registration failed:', error);
 
@@ -34,7 +34,7 @@ const CacheManager = () => {
         try {
           const cache = await caches.open(CACHE_NAME);
           await cache.addAll(CACHE_URLS);
-          console.log('Static assets cached successfully');
+          // Static assets cached successfully
         } catch (error) {
           console.error('Failed to cache static assets:', error);
 

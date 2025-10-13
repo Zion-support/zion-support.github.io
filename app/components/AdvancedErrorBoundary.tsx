@@ -63,7 +63,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     };
 
     // Log the error data for debugging
-    console.error('Error data:', errorData);
+    // Error data logged
 
 
 
@@ -76,7 +76,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     // });
     
     // For now, just log to console
-    console.error('Error data:', errorData);
+    // Error data logged
   };
 
   handleReset = () => {

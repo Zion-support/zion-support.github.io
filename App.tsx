@@ -8,6 +8,9 @@ import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
+import AdvancedPerformanceEnhancer from "./app/components/AdvancedPerformanceEnhancer";
+import EnhancedAccessibilityManager from "./app/components/EnhancedAccessibilityManager";
+import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import EnhancedPerformanceOptimizer from "./app/components/EnhancedPerformanceOptimizer";
@@ -213,17 +216,18 @@ function App() {
   });
 
   return (
-    <ErrorHandler>
-      <EnhancedErrorBoundary>
-        <HelmetProvider>
-          <AccessibilityEnhancer>
-            <Router>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                <FuturisticBackground>
-                  <Navigation />
-                  <Breadcrumb />
-                  <main id="main-content" role="main">
-                    <Suspense fallback={<LoadingPage />}>
+    <GlobalErrorBoundary>
+      <ErrorHandler>
+        <EnhancedErrorBoundary>
+          <HelmetProvider>
+            <AccessibilityEnhancer>
+              <Router>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                  <FuturisticBackground>
+                    <Navigation />
+                    <Breadcrumb />
+                    <main id="main-content" role="main">
+                      <Suspense fallback={<LoadingPage />}>
                       <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
@@ -459,6 +463,18 @@ function App() {
                   </main>
                   <Footer />
                   <EnhancedPerformanceOptimizer />
+                  <AdvancedPerformanceEnhancer 
+                    enableImageOptimization={true}
+                    enablePreloading={true}
+                    enableCaching={true}
+                    enableCompression={true}
+                  />
+                  <EnhancedAccessibilityManager
+                    enableKeyboardNavigation={true}
+                    enableScreenReader={true}
+                    enableHighContrast={true}
+                    enableFocusManagement={true}
+                  />
                   <EnhancedAccessibility>
                     <div></div>
                   </EnhancedAccessibility>
@@ -478,6 +494,7 @@ function App() {
         </HelmetProvider>
       </EnhancedErrorBoundary>
     </ErrorHandler>
+    </GlobalErrorBoundary>
   );
 }
 
