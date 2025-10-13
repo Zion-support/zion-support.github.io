@@ -38,6 +38,12 @@ const TermsPage = React.lazy(() => import("./app/terms/page"));
 const CookiesPage = React.lazy(() => import("./app/cookies/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
 
+// Missing service pages
+const CloudServicesPage = React.lazy(() => import("./app/cloud-services/page"));
+const CybersecurityPage = React.lazy(() => import("./app/cybersecurity/page"));
+const DataAnalyticsPage = React.lazy(() => import("./app/data-analytics/page"));
+const CustomDevelopmentPage = React.lazy(() => import("./app/custom-development/page"));
+
 // AI Service Pages
 
 // IT Service Pages
@@ -209,6 +215,12 @@ function App() {
                   <Route path="/terms" element={<TermsPage />} />
                   <Route path="/cookies" element={<CookiesPage />} />
                   <Route path="/sitemap" element={<SitemapPage />} />
+
+                  {/* Missing service routes */}
+                  <Route path="/cloud-services" element={<CloudServicesPage />} />
+                  <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                  <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+                  <Route path="/custom-development" element={<CustomDevelopmentPage />} />
 
                   {/* AI Service Routes */}
 
