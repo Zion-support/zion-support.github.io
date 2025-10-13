@@ -159,7 +159,7 @@ const HomePage = () => {
       price: "From $299/month",
       icon: <Globe className="w-6 h-6" />,
       link: "/ai-climate-prediction-engine",
-      featured: false
+      featured: true
     },
     {
       name: "Neural Memory Assistant",
@@ -167,7 +167,7 @@ const HomePage = () => {
       price: "From $149/month",
       icon: <Brain className="w-6 h-6" />,
       link: "/ai-neural-memory-assistant",
-      featured: false
+      featured: true
     },
     {
       name: "AI Drug Discovery Pro",
@@ -175,7 +175,7 @@ const HomePage = () => {
       price: "From $999/month",
       icon: <BarChart3 className="w-6 h-6" />,
       link: "/ai-drug-discovery-pro",
-      featured: false
+      featured: true
     },
     {
       name: "Telepathic Interface System",
@@ -183,7 +183,7 @@ const HomePage = () => {
       price: "From $799/month",
       icon: <Brain className="w-6 h-6" />,
       link: "/ai-telepathic-interface",
-      featured: false
+      featured: true
     }
   ];
 
@@ -258,7 +258,7 @@ const HomePage = () => {
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+            <span className="holographic-text glitch" data-text="Welcome to Zion Tech Group">
               Welcome to Zion Tech Group
             </span>
           </h1>
@@ -274,6 +274,7 @@ const HomePage = () => {
               variant="primary"
               size="lg"
               icon={<Sparkles className="w-5 h-5" />}
+              className="cyber-button neon-glow"
             >
               Get Started Today
             </FuturisticButton>
@@ -282,6 +283,7 @@ const HomePage = () => {
               variant="outline"
               size="lg"
               icon={<Monitor className="w-5 h-5" />}
+              className="neon-glow"
             >
               Watch Demo
             </FuturisticButton>
@@ -318,7 +320,7 @@ const HomePage = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 cursor-pointer"
+                className="group futuristic-card-hover bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 cursor-pointer"
               >
                 <Link
                   to={feature.link}

@@ -239,13 +239,33 @@ const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
   }, []);
 
   return (
-    <div className="relative min-h-screen cyber-grid-enhanced">
+    <div className="relative min-h-screen quantum-particles neural-network">
+      {/* Quantum Field Background */}
+      <div className="absolute inset-0 quantum-field"></div>
+      
+      {/* Cyber Grid */}
+      <div className="absolute inset-0 cyber-grid opacity-20"></div>
+      
+      {/* Matrix Rain Effect */}
+      <div className="absolute inset-0 matrix-rain opacity-10"></div>
+      
+      {/* Neural Network Canvas */}
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full"
+        className="absolute inset-0 w-full h-full gpu-accelerated"
         style={{ zIndex: 1 }}
       />
+      
+      {/* Holographic Overlay */}
+      <div className="absolute inset-0 holographic opacity-5"></div>
+      
+      {/* Quantum Tunnel Effect */}
+      <div className="absolute inset-0 quantum-tunnel opacity-10"></div>
+      
+      {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900/50 via-purple-900/30 to-slate-900/50" style={{ zIndex: 2 }} />
+      
+      {/* Content */}
       <div className="relative z-10">
         {children}
       </div>
