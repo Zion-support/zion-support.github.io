@@ -40,6 +40,27 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
+      name: "Zion AI Chatbot Builder",
+      description: "No-code AI chatbot creation platform",
+      price: "From $29/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/zion-ai-chatbot-builder"
+    },
+    {
+      name: "Zion Smart Inventory",
+      description: "AI-powered inventory management",
+      price: "From $49/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/zion-smart-inventory"
+    },
+    {
+      name: "Zion Email Genius",
+      description: "AI-powered email marketing platform",
+      price: "From $39/month",
+      icon: <Mail className="w-6 h-6" />,
+      link: "/zion-email-genius"
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform",
       price: "From $29/month",
@@ -215,8 +236,8 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {microSaasHighlights.map((saas, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
                 to={saas.link}

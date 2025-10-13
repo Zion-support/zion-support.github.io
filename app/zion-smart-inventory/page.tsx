@@ -2,9 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Mic, 
-  Volume2, 
-  Brain, 
+  Package, 
+  TrendingUp, 
+  AlertTriangle, 
   BarChart3, 
   Smartphone, 
   CheckCircle, 
@@ -12,6 +12,7 @@ import {
   Star,
   Users,
   Clock,
+  Brain,
   Settings,
   Code,
   Database,
@@ -21,153 +22,150 @@ import {
   Zap,
   Shield,
   Globe,
+  Target,
   DollarSign,
-  Headphones,
-  MessageCircle,
-  Calendar,
-  FileText,
-  Bot,
-  Speaker,
-  Radio
+  ShoppingCart,
+  Truck,
+  Warehouse
 } from 'lucide-react';
 
-export default function AIVoiceAssistant() {
+export default function ZionSmartInventory() {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "Natural Language Processing",
-      description: "Advanced NLP for human-like conversations and understanding"
+      title: "AI-Powered Forecasting",
+      description: "Predict demand with 95% accuracy using machine learning algorithms"
     },
     {
-      icon: <Volume2 className="w-6 h-6" />,
-      title: "Multi-Language Support",
-      description: "Support for 50+ languages with native pronunciation"
+      icon: <AlertTriangle className="w-6 h-6" />,
+      title: "Smart Alerts",
+      description: "Get notified before stockouts with intelligent reorder points"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Conversation Analytics",
-      description: "Detailed insights into user interactions and satisfaction"
+      title: "Real-time Analytics",
+      description: "Comprehensive dashboards with actionable insights"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Real-time Processing",
-      description: "Ultra-low latency voice processing for seamless interactions"
+      title: "Automated Reordering",
+      description: "Set up automatic purchase orders based on demand patterns"
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Enterprise Security",
-      description: "End-to-end encryption and compliance with industry standards"
+      title: "Multi-location Support",
+      description: "Manage inventory across multiple warehouses and stores"
     },
     {
       icon: <Code className="w-6 h-6" />,
       title: "API Integration",
-      description: "Easy integration with existing systems and platforms"
+      description: "Seamlessly connect with your existing systems and tools"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$49",
       period: "/month",
       description: "Perfect for small businesses",
       features: [
-        "Up to 1,000 voice interactions/month",
-        "Basic voice recognition",
+        "Up to 1,000 SKUs",
+        "Basic forecasting",
         "Email support",
-        "Standard voice models",
-        "Basic analytics",
-        "1 language support"
+        "Standard reports",
+        "Mobile app access",
+        "1 warehouse location"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$149",
       period: "/month",
       description: "Ideal for growing businesses",
       features: [
-        "Up to 10,000 voice interactions/month",
-        "Advanced voice recognition",
+        "Up to 10,000 SKUs",
+        "Advanced AI forecasting",
         "Priority support",
-        "Custom voice models",
-        "Advanced analytics",
-        "Multi-language support",
+        "Custom analytics",
+        "Multi-location support",
         "API access",
-        "Custom wake words"
+        "Automated reordering",
+        "3 warehouse locations"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$399",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited voice interactions",
+        "Unlimited SKUs",
         "Custom AI models",
         "24/7 dedicated support",
         "White-label solution",
         "Advanced integrations",
         "Custom development",
-        "SLA guarantee",
-        "On-premise deployment"
+        "Unlimited locations",
+        "SLA guarantee"
       ],
       popular: false
     }
   ];
 
-  const useCases = [
+  const benefits = [
     {
-      title: "Customer Service",
-      description: "24/7 voice support with intelligent call routing and resolution",
-      icon: <Headphones className="w-8 h-8" />,
-      benefits: ["Reduce call wait times", "Improve customer satisfaction", "Lower support costs"]
+      title: "Reduce Stockouts",
+      description: "Minimize lost sales with intelligent demand forecasting",
+      icon: <AlertTriangle className="w-8 h-8" />,
+      stat: "85% reduction"
     },
     {
-      title: "Virtual Receptionist",
-      description: "Automated call handling and appointment scheduling",
-      icon: <Phone className="w-8 h-8" />,
-      benefits: ["Never miss a call", "Professional greeting", "Efficient call routing"]
-    },
-    {
-      title: "Voice Commerce",
-      description: "Enable voice-based shopping and transactions",
+      title: "Lower Inventory Costs",
+      description: "Optimize stock levels to reduce carrying costs",
       icon: <DollarSign className="w-8 h-8" />,
-      benefits: ["Increase sales", "Improve user experience", "Faster checkout"]
+      stat: "30% savings"
     },
     {
-      title: "Smart Home Control",
-      description: "Voice control for IoT devices and home automation",
-      icon: <Home className="w-8 h-8" />,
-      benefits: ["Convenient control", "Energy efficiency", "Enhanced security"]
+      title: "Improve Efficiency",
+      description: "Automate manual processes and reduce errors",
+      icon: <Zap className="w-8 h-8" />,
+      stat: "60% faster"
+    },
+    {
+      title: "Better Decisions",
+      description: "Make data-driven inventory decisions with real-time insights",
+      icon: <BarChart3 className="w-8 h-8" />,
+      stat: "95% accuracy"
     }
   ];
 
-  const industries = [
-    { name: "Healthcare", description: "Patient scheduling and medical inquiries", icon: "🏥" },
-    { name: "Banking", description: "Account inquiries and transaction support", icon: "🏦" },
-    { name: "Retail", description: "Product information and order assistance", icon: "🛍️" },
-    { name: "Travel", description: "Booking assistance and travel information", icon: "✈️" },
-    { name: "Education", description: "Student support and course information", icon: "🎓" },
-    { name: "Real Estate", description: "Property inquiries and appointment scheduling", icon: "🏠" },
-    { name: "Automotive", description: "Service appointments and vehicle information", icon: "🚗" },
-    { name: "Restaurants", description: "Reservation management and menu assistance", icon: "🍽️" }
+  const integrations = [
+    { name: "Shopify", logo: "🛍️" },
+    { name: "WooCommerce", logo: "🛒" },
+    { name: "Amazon", logo: "📦" },
+    { name: "eBay", logo: "🏪" },
+    { name: "QuickBooks", logo: "📊" },
+    { name: "Xero", logo: "💰" },
+    { name: "SAP", logo: "🏢" },
+    { name: "Oracle", logo: "🔮" }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Conversational AI Platform | Zion Tech Group</title>
+        <title>Zion Smart Inventory - AI-Powered Inventory Management | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform customer interactions with our AI Voice Assistant. Advanced NLP, multi-language support, real-time processing, and enterprise security. Reduce support costs by 60% and improve customer satisfaction. Start free trial today."
+          content="Revolutionize your inventory management with Zion Smart Inventory. AI-powered forecasting, automated reordering, and real-time analytics. Reduce stockouts by 85% and cut costs by 30%. Start free trial today."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, conversational AI, voice recognition, natural language processing, voice automation, customer service AI, virtual assistant, voice commerce, smart home control"
+          content="inventory management, AI forecasting, stock management, automated reordering, inventory analytics, warehouse management, supply chain, demand forecasting, stock optimization"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-voice-assistant" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-smart-inventory" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -180,20 +178,20 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-                <Mic className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">Conversational AI Platform</span>
+                <Package className="w-4 h-4 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 text-sm font-medium">AI-Powered Inventory Management</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                AI Voice
+                Zion Smart
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                  {" "}Assistant
+                  {" "}Inventory
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Transform customer interactions with our advanced AI Voice Assistant. Featuring natural language processing, 
-                multi-language support, and real-time voice processing for seamless conversational experiences.
+                Transform your inventory management with AI-powered forecasting, automated reordering, and real-time analytics. 
+                Reduce stockouts by 85% and cut inventory costs by 30% with intelligent automation.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -209,27 +207,27 @@ export default function AIVoiceAssistant() {
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
                 >
                   Watch Demo
-                  <Mic className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                  <Package className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
                 </Link>
               </div>
 
               {/* Key Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
-                  <div className="text-gray-300 text-sm">Languages Supported</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">85%</div>
+                  <div className="text-gray-300 text-sm">Reduction in Stockouts</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">60%</div>
-                  <div className="text-gray-300 text-sm">Cost Reduction</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">30%</div>
+                  <div className="text-gray-300 text-sm">Cost Savings</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-pink-400 mb-2">95%</div>
-                  <div className="text-gray-300 text-sm">Accuracy Rate</div>
+                  <div className="text-gray-300 text-sm">Forecast Accuracy</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
-                  <div className="text-gray-300 text-sm">Availability</div>
+                  <div className="text-gray-300 text-sm">Monitoring</div>
                 </div>
               </div>
             </div>
@@ -241,13 +239,13 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Advanced AI
+                Powerful Features for
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Capabilities
+                  {" "}Smart Inventory
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powered by cutting-edge AI technology to deliver natural, intelligent voice interactions.
+                Everything you need to optimize your inventory, reduce costs, and never run out of stock again.
               </p>
             </div>
             
@@ -272,77 +270,67 @@ export default function AIVoiceAssistant() {
           </div>
         </section>
 
-        {/* Use Cases Section */}
+        {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Perfect for Every
+                Proven Business
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-                  {" "}Industry
+                  {" "}Benefits
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                From healthcare to retail, our AI Voice Assistant adapts to your specific industry needs.
+                Join thousands of businesses that have transformed their inventory management with our AI-powered platform.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
+              {benefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 text-center"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {useCase.icon}
+                    {benefit.icon}
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-purple-400 transition-colors text-center">
-                    {useCase.title}
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{benefit.stat}</div>
+                  <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                    {benefit.title}
                   </h3>
-                  <p className="text-gray-300 text-sm leading-relaxed mb-4 text-center">
-                    {useCase.description}
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {benefit.description}
                   </p>
-                  <ul className="space-y-2">
-                    {useCase.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                        <span>{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Industries Section */}
+        {/* Integrations Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Trusted by
+                Seamless
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Leading Industries
+                  {" "}Integrations
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI Voice Assistant is trusted by businesses across various industries worldwide.
+                Connect with your favorite tools and platforms. No more manual data entry or duplicate work.
               </p>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-              {industries.map((industry, index) => (
+              {integrations.map((integration, index) => (
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 text-center"
                 >
-                  <div className="text-4xl mb-2">{industry.icon}</div>
-                  <div className="text-white font-medium text-sm group-hover:text-cyan-400 transition-colors mb-1">
-                    {industry.name}
-                  </div>
-                  <div className="text-gray-400 text-xs leading-relaxed">
-                    {industry.description}
+                  <div className="text-4xl mb-2">{integration.logo}</div>
+                  <div className="text-white font-medium text-sm group-hover:text-cyan-400 transition-colors">
+                    {integration.name}
                   </div>
                 </div>
               ))}
@@ -355,13 +343,13 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Flexible
+                Simple, Transparent
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Pricing Plans
+                  {" "}Pricing
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your business needs. All plans include our core AI capabilities.
+                Choose the perfect plan for your business. All plans include our core features with no hidden fees.
               </p>
             </div>
             
@@ -423,10 +411,10 @@ export default function AIVoiceAssistant() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Customer Interactions?
+              Ready to Optimize Your Inventory?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses using our AI Voice Assistant to improve customer satisfaction and reduce operational costs.
+              Join thousands of businesses using Zion Smart Inventory to reduce costs, eliminate stockouts, and grow faster.
             </p>
             
             {/* Contact Information */}
@@ -467,7 +455,7 @@ export default function AIVoiceAssistant() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Schedule Demo
-                <Mic className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Package className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>
