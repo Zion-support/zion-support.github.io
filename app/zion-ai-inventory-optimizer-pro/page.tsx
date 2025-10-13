@@ -10,32 +10,12 @@ import {
   Star, 
   Clock, 
   Zap, 
-<<<<<<< HEAD
-=======
-
-
-
-
-
->>>>>>> 16298d5b7981c71a386c4e8d112e77e49ff2ba16
   Sparkles,
   Cpu,
   Globe,
   AlertTriangle,
   ShoppingCart,
-<<<<<<< HEAD
   Truck
-=======
-  Truck,
-
-  Globe
-
-
-  Zap
-
-
-
->>>>>>> 16298d5b7981c71a386c4e8d112e77e49ff2ba16
 } from 'lucide-react';
 
 const ZionAIInventoryOptimizerProPage: React.FC = () => {

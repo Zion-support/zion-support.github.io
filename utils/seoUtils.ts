@@ -2,22 +2,10 @@ export interface SEOConfig {
   title: string;
   description: string;
   keywords: string[];
-<<<<<<< HEAD
-=======
-
-
-  canonicalUrl?: string;
-  ogImage?: string;
-
->>>>>>> 16298d5b7981c71a386c4e8d112e77e49ff2ba16
   canonicalUrl: string;
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-
-  canonical?: string;
-  ogImage?: string;
-
 }
 
 export class SEOUtils {
@@ -27,16 +15,11 @@ export class SEOUtils {
     this.config = config;
   }
 
-
-
-
-
   generateMetaTags() {
     return {
       title: this.config.title,
       description: this.config.description,
       keywords: this.config.keywords.join(', '),
-
       canonical: this.config.canonicalUrl,
       'og:title': this.config.title,
       'og:description': this.config.description,
@@ -141,14 +124,6 @@ export class SEOUtils {
     this.updateTwitterCard();
     this.generateStructuredData();
   }
-
-      canonical: this.config.canonical,
-      'og:title': this.config.title,
-      'og:description': this.config.description,
-      'og:image': this.config.ogImage,
-    };
-  }
-
 }
 
 export default SEOUtils;
