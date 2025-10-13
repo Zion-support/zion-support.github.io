@@ -1,8 +1,7 @@
-// Performanceutils utility functions
-
-export function performanceutils() {
-  // Implementation here
-  return null;
-}
-
-export default performanceutils;
+// performanceUtils utility
+export const performanceUtils = {
+  // Utility implementation
+  init: () => {
+    console.log('performanceUtils initialized');
+  }
+};

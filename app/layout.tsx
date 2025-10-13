@@ -1,14 +1,18 @@
 import React from 'react';
 
-interface LayoutProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Layout({ className = '', children, ...props }: LayoutProps) {
+export default function Layout() {
   return (
-    <div className={`layout-component ${className}`} {...props}>
-      {children}
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Layout
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            This page is under development. Please check back later.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

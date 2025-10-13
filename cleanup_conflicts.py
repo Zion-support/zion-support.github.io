@@ -15,9 +15,9 @@ def cleanup_file(file_path):
         original_content = content
         
         # Remove all merge conflict markers
-        content = re.sub(r'<<<<<<< HEAD.*?=======.*?>>>>>>>.*?', '', content, flags=re.DOTALL)
-        content = re.sub(r'=======.*?>>>>>>>.*?', '', content, flags=re.DOTALL)
-        content = re.sub(r'<<<<<<< HEAD.*?=======', '', content, flags=re.DOTALL)
+        content = re.sub(r'.*?>>>>>>>.*?', '', content, flags=re.DOTALL)
+        content = re.sub(r'.*?>>>>>>>.*?', '', content, flags=re.DOTALL)
+        content = re.sub(r'', '', content, flags=re.DOTALL)
         content = re.sub(r'>>>>>>>.*?', '', content, flags=re.DOTALL)
         
         # Remove branch references

@@ -1,8 +1,7 @@
-// Analyticstracker utility functions
-
-export function analyticstracker() {
-  // Implementation here
-  return null;
-}
-
-export default analyticstracker;
+// analyticsTracker utility
+export const analyticsTracker = {
+  // Utility implementation
+  init: () => {
+    console.log('analyticsTracker initialized');
+  }
+};

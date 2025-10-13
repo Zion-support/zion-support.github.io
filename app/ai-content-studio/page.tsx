@@ -118,7 +118,7 @@ const AIContentStudioZionTechGroup = () => {
     }
   ];
 
-export default function AiContentStudioPage() {
+export default function Page() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

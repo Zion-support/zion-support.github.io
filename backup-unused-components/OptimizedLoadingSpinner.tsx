@@ -141,3 +141,4 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(</O
 OptimizedLoadingSpinner.displayName = "OptimizedLoadingSpinner";
 export default OptimizedLoadingSpinner;
 </OptimizedLoadingSpinnerProps>
+</div>

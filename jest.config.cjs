@@ -1,4 +1,5 @@
 module.exports = {
+
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.cjs'],
   moduleNameMapper: {
@@ -10,9 +11,12 @@ module.exports = {
   testMatch: [
     '**/__tests__/**/*.(ts|tsx)',
     '**/*.(test|spec).(ts|tsx)',
+
   ],
   collectCoverageFrom: [
     'app/**/*.{ts,tsx}',
     '!app/**/*.d.ts',
+
   ],
 };
+

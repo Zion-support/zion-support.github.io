@@ -177,7 +177,7 @@ export default function AICustomerSupportChatbot() {
     }
   ];
 
-export default function AiCustomerSupportChatbotPage() {
+export default function Page() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

@@ -21,7 +21,6 @@ export function usePerformanceMonitor() {
   });
 
   useEffect(() => {
-    // Implementation here
     setState('initialized');
   }, []);
 

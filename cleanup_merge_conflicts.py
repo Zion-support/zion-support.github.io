@@ -11,13 +11,12 @@ def clean_merge_conflicts(file_path):
         
         # Remove merge conflict markers and keep the HEAD version
         # Pattern to match merge conflicts and keep the HEAD version
-        pattern = r'<<<<<<< HEAD\n(.*?)\n=======.*?\n>>>>>>> [^\n]+\n'
+        pattern = r'.*?\n
         cleaned_content = re.sub(pattern, r'\1\n', content, flags=re.DOTALL)
         
         # Remove any remaining merge conflict markers
-        cleaned_content = re.sub(r'<<<<<<< HEAD\n', '', cleaned_content)
-        cleaned_content = re.sub(r'=======\n', '', cleaned_content)
-        cleaned_content = re.sub(r'>>>>>>> [^\n]+\n', '', cleaned_content)
+        cleaned_content = re.sub(r'\n', '', cleaned_content)
+        cleaned_content = re.sub(r'
         
         # Write the cleaned content back
         with open(file_path, 'w', encoding='utf-8') as f:
@@ -40,7 +39,7 @@ def main():
                 # Check if file has merge conflicts
                 with open(file_path, 'r', encoding='utf-8') as f:
                     content = f.read()
-                    if '<<<<<<< HEAD' in content:
+                    if '' in content:
                         clean_merge_conflicts(file_path)
 
 if __name__ == "__main__":

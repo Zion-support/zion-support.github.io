@@ -110,7 +110,7 @@ export default function Page() {
     }
   ];
 
-export default function AiHealthcareDiagnosticsPage() {
+export default function Page() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

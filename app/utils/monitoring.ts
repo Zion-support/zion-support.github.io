@@ -1,8 +1,7 @@
-// Monitoring utility functions
-
-export function monitoring() {
-  // Implementation here
-  return null;
-}
-
-export default monitoring;
+// monitoring utility
+export const monitoring = {
+  // Utility implementation
+  init: () => {
+    console.log('monitoring initialized');
+  }
+};

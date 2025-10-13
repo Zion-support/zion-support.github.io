@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface LazyimageProps {
-  className?: string;
+className?: string;
   children?: React.ReactNode;
 }
 

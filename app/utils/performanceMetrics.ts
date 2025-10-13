@@ -1,8 +1,7 @@
-// Performancemetrics utility functions
-
-export function performancemetrics() {
-  // Implementation here
-  return null;
-}
-
-export default performancemetrics;
+// performanceMetrics utility
+export const performanceMetrics = {
+  // Utility implementation
+  init: () => {
+    console.log('performanceMetrics initialized');
+  }
+};

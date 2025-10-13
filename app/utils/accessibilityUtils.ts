@@ -1,8 +1,7 @@
-// Accessibilityutils utility functions
-
-export function accessibilityutils() {
-  // Implementation here
-  return null;
-}
-
-export default accessibilityutils;
+// accessibilityUtils utility
+export const accessibilityUtils = {
+  // Utility implementation
+  init: () => {
+    console.log('accessibilityUtils initialized');
+  }
+};

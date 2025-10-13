@@ -1,8 +1,7 @@
-// Apicache utility functions
-
-export function apicache() {
-  // Implementation here
-  return null;
-}
-
-export default apicache;
+// apiCache utility
+export const apiCache = {
+  // Utility implementation
+  init: () => {
+    console.log('apiCache initialized');
+  }
+};

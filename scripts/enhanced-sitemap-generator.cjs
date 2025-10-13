@@ -1,124 +1,90 @@
 const fs = require('fs');
 const path = require('path');
 
-// Define all the pages and their priorities
+// Configuration
+const SITE_URL = 'https://ziontechgroup.com';
+const OUTPUT_FILE = 'public/sitemap.xml';
+const PRIORITY_HIGH = '1.0';
+const PRIORITY_MEDIUM = '0.8';
+const PRIORITY_LOW = '0.6';
+const PRIORITY_VERY_LOW = '0.4';
+
+// Page configurations with priorities and change frequencies
 const pages = [
-  { url: '/', priority: '1.0', changefreq: 'daily' },
-  { url: '/about', priority: '0.8', changefreq: 'monthly' },
-  { url: '/services', priority: '0.9', changefreq: 'weekly' },
-  { url: '/contact', priority: '0.8', changefreq: 'monthly' },
-  { url: '/blog', priority: '0.7', changefreq: 'weekly' },
-  { url: '/micro-saas', priority: '0.9', changefreq: 'weekly' },
-  { url: '/5g-solutions', priority: '0.8', changefreq: 'weekly' },
-  { url: '/ai-services', priority: '0.9', changefreq: 'weekly' },
-  { url: '/pricing', priority: '0.8', changefreq: 'monthly' },
-  { url: '/demo', priority: '0.7', changefreq: 'monthly' },
-  { url: '/support', priority: '0.6', changefreq: 'monthly' },
-  { url: '/consultation', priority: '0.7', changefreq: 'monthly' },
-  { url: '/team', priority: '0.6', changefreq: 'monthly' },
-  { url: '/careers', priority: '0.6', changefreq: 'weekly' },
-  { url: '/case-studies', priority: '0.7', changefreq: 'monthly' },
-  { url: '/news', priority: '0.6', changefreq: 'weekly' },
-  { url: '/press', priority: '0.5', changefreq: 'monthly' },
-  { url: '/partners', priority: '0.6', changefreq: 'monthly' }
+  // Main pages
+  { path: '/', priority: PRIORITY_HIGH, changefreq: 'daily' },
+  { path: '/about', priority: PRIORITY_HIGH, changefreq: 'monthly' },
+  { path: '/contact', priority: PRIORITY_HIGH, changefreq: 'monthly' },
+  { path: '/services', priority: PRIORITY_HIGH, changefreq: 'weekly' },
+  { path: '/careers', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/case-studies', priority: PRIORITY_MEDIUM, changefreq: 'monthly' },
+  { path: '/partners', priority: PRIORITY_MEDIUM, changefreq: 'monthly' },
+  { path: '/privacy', priority: PRIORITY_LOW, changefreq: 'yearly' },
+  { path: '/terms', priority: PRIORITY_LOW, changefreq: 'yearly' },
+  
+  // AI Services
+  { path: '/ai-services', priority: PRIORITY_HIGH, changefreq: 'weekly' },
+  { path: '/ai-analytics', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/ai-automation', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/ai-business-intelligence', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/ai-content-generation', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/ai-customer-service', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/ai-data-analytics', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/ai-email-automation', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/ai-fraud-detection', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/ai-healthcare', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/ai-marketing', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/ai-predictive-analytics', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/ai-project-management', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/ai-quantum-computing', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/ai-powered-devops', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/ai-code-assistant-pro', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/ai-content-studio', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/ai-customer-insights', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/ai-marketing-automation-pro', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/ai-meeting-transcriber', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/ai-sales-predictor', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/ai-video-generator', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/ai-cybersecurity-suite-pro', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/ai-invoice-generator', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/ai-project-manager-pro', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/ai-analytics-pro', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/zion-ai-analytics-pro', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/zion-ai-crm-pro', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/zion-ai-customer-insights', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/zion-ai-marketing-automation-pro', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/zion-ai-meeting-transcriber', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/zion-ai-sales-predictor', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/zion-ai-video-generator', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/zion-analytics-pro', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/zion-smart-inventory-optimizer', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  
+  // Micro SAAS Services
+  { path: '/micro-saas', priority: PRIORITY_HIGH, changefreq: 'weekly' },
+  { path: '/micro-saas-services', priority: PRIORITY_HIGH, changefreq: 'weekly' },
+  
+  // 5G Solutions
+  { path: '/5g-solutions', priority: PRIORITY_HIGH, changefreq: 'weekly' },
+  { path: '/5g-network-infrastructure', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/5g-private-networks', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/5g-iot-solutions', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/5g-edge-computing', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/5g-smart-cities', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/5g-autonomous-vehicles', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  
+  // Other services
+  { path: '/cloud-infrastructure', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/custom-development', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/it-services', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/consultation', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/tutorials', priority: PRIORITY_LOW, changefreq: 'monthly' },
+  { path: '/demo', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/support', priority: PRIORITY_MEDIUM, changefreq: 'weekly' },
+  { path: '/blog', priority: PRIORITY_LOW, changefreq: 'weekly' }
 ];
-
-// AI Services pages
-const aiServices = [
-  'ai-analytics-dashboard-pro',
-  'ai-cybersecurity-suite-pro',
-  'ai-content-generation-pro',
-  'ai-customer-support-chatbot',
-  'ai-code-assistant-pro',
-  'ai-business-intelligence-pro',
-  'ai-automation-platform',
-  'ai-data-analytics-pro',
-  'ai-marketing-automation',
-  'ai-hr-recruitment-pro',
-  'ai-financial-analysis',
-  'ai-supply-chain-optimizer',
-  'ai-voice-assistant-pro',
-  'ai-image-recognition-pro',
-  'ai-predictive-maintenance',
-  'ai-sentiment-analysis-pro',
-  'ai-recommendation-engine',
-  'ai-fraud-detection-pro',
-  'ai-language-translation',
-  'ai-chatbot-enterprise',
-  'ai-data-mining-pro',
-  'ai-video-analysis',
-  'ai-time-series-forecasting',
-  'ai-nlp-text-analysis'
-];
-
-// Micro SAAS pages
-const microSaas = [
-  'zion-analytics-pro',
-  'zion-security-shield',
-  'zion-cloud-vault',
-  'zion-ai-inventory-manager',
-  'zion-hr-assistant-pro',
-  'zion-ai-accounting-suite',
-  'zion-ecommerce-optimizer',
-  'zion-ai-customer-insights',
-  'zion-ai-lead-scoring',
-  'zion-ai-document-processor',
-  'zion-ai-social-listener',
-  'zion-ai-email-optimizer',
-  'zion-ai-meeting-assistant',
-  'zion-ai-expense-tracker',
-  'zion-ai-survey-builder',
-  'zion-ai-chatbot-builder',
-  'zion-ai-workflow-automation',
-  'zion-ai-seo-optimizer',
-  'zion-ai-data-warehouse',
-  'zion-ai-mobile-app-builder',
-  'zion-ai-api-manager',
-  'zion-ai-backup-manager',
-  'zion-ai-testing-automation'
-];
-
-// 5G Solutions pages
-const fiveGSolutions = [
-  '5g-data-analytics',
-  '5g-edge-computing',
-  '5g-implementation',
-  '5g-mobile-applications',
-  '5g-network-infrastructure',
-  '5g-private-networks',
-  '5g-smart-city-solutions'
-];
-
-// Add AI services to pages
-aiServices.forEach(service => {
-  pages.push({
-    url: `/${service}`,
-    priority: '0.7',
-    changefreq: 'monthly'
-  });
-});
-
-// Add Micro SAAS to pages
-microSaas.forEach(saas => {
-  pages.push({
-    url: `/${saas}`,
-    priority: '0.7',
-    changefreq: 'monthly'
-  });
-});
-
-// Add 5G Solutions to pages
-fiveGSolutions.forEach(solution => {
-  pages.push({
-    url: `/${solution}`,
-    priority: '0.7',
-    changefreq: 'monthly'
-  });
-});
 
 // Generate sitemap XML
-const generateSitemap = () => {
-  const baseUrl = 'https://ziontechgroup.com';
+function generateSitemap() {
   const currentDate = new Date().toISOString();
   
   let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -128,8 +94,9 @@ const generateSitemap = () => {
 `;
 
   pages.forEach(page => {
+    const fullUrl = `${SITE_URL}${page.path}`;
     sitemap += `  <url>
-    <loc>${baseUrl}${page.url}</loc>
+    <loc>${fullUrl}</loc>
     <lastmod>${currentDate}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
@@ -140,20 +107,33 @@ const generateSitemap = () => {
   sitemap += `</urlset>`;
 
   return sitemap;
-};
-
-// Write sitemap to public directory
-const sitemapContent = generateSitemap();
-const sitemapPath = path.join(__dirname, '..', 'public', 'sitemap.xml');
-
-try {
-  fs.writeFileSync(sitemapPath, sitemapContent, 'utf8');
-  console.log('✅ Enhanced sitemap generated successfully at:', sitemapPath);
-  console.log(`📊 Total pages: ${pages.length}`);
-  console.log(`🤖 AI Services: ${aiServices.length}`);
-  console.log(`💼 Micro SAAS: ${microSaas.length}`);
-  console.log(`📡 5G Solutions: ${fiveGSolutions.length}`);
-} catch (error) {
-  console.error('❌ Error generating sitemap:', error);
-  process.exit(1);
 }
+
+// Write sitemap to file
+function writeSitemap() {
+  try {
+    const sitemap = generateSitemap();
+    const outputPath = path.join(process.cwd(), OUTPUT_FILE);
+    
+    // Ensure directory exists
+    const dir = path.dirname(outputPath);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+    
+    fs.writeFileSync(outputPath, sitemap, 'utf8');
+    
+    console.log(`✅ Enhanced sitemap generated successfully at: ${outputPath}`);
+    console.log(`📊 Total pages: ${pages.length}`);
+    console.log(`🤖 AI Services: ${pages.filter(p => p.path.includes('ai-') || p.path.includes('zion-ai-')).length}`);
+    console.log(`💼 Micro SAAS: ${pages.filter(p => p.path.includes('micro-saas')).length}`);
+    console.log(`📡 5G Solutions: ${pages.filter(p => p.path.includes('5g-')).length}`);
+    
+  } catch (error) {
+    console.error('❌ Error generating sitemap:', error);
+    process.exit(1);
+  }
+}
+
+// Run the generator
+writeSitemap();

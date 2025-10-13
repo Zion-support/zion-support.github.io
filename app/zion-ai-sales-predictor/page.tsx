@@ -80,7 +80,7 @@ export default function ZionAISalesPredictor() {
     }
   ];
 
-export default function ZionAiSalesPredictorPage() {
+export default function Page() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

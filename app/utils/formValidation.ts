@@ -1,8 +1,7 @@
-// Formvalidation utility functions
-
-export function formvalidation() {
-  // Implementation here
-  return null;
-}
-
-export default formvalidation;
+// formValidation utility
+export const formValidation = {
+  // Utility implementation
+  init: () => {
+    console.log('formValidation initialized');
+  }
+};

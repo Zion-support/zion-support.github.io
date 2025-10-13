@@ -385,7 +385,7 @@ export default function ITServices() {
     }
   ];
 
-export default function ItServicesPage() {
+export default function Page() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

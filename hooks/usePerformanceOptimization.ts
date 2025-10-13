@@ -217,3 +217,8 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     registerServiceWorker,
     setupPerformanceMonitoring,
   };
+=======
+export default function usePerformanceOptimization() {
+  return {};
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd18

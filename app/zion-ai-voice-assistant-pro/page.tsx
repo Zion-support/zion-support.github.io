@@ -104,7 +104,7 @@ export default function ZionAIVoiceAssistantPro() {
     }
   ];
 
-export default function ZionAiVoiceAssistantProPage() {
+export default function Page() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

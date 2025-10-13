@@ -1,8 +1,7 @@
-// Validators utility functions
-
-export function validators() {
-  // Implementation here
-  return null;
-}
-
-export default validators;
+// validators utility
+export const validators = {
+  // Utility implementation
+  init: () => {
+    console.log('validators initialized');
+  }
+};

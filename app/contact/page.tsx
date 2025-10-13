@@ -83,7 +83,7 @@ export default function Contact() {
     "Financial Analytics"
   ];
 
-export default function ContactPage() {
+export default function Page() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

@@ -1,8 +1,4 @@
-// Metadata utility functions
-
-export function metadata() {
-  // Implementation here
-  return null;
-}
-
-export default metadata;
+export const metadata = {
+  title: 'Zion - AI-Powered Technology Solutions',
+  description: 'Leading provider of AI-powered technology solutions',
+};

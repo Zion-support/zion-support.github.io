@@ -196,3 +196,4 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = (
 export default FuturisticServiceCard;
 </FuturisticServiceCardProps>
 </any>
+</meta>

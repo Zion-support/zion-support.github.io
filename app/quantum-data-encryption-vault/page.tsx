@@ -132,7 +132,7 @@ const QuantumDataEncryptionVault = () => {
     { number: "50+", label: "Compliance Standards", icon: <Award className="w-6 h-6" /> }
   ];
 
-export default function QuantumDataEncryptionVaultPage() {
+export default function Page() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

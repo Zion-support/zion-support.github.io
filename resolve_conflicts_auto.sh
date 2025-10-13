@@ -21,8 +21,7 @@ for file in "${files[@]}"; do
         echo "Processing $file..."
         
         # Remove conflict markers and keep HEAD version
-        # This pattern removes everything from  and keeps what's after =======
-        sed -i '/^<<<<<<< HEAD$/,/^=======$/d' "$file"
+        # This pattern removes everything from  and keeps what's after sed -i '/^$/d' "$file"
         sed -i '/^
         
         # Clean up any remaining conflict markers

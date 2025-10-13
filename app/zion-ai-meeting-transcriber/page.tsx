@@ -80,7 +80,7 @@ export default function ZionAIMeetingTranscriber() {
     }
   ];
 
-export default function ZionAiMeetingTranscriberPage() {
+export default function Page() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

@@ -1,8 +1,7 @@
-// Performancemonitoring utility functions
-
-export function performancemonitoring() {
-  // Implementation here
-  return null;
-}
-
-export default performancemonitoring;
+// performanceMonitoring utility
+export const performanceMonitoring = {
+  // Utility implementation
+  init: () => {
+    console.log('performanceMonitoring initialized');
+  }
+};

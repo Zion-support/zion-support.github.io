@@ -2,7 +2,7 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
-export default function ZionAiSocialMediaManagerPage() {
+export default function Page() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

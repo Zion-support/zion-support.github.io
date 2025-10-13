@@ -1,8 +1,7 @@
-// Securitymanager utility functions
-
-export function securitymanager() {
-  // Implementation here
-  return null;
-}
-
-export default securitymanager;
+// securityManager utility
+export const securityManager = {
+  // Utility implementation
+  init: () => {
+    console.log('securityManager initialized');
+  }
+};

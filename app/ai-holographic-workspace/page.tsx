@@ -132,7 +132,7 @@ const AIHolographicWorkspace = () => {
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> }
   ];
 
-export default function AiHolographicWorkspacePage() {
+export default function Page() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

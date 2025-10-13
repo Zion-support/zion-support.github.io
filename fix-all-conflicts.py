@@ -53,7 +53,7 @@ def main():
                 content = f.read()
             
             # Check if file has conflicts
-            if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>>' in content:
+            if '' in content or '>>>>>>>' in content:
                 print(f"Fixing conflicts in {file_path}...")
                 
                 # Resolve conflicts

@@ -1,8 +1,7 @@
-// Advancedanalytics utility functions
-
-export function advancedanalytics() {
-  // Implementation here
-  return null;
-}
-
-export default advancedanalytics;
+// advancedAnalytics utility
+export const advancedAnalytics = {
+  // Utility implementation
+  init: () => {
+    console.log('advancedAnalytics initialized');
+  }
+};

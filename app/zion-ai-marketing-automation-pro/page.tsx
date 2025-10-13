@@ -107,7 +107,7 @@ export default function page() {
     }
   ];
 
-export default function ZionAiMarketingAutomationProPage() {
+export default function Page() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

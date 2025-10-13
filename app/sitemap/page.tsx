@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 
-export default function SitemapPage() {
+export default function Page() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
