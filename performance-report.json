@@ -1,21 +1,10 @@
 {
-<<<<<<< HEAD
-=======
-  "timestamp": "2025-10-13T10:41:07.440Z",
+  "timestamp": "2025-10-13T11:04:56.278Z",
   "buildStats": {
-    "totalFiles": 16,
-    "totalSize": 692015,
-    "jsFiles": 12,
-    "jsSize": 668684,
->>>>>>> cursor/fix-errors-and-merge-to-main-aec0
-=======
-  "timestamp": "2025-10-13T10:52:48.013Z",
-  "buildStats": {
-    "totalFiles": 85,
-    "totalSize": 815888,
-    "jsFiles": 82,
-    "jsSize": 806785,
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
+    "totalFiles": 86,
+    "totalSize": 688672,
+    "jsFiles": 83,
+    "jsSize": 679569,
     "cssFiles": 1,
     "cssSize": 1811,
     "imageFiles": 0,
