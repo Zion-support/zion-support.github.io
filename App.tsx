@@ -23,6 +23,22 @@ import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
 import AISolutionsPage from './app/ai-solutions/page';
 import ITSolutionsPage from './app/it-solutions/page';
 
+// New Page Components
+import DigitalTransformationPage from './app/digital-transformation/page';
+import CloudSolutionsPage from './app/cloud-solutions/page';
+import TeamPage from './app/team/page';
+import CareersPage from './app/careers/page';
+import CaseStudiesPage from './app/case-studies/page';
+import NewsPage from './app/news/page';
+import DocsPage from './app/docs/page';
+import ApiPage from './app/api/page';
+import CommunityPage from './app/community/page';
+import StatusPage from './app/status/page';
+import CookiesPage from './app/cookies/page';
+import GdprPage from './app/gdpr/page';
+import SecurityPage from './app/security/page';
+import CompliancePage from './app/compliance/page';
+
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -74,6 +90,22 @@ function App() {
               <Route path="/terms" element={<TermsPage />} />
               <Route path="/pricing" element={<PricingPage />} />
               <Route path="/solutions" element={<SolutionsPage />} />
+              
+              {/* New Pages */}
+              <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+              <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
+              <Route path="/team" element={<TeamPage />} />
+              <Route path="/careers" element={<CareersPage />} />
+              <Route path="/case-studies" element={<CaseStudiesPage />} />
+              <Route path="/news" element={<NewsPage />} />
+              <Route path="/docs" element={<DocsPage />} />
+              <Route path="/api" element={<ApiPage />} />
+              <Route path="/community" element={<CommunityPage />} />
+              <Route path="/status" element={<StatusPage />} />
+              <Route path="/cookies" element={<CookiesPage />} />
+              <Route path="/gdpr" element={<GdprPage />} />
+              <Route path="/security" element={<SecurityPage />} />
+              <Route path="/compliance" element={<CompliancePage />} />
               
               {/* Catch all route */}
               <Route path="*" element={
