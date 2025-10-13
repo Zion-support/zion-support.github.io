@@ -65,9 +65,6 @@ export default tseslint.config(
       "ci-cd-reports/**",
       "content/**",
       "contracts/**"
-
-      "*.js"
-
     ],
   }
 );
