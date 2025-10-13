@@ -609,16 +609,22 @@ const ZionSecurityShieldPage = React.lazy(() => import("./app/zion-security-shie
 const ZionCloudVaultPage = React.lazy(() => import("./app/zion-cloud-vault/page"));
 const ZionContentStudioPage = React.lazy(() => import("./app/zion-content-studio/page"));
 
-// New Micro SAAS Services
-const ZionAiVideoGeneratorPage = React.lazy(() => import("./app/zion-ai-video-generator/page"));
-const ZionAiCustomerInsightsPage = React.lazy(() => import("./app/zion-ai-customer-insights/page"));
-
 // Additional pages
 const CaseStudiesPage = React.lazy(() => import("./app/case-studies/page"));
 const DataAnalyticsPage = React.lazy(() => import("./app/data-analytics/page"));
 const NetworkInfrastructurePage = React.lazy(() => import("./app/network-infrastructure/page"));
 const ConsultationPage = React.lazy(() => import("./app/consultation/page"));
 const CareersPage = React.lazy(() => import("./app/careers/page"));
+
+// New Micro SAAS Services
+const ZionAiVideoGeneratorPage = React.lazy(() => import("./app/zion-ai-video-generator/page"));
+const ZionAiCustomerInsightsPage = React.lazy(() => import("./app/zion-ai-customer-insights/page"));
+
+// New AI Services
+const AiQuantumComputingPage = React.lazy(() => import("./app/ai-quantum-computing/page"));
+
+// New IT Services
+const CloudInfrastructureManagementPage = React.lazy(() => import("./app/cloud-infrastructure-management/page"));
 >>>>>>> cursor/website-audit-and-update-with-deployment-3531
 
 // Main App Component
@@ -716,6 +722,12 @@ function App() {
                         {/* New Micro SAAS Services */}
                         <Route path="/zion-ai-video-generator" element={<ZionAiVideoGeneratorPage />} />
                         <Route path="/zion-ai-customer-insights" element={<ZionAiCustomerInsightsPage />} />
+                        
+                        {/* New AI Services */}
+                        <Route path="/ai-quantum-computing" element={<AiQuantumComputingPage />} />
+                        
+                        {/* New IT Services */}
+                        <Route path="/cloud-infrastructure-management" element={<CloudInfrastructureManagementPage />} />
 >>>>>>> cursor/website-audit-and-update-with-deployment-3531
                       </Routes>
                     </Suspense>

@@ -5,8 +5,11 @@ import {
   ArrowRight, 
   CheckCircle, 
   Star, 
-  Cloud, 
-  Server, 
+  Video, 
+  Play, 
+  Download, 
+  Share, 
+  Settings, 
   Zap, 
   Sparkles, 
   Clock, 
@@ -18,13 +21,20 @@ import {
   Mail, 
   Phone, 
   MapPin,
-  Database,
-  Shield,
-  Settings,
-  BarChart3,
-  TrendingUp,
-  Target,
   Brain,
+  Camera,
+  Mic,
+  Edit3,
+  Palette,
+  Music,
+  Layers,
+  Target,
+  TrendingUp,
+  BarChart3,
+  Shield,
+  Lock,
+  Cloud,
+  Database,
   Code,
   FileText,
   Image,
@@ -145,79 +155,79 @@ import {
 } from "lucide-react";
 import SEOOptimizer from "../../components/SEOOptimizer";
 
-export default function CloudInfrastructureManagement() {
+export default function ZionAiVideoGenerator() {
   const features = [
-    "Multi-cloud infrastructure management",
-    "Automated scaling and load balancing",
-    "Real-time monitoring and alerting",
-    "Disaster recovery and backup solutions",
-    "Security hardening and compliance",
-    "Cost optimization and resource management",
-    "Container orchestration (Kubernetes)",
-    "Serverless computing management",
-    "Database optimization and management",
-    "Network performance optimization",
-    "24/7 infrastructure monitoring",
-    "Custom cloud architecture design"
+    "AI-powered video generation from text prompts",
+    "Multiple video styles and templates",
+    "4K and HD video output options",
+    "Voice synthesis and text-to-speech",
+    "Background music and sound effects",
+    "Automatic video editing and transitions",
+    "Brand customization and watermarking",
+    "Batch video generation",
+    "Social media optimization",
+    "Real-time preview and editing",
+    "Cloud storage and sharing",
+    "API integration capabilities"
   ];
 
   const benefits = [
-    "Reduce infrastructure costs by 40%",
-    "Improve system uptime to 99.9%",
-    "Scale resources automatically",
-    "Enhance security and compliance"
+    "Create professional videos in minutes",
+    "Reduce video production costs by 80%",
+    "Scale video content creation 10x",
+    "Improve engagement rates by 45%"
   ];
 
   const pricingPlans = [
     {
-      name: "Basic Management",
-      price: "$499",
+      name: "Starter",
+      price: "$29",
       period: "/month",
-      originalPrice: "$799",
-      discount: "38% OFF",
+      originalPrice: "$49",
+      discount: "40% OFF",
       features: [
-        "Up to 10 servers",
-        "Basic monitoring",
+        "10 videos per month",
+        "HD quality output",
+        "Basic templates",
+        "Text-to-speech",
         "Email support",
-        "Standard backup",
-        "Monthly reports",
-        "Basic security"
+        "Watermark included"
       ],
       popular: false
     },
     {
-      name: "Professional Management",
-      price: "$1,299",
+      name: "Professional",
+      price: "$79",
       period: "/month",
-      originalPrice: "$1,999",
-      discount: "35% OFF",
+      originalPrice: "$129",
+      discount: "39% OFF",
       features: [
-        "Up to 50 servers",
-        "Advanced monitoring",
+        "50 videos per month",
+        "4K quality output",
+        "Premium templates",
+        "Custom voice synthesis",
         "Priority support",
-        "Automated backups",
-        "Real-time dashboards",
-        "Advanced security",
-        "Auto-scaling",
+        "No watermark",
+        "Brand customization",
         "API access"
       ],
       popular: true
     },
     {
-      name: "Enterprise Management",
-      price: "$2,999",
+      name: "Enterprise",
+      price: "$199",
       period: "/month",
-      originalPrice: "$4,499",
+      originalPrice: "$299",
       discount: "33% OFF",
       features: [
-        "Unlimited servers",
-        "Full monitoring suite",
+        "Unlimited videos",
+        "4K & HD quality",
+        "All templates & styles",
+        "Custom AI training",
         "24/7 dedicated support",
-        "Disaster recovery",
-        "Custom dashboards",
-        "Enterprise security",
-        "Custom scaling rules",
-        "SLA guarantees"
+        "White-label solution",
+        "Advanced analytics",
+        "Custom integrations"
       ],
       popular: false
     }
@@ -225,54 +235,54 @@ export default function CloudInfrastructureManagement() {
 
   const testimonials = [
     {
-      name: "Jennifer Martinez",
-      company: "E-commerce Platform",
-      role: "CTO",
-      content: "Zion's cloud infrastructure management has transformed our operations. We've reduced costs by 45% while improving performance and reliability significantly.",
+      name: "Sarah Johnson",
+      company: "Digital Marketing Pro",
+      role: "Content Director",
+      content: "Zion AI Video Generator has revolutionized our content creation. We're producing 10x more video content with better quality and engagement rates.",
       rating: 5,
-      avatar: "JM"
+      avatar: "SJ"
     },
     {
-      name: "David Thompson",
-      company: "SaaS Startup",
-      role: "Head of Engineering",
-      content: "The automated scaling and monitoring capabilities are outstanding. Our infrastructure now handles traffic spikes seamlessly without manual intervention.",
+      name: "Michael Chen",
+      company: "E-learning Solutions",
+      role: "CEO",
+      content: "The AI video generation is incredibly powerful. We've reduced our video production costs by 85% while maintaining professional quality.",
       rating: 5,
-      avatar: "DT"
+      avatar: "MC"
     },
     {
-      name: "Lisa Chen",
-      company: "Financial Services",
-      role: "IT Director",
-      content: "The security hardening and compliance features give us peace of mind. Our infrastructure is now more secure and compliant than ever before.",
+      name: "Emily Rodriguez",
+      company: "Social Media Agency",
+      role: "Creative Director",
+      content: "Our clients love the videos we create with Zion AI. The customization options and quality are outstanding. Highly recommended!",
       rating: 5,
-      avatar: "LC"
+      avatar: "ER"
     }
   ];
 
-  const services = [
+  const useCases = [
     {
-      title: "Cloud Migration",
-      description: "Seamless migration to cloud platforms with zero downtime and data integrity",
-      icon: <Cloud className="w-8 h-8" />,
+      title: "Marketing Videos",
+      description: "Create compelling promotional videos for social media, websites, and advertising campaigns",
+      icon: <Target className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Performance Optimization",
-      description: "Optimize cloud resources for maximum performance and cost efficiency",
-      icon: <TrendingUp className="w-8 h-8" />,
+      title: "Educational Content",
+      description: "Generate engaging educational videos, tutorials, and training materials",
+      icon: <BookOpen className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Security Hardening",
-      description: "Comprehensive security measures and compliance management",
-      icon: <Shield className="w-8 h-8" />,
+      title: "Product Demos",
+      description: "Create professional product demonstration videos and explainer content",
+      icon: <Play className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Disaster Recovery",
-      description: "Robust backup and disaster recovery solutions for business continuity",
-      icon: <Database className="w-8 h-8" />,
+      title: "Social Media",
+      description: "Generate optimized videos for Instagram, TikTok, YouTube, and other platforms",
+      icon: <Share className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -280,20 +290,20 @@ export default function CloudInfrastructureManagement() {
   return (
     <>
       <Helmet>
-        <title>Cloud Infrastructure Management - Advanced Cloud Solutions | Zion Tech Group</title>
+        <title>Zion AI Video Generator - AI-Powered Video Creation | Zion Tech Group</title>
         <meta
           name="description"
-          content="Expert cloud infrastructure management services. Multi-cloud management, automated scaling, monitoring, security, and cost optimization. Transform your cloud operations with Zion Tech Group."
+          content="Create professional videos instantly with AI. Zion AI Video Generator transforms text into engaging videos with voice synthesis, templates, and 4K quality. Start your free trial today!"
         />
         <meta
           name="keywords"
-          content="cloud infrastructure management, cloud migration, cloud optimization, cloud security, cloud monitoring, multi-cloud, AWS, Azure, GCP, cloud consulting"
+          content="AI video generator, video creation, text to video, AI video maker, video automation, content creation, video marketing, social media videos"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/cloud-infrastructure-management" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-video-generator" />
       </Helmet>
       <SEOOptimizer
-        title="Cloud Infrastructure Management - Advanced Cloud Solutions | Zion Tech Group"
-        description="Expert cloud infrastructure management services. Multi-cloud management, automated scaling, monitoring, security, and cost optimization. Transform your cloud operations with Zion Tech Group."
+        title="Zion AI Video Generator - AI-Powered Video Creation | Zion Tech Group"
+        description="Create professional videos instantly with AI. Zion AI Video Generator transforms text into engaging videos with voice synthesis, templates, and 4K quality. Start your free trial today!"
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -306,19 +316,19 @@ export default function CloudInfrastructureManagement() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">Expert Cloud Management</span>
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Video Creation</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Cloud Infrastructure
+              Zion AI
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Management
+                {" "}Video Generator
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Optimize your cloud infrastructure with expert management services. 
-              Multi-cloud solutions, automated scaling, security, and cost optimization for maximum performance.
+              Transform text into professional videos instantly with AI. Create engaging content for marketing, 
+              education, social media, and more with our advanced video generation technology.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -326,15 +336,15 @@ export default function CloudInfrastructureManagement() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Get Cloud Consultation
+                Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                View Cloud Demo
-                <Monitor className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                Watch Demo
+                <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
             
@@ -342,31 +352,31 @@ export default function CloudInfrastructureManagement() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Cloud className="w-8 h-8 text-cyan-400" />
+                  <Video className="w-8 h-8 text-cyan-400" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">99.9%</div>
-                <div className="text-gray-300 text-sm">Uptime SLA</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">10,000+</div>
+                <div className="text-gray-300 text-sm">Videos Generated</div>
               </div>
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <TrendingUp className="w-8 h-8 text-cyan-400" />
+                  <Clock className="w-8 h-8 text-cyan-400" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">40%</div>
-                <div className="text-gray-300 text-sm">Cost Reduction</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">2 min</div>
+                <div className="text-gray-300 text-sm">Average Creation Time</div>
               </div>
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Shield className="w-8 h-8 text-cyan-400" />
+                  <Users className="w-8 h-8 text-cyan-400" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">100%</div>
-                <div className="text-gray-300 text-sm">Security Compliance</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">5,000+</div>
+                <div className="text-gray-300 text-sm">Active Users</div>
               </div>
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Award className="w-8 h-8 text-cyan-400" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">500+</div>
-                <div className="text-gray-300 text-sm">Infrastructures Managed</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">4.9/5</div>
+                <div className="text-gray-300 text-sm">User Rating</div>
               </div>
             </div>
           </div>
@@ -377,11 +387,10 @@ export default function CloudInfrastructureManagement() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Comprehensive Cloud Management
+                Powerful AI Video Creation Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                From migration to optimization, we provide end-to-end cloud infrastructure 
-                management services that ensure reliability, security, and cost efficiency.
+                Create professional videos with advanced AI technology. From text prompts to finished videos in minutes.
               </p>
             </div>
             
@@ -405,35 +414,35 @@ export default function CloudInfrastructureManagement() {
           </div>
         </section>
 
-        {/* Services */}
+        {/* Use Cases */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Cloud Management Services
+                Perfect for Every Use Case
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive cloud solutions tailored to your business needs. 
-                From migration to ongoing management, we've got you covered.
+                Whether you're creating marketing content, educational videos, or social media posts, 
+                our AI video generator adapts to your needs.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => (
+              {useCases.map((useCase, index) => (
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
                   <div
-                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${useCase.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                   >
-                    {service.icon}
+                    {useCase.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-300 transition-colors">
-                    {service.title}
+                    {useCase.title}
                   </h3>
                   <p className="text-gray-300 text-center leading-relaxed">
-                    {service.description}
+                    {useCase.description}
                   </p>
                 </div>
               ))}
@@ -446,11 +455,10 @@ export default function CloudInfrastructureManagement() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Cloud Management Pricing
+                Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing plans for cloud infrastructure management. 
-                Choose the level that matches your infrastructure needs.
+                Choose the plan that fits your video creation needs. All plans include our core AI features.
               </p>
             </div>
             
@@ -515,10 +523,10 @@ export default function CloudInfrastructureManagement() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Cloud Teams Worldwide
+                Trusted by Content Creators Worldwide
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how our cloud infrastructure management is transforming businesses
+                See what our users say about Zion AI Video Generator
               </p>
             </div>
             
@@ -553,11 +561,11 @@ export default function CloudInfrastructureManagement() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Optimize Your Cloud?
+              Ready to Create Amazing Videos?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Transform your cloud infrastructure with expert management services. 
-              Reduce costs, improve performance, and enhance security with our proven solutions.
+              Join thousands of content creators using Zion AI Video Generator to produce 
+              professional videos in minutes. Start your free trial today!
             </p>
             
             {/* Contact Information */}
@@ -590,14 +598,14 @@ export default function CloudInfrastructureManagement() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Get Cloud Consultation
+                Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/it-services"
+                to="/micro-saas"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                View All IT Services
+                View All Solutions
                 <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
