@@ -132,7 +132,7 @@ export default function ContactPage() {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Message Sent!</h3>
               <p className="text-gray-300 mb-6">
-                Thank you for contacting us. We'll get back to you within 24 hours.
+                Thank you for contacting us. We&apos;ll get back to you within 24 hours.
               </p>
               <button
                 onClick={() => {

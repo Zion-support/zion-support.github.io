@@ -1,7 +1,4 @@
-const { withSentry } = require('../withSentry.cjs');
-const { isValidEmail } = require('../emailUtils.cjs');
-
-async function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
@@ -19,7 +16,9 @@ async function handler(req, res) {
       return;
     }
 
-    if (!isValidEmail(email)) {
+    // Simple email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
       res.statusCode = 400;
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Invalid email format' }));
@@ -36,6 +35,12 @@ async function handler(req, res) {
     // console.log removed for production
     console.log('Newsletter subscription:', {
       email: req.body.email,
+      timestamp: new Date().toISOString()
+    });
+
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ success: true, message: 'Successfully subscribed to newsletter' }));
 
   } catch (_error) { // eslint-disable-line no-unused-vars
     // console.error('Newsletter subscription error:', error);
@@ -47,5 +52,3 @@ async function handler(req, res) {
     }));
   }
 }
-
-module.exports = withSentry(handler);

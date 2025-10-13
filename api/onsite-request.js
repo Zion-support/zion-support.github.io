@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 // Simple wrapper function to replace withSentry
 // const withSentry = (handler) => handler;
@@ -49,6 +49,11 @@ export default function handler(req, res) {
 
   try {
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true, 
+      message: 'Onsite request submitted successfully',
       id: newRequest.id
     }));
   } catch (_error) { // eslint-disable-line no-unused-vars

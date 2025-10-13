@@ -6,33 +6,13 @@ import { ErrorBoundary } from 'react-error-boundary';
 // Components
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
-import PerformanceOptimizer from './app/components/PerformanceOptimizer';
-import FuturisticBackground from './app/components/FuturisticBackground';
 import AnalyticsProvider from './app/components/AnalyticsProvider';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import LoadingSpinner from './app/components/LoadingSpinner';
 
 // Page Components
-<<<<<<< HEAD
 import HomePage from './src/pages/HomePage';
-import ContactPage from './src/pages/ContactPage';
-import BlogPage from './src/pages/BlogPage';
-import SolutionsPage from './src/pages/SolutionsPage';
-
-// Placeholder components for missing pages
-const AboutPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">About Page</h1></div>;
-const ServicesPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">Services Page</h1></div>;
-const TutorialsPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">Tutorials Page</h1></div>;
-const DemoPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">Demo Page</h1></div>;
-const SupportPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">Support Page</h1></div>;
-const PrivacyPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">Privacy Page</h1></div>;
-const TermsPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">Terms Page</h1></div>;
-const PricingPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">Pricing Page</h1></div>;
-=======
-import HomePage from './app/pages/HomePage';
 import AboutPage from './app/pages/AboutPage';
-import ContactPage from './app/pages/ContactPage';
+import ContactPage from './src/pages/ContactPage';
 import ServicesPage from './app/pages/ServicesPage';
 import BlogPage from './app/pages/BlogPage';
 import TutorialsPage from './app/pages/TutorialsPage';
@@ -41,8 +21,7 @@ import SupportPage from './app/pages/SupportPage';
 import PrivacyPage from './app/pages/PrivacyPage';
 import TermsPage from './app/pages/TermsPage';
 import PricingPage from './app/pages/PricingPage';
-import SolutionsPage from './app/pages/SolutionsPage';
->>>>>>> cursor/fix-errors-and-merge-to-main-16fc
+import SolutionsPage from './src/pages/SolutionsPage';
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (

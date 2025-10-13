@@ -1,6 +1,4 @@
-import { withErrorLogging } from './withErrorLogging.cjs';
-
-async function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
@@ -8,6 +6,23 @@ async function handler(req, res) {
     return;
   }
 
+  try {
+    const { amount, currency = 'usd' } = req.body || {};
+
+    if (!amount) {
+      res.statusCode = 400;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Amount is required' }));
+      return;
+    }
+
+    // Mock payment intent creation
+    const paymentIntent = {
+      id: 'pi_' + Math.random().toString(36).substr(2, 9),
+      amount: amount * 100, // Convert to cents
+      currency,
+      status: 'requires_payment_method',
+      client_secret: 'pi_' + Math.random().toString(36).substr(2, 9) + '_secret_' + Math.random().toString(36).substr(2, 9)
     };
 
     res.statusCode = 200;
@@ -16,3 +31,6 @@ async function handler(req, res) {
     // console.error("Error:", err);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Internal server error' }));
+  }
+}
