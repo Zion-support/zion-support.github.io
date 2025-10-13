@@ -1,120 +1,119 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-'use client;
-
-import React from 'react;
-
-import { Helmet } from 'react-helmet-async;
-
-import { Play, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart, Users } from 'lucide-react;
-
-import Navigation from ../components
-import Footer from ../components
-;
-
-const DemoPage: React.FC = () => {const demos = [;
+import { Play, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart, Users } from 'lucide-react';
 
 const DemoPage: React.FC = () => {
-  const demos = [    {;
-      title: 'AI Analytics Dashboard,
-      description: 'See how our AI analytics can transform your business intelligence,
-      duration: '5 min,
-      features: ['Real-time data visualization', 'Predictive analytics', 'Custom reports]
-    service: '',
-    message: '
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    const subject = `Demo Request from ${formData.name} - ${formData.company}`;
-    const body = `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nPhone: ${formData.phone}\nService: ${formData.service}\nMessage: ${formData.message}`;
-    window.location.href = `mailto:kleber@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  };
-
-  const demoFeatures = [
+  const features = [
     {
-      icon: Brain,
-      title: 'AI Solutions Demo',
-      description: 'See our AI services in action with live demonstrations'
-    },
-    {
-      icon: Shield,
-      title: 'Security Assessment',
-      description: 'Get a free security evaluation of your current setup'
-    },
-    {
-      icon: Zap,
-      title: 'Performance Analysis',
-      description: 'Learn how to optimize your business processes'
-    },
-    {
-      id: 'ai-chatbot,
-      title: 'AI Customer Service Bot,
-      description: 'See how our AI chatbot handles customer inquiries with natural language processing.,
-      features: [
-        'Natural language understanding,'
-        'Multi-language support,'
-        24;
-        Seamless handoff to humans]
-      ],
-      icon: Users,
-      duration: '3 min demo,'
-      category: 'AI Solutions;'
-    },    {
-      title: 'AI Content Generation,
-      description: 'Watch our AI create high-quality content in seconds,
-      duration: '4 min,
-      features: ['Blog posts', 'Social media content', 'Product descriptions]
-import { Play, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart, Users } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-;
-
-const $1Page: React.FC = () => {}
-  const demos = [
-
-const DemoPage: React.FC = () => {}
-  const demos = [
-    {}
       title: 'AI Analytics Dashboard',
-      description: 'See how our AI analytics can transform your business intelligence',
-      duration: '5 min',
-      features: ['Real-time data visualization', 'Predictive analytics', 'Custom reports']
+      description: 'Real-time insights and predictive analytics',
+      icon: BarChart,
+      color: 'from-blue-500 to-cyan-500'
     },
-    {}
-      id: 'ai-chatbot',
-      title: 'AI Customer Service Bot',
-      description: 'See how our AI chatbot handles customer inquiries with natural language processing.',
-      features: []
-        'Natural language understanding',
-        'Multi-language support',
-        '24
-        'Seamless handoff to humans'
-      ],
+    {
+      title: 'Smart Automation',
+      description: 'Intelligent process automation',
+      icon: Zap,
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security features',
+      icon: Shield,
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      title: 'Team Collaboration',
+      description: 'Seamless team collaboration tools',
       icon: Users,
-      duration: '3 min demo',
-      category: 'AI Solutions'
-    },
-    {}
-      title: 'AI Content Generation',
-      description: 'Watch our AI create high-quality content in seconds',
-      duration: '4 min',
-      features: ['Blog posts', 'Social media content', 'Product descriptions']
+      color: 'from-orange-500 to-red-500'
     }
-
   ];
 
-export default function Demo() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <>
+      <Helmet>
+        <title>Demo - Zion Tech Group</title>
+        <meta name="description" content="Experience our AI and IT solutions with interactive demos" />
+        <meta name="keywords" content="demo, AI demo, IT demo, interactive demo, Zion Tech Group" />
+      </Helmet>
 
-        </div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Interactive Demo
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Experience our AI and IT solutions firsthand with interactive demonstrations
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105">
+                <Play className="inline-block mr-2 w-5 h-5" />
+                Start Demo
+              </button>
+              <button className="px-8 py-4 border border-blue-500 text-blue-400 rounded-lg font-semibold text-lg hover:bg-blue-500/10 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Demo Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Explore our comprehensive suite of AI and IT solutions
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-blue-500/50 transition-all duration-300">
+                  <div
+                    className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                    aria-hidden="true"
+                  >
+                    <feature.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
+                  <p className="text-gray-300 text-sm text-center">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to See More?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us to schedule a personalized demo for your business
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
+                Schedule Demo
+                <ArrowRight className="inline-block ml-2 w-5 h-5" />
+              </button>
+              <button className="px-8 py-4 border border-blue-500 text-blue-400 rounded-lg font-semibold text-lg hover:bg-blue-500/10 transition-all duration-300">
+                Contact Us
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
-    </div>
+    </>
   );
-}
-      {/* CTA Section *
-      <section className="py-20 px-4>"
-        <div className="max-w-4xl mx-auto text-center>"
-          <h2 className="text-4xl font-bold text-white mb-6>
+};
+
+export default DemoPage;

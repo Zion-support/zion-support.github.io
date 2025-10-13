@@ -13,7 +13,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = false,
-  enableFocusManagement = true;
+  enableFocusManagement = true
 }) => {
   useEffect(() => {
     // Enable keyboard navigation
@@ -42,9 +42,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       };
 
       document.addEventListener('keydown', handleKeyDown);
-      const Component = () => {
-  
-        return () => document.removeEventListener('keydown', handleKeyDown);
+      
+      return () => document.removeEventListener('keydown', handleKeyDown);
     }
   }, [enableKeyboardNavigation]);
 
