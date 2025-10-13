@@ -43,9 +43,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   }, [])
 
   const aiServices = useMemo(() => [
+    { name: 'Zion AI Video Editor Pro', path: '/zion-ai-video-editor-pro', icon: <Brain className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Project Manager Pro', path: '/zion-ai-project-manager-pro', icon: <Code className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Cybersecurity Suite Pro', path: '/zion-ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Data Intelligence Pro', path: '/zion-ai-data-intelligence-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Brain className="w-4 h-4" /> },
-    { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> },
     { name: 'AI Customer Support', path: '/ai-customer-support-chatbot', icon: <Zap className="w-4 h-4" /> },
     { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> },
     { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> },
@@ -54,6 +57,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   ], [])
 
   const itServices = useMemo(() => [
+    { name: 'Enterprise Cloud Migration Pro', path: '/enterprise-cloud-migration-pro', icon: <Cloud className="w-4 h-4" />, featured: true },
+    { name: 'Advanced Cybersecurity Solutions Pro', path: '/advanced-cybersecurity-solutions-pro', icon: <Shield className="w-4 h-4" />, featured: true },
     { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },
     { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions', icon: <Shield className="w-4 h-4" /> },
     { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> },
@@ -65,6 +70,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   ], [])
 
   const microSaasServices = useMemo(() => [
+    { name: 'Zion AI Video Editor Pro', path: '/zion-ai-video-editor-pro', icon: <Brain className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Project Manager Pro', path: '/zion-ai-project-manager-pro', icon: <Code className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Cybersecurity Suite Pro', path: '/zion-ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Data Intelligence Pro', path: '/zion-ai-data-intelligence-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
     { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
     { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
     { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },

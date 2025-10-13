@@ -558,6 +558,16 @@ const ZionChatAiPage = React.lazy(() => import("./app/zion-chat-ai/page"));
 const ZionCrmIntelligencePage = React.lazy(() => import("./app/zion-crm-intelligence/page"));
 const ZionCustomerInsightsPage = React.lazy(() => import("./app/zion-customer-insights/page"));
 
+// New AI Services
+const ZionAiVideoEditorProPage = React.lazy(() => import("./app/zion-ai-video-editor-pro/page"));
+const ZionAiProjectManagerProPage = React.lazy(() => import("./app/zion-ai-project-manager-pro/page"));
+const ZionAiCybersecuritySuiteProPage = React.lazy(() => import("./app/zion-ai-cybersecurity-suite-pro/page"));
+const ZionAiDataIntelligenceProPage = React.lazy(() => import("./app/zion-ai-data-intelligence-pro/page"));
+
+// New IT Services
+const EnterpriseCloudMigrationProPage = React.lazy(() => import("./app/enterprise-cloud-migration-pro/page"));
+const AdvancedCybersecuritySolutionsProPage = React.lazy(() => import("./app/advanced-cybersecurity-solutions-pro/page"));
+
 
 // Main App Component
 function App() {
@@ -603,6 +613,14 @@ function App() {
                         <Route path="/terms" element={<TermsPage />} />
                         <Route path="/cookies" element={<CookiesPage />} />
                         <Route path="/sitemap" element={<SitemapPage />} />
+                        {/* New AI Services */}
+                        <Route path="/zion-ai-video-editor-pro" element={<ZionAiVideoEditorProPage />} />
+                        <Route path="/zion-ai-project-manager-pro" element={<ZionAiProjectManagerProPage />} />
+                        <Route path="/zion-ai-cybersecurity-suite-pro" element={<ZionAiCybersecuritySuiteProPage />} />
+                        <Route path="/zion-ai-data-intelligence-pro" element={<ZionAiDataIntelligenceProPage />} />
+                        {/* New IT Services */}
+                        <Route path="/enterprise-cloud-migration-pro" element={<EnterpriseCloudMigrationProPage />} />
+                        <Route path="/advanced-cybersecurity-solutions-pro" element={<AdvancedCybersecuritySolutionsProPage />} />
                       </Routes>
                     </Suspense>
                   </main>

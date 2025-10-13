@@ -19,7 +19,8 @@ import {
   Database,
   Users,
   Award,
-  Star
+  Star,
+  Monitor
 } from "lucide-react";
 import FuturisticButton from "./FuturisticButton";
 
@@ -53,6 +54,15 @@ const Footer = React.memo(() => {
     { name: "Cybersecurity", path: "/cybersecurity", icon: <Shield className="w-4 h-4" /> },
     { name: "Web Development", path: "/web-development", icon: <Code className="w-4 h-4" /> },
     { name: "Data Analytics", path: "/data-analytics", icon: <BarChart3 className="w-4 h-4" /> }
+  ], []);
+
+  const featuredServices = useMemo(() => [
+    { name: "Zion AI Video Editor Pro", path: "/zion-ai-video-editor-pro", icon: <Monitor className="w-4 h-4" />, featured: true },
+    { name: "Zion AI Project Manager Pro", path: "/zion-ai-project-manager-pro", icon: <Code className="w-4 h-4" />, featured: true },
+    { name: "Zion AI Cybersecurity Suite Pro", path: "/zion-ai-cybersecurity-suite-pro", icon: <Shield className="w-4 h-4" />, featured: true },
+    { name: "Zion AI Data Intelligence Pro", path: "/zion-ai-data-intelligence-pro", icon: <BarChart3 className="w-4 h-4" />, featured: true },
+    { name: "Zion Analytics Pro", path: "/zion-analytics-pro", icon: <BarChart3 className="w-4 h-4" />, featured: true },
+    { name: "Zion Security Shield", path: "/zion-security-shield", icon: <Shield className="w-4 h-4" />, featured: true }
   ], []);
 
   const companyLinks = useMemo(() => [

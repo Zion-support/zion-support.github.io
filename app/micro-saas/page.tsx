@@ -377,6 +377,130 @@ export default function MicroSaas() {
       reviews: 1234,
       link: "/zion-social-scheduler",
       featured: false
+    },
+    {
+      id: "zion-ai-video-editor-pro",
+      name: "Zion AI Video Editor Pro",
+      description: "AI-powered video editing with smart cut detection, automated effects, and cloud processing",
+      price: "From $19/month",
+      originalPrice: "$39/month",
+      discount: "51% OFF",
+      icon: <Video className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      features: [
+        "AI-powered editing automation",
+        "Smart cut detection",
+        "Audio enhancement",
+        "Visual effects library",
+        "Cloud processing",
+        "Multi-platform export",
+        "Real-time collaboration",
+        "Custom branding"
+      ],
+      benefits: [
+        "Save 80% editing time",
+        "Increase engagement 3x",
+        "Professional quality results",
+        "No technical expertise needed"
+      ],
+      category: "Content",
+      rating: 4.9,
+      reviews: 2156,
+      link: "/zion-ai-video-editor-pro",
+      featured: true
+    },
+    {
+      id: "zion-ai-project-manager-pro",
+      name: "Zion AI Project Manager Pro",
+      description: "Intelligent project management with AI automation, predictive analytics, and team optimization",
+      price: "From $29/month",
+      originalPrice: "$59/month",
+      discount: "51% OFF",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      features: [
+        "AI task automation",
+        "Smart goal tracking",
+        "Predictive analytics",
+        "Team collaboration",
+        "Time tracking",
+        "Risk management",
+        "Resource optimization",
+        "Custom workflows"
+      ],
+      benefits: [
+        "Increase productivity 40%",
+        "Save 15+ hours/week",
+        "95% on-time delivery",
+        "Better team coordination"
+      ],
+      category: "Productivity",
+      rating: 4.8,
+      reviews: 1247,
+      link: "/zion-ai-project-manager-pro",
+      featured: true
+    },
+    {
+      id: "zion-ai-cybersecurity-suite-pro",
+      name: "Zion AI Cybersecurity Suite Pro",
+      description: "Advanced AI-powered cybersecurity with threat detection, behavioral analytics, and automated response",
+      price: "From $199/month",
+      originalPrice: "$399/month",
+      discount: "50% OFF",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-red-500 to-orange-500",
+      features: [
+        "AI threat detection",
+        "Zero-trust security",
+        "Behavioral analytics",
+        "Advanced encryption",
+        "Predictive security",
+        "Real-time monitoring",
+        "Compliance automation",
+        "Incident response"
+      ],
+      benefits: [
+        "99.9% threat prevention",
+        "30s response time",
+        "Reduce security costs 70%",
+        "Meet compliance requirements"
+      ],
+      category: "Security",
+      rating: 4.9,
+      reviews: 892,
+      link: "/zion-ai-cybersecurity-suite-pro",
+      featured: true
+    },
+    {
+      id: "zion-ai-data-intelligence-pro",
+      name: "Zion AI Data Intelligence Pro",
+      description: "AI-powered data analytics platform with predictive modeling, real-time insights, and automated reporting",
+      price: "From $99/month",
+      originalPrice: "$199/month",
+      discount: "50% OFF",
+      icon: <BarChart3 className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      features: [
+        "AI-powered insights",
+        "Real-time analytics",
+        "Predictive modeling",
+        "Data integration",
+        "Performance optimization",
+        "Data security",
+        "Natural language queries",
+        "Automated reporting"
+      ],
+      benefits: [
+        "Increase revenue 25%",
+        "Save 20+ hours/week",
+        "95% prediction accuracy",
+        "Better decision making"
+      ],
+      category: "Analytics",
+      rating: 4.9,
+      reviews: 1856,
+      link: "/zion-ai-data-intelligence-pro",
+      featured: true
     }
   ];
 
