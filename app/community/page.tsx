@@ -27,9 +27,3 @@ export default function CommunityZionTechGroup() {
     </>
   );
 }
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6877
