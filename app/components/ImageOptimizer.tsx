@@ -17,10 +17,6 @@ const ImageOptimizer = React.memo<ImageOptimizerProps>(({
   width,
   height,
   className = '',
-<<<<<<< HEAD
-  // placeholder, // Available for future use
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-711b
   lazy = true
 }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -43,11 +39,7 @@ const ImageOptimizer = React.memo<ImageOptimizerProps>(({
     return `${src}?format=webp&quality=80`;
   }, [src]);
 
-<<<<<<< HEAD
-  // Placeholder generation (currently unused but available for future use)
-=======
   // Placeholder generation logic (currently unused but kept for future use)
->>>>>>> cursor/fix-errors-and-merge-to-main-711b
   // const placeholderSrc = useMemo(() => {
   //   if (placeholder) return placeholder;
   //   
