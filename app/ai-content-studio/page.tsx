@@ -10,31 +10,6 @@ import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
 
 const AIContentStudioZionTechGroup = () => {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Zion AI Content Studio Pro",
-    "description": "AI-powered content creation platform with automated writing, design, and video generation",
-    "url": "https://ziontechgroup.com/ai-content-studio",
-    "applicationCategory": "ContentCreationApplication",
-    "operatingSystem": "Web, Windows, macOS, Linux",
-    "offers": {
-      "@type": "Offer",
-      "price": "149",
-      "priceCurrency": "USD",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": "149",
-        "priceCurrency": "USD",
-        "unitText": "MONTH"
-      }
-    },
-    "provider": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com"
-    }
-  };
 
   const features = [
     {

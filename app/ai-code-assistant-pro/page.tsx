@@ -10,31 +10,6 @@ import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
 
 const AICodeAssistantProZionTechGroup = () => {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Zion AI Code Assistant Pro",
-    "description": "AI-powered code generation, debugging, and optimization with support for 50+ programming languages",
-    "url": "https://ziontechgroup.com/ai-code-assistant-pro",
-    "applicationCategory": "DeveloperApplication",
-    "operatingSystem": "Web, Windows, macOS, Linux",
-    "offers": {
-      "@type": "Offer",
-      "price": "199",
-      "priceCurrency": "USD",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": "199",
-        "priceCurrency": "USD",
-        "unitText": "MONTH"
-      }
-    },
-    "provider": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com"
-    }
-  };
 
   const features = [
     {
