@@ -1,17 +1,5 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "timestamp": "2025-10-13T06:36:21.034Z",
-=======
-  "timestamp": "2025-10-13T06:39:30.691Z",
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
-=======
-  "timestamp": "2025-10-13T06:54:01.007Z",
->>>>>>> cursor/analyze-improve-and-deploy-application-c69e
-=======
-  "timestamp": "2025-10-13T07:05:36.226Z",
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
+  "timestamp": "2025-10-13T08:02:37.800Z",
   "optimizations": [
     "Critical CSS inlined",
     "Images optimized",

@@ -14,12 +14,12 @@ import {
   Users,
   Clock,
   Award,
-  Cloud,
-  Server,
-  Settings,
+  Eye,
+  MessageSquare,
   Target,
   PieChart,
   FileText,
+  Settings,
   Bell,
   Download,
   Play,
@@ -27,98 +27,93 @@ import {
   RefreshCw,
   Heart,
   ThumbsUp,
-  AlertTriangle,
-  Workflow,
-  Cpu,
-  Bot,
-  GitBranch,
-  Lock,
-  Globe,
-  Monitor
+  AlertTriangle
 } from "lucide-react";
 
-export default function CloudMigrationPro() {
+export default function AiCustomerInsightsPro() {
   const features = [
     {
       icon: <Brain className="w-8 h-8" />,
-      title: "AI-Powered Migration Planning",
-      description: "Intelligent assessment and planning using AI to analyze your current infrastructure and recommend optimal cloud migration strategies.",
-      benefits: ["95% migration success rate", "Zero downtime migration", "Cost optimization"]
+      title: "AI-Powered Customer Segmentation",
+      description: "Automatically segment customers using advanced machine learning algorithms that analyze behavior patterns, preferences, and lifetime value.",
+      benefits: ["95% segmentation accuracy", "Dynamic customer profiles", "Real-time updates"]
     },
     {
-      icon: <Cloud className="w-8 h-8" />,
-      title: "Multi-Cloud Strategy",
-      description: "Comprehensive multi-cloud migration support for AWS, Azure, Google Cloud, and hybrid cloud environments with seamless integration.",
-      benefits: ["Multi-cloud expertise", "Vendor neutrality", "Hybrid cloud support"]
+      icon: <TrendingUp className="w-8 h-8" />,
+      title: "Predictive Customer Analytics",
+      description: "Forecast customer behavior, churn risk, and purchase likelihood using sophisticated predictive models trained on your data.",
+      benefits: ["90% churn prediction accuracy", "Revenue forecasting", "Behavioral predictions"]
     },
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Security-First Migration",
-      description: "Enterprise-grade security throughout the migration process with automated compliance checks and data protection measures.",
-      benefits: ["End-to-end security", "Compliance automation", "Data protection"]
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Automated Migration Tools",
-      description: "Advanced automation tools that streamline the migration process, reducing manual effort and human error by 90%.",
-      benefits: ["90% automation", "Faster migration", "Reduced errors"]
+      icon: <MessageSquare className="w-8 h-8" />,
+      title: "Sentiment Analysis Engine",
+      description: "Analyze customer feedback, reviews, and social media mentions to understand sentiment and emotional responses in real-time.",
+      benefits: ["Real-time sentiment tracking", "Multi-language support", "Emotion detection"]
     },
     {
       icon: <Target className="w-8 h-8" />,
-      title: "Performance Optimization",
-      description: "Post-migration optimization to ensure your applications perform better in the cloud with continuous monitoring and tuning.",
-      benefits: ["Performance improvement", "Cost reduction", "Continuous optimization"]
+      title: "Personalized Recommendations",
+      description: "Generate highly personalized product recommendations and marketing messages based on individual customer preferences and behavior.",
+      benefits: ["40% higher conversion rates", "Personalized experiences", "Dynamic content"]
     },
     {
-      icon: <Settings className="w-8 h-8" />,
-      title: "24/7 Migration Support",
-      description: "Round-the-clock expert support throughout your migration journey with dedicated migration specialists and engineers.",
-      benefits: ["24/7 support", "Expert guidance", "Dedicated team"]
+      icon: <Eye className="w-8 h-8" />,
+      title: "Customer Journey Mapping",
+      description: "Visualize complete customer journeys across all touchpoints with AI-powered insights and optimization recommendations.",
+      benefits: ["Complete journey visibility", "Bottleneck identification", "Optimization suggestions"]
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Privacy-First Analytics",
+      description: "Advanced privacy protection with GDPR compliance, data anonymization, and secure processing of customer information.",
+      benefits: ["GDPR compliant", "Data anonymization", "Enterprise security"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Assessment",
-      price: "$5,000",
-      period: "one-time",
-      description: "Comprehensive cloud readiness assessment",
+      name: "Starter",
+      price: "$49",
+      period: "per month",
+      description: "Perfect for small businesses",
       features: [
-        "Infrastructure analysis",
-        "Cost estimation",
-        "Migration roadmap",
-        "Risk assessment",
-        "Recommendations report"
+        "Up to 10,000 customers",
+        "Basic segmentation",
+        "Standard analytics",
+        "Email support",
+        "API access"
       ],
-      cta: "Get Assessment",
+      cta: "Start Free Trial",
       popular: false
     },
     {
-      name: "Standard Migration",
-      price: "$25,000",
-      period: "per project",
-      description: "Complete migration for small to medium businesses",
+      name: "Professional",
+      price: "$149",
+      period: "per month",
+      description: "Ideal for growing companies",
       features: [
-        "Full migration planning",
-        "Application migration",
-        "Data migration",
-        "Testing & validation",
-        "30 days support"
+        "Up to 100,000 customers",
+        "Advanced AI insights",
+        "Predictive analytics",
+        "Priority support",
+        "Custom integrations",
+        "Real-time dashboards"
       ],
-      cta: "Start Migration",
+      cta: "Start Free Trial",
       popular: true
     },
     {
-      name: "Enterprise Migration",
-      price: "Custom",
-      period: "per project",
-      description: "Large-scale enterprise migration",
+      name: "Enterprise",
+      price: "$399",
+      period: "per month",
+      description: "For large organizations",
       features: [
-        "Everything in Standard",
-        "Custom migration tools",
-        "Dedicated migration team",
-        "Extended support",
-        "Training & documentation"
+        "Unlimited customers",
+        "Full AI suite",
+        "Custom models",
+        "24/7 dedicated support",
+        "White-label solution",
+        "On-premise deployment"
       ],
       cta: "Contact Sales",
       popular: false
@@ -127,149 +122,113 @@ export default function CloudMigrationPro() {
 
   const testimonials = [
     {
-      name: "Robert Johnson",
-      role: "CTO",
-      company: "TechCorp Inc.",
-      content: "Cloud Migration Pro helped us migrate our entire infrastructure to AWS with zero downtime. The AI planning was incredibly accurate and saved us months of work.",
+      name: "Jennifer Martinez",
+      role: "CMO",
+      company: "RetailMax",
+      content: "AI Customer Insights Pro helped us increase customer retention by 35% through better segmentation and personalized experiences.",
       rating: 5
     },
     {
-      name: "Maria Garcia",
-      role: "IT Director",
-      company: "Manufacturing Solutions",
-      content: "The automated migration tools made what seemed impossible actually achievable. We migrated 200+ applications in just 6 weeks.",
+      name: "David Kim",
+      role: "Head of Analytics",
+      company: "TechStart",
+      content: "The predictive analytics are incredibly accurate. We can now predict customer churn with 90% accuracy and take proactive measures.",
       rating: 5
     },
     {
-      name: "James Wilson",
-      role: "VP Engineering",
-      company: "StartupXYZ",
-      content: "The multi-cloud strategy they recommended has given us incredible flexibility and cost savings. Our infrastructure costs are down 40%.",
+      name: "Lisa Thompson",
+      role: "VP Marketing",
+      company: "GlobalBrand",
+      content: "The sentiment analysis feature has transformed how we understand our customers. We can now respond to issues before they escalate.",
       rating: 5
-    }
-  ];
-
-  const migrationSteps = [
-    {
-      step: "01",
-      title: "Assessment & Planning",
-      description: "Comprehensive analysis of your current infrastructure and creation of detailed migration roadmap.",
-      duration: "1-2 weeks"
-    },
-    {
-      step: "02",
-      title: "Pre-Migration Setup",
-      description: "Cloud environment preparation, security configuration, and migration tool setup.",
-      duration: "1 week"
-    },
-    {
-      step: "03",
-      title: "Pilot Migration",
-      description: "Small-scale pilot migration to validate approach and identify potential issues.",
-      duration: "1-2 weeks"
-    },
-    {
-      step: "04",
-      title: "Full Migration",
-      description: "Complete migration of all applications and data with continuous monitoring.",
-      duration: "2-8 weeks"
-    },
-    {
-      step: "05",
-      title: "Testing & Validation",
-      description: "Comprehensive testing to ensure all systems work correctly in the new environment.",
-      duration: "1-2 weeks"
-    },
-    {
-      step: "06",
-      title: "Optimization & Support",
-      description: "Performance optimization and ongoing support to ensure optimal cloud performance.",
-      duration: "Ongoing"
-    }
-  ];
-
-  const metrics = [
-    {
-      title: "Migration Success Rate",
-      improvement: "99.5%",
-      description: "Successful migrations completed"
-    },
-    {
-      title: "Downtime Reduction",
-      improvement: "-95%",
-      description: "Average downtime during migration"
-    },
-    {
-      title: "Cost Savings",
-      improvement: "+35%",
-      description: "Average cost reduction after migration"
-    },
-    {
-      title: "Performance Improvement",
-      improvement: "+60%",
-      description: "Average performance improvement"
     }
   ];
 
   const useCases = [
     {
-      title: "Legacy System Migration",
-      description: "Modernize legacy applications and migrate them to modern cloud platforms.",
-      icon: <Server className="w-6 h-6" />
+      title: "E-commerce",
+      description: "Optimize product recommendations and personalize shopping experiences for higher conversion rates.",
+      icon: <ShoppingCart className="w-6 h-6" />
     },
     {
-      title: "Multi-Cloud Strategy",
-      description: "Implement hybrid and multi-cloud strategies for better flexibility and cost optimization.",
-      icon: <Globe className="w-6 h-6" />
+      title: "SaaS",
+      description: "Reduce churn and increase customer lifetime value with predictive analytics and engagement insights.",
+      icon: <Cloud className="w-6 h-6" />
     },
     {
-      title: "Disaster Recovery",
-      description: "Set up robust disaster recovery and business continuity solutions in the cloud.",
-      icon: <Shield className="w-6 h-6" />
+      title: "Financial Services",
+      description: "Enhance customer experience and detect fraud with advanced behavioral analysis and risk assessment.",
+      icon: <CreditCard className="w-6 h-6" />
     },
     {
-      title: "Compliance Migration",
-      description: "Ensure compliance with industry regulations during cloud migration.",
-      icon: <Lock className="w-6 h-6" />
+      title: "Healthcare",
+      description: "Improve patient engagement and outcomes with personalized communication and treatment recommendations.",
+      icon: <Heart className="w-6 h-6" />
+    }
+  ];
+
+  const metrics = [
+    {
+      title: "Customer Lifetime Value",
+      improvement: "+45%",
+      description: "Average increase in CLV through better targeting"
+    },
+    {
+      title: "Churn Reduction",
+      improvement: "-60%",
+      description: "Decrease in customer churn with predictive insights"
+    },
+    {
+      title: "Conversion Rate",
+      improvement: "+40%",
+      description: "Higher conversion through personalized experiences"
+    },
+    {
+      title: "Customer Satisfaction",
+      improvement: "+55%",
+      description: "Improved satisfaction through better understanding"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
-        <title>Cloud Migration Pro - Enterprise Cloud Migration Services | Zion Tech Group</title>
-        <meta name="description" content="Transform your business with our AI-powered cloud migration services. 99.5% success rate, zero downtime, and 35% cost savings. Expert migration to AWS, Azure, and Google Cloud." />
-        <meta name="keywords" content="cloud migration, AWS migration, Azure migration, Google Cloud migration, cloud consulting, infrastructure migration" />
-        <link rel="canonical" href="https://ziontechgroup.com/cloud-migration-pro" />
+        <title>AI Customer Insights Pro - Advanced Customer Analytics & Intelligence | Zion Tech Group</title>
+        <meta name="description" content="Transform customer data into actionable insights with AI-powered analytics, predictive modeling, and personalized recommendations. Increase CLV by 45% and reduce churn by 60%." />
+        <meta name="keywords" content="AI customer insights, customer analytics, predictive analytics, customer segmentation, sentiment analysis, personalization" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-customer-insights-pro" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="Cloud Migration Pro - Enterprise Cloud Migration Services" />
-        <meta property="og:description" content="Transform your business with our AI-powered cloud migration services. 99.5% success rate, zero downtime, and 35% cost savings." />
-        <meta property="og:url" content="https://ziontechgroup.com/cloud-migration-pro" />
+        <meta property="og:title" content="AI Customer Insights Pro - Advanced Customer Analytics & Intelligence" />
+        <meta property="og:description" content="Transform customer data into actionable insights with AI-powered analytics, predictive modeling, and personalized recommendations." />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-customer-insights-pro" />
         <meta property="og:type" content="website" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Cloud Migration Pro - Enterprise Cloud Migration Services" />
-        <meta name="twitter:description" content="Transform your business with our AI-powered cloud migration services. 99.5% success rate, zero downtime, and 35% cost savings." />
+        <meta name="twitter:title" content="AI Customer Insights Pro - Advanced Customer Analytics & Intelligence" />
+        <meta name="twitter:description" content="Transform customer data into actionable insights with AI-powered analytics, predictive modeling, and personalized recommendations." />
         
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Cloud Migration Pro",
-            "description": "Enterprise cloud migration services with AI-powered planning and automation",
-            "url": "https://ziontechgroup.com/cloud-migration-pro",
+            "@type": "SoftwareApplication",
+            "name": "AI Customer Insights Pro",
+            "description": "Advanced customer analytics platform with AI-powered insights and predictive modeling",
+            "url": "https://ziontechgroup.com/ai-customer-insights-pro",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web, iOS, Android",
+            "offers": {
+              "@type": "Offer",
+              "price": "49",
+              "priceCurrency": "USD",
+              "priceValidUntil": "2025-12-31"
+            },
             "provider": {
               "@type": "Organization",
               "name": "Zion Tech Group",
               "url": "https://ziontechgroup.com"
-            },
-            "offers": {
-              "@type": "Offer",
-              "price": "5000",
-              "priceCurrency": "USD"
             }
           })}
         </script>
@@ -279,20 +238,20 @@ export default function CloudMigrationPro() {
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 border border-blue-500/30 mb-6">
-            <Cloud className="w-5 h-5 mr-2 text-blue-400" />
-            <span className="text-blue-300 font-medium">AI-Powered Cloud Migration</span>
+            <Brain className="w-5 h-5 mr-2 text-blue-400" />
+            <span className="text-blue-300 font-medium">AI-Powered Customer Intelligence</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            Cloud Migration
+            AI Customer Insights
             <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Pro
             </span>
           </h1>
           
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business with our AI-powered cloud migration services. 99.5% success rate, zero downtime, 
-            and 35% cost savings with expert migration to AWS, Azure, and Google Cloud.
+            Transform customer data into actionable insights with AI-powered analytics, predictive modeling, 
+            and personalized recommendations. Increase CLV by 45% and reduce churn by 60%.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -300,7 +259,7 @@ export default function CloudMigrationPro() {
               to="/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
             >
-              Get Free Assessment
+              Start Free Trial
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link
@@ -330,10 +289,10 @@ export default function CloudMigrationPro() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Migration Services
+              Advanced AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              End-to-end cloud migration with AI-powered planning and automation
+              Leverage cutting-edge AI technology to understand your customers like never before
             </p>
           </div>
           
@@ -363,46 +322,15 @@ export default function CloudMigrationPro() {
         </div>
       </section>
 
-      {/* Migration Process Section */}
+      {/* Use Cases Section */}
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Our Proven Migration Process
+              Perfect for Every Industry
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              A systematic approach to ensure successful cloud migration
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {migrationSteps.map((step, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
-                <div className="flex items-center mb-4">
-                  <div className="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg mr-4">
-                    {step.step}
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white">{step.title}</h3>
-                    <p className="text-blue-400 text-sm">{step.duration}</p>
-                  </div>
-                </div>
-                <p className="text-gray-300">{step.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Perfect for Every Migration Need
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our cloud migration expertise covers all scenarios and requirements
+              Our AI customer insights platform adapts to your industry's unique needs
             </p>
           </div>
           
@@ -427,14 +355,14 @@ export default function CloudMigrationPro() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 bg-slate-800/30">
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Transparent Pricing
+              Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the migration package that fits your needs
+              Choose the plan that fits your business size and needs. All plans include our core AI features.
             </p>
           </div>
           
@@ -488,14 +416,14 @@ export default function CloudMigrationPro() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Trusted by Industry Leaders
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our customers say about Cloud Migration Pro
+              See what our customers say about AI Customer Insights Pro
             </p>
           </div>
           
@@ -519,20 +447,20 @@ export default function CloudMigrationPro() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-slate-800/30">
+      <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Infrastructure?
+            Ready to Transform Your Customer Understanding?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join hundreds of companies already using Cloud Migration Pro to modernize their infrastructure.
+            Join thousands of businesses already using AI Customer Insights Pro to better understand and serve their customers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
             >
-              Get Free Assessment
+              Start Free Trial
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link
