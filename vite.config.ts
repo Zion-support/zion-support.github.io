@@ -35,10 +35,12 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 200, // Increased threshold for better chunking
-    assetsInlineLimit: 4096, // Optimized for better caching and faster initial load
+    chunkSizeWarningLimit: 150, // Reduced threshold for better chunking
+    assetsInlineLimit: 2048, // Reduced for better caching
     // Enable compression
     reportCompressedSize: true,
+    // Enable source maps for debugging in production
+    sourcemap: false,
     // Optimize for production
     terserOptions: {
       compress: {
@@ -83,15 +85,18 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
-          // Core React libraries
-          if (id.includes('react') || id.includes('react-dom')) {
-            return 'react-vendor'
+          // Core React libraries - split further
+          if (id.includes('react/') && !id.includes('react-dom')) {
+            return 'react-core'
+          }
+          if (id.includes('react-dom')) {
+            return 'react-dom'
           }
           // Router
           if (id.includes('react-router')) {
             return 'router'
           }
-          // UI libraries
+          // UI libraries - split animations and icons
           if (id.includes('framer-motion')) {
             return 'animations'
           }
@@ -118,7 +123,7 @@ export default defineConfig({
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
-          // AI service pages - group by category
+          // AI service pages - group by category with smaller chunks
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/ai-')[1]?.split('/')[0];
             if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
@@ -135,7 +140,7 @@ export default defineConfig({
             }
             return 'ai-other'
           }
-          // Zion service pages - group by category
+          // Zion service pages - group by category with smaller chunks
           if (id.includes('/zion-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/zion-')[1]?.split('/')[0];
             if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
@@ -153,10 +158,26 @@ export default defineConfig({
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
             return '5g-services'
           }
-          // Main pages
+          // Main pages - split into smaller chunks
           if (id.includes('/app/') && id.includes('/page.tsx') && 
               !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
+            if (id.includes('/about') || id.includes('/contact') || id.includes('/services')) {
+              return 'main-core'
+            }
+            if (id.includes('/blog') || id.includes('/tutorials') || id.includes('/demo')) {
+              return 'main-content'
+            }
             return 'main-pages'
+          }
+          // Split large vendor libraries
+          if (id.includes('node_modules')) {
+            if (id.includes('@types/') || id.includes('typescript')) {
+              return 'types'
+            }
+            if (id.includes('eslint') || id.includes('prettier')) {
+              return 'dev-tools'
+            }
+            return 'vendor'
           }
           // Default chunk for other modules
           return 'vendor'
