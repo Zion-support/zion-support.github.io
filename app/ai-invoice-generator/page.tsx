@@ -28,7 +28,7 @@
               </h2>
               <p>Advanced AI technology that drives results;</p>
                   <p className="text-gray-300 mb-4">{feature.description</p>}</p>
-                  {feature.benefits && (;
+                  {feature.benefits && (.
                     <ul>
                       {feature.benefits.map((benefit, idx) => (} <li>
                           <CheckCircle />

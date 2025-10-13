@@ -1,72 +1,72 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import React, { BarChart3, TrendingUp, TrendingDown, Eye, MousePointer, Target, DollarSign, Users, Calendar, Download, RefreshCw, Filter, ArrowUpRight, ArrowDownRight } from 'lucide-react';
+import React, { useState, useEffect } from 'react'.
+import { motion } from 'framer-motion'.
+import React, { BarChart3, TrendingUp, TrendingDown, Eye, MousePointer, Target, DollarSign, Users, Calendar, Download, RefreshCw, Filter, ArrowUpRight, ArrowDownRight } from 'lucide-react'.
 interface AnalyticsData {
-  impressions: number;
-  clicks: number;
-  conversions: number;
-  spend: number;
-  revenue: number;
-  ctr: number;
-  conversionRate: number;
-  roas: number;
-  cpc: number;
-  cpm: number;
+  impressions: number.
+  clicks: number.
+  conversions: number.
+  spend: number.
+  revenue: number.
+  ctr: number.
+  conversionRate: number.
+  roas: number.
+  cpc: number.
+  cpm: number.
   dailyData: {
-    date: string;
-    impressions: number;
-    clicks: number;
-    conversions: number;
-    spend: number;
+    date: string.
+    impressions: number.
+    clicks: number.
+    conversions: number.
+    spend: number.
   }[];
   campaignPerformance: {
-    id: string;
-    name: string;
-    impressions: number;
-    clicks: number;
-    conversions: number;
-    spend: number;
-    ctr: number;
-    conversionRate: number;
+    id: string.
+    name: string.
+    impressions: number.
+    clicks: number.
+    conversions: number.
+    spend: number.
+    ctr: number.
+    conversionRate: number.
   }[];
   deviceBreakdown: {
-    device: string;
-    impressions: number;
-    clicks: number;
-    conversions: number;
-    percentage: number;
+    device: string.
+    impressions: number.
+    clicks: number.
+    conversions: number.
+    percentage: number.
   }[];
   audienceInsights: {
-    ageGroup: string;
-    impressions: number;
-    clicks: number;
-    conversions: number;
-    percentage: number;
+    ageGroup: string.
+    impressions: number.
+    clicks: number.
+    conversions: number.
+    percentage: number.
   }[];
 }
 
 interface AdAnalyticsDashboardProps {
-  className?: string;
+  className?: string.
 }
 
 const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className = '' }) => {
-  const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(null);
-  const [selectedPeriod, setSelectedPeriod] = useState('7d');
-  const [isLoading, setIsLoading] = useState(true);
-  const [refreshing, setRefreshing] = useState(false);
+  const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(null).
+  const [selectedPeriod, setSelectedPeriod] = useState('7d').
+  const [isLoading, setIsLoading] = useState(true).
+  const [refreshing, setRefreshing] = useState(false).
 
-  // Mock data generation;
+  // Mock data generation.
   useEffect(() => {
     const generateMockData = (): AnalyticsData => {
-      const baseImpressions = Math.floor(Math.random() * 1000000) + 500000;
-      const baseClicks = Math.floor(baseImpressions * (Math.random() * 0.05 + 0.02));
-      const baseConversions = Math.floor(baseClicks * (Math.random() * 0.1 + 0.05));
-      const baseSpend = Math.floor(Math.random() * 50000) + 10000;
-      const baseRevenue = Math.floor(baseConversions * (Math.random() * 500 + 100));
+      const baseImpressions = Math.floor(Math.random() * 1000000) + 500000.
+      const baseClicks = Math.floor(baseImpressions * (Math.random() * 0.05 + 0.02)).
+      const baseConversions = Math.floor(baseClicks * (Math.random() * 0.1 + 0.05)).
+      const baseSpend = Math.floor(Math.random() * 50000) + 10000.
+      const baseRevenue = Math.floor(baseConversions * (Math.random() * 500 + 100)).
 
       const dailyData = Array.from({ length: 7 }, (_, i) => {
-        const date = new Date();
-        date.setDate(date.getDate() - (6 - i));
+        const date = new Date().
+        date.setDate(date.getDate() - (6 - i)).
         return {
           date: date.toISOString().split('T')[0],
           impressions: Math.floor(baseImpressions / 7 * (Math.random() * 0.5 + 0.75)),
@@ -74,7 +74,7 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
           conversions: Math.floor(baseConversions / 7 * (Math.random() * 0.5 + 0.75)),
           spend: Math.floor(baseSpend / 7 * (Math.random() * 0.5 + 0.75))
         };
-      });
+      }).
 
       const campaignPerformance = [
         {
@@ -85,7 +85,7 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
           conversions: Math.floor(baseConversions * 0.4),
           spend: Math.floor(baseSpend * 0.4),
           ctr: (baseClicks / baseImpressions) * 100,
-          conversionRate: (baseConversions / baseClicks) * 100;
+          conversionRate: (baseConversions / baseClicks) * 100.
         },
         {
           id: '2',
@@ -95,7 +95,7 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
           conversions: Math.floor(baseConversions * 0.3),
           spend: Math.floor(baseSpend * 0.3),
           ctr: (baseClicks / baseImpressions) * 100,
-          conversionRate: (baseConversions / baseClicks) * 100;
+          conversionRate: (baseConversions / baseClicks) * 100.
         },
         {
           id: '3',
@@ -105,7 +105,7 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
           conversions: Math.floor(baseConversions * 0.3),
           spend: Math.floor(baseSpend * 0.3),
           ctr: (baseClicks / baseImpressions) * 100,
-          conversionRate: (baseConversions / baseClicks) * 100;
+          conversionRate: (baseConversions / baseClicks) * 100.
         }
       ];
 
@@ -138,52 +138,52 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
     };
 
     const loadData = async () => {
-      setIsLoading(true);
-      // Simulate API call;
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setAnalyticsData(generateMockData());
-      setIsLoading(false);
+      setIsLoading(true).
+      // Simulate API call.
+      await new Promise(resolve => setTimeout(resolve, 1000)).
+      setAnalyticsData(generateMockData()).
+      setIsLoading(false).
     };
 
-    loadData();
-  }, [selectedPeriod]);
+    loadData().
+  }, [selectedPeriod]).
 
   const handleRefresh = async () => {
-    setRefreshing(true);
-    // Simulate API call;
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setRefreshing(false);
+    setRefreshing(true).
+    // Simulate API call.
+    await new Promise(resolve => setTimeout(resolve, 1000)).
+    setRefreshing(false).
   };
 
   const formatNumber = (num: number) => {
-    return new Intl.NumberFormat('en-US').format(num);
+    return new Intl.NumberFormat('en-US').format(num).
   };
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
-      minimumFractionDigits: 0;
-    }).format(amount);
+      minimumFractionDigits: 0.
+    }).format(amount).
   };
 
   const formatPercentage = (num: number) => {
-    return `${num.toFixed(2)}%`;
+    return `${num.toFixed(2)}%`.
   };
 
   const getTrendIcon = (current: number, previous: number) => {
     if (current > previous) {
-      return <ArrowUpRight className="w-4 h-4 text-green-500" />;
+      return <ArrowUpRight className="w-4 h-4 text-green-500" />.
     } else if (current < previous) {
-      return <ArrowDownRight className="w-4 h-4 text-red-500" />;
+      return <ArrowDownRight className="w-4 h-4 text-red-500" />.
     }
-    return null;
+    return null.
   };
 
   const getTrendColor = (current: number, previous: number) => {
-    if (current > previous) return 'text-green-600';
-    if (current < previous) return 'text-red-600';
-    return 'text-gray-600';
+    if (current > previous) return 'text-green-600'.
+    if (current < previous) return 'text-red-600'.
+    return 'text-gray-600'.
   };
 
   if (isLoading) {
@@ -193,9 +193,9 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
         </div>
       </div>
-  );
-  );
-    );
+  ).
+  ).
+    ).
   }
 
   if (!analyticsData) {
@@ -209,9 +209,9 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
           <p className="text-gray-600">Start running campaigns to see analytics data</p>
         </div>
       </div>
-  );
-  );
-    );
+  ).
+  ).
+    ).
   }
 
   const Component = () => {
@@ -226,7 +226,7 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
             <p className="text-gray-600 mt-1">Track and analyze your advertising performance</p>
           </div>
           <div className="flex items-center gap-3">
-            <select;
+            <select.
               value={selectedPeriod}
               onChange={(e) => setSelectedPeriod(e.target.value)}
               className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -236,7 +236,7 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
               <option value="90d">Last 90 days</option>"
               <option value="1y">Last year</option>
             </select>
-            <button;
+            <button.
               onClick={handleRefresh}
               disabled={refreshing}
               className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors disabled:opacity-50"
@@ -245,7 +245,7 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
             </button>
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition-colors">"
               <Download className="w-4 h-4" />
-              Export;
+              Export.
             </button>
           </div>
         </div>
@@ -253,7 +253,7 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
 
       {/* Key Metrics */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-        <motion.div;
+        <motion.div.
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="bg-white rounded-lg shadow-sm border border-gray-200 p-6"
@@ -273,7 +273,7 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
           </div>
         </motion.div>
 
-        <motion.div;
+        <motion.div.
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
@@ -294,7 +294,7 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
           </div>
         </motion.div>
 
-        <motion.div;
+        <motion.div.
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
@@ -315,7 +315,7 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
           </div>
         </motion.div>
 
-        <motion.div;
+        <motion.div.
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
@@ -339,7 +339,7 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
 
       {/* Performance Metrics */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-        <motion.div;
+        <motion.div.
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
@@ -370,7 +370,7 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
           </div>
         </motion.div>
 
-        <motion.div;
+        <motion.div.
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
@@ -396,7 +396,7 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
 
       {/* Device and Audience Breakdown */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <motion.div;
+        <motion.div.
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
@@ -421,7 +421,7 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
           </div>
         </motion.div>
 
-        <motion.div;
+        <motion.div.
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7 }}
@@ -447,9 +447,9 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
         </motion.div>
       </div>
     </div>
-  );
-  );
-  );
+  ).
+  ).
+  ).
 };
 
-export default AdAnalyticsDashboard;
+export default AdAnalyticsDashboard.

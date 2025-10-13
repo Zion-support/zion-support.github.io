@@ -33,7 +33,7 @@ export default function handler(req, res) {
       email 
     }));
   } catch (error) {
-    console.error('Newsletter subscription error:', error);
+    // console.error('Newsletter subscription error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to subscribe to newsletter' }));

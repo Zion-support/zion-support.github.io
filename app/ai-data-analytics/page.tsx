@@ -1,4 +1,4 @@
-import React, { CheckCircle, Database, Brain, BarChart3, Target } from 'lucide-react';
+import React, { CheckCircle, Database, Brain, BarChart3, Target } from 'lucide-react'.
 const AIDataAnalyticsPage: React.FC = () => {
   const analyticsServices = [
     {
@@ -24,8 +24,8 @@ const AIDataAnalyticsPage: React.FC = () => {
       ],
       marketPrice: '$2,000-4,000/month',
       category: 'Business Intelligence',
-      technologies: ['Python', 'TensorFlow', 'React', 'PostgreSQL', 'Redis', 'Apache Kafka'],'
-      useCases: ['Retail Analytics', 'Financial Forecasting', 'Supply Chain Optimization', 'Customer Behavior Analysis'],'
+      technologies: ['Python', 'TensorFlow', 'React', 'PostgreSQL', 'Redis', 'Apache Kafka'],
+      useCases: ['Retail Analytics', 'Financial Forecasting', 'Supply Chain Optimization', 'Customer Behavior Analysis'],
     },
     {
       title: 'AI-Powered Customer Analytics Suite',
@@ -50,8 +50,8 @@ const AIDataAnalyticsPage: React.FC = () => {
       ],
       marketPrice: '$1,500-3,000/month',
       category: 'Customer Analytics',
-      technologies: ['Machine Learning', 'Python', 'Scikit-learn', 'Pandas', 'React', 'MongoDB'],'
-      useCases: ['E-commerce', 'SaaS Companies', 'Financial Services', 'Healthcare'],'
+      technologies: ['Machine Learning', 'Python', 'Scikit-learn', 'Pandas', 'React', 'MongoDB'],
+      useCases: ['E-commerce', 'SaaS Companies', 'Financial Services', 'Healthcare'],
     },
     {
       title: 'Predictive Maintenance Analytics',
@@ -76,8 +76,8 @@ const AIDataAnalyticsPage: React.FC = () => {
       ],
       marketPrice: '$2,500-5,000/month',
       category: 'Industrial Analytics',
-      technologies: ['Time Series Analysis', 'LSTM Networks', 'Python', 'TensorFlow', 'InfluxDB', 'Grafana'],'
-      useCases: ['Manufacturing', 'Oil & Gas', 'Utilities', 'Transportation'],'
+      technologies: ['Time Series Analysis', 'LSTM Networks', 'Python', 'TensorFlow', 'InfluxDB', 'Grafana'],
+      useCases: ['Manufacturing', 'Oil & Gas', 'Utilities', 'Transportation'],
     },
     {
       title: 'Financial Risk Analytics Platform',
@@ -102,8 +102,8 @@ const AIDataAnalyticsPage: React.FC = () => {
       ],
       marketPrice: '$3,000-6,000/month',
       category: 'Financial Analytics',
-      technologies: ['Deep Learning', 'Anomaly Detection', 'Python', 'PyTorch', 'Apache Spark', 'Kafka'],'
-      useCases: ['Banks', 'Credit Unions', 'Fintech', 'Insurance Companies'],'
+      technologies: ['Deep Learning', 'Anomaly Detection', 'Python', 'PyTorch', 'Apache Spark', 'Kafka'],
+      useCases: ['Banks', 'Credit Unions', 'Fintech', 'Insurance Companies'],
     },
     {
       title: 'AI Marketing Attribution Platform',
@@ -128,8 +128,8 @@ const AIDataAnalyticsPage: React.FC = () => {
       ],
       marketPrice: '$2,000-4,000/month',
       category: 'Marketing Analytics',
-      technologies: ['Attribution Modeling', 'Python', 'R', 'Google Analytics API', 'Facebook API', 'React'],'
-      useCases: ['E-commerce', 'SaaS', 'Retail', 'Digital Agencies'],'
+      technologies: ['Attribution Modeling', 'Python', 'R', 'Google Analytics API', 'Facebook API', 'React'],
+      useCases: ['E-commerce', 'SaaS', 'Retail', 'Digital Agencies'],
     },
     {
       title: 'Supply Chain Intelligence Suite',
@@ -154,8 +154,8 @@ const AIDataAnalyticsPage: React.FC = () => {
       ],
       marketPrice: '$2,500-5,000/month',
       category: 'Supply Chain Analytics',
-      technologies: ['Time Series Forecasting', 'Optimization Algorithms', 'Python', 'OR-Tools', 'PostgreSQL', 'React'],'
-      useCases: ['Manufacturing', 'Retail', 'Logistics', 'Food & Beverage'],'
+      technologies: ['Time Series Forecasting', 'Optimization Algorithms', 'Python', 'OR-Tools', 'PostgreSQL', 'React'],
+      useCases: ['Manufacturing', 'Retail', 'Logistics', 'Food & Beverage'],
     }
   ];
   const additionalFeatures = [
@@ -188,23 +188,23 @@ const AIDataAnalyticsPage: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
           <div className="text-center">"
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI Data Analytics Services;
+              AI Data Analytics Services.
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              Transform your data into actionable insights with our advanced AI-powered analytics solutions;
+              Transform your data into actionable insights with our advanced AI-powered analytics solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
               >
-                📞 +1 302 464 0950;
+                📞 +1 302 464 0950.
               </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
-                ✉️ Get Free Consultation;
+                ✉️ Get Free Consultation.
               </a>
             </div>
           </div>
@@ -215,10 +215,10 @@ const AIDataAnalyticsPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
           <div className="text-center mb-12">"
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Analytics Solutions;
+              Our Analytics Solutions.
             </h2>
             <p className="text-xl text-gray-600">
-              Comprehensive AI-powered analytics platforms for every business need;
+              Comprehensive AI-powered analytics platforms for every business need.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -254,7 +254,7 @@ const AIDataAnalyticsPage: React.FC = () => {
                   href="/contact"
                   className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center justify-center"
                 >
-                  Get Started;
+                  Get Started.
                 </a>
               </div>
             ))}
@@ -269,7 +269,7 @@ const AIDataAnalyticsPage: React.FC = () => {
               Why Choose Our Analytics Solutions?
             </h2>
             <p className="text-xl text-gray-600">
-              Advanced technology and expert implementation for maximum ROI;
+              Advanced technology and expert implementation for maximum ROI.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -292,20 +292,20 @@ const AIDataAnalyticsPage: React.FC = () => {
             Ready to Transform Your Data into Insights?
           </h2>
           <p className="text-xl mb-8 text-blue-100">
-            Contact us today for a free consultation and custom analytics solution;
+            Contact us today for a free consultation and custom analytics solution.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="tel:+13024640950"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
             >
-              📞 +1 302 464 0950;
+              📞 +1 302 464 0950.
             </a>
             <a 
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
-              ✉️ kleber@ziontechgroup.com;
+              ✉️ kleber@ziontechgroup.com.
             </a>
           </div>
           <div className="mt-8 text-sm text-blue-200">
@@ -314,7 +314,7 @@ const AIDataAnalyticsPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-  );
+  ).
+  ).
 };
-export default AIDataAnalyticsPage;
+export default AIDataAnalyticsPage.

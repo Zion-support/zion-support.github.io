@@ -1,17 +1,17 @@
-import React from 'react';
-import Link from 'next/link';
-import React, { Star, Users, TrendingUp, Award, Sparkles } from 'lucide-react';
+import React from 'react'.
+import Link from 'next/link'.
+import React, { Star, Users, TrendingUp, Award, Sparkles } from 'lucide-react'.
 interface FeaturedContent {
-  id: number;
-  title: string;
-  category: string;
-  readTime: string;
-  rating: number;
-  readers: string;
-  badge: string;
-  gradient: string;
-  icon: React.ReactNode;
-  link: string;
+  id: number.
+  title: string.
+  category: string.
+  readTime: string.
+  rating: number.
+  readers: string.
+  badge: string.
+  gradient: string.
+  icon: React.ReactNode.
+  link: string.
 }
 
 const NewContentAdvertisingBanner: React.FC = () => {
@@ -104,7 +104,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-20">"
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-fade-in">
-            Revolutionary New Content Hub;
+            Revolutionary New Content Hub.
           </h2>
           
           {/* Achievements Grid */}
@@ -123,7 +123,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
           {/* Featured Content Grid */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {featuredContent.map((content, index) => (
-              <div;
+              <div.
                 key={content.id}
                 className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-indigo-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/20"
                 style={{ animationDelay: `${index * 200}ms` }}
@@ -156,7 +156,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
                       <Users className="w-4 h-4" />"
                       <span className="text-sm">{content.readers} readers</span>
                     </div>
-                    <Link ;
+                    <Link .
                       href={content.link}
                       className="group-hover:translate-x-1 transition-transform duration-300"
                     >
@@ -174,7 +174,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 mb-6">"
                 <Star className="w-5 h-5 text-yellow-400 fill-current" />"
                 <span className="text-yellow-400 font-bold text-sm tracking-wider uppercase">
-                  LIMITED TIME OFFER;
+                  LIMITED TIME OFFER.
                 </span>
               </div>
               
@@ -199,7 +199,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  ).
 };
 
-export default NewContentAdvertisingBanner;
+export default NewContentAdvertisingBanner.

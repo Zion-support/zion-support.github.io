@@ -1,4 +1,4 @@
-import React, { CheckCircle, Code, Smartphone } from 'lucide-react';
+import React, { CheckCircle, Code, Smartphone } from 'lucide-react'.
 const AIMobileAppDevelopmentPage: React.FC = () => {
   const mobileServices = [
     {
@@ -24,8 +24,8 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
       ],
       marketPrice: '$8,000-15,000/project',
       category: 'Mobile Development',
-      technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'TensorFlow Lite', 'Core ML'],'
-      platforms: ['iOS', 'Android', 'Cross-platform'],'
+      technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'TensorFlow Lite', 'Core ML'],
+      platforms: ['iOS', 'Android', 'Cross-platform'],
     },
     {
       title: 'AI Chatbot Mobile Integration',
@@ -50,8 +50,8 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
       ],
       marketPrice: '$2,000-4,000/month',
       category: 'AI Integration',
-      technologies: ['Dialogflow', 'Rasa', 'OpenAI GPT', 'TensorFlow', 'Node.js', 'APIs'],'
-      platforms: ['iOS', 'Android', 'Cross-platform'],'
+      technologies: ['Dialogflow', 'Rasa', 'OpenAI GPT', 'TensorFlow', 'Node.js', 'APIs'],
+      platforms: ['iOS', 'Android', 'Cross-platform'],
     },
     {
       title: 'AI-Powered Analytics for Mobile',
@@ -76,8 +76,8 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
       ],
       marketPrice: '$1,500-3,000/month',
       category: 'Analytics',
-      technologies: ['Firebase', 'Mixpanel', 'Amplitude', 'Python', 'Machine Learning', 'APIs'],'
-      platforms: ['iOS', 'Android', 'Cross-platform'],'
+      technologies: ['Firebase', 'Mixpanel', 'Amplitude', 'Python', 'Machine Learning', 'APIs'],
+      platforms: ['iOS', 'Android', 'Cross-platform'],
     },
     {
       title: 'AI Mobile Security Suite',
@@ -102,8 +102,8 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
       ],
       marketPrice: '$2,500-5,000/month',
       category: 'Security',
-      technologies: ['OWASP', 'Encryption', 'Biometrics', 'Machine Learning', 'APIs', 'SDKs'],'
-      platforms: ['iOS', 'Android', 'Cross-platform'],'
+      technologies: ['OWASP', 'Encryption', 'Biometrics', 'Machine Learning', 'APIs', 'SDKs'],
+      platforms: ['iOS', 'Android', 'Cross-platform'],
     },
     {
       title: 'AI Mobile Marketing Automation',
@@ -128,8 +128,8 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
       ],
       marketPrice: '$2,000-4,000/month',
       category: 'Marketing',
-      technologies: ['Firebase', 'OneSignal', 'Branch', 'Machine Learning', 'APIs', 'Analytics'],'
-      platforms: ['iOS', 'Android', 'Cross-platform'],'
+      technologies: ['Firebase', 'OneSignal', 'Branch', 'Machine Learning', 'APIs', 'Analytics'],
+      platforms: ['iOS', 'Android', 'Cross-platform'],
     },
     {
       title: 'AI Mobile App Testing Suite',
@@ -154,8 +154,8 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
       ],
       marketPrice: '$1,200-2,500/month',
       category: 'Testing',
-      technologies: ['Appium', 'Detox', 'Jest', 'Python', 'Machine Learning', 'APIs'],'
-      platforms: ['iOS', 'Android', 'Cross-platform'],'
+      technologies: ['Appium', 'Detox', 'Jest', 'Python', 'Machine Learning', 'APIs'],
+      platforms: ['iOS', 'Android', 'Cross-platform'],
     }
   ];
   const mobileFeatures = [
@@ -215,23 +215,23 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
           <div className="text-center">"
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI Mobile App Development;
+              AI Mobile App Development.
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto">
-              Build intelligent mobile apps with AI-powered features that engage users and drive business growth;
+              Build intelligent mobile apps with AI-powered features that engage users and drive business growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950"
                 className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center"
               >
-                📞 +1 302 464 0950;
+                📞 +1 302 464 0950.
               </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
               >
-                ✉️ Get Free Consultation;
+                ✉️ Get Free Consultation.
               </a>
             </div>
           </div>
@@ -242,10 +242,10 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
           <div className="text-center mb-12">"
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Development Process;
+              Our Development Process.
             </h2>
             <p className="text-xl text-gray-600">
-              Proven 5-step process for building exceptional AI-powered mobile apps;
+              Proven 5-step process for building exceptional AI-powered mobile apps.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
@@ -266,10 +266,10 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
           <div className="text-center mb-12">"
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Mobile Development Services;
+              Our Mobile Development Services.
             </h2>
             <p className="text-xl text-gray-600">
-              Comprehensive AI-powered mobile app development and support services;
+              Comprehensive AI-powered mobile app development and support services.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -305,7 +305,7 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
                   href="/contact"
                   className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors inline-flex items-center justify-center"
                 >
-                  Start Building;
+                  Start Building.
                 </a>
               </div>
             ))}
@@ -320,7 +320,7 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
               Why Choose Our Mobile Development?
             </h2>
             <p className="text-xl text-gray-600">
-              Advanced AI technology with expert mobile development expertise;
+              Advanced AI technology with expert mobile development expertise.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -341,10 +341,10 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
           <div className="text-center mb-12">"
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Success Stories;
+              Success Stories.
             </h2>
             <p className="text-xl text-gray-600">
-              Real results from our mobile app development clients;
+              Real results from our mobile app development clients.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
@@ -376,20 +376,20 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
             Ready to Build Your AI Mobile App?
           </h2>
           <p className="text-xl mb-8 text-indigo-100">
-            Get a free consultation and discover how AI can transform your mobile app;
+            Get a free consultation and discover how AI can transform your mobile app.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="tel:+13024640950"
               className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center"
             >
-              📞 +1 302 464 0950;
+              📞 +1 302 464 0950.
             </a>
             <a 
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
             >
-              ✉️ kleber@ziontechgroup.com;
+              ✉️ kleber@ziontechgroup.com.
             </a>
           </div>
           <div className="mt-8 text-sm text-indigo-200">
@@ -398,7 +398,7 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-  );
+  ).
+  ).
 };
-export default AIMobileAppDevelopmentPage;
+export default AIMobileAppDevelopmentPage.

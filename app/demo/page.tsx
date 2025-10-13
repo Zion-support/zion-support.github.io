@@ -1,4 +1,4 @@
-import React, { Helmet } from 'react-helmet-async';
+import React, { Helmet } from 'react-helmet-async'.
 const DemoPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -7,14 +7,14 @@ const DemoPage: React.FC = () => {
     phone: '',
     service: '',
     message: '
-  });
+  }).
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target.
     setFormData(prev => ({
       ...prev,
-      [name]: value;
-    }));
+      [name]: value.
+    })).
   };
 
     },
@@ -25,7 +25,7 @@ const DemoPage: React.FC = () => {
       features: [
         'Natural language understanding,'
         'Multi-language support,'
-        24;
+        24.
         Seamless handoff to humans]
       ],
       icon: Users,
@@ -35,7 +35,7 @@ const DemoPage: React.FC = () => {
       title: 'AI Content Generation,'
       description: 'Watch our AI create high-quality content in seconds,'
       duration: '4 min,'
-      features: ['Blog posts', 'Social media content', 'Product descriptions],'
+      features: ['Blog posts', 'Social media content', 'Product descriptions],
 export default function Demo() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -46,7 +46,7 @@ export default function Demo() {
       <div className="container mx-auto px-4 py-16">"
         <div className="text-center">"
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Interactive Demos;
+            Interactive Demos.
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             Experience our solutions through interactive demonstrations.
@@ -105,22 +105,22 @@ export default function Demo() {
             Ready to See More?
           <
           <p className="text-xl text-gray-300 mb-8>
-            Schedule a personalized demo with our experts. Well show you exactly ;
+            Schedule a personalized demo with our experts. Well show you exactly .
             how our solutions can address your specific business needs.
           <
           <div className="flex flex-col sm: flex-row gap-4 justify-center>"
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105>
-              Schedule Live Demo;
+              Schedule Live Demo.
             <
             <button className=border border-purple-400 text-purple-400 hover:bg-purple-400 hove,
     r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300>
-              Contact Sales;
+              Contact Sales.
             <
           <
         <
       <
 
-      <Footer ;
+      <Footer .
     <
     </React.Fragment>)
   );};
@@ -149,14 +149,14 @@ const DemoPage: React.FC = () => {
       interests: prev.interests.includes(interest)
         ? prev.interests.filter(i => i !== interest)
         : [...prev.interests, interest]
-    }));
+    })).
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault().
     // Handle form submission
-    console.log('Demo request submitted:', formData);
-    alert('Thank you for your interest! We will contact you within 24 hours to schedule your demo.');
+    console.log('Demo request submitted:', formData).
+    alert('Thank you for your interest! We will contact you within 24 hours to schedule your demo.').
   };
 
   const Component = () => {
@@ -258,7 +258,7 @@ const DemoPage: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Company;
+                      Company.
                     </label>
                     <input
                       type="text"
@@ -272,7 +272,7 @@ const DemoPage: React.FC = () => {
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Phone Number;
+                      Phone Number.
                     </label>
                     <input
                       type="tel"
@@ -287,7 +287,7 @@ const DemoPage: React.FC = () => {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Job Role;
+                    Job Role.
                   </label>
                   <select
                     name="role"
@@ -327,7 +327,7 @@ const DemoPage: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Preferred Date;
+                      Preferred Date.
                     </label>
                     <input
                       type="date"
@@ -341,7 +341,7 @@ const DemoPage: React.FC = () => {
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Preferred Time;
+                      Preferred Time.
                     </label>
                     <select
                       name="preferredTime"
@@ -359,7 +359,7 @@ const DemoPage: React.FC = () => {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Additional Message;
+                    Additional Message.
                   </label>
                   <textarea
                     name="message"
@@ -376,7 +376,7 @@ const DemoPage: React.FC = () => {
                   className="w-full cyber-button py-4 text-lg font-semibold"
                 >
                   <Calendar className="w-5 h-5 mr-2 inline" />
-                  Schedule My Demo;
+                  Schedule My Demo.
                 </button>
               </form>
             </div>
@@ -422,16 +422,16 @@ const DemoPage: React.FC = () => {
       
       <Footer />
     </>
-  );
+  ).
 };
 
-export default DemoPage;
+export default DemoPage.
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Demo List */}
               <div className="space-y-6">"
                 <h2 className="text-3xl font-bold text-white mb-8">Choose a Demo</h2>
                 {demos.map((demo) => (
-                  <div;
+                  <div.
                     key={demo.id}
                     className={`cyber-card p-6 cursor-pointer transition-all ${
                       selectedDemo === demo.id ? 'ring-2 ring-cyan-500' : '
@@ -460,7 +460,7 @@ export default DemoPage;
               {/* Demo Preview */}
               <div className="cyber-card p-8">"
                 <h3 className="text-2xl font-bold text-white mb-6">
-                  {demos.find(d => d.id === selectedDemo)?.title} Demo;
+                  {demos.find(d => d.id === selectedDemo)?.title} Demo.
                 </h3>
                 <div className="bg-gray-800 rounded-lg p-8 mb-6 text-center">"
                   <div className="w-16 h-16 bg-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
@@ -470,7 +470,7 @@ export default DemoPage;
                     Interactive demo coming soon. Contact us to schedule a live demonstration.
                   </p>
                   <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-                    Schedule Live Demo;
+                    Schedule Live Demo.
                   </button>
                 </div>
                 <div className="space-y-4">"
@@ -494,14 +494,14 @@ export default DemoPage;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">"
                 <Play className="w-5 h-5 mr-2" />
-                Schedule Demo;
+                Schedule Demo.
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors flex items-center justify-center">"
                 <ArrowRight className="w-5 h-5 mr-2" />
-                Contact Sales;
+                Contact Sales.
               </button>
             </div>
           </div>
     </>
-);
+).
 }

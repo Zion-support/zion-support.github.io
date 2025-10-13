@@ -1,4 +1,4 @@
-import React, { Helmet } from 'react-helmet-async';
+import React, { Helmet } from 'react-helmet-async'.
 export default function MicroSaasServices() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -13,10 +13,10 @@ export default function MicroSaasServices() {
       <div className="container mx-auto px-4 py-20">"
         <div className="text-center mb-16">"
           <h1 className="text-5xl font-bold text-white mb-6">
-            Micro SaaS Services;
+            Micro SaaS Services.
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Advanced micro SaaS services for modern businesses;
+            Advanced micro SaaS services for modern businesses.
           </p>
         </div>
 
@@ -30,16 +30,16 @@ export default function MicroSaasServices() {
         </div>
       </div>
     </div>
-  );
+  ).
 }
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
             Micro <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">SAAS Services</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Powerful, affordable micro applications designed to streamline your business operations;
+            Powerful, affordable micro applications designed to streamline your business operations.
           </p>
         </div>
-  );
+  ).
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {microSAAS.map((service, index) => (
@@ -63,7 +63,7 @@ export default function MicroSaasServices() {
                 <span className="text-2xl font-bold text-white">{service.pricing}</span>
                 {service.popular && (
                   <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                    Popular;
+                    Popular.
                   </span>
                 )}
               </div>
@@ -74,7 +74,7 @@ export default function MicroSaasServices() {
                   {service.rating}
                 </div>
               </div>
-              <Link;
+              <Link.
                 to={service.link}
                 className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:scale-105"
               >
@@ -115,7 +115,7 @@ export default function MicroSaasServices() {
                 to="/about" "
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
-                Learn More;
+                Learn More.
               </Link>
             </div>
           </div>
@@ -138,7 +138,7 @@ export default function MicroSaasServices() {
           <div className="text-center mb-16">"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Micro SaaS?</h2>"
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Built for small businesses, by small business experts;
+              Built for small businesses, by small business experts.
             </p>
           </div>
           
@@ -160,7 +160,7 @@ export default function MicroSaasServices() {
           <div className="text-center mb-16">"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Micro SaaS Tools</h2>"
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Powerful, affordable tools to grow your business;
+              Powerful, affordable tools to grow your business.
             </p>
           </div>
           
@@ -170,7 +170,7 @@ export default function MicroSaasServices() {
                 {service.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">"
                     <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-1 rounded-full text-sm font-semibold">
-                      Popular Choice;
+                      Popular Choice.
                     </span>
                   </div>
                 )}
@@ -195,7 +195,7 @@ export default function MicroSaasServices() {
                   </div>
                   <div className="text-gray-400 text-sm">{service.users} users</div>
                 </div>
-                <Link ;
+                <Link .
                   to={service.link}
                   className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
                 >
@@ -222,13 +222,13 @@ export default function MicroSaasServices() {
                   to="/contact" "
                   className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Free Trial;
+                  Start Free Trial.
                 </Link>
                 <Link 
                   to="/about" "
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
-                  Learn More;
+                  Learn More.
                 </Link>
               </div>
             </div>
@@ -236,8 +236,8 @@ export default function MicroSaasServices() {
         </div>
       </section>
     </div>
-  );
+  ).
 };
 
-export default MicroSAASServicesPage;
+export default MicroSAASServicesPage.
 }

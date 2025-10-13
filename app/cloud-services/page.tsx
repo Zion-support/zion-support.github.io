@@ -1,6 +1,6 @@
-import React, { Helmet } from 'react-helmet-async';
-import React, { Link } from 'react-router-dom';
-import React, { ArrowRight, Cloud, Shield, Zap, Globe, Database, Server, CheckCircle, TrendingUp, Clock } from 'lucide-react';
+import React, { Helmet } from 'react-helmet-async'.
+import React, { Link } from 'react-router-dom'.
+import React, { ArrowRight, Cloud, Shield, Zap, Globe, Database, Server, CheckCircle, TrendingUp, Clock } from 'lucide-react'.
 export default function CloudServices() {
   const services = [
     {
@@ -48,8 +48,8 @@ export default function CloudServices() {
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <>
       <Helmet>
@@ -63,7 +63,7 @@ export default function CloudServices() {
           <div className="max-w-7xl mx-auto">"
             <div className="text-center">"
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Cloud Services;
+                Cloud Services.
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                 Transform your business with our comprehensive cloud solutions. 
@@ -81,7 +81,7 @@ export default function CloudServices() {
                   to="/consultation"
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
                 >
-                  Free Consultation;
+                  Free Consultation.
                 </Link>
                 <Link
                   to="/demo"
@@ -100,16 +100,16 @@ export default function CloudServices() {
           <div className="max-w-7xl mx-auto">"
             <div className="text-center mb-16">"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Cloud Solutions;
+                Our Cloud Solutions.
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Comprehensive cloud services designed to accelerate your digital transformation;
+                Comprehensive cloud services designed to accelerate your digital transformation.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <div;
+                <div.
                   key={index}
                   className="bg-slate-800/50 backdrop-blur-xl rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
                 >
@@ -132,13 +132,13 @@ export default function CloudServices() {
                 Why Choose Our Cloud Services?
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Experience the benefits of enterprise-grade cloud infrastructure;
+                Experience the benefits of enterprise-grade cloud infrastructure.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
-                <div;
+                <div.
                   key={index}
                   className="flex items-center space-x-3 bg-slate-800/30 backdrop-blur-xl rounded-lg p-4 border border-cyan-500/20"
                 >
@@ -172,7 +172,7 @@ export default function CloudServices() {
                   to="/pricing"
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
-                  View Pricing;
+                  View Pricing.
                 </Link>
               </div>
             </div>
@@ -180,5 +180,5 @@ export default function CloudServices() {
         </section>
       </div>
     </>
-  );
+  ).
 }

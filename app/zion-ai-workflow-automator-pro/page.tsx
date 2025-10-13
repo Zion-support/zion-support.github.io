@@ -1,4 +1,4 @@
-import React, { Helmet } from 'react-helmet-async';
+import React, { Helmet } from 'react-helmet-async'.
 export default function ZionAiworkflowautomatorProPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -11,7 +11,7 @@ export default function ZionAiworkflowautomatorProPage() {
         <div className="text-center">"
           <h1 className="text-4xl font-bold text-white mb-8">AI Workflow Automator Pro</h1>"
           <p className="text-xl text-gray-300 mb-8">
-            Advanced AI workflow automator pro solutions by Zion Tech Group;
+            Advanced AI workflow automator pro solutions by Zion Tech Group.
           </p>
         </div>
         
@@ -25,6 +25,6 @@ export default function ZionAiworkflowautomatorProPage() {
         </div>
       </div>
     </div>
-  );
-  );
+  ).
+  ).
 }

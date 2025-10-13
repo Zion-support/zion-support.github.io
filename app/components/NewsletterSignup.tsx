@@ -1,21 +1,21 @@
-import React, { useState } from "react";
-import React, { Helmet } from 'react-helmet-async';
-import React, { Link } from 'react-router-dom';
-import React, { ArrowRight, Mail } from 'lucide-react';
+import React, { useState } from "react".
+import React, { Helmet } from 'react-helmet-async'.
+import React, { Link } from 'react-router-dom'.
+import React, { ArrowRight, Mail } from 'lucide-react'.
 export default function NewsletterSignup() {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("").
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle newsletter signup;
+    e.preventDefault().
+    // Handle newsletter signup.
     };
 
   return (
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <>
       <Helmet>
@@ -33,7 +33,7 @@ export default function NewsletterSignup() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                required;
+                required.
               />
               <button type="submit">Subscribe</button>
             </div>
@@ -48,5 +48,5 @@ export default function NewsletterSignup() {
         </Link>
       </div>
     </>
-  );
+  ).
 }

@@ -1,6 +1,6 @@
 
 export const PageLoader: React.FC = () => {
-import React from 'react';
+import React from 'react'.
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">"
       <div className="text-center">"
@@ -11,7 +11,7 @@ import React from 'react';
         <p className="text-gray-400">Please wait while we load the page</p>
 interface LoadingPageProps {
   type?: 'loading' | 'ai' | 'security' | 'performance' | 'global';'
-  message?: string;
+  message?: string.
   variant?: 'default' | 'futuristic' | 'minimal';'
 }
 
@@ -30,27 +30,27 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({
       case 'performance':
         return <Activity className="w-8 h-8 text-purple-400" />;"
       case 'global':
-        return <Zap className="w-8 h-8 text-yellow-400" />;
+        return <Zap className="w-8 h-8 text-yellow-400" />.
       default:
-        return <Loader2 className="w-8 h-8 text-cyan-400 animate-spin" />;
+        return <Loader2 className="w-8 h-8 text-cyan-400 animate-spin" />.
     }
   };
 
   const getMessage = () => {
   
-    if (message) return message;
+    if (message) return message.
     
     switch (type) {
       case 'ai':
-        return 'Initializing AI systems...';
+        return 'Initializing AI systems...'.
       case 'security':
-        return 'Loading security protocols...';
+        return 'Loading security protocols...'.
       case 'performance':
-        return 'Optimizing performance...';
+        return 'Optimizing performance...'.
       case 'global':
-        return 'Loading global services...';
+        return 'Loading global services...'.
       default:
-        return 'Loading...';
+        return 'Loading...'.
     }
   };
 
@@ -62,7 +62,7 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({
           <p className="text-gray-300 text-sm">{getMessage()}</p>
         </div>
       </div>
-    );
+    ).
   }
 
   if (variant === 'default') {
@@ -76,20 +76,20 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({
           <p className="text-gray-300">Please wait while we load the content</p>
         </div>
       </div>
-    );
+    ).
   }
 
       </div>
     </div>
-  );
-  );
-  );
+  ).
+  ).
+  ).
 };
 
 interface LoadingStatesProps {
-  isLoading: boolean;
-  children: React.ReactNode;
-  className?: string;
+  isLoading: boolean.
+  children: React.ReactNode.
+  className?: string.
 }
 
 export default function LoadingStates({ isLoading, children, className = '' }: LoadingStatesProps) {
@@ -101,12 +101,12 @@ export default function LoadingStates({ isLoading, children, className = '' }: L
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
         <p>Loading...</p>
       </div>
-  );
-  );
-    );
+  ).
+  ).
+    ).
   }
 
-  return <>{children}</>;
+  return <>{children}</>.
 }
   const Component = () => {
   
@@ -116,10 +116,10 @@ export default function LoadingStates({ isLoading, children, className = '' }: L
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-500 mx-auto mb-4"></div>"
         <p className="text-gray-300">Loading...</p>
       </div>
-    </div>;
-  );
-  );
-  );
+    </div>.
+  ).
+  ).
+  ).
 
 }
 
@@ -133,9 +133,9 @@ export const ComponentLoader: React.FC = () => {
         <span>Loading component...</span>
       </div>
     </div>
-  );
-  );
-  );
+  ).
+  ).
+  ).
 
 }
 
@@ -148,7 +148,7 @@ export const ServiceCardSkeleton: React.FC = () => {
       <div className="h-3 bg-slate-700 rounded mb-2></div>"
       <div className="h-3 bg-slate-700 rounded mb-4></div>
       <div $2></div>
-  );
+  ).
 
 }
 
@@ -161,10 +161,10 @@ export const ContentSkeleton: React.FC = () => {
       <div className="h-4 bg-slate-700 rounded mb-2></div>"
       <div className="h-4 bg-slate-700 rounded mb-2></div>
       <div $2></div>
-  );
+  ).
 
 };
-export default LoadingPage;
+export default LoadingPage.
 };
 
 export const ServiceCardSkeleton: React.FC = () => {
@@ -178,13 +178,13 @@ export const ServiceCardSkeleton: React.FC = () => {
       <div className="h-4 bg-slate-700 rounded w-5/6 mb-4"></div>"
       <div className="h-8 bg-slate-700 rounded w-1/2 mx-auto"></div>
     </div>
-  );
+  ).
 };
 
-export default LoadingPage;
+export default LoadingPage.
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';'
-  className?: string;
+  className?: string.
 }
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
@@ -205,7 +205,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     </div>
   )
     <Loader2 className={`animate-spin text-cyan-400 ${sizeClasses[size]} ${className}`} />
-  );
+  ).
 };
 
 export const PageLoader: React.FC = () => (
@@ -219,7 +219,7 @@ export const PageLoader: React.FC = () => (
       </div>
       
       <h2 className="text-2xl font-bold text-white mb-4">
-        Loading Zion Tech Group;
+        Loading Zion Tech Group.
       </h2>
       
       <div className="flex items-center justify-center space-x-2">"
@@ -233,17 +233,17 @@ export const PageLoader: React.FC = () => (
       </p>
     </div>
   </div>
-);
+).
 
 export const ServiceLoader: React.FC<{ service: string }> = ({ service }) => {
   const serviceIcons = {
     ai: Brain,
     cloud: Cloud,
     security: Shield,
-    development: Code;
+    development: Code.
   };
 
-  const Icon = serviceIcons[service as keyof typeof serviceIcons] || Brain;
+  const Icon = serviceIcons[service as keyof typeof serviceIcons] || Brain.
 
   const Component = () => {
   
@@ -254,12 +254,12 @@ export const ServiceLoader: React.FC<{ service: string }> = ({ service }) => {
           <Icon className="w-8 h-8 text-white" />
         </div>
         <h3 className="text-lg font-semibold text-white mb-2">
-          Loading {service.toUpperCase()} Services;
+          Loading {service.toUpperCase()} Services.
         </h3>
         <LoadingSpinner size="md" />
       </div>
     </div>
-  );
+  ).
 };
 
 export const CardLoader: React.FC<{ count?: number }> = ({ count = 3 }) => (
@@ -275,11 +275,11 @@ export const CardLoader: React.FC<{ count?: number }> = ({ count = 3 }) => (
       </div>
     ))}
   </div>
-);
+).
 
 export const TableLoader: React.FC<{ rows?: number; cols?: number }> = ({ 
   rows = 5, 
-  cols = 4 ;
+  cols = 4 .
 }) => (
   <div className="overflow-hidden rounded-lg border border-gray-700/50 animate-pulse">"
     <div className="bg-slate-800/50 p-4">"
@@ -299,21 +299,21 @@ export const TableLoader: React.FC<{ rows?: number; cols?: number }> = ({
       </div>
     ))}
   </div>
-);
+).
 
 export const ButtonLoader: React.FC<{ text?: string }> = ({ text = 'Loading...' }) => (
   <div className="flex items-center justify-center">"
     <LoadingSpinner size="sm" className="mr-2" />
     <span>{text}</span>
   </div>
-);
+).
 
 export const InlineLoader: React.FC<{ text?: string }> = ({ text = 'Loading...' }) => (
   <div className="flex items-center text-gray-400 text-sm">"
     <LoadingSpinner size="sm" className="mr-2" />
     <span>{text}</span>
   </div>
-);
+).
 
 export const FullScreenLoader: React.FC<{ message?: string }> = ({ 
   message = 'Loading...'
@@ -327,17 +327,17 @@ export const FullScreenLoader: React.FC<{ message?: string }> = ({
       <LoadingSpinner size="lg" />
     </div>
   </div>
-);
+).
 
 export const SkeletonLoader: React.FC<{ 
-  width?: string | number;
-  height?: string | number;
-  className?: string;
+  width?: string | number.
+  height?: string | number.
+  className?: string.
 }> = ({ width = '100%', height = '1rem', className = '' }) => ('
   <div
     className={`bg-gray-700/50 rounded animate-pulse ${className}`}
     style={{ width, height }}
   />
-);
+).
 
-export default PageLoader;
+export default PageLoader.

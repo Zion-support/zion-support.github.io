@@ -1,4 +1,4 @@
-import React, { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Server, Database, Cloud, Lock, Settings, Monitor } from 'lucide-react';
+import React, { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Server, Database, Cloud, Lock, Settings, Monitor } from 'lucide-react'.
 const ITInfrastructurePage: React.FC = () => {
   const itServices = [
     {
@@ -21,7 +21,7 @@ const ITInfrastructurePage: React.FC = () => {
         'Ensure enterprise-grade security']
       ],
       marketPrice: '$5000-10000/month',
-      technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'Kubernetes', 'Docker'],'
+      technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'Kubernetes', 'Docker'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -44,7 +44,7 @@ const ITInfrastructurePage: React.FC = () => {
         'Ensure consistent deployments']
       ],
       marketPrice: '$3000-6000/month',
-      technologies: ['Jenkins', 'GitLab CI', 'GitHub Actions', 'Docker', 'Kubernetes', 'Ansible'],'
+      technologies: ['Jenkins', 'GitLab CI', 'GitHub Actions', 'Docker', 'Kubernetes', 'Ansible'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -67,7 +67,7 @@ const ITInfrastructurePage: React.FC = () => {
         'Optimize storage costs']
       ],
       marketPrice: '$2500-5000/month',
-      technologies: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch', 'AWS RDS'],'
+      technologies: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch', 'AWS RDS'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -90,7 +90,7 @@ const ITInfrastructurePage: React.FC = () => {
         'Protect sensitive data']
       ],
       marketPrice: '$4000-8000/month',
-      technologies: ['Cisco', 'Fortinet', 'Palo Alto', 'pfSense', 'Snort', 'Wireshark'],'
+      technologies: ['Cisco', 'Fortinet', 'Palo Alto', 'pfSense', 'Snort', 'Wireshark'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -113,7 +113,7 @@ const ITInfrastructurePage: React.FC = () => {
         'Prevent security vulnerabilities']
       ],
       marketPrice: '$3000-6000/month',
-      technologies: ['Windows Server', 'Linux', 'VMware', 'Hyper-V', 'Ansible', 'Puppet'],'
+      technologies: ['Windows Server', 'Linux', 'VMware', 'Hyper-V', 'Ansible', 'Puppet'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -136,7 +136,7 @@ const ITInfrastructurePage: React.FC = () => {
         'Prevent problems proactively']
       ],
       marketPrice: '$2000-4000/month',
-      technologies: ['ServiceNow', 'Jira', 'TeamViewer', 'SCCM', 'Active Directory', 'Office 365'],'
+      technologies: ['ServiceNow', 'Jira', 'TeamViewer', 'SCCM', 'Active Directory', 'Office 365'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -159,7 +159,7 @@ const ITInfrastructurePage: React.FC = () => {
         'Reduce recovery time to minutes']
       ],
       marketPrice: '$1500-3000/month',
-      technologies: ['Veeam', 'Acronis', 'AWS Backup', 'Azure Backup', 'Commvault', 'Rubrik'],'
+      technologies: ['Veeam', 'Acronis', 'AWS Backup', 'Azure Backup', 'Commvault', 'Rubrik'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -182,7 +182,7 @@ const ITInfrastructurePage: React.FC = () => {
         'Enhance productivity']
       ],
       marketPrice: '$1200-2500/month',
-      technologies: ['Microsoft 365', 'Google Workspace', 'Exchange Server', 'Postfix', 'SpamAssassin', 'MDM'],'
+      technologies: ['Microsoft 365', 'Google Workspace', 'Exchange Server', 'Postfix', 'SpamAssassin', 'MDM'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
@@ -198,8 +198,8 @@ const ITInfrastructurePage: React.FC = () => {
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -209,23 +209,23 @@ const ITInfrastructurePage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
             <div className="text-center">"
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                IT Infrastructure Services;
+                IT Infrastructure Services.
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-                Enterprise-grade IT infrastructure solutions with 99.9% uptime guarantee and 24/7 expert support;
+                Enterprise-grade IT infrastructure solutions with 99.9% uptime guarantee and 24/7 expert support.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
                   href="tel:+13024640950"
                   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
                 >
-                  📞 +1 302 464 0950;
+                  📞 +1 302 464 0950.
                 </a>
                 <a 
                   href="mailto:kleber@ziontechgroup.com"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                 >
-                  ✉️ Get Free Infrastructure Audit;
+                  ✉️ Get Free Infrastructure Audit.
                 </a>
               </div>
             </div>
@@ -236,10 +236,10 @@ const ITInfrastructurePage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
             <div className="text-center mb-12">"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Infrastructure Track Record;
+                Our Infrastructure Track Record.
               </h2>
               <p className="text-xl text-gray-600">
-                Proven results from our IT infrastructure services;
+                Proven results from our IT infrastructure services.
               </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
@@ -260,7 +260,7 @@ const ITInfrastructurePage: React.FC = () => {
                 Why Choose Our IT Infrastructure Services?
               </h2>
               <p className="text-xl text-gray-600">
-                Enterprise-grade solutions with unmatched reliability and support;
+                Enterprise-grade solutions with unmatched reliability and support.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
@@ -300,10 +300,10 @@ const ITInfrastructurePage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
             <div className="text-center mb-12">"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                IT Infrastructure Services;
+                IT Infrastructure Services.
               </h2>
               <p className="text-xl text-gray-600">
-                Comprehensive infrastructure solutions for modern businesses;
+                Comprehensive infrastructure solutions for modern businesses.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -318,7 +318,7 @@ const ITInfrastructurePage: React.FC = () => {
                       <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                     </div>
                     <div className="text-sm text-green-600 font-semibold">
-                      Save up to 50% vs market rates;
+                      Save up to 50% vs market rates.
                     </div>
                   </div>
                   <div className="mb-4">"
@@ -361,13 +361,13 @@ const ITInfrastructurePage: React.FC = () => {
                       href="tel:+13024640950"
                       className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
                     >
-                      Call Now;
+                      Call Now.
                     </a>
                     <a 
                       href="mailto:kleber@ziontechgroup.com"
                       className="flex-1 border border-blue-600 text-blue-600 py-2 px-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center"
                     >
-                      Email Us;
+                      Email Us.
                     </a>
                   </div>
                 </div>
@@ -380,10 +380,10 @@ const ITInfrastructurePage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
             <div className="text-center mb-12">"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Infrastructure Implementation Process;
+                Our Infrastructure Implementation Process.
               </h2>
               <p className="text-xl text-gray-600">
-                How we design, implement, and manage your IT infrastructure;
+                How we design, implement, and manage your IT infrastructure.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
@@ -417,20 +417,20 @@ const ITInfrastructurePage: React.FC = () => {
               Ready to Optimize Your IT Infrastructure?
             </h2>
             <p className="text-xl mb-8 text-blue-100">
-              Contact our IT infrastructure experts for a free assessment and custom solution design;
+              Contact our IT infrastructure experts for a free assessment and custom solution design.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a 
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
               >
-                📞 +1 302 464 0950;
+                📞 +1 302 464 0950.
               </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
-                ✉️ kleber@ziontechgroup.com;
+                ✉️ kleber@ziontechgroup.com.
               </a>
             </div>
             <div className="text-sm text-blue-200">
@@ -441,6 +441,6 @@ const ITInfrastructurePage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  ).
 };
-export default ITInfrastructurePage;
+export default ITInfrastructurePage.

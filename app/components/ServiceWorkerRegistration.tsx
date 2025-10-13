@@ -1,9 +1,9 @@
-'use client';
-import React, { Helmet } from 'react-helmet-async';
-import React, { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+'use client'.
+import React, { Helmet } from 'react-helmet-async'.
+import React, { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'.
+'use client'.
+import React from 'react'.
+import {Helmet}}from 'react-helmet-async'.
 const ServiceWorkerRegistrationPage: React.FC = () => {,
       description: 'Worldwide deployment and support for international businesses',}}
   ]
@@ -15,7 +15,7 @@ return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple
       <Helmet />
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         </section>
-  );
+  ).
         <div className="max-w-7xl mx-auto">"
           <div className="text-center">"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
@@ -64,20 +64,20 @@ return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple
             </h2>
             <p>Contact our experts to discuss your serviceworkerregistration needs and get a customized solution.</p>
                 <Phone>
-                Call Now;
+                Call Now.
               </button>
               <button>
                 <Mail>
-                Email Us;
+                Email Us.
               </button>
             </div>
           </div>
         </div>
       </section>
     </div>
-  );
+  ).
 };
 
 
-export default Component;
-export default ServiceWorkerRegistrationPage;
+export default Component.
+export default ServiceWorkerRegistrationPage.

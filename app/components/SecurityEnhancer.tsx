@@ -1,11 +1,11 @@
-'use client';
+'use client'.
 
     }
 
     // Content Security Policy
-    if ($1) { const cspMeta = document.createElement(meta);;
+    if ($1) { const cspMeta = document.createElement(meta);.
 
-      cspMeta.httpEquiv = Content-Security-Policy;
+      cspMeta.httpEquiv = Content-Security-Policy.
 
       cspMeta.content = [
         "default-src 'self',"
@@ -20,77 +20,77 @@
         "object-src 'none',"
         "media-src 'self',"
         "worker-src 'self' blob:"
-      ].join(; );
+      ].join(; ).
 
-      document.head.appendChild(cspMeta);
+      document.head.appendChild(cspMeta).
 
     }
 
     // XSS Protection
-    if ($1) { const xssMeta = document.createElement(meta);;
+    if ($1) { const xssMeta = document.createElement(meta);.
 
-      xssMeta.httpEquiv = X-XSS-Protection;
+      xssMeta.httpEquiv = X-XSS-Protection.
 
-      xssMeta.content = 1; mode=block;
+      xssMeta.content = 1; mode=block.
 
-      document.head.appendChild(xssMeta);
+      document.head.appendChild(xssMeta).
 
     }
 
     // Clickjacking Protection
-    if ($1) { const frameOptionsMeta = document.createElement(meta);;
+    if ($1) { const frameOptionsMeta = document.createElement(meta);.
 
-      frameOptionsMeta.httpEquiv = X-Frame-Options;
+      frameOptionsMeta.httpEquiv = X-Frame-Options.
 
-      frameOptionsMeta.content = DENY;
+      frameOptionsMeta.content = DENY.
 
-      document.head.appendChild(frameOptionsMeta);
+      document.head.appendChild(frameOptionsMeta).
 
     }
 
     // Content Type Sniffing Protection
-    if ($1) { const contentTypeMeta = document.createElement(meta);;
+    if ($1) { const contentTypeMeta = document.createElement(meta);.
 
-      contentTypeMeta.httpEquiv = X-Content-Type-Options;
+      contentTypeMeta.httpEquiv = X-Content-Type-Options.
 
-      contentTypeMeta.content = nosniff;
+      contentTypeMeta.content = nosniff.
 
-      document.head.appendChild(contentTypeMeta);
+      document.head.appendChild(contentTypeMeta).
 
     }
 
-    // Referrer Policy;
+    // Referrer Policy.
 
-const referrerMeta = document.createElement(meta);;
+const referrerMeta = document.createElement(meta);.
 
-    referrerMeta.name = referrer;
+    referrerMeta.name = referrer.
 
-    referrerMeta.content = strict-origin-when-cross-origin;
+    referrerMeta.content = strict-origin-when-cross-origin.
 
-    document.head.appendChild(referrerMeta);
+    document.head.appendChild(referrerMeta).
 
-    // Permissions Policy;
+    // Permissions Policy.
 
-const permissionsMeta = document.createElement(meta);;
+const permissionsMeta = document.createElement(meta);.
 
-    permissionsMeta.httpEquiv = Permissions-Policy;
+    permissionsMeta.httpEquiv = Permissions-Policy.
 
-    permissionsMeta.content = camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=();
+    permissionsMeta.content = camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=().
 
-    document.head.appendChild(permissionsMeta);
+    document.head.appendChild(permissionsMeta).
 
-    // Security headers for API calls;
+    // Security headers for API calls.
 
-const originalFetch = window.fetch;;
+const originalFetch = window.fetch;.
 
-    window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {;
+    window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {.
 
-const headers = new Headers(init?.headers);;
+const headers = new Headers(init?.headers);.
 
       // Add security headers
-      headers.set('X-Requested-With', XMLHttpRequest);
+      headers.set('X-Requested-With', XMLHttpRequest).
 
-      headers.set('X-Content-Type-Options', nosniff);
+      headers.set('X-Content-Type-Options', nosniff).
 
       return originalFetch(input, {
         ...init,
@@ -98,29 +98,29 @@ const headers = new Headers(init?.headers);;
         credentials: 'same-origin'
       })    };
 
-    // Input sanitization for forms;
+    // Input sanitization for forms.
 
-const sanitizeInput = (input: string): string => {;;
+const sanitizeInput = (input: string): string => {;.
 
       return input
         .replace(/[<>]/g, ') // Remove potential HTML tags'
         .replace(/javascript:/gi, ') // Remove javascript: protocol'
         .replace(/on\w+=/gi, ') // Remove event handlers'
-        .trim();
+        .trim().
 
     };
 
-    // Apply input sanitization to all form inputs;
+    // Apply input sanitization to all form inputs.
 
-const inputs = document.querySelectorAll(input, textarea, select);;
+const inputs = document.querySelectorAll(input, textarea, select);.
 
     inputs.forEach(input => {
-      input.addEventListener(input, (e) => {;
+      input.addEventListener(input, (e) => {.
 
-const target = e.target as HTMLInputElement;;
+const target = e.target as HTMLInputElement;.
 
         if (target.value !== sanitizeInput(target.value)) {
-          target.value = sanitizeInput(target.value);
+          target.value = sanitizeInput(target.value).
 
         }
 
@@ -129,18 +129,18 @@ const target = e.target as HTMLInputElement;;
     // Console warning for security
     // console.log removed for production
 // console.log removed for production
-}, [enableCSP, enableHSTS, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffing]);
+}, [enableCSP, enableHSTS, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffing]).
 
-  return <React.Fragment>{children}</React.Fragment>;
+  return <React.Fragment>{children}</React.Fragment>.
 
-import React, {  useEffect  } from 'react';
+import React, {  useEffect  } from 'react'.
 
 interface SecurityEnhancerProps {
-  children: React.ReactNode;
+  children: React.ReactNode.
 }
 
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
-  return <>{children}</>;
+  return <>{children}</>.
 };
 
-export default SecurityEnhancer;
+export default SecurityEnhancer.

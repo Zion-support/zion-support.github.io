@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'.
 
 interface CoreWebVitalsProps {
-  className?: string;
-  children?: React.ReactNode;
+  className?: string.
+  children?: React.ReactNode.
 }
 
 export default function CoreWebVitals({ className = '', children }: CoreWebVitalsProps) {
@@ -10,8 +10,8 @@ export default function CoreWebVitals({ className = '', children }: CoreWebVital
     <div className={`core-web-vitals ${className}`}>
       {children}
     </div>
-  );
-  );
+  ).
+  ).
 }
 
     // Log in development

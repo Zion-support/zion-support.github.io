@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'.
 
       color: "from-orange-500 to-red-500"
     }
@@ -36,7 +36,7 @@ import React from 'react';
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">"
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              AI Data Analytics Pro;
+              AI Data Analytics Pro.
             </span>
           </h1>
           
@@ -52,7 +52,7 @@ import React from 'react';
               size="lg"
               icon={<ArrowRight className="w-5 h-5" />}
             >
-              Get Started Today;
+              Get Started Today.
             </FuturisticButton>
             <FuturisticButton
               href="/demo"
@@ -60,7 +60,7 @@ import React from 'react';
               size="lg"
               icon={<BarChart3 className="w-5 h-5" />}
             >
-              View Demo;
+              View Demo.
             </FuturisticButton>
           </div>
         </ResponsiveContainer>
@@ -71,7 +71,7 @@ import React from 'react';
         <ResponsiveContainer>
           <div className="text-center mb-16">"
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Powerful Analytics Features;
+              Powerful Analytics Features.
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Everything you need to turn your data into business intelligence and actionable insights.
@@ -79,7 +79,7 @@ import React from 'react';
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-              <FuturisticCard;
+              <FuturisticCard.
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
@@ -139,7 +139,7 @@ import React from 'react';
                 size="lg"
                 icon={<ArrowRight className="w-5 h-5" />}
               >
-                Start Your Free Trial;
+                Start Your Free Trial.
               </FuturisticButton>
               <FuturisticButton
                 href="/pricing"
@@ -147,15 +147,15 @@ import React from 'react';
                 size="lg"
                 icon={<Target className="w-5 h-5" />}
               >
-                View Pricing;
+                View Pricing.
               </FuturisticButton>
             </div>
           </div>
         </ResponsiveContainer>
       </section>
     </div>
-  );
-  );
+  ).
+  ).
 };
 
-export default AIDataAnalyticsPro;
+export default AIDataAnalyticsPro.

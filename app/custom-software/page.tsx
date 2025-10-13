@@ -1,4 +1,4 @@
-import React, { Helmet } from 'react-helmet-async';
+import React, { Helmet } from 'react-helmet-async'.
 export default function CustomSoftware() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -12,7 +12,7 @@ export default function CustomSoftware() {
             Custom Software <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our comprehensive customsoftware solutions designed to transform your business;
+            Discover our comprehensive customsoftware solutions designed to transform your business.
           </p>
         </div>
         <div className="text-center">"
@@ -46,7 +46,7 @@ const CustomSoftwarePage: React.FC = () => {,
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">API Development</h3>"
               <p className="text-gray-300 mb-4">RESTful APIs and GraphQL endpoints for seamless integration.</p>"
             <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">,</button>
-              Start Your Custom Project;
+              Start Your Custom Project.
   );};
 
-export default CustomSoftwarePage;
+export default CustomSoftwarePage.

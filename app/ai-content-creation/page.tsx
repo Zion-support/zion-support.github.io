@@ -1,5 +1,5 @@
-import React, { Helmet } from 'react-helmet-async';
-import React, { CheckCircle, TrendingUp, Phone, Mail, MapPin, PenTool, Image, Video, FileText } from 'lucide-react';
+import React, { Helmet } from 'react-helmet-async'.
+import React, { CheckCircle, TrendingUp, Phone, Mail, MapPin, PenTool, Image, Video, FileText } from 'lucide-react'.
 const AIContentCreationPage: React.FC = () => {
   const contentServices = [
     {
@@ -26,7 +26,7 @@ const AIContentCreationPage: React.FC = () => {
       ],
       marketPrice: '$500-1,500/month',
       category: 'Content Writing',
-      technologies: ['OpenAI GPT-4', 'Claude', 'Custom NLP Models', 'SEO Tools', 'Plagiarism Detection'],'
+      technologies: ['OpenAI GPT-4', 'Claude', 'Custom NLP Models', 'SEO Tools', 'Plagiarism Detection'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -53,7 +53,7 @@ const AIContentCreationPage: React.FC = () => {
       ],
       marketPrice: '$800-2,500/month',
       category: 'Image Generation',
-      technologies: ['DALL-E', 'Midjourney', 'Stable Diffusion', 'Custom GANs', 'Image Processing'],'
+      technologies: ['DALL-E', 'Midjourney', 'Stable Diffusion', 'Custom GANs', 'Image Processing'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -80,7 +80,7 @@ const AIContentCreationPage: React.FC = () => {
       ],
       marketPrice: '$1,500-5,000/month',
       category: 'Video Production',
-      technologies: ['Runway ML', 'Synthesia', 'Custom Video AI', 'FFmpeg', 'Motion Graphics'],'
+      technologies: ['Runway ML', 'Synthesia', 'Custom Video AI', 'FFmpeg', 'Motion Graphics'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -107,7 +107,7 @@ const AIContentCreationPage: React.FC = () => {
       ],
       marketPrice: '$800-2,000/month',
       category: 'Social Media',
-      technologies: ['Social Media APIs', 'NLP', 'Sentiment Analysis', 'Custom Analytics', 'Automation Tools'],'
+      technologies: ['Social Media APIs', 'NLP', 'Sentiment Analysis', 'Custom Analytics', 'Automation Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -134,7 +134,7 @@ const AIContentCreationPage: React.FC = () => {
       ],
       marketPrice: '$600-1,800/month',
       category: 'Email Marketing',
-      technologies: ['Email APIs', 'NLP', 'Machine Learning', 'A/B Testing', 'Analytics'],'
+      technologies: ['Email APIs', 'NLP', 'Machine Learning', 'A/B Testing', 'Analytics'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -161,7 +161,7 @@ const AIContentCreationPage: React.FC = () => {
       ],
       marketPrice: '$1,200-3,500/month',
       category: 'Podcast Production',
-      technologies: ['Text-to-Speech', 'Audio Processing', 'Podcast APIs', 'Custom Voice Models', 'Audio Editing'],'
+      technologies: ['Text-to-Speech', 'Audio Processing', 'Podcast APIs', 'Custom Voice Models', 'Audio Editing'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -188,7 +188,7 @@ const AIContentCreationPage: React.FC = () => {
       ],
       marketPrice: '$1,000-3,000/month',
       category: 'Web Design',
-      technologies: ['Design AI', 'CSS Generation', 'Responsive Design', 'SEO Tools', 'Code Generation'],'
+      technologies: ['Design AI', 'CSS Generation', 'Responsive Design', 'SEO Tools', 'Code Generation'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -215,7 +215,7 @@ const AIContentCreationPage: React.FC = () => {
       ],
       marketPrice: '$400-1,200/month',
       category: 'Presentation Design',
-      technologies: ['Presentation APIs', 'Design AI', 'Chart Generation', 'Animation Tools', 'Export Libraries'],'
+      technologies: ['Presentation APIs', 'Design AI', 'Chart Generation', 'Animation Tools', 'Export Libraries'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
@@ -232,7 +232,7 @@ const AIContentCreationPage: React.FC = () => {
       <section className="pt-24 pb-16 px-4">"
         <div className="max-w-7xl mx-auto text-center">"
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Content Creation Services;
+            AI Content Creation Services.
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your content strategy with AI-powered creation tools that generate, optimize, and scale your content across all channels.
@@ -282,7 +282,7 @@ const AIContentCreationPage: React.FC = () => {
       <section className="py-16 px-4">"
         <div className="max-w-7xl mx-auto">"
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Choose Your Content Creation Solution;
+            Choose Your Content Creation Solution.
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {contentServices.map((service, index) => (
@@ -314,7 +314,7 @@ const AIContentCreationPage: React.FC = () => {
                     ))}
                     {service.features.length > 4 && (
                       <li className="text-sm text-gray-500">
-                        +{service.features.length - 4} more features;
+                        +{service.features.length - 4} more features.
                       </li>
                     )}
                   </ul>
@@ -348,7 +348,7 @@ const AIContentCreationPage: React.FC = () => {
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
                   >
-                    Get Started Now;
+                    Get Started Now.
                   </a>
                   <p className="text-xs text-gray-500 mt-2">
                     {service.contactInfo}
@@ -374,20 +374,20 @@ const AIContentCreationPage: React.FC = () => {
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
             >
-              Call (302) 464-0950;
+              Call (302) 464-0950.
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
             >
-              Email Us;
+              Email Us.
             </a>
           </div>
         </div>
       </section>
     </div>
-  );
-  );
+  ).
+  ).
 };
 
-export default AIContentCreationPage;
+export default AIContentCreationPage.

@@ -1,5 +1,5 @@
-import React from 'react';
-import {Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe}}from 'lucide-react';
+import React from 'react'.
+import {Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe}}from 'lucide-react'.
 const EnhancedServicesShowcase: React.FC = () => {,
       stats: '300% ROI'
     },
@@ -21,18 +21,18 @@ const EnhancedServicesShowcase: React.FC = () => {,
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <section className="py-16">
         </section>
       <div className="container mx-auto px-4">"
         <div className="text-center mb-16">"
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
-            Our Core Services;
+            Our Core Services.
           </h2>
           <p className="text-xl text-cyan-400 max-w-3xl mx-auto">
-            Comprehensive AI and IT solutions designed to transform your business and drive innovation;
+            Comprehensive AI and IT solutions designed to transform your business and drive innovation.
           </p>
         </div>
 
@@ -82,9 +82,9 @@ const Component = () => {
           </a>
         </div>
     </section>
-  );
+  ).
 };
 
 
-export default Component;
-export default EnhancedServicesShowcase;
+export default Component.
+export default EnhancedServicesShowcase.

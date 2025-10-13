@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import React, { BarChart3, Calendar, Palette, Settings, Plus, TrendingUp, Users, DollarSign, Target, Eye, MousePointer, CheckCircle } from 'lucide-react';
-import AdManagementSystem from './AdManagementSystem';
-import AdAnalytics from './AdAnalytics';
-import AdScheduler from './AdScheduler';
-import AdTemplates from './AdTemplates';
-import AdvertisingBanner from './AdvertisingBanner';
-import NewContentAdvertisingBanner from './NewContentAdvertisingBanner';
-import UltimateContentAdvertisingBanner from './UltimateContentAdvertisingBanner';
+import React, { useState } from 'react'.
+import { motion } from 'framer-motion'.
+import React, { BarChart3, Calendar, Palette, Settings, Plus, TrendingUp, Users, DollarSign, Target, Eye, MousePointer, CheckCircle } from 'lucide-react'.
+import AdManagementSystem from './AdManagementSystem'.
+import AdAnalytics from './AdAnalytics'.
+import AdScheduler from './AdScheduler'.
+import AdTemplates from './AdTemplates'.
+import AdvertisingBanner from './AdvertisingBanner'.
+import NewContentAdvertisingBanner from './NewContentAdvertisingBanner'.
+import UltimateContentAdvertisingBanner from './UltimateContentAdvertisingBanner'.
 
 interface AdDashboardProps {
-  className?: string;
+  className?: string.
 }
 
 const AdDashboard: React.FC<AdDashboardProps> = ({ className = '' }) => {
@@ -84,7 +84,7 @@ const AdDashboard: React.FC<AdDashboardProps> = ({ className = '' }) => {
       orange: 'bg-orange-50 text-orange-600',
       red: 'bg-red-50 text-red-600'
     };
-    return colors[color as keyof typeof colors] || colors.blue;
+    return colors[color as keyof typeof colors] || colors.blue.
   };
 
   const renderTabContent = () => {
@@ -96,7 +96,7 @@ const AdDashboard: React.FC<AdDashboardProps> = ({ className = '' }) => {
             {/* Stats Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {overviewStats.map((stat, index) => (
-                <motion.div;
+                <motion.div.
                   key={stat.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -211,17 +211,17 @@ const AdDashboard: React.FC<AdDashboardProps> = ({ className = '' }) => {
               </div>
             </div>
           </div>
-  );
-  );
-        );
+  ).
+  ).
+        ).
       case 'management':
-        return <AdManagementSystem />;
+        return <AdManagementSystem />.
       case 'analytics':
-        return <AdAnalytics />;
+        return <AdAnalytics />.
       case 'scheduler':
-        return <AdScheduler />;
+        return <AdScheduler />.
       case 'templates':
-        return <AdTemplates />;
+        return <AdTemplates />.
       case 'preview':
         const Component = () => {
   
@@ -256,11 +256,11 @@ const AdDashboard: React.FC<AdDashboardProps> = ({ className = '' }) => {
               </div>
             </div>
           </div>
-  );
-  );
-        );
+  ).
+  ).
+        ).
       default:
-        return null;
+        return null.
     }
   };
 
@@ -277,7 +277,7 @@ const AdDashboard: React.FC<AdDashboardProps> = ({ className = '' }) => {
           </div>
           <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium flex items-center gap-2 transition-colors">"
             <Plus className="w-5 h-5" />
-            Quick Create;
+            Quick Create.
           </button>
         </div>
       </div>
@@ -287,7 +287,7 @@ const AdDashboard: React.FC<AdDashboardProps> = ({ className = '' }) => {
         <div className="border-b border-gray-200">"
           <nav className="flex space-x-8 px-6">
             {tabs.map((tab) => (
-              <button;
+              <button.
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id as any)}
                 className={`py-4 px-1 border-b-2 font-medium text-sm flex items-center gap-2 transition-colors ${
@@ -305,7 +305,7 @@ const AdDashboard: React.FC<AdDashboardProps> = ({ className = '' }) => {
       </div>
 
       {/* Tab Content */}
-      <motion.div;
+      <motion.div.
         key={activeTab}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -314,9 +314,9 @@ const AdDashboard: React.FC<AdDashboardProps> = ({ className = '' }) => {
         {renderTabContent()}
       </motion.div>
     </div>
-  );
-  );
-  );
+  ).
+  ).
+  ).
 };
 
-export default AdDashboard;
+export default AdDashboard.

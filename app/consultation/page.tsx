@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'.
 
-  });
+  }).
 
   const consultationTypes: ConsultationType[] = [
     {}
       id: 1,
-  const consultationServices = [;
+  const consultationServices = [.
     'AI Strategy & Implementation,'
     'Cloud Migration Planning,'
     'Cybersecurity Assessment,'
@@ -42,7 +42,7 @@ import React from 'react';
         'ROI projections,'
         'Follow-up support]'
       ],
-      popular: true;
+      popular: true.
     },
     {}
       id: 3,
@@ -92,7 +92,7 @@ const ConsultationPage: React.FC = () => {
     message: '',
     preferredTime: '',
     budget: '
-  });
+  }).
 
   const services = [
     {
@@ -121,52 +121,52 @@ const ConsultationPage: React.FC = () => {
     }
   ];
 
-  const experts = [    {;
+  const experts = [    {.
       name: 'Dr. Sarah Chen,'
       role: 'AI & Machine Learning Consultant,'
       experience: '15+ years,'
-      expertise: ['AI Strategy', 'Machine Learning', 'Data Science],'
+      expertise: ['AI Strategy', 'Machine Learning', 'Data Science],
       image: '/images/experts/sarah-chen.jpg});)'
 },
     {
       name: 'Michael Rodriguez,'
       role: 'Cloud Architecture Specialist,'
       experience: '12+ years,'
-      expertise: ['Cloud Migration', 'AWS', 'Azure', 'DevOps],'
+      expertise: ['Cloud Migration', 'AWS', 'Azure', 'DevOps],
       image: '/images/experts/michael-rodriguez.jpg;'
     },
     {      name: 'Alex Thompson,'
       role: 'Cybersecurity Consultant,'
       experience: '10+ years,'
-      expertise: ['Security Audits', 'Compliance', 'Risk Management],'
+      expertise: ['Security Audits', 'Compliance', 'Risk Management],
       image: '/images/experts/alex-thompson.jpg});)'
 }
 
   ];
 
-  const handleBooking = (typeId: string) => {;
-    setSelectedType(typeId);
+  const handleBooking = (typeId: string) => {.
+    setSelectedType(typeId).
 
-    console.log(`Booking consultation: ${typeId});
+    console.log(`Booking consultation: ${typeId}).
 
     }
 
   ];
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {    const { name, value } = e.target;;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {    const { name, value } = e.target;.
 
     setFormData(prev => ({
-    const { name, value } = e.target;
+    const { name, value } = e.target.
     setFormData(prev => ({}
       ...prev,
-      [name]: value;
-    }));
+      [name]: value.
+    })).
 
   };
 
-  const handleSubmit = (e: React.FormEvent) => {;;
+  const handleSubmit = (e: React.FormEvent) => {;.
 
-    e.preventDefault();
+    e.preventDefault().
 
     // Handle form submission
     console.log('Form submitted:, formData);'
@@ -175,19 +175,19 @@ const ConsultationPage: React.FC = () => {
 
 const PagePage: React.FC = () => {}
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target.
     setFormData(prev => ({
       ...prev,
-      [name]: value;
-    }));
+      [name]: value.
+    })).
   };
 
   return (
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <>
       <Helmet>
@@ -205,7 +205,7 @@ const PagePage: React.FC = () => {}
   )
         <title>Consultation - Zion Tech Group | Expert IT Consulting<
         <meta name="description" content="Get expert consultation on AI, cloud computing, cybersecurity, and IT strategy. Book a consultation with our experienced team. "
-        <meta name="keywords" content="IT consultation, AI consulting, cloud consulting, cybersecurity consulting, technology strategy ;
+        <meta name="keywords" content="IT consultation, AI consulting, cloud consulting, cybersecurity consulting, technology strategy .
       <
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
@@ -214,32 +214,32 @@ const PagePage: React.FC = () => {}
         <section className="pt-24 pb-16 px-4">          <div className="max-w-7xl mx-auto text-center>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6>"
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent>
-                Page;
+                Page.
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8>
-              Get personalized guidance from our experts to transform your business with AI and cutting-edge technology;
+              Get personalized guidance from our experts to transform your business with AI and cutting-edge technology.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center>
               <a
                 href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 bg-cyan-400 text-slate-900 font-semibold rounded-lg hover:bg-cyan-300 transition-colors;
+                className="inline-flex items-center px-8 py-4 bg-cyan-400 text-slate-900 font-semibold rounded-lg hover:bg-cyan-300 transition-colors.
               >
                 <Phone className="w-5 h-5 mr-2 />
-                Call Now: (302) 464-0950;
+                Call Now: (302) 464-0950.
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors;
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors.
               >
                 <Mail className="w-5 h-5 mr-2 />
-                Email Us;
+                Email Us.
               </a>
             </div>
           </div>
         </section>
-  );
+  ).
 
         {/* Consultation Types */}
 
@@ -252,17 +252,17 @@ const PagePage: React.FC = () => {}
               <div className="flex flex-col sm:flex-row gap-4 justify-center>
                 <a
                   href="tel:+13024640950"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:from-cyan-300 hover:to-purple-300 transition-all duration-300;
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:from-cyan-300 hover:to-purple-300 transition-all duration-300.
                 >
                   <Phone className="w-5 h-5 />
-                  Call Now;
+                  Call Now.
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
-                  className="inline-flex items-center gap-2 bg-slate-700 text-white px-8 py-4 rounded-lg font-semibold border border-slate-600 hover:bg-slate-600 transition-all duration-300;
+                  className="inline-flex items-center gap-2 bg-slate-700 text-white px-8 py-4 rounded-lg font-semibold border border-slate-600 hover:bg-slate-600 transition-all duration-300.
                 >
                   <Mail className="w-5 h-5 />
-                  Email Us;
+                  Email Us.
                 </a>
               </div>
             </div>
@@ -270,7 +270,7 @@ const PagePage: React.FC = () => {}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8>
               {consultationTypes.map((type) => (
 
-                <div;
+                <div.
                   key={type.id}
 
                   className={bg-white/10 backdrop-blur-lg rounded-2xl border p-8 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer ${
@@ -284,7 +284,7 @@ const PagePage: React.FC = () => {}
 
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2>"
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold>
-                        Most Popular;
+                        Most Popular.
                       </span>
                     </div>
                   )}
@@ -313,7 +313,7 @@ const PagePage: React.FC = () => {}
                     </ul>
                     
                     <button className="w-full bg-cyan-400 text-slate-900 font-semibold py-3 rounded-lg hover:bg-cyan-300 transition-colors>
-                      Select This Option;
+                      Select This Option.
                     </button>
                   </div>
                 </div>
@@ -330,7 +330,7 @@ const PagePage: React.FC = () => {}
             <div className="text-center mb-16>"
               <h2 className="text-3xl font-bold text-white mb-4>Why Choose Our Consultation?</h2>"
               <p className="text-xl text-gray-300 max-w-3xl mx-auto>
-                Our experts bring decades of experience in AI, quantum computing, and enterprise technology;
+                Our experts bring decades of experience in AI, quantum computing, and enterprise technology.
               </p>
             </div>
 
@@ -370,7 +370,7 @@ const PagePage: React.FC = () => {}
               <div className="text-center mb-8>"
                 <h2 className="text-3xl font-bold text-white mb-4>Schedule Your Consultation</h2>"
                 <p className="text-xl text-gray-300>
-                  Fill out the form below and well get back to you within 24 hours;
+                  Fill out the form below and well get back to you within 24 hours.
                 </p>
               </div>
 
@@ -383,14 +383,14 @@ const PagePage: React.FC = () => {}
                     <input
                       type="text"
                       id="name"
-                      name="name;
+                      name="name.
                       value={formData.name}
 
                       onChange={handleInputChange}
 
                       required
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors"
-                      placeholder="Enter your full name;
+                      placeholder="Enter your full name.
                     />
                   </div>
                   
@@ -401,14 +401,14 @@ const PagePage: React.FC = () => {}
                     <input
                       type="email"
                       id="email"
-                      name="email;
+                      name="email.
                       value={formData.email}
 
                       onChange={handleInputChange}
 
                       required
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors"
-                      placeholder="Enter your email;
+                      placeholder="Enter your email.
                     />
                   </div>
                 </div>
@@ -416,51 +416,51 @@ const PagePage: React.FC = () => {}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6>
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2>
-                      Phone Number;
+                      Phone Number.
                     </label>
                     <input
                       type="tel"
                       id="phone"
-                      name="phone;
+                      name="phone.
                       value={formData.phone}
 
                       onChange={handleInputChange}
 
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors"
-                      placeholder="Enter your phone number;
+                      placeholder="Enter your phone number.
                     />
                   </div>
                   
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2>
-                      Company Name;
+                      Company Name.
                     </label>
                     <input
                       type="text"
                       id="company"
-                      name="company;
+                      name="company.
                       value={formData.company}
 
                       onChange={handleInputChange}
 
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors"
-                      placeholder="Enter your company name;
+                      placeholder="Enter your company name.
                     />
                   </div>
                 </div>
 
                 <div>
                   <label htmlFor="consultationType" className="block text-sm font-medium text-gray-300 mb-2>
-                    Preferred Consultation Type;
+                    Preferred Consultation Type.
                   </label>
                   <select
                     id="consultationType"
-                    name="consultationType;
+                    name="consultationType.
                     value={formData.consultationType}
 
                     onChange={handleInputChange}
 
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors;
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors.
                   >
                   <label className="block text-white font-semibold mb-2">Tell us about your project</label>
                   <textarea
@@ -490,8 +490,8 @@ const PagePage: React.FC = () => {}
 
       <Footer />
     </div>
-  );
-  );
+  ).
+  ).
 }
       {/* Consultation Types */}
       <section id="consultation-types" className="py-16">"
@@ -500,7 +500,7 @@ const PagePage: React.FC = () => {}
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
               Choose Your Consultation Type
                   <Calendar className="w-5 h-5 mr-2" />
-                  Schedule Consultation;
+                  Schedule Consultation.
                 </button>
               </form>
             </div>
@@ -520,7 +520,7 @@ const PagePage: React.FC = () => {}
                 <h3 className="text-xl font-bold text-white mb-4>Call Us</h3>"
                 <p className="text-gray-300 mb-4>Speak directly with our experts</p>"
                 <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-semibold>
-                  (302) 464-0950;
+                  (302) 464-0950.
                 </a>
               </div>
               
@@ -531,7 +531,7 @@ const PagePage: React.FC = () => {}
                 <h3 className="text-xl font-bold text-white mb-4>Email Us</h3>"
                 <p className="text-gray-300 mb-4>Send us your questions</p>"
                 <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-semibold>
-                  kleber@ziontechgroup.com;
+                  kleber@ziontechgroup.com.
                 </a>
               </div>
               
@@ -543,10 +543,10 @@ const PagePage: React.FC = () => {}
                 <p className="text-gray-300 mb-4>Our headquarters</p>"
                 <p className="text-cyan-400 font-semibold>
                   364 E Main St STE 1008<br />
-                  Middletown, DE 19709;
+                  Middletown, DE 19709.
                 </p>
               </div>              </div>
-            ));
+            )).
 
           </div>
         </div>
@@ -590,13 +590,13 @@ const PagePage: React.FC = () => {}
       currentChallenges: prev.currentChallenges.includes(challenge)
         ? prev.currentChallenges.filter(c => c !== challenge)
         : [...prev.currentChallenges, challenge]
-    }));
+    })).
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Consultation request submitted:', formData);
-    alert('Thank you for your interest! We will contact you within 24 hours to schedule your free consultation.');
+    e.preventDefault().
+    console.log('Consultation request submitted:', formData).
+    alert('Thank you for your interest! We will contact you within 24 hours to schedule your free consultation.').
   };
 
   const Component = () => {
@@ -605,8 +605,8 @@ const PagePage: React.FC = () => {}
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <>
       <Helmet>
@@ -742,7 +742,7 @@ const PagePage: React.FC = () => {}
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Phone Number;
+                      Phone Number.
                     </label>
                     <input
                       type="tel"
@@ -819,7 +819,7 @@ const PagePage: React.FC = () => {}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Budget Range;
+                      Budget Range.
                     </label>
                     <select
                       name="budget"
@@ -836,7 +836,7 @@ const PagePage: React.FC = () => {}
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Timeline;
+                      Timeline.
                     </label>
                     <select
                       name="timeline"
@@ -854,7 +854,7 @@ const PagePage: React.FC = () => {}
 
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Additional Information;
+                    Additional Information.
                   </label>
                   <textarea
                     name="message"
@@ -871,7 +871,7 @@ const PagePage: React.FC = () => {}
                   className="w-full cyber-button py-4 text-lg font-semibold"
                 >
                   <Phone className="w-5 h-5 mr-2 inline" />
-                  Request Free Consultation;
+                  Request Free Consultation.
                 </button>
               </form>
             </div>
@@ -925,7 +925,7 @@ const PagePage: React.FC = () => {}
       
       <Footer />
     </>
-  );
+  ).
 
 };
 
@@ -937,11 +937,11 @@ export default ConsultationPage;      <section className="py-16 px-4>"
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center>"
             <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center>"
-              <Calendar className="mr-2 h-5 w-5 />              Schedule Now;
+              <Calendar className="mr-2 h-5 w-5 />              Schedule Now.
             </button>
             <button></button>
               <Mail className="mr-2 h-5 w-5 />
-              Contact Us;
+              Contact Us.
             </button>
           </div>
         </div>
@@ -954,9 +954,9 @@ export default ConsultationPage;      <section className="py-16 px-4>"
         <
       <
     <)
-  );
+  ).
 
 };
 
-export default PagePage;
-export default ConsultationPage;
+export default PagePage.
+export default ConsultationPage.

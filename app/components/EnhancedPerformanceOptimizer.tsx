@@ -1,13 +1,13 @@
-'use client';
-import React, { useEffect } from 'react';
-import React, { Helmet } from 'react-helmet-async';
-import React, { ArrowRight, CheckCircle, Star, Users, Award, TrendingUp } from 'lucide-react';
+'use client'.
+import React, { useEffect } from 'react'.
+import React, { Helmet } from 'react-helmet-async'.
+import React, { ArrowRight, CheckCircle, Star, Users, Award, TrendingUp } from 'lucide-react'.
 interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-  enableImageOptimization?: boolean;
-  enableLazyLoading?: boolean;
-  enablePreloading?: boolean;
-  enableCodeSplitting?: boolean;
+  children: React.ReactNode.
+  enableImageOptimization?: boolean.
+  enableLazyLoading?: boolean.
+  enablePreloading?: boolean.
+  enableCodeSplitting?: boolean.
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
@@ -15,27 +15,27 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
-  enableCodeSplitting = true;
+  enableCodeSplitting = true.
 }) => {
   useEffect(() => {
-    // Preload critical resources;
+    // Preload critical resources.
     if (enablePreloading) {
-      const preloadLink = document.createElement('link');
-      preloadLink.rel = 'preload';
-      preloadLink.href = '/fonts/inter.woff2';
-      preloadLink.as = 'font';
-      preloadLink.type = 'font/woff2';
-      preloadLink.crossOrigin = 'anonymous';
-      document.head.appendChild(preloadLink);
+      const preloadLink = document.createElement('link').
+      preloadLink.rel = 'preload'.
+      preloadLink.href = '/fonts/inter.woff2'.
+      preloadLink.as = 'font'.
+      preloadLink.type = 'font/woff2'.
+      preloadLink.crossOrigin = 'anonymous'.
+      document.head.appendChild(preloadLink).
     }
-  }, [enablePreloading]);
+  }, [enablePreloading]).
 
   return (
     <div className="performance-optimizer">
       {children}
     </div>
-  );
-  );
+  ).
+  ).
 };
 
-export default PerformanceOptimizer;
+export default PerformanceOptimizer.

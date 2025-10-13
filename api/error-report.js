@@ -14,10 +14,10 @@ export default function handler(req, res) {
     // 3. Send alerts to your team
 
     // console.error removed for production
-    console.log('Error report received:', {
-      error: req.body.error,
-      timestamp: new Date().toISOString()
-    });
+    // console.log('Error report received:', {
+    //   error: req.body.error,
+    //   timestamp: new Date().toISOString()
+    // });
 
     // For now, just acknowledge receipt
     res.statusCode = 200;

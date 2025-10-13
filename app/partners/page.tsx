@@ -1,16 +1,16 @@
-import React from 'react';
+import React from 'react'.
 
 
 interface Partner {}
-  name: string;
+  name: string.
 
-  logo: string;
+  logo: string.
 
-  description: string;
+  description: string.
 
-  category: string;
+  category: string.
 
-  website?: string;
+  website?: string.
 
   tier: 'strategic' | 'preferred' | 'certified});)'
 }
@@ -81,31 +81,31 @@ const PartnersPage: React.FC = () => {}
       tier: 'certified;'
     }  ];
 
-  const benefits = [;;
+  const benefits = [;.
 
     'Access to cutting-edge technology platforms,'
     'Joint go-to-market strategies,'
     'Co-marketing opportunities,'
     'Technical support and training,'
     'Early access to new features,'
-    Dedicated partner success manager;
+    Dedicated partner success manager.
   ];
 
-  const partnershipTiers = [;;
+  const partnershipTiers = [;.
 
     {
       name: 'Strategic,'
       description: 'Deep integration and co-innovation,'
       bgColor: 'bg-gradient-to-br from-purple-500/20 to-blue-500/20,'
       borderColor: 'border-purple-400/50,'
-      icon: Award;
+      icon: Award.
     },
     {
       name: 'Preferred,'
       description: 'Enhanced support and collaboration,'
       bgColor: 'bg-gradient-to-br from-blue-500/20 to-cyan-500/20,'
       borderColor: 'border-blue-400/50,'
-      icon: Handshake;
+      icon: Handshake.
     },
     {
       name: 'Certified,'
@@ -217,8 +217,8 @@ const PartnersPage: React.FC = () => {
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <>
   </>
@@ -233,7 +233,7 @@ const PartnersPage: React.FC = () => {
         <section className="pt-24 pb-16 px-4">"
           <div className="max-w-7xl mx-auto text-center">"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-              Our Partners;
+              Our Partners.
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               We collaborate with industry leaders to deliver the most advanced AI and IT solutions. 
@@ -246,27 +246,27 @@ const PartnersPage: React.FC = () => {
         <section className="py-16 px-4">"
           <div className="max-w-7xl mx-auto">"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
-              Strategic Technology Partners;
+              Strategic Technology Partners.
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {partners.map((partner, index) => {
-                const tierInfo = getTierInfo(partner.tier);
+                const tierInfo = getTierInfo(partner.tier).
                 const Component = () => {
   
                   return (
-    <div;
+    <div.
                     key={index}
                     className={`cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300 border ${tierInfo.borderColor}`}
                   >
                     <div className="text-center mb-4">
-                      <img;
+                      <img.
                         src={partner.logo}
                         alt={partner.name}
                         className="w-24 h-12 object-contain mx-auto mb-4"
                       />
                       <h3 className="text-lg font-bold text-white mb-2">{partner.name}</h3>"
                       <span className={`px-3 py-1 rounded-full text-sm font-medium ${tierInfo.bgColor} ${tierInfo.color}`}>
-                        {partner.tier} Partner;
+                        {partner.tier} Partner.
                       </span>
                     </div>
                     
@@ -280,9 +280,9 @@ const PartnersPage: React.FC = () => {
                       <ExternalLink className="w-4 h-4 inline ml-2" />
                     </button>
                   </div>
-  );
-  );
-                );
+  ).
+  ).
+                ).
               })}
             </div>
           </div>
@@ -292,14 +292,14 @@ const PartnersPage: React.FC = () => {
         <section className="py-16 px-4 bg-gray-900/30">"
           <div className="max-w-7xl mx-auto">"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
-              Partnership Benefits;
+              Partnership Benefits.
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
               <div className="cyber-card hologram-card p-8 text-center">"
                 <Globe className="w-12 h-12 text-cyan-400 mx-auto mb-4" />"
                 <h3 className="text-xl font-bold text-white mb-4">Global Reach</h3>"
                 <p className="text-gray-300">
-                  Access to worldwide markets and customer bases through our partner network;
+                  Access to worldwide markets and customer bases through our partner network.
                 </p>
               </div>
               
@@ -307,7 +307,7 @@ const PartnersPage: React.FC = () => {
                 <Zap className="w-12 h-12 text-yellow-400 mx-auto mb-4" />"
                 <h3 className="text-xl font-bold text-white mb-4">Innovation</h3>"
                 <p className="text-gray-300">
-                  Early access to cutting-edge technologies and joint innovation programs;
+                  Early access to cutting-edge technologies and joint innovation programs.
                 </p>
               </div>
               
@@ -315,7 +315,7 @@ const PartnersPage: React.FC = () => {
                 <Shield className="w-12 h-12 text-green-400 mx-auto mb-4" />"
                 <h3 className="text-xl font-bold text-white mb-4">Support</h3>"
                 <p className="text-gray-300">
-                  Comprehensive technical support and dedicated partner success managers;
+                  Comprehensive technical support and dedicated partner success managers.
                 </p>
               </div>
             </div>
@@ -373,12 +373,12 @@ const PartnersPage: React.FC = () => {
   ];
 
   const benefits = [
-      icon: CheckCircle;
+      icon: CheckCircle.
     }
 
   ];
 
-  const getTierInfo = (tier: string) => {;;
+  const getTierInfo = (tier: string) => {;.
 
     return partnershipTiers.find(t => t.name.toLowerCase().includes(tier)) || partnershipTiers[2]});)
 };
@@ -390,8 +390,8 @@ const PagePage: React.FC = () => {}
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <>
       <Helmet>
@@ -450,7 +450,7 @@ const PagePage: React.FC = () => {}
                   <h></h>{tier.name}</h3>
                   <p className="text-gray-300>{tier.description}</p>
                 </div>
-              ));
+              )).
 
             </div>
           </div>
@@ -476,8 +476,8 @@ const PagePage: React.FC = () => {}
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <>
       <div></div>
@@ -500,11 +500,11 @@ const PagePage: React.FC = () => {}
                           Visit Website
                           <ExternalLink className="w-3 h-3 />
                         </a>
-                      );
+                      ).
 
                     </div>
                   </div>
-                );
+                ).
 
               })}
 
@@ -531,7 +531,7 @@ const PagePage: React.FC = () => {}
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1 />"
                     <span className="text-gray-300>{benefit}</span>
                   </div>
-                ));
+                )).
 
               </div>
             </div>
@@ -550,33 +550,33 @@ const PagePage: React.FC = () => {}
               <div></div>
                 <button></button>
                   <Handshake className="w-5 h-5 />
-                  Partner With Us;
+                  Partner With Us.
                 </button>
                 <button></button>
                   <TrendingUp className="w-5 h-5 />
-                  View Partnership Program;
+                  View Partnership Program.
                 </button>
               </div>
       nam,    e: 'Microsoft,'
-      logo: /api/placeholder/200;
+      logo: /api/placeholder/200.
       descriptio,
     n: 'Strategic partnership for Azure cloud solutions and AI services,'
-      category: Cloud & AI;
+      category: Cloud & AI.
     },
     {
       name: 'Amazon Web Services,'
-      logo: /api/placeholder/200;
+      logo: /api/placeholder/200.
       descriptio,
     n: 'Leading cloud infrastructure and machine learning platform provider,'
-      category: Cloud Computing;
+      category: Cloud Computing.
     },
     {
       name: 'Google Cloud,'
-      logo: /api/placeholder/200;
+      logo: /api/placeholder/200.
     },
     {
       name: 'IBM,'
-      logo: /api/placeholder/200;
+      logo: /api/placeholder/200.
   ];
 
   const Component = () => {
@@ -623,14 +623,14 @@ const PagePage: React.FC = () => {}
             <div className="flex flex-col sm:flex-row gap-4 justify-center>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:from-cyan-300 hover:to-purple-300 transition-all duration-300;
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:from-cyan-300 hover:to-purple-300 transition-all duration-300.
               >
                 Get Started
                 <ArrowRight className="w-5 h-5 />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center gap-2 bg-slate-700 text-white px-8 py-4 rounded-lg font-semibold border border-slate-600 hover:bg-slate-600 transition-all duration-300;
+                className="inline-flex items-center gap-2 bg-slate-700 text-white px-8 py-4 rounded-lg font-semibold border border-slate-600 hover:bg-slate-600 transition-all duration-300.
               >
                 Learn More
                 <ArrowRight className="w-5 h-5 />
@@ -684,17 +684,17 @@ const PagePage: React.FC = () => {}
               <div className="flex flex-col sm:flex-row gap-4 justify-center>
                 <a
                   href="tel:+13024640950"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:from-cyan-300 hover:to-purple-300 transition-all duration-300;
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:from-cyan-300 hover:to-purple-300 transition-all duration-300.
                 >
                   <Phone className="w-5 h-5 />
-                  Call Now;
+                  Call Now.
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
-                  className="inline-flex items-center gap-2 bg-slate-700 text-white px-8 py-4 rounded-lg font-semibold border border-slate-600 hover:bg-slate-600 transition-all duration-300;
+                  className="inline-flex items-center gap-2 bg-slate-700 text-white px-8 py-4 rounded-lg font-semibold border border-slate-600 hover:bg-slate-600 transition-all duration-300.
                 >
                   <Mail className="w-5 h-5 />
-                  Email Us;
+                  Email Us.
                 </a>
               </div>
             </div>
@@ -705,11 +705,11 @@ const PagePage: React.FC = () => {}
         <section className="py-16 px-4">"
           <div className="max-w-7xl mx-auto">"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
-              Partnership Tiers;
+              Partnership Tiers.
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {partnerTiers.map((tier, index) => (
-                <div;
+                <div.
                   key={index}
                   className={`cyber-card hologram-card p-8 text-center border ${tier.borderColor}`}
                 >
@@ -742,7 +742,7 @@ const PagePage: React.FC = () => {}
           <div className="max-w-7xl mx-auto">"
             <div className="cyber-card hologram-card p-12 text-center">"
               <h2 className="text-3xl font-bold text-white mb-6 neon-text">
-                Become Our Partner;
+                Become Our Partner.
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Join our ecosystem of technology leaders and unlock new opportunities for growth, 
@@ -758,7 +758,7 @@ const PagePage: React.FC = () => {}
                   href="mailto:partners@ziontechgroup.com"
                   className="border-2 border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300 text-center"
                 >
-                  Contact Partners Team;
+                  Contact Partners Team.
                 </a>
               </div>
             </div>
@@ -769,10 +769,10 @@ const PagePage: React.FC = () => {}
         </div>
       </section>
     </div>
-  );
+  ).
   );};
 
-export default PartnersPage;
+export default PartnersPage.
     {
       icon: <Handshake className="w-8 h-8 text-blue-600" />,"
       title: 'Strategic Partnerships',
@@ -817,9 +817,9 @@ export default PartnersPage;
     if (!acc[partner.tier]) {
       acc[partner.tier] = [];
     }
-    acc[partner.tier].push(partner);
-    return acc;
-  }, {} as Record<string, Partner[]>);
+    acc[partner.tier].push(partner).
+    return acc.
+  }, {} as Record<string, Partner[]>).
 
   const Component = () => {
   
@@ -839,7 +839,7 @@ export default PartnersPage;
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Partner With
             <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Zion Tech Group;
+              Zion Tech Group.
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -852,7 +852,7 @@ export default PartnersPage;
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
             <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              View Partner Portal;
+              View Partner Portal.
             </button>
           </div>
         </div>
@@ -972,7 +972,7 @@ export default PartnersPage;
                 <ArrowRight className="inline-block ml-2 w-5 h-5" />
               </button>
               <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Download Partner Kit;
+                Download Partner Kit.
               </button>
             </div>
           </div>
@@ -981,7 +981,7 @@ export default PartnersPage;
 
       <Footer />
     </div>
-  );
+  ).
 };
 
-export default PartnersPage;
+export default PartnersPage.

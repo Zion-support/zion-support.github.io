@@ -1,18 +1,18 @@
-import React, { lazy, Suspense } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import { ErrorBoundary } from 'react-error-boundary';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import LoadingSpinner from './components/LoadingSpinner';
-import PerformanceMonitor from './components/PerformanceMonitor';
+import React, { lazy, Suspense } from 'react'.
+import { BrowserRouter, Routes, Route } from 'react-router-dom'.
+import { HelmetProvider } from 'react-helmet-async'.
+import { ErrorBoundary } from 'react-error-boundary'.
+import AccessibilityEnhancer from './components/AccessibilityEnhancer'.
+import LoadingSpinner from './components/LoadingSpinner'.
+import PerformanceMonitor from './components/PerformanceMonitor'.
 
 // Lazy load pages for better performance
-const HomePage = lazy(() => import('./page'));
+const HomePage = lazy(() => import('./page')).
 
 // Loading component
 const AppLoadingSpinner = () => (
   <LoadingSpinner />
-);
+).
 
 const App: React.FC = () => {
   return (
@@ -32,7 +32,7 @@ const App: React.FC = () => {
         </BrowserRouter>
       </HelmetProvider>
     </ErrorBoundary>
-  );
+  ).
 };
 
-export default App;
+export default App.

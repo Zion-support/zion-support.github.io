@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'.
 
 
 const SecurityPage: React.FC = () => {
@@ -13,9 +13,9 @@ const SecurityPage: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-  );
+  ).
+  ).
 };
 
-export default SecurityPage;
+export default SecurityPage.
 

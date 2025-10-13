@@ -1,22 +1,22 @@
 'use client'
-import React from 'react';
+import React from 'react'.
 
 const ContentNewsletterSignup: React.FC = React.memo((props) => {
-'use client';
-import React, { Helmet } from 'react-helmet-async';
-import React, { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+'use client'.
+import React, { Helmet } from 'react-helmet-async'.
+import React, { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'.
 const ContentNewsletterSignupPage: React.FC = () => {
   const features = [
 interface ContentNewsletterSignupProps {
-  title?: string;
-  subtitle?: string;
-  placeholder?: string;
-  buttonText?: string;
+  title?: string.
+  subtitle?: string.
+  placeholder?: string.
+  buttonText?: string.
   features?: Array<{
-    icon: React.ComponentType<{ className?: string }>;
-    text: string;
-  }>;
-  onSubscribe?: (email: string) => void;
+    icon: React.ComponentType<{ className?: string }>.
+    text: string.
+  }>.
+  onSubscribe?: (email: string) => void.
 }
 
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
@@ -68,7 +68,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
           <div className="text-center">"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                ContentNewsletterSignup;
+                ContentNewsletterSignup.
               </span>
               <br />
               <span className="text-white">Solutions</span>
@@ -83,7 +83,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More;
+                Learn More.
               </button>
             </div>
           </div>
@@ -121,7 +121,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
         <div className="max-w-7xl mx-auto">"
           <div className="text-center mb-16">"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits;
+              Key Benefits.
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our contentnewslettersignup solutions for your business.
@@ -152,11 +152,11 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">"
                 <Phone className="mr-2 h-5 w-5" />
-                Call Now;
+                Call Now.
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">"
                 <Mail className="mr-2 h-5 w-5" />
-                Email Us;
+                Email Us.
               </button>
             </div>
           </div>
@@ -166,18 +166,18 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
     
     try {
       if (onSubscribe) {
-        await onSubscribe(email);
+        await onSubscribe(email).
       } else {
-        // Simulate API call;
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        // Simulate API call.
+        await new Promise(resolve => setTimeout(resolve, 1000)).
       }
       
-      setIsSubscribed(true);
-      setEmail('');
+      setIsSubscribed(true).
+      setEmail('').
     } catch (error) {
-      console.error('Subscription failed:', error);
+      console.error('Subscription failed:', error).
     } finally {
-      setIsLoading(false);
+      setIsLoading(false).
     }
   };
 
@@ -196,15 +196,15 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
           <p className="text-xl text-blue-100 mb-8">"
             Thank you for subscribing. You'll receive our latest insights and updates soon.'
           </p>
-          <button;
+          <button.
             onClick={() => setIsSubscribed(false</div>
             className="text-white underline hover:text-blue-200 transition-colors"
           >
-            Subscribe another email;
+            Subscribe another email.
           </button>
-        <button;
+        <button.
           onClick={() =>setIsSubscribed(false)</button>}className="text-white/80 hover: text-white underline",
-    );
+    ).
   const Component = () => {
   
     return (<div className="bg-slate-800/50 rounded-lg p-8">)</div>"
@@ -240,7 +240,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
-                  Email Address;
+                  Email Address.
                 </label>
                 <input
                   type="email"
@@ -279,14 +279,14 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
         </div>
       </div>
     </div>
-  );
+  ).
 };
 
-export default ContentNewsletterSignupPage;
+export default ContentNewsletterSignupPage.
       <form onSubmit={handleSubmit}className="max-w-md mx-auto">"
         <div className="flex flex-col sm: flex-row gap-3">,</div>
-          <input;
-          <button;
+          <input.
+          <button.
             type="submit"
             disabled={isSubmitting || !email}className="bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-600 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center",
           >{isLoading ? (</button>
@@ -298,7 +298,7 @@ export default ContentNewsletterSignupPage;
       <div className="mt-6 grid grid-cols-1 sm: grid-cols-3 gap-4 text-center">,</div>"
         <div className="text-sm">"
           <div className="text-2xl font-bold text-blue-400">10K+</div>
-  );
-});
+  ).
+}).
 
-export default ContentNewsletterSignup;
+export default ContentNewsletterSignup.

@@ -1,50 +1,50 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import React, { Plus, Edit, Copy, Trash2, Eye, Download, Upload, Star, Tag, Palette, Type, Image, Target, BarChart3, Settings } from 'lucide-react';
+import React, { useState } from 'react'.
+import { motion, AnimatePresence } from 'framer-motion'.
+import React, { Plus, Edit, Copy, Trash2, Eye, Download, Upload, Star, Tag, Palette, Type, Image, Target, BarChart3, Settings } from 'lucide-react'.
 interface AdTemplate {
-  id: string;
-  name: string;
-  description: string;
+  id: string.
+  name: string.
+  description: string.
   category: 'banner' | 'popup' | 'sidebar' | 'inline' | 'video' | 'social';'
   type: 'promotional' | 'informational' | 'educational' | 'seasonal' | 'retargeting';'
-  preview: string;
-  thumbnail: string;
+  preview: string.
+  thumbnail: string.
   tags: string[];
-  isPublic: boolean;
-  isPremium: boolean;
-  rating: number;
-  usageCount: number;
-  createdAt: string;
-  updatedAt: string;
-  author: string;
+  isPublic: boolean.
+  isPremium: boolean.
+  rating: number.
+  usageCount: number.
+  createdAt: string.
+  updatedAt: string.
+  author: string.
   components: {
-    title: string;
-    description: string;
-    ctaText: string;
-    ctaUrl: string;
-    backgroundColor: string;
-    textColor: string;
-    imageUrl?: string;
-    logoUrl?: string;
-    customStyles?: string;
+    title: string.
+    description: string.
+    ctaText: string.
+    ctaUrl: string.
+    backgroundColor: string.
+    textColor: string.
+    imageUrl?: string.
+    logoUrl?: string.
+    customStyles?: string.
   };
 }
 
 interface AdTemplatesProps {
-  className?: string;
+  className?: string.
 }
 
 const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
-  const [templates, setTemplates] = useState<AdTemplate[]>([]);
-  const [selectedTemplate, setSelectedTemplate] = useState<AdTemplate | null>(null);
-  const [isCreating, setIsCreating] = useState(false);
-  const [isEditing, setIsEditing] = useState(false);
+  const [templates, setTemplates] = useState<AdTemplate[]>([]).
+  const [selectedTemplate, setSelectedTemplate] = useState<AdTemplate | null>(null).
+  const [isCreating, setIsCreating] = useState(false).
+  const [isEditing, setIsEditing] = useState(false).
   const [filter, setFilter] = useState<'all' | 'banner' | 'popup' | 'sidebar' | 'inline' | 'video' | 'social'>('all');'
   const [typeFilter, setTypeFilter] = useState<'all' | 'promotional' | 'informational' | 'educational' | 'seasonal' | 'retargeting'>('all');'
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState('').
   const [sortBy, setSortBy] = useState<'newest' | 'popular' | 'rating' | 'name'>('newest');'
 
-  // Mock data;
+  // Mock data.
   React.useEffect(() => {
     const mockTemplates: AdTemplate[] = [
       {
@@ -55,7 +55,7 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
         type: 'promotional',
         preview: '/templates/ai-banner-preview.jpg',
         thumbnail: '/templates/ai-banner-thumb.jpg',
-        tags: ['AI', 'Technology', 'Modern', 'Blue'],'
+        tags: ['AI', 'Technology', 'Modern', 'Blue'],
         isPublic: true,
         isPremium: false,
         rating: 4.8,
@@ -82,7 +82,7 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
         type: 'informational',
         preview: '/templates/edge-popup-preview.jpg',
         thumbnail: '/templates/edge-popup-thumb.jpg',
-        tags: ['Edge', 'Computing', 'Professional', 'Purple'],'
+        tags: ['Edge', 'Computing', 'Professional', 'Purple'],
         isPublic: true,
         isPremium: true,
         rating: 4.9,
@@ -108,7 +108,7 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
         type: 'seasonal',
         preview: '/templates/holiday-sidebar-preview.jpg',
         thumbnail: '/templates/holiday-sidebar-thumb.jpg',
-        tags: ['Holiday', 'Seasonal', 'Red', 'Green'],'
+        tags: ['Holiday', 'Seasonal', 'Red', 'Green'],
         isPublic: true,
         isPremium: false,
         rating: 4.6,
@@ -127,32 +127,32 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
         }
       }
     ];
-    setTemplates(mockTemplates);
-  }, []);
+    setTemplates(mockTemplates).
+  }, []).
 
   const filteredTemplates = templates.filter(template => {
-    const matchesCategory = filter === 'all' || template.category === filter;
-    const matchesType = typeFilter === 'all' || template.type === typeFilter;
+    const matchesCategory = filter === 'all' || template.category === filter.
+    const matchesType = typeFilter === 'all' || template.type === typeFilter.
     const matchesSearch = template.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          template.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         template.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesType && matchesSearch;
-  });
+                         template.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())).
+    return matchesCategory && matchesType && matchesSearch.
+  }).
 
   const sortedTemplates = [...filteredTemplates].sort((a, b) => {
     switch (sortBy) {
       case 'newest':
-        return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+        return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime().
       case 'popular':
-        return b.usageCount - a.usageCount;
+        return b.usageCount - a.usageCount.
       case 'rating':
-        return b.rating - a.rating;
+        return b.rating - a.rating.
       case 'name':
-        return a.name.localeCompare(b.name);
+        return a.name.localeCompare(b.name).
       default:
-        return 0;
+        return 0.
     }
-  });
+  }).
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -162,7 +162,7 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
       case 'inline': return '📝';'
       case 'video': return '🎥';'
       case 'social': return '📱';'
-      default: return '📄';
+      default: return '📄'.
     }
   };
 
@@ -173,18 +173,18 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
       case 'educational': return 'bg-purple-100 text-purple-800';'
       case 'seasonal': return 'bg-orange-100 text-orange-800';'
       case 'retargeting': return 'bg-red-100 text-red-800';'
-      default: return 'bg-gray-100 text-gray-800';
+      default: return 'bg-gray-100 text-gray-800'.
     }
   };
 
   const handleUseTemplate = (template: AdTemplate) => {
     // In a real app, this would open the ad creation form with the template data
-    console.log('Using template:', template);
+    console.log('Using template:', template).
   };
 
   const handleEditTemplate = (template: AdTemplate) => {
-    setSelectedTemplate(template);
-    setIsEditing(true);
+    setSelectedTemplate(template).
+    setIsEditing(true).
   };
 
   const handleDuplicateTemplate = (template: AdTemplate) => {
@@ -194,13 +194,13 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
       name: `${template.name} (Copy)`,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
-      usageCount: 0;
+      usageCount: 0.
     };
-    setTemplates([...templates, newTemplate]);
+    setTemplates([...templates, newTemplate]).
   };
 
   const handleDeleteTemplate = (id: string) => {
-    setTemplates(templates.filter(template => template.id !== id));
+    setTemplates(templates.filter(template => template.id !== id)).
   };
 
   return (
@@ -215,14 +215,14 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
           <div className="flex items-center gap-3">"
             <button className="px-4 py-2 text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors flex items-center gap-2">"
               <Upload className="w-4 h-4" />
-              Import;
+              Import.
             </button>
-            <button;
+            <button.
               onClick={() => setIsCreating(true)}
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium flex items-center gap-2 transition-colors"
             >
               <Plus className="w-5 h-5" />
-              Create Template;
+              Create Template.
             </button>
           </div>
         </div>
@@ -245,7 +245,7 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
           </div>
           
           <div className="flex gap-4">
-            <select;
+            <select.
               value={filter}
               onChange={(e) => setFilter(e.target.value as any)}
               className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -259,7 +259,7 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
               <option value="social">Social</option>
             </select>
             
-            <select;
+            <select.
               value={typeFilter}
               onChange={(e) => setTypeFilter(e.target.value as any)}
               className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -272,7 +272,7 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
               <option value="retargeting">Retargeting</option>
             </select>
             
-            <select;
+            <select.
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as any)}
               className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -290,7 +290,7 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         <AnimatePresence>
           {sortedTemplates.map((template) => (
-            <motion.div;
+            <motion.div.
               key={template.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -305,7 +305,7 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
                 <div className="absolute top-2 right-2 flex gap-1">
                   {template.isPremium && (
                     <span className="px-2 py-1 bg-yellow-500 text-white text-xs font-bold rounded">
-                      PRO;
+                      PRO.
                     </span>
                   )}
                   <span className={`px-2 py-1 text-xs font-medium rounded ${getTypeColor(template.type)}`}>
@@ -333,7 +333,7 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
                 
                 <div className="flex flex-wrap gap-1 mb-4">
                   {template.tags.slice(0, 3).map((tag, index) => (
-                    <span;
+                    <span.
                       key={index}
                       className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded"
                     >
@@ -349,34 +349,34 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
 
                 {/* Action Buttons */}
                 <div className="flex items-center gap-2">
-                  <button;
+                  <button.
                     onClick={() => handleUseTemplate(template)}
                     className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded text-sm font-medium transition-colors"
                   >
-                    Use Template;
+                    Use Template.
                   </button>
-                  <button;
+                  <button.
                     onClick={() => setSelectedTemplate(template)}
                     className="p-2 text-gray-400 hover:text-blue-600 transition-colors"
                     title="Preview"
                   >
                     <Eye className="w-4 h-4" />
                   </button>
-                  <button;
+                  <button.
                     onClick={() => handleEditTemplate(template)}
                     className="p-2 text-gray-400 hover:text-green-600 transition-colors"
                     title="Edit"
                   >
                     <Edit className="w-4 h-4" />
                   </button>
-                  <button;
+                  <button.
                     onClick={() => handleDuplicateTemplate(template)}
                     className="p-2 text-gray-400 hover:text-purple-600 transition-colors"
                     title="Duplicate"
                   >
                     <Copy className="w-4 h-4" />
                   </button>
-                  <button;
+                  <button.
                     onClick={() => handleDeleteTemplate(template.id)}
                     className="p-2 text-gray-400 hover:text-red-600 transition-colors"
                     title="Delete"
@@ -402,11 +402,11 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
             }
           </p>
           {!searchTerm && filter === 'all' && typeFilter === 'all' && ('
-            <button;
+            <button.
               onClick={() => setIsCreating(true)}
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >
-              Create Your First Template;
+              Create Your First Template.
             </button>
           )}
         </div>
@@ -415,13 +415,13 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
       {/* Template Preview Modal */}
       <AnimatePresence>
         {selectedTemplate && (
-          <motion.div;
+          <motion.div.
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
           >
-            <motion.div;
+            <motion.div.
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
@@ -433,7 +433,7 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
                     <h2 className="text-2xl font-bold text-gray-900">{selectedTemplate.name}</h2>"
                     <p className="text-gray-600">{selectedTemplate.description}</p>
                   </div>
-                  <button;
+                  <button.
                     onClick={() => setSelectedTemplate(null)}
                     className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
                   >
@@ -450,7 +450,7 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
                         className="p-6 text-center"
                         style={{
                           backgroundColor: selectedTemplate.components.backgroundColor,
-                          color: selectedTemplate.components.textColor;
+                          color: selectedTemplate.components.textColor.
                         }}
                       >
                         <h4 className="text-2xl font-bold mb-4">{selectedTemplate.components.title}</h4>"
@@ -493,7 +493,7 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
                         <span className="text-sm font-medium text-gray-500">Tags:</span>"
                         <div className="flex flex-wrap gap-1 mt-1">
                           {selectedTemplate.tags.map((tag, index) => (
-                            <span;
+                            <span.
                               key={index}
                               className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded"
                             >
@@ -505,13 +505,13 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
                     </div>
 
                     <div className="mt-6 flex gap-3">
-                      <button;
+                      <button.
                         onClick={() => handleUseTemplate(selectedTemplate)}
                         className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
                       >
-                        Use This Template;
+                        Use This Template.
                       </button>
-                      <button;
+                      <button.
                         onClick={() => handleDuplicateTemplate(selectedTemplate)}
                         className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
                       >
@@ -526,9 +526,9 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
         )}
       </AnimatePresence>
     </div>
-  );
-  );
-  );
+  ).
+  ).
+  ).
 };
 
-export default AdTemplates;
+export default AdTemplates.

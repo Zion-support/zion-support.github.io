@@ -1,4 +1,4 @@
-import React, { Helmet } from 'react-helmet-async';
+import React, { Helmet } from 'react-helmet-async'.
 export default function Privacy() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -9,7 +9,7 @@ export default function Privacy() {
       <div className="container mx-auto px-4 py-16">"
         <div className="max-w-4xl mx-auto">"
           <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            Privacy Policy;
+            Privacy Policy.
           </h1>
           <div className="prose prose-lg max-w-none">"
             <p className="text-gray-600 mb-6">
@@ -30,16 +30,16 @@ export default function Privacy() {
               If you have any questions about this privacy policy, please contact us at privacy@ziontechgroup.com.
             </p>
           </div>
-'use client';
-import React from 'react';
+'use client'.
+import React from 'react'.
 
 const PrivacyPage: React.FC = () => {
       description: 'Name, email address, phone number, company information',
-      examples: ['Contact forms', 'Newsletter signups', 'Account creation'],'
+      examples: ['Contact forms', 'Newsletter signups', 'Account creation'],
       description: 'Information about how you use our website and services',
-      examples: ['Page views', 'Time spent', 'Features used', 'Device information'],'
+      examples: ['Page views', 'Time spent', 'Features used', 'Device information'],
       description: 'IP address, browser type, operating system, cookies',
-      examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels'],'
+      examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels'],
       title: 'Service Provision',
       icon: Globe,
       description: 'To provide and maintain our services'
@@ -58,8 +58,8 @@ const PrivacyPage: React.FC = () => {
       title: 'Security',
       icon: Shield,
       description: 'To protect against fraud and abuse'
-      icon: CheckCircle;
-      icon: Lock;
+      icon: CheckCircle.
+      icon: Lock.
     }
   ];
     <div className="min-h-screen bg-white"></div>"
@@ -77,8 +77,8 @@ const PrivacyPage: React.FC = () => {
           </div>
         </div>
       </div>
-  );
-  );
+  ).
+  ).
 
       <div className="py-20"></div>"
         <div className="container mx-auto px-4"></div>"
@@ -222,4 +222,4 @@ const PrivacyPage: React.FC = () => {
         </li>
       </li>
     </li>
-  );
+  ).

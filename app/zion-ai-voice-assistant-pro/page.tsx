@@ -1,4 +1,4 @@
-import React, { Helmet } from 'react-helmet-async';
+import React, { Helmet } from 'react-helmet-async'.
 export default function ZionAiVoiceAssistantPro() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -12,7 +12,7 @@ export default function ZionAiVoiceAssistantPro() {
             Zion Ai Voice Assistant Pro <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our comprehensive zionaivoiceassistantpro solutions designed to transform your business;
+            Discover our comprehensive zionaivoiceassistantpro solutions designed to transform your business.
           </p>
         </div>
         <div className="text-center">"
@@ -40,7 +40,7 @@ export default function ZionAiVoiceAssistantPro() {
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">"
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Zion AI Voice Assistant Pro;
+              Zion AI Voice Assistant Pro.
             </span>
           </h1>
           
@@ -86,17 +86,17 @@ export default function ZionAiVoiceAssistantPro() {
         <div className="max-w-7xl mx-auto">"
           <div className="text-center mb-16">"
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Powerful Features;
+              Powerful Features.
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Advanced AI voice technology designed to enhance your business operations ;
+              Advanced AI voice technology designed to enhance your business operations .
               and provide exceptional customer experiences.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div;
+              <div.
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
@@ -117,7 +117,7 @@ export default function ZionAiVoiceAssistantPro() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of businesses already using our AI voice assistant to enhance ;
+            Join thousands of businesses already using our AI voice assistant to enhance .
             customer experience and streamline operations.
           </p>
           
@@ -140,7 +140,7 @@ export default function ZionAiVoiceAssistantPro() {
         </div>
       </section>
     </div>
-  );
+  ).
 };
 
-export default ZionAIVoiceAssistantPro;
+export default ZionAIVoiceAssistantPro.

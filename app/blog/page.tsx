@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import React, { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from 'lucide-react';
-import React, { Helmet } from 'react-helmet-async';
-import React, { Link } from 'react-router-dom';
+import React, { useState } from "react".
+import React, { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from 'lucide-react'.
+import React, { Helmet } from 'react-helmet-async'.
+import React, { Link } from 'react-router-dom'.
 export default function Blog() {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [searchTerm, setSearchTerm] = useState("").
+  const [selectedCategory, setSelectedCategory] = useState("all").
 
   const categories = [
     { id: "all", name: "All Posts", count: 12 },"
@@ -24,11 +24,11 @@ export default function Blog() {
       category: "AI & Machine Learning",
       readTime: "5 min read",
       image: "/images/blog/ai-business-2024.jpg",
-import React, { useState } from 'react';
-import React, { Helmet } from 'react-helmet-async';
-import React, { Search, Calendar, User, Clock, ArrowRight } from 'lucide-react';
+import React, { useState } from 'react'.
+import React, { Helmet } from 'react-helmet-async'.
+import React, { Search, Calendar, User, Clock, ArrowRight } from 'lucide-react'.
 const BlogPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState('').
 
   const blogPosts = [
     {
@@ -44,7 +44,7 @@ const BlogPage: React.FC = () => {
       category: "ai",
       readTime: "5 min read",
       image: "/images/blog/ai-business-2024.jpg",
-      featured: true;
+      featured: true.
     },
     {
       id: 2,
@@ -55,7 +55,7 @@ const BlogPage: React.FC = () => {
       readTime: "6 min read",
       category: "security",
       image: "/api/placeholder/600/400",
-      featured: true;
+      featured: true.
     },
     {
       id: 3,
@@ -73,7 +73,7 @@ const BlogPage: React.FC = () => {
       readTime: '8 min read',
       category: 'Development',
       image: '/images/blog/micro-saas.jpg',
-      featured: false;
+      featured: false.
     },
     {
       id: 3,
@@ -84,7 +84,7 @@ const BlogPage: React.FC = () => {
       readTime: '6 min read',
       category: 'Security',
       image: '/images/blog/cloud-security.jpg',
-      featured: false;
+      featured: false.
     },
     {
       id: 4,
@@ -95,7 +95,7 @@ const BlogPage: React.FC = () => {
       readTime: '7 min read',
       category: 'AI & Technology',
       image: '/images/blog/ml-healthcare.jpg',
-      featured: false;
+      featured: false.
     },
     {
       id: 5,
@@ -106,7 +106,7 @@ const BlogPage: React.FC = () => {
       readTime: "12 min read",
       category: "cybersecurity",
       image: "/api/placeholder/600/300",
-      featured: true;
+      featured: true.
     },
     {
       id: 6,
@@ -117,29 +117,29 @@ const BlogPage: React.FC = () => {
       readTime: "10 min read",
       category: "cloud",
       image: "/api/placeholder/600/300",
-      featured: false;
+      featured: false.
     },
     {
       id: 6,
-      featured: false;
+      featured: false.
     }
   ];
 
   const filteredPosts = posts.filter(post => {
     const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === "all" || post.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()).
+    const matchesCategory = selectedCategory === "all" || post.category === selectedCategory.
+    return matchesSearch && matchesCategory.
+  }).
 
-  const featuredPosts = posts.filter(post => post.featured);
+  const featuredPosts = posts.filter(post => post.featured).
 
   return (
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <>
       <Helmet>
@@ -194,7 +194,7 @@ const BlogPage: React.FC = () => {
     { name: "Cloud", count: 3, active: false }
   ];
 
-  const featuredPost = blogPosts.find(post => post.featured);
+  const featuredPost = blogPosts.find(post => post.featured).
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -207,8 +207,8 @@ const BlogPage: React.FC = () => {
       <FuturisticBackground />
       {/* Hero Section */}
             </div>
-  );
-  );
+  ).
+  ).
           </div>
         </div>
       </section>
@@ -232,7 +232,7 @@ const BlogPage: React.FC = () => {
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">"
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Technology Blog;
+              Technology Blog.
             </span>
           </h1>
           
@@ -250,14 +250,14 @@ const BlogPage: React.FC = () => {
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 overflow-hidden hover:bg-white/20 transition-all duration-300">"
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">"
                 <div className="relative h-64 lg:h-auto">
-                  <img;
+                  <img.
                     src={featuredPost.image}
                     alt={featuredPost.title}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute top-4 left-4">"
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Featured;
+                      Featured.
                     </span>
                   </div>
                 </div>
@@ -307,7 +307,7 @@ const BlogPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">"
             <div className="text-center">"
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Tech Insights & Trends;
+                Tech Insights & Trends.
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                 Stay ahead of the curve with expert insights on AI, cybersecurity, cloud computing, and emerging technologies.
@@ -345,7 +345,7 @@ const BlogPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">"
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
-                <button;
+                <button.
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
@@ -368,7 +368,7 @@ const BlogPage: React.FC = () => {
               <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured Articles</h2>"
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {featuredPosts.map((post) => (
-                  <article;
+                  <article.
                     key={post.id}
                     className="bg-slate-800/50 backdrop-blur-xl rounded-xl overflow-hidden border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
                   >
@@ -415,7 +415,7 @@ const BlogPage: React.FC = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredPosts.map((post) => (
-                <article;
+                <article.
                   key={post.id}
                   className="bg-slate-800/50 backdrop-blur-xl rounded-xl overflow-hidden border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
                 >
@@ -430,7 +430,7 @@ const BlogPage: React.FC = () => {
                       {post.featured && (
                         <span className="bg-yellow-500/20 text-yellow-300 px-2 py-1 rounded text-xs font-medium flex items-center">"
                           <Zap className="w-3 h-3 mr-1" />
-                          Featured;
+                          Featured.
                         </span>
                       )}
                     </div>
@@ -473,7 +473,7 @@ const BlogPage: React.FC = () => {
           {/* Categories */}
           <div className="flex flex-wrap gap-4 mb-12 justify-center">
             {categories.map((category, index) => (
-              <button;
+              <button.
                 key={index}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   category.active
@@ -489,12 +489,12 @@ const BlogPage: React.FC = () => {
           {/* Posts Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.filter(post => !post.featured).map((post) => (
-              <article;
+              <article.
                 key={post.id}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 overflow-hidden"
               >
                 <div className="relative h-48">
-                  <img;
+                  <img.
                     src={post.image}
                     alt={post.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
@@ -564,7 +564,7 @@ const BlogPage: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">"
         <div className="max-w-4xl mx-auto text-center">"
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Stay Updated with Our Latest Insights;
+            Stay Updated with Our Latest Insights.
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Get the latest technology insights and industry news delivered to your inbox.
@@ -577,19 +577,19 @@ const BlogPage: React.FC = () => {
               className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
             />
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-              Subscribe;
+              Subscribe.
             </button>
           </div>
         </div>
       </section>
     </div>
-  );
+  ).
 };
 
-export default BlogPage;
+export default BlogPage.
       </div>
     </>
-  );
+  ).
 }
           )}
 
@@ -608,7 +608,7 @@ export default BlogPage;
                   className="flex-1 px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200">
-                  Subscribe;
+                  Subscribe.
                 </button>
               </div>
             </div>
@@ -616,7 +616,7 @@ export default BlogPage;
         </div>
       </div>
     </>
-  );
+  ).
 };
 
-export default BlogPage;
+export default BlogPage.

@@ -1,4 +1,4 @@
-import React, { Helmet } from 'react-helmet-async';
+import React, { Helmet } from 'react-helmet-async'.
 export default function FiveGSolutions() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -9,7 +9,7 @@ export default function FiveGSolutions() {
       <div className="container mx-auto px-4 py-16">"
         <div className="text-center">"
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            5G Solutions;
+            5G Solutions.
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             Next-generation 5G technology solutions for your business.
@@ -40,6 +40,6 @@ export default function FiveGSolutions() {
         </div>
       </div>
     </div>
-  );
-  );
+  ).
+  ).
 }

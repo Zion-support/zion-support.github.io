@@ -1,9 +1,9 @@
-import React from 'react';
-'use client';
-import React, { memo } from 'react';
-import React, { Link } from 'react-router-dom';
+import React from 'react'.
+'use client'.
+import React, { memo } from 'react'.
+import React, { Link } from 'react-router-dom'.
 const Footer: React.FC = memo(() => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear().
   
   const aiServices = [
     { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', description: 'Conversational AI' },'
@@ -162,8 +162,8 @@ export default function Footer() {
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <footer className="bg-gray-900 text-white py-8">"
       <div className="container mx-auto px-4">"
@@ -180,7 +180,7 @@ export default function Footer() {
     { name: 'Privacy Policy', path: '/privacy' },'
     { name: 'Terms of Service', path: '/terms' }'
   ]
-import React, { Brain, Mail, Phone, MapPin, ArrowRight, Award, Users, Shield, Clock, Globe, Zap, ChevronRight } from 'lucide-react';
+import React, { Brain, Mail, Phone, MapPin, ArrowRight, Award, Users, Shield, Clock, Globe, Zap, ChevronRight } from 'lucide-react'.
 export default function Footer() {
   const navigationItems = [
     { name: "Home", path: "/" },"
@@ -258,8 +258,8 @@ const Footer: React.FC = () => {
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <footer className="bg-gray-900/50 backdrop-blur-lg border-t border-white/10">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">"
@@ -302,7 +302,7 @@ const Footer: React.FC = () => {
               </div>
               </div>
               <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                Zion Tech Group;
+                Zion Tech Group.
               </h3>
             </div>
   const Component = () => {
@@ -311,8 +311,8 @@ const Footer: React.FC = () => {
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
       {/* Background Effects */}
@@ -364,12 +364,12 @@ const Footer: React.FC = () => {
             <div>
               <h4 className="text-lg font-bold text-cyan-400 mb-6 flex items-center">"
                 <Brain className="w-5 h-5 mr-2" />
-                AI Services;
+                AI Services.
               </h4>
               <ul className="space-y-3">
                 {aiServices.slice(0, 8).map((service, index) => (
                   <li key={index}>
-                    <Link;
+                    <Link.
                       to={service.url}
                       className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                     >
@@ -394,12 +394,12 @@ const Footer: React.FC = () => {
             <div>
               <h4 className="text-lg font-bold text-purple-400 mb-6 flex items-center">"
                 <Cloud className="w-5 h-5 mr-2" />
-                IT Services;
+                IT Services.
               </h4>
               <ul className="space-y-3">
                 {itServices.slice(0, 8).map((service, index) => (
                   <li key={index}>
-                    <Link;
+                    <Link.
                       to={service.url}
                       className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm group flex items-center"
                     >
@@ -424,12 +424,12 @@ const Footer: React.FC = () => {
             <div>
               <h4 className="text-lg font-bold text-green-400 mb-6 flex items-center">"
                 <Cpu className="w-5 h-5 mr-2" />
-                Micro SAAS;
+                Micro SAAS.
               </h4>
               <ul className="space-y-3">
                 {microSaasServices.slice(0, 8).map((service, index) => (
                   <li key={index}>
-                    <Link;
+                    <Link.
                       to={service.url}
                       className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm group flex items-center"
                     >
@@ -482,13 +482,13 @@ const Footer: React.FC = () => {
         </div>
       </div>
     </footer>
-  );
+  ).
 }
                 <li key={index}>
-                  <Link ;
+                  <Link .
                     href={service.url}
 
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm;
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm.
                   >
                     {service.name}
 
@@ -503,16 +503,16 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center>"
               <Users className="w-5 h-5 mr-2 />
-              Company;
+              Company.
             </h3>
             <ul className="space-y-2 mb-6>
               {companyLinks.map((link, index) => (
 
                 <li key={index}>
-                  <Link ;
+                  <Link .
                     href={link.url}
 
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm;
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm.
                   >
                     {link.name}
 
@@ -526,10 +526,10 @@ const Footer: React.FC = () => {
               {supportLinks.map((link, index) => (
 
                 <li key={index}>
-                  <Link ;
+                  <Link .
                     href={link.url}
 
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm;
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm.
                   >
                     {link.name}
 
@@ -564,8 +564,8 @@ const Footer: React.FC = () => {
               <div className="text-xs text-cyan-400 font-medium>
                 {contactInfo.emergency}
 
-import React, { Link } from 'react-router-dom';
-import React, { Brain, Mail, Phone, MapPin } from 'lucide-react';
+import React, { Link } from 'react-router-dom'.
+import React, { Brain, Mail, Phone, MapPin } from 'lucide-react'.
   BarChart3,
   Cloud,
   Code,
@@ -578,18 +578,18 @@ import React, { Brain, Mail, Phone, MapPin } from 'lucide-react';
   Users,
   Award,
   Star
-} from "lucide-react";
+} from "lucide-react".
 
 const Footer = () => {
   
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear().
 
   const services = useMemo(() => [
     { name: "AI Solutions", href: "/ai-services", icon: <Brain className="w-4 h-4" /> },"
     { name: "IT Services", href: "/services", icon: <Shield className="w-4 h-4" /> },"
     { name: "Micro SAAS", href: "/micro-saas", icon: <Zap className="w-4 h-4" /> },"
     { name: "5G Solutions", href: "/5g-solutions", icon: <Globe className="w-4 h-4" /> }
-  ], []);
+  ], []).
 
   const aiServices = useMemo(() => [
     { name: "AI Analytics", href: "/ai-analytics" },"
@@ -598,7 +598,7 @@ const Footer = () => {
     { name: "AI Customer Service", href: "/ai-customer-service" },"
     { name: "AI Marketing", href: "/ai-marketing" },"
     { name: "AI Healthcare", href: "/ai-healthcare" }"
-  ], []);
+  ], []).
 
   const microSaasServices = useMemo(() => [
     { name: "Zion Analytics Pro", href: "/zion-analytics-pro" },"
@@ -607,7 +607,7 @@ const Footer = () => {
     { name: "Zion Content Studio", href: "/zion-content-studio" },"
     { name: "Zion AI Video Generator", href: "/zion-ai-video-generator" },"
     { name: "Zion AI Invoice Generator", href: "/zion-ai-invoice-generator" }"
-  ], []);
+  ], []).
 
   const companyLinks = useMemo(() => [
     { name: "About Us", href: "/about" },"
@@ -617,14 +617,14 @@ const Footer = () => {
     { name: "Support", href: "/support" },"
     { name: "Privacy Policy", href: "/privacy" },"
     { name: "Terms of Service", href: "/terms" }"
-  ], []);
+  ], []).
 
   const stats = useMemo(() => [
     { number: "10,000+", label: "Active Users", icon: <Users className="w-5 h-5" /> },"
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-5 h-5" /> },"
     { number: "60+", label: "Micro SAAS Solutions", icon: <Zap className="w-5 h-5" /> },"
     { number: "24/7", label: "Support", icon: <Clock className="w-5 h-5" /> }
-  ], []);
+  ], []).
 
 const Footer: React.FC = () => {
   const Component = () => {
@@ -633,8 +633,8 @@ const Footer: React.FC = () => {
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <footer className="bg-slate-900 text-white">"
       <div className="max-w-7xl mx-auto px-4 py-12">"
@@ -704,20 +704,20 @@ const Footer: React.FC = () => {
             </div>
             <div className="flex space-x-6>"
               <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors>
-                Privacy Policy;
+                Privacy Policy.
               </a>
               <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors>
-                Terms of Service;
+                Terms of Service.
               </a>
               <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors>"
             <h3 className="text-lg font-semibold mb-6 flex items-center">"
               <Brain className="w-5 h-5 mr-2 text-cyan-400" />
-              AI Services;
+              AI Services.
             </h3>
             <ul className="space-y-3">
               {aiServices.map((service, index) => (
                 <li key={index}>
-                  <Link;
+                  <Link.
                     href={service.url}
                     className="text-gray-300 hover:text-white transition-colors group flex items-start"
                   >
@@ -737,7 +737,7 @@ const Footer: React.FC = () => {
                   </Link>
                 </li>
               ))}
-                  <Link ;
+                  <Link .
                     href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center group"
                   >
@@ -753,12 +753,12 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6 flex items-center">"
               <Code className="w-5 h-5 mr-2 text-cyan-400" />
-              IT Services;
+              IT Services.
             </h3>
             <ul className="space-y-3">
               {itServices.map((service, index) => (
                 <li key={index}>
-                  <Link;
+                  <Link.
                     href={service.url}
                     className="text-gray-300 hover:text-white transition-colors group flex items-start"
                   >
@@ -777,7 +777,7 @@ const Footer: React.FC = () => {
                     {link.name}
               {navigationItems.slice(0, 6).map((item) => (
                 <li key={item.name}>
-                  <Link;
+                  <Link.
                     to={item.path}
                     className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"
                   >
@@ -798,7 +798,7 @@ const Footer: React.FC = () => {
                   <ul className="space-y-2">
                     {category.services.map((service, serviceIndex) => (
                       <li key={serviceIndex}>
-                        <Link ;
+                        <Link .
                           to={service.path} 
                           className="text-gray-300 hover:text-white transition-colors flex items-center group"
                         >
@@ -819,7 +819,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2 mb-6">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <Link;
+                  <Link.
                     to={link.path}
                     className="text-gray-300 hover:text-white transition-colors flex items-center group"
                   >
@@ -834,12 +834,12 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4 flex items-center">"
               <Cloud className="w-5 h-5 text-purple-400 mr-2" />
-              Micro SaaS;
+              Micro SaaS.
             </h4>
             <ul className="space-y-2">
               {microSaasServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
-                  <Link ;
+                  <Link .
                     to={service.url}
                     className="text-gray-300 hover:text-purple-400 transition-colors duration-200 text-sm"
                     title={service.description}
@@ -855,12 +855,12 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4 flex items-center">"
               <Code className="w-5 h-5 text-pink-400 mr-2" />
-              IT Services;
+              IT Services.
             </h4>
             <ul className="space-y-2">
               {itServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
-                  <Link ;
+                  <Link .
                     to={service.url}
                     className="text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm"
                     title={service.description}
@@ -870,7 +870,7 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
-                Cookie Policy;
+                Cookie Policy.
               </a>
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Solutions</h3>"
             <div className="space-y-6">
@@ -879,7 +879,7 @@ const Footer: React.FC = () => {
                 <ul className="space-y-2">
                   {microSaasServices.slice(0, 4).map((service, index) => (
                     <li key={index}>
-                      <Link ;
+                      <Link .
                         href={service.url}
                         className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
                       >
@@ -893,7 +893,7 @@ const Footer: React.FC = () => {
                 <ul className="space-y-2">
                   {companyLinks.map((link, index) => (
                     <li key={index}>
-                      <Link;
+                      <Link.
                         to={link.url}
                         className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
                       >
@@ -908,7 +908,7 @@ const Footer: React.FC = () => {
                 <ul className="space-y-2">
                   {emergingTech.slice(0, 4).map((service, index) => (
                     <li key={index}>
-                      <Link ;
+                      <Link .
                         href={service.url}
                         className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
                       >
@@ -980,7 +980,7 @@ const Footer: React.FC = () => {
                   className="flex-1 px-3 py-2 bg-gray-800 border border-gray-600 rounded-l-md text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
                 <button className="px-4 py-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-r-md hover:from-purple-600 hover:to-cyan-600 transition-all duration-200 text-sm font-medium">
-                  Subscribe;
+                  Subscribe.
                 </button>
               </div>
             </div>
@@ -993,7 +993,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-2">
                 {services.map((service, index) => (
                   <li key={index}>
-                    <Link;
+                    <Link.
                       to={service.href}
                       className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors group"
                     >
@@ -1010,7 +1010,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-2">
                 {aiServices.map((service, index) => (
                   <li key={index}>
-                    <Link;
+                    <Link.
                       to={service.href}
                       className="text-gray-300 hover:text-cyan-400 transition-colors"
                     >
@@ -1026,7 +1026,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-2">
                 {microSaasServices.map((service, index) => (
                   <li key={index}>
-                    <Link;
+                    <Link.
                       to={service.href}
                       className="text-gray-300 hover:text-cyan-400 transition-colors"
                     >
@@ -1053,7 +1053,7 @@ const Footer: React.FC = () => {
           <div className="border-t border-gray-800 pt-8">"
             <div className="flex flex-wrap justify-center gap-6 mb-8">
               {companyLinks.map((link, index) => (
-                <Link;
+                <Link.
                   key={index}
                   to={link.href}
                   className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
@@ -1098,7 +1098,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-3 mb-8">
               {companyLinks.map((link, index) => (
                 <li key={index}>
-                  <Link;
+                  <Link.
                     to={link.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 group flex items-center"
                   >
@@ -1156,11 +1156,11 @@ const Footer: React.FC = () => {
     </footer>
   )})
 Footer.displayName = 'Footer;'
-  );
-export default Footer;
-});
+  ).
+export default Footer.
+}).
 
-Footer.displayName = 'Footer';
+Footer.displayName = 'Footer'.
 
         {/* Quick Links & Contact */}
         <div className="mt-8 pt-8 border-t border-gray-700">"
@@ -1170,7 +1170,7 @@ Footer.displayName = 'Footer';
               <ul className="space-y-2">
                 {quickLinks.map((link, index) => (
                   <li key={index}>
-                    <Link;
+                    <Link.
                       to={link.path}
                       className="text-gray-300 hover:text-white transition-colors text-sm flex items-center group"
                     >
@@ -1226,11 +1226,11 @@ Footer.displayName = 'Footer';
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">"
               <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Privacy Policy;
+                Privacy Policy.
               </Link>
               <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
                 <li key={index}>
-                  <Link;
+                  <Link.
                     to={link.path}
                     className="text-gray-300 hover:text-white transition-colors flex items-center group"
                   >
@@ -1243,10 +1243,10 @@ Footer.displayName = 'Footer';
           </div>
         </div>
 
-                Terms of Service;
+                Terms of Service.
               </Link>
               <Link to="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">
-                Cookie Policy;
+                Cookie Policy.
               </Link>
         {/* Bottom Footer */}
         <div className="border-t border-gray-800 pt-8">"
@@ -1265,13 +1265,13 @@ Footer.displayName = 'Footer';
             </div>
             <div className="mt-4 md:mt-0">"
               <p className="text-gray-500 text-xs">
-                Built with ❤️ by Zion Tech Group;
+                Built with ❤️ by Zion Tech Group.
               </p>
         {/* Newsletter Signup */}
         <div className="border-t border-gray-800 mt-12 pt-8">"
           <div className="max-w-2xl mx-auto text-center">"
             <h3 className="text-2xl font-bold text-white mb-4">
-              Stay Updated with Latest Tech Trends;
+              Stay Updated with Latest Tech Trends.
             </h3>
             <p className="text-gray-300 mb-6">
               Get insights on AI, emerging technologies, and industry best practices delivered to your inbox.
@@ -1329,15 +1329,15 @@ Footer.displayName = 'Footer';
             <div className="flex items-center space-x-6 text-sm text-gray-400">"
               <span className="flex items-center">"
                 <Shield className="w-4 h-4 mr-1" />
-                Enterprise Security;
+                Enterprise Security.
               </span>
               <span className="flex items-center">"
                 <Award className="w-4 h-4 mr-1" />
-                ISO 27001 Certified;
+                ISO 27001 Certified.
               </span>
               <span className="flex items-center">"
                 <Globe className="w-4 h-4 mr-1" />
-                Global Services;
+                Global Services.
               </span>
             </div>
           </div>
@@ -1345,18 +1345,18 @@ Footer.displayName = 'Footer';
       </div>
     </footer>
   )
-  );
+  ).
 };
 
 }
 
-export default Footer;
+export default Footer.
 };
 
-export default Footer;
-});
+export default Footer.
+}).
 
-Footer.displayName = 'Footer';
+Footer.displayName = 'Footer'.
 
-export default Footer;
-export default Footer;
+export default Footer.
+export default Footer.

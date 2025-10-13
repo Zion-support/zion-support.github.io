@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'.
 
 
 const SystemStatusPage: React.FC = () => {
@@ -13,8 +13,8 @@ const SystemStatusPage: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-  );
+  ).
+  ).
 };
 
-export default SystemStatusPage;
+export default SystemStatusPage.

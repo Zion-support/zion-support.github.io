@@ -1,4 +1,4 @@
-import React, { Helmet } from 'react-helmet-async';
+import React, { Helmet } from 'react-helmet-async'.
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -22,24 +22,24 @@ export default function ZionAiInventoryManager() {
       <div className="container mx-auto px-4 py-16">"
         <div className="text-center">"
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Zion AI Inventory Manager;
+            Zion AI Inventory Manager.
           </h1>
 <p className="text-xl text-gray-600 mb-8">
             Intelligent inventory management with AI optimization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-300">
-              Start Free Trial;
+              Start Free Trial.
             </button>
             <button className="border border-gray-300 text-gray-300 hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition-colors duration-300">
-              Learn More;
+              Learn More.
             </button>
           </div>
         </div>
       </div>
     </div>
-  );
-  );
+  ).
+  ).
 }
         canonical="https://ziontechgroup.com/zion-ai-inventory-manager"
       />
@@ -59,7 +59,7 @@ export default function ZionAiInventoryManager() {
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">"
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Zion AI Inventory Manager;
+              Zion AI Inventory Manager.
             </span>
           </h1>
           
@@ -75,7 +75,7 @@ export default function ZionAiInventoryManager() {
               size="lg"
               icon={<ArrowRight className="w-5 h-5" />}
             >
-              Get Started Today;
+              Get Started Today.
             </FuturisticButton>
             <FuturisticButton
               href="/demo"
@@ -83,7 +83,7 @@ export default function ZionAiInventoryManager() {
               size="lg"
               icon={<Package className="w-5 h-5" />}
             >
-              View Demo;
+              View Demo.
             </FuturisticButton>
           </div>
         </ResponsiveContainer>
@@ -94,7 +94,7 @@ export default function ZionAiInventoryManager() {
         <ResponsiveContainer>
           <div className="text-center mb-16">"
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Smart Inventory Features;
+              Smart Inventory Features.
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Everything you need to manage your inventory efficiently with AI-powered insights.
@@ -102,7 +102,7 @@ export default function ZionAiInventoryManager() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-              <FuturisticCard;
+              <FuturisticCard.
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
@@ -162,7 +162,7 @@ export default function ZionAiInventoryManager() {
                 size="lg"
                 icon={<ArrowRight className="w-5 h-5" />}
               >
-                Start Your Free Trial;
+                Start Your Free Trial.
               </FuturisticButton>
               <FuturisticButton
                 href="/pricing"
@@ -170,14 +170,14 @@ export default function ZionAiInventoryManager() {
                 size="lg"
                 icon={<Target className="w-5 h-5" />}
               >
-                View Pricing;
+                View Pricing.
               </FuturisticButton>
             </div>
           </div>
         </ResponsiveContainer>
       </section>
     </div>
-  );
+  ).
 };
 
-export default ZionAIInventoryManager;
+export default ZionAIInventoryManager.

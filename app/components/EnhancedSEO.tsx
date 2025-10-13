@@ -1,19 +1,19 @@
-import React from 'react';
+import React from 'react'.
 
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  structuredData?: object;
-  noIndex?: boolean;
-  noFollow?: boolean;
-  lang?: string;
-  noindex?: boolean;
-  nofollow?: boolean;
+  ogTitle?: string.
+  ogDescription?: string.
+  ogImage?: string.
+  ogType?: string.
+  twitterCard?: string.
+  twitterTitle?: string.
+  twitterDescription?: string.
+  twitterImage?: string.
+  structuredData?: object.
+  noIndex?: boolean.
+  noFollow?: boolean.
+  lang?: string.
+  noindex?: boolean.
+  nofollow?: boolean.
 }
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
@@ -26,7 +26,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   ogType = 'website',
   twitterCard = 'summary_large_image'
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`.
   const fullCanonical = canonical || `https://ziontechgroup.com${typeof window !== 'undefined' ? window.location.pathname : ''}`;'
 }) => {
   ogImage = '/og-image.svg',
@@ -44,19 +44,19 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   author,
   section,
   tags = [],
-  readingTime;
+  readingTime.
 }) => {
-  const siteUrl = 'https://ziontechgroup.com';
-  const defaultImage = 'https://ziontechgroup.com/og-image.jpg';
+  const siteUrl = 'https://ziontechgroup.com'.
+  const defaultImage = 'https://ziontechgroup.com/og-image.jpg'.
   
-  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
-  const fullCanonical = canonical ? (canonical.startsWith('http') ? canonical : `${siteUrl}${canonical}`) : undefined;
-  const fullOgUrl = ogUrl || fullCanonical || siteUrl;
-  const fullOgImage = ogImage || defaultImage;
-  const fullTwitterImage = twitterImage || fullOgImage;
+  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`.
+  const fullCanonical = canonical ? (canonical.startsWith('http') ? canonical : `${siteUrl}${canonical}`) : undefined.
+  const fullOgUrl = ogUrl || fullCanonical || siteUrl.
+  const fullOgImage = ogImage || defaultImage.
+  const fullTwitterImage = twitterImage || fullOgImage.
   
-  const defaultKeywords = 'AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology, Zion Tech Group';
-  const finalKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords;
+  const defaultKeywords = 'AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology, Zion Tech Group'.
+  const finalKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords.
 
   const defaultStructuredData = {
     "@context": "https://schema.org","
@@ -131,16 +131,16 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
     ]
   };
 
-  const finalStructuredData = structuredData || defaultStructuredData;
+  const finalStructuredData = structuredData || defaultStructuredData.
 
-  const mergedStructuredData = structuredData ? { ...defaultStructuredData, ...structuredData } : defaultStructuredData;
+  const mergedStructuredData = structuredData ? { ...defaultStructuredData, ...structuredData } : defaultStructuredData.
 
   return (
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <Helmet>
       {/* Basic Meta Tags */}
@@ -240,7 +240,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
         </script>
       )}
     </Helmet>
-  );
+  ).
 };
 
 const EnhancedSEOPage: React.FC = () => {
@@ -276,7 +276,7 @@ const Component = () => {
       <Helmet />
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         </section>
-  );
+  ).
         <div className="max-w-7xl mx-auto">"
           <div className="text-center">"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
@@ -325,22 +325,22 @@ const Component = () => {
             </h2>
             <p>Contact our experts to discuss your enhancedseo needs and get a customized solution.</p>
                 <Phone>
-                Call Now;
+                Call Now.
               </button>
               <button>
                 <Mail>
-                Email Us;
+                Email Us.
               </button>
             </div>
           </div>
         </div>
       </section>
     </div>
-  );
+  ).
 };
 
 
-export default Component;
-export default EnhancedSEOPage;
-export default EnhancedSEO;
-export default EnhancedSEO;
+export default Component.
+export default EnhancedSEOPage.
+export default EnhancedSEO.
+export default EnhancedSEO.

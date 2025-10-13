@@ -1,4 +1,4 @@
-import React, { Helmet } from 'react-helmet-async';
+import React, { Helmet } from 'react-helmet-async'.
 export default function ZionAIAnalyticsPro() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -9,10 +9,10 @@ export default function ZionAIAnalyticsPro() {
       <div className="container mx-auto px-4 py-16">"
         <div className="text-center">"
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Zion AI Analytics Pro;
+            Zion AI Analytics Pro.
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-            Advanced AI analytics solutions by Zion Tech Group;
+            Advanced AI analytics solutions by Zion Tech Group.
           </p>
         </div>
         <div className="max-w-4xl mx-auto">"
@@ -25,6 +25,6 @@ export default function ZionAIAnalyticsPro() {
         </div>
       </div>
     </div>
-  );
-  );
+  ).
+  ).
 }

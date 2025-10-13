@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import Link from 'next/link';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import React, { CheckCircle, Shield, Lock, FileText, Award, Users, Clock, Mail, Phone } from 'lucide-react';
+'use client'.
+import React from 'react'.
+import Link from 'next/link'.
+import Navigation from '../components/Navigation'.
+import Footer from '../components/Footer'.
+import React, { CheckCircle, Shield, Lock, FileText, Award, Users, Clock, Mail, Phone } from 'lucide-react'.
 const CompliancePage: React.FC = () => {
   const certifications = [
     { name: 'ISO 27001', status: 'Certified' },'
@@ -109,13 +109,13 @@ const CompliancePage: React.FC = () => {
                   <div className="flex items-center">"
                     <Mail className="w-5 h-5 text-cyan-400 mr-3" />"
                     <a href="mailto:compliance@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
-                      compliance@ziontechgroup.com;
+                      compliance@ziontechgroup.com.
                     </a>
                   </div>
                   <div className="flex items-center">"
                     <Phone className="w-5 h-5 text-cyan-400 mr-3" />"
                     <a href="tel:+1-302-464-0950" className="text-cyan-400 hover:text-cyan-300">
-                      +1 (302) 464-0950;
+                      +1 (302) 464-0950.
                     </a>
                   </div>
                   <div className="flex items-center">"
@@ -138,7 +138,7 @@ const CompliancePage: React.FC = () => {
             href="/contact"
             className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
           >
-            Contact Compliance Team;
+            Contact Compliance Team.
           </a>
           <div className="mt-8 text-sm text-blue-200">
             <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
@@ -147,9 +147,9 @@ const CompliancePage: React.FC = () => {
       </main>
       <Footer />
     </div>
-  );
-  );
-  );
+  ).
+  ).
+  ).
 };
 
-export default CompliancePage;
+export default CompliancePage.

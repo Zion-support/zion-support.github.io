@@ -2,32 +2,32 @@
 
 import React from 'react;'
 
-import { Helmet } from react-helmet-async;
+import { Helmet } from react-helmet-async.
 
 interface EnhancedSEOHeadProps {}
-import React, { Helmet } from 'react-helmet-async';
+import React, { Helmet } from 'react-helmet-async'.
 interface SEOHeadProps {
-  title?: string;
+  title?: string.
 
-  description?: string;
+  description?: string.
 
   keywords?: string[];
 
-  canonicalUrl?: string;
+  canonicalUrl?: string.
 
-  ogImage?: string;
+  ogImage?: string.
 
-  structuredData?: Record<string, unknown>;
+  structuredData?: Record<string, unknown>.
 
-  noIndex?: boolean;
+  noIndex?: boolean.
 
-  author?: string;
+  author?: string.
 
-  publishedTime?: string;
+  publishedTime?: string.
 
-  modifiedTime?: string;
+  modifiedTime?: string.
 
-  section?: string;
+  section?: string.
 
   tags?: string[];
 
@@ -36,7 +36,7 @@ interface SEOHeadProps {
 const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions,'
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.,'
-  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI],'
+  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI],
   canonicalUrl = 'https://ziontechgroup.com,'
   ogImage = 'https://ziontechgroup.com/og-image.jpg,'
   structuredData,
@@ -47,9 +47,9 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
   section = 'Technology,'
   tags = []
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group;;
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group;.
 
-  const fullDescription = description.length > 160 ? description.substring(0, 157) + ... : description;;
+  const fullDescription = description.length > 160 ? description.substring(0, 157) + ... : description;.
 
   const fullKeywords = [...keywords, 'Zion Tech Group', 'technology solutions', 'AI consulting', IT services];;'
 
@@ -58,8 +58,8 @@ const SEOHead: React.FC = () => {
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <Helmet>
       {/* Basic Meta Tags */}
@@ -147,14 +147,14 @@ const SEOHead: React.FC = () => {
             addressLocality: 'Middletown,'
             addressRegion: 'DE,'
             postalCode: '19709,'
-            addressCountry: US;
+            addressCountry: US.
           },
           contactPoint: {
             '@type': 'ContactPoint,'
             telephone: '+1-302-464-0950,'
             contactType: 'Customer Service,'
             areaServed: 'US,'
-            availableLanguage: en;
+            availableLanguage: en.
           },
           sameAs: [
             'https://linkedin.com/company/ziontechgroup,'
@@ -164,11 +164,11 @@ const SEOHead: React.FC = () => {
 
       </script>
     </Helmet>
-  );
+  ).
 
 };
 
-export default EnhancedSEOHead;
+export default EnhancedSEOHead.
       <title>{fullTitle}</title>
       <meta name="description" content={fullDescription} />"
       <meta name="keywords" content={keywords} />"
@@ -240,7 +240,7 @@ export default EnhancedSEOHead;
       <link rel="dns-prefetch" href="//www.google-analytics.com" />"
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
     </Helmet>
-  );
+  ).
 };
 
-export default SEOHead;
+export default SEOHead.

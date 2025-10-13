@@ -1,31 +1,31 @@
-import React, { Link } from 'react-router-dom';
-import React, { useState, useCallback, useMemo } from 'react';
-import React, { Link, useLocation } from 'react-router-dom';
-import React, { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Phone, MapPin, Code, Database, ChevronDown, Menu, X, SidebarIcon, Package, Heart, Receipt, TrendingUp, Cpu, Network, FileText, Clock } from 'lucide-react';
-import FuturisticButton from './FuturisticButton';
+import React, { Link } from 'react-router-dom'.
+import React, { useState, useCallback, useMemo } from 'react'.
+import React, { Link, useLocation } from 'react-router-dom'.
+import React, { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Phone, MapPin, Code, Database, ChevronDown, Menu, X, SidebarIcon, Package, Heart, Receipt, TrendingUp, Cpu, Network, FileText, Clock } from 'lucide-react'.
+import FuturisticButton from './FuturisticButton'.
 import React, { useState, useCallback, useMemo } from 'react'
-import React, { Link } from 'react-router-dom';
-import React, { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Globe, Cpu, Link as LinkIcon, Sidebar as SidebarIcon } from 'lucide-react';
+import React, { Link } from 'react-router-dom'.
+import React, { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Globe, Cpu, Link as LinkIcon, Sidebar as SidebarIcon } from 'lucide-react'.
 interface NavigationProps {
-  onSidebarToggle: () => void;
+  onSidebarToggle: () => void.
 }
 
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const location = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false).
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null).
+  const location = useLocation().
 
   const toggleMenu = useCallback(() => {
-    setIsMenuOpen(prev => !prev);
-  }, []);
+    setIsMenuOpen(prev => !prev).
+  }, []).
 
   const toggleDropdown = useCallback((dropdown: string) => {
-    setActiveDropdown(prev => prev === dropdown ? null : dropdown);
-  }, []);
+    setActiveDropdown(prev => prev === dropdown ? null : dropdown).
+  }, []).
 
   const isActive = useCallback((path: string) => {
-    return location.pathname === path;
-  }, [location.pathname]);
+    return location.pathname === path.
+  }, [location.pathname]).
 
   const navigationItems = useMemo(() => [
     {
@@ -110,11 +110,11 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       path: '/contact',
       icon: <Phone className="w-4 h-4" />
     }
-  ], []);
+  ], []).
 
-import React, { useState, useEffect } from 'react';
-import React, { Link } from 'react-router-dom';
-import React, { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Search, Palette } from 'lucide-react';
+import React, { useState, useEffect } from 'react'.
+import React, { Link } from 'react-router-dom'.
+import React, { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Search, Palette } from 'lucide-react'.
   const aiServices = useMemo(() => [
     { name: 'AI Analytics', path: '/ai-analytics', icon: <BarChart3 className="w-4 h-4" /> },"'
     { name: 'AI Automation', path: '/ai-automation', icon: <Cpu className="w-4 h-4" /> },"'
@@ -124,24 +124,24 @@ import React, { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield,
     { name: 'AI Marketing', path: '/ai-marketing', icon: <TrendingUp className="w-4 h-4" /> },"'
     { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', icon: <Brain className="w-4 h-4" /> },"'
     { name: 'AI Workflow Automation', path: '/ai-workflow-automation', icon: <Zap className="w-4 h-4" /> }'
-  ], []);
-import React, { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, Star, TrendingUp, Settings, Globe, Target } from 'lucide-react';
-'use client';
-import React, { useState, useEffect, useCallback } from 'react';
-import React, { Link } from 'react-router-dom';
-import React, { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart } from 'lucide-react';
+  ], []).
+import React, { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, Star, TrendingUp, Settings, Globe, Target } from 'lucide-react'.
+'use client'.
+import React, { useState, useEffect, useCallback } from 'react'.
+import React, { Link } from 'react-router-dom'.
+import React, { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart } from 'lucide-react'.
 const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [aiServicesOpen, setAiServicesOpen] = useState(false);
-  const [itServicesOpen, setItServicesOpen] = useState(false);
-  const [microSaasOpen, setMicroSaasOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false).
+  const [servicesOpen, setServicesOpen] = useState(false).
+  const [aiServicesOpen, setAiServicesOpen] = useState(false).
+  const [itServicesOpen, setItServicesOpen] = useState(false).
+  const [microSaasOpen, setMicroSaasOpen] = useState(false).
+  const [isScrolled, setIsScrolled] = useState(false).
 
   const handleResize = () => {
   
     if (window.innerWidth >= 1024) {
-      setIsOpen(false);
+      setIsOpen(false).
     },
     {
       title: 'Cloud Services',
@@ -171,71 +171,71 @@ const Navigation: React.FC = () => {
 
   const handleScroll = () => {
   
-    setIsScrolled(window.scrollY > 50);
+    setIsScrolled(window.scrollY > 50).
   };
 
   useEffect(() => {
-        setIsOpen(false);
+        setIsOpen(false).
       }
     };
 
     const handleScroll = () => {
   
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 10).
     };
 
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize).
+    window.addEventListener('scroll', handleScroll).
 
     return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize).
+      window.removeEventListener('scroll', handleScroll).
     };
-    setAiServicesOpen(false);
-    setItServicesOpen(false);
-    setMicroSaasOpen(false);
-  }, [servicesOpen]);
+    setAiServicesOpen(false).
+    setItServicesOpen(false).
+    setMicroSaasOpen(false).
+  }, [servicesOpen]).
 
   const toggleAiServices = useCallback(() => {
-    setAiServicesOpen(!aiServicesOpen);
-    setServicesOpen(false);
-    setItServicesOpen(false);
-    setMicroSaasOpen(false);
-  }, [aiServicesOpen]);
+    setAiServicesOpen(!aiServicesOpen).
+    setServicesOpen(false).
+    setItServicesOpen(false).
+    setMicroSaasOpen(false).
+  }, [aiServicesOpen]).
 
   const toggleItServices = useCallback(() => {
-    setItServicesOpen(!itServicesOpen);
-    setServicesOpen(false);
-    setAiServicesOpen(false);
-    setMicroSaasOpen(false);
-  }, [itServicesOpen]);
+    setItServicesOpen(!itServicesOpen).
+    setServicesOpen(false).
+    setAiServicesOpen(false).
+    setMicroSaasOpen(false).
+  }, [itServicesOpen]).
 
   const toggleMicroSaas = useCallback(() => {
-    setMicroSaasOpen(!microSaasOpen);
-    setServicesOpen(false);
-    setAiServicesOpen(false);
-    setItServicesOpen(false);
-  }, [microSaasOpen]);
+    setMicroSaasOpen(!microSaasOpen).
+    setServicesOpen(false).
+    setAiServicesOpen(false).
+    setItServicesOpen(false).
+  }, [microSaasOpen]).
 
   const closeAllMenus = useCallback(() => {
-    setIsOpen(false);
-    setServicesOpen(false);
-    setAiServicesOpen(false);
-    setItServicesOpen(false);
-    setMicroSaasOpen(false);
-  }, []);
+    setIsOpen(false).
+    setServicesOpen(false).
+    setAiServicesOpen(false).
+    setItServicesOpen(false).
+    setMicroSaasOpen(false).
+  }, []).
 
   const closeAllMenus = () => {
   
-    setServicesOpen(false);
-    setAiServicesOpen(false);
-    setItServicesOpen(false);
-    setMicroSaasOpen(false);
+    setServicesOpen(false).
+    setAiServicesOpen(false).
+    setItServicesOpen(false).
+    setMicroSaasOpen(false).
   };
 
   const toggleMobileMenu = () => {
   
-    setIsOpen(!isOpen);
+    setIsOpen(!isOpen).
   };
 
   const aiServices = [
@@ -445,14 +445,14 @@ export default function Navigation() {
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <nav className="bg-white shadow-lg">"
       <div className="container mx-auto px-4">"
         <div className="flex justify-between items-center py-4">"
           <Link to="/" className="text-xl font-bold text-gray-800">
-            Zion Tech Group;
+            Zion Tech Group.
           </Link>
           <div className="space-x-6">"
             <Link to="/about" className="text-gray-600 hover:text-gray-800">
@@ -466,14 +466,14 @@ export default function Navigation() {
                 <Zap className="w-6 h-6 text-white" />
               </div>
               <span className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
-                Zion Tech Group;
+                Zion Tech Group.
               </span>
             </Link>
             <Link to="/services" className="text-gray-600 hover:text-gray-800">
-              Services;
+              Services.
             </Link>
             <Link to="/contact" className="text-gray-600 hover:text-gray-800">
-              Contact;
+              Contact.
             </Link>
             </Link>
     }`}>
@@ -490,12 +490,12 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">"
             <Link href="/" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
-              Home;
+              Home.
             </Link>
             
             {/* AI Services Dropdown */}
             <div className="relative group">
-              <button;
+              <button.
                 onClick={() => setAiServicesOpen(!aiServicesOpen)}
                 className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
               >
@@ -507,7 +507,7 @@ export default function Navigation() {
                 <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">"
                   <div className="grid grid-cols-1 gap-2">
                     {aiServices.map((service) => (
-                      <Link;
+                      <Link.
                         key={service.name}
                         href={service.href}
                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
@@ -517,7 +517,7 @@ export default function Navigation() {
                         <div>
                           <div className="text-white font-medium">{service.name}</div>"
                           <div className="text-xs text-gray-400">{service.description}</div>
-              Zion Tech Group;
+              Zion Tech Group.
             </span>
           </Link>
 
@@ -530,7 +530,7 @@ export default function Navigation() {
               }`}
               onClick={closeAllMenus}
             >
-              Home;
+              Home.
             </Link>
             
             <Link 
@@ -540,12 +540,12 @@ export default function Navigation() {
               }`}
               onClick={closeAllMenus}
             >
-              About;
+              About.
             </Link>
 
             {/* Services Dropdown */}
             <div className="relative">
-              <button;
+              <button.
                 onClick={() => setServicesOpen(!servicesOpen)}
                 className={`flex items-center space-x-1 font-medium transition-colors hover:text-purple-600 ${
                   isScrolled ? 'text-gray-700' : 'text-white'
@@ -569,7 +569,7 @@ export default function Navigation() {
 
             {/* IT Services Dropdown */}
             <div className="relative group">
-              <button;
+              <button.
                 onClick={() => setItServicesOpen(!itServicesOpen)}
                 className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
               >
@@ -581,7 +581,7 @@ export default function Navigation() {
                 <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">"
                   <div className="grid grid-cols-1 gap-2">
                     {itServices.map((service) => (
-                      <Link;
+                      <Link.
                         key={service.name}
                         href={service.href}
                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
@@ -602,7 +602,7 @@ export default function Navigation() {
 
             {/* Micro SAAS Dropdown */}
             <div className="relative group">
-              <button;
+              <button.
                 onClick={() => setMicroSaasOpen(!microSaasOpen)}
                 className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
               >
@@ -614,7 +614,7 @@ export default function Navigation() {
                 <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">"
                   <div className="grid grid-cols-1 gap-2">
                     {microSaasServices.map((service) => (
-                      <Link;
+                      <Link.
                         key={service.name}
                         href={service.href}
                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
@@ -635,7 +635,7 @@ export default function Navigation() {
 
             {/* Emerging Technologies Dropdown */}
             <div className="relative group">
-              <button;
+              <button.
                 onClick={() => setServicesOpen(!servicesOpen)}
                 className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
               >
@@ -647,7 +647,7 @@ export default function Navigation() {
                 <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">"
                   <div className="grid grid-cols-1 gap-2">
                     {emergingTech.map((service) => (
-                      <Link;
+                      <Link.
                         key={service.name}
                         href={service.href}
                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
@@ -677,16 +677,16 @@ export default function Navigation() {
             </Link>
 
             <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              About;
+              About.
             </Link>
             <Link href="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Services;
+              Services.
             </Link>
             <Link href="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Pricing;
+              Pricing.
             </Link>
             <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Blog;
+              Blog.
             </Link>
             <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
           {/* CTA Button */}
@@ -694,16 +694,16 @@ export default function Navigation() {
             <Link
               to="/contact"
             <Link href="/about" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
-              About;
+              About.
             </Link>
             <Link href="/case-studies" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
-              Case Studies;
+              Case Studies.
             </Link>
             <Link href="/blog" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
-              Blog;
+              Blog.
             </Link>
             <Link href="/contact" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
-              Contact;
+              Contact.
             </Link>
           </div>
 
@@ -727,7 +727,7 @@ export default function Navigation() {
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
-            <button;
+            <button.
               onClick={toggleMenu}
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
@@ -743,7 +743,7 @@ export default function Navigation() {
 
           {/* Mobile menu button */}
           <div className="lg:hidden flex items-center space-x-2">
-            <button;
+            <button.
               onClick={onSidebarToggle}
               className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all duration-300"
               aria-label="Toggle sidebar"
@@ -759,21 +759,21 @@ export default function Navigation() {
                 to="/"
                 className="text-gray-900 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors"
             <div className="relative">
-              <button;
+              <button.
                 onClick={() => setMicroSaasOpen(!microSaasOpen)}
                 className="flex items-center space-x-1 text-white hover:text-cyan-400 font-medium transition-colors"
               >
-                Home;
+                Home.
               </Link>
               <Link
                 to="/about"
                 className="text-gray-900 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors"
               >
-                About;
+                About.
               </Link>
               
               <div className="relative">
-                <button;
+                <button.
                   onClick={toggleServices}
                   className="text-gray-900 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors flex items-center"
                 >
@@ -785,17 +785,17 @@ export default function Navigation() {
                   <div className="absolute left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">"
                     <div className="grid grid-cols-2 gap-2 p-4">
                       {services.map((service) => {
-                        const IconComponent = service.icon;
+                        const IconComponent = service.icon.
                         const Component = () => {
   
                           return (
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
-                          <Link;
+                          <Link.
                             key={service.href}
                             to={service.href}
                             className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors"
@@ -818,26 +818,26 @@ export default function Navigation() {
                 to="/contact"
                 className="text-gray-900 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors"
               >
-                Contact;
+                Contact.
               </Link>
               
               <Link 
                 to="/contact" "
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
               >
-                Get Started;
+                Get Started.
               </Link>
             </div>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
-            <button;
+            <button.
               onClick={onSidebarToggle}
               className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all duration-300"
             {/* Main Pages */}
             {mainPages.map((page, index) => (
-              <Link;
+              <Link.
                 key={index}
                 to={page.href}
                 className="text-white hover:text-cyan-400 transition-colors"
@@ -950,8 +950,8 @@ export default function Navigation() {
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -966,7 +966,7 @@ export default function Navigation() {
               <Zap className="w-6 h-6 text-white" />
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Zion Tech Group;
+              Zion Tech Group.
             </span>
           </Link>
 
@@ -977,7 +977,7 @@ export default function Navigation() {
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
-              Home;
+              Home.
             </Link>
             
             <Link 
@@ -985,12 +985,12 @@ export default function Navigation() {
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
-              About;
+              About.
             </Link>
 
             {/* Services Dropdown */}
             <div className="relative">
-              <button;
+              <button.
                 onClick={toggleServices}
                 className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               >
@@ -1004,11 +1004,11 @@ export default function Navigation() {
                     <div>
                       <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">"
                         <Brain className="w-5 h-5 mr-2" />
-                        AI Services;
+                        AI Services.
                       </h3>
                       <div className="grid grid-cols-1 gap-2">
                         {aiServices.slice(0, 6).map((service, index) => (
-                          <Link;
+                          <Link.
                             key={index}
                             to={service.href}
                             className="flex items-center space-x-3 p-2 rounded-lg hover:bg-slate-700/50 transition-colors duration-200"
@@ -1030,7 +1030,7 @@ export default function Navigation() {
 
             {/* AI Services Dropdown */}
             <div className="relative">
-              <button;
+              <button.
                 onClick={toggleAiServices}
                 className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               >
@@ -1042,7 +1042,7 @@ export default function Navigation() {
                 <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-2xl border border-cyan-500/20 p-6">"
                   <div className="grid grid-cols-2 gap-4">
                     {aiServices.slice(0, 12).map((service, index) => (
-                      <Link;
+                      <Link.
                         key={index}
                         to={service.href}
                         className="flex items-center space-x-3 p-2 rounded-lg hover:bg-slate-700/50 transition-colors duration-200"
@@ -1072,7 +1072,7 @@ export default function Navigation() {
 
             {/* IT Services Dropdown */}
             <div className="relative">
-              <button;
+              <button.
                 onClick={toggleItServices}
                 className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               >
@@ -1084,7 +1084,7 @@ export default function Navigation() {
                 <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-2xl border border-cyan-500/20 p-6">"
                   <div className="grid grid-cols-2 gap-4">
                     {itServices.slice(0, 12).map((service, index) => (
-                      <Link;
+                      <Link.
                         key={index}
                         to={service.href}
                         className="flex items-center space-x-3 p-2 rounded-lg hover:bg-slate-700/50 transition-colors duration-200"
@@ -1114,7 +1114,7 @@ export default function Navigation() {
 
             {/* Micro SaaS Dropdown */}
             <div className="relative">
-              <button;
+              <button.
                 onClick={toggleMicroSaas}
                 className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               >
@@ -1126,7 +1126,7 @@ export default function Navigation() {
                 <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-2xl border border-cyan-500/20 p-6">"
                   <div className="grid grid-cols-2 gap-4">
                     {microSaasServices.slice(0, 12).map((service, index) => (
-                      <Link;
+                      <Link.
                         key={index}
                         to={service.href}
                         className="flex items-center space-x-3 p-2 rounded-lg hover:bg-slate-700/50 transition-colors duration-200"
@@ -1159,7 +1159,7 @@ export default function Navigation() {
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
-              Pricing;
+              Pricing.
             </Link>
             
             <Link 
@@ -1167,7 +1167,7 @@ export default function Navigation() {
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
-              Contact;
+              Contact.
             </Link>
 
             {/* CTA Button */}
@@ -1176,7 +1176,7 @@ export default function Navigation() {
               className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               onClick={closeAllMenus}
             >
-              Get Started;
+              Get Started.
             </Link>
           </div>
 
@@ -1184,7 +1184,7 @@ export default function Navigation() {
             >
               <SidebarIcon className="w-6 h-6" />
             </button>
-            <button;
+            <button.
               onClick={toggleMenu}
               className="text-gray-900 hover:text-purple-600 p-2"
               className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
@@ -1196,7 +1196,7 @@ export default function Navigation() {
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}"
           <div className="lg:hidden">
-            <button;
+            <button.
               onClick={toggleMenu}
               className="text-white hover:text-cyan-400 transition-colors duration-200 p-2"
               aria-label="Toggle menu"
@@ -1205,7 +1205,7 @@ export default function Navigation() {
             </button>
             {/* Mobile 5G Solutions */}
             <div className="pt-2">
-              <button;
+              <button.
                 onClick={toggle5GServices}
                 className="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300 flex items-center justify-between"
               >
@@ -1218,13 +1218,13 @@ export default function Navigation() {
               {is5GServicesOpen && (
                 <div className="pl-6 space-y-1">
                   {fiveGServices.map((service) => (
-                    <Link;
+                    <Link.
                       key={service.name}
                       to={service.path}
                       className="block px-3 py-2 rounded-md text-sm text-gray-300 hover:text-white hover:bg-cyan-500/10 transition-colors duration-200 flex items-center space-x-2"
                       onClick={() => {
-                        setIsMobileMenuOpen(false);
-                        setIs5GServicesOpen(false);
+                        setIsMobileMenuOpen(false).
+                        setIs5GServicesOpen(false).
                       }}
                     >
                       {service.icon}
@@ -1239,7 +1239,7 @@ export default function Navigation() {
 
               onClick={closeAllMenus}
             >
-              Contact;
+              Contact.
             </Link>
             
             {/* Contact Button */}
@@ -1248,12 +1248,12 @@ export default function Navigation() {
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
               onClick={closeAllMenus}
             >
-              Get Started;
+              Get Started.
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <button;
+          <button.
             onClick={toggleMobileMenu}
             className="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
           >
@@ -1266,12 +1266,12 @@ export default function Navigation() {
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">"
             <div className="pt-4 space-y-4">"
               <Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Home;
+                Home.
               </Link>
               
               {/* Mobile AI Services */}
               <div>
-                <button;
+                <button.
                   onClick={() => setAiServicesOpen(!aiServicesOpen)}
                   className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
                 >
@@ -1284,7 +1284,7 @@ export default function Navigation() {
                 {aiServicesOpen && (
                   <div className="mt-2 ml-4 space-y-2">
                     {aiServices.slice(0, 8).map((service) => (
-                      <Link;
+                      <Link.
                         key={service.name}
                         href={service.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
@@ -1306,7 +1306,7 @@ export default function Navigation() {
 
               {/* Mobile IT Services */}
               <div>
-                <button;
+                <button.
                   onClick={() => setItServicesOpen(!itServicesOpen)}
                   className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
                 >
@@ -1319,7 +1319,7 @@ export default function Navigation() {
                 {itServicesOpen && (
                   <div className="mt-2 ml-4 space-y-2">
                     {itServices.map((service) => (
-                      <Link;
+                      <Link.
                         key={service.name}
                         href={service.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
@@ -1334,7 +1334,7 @@ export default function Navigation() {
 
               {/* Mobile Micro SAAS */}
               <div>
-                <button;
+                <button.
                   onClick={() => setMicroSaasOpen(!microSaasOpen)}
                   className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
                 >
@@ -1347,7 +1347,7 @@ export default function Navigation() {
                 {microSaasOpen && (
                   <div className="mt-2 ml-4 space-y-2">
                     {microSaasServices.slice(0, 8).map((service) => (
-                      <Link;
+                      <Link.
                         key={service.name}
                         href={service.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
@@ -1374,19 +1374,19 @@ export default function Navigation() {
               </Link>
 
               <Link href="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                About;
+                About.
               </Link>
               <Link href="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Services;
+                Services.
               </Link>
               <Link href="/pricing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Pricing;
+                Pricing.
               </Link>
               <Link href="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Blog;
+                Blog.
               </Link>
               <Link href="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Contact;
+                Contact.
               </Link>
 
               {/* Mobile Contact Info */}
@@ -1422,7 +1422,7 @@ export default function Navigation() {
                 className="block px-3 py-2 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
                 onClick={closeAllMenus}
               >
-                Home;
+                Home.
               </Link>
               
               <Link
@@ -1430,7 +1430,7 @@ export default function Navigation() {
                 className="block px-3 py-2 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
                 onClick={closeAllMenus}
               >
-                About;
+                About.
               </Link>
 
               <Link
@@ -1438,7 +1438,7 @@ export default function Navigation() {
                 className="block px-3 py-2 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
                 onClick={closeAllMenus}
               >
-                AI Services;
+                AI Services.
               </Link>
 
               <Link
@@ -1446,7 +1446,7 @@ export default function Navigation() {
                 className="block px-3 py-2 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
                 onClick={closeAllMenus}
               >
-                IT Services;
+                IT Services.
               </Link>
 
               <Link
@@ -1454,7 +1454,7 @@ export default function Navigation() {
                 className="block px-3 py-2 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
                 onClick={closeAllMenus}
               >
-                Micro SaaS;
+                Micro SaaS.
               </Link>
 
               <Link
@@ -1462,7 +1462,7 @@ export default function Navigation() {
                 className="block px-3 py-2 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
                 onClick={closeAllMenus}
               >
-                Pricing;
+                Pricing.
               </Link>
               
               <Link
@@ -1470,7 +1470,7 @@ export default function Navigation() {
                 className="block px-3 py-2 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
                 onClick={closeAllMenus}
               >
-                Contact;
+                Contact.
               </Link>
 
               <Link
@@ -1478,29 +1478,29 @@ export default function Navigation() {
                 className="block px-3 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-medium text-center mt-4"
                 onClick={closeAllMenus}
               >
-                Get Started;
+                Get Started.
               </Link>
             </div>
           </div>
         )}
       </div>
     </nav>
-  );
+  ).
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (isOpen) {
-        closeAllMenus();
+        closeAllMenus().
       }
     };
 
-    document.addEventListener('click', handleClickOutside);
+    document.addEventListener('click', handleClickOutside).
     const Component = () => {
   
       return () => {
-      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener('click', handleClickOutside).
     };
-  }, [isOpen]);
+  }, [isOpen]).
 
   const Component = () => {
   
@@ -1508,8 +1508,8 @@ export default function Navigation() {
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <nav className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border-b border-cyan-500/20 sticky top-0 z-50 backdrop-blur-md">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
@@ -1522,14 +1522,14 @@ export default function Navigation() {
               </div>
               <div className="flex flex-col">"
                 <span className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
-                  Zion Tech Group;
+                  Zion Tech Group.
                 </span>
                 <span className="text-xs text-cyan-400 font-medium tracking-wider">
-                  AI & IT SOLUTIONS;
+                  AI & IT SOLUTIONS.
                 </span>
               </div>
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
+  const toggleMenu = () => setIsOpen(!isOpen).
+  const closeMenu = () => setIsOpen(false).
 
   const Component = () => {
   
@@ -1537,8 +1537,8 @@ export default function Navigation() {
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-gray-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
@@ -1548,7 +1548,7 @@ export default function Navigation() {
           {/* Logo */}
           <div className="flex-shrink-0">"
             <Link href="/" className="text-2xl font-bold text-white">
-              Zion Tech Group;
+              Zion Tech Group.
             </Link>
           </div>
 
@@ -1559,19 +1559,19 @@ export default function Navigation() {
                 to="/"
                 className="text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
               >
-                Home;
+                Home.
               </Link>
               
               <Link
                 to="/about"
                 className="text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
               >
-                About;
+                About.
               </Link>
 
               {/* Services Dropdown */}
               <div className="relative group">
-                <button;
+                <button.
                   onClick={() => setServicesOpen(!servicesOpen)}
                   className="text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 flex items-center"
                 >
@@ -1585,11 +1585,11 @@ export default function Navigation() {
                       <div>
                         <h3 className="text-lg font-semibold text-cyan-400 mb-3 flex items-center">"
                           <Brain className="w-5 h-5 mr-2" />
-                          AI Services;
+                          AI Services.
                         </h3>
                         <div className="grid grid-cols-2 gap-2">
                           {aiServices.slice(0, 4).map((service, index) => (
-                            <Link;
+                            <Link.
                               key={index}
                               to={service.href}
                               className="text-gray-300 hover:text-cyan-400 text-sm transition-colors duration-200 block py-1"
@@ -1612,11 +1612,11 @@ export default function Navigation() {
                       <div>
                         <h3 className="text-lg font-semibold text-cyan-400 mb-3 flex items-center">"
                           <Cloud className="w-5 h-5 mr-2" />
-                          IT Services;
+                          IT Services.
                         </h3>
                         <div className="grid grid-cols-2 gap-2">
                           {itServices.slice(0, 4).map((service, index) => (
-                            <Link;
+                            <Link.
                               key={index}
                               to={service.href}
                               className="text-gray-300 hover:text-cyan-400 text-sm transition-colors duration-200 block py-1"
@@ -1644,21 +1644,21 @@ export default function Navigation() {
                 to="/pricing"
                 className="text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
               >
-                Pricing;
+                Pricing.
               </Link>
               
               <Link
                 to="/blog"
                 className="text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
               >
-                Blog;
+                Blog.
               </Link>
               
               <Link
                 to="/contact"
                 className="text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
               >
-                Contact;
+                Contact.
               </Link>
             </div>
           </div>
@@ -1669,13 +1669,13 @@ export default function Navigation() {
               to="/consultation"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25"
             >
-              Get Started;
+              Get Started.
             </Link>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button;
+            <button.
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-cyan-400 p-2 rounded-md transition-colors duration-200"
             >
@@ -1692,18 +1692,18 @@ export default function Navigation() {
                 className="text-gray-900 hover:text-purple-600 block px-3 py-2 text-base font-medium"
                 onClick={() => setIsOpen(false)}
               >
-                Home;
+                Home.
               </Link>
               <Link
                 to="/about"
                 className="text-gray-900 hover:text-purple-600 block px-3 py-2 text-base font-medium"
                 onClick={() => setIsOpen(false)}
               >
-                About;
+                About.
               </Link>
               
               <div>
-                <button;
+                <button.
                   onClick={toggleServices}
                   className="text-gray-900 hover:text-purple-600 block px-3 py-2 text-base font-medium w-full text-left flex items-center justify-between"
                 >
@@ -1714,17 +1714,17 @@ export default function Navigation() {
                 {isServicesOpen && (
                   <div className="pl-6 space-y-1">
                     {services.map((service) => {
-                      const IconComponent = service.icon;
+                      const IconComponent = service.icon.
                       const Component = () => {
   
                         return (
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
-                        <Link;
+                        <Link.
                           key={service.href}
                           to={service.href}
                           className="text-gray-600 hover:text-purple-600 block px-3 py-2 text-sm font-medium flex items-center"
@@ -1747,7 +1747,7 @@ export default function Navigation() {
                 className="text-gray-900 hover:text-purple-600 block px-3 py-2 text-base font-medium"
                 onClick={() => setIsOpen(false)}
               >
-                Contact;
+                Contact.
               </Link>
             </div>
           </div>
@@ -1763,7 +1763,7 @@ export default function Navigation() {
               className="text-gray-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
               onClick={closeAllMenus}
             >
-              Home;
+              Home.
             </Link>
             
             <Link
@@ -1771,7 +1771,7 @@ export default function Navigation() {
               className="text-gray-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
               onClick={closeAllMenus}
             >
-              About;
+              About.
             </Link>
 
             <Link
@@ -1779,7 +1779,7 @@ export default function Navigation() {
               className="text-gray-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
               onClick={closeAllMenus}
             >
-              AI Services;
+              AI Services.
             </Link>
 
             <Link
@@ -1787,7 +1787,7 @@ export default function Navigation() {
               className="text-gray-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
               onClick={closeAllMenus}
             >
-              IT Services;
+              IT Services.
             </Link>
 
             <Link
@@ -1795,7 +1795,7 @@ export default function Navigation() {
               className="text-gray-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
               onClick={closeAllMenus}
             >
-              Pricing;
+              Pricing.
             </Link>
             
             <Link
@@ -1803,7 +1803,7 @@ export default function Navigation() {
               className="text-gray-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
               onClick={closeAllMenus}
             >
-              Blog;
+              Blog.
             </Link>
             
             <Link
@@ -1811,7 +1811,7 @@ export default function Navigation() {
               className="text-gray-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
               onClick={closeAllMenus}
             >
-              Contact;
+              Contact.
             </Link>
 
             <Link
@@ -1819,10 +1819,10 @@ export default function Navigation() {
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 mt-4 text-center"
               onClick={closeAllMenus}
             >
-              Get Started;
+              Get Started.
             </Link>
                 >
-                  Get Started;
+                  Get Started.
                 </Link>
               </div>
             </div>
@@ -1832,25 +1832,25 @@ export default function Navigation() {
                 className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-2 rounded-lg text-base font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center mt-4"
                 onClick={() => setIsOpen(false)}
               >
-                Get Started;
+                Get Started.
               </Link>
             </div>
           </div>
         )}
       </div>
     </nav>
-  );
+  ).
 };
 
 
-export default Navigation;
+export default Navigation.
 
-export default Navigation;
+export default Navigation.
 
-export default Navigation;
+export default Navigation.
 
-export default Navigation;
+export default Navigation.
 };
 
-export default Navigation;
-export default Navigation;
+export default Navigation.
+export default Navigation.

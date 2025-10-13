@@ -1,24 +1,24 @@
-import React from 'react';
+import React from 'react'.
 
-return (;
+return (.
 
 const [openItems, setOpenItems] = useState<number[]>
-);
+).
 
-}([]);
+}([]).
 
-;
+.
 
-const toggleItem = (index: number) => {;;
+const toggleItem = (index: number) => {;.
 
     setOpenItems(prev => 
       prev.includes(index) 
         ? prev.filter(item => item !== index)
-        : [...prev, index]);
+        : [...prev, index]).
 
-;
+.
 
-const faqs = [;;;
+const faqs = [;;.
 
     {
       questio,
@@ -42,11 +42,11 @@ const faqs = [;;;
     },
     {
       question: "Do you provide ongoing support?,"
-      answer: Yes, we offer comprehensive support and maintenance services including 24;
+      answer: Yes, we offer comprehensive support and maintenance services including 24.
     },
     {
       question: "What technologies do you use?,"
-      answer: We use cutting-edge technologies including React, TypeScript, Python, TensorFlow, PyTorch, AWS, Azure, Docker, Kubernetes, and various AI;
+      answer: We use cutting-edge technologies including React, TypeScript, Python, TensorFlow, PyTorch, AWS, Azure, Docker, Kubernetes, and various AI.
     },    {
       question: "What industries do you serve?,"
       answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."
@@ -66,19 +66,19 @@ const faqs = [;;;
         <div className="container mx-auto px-4>"
           <div className="text-center mb-16>"
             <h1 className="text-5xl font-bold text-white mb-6>
-              Frequently Asked Questions;
+              Frequently Asked Questions.
             <
             <p className="text-xl text-gray-300 max-w-3xl mx-auto>
               Find answers to common questions about our AI and IT solutions, 
               services, and how we can help transform your business.
             <
           <
-  );
+  ).
 };
 
 
-export default Component;
-export default FAQPage;
+export default Component.
+export default FAQPage.
                   </p>
                 </div>
         <section className="py-20 px-4">"
@@ -94,7 +94,7 @@ export default FAQPage;
           <div className="max-w-4xl mx-auto">"
             <div className="space-y-4">{faqs.map((faq, index) => (</div>"
                 <div key={index}className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-cyan-500/20">
-                  <button;
+                  <button.
                     onClick={() =>toggleItem(index)</button>}className="w-full px-6 py-4 text-left flex items-center justify-between hover: bg-slate-700/30 transition-colors">,"
                     <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
                     )} </button>
@@ -104,7 +104,7 @@ export default FAQPage;
         </div>
       ))
 
-  );
+  ).
 };
 
-export default FAQPage;
+export default FAQPage.

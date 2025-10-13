@@ -1,41 +1,41 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'.
 
 interface LoadingOptimizerProps {
-  children: React.ReactNode;
-  fallback?: React.ReactNode;
-  delay?: number;
+  children: React.ReactNode.
+  fallback?: React.ReactNode.
+  delay?: number.
 }
 
 export default function LoadingOptimizer({ 
   children, 
   fallback = <DefaultLoadingSpinner />, 
-  delay = 200 ;
+  delay = 200 .
 }: LoadingOptimizerProps) {
-  const [isLoading, setIsLoading] = useState(true);
-  const [showFallback, setShowFallback] = useState(false);
+  const [isLoading, setIsLoading] = useState(true).
+  const [showFallback, setShowFallback] = useState(false).
 
   useEffect(() => {
-    // Show fallback after delay to prevent flash;
+    // Show fallback after delay to prevent flash.
     const fallbackTimer = setTimeout(() => {
-      setShowFallback(true);
-    }, delay);
+      setShowFallback(true).
+    }, delay).
 
-    // Simulate loading completion;
+    // Simulate loading completion.
     const loadingTimer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
+      setIsLoading(false).
+    }, 1000).
 
     return () => {
-      clearTimeout(fallbackTimer);
-      clearTimeout(loadingTimer);
+      clearTimeout(fallbackTimer).
+      clearTimeout(loadingTimer).
     };
-  }, [delay]);
+  }, [delay]).
 
   if (isLoading && showFallback) {
-    return <>{fallback}</>;
+    return <>{fallback}</>.
   }
 
-  return <>{children}</>;
+  return <>{children}</>.
 }
 
 function DefaultLoadingSpinner() {
@@ -52,14 +52,14 @@ function DefaultLoadingSpinner() {
         <p className="text-gray-300">Preparing your experience...</p>
       </div>
     </div>
-  );
-  );
+  ).
+  ).
 }
 
-// Preload critical resources;
+// Preload critical resources.
 export function PreloadResources() {
   useEffect(() => {
-    // Preload critical images;
+    // Preload critical images.
     const criticalImages = [
       '/images/og-image.jpg',
       '/images/logo.png',
@@ -67,65 +67,65 @@ export function PreloadResources() {
     ];
 
     criticalImages.forEach(src => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.as = 'image';
-      link.href = src;
-      document.head.appendChild(link);
-    });
+      const link = document.createElement('link').
+      link.rel = 'preload'.
+      link.as = 'image'.
+      link.href = src.
+      document.head.appendChild(link).
+    }).
 
     // Preload critical fonts
-    const fontLink = document.createElement('link');
-    fontLink.rel = 'preload';
-    fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
-    fontLink.as = 'style';
-    document.head.appendChild(fontLink);
+    const fontLink = document.createElement('link').
+    fontLink.rel = 'preload'.
+    fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'.
+    fontLink.as = 'style'.
+    document.head.appendChild(fontLink).
 
     // Preload critical scripts
-    const scriptLink = document.createElement('link');
-    scriptLink.rel = 'modulepreload';
-    scriptLink.href = '/src/main.tsx';
-    document.head.appendChild(scriptLink);
-  }, []);
+    const scriptLink = document.createElement('link').
+    scriptLink.rel = 'modulepreload'.
+    scriptLink.href = '/src/main.tsx'.
+    document.head.appendChild(scriptLink).
+  }, []).
 
-  return null;
+  return null.
 }
 
-// Lazy load images with intersection observer;
+// Lazy load images with intersection observer.
 export function LazyImage({ 
   src, 
   alt, 
   className = '', 
   placeholder = '/images/placeholder.jpg'
 }: {
-  src: string;
-  alt: string;
-  className?: string;
-  placeholder?: string;
+  src: string.
+  alt: string.
+  className?: string.
+  placeholder?: string.
 }) {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
-  const imgRef = React.useRef<HTMLImageElement>(null);
+  const [isLoaded, setIsLoaded] = useState(false).
+  const [isInView, setIsInView] = useState(false).
+  const imgRef = React.useRef<HTMLImageElement>(null).
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
+          setIsInView(true).
+          observer.disconnect().
         }
       },
       { threshold: 0.1 }
-    );
+    ).
 
     if (imgRef.current) {
-      observer.observe(imgRef.current);
+      observer.observe(imgRef.current).
     }
 
     const Component = () => {
   
-      return () => observer.disconnect();
-  }, []);
+      return () => observer.disconnect().
+  }, []).
 
   const Component = () => {
   
@@ -137,7 +137,7 @@ export function LazyImage({
         </div>
       )}
       {isInView && (
-        <img;
+        <img.
           src={src}
           alt={alt}
           className={`w-full h-full object-cover transition-opacity duration-300 ${
@@ -148,6 +148,6 @@ export function LazyImage({
         />
       )}
     </div>
-  );
-  );
+  ).
+  ).
 }
