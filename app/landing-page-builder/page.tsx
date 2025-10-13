@@ -1,79 +1,58 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';';
 import React from 'react';';';
 import {Helmet}}from 'react-helmet-async';';';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';';';
 const PagePage: React.FC = () => {,;
 const features = [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       icon: Brain,
       title: 'AI-Powered Solutions','
       description: 'Advanced AI technology to transform your business operations and improve efficiency''
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       icon: Zap,
       title: 'High Performance','
       description: 'Lightning-fast processing and real-time analytics for optimal results''
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       icon: Shield,
       title: 'Enterprise Security','
       description: 'Bank-level security with encryption and compliance standards''
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       icon: Globe,
       title: 'Global Reach','
       description: 'Worldwide deployment and support for international businesses''
     }
   ];
-;
 const benefits = [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
     'Advanced AI technology integration','
     'Real-time processing and analytics','
     'Enterprise-grade security and compliance','
     'Scalable and flexible solutions','
-
     '24/7 technical support','
-
     'Easy integration with existing systems','
-
     'Cost-effective pricing plans','
-
 export default function PagePage() {
   return (
-  // TODO: Add parameters
 )
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
 <Helmet>
 <title>Page | Zion Tech Group</title>
 <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />"
 <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" /></Helmet>"
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
 <div className="max-w-7xl mx-auto">"
@@ -97,7 +76,6 @@ export default function PagePage() {
               </button></div>
 </div>
         </div></section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
 <div className="max-w-7xl mx-auto">"
@@ -110,7 +88,6 @@ export default function PagePage() {
             </p></div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
             {features.map((feature, index) => (
-  // TODO: Add parameters
 )
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">"
 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">"
@@ -121,7 +98,6 @@ export default function PagePage() {
             ))}
           </div></div>
 </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">"
 <div className="max-w-7xl mx-auto">"
@@ -134,7 +110,6 @@ export default function PagePage() {
             </p></div>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
             {benefits.map((benefit, index) => (
-  // TODO: Add parameters
 )
               <div key={index} className="flex items-start space-x-3">"
 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />"
@@ -142,7 +117,6 @@ export default function PagePage() {
             ))}
           </div></div>
 </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
 <div className="max-w-4xl mx-auto text-center">"
@@ -166,32 +140,7 @@ export default function PagePage() {
 </section></div>
   );
 };
-;
 export default PagePage;
->>>>>>> cursor/delete-records-a75e
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function LandingPageBuilderPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
-
-export default function LandingPageBuilder() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
->>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
-      <Helmet>
-        <title>Landing Page Builder - Zion Tech Group</title>
-        <meta name="description" content="Advanced landing page builder solutions by Zion Tech Group" />
-      </Helmet>
-<<<<<<< HEAD
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -201,7 +150,6 @@ export default function LandingPageBuilder() {
             Create high-converting landing pages with our AI-powered landing page builder.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
             <h3 className="text-2xl font-semibold text-white mb-4">Conversion Optimization</h3>
@@ -220,89 +168,4 @@ export default function LandingPageBuilder() {
             <p className="text-gray-300 mb-6">
               Track performance and user behavior with integrated analytics tools.
             </p>
-=======
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Landing Page Builder
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Create high-converting landing pages with our AI-powered builder platform.
-          </p>
-        </div>
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Drag & Drop Builder</h3>
-              <p className="text-gray-600">
-                Easy-to-use drag and drop interface for creating stunning landing pages.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Optimization</h3>
-              <p className="text-gray-600">
-                AI-powered optimization for better conversion rates and performance.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Mobile Responsive</h3>
-              <p className="text-gray-600">
-                Automatically responsive designs that work perfectly on all devices.
-              </p>
-            </div>
-          </div>
-          <div className="text-center mt-12">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Get Started
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
->>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-<<<<<<< HEAD
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
-}
->>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function PageTsxPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page.Tsx - Zion Tech Group</title>
-        <meta name="description" content="Advanced page.tsx solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page.Tsx</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Advanced page.tsx solutions by Zion Tech Group
-          </p>
-        </div>
-        
-        <div className="max-w-4xl mx-auto">
-          
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-          <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-          <p className="text-gray-300">
-            This page is under development. Please check back later for updates.
-          </p>
-        </div>
-      
-        </div>
-      </div>
-    </div>
-  );
-}
->>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd

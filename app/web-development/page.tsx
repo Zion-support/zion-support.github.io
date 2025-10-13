@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     {name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' ,},'
     {name: 'Node.js', icon: Database, description: 'Server-side JavaScript' ,},'
     {name: 'Python/Django', icon: Globe, description: 'Backend development' ,},'
@@ -6,9 +5,7 @@
     {name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' ,},'
     {name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' ,}];';
 const process = [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
     {step: '01','
       title: 'Discovery & Planning','
@@ -19,23 +16,17 @@ return(<>)
     }
   ];
 return (
-  // TODO: Add parameters
 )
     <>
       <SEOOptimizer;
         title="Web Development Services - Zion Tech Group";"
         description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices.";"
-;
 const WebDevelopmentPage: React.FC = () => {,;
 const webServices = [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       title: 'Frontend Development','
       description: 'Modern, responsive web applications with cutting-edge technologies','
@@ -72,9 +63,7 @@ const webServices = [
       features: ['24/7 Support', 'Regular Updates', 'Bug Fixes', 'Performance Monitoring'],'
       color: 'text-gray-400',}];';
 const technologies = [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
     {name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' ,},'
     {name: 'Node.js', icon: Database, description: 'Server-side JavaScript' ,},'
@@ -83,9 +72,7 @@ const technologies = [
     {name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' ,},'
     {name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' ,}];';
 const process = [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
     {step: '01','
       title: 'Discovery & Planning','
@@ -103,7 +90,6 @@ const process = [
       title: 'Testing & Launch','
       description: 'Thorough testing and deployment with ongoing support','
       icon: Shield;,}]
-
   return(<>)
       <SEOOptimizer;
         title="Web Development Services - Zion Tech Group""
@@ -206,14 +192,12 @@ const process = [
                 Call +1 302 464 0950;
               </a></div>
 </section>
-
           {/* Services Grid */} <section className="mb-20">"
 <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">,</h2>"
               Our Web Development Services;
             </h2>
 <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,</div>"
               {webServices.map((service, index) => (
-  // TODO: Add parameters
 )
                 <div key={index}className="cyber-card p-8 hover: scale-105 transition-all duration-300">,</div>"
 <div className="flex items-center mb-6">"
@@ -241,7 +225,6 @@ const process = [
 );
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">),</div>"
               {webServices.map((service, index) => (</div>} <div key={index}className="cyber-card p-8 hover: scale-105 transition-all duration-300"></div>,"
->>>>>>> origin/main
                   <div className="flex items-center mb-6">,</div>"
 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">,</div>"
 <service.icon className="w-8 h-8 text-white" />,"
@@ -267,9 +250,7 @@ const process = [
 <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" >{feature}</CheckCircle></CheckCircle>"
                       ))}
                     </ul></li>
-
                   {service.benefits && (
-  // TODO: Add parameters
 )
                     <div className="mb-6"></div>"
 <h4 className="text-lg font-semibold text-white mb-3">Benefits<ul className="space-y-2">{service.benefits.map((benefit, benefitIndex) => (</ul>"
@@ -289,7 +270,6 @@ const process = [
                   </a>,
                 </div>))}
             </li></section>
-
           {/* Technologies */}
           <section className="mb-20"></section>"
 <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">{technologies.map((tech, index) => (</div>"
@@ -314,7 +294,6 @@ const process = [
 <p className="text-sm text-gray-300">{tech.description}</p></li>"
               ))}
             </li></section>
-
           {/* Process */}
           <section className="mb-20"></section>"
 <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Process<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{process.map((step, index) => (</div>"
@@ -341,7 +320,6 @@ const process = [
 <p className="text-gray-300">{step.description}</p></li>"
               ))}
             </li></section>
-
           {/* CTA Section */}
           <section className="text-center"></section>"
 <div className="cyber-card p-12 max-w-4xl mx-auto"></div>"
@@ -381,7 +359,6 @@ const process = [
             ))}
           </div></div>
 </section>
-
                   href="tel: +13024640950";,"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300","
                 >
@@ -392,104 +369,10 @@ const process = [
 <Footer />,
     </>);
 };
-;
 export default WebDevelopmentPage;
       </div></>
   );
 };
-;
 export default WebDevelopmentPage;
-
 }}}}))))))
->>>>>>> cursor/delete-records-a75e
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain, Shield, Zap } from 'lucide-react';
-
-export default function PagePage() {
-  const features = [
-    {
-      title: "Advanced Technology",
-      description: "Cutting-edge solutions powered by the latest technology",
-      icon: <Brain className="w-8 h-8" />
-    },
-    {
-      title: "Secure & Reliable",
-      description: "Enterprise-grade security and reliability for your business",
-      icon: <Shield className="w-8 h-8" />
-    },
-    {
-      title: "Fast Implementation",
-      description: "Quick deployment and implementation for immediate results",
-      icon: <Zap className="w-8 h-8" />
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title> - Zion Tech Group</title>
-        <meta name="description" content="Advanced  solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Advanced  solutions by Zion Tech Group
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-6">
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced page solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Advanced page solutions by Zion Tech Group
-          </p>
-        </div>
-        
-        <div className="max-w-4xl mx-auto">
-          
-      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-        <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-        <p className="text-gray-300">
-          This page is under development. Please check back later for updates.
-        </p>
-      </div>
-    
->>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd
-        </div>
-      </div>
-    </div>
-  );
-<<<<<<< HEAD
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
-}
->>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd

@@ -1,77 +1,55 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [searchQuery, setSearchQuery] = useState('');'
-;
 const faqs = [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       question: 'How do I get started with your AI solutions?','
       answer: 'Contact our team for a free consultation where we\'ll assess your needs and recommend the best AI solutions for your business.','
       category: 'general''
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       question: 'What support do you provide after implementation?','
       answer: 'We provide 24/7 technical support, regular maintenance, updates, and ongoing optimization to ensure your systems run smoothly.','
       category: 'Support''
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       question: 'How secure are your solutions?','
       answer: 'Security is our top priority. We implement enterprise-grade security measures including encryption, access controls, and compliance with industry standards.','
       category: 'Security''
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       question: 'Can I integrate with my existing systems?','
       answer: 'Yes! Our solutions are designed to integrate seamlessly with your existing infrastructure and third-party applications.','
       category: 'Integration''
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       question: 'What is your response time for support requests?','
       answer: 'We guarantee response times of under 1 hour for critical issues and 4 hours for general inquiries during business hours.','
       category: 'Support''
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       question: 'Do you offer training for my team?','
       answer: 'Absolutely! We provide comprehensive training programs to ensure your team can effectively use and maintain the solutions.','
       category: 'Training''
     }
   ];
-;
 const supportChannels = [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       icon: Phone,
       title: 'Phone Support','
@@ -80,108 +58,81 @@ const supportChannels = [
       hours: '24/7 Available''
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       category: 'Technical','
       question: 'What technical support do you provide?','
       answer: 'We provide 24/7 technical support for all our services. Our support team includes certified engineers who can help with implementation, troubleshooting, and optimization.''
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       category: 'Billing','
       question: 'What payment methods do you accept?','
       answer: 'We accept all major credit cards, bank transfers, and can arrange custom payment terms for Enterprise clients. All payments are processed securely through our encrypted payment system.''
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       category: 'Technical','
       question: 'Do you offer training for your solutions?','
       answer: 'Yes! We provide comprehensive training for all our solutions, including documentation, video tutorials, and live training sessions. Training is included with all our service plans.''
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       category: 'General','
       question: 'Can I customize your solutions for my specific needs?','
       answer: 'Absolutely! All our solutions are designed to be customizable. Our team works closely with you to tailor solutions that meet your specific business requirements and objectives.''
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       category: 'Technical','
       question: 'What is your uptime guarantee?','
       answer: 'We guarantee 99.9% uptime for all our services. We have redundant systems and monitoring in place to ensure maximum availability and quick recovery from any issues.''
     }
   ];
-;
 const categories = ['all', ...Array.from(new Set(faqs.map(faq => faq.category)))];'
-;
 const filteredFAQs = faqs.filter(faq => {;
 const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;'
     return matchesSearch && matchesCategory;
   });
-;
 const faqs = [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       question: 'How do I get started with your AI services?','
       answer: 'Getting started is easy! Contact our team for a free consultation where we assess your needs and create a customized implementation plan.''
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       question: 'What is your typical project timeline?','
       answer: 'Project timelines vary based on complexity, but most AI implementations take 4-12 weeks from start to finish.''
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       question: 'Do you provide ongoing support?','
       answer: 'Yes, we offer comprehensive support packages including monitoring, maintenance, and optimization services.''
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       question: 'What technologies do you work with?','
       answer: 'We work with all major cloud platforms (AWS, Azure, GCP), AI frameworks (TensorFlow, PyTorch), and modern development stacks.''
     }
   ];
   const supportChannels = [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       title: 'Email Support','
       description: 'Get help via email within 24 hours','
@@ -189,9 +140,7 @@ const faqs = [
       contact: 'support@ziontechgroup.com','
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       title: 'Phone Support','
       description: 'Speak directly with our technical team','
@@ -200,9 +149,7 @@ const faqs = [
       availability: 'Mon-Fri 9AM-6PM EST''
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       title: 'Live Chat','
       description: 'Get instant help through our chat system','
@@ -214,9 +161,7 @@ const filteredFaqs = faqs.filter(faq =>
     faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
     faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
   );
-
   return (
-  // TODO: Add parameters
 )
     <div className="min-h-screen pt-20">"
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">"
@@ -229,19 +174,14 @@ const filteredFaqs = faqs.filter(faq =>
 </div>
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       icon: Mail,
       title: 'Email Support','
       hours: '24/7''
->>>>>>> origin/main
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       icon: MessageCircle,
       title: 'Live Chat','
@@ -249,14 +189,10 @@ const filteredFaqs = faqs.filter(faq =>
     }
   ];
 const resources = [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       icon: BookOpen,
       title: 'Documentation','
@@ -264,9 +200,7 @@ const resources = [
       link: '/docs''
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       icon: Video,
       title: 'Video Tutorials','
@@ -274,9 +208,7 @@ const resources = [
       link: '/tutorials''
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       title: 'Community Forum','
       description: 'Connect with other users and experts','
@@ -284,7 +216,6 @@ const resources = [
       link: '/community''
     }
   ]
-
     <>
 </>
 <Helmet>
@@ -292,7 +223,6 @@ const resources = [
 <meta name="description" content="Get technical support and help for your AI and IT solutions. 24/7 support, documentation, and expert assistance from Zion Tech Group." />"
 <meta name="keywords" content="technical support, AI support, IT help, customer service, documentation, troubleshooting" /></Helmet>"
 <Navigation />
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">"
 <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.3)_0%,transparent_50%)] animate-pulse" />"
@@ -308,7 +238,6 @@ const resources = [
             Find answers, get assistance, and access resources.
           </p></div>
 </section>
-
       {/* Search Section */}
       <section className="py-16 px-4">"
 <div className="max-w-4xl mx-auto">"
@@ -326,7 +255,6 @@ const resources = [
             />
 </div></div>
 </section>
-
       {/* Contact Support */}
       <section className="py-16 px-4">"
 <div className="max-w-7xl mx-auto">"
@@ -335,7 +263,6 @@ const resources = [
 <p className="text-xl text-gray-300">Get in touch with our support team</p></div>"
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
             {supportChannels.map((channel, index) => (
-  // TODO: Add parameters
 )
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">"
 <div className="w-16 h-16 bg-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
@@ -347,7 +274,6 @@ const resources = [
             ))}
           </div></div>
 </section>
-
       {/* FAQ Section */}
       <section className="py-20 px-4">"
 <div className="max-w-4xl mx-auto">"
@@ -356,7 +282,6 @@ const resources = [
 <p className="text-xl text-gray-300">Find answers to common questions</p></div>"
 <div className="space-y-6">"
             {filteredFaqs.map((faq, index) => (
-  // TODO: Add parameters
 )
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">"
 <div className="flex items-start justify-between">"
@@ -369,13 +294,10 @@ const resources = [
 <p className="text-gray-300">{faq.answer}</p></div>"
 </div></div>
             ))}
-
   return (
-  // TODO: Add parameters
 )
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
 <Navigation />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">"
 <div className="max-w-7xl mx-auto">"
@@ -387,7 +309,6 @@ const resources = [
               We're here to help! Get the support you need with our comprehensive help center and dedicated support team.'
             </p></div>
 </div></section>
-
       {/* Search Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">"
 <div className="max-w-4xl mx-auto">"
@@ -416,10 +337,8 @@ const resources = [
 <option value="Technical">Technical</option>"
 <option value="Billing">Billing</option></select>"
 </div>
->>>>>>> origin/main
           </div></div>
 </section>
-
       {/* Support Channels */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">"
 <div className="max-w-7xl mx-auto">"
@@ -432,7 +351,6 @@ const resources = [
             </p></div>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
             {supportChannels.map((channel, index) => (
-  // TODO: Add parameters
 )
               <div key={index} className="cyber-card text-center">"
 <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
@@ -450,7 +368,6 @@ const resources = [
               </p></div>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
               {supportChannels.map((channel, index) => (
-  // TODO: Add parameters
 )
                 <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">"
 <div className="w-16 h-16 bg-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
@@ -463,7 +380,6 @@ const resources = [
             </div>
           ))
         </section>
-
         {/* FAQ Section */}
         <section className="py-16 px-4"></section>"
 <div className="max-w-4xl mx-auto">"
@@ -472,7 +388,6 @@ const resources = [
 <p className="text-xl text-gray-300">Find answers to common questions</p></div>"
 <div className="space-y-6">"
               {faqs.map((faq, index) => (
-  // TODO: Add parameters
 )
                 <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">"
 <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>"
@@ -481,152 +396,12 @@ const resources = [
             ))
           </div></div>
 </section></div>
->>>>>>> origin/main
   );
 };
-;
 export default SupportPage;
             </div></div>
 </div></section>
 <Footer /></div>
   );
 }
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain, Shield, Zap } from 'lucide-react';
-
-export default function PagePage() {
-  const features = [
-    {
-      title: "Advanced Technology",
-      description: "Cutting-edge solutions powered by the latest technology",
-      icon: <Brain className="w-8 h-8" />
-    },
-    {
-      title: "Secure & Reliable",
-      description: "Enterprise-grade security and reliability for your business",
-      icon: <Shield className="w-8 h-8" />
-    },
-    {
-      title: "Fast Implementation",
-      description: "Quick deployment and implementation for immediate results",
-      icon: <Zap className="w-8 h-8" />
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title> - Zion Tech Group</title>
-        <meta name="description" content="Advanced  solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Advanced  solutions by Zion Tech Group
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-6">
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function Support() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>Support - Zion Tech Group</title>
-        <meta name="description" content="Customer support by Zion Tech Group" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Support Center
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Get help and support for all your needs.
-          </p>
-        </div>
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Documentation</h3>
-              <p className="text-gray-600">
-                Comprehensive documentation and guides for all our services.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Contact Support</h3>
-              <p className="text-gray-600">
-                Reach out to our support team for personalized assistance.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Community</h3>
-              <p className="text-gray-600">
-                Join our community forum for discussions and tips.
-              </p>
-            </div>
-          </div>
->>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced page solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Advanced page solutions by Zion Tech Group
-          </p>
-        </div>
-        
-        <div className="max-w-4xl mx-auto">
-          
-      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-        <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-        <p className="text-gray-300">
-          This page is under development. Please check back later for updates.
-        </p>
-      </div>
-    
->>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd
-        </div>
-      </div>
-    </div>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
-}
->>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
-=======
-}
->>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd

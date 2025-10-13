@@ -1,17 +1,12 @@
-<<<<<<< HEAD
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';';';
 const AiWorkflowAutomationPage: React.FC = () => {,;
 const features = [;
 const AiWorkflowAutomationPage: React.FC = () => {;
 const features = [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       icon: Brain,;
 import React, {useState, useEffect}from 'react';';';
@@ -19,25 +14,16 @@ import Navigation from '../components/Navigation';';';
 import Footer from '../components/Footer';';';
 import SEOOptimizer from '../components/SEOOptimizer';';';
 import {Zap, Workflow, Target, CheckCircle, Phone, Mail, Brain, Database, Settings, Globe, BarChart, Users}}from 'lucide-react';';'
-;
 const AIWorkflowAutomation: React.FC = () => {,;
 const [isLoaded, setIsLoaded] = useState(false);
-
   useEffect(() => {
-  // TODO: Implement
 }
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
-  // TODO: Implement
 }
     setIsLoaded(true);}, []);
-;
 const features = [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
     {icon: Brain,
       title: 'AI-Powered Automation','
@@ -63,11 +49,8 @@ const features = [
       title: 'Analytics & Reporting','
       description: 'Comprehensive analytics to track workflow performance and ROI','
       benefits: ['Performance metrics', 'ROI tracking', 'Custom reports']}];'
-;
 const services = [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
     {icon: Zap,
       title: 'Basic Automation','
@@ -84,17 +67,13 @@ const services = [
       price: '$599','
       period: '/month','
       benefits: ['Custom AI models', 'Dedicated support', 'White-label options']}];'
-;
 const stats = [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
     {number: '90%', label: 'Time Savings' ,},'
     {number: '75%', label: 'Error Reduction' ,},'
     {number: '500+', label: 'Integrations' ,},'
     {number: '24/7', label: 'Automation' ,}];'
-
   return(<>)
       <SEOOptimizer;
         title="AI Workflow Automation Platform - Zion Tech Group""
@@ -129,10 +108,8 @@ const stats = [
 <Mail className="w-5 h-5" />"
 <span>Start Free Trial</span></a>
 </div>
-
               {/* Stats */} <div className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16">,</div>"
                 {stats.map((stat, index) => (
-  // TODO: Add parameters
 )
                   <div key={index}className="hologram-card-enhanced p-6 text-center">"
 <div className="text-3xl md: text-4xl font-bold text-yellow-400 mb-2 neon-text">,</div>"
@@ -141,7 +118,6 @@ const stats = [
                 ))}
               </div></div>
 </section>
-
           {/* Features Section */} <section className="py-16">"
 <div className="container mx-auto px-4">"
 <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">,</h2>"
@@ -149,7 +125,6 @@ const stats = [
               </h2>
 <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,</div>"
                 {features.map((feature, index) => (
-  // TODO: Add parameters
 )
                   <div key={index}className="hologram-card-enhanced p-6 hover: scale-105 transition-all duration-300">,</div>"
 <div className="text-4xl mb-4 text-yellow-400">"
@@ -158,7 +133,6 @@ const stats = [
 <p className="text-gray-300 mb-4">{feature.description</p>}</p>"
 <ul className="space-y-2">"
                       {feature.benefits.map((benefit, benefitIndex) => (
-  // TODO: Add parameters
 )
                         <li key={benefitIndex}className="flex items-center text-sm text-gray-400">"
 <CheckCircle className="w-4 h-4 text-green-400 mr-2" />"
@@ -168,7 +142,6 @@ const stats = [
                   )}
                 </div>
               ))}
-
             </div></div>
 </section>
         {/* Benefits Section */} <section className="py-20 px-4"></section>"
@@ -197,7 +170,6 @@ const stats = [
                 ))}
               </div></div>
 </section>
-
           {/* Services Section */} <section className="py-16 bg-gray-900/50">"
 <div className="container mx-auto px-4">"
 <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">,</h2>"
@@ -205,7 +177,6 @@ const stats = [
               </h2>
 <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,</div>"
                 {services.map((service, index) => (
-  // TODO: Add parameters
 )
                   <div key={index}className="hologram-card-enhanced p-6 hover: scale-105 transition-all duration-300">,</div>"
 <div className="text-4xl mb-4 text-cyan-400">"
@@ -226,14 +197,11 @@ const stats = [
                     </a></div>
                 ))}
   ];
->>>>>>> cursor/delete-records-a75e
-
 export default function PagePage() {
   return (
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Shield, Zap } from 'lucide-react';
-
 export default function PagePage() {
   const features = [
     {
@@ -252,24 +220,20 @@ export default function PagePage() {
       icon: <Zap className="w-8 h-8" />
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title> - Zion Tech Group</title>
         <meta name="description" content="Advanced  solutions by Zion Tech Group" />
       </Helmet>
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Advanced  solutions by Zion Tech Group
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
@@ -280,42 +244,6 @@ export default function PagePage() {
               <p className="text-gray-300">{feature.description}</p>
             </div>
           ))}
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced page solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Advanced page solutions by Zion Tech Group
-          </p>
-        </div>
-        
-        <div className="max-w-4xl mx-auto">
-          
-      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-        <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-        <p className="text-gray-300">
-          This page is under development. Please check back later for updates.
-        </p>
-      </div>
-    
->>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd
-        </div>
-      </div>
-    </div>
-  );
-<<<<<<< HEAD
-  // TODO: Add parameters
 )
     <>
 </>
@@ -341,7 +269,6 @@ export default function PagePage() {
                 View Demo
               </button></div>
 </div></section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
 <div className="max-w-7xl mx-auto">"
@@ -354,7 +281,6 @@ export default function PagePage() {
             </p></div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
             {features.map((feature, index) => (
-  // TODO: Add parameters
 )
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">"
 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">"
@@ -373,21 +299,10 @@ export default function PagePage() {
 <button className="border border-gray-300 text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">"
                   Learn More
                 </button>
-
->>>>>>> origin/main
               </div></div>
           ))
         </section></div>
 <Footer />
-
   );
 };
-;
 export default PagePage;
->>>>>>> cursor/delete-records-a75e
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
-}
->>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd

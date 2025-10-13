@@ -1,56 +1,41 @@
-<<<<<<< HEAD
 import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'react-helmet-async';';';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';';'
-;
 const PagePage: React.FC = () => {;
 const features = [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       icon: Brain,
       title: 'AI-Powered Solutions','
       description: 'Advanced AI technology to transform your business operations and improve efficiency''
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       icon: Zap,
       title: 'High Performance','
       description: 'Lightning-fast processing and real-time analytics for optimal results''
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       icon: Shield,
       title: 'Enterprise Security','
       description: 'Bank-level security with encryption and compliance standards''
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       icon: Globe,
       title: 'Global Reach','
       description: 'Worldwide deployment and support for international businesses''
     }
   ];
-;
 const MobileDevelopmentPage: React.FC = () => {;
 const features = [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
     'iOS development','
     'Android development','
@@ -59,13 +44,11 @@ const features = [
     'App store optimization','
     'Maintenance and support''
   ]
-
 export default function PagePage() {
   return (
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Shield, Zap } from 'lucide-react';
-
 export default function PagePage() {
   const features = [
     {
@@ -84,24 +67,20 @@ export default function PagePage() {
       icon: <Zap className="w-8 h-8" />
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title> - Zion Tech Group</title>
         <meta name="description" content="Advanced  solutions by Zion Tech Group" />
       </Helmet>
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Advanced  solutions by Zion Tech Group
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
@@ -112,46 +91,9 @@ export default function PagePage() {
               <p className="text-gray-300">{feature.description}</p>
             </div>
           ))}
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced page solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Advanced page solutions by Zion Tech Group
-          </p>
-        </div>
-        
-        <div className="max-w-4xl mx-auto">
-          
-      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-        <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-        <p className="text-gray-300">
-          This page is under development. Please check back later for updates.
-        </p>
-      </div>
-    
->>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd
-        </div>
-      </div>
-    </div>
-  );
-<<<<<<< HEAD
-  // TODO: Add parameters
 )
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
 <Navigation />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">"
 <div className="max-w-7xl mx-auto">"
@@ -170,7 +112,6 @@ export default function PagePage() {
               </button></div>
           </div></div>
 </section>
-
       {/* Features Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">"
 <div className="max-w-7xl mx-auto">"
@@ -183,7 +124,6 @@ export default function PagePage() {
             </p></div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
             {features.map((feature, index) => (
-  // TODO: Add parameters
 )
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">"
 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">"
@@ -202,18 +142,9 @@ export default function PagePage() {
 <div className="max-w-7xl mx-auto"></div>"
 <div className="text-center mb-16"></div>"
 <h2>Key Benefits;</h2>
->>>>>>> origin/main
             </h2>
 <p>Experience the power of our page solutions for your business.</p></p>
 </div></div>
 </div></section>;
 export default PagePage;
-
 }})
->>>>>>> cursor/delete-records-a75e
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
-}
->>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd

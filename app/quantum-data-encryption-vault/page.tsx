@@ -1,9 +1,4 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Shield, Lock, Eye } from 'lucide-react';
-
 export default function QuantumDataEncryptionVaultPage() {
   const features = [
     {
@@ -22,14 +17,12 @@ export default function QuantumDataEncryptionVaultPage() {
       icon: <Eye className="w-8 h-8" />
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Quantum Data Encryption Vault - Zion Tech Group</title>
         <meta name="description" content="Secure your data with quantum-grade encryption and zero-knowledge architecture." />
       </Helmet>
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -39,7 +32,6 @@ export default function QuantumDataEncryptionVaultPage() {
             Protect your most sensitive data with quantum-grade encryption and zero-knowledge architecture.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {features.map((feature, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
@@ -51,71 +43,7 @@ export default function QuantumDataEncryptionVaultPage() {
             </div>
           ))}
         </div>
-
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Ready to Secure Your Data?
           </h2>
-=======
-
-export default function QuantumDataEncryptionVault() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-blue-900">
-      <Helmet>
-        <title>Quantum Data Encryption Vault - Zion Tech Group</title>
-        <meta name="description" content="Quantum-grade data encryption vault solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Quantum Data Encryption Vault
-          </h1>
->>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Protect your most sensitive data with quantum-grade encryption and zero-knowledge architecture. 
-            Start your quantum security journey today.
-          </p>
-<<<<<<< HEAD
-=======
-          <div className="flex justify-center space-x-4">
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-              Get Started
-            </button>
-            <button className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-colors">
-              Learn More
-            </button>
-          </div>
->>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
-=======
-
-export default function PageTsxPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page.Tsx - Zion Tech Group</title>
-        <meta name="description" content="Advanced page.tsx solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page.Tsx</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Advanced page.tsx solutions by Zion Tech Group
-          </p>
-        </div>
-        
-        <div className="max-w-4xl mx-auto">
-          
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-          <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-          <p className="text-gray-300">
-            This page is under development. Please check back later for updates.
-          </p>
-        </div>
-      
->>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd
-        </div>
-      </div>
-    </div>
-  );
-}

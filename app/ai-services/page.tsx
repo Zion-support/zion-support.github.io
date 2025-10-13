@@ -1,20 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';';
 import React from 'react';';'
-;
 const AiServicesPage: React.FC = () => {;
 const [selectedCategory, setSelectedCategory] = useState('all');'
-;
 const services = [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-chatbots','
       name: 'AI-Powered Chatbots','
@@ -22,9 +14,7 @@ const services = [
       price: '$299/month','
       marketPrice: '$500-2000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Natural language processing','
         'Multi-language support','
@@ -33,9 +23,7 @@ const services = [
         'Real-time learning''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Reduce support costs by 60%','
         '24/7 availability','
@@ -47,9 +35,7 @@ const services = [
       icon: MessageSquare
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-content','
       name: 'AI Content Generation','
@@ -57,9 +43,7 @@ const services = [
       price: '$199/month','
       marketPrice: '$300-1500/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Blog post generation','
         'Social media content','
@@ -68,9 +52,7 @@ const services = [
         'Brand voice customization''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Save 80% content creation time','
         'Consistent brand voice','
@@ -82,9 +64,7 @@ const services = [
       icon: Brain
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-analytics','
       name: 'AI Data Analytics','
@@ -92,9 +72,7 @@ const services = [
       price: '$399/month','
       marketPrice: '$800-3000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Predictive analytics','
         'Real-time dashboards','
@@ -103,9 +81,7 @@ const services = [
         'Custom data models''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Data-driven insights','
         'Predictive forecasting','
@@ -117,9 +93,7 @@ const services = [
       icon: BarChart
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-vision','
       name: 'AI Computer Vision','
@@ -127,9 +101,7 @@ const services = [
       price: '$599/month','
       marketPrice: '$1000-5000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Object detection and recognition','
         'Quality control automation','
@@ -138,9 +110,7 @@ const services = [
         'Real-time processing''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Automated quality control','
         'Enhanced security','
@@ -152,9 +122,7 @@ const services = [
       icon: Eye
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-voice','
       name: 'AI Voice Processing','
@@ -162,9 +130,7 @@ const services = [
       price: '$249/month','
       marketPrice: '$400-1800/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Speech-to-text conversion','
         'Voice synthesis','
@@ -173,9 +139,7 @@ const services = [
         'Multi-language support''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Improved accessibility','
         'Voice automation','
@@ -187,9 +151,7 @@ const services = [
       icon: Mic
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-automation','
       name: 'AI Workflow Automation','
@@ -197,9 +159,7 @@ const services = [
       price: '$349/month','
       marketPrice: '$600-2500/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Process mining','
         'Workflow optimization','
@@ -208,9 +168,7 @@ const services = [
         'Performance monitoring''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Process efficiency','
         'Error reduction','
@@ -222,9 +180,7 @@ const services = [
       icon: Zap
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-fraud-detection','
       name: 'AI Fraud Detection','
@@ -232,9 +188,7 @@ const services = [
       price: '$799/month','
       marketPrice: '$1500-5000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Real-time transaction monitoring','
         'Behavioral pattern analysis','
@@ -243,9 +197,7 @@ const services = [
         'Automated alert systems''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Reduce fraud losses by 85%','
         'Real-time protection','
@@ -257,9 +209,7 @@ const services = [
       icon: Shield
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-predictive-maintenance','
       name: 'AI Predictive Maintenance','
@@ -267,9 +217,7 @@ const services = [
       price: '$1,299/month','
       marketPrice: '$2500-8000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'IoT sensor integration','
         'Failure prediction models','
@@ -278,9 +226,7 @@ const services = [
         'Real-time monitoring''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Reduce downtime by 70%','
         'Extend equipment life','
@@ -292,9 +238,7 @@ const services = [
       icon: Settings
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-personalization','
       name: 'AI Personalization Engine','
@@ -302,9 +246,7 @@ const services = [
       price: '$499/month','
       marketPrice: '$1000-3000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Real-time recommendations','
         'Customer segmentation','
@@ -313,9 +255,7 @@ const services = [
         'Cross-platform personalization''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Increase conversions by 40%','
         'Improve customer engagement','
@@ -327,9 +267,7 @@ const services = [
       icon: Target
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-supply-chain','
       name: 'AI Supply Chain Optimization','
@@ -337,9 +275,7 @@ const services = [
       price: '$1,599/month','
       marketPrice: '$3000-10000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Demand forecasting','
         'Inventory optimization','
@@ -348,9 +284,7 @@ const services = [
         'Cost optimization''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Reduce inventory costs by 30%','
         'Improve delivery times','
@@ -362,9 +296,7 @@ const services = [
       icon: Box
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-healthcare-diagnostics','
       name: 'AI Healthcare Diagnostics','
@@ -372,9 +304,7 @@ const services = [
       price: '$2,999/month','
       marketPrice: '$5000-20000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Medical image analysis','
         'Diagnostic assistance','
@@ -383,9 +313,7 @@ const services = [
         'HIPAA compliance''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Improve diagnostic accuracy','
         'Reduce diagnostic time','
@@ -397,9 +325,7 @@ const services = [
       icon: Heart
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-financial-modeling','
       name: 'AI Financial Modeling','
@@ -407,9 +333,7 @@ const services = [
       price: '$899/month','
       marketPrice: '$2000-6000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Portfolio optimization','
         'Risk assessment','
@@ -418,9 +342,7 @@ const services = [
         'Compliance monitoring''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Improve investment returns','
         'Reduce financial risk','
@@ -432,9 +354,7 @@ const services = [
       icon: TrendingUp
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-nlp-processing','
       name: 'AI Natural Language Processing','
@@ -442,9 +362,7 @@ const services = [
       price: '$399/month','
       marketPrice: '$800-2500/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Text classification','
         'Sentiment analysis','
@@ -453,9 +371,7 @@ const services = [
         'Document summarization''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Automate text processing','
         'Extract business insights','
@@ -467,9 +383,7 @@ const services = [
       icon: FileText
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-robotic-process','
       name: 'AI Robotic Process Automation','
@@ -477,9 +391,7 @@ const services = [
       price: '$599/month','
       marketPrice: '$1200-4000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Process automation','
         'Intelligent decision making','
@@ -488,9 +400,7 @@ const services = [
         'Integration capabilities''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Reduce manual work by 90%','
         'Improve accuracy','
@@ -502,9 +412,7 @@ const services = [
       icon: Cpu
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-customer-insights','
       name: 'AI Customer Insights','
@@ -512,9 +420,7 @@ const services = [
       price: '$699/month','
       marketPrice: '$1500-5000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Customer journey mapping','
         'Behavioral analysis','
@@ -523,9 +429,7 @@ const services = [
         'Segmentation analysis''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Improve customer retention','
         'Increase customer lifetime value','
@@ -537,9 +441,7 @@ const services = [
       icon: Users
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-quality-assurance','
       name: 'AI Quality Assurance','
@@ -547,9 +449,7 @@ const services = [
       price: '$799/month','
       marketPrice: '$1500-5000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Automated test generation','
         'Performance testing','
@@ -558,9 +458,7 @@ const services = [
         'Regression testing''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Reduce testing time by 80%','
         'Improve software quality','
@@ -572,9 +470,7 @@ const services = [
       icon: CheckCircle
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-energy-optimization','
       name: 'AI Energy Optimization','
@@ -582,9 +478,7 @@ const services = [
       price: '$1,199/month','
       marketPrice: '$2500-8000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Energy consumption analysis','
         'Predictive energy modeling','
@@ -593,9 +487,7 @@ const services = [
         'Cost optimization''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Reduce energy costs by 25%','
         'Improve energy efficiency','
@@ -607,9 +499,7 @@ const services = [
       icon: Zap
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-hr-analytics','
       name: 'AI HR Analytics','
@@ -617,9 +507,7 @@ const services = [
       price: '$599/month','
       marketPrice: '$1200-4000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Employee performance analysis','
         'Talent acquisition optimization','
@@ -628,9 +516,7 @@ const services = [
         'Skills gap analysis''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Improve hiring decisions','
         'Reduce employee turnover','
@@ -642,9 +528,7 @@ const services = [
       icon: Users
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-blockchain-analytics','
       name: 'AI Blockchain Analytics','
@@ -652,9 +536,7 @@ const services = [
       price: '$1,499/month','
       marketPrice: '$3000-10000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Blockchain transaction analysis','
         'Cryptocurrency market prediction','
@@ -663,9 +545,7 @@ const services = [
         'Risk assessment''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Better investment decisions','
         'Risk mitigation','
@@ -677,9 +557,7 @@ const services = [
       icon: Link
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-edge-computing','
       name: 'AI Edge Computing','
@@ -687,9 +565,7 @@ const services = [
       price: '$1,799/month','
       marketPrice: '$3500-12000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Edge model deployment','
         'Real-time processing','
@@ -698,9 +574,7 @@ const services = [
         'Distributed computing''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Reduce latency by 90%','
         'Improve response times','
@@ -712,9 +586,7 @@ const services = [
       icon: Server
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-video-analysis','
       name: 'AI Video Analysis','
@@ -722,9 +594,7 @@ const services = [
       price: '$899/month','
       marketPrice: '$1800-5000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Real-time video object detection','
         'Scene classification and understanding','
@@ -736,9 +606,7 @@ const services = [
         'API integration for applications''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Automate video content processing','
         'Improve content discoverability','
@@ -750,9 +618,7 @@ const services = [
       icon: Eye
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-speech-synthesis','
       name: 'AI Speech Synthesis','
@@ -760,9 +626,7 @@ const services = [
       price: '$299/month','
       marketPrice: '$600-2000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Natural-sounding voice synthesis','
         'Multiple voice options and languages','
@@ -774,9 +638,7 @@ const services = [
         'Batch processing capabilities''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Create engaging audio content','
         'Improve accessibility','
@@ -788,9 +650,7 @@ const services = [
       icon: Mic
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-recommendation-engine','
       name: 'AI Recommendation Engine','
@@ -798,9 +658,7 @@ const services = [
       price: '$599/month','
       marketPrice: '$1200-4000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Collaborative filtering algorithms','
         'Content-based recommendations','
@@ -812,9 +670,7 @@ const services = [
         'Integration with existing systems''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Increase user engagement by 200%','
         'Improve conversion rates','
@@ -826,9 +682,7 @@ const services = [
       icon: Target
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-sentiment-analysis','
       name: 'AI Sentiment Analysis','
@@ -836,9 +690,7 @@ const services = [
       price: '$199/month','
       marketPrice: '$400-1200/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Text sentiment analysis','
         'Voice emotion detection','
@@ -850,9 +702,7 @@ const services = [
         'Detailed analytics and reporting''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Understand customer emotions','
         'Monitor brand sentiment','
@@ -864,9 +714,7 @@ const services = [
       icon: Heart
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-chatbot-enterprise','
       name: 'AI Enterprise Chatbot','
@@ -874,9 +722,7 @@ const services = [
       price: '$1,299/month','
       marketPrice: '$2500-8000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Advanced NLP and understanding','
         'Multi-channel deployment','
@@ -888,9 +734,7 @@ const services = [
         '24/7 support and maintenance''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Reduce support costs by 70%','
         'Improve customer satisfaction','
@@ -902,9 +746,7 @@ const services = [
       icon: MessageSquare
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-content-moderation','
       name: 'AI Content Moderation','
@@ -912,9 +754,7 @@ const services = [
       price: '$399/month','
       marketPrice: '$800-2500/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Image and video content analysis','
         'Text toxicity detection','
@@ -926,9 +766,7 @@ const services = [
         'Detailed moderation reports''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Maintain platform safety','
         'Reduce manual moderation','
@@ -940,9 +778,7 @@ const services = [
       icon: Shield
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-predictive-modeling','
       name: 'AI Predictive Modeling','
@@ -950,9 +786,7 @@ const services = [
       price: '$1,499/month','
       marketPrice: '$3000-10000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Multiple ML algorithms','
         'Automated feature engineering','
@@ -964,9 +798,7 @@ const services = [
         'A/B testing capabilities''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Improve business forecasting','
         'Data-driven decision making','
@@ -978,9 +810,7 @@ const services = [
       icon: BarChart
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-document-intelligence','
       name: 'AI Document Intelligence','
@@ -988,9 +818,7 @@ const services = [
       price: '$499/month','
       marketPrice: '$1000-3000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Advanced OCR and text extraction','
         'Document classification and routing','
@@ -1002,9 +830,7 @@ const services = [
         'API integration for automation''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Process documents 10x faster','
         'Automated data extraction','
@@ -1016,9 +842,7 @@ const services = [
       icon: FileText
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-conversation-analytics','
       name: 'AI Conversation Analytics','
@@ -1026,9 +850,7 @@ const services = [
       price: '$699/month','
       marketPrice: '$1400-4000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Conversation sentiment analysis','
         'Topic modeling and extraction','
@@ -1040,9 +862,7 @@ const services = [
         'Automated insights and alerts''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Improve conversation quality','
         'Better customer understanding','
@@ -1054,9 +874,7 @@ const services = [
       icon: Users
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-supply-chain-ai','
       name: 'AI Supply Chain Intelligence','
@@ -1064,9 +882,7 @@ const services = [
       price: '$1,999/month','
       marketPrice: '$4000-15000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Demand forecasting algorithms','
         'Inventory optimization','
@@ -1078,9 +894,7 @@ const services = [
         'Custom optimization models''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Reduce supply chain costs by 30%','
         'Improve delivery efficiency','
@@ -1092,9 +906,7 @@ const services = [
       icon: Box
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-healthcare-diagnostics','
       name: 'AI Healthcare Diagnostics','
@@ -1102,9 +914,7 @@ const services = [
       price: '$2,999/month','
       marketPrice: '$6000-25000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Medical image analysis','
         'Diagnostic assistance tools','
@@ -1116,9 +926,7 @@ const services = [
         'Clinical decision support''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Improve diagnostic accuracy','
         'Reduce diagnostic time','
@@ -1130,9 +938,7 @@ const services = [
       icon: Heart
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-financial-forecasting','
       name: 'AI Financial Forecasting','
@@ -1140,9 +946,7 @@ const services = [
       price: '$1,799/month','
       marketPrice: '$3500-12000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Market trend analysis','
         'Investment portfolio optimization','
@@ -1154,9 +958,7 @@ const services = [
         'Advanced reporting and analytics''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Improve investment decisions','
         'Better risk management','
@@ -1168,9 +970,7 @@ const services = [
       icon: TrendingUp
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-iot-analytics','
       name: 'AI IoT Analytics','
@@ -1178,9 +978,7 @@ const services = [
       price: '$1,299/month','
       marketPrice: '$2500-8000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Real-time IoT data processing','
         'Predictive maintenance algorithms','
@@ -1192,9 +990,7 @@ const services = [
         'Comprehensive reporting''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Optimize IoT operations','
         'Prevent equipment failures','
@@ -1206,9 +1002,7 @@ const services = [
       icon: Cpu
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-conversational-ai','
       name: 'AI Conversational AI Platform','
@@ -1216,9 +1010,7 @@ const services = [
       price: '$999/month','
       marketPrice: '$2000-6000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Natural language understanding','
         'Context-aware conversations','
@@ -1230,9 +1022,7 @@ const services = [
         'Custom conversation training''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Create natural conversations','
         'Improve user engagement','
@@ -1244,9 +1034,7 @@ const services = [
       icon: MessageCircle
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-automated-testing','
       name: 'AI Automated Testing','
@@ -1254,9 +1042,7 @@ const services = [
       price: '$799/month','
       marketPrice: '$1600-5000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Automated test case generation','
         'Intelligent test execution','
@@ -1268,9 +1054,7 @@ const services = [
         'Detailed test analytics''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Reduce testing time by 80%','
         'Improve test coverage','
@@ -1282,9 +1066,7 @@ const services = [
       icon: CheckCircle
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-knowledge-management','
       name: 'AI Knowledge Management','
@@ -1292,9 +1074,7 @@ const services = [
       price: '$599/month','
       marketPrice: '$1200-4000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Automated content categorization','
         'Intelligent search and retrieval','
@@ -1306,9 +1086,7 @@ const services = [
         'Advanced analytics and insights''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Improve knowledge discovery','
         'Automated content organization','
@@ -1320,9 +1098,7 @@ const services = [
       icon: FileText
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-customer-churn','
       name: 'AI Customer Churn Prediction','
@@ -1330,9 +1106,7 @@ const services = [
       price: '$899/month','
       marketPrice: '$1800-5000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Churn prediction algorithms','
         'Customer segmentation analysis','
@@ -1344,9 +1118,7 @@ const services = [
         'Detailed analytics and reporting''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Reduce customer churn by 40%','
         'Improve retention strategies','
@@ -1358,9 +1130,7 @@ const services = [
       icon: Users
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-automated-reporting','
       name: 'AI Automated Reporting','
@@ -1368,9 +1138,7 @@ const services = [
       price: '$399/month','
       marketPrice: '$800-2500/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Automated report generation','
         'Data analysis and insights','
@@ -1382,9 +1150,7 @@ const services = [
         'Advanced visualization options''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Save 90% report creation time','
         'Automated data analysis','
@@ -1396,9 +1162,7 @@ const services = [
       icon: BarChart
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
       id: 'ai-voice-assistant','
       name: 'AI Voice Assistant Platform','
@@ -1406,9 +1170,7 @@ const services = [
       price: '$1,199/month','
       marketPrice: '$2400-7000/month','
       features: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Custom voice command training','
         'Multi-language voice support','
@@ -1420,9 +1182,7 @@ const services = [
         'Advanced voice customization''
       ],
       benefits: [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
         'Hands-free business operations','
         'Improve accessibility','
@@ -1434,16 +1194,12 @@ const services = [
       icon: Mic
     },
     {
-  // TODO: Add properties
 }
-  // TODO: Add properties
 }
     }
   ];
 const categories = [
-  // TODO: Add items
 ]
-  // TODO: Add items
 ]
     { id: 'all', name: 'All Services', count: services.length },'
     { id: 'Customer Service', name: 'Customer Service', count: services.filter(s => s.category === 'Customer Service').length },'
@@ -1477,9 +1233,7 @@ const categories = [
 const filteredServices = services.filter(service =>
     selectedCategory === 'all' || service.category === selectedCategory'
   );
-
   return (
-  // TODO: Add parameters
 )
     <>
 </>
@@ -1508,7 +1262,6 @@ const filteredServices = services.filter(service =>
                 View Demo
               </button></div>
 </div></section>
-
         {/* Features Section */}
         <section className="py-20 px-4"></section>"
 <div className="max-w-7xl mx-auto">"
@@ -1521,7 +1274,6 @@ const filteredServices = services.filter(service =>
               </p></div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
               {features.map((feature, index) => (
-  // TODO: Add parameters
 )
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">"
 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">"
@@ -1529,11 +1281,9 @@ const filteredServices = services.filter(service =>
 <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>"
 <p className="text-gray-300 mb-4">{feature.description}</p>"
                   {feature.benefits && (
-  // TODO: Add parameters
 )
                     <ul className="space-y-2">"
                       {feature.benefits.map((benefit, idx) => (
-  // TODO: Add parameters
 )
                         <li key={idx} className="flex items-center text-sm text-gray-400">"
 <CheckCircle className="w-4 h-4 text-green-400 mr-2" />"
@@ -1545,7 +1295,6 @@ const filteredServices = services.filter(service =>
               ))}
             </div></div>
 </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4"></section>"
 <div className="max-w-7xl mx-auto">"
@@ -1558,7 +1307,6 @@ const filteredServices = services.filter(service =>
               </p></div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
               {benefits.map((benefit, index) => (
-  // TODO: Add parameters
 )
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">"
 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">"
@@ -1568,7 +1316,6 @@ const filteredServices = services.filter(service =>
             </div>
           ))
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4"></section>"
 <div className="max-w-4xl mx-auto text-center">"
@@ -1590,144 +1337,6 @@ const filteredServices = services.filter(service =>
           ))
         </section></div>
 <Footer />
-
   );
 };
-;
 export default AiServicesPage;
-
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain, Shield, Zap } from 'lucide-react';
-
-export default function PagePage() {
-  const features = [
-    {
-      title: "Advanced Technology",
-      description: "Cutting-edge solutions powered by the latest technology",
-      icon: <Brain className="w-8 h-8" />
-    },
-    {
-      title: "Secure & Reliable",
-      description: "Enterprise-grade security and reliability for your business",
-      icon: <Shield className="w-8 h-8" />
-    },
-    {
-      title: "Fast Implementation",
-      description: "Quick deployment and implementation for immediate results",
-      icon: <Zap className="w-8 h-8" />
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title> - Zion Tech Group</title>
-        <meta name="description" content="Advanced  solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Advanced  solutions by Zion Tech Group
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-6">
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AIServices() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI services by Zion Tech Group" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            AI Services
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Comprehensive AI solutions to transform your business.
-          </p>
-        </div>
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Machine Learning</h3>
-              <p className="text-gray-600">
-                Advanced machine learning solutions for data analysis and prediction.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Natural Language Processing</h3>
-              <p className="text-gray-600">
-                AI-powered text analysis and language understanding.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Computer Vision</h3>
-              <p className="text-gray-600">
-                Image and video analysis using advanced AI algorithms.
-              </p>
-            </div>
-          </div>
->>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced page solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Advanced page solutions by Zion Tech Group
-          </p>
-        </div>
-        
-        <div className="max-w-4xl mx-auto">
-          
-      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-        <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-        <p className="text-gray-300">
-          This page is under development. Please check back later for updates.
-        </p>
-      </div>
-    
->>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd
-        </div>
-      </div>
-    </div>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
->>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
-=======
->>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd
-}
