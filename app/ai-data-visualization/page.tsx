@@ -22,6 +22,7 @@ export default function AIDataVisualizationZionTechGroup() {
 'use client';
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 =======
@@ -107,6 +108,8 @@ return (
 =======
 'use client';
 import React from 'react';
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -162,13 +165,20 @@ const AIDataVisualizationPage: React.FC = () => {
       features: ['Unlimited dashboards', 'Custom development', 'White-label options', '24/7 support', 'Dedicated account manager']
     }
   ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
   const stats = [
     { number: '95%', label: 'Faster Insights' },
     { number: '100+', label: 'Data Sources' },
     { number: '50+', label: 'Chart Types' },
     { number: '24/7', label: 'Real-time Updates' }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
   const useCases = [
     {
       title: 'Sales Analytics',
@@ -395,6 +405,7 @@ const AIDataVisualizationPage: React.FC = () => {
     </>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 }
 
@@ -611,6 +622,8 @@ export default AiDataVisualizationPage;
 =======
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
   );
 };
 export default DataVisualizationPage;

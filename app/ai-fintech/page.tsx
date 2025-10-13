@@ -623,10 +623,14 @@ return (
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
       </main>
 =======
       </div>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
+=======
+      </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
       <Footer />
     </div>
   );

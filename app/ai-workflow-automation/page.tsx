@@ -247,6 +247,10 @@ const AIWorkflowAutomationPage: React.FC = () => {
       benefits: ['Role-based Access', 'Team Collaboration', 'Version Control', 'Approval Workflows']
     }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
   const pricingPlans = [
     {
       name: 'Starter',
@@ -267,16 +271,45 @@ const AIWorkflowAutomationPage: React.FC = () => {
       features: ['Unlimited workflows', 'Custom development', 'Advanced analytics', '24/7 support', 'Dedicated account manager']
     }
   ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
+=======
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
   const stats = [
     {number: '90%', label: 'Time Savings' ,},
     {number: '75%', label: 'Error Reduction' ,},
     {number: '500+', label: 'Integrations' ,},
     {number: '24/7', label: 'Automation' ,}];
 
+<<<<<<< HEAD
 =======
 const WorkflowAutomationPage: React.FC = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
+=======
+  const useCases = [
+    {
+      title: 'Customer Onboarding',
+      description: 'Automate the entire customer onboarding process from signup to first value delivery with personalized workflows.',
+      icon: Users
+    },
+    {
+      title: 'Invoice Processing',
+      description: 'Automatically process invoices, validate data, route for approval, and update accounting systems.',
+      icon: Database
+    },
+    {
+      title: 'Lead Management',
+      description: 'Automate lead scoring, assignment, follow-up sequences, and CRM updates based on lead behavior.',
+      icon: Globe
+    },
+    {
+      title: 'Employee Onboarding',
+      description: 'Streamline new hire processes with automated document collection, system access, and training assignments.',
+      icon: Settings
+    }
+  ];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
   return (
     <>
   <SEOOptimizer;
@@ -652,6 +685,7 @@ export default function AiWorkflowAutomationZionTechGroup() {
     </>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   ),
 =======
       <Footer />
@@ -681,6 +715,8 @@ export default AiWorkflowAutomationPage
     </>
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
   );
 };
 export default WorkflowAutomationPage;

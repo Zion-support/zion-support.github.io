@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 'use client';
 <<<<<<< HEAD
@@ -33,6 +34,9 @@ import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, 
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+=======
+import React from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
 const ContentStatistics: React.FC = () => {
 }
   const [counters, setCounters] = useState({
@@ -1063,6 +1067,7 @@ export default ContentStatistics
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ContentStatistics;
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
@@ -1070,3 +1075,7 @@ export default ContentStatistics;
 
 export default ContentStatistics;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
+=======
+
+export default ContentStatistics;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573

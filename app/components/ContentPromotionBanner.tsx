@@ -135,12 +135,15 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Zap, Shield, Star, Users, ArrowRight}}from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {,
 =======
 import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
 
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
 const ContentPromotionBanner: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
 =======

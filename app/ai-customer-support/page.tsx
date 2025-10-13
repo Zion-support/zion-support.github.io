@@ -22,6 +22,7 @@ export default function AICustomerSupportZionTechGroup() {
 'use client';
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 =======
@@ -107,13 +108,18 @@ return (
 =======
 'use client';
 import React from 'react';
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 <<<<<<< HEAD
 =======
 import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
 const AICustomerSupportPage: React.FC = () => {
   const features = [
     {
@@ -162,9 +168,12 @@ const AICustomerSupportPage: React.FC = () => {
     }
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
   const stats = [
     { number: '95%', label: 'Customer Satisfaction' },
     { number: '60%', label: 'Faster Resolution' },
@@ -382,15 +391,19 @@ const AICustomerSupportPage: React.FC = () => {
                   kleber@ziontechgroup.com
                 </a>
               </div>
+<<<<<<< HEAD
               <div className="mt-6 text-sm text-gray-400">
                 <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
               </div>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
             </div>
           </section>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
         </div>
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   )
@@ -609,6 +622,8 @@ export default AiCustomerSupportPage;
 =======
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
   );
 };
 export default AICustomerSupportPage;

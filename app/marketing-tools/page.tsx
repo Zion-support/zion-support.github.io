@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Helmet}}from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
 const PagePage: React.FC = () => {,
@@ -51,6 +52,9 @@ const PagePage: React.FC = () => {
 const features = [
 ];
 };
+=======
+import React from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
@@ -95,6 +99,7 @@ const PagePage: React.FC = () => {
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     };
   ];
+<<<<<<< HEAD
 ;
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const benefits = [
@@ -111,6 +116,39 @@ const benefits = [
   ]
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+=======
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Marketing Tools - Zion Tech Group</title>
+        <meta name="description" content="AI-powered marketing tools for content creation, SEO optimization, social media management, and analytics. Starting at $179/month." />
+        <meta name="keywords" content="marketing tools, ai marketing, content generation, seo optimization, social media management, email marketing" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="pt-24 pb-16 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+            AI Marketing Tools
+          </h1>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Transform your marketing with AI-powered tools for content creation, SEO optimization, social media management, and analytics.
+          </p>
+          <a
+            href="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
+          >
+            Contact Us
+          </a>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+};
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
 =======
   ];
   return (

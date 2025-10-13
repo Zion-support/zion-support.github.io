@@ -134,6 +134,27 @@ const HomePage: React.FC = () => {
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
+<<<<<<< HEAD
+=======
+// Main page loading component
+const MainPageLoading: React.FC = memo(() => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="container mx-auto px-4 py-16 pt-24">
+      <div className="text-center mb-16">
+        <div className="h-16 bg-gray-200 rounded-lg mb-6 animate-pulse"></div>
+        <div className="h-8 bg-gray-200 rounded-lg mb-4 animate-pulse"></div>
+        <div className="h-6 bg-gray-200 rounded-lg mb-8 animate-pulse"></div>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+        {Array.from({ length: 8 }).map((_, i) => (
+          <ServiceCardSkeleton key={i} />
+        ))}
+      </div>
+    </div>
+  </div>
+));
+MainPageLoading.displayName = 'MainPageLoading';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -177,6 +198,7 @@ const HomePage: React.FC = () => {
     }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
   }, []);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
 
@@ -318,6 +340,12 @@ const HomePage = () => {
     { number: '24/7', label: 'Support Available' },
     { number: '5+', label: 'Years Experience' }
   ]
+=======
+  
+  if (!isLoaded) {
+    return <MainPageLoading />;
+  }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
 
   return (
 <<<<<<< HEAD
@@ -918,6 +946,7 @@ const HomePage = () => {
                   </a>
                 </div>
               </article>
+<<<<<<< HEAD
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
@@ -930,10 +959,22 @@ const HomePage = () => {
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2">Starting at $199/month</div>
                   <a href="/ai-content-generation" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base">
+=======
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔒</div>
+                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Cybersecurity Suite</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Comprehensive security solutions with threat detection, vulnerability assessment, and automated response.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-red-400 mb-2">$799/month</div>
+                  <a href="/cybersecurity-suite" className="text-red-400 hover:text-red-300 font-medium text-sm sm:text-base">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
                     Learn More →
                   </a>
                 </div>
               </article>
+<<<<<<< HEAD
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
@@ -946,10 +987,22 @@ const HomePage = () => {
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2">Starting at $999/month</div>
                   <a href="/it-infrastructure" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base">
+=======
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">⚙️</div>
+                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">DevOps & CI/CD</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Streamline development workflows with automated testing, deployment, and monitoring solutions.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2">$599/month</div>
+                  <a href="/devops-cicd" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
                     Learn More →
                   </a>
                 </div>
               </article>
+<<<<<<< HEAD
             </Suspense>
           </div>
 
@@ -998,6 +1051,74 @@ const HomePage = () => {
                 <li>• Disaster Recovery</li>
               </ul>
             </article>
+=======
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🗄️</div>
+                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Database Management</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Database design, optimization, migration, and management with AI-powered performance tuning.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-teal-400 mb-2">$399/month</div>
+                  <a href="/database-management" className="text-teal-400 hover:text-teal-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🌐</div>
+                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Network Solutions</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Enterprise networking, VPN setup, load balancing, and network security with 24/7 monitoring.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2">$699/month</div>
+                  <a href="/network-solutions" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</div>
+                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Mobile App Development</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Native and cross-platform mobile applications with AI integration and modern UX design.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2">$1,999/month</div>
+                  <a href="/mobile-app-development" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🛠️</div>
+                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Consulting</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Strategic IT planning, technology assessment, and digital transformation consulting.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-yellow-400 mb-2">$299/hour</div>
+                  <a href="/it-consulting" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
+                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Support & Maintenance</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Comprehensive IT support, system maintenance, and troubleshooting with guaranteed response times.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2">$499/month</div>
+                  <a href="/it-support" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
           </div>
         </section>
 

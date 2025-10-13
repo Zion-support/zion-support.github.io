@@ -13,6 +13,7 @@ const AiSalesAutomationPage: React.FC = () => {
 'use client';
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 =======
@@ -98,6 +99,8 @@ return (
 =======
 'use client';
 import React from 'react';
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -182,7 +185,11 @@ const AISalesAutomationPage: React.FC = () => {
       icon: Home
     }
   ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
+=======
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
   return (
     <>
       <SEOOptimizer
@@ -378,12 +385,74 @@ const AISalesAutomationPage: React.FC = () => {
                   kleber@ziontechgroup.com
                 </a>
               </div>
+<<<<<<< HEAD
+=======
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Testimonials Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-800 to-purple-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+              What Our Customers Say
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Join thousands of sales teams who have transformed their performance with AI
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="cyber-card hologram-card">
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
+                <div>
+                  <div className="font-semibold text-white">{testimonial.name}</div>
+                  <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+            Ready to Transform Your Sales Process?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Start closing more deals with AI-powered sales automation. 
+            Join thousands of sales teams already using our platform.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="cyber-button inline-flex items-center justify-center"
+            >
+              📞 Call Now: (302) 464-0950
+            </a>
+            <a
+              href="/contact"
+              className="cyber-button inline-flex items-center justify-center"
+              style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+            >
+              Get Free Demo
+            </a>
+          </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
             </div>
           </section>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
         </div>
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   )
@@ -602,6 +671,8 @@ export default AiSalesAutomationPage;
 =======
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
   );
 };
 export default SalesAutomationPage;

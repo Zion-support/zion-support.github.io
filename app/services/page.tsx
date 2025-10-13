@@ -19,6 +19,7 @@ import { Helmet } from 'react-helmet-async'
 'use client';
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -30,6 +31,10 @@ import Link from 'next/link';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
+=======
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
       color: 'text-purple-600',
@@ -93,6 +98,9 @@ const ServicesPage: React.FC = () => {
     }
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
 
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
@@ -252,6 +260,7 @@ const ServicesPage: React.FC = () => {
                 <span className="text-white font-medium">Middletown, DE</span>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <>
       <Helmet>
@@ -262,6 +271,10 @@ const ServicesPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
         <Navigation />
         
+=======
+      {/* Main Service Categories */}
+      <section className="py-16 bg-white">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-white mb-6">Our Services</h1>
@@ -422,6 +435,35 @@ const ServicesPage: React.FC = () => {
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      {/* Additional Services */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Additional Services
+            </h2>
+            <p className="text-xl text-gray-600">
+              Specialized solutions for specific business needs
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {additionalServices.map((service, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
+                <p className="text-gray-600 mb-4">{service.description}</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
 
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
@@ -443,6 +485,14 @@ const ServicesPage: React.FC = () => {
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      {/* Contact Section */}
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
 
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
