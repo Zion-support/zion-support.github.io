@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, Atom, Eye } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
+import AdvancedFuturisticBackground from "./components/AdvancedFuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
 import FuturisticButton from "./components/FuturisticButton";
 import FuturisticText from "./components/FuturisticText";
@@ -131,12 +132,31 @@ const HomePage = () => {
     },
     {
       name: "Zion AI Project Manager Pro",
-      description: "AI-powered project management with intelligent task prioritization and resource allocation",
-      price: "From $99/month",
-      icon: <Calendar className="w-6 h-6" />,
-      link: "/zion-ai-project-manager-pro",
+    },
+    {
+      name: "Zion Quantum AI Assistant",
+      description: "Revolutionary quantum-powered AI assistant with exponential processing power and unbreakable security",
+      price: "From $299/month",
+      icon: <Atom className="w-6 h-6" />,
+      link: "/ai-quantum-ai-assistant",
       featured: true
-    }
+    },
+    {
+      name: "Zion Holographic Workspace Pro",
+      description: "Transform your physical environment into an immersive 3D holographic workspace",
+      price: "From $499/month",
+      icon: <Eye className="w-6 h-6" />,
+      link: "/ai-holographic-workspace-pro",
+      featured: true
+    },
+    {
+      name: "Zion Cybersecurity Suite Pro",
+      description: "Enterprise-grade cybersecurity suite with advanced threat detection and compliance management",
+      price: "From $199/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/cybersecurity-suite-pro",
+      featured: true
+    },
   ];
 
   const stats = [
@@ -172,7 +192,7 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      <FuturisticBackground />
+      <AdvancedFuturisticBackground />
       <EnhancedSEO
         title="Zion Tech Group - Advanced AI & IT Solutions | Transform Your Business"
         description="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation. Expert technology consulting for modern businesses. Get started today!"
