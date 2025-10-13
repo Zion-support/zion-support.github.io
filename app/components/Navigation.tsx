@@ -1,12 +1,15 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, BarChart3, Star, ArrowRight } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, BarChart3, Star, ArrowRight, Search } from 'lucide-react'
+import SearchBar from './SearchBar'
+import ThemeToggle from './ThemeToggle'
 
 const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
   const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false)
+  const [showSearch, setShowSearch] = useState(false)
   
   const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen)
@@ -23,6 +26,10 @@ const Navigation = React.memo(() => {
   const toggleMicroSaas = useCallback(() => {
     setIsMicroSaasOpen(!isMicroSaasOpen)
   }, [isMicroSaasOpen])
+
+  const toggleSearch = useCallback(() => {
+    setShowSearch(!showSearch)
+  }, [showSearch])
 
 
   const solutions = useMemo(() => [
@@ -84,6 +91,18 @@ const Navigation = React.memo(() => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
               </Link>
             ))}
+            
+            {/* Search Button */}
+            <button
+              onClick={toggleSearch}
+              className="p-2 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300"
+              aria-label="Search"
+            >
+              <Search className="w-5 h-5" />
+            </button>
+            
+            {/* Theme Toggle */}
+            <ThemeToggle />
             
             {/* Solutions Dropdown */}
             <div className="relative">
@@ -196,7 +215,14 @@ const Navigation = React.memo(() => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden">
+          <div className="lg:hidden flex items-center space-x-2">
+            <button
+              onClick={toggleSearch}
+              className="text-white hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10"
+              aria-label="Search"
+            >
+              <Search className="w-5 h-5" />
+            </button>
             <button
               onClick={toggleMenu}
               className="text-white hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10"
@@ -320,6 +346,27 @@ const Navigation = React.memo(() => {
                 <span>Get Started</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
+            </div>
+          </div>
+        )}
+
+        {/* Search Overlay */}
+        {showSearch && (
+          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-start justify-center pt-20">
+            <div className="w-full max-w-2xl mx-4">
+              <SearchBar
+                onSearch={(query) => {
+                  console.log('Search query:', query);
+                  setShowSearch(false);
+                }}
+                className="w-full"
+              />
+              <button
+                onClick={() => setShowSearch(false)}
+                className="absolute top-4 right-4 text-white hover:text-cyan-400 transition-colors"
+              >
+                <X className="w-6 h-6" />
+              </button>
             </div>
           </div>
         )}

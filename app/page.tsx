@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
+import NewsletterSignup from "./components/NewsletterSignup";
 
 const HomePage = () => {
   const features = [
@@ -279,6 +280,13 @@ const HomePage = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Newsletter Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <div className="max-w-4xl mx-auto">
+          <NewsletterSignup variant="hero" />
         </div>
       </section>
 
