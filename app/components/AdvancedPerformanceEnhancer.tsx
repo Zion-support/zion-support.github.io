@@ -159,19 +159,19 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
     if ('web-vitals' in window) {
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
         getCLS((metric) => {
-          // Track CLS
+          console.log('CLS:', metric);
         });
         getFID((metric) => {
-          // Track FID
+          console.log('FID:', metric);
         });
         getFCP((metric) => {
-          // Track FCP
+          console.log('FCP:', metric);
         });
         getLCP((metric) => {
-          // Track LCP
+          console.log('LCP:', metric);
         });
         getTTFB((metric) => {
-          // Track TTFB
+          console.log('TTFB:', metric);
         });
       });
     }

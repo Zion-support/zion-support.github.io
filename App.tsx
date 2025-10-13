@@ -11,7 +11,7 @@ import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
 import AdvancedPerformanceEnhancer from "./app/components/AdvancedPerformanceEnhancer";
 import EnhancedAccessibilityManager from "./app/components/EnhancedAccessibilityManager";
-import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
+// import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import EnhancedPerformanceOptimizer from "./app/components/EnhancedPerformanceOptimizer";
@@ -501,7 +501,6 @@ function App() {
         </HelmetProvider>
       </EnhancedErrorBoundary>
     </ErrorHandler>
-    </GlobalErrorBoundary>
   );
 }
 
