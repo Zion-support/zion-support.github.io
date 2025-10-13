@@ -5,23 +5,22 @@ interface ImageOptimizerProps {
   alt: string;
   width?: number;
   height?: number;
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
   className?: string;
   priority?: boolean;
   onLoad?: () => void;
   onError?: () => void;
 }
 
-const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  className = '',
-  priority = false,
-  onLoad,
-  onError
-}) => {
+export default function ImageOptimizer({ 
+  src, 
+  alt, 
+  width, 
+  height, 
+  className = '', 
+  priority = false, 
+  onLoad, 
+  onError 
+}: ImageOptimizerProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const [isInView, setIsInView] = useState(priority);
@@ -87,4 +86,4 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       )}
     </div>
   );
-};
+}

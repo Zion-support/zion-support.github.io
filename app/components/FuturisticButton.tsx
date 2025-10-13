@@ -43,7 +43,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     <>
       {icon && <span className="mr-2">{icon}</span>}
       {children}
-      {external && <ExternalLink className="w-4 h-4 ml-2" />}
+      {external && <span className="w-4 h-4 ml-2">↗</span>}
     </>
   );
 

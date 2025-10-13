@@ -59,5 +59,3 @@ function fixUnusedImports(filePath) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1

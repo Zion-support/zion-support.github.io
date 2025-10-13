@@ -4,14 +4,14 @@ export function logger(message: string, level: 'info' | 'warn' | 'error' = 'info
   console[level](message);
 }
 
-const LOG_LEVELS: LogLevel = {
+const LOG_LEVELS = {
   ERROR: 'error',
   WARN: 'warn',
   INFO: 'info',
   DEBUG: 'debug',
-};
+} as const;
 
-type LogLevelType = LogLevel[keyof LogLevel];
+type LogLevelType = typeof LOG_LEVELS[keyof typeof LOG_LEVELS];
 
 class Logger {
   private isDevelopment = process.env.NODE_ENV === 'development';
@@ -22,16 +22,18 @@ class Logger {
       return;
     }
 
-    // const timestamp = new Date().toISOString();
-
     switch (level) {
       case 'error':
+        console.error(message, ...args);
         break;
       case 'warn':
+        console.warn(message, ...args);
         break;
       case 'info':
+        console.info(message, ...args);
         break;
       case 'debug':
+        console.debug(message, ...args);
         break;
     }
 
@@ -61,7 +63,10 @@ class Logger {
       }
 
       localStorage.setItem('app-logs', JSON.stringify(logs));
-    } catch (e) { console.error(e); }}
+    } catch (e) { 
+      console.error(e); 
+    }
+  }
 
   error(message: string, ...args: any[]): void {
     this.log(LOG_LEVELS.ERROR, message, ...args);
@@ -94,17 +99,5 @@ class Logger {
   }
 }
 
-const logger = new Logger();
-export const logger = {
-  // Logger implementation
-  info: (message: string) => {
-    console.log(`[INFO] ${message}`);
-  },
-  error: (message: string) => {
-    console.error(`[ERROR] ${message}`);
-  },
-  warn: (message: string) => {
-    console.warn(`[WARN] ${message}`);
-  }
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-bd18
+const loggerInstance = new Logger();
+export default loggerInstance;

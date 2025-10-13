@@ -1,11 +1,19 @@
-
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-const Page = () => {
+
+export default function Page() {
   return (
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page solutions by Zion Tech Group" />
+      </Helmet>
+
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold mb-8">Page</h1>
+        <div className="prose prose-invert max-w-none">
+          <p className="text-xl text-gray-300 mb-8">
+            Discover our comprehensive page solutions designed to meet your business needs.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
@@ -32,3 +40,6 @@ const Page = () => {
           </div>
         </div>
       </div>
+    </div>
+  );
+}

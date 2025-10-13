@@ -1,4 +1,7 @@
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function BusinessIntelligencePage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -37,3 +40,6 @@
           </div>
         </div>
       </div>
+    </div>
+  );
+}

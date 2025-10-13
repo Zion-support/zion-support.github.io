@@ -1,14 +1,22 @@
-
 export default function Page() {
   return (
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-          </p>
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-4xl mx-auto text-center py-20">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          Welcome to Zion Tech Group
+        </h1>
+        <p className="text-xl text-gray-600 mb-8">
+          Advanced AI and IT Solutions for Modern Businesses
+        </p>
+        <div className="mt-8">
+          <a 
+            href="/services" 
+            className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Explore Our Services
+          </a>
         </div>
       </div>
     </div>
   );
+}

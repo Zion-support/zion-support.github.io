@@ -1,25 +1,23 @@
-
-interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
-  timeToInteractive: number;
+export function formatDate(date: Date | string): string {
+  const d = new Date(date);
+  return d.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
 }
 
-export function usePerformanceMonitor() {
-  const [state, setState] = useState<string | null>(null);
-  const metricsRef = useRef<PerformanceMetrics>({
-    loadTime: 0,
-    firstContentfulPaint: 0,
-    largestContentfulPaint: 0,
-    firstInputDelay: 0,
-    cumulativeLayoutShift: 0,
-    timeToInteractive: 0
-  });
+export function formatCurrency(amount: number, currency = 'USD'): string {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency
+  }).format(amount);
+}
 
-  useEffect(() => {
-    setState('initialized');
-  }, []);
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
+export function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[\s_-]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
