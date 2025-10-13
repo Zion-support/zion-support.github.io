@@ -27,7 +27,3 @@ export default function ComplianceZionTechGroup() {
     </>
   );
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-f2e0
