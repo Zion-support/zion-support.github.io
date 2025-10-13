@@ -47,77 +47,105 @@ export class PerformanceUtils {
   }
 
   measureMemoryUsage(): number {
-    if (typeof window !== 'undefined' && 'memory' in performance) {
-      const memory = (performance as any).memory;
-      this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
+    if (typeof window !== 'undefined' && (window as any).performance?.memory) {
+      const memory = (window as any).performance.memory;
+      this.metrics.memoryUsage = memory.usedJSHeapSize / memory.totalJSHeapSize;
       return this.metrics.memoryUsage;
     }
     return 0;
   }
 
   measureFPS(): number {
-    let lastTime = performance.now();
-    let frameCount = 0;
-    
-    const measureFrame = (currentTime: number) => {
-      frameCount++;
-      if (currentTime - lastTime >= 1000) {
-        this.metrics.fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
-        frameCount = 0;
-        lastTime = currentTime;
-      }
+    if (typeof window !== 'undefined' && typeof window.requestAnimationFrame === 'function') {
+      let lastTime = performance.now();
+      let frameCount = 0;
+      
+      const measureFrame = (currentTime: number) => {
+        frameCount++;
+        if (currentTime - lastTime >= 1000) {
+          this.metrics.fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+          frameCount = 0;
+          lastTime = currentTime;
+        }
+        requestAnimationFrame(measureFrame);
+      };
+      
       requestAnimationFrame(measureFrame);
-    };
-    
-    requestAnimationFrame(measureFrame);
-    return this.metrics.fps;
+      return this.metrics.fps;
+    }
+    return 0;
   }
 
   getMetrics(): PerformanceMetrics {
     return { ...this.metrics };
   }
 
-  optimizeImages(): void {
+  resetMetrics(): void {
+    this.metrics = {
+      loadTime: 0,
+      renderTime: 0,
+      memoryUsage: 0,
+      fps: 0
+    };
+  }
+
+  isPerformanceGood(): boolean {
+    return this.metrics.loadTime < 3000 && 
+           this.metrics.renderTime < 1000 && 
+           this.metrics.memoryUsage < 0.8 && 
+           this.metrics.fps > 30;
+  }
+
+  optimizePerformance(): void {
     if (!this.config.optimization) return;
-    
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
-      if (!img.hasAttribute('loading')) {
-        img.setAttribute('loading', 'lazy');
+
+    // Lazy load images
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset.src || '';
+          img.removeAttribute('data-src');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+
+    images.forEach(img => imageObserver.observe(img));
+
+    // Preload critical resources
+    const criticalResources = document.querySelectorAll('link[rel="preload"]');
+    criticalResources.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href) {
+        const preloadLink = document.createElement('link');
+        preloadLink.rel = 'preload';
+        preloadLink.href = href;
+        preloadLink.as = link.getAttribute('as') || 'script';
+        document.head.appendChild(preloadLink);
       }
     });
   }
 
-  preloadCriticalResources(): void {
-    if (!this.config.optimization) return;
-    
-    const criticalResources = [
-      '/fonts/main.woff2',
-      '/css/critical.css'
-    ];
-    
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.css') ? 'style' : 'font';
-      document.head.appendChild(link);
-    });
-  }
+  startMonitoring(): void {
+    if (!this.config.monitoring) return;
 
-  enableMonitoring(): void {
-    this.config.monitoring = true;
+    // Monitor performance metrics
     this.measureLoadTime();
     this.measureRenderTime();
     this.measureMemoryUsage();
     this.measureFPS();
+
+    // Log performance issues
+    if (!this.isPerformanceGood()) {
+      console.warn('Performance issues detected:', this.getMetrics());
+    }
   }
 
-  disableMonitoring(): void {
+  stopMonitoring(): void {
     this.config.monitoring = false;
   }
-
-  getConfig(): PerformanceConfig {
-    return { ...this.config };
-  }
 }
+
+export const performanceUtils = new PerformanceUtils();

@@ -1,26 +1,24 @@
 export default {
-  testEnvironment: "jsdom",
-  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+  preset: 'ts-jest',
+  testEnvironment: 'jsdom',
   moduleNameMapper: {
-    "^@/(.*)$": "<rootDir>/$1",
-    "^@/components/(.*)$": "<rootDir>/app/components/$1",
-    "^@/content/(.*)$": "<rootDir>/content/$1",
+    '^@/(.*)$': '<rootDir>/src/$1',
   },
   transform: {
-    "^.+\\.(ts|tsx)$": "ts-jest",
-    "^.+\\.(js|jsx)$": "babel-jest",
+    '^.+\\.(ts|tsx)$': 'ts-jest',
   },
   testMatch: [
-    "<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)",
-    "<rootDir>/__tests__/**/*.(test|spec).(ts|tsx|js|jsx)",
+    '<rootDir>/__tests__/**/*.(ts|tsx)',
+    '<rootDir>/src/**/__tests__/**/*.(ts|tsx)',
   ],
   collectCoverageFrom: [
-    "app/**/*.{ts,tsx}",
-    "!app/**/index.{ts,tsx}",
-    "!app/**/*.d.ts",
+    'src/**/*.(ts|tsx)',
+    '!src/**/*.d.ts',
   ],
-  testPathIgnorePatterns: ["<rootDir>/out/", "<rootDir>/node_modules/"],
-  transformIgnorePatterns: [
-    "node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))",
-  ],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  globals: {
+    'ts-jest': {
+      tsconfig: 'tsconfig.json',
+    },
+  },
 };

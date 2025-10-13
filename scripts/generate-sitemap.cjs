@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Generate sitemap
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ziontechgroup.com/</loc>
@@ -138,7 +138,7 @@ function generateSitemap() {
 }
 
 // Write sitemap to file
-const sitemap = generateSitemap();
+const sitemapData = generateSitemap();
 const outputPath = path.join(__dirname, '..', 'dist', 'sitemap.xml');
 
 // Ensure dist directory exists
@@ -147,7 +147,7 @@ if (!fs.existsSync(distDir)) {
   fs.mkdirSync(distDir, { recursive: true });
 }
 
-fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemap);
+fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemapData);
 console.log('Sitemap generated successfully');
 
 // Define all the routes in your application
@@ -251,11 +251,11 @@ const generateSitemap = () => {
 
 // Write sitemap to public directory
 const writeSitemap = () => {
-  const sitemap = generateSitemap();
+  const sitemapData2 = generateSitemap();
   const sitemapPath = path.join(__dirname, '..', 'public', 'sitemap.xml');
   
   try {
-    fs.writeFileSync(sitemapPath, sitemap, 'utf8');
+    fs.writeFileSync(sitemapPath, sitemapData2, 'utf8');
     console.log('✅ Sitemap generated successfully at:', sitemapPath);
   } catch (error) {
     console.error('❌ Error generating sitemap:', error);
