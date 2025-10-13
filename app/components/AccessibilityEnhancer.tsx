@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 'use client;
 =======
@@ -291,6 +292,46 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
       // Check if user prefers high contrast
       if (window.matchMedia('(prefers-contrast: high)').matches) {
         document.body.classList.add('high-contrast');
+=======
+import React, { useEffect } from 'react';
+
+interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
+}
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+  useEffect(() => {
+    // Skip focus management for keyboard navigation
+    const skipLinks = document.querySelectorAll('[data-skip-link]');
+    skipLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href') || '');
+        if (target) {
+          (target as HTMLElement).focus();
+        }
+      });
+    });
+
+    // Announce page changes to screen readers
+    const announcePageChange = () => {
+      const announcement = document.createElement('div');
+      announcement.setAttribute('aria-live', 'polite');
+      announcement.setAttribute('aria-atomic', 'true');
+      announcement.className = 'sr-only';
+      announcement.textContent = 'Page content has loaded';
+      document.body.appendChild(announcement);
+      
+      setTimeout(() => {
+        document.body.removeChild(announcement);
+      }, 1000);
+    };
+
+    // Add keyboard navigation support
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
       }
 
       // Listen for changes in contrast preference
@@ -303,6 +344,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
       });
     };
 
+<<<<<<< HEAD
     // Initialize all accessibility features
     addSkipLink();
     addAriaLandmarks();
@@ -631,10 +673,27 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
   }, []);
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
+=======
+    const handleMouseDown = () => {
+      document.body.classList.remove('keyboard-navigation');
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleMouseDown);
+
+    // Cleanup
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown);
+    };
+  }, []);
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
   return <>{children}</>;
 };
 
 export default AccessibilityEnhancer;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default AccessibilityEnhancer;
   return <>{children}</>
@@ -797,3 +856,5 @@ const AccessibilityEnhancer: React.FC = () => {
 
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091

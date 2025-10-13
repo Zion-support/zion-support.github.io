@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface FuturisticBackgroundProps {
@@ -28,3 +29,11 @@ const FuturisticBackground: React.FC = () => {
       className="fixed inset-0 w-full h-full pointer-events-none z-0"
       style={{ background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)' }}
 export default FuturisticBackground;
+=======
+      <canvas
+        ref={canvasRef}
+        className="fixed inset-0 w-full h-full pointer-events-none"
+        style={{ zIndex: -1 }}
+      />
+      {children}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091

@@ -1,23 +1,18 @@
 #!/bin/bash
 
-# Function to remove all merge conflict markers from a file
-fix_file() {
-    local file="$1"
-    if [ -f "$file" ]; then
-        # Remove all merge conflict markers
-        sed -i '/^<<<<<<< /d; /^=======/d; /^>>>>>>> /d' "$file"
-        echo "Fixed: $file"
-    fi
-}
+# Find all files with merge conflicts
+files_with_conflicts=$(find /workspace/app/components -name "*.tsx" -exec grep -l "<<<<<<< HEAD\|=======\|>>>>>>>" {} \;)
 
-# Fix all problematic files
-fix_file "/workspace/api/onsite-request.js"
-fix_file "/workspace/api/shipping-rates.js"
-fix_file "/workspace/api/subscribe.js"
-fix_file "/workspace/app/about/page.tsx"
-fix_file "/workspace/app/contact/page.tsx"
-fix_file "/workspace/app/enterprise/page.tsx"
-fix_file "/workspace/App.tsx"
-fix_file "/workspace/app/components/ErrorBoundary.tsx"
+for file in $files_with_conflicts; do
+  echo "Fixing conflicts in: $file"
+  
+  # Remove merge conflict markers and keep the HEAD version
+  sed -i '/<<<<<<< HEAD/,/=======/!d' "$file"
+  sed -i '/<<<<<<< HEAD/d' "$file"
+  sed -i '/=======/d' "$file"
+  sed -i '/>>>>>>> /d' "$file"
+  sed -i '/^=======/d' "$file"
+  sed -i '/^>>>>>>> /d' "$file"
+done
 
-echo "All files processed"
+echo "Fixed conflicts in all files"

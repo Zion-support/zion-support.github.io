@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -50,9 +48,12 @@ const WebDevelopmentPage: React.FC = () => {
 };
 
 export default WebDevelopmentPage;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
 =======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091

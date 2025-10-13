@@ -79,6 +79,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer'
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Brain, Shield, Zap, Globe, ArrowRight, CheckCircle, Star, Users, Award } from "lucide-react";
 import ImageOptimizer from "./components/ImageOptimizer";
 
@@ -153,6 +154,9 @@ const HomePage = () => {
         ogImage="https://ziontechgroup.com/images/og-image.jpg"
 =======
 import { ArrowRight, Star, Brain, Zap, Globe } from "lucide-react";
+=======
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";

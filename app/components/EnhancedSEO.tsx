@@ -1,9 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface EnhancedSEOProps {
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+interface SEOProps {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
   title: string;
   description: string;
   keywords?: string;
   canonical?: string;
+<<<<<<< HEAD
   structuredData?: any;
   keywords = '',
   canonical = '',
@@ -17,8 +25,13 @@ interface EnhancedSEOProps {
   keywords?: string;
   canonical?: string;
   ogImage?: string;
+=======
+  ogUrl?: string;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
   ogType?: string;
+  ogImage?: string;
   twitterCard?: string;
+<<<<<<< HEAD
   structuredData?: any;
   noindex?: boolean;
   nofollow?: boolean;
@@ -225,6 +238,59 @@ export default EnhancedSEO;
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//fonts.gstatic.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
+=======
+  twitterSite?: string;
+  twitterCreator?: string;
+  structuredData?: object;
+}
+
+const EnhancedSEO: React.FC<SEOProps> = ({
+  title,
+  description,
+  keywords,
+  canonical,
+  ogUrl,
+  ogType = 'website',
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  twitterCard = 'summary_large_image',
+  twitterSite = '@ziontechgroup',
+  twitterCreator = '@ziontechgroup',
+  structuredData
+}) => {
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const fullCanonical = canonical || `https://ziontechgroup.com${typeof window !== 'undefined' ? window.location.pathname : ''}`;
+  const fullOgUrl = ogUrl || fullCanonical;
+
+  return (
+    <Helmet>
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      {keywords && <meta name="keywords" content={keywords} />}
+      <link rel="canonical" href={fullCanonical} />
+      
+      {/* Open Graph */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content={fullOgUrl} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      
+      {/* Twitter */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:site" content={twitterSite} />
+      <meta name="twitter:creator" content={twitterCreator} />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      
+      {/* Additional SEO */}
+      <meta name="robots" content="index, follow" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="language" content="English" />
+      <meta name="author" content="Zion Tech Group" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
       
       {/* Structured Data */}
       {structuredData && (
@@ -232,6 +298,7 @@ export default EnhancedSEO;
           {JSON.stringify(structuredData)}
         </script>
       )}
+<<<<<<< HEAD
       
       {/* Additional Structured Data for Organization */}
       <script type="application/ld+json">
@@ -263,12 +330,17 @@ export default EnhancedSEO;
         })}
       </script>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
     </Helmet>
   );
 };
 
 export default EnhancedSEO;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ed4
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091

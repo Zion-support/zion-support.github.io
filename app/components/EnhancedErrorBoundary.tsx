@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,10 +28,18 @@ interface Props {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1061
+=======
+import React, { Component, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+
+interface Props {
+  children: ReactNode;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
 }
 
 interface State {
   hasError: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   error: Error | null;
@@ -214,6 +223,12 @@ Please describe what you were doing when this error occurred:
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
+=======
+  error?: Error;
+}
+
+class EnhancedErrorBoundary extends Component<Props, State> {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
@@ -223,6 +238,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
+<<<<<<< HEAD
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 <<<<<<< HEAD
     console.error('Error caught by boundary:', error, errorInfo);
@@ -230,13 +246,17 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     console.error('EnhancedErrorBoundary caught an error:', error, errorInfo);
     this.setState({ error, errorInfo });
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1061
+=======
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Enhanced Error Boundary caught an error:', error, errorInfo);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
   }
 
   render() {
     if (this.state.hasError) {
-<<<<<<< HEAD
       return (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<<<<<<< HEAD
           <div className="max-w-md mx-auto text-center p-8">
 =======
       if (this.props.fallback) {
@@ -255,12 +275,19 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             </h1>
             <p className="text-gray-300 mb-6">
 <<<<<<< HEAD
+=======
+          <div className="text-center p-8 max-w-md mx-auto">
+            <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
+            <h1 className="text-3xl font-bold text-white mb-4">Oops! Something went wrong</h1>
+            <p className="text-gray-300 mb-8">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
               We're sorry, but something unexpected happened. Please try refreshing the page.
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 =======
               We're sorry, but something unexpected happened. Please try refreshing the page or contact support if the problem persists.
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1061
             </p>
+<<<<<<< HEAD
             
             {process.env['NODE_ENV'] === 'development' && this.state.error && (
               <details className="mb-6 text-left">
@@ -390,6 +417,24 @@ export default EnhancedErrorBoundary;
             </div>
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1061
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={() => window.location.reload()}
+                className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2"
+              >
+                <RefreshCw className="w-5 h-5" />
+                <span>Try Again</span>
+              </button>
+              <button
+                onClick={() => window.location.href = '/'}
+                className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2"
+              >
+                <Home className="w-5 h-5" />
+                <span>Go Home</span>
+              </button>
+            </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
           </div>
         </div>
       );
@@ -400,8 +445,12 @@ export default EnhancedErrorBoundary;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default EnhancedErrorBoundary;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 =======
 export default EnhancedErrorBoundary;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1061
+=======
+export default EnhancedErrorBoundary;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
       name: "Professional",
       price: "$7,999",
       period: "/project",
@@ -288,3 +289,19 @@ import { Link } from 'react-router-dom'
     {
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
+=======
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import {
+  Cloud,
+  Shield,
+  Zap,
+  CheckCircle,
+  ArrowRight,
+  Star,
+} from "lucide-react";
+
+const CloudMigrationProPage = () => {
+  const features = [
+    {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091

@@ -23,10 +23,19 @@ export default defineConfig(({ mode }) => ({
     sourcemap: mode !== "production",
     cssCodeSplit: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
     chunkSizeWarningLimit: 1000,
 <<<<<<< HEAD
 =======
     assetsInlineLimit: 4096,
+=======
+    modulePreload: {
+      polyfill: false,
+    },
+    // Performance optimizations
+    chunkSizeWarningLimit: 150, // Balanced threshold for better performance
+    assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
     // Enable compression
     reportCompressedSize: true,
     // Additional optimizations
@@ -242,6 +251,7 @@ export default defineConfig(({ mode }) => ({
           }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           // Other service pages
           if (id.includes('/app/') && id.includes('/page.tsx') && 
               !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
@@ -253,6 +263,28 @@ export default defineConfig(({ mode }) => ({
             if (id.includes('/about') || id.includes('/contact')) {
               return 'main-important'
             }
+=======
+          // IT service pages - group together
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-') &&
+              (id.includes('devops') || id.includes('cloud') || id.includes('network') || 
+               id.includes('software') || id.includes('web') || id.includes('it-'))) {
+            return 'it-services'
+          }
+          // Micro SAAS pages - group together
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              (id.includes('micro-saas') || id.includes('project-management') || 
+               id.includes('customer-relationship') || id.includes('inventory') ||
+               id.includes('financial') || id.includes('employee') || id.includes('social') ||
+               id.includes('email') || id.includes('website') || id.includes('task') ||
+               id.includes('smart-') || id.includes('ai-powered'))) {
+            return 'micro-saas'
+          }
+          // Main pages - keep core pages together
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              (id.includes('about') || id.includes('contact') || id.includes('services') || 
+               id.includes('blog') || id.includes('privacy') || id.includes('terms'))) {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
             return 'main-pages'
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fe6
 =======

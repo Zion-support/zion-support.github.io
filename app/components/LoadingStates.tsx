@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client;
 =======
 import React from 'react';
@@ -191,11 +192,24 @@ export const ContentSkeleton: React.FC = () => {
           <p className="text-gray-300 text-sm">{description}</p>
         </div>
         <LoadingSpinner size="md" className="text-cyan-400" />
+=======
+import React from 'react';
+import { Loader2 } from 'lucide-react';
+
+export const LoadingPage: React.FC = () => {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="text-center">
+        <Loader2 className="w-12 h-12 text-cyan-400 animate-spin mx-auto mb-4" />
+        <h2 className="text-2xl font-bold text-white mb-2">Loading...</h2>
+        <p className="text-gray-400">Please wait while we load the content</p>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD
 interface SkeletonLoaderProps {
   lines?: number;
   className?: string;
@@ -259,3 +273,6 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({ service }) => {
 
 export default LoadingPage;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ed4
+=======
+export default LoadingPage;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,6 +15,31 @@ export default function PerformanceMonitor() {
   const [isVisible, setIsVisible] = useState(false);
     // Only run in development
     if (process.env['NODE_ENV'] !== 'development') return;
+=======
+import React, { useEffect, useState } from 'react';
+
+interface PerformanceMetrics {
+  lcp: number;
+  fid: number;
+  cls: number;
+  fcp: number;
+  ttfb: number;
+}
+
+interface PerformanceMonitorProps {
+  children: React.ReactNode;
+  showDetails?: boolean;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children, showDetails = false }) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    fcp: 0,
+    ttfb: 0
+  });
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
 
     const measurePerformance = () => {
       // Measure load time
@@ -98,6 +124,7 @@ export default function PerformanceMonitor() {
 const timer = setTimeout(() => setIsVisible(true), 3000);
       observer.disconnect();
   useEffect(() => {
+<<<<<<< HEAD
     // Only show in development or if explicitly enabled
     if (process.env['NODE_ENV'] !== 'development' && !showInProduction) {
       return;
@@ -360,10 +387,27 @@ const PerformanceMonitor: React.FC = () => {
             if (!entry.hadRecentInput) {
               setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
             }
+=======
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+          }
+          if (entry.entryType === 'first-input') {
+            setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime }));
+          }
+          if (entry.entryType === 'layout-shift') {
+            setMetrics(prev => ({ ...prev, cls: prev.cls + (entry as any).value }));
+          }
+          if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
+            setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
           }
         }
       });
 
+<<<<<<< HEAD
       try {
         observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
       } catch (e) {
@@ -536,10 +580,31 @@ const PerformanceMonitor: React.FC = () => {
         </div>
       </div>
     </div>
+=======
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
+
+      return () => observer.disconnect();
+    }
+  }, []);
+
+  return (
+    <>
+      {children}
+      {showDetails && process.env['NODE_ENV'] === 'development' && (
+        <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-4 rounded-lg text-xs">
+          <div>LCP: {metrics.lcp.toFixed(2)}ms</div>
+          <div>FID: {metrics.fid.toFixed(2)}ms</div>
+          <div>CLS: {metrics.cls.toFixed(4)}</div>
+          <div>FCP: {metrics.fcp.toFixed(2)}ms</div>
+        </div>
+      )}
+    </>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
   );
 };
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
 
+<<<<<<< HEAD
     // Update metrics after page load
     const timer = setTimeout(updateMetrics, 1000);
     
@@ -867,3 +932,6 @@ export default PerformanceMonitor;
 
 export default PerformanceMonitor;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
+=======
+export default PerformanceMonitor;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091

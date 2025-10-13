@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
@@ -31,6 +32,8 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     
     // Log error to console in development
     if (process.env['NODE_ENV'] === 'development') {
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
       console.error('Error caught by boundary:', error, errorInfo);
     }
     
@@ -41,6 +44,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     
     // In production, you might want to send this to an error reporting service
     // Example: errorReportingService.captureException(error, { extra: errorInfo });
+<<<<<<< HEAD
   }
 
   handleRetry = () => {
@@ -152,3 +156,5 @@ export const useErrorHandler = () => {
 
 export default ImprovedErrorBoundary;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
