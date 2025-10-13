@@ -16,6 +16,7 @@ interface EnhancedSEOProps {
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
+<<<<<<< HEAD
   ogUrl?: string;
 <<<<<<< HEAD
   twitterTitle?: string;
@@ -24,11 +25,27 @@ interface EnhancedSEOProps {
   structuredData?: object;
   noIndex?: boolean;
   noFollow?: boolean;
+=======
+  ogType?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  structuredData?: any;
+  noIndex?: boolean;
+  noindex?: boolean;
+  nofollow?: boolean;
+  lang?: string;
+>>>>>>> cursor/analyze-improve-and-deploy-application-30da
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
   tags?: string[];
+<<<<<<< HEAD
+=======
+  readingTime?: number;
+>>>>>>> cursor/analyze-improve-and-deploy-application-30da
 }
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
@@ -45,6 +62,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   twitterImage,
   structuredData,
   noIndex = false,
+<<<<<<< HEAD
   noFollow = false,
   author = "Zion Tech Group",
   publishedTime,
@@ -54,11 +72,30 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
 }) => {
   const siteUrl = "https://ziontechgroup.com";
   const defaultImage = `${siteUrl}/api/placeholder/1200/630`;
+=======
+  noindex = false,
+  nofollow = false,
+  lang = 'en',
+  author,
+  section,
+  tags = [],
+  readingTime
+}) => {
+  const siteName = 'Zion Tech Group';
+  const siteUrl = 'https://ziontechgroup.com';
+  const defaultImage = 'https://ziontechgroup.com/og-image.jpg';
+>>>>>>> cursor/analyze-improve-and-deploy-application-30da
   
   const fullTitle = title.includes("Zion Tech Group") ? title : `${title} | Zion Tech Group`;
   const fullDescription = description || "Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses.";
   const fullKeywords = keywords || "AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology";
   
+<<<<<<< HEAD
+=======
+  const defaultKeywords = 'AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology, Zion Tech Group';
+  const finalKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords;
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-30da
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -86,6 +123,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
     ]
   };
 
+<<<<<<< HEAD
   const articleStructuredData = publishedTime ? {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -146,20 +184,53 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   const fullTwitterDescription = twitterDescription || description;
   const fullTwitterImage = twitterImage || ogImage;
 >>>>>>> cursor/analyze-improve-and-deploy-application-c573
+=======
+  const mergedStructuredData = structuredData ? { ...defaultStructuredData, ...structuredData } : defaultStructuredData;
+
+  const robotsContent = [
+    (noIndex || noindex) ? 'noindex' : 'index',
+    nofollow ? 'nofollow' : 'follow'
+  ].join(', ');
+>>>>>>> cursor/analyze-improve-and-deploy-application-30da
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <meta name="description" content={fullDescription} />
       <meta name="keywords" content={fullKeywords} />
       <meta name="author" content={author} />
       <meta name="robots" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} />
+=======
+      <meta name="description" content={description} />
+      <meta name="keywords" content={finalKeywords} />
+      <meta name="robots" content={robotsContent} />
+      <meta name="language" content={lang} />
+      {author && <meta name="author" content={author} />}
+      {section && <meta name="article:section" content={section} />}
+      {tags.length > 0 && <meta name="article:tag" content={tags.join(', ')} />}
+      {readingTime && <meta name="twitter:label1" content="Reading time" />}
+      {readingTime && <meta name="twitter:data1" content={`${readingTime} min read`} />}
+
+      {/* Canonical URL */}
+      {fullCanonical && <link rel="canonical" href={fullCanonical} />}
+
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={ogTitle || fullTitle} />
+      <meta property="og:description" content={ogDescription || description} />
+      <meta property="og:image" content={fullOgImage} />
+      <meta property="og:url" content={fullOgUrl} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:site_name" content={siteName} />
+      <meta property="og:locale" content={lang === 'en' ? 'en_US' : lang} />
+>>>>>>> cursor/analyze-improve-and-deploy-application-30da
       
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical} />}
       
+<<<<<<< HEAD
       {/* Open Graph Meta Tags */}
       <meta property="og:type" content={publishedTime ? "article" : "website"} />
       <meta property="og:title" content={ogTitle || fullTitle} />
@@ -222,6 +293,13 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       
+=======
+      {/* Additional Meta Tags */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="theme-color" content="#00ffff" />
+      <meta name="msapplication-TileColor" content="#8b5cf6" />
+>>>>>>> cursor/analyze-improve-and-deploy-application-30da
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
@@ -230,8 +308,9 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
+      <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
       
+<<<<<<< HEAD
       {/* DNS Prefetch for performance */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
@@ -246,8 +325,18 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
         </script>
       )}
 >>>>>>> cursor/analyze-improve-and-deploy-application-c573
+=======
+      {/* Favicon and Icons */}
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      <link rel="manifest" href="/manifest.json" />
+>>>>>>> cursor/analyze-improve-and-deploy-application-30da
     </Helmet>
   );
 };
 
+<<<<<<< HEAD
 export default EnhancedSEO;
+=======
+export default EnhancedSEO;
+>>>>>>> cursor/analyze-improve-and-deploy-application-30da

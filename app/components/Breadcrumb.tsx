@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronRight, Home } from "lucide-react";
@@ -16,6 +17,14 @@ import { ChevronRight, Home } from 'lucide-react';
 
 const Breadcrumb: React.FC = () => {
   const location = useLocation();
+=======
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { ChevronRight, Home } from 'lucide-react';
+
+const Breadcrumb: React.FC = () => {
+  const location = useLocation();
+>>>>>>> cursor/analyze-improve-and-deploy-application-30da
   
   const pathSegments = location.pathname
     .split('/')
@@ -27,13 +36,17 @@ const Breadcrumb: React.FC = () => {
     }));
 
   if (pathSegments.length === 0) {
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-c573
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-9c39
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-30da
     return null;
   }
 
   return (
+<<<<<<< HEAD
     <nav className="flex items-center space-x-2 text-sm text-gray-400 mb-4">
       <Link
         to="/"
@@ -73,6 +86,9 @@ const Breadcrumb: React.FC = () => {
 }
 =======
     <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-white/10 py-2" aria-label="Breadcrumb">
+=======
+    <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-cyan-500/20 py-3">
+>>>>>>> cursor/analyze-improve-and-deploy-application-30da
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ol className="flex items-center space-x-2 text-sm">
           <li>
@@ -80,15 +96,27 @@ const Breadcrumb: React.FC = () => {
               to="/"
               className="text-gray-400 hover:text-cyan-400 transition-colors flex items-center"
             >
+<<<<<<< HEAD
               <Home className="w-4 h-4" />
               <span className="sr-only">Home</span>
             </Link>
           </li>
+=======
+              <Home className="w-4 h-4 mr-1" />
+              Home
+            </Link>
+          </li>
+          
+>>>>>>> cursor/analyze-improve-and-deploy-application-30da
           {pathSegments.map((segment, index) => (
             <li key={segment.path} className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-500 mx-2" />
               {segment.isLast ? (
+<<<<<<< HEAD
                 <span className="text-cyan-400 font-medium" aria-current="page">
+=======
+                <span className="text-cyan-400 font-medium">
+>>>>>>> cursor/analyze-improve-and-deploy-application-30da
                   {segment.name}
                 </span>
               ) : (
@@ -103,11 +131,17 @@ const Breadcrumb: React.FC = () => {
           ))}
         </ol>
       </div>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-9c39
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-30da
     </nav>
   );
 };
 
 export default Breadcrumb;
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-c573
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-30da

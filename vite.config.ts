@@ -36,12 +36,17 @@ export default defineConfig({
     },
     // Performance optimizations
 <<<<<<< HEAD
+<<<<<<< HEAD
     chunkSizeWarningLimit: 100, // Reduced warning threshold for better performance
     assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
 =======
     chunkSizeWarningLimit: 500, // Increased threshold for better chunking
     assetsInlineLimit: 1024, // Optimized for better caching and faster initial load
 >>>>>>> cursor/analyze-improve-and-deploy-application-c573
+=======
+    chunkSizeWarningLimit: 150, // Balanced threshold for better performance
+    assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
+>>>>>>> cursor/analyze-improve-and-deploy-application-30da
     // Enable compression
     reportCompressedSize: true,
     // Optimize for production
@@ -158,9 +163,32 @@ export default defineConfig({
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
             return '5g-services'
           }
+<<<<<<< HEAD
           // Main pages
           if (id.includes('/app/') && id.includes('/page.tsx') && 
               !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
+=======
+          // IT service pages - group together
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-') &&
+              (id.includes('devops') || id.includes('cloud') || id.includes('network') || 
+               id.includes('software') || id.includes('web') || id.includes('it-'))) {
+            return 'it-services'
+          }
+          // Micro SAAS pages - group together
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              (id.includes('micro-saas') || id.includes('project-management') || 
+               id.includes('customer-relationship') || id.includes('inventory') ||
+               id.includes('financial') || id.includes('employee') || id.includes('social') ||
+               id.includes('email') || id.includes('website') || id.includes('task') ||
+               id.includes('smart-') || id.includes('ai-powered'))) {
+            return 'micro-saas'
+          }
+          // Main pages - keep core pages together
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              (id.includes('about') || id.includes('contact') || id.includes('services') || 
+               id.includes('blog') || id.includes('privacy') || id.includes('terms'))) {
+>>>>>>> cursor/analyze-improve-and-deploy-application-30da
             return 'main-pages'
           }
           // Default chunk for other modules

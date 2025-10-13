@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 =======
 import { Link } from 'react-router-dom';
@@ -20,13 +21,28 @@ interface FuturisticButtonProps {
 >>>>>>> cursor/analyze-improve-and-deploy-application-c573
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
+=======
+import { ArrowRight } from 'lucide-react';
+
+interface FuturisticButtonProps {
+  children: React.ReactNode;
+  variant?: 'primary' | 'outline' | 'ghost';
+  size?: 'sm' | 'md' | 'lg';
+  href?: string;
+  onClick?: () => void;
+  className?: string;
+  icon?: React.ReactNode;
+>>>>>>> cursor/analyze-improve-and-deploy-application-30da
 }
 
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   children,
+  variant = 'primary',
+  size = 'md',
   href,
   to,
   onClick,
+<<<<<<< HEAD
   variant = 'primary',
   size = 'md',
   className = '',
@@ -62,10 +78,32 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
 <<<<<<< HEAD
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className} ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`;
   
+=======
+  className = '',
+  icon
+}) => {
+  const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900';
+  
+  const variantClasses = {
+    primary: 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg hover:shadow-cyan-500/25',
+    outline: 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900',
+    ghost: 'text-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-300'
+  };
+  
+  const sizeClasses = {
+    sm: 'px-3 py-2 text-sm',
+    md: 'px-4 py-2 text-base',
+    lg: 'px-6 py-3 text-lg'
+  };
+
+  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-30da
   if (href) {
     return (
       <a href={href} className={classes}>
         {children}
+<<<<<<< HEAD
         <ArrowRight className="w-4 h-4 ml-2" />
       </a>
 =======
@@ -87,6 +125,9 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
         rel="noopener noreferrer"
       >
         {content}
+=======
+        {icon && <span className="ml-2 group-hover:translate-x-1 transition-transform">{icon}</span>}
+>>>>>>> cursor/analyze-improve-and-deploy-application-30da
       </a>
     );
   }
@@ -102,6 +143,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <button onClick={onClick} className={classes} disabled={disabled}>
       {children}
       <ArrowRight className="w-4 h-4 ml-2" />
@@ -114,6 +156,11 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     >
       {content}
 >>>>>>> cursor/analyze-improve-and-deploy-application-c573
+=======
+    <button onClick={onClick} className={classes}>
+      {children}
+      {icon && <span className="ml-2 group-hover:translate-x-1 transition-transform">{icon}</span>}
+>>>>>>> cursor/analyze-improve-and-deploy-application-30da
     </button>
   );
 };

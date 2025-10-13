@@ -1,7 +1,10 @@
 import React from 'react';
 
-<<<<<<< HEAD
-const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
+interface FuturisticBackgroundProps {
+  children?: React.ReactNode;
+}
+
+const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -50,11 +53,14 @@ const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
       window.removeEventListener('resize', resizeCanvas);
     };
   }, []);
+<<<<<<< HEAD
 =======
 interface FuturisticBackgroundProps {
   children: React.ReactNode;
 }
 >>>>>>> cursor/analyze-improve-and-deploy-application-c573
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-30da
 
 const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
   return (
@@ -87,7 +93,10 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
       <div className="relative z-10">
         {children}
       </div>
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-c573
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-30da
     </div>
   );
 };
