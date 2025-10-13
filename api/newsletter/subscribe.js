@@ -10,6 +10,7 @@ const isValidEmail = (email) => {
 async function handler(req, res) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default function handler(req, res) {
 >>>>>>> cursor/fix-errors-and-merge-to-main-3792
@@ -20,6 +21,9 @@ export default async function handler(req, res) {
 >>>>>>> cursor/fix-errors-and-merge-to-main-529c
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-717a
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-8341
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
@@ -54,6 +58,7 @@ export default async function handler(req, res) {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-3792
 =======
     res.statusCode = 200;
@@ -63,6 +68,8 @@ export default async function handler(req, res) {
 >>>>>>> cursor/fix-errors-and-merge-to-main-529c
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-717a
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8341
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
@@ -81,6 +88,7 @@ export default async function handler(req, res) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-717a
 }
@@ -98,3 +106,6 @@ export default handler;
 >>>>>>> cursor/fix-errors-and-merge-to-main-529c
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-717a
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-8341

@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -22,14 +22,16 @@ declare global {
     // This extends the built-in PerformanceEntry
   }
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8341
 
 // Type definitions for browser APIs
 declare global {
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
   interface PerformanceNavigationTiming extends PerformanceEntry {
     requestStart: number;
     responseStart: number;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   const PerformanceObserver: {
     new (callback: (list: { getEntries(): PerformanceEntry[] }) => void): PerformanceObserver;
@@ -53,6 +55,16 @@ import React, { useEffect, useState } from 'react';
   }
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-717a
+=======
+  
+  interface PerformanceEntry {
+    name: string;
+    entryType: string;
+    startTime: number;
+    duration: number;
+  }
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8341
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -84,6 +96,7 @@ const PerformanceMonitor: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (inputEntry.processingStart && inputEntry.startTime) {
               setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
             }
@@ -108,6 +121,9 @@ const PerformanceMonitor: React.FC = () => {
               setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
             }
 >>>>>>> cursor/fix-errors-and-merge-to-main-717a
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-8341
           } else if (entry.entryType === 'layout-shift') {
             setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
           }
@@ -141,7 +157,4 @@ const PerformanceMonitor: React.FC = () => {
   );
 };
 export default PerformanceMonitor;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-529c

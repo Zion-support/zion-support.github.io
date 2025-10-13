@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-717a
 
@@ -41,6 +42,9 @@ import React, { useEffect, useState } from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-1911
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-717a
+=======
+import React, { useEffect, useState } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-8341
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
@@ -209,6 +213,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -227,6 +232,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 >>>>>>> cursor/fix-errors-and-merge-to-main-1911
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-717a
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8341
 };
 
 export default AccessibilityEnhancer;

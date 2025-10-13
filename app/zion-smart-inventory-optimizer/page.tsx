@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-3792
@@ -12,6 +13,9 @@ import { Helmet } from 'react-helmet-async';
 >>>>>>> cursor/fix-errors-and-merge-to-main-529c
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-717a
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-8341
 export default function ZionSmartInventoryOptimizer() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -74,7 +78,4 @@ export default function ZionSmartInventoryOptimizer() {
           </div>
   );
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-529c

@@ -24,14 +24,11 @@ export default function handler(req, res) {
       timestamp: new Date().toISOString()
     });
     res.status(200).json({ success: true });
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
   } catch (error) {
     console.error('Error processing error report:', error);
     res.status(500).json({ error: 'Failed to process error report' });
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -49,3 +46,6 @@ export default function handler(req, res) {
 >>>>>>> cursor/fix-errors-and-merge-to-main-529c
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-717a
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-8341

@@ -3,6 +3,7 @@ import path from 'path';
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-3792
 =======
 // Simple wrapper function to replace withSentry
@@ -11,6 +12,8 @@ import path from 'path';
 >>>>>>> cursor/fix-errors-and-merge-to-main-529c
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-717a
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8341
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'onsite-requests.json');
 export default function handler(req, res) {
@@ -54,6 +57,7 @@ export default function handler(req, res) {
       success: true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-3792
 =======
@@ -61,6 +65,9 @@ export default function handler(req, res) {
 >>>>>>> cursor/fix-errors-and-merge-to-main-529c
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-717a
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-8341
       id: newRequest.id
     }));
   } catch {
