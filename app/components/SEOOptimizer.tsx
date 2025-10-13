@@ -26,17 +26,45 @@ const SEOOptimizer = ({
       "url": "https://ziontechgroup.com",
       "logo": "https://ziontechgroup.com/logo.png",
       "description": description,
-      "sameAs": [
-        "https://linkedin.com/company/zion-tech-group",
-        "https://twitter.com/ziontechgroup"
-      ],
+      "foundingDate": "2020",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "364 E Main St STE 1008",
+        "addressLocality": "Middletown",
+        "addressRegion": "DE",
+        "postalCode": "19709",
+        "addressCountry": "US"
+      },
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+1-555-0123",
+        "telephone": "+1-302-464-0950",
+        "email": "kleber@ziontechgroup.com",
         "contactType": "customer service",
         "areaServed": "US",
         "availableLanguage": "English"
-      }
+      },
+      "sameAs": [
+        "https://linkedin.com/company/ziontechgroup",
+        "https://twitter.com/ziontechgroup",
+        "https://github.com/ziontechgroup"
+      ],
+      "service": [
+        {
+          "@type": "Service",
+          "name": "AI Solutions",
+          "description": "Artificial intelligence and machine learning solutions"
+        },
+        {
+          "@type": "Service", 
+          "name": "Cybersecurity",
+          "description": "Comprehensive cybersecurity solutions and IT services"
+        },
+        {
+          "@type": "Service",
+          "name": "5G Implementation",
+          "description": "5G network implementation and edge computing solutions"
+        }
+      ]
     }
 
     // Add structured data to head

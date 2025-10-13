@@ -23,8 +23,11 @@ const PerformanceMonitor: React.FC = () => {
       const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
       
+      // Calculate load time more accurately
+      const loadTime = navigation.loadEventEnd - navigation.navigationStart;
+      
       const metrics: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+        loadTime: loadTime,
         firstContentfulPaint: fcp ? fcp.startTime : 0,
         largestContentfulPaint: lcp ? lcp.startTime : 0,
         firstInputDelay: 0, // Would need to measure with PerformanceObserver
@@ -32,6 +35,11 @@ const PerformanceMonitor: React.FC = () => {
       };
 
       setMetrics(metrics);
+      
+      // Log performance metrics for debugging
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Performance Metrics:', metrics);
+      }
     };
 
     // Measure after page load

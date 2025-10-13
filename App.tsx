@@ -13,8 +13,10 @@ import Breadcrumb from "./app/components/Breadcrumb";
 import PerformanceOptimizer from "./app/components/EnhancedPerformanceOptimizer";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
+import EnhancedAccessibilityFeatures from "./app/components/EnhancedAccessibilityFeatures";
 import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
+import EnhancedPerformanceMonitor from "./app/components/EnhancedPerformanceMonitor";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
@@ -409,6 +411,8 @@ function App() {
             <AnalyticsProvider>
               <div>
                 <PerformanceMonitor />
+                <EnhancedPerformanceMonitor />
+                <EnhancedAccessibilityFeatures />
                 <PerformanceEnhancer />
                 <SEOOptimizer />
               </div>

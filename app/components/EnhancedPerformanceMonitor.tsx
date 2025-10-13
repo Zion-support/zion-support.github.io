@@ -1,181 +1,146 @@
-import React, { useState, useEffect } from "react";
-import { Activity, Zap, Clock, TrendingUp } from "lucide-react";
+import React, { useEffect, useState } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  cpuUsage: number;
-  networkLatency: number;
-  errorRate: number;
+interface CoreWebVitals {
+  cls: number;
+  inp: number;
+  fcp: number;
+  lcp: number;
+  ttfb: number;
 }
 
-interface EnhancedPerformanceMonitorProps {
-  className?: string;
-  showDetails?: boolean;
-  refreshInterval?: number;
-}
-
-const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({
-  className = "",
-  showDetails = true,
-  refreshInterval = 1000,
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    cpuUsage: 0,
-    networkLatency: 0,
-    errorRate: 0,
-  });
-
-  const [isMonitoring, setIsMonitoring] = useState(false);
+const EnhancedPerformanceMonitor: React.FC = () => {
+  const [vitals, setVitals] = useState<CoreWebVitals | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (!isMonitoring) return;
+    // Only run in browser environment
+    if (typeof window === 'undefined') return;
 
-    const updateMetrics = () => {
-      // Simulate performance metrics collection
-      setMetrics({
-        loadTime: Math.random() * 1000 + 100,
-        renderTime: Math.random() * 50 + 10,
-        memoryUsage: Math.random() * 100,
-        cpuUsage: Math.random() * 100,
-        networkLatency: Math.random() * 200 + 50,
-        errorRate: Math.random() * 5,
-      });
-    };
+    const vitalsData: Partial<CoreWebVitals> = {};
 
-    const interval = setInterval(updateMetrics, refreshInterval);
-    updateMetrics(); // Initial update
+    // Measure Core Web Vitals
+    onCLS((metric) => {
+      vitalsData.cls = metric.value;
+      checkAllVitalsCollected();
+    });
 
-    return () => clearInterval(interval);
-  }, [isMonitoring, refreshInterval]);
+    onINP((metric) => {
+      vitalsData.inp = metric.value;
+      checkAllVitalsCollected();
+    });
 
-  const getPerformanceStatus = (
-    value: number,
-    thresholds: { good: number; warning: number },
-  ) => {
-    if (value <= thresholds.good) return "good";
-    if (value <= thresholds.warning) return "warning";
-    return "poor";
-  };
+    onFCP((metric) => {
+      vitalsData.fcp = metric.value;
+      checkAllVitalsCollected();
+    });
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case "good":
-        return "text-green-400";
-      case "warning":
-        return "text-yellow-400";
-      case "poor":
-        return "text-red-400";
-      default:
-        return "text-gray-400";
+    onLCP((metric) => {
+      vitalsData.lcp = metric.value;
+      checkAllVitalsCollected();
+    });
+
+    onTTFB((metric) => {
+      vitalsData.ttfb = metric.value;
+      checkAllVitalsCollected();
+    });
+
+    function checkAllVitalsCollected() {
+      if (vitalsData.cls !== undefined && 
+          vitalsData.inp !== undefined && 
+          vitalsData.fcp !== undefined && 
+          vitalsData.lcp !== undefined && 
+          vitalsData.ttfb !== undefined) {
+        setVitals(vitalsData as CoreWebVitals);
+      }
     }
-  };
 
-  const loadTimeStatus = getPerformanceStatus(metrics.loadTime, {
-    good: 200,
-    warning: 500,
-  });
-  const memoryStatus = getPerformanceStatus(metrics.memoryUsage, {
-    good: 50,
-    warning: 80,
-  });
-  const cpuStatus = getPerformanceStatus(metrics.cpuUsage, {
-    good: 30,
-    warning: 70,
-  });
+    // Fallback timeout
+    setTimeout(() => {
+      if (!vitals) {
+        setVitals({
+          cls: 0,
+          inp: 0,
+          fcp: 0,
+          lcp: 0,
+          ttfb: 0
+        });
+      }
+    }, 5000);
+
+  }, []);
+
+  // Only show in development
+  if (process.env.NODE_ENV !== 'development' || !vitals) {
+    return null;
+  }
+
+  const getScoreColor = (value: number, thresholds: { good: number; needsImprovement: number }) => {
+    if (value <= thresholds.good) return 'text-green-600';
+    if (value <= thresholds.needsImprovement) return 'text-yellow-600';
+    return 'text-red-600';
+  };
 
   return (
-    <div
-      className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 ${className}`}
-    >
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center space-x-2">
-          <Activity className="w-6 h-6 text-cyan-400" />
-          <h3 className="text-xl font-semibold text-white">
-            Performance Monitor
-          </h3>
-        </div>
-        <button
-          onClick={() => setIsMonitoring(!isMonitoring)}
-          className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
-            isMonitoring
-              ? "bg-red-500 hover:bg-red-600 text-white"
-              : "bg-green-500 hover:bg-green-600 text-white"
-          }`}
-        >
-          {isMonitoring ? "Stop" : "Start"} Monitoring
-        </button>
-      </div>
-
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-        <div className="text-center">
-          <div className="flex items-center justify-center mb-2">
-            <Clock className="w-5 h-5 text-blue-400 mr-2" />
-            <span className="text-sm text-gray-300">Load Time</span>
+    <div className="fixed bottom-4 right-4 z-50">
+      <button
+        onClick={() => setIsVisible(!isVisible)}
+        className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg"
+      >
+        Core Web Vitals
+      </button>
+      
+      {isVisible && (
+        <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-xl p-6 w-80">
+          <h3 className="font-bold text-gray-900 mb-4 text-lg">Core Web Vitals</h3>
+          <div className="space-y-3 text-sm">
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600 font-medium">LCP (Largest Contentful Paint):</span>
+              <span className={`font-mono font-bold ${getScoreColor(vitals.lcp, { good: 2500, needsImprovement: 4000 })}`}>
+                {vitals.lcp.toFixed(0)}ms
+              </span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600 font-medium">INP (Interaction to Next Paint):</span>
+              <span className={`font-mono font-bold ${getScoreColor(vitals.inp, { good: 200, needsImprovement: 500 })}`}>
+                {vitals.inp.toFixed(0)}ms
+              </span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600 font-medium">CLS (Cumulative Layout Shift):</span>
+              <span className={`font-mono font-bold ${getScoreColor(vitals.cls, { good: 0.1, needsImprovement: 0.25 })}`}>
+                {vitals.cls.toFixed(3)}
+              </span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600 font-medium">FCP (First Contentful Paint):</span>
+              <span className={`font-mono font-bold ${getScoreColor(vitals.fcp, { good: 1800, needsImprovement: 3000 })}`}>
+                {vitals.fcp.toFixed(0)}ms
+              </span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600 font-medium">TTFB (Time to First Byte):</span>
+              <span className={`font-mono font-bold ${getScoreColor(vitals.ttfb, { good: 800, needsImprovement: 1800 })}`}>
+                {vitals.ttfb.toFixed(0)}ms
+              </span>
+            </div>
           </div>
-          <div
-            className={`text-2xl font-bold ${getStatusColor(loadTimeStatus)}`}
-          >
-            {metrics.loadTime.toFixed(0)}ms
-          </div>
-        </div>
-
-        <div className="text-center">
-          <div className="flex items-center justify-center mb-2">
-            <Zap className="w-5 h-5 text-yellow-400 mr-2" />
-            <span className="text-sm text-gray-300">Memory</span>
-          </div>
-          <div className={`text-2xl font-bold ${getStatusColor(memoryStatus)}`}>
-            {metrics.memoryUsage.toFixed(1)}%
-          </div>
-        </div>
-
-        <div className="text-center">
-          <div className="flex items-center justify-center mb-2">
-            <TrendingUp className="w-5 h-5 text-purple-400 mr-2" />
-            <span className="text-sm text-gray-300">CPU</span>
-          </div>
-          <div className={`text-2xl font-bold ${getStatusColor(cpuStatus)}`}>
-            {metrics.cpuUsage.toFixed(1)}%
-          </div>
-        </div>
-      </div>
-
-      {showDetails && (
-        <div className="space-y-4">
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <div className="text-sm text-gray-300 mb-1">Render Time</div>
-              <div className="text-lg font-semibold text-white">
-                {metrics.renderTime.toFixed(1)}ms
+          
+          <div className="mt-4 pt-4 border-t border-gray-200">
+            <div className="text-xs text-gray-500">
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                <span>Good</span>
+              </div>
+              <div className="flex items-center space-x-2 mt-1">
+                <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                <span>Needs Improvement</span>
+              </div>
+              <div className="flex items-center space-x-2 mt-1">
+                <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                <span>Poor</span>
               </div>
             </div>
-            <div>
-              <div className="text-sm text-gray-300 mb-1">Network Latency</div>
-              <div className="text-lg font-semibold text-white">
-                {metrics.networkLatency.toFixed(0)}ms
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div className="text-sm text-gray-300 mb-1">Error Rate</div>
-            <div className="text-lg font-semibold text-white">
-              {metrics.errorRate.toFixed(2)}%
-            </div>
-          </div>
-        </div>
-      )}
-
-      {isMonitoring && (
-        <div className="mt-4 p-3 bg-green-500/20 border border-green-500/30 rounded-lg">
-          <div className="flex items-center text-green-400 text-sm">
-            <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
-            Live monitoring active
           </div>
         </div>
       )}
