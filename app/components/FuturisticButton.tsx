@@ -6,20 +6,6 @@ interface FuturisticButtonProps {
   children: React.ReactNode;
   href?: string;
   onClick?: () => void;
-<<<<<<< HEAD
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
-  size?: 'sm' | 'md' | 'lg';
-  className?: string;
-  icon?: React.ReactNode;
-  disabled?: boolean;
-}
-
-const FuturisticButton = ({ 
-  children, 
-  href, 
-  onClick, 
-  variant = 'primary', 
-=======
   variant?: 'primary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   icon?: React.ReactNode;
@@ -32,13 +18,11 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   href,
   onClick,
   variant = 'primary',
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
   size = 'md',
   className,
   icon,
-<<<<<<< HEAD
   disabled = false
-}: FuturisticButtonProps) => {
+}) => {
   const baseClasses = 'relative inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900 disabled:opacity-50 disabled:cursor-not-allowed';
   
   const sizeClasses = {
