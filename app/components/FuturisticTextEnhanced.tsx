@@ -99,7 +99,7 @@ const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
       scale: 1.05,
       transition: { duration: 0.2 }
     }
-  };
+  } as const;
 
   const getTextColor = () => {
     if (gradient) {

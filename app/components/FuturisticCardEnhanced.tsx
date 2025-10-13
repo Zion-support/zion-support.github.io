@@ -4,12 +4,20 @@ interface FuturisticCardEnhancedProps {
   children: React.ReactNode;
   className?: string;
   variant?: 'default' | 'gradient' | 'glass';
+  glowColor?: string;
+  hoverEffect?: boolean;
+  animated?: boolean;
+  neon?: boolean;
 }
 
 const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = ({ 
   children, 
   className = '', 
-  variant = 'default' 
+  variant = 'default',
+  glowColor = 'cyan',
+  hoverEffect = true,
+  animated = false,
+  neon = false
 }) => {
   const baseClasses = "relative rounded-xl overflow-hidden transition-all duration-300";
   
@@ -19,10 +27,18 @@ const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = ({
     glass: "bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20"
   };
 
+  const glowColorClass = glowColor === 'cyan' ? 'from-cyan-500/5 to-purple-500/5' : 
+                        glowColor === 'purple' ? 'from-purple-500/5 to-pink-500/5' :
+                        'from-cyan-500/5 to-purple-500/5';
+  
+  const hoverClasses = hoverEffect ? 'hover:border-cyan-500/40' : '';
+  const animationClasses = animated ? 'animate-pulse' : '';
+  const neonClasses = neon ? 'shadow-lg shadow-cyan-500/25' : '';
+
   return (
-    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
+    <div className={`${baseClasses} ${variantClasses[variant]} ${hoverClasses} ${animationClasses} ${neonClasses} ${className}`}>
       {/* Glow effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+      <div className={`absolute inset-0 bg-gradient-to-r ${glowColorClass} opacity-0 hover:opacity-100 transition-opacity duration-300`}></div>
       
       {/* Content */}
       <div className="relative z-10 p-6">
