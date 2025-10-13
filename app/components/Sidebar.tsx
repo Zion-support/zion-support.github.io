@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { X } from 'lucide-react';
-=======
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { 
@@ -25,12 +20,6 @@ import {
   Mail,
   MapPin
 } from 'lucide-react'
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { X, Brain, Shield, Zap, Globe, Home, Mail, Phone } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
 
 interface SidebarProps {
   isOpen: boolean;
@@ -38,37 +27,9 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-<<<<<<< HEAD
-  if (!isOpen) return null;
-
-  return (
-<<<<<<< HEAD
-    <div className="fixed inset-0 z-50 md:hidden">
-      <div className="fixed inset-0 bg-black/50" onClick={onClose} />
-      <div className="fixed top-0 right-0 h-full w-80 bg-slate-900/95 backdrop-blur-md border-l border-cyan-500/20">
-        <div className="flex items-center justify-between p-4 border-b border-cyan-500/20">
-          <h2 className="text-lg font-semibold text-white">Menu</h2>
-          <button
-            onClick={onClose}
-            className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10"
-          >
-            <X className="w-6 h-6" />
-          </button>
-        </div>
-        <div className="p-4">
-          <p className="text-gray-300">Sidebar content goes here</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Sidebar;
-=======
-=======
   const mainNavItems = [
     { name: 'Home', href: '/', icon: Home },
-    { name: 'About', href: '/about', icon: Brain },
+    { name: 'About', href: '/about', icon: Users },
     { name: 'Contact', href: '/contact', icon: Mail },
   ];
 
@@ -76,13 +37,26 @@ export default Sidebar;
     { name: 'AI Solutions', href: '/ai-services', icon: Brain },
     { name: 'IT Services', href: '/services', icon: Shield },
     { name: 'Micro SAAS', href: '/micro-saas', icon: Zap },
-    { name: '5G Solutions', href: '/5g-solutions', icon: Globe },
+    { name: '5G Solutions', href: '/5g-solutions', icon: Cloud },
+  ];
+
+  const microSaasItems = [
+    { name: 'Zion Analytics Pro', href: '/zion-analytics-pro', icon: BarChart3 },
+    { name: 'Zion Security Shield', href: '/zion-security-shield', icon: Shield },
+    { name: 'Zion Cloud Vault', href: '/zion-cloud-vault', icon: Cloud },
+    { name: 'Zion Content Studio', href: '/zion-content-studio', icon: Code },
+  ];
+
+  const aiServicesItems = [
+    { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart3 },
+    { name: 'AI Content Generation', href: '/ai-content-generation', icon: Code },
+    { name: 'AI Customer Support', href: '/ai-customer-support', icon: Users },
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield },
   ];
 
   if (!isOpen) return null;
 
   return (
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
     <>
       {/* Overlay */}
       <div
@@ -142,6 +116,42 @@ export default Sidebar;
             </div>
           </div>
 
+          {/* Micro SAAS */}
+          <div className="mb-8">
+            <h3 className="text-purple-400 font-semibold mb-4 px-4">Micro SAAS</h3>
+            <div className="space-y-2">
+              {microSaasItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  onClick={onClose}
+                  className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-purple-400 hover:bg-slate-800/50 rounded-lg transition-colors group"
+                >
+                  <item.icon className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                  <span>{item.name}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* AI Services */}
+          <div className="mb-8">
+            <h3 className="text-blue-400 font-semibold mb-4 px-4">AI Services</h3>
+            <div className="space-y-2">
+              {aiServicesItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  onClick={onClose}
+                  className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-blue-400 hover:bg-slate-800/50 rounded-lg transition-colors group"
+                >
+                  <item.icon className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                  <span>{item.name}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
           {/* Contact Info */}
           <div className="border-t border-gray-700 pt-6">
             <h3 className="text-cyan-400 font-semibold mb-4 px-4">Contact Us</h3>
@@ -154,6 +164,10 @@ export default Sidebar;
                 <Phone className="w-4 h-4 text-cyan-400" />
                 <span className="text-sm">+1 302 464 0950</span>
               </div>
+              <div className="flex items-start space-x-3 text-gray-400">
+                <MapPin className="w-4 h-4 text-cyan-400 mt-0.5" />
+                <span className="text-sm">364 E Main St STE 1008<br />Middletown, DE 19709</span>
+              </div>
             </div>
           </div>
         </div>
@@ -162,9 +176,4 @@ export default Sidebar;
   );
 };
 
-<<<<<<< HEAD
-export default Sidebar
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
 export default Sidebar;
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
