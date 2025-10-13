@@ -1,3 +1,6 @@
+const path = require('path');
+const fs = require('fs');
+
 export default function handler(req, res) {
   if (req.method !== "POST") {
     res.statusCode = 405;

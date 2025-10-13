@@ -126,3 +126,40 @@ function App() {
       console.log('Zion Tech Group App initialized');
     }
   }, []);
+
+  return (
+    <div className="App">
+      <EnhancedErrorBoundary>
+        <AnalyticsProvider>
+          <PerformanceMonitor>
+            <WebVitalsTracker>
+              <AccessibilityEnhancer>
+                <CoreWebVitals>
+                  <FuturisticBackground>
+                    <EnhancedAccessibility>
+                      <Navigation 
+                        isSidebarOpen={isSidebarOpen}
+                        toggleSidebar={toggleSidebar}
+                      />
+                      <Sidebar 
+                        isOpen={isSidebarOpen}
+                        onClose={closeSidebar}
+                      />
+                      <main className="main-content">
+                        <Breadcrumb />
+                        <HomePage />
+                      </main>
+                      <Footer />
+                    </EnhancedAccessibility>
+                  </FuturisticBackground>
+                </CoreWebVitals>
+              </AccessibilityEnhancer>
+            </WebVitalsTracker>
+          </PerformanceMonitor>
+        </AnalyticsProvider>
+      </EnhancedErrorBoundary>
+    </div>
+  );
+}
+
+export default App;
