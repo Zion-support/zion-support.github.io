@@ -1,11 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Right, Circle } from 'lucide-react';
-=======
 import { Right, Circle, MessageCircle, Mail, Phone, BookOpen } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
 
 const SupportPage: React.FC = () => {
   const supportOptions = [
