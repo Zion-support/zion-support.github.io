@@ -14,12 +14,12 @@ import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import GlobalErrorBoundary from "./app/components/GlobalErrorBoundary";
-
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
 const ContactPage = React.lazy(() => import("./app/contact/page"));
@@ -38,18 +38,14 @@ const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
 const CookiesPage = React.lazy(() => import("./app/cookies/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
-
 // New AI Services
 const AIVoiceCloningStudioPage = React.lazy(() => import("./app/ai-voice-cloning-studio/page"));
 const AIQuantumFinancialOraclePage = React.lazy(() => import("./app/ai-quantum-financial-oracle/page"));
 const AISpaceMissionOptimizerPage = React.lazy(() => import("./app/ai-space-mission-optimizer/page"));
-
 // New IT Services
 const QuantumComputingSolutionsPage = React.lazy(() => import("./app/quantum-computing-solutions/page"));
-
 // New Micro SAAS Services
 const ZionAINeuralInterfacePage = React.lazy(() => import("./app/zion-ai-neural-interface/page"));
-
 // Additional service pages
 const ItServicesPage = React.lazy(() => import("./app/it-services/page"));
 const CloudServicesPage = React.lazy(() => import("./app/cloud-services/page"));
@@ -66,7 +62,6 @@ const FiveGIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/pa
 const FiveGSmartCitySolutionsPage = React.lazy(() => import("./app/5g-smart-city-solutions/page"));
 const FiveGPrivateNetworksPage = React.lazy(() => import("./app/5g-private-networks/page"));
 const FiveGDataAnalyticsPage = React.lazy(() => import("./app/5g-data-analytics/page"));
-
 // AI Service pages
 const AiAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
 const AiAutomationPage = React.lazy(() => import("./app/ai-automation/page"));
@@ -83,19 +78,15 @@ const AiProjectManagementPage = React.lazy(() => import("./app/ai-project-manage
 const AiRecommendationEnginePage = React.lazy(() => import("./app/ai-recommendation-engine/page"));
 const AiSalesAutomationPage = React.lazy(() => import("./app/ai-sales-automation/page"));
 const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
-
 // Main App Component
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
-
   const toggleSidebar = React.useCallback(() => {
     setIsSidebarOpen(prev => !prev);
   }, []);
-
   const closeSidebar = React.useCallback(() => {
     setIsSidebarOpen(false);
   }, []);
-
   return (
     <GlobalErrorBoundary>
       <EnhancedErrorBoundary>
@@ -128,18 +119,14 @@ function App() {
                         <Route path="/terms" element={<TermsPage />} />
                         <Route path="/cookies" element={<CookiesPage />} />
                         <Route path="/sitemap" element={<SitemapPage />} />
-                        
                         {/* New AI Services */}
                         <Route path="/ai-voice-cloning-studio" element={<AIVoiceCloningStudioPage />} />
                         <Route path="/ai-quantum-financial-oracle" element={<AIQuantumFinancialOraclePage />} />
                         <Route path="/ai-space-mission-optimizer" element={<AISpaceMissionOptimizerPage />} />
-                        
                         {/* New IT Services */}
                         <Route path="/quantum-computing-solutions" element={<QuantumComputingSolutionsPage />} />
-                        
                         {/* New Micro SAAS Services */}
                         <Route path="/zion-ai-neural-interface" element={<ZionAINeuralInterfacePage />} />
-                        
                         {/* Additional Service Pages */}
                         <Route path="/it-services" element={<ItServicesPage />} />
                         <Route path="/cloud-services" element={<CloudServicesPage />} />
@@ -150,7 +137,6 @@ function App() {
                         <Route path="/web-development" element={<WebDevelopmentPage />} />
                         <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
                         <Route path="/database-management" element={<DatabaseManagementPage />} />
-                        
                         {/* 5G Solutions */}
                         <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
                         <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
@@ -158,7 +144,6 @@ function App() {
                         <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
                         <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
                         <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
-                        
                         {/* AI Services */}
                         <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
                         <Route path="/ai-automation" element={<AiAutomationPage />} />
@@ -186,12 +171,7 @@ function App() {
                   <div></div>
                 </EnhancedAccessibility>
               </div>
-              <AnalyticsProvider>
-                <div>
-                  <PerformanceMonitor />
-                  <WebVitalsTracker />
-                </div>
-              </AnalyticsProvider>
+              <AnalyticsProvider />
             </Router>
           </AccessibilityEnhancer>
         </HelmetProvider>
@@ -199,5 +179,4 @@ function App() {
     </GlobalErrorBoundary>
   );
 }
-
 export default App;

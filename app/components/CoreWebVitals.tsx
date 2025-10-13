@@ -34,13 +34,11 @@ const CoreWebVitals: React.FC = () => {
 
     // Log in development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Web Vital:', data.name, data.value);
-    }
+      }
 =======
   useEffect(() => {
     // Core Web Vitals monitoring
-    console.log('Core Web Vitals monitoring initialized');
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
+    >>>>>>> cursor/analyze-improve-and-deploy-application-a281
   }, []);
 
   useEffect(() => {
@@ -55,8 +53,7 @@ const CoreWebVitals: React.FC = () => {
         onTTFB(reportWebVitals);
         onINP(reportWebVitals);
       } catch (error) {
-        console.warn('Failed to load web-vitals:', error);
-      }
+        }
     };
 
     measureWebVitals();
