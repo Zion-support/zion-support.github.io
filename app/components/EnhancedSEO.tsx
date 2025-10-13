@@ -11,6 +11,13 @@ interface EnhancedSEOProps {
   twitterCard?: string;
   noIndex?: boolean;
   structuredData?: object;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+  locale?: string;
+  alternateLocales?: string[];
 }
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
@@ -22,7 +29,14 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   ogType = 'website',
   twitterCard = 'summary_large_image',
   noIndex = false,
-  structuredData
+  structuredData,
+  author = 'Zion Tech Group',
+  publishedTime,
+  modifiedTime,
+  section,
+  tags = [],
+  locale = 'en_US',
+  alternateLocales = []
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const siteUrl = 'https://ziontechgroup.com';
@@ -57,7 +71,38 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#06b6d4" />
-      <meta name="author" content="Zion Tech Group" />
+      <meta name="author" content={author} />
+      <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />
+      <meta name="googlebot" content="index, follow" />
+      <meta name="bingbot" content="index, follow" />
+      
+      {/* Language and Locale */}
+      <meta property="og:locale" content={locale} />
+      {alternateLocales.map((altLocale) => (
+        <meta key={altLocale} property="og:locale:alternate" content={altLocale} />
+      ))}
+      
+      {/* Article specific meta tags */}
+      {ogType === 'article' && (
+        <>
+          {author && <meta property="article:author" content={author} />}
+          {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+          {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+          {section && <meta property="article:section" content={section} />}
+          {tags.map((tag) => (
+            <meta key={tag} property="article:tag" content={tag} />
+          ))}
+        </>
+      )}
+      
+      {/* Additional Open Graph tags */}
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={title} />
+      
+      {/* Twitter additional tags */}
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
       
       {/* Structured Data */}
       {structuredData && (
@@ -65,6 +110,12 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
           {JSON.stringify(structuredData)}
         </script>
       )}
+      
+      {/* Preconnect to external domains for performance */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+      <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     </Helmet>
   );
 };

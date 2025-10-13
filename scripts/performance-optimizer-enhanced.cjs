@@ -1,182 +1,306 @@
 const fs = require('fs');
 const path = require('path');
+const { gzipSync } = require('zlib');
 
-console.log('Starting enhanced performance optimization...');
-
-// Optimize images
-console.log('Optimizing images...');
-const publicDir = path.join(__dirname, '../public');
-const distDir = path.join(__dirname, '../dist');
-
-if (fs.existsSync(publicDir)) {
-  const files = fs.readdirSync(publicDir);
-  const imageFiles = files.filter(file => 
-    /\.(jpg|jpeg|png|gif|webp|svg)$/i.test(file)
-  );
-  
-  console.log(`Found ${imageFiles.length} image files to optimize`);
-}
-
-// Generate critical CSS
-console.log('Generating critical CSS...');
-const criticalCSS = `
-/* Critical CSS for above-the-fold content */
-.min-h-screen { min-height: 100vh; }
-.bg-gradient-to-br { background-image: linear-gradient(to bottom right, var(--tw-gradient-stops)); }
-.from-slate-900 { --tw-gradient-from: #0f172a; --tw-gradient-to: rgb(15 23 42 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
-.via-purple-900 { --tw-gradient-to: rgb(88 28 135 / 0); --tw-gradient-stops: var(--tw-gradient-from), #581c87, var(--tw-gradient-to); }
-.to-slate-900 { --tw-gradient-to: #0f172a; --tw-gradient-stops: var(--tw-gradient-from), #581c87, var(--tw-gradient-to); }
-.text-white { color: rgb(255 255 255); }
-.text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
-.font-bold { font-weight: 700; }
-.text-center { text-align: center; }
-.max-w-7xl { max-width: 80rem; }
-.mx-auto { margin-left: auto; margin-right: auto; }
-.px-4 { padding-left: 1rem; padding-right: 1rem; }
-.py-20 { padding-top: 5rem; padding-bottom: 5rem; }
-`;
-
-if (!fs.existsSync(distDir)) {
-  fs.mkdirSync(distDir, { recursive: true });
-}
-
-fs.writeFileSync(path.join(distDir, 'critical.css'), criticalCSS);
-
-// Optimize JavaScript bundles
-console.log('Optimizing JavaScript bundles...');
-const distAssetsDir = path.join(distDir, 'assets');
-if (fs.existsSync(distAssetsDir)) {
-  const jsFiles = fs.readdirSync(distAssetsDir).filter(file => file.endsWith('.js'));
-  console.log(`Found ${jsFiles.length} JavaScript files to optimize`);
-}
-
-// Generate performance report
-const performanceReport = {
-  timestamp: new Date().toISOString(),
-  optimizations: [
-    'Critical CSS generated',
-    'Image optimization pipeline ready',
-    'JavaScript bundle analysis completed',
-    'Lazy loading implemented',
-    'Service worker optimized',
-    'PWA manifest enhanced',
-    'SEO meta tags optimized',
-    'Error boundaries added',
-    'Performance monitoring enabled',
-    'Accessibility enhancements applied'
-  ],
-  recommendations: [
-    'Consider implementing image optimization pipeline with WebP format',
-    'Add more granular code splitting for large pages',
-    'Implement preloading for critical resources',
-    'Add more comprehensive caching strategies',
-    'Consider implementing CDN for static assets',
-    'Optimize font loading with font-display: swap',
-    'Implement resource hints (preload, prefetch, preconnect)',
-    'Add compression for text assets',
-    'Consider implementing edge-side includes for dynamic content',
-    'Add performance budgets to prevent regression'
-  ],
-  metrics: {
-    bundleSize: 'Optimized for production',
-    imageOptimization: 'Ready for implementation',
-    criticalCSS: 'Generated',
-    lazyLoading: 'Implemented',
-    serviceWorker: 'Optimized',
-    pwaSupport: 'Enhanced'
+class PerformanceOptimizer {
+  constructor() {
+    this.distPath = path.join(__dirname, '../dist');
+    this.reportPath = path.join(__dirname, '../performance-report-enhanced.json');
+    this.optimizations = [];
   }
-};
 
-fs.writeFileSync(
-  path.join(distDir, 'performance-report-enhanced.json'), 
-  JSON.stringify(performanceReport, null, 2)
-);
-
-// Create performance script for runtime
-const performanceScript = `
-// Enhanced Performance Monitor
-(function() {
-  'use strict';
-  
-  // Performance metrics collection
-  const metrics = {
-    lcp: 0,
-    fid: 0,
-    cls: 0,
-    fcp: 0,
-    ttfb: 0
-  };
-  
-  // Collect Core Web Vitals
-  function collectWebVitals() {
-    if ('PerformanceObserver' in window) {
-      // LCP
-      new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        metrics.lcp = lastEntry.startTime;
-      }).observe({ entryTypes: ['largest-contentful-paint'] });
+  async optimize() {
+    console.log('🚀 Starting enhanced performance optimization...');
+    
+    try {
+      // Analyze build output
+      const buildStats = await this.analyzeBuild();
       
-      // FID
-      new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          metrics.fid = entry.processingStart - entry.startTime;
-        });
-      }).observe({ entryTypes: ['first-input'] });
+      // Optimize images
+      await this.optimizeImages();
       
-      // CLS
-      new PerformanceObserver((list) => {
-        let clsValue = 0;
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
-          }
-        });
-        metrics.cls = clsValue;
-      }).observe({ entryTypes: ['layout-shift'] });
+      // Optimize CSS
+      await this.optimizeCSS();
+      
+      // Optimize JavaScript
+      await this.optimizeJavaScript();
+      
+      // Generate performance report
+      await this.generateReport(buildStats);
+      
+      console.log('✅ Enhanced performance optimization completed!');
+    } catch (error) {
+      console.error('❌ Performance optimization failed:', error);
+      throw error;
     }
   }
-  
-  // Resource optimization
-  function optimizeResources() {
-    // Preload critical resources
-    const criticalResources = [
-      '/fonts/inter-var.woff2',
-      '/assets/critical.css'
-    ];
+
+  async analyzeBuild() {
+    console.log('📊 Analyzing build output...');
     
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.css') ? 'style' : 'font';
-      if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous';
+    const stats = {
+      totalFiles: 0,
+      totalSize: 0,
+      jsFiles: 0,
+      jsSize: 0,
+      cssFiles: 0,
+      cssSize: 0,
+      imageFiles: 0,
+      imageSize: 0,
+      htmlFiles: 0,
+      htmlSize: 0,
+      otherFiles: 0,
+      otherSize: 0
+    };
+
+    const files = this.getAllFiles(this.distPath);
+    
+    for (const file of files) {
+      const relativePath = path.relative(this.distPath, file);
+      const stat = fs.statSync(file);
+      const size = stat.size;
+      
+      stats.totalFiles++;
+      stats.totalSize += size;
+      
+      const ext = path.extname(file).toLowerCase();
+      
+      switch (ext) {
+        case '.js':
+          stats.jsFiles++;
+          stats.jsSize += size;
+          break;
+        case '.css':
+          stats.cssFiles++;
+          stats.cssSize += size;
+          break;
+        case '.html':
+          stats.htmlFiles++;
+          stats.htmlSize += size;
+          break;
+        case '.png':
+        case '.jpg':
+        case '.jpeg':
+        case '.gif':
+        case '.webp':
+        case '.svg':
+          stats.imageFiles++;
+          stats.imageSize += size;
+          break;
+        default:
+          stats.otherFiles++;
+          stats.otherSize += size;
       }
-      document.head.appendChild(link);
-    });
-  }
-  
-  // Initialize performance monitoring
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-      collectWebVitals();
-      optimizeResources();
-    });
-  } else {
-    collectWebVitals();
-    optimizeResources();
-  }
-  
-  // Export metrics for debugging
-  window.performanceMetrics = metrics;
-})();
-`;
+    }
 
-fs.writeFileSync(path.join(distDir, 'performance-enhanced.js'), performanceScript);
+    return stats;
+  }
 
-console.log('✓ Enhanced performance optimization completed!');
-console.log('Performance report generated at: /workspace/dist/performance-report-enhanced.json');
-console.log('Performance script created at: /workspace/dist/performance-enhanced.js');
+  getAllFiles(dir) {
+    let files = [];
+    const items = fs.readdirSync(dir);
+    
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        files = files.concat(this.getAllFiles(fullPath));
+      } else {
+        files.push(fullPath);
+      }
+    }
+    
+    return files;
+  }
+
+  async optimizeImages() {
+    console.log('🖼️ Optimizing images...');
+    
+    const imageFiles = this.getAllFiles(this.distPath).filter(file => {
+      const ext = path.extname(file).toLowerCase();
+      return ['.png', '.jpg', '.jpeg', '.gif', '.webp', '.svg'].includes(ext);
+    });
+
+    for (const file of imageFiles) {
+      const originalSize = fs.statSync(file).size;
+      
+      // For now, just log the files that could be optimized
+      // In a real implementation, you would use sharp or imagemin
+      this.optimizations.push({
+        type: 'image',
+        file: path.relative(this.distPath, file),
+        originalSize,
+        optimizedSize: originalSize, // Would be smaller after optimization
+        savings: 0
+      });
+    }
+  }
+
+  async optimizeCSS() {
+    console.log('🎨 Optimizing CSS...');
+    
+    const cssFiles = this.getAllFiles(this.distPath).filter(file => 
+      path.extname(file).toLowerCase() === '.css'
+    );
+
+    for (const file of cssFiles) {
+      const content = fs.readFileSync(file, 'utf8');
+      const originalSize = Buffer.byteLength(content, 'utf8');
+      
+      // Remove unnecessary whitespace and comments
+      const optimized = content
+        .replace(/\/\*[\s\S]*?\*\//g, '') // Remove comments
+        .replace(/\s+/g, ' ') // Replace multiple spaces with single space
+        .replace(/;\s*}/g, '}') // Remove semicolon before closing brace
+        .replace(/\s*{\s*/g, '{') // Remove spaces around opening brace
+        .replace(/;\s*/g, ';') // Remove spaces after semicolons
+        .trim();
+      
+      const optimizedSize = Buffer.byteLength(optimized, 'utf8');
+      const savings = originalSize - optimizedSize;
+      
+      if (savings > 0) {
+        fs.writeFileSync(file, optimized);
+        this.optimizations.push({
+          type: 'css',
+          file: path.relative(this.distPath, file),
+          originalSize,
+          optimizedSize,
+          savings
+        });
+      }
+    }
+  }
+
+  async optimizeJavaScript() {
+    console.log('⚡ Optimizing JavaScript...');
+    
+    const jsFiles = this.getAllFiles(this.distPath).filter(file => 
+      path.extname(file).toLowerCase() === '.js'
+    );
+
+    for (const file of jsFiles) {
+      const content = fs.readFileSync(file, 'utf8');
+      const originalSize = Buffer.byteLength(content, 'utf8');
+      
+      // Basic optimizations
+      let optimized = content;
+      
+      // Remove console.log statements in production
+      optimized = optimized.replace(/console\.(log|debug|info|warn|error)\([^)]*\);?\s*/g, '');
+      
+      // Remove unnecessary whitespace
+      optimized = optimized
+        .replace(/\s+/g, ' ')
+        .replace(/;\s*}/g, '}')
+        .replace(/{\s*/g, '{')
+        .replace(/;\s*/g, ';')
+        .trim();
+      
+      const optimizedSize = Buffer.byteLength(optimized, 'utf8');
+      const savings = originalSize - optimizedSize;
+      
+      if (savings > 0) {
+        fs.writeFileSync(file, optimized);
+        this.optimizations.push({
+          type: 'javascript',
+          file: path.relative(this.distPath, file),
+          originalSize,
+          optimizedSize,
+          savings
+        });
+      }
+    }
+  }
+
+  async generateReport(buildStats) {
+    console.log('📄 Generating performance report...');
+    
+    const totalSavings = this.optimizations.reduce((sum, opt) => sum + opt.savings, 0);
+    const gzipSize = gzipSync(fs.readFileSync(path.join(this.distPath, 'index.html'))).length;
+    
+    const report = {
+      timestamp: new Date().toISOString(),
+      buildStats: {
+        ...buildStats,
+        gzipSize,
+        totalSavings
+      },
+      optimizations: this.optimizations,
+      recommendations: this.generateRecommendations(buildStats, totalSavings),
+      performanceScore: this.calculatePerformanceScore(buildStats, totalSavings)
+    };
+
+    fs.writeFileSync(this.reportPath, JSON.stringify(report, null, 2));
+    console.log(`📊 Performance report generated: ${this.reportPath}`);
+  }
+
+  generateRecommendations(stats, totalSavings) {
+    const recommendations = [];
+    
+    if (stats.jsSize > 500000) {
+      recommendations.push({
+        type: 'warning',
+        message: 'JavaScript bundle size is large. Consider code splitting or tree shaking.',
+        impact: 'high'
+      });
+    }
+    
+    if (stats.cssSize > 100000) {
+      recommendations.push({
+        type: 'warning',
+        message: 'CSS bundle size is large. Consider purging unused styles.',
+        impact: 'medium'
+      });
+    }
+    
+    if (stats.imageSize > 200000) {
+      recommendations.push({
+        type: 'warning',
+        message: 'Image files are large. Consider using WebP format or lazy loading.',
+        impact: 'high'
+      });
+    }
+    
+    if (totalSavings > 0) {
+      recommendations.push({
+        type: 'success',
+        message: `Optimizations saved ${this.formatBytes(totalSavings)} in total.`,
+        impact: 'low'
+      });
+    }
+    
+    return recommendations;
+  }
+
+  calculatePerformanceScore(stats, totalSavings) {
+    let score = 100;
+    
+    // Deduct points for large bundle sizes
+    if (stats.jsSize > 500000) score -= 20;
+    if (stats.cssSize > 100000) score -= 15;
+    if (stats.imageSize > 200000) score -= 25;
+    
+    // Add points for optimizations
+    if (totalSavings > 50000) score += 10;
+    
+    return Math.max(0, Math.min(100, score));
+  }
+
+  formatBytes(bytes) {
+    if (bytes === 0) return '0 Bytes';
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  }
+}
+
+// Run optimization if called directly
+if (require.main === module) {
+  const optimizer = new PerformanceOptimizer();
+  optimizer.optimize().catch(console.error);
+}
+
+module.exports = PerformanceOptimizer;
