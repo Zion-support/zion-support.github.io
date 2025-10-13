@@ -1,31 +1,23 @@
-<<<<<<< HEAD
 // Simple email validation function
 const isValidEmail = (email) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 };
-
 async function handler(req, res) {
-=======
-export default async function handler(req, res) {
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
-
   try {
     const { email } = req.body || {};
-
     if (!email) {
       res.statusCode = 400;
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Email is required' }));
       return;
     }
-
     // Simple email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
@@ -34,32 +26,21 @@ export default async function handler(req, res) {
       res.end(JSON.stringify({ error: 'Invalid email format' }));
       return;
     }
-
     // Save subscription logic here
     // In a real application, you would:
     // 1. Save to your database
     // 2. Add to your email marketing service (Mailchimp, ConvertKit, etc.)
     // 3. Send confirmation email
-
     console.log('Newsletter subscription:', {
       email: req.body.email,
       timestamp: new Date().toISOString()
     });
-<<<<<<< HEAD
-=======
-
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ success: true, message: 'Successfully subscribed to newsletter' }));
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
-
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true,
       message: 'Successfully subscribed to newsletter'
     }));
-
   } catch (error) {
     console.error('Newsletter subscription error:', error);
     res.statusCode = 500;
@@ -70,8 +51,4 @@ export default async function handler(req, res) {
     }));
   }
 }
-<<<<<<< HEAD
-
 export default handler;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93

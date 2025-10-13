@@ -10,11 +10,7 @@ import AnalyticsProvider from './app/components/AnalyticsProvider';
 import LoadingSpinner from './app/components/LoadingSpinner';
 
 // Page Components
-<<<<<<< HEAD
 import HomePage from './app/pages/HomePage';
-=======
-import HomePage from './src/pages/HomePage';
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
 import AboutPage from './app/pages/AboutPage';
 import ContactPage from './src/pages/ContactPage';
 import ServicesPage from './app/pages/ServicesPage';
@@ -25,11 +21,7 @@ import SupportPage from './app/pages/SupportPage';
 import PrivacyPage from './app/pages/PrivacyPage';
 import TermsPage from './app/pages/TermsPage';
 import PricingPage from './app/pages/PricingPage';
-<<<<<<< HEAD
 import SolutionsPage from './app/pages/SolutionsPage';
-=======
-import SolutionsPage from './src/pages/SolutionsPage';
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -81,6 +73,7 @@ function App() {
                     <Route path="/privacy" element={<PrivacyPage />} />
                     <Route path="/terms" element={<TermsPage />} />
                     <Route path="/pricing" element={<PricingPage />} />
+                    <Route path="/solutions" element={<SolutionsPage />} />
                     
                     {/* Catch all route */}
                     <Route path="*" element={

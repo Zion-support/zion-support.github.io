@@ -1,9 +1,7 @@
 import fs from 'fs';
 import path from 'path';
-
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'wallets.json');
-
 export default function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -11,20 +9,16 @@ export default function handler(req, res) {
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
-
   const { address, type, name, userId } = req.body || {};
-
   if (!address || !type) {
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Address and type are required' }));
     return;
   }
-
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
-
   let existing = [];
   try {
     if (fs.existsSync(file)) {
@@ -32,15 +26,9 @@ export default function handler(req, res) {
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
     }
-<<<<<<< HEAD
   } catch {
-=======
-  } catch (_error) {  
-    // console.error('Error reading existing wallets:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-c5cd
     existing = [];
   }
-
   // Check if wallet address already exists
   const existingWallet = existing.find(wallet => wallet.address === address);
   if (existingWallet) {
@@ -49,7 +37,6 @@ export default function handler(req, res) {
     res.end(JSON.stringify({ error: 'Wallet address already exists' }));
     return;
   }
-
   const newWallet = {
     id: Date.now().toString(),
     address,
@@ -59,9 +46,7 @@ export default function handler(req, res) {
     timestamp: new Date().toISOString(),
     status: 'active'
   };
-
   existing.push(newWallet);
-
   try {
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode = 200;
@@ -71,12 +56,7 @@ export default function handler(req, res) {
       message: 'Wallet added successfully',
       id: newWallet.id
     }));
-<<<<<<< HEAD
   } catch {
-=======
-  } catch (_error) {  
-    // console.error('Error saving wallet:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-c5cd
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save wallet' }));

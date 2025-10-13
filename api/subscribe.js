@@ -1,9 +1,7 @@
 import fs from 'fs';
 import path from 'path';
-
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'subscribers.json');
-
 export default function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -11,20 +9,16 @@ export default function handler(req, res) {
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
-
   const { email, name, preferences } = req.body || {};
-
   if (!email) {
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Email is required' }));
     return;
   }
-
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
-
   let existing = [];
   try {
     if (fs.existsSync(file)) {
@@ -32,15 +26,9 @@ export default function handler(req, res) {
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
     }
-<<<<<<< HEAD
   } catch {
-=======
-  } catch (_error) {  
-    // console.error('Error reading existing subscribers:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-c5cd
     existing = [];
   }
-
   // Check if email already exists
   const existingSubscriber = existing.find(sub => sub.email === email);
   if (existingSubscriber) {
@@ -49,7 +37,6 @@ export default function handler(req, res) {
     res.end(JSON.stringify({ error: 'Email already subscribed' }));
     return;
   }
-
   const newSubscriber = {
     id: Date.now().toString(),
     email,
@@ -58,9 +45,7 @@ export default function handler(req, res) {
     timestamp: new Date().toISOString(),
     status: 'active'
   };
-
   existing.push(newSubscriber);
-
   try {
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode = 200;
@@ -70,12 +55,7 @@ export default function handler(req, res) {
       message: 'Successfully subscribed to newsletter',
       id: newSubscriber.id
     }));
-<<<<<<< HEAD
   } catch {
-=======
-  } catch (_error) {  
-    // console.error('Error saving subscriber:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-c5cd
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save subscription' }));

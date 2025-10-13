@@ -1,11 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
 export default function ZionAIVoiceAssistantPro() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -13,7 +8,6 @@ export default function ZionAIVoiceAssistantPro() {
         <title>Zion AI Voice Assistant Pro | Zion Tech Group</title>
         <meta name="description" content="Professional AI Voice Assistant Pro services by Zion Tech Group. Advanced AI and IT solutions for your business." />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
@@ -23,7 +17,6 @@ export default function ZionAIVoiceAssistantPro() {
             Advanced AI-powered solutions for modern businesses.
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold text-white mb-4">AI-Powered Features</h3>
@@ -36,7 +29,6 @@ export default function ZionAIVoiceAssistantPro() {
               <li>• Automated processes</li>
             </ul>
           </div>
-
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold text-white mb-4">Smart Integration</h3>
             <p className="text-gray-300 mb-4">
@@ -48,7 +40,6 @@ export default function ZionAIVoiceAssistantPro() {
               <li>• Real-time updates</li>
             </ul>
           </div>
-
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold text-white mb-4">24/7 Support</h3>
             <p className="text-gray-300 mb-4">
@@ -61,7 +52,6 @@ export default function ZionAIVoiceAssistantPro() {
             </ul>
           </div>
         </div>
-
         <div className="text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
@@ -77,7 +67,3 @@ export default function ZionAIVoiceAssistantPro() {
     </div>
   );
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
