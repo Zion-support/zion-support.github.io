@@ -1,29 +1,274 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BarChart3, TrendingUp, Database, Zap, Shield, Users, Clock, CheckCircle, Star, Eye, Target } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ZionAnalyticsProZionTechGroup() {
+export default function ZionAnalyticsPro() {
+  const features = [
+    {
+      title: "Real-time Dashboards",
+      description: "Monitor your business metrics in real-time with customizable, interactive dashboards",
+      icon: <BarChart3 className="w-6 h-6" />
+    },
+    {
+      title: "Predictive Analytics",
+      description: "AI-powered forecasting to predict trends and make data-driven decisions",
+      icon: <TrendingUp className="w-6 h-6" />
+    },
+    {
+      title: "Data Integration",
+      description: "Connect to 100+ data sources including CRM, ERP, and marketing platforms",
+      icon: <Database className="w-6 h-6" />
+    },
+    {
+      title: "Automated Reports",
+      description: "Generate comprehensive reports automatically with AI-powered insights",
+      icon: <Zap className="w-6 h-6" />
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$299",
+      period: "per month",
+      description: "Perfect for small businesses",
+      features: [
+        "Up to 5 data sources",
+        "Basic dashboards",
+        "Monthly reports",
+        "Email support",
+        "5 user accounts"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$599",
+      period: "per month",
+      description: "Ideal for growing companies",
+      features: [
+        "Up to 25 data sources",
+        "Advanced dashboards",
+        "Real-time reporting",
+        "Priority support",
+        "25 user accounts",
+        "API access",
+        "Custom integrations"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$1,199",
+      period: "per month",
+      description: "For large organizations",
+      features: [
+        "Unlimited data sources",
+        "Custom AI models",
+        "Dedicated support",
+        "Unlimited users",
+        "White-label solution",
+        "On-premise deployment",
+        "SLA guarantee"
+      ],
+      popular: false
+    }
+  ];
+
+  const benefits = [
+    "Increase revenue by 30% with data-driven insights",
+    "Reduce reporting time by 80% through automation",
+    "Improve decision-making speed by 50%",
+    "Identify new opportunities with predictive analytics",
+    "Achieve 99.9% data accuracy"
+  ];
+
   return (
     <>
       <Helmet>
-        <title>ZionAnalyticsPro - Zion Tech Group</title>
+        <title>Zion Analytics Pro - Advanced Business Intelligence Platform</title>
+        <meta
+          name="description"
+          content="Transform your business data into actionable insights with Zion Analytics Pro. Real-time dashboards, predictive analytics, and AI-powered reporting. Starting at $299/month."
+        />
+        <meta
+          name="keywords"
+          content="business analytics, data visualization, predictive analytics, business intelligence, dashboard, reporting, data analysis"
+        />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            ZionAnalyticsPro
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional zionanalyticspro services coming soon.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Zion Analytics
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                  {" "}Pro
+                </span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Transform your business data into actionable insights with our advanced analytics platform. 
+                Get real-time dashboards, predictive analytics, and AI-powered reporting that drives growth.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                >
+                  Start Free Trial
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+                <a
+                  href="tel:+13024640950"
+                  className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                >
+                  Call: +1 302 464 0950
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Powerful Analytics Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our platform combines cutting-edge AI with intuitive design to deliver insights that matter.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm">
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Proven Business Results
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our clients consistently achieve remarkable improvements in their business performance.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0 mt-1" />
+                  <p className="text-gray-300">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Flexible Pricing Plans
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose the plan that fits your business needs. All plans include our core analytics features.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index) => (
+                <div
+                  key={index}
+                  className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border-2 transition-all duration-300 hover:bg-white/20 ${
+                    plan.popular ? 'border-cyan-400' : 'border-white/20'
+                  }`}
+                >
+                  {plan.popular && (
+                    <div className="flex items-center justify-center mb-4">
+                      <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
+                        <Star className="w-4 h-4 mr-1" />
+                        Most Popular
+                      </div>
+                    </div>
+                  )}
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <p className="text-gray-300 mb-4">{plan.description}</p>
+                  <div className="mb-6">
+                    <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
+                    <span className="text-gray-300 ml-2">{plan.period}</span>
+                  </div>
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, idx) => (
+                      <li key={idx} className="text-gray-300 text-sm flex items-center">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    to="/contact"
+                    className={`w-full px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
+                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+                    }`}
+                  >
+                    Get Started
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Data into Insights?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today for a free consultation and discover how Zion Analytics Pro can accelerate your business growth.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+              >
+                Start Your Free Trial
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              >
+                Email: kleber@ziontechgroup.com
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );

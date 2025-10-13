@@ -37,9 +37,20 @@ const Footer = React.memo(() => {
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
             <p className="text-gray-400 text-sm max-w-md">
-              Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. 
+              Leading provider of AI-powered solutions, micro SAAS platforms, and enterprise IT services. 
               We help businesses transform with cutting-edge technology and innovative solutions.
             </p>
+            <div className="mt-4 space-y-2">
+              <p className="text-gray-400 text-sm">
+                <strong>Phone:</strong> <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a>
+              </p>
+              <p className="text-gray-400 text-sm">
+                <strong>Email:</strong> <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a>
+              </p>
+              <p className="text-gray-400 text-sm">
+                <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709
+              </p>
+            </div>
             <div className="flex space-x-4">
               {socialLinks.map((link) => (
                 <a
@@ -70,26 +81,26 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/cloud-infrastructure"
+                  to="/services"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Cloud Infrastructure
+                  IT Services
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/cybersecurity-solutions"
+                  to="/micro-saas"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Cybersecurity
+                  Micro SAAS
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/5g-implementation"
+                  to="/5g-solutions"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  5G Implementation
+                  5G Solutions
                 </Link>
               </li>
             </ul>
