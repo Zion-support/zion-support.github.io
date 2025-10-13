@@ -9,7 +9,6 @@ interface WebVitalsData {
 }
 
 const CoreWebVitals: React.FC = () => {
-<<<<<<< HEAD
   const reportWebVitals = useCallback((data: WebVitalsData) => {
     // Send to Google Analytics if available
     if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -28,38 +27,29 @@ const CoreWebVitals: React.FC = () => {
         metric: data.name,
         value: data.value,
         delta: data.delta,
-        id: data.id
+        id: data.id,
+        navigationType: data.navigationType
       });
     }
 
-    // Log in development
+    // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      }
-=======
-  useEffect(() => {
-    // Core Web Vitals monitoring
-    >>>>>>> cursor/analyze-improve-and-deploy-application-a281
+      console.log('Web Vitals:', data);
+    }
   }, []);
 
   useEffect(() => {
-    const measureWebVitals = async () => {
-      try {
-        const { onCLS, onFID, onFCP, onLCP, onTTFB, onINP } = await import('web-vitals');
-
-        onCLS(reportWebVitals);
-        onFID(reportWebVitals);
-        onFCP(reportWebVitals);
-        onLCP(reportWebVitals);
-        onTTFB(reportWebVitals);
-        onINP(reportWebVitals);
-      } catch (error) {
-        }
-    };
-
-    measureWebVitals();
+    // Import and initialize web-vitals
+    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      getCLS(reportWebVitals);
+      getFID(reportWebVitals);
+      getFCP(reportWebVitals);
+      getLCP(reportWebVitals);
+      getTTFB(reportWebVitals);
+    });
   }, [reportWebVitals]);
 
-  return null; // This component doesn't render anything
+  return null;
 };
 
 export default CoreWebVitals;
