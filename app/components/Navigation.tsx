@@ -6,11 +6,13 @@ import {
   Brain, 
   Shield, 
   Zap, 
-<<<<<<< HEAD
   Globe,
+<<<<<<< HEAD
 =======
   Globe, 
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4257
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-568e
   ChevronDown,
   ChevronUp
 } from 'lucide-react';
@@ -185,6 +187,7 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                 </Link>
                 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 {/* Services Dropdown */}
                 {item.hasDropdown && (
                   <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
@@ -224,6 +227,8 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                         </Link>
                       </div>                {/* Dropdown Menu */}
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-568e
                 {/* Dropdown Menu */}
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4257
                 {item.hasDropdown && item.dropdownItems && (

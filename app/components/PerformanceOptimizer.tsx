@@ -5,7 +5,10 @@ interface PerformanceOptimizerProps {
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+<<<<<<< HEAD
   const [isOptimized, setIsOptimized] = useState(false);
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-568e
   // Preload critical resources
   useEffect(() => {
     const preloadCriticalResources = () => {
@@ -19,7 +22,72 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       // Preload critical images
       const criticalImages = [
         '/logo.svg',
+<<<<<<< HEAD
         '/og-image.svg'        '/og-image.svg',
+=======
+        '/og-image.svg'
+      ];
+
+      criticalImages.forEach(src => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = src;
+        link.as = 'image';
+        document.head.appendChild(link);
+      });
+    };
+
+    preloadCriticalResources();
+  }, []);
+
+  // Optimize scroll performance
+  const handleScroll = useCallback(() => {
+    // Throttle scroll events
+    let ticking = false;
+    
+    const updateScrollPosition = () => {
+      // Add scroll-based optimizations here
+      ticking = false;
+    };
+
+    if (!ticking) {
+      requestAnimationFrame(updateScrollPosition);
+      ticking = true;
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
+
+  // Optimize resize performance
+  const handleResize = useCallback(() => {
+    let ticking = false;
+    
+    const updateLayout = () => {
+      // Add resize-based optimizations here
+      ticking = false;
+    };
+
+    if (!ticking) {
+      requestAnimationFrame(updateLayout);
+      ticking = true;
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize, { passive: true });
+    return () => window.removeEventListener('resize', handleResize);
+  }, [handleResize]);
+
+  const [isOptimized, setIsOptimized] = useState(false);
+
+  useEffect(() => {
+    // Preload critical resources
+    const preloadCriticalResources = () => {
+      const criticalImages = [
+>>>>>>> cursor/analyze-improve-and-deploy-application-568e
         '/api/placeholder/1200/630', // Hero image
         '/api/placeholder/800/600',  // Service images
       ];
@@ -261,10 +329,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     </>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   return <>{children}</>;
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-ad0b
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-568e
 };
 
 export default PerformanceOptimizer;

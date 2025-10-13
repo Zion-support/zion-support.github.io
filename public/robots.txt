@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 
+# Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
 # Crawl-delay for respectful crawling
@@ -8,20 +9,25 @@ Crawl-delay: 1
 
 # Disallow admin and private areas
 Disallow: /admin/
-Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /static/
+Disallow: /private/
 
 # Allow important pages
-Allow: /
+Allow: /ai-services/
+Allow: /micro-saas/
+Allow: /5g-solutions/
 Allow: /about
-Allow: /services
-Allow: /ai-services
-Allow: /micro-saas
-Allow: /5g-solutions
 Allow: /contact
-Allow: /blog
+Allow: /services
 
+<<<<<<< HEAD
 # Host
 Host: https://ziontechgroup.com
+=======
+# Block common bot traps
+Disallow: /*?*
+Disallow: /*#
+Disallow: /search?*
+Disallow: /filter?*
+>>>>>>> cursor/analyze-improve-and-deploy-application-568e
