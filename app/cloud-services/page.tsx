@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Cloud, Shield, Zap, Globe, Database, Server, CheckCircle, TrendingUp, Clock } from 'lucide-react';
-=======
 import { ArrowRight, Cloud, Shield, Database, Zap, Globe, BarChart3, Mail, Smartphone } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
->>>>>>> cursor/website-audit-and-update-with-deployment-f1ad
-
 export default function CloudServices() {
   const services = [
     {
@@ -36,20 +32,13 @@ export default function CloudServices() {
       features: ["Virtual Machines", "Container Orchestration", "Load Balancing", "Auto Scaling"]
     }
   ];
-
-<<<<<<< HEAD
-<<<<<<< HEAD
   const benefits = [
     { icon: <TrendingUp className="w-6 h-6" />, title: 'Cost Optimization', description: 'Reduce IT costs by up to 40% with efficient cloud solutions' },
     { icon: <Zap className="w-6 h-6" />, title: 'Scalability', description: 'Scale resources instantly based on demand' },
     { icon: <Globe className="w-6 h-6" />, title: 'Global Reach', description: 'Access your applications from anywhere in the world' },
     { icon: <Clock className="w-6 h-6" />, title: '24/7 Support', description: 'Round-the-clock technical support and monitoring' }
   ];
-=======
 >>>>>>> 772e8e1b479bacba5b030e0b9a1c321c4e1bf36c
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-f1ad
   return (
     <>
       <Helmet>
@@ -63,7 +52,6 @@ export default function CloudServices() {
           content="cloud services, cloud migration, cloud infrastructure, cloud security, AWS, Azure, Google Cloud, cloud consulting"
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         {/* Hero Section */}
         <section className="py-20 px-4">
@@ -94,7 +82,6 @@ export default function CloudServices() {
             </div>
           </div>
         </section>
-
         {/* Services Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -104,7 +91,6 @@ export default function CloudServices() {
                 Comprehensive cloud solutions designed to accelerate your digital transformation
               </p>
             </div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.map((service, index) => (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
@@ -126,7 +112,6 @@ export default function CloudServices() {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-gray-800/30">
           <div className="max-w-7xl mx-auto">
@@ -136,7 +121,6 @@ export default function CloudServices() {
                 Experience the benefits of cloud computing with our expert guidance and support
               </p>
             </div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
@@ -150,7 +134,6 @@ export default function CloudServices() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">

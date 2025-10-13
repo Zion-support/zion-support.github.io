@@ -210,16 +210,5 @@ export default function Community() {
       </div>
     </>
   );
-}
-<<<<<<< HEAD
-=======
+  }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6877
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-f1ad

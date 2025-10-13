@@ -215,12 +215,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       cleanupContrast?.();
       cleanupMotion?.();
     };
-<<<<<<< HEAD
   }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
 
 
-=======
-  }, []);
 
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
@@ -276,7 +273,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   };
 
   // Removed unused functions - functionality is handled by updateSetting directly
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
   return (
     <>
       {children}

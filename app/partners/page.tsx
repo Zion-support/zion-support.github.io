@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Handshake, Award, Globe, Shield, Zap, Star, CheckCircle, TrendingUp } from 'lucide-react';
-
 export default function Partners() {
   const partnerTypes = [
     {
@@ -30,14 +29,12 @@ export default function Partners() {
       benefits: ["Joint ventures", "Market expansion", "Innovation collaboration", "Strategic planning"]
     }
   ];
-
   const benefits = [
     { icon: <TrendingUp className="w-6 h-6" />, title: 'Revenue Growth', description: 'Increase revenue through joint sales and marketing efforts' },
     { icon: <Globe className="w-6 h-6" />, title: 'Market Expansion', description: 'Access new markets and customer segments through partnerships' },
     { icon: <Shield className="w-6 h-6" />, title: 'Risk Mitigation', description: 'Share risks and resources with trusted partners' },
     { icon: <Star className="w-6 h-6" />, title: 'Innovation', description: 'Collaborate on innovative solutions and technologies' }
   ];
-
   const requirements = [
     "Proven track record in your industry",
     "Complementary technology or service offerings",
@@ -45,7 +42,6 @@ export default function Partners() {
     "Commitment to quality and customer success",
     "Financial stability and growth potential"
   ];
-
   return (
     <>
       <Helmet>
@@ -59,9 +55,6 @@ export default function Partners() {
           content="partnerships, technology partners, solution partners, channel partners, strategic alliances, business partnerships, technology integration"
         />
       </Helmet>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         {/* Hero Section */}
         <section className="py-20 px-4">
@@ -92,10 +85,6 @@ export default function Partners() {
             </div>
           </div>
         </section>
-=======
-<<<<<<< HEAD
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
-
         {/* Partner Types Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -105,8 +94,6 @@ export default function Partners() {
                 Choose the partnership model that best fits your business goals and capabilities
               </p>
             </div>
-
-<<<<<<< HEAD
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {partnerTypes.map((type, index) => (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
@@ -128,7 +115,6 @@ export default function Partners() {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-gray-800/30">
           <div className="max-w-7xl mx-auto">
@@ -138,7 +124,6 @@ export default function Partners() {
                 Discover the advantages of joining our partner ecosystem
               </p>
             </div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
@@ -152,7 +137,6 @@ export default function Partners() {
             </div>
           </div>
         </section>
-
         {/* Requirements Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto">
@@ -162,7 +146,6 @@ export default function Partners() {
                 We look for partners who share our commitment to excellence and innovation
               </p>
             </div>
-
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700">
               <ul className="space-y-4">
                 {requirements.map((requirement, index) => (
@@ -175,7 +158,6 @@ export default function Partners() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gray-800/30">
           <div className="max-w-4xl mx-auto text-center">
@@ -192,12 +174,6 @@ export default function Partners() {
             </Link>
           </div>
         </section>
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6877
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-f1ad
       </div>
     </>
   );
