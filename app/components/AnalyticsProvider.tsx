@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-
-const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  useEffect(() => {
-    // Initialize analytics
-    console.log('Analytics initialized');
-  }, []);
-
-  return <>{children}</>;
-};
-
-export default AnalyticsProvider;
-=======
 import React, { createContext, useContext, useEffect } from 'react';
 
 interface AnalyticsContextType {
@@ -83,4 +69,3 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
 };
 
 export default AnalyticsProvider;
->>>>>>> cursor/analyze-improve-and-deploy-application-c573

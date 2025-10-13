@@ -2,22 +2,14 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface EnhancedSEOProps {
-<<<<<<< HEAD
   title: string;
   description: string;
   keywords?: string;
   canonical?: string;
-=======
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonicalUrl?: string;
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
   ogUrl?: string;
-<<<<<<< HEAD
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
