@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, Brain, Users, Zap, CheckCircle, Star, Award, BarChart3, Target, Sparkles, TrendingUp, Monitor, FileText, MessageSquare, Workflow, Shield, Lightbulb, GitBranch, Timer } from 'lucide-react';
+import { Calendar, Brain, Users, Zap, CheckCircle, Star, Award, BarChart3, Target, Sparkles, TrendingUp, Monitor, FileText, MessageSquare, Workflow, Shield, Lightbulb, GitBranch, Timer, Power, Square, Circle, Mic } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -45,6 +45,27 @@ const ZionAIProjectManagerProPage = () => {
       color: "from-cyan-500 to-blue-500"
     }
   ];
+
+  const testimonials = [
+    {
+        "name": "Sarah Johnson",
+        "role": "CTO, TechCorp",
+        "content": "Zion Tech Group transformed our business with their innovative AI solutions. The results exceeded our expectations.",
+        "rating": 5
+    },
+    {
+        "name": "Michael Chen",
+        "role": "CEO, InnovateLabs",
+        "content": "Outstanding service and cutting-edge technology. Our productivity increased by 300% after implementing their solutions.",
+        "rating": 5
+    },
+    {
+        "name": "Emily Rodriguez",
+        "role": "Operations Director, GlobalTech",
+        "content": "Professional, reliable, and innovative. Zion Tech Group is our trusted technology partner.",
+        "rating": 5
+    }
+];
 
   const pricingPlans = [
     {

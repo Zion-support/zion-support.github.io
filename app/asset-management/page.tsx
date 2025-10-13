@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Package, BarChart3, ArrowRight, Sparkles, CheckCircle, Target, Shield } from 'lucide-react';
+import { Package, BarChart3, ArrowRight, Sparkles, CheckCircle, Target, Shield, Star, Circle } from 'lucide-react';
 
 const AssetManagementPage = () => {
   const features = [
@@ -30,6 +30,15 @@ const AssetManagementPage = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
+
+  const benefits = [
+    "Increased efficiency and productivity",
+    "Reduced operational costs",
+    "Enhanced security and compliance",
+    "Scalable and flexible solutions",
+    "24/7 monitoring and support",
+    "Expert technical guidance"
+];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">

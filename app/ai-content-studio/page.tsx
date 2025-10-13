@@ -1,4 +1,4 @@
-import { Sparkles, PenTool, Video, Image, FileText, CheckCircle, ArrowRight, Star } from "lucide-react";
+import { Sparkles, PenTool, Video, Image, FileText, CheckCircle, ArrowRight, Star, Power, Circle, Wind, Mic } from 'lucide-react';
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
@@ -62,6 +62,27 @@ const AIContentStudioZionTechGroup = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
+
+  const testimonials = [
+    {
+        "name": "Sarah Johnson",
+        "role": "CTO, TechCorp",
+        "content": "Zion Tech Group transformed our business with their innovative AI solutions. The results exceeded our expectations.",
+        "rating": 5
+    },
+    {
+        "name": "Michael Chen",
+        "role": "CEO, InnovateLabs",
+        "content": "Outstanding service and cutting-edge technology. Our productivity increased by 300% after implementing their solutions.",
+        "rating": 5
+    },
+    {
+        "name": "Emily Rodriguez",
+        "role": "Operations Director, GlobalTech",
+        "content": "Professional, reliable, and innovative. Zion Tech Group is our trusted technology partner.",
+        "rating": 5
+    }
+];
 
   const pricingPlans = [
     {

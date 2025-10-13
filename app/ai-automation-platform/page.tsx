@@ -1,12 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  BarChart3, 
-  Cloud, 
-  Workflow,
-  Target
-} from 'lucide-react';
+import { BarChart3, Cloud, Workflow, Target, TrendingUp, Settings, Users, Sparkles, ArrowRight, CheckCircle, Star, Power, Circle } from 'lucide-react';
 
 const AIAutomationPlatformPage = () => {
   const features = [
@@ -35,6 +30,15 @@ const AIAutomationPlatformPage = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
+
+  const benefits = [
+    "Increased efficiency and productivity",
+    "Reduced operational costs",
+    "Enhanced security and compliance",
+    "Scalable and flexible solutions",
+    "24/7 monitoring and support",
+    "Expert technical guidance"
+];
 
   const useCases = [
     {

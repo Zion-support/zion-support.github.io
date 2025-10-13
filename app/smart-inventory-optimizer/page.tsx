@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { Package, TrendingUp, AlertTriangle, Zap, BarChart3, Users, CheckCircle, ArrowRight, Brain, Target, Globe, DollarSign, Truck, Shield } from 'lucide-react';
+import { Package, TrendingUp, AlertTriangle, Zap, BarChart3, Users, CheckCircle, ArrowRight, Brain, Target, Globe, DollarSign, Truck, Shield, Star, Power, Circle, Triangle } from 'lucide-react';
 
 const SmartInventoryOptimizerPage = () => {
   const features = [
@@ -36,6 +36,34 @@ const SmartInventoryOptimizerPage = () => {
       description: "Connect with suppliers for automated ordering, real-time stock updates, and seamless supply chain management."
     }
   ];
+
+  const benefits = [
+    "Increased efficiency and productivity",
+    "Reduced operational costs",
+    "Enhanced security and compliance",
+    "Scalable and flexible solutions",
+    "24/7 monitoring and support",
+    "Expert technical guidance"
+];
+
+  const stats = [
+    {
+        "number": "500+",
+        "label": "Projects Completed"
+    },
+    {
+        "number": "50+",
+        "label": "Happy Clients"
+    },
+    {
+        "number": "99.9%",
+        "label": "Uptime"
+    },
+    {
+        "number": "24/7",
+        "label": "Support"
+    }
+];
 
   const pricingPlans = [
     {

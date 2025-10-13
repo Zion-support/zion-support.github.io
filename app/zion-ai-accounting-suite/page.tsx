@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Calculator, Brain, Shield, ArrowRight, CheckCircle, Star, FileText, TrendingUp, Receipt, BarChart3, CreditCard, PieChart, Clock } from 'lucide-react';
+import { Calculator, Brain, Shield, ArrowRight, CheckCircle, Star, FileText, TrendingUp, Receipt, BarChart3, CreditCard, PieChart, Clock, Power, Circle, Mic } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const ZionAIAccountingSuite = () => {
@@ -42,6 +42,46 @@ const ZionAIAccountingSuite = () => {
       benefit: "99.9% fraud detection"
     }
   ];
+
+  const testimonials = [
+    {
+        "name": "Sarah Johnson",
+        "role": "CTO, TechCorp",
+        "content": "Zion Tech Group transformed our business with their innovative AI solutions. The results exceeded our expectations.",
+        "rating": 5
+    },
+    {
+        "name": "Michael Chen",
+        "role": "CEO, InnovateLabs",
+        "content": "Outstanding service and cutting-edge technology. Our productivity increased by 300% after implementing their solutions.",
+        "rating": 5
+    },
+    {
+        "name": "Emily Rodriguez",
+        "role": "Operations Director, GlobalTech",
+        "content": "Professional, reliable, and innovative. Zion Tech Group is our trusted technology partner.",
+        "rating": 5
+    }
+];
+
+  const stats = [
+    {
+        "number": "500+",
+        "label": "Projects Completed"
+    },
+    {
+        "number": "50+",
+        "label": "Happy Clients"
+    },
+    {
+        "number": "99.9%",
+        "label": "Uptime"
+    },
+    {
+        "number": "24/7",
+        "label": "Support"
+    }
+];
 
   const pricingPlans = [
     {

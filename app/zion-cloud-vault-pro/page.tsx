@@ -41,6 +41,36 @@ export default function ZionCloudVaultPro() {
     }
   ];
 
+  const testimonials = [
+    {
+        "name": "Sarah Johnson",
+        "role": "CTO, TechCorp",
+        "content": "Zion Tech Group transformed our business with their innovative AI solutions. The results exceeded our expectations.",
+        "rating": 5
+    },
+    {
+        "name": "Michael Chen",
+        "role": "CEO, InnovateLabs",
+        "content": "Outstanding service and cutting-edge technology. Our productivity increased by 300% after implementing their solutions.",
+        "rating": 5
+    },
+    {
+        "name": "Emily Rodriguez",
+        "role": "Operations Director, GlobalTech",
+        "content": "Professional, reliable, and innovative. Zion Tech Group is our trusted technology partner.",
+        "rating": 5
+    }
+];
+
+  const benefits = [
+    "Increased efficiency and productivity",
+    "Reduced operational costs",
+    "Enhanced security and compliance",
+    "Scalable and flexible solutions",
+    "24/7 monitoring and support",
+    "Expert technical guidance"
+];
+
   const storageStats = [
     { number: "99.99%", label: "Uptime Guarantee", icon: <Award className="w-6 h-6" /> },
     { number: "256-bit", label: "AES Encryption", icon: <Lock className="w-6 h-6" /> },

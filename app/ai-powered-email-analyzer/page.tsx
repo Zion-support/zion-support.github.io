@@ -36,6 +36,25 @@ const AIPoweredEmailAnalyzerPage = () => {
     }
   ];
 
+  const stats = [
+    {
+        "number": "500+",
+        "label": "Projects Completed"
+    },
+    {
+        "number": "50+",
+        "label": "Happy Clients"
+    },
+    {
+        "number": "99.9%",
+        "label": "Uptime"
+    },
+    {
+        "number": "24/7",
+        "label": "Support"
+    }
+];
+
   const pricingPlans = [
     {
       name: "Starter",

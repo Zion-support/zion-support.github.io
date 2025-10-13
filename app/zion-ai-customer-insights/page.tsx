@@ -80,6 +80,46 @@ const ZionAICustomerInsightsPage = () => {
     }
   ];
 
+  const testimonials = [
+    {
+        "name": "Sarah Johnson",
+        "role": "CTO, TechCorp",
+        "content": "Zion Tech Group transformed our business with their innovative AI solutions. The results exceeded our expectations.",
+        "rating": 5
+    },
+    {
+        "name": "Michael Chen",
+        "role": "CEO, InnovateLabs",
+        "content": "Outstanding service and cutting-edge technology. Our productivity increased by 300% after implementing their solutions.",
+        "rating": 5
+    },
+    {
+        "name": "Emily Rodriguez",
+        "role": "Operations Director, GlobalTech",
+        "content": "Professional, reliable, and innovative. Zion Tech Group is our trusted technology partner.",
+        "rating": 5
+    }
+];
+
+  const stats = [
+    {
+        "number": "500+",
+        "label": "Projects Completed"
+    },
+    {
+        "number": "50+",
+        "label": "Happy Clients"
+    },
+    {
+        "number": "99.9%",
+        "label": "Uptime"
+    },
+    {
+        "number": "24/7",
+        "label": "Support"
+    }
+];
+
   const pricingPlans = [
     {
       name: 'Starter',

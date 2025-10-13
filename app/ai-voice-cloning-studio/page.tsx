@@ -1,24 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Mic, 
-  Play, 
-  Pause, 
-  Download, 
-  Upload, 
-  Settings, 
-  Star, 
-  Users, 
-  Zap, 
-  Shield, 
-  CheckCircle, 
-  ArrowRight,
-  Brain,
-  Volume2,
-  FileAudio,
-  Clock,
-  Globe
-} from 'lucide-react';
+import { Mic, Play, Pause, Download, Upload, Settings, Star, Users, Zap, Shield, CheckCircle, ArrowRight, Brain, Volume2, FileAudio, Clock, Globe, Power, Circle } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';

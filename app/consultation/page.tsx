@@ -77,6 +77,15 @@ export default function ConsultationPage() {
     }
   ];
 
+  const benefits = [
+    "Increased efficiency and productivity",
+    "Reduced operational costs",
+    "Enhanced security and compliance",
+    "Scalable and flexible solutions",
+    "24/7 monitoring and support",
+    "Expert technical guidance"
+];
+
   return (
     <>
       <Helmet>

@@ -1,18 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { 
-  Heart, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  CheckCircle,
-  ArrowRight,
-  Brain,
-  Target,
-  Globe,
-  AlertCircle
-} from 'lucide-react';
+import { Heart, Zap, BarChart3, Users, CheckCircle, ArrowRight, Brain, Target, Globe, AlertCircle, Star, Power, Circle, Monitor } from 'lucide-react';
 
 const AICustomerSentimentTrackerPage = () => {
   const features = [
@@ -47,6 +36,34 @@ const AICustomerSentimentTrackerPage = () => {
       description: "Share insights across teams, assign tasks, and track resolution progress for better customer experience."
     }
   ];
+
+  const benefits = [
+    "Increased efficiency and productivity",
+    "Reduced operational costs",
+    "Enhanced security and compliance",
+    "Scalable and flexible solutions",
+    "24/7 monitoring and support",
+    "Expert technical guidance"
+];
+
+  const stats = [
+    {
+        "number": "500+",
+        "label": "Projects Completed"
+    },
+    {
+        "number": "50+",
+        "label": "Happy Clients"
+    },
+    {
+        "number": "99.9%",
+        "label": "Uptime"
+    },
+    {
+        "number": "24/7",
+        "label": "Support"
+    }
+];
 
   const pricingPlans = [
     {

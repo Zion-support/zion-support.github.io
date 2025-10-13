@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Shield, CheckCircle, FileText, Lock, Users, Globe, Award, Clock } from 'lucide-react';
+import { ArrowRight, Shield, CheckCircle, FileText, Lock, Users, Globe, Award, Clock, Star, Circle, Monitor } from 'lucide-react';
 
 export default function Compliance() {
   const complianceFrameworks = [
@@ -42,6 +42,15 @@ export default function Compliance() {
       icon: <Users className="w-8 h-8" />
     }
   ];
+
+  const benefits = [
+    "Increased efficiency and productivity",
+    "Reduced operational costs",
+    "Enhanced security and compliance",
+    "Scalable and flexible solutions",
+    "24/7 monitoring and support",
+    "Expert technical guidance"
+];
 
   const services = [
     {

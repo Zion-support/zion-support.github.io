@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Cloud, Cloud } from 'lucide-react';
 
 import { Helmet } from "react-helmet-async";
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Server, Clock, Award, ArrowRight, CheckCircle, BarChart3, Database, Lock, Users, Settings, Zap, Globe } from 'lucide-react';
+import { Server, Clock, Award, ArrowRight, CheckCircle, BarChart3, Database, Lock, Users, Settings, Zap, Globe, Star, Circle, Cloud, Code, Cloud, Monitor } from 'lucide-react';
 
 const DevOpsServicesPage: React.FC = () => {
   const services = [

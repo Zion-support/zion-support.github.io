@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, MessageCircle, Calendar, Award, Globe, Star } from 'lucide-react';
+import { ArrowRight, Users, MessageCircle, Calendar, Award, Globe, Star, Circle, Cloud, Hand, Cloud } from 'lucide-react';
 
 export default function Community() {
   const events = [
@@ -30,6 +30,25 @@ export default function Community() {
       attendees: 25
     }
   ];
+
+  const stats = [
+    {
+        "number": "500+",
+        "label": "Projects Completed"
+    },
+    {
+        "number": "50+",
+        "label": "Happy Clients"
+    },
+    {
+        "number": "99.9%",
+        "label": "Uptime"
+    },
+    {
+        "number": "24/7",
+        "label": "Support"
+    }
+];
 
   const initiatives = [
     {

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Users, Zap, Globe, Clock, CheckCircle } from "lucide-react";
+import { Brain, Users, Zap, Globe, Clock, CheckCircle, Star, Calendar, Power, Circle, Mic } from 'lucide-react';
 import Layout from "../layout";
 
 export default function AISmartScheduler() {
@@ -28,6 +28,27 @@ export default function AISmartScheduler() {
       description: "Works with all major calendar platforms and time zones",
     },
   ];
+
+  const testimonials = [
+    {
+        "name": "Sarah Johnson",
+        "role": "CTO, TechCorp",
+        "content": "Zion Tech Group transformed our business with their innovative AI solutions. The results exceeded our expectations.",
+        "rating": 5
+    },
+    {
+        "name": "Michael Chen",
+        "role": "CEO, InnovateLabs",
+        "content": "Outstanding service and cutting-edge technology. Our productivity increased by 300% after implementing their solutions.",
+        "rating": 5
+    },
+    {
+        "name": "Emily Rodriguez",
+        "role": "Operations Director, GlobalTech",
+        "content": "Professional, reliable, and innovative. Zion Tech Group is our trusted technology partner.",
+        "rating": 5
+    }
+];
 
   const pricingPlans = [
     {

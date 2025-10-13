@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Cloud, Globe, Calendar, Phone, CheckCircle, Award, Rocket, Sparkles, TrendingUp, Heart, Receipt, Package, Code, Globe as WebIcon, Calendar as ScheduleIcon, Cloud as CloudIcon, Shield as ProtectionIcon } from 'lucide-react';
+import { ArrowRight, Shield, Cloud, Globe, Calendar, Phone, CheckCircle, Award, Rocket, Sparkles, TrendingUp, Heart, Receipt, Package, Code, Globe as Globe, Calendar as ScheduleIcon, Cloud as CloudIcon, Shield as ProtectionIcon, Star, Power, Circle, Filter, Globe, Mic, Workflow, Monitor, AnalyticsIcon, TeamIcon, MarketingIcon, EmailIcon, DocumentIcon, ConfigIcon } from 'lucide-react';
 
 export default function MicroSaasServices() {
   const microSaasServices = [
@@ -329,6 +329,25 @@ export default function MicroSaasServices() {
       ]
     }
   ];
+
+  const stats = [
+    {
+        "number": "500+",
+        "label": "Projects Completed"
+    },
+    {
+        "number": "50+",
+        "label": "Happy Clients"
+    },
+    {
+        "number": "99.9%",
+        "label": "Uptime"
+    },
+    {
+        "number": "24/7",
+        "label": "Support"
+    }
+];
 
   return (
     <>

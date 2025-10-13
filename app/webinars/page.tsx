@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Brain, Globe, Shield, Play } from 'lucide-react';
+import { ArrowRight, Sparkles, Brain, Globe, Shield, Play, Power, Cloud, Mic, Cloud } from 'lucide-react';
 
 const WebinarsPage = () => {
   const upcomingWebinars = [

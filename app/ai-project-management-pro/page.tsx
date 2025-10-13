@@ -1,7 +1,7 @@
 "use client";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { CheckCircle, Star, Brain, Clock, Target, BarChart3 } from 'lucide-react';
+import { CheckCircle, Star, Brain, Clock, Target, BarChart3, Power, Circle, Cloud, Workflow, Cloud, Mic } from 'lucide-react';
 
 export default function AIProjectManagementPro() {
   const features = [
@@ -30,6 +30,27 @@ export default function AIProjectManagementPro() {
         "Comprehensive reporting and analytics to optimize project performance",
     },
   ];
+
+  const testimonials = [
+    {
+        "name": "Sarah Johnson",
+        "role": "CTO, TechCorp",
+        "content": "Zion Tech Group transformed our business with their innovative AI solutions. The results exceeded our expectations.",
+        "rating": 5
+    },
+    {
+        "name": "Michael Chen",
+        "role": "CEO, InnovateLabs",
+        "content": "Outstanding service and cutting-edge technology. Our productivity increased by 300% after implementing their solutions.",
+        "rating": 5
+    },
+    {
+        "name": "Emily Rodriguez",
+        "role": "Operations Director, GlobalTech",
+        "content": "Professional, reliable, and innovative. Zion Tech Group is our trusted technology partner.",
+        "rating": 5
+    }
+];
 
   const projectFeatures = [
     {

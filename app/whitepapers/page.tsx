@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Download, ArrowRight, Sparkles, Target, Brain, Globe, Settings, Shield, BookOpen } from 'lucide-react';
+import { Download, ArrowRight, Sparkles, Target, Brain, Globe, Settings, Shield, BookOpen, Filter, Cloud, Mic, Cloud } from 'lucide-react';
 
 const WhitepapersPage = () => {
   const whitepapers = [

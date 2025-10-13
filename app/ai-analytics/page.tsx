@@ -1,22 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { 
-  ArrowRight, 
-  BarChart3, 
-  Brain, 
-  CheckCircle, 
-  Star, 
-  Zap, 
-  Globe, 
-  Mail, 
-  Phone, 
-  Database,
-  Settings,
-  Monitor,
-  Sparkles,
-  Lightbulb,
-  TrendingDown
-} from "lucide-react";
+import { ArrowRight, BarChart3, Brain, CheckCircle, Star, Zap, Globe, Mail, Phone, Database, Settings, Monitor, Sparkles, Lightbulb, TrendingDown, Power, Circle, Mic } from 'lucide-react';
 
 export default function AiAnalytics() {
   const features = [
@@ -57,6 +41,36 @@ export default function AiAnalytics() {
       benefits: ["Custom model training", "Model deployment", "Performance monitoring", "Continuous learning"]
     }
   ];
+
+  const testimonials = [
+    {
+        "name": "Sarah Johnson",
+        "role": "CTO, TechCorp",
+        "content": "Zion Tech Group transformed our business with their innovative AI solutions. The results exceeded our expectations.",
+        "rating": 5
+    },
+    {
+        "name": "Michael Chen",
+        "role": "CEO, InnovateLabs",
+        "content": "Outstanding service and cutting-edge technology. Our productivity increased by 300% after implementing their solutions.",
+        "rating": 5
+    },
+    {
+        "name": "Emily Rodriguez",
+        "role": "Operations Director, GlobalTech",
+        "content": "Professional, reliable, and innovative. Zion Tech Group is our trusted technology partner.",
+        "rating": 5
+    }
+];
+
+  const benefits = [
+    "Increased efficiency and productivity",
+    "Reduced operational costs",
+    "Enhanced security and compliance",
+    "Scalable and flexible solutions",
+    "24/7 monitoring and support",
+    "Expert technical guidance"
+];
 
   const analyticsStats = [
     { number: "40%", label: "Faster Decision Making", icon: <Zap className="w-6 h-6" /> },

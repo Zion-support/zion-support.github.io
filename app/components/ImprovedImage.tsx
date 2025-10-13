@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { ImageIcon } from 'lucide-react';
+import { ImageIcon, Cloud, Cloud } from 'lucide-react';
 
 interface ImprovedImageProps {
   src: string;
