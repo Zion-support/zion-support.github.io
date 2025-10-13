@@ -1,23 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-export default function Sidebar({ isOpen, onClose }: SidebarProps) {
+const Sidebar: React.FC = () => {
   return (
-    <div className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
-      <button onClick={onClose} className="close-btn">
-        ×
-      </button>
-      <nav>
-        <Link to="/" onClick={onClose}>Home</Link>
-        <Link to="/about" onClick={onClose}>About</Link>
-        <Link to="/services" onClick={onClose}>Services</Link>
-        <Link to="/contact" onClick={onClose}>Contact</Link>
-      </nav>
-    </div>
+    <aside className="bg-slate-800 text-white w-64 p-4">
+      <h3 className="text-lg font-semibold mb-4">Navigation</h3>
+      <ul className="space-y-2">
+        <li><a href="/" className="block hover:text-blue-400">Home</a></li>
+        <li><a href="/about" className="block hover:text-blue-400">About</a></li>
+        <li><a href="/services" className="block hover:text-blue-400">Services</a></li>
+        <li><a href="/contact" className="block hover:text-blue-400">Contact</a></li>
+      </ul>
+    </aside>
   );
-}
+};
+
+export default Sidebar;

@@ -1,184 +1,145 @@
 #!/usr/bin/env python3
 """
-Comprehensive fix for all remaining syntax and parsing errors.
-This script creates clean, working versions of all problematic files.
+Comprehensive script to fix all syntax and JSX issues in the codebase.
 """
 
 import os
 import re
 import glob
-from pathlib import Path
 
-def create_clean_page_template(page_name):
-    """Create a clean page template based on the page name."""
-    # Extract service name from path
-    service_name = page_name.replace('app/', '').replace('/page.tsx', '').replace('-', ' ').title()
-    
-    return f"""import React from 'react';
-
-export default function {service_name.replace(' ', '')}Page() {{
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            {service_name}
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Advanced AI and IT solutions for your business needs.
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
-            <p className="text-gray-600">
-              Comprehensive solution for your business requirements.
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
-            <p className="text-gray-600">
-              Advanced technology integration and optimization.
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
-            <p className="text-gray-600">
-              Scalable and secure implementation.
-            </p>
-          </div>
-        </div>
-        
-        <div className="text-center mt-12">
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-            Get Started
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}}
-"""
-
-def create_clean_component_template(component_name):
-    """Create a clean component template."""
-    return f"""import React from 'react';
-
-interface {component_name}Props {{
-  className?: string;
-  children?: React.ReactNode;
-}}
-
-export default function {component_name}({{ className = '', children, ...props }}: {component_name}Props) {{
-    return (
-        <div className={`${{{component_name.lower()}}}-component ${{className}}`}} {{...props}}>
-          {{children}}
-        </div>
-      );
-}}
-"""
-
-def fix_file_content(file_path):
-    """Fix the content of a single file."""
-    try:
-        # Check if it's a page file
-        if '/page.tsx' in file_path:
-            clean_content = create_clean_page_template(file_path)
-        elif '/components/' in file_path:
-            component_name = Path(file_path).stem
-            clean_content = create_clean_component_template(component_name)
-        else:
-            # For other files, create a basic template
-            clean_content = f"""import React from 'react';
-
-export default function Component() {{
-  return (
-    <div>
-      <h1>Component</h1>
-    </div>
-  );
-}}
-"""
-        
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(clean_content)
-        
-        print(f"Fixed: {file_path}")
-        return True
-        
-    except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
-        return False
-
-def has_parsing_errors(file_path):
-    """Check if file has parsing errors."""
+def fix_file_syntax(file_path):
+    """Fix syntax issues in a single file."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Check for common parsing error patterns
-        error_patterns = [
-            r'Declaration or statement expected',
-            r'Identifier expected',
-            r'Expression expected',
-            r'Unexpected token',
-            r'Parsing error',
-            r'',
-            r'',
-            r'>>>>>>>'
-        ]
+        original_content = content
         
-        for pattern in error_patterns:
-            if re.search(pattern, content, re.IGNORECASE):
-                return True
+        # Fix orphaned text outside JSX elements (lines that start with text but aren't in JSX)
+        lines = content.split('\n')
+        new_lines = []
+        in_jsx = False
+        brace_count = 0
         
-        # Check for incomplete files
-        if len(content.strip()) < 50:
-            return True
+        for i, line in enumerate(lines):
+            stripped = line.strip()
             
-        # Check for missing closing braces
-        open_braces = content.count('{')
-        close_braces = content.count('}')
-        if open_braces != close_braces:
-            return True
+            # Skip empty lines
+            if not stripped:
+                new_lines.append(line)
+                continue
             
+            # Check if we're entering JSX
+            if 'return (' in line or 'return(' in line:
+                in_jsx = True
+                brace_count = 0
+                new_lines.append(line)
+                continue
+            
+            # Count braces to track JSX context
+            if in_jsx:
+                brace_count += line.count('(') - line.count(')')
+                if brace_count <= 0 and ')' in line:
+                    in_jsx = False
+            
+            # Skip orphaned text that's not in JSX
+            if not in_jsx and stripped and not stripped.startswith(('import', 'export', 'const', 'function', 'interface', 'type', '//', '/*', '*', '*/')):
+                # This might be orphaned text, skip it
+                continue
+            
+            new_lines.append(line)
+        
+        content = '\n'.join(new_lines)
+        
+        # Fix missing closing tags by ensuring proper JSX structure
+        # Count opening and closing div tags
+        open_divs = content.count('<div')
+        close_divs = content.count('</div>')
+        
+        if open_divs > close_divs:
+            # Find the last return statement and add missing closing divs
+            last_return = content.rfind('return (')
+            if last_return != -1:
+                # Find the matching closing parenthesis
+                paren_count = 0
+                i = last_return
+                while i < len(content):
+                    if content[i] == '(':
+                        paren_count += 1
+                    elif content[i] == ')':
+                        paren_count -= 1
+                        if paren_count == 0:
+                            # Insert missing closing divs before this closing paren
+                            missing_divs = open_divs - close_divs
+                            content = content[:i] + '</div>' * missing_divs + content[i:]
+                            break
+                    i += 1
+        
+        # Fix syntax errors in import statements
+        content = re.sub(r'import\s*{\s*([^}]+)\s*}\s*from\s*[\'"]([^\'"]+)[\'"];?\s*import\s*{\s*([^}]+)\s*}\s*from\s*[\'"]([^\'"]+)[\'"];?', 
+                        r'import { \1, \3 } from "\2";', content)
+        
+        # Fix missing semicolons in import statements
+        content = re.sub(r'import\s*{\s*([^}]+)\s*}\s*from\s*[\'"]([^\'"]+)[\'"]\s*$', 
+                        r'import { \1 } from "\2";', content, flags=re.MULTILINE)
+        
+        # Fix orphaned text that's not properly formatted
+        content = re.sub(r'^\s*[A-Za-z][^<]*$', '', content, flags=re.MULTILINE)
+        
+        # Fix missing closing tags in JSX
+        content = re.sub(r'<div([^>]*)>\s*$', r'<div\1></div>', content, flags=re.MULTILINE)
+        
+        # Clean up extra whitespace and empty lines
+        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
+        
+        # Remove lines that are just orphaned text
+        lines = content.split('\n')
+        new_lines = []
+        for line in lines:
+            stripped = line.strip()
+            if stripped and not stripped.startswith(('import', 'export', 'const', 'function', 'interface', 'type', '//', '/*', '*', '*/', '<', 'return', 'if', 'for', 'while', 'switch', 'case', 'default', 'break', 'continue', 'try', 'catch', 'finally', 'throw', 'class', 'extends', 'implements', 'public', 'private', 'protected', 'static', 'abstract', 'async', 'await', 'yield', 'var', 'let', 'const', '=')):
+                # Check if this looks like orphaned text
+                if not any(char in stripped for char in ['<', '>', '(', ')', '{', '}', '[', ']', ';', ':', ',', '?', '!', '=', '+', '-', '*', '/', '%', '&', '|', '^', '~', '`', '"', "'"]):
+                    continue
+            new_lines.append(line)
+        
+        content = '\n'.join(new_lines)
+        
+        if content != original_content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            return True
+        
         return False
-        
-    except:
-        return True
+    except Exception as e:
+        print(f"Error fixing {file_path}: {e}")
+        return False
 
 def main():
-    """Main function to fix all files with parsing errors."""
-    print("Starting comprehensive fix...")
-    
-    # Find all TypeScript/JavaScript files
-    file_patterns = [
+    """Main function to fix all syntax issues."""
+    # Get all TypeScript and TSX files
+    patterns = [
         'app/**/*.tsx',
-        'app/**/*.ts'
+        'app/**/*.ts',
+        'utils/**/*.ts',
+        'components/**/*.tsx',
+        'components/**/*.ts'
     ]
     
-    files_to_process = []
-    for pattern in file_patterns:
-        files_to_process.extend(glob.glob(pattern, recursive=True))
-    
-    # Filter out node_modules and other directories
-    files_to_process = [f for f in files_to_process if not any(exclude in f for exclude in [
-        'node_modules', '.git', 'dist', 'build', '.next', 'coverage'
-    ])]
-    
-    print(f"Found {len(files_to_process)} files to check")
+    files_to_fix = []
+    for pattern in patterns:
+        files_to_fix.extend(glob.glob(pattern, recursive=True))
     
     fixed_count = 0
-    for file_path in files_to_process:
-        if has_parsing_errors(file_path):
-            if fix_file_content(file_path):
+    total_count = 0
+    
+    for file_path in files_to_fix:
+        if os.path.isfile(file_path):
+            total_count += 1
+            if fix_file_syntax(file_path):
                 fixed_count += 1
     
-    print(f"Fixed {fixed_count} files")
-    print("Comprehensive fix complete!")
+    print(f"Fixed syntax issues in {fixed_count} out of {total_count} files")
 
 if __name__ == "__main__":
     main()

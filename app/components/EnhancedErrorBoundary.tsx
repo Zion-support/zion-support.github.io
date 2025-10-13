@@ -1,4 +1,5 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+
+import React, { Component, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
@@ -20,7 +21,7 @@ export default class EnhancedErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
 
@@ -29,7 +30,9 @@ export default class EnhancedErrorBoundary extends Component<Props, State> {
       return this.props.fallback || (
         <div className="error-boundary">
           <h2>Something went wrong.</h2>
-          <p>Please refresh the page and try again.</p>
+          <details>
+            {this.state.error && this.state.error.toString()}
+          </details>
         </div>
       );
     }

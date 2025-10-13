@@ -7,7 +7,7 @@ import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
 import LoadingStates from './app/components/LoadingStates';
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
-import AnalyticsProvider from "./app/components/AnalyticsProvider";
+import { AnalyticsProvider } from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
@@ -76,21 +76,21 @@ function App() {
     <EnhancedErrorBoundary>
       <HelmetProvider>
         <AnalyticsProvider>
-          <PerformanceMonitor className="performance-monitor" />
-          <WebVitalsTracker className="web-vitals-tracker" />
-          <EnhancedAccessibility className="enhanced-accessibility" />
+          <PerformanceMonitor />
+          <WebVitalsTracker />
+          <EnhancedAccessibility />
           <AccessibilityEnhancer>
-            <CoreWebVitals className="core-web-vitals" />
+            <CoreWebVitals />
             <Router>
                       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                         <FuturisticBackground>
                           <PerformanceOptimizer>
                             <Navigation />
-                            <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-                            <Breadcrumb items={breadcrumbItems} />
+                            <Sidebar />
+                            <Breadcrumb />
                             
                             <main className="relative z-10" id="main-content" role="main">
-                              <Suspense fallback={<LoadingStates isLoading={true}><div>Loading...</div></LoadingStates>}>
+                              <Suspense fallback={<LoadingStates><div>Loading...</div></LoadingStates>}>
                                 <Routes>
                                   {/* Main Pages */}
                                   <Route path="/" element={<HomePage />} />

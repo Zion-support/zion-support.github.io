@@ -1,14 +1,15 @@
-import React, { useEffect } from 'react';
-import { accessibilityEnhancer } from '../utils/accessibilityEnhancer';
+import React from 'react';
 
 interface AccessibilityEnhancerProps {
-  children?: React.ReactNode;
+  children: React.ReactNode;
 }
 
-export default function AccessibilityEnhancer({ children }: AccessibilityEnhancerProps) {
-  useEffect(() => {
-    accessibilityEnhancer.init();
-  }, []);
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+  return (
+    <div className="accessibility-enhancer">
+      {children}
+    </div>
+  );
+};
 
-  return <>{children}</>;
-}
+export default AccessibilityEnhancer;

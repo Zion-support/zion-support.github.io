@@ -1,82 +1,53 @@
-export interface AccessibilityConfig {
-  enabled: boolean;
-  announceChanges: boolean;
-  highContrast: boolean;
-  reducedMotion: boolean;
-  fontSize: number;
-  screenReader: boolean;
+
+interface AccessibilityConfig {
+  enableKeyboardNavigation?: boolean;
+  enableScreenReader?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusIndicators?: boolean;
 }
 
-export class AccessibilityUtils {
+class AccessibilityUtils {
   private config: AccessibilityConfig;
 
   constructor(config: Partial<AccessibilityConfig> = {}) {
     this.config = {
-      enabled: true,
-      announceChanges: true,
-      highContrast: false,
-      reducedMotion: false,
-      fontSize: 16,
-      screenReader: false,
+      enableKeyboardNavigation: true,
+      enableScreenReader: true,
+      enableHighContrast: false,
+      enableFocusIndicators: true,
       ...config
     };
   }
 
-  announceToScreenReader(message: string): void {
-    if (this.config.enabled && this.config.announceChanges) {
-      const announcement = document.createElement('div');
-      announcement.setAttribute('aria-live', 'polite');
-      announcement.setAttribute('aria-atomic', 'true');
-      announcement.className = 'sr-only';
-      announcement.textContent = message;
-      document.body.appendChild(announcement);
-      
-      setTimeout(() => {
-        document.body.removeChild(announcement);
-      }, 1000);
+  enableKeyboardNavigation(): void {
+    if (this.config.enableKeyboardNavigation) {
+      document.addEventListener('keydown', this.handleKeyboardNavigation);
     }
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('Accessibility utils initialized');
-    }
-  }
-
-  setHighContrast(enabled: boolean): void {
-    this.config.highContrast = enabled;
-    if (enabled) {
-      document.body.classList.add('high-contrast');
-    } else {
-      document.body.classList.remove('high-contrast');
-    }
-  }
-
-  setReducedMotion(enabled: boolean): void {
-    this.config.reducedMotion = enabled;
-    if (enabled) {
-      document.body.classList.add('reduced-motion');
-    } else {
-      document.body.classList.remove('reduced-motion');
-    }
-  }
-
-  setFontSize(size: number): void {
-    this.config.fontSize = size;
-    document.documentElement.style.fontSize = `${size}px`;
-  }
+  private handleKeyboardNavigation = (event: KeyboardEvent): void => {
+    // Keyboard navigation logic
+    console.log('Keyboard navigation:', event.key);
+  };
 
   enableScreenReader(): void {
-    this.config.screenReader = true;
-    document.body.classList.add('screen-reader-optimized');
+    if (this.config.enableScreenReader) {
+      // Screen reader enhancements
+      console.log('Screen reader support enabled');
+    }
   }
 
-  disableScreenReader(): void {
-    this.config.screenReader = false;
-    document.body.classList.remove('screen-reader-optimized');
+  enableHighContrast(): void {
+    if (this.config.enableHighContrast) {
+      document.body.classList.add('high-contrast');
+    }
   }
 
-  getConfig(): AccessibilityConfig {
-    return { ...this.config };
+  enableFocusIndicators(): void {
+    if (this.config.enableFocusIndicators) {
+      document.body.classList.add('focus-indicators');
+    }
   }
 }
+
+export default AccessibilityUtils;
