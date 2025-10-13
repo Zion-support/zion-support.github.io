@@ -2,14 +2,17 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import SEO from './components/SEO';import { 
+import SEO from './components/SEO';
+import { 
   CpuChipIcon, 
   ShieldCheckIcon, 
   CloudIcon, 
   RocketLaunchIcon,
   CheckCircleIcon,
   ArrowRightIcon,
-  StarIcon
+  StarIcon,
+  ChartBarIcon,
+  GlobeAltIcon
 } from '@heroicons/react/24/outline';
 
 export default function HomePage()  {
@@ -57,6 +60,45 @@ export default function HomePage()  {
     { number: '50+', label: 'Happy Clients' },
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' }
+  ];
+
+  const services = [
+    {
+      title: 'AI Solutions',
+      description: 'Advanced artificial intelligence services including machine learning, natural language processing, and predictive analytics.',
+      href: '/ai-solutions',
+      icon: CpuChipIcon
+    },
+    {
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions to protect your digital assets, data, and infrastructure from evolving threats.',
+      href: '/cybersecurity',
+      icon: ShieldCheckIcon
+    },
+    {
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud solutions and infrastructure management to optimize performance and reduce operational costs.',
+      href: '/cloud-solutions',
+      icon: CloudIcon
+    },
+    {
+      title: 'Digital Transformation',
+      description: 'Strategic digital transformation services to modernize your business processes and enhance customer experiences.',
+      href: '/digital-transformation',
+      icon: ChartBarIcon
+    },
+    {
+      title: 'Micro SaaS',
+      description: 'Custom micro SaaS solutions designed to solve specific business challenges with scalable, cost-effective applications.',
+      href: '/micro-saas',
+      icon: GlobeAltIcon
+    },
+    {
+      title: '5G Solutions',
+      description: 'Next-generation 5G technology solutions for enhanced connectivity, IoT applications, and ultra-low latency services.',
+      href: '/5g-solutions',
+      icon: GlobeAltIcon
+    }
   ];
 
   return (
@@ -234,69 +276,16 @@ export default function HomePage()  {
             
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="text-center">
-                <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
+                <div className="text-4xl font-bold text-purple-400 mb-2">500+</div>
                 <div className="text-gray-300">Projects Completed</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">25+</div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
                 <div className="text-gray-300">Happy Clients</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-green-400 mb-2">99%</div>
-                <div className="text-gray-300">Success Rate</div>
-              </div>
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI & IT Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, technology consulting, Zion Tech Group" />
-        <meta property="og:title" content="Zion Tech Group - Advanced AI & IT Solutions" />
-        <meta property="og:description" content="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Tech Group - Advanced AI & IT Solutions" />
-        <meta name="twitter:description" content="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-slate-900 text-white">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-            <div className="text-center">
-              <h1 className="text-5xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                Zion Tech Group
-              </h1>
-              <p className="text-xl lg:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-                Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services that drive innovation and growth.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-                <Link
-                  to="/contact"
-                  className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Get Started Today
-                </Link>
-                <Link
-                  to="/about"
-                  className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
-                >
-                  Learn More
-                </Link>
-              </div>
-              
-              {/* Stats */}
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                {stats.map((stat, index) => (
-                  <div key={index} className="text-center">
-                    <div className="text-3xl lg:text-4xl font-bold text-purple-400 mb-2">
-                      {stat.number}
-                    </div>
-                    <div className="text-gray-300 text-sm lg:text-base">
-                      {stat.label}
-                    </div>
-                  </div>
-                ))}
+                <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
+                <div className="text-gray-300">Uptime Guarantee</div>
               </div>
             </div>
           </div>
@@ -314,7 +303,7 @@ export default function HomePage()  {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <Link
                   key={index}
@@ -388,7 +377,6 @@ export default function HomePage()  {
             </div>
           </div>
         </section>
-      </div>
     </>
   );
 }
