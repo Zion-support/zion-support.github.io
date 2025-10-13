@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 <<<<<<< HEAD
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
@@ -13,10 +14,14 @@ import { ExclamationTriangleIcon, ArrowPathIcon } from '@heroicons/react/24/outl
 import { Link } from 'react-router-dom';
 import { ExclamationTriangleIcon, ArrowPathIcon } from '@heroicons/react/24/outline';
 >>>>>>> cursor/analyze-improve-and-deploy-application-705a
+=======
+import React, { Component, ErrorInfo, ReactNode } from 'react';'
+import { AlertTriangle,  RefreshCw,  Home , Link  } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
+  fallback?: ReactNode;}
 }
 
 interface State {
@@ -25,6 +30,7 @@ interface State {
 <<<<<<< HEAD
 <<<<<<< HEAD
 error: Error | null;
+<<<<<<< HEAD
   errorInfo: ErrorInfo | null;
 =======
 error?: Error;
@@ -38,6 +44,9 @@ error?: Error;
   error?: Error;
   errorInfo?: ErrorInfo;
 >>>>>>> cursor/analyze-improve-and-deploy-application-705a
+=======
+  errorInfo: ErrorInfo | null;}
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -45,8 +54,13 @@ class ErrorBoundary extends Component<Props, State> {
     super(props);
     this.state = {
       hasError: false,
+<<<<<<< HEAD
       error: undefined,
       errorInfo: undefined
+=======
+      error: null,
+      errorInfo: null}
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
     };
   }
 
@@ -54,6 +68,7 @@ class ErrorBoundary extends Component<Props, State> {
     return {
       hasError: true,
       error,
+<<<<<<< HEAD
       errorInfo: undefined
     };
   }
@@ -169,8 +184,17 @@ We're sorry, but something unexpected happened. Our team has been notified and i
 =======
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
 >>>>>>> cursor/analyze-improve-and-deploy-application-705a
-            </p>
+=======
+      errorInfo: null}
+    };
+  }
 
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {'
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
+            </p>
+'
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
                 <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
@@ -183,13 +207,13 @@ Error Details (Development Only)
 >>>>>>> cursor/analyze-improve-and-deploy-application-7aca
                 </summary>
                 <div className="mt-2 p-4 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto">
-                  <div className="mb-2">
+                  <div className="mb-2">}
                     <strong>Error:</strong> {this.state.error.message}
                   </div>
                   {this.state.errorInfo && (
                     <div>
                       <strong>Stack Trace:</strong>
-                      <pre className="mt-1 whitespace-pre-wrap">
+                      <pre className="mt-1 whitespace-pre-wrap">}
                         {this.state.errorInfo.componentStack}
                       </pre>
                     </div>
@@ -249,7 +273,7 @@ className="flex items-center justify-center gap-2 border-2 border-purple-400 tex
             </div>
 
             <div className="mt-6 pt-6 border-t border-slate-700">
-              <p className="text-sm text-gray-400">
+              <p className="text-sm text-gray-400">'
                 If this problem persists, please{' '}
                 <Link to="/contact" className="text-purple-400 hover:text-purple-300">
                   contact our support team
@@ -281,4 +305,8 @@ className="block w-full border-2 border-purple-400 text-purple-300 px-6 py-3 rou
   }
 }
 
+<<<<<<< HEAD
 export default ErrorBoundary;
+=======
+export default ErrorBoundary;'
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6

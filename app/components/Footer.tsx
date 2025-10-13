@@ -1,5 +1,6 @@
-import React from 'react';
+import React from 'react';'
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -38,10 +39,14 @@ import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
   ArrowRightIcon
 } from '@heroicons/react/24/outline';
 >>>>>>> cursor/analyze-improve-and-deploy-application-705a
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -65,14 +70,11 @@ const Footer: React.FC = () => {
     { name: '5G Solutions', href: '/5g-solutions' },
   ];
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
 
-<<<<<<< HEAD
-    { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
-    { name: '5G Solutions', href: '/5g-solutions' },
-  ];
-
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
 >>>>>>> origin/main
+<<<<<<< HEAD
 =======
     { name: 'Micro SaaS', href: '/micro-saas' },
     { name: '5G Solutions', href: '/5g-solutions' }
@@ -87,10 +89,19 @@ const Footer: React.FC = () => {
     { name: 'Careers', href: '/careers' },
     { name: 'Blog', href: '/blog' },
     { name: 'Case Studies', href: '/case-studies' },
+=======
+  const company = ['}
+    { name: 'About Us', href: '/about' },'
+    { name: 'Our Team', href: '/team' },'
+    { name: 'Careers', href: '/careers' },'
+    { name: 'Blog', href: '/blog' },'
+    { name: 'Case Studies', href: '/case-studies' },'
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
     { name: 'News', href: '/news' },
 >>>>>>> cursor/analyze-improve-and-deploy-application-705a
   ];
 
+<<<<<<< HEAD
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   const company = [
     { name: 'About Us', href: '/about' },
@@ -120,21 +131,25 @@ const Footer: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
   ];
-
-  const socialLinks = [
-    { name: 'Facebook', href: '#', icon: 'facebook' },
-    { name: 'Twitter', href: '#', icon: 'twitter' },
-    { name: 'LinkedIn', href: '#', icon: 'linkedin' },
-    { name: 'GitHub', href: '#', icon: 'github' }
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const socialLinks = [
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'GitHub', href: '#', icon: Github }
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
+  const resources = ['
+    { name: 'Documentation', href: '/docs' },'
+    { name: 'Tutorials', href: '/tutorials' },'
+    { name: 'API Reference', href: '/api' },'
+    { name: 'Support', href: '/support' },'
+    { name: 'Community', href: '/community' },'
+    { name: 'Status', href: '/status' },
+  ];
+
+  const legal = ['
+    { name: 'Privacy Policy', href: '/privacy' },'
+    { name: 'Terms of Service', href: '/terms' },'
+    { name: 'Cookie Policy', href: '/cookies' },'
+    { name: 'GDPR', href: '/gdpr' },'
+    { name: 'Security', href: '/security' },'
+    { name: 'Compliance', href: '/compliance' },
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
+
 >>>>>>> origin/main
 =======
     { name: 'Terms of Service', href: '/terms' }
@@ -180,11 +195,7 @@ const Footer: React.FC = () => {
 <<<<<<< HEAD
             <Link to="/" className="flex items-center space-x-3 mb-6 group">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-<<<<<<< HEAD
-=======
-            <Link to="/" className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
+
 >>>>>>> origin/main
 =======
             <Link to="/" className="flex items-center space-x-2 mb-6">
@@ -207,6 +218,7 @@ const Footer: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-705a
             
@@ -214,6 +226,9 @@ const Footer: React.FC = () => {
 =======
 {/* Contact Info */}
 >>>>>>> origin/main
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3 text-gray-300">
                 <PhoneIcon className="w-5 h-5 text-purple-400" />
@@ -227,6 +242,7 @@ const Footer: React.FC = () => {
                 <MapPinIcon className="w-5 h-5 text-purple-400" />
                 <span>364 E Main St STE 1008, Middletown, DE 19709</span>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             </div>
@@ -290,6 +306,9 @@ const Footer: React.FC = () => {
 >>>>>>> cursor/analyze-improve-and-deploy-application-7aca
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-705a
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
             </div>
           </div>
 
@@ -299,20 +318,21 @@ const Footer: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Services</h3>
-<<<<<<< HEAD
-=======
-            <h3 className="text-white font-semibold text-lg mb-6">Services</h3>
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
+
 >>>>>>> origin/main
 =======
             <h3 className="text-white font-semibold text-lg mb-6">Services</h3>
 >>>>>>> cursor/analyze-improve-and-deploy-application-705a
             <ul className="space-y-3">
+<<<<<<< HEAD
 =======
             <h3 className="text-white font-semibold text-lg mb-4">Services</h3>
             <ul className="space-y-2">
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
               {services.map((service) => (
+=======
+              {services.map((service) => (}
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
                 <li key={service.name}>
                   <Link 
                     to={service.href} 
@@ -340,20 +360,21 @@ const Footer: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Company</h3>
-<<<<<<< HEAD
-=======
-            <h3 className="text-white font-semibold text-lg mb-6">Company</h3>
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
+
 >>>>>>> origin/main
 =======
             <h3 className="text-white font-semibold text-lg mb-6">Company</h3>
 >>>>>>> cursor/analyze-improve-and-deploy-application-705a
             <ul className="space-y-3">
+<<<<<<< HEAD
 =======
             <h3 className="text-white font-semibold text-lg mb-4">Company</h3>
             <ul className="space-y-2">
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
               {company.map((item) => (
+=======
+              {company.map((item) => (}
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
                 <li key={item.name}>
                   <Link 
                     to={item.href} 
@@ -381,16 +402,13 @@ const Footer: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Resources</h3>
-<<<<<<< HEAD
-=======
-            <h3 className="text-white font-semibold text-lg mb-6">Resources</h3>
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
+
 >>>>>>> origin/main
 =======
             <h3 className="text-white font-semibold text-lg mb-6">Resources</h3>
 >>>>>>> cursor/analyze-improve-and-deploy-application-705a
             <ul className="space-y-3 mb-8">
-              {resources.map((resource) => (
+              {resources.map((resource) => (}
                 <li key={resource.name}>
 =======
             <h3 className="text-white font-semibold text-lg mb-4">Support & Legal</h3>
@@ -407,7 +425,15 @@ const Footer: React.FC = () => {
                   </Link>
                 </li>
               ))}
+<<<<<<< HEAD
               {legal.map((item) => (
+=======
+            </ul>
+            
+            <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Legal</h3>
+            <ul className="space-y-3">
+              {legal.map((item) => (}
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
                 <li key={item.name}>
                   <Link 
                     to={item.href} 
@@ -445,10 +471,14 @@ const Footer: React.FC = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
+<<<<<<< HEAD
                 className="flex-1 px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
 =======
 className="flex-1 px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
 >>>>>>> origin/main
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
               />
               <button className="px-8 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center font-semibold">
                 Subscribe
@@ -499,6 +529,7 @@ className="flex-1 px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text
             <span>by Zion Tech Group</span>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           <div className="flex flex-wrap gap-6 mb-4 md:mb-0">
             {legal.map((link) => (
@@ -511,6 +542,9 @@ className="flex-1 px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text
               </Link>
             ))}
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
 >>>>>>> origin/main
 =======
           {/* Newsletter Signup */}
@@ -559,4 +593,8 @@ className="flex-1 px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text
   );
 };
 
+<<<<<<< HEAD
 export default Footer;
+=======
+export default Footer;'
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { Link, useLocation } from 'react-router-dom';
 import { 
   Bars3Icon, 
@@ -21,6 +22,24 @@ import {
   SignalIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline';
+=======
+import { Link,  useLocation , Bars3Icon,  
+  XMarkIcon, 
+  HomeIcon, 
+  InformationCircleIcon, 
+  BriefcaseIcon, 
+  PhoneIcon, 
+  DocumentTextIcon, 
+  AcademicCapIcon, 
+  PlayIcon, 
+  QuestionMarkCircleIcon, 
+  ShieldCheckIcon, 
+  CurrencyDollarIcon, 
+  CogIcon, 
+  ChevronDownIcon, 
+  GlobeAltIcon;'}
+ } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
 
 interface NavigationProps {
   onSidebarToggle?: () => void;
@@ -32,13 +51,14 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const location = useLocation();
 
-  const navigation = [
-    { name: 'Home', href: '/', icon: HomeIcon },
+  const navigation = ['}
+    { name: 'Home', href: '/', icon: HomeIcon },'
     { name: 'About', href: '/about', icon: InformationCircleIcon },
-    { 
-      name: 'Services', 
+    { '
+      name: 'Services', '
       href: '/services', 
       icon: BriefcaseIcon,
+<<<<<<< HEAD
       submenu: [
 <<<<<<< HEAD
         { name: 'AI Solutions', href: '/ai-solutions' },
@@ -92,6 +112,19 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
+=======
+      submenu: ['}
+        { name: 'AI Solutions', href: '/ai-solutions' },'
+        { name: 'IT Solutions', href: '/it-solutions' },'
+        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },'
+        { name: 'Cybersecurity', href: '/cybersecurity' },'
+        { name: 'Cloud Infrastructure', href: '/cloud-solutions' },'
+        { name: 'Digital Transformation', href: '/digital-transformation' },'
+        { name: '5G Solutions', href: '/5g-solutions' }
+      ]
+    },
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
 >>>>>>> origin/main
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
@@ -102,7 +135,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   ];
 
   const isActive = (path: string) => {
-    return location.pathname === path;
+    return location.pathname === path;}
   };
 
   const toggleMobileMenu = () => {
@@ -132,6 +165,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -228,6 +262,9 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 >>>>>>> cursor/analyze-improve-and-deploy-application-7aca
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-705a
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
           </div>
 
           {/* CTA Button */}
@@ -248,6 +285,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
             </Link>
           </div>
 
+<<<<<<< HEAD
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-4">
@@ -272,8 +310,39 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                       <div className={`absolute left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-slate-700 py-2 z-50 ${
                         (item.name === 'Services' ? isServicesOpen : isSolutionsOpen) ? 'block' : 'hidden'
                       }`}>
+=======
+          {/* Mobile menu button */}
+          <div className="lg:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-300 hover:text-white p-2"
+            >
+              {isOpen ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className="lg:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2">
+              {navigation.map((item) => {
+                const Icon = item.icon;
+                return (}
+                  <div key={item.name}>
+                    <Link
+                      to={item.href}
+                      className="flex items-center space-x-3 text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <Icon className="w-5 h-5" />
+                      <span>{item.name}</span>
+                    </Link>
+                    {item.submenu && (
+                      <div className="ml-8 space-y-1">
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
                         {item.submenu.map((subItem) => (
-                          <Link
+                          <Link}
                             key={subItem.name}
                             to={subItem.href}
                             className="flex items-center px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
@@ -380,4 +449,4 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   );
 };
 
-export default Navigation;
+export default Navigation;'

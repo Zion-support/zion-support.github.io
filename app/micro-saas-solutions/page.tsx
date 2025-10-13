@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 =======
 
@@ -14,6 +15,27 @@
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-705a
 import React from 'react';
+=======
+
+import React from 'react';'
+import { Helmet , Link  } from 'lucide-react';
+import { 
+  CpuChipIcon,
+  ShieldCheckIcon,
+  CloudIcon,
+  ChartBarIcon,
+  GlobeAltIcon,
+  RocketLaunchIcon,
+  ArrowRightIcon,
+  CheckCircleIcon,
+  PhoneIcon,
+  EnvelopeIcon,
+  CurrencyDollarIcon,
+  ClockIcon,
+  UserGroupIcon,
+  CogIcon;'}
+} from '@heroicons/react/24/outline';
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
 
 <<<<<<< HEAD
 export default function MicroSaaSSolutionsPage()   {
@@ -35,7 +57,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$1,500",
       benefits: ["40% faster insights", "Real-time updates", "Custom dashboards"],
       useCases: ["E-commerce analytics", "Marketing performance", "Financial reporting"],
-      href: "/ai-analytics-dashboard"
+      href: "/ai-analytics-dashboard"}
     },
     {
       title: "AI Content Management System",
@@ -54,7 +76,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$800",
       benefits: ["80% time savings", "SEO optimized", "Multi-language"],
       useCases: ["Blog management", "E-commerce content", "Marketing campaigns"],
-      href: "/ai-content-management"
+      href: "/ai-content-management"}
     },
     {
       title: "AI Customer Support Bot",
@@ -73,7 +95,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$600",
       benefits: ["24/7 availability", "Instant responses", "95% satisfaction"],
       useCases: ["Customer service", "Lead qualification", "FAQ automation"],
-      href: "/ai-customer-support-bot"
+      href: "/ai-customer-support-bot"}
     },
     {
       title: "AI Project Management Suite",
@@ -92,7 +114,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$1,200",
       benefits: ["30% efficiency gain", "Predictive planning", "Risk mitigation"],
       useCases: ["Software development", "Marketing campaigns", "Event planning"],
-      href: "/ai-project-management"
+      href: "/ai-project-management"}
     },
     {
       title: "AI E-commerce Optimizer",
@@ -111,7 +133,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$2,000",
       benefits: ["25% sales increase", "Optimized pricing", "Reduced inventory costs"],
       useCases: ["Online stores", "Marketplace optimization", "Retail analytics"],
-      href: "/ai-ecommerce-optimizer"
+      href: "/ai-ecommerce-optimizer"}
     },
     {
       title: "AI HR Management System",
@@ -130,7 +152,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$900",
       benefits: ["50% faster hiring", "Reduced turnover", "Better performance"],
       useCases: ["Recruitment", "Performance management", "Employee development"],
-      href: "/ai-hr-management"
+      href: "/ai-hr-management"}
     },
     {
       title: "AI Financial Analytics",
@@ -149,7 +171,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$1,500",
       benefits: ["Accurate forecasting", "Risk mitigation", "Automated compliance"],
       useCases: ["Financial planning", "Investment analysis", "Risk management"],
-      href: "/ai-financial-analytics"
+      href: "/ai-financial-analytics"}
     },
     {
       title: "AI Marketing Automation",
@@ -168,7 +190,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$1,200",
       benefits: ["300% ROI increase", "Personalized campaigns", "Automated optimization"],
       useCases: ["Email marketing", "Social media", "Lead generation"],
-      href: "/ai-marketing-automation"
+      href: "/ai-marketing-automation"}
     },
     {
       title: "AI Inventory Management",
@@ -187,7 +209,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$1,000",
       benefits: ["30% cost reduction", "Zero stockouts", "Optimized inventory"],
       useCases: ["Retail management", "Manufacturing", "Supply chain"],
-      href: "/ai-inventory-management"
+      href: "/ai-inventory-management"}
     },
     {
       title: "AI Document Processing",
@@ -206,7 +228,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$700",
       benefits: ["90% accuracy", "80% time savings", "Automated workflows"],
       useCases: ["Document management", "Data entry", "Compliance processing"],
-      href: "/ai-document-processing"
+      href: "/ai-document-processing"}
     },
     {
       title: "AI Social Media Manager",
@@ -225,7 +247,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$500",
       benefits: ["200% engagement increase", "Automated posting", "Optimized timing"],
       useCases: ["Social media marketing", "Brand management", "Community building"],
-      href: "/ai-social-media-manager"
+      href: "/ai-social-media-manager"}
     },
     {
       title: "AI Email Marketing Suite",
@@ -244,7 +266,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$400",
       benefits: ["40% open rates", "Personalized content", "Optimized timing"],
       useCases: ["Email campaigns", "Newsletter management", "Lead nurturing"],
-      href: "/ai-email-marketing"
+      href: "/ai-email-marketing"}
     },
     {
       title: "AI Voice Assistant Platform",
@@ -263,7 +285,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$2,500",
       benefits: ["95% accuracy", "24/7 availability", "Multi-language"],
       useCases: ["Customer service", "Voice commands", "Accessibility"],
-      href: "/ai-voice-assistant"
+      href: "/ai-voice-assistant"}
     },
     {
       title: "AI Video Analytics Platform",
@@ -282,7 +304,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$1,800",
       benefits: ["Real-time insights", "Automated analysis", "Performance boost"],
       useCases: ["Video marketing", "Content optimization", "Audience analysis"],
-      href: "/ai-video-analytics"
+      href: "/ai-video-analytics"}
     },
     {
       title: "AI Legal Document Analyzer",
@@ -301,7 +323,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$3,000",
       benefits: ["90% time savings", "Risk reduction", "Compliance assurance"],
       useCases: ["Legal firms", "Contract management", "Compliance"],
-      href: "/ai-legal-analyzer"
+      href: "/ai-legal-analyzer"}
     },
     {
       title: "AI Real Estate Assistant",
@@ -320,7 +342,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$1,500",
       benefits: ["Accurate valuations", "Market insights", "Lead generation"],
       useCases: ["Real estate agents", "Property management", "Investment analysis"],
-      href: "/ai-real-estate"
+      href: "/ai-real-estate"}
     },
     {
       title: "AI Healthcare Analytics",
@@ -339,7 +361,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$4,000",
       benefits: ["Improved outcomes", "Risk reduction", "Cost savings"],
       useCases: ["Hospitals", "Clinics", "Health systems"],
-      href: "/ai-healthcare-analytics"
+      href: "/ai-healthcare-analytics"}
     },
     {
       title: "AI Supply Chain Optimizer",
@@ -358,7 +380,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$2,200",
       benefits: ["20% cost reduction", "Optimized routes", "Risk mitigation"],
       useCases: ["Logistics", "Manufacturing", "Retail"],
-      href: "/ai-supply-chain"
+      href: "/ai-supply-chain"}
     },
     {
       title: "AI Energy Management System",
@@ -377,7 +399,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$1,800",
       benefits: ["30% energy savings", "Cost reduction", "Sustainability"],
       useCases: ["Manufacturing", "Buildings", "Utilities"],
-      href: "/ai-energy-management"
+      href: "/ai-energy-management"}
     },
     {
       title: "AI Fraud Detection System",
@@ -396,7 +418,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$2,500",
       benefits: ["99.9% accuracy", "Real-time detection", "Cost savings"],
       useCases: ["Banking", "E-commerce", "Financial services"],
-      href: "/ai-fraud-detection"
+      href: "/ai-fraud-detection"}
     },
     {
       title: "AI Learning Management System",
@@ -415,7 +437,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$1,000",
       benefits: ["Personalized learning", "Better outcomes", "Engagement boost"],
       useCases: ["Education", "Corporate training", "Online courses"],
-      href: "/ai-learning-management"
+      href: "/ai-learning-management"}
     },
     {
       title: "AI Quality Assurance Platform",
@@ -434,7 +456,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$1,900",
       benefits: ["90% test coverage", "Faster delivery", "Quality improvement"],
       useCases: ["Software development", "Manufacturing", "Quality control"],
-      href: "/ai-quality-assurance"
+      href: "/ai-quality-assurance"}
     },
     {
       title: "AI Event Management Suite",
@@ -453,7 +475,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$1,200",
       benefits: ["Better engagement", "Optimized planning", "Success metrics"],
       useCases: ["Conferences", "Webinars", "Corporate events"],
-      href: "/ai-event-management"
+      href: "/ai-event-management"}
     }
   ];
 =======
@@ -475,6 +497,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
             Discover our micro SaaS solutions and services.
           </p>
         </div>
+<<<<<<< HEAD
       </div>
     </>
   );
@@ -497,3 +520,299 @@ export default function MicroSaaSSolutionsPage() {
   );
 }
 >>>>>>> cursor/analyze-improve-and-deploy-application-705a
+=======
+      </section>
+
+      {/* Micro SaaS Products Grid */}
+      <section className="py-20 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {microSaaSProducts.map((product, index) => {
+              const Icon = product.icon;
+              return (
+                <div }
+                  key={product.title}
+                  className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105"
+                >
+                  <div className={`w-16 h-16 bg-gradient-to-r ${product.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                    <Icon className="w-8 h-8 text-white" />
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-white mb-4">{product.title}</h3>
+                  <p className="text-gray-300 mb-4 leading-relaxed">
+                    {product.description}
+                  </p>
+                  
+                  {/* Pricing */}
+                  <div className="mb-4">
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-3xl font-bold text-green-400">{product.price}</span>
+                      <span className="text-gray-400">/month</span>
+                    </div>
+                    <div className="text-sm text-gray-400">
+                      Setup fee: <span className="text-yellow-400 font-semibold">{product.setupFee}</span>
+                    </div>
+                  </div>
+                  
+                  {/* Benefits */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Benefits:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {product.benefits.map((benefit, benefitIndex) => (}
+                        <span key={benefitIndex} className="text-xs bg-green-900/30 text-green-300 px-2 py-1 rounded-full">
+                          {benefit}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Use Cases */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Perfect for:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {product.useCases.map((useCase, useCaseIndex) => (}
+                        <span key={useCaseIndex} className="text-xs bg-blue-900/30 text-blue-300 px-2 py-1 rounded-full">
+                          {useCase}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <ul className="space-y-2 mb-6">
+                    {product.features.map((feature, featureIndex) => (}
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        <span className="text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <div className="flex gap-2">
+                    <Link 
+                      to={product.href}'
+                      className={`flex-1 inline-flex items-center justify-center gap-2 text-${product.color.split(' ')[1].split('-')[1]}-400 hover:text-${product.color.split(' ')[1].split('-')[1]}-300 font-semibold group-hover:gap-3 transition-all border border-current px-4 py-2 rounded-lg`}
+                    >
+                      Learn More <ArrowRightIcon className="w-4 h-4" />
+                    </Link>
+                    <Link 
+                      to="/contact"
+                      className="flex-1 bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-2 rounded-lg font-semibold text-center hover:from-purple-700 hover:to-cyan-700 transition-all"
+                    >
+                      Get Started
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Our Micro SaaS */}
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Why Choose Our Micro SaaS Solutions?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Built with modern technology and designed for rapid deployment and scalability
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <ClockIcon className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Rapid Deployment</h3>
+              <p className="text-gray-300">
+                Get your micro SaaS up and running in days, not months. Our pre-built solutions are ready to deploy.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <CurrencyDollarIcon className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Cost Effective</h3>
+              <p className="text-gray-300">
+                Start with affordable monthly plans. No large upfront investments or long-term commitments required.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <CogIcon className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">AI-Powered</h3>
+              <p className="text-gray-300">
+                Every solution includes AI capabilities for automation, optimization, and intelligent insights.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <ShieldCheckIcon className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Enterprise Security</h3>
+              <p className="text-gray-300">
+                Bank-level security with encryption, compliance, and regular security updates included.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Comparison */}
+      <section className="py-20 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Transparent Pricing
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              No hidden fees, no surprises. Choose the plan that fits your business needs.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600">
+              <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
+              <div className="text-4xl font-bold text-green-400 mb-6">$99-299<span className="text-lg text-gray-400">/month</span></div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Basic AI features</span>
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Email support</span>
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Standard setup</span>
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Monthly updates</span>
+                </li>
+              </ul>
+              <Link to="/contact" className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-purple-700 hover:to-cyan-700 transition-all">
+                Get Started
+              </Link>
+            </div>
+
+            <div className="bg-gradient-to-br from-purple-800 to-pink-800 p-8 rounded-xl border border-purple-500 relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  Most Popular
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
+              <div className="text-4xl font-bold text-green-400 mb-6">$299-599<span className="text-lg text-gray-400">/month</span></div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Advanced AI features</span>
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Priority support</span>
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Custom setup</span>
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Weekly updates</span>
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <span>API access</span>
+                </li>
+              </ul>
+              <Link to="/contact" className="w-full bg-white text-purple-900 px-6 py-3 rounded-lg font-semibold text-center hover:bg-gray-100 transition-all">
+                Get Started
+              </Link>
+            </div>
+
+            <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600">
+              <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
+              <div className="text-4xl font-bold text-green-400 mb-6">Custom<span className="text-lg text-gray-400">/month</span></div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Full AI capabilities</span>
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <span>24/7 dedicated support</span>
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <span>White-label solution</span>
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Daily updates</span>
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Custom integrations</span>
+                </li>
+              </ul>
+              <Link to="/contact" className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-purple-700 hover:to-cyan-700 transition-all">
+                Contact Sales
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-12">
+              Choose from our comprehensive suite of micro SaaS solutions and start seeing results immediately
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Link 
+                to="/contact" 
+                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                Get Free Consultation
+                <ArrowRightIcon className="w-5 h-5" />
+              </Link>
+              <Link 
+                to="/demo" 
+                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                Schedule Demo
+                <ArrowRightIcon className="w-5 h-5" />
+              </Link>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center text-gray-300">
+              <div className="flex items-center gap-3">
+                <PhoneIcon className="w-6 h-6 text-purple-400" />
+                <span>+1-302-464-0950</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <EnvelopeIcon className="w-6 h-6 text-purple-400" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}'
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6

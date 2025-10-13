@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';'
 'use client';
 const EnhancedFooter: React.FC = () => {
   return (
@@ -7,7 +7,7 @@ const EnhancedFooter: React.FC = () => {
       <Helmet>
         <title>Enhanced Footer - Zion Tech Group</title>
         <meta name="description" content="Professional enhanced footer services by Zion Tech Group." />
-      </Helmet>
+      </Helmet>}
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">;
         <div className="max-w-6xl mx-auto text-center">;
@@ -25,3 +25,4 @@ const EnhancedFooter: React.FC = () => {
 };
 
 export default EnhancedFooter;
+'

@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Circle, Send, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import React, { useState } from 'react';'
+import { Helmet , Circle,  Send,  Phone,  Mail,  MapPin,  Clock  } from 'lucide-react';
 
 export default function ContactPage()    {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    subject: '',
-    message: ''
+  const [formData, setFormData] = useState({'
+    name: '','
+    email: '','
+    company: '','
+    phone: '','
+    subject: '','
+    message: ''}
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -18,7 +17,7 @@ export default function ContactPage()    {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value}
     });
   };
 
@@ -30,11 +29,12 @@ export default function ContactPage()    {
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     setIsSubmitted(true);
-    setIsSubmitting(false);
+    setIsSubmitting(false);}
   };
 
   const contactInfo = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       icon: 'Phone',
@@ -44,23 +44,31 @@ icon: 'Phone',
       title: 'Phone',
       value: '+1 (555) 123-4567',
       description: 'Mon-Fri 9AM-6PM EST'
+=======
+'
+      icon: 'Phone','
+      title: 'Phone','
+      value: '+1 (555) 123-4567','
+      description: 'Mon-Fri 9AM-6PM EST'}
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
     },
-    {
-      icon: 'Email',
-      title: 'Email',
-      value: 'contact@ziontechgroup.com',
-      description: 'We respond within 24 hours'
+    {'
+      icon: 'Email','
+      title: 'Email','
+      value: 'contact@ziontechgroup.com','
+      description: 'We respond within 24 hours'}
     },
-    {
-      icon: 'Location',
-      title: 'Address',
-      value: '123 Tech Street, Suite 100',
-      description: 'San Francisco, CA 94105'
+    {'
+      icon: 'Location','
+      title: 'Address','
+      value: '123 Tech Street, Suite 100','
+      description: 'San Francisco, CA 94105'}
     },
-    {
+    {'
       icon: 'Clock',
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
 =======
 icon: Phone,
@@ -88,16 +96,20 @@ value: 'Monday - Friday',
 value: 'Monday - Friday',
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       description: '9:00 AM - 6:00 PM EST'
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd3e'
+      description: '9:00 AM - 6:00 PM EST'}
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
     }
   ];
 
-  const subjects = [
-    'AI Services',
-    'IT Services',
-    'Services',
-    'Micro SAAS',
-    'Digital Transformation',
-    '5G Implementation',
+  const subjects = ['
+    'AI Services','
+    'IT Services','
+    'Services','
+    'Micro SAAS','
+    'Digital Transformation','
+    '5G Implementation','
     'Other'
   ];
 
@@ -134,7 +146,7 @@ value: 'Monday - Friday',
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contactInfo.map((info, index) => {
               const Icon = info.icon;
-              return (
+              return (}
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4">
                     <Icon className="w-6 h-6 text-white" />
@@ -162,19 +174,19 @@ value: 'Monday - Friday',
                 <Circle className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-300 mb-6">'
                 Thank you for contacting us. We'll get back to you within 24 hours.
               </p>
               <button
                 onClick={() => {
                   setIsSubmitted(false);
-                  setFormData({
-                    name: '',
-                    email: '',
-                    company: '',
-                    phone: '',
-                    subject: '',
-                    message: ''
+                  setFormData({'
+                    name: '','
+                    email: '','
+                    company: '','
+                    phone: '','
+                    subject: '','
+                    message: ''}
                   });
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
@@ -261,7 +273,7 @@ value: 'Monday - Friday',
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
                   <option value="">Select a subject</option>
-                  {subjects.map((subject, index) => (
+                  {subjects.map((subject, index) => (}
                     <option key={index} value={subject}>
                       {subject}
                     </option>
@@ -300,7 +312,7 @@ value: 'Monday - Friday',
                     <>
                       Send Message
                       <Send className="w-5 h-5 ml-2 inline" />
-                    </>
+                    </>}
                   )}
                 </button>
               </div>
@@ -310,4 +322,4 @@ value: 'Monday - Friday',
       </section>
     </div>
   );
-}
+}'

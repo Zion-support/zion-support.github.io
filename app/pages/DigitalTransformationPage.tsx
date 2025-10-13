@@ -1,44 +1,49 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { RefreshCw, Users, Target, TrendingUp, Lightbulb, CheckCircle } from 'lucide-react;
+=======
+import React from 'react';'
+import { Helmet , RefreshCw,  Users,  Target,  TrendingUp,  Lightbulb,  CheckCircle   } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
 const DigitalTransformationPage: React.FC = () => {
   const services = [{
-      icon: RefreshCw,
-      title: 'Process Automation',';
-      description: 'Streamline and automate business processes to improve efficiency and reduce manual errors.',';
-      features: ['Workflow Analysis', 'Process Mapping', 'Automation Implementation', 'Performance Monitoring']';
+      icon: RefreshCw,'
+      title: 'Process Automation',';'
+      description: 'Streamline and automate business processes to improve efficiency and reduce manual errors.',';'
+      features: ['Workflow Analysis', 'Process Mapping', 'Automation Implementation', 'Performance Monitoring']';}
     },
     {
-      icon: Users,
-      title: 'Change Management',';
-      description: 'Guide your team through digital transformation with effective change management strategies.',';
-      features: ['Training Programs', 'Communication Plans', 'Resistance Management', 'Success Metrics']';
+      icon: Users,'
+      title: 'Change Management',';'
+      description: 'Guide your team through digital transformation with effective change management strategies.',';'
+      features: ['Training Programs', 'Communication Plans', 'Resistance Management', 'Success Metrics']';}
     },
     {
-      icon: Target,
-      title: 'Digital Strategy',';
-      description: 'Develop comprehensive digital strategies aligned with your business objectives.',';
-      features: ['Digital Assessment', 'Technology Roadmap', 'Implementation Planning', 'ROI Analysis']';
+      icon: Target,'
+      title: 'Digital Strategy',';'
+      description: 'Develop comprehensive digital strategies aligned with your business objectives.',';'
+      features: ['Digital Assessment', 'Technology Roadmap', 'Implementation Planning', 'ROI Analysis']';}
     },
     {
-      icon: TrendingUp,
-      title: 'Data Analytics',';
-      description: 'Transform data into actionable insights to drive better business decisions.',';
-      features: ['Data Collection', 'Analytics Platforms', 'Dashboard Development', 'Insight Generation']';
+      icon: TrendingUp,'
+      title: 'Data Analytics',';'
+      description: 'Transform data into actionable insights to drive better business decisions.',';'
+      features: ['Data Collection', 'Analytics Platforms', 'Dashboard Development', 'Insight Generation']';}
     },
     {
-      icon: Lightbulb,
-      title: 'Innovation Consulting',';
-      description: 'Identify and implement innovative technologies to stay competitive in the digital age.',';
-      features: ['Technology Research', 'Innovation Workshops', 'Pilot Programs', 'Scalability Planning']';
+      icon: Lightbulb,'
+      title: 'Innovation Consulting',';'
+      description: 'Identify and implement innovative technologies to stay competitive in the digital age.',';'
+      features: ['Technology Research', 'Innovation Workshops', 'Pilot Programs', 'Scalability Planning']';}
     },
     {
-      icon: CheckCircle,
-      title: 'Digital Maturity',';
-      description: 'Assess and improve your organization\'s digital maturity across all business functions.',';
-      features: ['Maturity Assessment', 'Gap Analysis', 'Improvement Plans', 'Progress Tracking']';
+      icon: CheckCircle,'
+      title: 'Digital Maturity',';'
+      description: 'Assess and improve your organization\'s digital maturity across all business functions.',';'
+      features: ['Maturity Assessment', 'Gap Analysis', 'Improvement Plans', 'Progress Tracking']';}
     }
   ];
 =======
@@ -68,7 +73,7 @@ const DigitalTransformationPage: React.FC = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
           {services.map((service, _index) => {
             const Icon = service.icon;
-            return (
+            return (}
               <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">;
                 <div className="flex items-center mb-4">;
                   <div className="p-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg mr-4">;
@@ -78,7 +83,7 @@ const DigitalTransformationPage: React.FC = () => {
                 </div>;
                 <p className="text-gray-300 mb-4">{service.description}</p>;
                 <ul className="space-y-2">;
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="text-sm text-gray-400 flex items-center">;
                       <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>;
                       {feature}
@@ -127,6 +132,7 @@ const DigitalTransformationPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default DigitalTransformationPage;
 =======
 
@@ -145,3 +151,6 @@ export default function DigitalTransformationPage() {
   );
 }
 >>>>>>> cursor/analyze-improve-and-deploy-application-705a
+=======
+export default DigitalTransformationPage;'
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6

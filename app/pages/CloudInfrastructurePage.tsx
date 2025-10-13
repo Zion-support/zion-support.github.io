@@ -1,44 +1,49 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { Cloud, Server, Database, Shield, Zap, Globe } from 'lucide-react;
+=======
+import React from 'react';'
+import { Helmet , Cloud,  Server,  Database,  Shield,  Zap,  Globe   } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
 const CloudInfrastructurePage: React.FC = () => {
   const services = [{
-      icon: Cloud,
-      title: 'Cloud Migration',';
-      description: 'Seamlessly migrate your applications and data to the cloud with minimal downtime.',';
-      features: ['Assessment & Planning', 'Data Migration', 'Application Modernization', 'Testing & Validation']';
+      icon: Cloud,'
+      title: 'Cloud Migration',';'
+      description: 'Seamlessly migrate your applications and data to the cloud with minimal downtime.',';'
+      features: ['Assessment & Planning', 'Data Migration', 'Application Modernization', 'Testing & Validation']';}
     },
     {
-      icon: Server,
-      title: 'Infrastructure as Code',';
-      description: 'Automate infrastructure provisioning and management using modern DevOps practices.',';
-      features: ['Terraform Templates', 'CI/CD Pipelines', 'Version Control', 'Automated Deployments']';
+      icon: Server,'
+      title: 'Infrastructure as Code',';'
+      description: 'Automate infrastructure provisioning and management using modern DevOps practices.',';'
+      features: ['Terraform Templates', 'CI/CD Pipelines', 'Version Control', 'Automated Deployments']';}
     },
     {
-      icon: Database,
-      title: 'Database Solutions',';
-      description: 'Optimize your database performance and scalability in the cloud environment.',';
-      features: ['Database Migration', 'Performance Tuning', 'Backup & Recovery', 'Monitoring & Alerting']';
+      icon: Database,'
+      title: 'Database Solutions',';'
+      description: 'Optimize your database performance and scalability in the cloud environment.',';'
+      features: ['Database Migration', 'Performance Tuning', 'Backup & Recovery', 'Monitoring & Alerting']';}
     },
     {
-      icon: Shield,
-      title: 'Security & Compliance',';
-      description: 'Implement robust security measures and ensure compliance with industry standards.',';
-      features: ['Identity & Access Management', 'Data Encryption', 'Compliance Audits', 'Security Monitoring']';
+      icon: Shield,'
+      title: 'Security & Compliance',';'
+      description: 'Implement robust security measures and ensure compliance with industry standards.',';'
+      features: ['Identity & Access Management', 'Data Encryption', 'Compliance Audits', 'Security Monitoring']';}
     },
     {
-      icon: Zap,
-      title: 'Auto-scaling',';
-      description: 'Automatically scale your resources based on demand to optimize costs and performance.',';
-      features: ['Load Balancing', 'Resource Optimization', 'Cost Management', 'Performance Monitoring']';
+      icon: Zap,'
+      title: 'Auto-scaling',';'
+      description: 'Automatically scale your resources based on demand to optimize costs and performance.',';'
+      features: ['Load Balancing', 'Resource Optimization', 'Cost Management', 'Performance Monitoring']';}
     },
     {
-      icon: Globe,
-      title: 'Multi-cloud Strategy',';
-      description: 'Leverage multiple cloud providers for better resilience and vendor independence.',';
-      features: ['Cloud Strategy', 'Vendor Management', 'Disaster Recovery', 'Cost Optimization']';
+      icon: Globe,'
+      title: 'Multi-cloud Strategy',';'
+      description: 'Leverage multiple cloud providers for better resilience and vendor independence.',';'
+      features: ['Cloud Strategy', 'Vendor Management', 'Disaster Recovery', 'Cost Optimization']';}
     }
   ];
 =======
@@ -68,7 +73,7 @@ const CloudInfrastructurePage: React.FC = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
           {services.map((service, _index) => {
             const Icon = service.icon;
-            return (
+            return (}
               <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">;
                 <div className="flex items-center mb-4">;
                   <div className="p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg mr-4">;
@@ -78,7 +83,7 @@ const CloudInfrastructurePage: React.FC = () => {
                 </div>;
                 <p className="text-gray-300 mb-4">{service.description}</p>;
                 <ul className="space-y-2">;
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="text-sm text-gray-400 flex items-center">;
                       <span className="w-2 h-2 bg-indigo-400 rounded-full mr-3"></span>;
                       {feature}
@@ -127,6 +132,7 @@ const CloudInfrastructurePage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default CloudInfrastructurePage;
 =======
 
@@ -145,3 +151,6 @@ export default function CloudInfrastructurePage() {
   );
 }
 >>>>>>> cursor/analyze-improve-and-deploy-application-705a
+=======
+export default CloudInfrastructurePage;'
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6

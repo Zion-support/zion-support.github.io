@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -7,6 +8,77 @@ import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;
 
 >>>>>>> cursor/analyze-improve-and-deploy-application-7aca
 const CareersPage: React.FC = () => {
+=======
+import React from 'react';'
+import { Helmet , MapPin,  Clock,  Users,  Heart,  Zap,  Target   } from 'lucide-react';
+const CareersPage: React.FC = () => {
+  const benefits = [{
+      icon: Heart,'
+      title: 'Health & Wellness',';'
+      description: 'Comprehensive health insurance, mental health support, and wellness programs.'';}
+    },
+    {
+      icon: Zap,'
+      title: 'Learning & Development',';'
+      description: 'Continuous learning opportunities, conferences, and professional development budget.'';}
+    },
+    {
+      icon: Users,'
+      title: 'Collaborative Culture',';'
+      description: 'Work with talented professionals in an inclusive and innovative environment.'';}
+    },
+    {
+      icon: Target,'
+      title: 'Career Growth',';'
+      description: 'Clear career paths, mentorship programs, and opportunities for advancement.'';}
+    }
+  ];
+
+  const openPositions = [{'
+      title: 'Senior AI Engineer',';'
+      location: 'Remote / Delaware',';'
+      type: 'Full-time',';'
+      department: 'Engineering',';'
+      description: 'Lead AI model development and implementation for enterprise clients.'';}
+    },
+    {'
+      title: 'Cloud Solutions Architect',';'
+      location: 'Remote / Delaware',';'
+      type: 'Full-time',';'
+      department: 'Engineering',';'
+      description: 'Design and implement scalable cloud infrastructure solutions.'';}
+    },
+    {'
+      title: 'Cybersecurity Specialist',';'
+      location: 'Remote / Delaware',';'
+      type: 'Full-time',';'
+      department: 'Security',';'
+      description: 'Protect client systems and data with advanced security measures.'';}
+    },
+    {'
+      title: 'Product Manager',';'
+      location: 'Remote / Delaware',';'
+      type: 'Full-time',';'
+      department: 'Product',';'
+      description: 'Drive product strategy and roadmap for our AI and IT solutions.'';}
+    },
+    {'
+      title: 'Sales Engineer',';'
+      location: 'Remote / Delaware',';'
+      type: 'Full-time',';'
+      department: 'Sales',';'
+      description: 'Help clients understand and implement our technology solutions.'';}
+    },
+    {'
+      title: 'UX/UI Designer',';'
+      location: 'Remote / Delaware',';'
+      type: 'Full-time',';'
+      department: 'Design',';'
+      description: 'Create intuitive and engaging user experiences for our products.'';}
+    }
+  ];
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900">;
@@ -21,7 +93,7 @@ const CareersPage: React.FC = () => {
           <h1 className="text-5xl font-bold text-white mb-6">;
             Join Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-400">Team</span>;
           </h1>;
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;'
             Be part of a team that's shaping the future of AI and IT solutions.';
             Work on cutting-edge projects and make a real impact.;
           </p>;
@@ -32,7 +104,7 @@ const CareersPage: React.FC = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {benefits.map((benefit, _index) => {
               const Icon = benefit.icon;
-              return (
+              return (}
                 <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">;
                   <div className="p-3 bg-gradient-to-r from-rose-500 to-pink-500 rounded-lg w-fit mx-auto mb-4">;
                     <Icon className="w-6 h-6 text-white" />;
@@ -48,7 +120,7 @@ const CareersPage: React.FC = () => {
         <div className="mb-16">;
           <h2 className="text-3xl font-bold text-white text-center mb-12">Open Positions</h2>;
           <div className="grid md:grid-cols-2 gap-6">;
-            {openPositions.map((position, _index) => (
+            {openPositions.map((position, _index) => (}
               <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">;
                 <div className="flex justify-between items-start mb-4">;
                   <h3 className="text-xl font-semibold text-white">{position.title}</h3>;
@@ -99,9 +171,9 @@ const CareersPage: React.FC = () => {
         </div>;
         {/* CTA Section */}
         <div className="text-center">;
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">;
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">;'
             <h2 className="text-2xl font-bold text-white mb-4">Don't See Your Perfect Role?</h2>';
-            <p className="text-gray-300 mb-6">;
+            <p className="text-gray-300 mb-6">;'
               We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.';
             </p>;
             <button className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-rose-600 hover:to-pink-600 transition-all duration-300">;
@@ -130,6 +202,7 @@ const CareersPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default CareersPage;
 =======
 
@@ -148,3 +221,6 @@ export default function CareersPage() {
   );
 }
 >>>>>>> cursor/analyze-improve-and-deploy-application-705a
+=======
+export default CareersPage;'
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6

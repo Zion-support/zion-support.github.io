@@ -1,25 +1,24 @@
-import React from 'react';
-import { useState } from 'react;
-import { Link } from 'react-router-dom;
-import { Menu, X, ChevronDown } from 'lucide-react;
+import React from 'react';'
+{ useState } from 'react';'
+import { Link  , Menu,  X,  ChevronDown   } from 'lucide-react';
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-
-  const navigationItems = [{ name: 'Home', href: '/' },';
+'}
+  const navigationItems = [{ name: 'Home', href: '/' },';'
     { name: 'About', href: '/about' },';
-    { 
-      name: 'Services',';
-      href: '/services',';
-      submenu: [{ name: 'AI Services', href: '/ai-services' },';
-        { name: 'IT Services', href: '/it-services' },';
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },';
+    { '
+      name: 'Services',';'
+      href: '/services',';'}
+      submenu: [{ name: 'AI Services', href: '/ai-services' },';'
+        { name: 'IT Services', href: '/it-services' },';'
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },';'
         { name: 'Digital Transformation', href: '/digital-transformation' }';
       ];
-    },
-    { name: 'Solutions', href: '/solutions' },';
-    { name: 'Case Studies', href: '/case-studies' },';
-    { name: 'Blog', href: '/blog' },';
+    },'
+    { name: 'Solutions', href: '/solutions' },';'
+    { name: 'Case Studies', href: '/case-studies' },';'
+    { name: 'Blog', href: '/blog' },';'
     { name: 'Contact', href: '/contact' }';
   ];
 
@@ -36,7 +35,7 @@ const Header: React.FC = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">;
             <div className="ml-10 flex items-baseline space-x-4">;
-              {navigationItems.map((item) => (
+              {navigationItems.map((item) => (}
                 <div key={item.name} className="relative group">;
                   <Link;
                     to={item.href}
@@ -51,7 +50,7 @@ const Header: React.FC = () => {
                   {item.submenu && isServicesOpen && (
                     <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">;
                       {item.submenu.map((subItem) => (
-                        <Link;
+                        <Link;}
                           key={subItem.name}
                           to={subItem.href}
                           className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700";
@@ -88,7 +87,7 @@ const Header: React.FC = () => {
         {isOpen && (
           <div className="md:hidden">;
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 rounded-lg mt-2">;
-              {navigationItems.map((item) => (
+              {navigationItems.map((item) => (}
                 <div key={item.name}>;
                   <Link;
                     to={item.href}
@@ -100,7 +99,7 @@ const Header: React.FC = () => {
                   {item.submenu && (
                     <div className="ml-4 space-y-1">;
                       {item.submenu.map((subItem) => (
-                        <Link;
+                        <Link;}
                           key={subItem.name}
                           to={subItem.href}
                           className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm";
@@ -130,4 +129,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default Header;'

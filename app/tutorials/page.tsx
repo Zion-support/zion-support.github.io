@@ -1,6 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Right, Play, User, Star, Circle, Clock } from 'lucide-react;
+import React from 'react';'
+import { Helmet , Right,  Play,  User,  Star,  Circle,  Clock   } from 'lucide-react';
 const TutorialsPage: React.FC = () => {
   const tutorials = [{
       id: 1,
@@ -11,7 +10,7 @@ const TutorialsPage: React.FC = () => {
       instructor: "Dr. Sarah Johnson",
       rating: 4.8,
       students: 1250,
-      thumbnail: "🤖";
+      thumbnail: "🤖";}
     },
     {
       id: 2,
@@ -22,7 +21,7 @@ const TutorialsPage: React.FC = () => {
       instructor: "Michael Chen",
       rating: 4.9,
       students: 980,
-      thumbnail: "☁️";
+      thumbnail: "☁️";}
     },
     {
       id: 3,
@@ -33,7 +32,7 @@ const TutorialsPage: React.FC = () => {
       instructor: "Emily Rodriguez",
       rating: 4.7,
       students: 2100,
-      thumbnail: "🔒";
+      thumbnail: "🔒";}
     },
     {
       id: 4,
@@ -44,7 +43,7 @@ const TutorialsPage: React.FC = () => {
       instructor: "Dr. David Kim",
       rating: 4.9,
       students: 750,
-      thumbnail: "🧠";
+      thumbnail: "🧠";}
     },
     {
       id: 5,
@@ -55,7 +54,7 @@ const TutorialsPage: React.FC = () => {
       instructor: "Lisa Wang",
       rating: 4.8,
       students: 1100,
-      thumbnail: "⚙️";
+      thumbnail: "⚙️";}
     },
     {
       id: 6,
@@ -66,7 +65,7 @@ const TutorialsPage: React.FC = () => {
       instructor: "James Wilson",
       rating: 4.6,
       students: 1650,
-      thumbnail: "📊";
+      thumbnail: "📊";}
     }
   ];
 
@@ -115,7 +114,7 @@ const TutorialsPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">;
             <div className="flex flex-wrap justify-center gap-4">;
               {categories.map((category, _index) => (
-                <button;
+                <button;}
                   key={_index}
                   className="px-6 py-3 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 text-white hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300";
                 >;
@@ -132,7 +131,7 @@ const TutorialsPage: React.FC = () => {
               Featured Tutorials;
             </h2>;
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {tutorials.map((tutorial) => (
+              {tutorials.map((tutorial) => (}
                 <div key={tutorial.id} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">;
                   <div className="text-4xl mb-4">{tutorial.thumbnail}</div>;
                   <div className="flex items-center justify-between mb-3">;
@@ -195,4 +194,4 @@ const TutorialsPage: React.FC = () => {
   );
 };
 
-export default TutorialsPage;
+export default TutorialsPage;'

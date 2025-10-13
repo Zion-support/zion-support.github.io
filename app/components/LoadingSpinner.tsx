@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
@@ -183,6 +184,9 @@ lg: 'w-12 h-12'
 
   return spinner;
 >>>>>>> cursor/analyze-improve-and-deploy-application-705a
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
 };
 
 export default LoadingSpinner;

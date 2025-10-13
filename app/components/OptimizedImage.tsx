@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';'
 import { Helmet } from 'react-helmet-async';
 
 interface OptimizedImageProps {
@@ -10,25 +10,25 @@ interface OptimizedImageProps {
   priority?: boolean;
   placeholder?: string;
   sizes?: string;
-  quality?: number;
+  quality?: number;'
   loading?: 'lazy' | 'eager';
   onLoad?: () => void;
-  onError?: () => void;
+  onError?: () => void;}
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
   width,
-  height,
+  height,'
   className = '',
-  priority = false,
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzY2NjY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+',
+  priority = false,'
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzY2NjY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+','
   sizes = '100vw',
-  quality = 85,
+  quality = 85,'
   loading = 'lazy',
   onLoad,
-  onError
+  onError}
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -42,17 +42,17 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
-          observer.disconnect();
+          observer.disconnect();}
         }
       },
       {
-        threshold: 0.1,
-        rootMargin: '50px'
+        threshold: 0.1,'
+        rootMargin: '50px'}
       }
     );
 
     if (imgRef.current) {
-      observer.observe(imgRef.current);
+      observer.observe(imgRef.current);}
     }
 
     return () => observer.disconnect();
@@ -60,23 +60,23 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   const handleLoad = () => {
     setIsLoaded(true);
-    onLoad?.();
+    onLoad?.();}
   };
 
   const handleError = () => {
     setIsError(true);
-    onError?.();
+    onError?.();}
   };
 
   // Generate WebP src if supported
-  const getOptimizedSrc = (originalSrc: string) => {
+  const getOptimizedSrc = (originalSrc: string) => {'
     if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {
-      return originalSrc;
+      return originalSrc;}
     }
     
-    // For external images, return as-is
+    // For external images, return as-is'
     if (originalSrc.startsWith('http')) {
-      return originalSrc;
+      return originalSrc;}
     }
     
     // For local images, you could implement WebP conversion here
@@ -88,7 +88,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   return (
     <>
       {priority && (
-        <Helmet>
+        <Helmet>}
           <link rel="preload" as="image" href={optimizedSrc} />
         </Helmet>
       )}
@@ -100,7 +100,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         {/* Placeholder */}
         {!isLoaded && !isError && (
           <div
-            className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"
+            className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"}
             style={{ width, height }}
           >
             <div className="text-gray-400 text-sm">Loading...</div>
@@ -110,7 +110,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         {/* Error state */}
         {isError && (
           <div
-            className="absolute inset-0 bg-gray-100 flex items-center justify-center"
+            className="absolute inset-0 bg-gray-100 flex items-center justify-center"}
             style={{ width, height }}
           >
             <div className="text-gray-400 text-sm text-center">
@@ -122,7 +122,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
         {/* Actual image */}
         {isInView && !isError && (
-          <img
+          <img}
             src={optimizedSrc}
             alt={alt}
             width={width}
@@ -131,13 +131,13 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
             sizes={sizes}
             onLoad={handleLoad}
             onError={handleError}
-            className={`transition-opacity duration-300 ${
-              isLoaded ? 'opacity-100' : 'opacity-0'
+            className={`transition-opacity duration-300 ${'
+              isLoaded ? 'opacity-100' : 'opacity-0'}
             }`}
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover'
+            style={{'
+              width: '100%','
+              height: '100%','
+              objectFit: 'cover'}
             }}
           />
         )}
@@ -146,4 +146,4 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   );
 };
 
-export default OptimizedImage;
+export default OptimizedImage;'

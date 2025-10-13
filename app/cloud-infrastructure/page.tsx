@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';'
 'use client';
 export default function Infrastructure() {
   return (
@@ -66,6 +66,7 @@ export default function Infrastructure() {
         </div>;
       </div>;
     </div>;
-  );
+  );}
 }
 
+'

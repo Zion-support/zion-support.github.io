@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react';'
 'use client';
       {/* Content Section */}
       <section className="py-16 px-4">;
@@ -39,4 +39,4 @@ import React from 'react';
             </div>;
           </div>;
         </div>;
-      </section>;
+      </section>;'

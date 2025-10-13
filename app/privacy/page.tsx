@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react';'
 import { Helmet } from 'react-helmet-async';
 const PrivacyPage: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const PrivacyPage: React.FC = () => {
         <meta name="description" content="Learn about how Zion Tech Group collects, uses, and protects your personal information in accordance with privacy laws and best practices." />
         <meta name="keywords" content="privacy policy, data protection, personal information, GDPR, privacy rights" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;}
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
           <div className="max-w-7xl mx-auto text-center">;
@@ -73,4 +73,4 @@ const PrivacyPage: React.FC = () => {
   );
 };
 
-export default PrivacyPage;
+export default PrivacyPage;'

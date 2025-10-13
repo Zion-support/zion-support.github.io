@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 <<<<<<< HEAD
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
@@ -8,13 +9,18 @@ import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 =======
 import React, { useEffect, useState } from 'react';
 >>>>>>> cursor/analyze-improve-and-deploy-application-705a
+=======
+import React, { useEffect, useState } from 'react';'
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
 
 interface PerformanceMetrics {
   cls: number | null;
   fcp: number | null;
   lcp: number | null;
   ttfb: number | null;
-  loadTime: number | null;
+  loadTime: number | null;}
 }
 
 const PerformanceMonitor: React.FC = () => {
@@ -24,26 +30,30 @@ const PerformanceMonitor: React.FC = () => {
     lcp: null,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     ttfb: null
+=======
+    ttfb: null}
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
   });
 
   useEffect(() => {
-    // Only run in production
+    // Only run in production'
     if (process.env.NODE_ENV !== 'production') return;
 
     const handleMetric = (metric: any) => {
       setMetrics(prev => ({
         ...prev,
-        [metric.name]: metric.value
+        [metric.name]: metric.value}
       }));
 
-      // Send to analytics service
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', metric.name, {
+      // Send to analytics service'
+      if (typeof window !== 'undefined' && window.gtag) {'
+        window.gtag('event', metric.name, {'
           event_category: 'Web Vitals',
           value: Math.round(metric.value),
           event_label: metric.id,
-          non_interaction: true,
+          non_interaction: true,}
         });
       }
     };
@@ -54,15 +64,15 @@ const PerformanceMonitor: React.FC = () => {
     onLCP(handleMetric);
     onTTFB(handleMetric);
   }, []);
-
-  // Don't render anything in production
+'
+  // Don't render anything in production'
   if (process.env.NODE_ENV === 'production') {
       <h3 className="font-bold mb-2">Performance Metrics</h3>
-      <div className="space-y-1">
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>
+      <div className="space-y-1">'}
+        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>'
+        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>'
+        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...'}</div>'
+        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>'
         <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
 =======
 
@@ -272,6 +282,7 @@ const PerformanceMonitor: React.FC = () => {
       </div>
       
       <div className="space-y-2 text-xs">
+<<<<<<< HEAD
         <div className="flex justify-between">
           <span>FCP:</span>
           <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
@@ -302,6 +313,38 @@ const PerformanceMonitor: React.FC = () => {
         <div className="flex justify-between items-center">
           <span className="text-gray-300">CLS:</span>
           <div className="flex items-center gap-2">
+=======
+        {metrics.fcp && (
+          <div className="flex justify-between">
+            <span className="text-gray-300">FCP:</span>}
+            <span className={getScoreColor(metrics.fcp, { good: 1800, needsImprovement: 3000 })}>
+              {metrics.fcp.toFixed(0)}ms
+            </span>
+          </div>
+        )}
+        
+        {metrics.lcp && (
+          <div className="flex justify-between">
+            <span className="text-gray-300">LCP:</span>}
+            <span className={getScoreColor(metrics.lcp, { good: 2500, needsImprovement: 4000 })}>
+              {metrics.lcp.toFixed(0)}ms
+            </span>
+          </div>
+        )}
+        
+        {metrics.fid && (
+          <div className="flex justify-between">
+            <span className="text-gray-300">FID:</span>}
+            <span className={getScoreColor(metrics.fid, { good: 100, needsImprovement: 300 })}>
+              {metrics.fid.toFixed(0)}ms
+            </span>
+          </div>
+        )}
+        
+        {metrics.cls !== undefined && (
+          <div className="flex justify-between">
+            <span className="text-gray-300">CLS:</span>}
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
             <span className={getScoreColor(metrics.cls, { good: 0.1, needsImprovement: 0.25 })}>
               {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
             </span>
@@ -345,4 +388,8 @@ const PerformanceMonitor: React.FC = () => {
 >>>>>>> cursor/analyze-improve-and-deploy-application-7aca
 };
 
+<<<<<<< HEAD
 export default PerformanceMonitor;
+=======
+export default PerformanceMonitor;'
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6

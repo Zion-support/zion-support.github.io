@@ -9,5 +9,6 @@ export default function MedicalRecordsManagerPage() {
         </p>;
       </div>;
     </div>;
-  );
+  );}
 }
+'

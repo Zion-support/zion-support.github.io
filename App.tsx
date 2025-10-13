@@ -17,6 +17,7 @@ import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
 =======
@@ -25,30 +26,34 @@ import LoadingSpinner from './app/components/LoadingSpinner';
 =======
 import LoadingSpinner from './app/components/LoadingSpinner';
 >>>>>>> cursor/analyze-improve-and-deploy-application-705a
+=======
+import EnhancedAccessibility from './app/components/EnhancedAccessibility';
+import LoadingSpinner from './app/components/LoadingSpinner';
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
 
 // Page Components
-import HomePage from './app/page';
-import AboutPage from './app/pages/AboutPage';
-import ContactPage from './app/pages/ContactPage';
-import ServicesPage from './app/pages/ServicesPage';
-import BlogPage from './app/pages/BlogPage';
-import TutorialsPage from './app/pages/TutorialsPage';
-import DemoPage from './app/pages/DemoPage';
-import SupportPage from './app/pages/SupportPage';
-import PrivacyPage from './app/pages/PrivacyPage';
-import TermsPage from './app/pages/TermsPage';
-import PricingPage from './app/pages/PricingPage';
-import SolutionsPage from './app/pages/SolutionsPage';
-import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
-import AISolutionsPage from './app/ai-solutions/page';
+import HomePage from './app/page';'
+import AboutPage from './app/pages/AboutPage';'
+import ContactPage from './app/pages/ContactPage';'
+import ServicesPage from './app/pages/ServicesPage';'
+import BlogPage from './app/pages/BlogPage';'
+import TutorialsPage from './app/pages/TutorialsPage';'
+import DemoPage from './app/pages/DemoPage';'
+import SupportPage from './app/pages/SupportPage';'
+import PrivacyPage from './app/pages/PrivacyPage';'
+import TermsPage from './app/pages/TermsPage';'
+import PricingPage from './app/pages/PricingPage';'
+import SolutionsPage from './app/pages/SolutionsPage';'
+import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';'
+import AISolutionsPage from './app/ai-solutions/page';'
 import ITSolutionsPage from './app/it-solutions/page';
 
-// Service Pages
-import AIServicesPage from './app/pages/AIServicesPage';
-import ITServicesPage from './app/pages/ITServicesPage';
-import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
-import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
-import CaseStudiesPage from './app/pages/CaseStudiesPage';
+// Service Pages'
+import AIServicesPage from './app/pages/AIServicesPage';'
+import ITServicesPage from './app/pages/ITServicesPage';'
+import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';'
+import DigitalTransformationPage from './app/pages/DigitalTransformationPage';'
+import CaseStudiesPage from './app/pages/CaseStudiesPage';'
 import CareersPage from './app/pages/CareersPage';
 
 // Additional Pages
@@ -100,7 +105,11 @@ function App() {
               <main className="relative z-10 flex-1" id="main-content" role="main">
               <ErrorBoundary>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Routes>
+=======
+                <Routes>}
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
                   {/* Main Pages */}
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
@@ -188,7 +197,7 @@ function App() {
                         </div>
 >>>>>>> cursor/analyze-improve-and-deploy-application-7aca
                       </div>
-                    </div>
+                    </div>}
                   } />
                 </Routes>
               </ErrorBoundary>
@@ -212,6 +221,7 @@ function App() {
       </HelmetProvider>
     </ErrorBoundary>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 import EnhancedAccessibility from './app/components/EnhancedAccessibility';
@@ -220,7 +230,9 @@ import LoadingSpinner from './app/components/LoadingSpinner';
 >>>>>>> origin/main
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
   );
 }
 
-export default App;
+export default App;'

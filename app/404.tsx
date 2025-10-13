@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';'
 'use client';
 export default function NotFoundPage() {
   return (
@@ -45,5 +45,5 @@ export default function NotFoundPage() {
         </div>;
       </div>;
     </>
-  );
-}
+  );}
+}'

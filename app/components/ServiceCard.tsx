@@ -9,5 +9,6 @@ export default function ComponentsPage() {
         </p>;
       </div>;
     </div>;
-  );
+  );}
 }
+'

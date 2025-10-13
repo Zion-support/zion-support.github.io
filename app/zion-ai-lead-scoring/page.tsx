@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react';'
 'use client';
 export default function ZionAiLeadScoringPage() {
   return (
@@ -10,5 +10,6 @@ export default function ZionAiLeadScoringPage() {
         </p>;
       </div>;
     </div>;
-  );
+  );}
 }
+'

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
 'use client';
@@ -19,6 +20,10 @@ import SEOHead from './components/SEOHead';
 >>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
+=======
+
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
 >>>>>>> origin/main
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-7aca
@@ -30,10 +35,19 @@ import {
   CpuChipIcon, 
   ShieldCheckIcon, 
   CloudIcon, 
+<<<<<<< HEAD
   RocketLaunchIcon,
   CheckCircleIcon,
   ArrowRightIcon,
   StarIcon
+=======
+  CpuChipIcon,
+  ChartBarIcon,
+  GlobeAltIcon,
+  PhoneIcon,
+  EnvelopeIcon,
+  MapPinIcon;}
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
 } from '@heroicons/react/24/outline';
 
 <<<<<<< HEAD
@@ -53,13 +67,17 @@ export default function HomePage()  {
       "foundingDate": "2020",
       "address": {
         "@type": "PostalAddress",
-        "addressCountry": "US"
+        "addressCountry": "US"}
       },
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+1-302-464-0950",
         "contactType": "customer service",
+<<<<<<< HEAD
         "email": "kleber@ziontechgroup.com"
+=======
+        "email": "info@ziontechgroup.com"}
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
       },
       "sameAs": [
         "https://linkedin.com/company/ziontechgroup",
@@ -116,6 +134,7 @@ const HomePage: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <SEO 
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
@@ -123,6 +142,9 @@ const HomePage: React.FC = () => {
         url="/"
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
       />
       
       {/* Hero Section */}
@@ -133,9 +155,9 @@ const HomePage: React.FC = () => {
         </div>
         
         {/* Floating Elements with Neon Effects */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 animate-pulse floating"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '1s'}}></div>
-        <div className="absolute top-1/2 left-20 w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 animate-pulse floating"></div>'
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '1s'}}></div>'
+        <div className="absolute top-1/2 left-20 w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '2s'}}></div>'
         <div className="absolute top-1/4 right-1/4 w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full opacity-15 floating" style={{animationDelay: '3s'}}></div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
@@ -481,6 +503,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/50 to-cyan-900/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -518,6 +541,34 @@ const HomePage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We deliver exceptional results through innovative technology and expert guidance.
               </p>
+=======
+      {/* About Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-xl text-gray-300 mb-12 leading-relaxed">
+              With over 4 years of experience in cutting-edge technology solutions, '
+              we've helped businesses across various industries transform their operations 
+              and achieve unprecedented growth.
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
+                <div className="text-gray-300">Projects Completed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-cyan-400 mb-2">25+</div>
+                <div className="text-gray-300">Happy Clients</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-green-400 mb-2">99%</div>
+                <div className="text-gray-300">Success Rate</div>
+              </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -537,8 +588,13 @@ const HomePage: React.FC = () => {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
               Ready to Transform Your Business?
             </h2>
+<<<<<<< HEAD
             <p className="text-xl text-gray-300 mb-8">
               Let's discuss how our technology solutions can accelerate your growth and innovation.
+=======
+            <p className="text-xl text-gray-300 mb-12">'
+              Let's discuss how our technology solutions can drive your business forward
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -580,9 +636,13 @@ const HomePage: React.FC = () => {
     </>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 
 export default HomePage;
 =======
 }
 >>>>>>> cursor/analyze-improve-and-deploy-application-705a
+=======
+}'
+>>>>>>> cursor/fix-errors-and-merge-to-main-bef6
