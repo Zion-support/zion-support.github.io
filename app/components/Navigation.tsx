@@ -1,13 +1,13 @@
 import { useState } from 'react';
-import { } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
-const : React.FC = () => {
+const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const navigationItems = [
-    { name: '', href: '/' },
+    { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { 
       name: 'Services', 
@@ -30,9 +30,9 @@ const : React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <to="/" className="text-2xl font-bold text-white">
+            <Link to="/" className="text-2xl font-bold text-white">
               Zion Tech Group
-            </>
+            </Link>
           </div>
 
           {/* Desktop */}
@@ -40,25 +40,26 @@ const : React.FC = () => {
             <div className="ml-10 flex items-baseline space-x-4">
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">
-                  <to={item.href}
+                  <Link to={item.href}
                     className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
                     onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
                     onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
                   >
                     {item.name}
                     {item.submenu && <ChevronDown className="inline w-4 h-4 ml-1" />}
-                  </>
+                  </Link>
                   
                   {/* Dropdown Menu */}
                   {item.submenu && isServicesOpen && (
                     <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
                       {item.submenu.map((subItem) => (
-                        <key={subItem.name}
+                        <Link
+                          key={subItem.name}
                           to={subItem.href}
                           className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700"
                         >
                           {subItem.name}
-                        </>
+                        </Link>
                       ))}
                     </div>
                   )}

@@ -7,10 +7,10 @@ interface SidebarNavigationProps {
 }
 
 const navigationItems = [
-  { name: '', href: '/', icon: },
+  { name: 'Home', href: '/', icon: User },
   { name: 'Profile', href: '/profile', icon: User },
-  { name: '', href: '/settings', icon: },
-  { name: 'Help', href: '/help', icon: },
+  { name: 'Settings', href: '/settings', icon: User },
+  { name: 'Help', href: '/help', icon: User },
 ];
 
 const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {
@@ -19,7 +19,7 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
       <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose} />
       <div className="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out">
         <div className="flex items-center justify-between p-4 border-b">
-          <h2 className="text-lg font-semibold"></h2>
+          <h2 className="text-lg font-semibold">Navigation</h2>
           <button onClick={onClose} className="p-2 hover:bg-gray-100 rounded">
             <X className="w-5 h-5" />
           </button>
