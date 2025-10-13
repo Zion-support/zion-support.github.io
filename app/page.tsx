@@ -1,27 +1,15 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor } from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Video } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
-=======
-import SEOOptimizer from "./components/SEOOptimizer";
-=======
-import EnhancedSEO from "./components/EnhancedSEO";
->>>>>>> cursor/analyze-improve-and-deploy-application-48cd
 import FuturisticBackground from "./components/FuturisticBackground";
+import FuturisticBackgroundEnhanced from "./components/FuturisticBackgroundEnhanced";
 import FuturisticCard from "./components/FuturisticCard";
+import FuturisticCardEnhanced from "./components/FuturisticCardEnhanced";
 import FuturisticButton from "./components/FuturisticButton";
 import FuturisticText from "./components/FuturisticText";
 import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
 import ResponsiveText from "./components/ResponsiveText";
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-48cd
 
 const HomePage = () => {
   const structuredData = {
@@ -104,12 +92,44 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
+      name: "Zion AI Video Generator",
+      description: "AI-powered video creation platform with script generation, voice synthesis, and smart editing",
+      price: "From $29/month",
+      icon: <Video className="w-6 h-6" />,
+      link: "/zion-ai-video-generator",
+      featured: true
+    },
+    {
+      name: "Zion AI Customer Insights",
+      description: "AI-powered customer analytics platform with sentiment analysis and predictive behavior modeling",
+      price: "From $49/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/zion-ai-customer-insights",
+      featured: true
+    },
+    {
+      name: "Zion AI Cybersecurity Suite Pro",
+      description: "Enterprise-grade AI-powered cybersecurity with threat detection and automated incident response",
+      price: "From $299/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/zion-ai-cybersecurity-suite-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Business Intelligence Pro",
+      description: "AI-powered business intelligence platform with predictive analytics and natural language queries",
+      price: "From $199/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/zion-ai-business-intelligence-pro",
+      featured: true
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
       price: "From $299/month",
       icon: <BarChart3 className="w-6 h-6" />,
       link: "/zion-analytics-pro",
-      featured: true
+      featured: false
     },
     {
       name: "Zion Security Shield",
@@ -117,39 +137,7 @@ const HomePage = () => {
       price: "From $499/month",
       icon: <Shield className="w-6 h-6" />,
       link: "/zion-security-shield",
-      featured: true
-    },
-    {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution with end-to-end encryption and unlimited scalability",
-      price: "From $99/month",
-      icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault",
-      featured: true
-    },
-    {
-      name: "Zion AI CRM Pro",
-      description: "AI-powered customer relationship management with intelligent lead scoring and automation",
-      price: "From $199/month",
-      icon: <Users className="w-6 h-6" />,
-      link: "/zion-ai-crm-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Marketing Automation Pro",
-      description: "AI-powered marketing automation with predictive content generation and multi-channel orchestration",
-      price: "From $149/month",
-      icon: <Target className="w-6 h-6" />,
-      link: "/zion-ai-marketing-automation-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Project Manager Pro",
-      description: "AI-powered project management with intelligent task prioritization and resource allocation",
-      price: "From $99/month",
-      icon: <Calendar className="w-6 h-6" />,
-      link: "/zion-ai-project-manager-pro",
-      featured: true
+      featured: false
     }
   ];
 
@@ -185,20 +173,8 @@ const HomePage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-<<<<<<< HEAD
+    <FuturisticBackgroundEnhanced variant="cyber-grid" intensity="high" color="rainbow">
       <EnhancedSEO
-=======
-      <FuturisticBackground />
-<<<<<<< HEAD
-      <SEOOptimizer
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
-=======
-      <EnhancedSEO
->>>>>>> cursor/analyze-improve-and-deploy-application-48cd
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
         keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
@@ -278,9 +254,13 @@ const HomePage = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-              <div
+              <FuturisticCardEnhanced
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 cursor-pointer"
+                variant="holographic"
+                glowColor="cyan"
+                hoverEffect="lift"
+                animation="pulse"
+                className="group cursor-pointer"
               >
                 <Link
                   to={feature.link}
@@ -305,7 +285,7 @@ const HomePage = () => {
                     </span>
                   </div>
                 </Link>
-              </div>
+              </FuturisticCardEnhanced>
             ))}
           </div>
         </ResponsiveContainer>
@@ -324,11 +304,19 @@ const HomePage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasHighlights.map((saas, index) => (
-              <Link
+              <FuturisticCardEnhanced
                 key={index}
-                to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                variant={saas.featured ? "neon" : "glass"}
+                glowColor={saas.featured ? "purple" : "cyan"}
+                hoverEffect="lift"
+                animation="float"
+                className="group relative overflow-hidden"
               >
+                <Link
+                  to={saas.link}
+                  className="block h-full"
+                  aria-label={`Learn more about ${saas.name}`}
+                >
                 {saas.featured && (
                   <div className="absolute top-4 right-4">
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -354,7 +342,8 @@ const HomePage = () => {
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </div>
-              </Link>
+                </Link>
+              </FuturisticCardEnhanced>
             ))}
           </div>
           <div className="text-center mt-12">
@@ -456,7 +445,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-    </div>
+    </FuturisticBackgroundEnhanced>
   );
 };
 

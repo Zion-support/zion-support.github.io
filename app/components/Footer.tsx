@@ -294,6 +294,38 @@ const Footer = React.memo(() => {
             <ul className="space-y-2">
               <li>
                 <Link
+                  to="/zion-ai-video-generator"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Zion AI Video Generator
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-customer-insights"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Zion AI Customer Insights
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-cybersecurity-suite-pro"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Zion AI Cybersecurity Suite Pro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-business-intelligence-pro"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Zion AI Business Intelligence Pro
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/zion-analytics-pro"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
@@ -306,38 +338,6 @@ const Footer = React.memo(() => {
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
                   Zion Security Shield
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/zion-cloud-vault"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion Cloud Vault
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/zion-content-studio"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion Content Studio
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/zion-data-sync"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion Data Sync
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/zion-project-master"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion Project Master
                 </Link>
               </li>
             </ul>

@@ -1,111 +1,114 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Cloud, 
-  Server, 
-  Database, 
-  Shield, 
+  BarChart3, 
+  TrendingUp, 
+  Brain, 
+  Target, 
   Zap, 
   CheckCircle, 
   ArrowRight,
-  Globe,
+  PieChart,
+  LineChart,
+  Activity,
   Users,
-  BarChart3,
-  Settings,
+  DollarSign,
+  Globe,
   Clock,
   Award,
   Star,
-  Activity,
-  Lock,
-  Cpu,
-  HardDrive,
-  Network
+  Database,
+  Eye,
+  Settings
 } from 'lucide-react';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const CloudInfrastructure = () => {
-  const services = [
+const ZionAiBusinessIntelligencePro = () => {
+  const features = [
     {
-      title: "Cloud Migration",
-      description: "Seamlessly migrate your applications and data to the cloud with zero downtime and minimal risk",
-      icon: <Cloud className="w-8 h-8" />,
-      features: ["Zero-downtime migration", "Data integrity assurance", "Cost optimization", "Security compliance"],
-      price: "From $2,999/month"
+      title: "AI-Powered Insights",
+      description: "Automatically generate actionable business insights using advanced machine learning and natural language processing",
+      icon: <Brain className="w-6 h-6" />,
+      stats: "95% accuracy"
     },
     {
-      title: "Infrastructure as Code",
-      description: "Automate infrastructure provisioning and management using modern IaC tools and best practices",
-      icon: <Settings className="w-8 h-8" />,
-      features: ["Terraform automation", "Version control", "Environment consistency", "Disaster recovery"],
-      price: "From $1,999/month"
+      title: "Real-Time Analytics",
+      description: "Monitor key performance indicators and business metrics in real-time with instant updates and alerts",
+      icon: <Activity className="w-6 h-6" />,
+      stats: "Sub-second response"
     },
     {
-      title: "Cloud Security",
-      description: "Comprehensive security solutions to protect your cloud infrastructure from threats and vulnerabilities",
-      icon: <Shield className="w-8 h-8" />,
-      features: ["Identity management", "Network security", "Data encryption", "Compliance monitoring"],
-      price: "From $1,499/month"
+      title: "Predictive Analytics",
+      description: "Forecast future trends, customer behavior, and business outcomes with AI-powered predictive models",
+      icon: <TrendingUp className="w-6 h-6" />,
+      stats: "85% prediction accuracy"
     },
     {
-      title: "Auto Scaling",
-      description: "Dynamic resource scaling based on demand to optimize costs and ensure optimal performance",
-      icon: <Activity className="w-8 h-8" />,
-      features: ["Automatic scaling", "Cost optimization", "Performance monitoring", "Load balancing"],
-      price: "From $999/month"
+      title: "Natural Language Queries",
+      description: "Ask questions about your data in plain English and get instant answers with visualizations",
+      icon: <Zap className="w-6 h-6" />,
+      stats: "50+ languages"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$1,999",
+      name: "Professional",
+      price: "$199",
       period: "/month",
-      description: "Perfect for small businesses starting their cloud journey",
+      description: "Perfect for growing businesses with advanced analytics needs",
       features: [
-        "Up to 10 servers",
-        "Basic monitoring",
-        "Standard support",
-        "Cloud migration assistance",
-        "Security baseline",
-        "Monthly reporting"
+        "Up to 10 data sources",
+        "AI-powered insights",
+        "Real-time dashboards",
+        "Basic predictive analytics",
+        "Standard visualizations",
+        "Email support",
+        "5 user licenses",
+        "30-day data retention"
       ],
       popular: false,
-      cta: "Get Started"
-    },
-    {
-      name: "Professional",
-      price: "$4,999",
-      period: "/month",
-      description: "Ideal for growing businesses with complex infrastructure needs",
-      features: [
-        "Up to 50 servers",
-        "Advanced monitoring",
-        "Priority support",
-        "Full cloud migration",
-        "Advanced security",
-        "Weekly reporting",
-        "Auto-scaling setup",
-        "Disaster recovery"
-      ],
-      popular: true,
-      cta: "Get Started"
+      cta: "Start Free Trial"
     },
     {
       name: "Enterprise",
-      price: "$9,999",
+      price: "$499",
       period: "/month",
-      description: "Comprehensive solution for large organizations with mission-critical infrastructure",
+      description: "Comprehensive BI solution for large organizations",
       features: [
-        "Unlimited servers",
-        "Real-time monitoring",
-        "24/7 dedicated support",
-        "Custom migration strategy",
-        "Enterprise security",
-        "Daily reporting",
-        "Custom auto-scaling",
-        "Multi-region setup",
+        "Up to 50 data sources",
+        "Advanced AI analytics",
+        "Custom dashboards",
+        "Full predictive analytics",
+        "Advanced visualizations",
+        "Priority support",
+        "25 user licenses",
+        "90-day data retention",
+        "API access",
+        "Custom integrations",
+        "Dedicated analyst"
+      ],
+      popular: true,
+      cta: "Start Free Trial"
+    },
+    {
+      name: "Enterprise Plus",
+      price: "$1,299",
+      period: "/month",
+      description: "Maximum analytics power for enterprise organizations",
+      features: [
+        "Unlimited data sources",
+        "AI-powered insights engine",
+        "White-label dashboards",
+        "Custom AI models",
+        "Unlimited visualizations",
+        "24/7 phone support",
+        "Unlimited user licenses",
+        "Unlimited data retention",
+        "Full API access",
+        "On-premise deployment",
         "Dedicated account manager"
       ],
       popular: false,
@@ -115,72 +118,84 @@ const CloudInfrastructure = () => {
 
   const capabilities = [
     {
-      title: "Multi-Cloud Strategy",
-      description: "Design and implement hybrid and multi-cloud architectures for maximum flexibility and redundancy",
-      icon: <Globe className="w-6 h-6" />,
-      stats: "99.99% uptime"
+      title: "Data Integration",
+      description: "Connect and integrate data from 100+ sources including databases, cloud services, and APIs",
+      icon: <Database className="w-8 h-8" />,
+      features: ["100+ connectors", "Real-time sync", "Data transformation", "Quality monitoring"]
     },
     {
-      title: "Cost Optimization",
-      description: "Reduce cloud costs by up to 40% through intelligent resource management and optimization",
-      icon: <BarChart3 className="w-6 h-6" />,
-      stats: "40% cost reduction"
+      title: "Advanced Visualizations",
+      description: "Create stunning, interactive dashboards and reports with drag-and-drop simplicity",
+      icon: <BarChart3 className="w-8 h-8" />,
+      features: ["50+ chart types", "Interactive dashboards", "Mobile responsive", "Custom themes"]
     },
     {
-      title: "Security First",
-      description: "Implement enterprise-grade security measures to protect your cloud infrastructure",
-      icon: <Lock className="w-6 h-6" />,
-      stats: "Zero security incidents"
+      title: "AI-Powered Forecasting",
+      description: "Predict future trends and outcomes using machine learning and statistical models",
+      icon: <TrendingUp className="w-8 h-8" />,
+      features: ["Time series forecasting", "Anomaly detection", "Scenario planning", "Confidence intervals"]
     },
     {
-      title: "24/7 Monitoring",
-      description: "Continuous monitoring and alerting to ensure optimal performance and availability",
-      icon: <Activity className="w-6 h-6" />,
-      stats: "Sub-second response"
+      title: "Natural Language Processing",
+      description: "Ask questions about your data in plain English and get instant, intelligent answers",
+      icon: <Brain className="w-8 h-8" />,
+      features: ["Voice queries", "Smart suggestions", "Auto-generated insights", "Multi-language support"]
+    },
+    {
+      title: "Collaborative Analytics",
+      description: "Share insights and collaborate with team members through comments, annotations, and alerts",
+      icon: <Users className="w-8 h-8" />,
+      features: ["Team collaboration", "Comment system", "Alert management", "Role-based access"]
+    },
+    {
+      title: "Mobile Analytics",
+      description: "Access your analytics anywhere with native mobile apps and responsive web interface",
+      icon: <Globe className="w-8 h-8" />,
+      features: ["Native mobile apps", "Offline access", "Push notifications", "Touch-optimized"]
     }
   ];
 
   const testimonials = [
     {
-      name: "David Chen",
-      company: "TechStart Solutions",
-      role: "CTO",
-      content: "Zion's cloud infrastructure services transformed our operations. We achieved 99.99% uptime and reduced costs by 35% in the first year.",
+      name: "Sarah Johnson",
+      company: "Retail Analytics Corp",
+      role: "VP of Analytics",
+      content: "Zion AI Business Intelligence Pro has revolutionized how we analyze data. The AI insights have helped us identify opportunities worth millions in additional revenue.",
       rating: 5,
-      avatar: "DC"
+      avatar: "SJ"
     },
     {
-      name: "Sarah Rodriguez",
-      company: "E-commerce Plus",
-      role: "VP of Engineering",
-      content: "The migration was seamless and the ongoing support is exceptional. Our applications now scale automatically and perform better than ever.",
+      name: "Michael Chen",
+      company: "Financial Services Group",
+      role: "Chief Data Officer",
+      content: "The predictive analytics capabilities are outstanding. We can now forecast market trends with 85% accuracy, giving us a significant competitive advantage.",
       rating: 5,
-      avatar: "SR"
+      avatar: "MC"
     },
     {
-      name: "Michael Johnson",
-      company: "Financial Services Corp",
-      role: "IT Director",
-      content: "Enterprise-grade security and compliance features gave us confidence to move our critical systems to the cloud. Highly recommended.",
+      name: "Emily Rodriguez",
+      company: "Manufacturing Solutions",
+      role: "Operations Director",
+      content: "This platform has transformed our decision-making process. The real-time dashboards and AI insights help us optimize operations and reduce costs by 25%.",
       rating: 5,
-      avatar: "MJ"
+      avatar: "ER"
     }
   ];
 
   const stats = [
-    { number: "500+", label: "Infrastructure Projects", icon: <Server className="w-6 h-6" /> },
-    { number: "99.99%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "40%", label: "Average Cost Savings", icon: <BarChart3 className="w-6 h-6" /> },
-    { number: "24/7", label: "Monitoring & Support", icon: <Clock className="w-6 h-6" /> }
+    { number: "500+", label: "Enterprise Customers", icon: <Users className="w-6 h-6" /> },
+    { number: "1B+", label: "Data Points Processed", icon: <Database className="w-6 h-6" /> },
+    { number: "95%", label: "Insight Accuracy", icon: <Award className="w-6 h-6" /> },
+    { number: "50%", label: "Faster Decision Making", icon: <Clock className="w-6 h-6" /> }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
-        <title>Cloud Infrastructure Services - Enterprise Cloud Solutions | Zion Tech Group</title>
-        <meta name="description" content="Transform your business with our comprehensive cloud infrastructure services. Migration, security, auto-scaling, and 24/7 monitoring. Get started today!" />
-        <meta name="keywords" content="cloud infrastructure, cloud migration, cloud security, auto scaling, infrastructure as code, cloud consulting, AWS, Azure, GCP" />
-        <link rel="canonical" href="https://ziontechgroup.com/cloud-infrastructure" />
+        <title>Zion AI Business Intelligence Pro - AI-Powered Analytics Platform | Zion Tech Group</title>
+        <meta name="description" content="Transform your data into actionable insights with Zion AI Business Intelligence Pro. AI-powered analytics, predictive modeling, and real-time dashboards for enterprise organizations." />
+        <meta name="keywords" content="business intelligence, AI analytics, data visualization, predictive analytics, business intelligence platform, data insights, enterprise analytics" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-business-intelligence-pro" />
       </Helmet>
 
       {/* Hero Section */}
@@ -192,19 +207,19 @@ const CloudInfrastructure = () => {
         
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
-            <Cloud className="w-4 h-4 text-blue-400 mr-2" />
-            <span className="text-blue-400 text-sm font-medium">Enterprise Cloud Infrastructure</span>
+            <BarChart3 className="w-4 h-4 text-blue-400 mr-2" />
+            <span className="text-blue-400 text-sm font-medium">AI-Powered Business Intelligence</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400">
-              Cloud Infrastructure Services
+              Zion AI Business Intelligence Pro
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your business with our comprehensive cloud infrastructure services. From migration and security 
-            to auto-scaling and monitoring, we provide enterprise-grade solutions that scale with your needs.
+            Transform your data into actionable insights with AI-powered analytics, predictive modeling, and real-time dashboards. 
+            Make smarter decisions faster with enterprise-grade business intelligence.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -212,17 +227,17 @@ const CloudInfrastructure = () => {
               href="#pricing"
               variant="primary"
               size="lg"
-              icon={<Cloud className="w-5 h-5" />}
+              icon={<BarChart3 className="w-5 h-5" />}
             >
-              Get Started
+              Start Free Trial
             </FuturisticButton>
             <FuturisticButton
-              href="#services"
+              href="#demo"
               variant="outline"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
+              icon={<Eye className="w-5 h-5" />}
             >
-              Explore Services
+              View Demo
             </FuturisticButton>
           </div>
 
@@ -241,36 +256,36 @@ const CloudInfrastructure = () => {
         </ResponsiveContainer>
       </section>
 
-      {/* Capabilities Section */}
+      {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Why Choose Our Cloud Infrastructure Services
+              Advanced AI Analytics Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Our expert team delivers enterprise-grade cloud solutions that ensure reliability, security, and cost optimization
+              Our AI-powered platform provides comprehensive business intelligence capabilities that adapt to your data and business needs
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {capabilities.map((capability, index) => (
+            {features.map((feature, index) => (
               <FuturisticCard
                 key={index}
                 className="group hover:scale-105 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  {capability.icon}
+                  {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-blue-400 transition-colors">
-                  {capability.title}
+                  {feature.title}
                 </h3>
                 <p className="text-gray-300 text-center mb-4 leading-relaxed">
-                  {capability.description}
+                  {feature.description}
                 </p>
                 <div className="text-center">
                   <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-400">
-                    {capability.stats}
+                    {feature.stats}
                   </span>
                 </div>
               </FuturisticCard>
@@ -279,43 +294,40 @@ const CloudInfrastructure = () => {
         </ResponsiveContainer>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
+      {/* Capabilities Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Cloud Infrastructure Services
+              Comprehensive Analytics Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive cloud solutions designed to meet your specific business requirements
+              Everything you need to transform raw data into actionable business insights
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {capabilities.map((capability, index) => (
               <FuturisticCard
                 key={index}
                 className="group hover:scale-105 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  {service.icon}
+                  {capability.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-blue-400 transition-colors">
-                  {service.title}
+                  {capability.title}
                 </h3>
                 <p className="text-gray-300 text-center mb-6 leading-relaxed">
-                  {service.description}
+                  {capability.description}
                 </p>
-                <div className="space-y-2 mb-6">
-                  {service.features.map((feature, idx) => (
+                <div className="space-y-2">
+                  {capability.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {feature}
                     </div>
                   ))}
-                </div>
-                <div className="text-center">
-                  <span className="text-blue-400 font-semibold text-lg">{service.price}</span>
                 </div>
               </FuturisticCard>
             ))}
@@ -328,10 +340,10 @@ const CloudInfrastructure = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Flexible Pricing Plans
+              Enterprise Analytics Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that best fits your infrastructure needs and budget
+              Choose the analytics plan that scales with your business intelligence needs
             </p>
           </div>
           
@@ -370,7 +382,7 @@ const CloudInfrastructure = () => {
                 </ul>
                 
                 <FuturisticButton
-                  href={plan.cta === "Contact Sales" ? "/contact" : "#contact"}
+                  href={plan.cta === "Contact Sales" ? "/contact" : "#signup"}
                   variant={plan.popular ? "primary" : "outline"}
                   size="lg"
                   className="w-full"
@@ -388,10 +400,10 @@ const CloudInfrastructure = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Industry Leaders
+              Trusted by Data Leaders
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how organizations are using our cloud infrastructure services to drive growth
+              See how organizations are using Zion AI Business Intelligence Pro to drive data-driven decisions
             </p>
           </div>
           
@@ -429,33 +441,33 @@ const CloudInfrastructure = () => {
         <ResponsiveContainer>
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Infrastructure?
+              Transform Your Data Into Insights
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Join hundreds of organizations using our cloud infrastructure services to achieve scalability, security, and cost optimization.
+              Join hundreds of organizations using AI-powered business intelligence to make smarter, faster decisions that drive growth.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <FuturisticButton
-                href="/contact"
+                href="#signup"
                 variant="primary"
                 size="lg"
-                icon={<Cloud className="w-5 h-5" />}
+                icon={<BarChart3 className="w-5 h-5" />}
               >
-                Get Started Today
+                Start Free Trial
               </FuturisticButton>
               <FuturisticButton
-                href="/demo"
+                href="/contact"
                 variant="outline"
                 size="lg"
                 icon={<ArrowRight className="w-5 h-5" />}
               >
-                Schedule Demo
+                Contact Sales
               </FuturisticButton>
             </div>
             
             <div className="mt-8 text-sm text-gray-400">
-              <p>Free consultation • Custom solutions • 24/7 support</p>
+              <p>14-day free trial • No credit card required • Cancel anytime</p>
             </div>
           </div>
         </ResponsiveContainer>
@@ -464,4 +476,4 @@ const CloudInfrastructure = () => {
   );
 };
 
-export default CloudInfrastructure;
+export default ZionAiBusinessIntelligencePro;

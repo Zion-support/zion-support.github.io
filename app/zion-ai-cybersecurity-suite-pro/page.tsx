@@ -12,175 +12,189 @@ import {
   Globe,
   Users,
   BarChart3,
-  Settings,
   Clock,
   Award,
   Star,
   Activity,
   Database,
   Network,
-  FileText
+  FileText,
+  Settings
 } from 'lucide-react';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const CybersecuritySolutions = () => {
-  const services = [
+const ZionAiCybersecuritySuitePro = () => {
+  const features = [
     {
-      title: "Security Assessment",
-      description: "Comprehensive security audits to identify vulnerabilities and assess your current security posture",
-      icon: <Eye className="w-8 h-8" />,
-      features: ["Vulnerability scanning", "Penetration testing", "Risk assessment", "Compliance audit"],
-      price: "From $2,499/assessment"
+      title: "AI-Powered Threat Detection",
+      description: "Advanced machine learning algorithms detect and prevent sophisticated cyber threats in real-time",
+      icon: <Brain className="w-6 h-6" />,
+      stats: "99.9% accuracy"
     },
     {
-      title: "Threat Detection",
-      description: "Advanced threat detection and response systems to identify and neutralize security threats in real-time",
-      icon: <AlertTriangle className="w-8 h-8" />,
-      features: ["AI-powered detection", "Real-time monitoring", "Automated response", "Threat intelligence"],
-      price: "From $1,999/month"
+      title: "Zero-Trust Architecture",
+      description: "Implement comprehensive zero-trust security model with continuous verification and monitoring",
+      icon: <Lock className="w-6 h-6" />,
+      stats: "100% coverage"
     },
     {
-      title: "Identity Management",
-      description: "Secure identity and access management solutions to control user access and prevent unauthorized access",
-      icon: <Users className="w-8 h-8" />,
-      features: ["Multi-factor authentication", "Single sign-on", "Access governance", "Privileged access"],
-      price: "From $1,299/month"
+      title: "Automated Incident Response",
+      description: "AI-driven incident response that automatically contains and remediates security breaches",
+      icon: <Zap className="w-6 h-6" />,
+      stats: "2-minute response"
     },
     {
-      title: "Data Protection",
-      description: "Comprehensive data protection solutions to secure sensitive information and ensure compliance",
-      icon: <Database className="w-8 h-8" />,
-      features: ["Data encryption", "Backup security", "Data loss prevention", "Compliance monitoring"],
-      price: "From $1,799/month"
+      title: "Compliance Automation",
+      description: "Automated compliance monitoring and reporting for GDPR, HIPAA, SOX, and other regulations",
+      icon: <FileText className="w-6 h-6" />,
+      stats: "50+ frameworks"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Essential",
-      price: "$2,999",
+      name: "Professional",
+      price: "$299",
       period: "/month",
-      description: "Basic security protection for small to medium businesses",
+      description: "Perfect for mid-size businesses with advanced security needs",
       features: [
-        "Security assessment",
-        "Basic threat monitoring",
-        "Email security",
-        "Firewall management",
-        "Standard support",
-        "Monthly reports"
+        "Up to 100 endpoints",
+        "AI threat detection",
+        "24/7 monitoring",
+        "Incident response",
+        "Compliance reporting",
+        "Email support",
+        "Basic analytics",
+        "30-day data retention"
       ],
       popular: false,
-      cta: "Get Started"
-    },
-    {
-      name: "Professional",
-      price: "$5,999",
-      period: "/month",
-      description: "Advanced security solutions for growing businesses",
-      features: [
-        "Comprehensive security assessment",
-        "Advanced threat detection",
-        "Identity management",
-        "Data protection",
-        "Priority support",
-        "Weekly reports",
-        "Incident response",
-        "Security training"
-      ],
-      popular: true,
-      cta: "Get Started"
+      cta: "Start Free Trial"
     },
     {
       name: "Enterprise",
-      price: "$12,999",
+      price: "$799",
       period: "/month",
-      description: "Complete security suite for large organizations",
+      description: "Comprehensive security solution for large organizations",
       features: [
-        "Full security audit",
-        "AI-powered threat detection",
-        "Advanced identity management",
-        "Comprehensive data protection",
-        "24/7 dedicated support",
-        "Real-time reporting",
-        "Custom security policies",
-        "Dedicated security team",
-        "Compliance management"
+        "Up to 1,000 endpoints",
+        "Advanced AI analytics",
+        "24/7 SOC monitoring",
+        "Automated response",
+        "Full compliance suite",
+        "Priority support",
+        "Advanced analytics",
+        "90-day data retention",
+        "Custom integrations",
+        "Dedicated security advisor"
+      ],
+      popular: true,
+      cta: "Start Free Trial"
+    },
+    {
+      name: "Enterprise Plus",
+      price: "$1,999",
+      period: "/month",
+      description: "Maximum security for critical infrastructure and sensitive data",
+      features: [
+        "Unlimited endpoints",
+        "AI-powered threat hunting",
+        "24/7 dedicated SOC team",
+        "Custom AI models",
+        "Full compliance automation",
+        "24/7 phone support",
+        "Real-time analytics",
+        "Unlimited data retention",
+        "White-label solution",
+        "On-premise deployment",
+        "Dedicated account manager"
       ],
       popular: false,
       cta: "Contact Sales"
     }
   ];
 
-  const capabilities = [
+  const securityModules = [
     {
-      title: "AI-Powered Security",
-      description: "Advanced AI algorithms detect and prevent sophisticated cyber threats before they cause damage",
-      icon: <Brain className="w-6 h-6" />,
-      stats: "99.9% threat detection"
+      title: "Threat Intelligence",
+      description: "Real-time threat intelligence feeds and AI-powered analysis of global cyber threats",
+      icon: <Globe className="w-8 h-8" />,
+      capabilities: ["Global threat monitoring", "IOC analysis", "Threat hunting", "Risk assessment"]
     },
     {
-      title: "Zero Trust Architecture",
-      description: "Implement zero trust security model with continuous verification and least privilege access",
-      icon: <Lock className="w-6 h-6" />,
-      stats: "100% coverage"
+      title: "Endpoint Protection",
+      description: "Advanced endpoint detection and response with AI-powered behavioral analysis",
+      icon: <Shield className="w-8 h-8" />,
+      capabilities: ["Malware detection", "Behavioral analysis", "Device control", "Data loss prevention"]
     },
     {
-      title: "24/7 Monitoring",
-      description: "Round-the-clock security monitoring and incident response to protect your business",
-      icon: <Activity className="w-6 h-6" />,
-      stats: "Sub-minute response"
+      title: "Network Security",
+      description: "Comprehensive network monitoring and protection with AI-driven anomaly detection",
+      icon: <Network className="w-8 h-8" />,
+      capabilities: ["Traffic analysis", "Intrusion detection", "DDoS protection", "Network segmentation"]
     },
     {
-      title: "Compliance Ready",
-      description: "Meet industry compliance requirements including GDPR, HIPAA, SOX, and PCI DSS",
-      icon: <FileText className="w-6 h-6" />,
-      stats: "50+ frameworks"
+      title: "Identity & Access",
+      description: "Zero-trust identity management with AI-powered authentication and authorization",
+      icon: <Users className="w-8 h-8" />,
+      capabilities: ["Multi-factor auth", "Privileged access", "Identity analytics", "Access governance"]
+    },
+    {
+      title: "Data Protection",
+      description: "AI-powered data discovery, classification, and protection across all environments",
+      icon: <Database className="w-8 h-8" />,
+      capabilities: ["Data discovery", "Classification", "Encryption", "Backup security"]
+    },
+    {
+      title: "Compliance Management",
+      description: "Automated compliance monitoring and reporting for major security frameworks",
+      icon: <FileText className="w-8 h-8" />,
+      capabilities: ["GDPR compliance", "HIPAA monitoring", "SOX reporting", "Audit preparation"]
     }
   ];
 
   const testimonials = [
     {
-      name: "Jennifer Martinez",
-      company: "Financial Services Inc",
-      role: "CISO",
-      content: "Zion's cybersecurity solutions have significantly improved our security posture. We've achieved zero security incidents in the past year.",
-      rating: 5,
-      avatar: "JM"
-    },
-    {
       name: "Robert Chen",
-      company: "Healthcare Systems",
-      role: "IT Director",
-      content: "The AI-powered threat detection caught several advanced persistent threats that other solutions missed. Excellent service and support.",
+      company: "Financial Services Corp",
+      role: "CISO",
+      content: "Zion AI Cybersecurity Suite Pro has transformed our security posture. We've reduced security incidents by 90% and achieved full compliance with all major frameworks.",
       rating: 5,
       avatar: "RC"
     },
     {
-      name: "Lisa Thompson",
-      company: "E-commerce Solutions",
-      role: "Security Manager",
-      content: "Comprehensive security solutions that scale with our business. The compliance features helped us pass our audit with flying colors.",
+      name: "Maria Rodriguez",
+      company: "Healthcare Systems Inc",
+      role: "Security Director",
+      content: "The AI-powered threat detection is incredibly sophisticated. It caught several advanced persistent threats that other solutions missed completely.",
       rating: 5,
-      avatar: "LT"
+      avatar: "MR"
+    },
+    {
+      name: "James Wilson",
+      company: "TechStart Solutions",
+      role: "CTO",
+      content: "This platform gives us enterprise-grade security at a fraction of the cost of traditional solutions. The automated compliance reporting alone saves us weeks of work.",
+      rating: 5,
+      avatar: "JW"
     }
   ];
 
   const stats = [
-    { number: "1000+", label: "Security Incidents Prevented", icon: <Shield className="w-6 h-6" /> },
+    { number: "10,000+", label: "Organizations Protected", icon: <Shield className="w-6 h-6" /> },
     { number: "99.9%", label: "Threat Detection Accuracy", icon: <Award className="w-6 h-6" /> },
-    { number: "24/7", label: "Security Monitoring", icon: <Clock className="w-6 h-6" /> },
+    { number: "2min", label: "Average Response Time", icon: <Clock className="w-6 h-6" /> },
     { number: "50+", label: "Compliance Frameworks", icon: <FileText className="w-6 h-6" /> }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       <Helmet>
-        <title>Cybersecurity Solutions - Advanced Security Services | Zion Tech Group</title>
-        <meta name="description" content="Protect your business with our comprehensive cybersecurity solutions. AI-powered threat detection, zero trust architecture, and 24/7 monitoring. Get started today!" />
-        <meta name="keywords" content="cybersecurity, security solutions, threat detection, zero trust, data protection, compliance, security audit, penetration testing" />
-        <link rel="canonical" href="https://ziontechgroup.com/cybersecurity-solutions" />
+        <title>Zion AI Cybersecurity Suite Pro - Advanced AI-Powered Security Platform | Zion Tech Group</title>
+        <meta name="description" content="Protect your organization with Zion AI Cybersecurity Suite Pro. AI-powered threat detection, zero-trust architecture, and automated compliance. Enterprise-grade security made simple." />
+        <meta name="keywords" content="cybersecurity, AI security, threat detection, zero trust, compliance, SOC, endpoint protection, network security, data protection" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-cybersecurity-suite-pro" />
       </Helmet>
 
       {/* Hero Section */}
@@ -193,18 +207,18 @@ const CybersecuritySolutions = () => {
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 mb-6">
             <Shield className="w-4 h-4 text-red-400 mr-2" />
-            <span className="text-red-400 text-sm font-medium">Advanced Cybersecurity Solutions</span>
+            <span className="text-red-400 text-sm font-medium">AI-Powered Cybersecurity</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400">
-              Cybersecurity Solutions
+              Zion AI Cybersecurity Suite Pro
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Protect your business with our comprehensive cybersecurity solutions. From AI-powered threat detection 
-            to zero trust architecture, we provide enterprise-grade security that adapts to evolving threats.
+            Enterprise-grade cybersecurity powered by artificial intelligence. Protect your organization with 
+            advanced threat detection, zero-trust architecture, and automated compliance management.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -214,15 +228,15 @@ const CybersecuritySolutions = () => {
               size="lg"
               icon={<Shield className="w-5 h-5" />}
             >
-              Get Protected
+              Start Free Trial
             </FuturisticButton>
             <FuturisticButton
-              href="#services"
+              href="#demo"
               variant="outline"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
+              icon={<Eye className="w-5 h-5" />}
             >
-              Explore Solutions
+              View Demo
             </FuturisticButton>
           </div>
 
@@ -241,36 +255,36 @@ const CybersecuritySolutions = () => {
         </ResponsiveContainer>
       </section>
 
-      {/* Capabilities Section */}
+      {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Why Choose Our Cybersecurity Solutions
+              Advanced AI Security Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Our advanced security technologies and expert team provide comprehensive protection against the most sophisticated cyber threats
+              Our AI-powered security platform provides comprehensive protection against the most sophisticated cyber threats
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {capabilities.map((capability, index) => (
+            {features.map((feature, index) => (
               <FuturisticCard
                 key={index}
                 className="group hover:scale-105 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  {capability.icon}
+                  {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-red-400 transition-colors">
-                  {capability.title}
+                  {feature.title}
                 </h3>
                 <p className="text-gray-300 text-center mb-4 leading-relaxed">
-                  {capability.description}
+                  {feature.description}
                 </p>
                 <div className="text-center">
                   <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-red-500/20 to-orange-500/20 text-red-400">
-                    {capability.stats}
+                    {feature.stats}
                   </span>
                 </div>
               </FuturisticCard>
@@ -279,43 +293,40 @@ const CybersecuritySolutions = () => {
         </ResponsiveContainer>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-red-800/50">
+      {/* Security Modules Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-red-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Cybersecurity Services
+              Comprehensive Security Modules
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive security solutions designed to protect your business from all types of cyber threats
+              Complete cybersecurity coverage across all attack vectors and compliance requirements
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {securityModules.map((module, index) => (
               <FuturisticCard
                 key={index}
                 className="group hover:scale-105 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  {service.icon}
+                  {module.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-red-400 transition-colors">
-                  {service.title}
+                  {module.title}
                 </h3>
                 <p className="text-gray-300 text-center mb-6 leading-relaxed">
-                  {service.description}
+                  {module.description}
                 </p>
-                <div className="space-y-2 mb-6">
-                  {service.features.map((feature, idx) => (
+                <div className="space-y-2">
+                  {module.capabilities.map((capability, idx) => (
                     <div key={idx} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
+                      {capability}
                     </div>
                   ))}
-                </div>
-                <div className="text-center">
-                  <span className="text-red-400 font-semibold text-lg">{service.price}</span>
                 </div>
               </FuturisticCard>
             ))}
@@ -328,10 +339,10 @@ const CybersecuritySolutions = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Security Plans
+              Enterprise Security Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the security plan that provides the right level of protection for your organization
+              Choose the security plan that matches your organization's needs and compliance requirements
             </p>
           </div>
           
@@ -370,7 +381,7 @@ const CybersecuritySolutions = () => {
                 </ul>
                 
                 <FuturisticButton
-                  href={plan.cta === "Contact Sales" ? "/contact" : "#contact"}
+                  href={plan.cta === "Contact Sales" ? "/contact" : "#signup"}
                   variant={plan.popular ? "primary" : "outline"}
                   size="lg"
                   className="w-full"
@@ -391,7 +402,7 @@ const CybersecuritySolutions = () => {
               Trusted by Security Leaders
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how organizations are using our cybersecurity solutions to protect their critical assets
+              See how organizations are using Zion AI Cybersecurity Suite Pro to protect their critical assets
             </p>
           </div>
           
@@ -429,33 +440,33 @@ const CybersecuritySolutions = () => {
         <ResponsiveContainer>
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Secure Your Business Today
+              Secure Your Organization Today
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Don't wait for a breach to happen. Protect your organization with our comprehensive cybersecurity solutions.
+              Don't wait for a breach to happen. Protect your organization with AI-powered cybersecurity that adapts to evolving threats.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <FuturisticButton
-                href="/contact"
+                href="#signup"
                 variant="primary"
                 size="lg"
                 icon={<Shield className="w-5 h-5" />}
               >
-                Get Protected Now
+                Start Free Trial
               </FuturisticButton>
               <FuturisticButton
-                href="/demo"
+                href="/contact"
                 variant="outline"
                 size="lg"
                 icon={<ArrowRight className="w-5 h-5" />}
               >
-                Schedule Security Audit
+                Contact Sales
               </FuturisticButton>
             </div>
             
             <div className="mt-8 text-sm text-gray-400">
-              <p>Free security assessment • Custom solutions • 24/7 support</p>
+              <p>30-day free trial • No credit card required • Cancel anytime</p>
             </div>
           </div>
         </ResponsiveContainer>
@@ -464,4 +475,4 @@ const CybersecuritySolutions = () => {
   );
 };
 
-export default CybersecuritySolutions;
+export default ZionAiCybersecuritySuitePro;
