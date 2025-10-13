@@ -45,7 +45,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   tags = []
 }) => {
   const siteUrl = "https://ziontechgroup.com";
-  const defaultImage = `${siteUrl}/api/placeholder/1200/630`;
+  const defaultImage = `${siteUrl}/og-image.svg`;
   
   const fullTitle = title.includes("Zion Tech Group") ? title : `${title} | Zion Tech Group`;
   const fullDescription = description || "Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses.";
