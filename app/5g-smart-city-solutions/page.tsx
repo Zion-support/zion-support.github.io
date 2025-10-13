@@ -1,10 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-
-
-
-
 export default function FiveGSmartCitySolutions() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -23,10 +19,6 @@ export default function FiveGSmartCitySolutions() {
         </div>
         <div className="text-center">
           <p className="text-gray-300">Coming Soon - 5gSmartCitySolutions Solutions</p>
-
-
-
-
 
         </div>
       </div>

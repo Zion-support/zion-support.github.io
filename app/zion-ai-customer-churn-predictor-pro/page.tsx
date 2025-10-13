@@ -14,24 +14,16 @@ import {
   AlertTriangle,
   Cpu,
   Globe,
-<<<<<<< HEAD
-
-
-  Heart,
+Heart,
   MousePointer
-
 
   MousePointer,
   Heart
 
-
-=======
-  Heart,
+Heart,
   MousePointer
 } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-82b8
-
-  MousePointer,
+MousePointer,
   Heart
 
 } from 'lucide-react';

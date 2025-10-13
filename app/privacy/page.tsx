@@ -1,9 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-
-
-
 export default function Privacy() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -35,10 +32,6 @@ export default function Privacy() {
               If you have any questions about this privacy policy, please contact us at privacy@ziontechgroup.com.
             </p>
           </div>
-
-
-
-
 
         </div>
       </div>

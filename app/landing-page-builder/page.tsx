@@ -2,9 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link, ArrowRight } from 'lucide-react';
 
-
-<<<<<<< HEAD
-
 export default function PageTsxPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -32,12 +29,8 @@ export default function PageTsxPage() {
       
         </div>
 
-
-
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-82b8
 export default function LandingPageBuilder() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -85,10 +78,6 @@ export default function LandingPageBuilder() {
             </Link>
           </div>
         </div>
-
-
-
-
 
       </div>
     </div>

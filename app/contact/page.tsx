@@ -1,9 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-
-
 export default function PagePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -25,7 +22,6 @@ export default function PagePage() {
           This page is under development. Please check back later for updates.
         </p>
       </div>
-=======
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -49,14 +45,10 @@ export default function ContactPage() {
               Contact information and form will be added here.
             </p>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-82b8
-        </div>
+</div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
 
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-82b8

@@ -1,10 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-
-
-
-
 export default function Tutorials() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -42,10 +38,6 @@ export default function Tutorials() {
               </p>
             </div>
           </div>
-
-
-
-
 
         </div>
       </div>

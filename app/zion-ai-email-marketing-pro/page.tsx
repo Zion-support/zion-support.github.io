@@ -18,10 +18,7 @@ import {
   Shield,
   Zap,
   TrendingUp
-<<<<<<< HEAD
-
-
-  Zap, 
+Zap, 
 
 import {
   Mail,
@@ -41,13 +38,7 @@ import {
   Shield,
   Heart
 
-
-=======
 } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-82b8
-
-
-
 } from 'lucide-react';
 const ZionAIEmailMarketingProPage: React.FC = () => {
   const features = [

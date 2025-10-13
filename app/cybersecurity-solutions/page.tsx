@@ -8,9 +8,6 @@ import {
   CheckCircle 
 } from 'lucide-react';
 
-
-<<<<<<< HEAD
-
 export default function PageTsxPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -35,13 +32,8 @@ export default function PageTsxPage() {
             This page is under development. Please check back later for updates.
           </p>
         </div>
-      
-
-
 
 import { Eye, AlertTriangle, Users, Database, CheckCircle } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-82b8
 export default function CybersecuritySolutions() {
   const services = [
     {
@@ -228,10 +220,6 @@ export default function CybersecuritySolutions() {
               </button>
             </div>
           ))}
-
-
-
-
 
         </div>
       </div>
