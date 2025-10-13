@@ -1,195 +1,366 @@
-import React, { useEffect, useState } from 'react';
-import logger from '../../utils/logger';
+import React, { useEffect, useState, useCallback } from 'react';
 
 interface AccessibilitySettings {
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
+  focusVisible: boolean;
   screenReader: boolean;
+  keyboardNavigation: boolean;
 }
 
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+interface EnhancedAccessibilityProps {
+  children: React.ReactNode;
+}
+
+const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     largeText: false,
     reducedMotion: false,
+    focusVisible: false,
     screenReader: false,
+    keyboardNavigation: false
   });
 
-  useEffect(() => {
-    // Check for system preferences
-    const mediaQueries = {
-      highContrast: window.matchMedia('(prefers-contrast: high)'),
-      reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)'),
-    };
+  const [announcements, setAnnouncements] = useState<string[]>([]);
 
-    // Detect screen reader
-    const screenReaderDetected = 
-      'speechSynthesis' in window || 
-      'speechRecognition' in window ||
-      navigator.userAgent.includes('NVDA') ||
-      navigator.userAgent.includes('JAWS') ||
-      navigator.userAgent.includes('VoiceOver');
+  // Detect screen reader usage
+  const detectScreenReader = useCallback(() => {
+    if (typeof window === 'undefined') return false;
 
-    setSettings({
-      highContrast: mediaQueries.highContrast.matches,
-      largeText: localStorage.getItem('accessibility-large-text') === 'true',
-      reducedMotion: mediaQueries.reducedMotion.matches,
-      screenReader: screenReaderDetected,
-    });
+    // Check for screen reader indicators
+    const hasScreenReader = 
+      window.navigator.userAgent.includes('NVDA') ||
+      window.navigator.userAgent.includes('JAWS') ||
+      window.navigator.userAgent.includes('VoiceOver') ||
+      window.navigator.userAgent.includes('TalkBack') ||
+      window.speechSynthesis ||
+      (window as any).speechSynthesis;
 
-    // Listen for changes in system preferences
-    const handleHighContrastChange = (e: MediaQueryListEvent) => {
-      setSettings(prev => ({ ...prev, highContrast: e.matches }));
-    };
-
-    const handleReducedMotionChange = (e: MediaQueryListEvent) => {
-      setSettings(prev => ({ ...prev, reducedMotion: e.matches }));
-    };
-
-    mediaQueries.highContrast.addEventListener('change', handleHighContrastChange);
-    mediaQueries.reducedMotion.addEventListener('change', handleReducedMotionChange);
-
-    return () => {
-      mediaQueries.highContrast.removeEventListener('change', handleHighContrastChange);
-      mediaQueries.reducedMotion.removeEventListener('change', handleReducedMotionChange);
-    };
+    setSettings(prev => ({ ...prev, screenReader: hasScreenReader }));
+    return hasScreenReader;
   }, []);
 
-  useEffect(() => {
-    // Apply accessibility settings to document
-    const body = document.body;
+  // Detect reduced motion preference
+  const detectReducedMotion = useCallback(() => {
+    if (typeof window === 'undefined') return false;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    setSettings(prev => ({ ...prev, reducedMotion: prefersReducedMotion }));
+    return prefersReducedMotion;
+  }, []);
+
+  // Detect high contrast preference
+  const detectHighContrast = useCallback(() => {
+    if (typeof window === 'undefined') return false;
+
+    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+    setSettings(prev => ({ ...prev, highContrast: prefersHighContrast }));
+    return prefersHighContrast;
+  }, []);
+
+  // Apply accessibility settings to document
+  const applyAccessibilitySettings = useCallback(() => {
+    if (typeof document === 'undefined') return;
+
+    const root = document.documentElement;
     
+    // Apply high contrast
     if (settings.highContrast) {
-      body.classList.add('high-contrast');
+      root.classList.add('high-contrast');
     } else {
-      body.classList.remove('high-contrast');
+      root.classList.remove('high-contrast');
     }
 
+    // Apply large text
     if (settings.largeText) {
-      body.classList.add('large-text');
+      root.classList.add('large-text');
     } else {
-      body.classList.remove('large-text');
+      root.classList.remove('large-text');
     }
 
+    // Apply reduced motion
     if (settings.reducedMotion) {
-      body.classList.add('reduced-motion');
+      root.classList.add('reduced-motion');
     } else {
-      body.classList.remove('reduced-motion');
+      root.classList.remove('reduced-motion');
     }
 
-    if (settings.screenReader) {
-      body.classList.add('screen-reader');
+    // Apply focus visible
+    if (settings.focusVisible) {
+      root.classList.add('focus-visible');
     } else {
-      body.classList.remove('screen-reader');
+      root.classList.remove('focus-visible');
     }
-
-    logger.info('Accessibility settings applied:', settings);
   }, [settings]);
 
-  // Add skip links
-  useEffect(() => {
-    const skipLinks = document.createElement('div');
-    skipLinks.innerHTML = `
-      <a href="#main-content" class="skip-link">Skip to main content</a>
-      <a href="#navigation" class="skip-link">Skip to navigation</a>
-      <a href="#footer" class="skip-link">Skip to footer</a>
-    `;
-    skipLinks.className = 'skip-links';
-    document.body.insertBefore(skipLinks, document.body.firstChild);
+  // Announce changes to screen readers
+  const announce = useCallback((message: string) => {
+    if (!settings.screenReader) return;
 
-    // Add skip link styles
-    const style = document.createElement('style');
-    style.textContent = `
-      .skip-links {
-        position: absolute;
-        top: -100px;
-        left: 0;
-        z-index: 1000;
-      }
-      .skip-link {
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: #000;
-        color: #fff;
-        padding: 8px 16px;
-        text-decoration: none;
-        font-weight: bold;
-        z-index: 1001;
-        transition: top 0.3s;
-      }
-      .skip-link:focus {
-        top: 0;
-      }
-    `;
-    document.head.appendChild(style);
+    setAnnouncements(prev => [...prev, message]);
+    
+    // Clear announcement after 5 seconds
+    setTimeout(() => {
+      setAnnouncements(prev => prev.slice(1));
+    }, 5000);
+  }, [settings.screenReader]);
+
+  // Handle keyboard navigation
+  const handleKeyboardNavigation = useCallback((event: KeyboardEvent) => {
+    if (event.key === 'Tab') {
+      setSettings(prev => ({ ...prev, keyboardNavigation: true }));
+    }
+  }, []);
+
+  // Handle mouse usage
+  const handleMouseUsage = useCallback(() => {
+    setSettings(prev => ({ ...prev, keyboardNavigation: false }));
+  }, []);
+
+  // Skip to main content functionality
+  const skipToMainContent = useCallback(() => {
+    const mainContent = document.getElementById('main-content');
+    if (mainContent) {
+      mainContent.focus();
+      mainContent.scrollIntoView({ behavior: 'smooth' });
+      announce('Skipped to main content');
+    }
+  }, [announce]);
+
+  // Toggle accessibility settings
+  const toggleSetting = useCallback((setting: keyof AccessibilitySettings) => {
+    setSettings(prev => {
+      const newSettings = { ...prev, [setting]: !prev[setting] };
+      
+      // Announce changes
+      const settingNames = {
+        highContrast: 'high contrast',
+        largeText: 'large text',
+        reducedMotion: 'reduced motion',
+        focusVisible: 'focus visible',
+        screenReader: 'screen reader',
+        keyboardNavigation: 'keyboard navigation'
+      };
+      
+      announce(`${settingNames[setting]} ${newSettings[setting] ? 'enabled' : 'disabled'}`);
+      
+      return newSettings;
+    });
+  }, [announce]);
+
+  // Initialize accessibility features
+  useEffect(() => {
+    detectScreenReader();
+    detectReducedMotion();
+    detectHighContrast();
+
+    // Listen for media query changes
+    const mediaQueries = [
+      window.matchMedia('(prefers-reduced-motion: reduce)'),
+      window.matchMedia('(prefers-contrast: high)')
+    ];
+
+    const handleMediaChange = () => {
+      detectReducedMotion();
+      detectHighContrast();
+    };
+
+    mediaQueries.forEach(mq => {
+      mq.addEventListener('change', handleMediaChange);
+    });
+
+    // Add keyboard and mouse event listeners
+    document.addEventListener('keydown', handleKeyboardNavigation);
+    document.addEventListener('mousedown', handleMouseUsage);
+
+    // Add skip link
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'skip-link';
+    skipLink.onclick = (e) => {
+      e.preventDefault();
+      skipToMainContent();
+    };
+    document.body.insertBefore(skipLink, document.body.firstChild);
 
     return () => {
-      skipLinks.remove();
-      style.remove();
+      mediaQueries.forEach(mq => {
+        mq.removeEventListener('change', handleMediaChange);
+      });
+      document.removeEventListener('keydown', handleKeyboardNavigation);
+      document.removeEventListener('mousedown', handleMouseUsage);
+      
+      const existingSkipLink = document.querySelector('.skip-link');
+      if (existingSkipLink) {
+        existingSkipLink.remove();
+      }
     };
-  }, []);
+  }, [detectScreenReader, detectReducedMotion, detectHighContrast, handleKeyboardNavigation, handleMouseUsage, skipToMainContent]);
+
+  // Apply settings when they change
+  useEffect(() => {
+    applyAccessibilitySettings();
+  }, [applyAccessibilitySettings]);
 
   // Add ARIA landmarks
   useEffect(() => {
     const main = document.querySelector('main');
-    if (main) {
-      main.setAttribute('id', 'main-content');
+    if (main && !main.getAttribute('role')) {
       main.setAttribute('role', 'main');
     }
 
     const nav = document.querySelector('nav');
-    if (nav) {
-      nav.setAttribute('id', 'navigation');
+    if (nav && !nav.getAttribute('role')) {
       nav.setAttribute('role', 'navigation');
-      nav.setAttribute('aria-label', 'Main navigation');
     }
 
     const footer = document.querySelector('footer');
-    if (footer) {
-      footer.setAttribute('id', 'footer');
+    if (footer && !footer.getAttribute('role')) {
       footer.setAttribute('role', 'contentinfo');
     }
   }, []);
 
-  // Add keyboard navigation support
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Escape key to close modals/dropdowns
-      if (event.key === 'Escape') {
-        const activeElement = document.activeElement as HTMLElement;
-        if (activeElement && activeElement.blur) {
-          activeElement.blur();
-        }
-      }
-
-      // Tab navigation improvements
-      if (event.key === 'Tab') {
-        const focusableElements = document.querySelectorAll(
-          'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
-        );
-        const firstElement = focusableElements[0] as HTMLElement;
-        const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-
-        if (event.shiftKey && document.activeElement === firstElement) {
-          event.preventDefault();
-          lastElement?.focus();
-        } else if (!event.shiftKey && document.activeElement === lastElement) {
-          event.preventDefault();
-          firstElement?.focus();
-        }
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
   return (
-    <div className="accessibility-wrapper">
+    <>
       {children}
-    </div>
+      
+      {/* Accessibility Controls */}
+      <div className="accessibility-controls fixed top-4 right-4 z-50">
+        <button
+          onClick={() => toggleSetting('highContrast')}
+          className="accessibility-toggle"
+          aria-label="Toggle high contrast mode"
+          title="Toggle high contrast mode"
+        >
+          {settings.highContrast ? '🔆' : '🌙'}
+        </button>
+        
+        <button
+          onClick={() => toggleSetting('largeText')}
+          className="accessibility-toggle"
+          aria-label="Toggle large text mode"
+          title="Toggle large text mode"
+        >
+          {settings.largeText ? '🔍' : '🔍'}
+        </button>
+        
+        <button
+          onClick={() => toggleSetting('reducedMotion')}
+          className="accessibility-toggle"
+          aria-label="Toggle reduced motion mode"
+          title="Toggle reduced motion mode"
+        >
+          {settings.reducedMotion ? '⏸️' : '▶️'}
+        </button>
+      </div>
+
+      {/* Screen Reader Announcements */}
+      <div 
+        className="sr-only" 
+        aria-live="polite" 
+        aria-atomic="true"
+        role="status"
+      >
+        {announcements.map((announcement, index) => (
+          <div key={index}>{announcement}</div>
+        ))}
+      </div>
+
+      {/* Accessibility Styles */}
+      <style jsx>{`
+        .skip-link {
+          position: absolute;
+          top: -40px;
+          left: 6px;
+          background: #000;
+          color: #fff;
+          padding: 8px;
+          text-decoration: none;
+          z-index: 1000;
+          border-radius: 4px;
+        }
+        
+        .skip-link:focus {
+          top: 6px;
+        }
+        
+        .accessibility-controls {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+        
+        .accessibility-toggle {
+          background: rgba(0, 0, 0, 0.8);
+          color: white;
+          border: none;
+          padding: 8px;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 16px;
+          transition: all 0.3s ease;
+        }
+        
+        .accessibility-toggle:hover,
+        .accessibility-toggle:focus {
+          background: rgba(0, 0, 0, 1);
+          transform: scale(1.1);
+        }
+        
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+        
+        /* High contrast mode */
+        .high-contrast {
+          filter: contrast(150%) brightness(120%);
+        }
+        
+        .high-contrast * {
+          border-color: currentColor !important;
+        }
+        
+        /* Large text mode */
+        .large-text {
+          font-size: 1.2em;
+        }
+        
+        .large-text h1 { font-size: 2.5em; }
+        .large-text h2 { font-size: 2em; }
+        .large-text h3 { font-size: 1.75em; }
+        .large-text p, .large-text span { font-size: 1.2em; }
+        
+        /* Reduced motion mode */
+        .reduced-motion * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+        
+        /* Focus visible mode */
+        .focus-visible *:focus {
+          outline: 3px solid #0066cc !important;
+          outline-offset: 2px !important;
+        }
+        
+        /* Keyboard navigation mode */
+        .keyboard-navigation *:focus {
+          outline: 2px solid #0066cc !important;
+          outline-offset: 2px !important;
+        }
+      `}</style>
+    </>
   );
 };
 

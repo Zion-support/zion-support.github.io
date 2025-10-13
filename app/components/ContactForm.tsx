@@ -51,11 +51,7 @@ const ContactForm: React.FC = () => {
         service: "",
       });
     } catch (error) {
-<<<<<<< HEAD
       console.error('Failed to submit contact form:', error);
-=======
-      console.error('Form submission error:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-3db5
     } finally {
       setIsSubmitting(false);
     }
