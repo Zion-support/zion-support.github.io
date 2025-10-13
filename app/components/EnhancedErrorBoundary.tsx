@@ -1,3 +1,4 @@
+'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
@@ -23,6 +24,14 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Error caught by EnhancedErrorBoundary:', error, errorInfo);
+    
+    // Log error to external service if available
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'exception', {
+        description: error.message,
+        fatal: false
+      });
+    }
   }
 
   handleReset = () => {
@@ -41,6 +50,14 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <div className="mb-6 p-4 bg-red-900/20 rounded-lg text-left">
+                <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
+                <pre className="text-xs text-red-300 whitespace-pre-wrap">
+                  {this.state.error.message}
+                </pre>
+              </div>
+            )}
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <button
                 onClick={this.handleReset}
@@ -59,62 +76,11 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  );
-}
-=======
-'use client'';
-import React, { Component, ErrorInfo, ReactNode } from 'react';'
-
-  children: ReactNode;
-}
-
-interface State {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  hasError: boolean;
-  error?: Error;
-}
-
-class ErrorBoundary extends Component<Props, State> {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  constructor(props: Props) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error('Error caught by boundary:', error, errorInfo);'
+      );
     }
 
-    // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {'
-      // You can integrate with error reporting services like Sentry here
-      console.error('ErrorBoundary caught an error:', error, errorInfo)'
-    }
->>>>>>> origin/main
+    return this.props.children;
   }
+}
 
 export default EnhancedErrorBoundary;
