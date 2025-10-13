@@ -1,10 +1,6 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Sidebar as SidebarIcon } from 'lucide-react'
-=======
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Globe } from 'lucide-react'
->>>>>>> cursor/website-audit-and-update-with-deployment-4c61
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Globe, Sidebar as SidebarIcon } from 'lucide-react'
 
 interface NavigationProps {
   onSidebarToggle?: () => void
@@ -68,9 +64,11 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
   const mainNavItems = useMemo(() => [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
+    { name: 'AI Services', path: '/ai-services' },
+    { name: 'IT Services', path: '/it-services' },
+    { name: 'Micro SAAS', path: '/micro-saas' },
+    { name: '5G Solutions', path: '/5g-solutions' },
     { name: 'Pricing', path: '/pricing' },
-    { name: 'Case Studies', path: '/case-studies' },
     { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact' }
   ], [])

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, CheckCircle } from "lucide-react";
 import SEOOptimizer from "./components/SEOOptimizer";
 
 const HomePage = () => {
@@ -41,24 +41,51 @@ const HomePage = () => {
   const microSaasHighlights = [
     {
       name: "Zion Analytics Pro",
-      description: "AI-powered business intelligence platform",
+      description: "AI-powered business intelligence platform with real-time insights and predictive analytics",
       price: "From $29/month",
       icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-analytics-pro"
+      link: "/zion-analytics-pro",
+      features: ["Real-time dashboards", "Predictive analytics", "Custom reporting", "Multi-source integration"]
     },
     {
       name: "Zion Security Shield",
-      description: "Advanced cybersecurity protection",
+      description: "Advanced cybersecurity protection with AI-powered threat detection and automated response",
       price: "From $49/month",
       icon: <Shield className="w-6 h-6" />,
-      link: "/zion-security-shield"
+      link: "/zion-security-shield",
+      features: ["Threat detection", "Automated response", "Compliance reporting", "24/7 monitoring"]
     },
     {
       name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution",
+      description: "Enterprise-grade cloud storage with end-to-end encryption and automated backups",
       price: "From $9/month",
       icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault"
+      link: "/zion-cloud-vault",
+      features: ["End-to-end encryption", "Automated backups", "File versioning", "Team collaboration"]
+    },
+    {
+      name: "Zion Content Studio",
+      description: "AI-powered content creation platform for blogs, social media, and marketing materials",
+      price: "From $19/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/zion-content-studio",
+      features: ["AI content generation", "SEO optimization", "Brand voice customization", "Content calendar"]
+    },
+    {
+      name: "Zion Data Sync",
+      description: "Universal data integration platform connecting 500+ business applications",
+      price: "From $39/month",
+      icon: <Database className="w-6 h-6" />,
+      link: "/zion-data-sync",
+      features: ["500+ integrations", "Real-time sync", "Data transformation", "Error handling"]
+    },
+    {
+      name: "Zion Workflow Automation",
+      description: "No-code business process automation with intelligent decision making",
+      price: "From $44/month",
+      icon: <Zap className="w-6 h-6" />,
+      link: "/zion-workflow-automation",
+      features: ["Visual workflow builder", "1000+ app integrations", "Smart automation", "Performance monitoring"]
     }
   ];
 
@@ -212,39 +239,57 @@ const HomePage = () => {
               Featured Micro SAAS Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Ready-to-use software solutions that can transform your business operations immediately.
+              Ready-to-use software solutions that can transform your business operations immediately. 
+              Choose from our comprehensive collection of micro SAAS tools.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
                 to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
                     {saas.icon}
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
                       {saas.name}
                     </h3>
-                    <p className="text-cyan-400 font-medium">{saas.price}</p>
+                    <p className="text-cyan-400 font-medium text-sm">{saas.price}</p>
                   </div>
                 </div>
-                <p className="text-gray-300 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed mb-4">
                   {saas.description}
                 </p>
+                <div className="mb-4">
+                  <h4 className="text-xs font-semibold text-white mb-2">Key Features:</h4>
+                  <ul className="space-y-1">
+                    {saas.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-xs text-gray-300">
+                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="text-center">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition-all">
+                    Learn More
+                    <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </div>
               </Link>
             ))}
           </div>
           <div className="text-center mt-12">
             <Link
               to="/micro-saas"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-700 transition-all duration-300 group"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-700 transition-all duration-300 group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
             >
-              View All Micro SAAS Solutions
+              View All 50+ Micro SAAS Solutions
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
