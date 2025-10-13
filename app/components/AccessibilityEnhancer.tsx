@@ -1,16 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-3f37
-import React, { useEffect, useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-16fc
-
-<<<<<<< HEAD
-const AccessibilityEnhancer: React.FC = () => {
-  return null; // This component enhances accessibility but doesn't render anything visible
 =======
+>>>>>>> cursor/fix-errors-and-merge-to-main-c5cd
+import React, { useEffect, useState } from 'react';
+
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
@@ -175,11 +173,14 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-0bb0
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-16fc
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-3f37
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-c5cd
 };
 
 export default AccessibilityEnhancer;

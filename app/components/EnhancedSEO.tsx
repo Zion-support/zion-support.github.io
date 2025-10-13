@@ -5,7 +5,6 @@ interface EnhancedSEOProps {
   title?: string;
   description?: string;
   keywords?: string;
-<<<<<<< HEAD
   canonical?: string;
   children?: React.ReactNode;
 }
@@ -33,6 +32,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
 export default EnhancedSEO;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   children?: React.ReactNode;
 }
@@ -51,3 +51,5 @@ export default function EnhancedSEO({ title, description, keywords, children }: 
 >>>>>>> cursor/fix-errors-and-merge-to-main-16fc
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-3f37
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-c5cd
