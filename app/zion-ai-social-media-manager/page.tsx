@@ -1,32 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Camera, Eye, Brain, Zap, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, BarChart3, Search, Shield } from 'lucide-react';
+import { Share2, TrendingUp, Users, Heart, MessageCircle, Calendar, Zap, Brain, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, BarChart3 } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-export default function AiImageRecognition() {
+export default function ZionAiSocialMediaManager() {
   const features = [
     {
-      title: "Advanced Computer Vision",
-      description: "State-of-the-art image recognition with 99.5% accuracy across multiple object categories",
-      icon: <Eye className="w-6 h-6" />,
-      color: "from-green-500 to-emerald-500"
+      title: "AI Content Creation",
+      description: "Generate engaging posts, captions, and hashtags using advanced AI for all social platforms",
+      icon: <Brain className="w-6 h-6" />,
+      color: "from-pink-500 to-purple-500"
     },
     {
-      title: "Real-Time Processing",
-      description: "Instant image analysis and recognition with sub-second response times",
-      icon: <Zap className="w-6 h-6" />,
+      title: "Smart Scheduling",
+      description: "AI-powered optimal posting times and automated scheduling across all platforms",
+      icon: <Calendar className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Custom Model Training",
-      description: "Train custom models for specific use cases and industry requirements",
-      icon: <Brain className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
+      title: "Engagement Analytics",
+      description: "Comprehensive analytics and insights to track performance and optimize strategy",
+      icon: <BarChart3 className="w-6 h-6" />,
+      color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Multi-Format Support",
-      description: "Support for all major image formats including JPEG, PNG, TIFF, and RAW files",
-      icon: <Camera className="w-6 h-6" />,
+      title: "Multi-Platform Management",
+      description: "Manage Facebook, Instagram, Twitter, LinkedIn, and TikTok from one dashboard",
+      icon: <Share2 className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -34,42 +34,42 @@ export default function AiImageRecognition() {
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$79",
+      price: "$29",
       period: "/month",
-      description: "Perfect for small applications",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 10,000 images/month",
-        "Basic recognition models",
-        "Standard API access",
-        "Email support"
+        "3 social media accounts",
+        "Basic AI content creation",
+        "Scheduled posting",
+        "Basic analytics"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$199",
+      price: "$79",
       period: "/month",
-      description: "Ideal for growing businesses",
+      description: "Ideal for growing brands",
       features: [
-        "Up to 100,000 images/month",
-        "Advanced recognition models",
-        "Custom model training",
-        "Priority support",
-        "Real-time processing"
+        "10 social media accounts",
+        "Advanced AI content",
+        "Optimal timing suggestions",
+        "Detailed analytics",
+        "Hashtag research"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$599",
+      price: "$199",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited images",
-        "Custom AI models",
+        "Unlimited accounts",
+        "Custom AI training",
+        "Team collaboration",
         "White-label solution",
-        "24/7 dedicated support",
-        "On-premise deployment"
+        "Priority support"
       ],
       popular: false
     }
@@ -77,73 +77,73 @@ export default function AiImageRecognition() {
 
   const testimonials = [
     {
-      name: "David Wilson",
-      company: "E-commerce Platform",
-      role: "CTO",
-      content: "Zion AI Image Recognition revolutionized our product cataloging. We can now automatically categorize and tag 50,000+ products with 99% accuracy.",
+      name: "Sarah Johnson",
+      company: "Fashion Brand",
+      role: "Social Media Manager",
+      content: "Zion AI Social Media Manager increased our engagement by 150%. The AI content suggestions are spot-on and save us hours daily.",
       rating: 5
     },
     {
-      name: "Lisa Chen",
-      company: "Security Company",
-      role: "Security Director",
-      content: "The facial recognition capabilities are outstanding. We've improved our security monitoring by 300% and reduced false alarms by 90%.",
+      name: "Mike Chen",
+      company: "Tech Startup",
+      role: "Marketing Director",
+      content: "The optimal timing feature boosted our reach by 200%. We now post at the perfect times for maximum engagement.",
       rating: 5
     },
     {
-      name: "Michael Rodriguez",
-      company: "Medical Imaging",
-      role: "Radiology Director",
-      content: "The medical image analysis features are incredibly accurate. It helps our radiologists identify issues 40% faster with higher precision.",
+      name: "Emily Rodriguez",
+      company: "E-commerce Store",
+      role: "Digital Marketing Manager",
+      content: "Managing 5 social accounts used to take 4 hours daily. Now it takes 30 minutes with AI automation. Incredible ROI.",
       rating: 5
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
       <SEOOptimizer
-        title="AI Image Recognition - Advanced Computer Vision | Zion Tech Group"
-        description="Transform your business with Zion AI Image Recognition. Advanced computer vision, real-time processing, custom model training, and multi-format support."
-        keywords="AI image recognition, computer vision, image analysis, object detection, facial recognition, medical imaging, automated tagging"
-        canonical="https://ziontechgroup.com/ai-image-recognition"
+        title="Zion AI Social Media Manager - Automated Social Media Management | Zion Tech Group"
+        description="Transform your social media strategy with Zion AI Social Media Manager. AI-powered content creation, smart scheduling, and multi-platform management."
+        keywords="social media management, AI content creation, social media automation, social media scheduling, social media analytics, multi-platform management"
+        canonical="https://ziontechgroup.com/zion-ai-social-media-manager"
       />
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         
         <div className="max-w-7xl mx-auto text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 mb-6">
-            <Camera className="w-4 h-4 text-green-400 mr-2" />
-            <span className="text-green-400 text-sm font-medium">Advanced Computer Vision Technology</span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 mb-6">
+            <Share2 className="w-4 h-4 text-pink-400 mr-2" />
+            <span className="text-pink-400 text-sm font-medium">AI-Powered Social Media Management</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            AI
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-400 to-blue-400 animate-pulse">
-              {" "}Image Recognition
+            Zion AI
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 animate-pulse">
+              {" "}Social Media Manager
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your business with advanced computer vision technology. Real-time image recognition, 
-            custom model training, and multi-format support for any industry application.
+            Transform your social media presence with AI-powered content creation, smart scheduling, 
+            and multi-platform management. Boost engagement and save time with intelligent automation.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-green-500/25 hover:scale-105"
+              className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-pink-500/25 hover:scale-105"
             >
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="/demo"
-              className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+              className="border border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               Watch Demo
               <Zap className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
@@ -157,24 +157,24 @@ export default function AiImageRecognition() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Powerful Image Recognition Features
+              Powerful Social Media Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Leverage cutting-edge computer vision technology to analyze, recognize, and process images with unprecedented accuracy.
+              Leverage AI to create engaging content, optimize posting times, and manage all your social platforms efficiently.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10"
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/10"
               >
                 <div
                   className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                 >
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-green-400 transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-pink-400 transition-colors">
                   {feature.title}
                 </h3>
                 <p className="text-gray-300 text-center leading-relaxed">
@@ -187,14 +187,14 @@ export default function AiImageRecognition() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-green-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-pink-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Flexible pricing options to scale your image recognition capabilities.
+              Flexible pricing options to scale your social media presence.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -203,13 +203,13 @@ export default function AiImageRecognition() {
                 key={index}
                 className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                   plan.popular
-                    ? 'border-green-500/50 shadow-2xl shadow-green-500/20'
-                    : 'border-white/20 hover:border-green-500/30'
+                    ? 'border-pink-500/50 shadow-2xl shadow-pink-500/20'
+                    : 'border-white/20 hover:border-pink-500/30'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -234,8 +234,8 @@ export default function AiImageRecognition() {
                   to="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700'
-                      : 'border border-green-400 text-green-400 hover:bg-green-400 hover:text-slate-900'
+                      ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700'
+                      : 'border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900'
                   }`}
                 >
                   Get Started
@@ -251,17 +251,17 @@ export default function AiImageRecognition() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Industry Leaders
+              Trusted by Social Media Professionals
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what industry professionals say about Zion AI Image Recognition
+              See what social media managers say about Zion AI Social Media Manager
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10"
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/10"
               >
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -280,55 +280,55 @@ export default function AiImageRecognition() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/30 to-emerald-900/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-pink-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Transform Your Business with Computer Vision
+            Transform Your Social Media Strategy
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of businesses using Zion AI Image Recognition to automate processes, 
-            improve accuracy, and gain valuable insights. Start your free trial today.
+            Join thousands of brands using Zion AI Social Media Manager to boost engagement, 
+            save time, and grow their social presence. Start your free trial today.
           </p>
           
           {/* Contact Information */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <Mail className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-white font-semibold mb-2">Email</h3>
-              <p className="text-green-400">kleber@ziontechgroup.com</p>
+              <p className="text-pink-400">kleber@ziontechgroup.com</p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <Phone className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-white font-semibold mb-2">Phone</h3>
-              <p className="text-green-400">+1 302 464 0950</p>
+              <p className="text-pink-400">+1 302 464 0950</p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <MapPin className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-white font-semibold mb-2">Address</h3>
-              <p className="text-green-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <p className="text-pink-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-green-500/25 hover:scale-105"
+              className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-pink-500/25 hover:scale-105"
             >
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="/pricing"
-              className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+              className="border border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               View All Plans
-              <Camera className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+              <TrendingUp className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
           </div>
         </div>

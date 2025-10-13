@@ -1,75 +1,75 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Camera, Eye, Brain, Zap, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, BarChart3, Search, Shield } from 'lucide-react';
+import { Receipt, DollarSign, PieChart, CreditCard, Brain, Zap, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, BarChart3, TrendingUp } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-export default function AiImageRecognition() {
+export default function ZionAiExpenseTracker() {
   const features = [
     {
-      title: "Advanced Computer Vision",
-      description: "State-of-the-art image recognition with 99.5% accuracy across multiple object categories",
-      icon: <Eye className="w-6 h-6" />,
+      title: "AI Receipt Scanning",
+      description: "Automatically scan and categorize receipts using advanced OCR and AI recognition",
+      icon: <Receipt className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Real-Time Processing",
-      description: "Instant image analysis and recognition with sub-second response times",
-      icon: <Zap className="w-6 h-6" />,
+      title: "Smart Categorization",
+      description: "AI automatically categorizes expenses and learns from your spending patterns",
+      icon: <Brain className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Custom Model Training",
-      description: "Train custom models for specific use cases and industry requirements",
-      icon: <Brain className="w-6 h-6" />,
+      title: "Real-Time Analytics",
+      description: "Comprehensive spending insights and budget tracking with visual reports",
+      icon: <PieChart className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Multi-Format Support",
-      description: "Support for all major image formats including JPEG, PNG, TIFF, and RAW files",
-      icon: <Camera className="w-6 h-6" />,
+      title: "Multi-Currency Support",
+      description: "Track expenses in multiple currencies with automatic conversion and reporting",
+      icon: <CreditCard className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$79",
+      name: "Personal",
+      price: "$9",
       period: "/month",
-      description: "Perfect for small applications",
+      description: "Perfect for individuals",
       features: [
-        "Up to 10,000 images/month",
-        "Basic recognition models",
-        "Standard API access",
-        "Email support"
+        "Unlimited receipts",
+        "Basic AI categorization",
+        "Monthly reports",
+        "Mobile app access"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$199",
+      name: "Business",
+      price: "$29",
       period: "/month",
-      description: "Ideal for growing businesses",
+      description: "Ideal for small businesses",
       features: [
-        "Up to 100,000 images/month",
-        "Advanced recognition models",
-        "Custom model training",
-        "Priority support",
-        "Real-time processing"
+        "Team collaboration",
+        "Advanced AI features",
+        "Real-time analytics",
+        "Tax preparation tools",
+        "API integration"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$599",
+      price: "$99",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited images",
-        "Custom AI models",
+        "Unlimited users",
+        "Custom AI training",
+        "Advanced reporting",
         "White-label solution",
-        "24/7 dedicated support",
-        "On-premise deployment"
+        "Priority support"
       ],
       popular: false
     }
@@ -78,23 +78,23 @@ export default function AiImageRecognition() {
   const testimonials = [
     {
       name: "David Wilson",
-      company: "E-commerce Platform",
-      role: "CTO",
-      content: "Zion AI Image Recognition revolutionized our product cataloging. We can now automatically categorize and tag 50,000+ products with 99% accuracy.",
+      company: "Freelance Consultant",
+      role: "Independent Professional",
+      content: "Zion AI Expense Tracker saved me 5 hours weekly on expense management. The receipt scanning is incredibly accurate and the AI categorization is spot-on.",
       rating: 5
     },
     {
       name: "Lisa Chen",
-      company: "Security Company",
-      role: "Security Director",
-      content: "The facial recognition capabilities are outstanding. We've improved our security monitoring by 300% and reduced false alarms by 90%.",
+      company: "Small Business Owner",
+      role: "CEO",
+      content: "The real-time analytics helped us identify $2,000 in unnecessary expenses monthly. The ROI was immediate and the insights are invaluable.",
       rating: 5
     },
     {
       name: "Michael Rodriguez",
-      company: "Medical Imaging",
-      role: "Radiology Director",
-      content: "The medical image analysis features are incredibly accurate. It helps our radiologists identify issues 40% faster with higher precision.",
+      company: "Marketing Agency",
+      role: "Finance Manager",
+      content: "Managing expenses for 15 team members used to be a nightmare. Now it's automated and we have complete visibility into spending patterns.",
       rating: 5
     }
   ];
@@ -102,10 +102,10 @@ export default function AiImageRecognition() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       <SEOOptimizer
-        title="AI Image Recognition - Advanced Computer Vision | Zion Tech Group"
-        description="Transform your business with Zion AI Image Recognition. Advanced computer vision, real-time processing, custom model training, and multi-format support."
-        keywords="AI image recognition, computer vision, image analysis, object detection, facial recognition, medical imaging, automated tagging"
-        canonical="https://ziontechgroup.com/ai-image-recognition"
+        title="Zion AI Expense Tracker - Smart Expense Management | Zion Tech Group"
+        description="Simplify expense management with Zion AI Expense Tracker. AI-powered receipt scanning, smart categorization, and real-time analytics for businesses and individuals."
+        keywords="expense tracking, receipt scanning, expense management, AI categorization, budget tracking, expense analytics, financial management"
+        canonical="https://ziontechgroup.com/zion-ai-expense-tracker"
       />
 
       {/* Hero Section */}
@@ -117,20 +117,20 @@ export default function AiImageRecognition() {
         
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 mb-6">
-            <Camera className="w-4 h-4 text-green-400 mr-2" />
-            <span className="text-green-400 text-sm font-medium">Advanced Computer Vision Technology</span>
+            <Receipt className="w-4 h-4 text-green-400 mr-2" />
+            <span className="text-green-400 text-sm font-medium">AI-Powered Expense Management</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            AI
+            Zion AI
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-400 to-blue-400 animate-pulse">
-              {" "}Image Recognition
+              {" "}Expense Tracker
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your business with advanced computer vision technology. Real-time image recognition, 
-            custom model training, and multi-format support for any industry application.
+            Simplify expense management with AI-powered receipt scanning, smart categorization, 
+            and real-time analytics. Save time and gain insights into your spending patterns.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -157,10 +157,10 @@ export default function AiImageRecognition() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Powerful Image Recognition Features
+              Smart Expense Management Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Leverage cutting-edge computer vision technology to analyze, recognize, and process images with unprecedented accuracy.
+              Leverage AI to automate expense tracking, gain insights, and optimize your financial management.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -194,7 +194,7 @@ export default function AiImageRecognition() {
               Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Flexible pricing options to scale your image recognition capabilities.
+              Flexible pricing options to fit your expense management needs.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -251,10 +251,10 @@ export default function AiImageRecognition() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Industry Leaders
+              Trusted by Finance Professionals
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what industry professionals say about Zion AI Image Recognition
+              See what finance professionals say about Zion AI Expense Tracker
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -283,11 +283,11 @@ export default function AiImageRecognition() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/30 to-emerald-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Transform Your Business with Computer Vision
+            Simplify Your Expense Management
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of businesses using Zion AI Image Recognition to automate processes, 
-            improve accuracy, and gain valuable insights. Start your free trial today.
+            Join thousands of businesses using Zion AI Expense Tracker to streamline expense management, 
+            save time, and gain valuable insights. Start your free trial today.
           </p>
           
           {/* Contact Information */}
@@ -328,7 +328,7 @@ export default function AiImageRecognition() {
               className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               View All Plans
-              <Camera className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+              <DollarSign className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
           </div>
         </div>

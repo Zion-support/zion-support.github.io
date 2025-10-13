@@ -1,32 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Camera, Eye, Brain, Zap, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, BarChart3, Search, Shield } from 'lucide-react';
+import { TrendingUp, Target, BarChart3, Users, DollarSign, Brain, Zap, Shield, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-export default function AiImageRecognition() {
+export default function ZionAiSalesPredictor() {
   const features = [
     {
-      title: "Advanced Computer Vision",
-      description: "State-of-the-art image recognition with 99.5% accuracy across multiple object categories",
-      icon: <Eye className="w-6 h-6" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Real-Time Processing",
-      description: "Instant image analysis and recognition with sub-second response times",
-      icon: <Zap className="w-6 h-6" />,
+      title: "AI-Powered Sales Forecasting",
+      description: "Advanced machine learning algorithms predict sales trends with 95% accuracy",
+      icon: <Brain className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Custom Model Training",
-      description: "Train custom models for specific use cases and industry requirements",
-      icon: <Brain className="w-6 h-6" />,
+      title: "Real-Time Analytics",
+      description: "Live dashboards showing sales performance and predictive insights",
+      icon: <BarChart3 className="w-6 h-6" />,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Lead Scoring Intelligence",
+      description: "Automatically score and prioritize leads based on conversion probability",
+      icon: <Target className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Multi-Format Support",
-      description: "Support for all major image formats including JPEG, PNG, TIFF, and RAW files",
-      icon: <Camera className="w-6 h-6" />,
+      title: "Revenue Optimization",
+      description: "Identify opportunities to increase revenue and improve conversion rates",
+      icon: <TrendingUp className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -34,42 +34,42 @@ export default function AiImageRecognition() {
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$79",
+      price: "$49",
       period: "/month",
-      description: "Perfect for small applications",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 10,000 images/month",
-        "Basic recognition models",
-        "Standard API access",
-        "Email support"
+        "Up to 1,000 leads/month",
+        "Basic sales forecasting",
+        "Email support",
+        "Standard analytics dashboard"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$199",
+      price: "$149",
       period: "/month",
-      description: "Ideal for growing businesses",
+      description: "Ideal for growing companies",
       features: [
-        "Up to 100,000 images/month",
-        "Advanced recognition models",
-        "Custom model training",
+        "Up to 10,000 leads/month",
+        "Advanced AI predictions",
         "Priority support",
-        "Real-time processing"
+        "Custom dashboards",
+        "API integration"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$599",
+      price: "$399",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited images",
+        "Unlimited leads",
         "Custom AI models",
-        "White-label solution",
         "24/7 dedicated support",
-        "On-premise deployment"
+        "White-label solution",
+        "Advanced integrations"
       ],
       popular: false
     }
@@ -77,73 +77,73 @@ export default function AiImageRecognition() {
 
   const testimonials = [
     {
-      name: "David Wilson",
-      company: "E-commerce Platform",
-      role: "CTO",
-      content: "Zion AI Image Recognition revolutionized our product cataloging. We can now automatically categorize and tag 50,000+ products with 99% accuracy.",
+      name: "Sarah Johnson",
+      company: "TechStart Inc.",
+      role: "Sales Director",
+      content: "Zion AI Sales Predictor increased our sales accuracy by 85%. The predictive insights helped us close 40% more deals.",
       rating: 5
     },
     {
-      name: "Lisa Chen",
-      company: "Security Company",
-      role: "Security Director",
-      content: "The facial recognition capabilities are outstanding. We've improved our security monitoring by 300% and reduced false alarms by 90%.",
+      name: "Michael Chen",
+      company: "E-commerce Solutions",
+      role: "VP of Sales",
+      content: "The lead scoring feature is incredible. We now focus on high-probability leads and our conversion rate doubled.",
       rating: 5
     },
     {
-      name: "Michael Rodriguez",
-      company: "Medical Imaging",
-      role: "Radiology Director",
-      content: "The medical image analysis features are incredibly accurate. It helps our radiologists identify issues 40% faster with higher precision.",
+      name: "Emily Rodriguez",
+      company: "Digital Marketing Agency",
+      role: "Sales Manager",
+      content: "The revenue optimization insights helped us identify $2M in additional opportunities. ROI was achieved in 30 days.",
       rating: 5
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer
-        title="AI Image Recognition - Advanced Computer Vision | Zion Tech Group"
-        description="Transform your business with Zion AI Image Recognition. Advanced computer vision, real-time processing, custom model training, and multi-format support."
-        keywords="AI image recognition, computer vision, image analysis, object detection, facial recognition, medical imaging, automated tagging"
-        canonical="https://ziontechgroup.com/ai-image-recognition"
+        title="Zion AI Sales Predictor - Advanced Sales Forecasting Platform | Zion Tech Group"
+        description="Transform your sales strategy with Zion AI Sales Predictor. Advanced AI-powered forecasting, lead scoring, and revenue optimization for modern businesses."
+        keywords="AI sales prediction, sales forecasting, lead scoring, revenue optimization, sales analytics, CRM integration, sales intelligence"
+        canonical="https://ziontechgroup.com/zion-ai-sales-predictor"
       />
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         
         <div className="max-w-7xl mx-auto text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 mb-6">
-            <Camera className="w-4 h-4 text-green-400 mr-2" />
-            <span className="text-green-400 text-sm font-medium">Advanced Computer Vision Technology</span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
+            <Brain className="w-4 h-4 text-blue-400 mr-2" />
+            <span className="text-blue-400 text-sm font-medium">AI-Powered Sales Intelligence</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            AI
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-400 to-blue-400 animate-pulse">
-              {" "}Image Recognition
+            Zion AI
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 animate-pulse">
+              {" "}Sales Predictor
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your business with advanced computer vision technology. Real-time image recognition, 
-            custom model training, and multi-format support for any industry application.
+            Transform your sales strategy with AI-powered forecasting, intelligent lead scoring, and revenue optimization. 
+            Predict sales trends with 95% accuracy and boost your conversion rates.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-green-500/25 hover:scale-105"
+              className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-blue-500/25 hover:scale-105"
             >
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="/demo"
-              className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+              className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               Watch Demo
               <Zap className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
@@ -157,24 +157,24 @@ export default function AiImageRecognition() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Powerful Image Recognition Features
+              Powerful Sales Intelligence Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Leverage cutting-edge computer vision technology to analyze, recognize, and process images with unprecedented accuracy.
+              Leverage advanced AI to predict sales trends, optimize your pipeline, and maximize revenue potential.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10"
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
               >
                 <div
                   className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                 >
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-green-400 transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-blue-400 transition-colors">
                   {feature.title}
                 </h3>
                 <p className="text-gray-300 text-center leading-relaxed">
@@ -187,14 +187,14 @@ export default function AiImageRecognition() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-green-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Flexible pricing options to scale your image recognition capabilities.
+              Flexible pricing options to fit your business needs and scale with your growth.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -203,13 +203,13 @@ export default function AiImageRecognition() {
                 key={index}
                 className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                   plan.popular
-                    ? 'border-green-500/50 shadow-2xl shadow-green-500/20'
-                    : 'border-white/20 hover:border-green-500/30'
+                    ? 'border-blue-500/50 shadow-2xl shadow-blue-500/20'
+                    : 'border-white/20 hover:border-blue-500/30'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -234,8 +234,8 @@ export default function AiImageRecognition() {
                   to="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700'
-                      : 'border border-green-400 text-green-400 hover:bg-green-400 hover:text-slate-900'
+                      ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700'
+                      : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900'
                   }`}
                 >
                   Get Started
@@ -251,17 +251,17 @@ export default function AiImageRecognition() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Industry Leaders
+              Trusted by Sales Teams Worldwide
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what industry professionals say about Zion AI Image Recognition
+              See what sales professionals say about Zion AI Sales Predictor
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10"
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
               >
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -280,55 +280,55 @@ export default function AiImageRecognition() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/30 to-emerald-900/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Transform Your Business with Computer Vision
+            Ready to Predict Your Sales Success?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of businesses using Zion AI Image Recognition to automate processes, 
-            improve accuracy, and gain valuable insights. Start your free trial today.
+            Join thousands of sales teams using Zion AI Sales Predictor to boost their performance and revenue.
+            Start your free trial today.
           </p>
           
           {/* Contact Information */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <Mail className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-white font-semibold mb-2">Email</h3>
-              <p className="text-green-400">kleber@ziontechgroup.com</p>
+              <p className="text-blue-400">kleber@ziontechgroup.com</p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <Phone className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-white font-semibold mb-2">Phone</h3>
-              <p className="text-green-400">+1 302 464 0950</p>
+              <p className="text-blue-400">+1 302 464 0950</p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <MapPin className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-white font-semibold mb-2">Address</h3>
-              <p className="text-green-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <p className="text-blue-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-green-500/25 hover:scale-105"
+              className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-blue-500/25 hover:scale-105"
             >
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="/pricing"
-              className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+              className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               View All Plans
-              <Camera className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+              <DollarSign className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
           </div>
         </div>
