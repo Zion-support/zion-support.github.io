@@ -1,61 +1,60 @@
-<<<<<<< HEAD
-interface PerformanceUtilsConfig {
-  enabled: boolean;
+export interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  fps: number;
 }
 
 export class PerformanceUtils {
-  private config: PerformanceUtilsConfig;
+  private metrics: PerformanceMetrics = {
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    fps: 0
+  };
 
-  constructor(config: Partial<PerformanceUtilsConfig> = {}) {
-    this.config = {
-      enabled: true,
-=======
-interface PerformanceConfig {
-  enabled: boolean;
-  monitoring: boolean;
-  optimization: boolean;
-}
+    }
+  }
 
-export class PerformanceUtils {
-  private config: PerformanceConfig;
+  measureMemoryUsage() {
+    if (typeof window !== 'undefined' && (window as unknown as { performance?: { memory?: { usedJSHeapSize: number } } }).performance?.memory) {
+      const memory = (window as unknown as { performance: { memory: { usedJSHeapSize: number } } }).performance.memory;
+      this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+    }
+  }
 
-  constructor(config: Partial<PerformanceConfig> = {}) {
-    this.config = {
-      enabled: true,
-      monitoring: true,
-      optimization: true,
->>>>>>> cursor/fix-errors-and-merge-to-main-e61d
-      ...config
+  measureFPS() {
+    let lastTime = performance.now();
+    let frameCount = 0;
+    
+    const measureFrame = () => {
+      frameCount++;
+      const currentTime = performance.now();
+      
+      if (currentTime - lastTime >= 1000) {
+        this.metrics.fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+        frameCount = 0;
+        lastTime = currentTime;
+      }
+      
+      requestAnimationFrame(measureFrame);
+    };
+    
+    requestAnimationFrame(measureFrame);
+  }
+
+  getMetrics(): PerformanceMetrics {
+    return { ...this.metrics };
+  }
+
+  reset() {
+    this.metrics = {
+      loadTime: 0,
+      renderTime: 0,
+      memoryUsage: 0,
+      fps: 0
     };
   }
-
-  init(): void {
-    if (this.config.enabled) {
-<<<<<<< HEAD
-      console.log('PerformanceUtils initialized');
-=======
-      console.log('Performance utils initialized');
-    }
-  }
-
-  measurePerformance(name: string, fn: () => void): void {
-    if (this.config.monitoring) {
-      const start = performance.now();
-      fn();
-      const end = performance.now();
-      console.log(`${name} took ${end - start} milliseconds`);
-    } else {
-      fn();
-    }
-  }
-
-  optimizeImages(): void {
-    if (this.config.optimization) {
-      console.log('Optimizing images...');
->>>>>>> cursor/fix-errors-and-merge-to-main-e61d
-    }
-  }
 }
 
-export const performanceUtils = new PerformanceUtils();
-export default performanceUtils;
+export default PerformanceUtils;
