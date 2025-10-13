@@ -1,8 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor } from "lucide-react";
-<<<<<<< HEAD
-import EnhancedSEO from "./components/EnhancedSEO";
-=======
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
 import SEOOptimizer from "./components/SEOOptimizer";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
@@ -11,10 +8,6 @@ import FuturisticText from "./components/FuturisticText";
 import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
 import ResponsiveText from "./components/ResponsiveText";
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
 
 const HomePage = () => {
   const structuredData = {
@@ -63,86 +56,123 @@ const HomePage = () => {
   const features = [
     {
       title: "AI-Powered Solutions",
-      description: "Cutting-edge artificial intelligence to transform your business operations with machine learning, natural language processing, and predictive analytics",
+      description: "Cutting-edge artificial intelligence to transform your business operations with machine learning, natural language processing, and predictive analytics. Our AI solutions include business intelligence, content generation, customer support, and cybersecurity.",
       icon: <Brain className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500",
       stats: "40% efficiency boost",
-      link: "/ai-services"
+      link: "/ai-services",
+      services: ["Business Intelligence", "Content Generation", "Customer Support", "Cybersecurity", "Predictive Analytics"]
     },
     {
       title: "IT Services",
-      description: "Comprehensive technology solutions including cloud infrastructure, cybersecurity, and digital transformation for modern businesses",
+      description: "Comprehensive technology solutions including cloud infrastructure, cybersecurity, web development, mobile development, and digital transformation for modern businesses. We provide end-to-end IT support and consulting.",
       icon: <Shield className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500",
       stats: "99.9% uptime SLA",
-      link: "/services"
+      link: "/services",
+      services: ["Cloud Infrastructure", "Cybersecurity", "Web Development", "Mobile Development", "DevOps Solutions"]
     },
     {
       title: "Micro SAAS",
-      description: "Ready-to-use software solutions for immediate deployment including analytics, security, and productivity tools",
+      description: "Ready-to-use software solutions for immediate deployment including analytics, security, productivity tools, and AI-powered applications. Our micro SAAS solutions are designed for quick implementation and maximum ROI.",
       icon: <Zap className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500",
       stats: "50+ solutions",
-      link: "/micro-saas"
+      link: "/micro-saas",
+      services: ["Analytics Pro", "Security Shield", "Cloud Vault", "AI CRM", "Project Manager"]
     },
     {
       title: "5G Solutions",
-      description: "Next-generation connectivity and infrastructure services for IoT, edge computing, and smart city implementations",
+      description: "Next-generation connectivity and infrastructure services for IoT, edge computing, and smart city implementations. We provide 5G network design, implementation, and optimization services for businesses and municipalities.",
       icon: <Globe className="w-8 h-8" />,
       color: "from-orange-500 to-red-500",
       stats: "10x faster speeds",
-      link: "/5g-solutions"
+      link: "/5g-solutions",
+      services: ["5G Network Design", "Edge Computing", "IoT Solutions", "Smart City", "Mobile Applications"]
     },
   ];
 
   const microSaasHighlights = [
     {
       name: "Zion Analytics Pro",
-      description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
+      description: "AI-powered business intelligence platform with real-time dashboards, predictive analytics, and automated reporting. Features include data visualization, KPI tracking, and custom dashboard creation.",
       price: "From $299/month",
       icon: <BarChart3 className="w-6 h-6" />,
       link: "/zion-analytics-pro",
-      featured: true
+      featured: true,
+      features: ["Real-time dashboards", "Predictive analytics", "Custom reports", "API integrations", "Mobile app"]
     },
     {
       name: "Zion Security Shield",
-      description: "Advanced cybersecurity protection with AI-powered threat detection and automated response",
+      description: "Advanced cybersecurity protection with AI-powered threat detection, automated response, and 24/7 monitoring. Includes vulnerability scanning, incident response, and compliance reporting.",
       price: "From $499/month",
       icon: <Shield className="w-6 h-6" />,
       link: "/zion-security-shield",
-      featured: true
+      featured: true,
+      features: ["AI threat detection", "Automated response", "24/7 monitoring", "Compliance reporting", "Penetration testing"]
     },
     {
       name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution with end-to-end encryption and unlimited scalability",
+      description: "Secure cloud storage solution with end-to-end encryption, unlimited scalability, and advanced collaboration features. Includes file versioning, sharing controls, and backup automation.",
       price: "From $99/month",
       icon: <Cloud className="w-6 h-6" />,
       link: "/zion-cloud-vault",
-      featured: true
+      featured: true,
+      features: ["End-to-end encryption", "Unlimited storage", "File versioning", "Team collaboration", "Automated backups"]
     },
     {
       name: "Zion AI CRM Pro",
-      description: "AI-powered customer relationship management with intelligent lead scoring and automation",
+      description: "AI-powered customer relationship management with intelligent lead scoring, automated follow-ups, and predictive customer insights. Integrates with all major platforms.",
       price: "From $199/month",
       icon: <Users className="w-6 h-6" />,
       link: "/zion-ai-crm-pro",
-      featured: true
+      featured: true,
+      features: ["AI lead scoring", "Automated follow-ups", "Predictive insights", "Multi-platform integration", "Custom workflows"]
     },
     {
       name: "Zion AI Marketing Automation Pro",
-      description: "AI-powered marketing automation with predictive content generation and multi-channel orchestration",
+      description: "AI-powered marketing automation with predictive content generation, multi-channel orchestration, and advanced segmentation. Includes email, social media, and SMS campaigns.",
       price: "From $149/month",
       icon: <Target className="w-6 h-6" />,
       link: "/zion-ai-marketing-automation-pro",
-      featured: true
+      featured: true,
+      features: ["AI content generation", "Multi-channel campaigns", "Advanced segmentation", "A/B testing", "ROI tracking"]
     },
     {
       name: "Zion AI Project Manager Pro",
-      description: "AI-powered project management with intelligent task prioritization and resource allocation",
+      description: "AI-powered project management with intelligent task prioritization, resource allocation, and risk prediction. Features include Gantt charts, time tracking, and team collaboration.",
       price: "From $99/month",
       icon: <Calendar className="w-6 h-6" />,
       link: "/zion-ai-project-manager-pro",
-      featured: true
+      featured: true,
+      features: ["AI task prioritization", "Resource optimization", "Risk prediction", "Gantt charts", "Team collaboration"]
+    },
+    {
+      name: "Zion AI Code Assistant Pro",
+      description: "Advanced AI-powered code generation, debugging, and optimization tool. Supports 50+ programming languages with intelligent suggestions and automated testing.",
+      price: "From $79/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/zion-ai-code-assistant-pro",
+      featured: true,
+      features: ["Code generation", "Intelligent debugging", "50+ languages", "Automated testing", "Code review"]
+    },
+    {
+      name: "Zion AI Content Studio Pro",
+      description: "AI-powered content creation platform for blogs, social media, and marketing materials. Features include SEO optimization, plagiarism checking, and brand voice consistency.",
+      price: "From $129/month",
+      icon: <Globe className="w-6 h-6" />,
+      link: "/zion-ai-content-studio-pro",
+      featured: true,
+      features: ["AI content generation", "SEO optimization", "Plagiarism checking", "Brand voice", "Multi-format support"]
+    },
+    {
+      name: "Zion AI Financial Analytics Pro",
+      description: "AI-powered financial analysis and forecasting tool with real-time market data, risk assessment, and investment recommendations. Perfect for financial advisors and businesses.",
+      price: "From $399/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/zion-ai-financial-analytics-pro",
+      featured: true,
+      features: ["Real-time market data", "Risk assessment", "Investment recommendations", "Portfolio optimization", "Compliance reporting"]
     }
   ];
 
@@ -179,15 +209,8 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-<<<<<<< HEAD
-      <EnhancedSEO
-=======
       <FuturisticBackground />
       <SEOOptimizer
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
         keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
@@ -305,6 +328,25 @@ const HomePage = () => {
                   <p className="text-gray-300 text-center mb-4 leading-relaxed">
                     {feature.description}
                   </p>
+                  {feature.services && (
+                    <div className="mb-4">
+                      <div className="flex flex-wrap gap-1 justify-center">
+                        {feature.services.slice(0, 3).map((service, serviceIndex) => (
+                          <span
+                            key={serviceIndex}
+                            className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-300 px-2 py-1 rounded text-xs"
+                          >
+                            {service}
+                          </span>
+                        ))}
+                        {feature.services.length > 3 && (
+                          <span className="text-gray-400 text-xs">
+                            +{feature.services.length - 3} more
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  )}
                   <div className="text-center">
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400">
                       {feature.stats}
@@ -353,9 +395,28 @@ const HomePage = () => {
                     <p className="text-cyan-400 font-medium">{saas.price}</p>
                   </div>
                 </div>
-                <p className="text-gray-300 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed mb-4">
                   {saas.description}
                 </p>
+                {saas.features && (
+                  <div className="mb-4">
+                    <div className="flex flex-wrap gap-1">
+                      {saas.features.slice(0, 3).map((feature, featureIndex) => (
+                        <span
+                          key={featureIndex}
+                          className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-300 px-2 py-1 rounded text-xs"
+                        >
+                          {feature}
+                        </span>
+                      ))}
+                      {saas.features.length > 3 && (
+                        <span className="text-gray-400 text-xs">
+                          +{saas.features.length - 3} more
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                )}
                 <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
