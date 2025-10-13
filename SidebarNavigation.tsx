@@ -1,10 +1,14 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Home, User, Settings, HelpCircle } from 'lucide-react';
 
 import React from 'react';
 import { Home, User, Settings, HelpCircle, X } from 'lucide-react';
 
 import React from 'react';
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> cursor/fix-errors-and-merge-to-main-29e3
 import { Home, User, Settings, HelpCircle, X } from 'lucide-react';
 
 interface SidebarNavigationProps {
@@ -24,25 +28,38 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
     <div className={`fixed inset-0 z-50 ${isOpen ? 'block' : 'hidden'}`}>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-29e3
       <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose}></div>
       <nav className="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out">
         <div className="p-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-6">Navigation</h2>
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-xl font-bold text-gray-900">Navigation</h2>
+            <button
+              onClick={onClose}
+              className="p-2 rounded-md text-gray-400 hover:text-gray-600 hover:bg-gray-100"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
           <ul className="space-y-4">
             {navigationItems.map((item) => (
               <li key={item.name}>
-                <a
-                  href={item.href}
+                <Link
+                  to={item.href}
                   className="flex items-center space-x-3 text-gray-700 hover:text-blue-600 transition-colors"
+                  onClick={onClose}
                 >
                   <item.icon className="w-5 h-5" />
                   <span>{item.name}</span>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
         </div>
       </nav>
+<<<<<<< HEAD
 =======
       <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose} />
 =======
@@ -85,6 +102,8 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
         </nav>
       </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-c5cd
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-29e3
     </div>
   );
 };
