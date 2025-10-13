@@ -50,7 +50,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         Zion Tech Group
                       </span>
                     </Link>
-                    <nav className="hidden md:flex space-x-8">
+                    <nav className="hidden lg:flex space-x-8">
                       <Link
                         to="/about"
                         className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
@@ -58,13 +58,66 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         About
                         <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
                       </Link>
-                      <Link
-                        to="/services"
-                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
-                      >
-                        Services
-                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
-                      </Link>
+                      <div className="relative group">
+                        <button className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center">
+                          Services
+                          <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </button>
+                        <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm rounded-lg shadow-xl border border-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                          <div className="py-2">
+                            <Link to="/services" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/5 transition-colors">
+                              All Services
+                            </Link>
+                            <Link to="/ai-services" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/5 transition-colors">
+                              AI Services
+                            </Link>
+                            <Link to="/micro-saas" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/5 transition-colors">
+                              Micro SAAS
+                            </Link>
+                            <Link to="/5g-solutions" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/5 transition-colors">
+                              5G Solutions
+                            </Link>
+                            <Link to="/cloud-services" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/5 transition-colors">
+                              Cloud Services
+                            </Link>
+                            <Link to="/cybersecurity" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/5 transition-colors">
+                              Cybersecurity
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="relative group">
+                        <button className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center">
+                          Solutions
+                          <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </button>
+                        <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm rounded-lg shadow-xl border border-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                          <div className="py-2">
+                            <Link to="/ai-analytics" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/5 transition-colors">
+                              AI Analytics
+                            </Link>
+                            <Link to="/ai-automation" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/5 transition-colors">
+                              AI Automation
+                            </Link>
+                            <Link to="/ai-content-generation" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/5 transition-colors">
+                              Content Generation
+                            </Link>
+                            <Link to="/ai-customer-support" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/5 transition-colors">
+                              Customer Support
+                            </Link>
+                            <Link to="/data-analytics" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/5 transition-colors">
+                              Data Analytics
+                            </Link>
+                            <Link to="/web-development" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/5 transition-colors">
+                              Web Development
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
                       <Link
                         to="/contact"
                         className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
@@ -91,7 +144,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
               <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 py-12 relative z-10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
                     {/* Company Info */}
                     <div className="space-y-4">
                       <h3 className="text-xl font-bold text-white mb-4">
@@ -132,17 +185,48 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     <div className="space-y-4">
                       <h4 className="text-lg font-semibold text-white">Services</h4>
                       <div className="space-y-2">
-                        <Link to="/ai-business-intelligence" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          AI Business Intelligence
+                        <Link to="/ai-services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          AI Services
                         </Link>
-                        <Link to="/ai-customer-support" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          AI Customer Support
+                        <Link to="/micro-saas" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Micro SAAS
+                        </Link>
+                        <Link to="/5g-solutions" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          5G Solutions
+                        </Link>
+                        <Link to="/cloud-services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Cloud Services
+                        </Link>
+                        <Link to="/cybersecurity" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Cybersecurity
+                        </Link>
+                        <Link to="/data-analytics" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Data Analytics
+                        </Link>
+                      </div>
+                    </div>
+
+                    {/* Solutions */}
+                    <div className="space-y-4">
+                      <h4 className="text-lg font-semibold text-white">Solutions</h4>
+                      <div className="space-y-2">
+                        <Link to="/ai-analytics" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          AI Analytics
+                        </Link>
+                        <Link to="/ai-automation" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          AI Automation
                         </Link>
                         <Link to="/ai-content-generation" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          AI Content Generation
+                          Content Generation
                         </Link>
-                        <Link to="/ai-cybersecurity" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          AI Cybersecurity
+                        <Link to="/ai-customer-support" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Customer Support
+                        </Link>
+                        <Link to="/web-development" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Web Development
+                        </Link>
+                        <Link to="/mobile-apps" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Mobile Apps
                         </Link>
                       </div>
                     </div>
