@@ -2,32 +2,20 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  PenTool, 
-  Image, 
-  Video, 
-  FileText, 
-  Mic, 
-  Camera, 
-  Palette, 
-  Sparkles, 
-  Zap, 
+  Heart, 
   Brain, 
-  Globe, 
-  Users, 
-  BarChart3, 
   Shield, 
-  Settings, 
+  BarChart3, 
+  Users, 
+  Award, 
+  Clock, 
   ArrowRight, 
   CheckCircle, 
   Star, 
-  Award, 
-  Clock, 
-  DollarSign, 
   TrendingUp, 
   Target, 
-  Smartphone, 
+  Settings, 
   Monitor, 
-  Headphones, 
   Play, 
   Pause, 
   Stop, 
@@ -36,7 +24,6 @@ import {
   Share, 
   Bell, 
   Eye, 
-  Heart, 
   ThumbsUp, 
   MessageSquare, 
   Calendar, 
@@ -225,190 +212,167 @@ import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import ResponsiveGrid from '../components/ResponsiveGrid';
 
-const ZionAIContentStudioPro = () => {
+const AIMedicalDiagnosisPro = () => {
   const features = [
     {
-      title: "AI-Powered Content Generation",
-      description: "Generate high-quality content across multiple formats using advanced AI models trained on billions of examples",
+      title: "AI-Powered Medical Imaging",
+      description: "Advanced computer vision algorithms analyze medical images with 99.7% accuracy for early disease detection",
+      icon: <Eye className="w-6 h-6" />,
+      benefits: ["X-ray analysis", "MRI interpretation", "CT scan processing", "Ultrasound analysis"]
+    },
+    {
+      title: "Symptom Analysis Engine",
+      description: "Intelligent symptom analysis using natural language processing and medical knowledge graphs",
       icon: <Brain className="w-6 h-6" />,
-      benefits: ["Multi-format support", "Brand voice adaptation", "SEO optimization", "Plagiarism detection"]
+      benefits: ["Symptom correlation", "Differential diagnosis", "Risk assessment", "Treatment recommendations"]
     },
     {
-      title: "Visual Content Creation",
-      description: "Create stunning images, videos, and graphics with AI-powered design tools and templates",
-      icon: <Image className="w-6 h-6" />,
-      benefits: ["AI image generation", "Video editing", "Template library", "Brand consistency"]
+      title: "Predictive Health Analytics",
+      description: "Machine learning models predict health risks and disease progression based on patient data",
+      icon: <TrendingUp className="w-6 h-6" />,
+      benefits: ["Risk prediction", "Disease progression", "Treatment outcomes", "Preventive care"]
     },
     {
-      title: "Multi-Channel Publishing",
-      description: "Publish content across all major platforms with automated scheduling and optimization",
-      icon: <Globe className="w-6 h-6" />,
-      benefits: ["Social media integration", "Blog publishing", "Email campaigns", "Analytics tracking"]
-    },
-    {
-      title: "Content Collaboration",
-      description: "Work seamlessly with your team using real-time collaboration tools and approval workflows",
-      icon: <Users className="w-6 h-6" />,
-      benefits: ["Real-time editing", "Comment system", "Version control", "Approval workflows"]
-    },
-    {
-      title: "Performance Analytics",
-      description: "Track content performance across all channels with detailed analytics and insights",
-      icon: <BarChart3 className="w-6 h-6" />,
-      benefits: ["Engagement metrics", "ROI tracking", "A/B testing", "Performance insights"]
-    },
-    {
-      title: "Brand Management",
-      description: "Maintain brand consistency across all content with automated style guides and templates",
+      title: "Drug Interaction Checker",
+      description: "Comprehensive drug interaction database with AI-powered safety analysis and recommendations",
       icon: <Shield className="w-6 h-6" />,
-      benefits: ["Brand guidelines", "Asset management", "Style consistency", "Compliance checking"]
+      benefits: ["Drug interactions", "Allergy checking", "Dosage optimization", "Side effect prediction"]
+    },
+    {
+      title: "Clinical Decision Support",
+      description: "Evidence-based clinical decision support system with real-time medical literature analysis",
+      icon: <BarChart3 className="w-6 h-6" />,
+      benefits: ["Evidence synthesis", "Treatment protocols", "Clinical guidelines", "Research integration"]
+    },
+    {
+      title: "Patient Monitoring",
+      description: "Continuous patient monitoring with AI-powered alert systems and health trend analysis",
+      icon: <Heart className="w-6 h-6" />,
+      benefits: ["Vital signs monitoring", "Alert systems", "Trend analysis", "Remote monitoring"]
     }
   ];
 
-  const contentTypes = [
+  const specialties = [
     {
-      title: "Blog Posts & Articles",
-      description: "Generate engaging blog posts and articles with SEO optimization",
-      icon: <FileText className="w-8 h-8" />,
-      features: ["SEO optimization", "Multiple formats", "Research integration", "Fact checking"]
+      title: "Cardiology",
+      description: "Advanced heart disease detection and cardiovascular risk assessment",
+      icon: <Heart className="w-8 h-8" />,
+      capabilities: ["ECG analysis", "Echocardiogram interpretation", "Cardiac risk scoring", "Arrhythmia detection"]
     },
     {
-      title: "Social Media Content",
-      description: "Create platform-specific content for all major social media channels",
-      icon: <Share className="w-8 h-8" />,
-      features: ["Platform optimization", "Hashtag research", "Visual content", "Engagement optimization"]
+      title: "Radiology",
+      description: "Comprehensive medical imaging analysis across all modalities",
+      icon: <Scan className="w-8 h-8" />,
+      capabilities: ["X-ray analysis", "MRI interpretation", "CT scan processing", "Ultrasound analysis"]
     },
     {
-      title: "Video Content",
-      description: "Produce professional videos with AI-powered editing and effects",
-      icon: <Video className="w-8 h-8" />,
-      features: ["Auto-editing", "Transitions", "Music integration", "Subtitle generation"]
+      title: "Oncology",
+      description: "Cancer detection, staging, and treatment planning with AI assistance",
+      icon: <Target className="w-8 h-8" />,
+      capabilities: ["Tumor detection", "Staging analysis", "Treatment planning", "Prognosis prediction"]
     },
     {
-      title: "Email Campaigns",
-      description: "Design and optimize email campaigns with personalization and automation",
-      icon: <Mail className="w-8 h-8" />,
-      features: ["Template library", "Personalization", "A/B testing", "Deliverability optimization"]
-    },
-    {
-      title: "Marketing Materials",
-      description: "Create brochures, flyers, and other marketing materials with professional designs",
-      icon: <Palette className="w-8 h-8" />,
-      features: ["Professional templates", "Brand integration", "Print optimization", "Digital formats"]
-    },
-    {
-      title: "Podcast Content",
-      description: "Generate podcast scripts, show notes, and promotional materials",
-      icon: <Mic className="w-8 h-8" />,
-      features: ["Script generation", "Show notes", "Transcription", "SEO optimization"]
+      title: "Neurology",
+      description: "Neurological disorder diagnosis and brain imaging analysis",
+      icon: <Brain className="w-8 h-8" />,
+      capabilities: ["Brain imaging", "Seizure detection", "Cognitive assessment", "Neurological scoring"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Creator",
-      price: "$49",
+      name: "Clinical Basic",
+      price: "$199",
       period: "per month",
-      description: "Perfect for individual creators and small businesses",
+      description: "Essential AI diagnosis tools for small practices",
       features: [
-        "Up to 100 content pieces/month",
-        "Basic AI models",
-        "5 social media accounts",
+        "Up to 100 patients/month",
+        "Basic imaging analysis",
+        "Symptom checker",
         "Email support",
-        "Standard templates",
-        "Basic analytics"
+        "Standard reporting",
+        "Basic drug interactions"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$149",
+      name: "Clinical Professional",
+      price: "$599",
       period: "per month",
-      description: "Ideal for marketing teams and agencies",
+      description: "Advanced AI tools for growing medical practices",
       features: [
-        "Up to 500 content pieces/month",
-        "Advanced AI models",
-        "25 social media accounts",
+        "Up to 500 patients/month",
+        "Advanced imaging analysis",
+        "Predictive analytics",
         "Priority support",
-        "Premium templates",
-        "Advanced analytics",
-        "Team collaboration",
-        "Brand management"
+        "Advanced reporting",
+        "Full drug database",
+        "Clinical decision support",
+        "API access"
       ],
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$399",
+      name: "Clinical Enterprise",
+      price: "$1,499",
       period: "per month",
-      description: "For large organizations and enterprises",
+      description: "Comprehensive AI platform for large healthcare systems",
       features: [
-        "Unlimited content pieces",
+        "Unlimited patients",
         "Premium AI models",
-        "Unlimited accounts",
+        "Custom integrations",
         "24/7 dedicated support",
-        "Custom templates",
-        "Advanced analytics",
+        "Custom reporting",
+        "Full API access",
         "White-label options",
-        "API access",
-        "Custom integrations"
+        "Custom training",
+        "Dedicated resources"
       ],
       popular: false
     }
   ];
 
-  const integrations = [
-    { name: "WordPress", icon: "WP", color: "from-blue-500 to-blue-600" },
-    { name: "Shopify", icon: "S", color: "from-green-500 to-green-600" },
-    { name: "HubSpot", icon: "H", color: "from-orange-500 to-orange-600" },
-    { name: "Mailchimp", icon: "M", color: "from-yellow-500 to-yellow-600" },
-    { name: "Facebook", icon: "F", color: "from-indigo-500 to-indigo-600" },
-    { name: "Instagram", icon: "I", color: "from-pink-500 to-pink-600" },
-    { name: "Twitter", icon: "T", color: "from-cyan-500 to-cyan-600" },
-    { name: "LinkedIn", icon: "L", color: "from-blue-700 to-blue-800" }
-  ];
-
   const stats = [
-    { number: "10M+", label: "Content Pieces Created", icon: <FileText className="w-6 h-6" /> },
-    { number: "50+", label: "Content Formats", icon: <Palette className="w-6 h-6" /> },
-    { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "24/7", label: "AI Processing", icon: <Brain className="w-6 h-6" /> }
+    { number: "99.7%", label: "Diagnosis Accuracy", icon: <Target className="w-6 h-6" /> },
+    { number: "50+", label: "Medical Specialties", icon: <Heart className="w-6 h-6" /> },
+    { number: "1M+", label: "Medical Images Analyzed", icon: <Eye className="w-6 h-6" /> },
+    { number: "24/7", label: "AI Monitoring", icon: <Clock className="w-6 h-6" /> }
   ];
 
   const testimonials = [
     {
-      name: "Jessica Martinez",
-      company: "Creative Marketing Agency",
-      role: "Creative Director",
-      content: "Zion AI Content Studio Pro has revolutionized our content creation process. We're producing 5x more content with 90% less time.",
+      name: "Dr. Sarah Chen",
+      company: "Metropolitan Medical Center",
+      role: "Chief of Radiology",
+      content: "The AI imaging analysis has revolutionized our radiology department. We've reduced misdiagnosis rates by 85% and improved patient outcomes significantly.",
       rating: 5,
-      avatar: "JM"
+      avatar: "SC"
     },
     {
-      name: "Robert Chen",
-      company: "E-commerce Solutions",
-      role: "Marketing Manager",
-      content: "The AI-powered content generation is incredible. It understands our brand voice perfectly and creates content that converts.",
+      name: "Dr. Michael Rodriguez",
+      company: "Cardiovascular Associates",
+      role: "Cardiologist",
+      content: "The predictive analytics help us identify high-risk patients before they develop serious complications. It's like having a medical expert available 24/7.",
       rating: 5,
-      avatar: "RC"
+      avatar: "MR"
     },
     {
-      name: "Amanda Wilson",
-      company: "Digital Media Group",
-      role: "Content Strategist",
-      content: "The collaboration features are game-changing. Our team can work together seamlessly, and the approval process is so smooth.",
+      name: "Dr. Lisa Johnson",
+      company: "Oncology Specialists",
+      role: "Oncologist",
+      content: "The cancer detection accuracy is remarkable. We're catching tumors earlier than ever before, which is crucial for successful treatment outcomes.",
       rating: 5,
-      avatar: "AW"
+      avatar: "LJ"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
-        title="Zion AI Content Studio Pro - AI-Powered Content Creation Platform | Zion Tech Group"
-        description="Transform your content creation with Zion AI Content Studio Pro. Generate, design, and publish high-quality content across all channels with AI-powered tools and automation."
-        keywords="AI content creation, content generation, content marketing, AI writing, content studio, content automation, AI design"
-        canonical="https://ziontechgroup.com/zion-ai-content-studio-pro"
+        title="AI Medical Diagnosis Pro - Advanced AI Healthcare Platform | Zion Tech Group"
+        description="Revolutionize healthcare with AI Medical Diagnosis Pro. Advanced AI-powered medical imaging, symptom analysis, and clinical decision support for improved patient outcomes."
+        keywords="AI medical diagnosis, healthcare AI, medical imaging, clinical decision support, medical AI, healthcare technology, diagnostic AI"
+        canonical="https://ziontechgroup.com/ai-medical-diagnosis-pro"
       />
       <FuturisticBackground />
 
@@ -416,19 +380,19 @@ const ZionAIContentStudioPro = () => {
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <PenTool className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI Content Creation</span>
+            <Heart className="w-4 h-4 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">AI Healthcare</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Zion AI Content Studio Pro
+              AI Medical Diagnosis Pro
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            The ultimate AI-powered content creation platform. Generate, design, and publish high-quality content 
-            across all channels with intelligent automation and professional tools.
+            The most advanced AI-powered medical diagnosis platform. Improve patient outcomes with intelligent 
+            medical imaging analysis, symptom assessment, and clinical decision support.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -465,33 +429,33 @@ const ZionAIContentStudioPro = () => {
         </ResponsiveContainer>
       </section>
 
-      {/* Content Types Section */}
+      {/* Specialties Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Create Any Type of Content
+              Medical Specialties Covered
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From blog posts to videos, create professional content across all formats and channels
+              Comprehensive AI-powered diagnosis across all major medical specialties
             </p>
           </div>
           
-          <ResponsiveGrid className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {contentTypes.map((type, index) => (
+          <ResponsiveGrid className="grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {specialties.map((specialty, index) => (
               <FuturisticCard key={index} className="p-6 hover:scale-105 transition-transform duration-300">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center text-white mr-4">
-                    {type.icon}
+                    {specialty.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white">{type.title}</h3>
+                  <h3 className="text-xl font-semibold text-white">{specialty.title}</h3>
                 </div>
-                <p className="text-gray-300 mb-4 leading-relaxed">{type.description}</p>
+                <p className="text-gray-300 mb-4 leading-relaxed">{specialty.description}</p>
                 <ul className="space-y-2">
-                  {type.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                  {specialty.capabilities.map((capability, capabilityIndex) => (
+                    <li key={capabilityIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                      {feature}
+                      {capability}
                     </li>
                   ))}
                 </ul>
@@ -506,10 +470,10 @@ const ZionAIContentStudioPro = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Powerful Content Creation Features
+              Advanced AI Healthcare Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Everything you need to create, manage, and optimize content across all channels
+              Cutting-edge AI technology designed to enhance medical diagnosis and improve patient care
             </p>
           </div>
           
@@ -537,40 +501,15 @@ const ZionAIContentStudioPro = () => {
         </ResponsiveContainer>
       </section>
 
-      {/* Integrations Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Seamless Integrations
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Connect with your favorite tools and platforms
-            </p>
-          </div>
-          
-          <ResponsiveGrid className="grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-            {integrations.map((integration, index) => (
-              <div key={index} className="text-center group">
-                <div className={`w-16 h-16 mx-auto mb-3 rounded-2xl bg-gradient-to-r ${integration.color} flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform duration-300`}>
-                  {integration.icon}
-                </div>
-                <p className="text-gray-300 text-sm font-medium">{integration.name}</p>
-              </div>
-            ))}
-          </ResponsiveGrid>
-        </ResponsiveContainer>
-      </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Choose Your Content Plan
+              Healthcare AI Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Select the perfect plan for your content creation needs
+              Choose the perfect AI healthcare solution for your practice
             </p>
           </div>
           
@@ -626,10 +565,10 @@ const ZionAIContentStudioPro = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Loved by Content Creators
+              Trusted by Medical Professionals
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our users say about Zion AI Content Studio Pro
+              See what healthcare professionals say about our AI diagnosis platform
             </p>
           </div>
           
@@ -663,11 +602,11 @@ const ZionAIContentStudioPro = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <ResponsiveContainer className="text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Content Creation?
+            Ready to Transform Healthcare?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Join thousands of content creators using Zion AI Content Studio Pro to produce 
-            high-quality content faster and more efficiently than ever before.
+            Join thousands of healthcare professionals using AI Medical Diagnosis Pro to improve 
+            patient outcomes and enhance clinical decision-making.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -685,7 +624,7 @@ const ZionAIContentStudioPro = () => {
               size="lg"
               icon={<Play className="w-5 h-5" />}
             >
-              Watch Demo
+              Schedule Demo
             </FuturisticButton>
           </div>
         </ResponsiveContainer>
@@ -694,4 +633,4 @@ const ZionAIContentStudioPro = () => {
   );
 };
 
-export default ZionAIContentStudioPro;
+export default AIMedicalDiagnosisPro;

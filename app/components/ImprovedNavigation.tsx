@@ -27,7 +27,8 @@ import {
   Clock,
   CheckCircle,
   DollarSign,
-  Play
+  Play,
+  Cpu
 } from 'lucide-react';
 
 const ImprovedNavigation = () => {
@@ -440,6 +441,36 @@ const ImprovedNavigation = () => {
           href: '/zion-ai-testing-automation',
           description: 'Automated testing',
           icon: <CheckCircle className="w-4 h-4" />
+        },
+        { 
+          label: 'Zion AI Quantum Optimizer Pro', 
+          href: '/zion-ai-quantum-optimizer-pro',
+          description: 'Quantum computing optimization',
+          icon: <Cpu className="w-4 h-4" />
+        },
+        { 
+          label: 'Zion AI Cyber Defense Matrix Pro', 
+          href: '/zion-ai-cyber-defense-matrix-pro',
+          description: 'Advanced AI cybersecurity',
+          icon: <Shield className="w-4 h-4" />
+        },
+        { 
+          label: 'Zion AI Neural Interface Pro', 
+          href: '/zion-ai-neural-interface-pro',
+          description: 'Brain-computer interface',
+          icon: <Brain className="w-4 h-4" />
+        },
+        { 
+          label: 'Zion AI Climate Solutions Pro', 
+          href: '/zion-ai-climate-solutions-pro',
+          description: 'Climate monitoring & sustainability',
+          icon: <Globe className="w-4 h-4" />
+        },
+        { 
+          label: 'Zion AI Space Analytics Pro', 
+          href: '/zion-ai-space-analytics-pro',
+          description: 'Space data analytics',
+          icon: <Globe className="w-4 h-4" />
         },
         { 
           label: 'View All Micro SAAS', 

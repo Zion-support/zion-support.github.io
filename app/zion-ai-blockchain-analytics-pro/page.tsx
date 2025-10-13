@@ -2,15 +2,15 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Mic, 
-  Volume2, 
-  Brain, 
-  Zap, 
   Shield, 
+  BarChart3, 
+  Zap, 
   Globe, 
-  Smartphone, 
-  Monitor, 
-  Headphones,
+  Brain, 
+  TrendingUp, 
+  Database, 
+  Cpu, 
+  Sparkles,
   ArrowRight,
   CheckCircle,
   Star,
@@ -18,7 +18,6 @@ import {
   Award,
   Clock,
   DollarSign,
-  BarChart3,
   Settings,
   MessageSquare,
   Calendar,
@@ -32,50 +31,13 @@ import {
   Eye,
   Heart,
   ThumbsUp,
-  TrendingUp,
   Target,
-  Cpu,
-  Wifi,
-  Battery,
-  Camera,
-  Music,
-  BookOpen,
-  Lightbulb,
-  Puzzle,
-  Gamepad2,
-  ShoppingCart,
-  CreditCard,
-  Wallet,
-  Banknote,
-  Coins,
-  Gift,
-  Tag,
-  Percent,
-  Calculator,
-  PieChart,
-  LineChart,
-  Activity,
-  Layers,
-  Grid,
-  List,
-  Map,
-  Compass,
-  Navigation,
-  Globe2,
-  WifiOff,
-  Signal,
-  Bluetooth,
-  Usb,
-  HardDrive,
-  MemoryStick,
-  Printer,
-  Scanner,
-  Fax,
-  Phone,
-  Voicemail,
-  Headset,
-  Speaker,
-  VolumeX,
+  Smartphone,
+  Monitor,
+  Headphones,
+  Mic,
+  Volume2,
+  Home,
   Play,
   Pause,
   Stop,
@@ -210,7 +172,49 @@ import {
   Package,
   Receipt,
   ClipboardList,
-  Workflow
+  Workflow,
+  Lock,
+  Key,
+  Fingerprint,
+  Scan,
+  Activity,
+  Layers,
+  Grid,
+  List,
+  Map,
+  Compass,
+  Navigation,
+  Globe2,
+  WifiOff,
+  Signal,
+  Bluetooth,
+  Usb,
+  HardDrive,
+  MemoryStick,
+  Printer,
+  Scanner,
+  Fax,
+  Phone,
+  Voicemail,
+  Headset,
+  Speaker,
+  VolumeX,
+  Music,
+  BookOpen,
+  Lightbulb,
+  Puzzle,
+  Gamepad2,
+  ShoppingCart,
+  CreditCard,
+  Wallet,
+  Banknote,
+  Coins,
+  Gift,
+  Tag,
+  Percent,
+  Calculator,
+  PieChart,
+  LineChart
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticBackground from '../components/FuturisticBackground';
@@ -219,167 +223,178 @@ import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import ResponsiveGrid from '../components/ResponsiveGrid';
 
-const ZionAIVoiceAssistantPro = () => {
+const ZionAIBlockchainAnalyticsPro = () => {
   const features = [
     {
-      title: "Natural Language Processing",
-      description: "Advanced NLP engine that understands context, intent, and complex queries with 99.2% accuracy",
+      title: "Real-Time Blockchain Monitoring",
+      description: "Monitor multiple blockchain networks in real-time with advanced analytics and instant alerts",
+      icon: <Activity className="w-6 h-6" />,
+      benefits: ["Multi-chain support", "Real-time data", "Custom alerts", "Performance metrics"]
+    },
+    {
+      title: "AI-Powered Transaction Analysis",
+      description: "Advanced AI algorithms analyze transaction patterns, detect anomalies, and predict market trends",
       icon: <Brain className="w-6 h-6" />,
-      benefits: ["Context-aware responses", "Multi-language support", "Intent recognition", "Sentiment analysis"]
+      benefits: ["Pattern recognition", "Anomaly detection", "Predictive analytics", "Risk assessment"]
     },
     {
-      title: "Multi-Platform Integration",
-      description: "Seamlessly integrates with 500+ applications and services across all major platforms",
-      icon: <Globe className="w-6 h-6" />,
-      benefits: ["API integrations", "Webhook support", "Custom connectors", "Real-time sync"]
+      title: "DeFi Protocol Analytics",
+      description: "Comprehensive analysis of DeFi protocols including yield farming, liquidity pools, and governance tokens",
+      icon: <TrendingUp className="w-6 h-6" />,
+      benefits: ["Yield optimization", "Liquidity analysis", "Governance tracking", "APY monitoring"]
     },
     {
-      title: "Voice Recognition & Synthesis",
-      description: "State-of-the-art voice recognition with natural-sounding text-to-speech in 50+ languages",
-      icon: <Mic className="w-6 h-6" />,
-      benefits: ["Noise cancellation", "Accent adaptation", "Voice cloning", "Emotional tone"]
-    },
-    {
-      title: "AI-Powered Automation",
-      description: "Intelligent task automation that learns from user behavior and optimizes workflows",
-      icon: <Zap className="w-6 h-6" />,
-      benefits: ["Smart scheduling", "Predictive actions", "Workflow optimization", "Auto-completion"]
-    },
-    {
-      title: "Enterprise Security",
-      description: "Bank-grade security with end-to-end encryption and compliance with major standards",
+      title: "Smart Contract Security",
+      description: "Automated smart contract auditing with vulnerability detection and security scoring",
       icon: <Shield className="w-6 h-6" />,
-      benefits: ["End-to-end encryption", "GDPR compliance", "SOC 2 Type II", "Zero-trust architecture"]
+      benefits: ["Vulnerability scanning", "Security scoring", "Code analysis", "Risk mitigation"]
     },
     {
-      title: "Advanced Analytics",
-      description: "Comprehensive analytics dashboard with insights into usage patterns and performance metrics",
+      title: "Portfolio Management",
+      description: "Track and manage your crypto portfolio with advanced analytics and performance insights",
       icon: <BarChart3 className="w-6 h-6" />,
-      benefits: ["Usage analytics", "Performance metrics", "Custom reports", "Predictive insights"]
+      benefits: ["Portfolio tracking", "Performance metrics", "Risk analysis", "Rebalancing suggestions"]
+    },
+    {
+      title: "Compliance & Reporting",
+      description: "Automated compliance reporting and tax calculations for regulatory requirements",
+      icon: <FileText className="w-6 h-6" />,
+      benefits: ["Tax reporting", "Compliance tracking", "Audit trails", "Regulatory updates"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$29",
+      price: "$99",
       period: "per month",
-      description: "Perfect for small teams and individuals",
+      description: "Perfect for individual traders and small portfolios",
       features: [
-        "Up to 5 users",
-        "Basic voice commands",
-        "10 integrations",
-        "Standard support",
-        "5GB storage",
-        "Basic analytics"
+        "Up to 5 wallets",
+        "Basic analytics",
+        "3 blockchain networks",
+        "Email support",
+        "Standard reports",
+        "Basic alerts"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$79",
+      price: "$299",
       period: "per month",
-      description: "Ideal for growing businesses",
+      description: "Ideal for active traders and DeFi users",
       features: [
-        "Up to 25 users",
-        "Advanced AI features",
-        "100 integrations",
-        "Priority support",
-        "50GB storage",
+        "Up to 25 wallets",
         "Advanced analytics",
-        "Custom workflows",
-        "API access"
+        "10 blockchain networks",
+        "Priority support",
+        "Custom reports",
+        "Advanced alerts",
+        "API access",
+        "DeFi analytics"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$199",
+      price: "$799",
       period: "per month",
-      description: "For large organizations",
+      description: "For institutions and large portfolios",
       features: [
-        "Unlimited users",
-        "Full AI capabilities",
-        "Unlimited integrations",
+        "Unlimited wallets",
+        "Premium analytics",
+        "All blockchain networks",
         "24/7 dedicated support",
-        "Unlimited storage",
-        "Custom analytics",
+        "Custom dashboards",
+        "Real-time alerts",
+        "Full API access",
         "White-label options",
-        "Advanced security",
-        "Custom deployment"
+        "Custom integrations"
       ],
       popular: false
     }
   ];
 
-  const useCases = [
+  const supportedChains = [
+    { name: "Ethereum", icon: "ETH", color: "from-blue-500 to-blue-600" },
+    { name: "Bitcoin", icon: "BTC", color: "from-orange-500 to-orange-600" },
+    { name: "Binance Smart Chain", icon: "BNB", color: "from-yellow-500 to-yellow-600" },
+    { name: "Polygon", icon: "MATIC", color: "from-purple-500 to-purple-600" },
+    { name: "Solana", icon: "SOL", color: "from-green-500 to-green-600" },
+    { name: "Avalanche", icon: "AVAX", color: "from-red-500 to-red-600" },
+    { name: "Cardano", icon: "ADA", color: "from-cyan-500 to-cyan-600" },
+    { name: "Polkadot", icon: "DOT", color: "from-pink-500 to-pink-600" }
+  ];
+
+  const analyticsFeatures = [
     {
-      title: "Customer Service Automation",
-      description: "Handle customer inquiries 24/7 with intelligent responses and seamless handoff to human agents",
-      icon: <Headphones className="w-8 h-8" />,
-      benefits: ["80% reduction in response time", "95% customer satisfaction", "24/7 availability", "Multilingual support"]
+      title: "Transaction Flow Analysis",
+      description: "Track money flows across addresses and identify suspicious patterns",
+      icon: <ArrowRight className="w-6 h-6" />,
+      metrics: ["Flow visualization", "Pattern detection", "Risk scoring", "Alert system"]
     },
     {
-      title: "Meeting Assistant",
-      description: "Schedule meetings, take notes, and provide summaries with voice commands",
-      icon: <Calendar className="w-8 h-8" />,
-      benefits: ["Automated scheduling", "Real-time transcription", "Action item extraction", "Meeting insights"]
+      title: "Market Sentiment Analysis",
+      description: "AI-powered sentiment analysis from social media and news sources",
+      icon: <TrendingUp className="w-6 h-6" />,
+      metrics: ["Sentiment scoring", "News analysis", "Social monitoring", "Trend prediction"]
     },
     {
-      title: "Content Creation",
-      description: "Generate content, emails, and documents through voice commands and AI assistance",
-      icon: <FileText className="w-8 h-8" />,
-      benefits: ["Voice-to-text conversion", "Content optimization", "Template generation", "Multi-format output"]
+      title: "Yield Farming Optimization",
+      description: "Find the best yield farming opportunities across DeFi protocols",
+      icon: <Target className="w-6 h-6" />,
+      metrics: ["APY comparison", "Risk assessment", "Auto-compounding", "Strategy optimization"]
     },
     {
-      title: "Smart Home Control",
-      description: "Control IoT devices and smart home systems through natural voice commands",
-      icon: <Home className="w-8 h-8" />,
-      benefits: ["Device integration", "Scene automation", "Voice control", "Energy optimization"]
+      title: "Smart Contract Monitoring",
+      description: "Monitor smart contract interactions and detect potential issues",
+      icon: <Shield className="w-6 h-6" />,
+      metrics: ["Contract analysis", "Vulnerability detection", "Gas optimization", "Security scoring"]
     }
   ];
 
   const stats = [
-    { number: "99.2%", label: "Accuracy Rate", icon: <Target className="w-6 h-6" /> },
-    { number: "50+", label: "Languages Supported", icon: <Globe className="w-6 h-6" /> },
-    { number: "500+", label: "Integrations", icon: <Settings className="w-6 h-6" /> },
-    { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
+    { number: "50+", label: "Blockchain Networks", icon: <Globe className="w-6 h-6" /> },
+    { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
+    { number: "1M+", label: "Transactions Analyzed", icon: <BarChart3 className="w-6 h-6" /> },
+    { number: "24/7", label: "Monitoring", icon: <Clock className="w-6 h-6" /> }
   ];
 
   const testimonials = [
     {
-      name: "Sarah Chen",
-      company: "TechFlow Solutions",
-      role: "CEO",
-      content: "Zion AI Voice Assistant Pro has revolutionized how we handle customer service. Response times dropped by 80% and customer satisfaction increased to 98%.",
+      name: "David Kim",
+      company: "Crypto Capital Management",
+      role: "Portfolio Manager",
+      content: "Zion AI Blockchain Analytics Pro has revolutionized our trading strategies. The AI insights helped us increase returns by 35% while reducing risk.",
       rating: 5,
-      avatar: "SC"
+      avatar: "DK"
     },
     {
-      name: "Michael Rodriguez",
-      company: "Digital Innovations Inc",
-      role: "Operations Director",
-      content: "The voice recognition is incredibly accurate, even with our diverse team's different accents. It's like having a personal assistant for every employee.",
+      name: "Lisa Zhang",
+      company: "DeFi Ventures",
+      role: "Investment Director",
+      content: "The DeFi analytics are incredibly detailed. We can now identify the best yield farming opportunities before they become mainstream.",
       rating: 5,
-      avatar: "MR"
+      avatar: "LZ"
     },
     {
-      name: "Emily Watson",
-      company: "Creative Agency Pro",
-      role: "Project Manager",
-      content: "The meeting assistant feature is a game-changer. It automatically schedules meetings, takes notes, and provides summaries. We're 40% more productive now.",
+      name: "Marcus Johnson",
+      company: "Blockchain Security Labs",
+      role: "Security Analyst",
+      content: "The smart contract monitoring has saved us from several potential vulnerabilities. The security scoring is spot-on.",
       rating: 5,
-      avatar: "EW"
+      avatar: "MJ"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
-        title="Zion AI Voice Assistant Pro - Advanced Voice AI Platform | Zion Tech Group"
-        description="Transform your business with Zion AI Voice Assistant Pro. Advanced voice recognition, natural language processing, and intelligent automation in one powerful platform."
-        keywords="AI voice assistant, voice recognition, natural language processing, voice automation, AI assistant, voice AI platform, intelligent automation"
-        canonical="https://ziontechgroup.com/zion-ai-voice-assistant-pro"
+        title="Zion AI Blockchain Analytics Pro - Advanced Crypto Analytics Platform | Zion Tech Group"
+        description="Transform your blockchain analysis with Zion AI Blockchain Analytics Pro. Real-time monitoring, AI-powered insights, DeFi analytics, and smart contract security in one platform."
+        keywords="blockchain analytics, crypto analytics, DeFi analytics, smart contract security, blockchain monitoring, cryptocurrency analysis, AI blockchain"
+        canonical="https://ziontechgroup.com/zion-ai-blockchain-analytics-pro"
       />
       <FuturisticBackground />
 
@@ -387,19 +402,19 @@ const ZionAIVoiceAssistantPro = () => {
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Mic className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI Voice Technology</span>
+            <Shield className="w-4 h-4 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">Blockchain Intelligence</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Zion AI Voice Assistant Pro
+              Zion AI Blockchain Analytics Pro
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            The most advanced AI voice assistant platform. Transform your business with natural language processing, 
-            intelligent automation, and seamless multi-platform integration.
+            The most advanced blockchain analytics platform powered by AI. Monitor, analyze, and optimize your 
+            crypto investments with real-time insights and intelligent automation.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -417,7 +432,7 @@ const ZionAIVoiceAssistantPro = () => {
               size="lg"
               icon={<Play className="w-5 h-5" />}
             >
-              Watch Demo
+              View Demo
             </FuturisticButton>
           </div>
           
@@ -436,16 +451,40 @@ const ZionAIVoiceAssistantPro = () => {
         </ResponsiveContainer>
       </section>
 
+      {/* Supported Chains */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <ResponsiveContainer>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Supported Blockchain Networks
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Monitor and analyze transactions across all major blockchain networks
+            </p>
+          </div>
+          
+          <ResponsiveGrid className="grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+            {supportedChains.map((chain, index) => (
+              <div key={index} className="text-center group">
+                <div className={`w-16 h-16 mx-auto mb-3 rounded-2xl bg-gradient-to-r ${chain.color} flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform duration-300`}>
+                  {chain.icon}
+                </div>
+                <p className="text-gray-300 text-sm font-medium">{chain.name}</p>
+              </div>
+            ))}
+          </ResponsiveGrid>
+        </ResponsiveContainer>
+      </section>
+
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Powerful AI Voice Features
+              Advanced Analytics Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Experience the future of voice technology with our comprehensive suite of AI-powered features 
-              designed to transform how you work and communicate.
+              Unlock the power of blockchain data with our comprehensive suite of AI-powered analytics tools
             </p>
           </div>
           
@@ -473,38 +512,38 @@ const ZionAIVoiceAssistantPro = () => {
         </ResponsiveContainer>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Analytics Features */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Real-World Applications
+              Deep Analytics Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how Zion AI Voice Assistant Pro transforms businesses across different industries
+              Go beyond basic tracking with our advanced analytics and AI-powered insights
             </p>
           </div>
           
           <ResponsiveGrid className="grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+            {analyticsFeatures.map((feature, index) => (
               <FuturisticCard key={index} className="p-8 hover:scale-105 transition-transform duration-300">
                 <div className="flex items-center mb-6">
                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center text-white mr-6">
-                    {useCase.icon}
+                    {feature.icon}
                   </div>
                   <div>
-                    <h3 className="text-2xl font-semibold text-white mb-2">{useCase.title}</h3>
-                    <p className="text-gray-300 leading-relaxed">{useCase.description}</p>
+                    <h3 className="text-2xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300 leading-relaxed">{feature.description}</p>
                   </div>
                 </div>
-                <ul className="space-y-3">
-                  {useCase.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
-                      {benefit}
-                    </li>
+                <div className="grid grid-cols-2 gap-4">
+                  {feature.metrics.map((metric, metricIndex) => (
+                    <div key={metricIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                      {metric}
+                    </div>
                   ))}
-                </ul>
+                </div>
               </FuturisticCard>
             ))}
           </ResponsiveGrid>
@@ -516,10 +555,10 @@ const ZionAIVoiceAssistantPro = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple, Transparent Pricing
+              Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your business needs. All plans include our core AI voice features.
+              Select the perfect plan for your blockchain analytics needs
             </p>
           </div>
           
@@ -575,10 +614,10 @@ const ZionAIVoiceAssistantPro = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Industry Leaders
+              Trusted by Crypto Professionals
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our customers say about Zion AI Voice Assistant Pro
+              See what industry experts say about our blockchain analytics platform
             </p>
           </div>
           
@@ -612,11 +651,11 @@ const ZionAIVoiceAssistantPro = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <ResponsiveContainer className="text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
+            Ready to Master Blockchain Analytics?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Join thousands of businesses already using Zion AI Voice Assistant Pro to streamline operations, 
-            improve customer experience, and boost productivity.
+            Join thousands of crypto professionals using Zion AI Blockchain Analytics Pro to make smarter 
+            investment decisions and optimize their blockchain strategies.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -643,4 +682,4 @@ const ZionAIVoiceAssistantPro = () => {
   );
 };
 
-export default ZionAIVoiceAssistantPro;
+export default ZionAIBlockchainAnalyticsPro;

@@ -113,6 +113,11 @@ const ImprovedFooter = () => {
         { label: 'Zion AI API Manager', href: '/zion-ai-api-manager' },
         { label: 'Zion AI Backup Manager', href: '/zion-ai-backup-manager' },
         { label: 'Zion AI Testing Automation', href: '/zion-ai-testing-automation' },
+        { label: 'Zion AI Quantum Optimizer Pro', href: '/zion-ai-quantum-optimizer-pro' },
+        { label: 'Zion AI Cyber Defense Matrix Pro', href: '/zion-ai-cyber-defense-matrix-pro' },
+        { label: 'Zion AI Neural Interface Pro', href: '/zion-ai-neural-interface-pro' },
+        { label: 'Zion AI Climate Solutions Pro', href: '/zion-ai-climate-solutions-pro' },
+        { label: 'Zion AI Space Analytics Pro', href: '/zion-ai-space-analytics-pro' },
         { label: 'View All Micro SAAS', href: '/micro-saas', featured: true }
       ]
     },
@@ -174,9 +179,9 @@ const ImprovedFooter = () => {
   ];
 
   const stats = [
-    { number: '10,000+', label: 'Active Users', icon: <Users className="w-6 h-6" /> },
+    { number: '15,000+', label: 'Active Users', icon: <Users className="w-6 h-6" /> },
     { number: '99.9%', label: 'Uptime SLA', icon: <Award className="w-6 h-6" /> },
-    { number: '60+', label: 'Micro SAAS Solutions', icon: <Zap className="w-6 h-6" /> },
+    { number: '80+', label: 'Micro SAAS Solutions', icon: <Zap className="w-6 h-6" /> },
     { number: '24/7', label: 'Support Available', icon: <Shield className="w-6 h-6" /> }
   ];
 
