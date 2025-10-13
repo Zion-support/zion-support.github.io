@@ -3,34 +3,34 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Shield, Zap, Users, BarChart3, Settings, TrendingUp, Globe, Database } from 'lucide-react';
 
-const ITSupportPage = () => {
+const DisasterRecoveryPage = () => {
   const services = [
     {
-      title: "24/7 Technical Support",
-      description: "Round-the-clock technical support for all your IT needs",
+      title: "Disaster Recovery Planning",
+      description: "Comprehensive disaster recovery strategies and planning",
       icon: <Shield className="w-8 h-8" />,
-      benefits: ["24/7 availability", "Remote support", "Quick response", "Expert technicians"]
+      benefits: ["Risk assessment", "Recovery planning", "Testing procedures", "Documentation"]
     },
     {
-      title: "Hardware & Software Support",
-      description: "Comprehensive support for all hardware and software issues",
-      icon: <Settings className="w-8 h-8" />,
-      benefits: ["Hardware repair", "Software installation", "System optimization", "Troubleshooting"]
+      title: "Backup Solutions",
+      description: "Automated backup systems and data protection",
+      icon: <Database className="w-8 h-8" />,
+      benefits: ["Automated backups", "Data encryption", "Offsite storage", "Recovery testing"]
     },
     {
-      title: "Network Support",
-      description: "Network infrastructure support and maintenance",
-      icon: <Globe className="w-8 h-8" />,
-      benefits: ["Network setup", "Security monitoring", "Performance optimization", "Troubleshooting"]
+      title: "Business Continuity",
+      description: "Ensure business operations continue during disruptions",
+      icon: <Zap className="w-8 h-8" />,
+      benefits: ["Continuity planning", "Alternative systems", "Staff training", "Communication plans"]
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>IT Support Services - Zion Tech Group | 24/7 Technical Support</title>
-        <meta name="description" content="Professional IT support services including 24/7 technical support, hardware/software support, and network maintenance. Keep your systems running smoothly." />
-        <meta name="keywords" content="IT support, technical support, hardware support, software support, network support, IT maintenance" />
+        <title>Disaster Recovery Services - Zion Tech Group | Business Continuity & Data Protection</title>
+        <meta name="description" content="Comprehensive disaster recovery services including planning, backup solutions, and business continuity. Protect your business from disruptions." />
+        <meta name="keywords" content="disaster recovery, business continuity, backup solutions, data protection, risk management" />
       </Helmet>
 
       {/* Hero Section */}
@@ -38,19 +38,19 @@ const ITSupportPage = () => {
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              IT Support Services
+              Disaster Recovery Services
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Professional IT support services to keep your systems running smoothly. 
-            From 24/7 technical support to network maintenance, we've got you covered.
+            Protect your business from disruptions with comprehensive disaster recovery solutions. 
+            Ensure business continuity and data protection with our expert services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
             >
-              Get Support
+              Get Started
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -62,10 +62,10 @@ const ITSupportPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our IT Support Services
+              Our Disaster Recovery Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT support solutions for your business.
+              Complete disaster recovery solutions to protect your business.
             </p>
           </div>
           
@@ -98,17 +98,17 @@ const ITSupportPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Need IT Support?
+            Ready to Protect Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Contact our expert IT support team for immediate assistance.
+            Let our experts help you create a comprehensive disaster recovery plan.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
             >
-              Get Support
+              Get Started
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -118,4 +118,4 @@ const ITSupportPage = () => {
   );
 };
 
-export default ITSupportPage;
+export default DisasterRecoveryPage;

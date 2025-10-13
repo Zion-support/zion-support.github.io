@@ -3,34 +3,34 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Shield, Zap, Users, BarChart3, Settings, TrendingUp, Globe, Database } from 'lucide-react';
 
-const ITSupportPage = () => {
+const ManagedServicesPage = () => {
   const services = [
     {
-      title: "24/7 Technical Support",
-      description: "Round-the-clock technical support for all your IT needs",
-      icon: <Shield className="w-8 h-8" />,
-      benefits: ["24/7 availability", "Remote support", "Quick response", "Expert technicians"]
-    },
-    {
-      title: "Hardware & Software Support",
-      description: "Comprehensive support for all hardware and software issues",
+      title: "Infrastructure Management",
+      description: "Complete management of your IT infrastructure",
       icon: <Settings className="w-8 h-8" />,
-      benefits: ["Hardware repair", "Software installation", "System optimization", "Troubleshooting"]
+      benefits: ["24/7 monitoring", "Proactive maintenance", "Performance optimization", "Capacity planning"]
     },
     {
-      title: "Network Support",
-      description: "Network infrastructure support and maintenance",
-      icon: <Globe className="w-8 h-8" />,
-      benefits: ["Network setup", "Security monitoring", "Performance optimization", "Troubleshooting"]
+      title: "Security Management",
+      description: "Comprehensive security monitoring and management",
+      icon: <Shield className="w-8 h-8" />,
+      benefits: ["Threat monitoring", "Security updates", "Compliance management", "Incident response"]
+    },
+    {
+      title: "Cloud Management",
+      description: "End-to-end cloud infrastructure management",
+      icon: <Cloud className="w-8 h-8" />,
+      benefits: ["Cloud optimization", "Cost management", "Security monitoring", "Backup management"]
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>IT Support Services - Zion Tech Group | 24/7 Technical Support</title>
-        <meta name="description" content="Professional IT support services including 24/7 technical support, hardware/software support, and network maintenance. Keep your systems running smoothly." />
-        <meta name="keywords" content="IT support, technical support, hardware support, software support, network support, IT maintenance" />
+        <title>Managed Services - Zion Tech Group | IT Infrastructure Management</title>
+        <meta name="description" content="Comprehensive managed services including infrastructure management, security, and cloud management. Let us handle your IT operations." />
+        <meta name="keywords" content="managed services, IT management, infrastructure management, security management, cloud management" />
       </Helmet>
 
       {/* Hero Section */}
@@ -38,19 +38,19 @@ const ITSupportPage = () => {
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              IT Support Services
+              Managed Services
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Professional IT support services to keep your systems running smoothly. 
-            From 24/7 technical support to network maintenance, we've got you covered.
+            Comprehensive managed services to handle all your IT operations. 
+            Focus on your business while we manage your technology infrastructure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
             >
-              Get Support
+              Get Started
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -62,10 +62,10 @@ const ITSupportPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our IT Support Services
+              Our Managed Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT support solutions for your business.
+              Complete IT management solutions for your business.
             </p>
           </div>
           
@@ -98,17 +98,17 @@ const ITSupportPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Need IT Support?
+            Ready to Outsource Your IT Management?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Contact our expert IT support team for immediate assistance.
+            Let our experts handle your IT operations so you can focus on your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
             >
-              Get Support
+              Get Started
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -118,4 +118,4 @@ const ITSupportPage = () => {
   );
 };
 
-export default ITSupportPage;
+export default ManagedServicesPage;

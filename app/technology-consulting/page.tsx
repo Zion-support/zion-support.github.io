@@ -3,34 +3,34 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Shield, Zap, Users, BarChart3, Settings, TrendingUp, Globe, Database } from 'lucide-react';
 
-const ITSupportPage = () => {
+const TechnologyConsultingPage = () => {
   const services = [
     {
-      title: "24/7 Technical Support",
-      description: "Round-the-clock technical support for all your IT needs",
-      icon: <Shield className="w-8 h-8" />,
-      benefits: ["24/7 availability", "Remote support", "Quick response", "Expert technicians"]
-    },
-    {
-      title: "Hardware & Software Support",
-      description: "Comprehensive support for all hardware and software issues",
-      icon: <Settings className="w-8 h-8" />,
-      benefits: ["Hardware repair", "Software installation", "System optimization", "Troubleshooting"]
-    },
-    {
-      title: "Network Support",
-      description: "Network infrastructure support and maintenance",
+      title: "Technology Strategy",
+      description: "Develop comprehensive technology strategies aligned with business goals",
       icon: <Globe className="w-8 h-8" />,
-      benefits: ["Network setup", "Security monitoring", "Performance optimization", "Troubleshooting"]
+      benefits: ["Strategic planning", "Technology roadmap", "Digital transformation", "Innovation consulting"]
+    },
+    {
+      title: "System Architecture",
+      description: "Design scalable and efficient system architectures",
+      icon: <Settings className="w-8 h-8" />,
+      benefits: ["Architecture design", "Scalability planning", "Performance optimization", "Integration design"]
+    },
+    {
+      title: "Digital Transformation",
+      description: "Guide your organization through digital transformation initiatives",
+      icon: <TrendingUp className="w-8 h-8" />,
+      benefits: ["Process optimization", "Technology adoption", "Change management", "Training programs"]
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>IT Support Services - Zion Tech Group | 24/7 Technical Support</title>
-        <meta name="description" content="Professional IT support services including 24/7 technical support, hardware/software support, and network maintenance. Keep your systems running smoothly." />
-        <meta name="keywords" content="IT support, technical support, hardware support, software support, network support, IT maintenance" />
+        <title>Technology Consulting - Zion Tech Group | IT Strategy & Digital Transformation</title>
+        <meta name="description" content="Expert technology consulting services including strategy development, system architecture, and digital transformation. Transform your business with technology." />
+        <meta name="keywords" content="technology consulting, IT strategy, digital transformation, system architecture, technology roadmap" />
       </Helmet>
 
       {/* Hero Section */}
@@ -38,19 +38,19 @@ const ITSupportPage = () => {
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              IT Support Services
+              Technology Consulting
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Professional IT support services to keep your systems running smoothly. 
-            From 24/7 technical support to network maintenance, we've got you covered.
+            Expert technology consulting to help you make informed decisions and drive digital transformation. 
+            From strategy development to implementation, we guide your technology journey.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
             >
-              Get Support
+              Get Started
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -62,10 +62,10 @@ const ITSupportPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our IT Support Services
+              Our Technology Consulting Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT support solutions for your business.
+              Complete technology consulting solutions for your business.
             </p>
           </div>
           
@@ -98,17 +98,17 @@ const ITSupportPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Need IT Support?
+            Ready to Transform Your Technology?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Contact our expert IT support team for immediate assistance.
+            Let our technology experts help you make the right technology decisions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
             >
-              Get Support
+              Get Started
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -118,4 +118,4 @@ const ITSupportPage = () => {
   );
 };
 
-export default ITSupportPage;
+export default TechnologyConsultingPage;

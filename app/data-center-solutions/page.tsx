@@ -1,36 +1,36 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Shield, Zap, Users, BarChart3, Settings, TrendingUp, Globe, Database } from 'lucide-react';
+import { ArrowRight, CheckCircle, Server, Shield, Zap, Users, BarChart3, Settings, TrendingUp, Globe, Database } from 'lucide-react';
 
-const ITSupportPage = () => {
+const DataCenterSolutionsPage = () => {
   const services = [
     {
-      title: "24/7 Technical Support",
-      description: "Round-the-clock technical support for all your IT needs",
-      icon: <Shield className="w-8 h-8" />,
-      benefits: ["24/7 availability", "Remote support", "Quick response", "Expert technicians"]
+      title: "Data Center Design",
+      description: "Design and plan modern, efficient data centers for optimal performance",
+      icon: <Server className="w-8 h-8" />,
+      benefits: ["Scalable design", "Energy efficiency", "Redundancy planning", "Future-proofing"]
     },
     {
-      title: "Hardware & Software Support",
-      description: "Comprehensive support for all hardware and software issues",
+      title: "Infrastructure Management",
+      description: "Comprehensive management of your data center infrastructure",
       icon: <Settings className="w-8 h-8" />,
-      benefits: ["Hardware repair", "Software installation", "System optimization", "Troubleshooting"]
+      benefits: ["24/7 monitoring", "Proactive maintenance", "Performance optimization", "Capacity planning"]
     },
     {
-      title: "Network Support",
-      description: "Network infrastructure support and maintenance",
-      icon: <Globe className="w-8 h-8" />,
-      benefits: ["Network setup", "Security monitoring", "Performance optimization", "Troubleshooting"]
+      title: "Security & Compliance",
+      description: "Implement robust security measures and ensure compliance",
+      icon: <Shield className="w-8 h-8" />,
+      benefits: ["Physical security", "Network security", "Compliance audits", "Risk assessment"]
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>IT Support Services - Zion Tech Group | 24/7 Technical Support</title>
-        <meta name="description" content="Professional IT support services including 24/7 technical support, hardware/software support, and network maintenance. Keep your systems running smoothly." />
-        <meta name="keywords" content="IT support, technical support, hardware support, software support, network support, IT maintenance" />
+        <title>Data Center Solutions - Zion Tech Group | Infrastructure & Management</title>
+        <meta name="description" content="Comprehensive data center solutions including design, infrastructure management, and security. Optimize your data center operations." />
+        <meta name="keywords" content="data center, infrastructure management, data center design, server management, data center security" />
       </Helmet>
 
       {/* Hero Section */}
@@ -38,19 +38,19 @@ const ITSupportPage = () => {
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              IT Support Services
+              Data Center Solutions
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Professional IT support services to keep your systems running smoothly. 
-            From 24/7 technical support to network maintenance, we've got you covered.
+            Comprehensive data center solutions for modern businesses. Design, manage, and optimize your 
+            data center infrastructure for maximum performance and reliability.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
             >
-              Get Support
+              Get Started
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -62,10 +62,10 @@ const ITSupportPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our IT Support Services
+              Our Data Center Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT support solutions for your business.
+              Complete data center solutions designed to meet your business requirements.
             </p>
           </div>
           
@@ -98,17 +98,17 @@ const ITSupportPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Need IT Support?
+            Ready to Optimize Your Data Center?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Contact our expert IT support team for immediate assistance.
+            Let our experts help you design and manage a data center that meets your business needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
             >
-              Get Support
+              Get Started
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -118,4 +118,4 @@ const ITSupportPage = () => {
   );
 };
 
-export default ITSupportPage;
+export default DataCenterSolutionsPage;

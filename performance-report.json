@@ -1,37 +1,5 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "timestamp": "2025-10-13T05:30:22.688Z",
-=======
-  "timestamp": "2025-10-13T05:36:53.923Z",
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
-=======
-  "timestamp": "2025-10-13T05:39:49.300Z",
->>>>>>> cursor/analyze-improve-and-deploy-application-48cd
-  "optimizations": {
-    "images": "optimized",
-    "criticalCSS": "generated",
-    "javascript": "optimized",
-    "compression": "enabled"
-  },
-  "metrics": {
-    "totalAssets": 240,
-    "estimatedSavings": "15-25%",
-    "loadTimeImprovement": "20-30%"
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "timestamp": "2025-10-13T05:28:44.669Z",
-=======
-  "timestamp": "2025-10-13T05:29:31.527Z",
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
-=======
-  "timestamp": "2025-10-13T05:32:57.447Z",
->>>>>>> cursor/analyze-improve-and-deploy-application-381c
+  "timestamp": "2025-10-13T06:24:55.699Z",
   "optimizations": [
     "Icon imports optimized",
     "Bundle splitting improved",
@@ -49,9 +17,4 @@
     "Add more comprehensive caching strategies",
     "Consider implementing CDN for static assets"
   ]
->>>>>>> origin/main
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-48cd
 }
