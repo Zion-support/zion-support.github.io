@@ -6,59 +6,29 @@ import {
   Zap, 
   Globe, 
   ArrowRight, 
-  Star, 
   Users, 
-  Award, 
   BarChart3, 
   Cloud, 
   Sparkles, 
   Mail, 
   Smartphone, 
   Monitor,
-  Phone,
-  MapPin,
   Code,
   Database,
   ChevronDown,
   Menu,
   X,
-  SidebarIcon,
   Package,
-  Heart,
-  Receipt,
   TrendingUp,
   Cpu,
-  Network,
-  FileText,
-  Clock
+  Network
 } from 'lucide-react';
-<<<<<<< HEAD
-import FuturisticButton from './FuturisticButton';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
 interface NavigationProps {
   onSidebarToggle: () => void;
 }
 
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
-<<<<<<< HEAD
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const location = useLocation();
-
-  const toggleMenu = useCallback(() => {
-    setIsMenuOpen(prev => !prev);
-  }, []);
-
-  const toggleDropdown = useCallback((dropdown: string) => {
-    setActiveDropdown(prev => prev === dropdown ? null : dropdown);
-  }, []);
-
-  const closeDropdowns = useCallback(() => {
-    setActiveDropdown(null);
-  }, []);
-=======
   const [isAiServicesOpen, setIsAiServicesOpen] = useState(false);
   const [isItServicesOpen, setIsItServicesOpen] = useState(false);
   const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false);
@@ -81,7 +51,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const toggle5GServices = useCallback(() => {
     setIs5GServicesOpen(!is5GServicesOpen);
   }, [is5GServicesOpen]);
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
   const isActive = useCallback((path: string) => {
     return location.pathname === path;
@@ -106,91 +75,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     {
       name: 'Contact',
       path: '/contact',
-<<<<<<< HEAD
-      icon: <Phone className="w-4 h-4" />
-<<<<<<< HEAD
-=======
-      label: 'Home',
-      href: '/',
-      icon: <Star className="w-4 h-4" />
-    },
-    {
-      label: 'AI Services',
-      href: '/ai-services',
-      icon: <Brain className="w-4 h-4" />,
-      dropdown: [
-        { label: 'AI Analytics', href: '/ai-analytics' },
-        { label: 'AI Automation', href: '/ai-automation' },
-        { label: 'AI Business Intelligence', href: '/ai-business-intelligence' },
-        { label: 'AI Content Generation', href: '/ai-content-generation' },
-        { label: 'AI Customer Service', href: '/ai-customer-service' },
-        { label: 'AI Data Analytics', href: '/ai-data-analytics' },
-        { label: 'AI Email Automation', href: '/ai-email-automation' },
-        { label: 'AI Fraud Detection', href: '/ai-fraud-detection' },
-        { label: 'AI Healthcare', href: '/ai-healthcare' },
-        { label: 'AI Marketing', href: '/ai-marketing' },
-        { label: 'AI Predictive Analytics', href: '/ai-predictive-analytics' },
-        { label: 'AI Project Management', href: '/ai-project-management' },
-        { label: 'AI Recommendation Engine', href: '/ai-recommendation-engine' },
-        { label: 'AI Sales Automation', href: '/ai-sales-automation' },
-        { label: 'AI Workflow Automation', href: '/ai-workflow-automation' }
-      ]
-    },
-    {
-      label: 'IT Services',
-      href: '/services',
-      icon: <Shield className="w-4 h-4" />,
-      dropdown: [
-        { label: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
-        { label: 'Cybersecurity Solutions', href: '/cybersecurity-solutions' },
-        { label: 'Web Development', href: '/web-development' },
-        { label: 'Mobile Development', href: '/mobile-development' },
-        { label: 'Database Management', href: '/database-management' },
-        { label: 'Custom Software', href: '/custom-software' },
-        { label: 'Network Infrastructure', href: '/network-infrastructure' }
-      ]
-    },
-    {
-      label: 'Micro SAAS',
-      href: '/micro-saas',
-      icon: <Zap className="w-4 h-4" />,
-      dropdown: [
-        { label: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
-        { label: 'Zion Security Shield', href: '/zion-security-shield' },
-        { label: 'Zion Cloud Vault', href: '/zion-cloud-vault' },
-        { label: 'Zion Content Studio', href: '/zion-content-studio' }
-      ]
-    },
-    {
-      label: '5G Solutions',
-      href: '/5g-solutions',
-      icon: <Globe className="w-4 h-4" />,
-      dropdown: [
-        { label: '5G Data Analytics', href: '/5g-data-analytics' },
-        { label: '5G Edge Computing', href: '/5g-edge-computing' },
-        { label: '5G Implementation', href: '/5g-implementation' },
-        { label: '5G Mobile Applications', href: '/5g-mobile-applications' },
-        { label: '5G Network Infrastructure', href: '/5g-network-infrastructure' },
-        { label: '5G Private Networks', href: '/5g-private-networks' },
-        { label: '5G Smart City Solutions', href: '/5g-smart-city-solutions' },
-        { label: '5G IoT Solutions', href: '/5g-iot-solutions' }
-      ]
-    },
-    {
-      label: 'About',
-      href: '/about',
-      icon: <Users className="w-4 h-4" />
-    },
-    {
-      label: 'Contact',
-      href: '/contact',
       icon: <Mail className="w-4 h-4" />
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
-=======
-      icon: <Mail className="w-4 h-4" />
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-db59
     }
   ], []);
 
@@ -236,13 +121,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   ], []);
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-db59
     <nav className="relative z-50 bg-black/20 backdrop-blur-md border-b border-cyan-500/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -262,87 +140,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navigationItems.map((item) => (
-<<<<<<< HEAD
-                <div key={item.name} className="relative group">
-                  <Link
-                    to={item.path}
-                    className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
-                      isActive(item.path)
-                        ? 'text-cyan-400 bg-cyan-500/10'
-                        : 'text-gray-300 hover:text-white hover:bg-white/10'
-                    }`}
-                    onClick={item.hasDropdown ? (e) => {
-                      e.preventDefault();
-                      toggleServices();
-                    } : undefined}
-                  >
-                    <span>{item.icon}</span>
-                    <span>{item.name}</span>
-                    {item.hasDropdown && (
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
-                        isServicesOpen ? 'rotate-180' : ''
-                      }`} />
-                    )}
-                  </Link>
-
-                  {/* Dropdown Menu */}
-                  {item.hasDropdown && isServicesOpen && (
-                    <div className="absolute left-0 mt-2 w-96 bg-black/90 backdrop-blur-md border border-cyan-500/30 rounded-lg shadow-xl z-50">
-                      <div className="p-4">
-                        {item.dropdownItems?.map((section, sectionIndex) => (
-                          <div key={sectionIndex} className="mb-4 last:mb-0">
-                            <div className="flex items-center space-x-2 mb-2 text-cyan-400 font-semibold">
-                              <span>{section.icon}</span>
-                              <span>{section.name}</span>
-                            </div>
-                            <div className="grid grid-cols-1 gap-1">
-                              {section.items?.map((subItem, subIndex) => (
-                                <Link
-                                  key={subIndex}
-                                  to={subItem.path}
-                                  className="flex items-center space-x-2 px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-cyan-500/10 rounded-md transition-all duration-300"
-                                  onClick={() => setIsServicesOpen(false)}
-                                >
-                                  <span>{subItem.icon}</span>
-                                  <span>{subItem.name}</span>
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center space-x-2"
-            >
-              <span>Get Started</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center space-x-2">
-            <button
-              onClick={onSidebarToggle}
-              className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all duration-300"
-            >
-              <SidebarIcon className="w-6 h-6" />
-            </button>
-            <button
-              onClick={toggleMenu}
-              className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all duration-300"
-            >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-=======
                 <Link
                   key={item.name}
                   to={item.path}
@@ -475,6 +272,17 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
             </div>
           </div>
 
+          {/* CTA Button */}
+          <div className="hidden md:block">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center space-x-2"
+            >
+              <span>Get Started</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
@@ -487,83 +295,12 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               ) : (
                 <Menu className="block h-6 w-6" />
               )}
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
             </button>
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-db59
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/90 backdrop-blur-md border-t border-cyan-500/20">
-              {navigationItems.map((item) => (
-                <div key={item.name}>
-                  <Link
-                    to={item.path}
-                    className={`flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
-                      isActive(item.path)
-                        ? 'text-cyan-400 bg-cyan-500/10'
-                        : 'text-gray-300 hover:text-white hover:bg-white/10'
-                    }`}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <span>{item.icon}</span>
-                    <span>{item.name}</span>
-                  </Link>
-                </div>
-              ))}
-              <div className="pt-4">
-                <Link
-                  to="/contact"
-                  className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Get Started
-                </Link>
-              </div>
-<<<<<<< HEAD
-=======
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="lg:hidden border-t border-white/10 mt-4 pt-4 pb-4">
-            <div className="space-y-2">
-              {navigationItems.map((item) => (
-                <div key={item.label}>
-                  <Link
-                    to={item.href}
-                    className={`flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors py-2 px-3 rounded-lg hover:bg-white/5 ${
-                      isActive(item.href) ? 'text-cyan-400' : ''
-                    }`}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.icon}
-                    <span>{item.label}</span>
-                  </Link>
-                  {item.dropdown && (
-                    <div className="ml-6 space-y-1">
-                      {item.dropdown.map((dropdownItem) => (
-                        <Link
-                          key={dropdownItem.label}
-                          to={dropdownItem.href}
-                          className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1 px-3 rounded-lg hover:bg-white/5"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          {dropdownItem.label}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-=======
-      {/* Mobile menu */}
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-900/95 backdrop-blur-md border-t border-cyan-500/20">
@@ -582,7 +319,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 <span>{item.name}</span>
               </Link>
             ))}
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
             
             {/* Mobile AI Services */}
             <div className="pt-2">
@@ -590,20 +326,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 onClick={toggleAiServices}
                 className="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300 flex items-center justify-between"
               >
-<<<<<<< HEAD
-                Demo
-              </FuturisticButton>
-              <FuturisticButton
-                href="/contact"
-                variant="primary"
-                size="sm"
-                icon={<Sparkles className="w-4 h-4" />}
-                className="w-full"
-              >
-                Get Started
-              </FuturisticButton>
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
-=======
                 <div className="flex items-center space-x-2">
                   <Brain className="w-4 h-4" />
                   <span>AI Services</span>
@@ -724,31 +446,14 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                   ))}
                 </div>
               )}
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-db59
             </div>
           </div>
         </div>
       )}
     </nav>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-});
-
-Navigation.displayName = 'Navigation';
-=======
-};
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
-=======
-};
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-=======
 };
 
 Navigation.displayName = 'Navigation';
->>>>>>> cursor/analyze-improve-and-deploy-application-db59
 
 export default Navigation;
