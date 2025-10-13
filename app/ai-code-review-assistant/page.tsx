@@ -2,19 +2,23 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Mic, 
-  Video, 
-  FileText, 
-  Calendar, 
-  Users, 
-  Clock, 
+  Code, 
+  Shield, 
+  Zap, 
   CheckCircle, 
-  Star,
-  ArrowRight,
-  Zap,
+  AlertTriangle, 
+  Star, 
+  ArrowRight, 
   Brain,
-  Shield,
+  Target,
   BarChart3,
+  Users,
+  Clock,
+  FileText,
+  GitBranch,
+  Bug,
+  Lock,
+  Eye,
   MessageSquare,
   Download,
   Share2,
@@ -25,121 +29,139 @@ import {
 } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const ZionAIMeetingAssistant = () => {
+const AICodeReviewAssistant = () => {
   const features = [
     {
-      title: "Real-time Transcription",
-      description: "AI-powered speech-to-text with 99.5% accuracy in 50+ languages",
-      icon: <Mic className="w-6 h-6" />,
+      title: "Automated Code Analysis",
+      description: "AI-powered code review that catches bugs, security issues, and performance problems",
+      icon: <Code className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Smart Action Items",
-      description: "Automatically extracts and assigns action items with due dates",
-      icon: <CheckCircle className="w-6 h-6" />,
+      title: "Security Vulnerability Detection",
+      description: "Identify security flaws, SQL injection, XSS, and other critical vulnerabilities",
+      icon: <Shield className="w-6 h-6" />,
+      color: "from-red-500 to-pink-500"
+    },
+    {
+      title: "Performance Optimization",
+      description: "Suggest code improvements for better performance and efficiency",
+      icon: <Zap className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Meeting Summaries",
-      description: "AI-generated summaries with key decisions and next steps",
-      icon: <FileText className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Sentiment Analysis",
-      description: "Track team engagement and meeting effectiveness",
+      title: "Code Quality Metrics",
+      description: "Track code quality, maintainability, and technical debt over time",
       icon: <BarChart3 className="w-6 h-6" />,
-      color: "from-orange-500 to-red-500"
+      color: "from-purple-500 to-violet-500"
     },
     {
-      title: "Calendar Integration",
-      description: "Syncs with Google Calendar, Outlook, and other platforms",
-      icon: <Calendar className="w-6 h-6" />,
+      title: "Best Practices Enforcement",
+      description: "Ensure code follows industry standards and team conventions",
+      icon: <CheckCircle className="w-6 h-6" />,
+      color: "from-orange-500 to-yellow-500"
+    },
+    {
+      title: "Learning & Improvement",
+      description: "AI learns from your codebase to provide increasingly relevant suggestions",
+      icon: <Brain className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
-    },
-    {
-      title: "Team Collaboration",
-      description: "Share notes, recordings, and insights with your team",
-      icon: <Users className="w-6 h-6" />,
-      color: "from-teal-500 to-cyan-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$19",
+      name: "Developer",
+      price: "$29",
       period: "/month",
-      description: "Perfect for small teams",
+      description: "Perfect for individual developers",
       features: [
-        "Up to 5 meetings/month",
-        "60 minutes recording each",
-        "Basic transcription",
-        "Email summaries",
-        "1 user"
+        "Up to 5 repositories",
+        "Basic code analysis",
+        "Security scanning",
+        "Performance suggestions",
+        "Email support"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$49",
+      name: "Team",
+      price: "$99",
       period: "/month",
-      description: "Most popular for growing teams",
+      description: "Most popular for development teams",
       features: [
-        "Unlimited meetings",
-        "Unlimited recording time",
-        "Advanced AI features",
-        "Action item tracking",
+        "Up to 25 repositories",
+        "Advanced AI analysis",
         "Team collaboration",
-        "Up to 10 users"
+        "Custom rules",
+        "Priority support",
+        "Up to 10 developers"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$99",
+      price: "$299",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Everything in Professional",
-        "Custom integrations",
+        "Unlimited repositories",
+        "Custom AI training",
         "Advanced analytics",
-        "Priority support",
-        "Unlimited users",
-        "API access"
+        "API access",
+        "Dedicated support",
+        "Unlimited developers"
       ],
       popular: false
     }
   ];
 
-  const useCases = [
+  const supportedLanguages = [
+    { name: "JavaScript", icon: <Code className="w-8 h-8" />, color: "text-yellow-400" },
+    { name: "TypeScript", icon: <Code className="w-8 h-8" />, color: "text-blue-400" },
+    { name: "Python", icon: <Code className="w-8 h-8" />, color: "text-green-400" },
+    { name: "Java", icon: <Code className="w-8 h-8" />, color: "text-red-400" },
+    { name: "C#", icon: <Code className="w-8 h-8" />, color: "text-purple-400" },
+    { name: "Go", icon: <Code className="w-8 h-8" />, color: "text-cyan-400" },
+    { name: "Rust", icon: <Code className="w-8 h-8" />, color: "text-orange-400" },
+    { name: "PHP", icon: <Code className="w-8 h-8" />, color: "text-indigo-400" }
+  ];
+
+  const benefits = [
     {
-      title: "Sales Teams",
-      description: "Track client conversations, identify follow-ups, and improve conversion rates",
-      icon: <Users className="w-8 h-8" />,
-      benefit: "25% increase in deal closure"
+      title: "Reduce Bugs by 60%",
+      description: "Catch issues before they reach production",
+      metric: "60% fewer bugs",
+      icon: <Bug className="w-8 h-8" />
     },
     {
-      title: "Project Management",
-      description: "Keep stakeholders updated with automated meeting summaries and action items",
-      icon: <CheckCircle className="w-8 h-8" />,
-      benefit: "40% faster project delivery"
+      title: "Improve Code Quality",
+      description: "Maintain consistent, high-quality code standards",
+      metric: "40% better quality",
+      icon: <CheckCircle className="w-8 h-8" />
     },
     {
-      title: "Remote Teams",
-      description: "Bridge time zones with detailed meeting notes and asynchronous collaboration",
-      icon: <Globe className="w-8 h-8" />,
-      benefit: "60% better team alignment"
+      title: "Save Review Time",
+      description: "Automate routine code review tasks",
+      metric: "70% time saved",
+      icon: <Clock className="w-8 h-8" />
     }
+  ];
+
+  const stats = [
+    { label: "Code Reviews", value: "1M+", icon: <Eye className="w-6 h-6" /> },
+    { label: "Developers", value: "50K+", icon: <Users className="w-6 h-6" /> },
+    { label: "Bugs Caught", value: "95%", icon: <Bug className="w-6 h-6" /> },
+    { label: "Time Saved", value: "70%", icon: <Clock className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Meeting Assistant - Smart Meeting Management | Zion Tech Group</title>
-        <meta name="description" content="Transform your meetings with AI-powered transcription, action items, and insights. Boost productivity by 40% with our intelligent meeting assistant." />
-        <meta name="keywords" content="AI meeting assistant, meeting transcription, meeting notes, action items, team collaboration, productivity" />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-meeting-assistant" />
+        <title>AI Code Review Assistant - Automated Code Analysis | Zion Tech Group</title>
+        <meta name="description" content="Transform your code review process with AI-powered analysis. Catch 95% of bugs, reduce review time by 70%, and improve code quality by 40%." />
+        <meta name="keywords" content="AI code review, automated code analysis, code quality, security scanning, performance optimization, code metrics" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-code-review-assistant" />
       </Helmet>
       <SEOOptimizer />
 
@@ -150,18 +172,18 @@ const ZionAIMeetingAssistant = () => {
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
                 <Brain className="w-5 h-5 mr-2 text-cyan-400" />
-                <span className="text-cyan-400 font-medium">AI-Powered Meeting Assistant</span>
+                <span className="text-cyan-400 font-medium">AI-Powered Code Review</span>
               </div>
               
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Zion AI Meeting Assistant
+                  AI Code Review Assistant
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Transform your meetings with AI-powered transcription, smart action items, and intelligent insights. 
-                Boost team productivity by 40% with our cutting-edge meeting management platform.
+                Transform your code review process with AI-powered analysis. Catch 95% of bugs, 
+                reduce review time by 70%, and improve code quality by 40% with intelligent automation.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -169,7 +191,7 @@ const ZionAIMeetingAssistant = () => {
                   to="/demo"
                   className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-cyan-500/25 flex items-center"
                 >
-                  <Play className="w-5 h-5 mr-2" />
+                  <Code className="w-5 h-5 mr-2" />
                   Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
@@ -189,13 +211,30 @@ const ZionAIMeetingAssistant = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <Users className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-300">10,000+ Teams</span>
+                  <span className="text-gray-300">50,000+ Developers</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Zap className="w-5 h-5 text-purple-400" />
-                  <span className="text-gray-300">40% Productivity Boost</span>
+                  <span className="text-gray-300">95% Bug Detection</span>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="py-16 px-4 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center group">
+                  <div className="inline-flex p-3 rounded-xl bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-4 group-hover:scale-110 transition-transform duration-300">
+                    {stat.icon}
+                  </div>
+                  <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                  <div className="text-gray-400">{stat.label}</div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -210,7 +249,7 @@ const ZionAIMeetingAssistant = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to make your meetings more productive and actionable
+                Everything you need to maintain high-quality, secure code
               </p>
             </div>
 
@@ -231,33 +270,63 @@ const ZionAIMeetingAssistant = () => {
           </div>
         </section>
 
-        {/* Use Cases Section */}
+        {/* Supported Languages Section */}
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Perfect For
+                  Multi-Language Support
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how different teams use Zion AI Meeting Assistant to boost productivity
+                Works with all major programming languages and frameworks
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8">
+              {supportedLanguages.map((language, index) => (
+                <div
+                  key={index}
+                  className="group bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center"
+                >
+                  <div className={`${language.color} mb-3 group-hover:scale-110 transition-transform duration-300 flex justify-center`}>
+                    {language.icon}
+                  </div>
+                  <h3 className="text-sm font-medium text-white">{language.name}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  Proven Results
+                </span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                See the measurable impact on your development process
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              {useCases.map((useCase, index) => (
+              {benefits.map((benefit, index) => (
                 <div
                   key={index}
                   className="text-center group"
                 >
                   <div className="inline-flex p-4 rounded-2xl bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6 group-hover:scale-110 transition-transform duration-300">
-                    {useCase.icon}
+                    {benefit.icon}
                   </div>
-                  <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
-                  <p className="text-gray-300 mb-4 leading-relaxed">{useCase.description}</p>
-                  <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 text-green-400 font-medium">
-                    {useCase.benefit}
+                  <h3 className="text-2xl font-semibold text-white mb-4">{benefit.title}</h3>
+                  <p className="text-gray-300 mb-4 leading-relaxed">{benefit.description}</p>
+                  <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 text-green-400 font-medium text-lg">
+                    {benefit.metric}
                   </div>
                 </div>
               ))}
@@ -266,7 +335,7 @@ const ZionAIMeetingAssistant = () => {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -275,7 +344,7 @@ const ZionAIMeetingAssistant = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your team size and needs
+                Choose the plan that fits your development team
               </p>
             </div>
 
@@ -336,18 +405,18 @@ const ZionAIMeetingAssistant = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Ready to Transform Your Meetings?
+                Ready to Improve Your Code Quality?
               </span>
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of teams already using Zion AI Meeting Assistant to boost productivity
+              Join thousands of developers using AI Code Review Assistant to write better, more secure code
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/demo"
                 className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-cyan-500/25 flex items-center justify-center"
               >
-                <Play className="w-5 h-5 mr-2" />
+                <Code className="w-5 h-5 mr-2" />
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -366,4 +435,4 @@ const ZionAIMeetingAssistant = () => {
   );
 };
 
-export default ZionAIMeetingAssistant;
+export default AICodeReviewAssistant;

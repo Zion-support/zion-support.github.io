@@ -2,144 +2,157 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Mic, 
-  Video, 
-  FileText, 
-  Calendar, 
+  MessageSquare, 
+  TrendingUp, 
+  BarChart3, 
   Users, 
-  Clock, 
-  CheckCircle, 
-  Star,
-  ArrowRight,
+  Star, 
+  ArrowRight, 
   Zap,
   Brain,
   Shield,
-  BarChart3,
-  MessageSquare,
-  Download,
-  Share2,
-  Settings,
-  Play,
-  Pause,
-  Volume2
+  Target,
+  PieChart,
+  FileText,
+  Mail,
+  Phone,
+  Globe,
+  CheckCircle,
+  AlertTriangle,
+  ThumbsUp,
+  ThumbsDown,
+  Heart,
+  Smile,
+  Frown
 } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const ZionAIMeetingAssistant = () => {
+const ZionCustomerInsightsPro = () => {
   const features = [
     {
-      title: "Real-time Transcription",
-      description: "AI-powered speech-to-text with 99.5% accuracy in 50+ languages",
-      icon: <Mic className="w-6 h-6" />,
+      title: "Multi-Channel Analysis",
+      description: "Analyze feedback from emails, surveys, social media, reviews, and support tickets",
+      icon: <MessageSquare className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Smart Action Items",
-      description: "Automatically extracts and assigns action items with due dates",
-      icon: <CheckCircle className="w-6 h-6" />,
+      title: "Sentiment Analysis",
+      description: "AI-powered emotion detection with 95% accuracy across 50+ languages",
+      icon: <Heart className="w-6 h-6" />,
+      color: "from-pink-500 to-rose-500"
+    },
+    {
+      title: "Trend Detection",
+      description: "Identify emerging patterns and predict customer behavior changes",
+      icon: <TrendingUp className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Meeting Summaries",
-      description: "AI-generated summaries with key decisions and next steps",
-      icon: <FileText className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
+      title: "Actionable Insights",
+      description: "Get specific recommendations to improve customer satisfaction",
+      icon: <Target className="w-6 h-6" />,
+      color: "from-purple-500 to-violet-500"
     },
     {
-      title: "Sentiment Analysis",
-      description: "Track team engagement and meeting effectiveness",
-      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Real-time Alerts",
+      description: "Instant notifications for negative sentiment spikes or urgent issues",
+      icon: <AlertTriangle className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Calendar Integration",
-      description: "Syncs with Google Calendar, Outlook, and other platforms",
-      icon: <Calendar className="w-6 h-6" />,
-      color: "from-indigo-500 to-purple-500"
-    },
-    {
-      title: "Team Collaboration",
-      description: "Share notes, recordings, and insights with your team",
-      icon: <Users className="w-6 h-6" />,
-      color: "from-teal-500 to-cyan-500"
+      title: "Custom Dashboards",
+      description: "Build personalized views for different teams and stakeholders",
+      icon: <BarChart3 className="w-6 h-6" />,
+      color: "from-indigo-500 to-blue-500"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$19",
+      price: "$29",
       period: "/month",
-      description: "Perfect for small teams",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 5 meetings/month",
-        "60 minutes recording each",
-        "Basic transcription",
-        "Email summaries",
-        "1 user"
+        "Up to 1,000 feedback entries/month",
+        "Basic sentiment analysis",
+        "Email & social media integration",
+        "Standard dashboards",
+        "Email support"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$49",
+      price: "$79",
       period: "/month",
-      description: "Most popular for growing teams",
+      description: "Most popular for growing companies",
       features: [
-        "Unlimited meetings",
-        "Unlimited recording time",
-        "Advanced AI features",
-        "Action item tracking",
-        "Team collaboration",
-        "Up to 10 users"
+        "Up to 10,000 feedback entries/month",
+        "Advanced AI analysis",
+        "All channel integrations",
+        "Custom dashboards",
+        "Real-time alerts",
+        "Priority support"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$99",
+      price: "$199",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Everything in Professional",
+        "Unlimited feedback entries",
+        "Advanced AI & ML models",
         "Custom integrations",
-        "Advanced analytics",
-        "Priority support",
-        "Unlimited users",
+        "White-label options",
+        "Dedicated support",
         "API access"
       ],
       popular: false
     }
   ];
 
-  const useCases = [
+  const integrations = [
+    { name: "Zendesk", icon: <MessageSquare className="w-8 h-8" />, color: "text-blue-400" },
+    { name: "Intercom", icon: <Mail className="w-8 h-8" />, color: "text-purple-400" },
+    { name: "Salesforce", icon: <Users className="w-8 h-8" />, color: "text-cyan-400" },
+    { name: "HubSpot", icon: <Target className="w-8 h-8" />, color: "text-orange-400" },
+    { name: "Google Reviews", icon: <Star className="w-8 h-8" />, color: "text-yellow-400" },
+    { name: "Facebook", icon: <Globe className="w-8 h-8" />, color: "text-blue-500" },
+    { name: "Twitter", icon: <MessageSquare className="w-8 h-8" />, color: "text-sky-400" },
+    { name: "SurveyMonkey", icon: <FileText className="w-8 h-8" />, color: "text-green-400" }
+  ];
+
+  const benefits = [
     {
-      title: "Sales Teams",
-      description: "Track client conversations, identify follow-ups, and improve conversion rates",
-      icon: <Users className="w-8 h-8" />,
-      benefit: "25% increase in deal closure"
+      title: "Increase Customer Satisfaction",
+      description: "Identify and address issues before they escalate",
+      metric: "35% improvement",
+      icon: <ThumbsUp className="w-8 h-8" />
     },
     {
-      title: "Project Management",
-      description: "Keep stakeholders updated with automated meeting summaries and action items",
-      icon: <CheckCircle className="w-8 h-8" />,
-      benefit: "40% faster project delivery"
+      title: "Reduce Churn Rate",
+      description: "Predict and prevent customer cancellations",
+      metric: "28% reduction",
+      icon: <TrendingUp className="w-8 h-8" />
     },
     {
-      title: "Remote Teams",
-      description: "Bridge time zones with detailed meeting notes and asynchronous collaboration",
-      icon: <Globe className="w-8 h-8" />,
-      benefit: "60% better team alignment"
+      title: "Boost Revenue",
+      description: "Turn feedback into actionable growth strategies",
+      metric: "42% increase",
+      icon: <BarChart3 className="w-8 h-8" />
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Meeting Assistant - Smart Meeting Management | Zion Tech Group</title>
-        <meta name="description" content="Transform your meetings with AI-powered transcription, action items, and insights. Boost productivity by 40% with our intelligent meeting assistant." />
-        <meta name="keywords" content="AI meeting assistant, meeting transcription, meeting notes, action items, team collaboration, productivity" />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-meeting-assistant" />
+        <title>Zion Customer Insights Pro - AI-Powered Feedback Analysis | Zion Tech Group</title>
+        <meta name="description" content="Transform customer feedback into actionable insights with AI. Boost satisfaction by 35% and reduce churn by 28% with our intelligent analysis platform." />
+        <meta name="keywords" content="customer feedback analysis, sentiment analysis, customer insights, feedback management, customer satisfaction, AI analytics" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-customer-insights-pro" />
       </Helmet>
       <SEOOptimizer />
 
@@ -150,18 +163,18 @@ const ZionAIMeetingAssistant = () => {
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
                 <Brain className="w-5 h-5 mr-2 text-cyan-400" />
-                <span className="text-cyan-400 font-medium">AI-Powered Meeting Assistant</span>
+                <span className="text-cyan-400 font-medium">AI-Powered Customer Insights</span>
               </div>
               
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Zion AI Meeting Assistant
+                  Zion Customer Insights Pro
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Transform your meetings with AI-powered transcription, smart action items, and intelligent insights. 
-                Boost team productivity by 40% with our cutting-edge meeting management platform.
+                Transform customer feedback into actionable insights with AI-powered analysis. 
+                Boost satisfaction by 35% and reduce churn by 28% with intelligent sentiment tracking.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -169,7 +182,7 @@ const ZionAIMeetingAssistant = () => {
                   to="/demo"
                   className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-cyan-500/25 flex items-center"
                 >
-                  <Play className="w-5 h-5 mr-2" />
+                  <BarChart3 className="w-5 h-5 mr-2" />
                   Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
@@ -185,15 +198,15 @@ const ZionAIMeetingAssistant = () => {
               <div className="flex flex-wrap justify-center gap-8 text-center">
                 <div className="flex items-center space-x-2">
                   <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                  <span className="text-gray-300">4.9/5 Rating</span>
+                  <span className="text-gray-300">4.8/5 Rating</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Users className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-300">10,000+ Teams</span>
+                  <span className="text-gray-300">5,000+ Companies</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Zap className="w-5 h-5 text-purple-400" />
-                  <span className="text-gray-300">40% Productivity Boost</span>
+                  <span className="text-gray-300">35% Satisfaction Boost</span>
                 </div>
               </div>
             </div>
@@ -210,7 +223,7 @@ const ZionAIMeetingAssistant = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to make your meetings more productive and actionable
+                Everything you need to understand and act on customer feedback
               </p>
             </div>
 
@@ -231,33 +244,33 @@ const ZionAIMeetingAssistant = () => {
           </div>
         </section>
 
-        {/* Use Cases Section */}
+        {/* Benefits Section */}
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Perfect For
+                  Proven Results
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how different teams use Zion AI Meeting Assistant to boost productivity
+                See the measurable impact on your business
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              {useCases.map((useCase, index) => (
+              {benefits.map((benefit, index) => (
                 <div
                   key={index}
                   className="text-center group"
                 >
                   <div className="inline-flex p-4 rounded-2xl bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6 group-hover:scale-110 transition-transform duration-300">
-                    {useCase.icon}
+                    {benefit.icon}
                   </div>
-                  <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
-                  <p className="text-gray-300 mb-4 leading-relaxed">{useCase.description}</p>
-                  <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 text-green-400 font-medium">
-                    {useCase.benefit}
+                  <h3 className="text-2xl font-semibold text-white mb-4">{benefit.title}</h3>
+                  <p className="text-gray-300 mb-4 leading-relaxed">{benefit.description}</p>
+                  <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 text-green-400 font-medium text-lg">
+                    {benefit.metric}
                   </div>
                 </div>
               ))}
@@ -265,8 +278,38 @@ const ZionAIMeetingAssistant = () => {
           </div>
         </section>
 
-        {/* Pricing Section */}
+        {/* Integrations Section */}
         <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  Seamless Integrations
+                </span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Connect with your existing tools and platforms
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8">
+              {integrations.map((integration, index) => (
+                <div
+                  key={index}
+                  className="group bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center"
+                >
+                  <div className={`${integration.color} mb-3 group-hover:scale-110 transition-transform duration-300 flex justify-center`}>
+                    {integration.icon}
+                  </div>
+                  <h3 className="text-sm font-medium text-white">{integration.name}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-20 px-4 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -275,7 +318,7 @@ const ZionAIMeetingAssistant = () => {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your team size and needs
+                Choose the plan that fits your business needs
               </p>
             </div>
 
@@ -336,18 +379,18 @@ const ZionAIMeetingAssistant = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Ready to Transform Your Meetings?
+                Ready to Understand Your Customers Better?
               </span>
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of teams already using Zion AI Meeting Assistant to boost productivity
+              Join thousands of companies using Zion Customer Insights Pro to boost satisfaction and reduce churn
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/demo"
                 className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-cyan-500/25 flex items-center justify-center"
               >
-                <Play className="w-5 h-5 mr-2" />
+                <BarChart3 className="w-5 h-5 mr-2" />
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -366,4 +409,4 @@ const ZionAIMeetingAssistant = () => {
   );
 };
 
-export default ZionAIMeetingAssistant;
+export default ZionCustomerInsightsPro;
