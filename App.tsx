@@ -18,6 +18,7 @@ import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
+import ErrorHandler from "./app/components/ErrorHandler";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -179,8 +180,9 @@ const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 // Main App Component
 function App() {
   return (
-    <ErrorBoundary>
-      <HelmetProvider>
+    <ErrorHandler>
+      <ErrorBoundary>
+        <HelmetProvider>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             <FuturisticBackground>
@@ -415,6 +417,7 @@ function App() {
         </Router>
       </HelmetProvider>
     </ErrorBoundary>
+    </ErrorHandler>
   );
 }
 
