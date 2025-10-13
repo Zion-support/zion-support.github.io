@@ -5,7 +5,7 @@ import OptimizedImage from '../../app/components/OptimizedImage';
 // Mock framer-motion
 jest.mock('framer-motion', () => ({
   motion: {
-    img: ({ children, ...props }: any) => <img {...props}>{children}</img>,
+    img: ({ children, ...props }: React.ImgHTMLAttributes<HTMLImageElement> & { children?: React.ReactNode }) => <img {...props}>{children}</img>,
   },
 }));
 
