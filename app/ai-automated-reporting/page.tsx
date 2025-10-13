@@ -322,3 +322,7 @@ import React from 'react'.
         </section>
       </div>
     </>
+  );
+};
+
+export default AiAutomatedReportingPage;
