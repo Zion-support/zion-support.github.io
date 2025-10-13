@@ -82,6 +82,27 @@ const Footer = React.memo(() => {
     { name: "Sitemap", path: "/sitemap" }
   ], []);
 
+  const contactInfo = useMemo(() => [
+    {
+      icon: <Phone className="w-4 h-4" />,
+      label: "Phone",
+      value: "+1 302 464 0950",
+      link: "tel:+13024640950"
+    },
+    {
+      icon: <Mail className="w-4 h-4" />,
+      label: "Email",
+      value: "kleber@ziontechgroup.com",
+      link: "mailto:kleber@ziontechgroup.com"
+    },
+    {
+      icon: <MapPin className="w-4 h-4" />,
+      label: "Address",
+      value: "364 E Main St STE 1008, Middletown DE 19709",
+      link: "https://maps.google.com"
+    }
+  ], []);
+
   const stats = useMemo(() => [
     { number: "500+", label: "Projects Completed", icon: <Award className="w-5 h-5" /> },
     { number: "10,000+", label: "Happy Clients", icon: <Users className="w-5 h-5" /> },
@@ -175,6 +196,29 @@ const Footer = React.memo(() => {
                   </li>
                 ))}
               </ul>
+            </div>
+
+            {/* Contact Info */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold text-white mb-4">Contact Us</h3>
+              <div className="space-y-3">
+                {contactInfo.map((contact) => (
+                  <div key={contact.label} className="flex items-center space-x-3">
+                    <span className="text-cyan-400">
+                      {contact.icon}
+                    </span>
+                    <div>
+                      <p className="text-sm text-gray-400">{contact.label}</p>
+                      <a
+                        href={contact.link}
+                        className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
+                      >
+                        {contact.value}
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
