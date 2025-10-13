@@ -1,11 +1,12 @@
-import React, { useState, useCallback, useMemo } from 'react'
+import React, { useState, useCallback, useMemo, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Mic, Globe, Video } from 'lucide-react'
 
-const Navigation = React.memo(() => {
+const EnhancedNavigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   
   const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen)
@@ -19,6 +20,14 @@ const Navigation = React.memo(() => {
     setIsMicroSaasOpen(!isMicroSaasOpen)
   }, [isMicroSaasOpen])
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   const aiServices = useMemo(() => [
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Brain className="w-4 h-4" /> },
@@ -29,12 +38,13 @@ const Navigation = React.memo(() => {
   ], [])
 
   const microSaasServices = useMemo(() => [
+    { name: 'Zion AI Video Generator', path: '/zion-ai-video-generator', icon: <Video className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Code Reviewer', path: '/zion-ai-code-reviewer', icon: <Code className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Translator Pro', path: '/zion-ai-translator-pro', icon: <Globe className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Voice Cloner', path: '/zion-ai-voice-cloner', icon: <Mic className="w-4 h-4" />, featured: true },
     { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
     { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
     { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },
-    { name: 'Zion AI Video Generator', path: '/zion-ai-video-generator', icon: <Zap className="w-4 h-4" />, featured: true },
-    { name: 'Zion AI Code Reviewer', path: '/zion-ai-code-reviewer', icon: <Code className="w-4 h-4" />, featured: true },
-    { name: 'Zion AI Translator Pro', path: '/zion-ai-translator-pro', icon: <Brain className="w-4 h-4" />, featured: true },
     { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> },
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
@@ -54,18 +64,28 @@ const Navigation = React.memo(() => {
 
   return (
     <nav 
-      className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white shadow-2xl border-b border-cyan-500/20 backdrop-blur-md"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled 
+          ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/10' 
+          : 'bg-gradient-to-r from-slate-900/90 via-purple-900/90 to-slate-900/90 backdrop-blur-md border-b border-cyan-500/20'
+      }`}
       role="navigation"
       aria-label="Main navigation"
     >
-      <div className="max-w-7xl mx-auto px-4">
+      {/* Animated Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="flex justify-between items-center py-4">
           <Link 
             to="/" 
-            className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent hover:from-cyan-300 hover:to-purple-300 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded"
+            className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent hover:from-cyan-300 hover:via-purple-300 hover:to-pink-300 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded group"
             aria-label="Zion Tech Group - Go to homepage"
           >
-            Zion Tech Group
+            <span className="group-hover:animate-pulse">Zion Tech Group</span>
           </Link>
 
           <div className="hidden lg:flex space-x-8 items-center">
@@ -73,66 +93,19 @@ const Navigation = React.memo(() => {
               <Link
                 key={item.name}
                 to={item.path}
-                className="relative group hover:text-cyan-400 transition-all duration-300 font-medium"
+                className="relative group hover:text-cyan-400 transition-all duration-300 font-medium text-white/90 hover:text-white"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 group-hover:w-full transition-all duration-300 opacity-0 group-hover:opacity-100"></span>
               </Link>
             ))}
             
-<<<<<<< HEAD
-<<<<<<< HEAD
-            {/* Solutions Dropdown */}
-            <div className="relative">
-              <button
-                onClick={toggleSolutions}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    toggleSolutions();
-                  }
-                }}
-                className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-50 rounded-md px-2 py-1"
-                aria-expanded={isSolutionsOpen}
-                aria-haspopup="true"
-                aria-label="Solutions menu"
-              >
-                <span>Solutions</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isSolutionsOpen ? 'rotate-180' : ''}`} />
-              </button>
-              
-              {isSolutionsOpen && (
-                <div 
-                  className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-cyan-500/20"
-                  role="menu"
-                  aria-label="Solutions submenu"
-                >
-                  {solutions.map((solution, index) => (
-                    <Link
-                      key={solution.name}
-                      to={solution.path}
-                      className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-all duration-300 rounded-lg mx-2 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-50"
-                      onClick={() => setIsSolutionsOpen(false)}
-                      role="menuitem"
-                      tabIndex={0}
-                    >
-                      {solution.icon}
-                      <span>{solution.name}</span>
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-            
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e9d5
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-713a
             {/* AI Services Dropdown */}
             <div className="relative">
               <button
                 onClick={toggleServices}
-                className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group"
+                className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group text-white/90 hover:text-white"
               >
                 <span>AI Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
@@ -164,7 +137,7 @@ const Navigation = React.memo(() => {
             <div className="relative">
               <button
                 onClick={toggleMicroSaas}
-                className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group"
+                className="flex items-center space-x-1 hover:text-purple-400 transition-all duration-300 font-medium group text-white/90 hover:text-white"
               >
                 <span>Micro SAAS</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMicroSaasOpen ? 'rotate-180' : ''}`} />
@@ -204,10 +177,11 @@ const Navigation = React.memo(() => {
 
             <Link
               to="/consultation"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-6 py-3 rounded-lg transition-all duration-300 flex items-center space-x-2 font-semibold shadow-lg hover:shadow-cyan-500/25 group"
+              className="bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 px-6 py-3 rounded-lg transition-all duration-300 flex items-center space-x-2 font-semibold shadow-lg hover:shadow-cyan-500/25 group relative overflow-hidden"
             >
-              <span>Get Started</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+              <span className="relative z-10">Get Started</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300 relative z-10" />
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </Link>
           </div>
 
@@ -230,7 +204,7 @@ const Navigation = React.memo(() => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="px-4 py-3 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 font-medium"
+                  className="px-4 py-3 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 font-medium text-white/90 hover:text-white"
                   onClick={toggleMenu}
                 >
                   {item.name}
@@ -241,7 +215,7 @@ const Navigation = React.memo(() => {
               <div>
                 <button
                   onClick={toggleServices}
-                  className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 font-medium"
+                  className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 font-medium text-white/90 hover:text-white"
                 >
                   <span>AI Services</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
@@ -271,7 +245,7 @@ const Navigation = React.memo(() => {
               <div>
                 <button
                   onClick={toggleMicroSaas}
-                  className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 font-medium"
+                  className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 font-medium text-white/90 hover:text-white"
                 >
                   <span>Micro SAAS</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMicroSaasOpen ? 'rotate-180' : ''}`} />
@@ -300,7 +274,7 @@ const Navigation = React.memo(() => {
 
               <Link
                 to="/consultation"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-4 py-3 rounded-lg transition-all duration-300 text-center font-semibold mt-4 flex items-center justify-center space-x-2"
+                className="bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 px-4 py-3 rounded-lg transition-all duration-300 text-center font-semibold mt-4 flex items-center justify-center space-x-2"
                 onClick={toggleMenu}
               >
                 <span>Get Started</span>
@@ -314,6 +288,6 @@ const Navigation = React.memo(() => {
   )
 })
 
-Navigation.displayName = 'Navigation'
+EnhancedNavigation.displayName = 'EnhancedNavigation'
 
-export default Navigation
+export default EnhancedNavigation

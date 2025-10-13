@@ -5,7 +5,9 @@ import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
 import "./app/styles/futuristic-enhanced.css";
 import Navigation from "./app/components/Navigation";
+import EnhancedNavigation from "./app/components/EnhancedNavigation";
 import Footer from "./app/components/Footer";
+import EnhancedFooter from "./app/components/EnhancedFooter";
 import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
 import ErrorBoundary from "./app/components/ErrorBoundary";
@@ -174,6 +176,18 @@ const ZionComplianceManagerPage = React.lazy(
 const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
 );
+const ZionAiVideoGeneratorPage = React.lazy(
+  () => import("./app/zion-ai-video-generator/page"),
+);
+const ZionAiCodeReviewerPage = React.lazy(
+  () => import("./app/zion-ai-code-reviewer/page"),
+);
+const ZionAiTranslatorProPage = React.lazy(
+  () => import("./app/zion-ai-translator-pro/page"),
+);
+const ZionAiVoiceClonerPage = React.lazy(
+  () => import("./app/zion-ai-voice-cloner/page"),
+);
 
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(
@@ -209,7 +223,7 @@ function App() {
             <Router>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                 <FuturisticBackground>
-                  <Navigation />
+                  <EnhancedNavigation />
                   <Breadcrumb />
                   <main id="main-content" role="main">
                     <Suspense fallback={<LoadingPage />}>
@@ -409,6 +423,22 @@ function App() {
                     path="/zion-performance-monitor"
                     element={<ZionPerformanceMonitorPage />}
                   />
+                  <Route
+                    path="/zion-ai-video-generator"
+                    element={<ZionAiVideoGeneratorPage />}
+                  />
+                  <Route
+                    path="/zion-ai-code-reviewer"
+                    element={<ZionAiCodeReviewerPage />}
+                  />
+                  <Route
+                    path="/zion-ai-translator-pro"
+                    element={<ZionAiTranslatorProPage />}
+                  />
+                  <Route
+                    path="/zion-ai-voice-cloner"
+                    element={<ZionAiVoiceClonerPage />}
+                  />
 
                   {/* 5G Solutions Routes */}
                   <Route
@@ -446,7 +476,7 @@ function App() {
                       </Routes>
                     </Suspense>
                   </main>
-                  <Footer />
+                  <EnhancedFooter />
                   <EnhancedPerformanceOptimizer />
                   <EnhancedAccessibility>
                     <div></div>

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Code, Mic } from "lucide-react";
 import SEOOptimizer from "./components/SEOOptimizer";
 
 const HomePage = () => {
@@ -40,6 +40,27 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
+      name: "Zion AI Video Generator",
+      description: "AI-powered video creation from text prompts",
+      price: "From $29/month",
+      icon: <Zap className="w-6 h-6" />,
+      link: "/zion-ai-video-generator"
+    },
+    {
+      name: "Zion AI Code Reviewer",
+      description: "Automated code review and security analysis",
+      price: "From $19/month",
+      icon: <Code className="w-6 h-6" />,
+      link: "/zion-ai-code-reviewer"
+    },
+    {
+      name: "Zion AI Translator Pro",
+      description: "Advanced AI translation for 100+ languages",
+      price: "From $15/month",
+      icon: <Globe className="w-6 h-6" />,
+      link: "/zion-ai-translator-pro"
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform",
       price: "From $29/month",
@@ -59,6 +80,13 @@ const HomePage = () => {
       price: "From $9/month",
       icon: <Cloud className="w-6 h-6" />,
       link: "/zion-cloud-vault"
+    },
+    {
+      name: "Zion AI Voice Cloner",
+      description: "AI-powered voice cloning and synthesis",
+      price: "From $39/month",
+      icon: <Mic className="w-6 h-6" />,
+      link: "/zion-ai-voice-cloner"
     }
   ];
 
@@ -215,7 +243,7 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
