@@ -44,6 +44,21 @@ const FiveGSmartCitySolutionsPage = lazy(
 );
 const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
 
+// Micro SAAS Solutions Pages
+const MicroSaasPage = lazy(() => import("./micro-saas/page"));
+const ZionAnalyticsProPage = lazy(() => import("./zion-analytics-pro/page"));
+const ZionSecurityShieldPage = lazy(() => import("./zion-security-shield/page"));
+const ZionCloudVaultPage = lazy(() => import("./zion-cloud-vault/page"));
+const ZionAiChatbotPage = lazy(() => import("./zion-ai-chatbot/page"));
+const ZionContentStudioPage = lazy(() => import("./zion-content-studio/page"));
+const ZionProjectManagerPage = lazy(() => import("./zion-project-manager/page"));
+const ZionEmailAutomationPage = lazy(() => import("./zion-email-automation/page"));
+const ZionInventoryManagerPage = lazy(() => import("./zion-inventory-manager/page"));
+const ZionSocialSchedulerPage = lazy(() => import("./zion-social-scheduler/page"));
+const ZionFinanceTrackerPage = lazy(() => import("./zion-finance-tracker/page"));
+const ZionHrAssistantPage = lazy(() => import("./zion-hr-assistant/page"));
+const ZionApiGatewayPage = lazy(() => import("./zion-api-gateway/page"));
+
 // Main App Component
 function App() {
   return (
@@ -104,6 +119,21 @@ function App() {
                 element={<FiveGSmartCitySolutionsPage />}
               />
               <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+
+              {/* Micro SAAS Solutions Routes */}
+              <Route path="/micro-saas" element={<MicroSaasPage />} />
+              <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
+              <Route path="/zion-security-shield" element={<ZionSecurityShieldPage />} />
+              <Route path="/zion-cloud-vault" element={<ZionCloudVaultPage />} />
+              <Route path="/zion-ai-chatbot" element={<ZionAiChatbotPage />} />
+              <Route path="/zion-content-studio" element={<ZionContentStudioPage />} />
+              <Route path="/zion-project-manager" element={<ZionProjectManagerPage />} />
+              <Route path="/zion-email-automation" element={<ZionEmailAutomationPage />} />
+              <Route path="/zion-inventory-manager" element={<ZionInventoryManagerPage />} />
+              <Route path="/zion-social-scheduler" element={<ZionSocialSchedulerPage />} />
+              <Route path="/zion-finance-tracker" element={<ZionFinanceTrackerPage />} />
+              <Route path="/zion-hr-assistant" element={<ZionHrAssistantPage />} />
+              <Route path="/zion-api-gateway" element={<ZionApiGatewayPage />} />
             </Routes>
             </Suspense>
           </AccessibilityEnhancer>

@@ -36,6 +36,22 @@ const HomePage = () => {
       stats: "10x faster speeds",
       link: "/5g-solutions"
     },
+    {
+      title: "Cloud Infrastructure",
+      description: "Scalable cloud solutions with automated scaling, backup, and disaster recovery for enterprise-grade reliability",
+      icon: <Cloud className="w-8 h-8" />,
+      color: "from-indigo-500 to-purple-500",
+      stats: "99.99% uptime",
+      link: "/cloud-infrastructure"
+    },
+    {
+      title: "Data Analytics",
+      description: "Advanced data processing and visualization platform with machine learning models and interactive dashboards",
+      icon: <BarChart3 className="w-8 h-8" />,
+      color: "from-teal-500 to-cyan-500",
+      stats: "Real-time insights",
+      link: "/ai-data-analytics"
+    },
   ];
 
   const microSaasHighlights = [
@@ -173,7 +189,7 @@ const HomePage = () => {
               From AI-powered analytics to enterprise security, we have everything you need.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Link
                 key={index}
