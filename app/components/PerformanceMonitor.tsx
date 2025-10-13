@@ -1,37 +1,48 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
-  firstInputDelay: number;
+  interactionToNextPaint: number;
   cumulativeLayoutShift: number;
+  timeToFirstByte: number;
 }
 
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
+  const updateMetric = useCallback((metric: any) => {
+    setMetrics(prev => ({
+      ...prev,
+      [metric.name === 'CLS' ? 'cumulativeLayoutShift' : 
+       metric.name === 'INP' ? 'interactionToNextPaint' :
+       metric.name === 'FCP' ? 'firstContentfulPaint' :
+       metric.name === 'LCP' ? 'largestContentfulPaint' :
+       metric.name === 'TTFB' ? 'timeToFirstByte' : 'loadTime']: metric.value
+    }));
+  }, []);
+
   useEffect(() => {
     // Only run in browser environment
     if (typeof window === 'undefined') return;
 
+    // Measure Core Web Vitals
+    onCLS(updateMetric);
+    onINP(updateMetric);
+    onFCP(updateMetric);
+    onLCP(updateMetric);
+    onTTFB(updateMetric);
+
     const measurePerformance = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');
       
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
-      
-      const metrics: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-        firstContentfulPaint: fcp ? fcp.startTime : 0,
-        largestContentfulPaint: lcp ? lcp.startTime : 0,
-        firstInputDelay: 0, // Would need to measure with PerformanceObserver
-        cumulativeLayoutShift: 0, // Would need to measure with PerformanceObserver
-      };
-
-      setMetrics(metrics);
+      setMetrics(prev => ({
+        ...prev,
+        loadTime: navigation.loadEventEnd - navigation.loadEventStart
+      }));
     };
 
     // Measure after page load
@@ -45,37 +56,87 @@ const PerformanceMonitor: React.FC = () => {
     return () => {
       window.removeEventListener('load', measurePerformance);
     };
-  }, []);
+  }, [updateMetric]);
 
   // Only show in development
   if (process.env.NODE_ENV !== 'development' || !metrics) {
     return null;
   }
 
+  const getMetricColor = (value: number, thresholds: { good: number; poor: number }) => {
+    if (value <= thresholds.good) return 'text-green-600';
+    if (value <= thresholds.poor) return 'text-yellow-600';
+    return 'text-red-600';
+  };
+
   return (
     <div className="fixed bottom-4 right-4 z-50">
       <button
         onClick={() => setIsVisible(!isVisible)}
-        className="bg-blue-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
+        className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg"
+        aria-label="Toggle performance metrics"
       >
         Performance
       </button>
       
       {isVisible && (
-        <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 w-64">
-          <h3 className="font-semibold text-gray-900 mb-3">Performance Metrics</h3>
-          <div className="space-y-2 text-sm">
-            <div className="flex justify-between">
+        <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto">
+          <h3 className="font-semibold text-gray-900 mb-3 flex items-center">
+            <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+            Performance Metrics
+          </h3>
+          <div className="space-y-3 text-sm">
+            <div className="flex justify-between items-center">
               <span className="text-gray-600">Load Time:</span>
-              <span className="font-mono">{metrics.loadTime.toFixed(2)}ms</span>
+              <span className={`font-mono ${getMetricColor(metrics.loadTime, { good: 1000, poor: 3000 })}`}>
+                {metrics.loadTime.toFixed(0)}ms
+              </span>
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-between items-center">
               <span className="text-gray-600">FCP:</span>
-              <span className="font-mono">{metrics.firstContentfulPaint.toFixed(2)}ms</span>
+              <span className={`font-mono ${getMetricColor(metrics.firstContentfulPaint, { good: 1800, poor: 3000 })}`}>
+                {metrics.firstContentfulPaint.toFixed(0)}ms
+              </span>
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-between items-center">
               <span className="text-gray-600">LCP:</span>
-              <span className="font-mono">{metrics.largestContentfulPaint.toFixed(2)}ms</span>
+              <span className={`font-mono ${getMetricColor(metrics.largestContentfulPaint, { good: 2500, poor: 4000 })}`}>
+                {metrics.largestContentfulPaint.toFixed(0)}ms
+              </span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600">INP:</span>
+              <span className={`font-mono ${getMetricColor(metrics.interactionToNextPaint, { good: 200, poor: 500 })}`}>
+                {metrics.interactionToNextPaint.toFixed(0)}ms
+              </span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600">CLS:</span>
+              <span className={`font-mono ${getMetricColor(metrics.cumulativeLayoutShift, { good: 0.1, poor: 0.25 })}`}>
+                {metrics.cumulativeLayoutShift.toFixed(3)}
+              </span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600">TTFB:</span>
+              <span className={`font-mono ${getMetricColor(metrics.timeToFirstByte, { good: 800, poor: 1800 })}`}>
+                {metrics.timeToFirstByte.toFixed(0)}ms
+              </span>
+            </div>
+          </div>
+          <div className="mt-4 pt-3 border-t border-gray-200">
+            <div className="text-xs text-gray-500">
+              <div className="flex items-center mb-1">
+                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                Good
+              </div>
+              <div className="flex items-center mb-1">
+                <span className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
+                Needs Improvement
+              </div>
+              <div className="flex items-center">
+                <span className="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
+                Poor
+              </div>
             </div>
           </div>
         </div>
