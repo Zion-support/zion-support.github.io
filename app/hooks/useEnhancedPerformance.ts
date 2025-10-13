@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
-export function usePerformanceMonitor() {
-  const [state, setState] = useState(null);
+export function useEnhancedPerformance() {
+  const [state, setState] = useState<string | null>(null);
   
   useEffect(() => {
     // Implementation here
@@ -11,4 +11,4 @@ export function usePerformanceMonitor() {
   return state;
 }
 
-export default usePerformanceMonitor;
+export default useEnhancedPerformance;
