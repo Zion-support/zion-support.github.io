@@ -8,6 +8,7 @@
     <loc>https://ziontechgroup.com/</loc>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <lastmod>2025-10-13T16:29:19.585Z</lastmod>
 =======
     <lastmod>2025-10-13T17:05:28.371Z</lastmod>
@@ -22,11 +23,15 @@
 
 >>>>>>> 7b3f2754b7ff42ad23ffeb4f7ec37fac9a601ae7
 >>>>>>> origin/clean-main-20251013-145848
+=======
+    <lastmod>2025-10-12</lastmod>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/about</loc>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <lastmod>2025-10-13T16:29:19.585Z</lastmod>
@@ -1165,16 +1170,24 @@
   <url>
     <loc>https://ziontechgroup.com/ai-services/marketing-automation</loc>
     <lastmod>2025-10-13T03:39:21.709Z</lastmod>
+=======
+    <lastmod>2025-10-12</lastmod>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/ai-services</loc>
+<<<<<<< HEAD
     <lastmod>2025-10-13T03:39:21.709Z</lastmod>
+=======
+    <lastmod>2025-10-12</lastmod>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+<<<<<<< HEAD
     <loc>https://ziontechgroup.com/ai-services/predictive-maintenance</loc>
     <lastmod>2025-10-13T03:39:21.709Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -1598,6 +1611,10 @@
   <url>
     <loc>https://ziontechgroup.com/about</loc>
     <lastmod>2025-10-13T03:52:07.269Z</lastmod>
+=======
+    <loc>https://ziontechgroup.com/it-services</loc>
+    <lastmod>2025-10-12</lastmod>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -3123,6 +3140,7 @@
   <url>
     <loc>https://ziontechgroup.com/cloud-services</loc>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <lastmod>2025-10-13T03:52:07.269Z</lastmod>
 =======
     <lastmod>2025-10-13T03:39:21.709Z</lastmod>
@@ -3178,10 +3196,33 @@
     <lastmod>2025-10-13T03:39:21.709Z</lastmod>
 >>>>>>> origin/cursor/analyze-and-resolve-javascript-errors-6208
     <changefreq>monthly</changefreq>
+=======
+    <lastmod>2025-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas-services</loc>
+    <lastmod>2025-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/digital-transformation</loc>
+    <lastmod>2025-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/5g-implementation</loc>
+    <lastmod>2025-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/contact</loc>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <lastmod>2025-10-13T03:52:07.269Z</lastmod>
 =======
@@ -6825,5 +6866,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
 >>>>>>> origin/cursor/analyze-and-fix-application-errors-5651
+=======
+    <lastmod>2025-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
   </url>
 </urlset>

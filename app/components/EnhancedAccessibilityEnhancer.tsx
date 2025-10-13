@@ -21,6 +21,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
             <p>Transform your business with our advanced enhancedaccessibilityenhancer solutions.;</p>
               Powered by cutting-edge AI technology and industry expertise.
             </p>
+<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
               <button>Get Started;</button>
                 <ArrowRight>
@@ -35,6 +36,31 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>Key Benefits;</h2>
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our EnhancedAccessibilityEnhancer Solutions?
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
             </h2>
             <p>Experience the power of our enhancedaccessibilityenhancer solutions for your business.,</p>
                 <div key={index}className="flex items-start space-x-3"></div>

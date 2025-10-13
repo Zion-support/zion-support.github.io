@@ -1,10 +1,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 =======
 <<<<<<< HEAD
 'use client;
+=======
+'use client'
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Clock, MessageCircle } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import ContactForm from '../components/ContactForm'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
 
 import React, { useState, useCallback } from 'react;
 
@@ -40,6 +51,7 @@ const $1Page: React.FC = () => {}
     company: '',
     phone: '',
     service: '',
+<<<<<<< HEAD
     message: '';)
 })
 const [isSubmitting, setIsSubmitting] = useState(false);
@@ -102,9 +114,17 @@ const ContactPage: React.FC = () => {
     try {
       /
       await new Promise(resolve => setTimeout(resolve, 1000));
+=======
+    message: ''
+  })
+
+  const [status, setStatus] = useState<{ type: 'success' | 'error' | null; message: string }>({ type: null, message: '' })
+  const [isSubmitted, setIsSubmitted] = useState(false)
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
 
       setSubmitStatus(success);
 
+<<<<<<< HEAD
       setFormData({
         name: ',
         email: ',
@@ -155,8 +175,32 @@ message: '']
     } finally {
       setIsSubmitting(false);}
 >>>>>>> cursor/fix-errors-and-merge-to-main-d054
+=======
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    try {
+      // Handle form submission here
+      console.log('Form submitted:', formData)
+      setIsSubmitted(true)
+      setStatus({ type: 'success', message: 'Message sent successfully! We\'ll get back to you soon.' })
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        setIsSubmitted(false)
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          phone: '',
+          service: '',
+          message: ''
+        })
+      }, 3000)
+    } catch {
+      setStatus({ type: 'error', message: 'Failed to send message. Please try again.' })
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
     }
 
+<<<<<<< HEAD
   }, []);
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
@@ -192,6 +236,58 @@ message: '']
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed>
   }, []);
 >>>>>>> origin/cursor/ad-creation-and-management-f267
+=======
+  const contactInfo = [
+    {
+      icon: <Phone className="w-6 h-6 text-green-500" />,
+      title: 'Call Us',
+      details: '+1 (302) 464-0950',
+      description: 'Mon-Fri from 8am to 6pm'
+    },
+    {
+      icon: <Mail className="w-6 h-6 text-blue-500" />,
+      title: 'Email Us',
+      details: 'kleber@ziontechgroup.com',
+      description: 'We\'ll respond within 24 hours'
+    },
+    {
+      icon: <MapPin className="w-6 h-6 text-red-500" />,
+      title: 'Visit Us',
+      details: '364 E Main St STE 1008, Middletown, DE 19709',
+      description: 'Come say hello at our office'
+    },
+    {
+      icon: <Clock className="w-6 h-6 text-purple-500" />,
+      title: 'Business Hours',
+      details: 'Mon - Fri: 8:00 AM - 6:00 PM',
+      description: 'EST timezone'
+    }
+  ]
+
+  const features = [
+    {
+      icon: <CheckCircle className="w-5 h-5 text-green-500" />,
+      text: 'Free consultation within 24 hours'
+    },
+    {
+      icon: <CheckCircle className="w-5 h-5 text-green-500" />,
+      text: 'Expert team with 10+ years experience'
+    },
+    {
+      icon: <CheckCircle className="w-5 h-5 text-green-500" />,
+      text: '24/7 support and maintenance'
+    }
+  ]
+
+  const services = [
+    'AI Services',
+    'IT Services',
+    'Cloud Services',
+    'Micro SAAS',
+    'Digital Transformation',
+    '5G Implementation'
+  ]
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
 
 export default function Contact() {
   return (
@@ -226,6 +322,7 @@ const ContactPage: React.FC = () => {
     <>
       <Helmet>
         <title>Contact Us - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact our experts for consultation and support." />
         <meta name="keywords" content="contact, AI consulting, IT support, technology consultation" />
         <link rel="canonical" href="https://ziontechgroup.com/contact" />
@@ -307,9 +404,67 @@ const ContactPage: React.FC = () => {
                           placeholder="Your full name"
                         />
                       </div>
+=======
+        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Free consultation and expert support available." />
+        <meta name="keywords" content="contact, consultation, AI services, IT services, Zion Tech Group" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <div className="pt-20">
+        {/* Hero Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Get in <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Touch</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Ready to transform your business? Let's discuss how our AI and IT solutions can help you achieve your goals.
+            </p>
+          </div>
+        </section>
+
+        {/* Contact Info */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+              {contactInfo.map((info, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 text-center">
+                  <div className="mb-4 flex justify-center">
+                    {info.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{info.title}</h3>
+                  <p className="text-lg text-gray-300 mb-2">{info.details}</p>
+                  <p className="text-sm text-gray-400">{info.description}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Contact Form */}
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                        Full Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        placeholder="Your full name"
+                      />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
                     </div>
                     
                     <div>
+<<<<<<< HEAD
                       <label className="block text-sm font-medium text-gray-300 mb-2">
                         Email *
                       </label>
@@ -325,11 +480,27 @@ const ContactPage: React.FC = () => {
                           placeholder="your@email.com"
                         />
                       </div>
+=======
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                        Email Address *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        placeholder="your@email.com"
+                      />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
+<<<<<<< HEAD
                       <label className="block text-sm font-medium text-gray-300 mb-2">
                         Phone
                       </label>
@@ -348,6 +519,9 @@ const ContactPage: React.FC = () => {
                     
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
+=======
+                      <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
                         Company
                       </label>
                       <input
@@ -355,6 +529,7 @@ const ContactPage: React.FC = () => {
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
+<<<<<<< HEAD
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Your company name"
                       />
@@ -363,12 +538,37 @@ const ContactPage: React.FC = () => {
 
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
+=======
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        placeholder="Your company name"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                        Phone Number
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        placeholder="+1 (555) 123-4567"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
                       Service Interest
                     </label>
                     <select
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
+<<<<<<< HEAD
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     >
                       <option value="">Select a service</option>
@@ -378,11 +578,25 @@ const ContactPage: React.FC = () => {
                       <option value="cybersecurity">Cybersecurity</option>
                       <option value="consulting">Consulting</option>
                       <option value="other">Other</option>
+=======
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    >
+                      <option value="">Select a service</option>
+                      {services.map((service, index) => (
+                        <option key={index} value={service} className="bg-gray-800">
+                          {service}
+                        </option>
+                      ))}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
                     </select>
                   </div>
 
                   <div>
+<<<<<<< HEAD
                     <label className="block text-sm font-medium text-gray-300 mb-2">
+=======
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
                       Message *
                     </label>
                     <textarea
@@ -390,14 +604,27 @@ const ContactPage: React.FC = () => {
                       value={formData.message}
                       onChange={handleChange}
                       required
+<<<<<<< HEAD
                       rows={5}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
                       placeholder="Tell us about your project and how we can help..."
+=======
+                      rows={6}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      placeholder="Tell us about your project..."
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
                     />
                   </div>
 
+                  {status.type && (
+                    <div className={`p-4 rounded-lg ${status.type === 'success' ? 'bg-green-900/20 text-green-400' : 'bg-red-900/20 text-red-400'}`}>
+                      {status.message}
+                    </div>
+                  )}
+
                   <button
                     type="submit"
+<<<<<<< HEAD
                     disabled={isLoading}
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 flex items-center justify-center"
                   >
@@ -410,20 +637,71 @@ const ContactPage: React.FC = () => {
                       <>
                         <Send className="w-5 h-5 mr-2" />
                         Send Message
+=======
+                    disabled={isSubmitted}
+                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                  >
+                    {isSubmitted ? (
+                      <>
+                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Send Message
+                        <Send className="w-5 h-5 ml-2" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
                       </>
                     )}
                   </button>
                 </form>
-              )}
+              </div>
+
+              {/* Why Choose Us */}
+              <div>
+                <h2 className="text-3xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h2>
+                <div className="space-y-4 mb-8">
+                  {features.map((feature, index) => (
+                    <div key={index} className="flex items-start">
+                      <div className="flex-shrink-0 mr-4">
+                        {feature.icon}
+                      </div>
+                      <p className="text-gray-300">{feature.text}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+                  <h3 className="text-xl font-semibold text-white mb-4">Ready to Get Started?</h3>
+                  <p className="text-gray-300 mb-6">
+                    Schedule a free consultation with our experts to discuss your project requirements and get a customized solution.
+                  </p>
+                  <Link
+                    to="/about"
+                    className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold"
+                  >
+                    Learn More About Us
+                    <MessageCircle className="w-5 h-5 ml-2" />
+                  </Link>
+                </div>
+              </div>
             </div>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
           </div>
+<<<<<<< HEAD
         </div>
       </div>
+=======
+        </section>
+      </div>
+      
+      <Footer />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
     </div>
 <<<<<<< HEAD
   );
 }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       {/* Contact Form and Info *
@@ -858,3 +1136,5 @@ export default ContactPage;
 >>>>>>> origin/cursor/ad-creation-and-management-f267
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b

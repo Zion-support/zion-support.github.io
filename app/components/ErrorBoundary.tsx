@@ -1,10 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 'use client';
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+=======
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
 
 interface Props {
   children: ReactNode;
@@ -24,6 +29,7 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface State {
   hasError: boolean;
   error?: Error;
+<<<<<<< HEAD
 'use client';
 import React, { Component, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react';
@@ -55,6 +61,8 @@ interface State {
   hasError: boolean;
 <<<<<<< HEAD
   error?: Error;
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
   errorInfo?: ErrorInfo;
 =======
 <<<<<<< HEAD
@@ -250,6 +258,7 @@ class ErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return (
+<<<<<<< HEAD
         <div className="min-h-screen flex items-center justify-center bg-slate-900">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
@@ -295,6 +304,64 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
             </button>
 <<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-92c8
+=======
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
+          <div className="max-w-md w-full">
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
+              <div className="mb-6">
+                <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
+                <h1 className="text-2xl font-bold text-white mb-2">
+                  Oops! Something went wrong
+                </h1>
+                <p className="text-gray-300 mb-6">
+                  We're sorry, but something unexpected happened. Please try again or contact support if the problem persists.
+                </p>
+              </div>
+
+              {process.env['NODE_ENV'] === 'development' && this.state.error && (
+                <div className="mb-6 p-4 bg-red-900/20 border border-red-500/30 rounded-lg text-left">
+                  <h3 className="text-sm font-semibold text-red-400 mb-2">Error Details:</h3>
+                  <pre className="text-xs text-red-300 whitespace-pre-wrap overflow-auto max-h-32">
+                    {this.state.error.toString()}
+                  </pre>
+                  {this.state.errorInfo && (
+                    <pre className="text-xs text-red-300 whitespace-pre-wrap overflow-auto max-h-32 mt-2">
+                      {this.state.errorInfo.componentStack}
+                    </pre>
+                  )}
+                </div>
+              )}
+
+              <div className="space-y-3">
+                <button
+                  onClick={this.handleRetry}
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                >
+                  <RefreshCw className="w-5 h-5 mr-2" />
+                  Try Again
+                </button>
+                <button
+                  onClick={this.handleGoHome}
+                  className="w-full border border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors flex items-center justify-center"
+                >
+                  <Home className="w-5 h-5 mr-2" />
+                  Go Home
+                </button>
+              </div>
+
+              <div className="mt-6 pt-6 border-t border-white/20">
+                <p className="text-sm text-gray-400">
+                  If this problem continues, please contact our support team.
+                </p>
+                <a
+                  href="/contact"
+                  className="text-purple-400 hover:text-purple-300 text-sm font-medium"
+                >
+                  Contact Support
+                </a>
+              </div>
+            </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
           </div>
         </div>
       );
@@ -310,6 +377,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   }
 }
 
+<<<<<<< HEAD
 function DefaultErrorFallback({ error }: { error?: Error }) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-900 via-gray-900 to-red-900 flex items-center justify-center p-4">
@@ -398,3 +466,6 @@ export default ErrorBoundary;
 
 export default ErrorBoundary;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
+=======
+export default ErrorBoundary;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
