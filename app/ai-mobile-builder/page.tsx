@@ -1,5 +1,4 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+// AI Mobile Builder page
 
 export default function AIMobileBuilder() {
 }

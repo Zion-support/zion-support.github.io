@@ -17,7 +17,7 @@ const routes = [
   { url: '/tutorials', priority: '0.6', changefreq: 'monthly' },
   { url: '/demo', priority: '0.7', changefreq: 'monthly' },
   { url: '/support', priority: '0.6', changefreq: 'monthly' },
-  
+
   // AI Services
   { url: '/ai-analytics', priority: '0.7', changefreq: 'monthly' },
   { url: '/ai-automation', priority: '0.7', changefreq: 'monthly' },
@@ -34,7 +34,7 @@ const routes = [
   { url: '/ai-recommendation-engine', priority: '0.7', changefreq: 'monthly' },
   { url: '/ai-sales-automation', priority: '0.7', changefreq: 'monthly' },
   { url: '/ai-workflow-automation', priority: '0.7', changefreq: 'monthly' },
-  
+
   // IT Services
   { url: '/cloud-infrastructure', priority: '0.7', changefreq: 'monthly' },
   { url: '/cybersecurity-solutions', priority: '0.7', changefreq: 'monthly' },
@@ -43,7 +43,7 @@ const routes = [
   { url: '/database-management', priority: '0.7', changefreq: 'monthly' },
   { url: '/custom-software', priority: '0.7', changefreq: 'monthly' },
   { url: '/network-infrastructure', priority: '0.7', changefreq: 'monthly' },
-  
+
   // Micro SAAS Services
   { url: '/zion-analytics-pro', priority: '0.8', changefreq: 'monthly' },
   { url: '/zion-security-shield', priority: '0.8', changefreq: 'monthly' },
@@ -54,7 +54,7 @@ const routes = [
   { url: '/zion-ai-email-marketing-pro', priority: '0.8', changefreq: 'monthly' },
   { url: '/zion-ai-inventory-optimizer-pro', priority: '0.8', changefreq: 'monthly' },
   { url: '/zion-ai-customer-churn-predictor-pro', priority: '0.8', changefreq: 'monthly' },
-  
+
   // 5G Services
   { url: '/5g-data-analytics', priority: '0.7', changefreq: 'monthly' },
   { url: '/5g-edge-computing', priority: '0.7', changefreq: 'monthly' },
@@ -70,10 +70,10 @@ const routes = [
 function generateSitemap() {
   const baseUrl = 'https://ziontechgroup.com';
   const currentDate = new Date().toISOString();
-  
+
   let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
   sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-  
+
   routes.forEach(route => {
     sitemap += '  <url>\n';
     sitemap += `    <loc>${baseUrl}${route.url}</loc>\n`;
@@ -82,9 +82,9 @@ function generateSitemap() {
     sitemap += `    <priority>${route.priority}</priority>\n`;
     sitemap += '  </url>\n';
   });
-  
+
   sitemap += '</urlset>';
-  
+
   return sitemap;
 }
 
@@ -180,13 +180,10 @@ const routes = [
 
 // Generate sitemap XML
 const generateSitemap = () => {
-=======
-// Generate comprehensive sitemap
-function generateSitemap() {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
+
   const baseUrl = 'https://ziontechgroup.com';
   const currentDate = new Date().toISOString();
-  
+
   // Get all page routes
   const pages = [
     { url: '/', priority: '1.0', changefreq: 'daily' },
@@ -218,7 +215,6 @@ function generateSitemap() {
     });
   });
 
-
   microSaasServices.forEach(service => {
     pages.push({
       url: `/micro-saas/${service}`,
@@ -233,4 +229,3 @@ function generateSitemap() {
     '5g-smart-city-solutions', '5g-private-networks', '5g-mobile-applications',
     '5g-data-analytics', '5g-implementation'
   ];
-
