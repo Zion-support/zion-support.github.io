@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface AppProps {
@@ -12,6 +13,8 @@ export default function App({ className = '', children }: AppProps) {
       {children}
     </div>
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-018c
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -50,6 +53,10 @@ const FiveGSmartCitySolutionsPage = lazy(
 );
 const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-018c
 // Main App Component
 export default function App() {
   return (
@@ -112,4 +119,8 @@ export default function App() {
     </HelmetProvider>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-018c
