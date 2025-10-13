@@ -49,29 +49,6 @@ const CloudServicesPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
-    {
-      title: "Cost Reduction",
-      description: "Reduce infrastructure costs by up to 40% with optimized cloud solutions",
-      icon: <CheckCircle className="w-5 h-5" />
-    },
-    {
-      title: "Enhanced Security",
-      description: "Enterprise-grade security with 99.9% uptime guarantee",
-      icon: <Lock className="w-5 h-5" />
-    },
-    {
-      title: "Scalability",
-      description: "Scale your infrastructure instantly based on demand",
-      icon: <Settings className="w-5 h-5" />
-    },
-    {
-      title: "24/7 Support",
-      description: "Round-the-clock support from our cloud experts",
-      icon: <Users className="w-5 h-5" />
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}

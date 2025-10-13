@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import { AnalyticsProvider } from "./components/AnalyticsProvider";
+import AnalyticsProvider from "./components/AnalyticsProvider";
 import EnhancedPerformanceMonitor from "./components/EnhancedPerformanceMonitor";
 // import LoadingSpinner from "./components/LoadingSpinner"; // Removed unused import
 import { ErrorBoundary } from "react-error-boundary";
