@@ -1,199 +1,213 @@
-#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const glob = require('glob');
 
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
+// Common missing imports that need to be added
+const commonImports = {
+  'TrendingUp': 'lucide-react',
+  'Settings': 'lucide-react',
+  'Users': 'lucide-react',
+  'Sparkles': 'lucide-react',
+  'ArrowRight': 'lucide-react',
+  'CheckCircle': 'lucide-react',
+  'Clock': 'lucide-react',
+  'Award': 'lucide-react',
+  'Star': 'lucide-react',
+  'Globe': 'lucide-react',
+  'Shield': 'lucide-react',
+  'Zap': 'lucide-react',
+  'Brain': 'lucide-react',
+  'BarChart3': 'lucide-react',
+  'PieChart': 'lucide-react',
+  'Database': 'lucide-react',
+  'Cpu': 'lucide-react',
+  'Target': 'lucide-react',
+  'Mic': 'lucide-react',
+  'Layers': 'lucide-react',
+  'Box': 'lucide-react',
+  'Hand': 'lucide-react',
+  'FileText': 'lucide-react',
+  'DollarSign': 'lucide-react',
+  'Smartphone': 'lucide-react',
+  'Lock': 'lucide-react',
+  'Mail': 'lucide-react',
+  'Headphones': 'lucide-react',
+  'MessageSquare': 'lucide-react',
+  'Download': 'lucide-react',
+  'Share2': 'lucide-react',
+  'Search': 'lucide-react',
+  'Filter': 'lucide-react',
+  'Edit': 'lucide-react',
+  'Trash2': 'lucide-react',
+  'Plus': 'lucide-react',
+  'Minus': 'lucide-react',
+  'Play': 'lucide-react',
+  'Pause': 'lucide-react',
+  'Stop': 'lucide-react',
+  'Volume2': 'lucide-react',
+  'VolumeX': 'lucide-react',
+  'Wifi': 'lucide-react',
+  'WifiOff': 'lucide-react',
+  'Signal': 'lucide-react',
+  'Bluetooth': 'lucide-react',
+  'Calendar': 'lucide-react',
+  'MapPin': 'lucide-react',
+  'Phone': 'lucide-react',
+  'Code': 'lucide-react',
+  'Package': 'lucide-react',
+  'Heart': 'lucide-react',
+  'Receipt': 'lucide-react',
+  'Network': 'lucide-react',
+  'Server': 'lucide-react',
+  'Activity': 'lucide-react',
+  'AlertTriangle': 'lucide-react',
+  'Truck': 'lucide-react',
+  'Rocket': 'lucide-react',
+  'WebIcon': 'lucide-react'
+};
 
-// Function to fix common parsing errors
-function fixCommonErrors(filePath) {
+// Common missing variables that need to be defined
+const commonVariables = {
+  'stats': `const stats = [
+    { label: "Projects Completed", value: "500+" },
+    { label: "Happy Clients", value: "200+" },
+    { label: "Years Experience", value: "5+" },
+    { label: "Team Members", value: "50+" }
+  ];`,
+  'testimonials': `const testimonials = [
+    {
+      name: "John Smith",
+      role: "CEO, TechCorp",
+      content: "Zion Tech Group transformed our business with their AI solutions.",
+      avatar: "/images/testimonials/john-smith.jpg"
+    },
+    {
+      name: "Sarah Johnson",
+      role: "CTO, InnovateLabs",
+      content: "The team's expertise in AI and automation is unmatched.",
+      avatar: "/images/testimonials/sarah-johnson.jpg"
+    },
+    {
+      name: "Mike Chen",
+      role: "Founder, StartupXYZ",
+      content: "We saw immediate results after implementing their solutions.",
+      avatar: "/images/testimonials/mike-chen.jpg"
+    }
+  ];`,
+  'benefits': `const benefits = [
+    {
+      title: "Expert Team",
+      description: "Our team of AI and technology experts delivers exceptional results.",
+      icon: <Users className="w-8 h-8" />
+    },
+    {
+      title: "Proven Results",
+      description: "We have a track record of successful projects and satisfied clients.",
+      icon: <CheckCircle className="w-8 h-8" />
+    },
+    {
+      title: "24/7 Support",
+      description: "Round-the-clock support to ensure your success.",
+      icon: <Clock className="w-8 h-8" />
+    },
+    {
+      title: "Innovation",
+      description: "Cutting-edge solutions that keep you ahead of the competition.",
+      icon: <Zap className="w-8 h-8" />
+    }
+  ];`
+};
+
+function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, "utf8");
+    let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix 1: Add missing opening brace for function definitions
-    if (content.match(/const \w+Page: React\.FC = \(\) =>\s*$/m)) {
-      content = content.replace(
-        /const (\w+Page: React\.FC = \(\) =>)\s*$/m,
-        "const $1 {",
-      );
-      modified = true;
+    // Check if it's a React component file
+    if (!filePath.includes('.tsx') && !filePath.includes('.jsx')) {
+      return;
     }
 
-    // Fix 2: Fix malformed object literals that are missing opening braces
-    // Pattern: lines that start with just a property name and colon
-    const malformedObjectPattern = /^(\s+)(\w+):\s*\[([^\]]*)\]\s*,\s*$/gm;
-    content = content.replace(
-      malformedObjectPattern,
-      (match, indent, propName, arrayContent) => {
-        // Check if this should be an object property
-        const lines = content.split("\n");
-        const currentLineIndex =
-          content.substring(0, content.indexOf(match)).split("\n").length - 1;
-        const prevLine = lines[currentLineIndex - 1] || "";
-
-        // If previous line doesn't have an opening brace, this should be an object property
-        if (
-          !prevLine.includes("{") &&
-          !prevLine.includes("const") &&
-          !prevLine.includes("=")
-        ) {
-          return `${indent}  ${propName}: [${arrayContent}],`;
+    // Find existing lucide-react import
+    const lucideImportMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"]/);
+    
+    if (lucideImportMatch) {
+      const existingImports = lucideImportMatch[1].split(',').map(imp => imp.trim());
+      const missingImports = [];
+      
+      // Check which common imports are missing
+      for (const [importName, source] of Object.entries(commonImports)) {
+        if (source === 'lucide-react' && !existingImports.includes(importName)) {
+          // Check if the import is actually used in the file
+          if (content.includes(importName)) {
+            missingImports.push(importName);
+          }
         }
-        return match;
-      },
-    );
-
-    // Fix 3: Fix missing opening braces for arrays that should be objects
-    content = content.replace(
-      /^(\s+)(\w+):\s*\[\s*$/gm,
-      (match, indent, propName) => {
-        return `${indent}  ${propName}: [`;
-      },
-    );
-
-    // Fix 4: Fix malformed function calls that are missing opening braces
-    content = content.replace(
-      /const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*(\w+):\s*\[/gm,
-      "const $1 = () => {\n  $2: [",
-    );
-
-    // Fix 5: Fix missing closing braces and brackets
-    const lines = content.split("\n");
-    let braceCount = 0;
-    let bracketCount = 0;
-    let inFunction = false;
-    let functionStartLine = -1;
-
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-
-      if (
-        line.includes("const ") &&
-        line.includes("Page: React.FC = () => {")
-      ) {
-        inFunction = true;
-        functionStartLine = i;
       }
-
-      if (inFunction) {
-        braceCount += (line.match(/\{/g) || []).length;
-        braceCount -= (line.match(/\}/g) || []).length;
-        bracketCount += (line.match(/\[/g) || []).length;
-        bracketCount -= (line.match(/\]/g) || []).length;
-      }
-    }
-
-    // Add missing closing braces and brackets
-    if (inFunction && (braceCount > 0 || bracketCount > 0)) {
-      let missingClosures = "";
-      if (bracketCount > 0) {
-        missingClosures += "]".repeat(bracketCount);
-      }
-      if (braceCount > 0) {
-        missingClosures += "}".repeat(braceCount);
-      }
-
-      if (missingClosures) {
-        content += "\n" + missingClosures;
+      
+      if (missingImports.length > 0) {
+        const newImports = [...existingImports, ...missingImports].join(', ');
+        content = content.replace(
+          lucideImportMatch[0],
+          `import { ${newImports} } from 'lucide-react'`
+        );
         modified = true;
       }
-    }
-
-    // Fix 6: Fix malformed imports with extra semicolons
-    content = content.replace(/import\s+([^;]+);\s*,/g, "import $1,");
-    content = content.replace(
-      /import\s+([^,]+),\s*\{([^}]+)\}\s*from/g,
-      "import $1, {$2} from",
-    );
-
-    // Fix 7: Fix missing return statement
-    if (
-      content.includes("const ") &&
-      content.includes("Page: React.FC = () => {") &&
-      !content.includes("return (")
-    ) {
-      // Find the last closing brace and add return statement before it
-      const lastBraceIndex = content.lastIndexOf("}");
-      if (lastBraceIndex > 0) {
-        const beforeLastBrace = content.substring(0, lastBraceIndex);
-        const afterLastBrace = content.substring(lastBraceIndex);
-
-        if (!beforeLastBrace.includes("return (")) {
-          content =
-            beforeLastBrace +
-            "\n  return (\n    <div>Page content</div>\n  );\n" +
-            afterLastBrace;
+    } else {
+      // No lucide-react import exists, check if we need to add one
+      const neededImports = [];
+      for (const [importName, source] of Object.entries(commonImports)) {
+        if (source === 'lucide-react' && content.includes(importName)) {
+          neededImports.push(importName);
+        }
+      }
+      
+      if (neededImports.length > 0) {
+        // Add import after React import
+        const reactImportMatch = content.match(/import\s+React[^;]+;/);
+        if (reactImportMatch) {
+          content = content.replace(
+            reactImportMatch[0],
+            `${reactImportMatch[0]}\nimport { ${neededImports.join(', ')} } from 'lucide-react';`
+          );
           modified = true;
         }
       }
     }
 
-    // Fix 8: Fix malformed object properties that are missing opening braces
-    content = content.replace(
-      /^(\s+)(\w+):\s*\[([^\]]*)\]\s*,\s*$/gm,
-      (match, indent, propName, arrayContent) => {
-        // Check if this line is part of an object that's missing opening braces
-        const lines = content.split("\n");
-        const currentLineIndex =
-          content.substring(0, content.indexOf(match)).split("\n").length - 1;
-        const prevLine = lines[currentLineIndex - 1] || "";
-
-        if (
-          !prevLine.includes("{") &&
-          !prevLine.includes("const") &&
-          !prevLine.includes("=")
-        ) {
-          return `${indent}  ${propName}: [${arrayContent}],`;
+    // Add missing variables
+    for (const [varName, varDefinition] of Object.entries(commonVariables)) {
+      if (content.includes(varName) && !content.includes(`const ${varName}`)) {
+        // Find a good place to add the variable (after the component definition but before return)
+        const componentMatch = content.match(/(const\s+\w+\s*[=:]\s*\([^)]*\)\s*=>\s*{)/);
+        if (componentMatch) {
+          const insertPoint = componentMatch.index + componentMatch[0].length;
+          content = content.slice(0, insertPoint) + '\n  ' + varDefinition + '\n' + content.slice(insertPoint);
+          modified = true;
         }
-        return match;
-      },
-    );
-
-    if (modified) {
-      fs.writeFileSync(filePath, content, "utf8");
-      return true;
+      }
     }
 
-    return false;
+    // Fix GlobeIcon reference
+    if (content.includes('GlobeIcon') && !content.includes('GlobeIcon')) {
+      content = content.replace(/GlobeIcon/g, 'Globe');
+      modified = true;
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
+    }
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-// Get all TypeScript files with parsing errors
-function getFilesWithErrors() {
-  try {
-    const output = execSync(
-      'pnpm run lint 2>&1 | grep -B1 "Parsing error" | grep "\\.tsx"',
-      {
-        encoding: "utf8",
-        cwd: "/workspace",
-      },
-    );
-    return output
-      .trim()
-      .split("\n")
-      .filter((line) => line.includes(".tsx"))
-      .map((line) => line.trim());
-  } catch (error) {
-    console.error("Error getting files with errors:", error.message);
-    return [];
-  }
-}
+// Find all React component files
+const files = glob.sync('app/**/*.{tsx,jsx}', { ignore: ['node_modules/**', 'dist/**', '.next/**'] });
 
-// Main execution
-console.log("Finding files with parsing errors...");
-const filesWithErrors = getFilesWithErrors();
+console.log(`Found ${files.length} files to check...`);
 
-console.log(`Found ${filesWithErrors.length} files with parsing errors`);
+files.forEach(fixFile);
 
-let fixedCount = 0;
-filesWithErrors.forEach((file) => {
-  if (fixCommonErrors(file)) {
-    fixedCount++;
-    console.log(`Fixed: ${file}`);
-  }
-});
-
-console.log(`Fixed ${fixedCount} files.`);
+console.log('Done fixing common errors!');

@@ -1,20 +1,39 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { 
-  Heart, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  CheckCircle,
-  ArrowRight,
-  Brain,
-  Target,
-  Globe,
-  AlertCircle
-} from 'lucide-react';
+import { Heart, Zap, BarChart3, Users, CheckCircle, ArrowRight, Brain, Target, Globe, AlertCircle, Star } from 'lucide-react';
 
 const AICustomerSentimentTrackerPage = () => {
+  const benefits = [
+    {
+      title: "Expert Team",
+      description: "Our team of AI and technology experts delivers exceptional results.",
+      icon: <Users className="w-8 h-8" />
+    },
+    {
+      title: "Proven Results",
+      description: "We have a track record of successful projects and satisfied clients.",
+      icon: <CheckCircle className="w-8 h-8" />
+    },
+    {
+      title: "24/7 Support",
+      description: "Round-the-clock support to ensure your success.",
+      icon: <Clock className="w-8 h-8" />
+    },
+    {
+      title: "Innovation",
+      description: "Cutting-edge solutions that keep you ahead of the competition.",
+      icon: <Zap className="w-8 h-8" />
+    }
+  ];
+
+  const stats = [
+    { label: "Projects Completed", value: "500+" },
+    { label: "Happy Clients", value: "200+" },
+    { label: "Years Experience", value: "5+" },
+    { label: "Team Members", value: "50+" }
+  ];
+
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,

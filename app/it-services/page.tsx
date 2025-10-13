@@ -1,4 +1,5 @@
 import React from "react";
+import { Settings, ArrowRight, Star, Shield, Zap, BarChart3, Database, Target, Smartphone, Headphones, Code, Network } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Star } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 
 declare global {

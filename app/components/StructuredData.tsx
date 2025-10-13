@@ -1,4 +1,5 @@
 import React from 'react';
+import { Search, Code } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 interface StructuredDataProps {

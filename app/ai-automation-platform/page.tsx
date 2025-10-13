@@ -1,12 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  BarChart3, 
-  Cloud, 
-  Workflow,
-  Target
-} from 'lucide-react';
+import { BarChart3, Cloud, Workflow, Target, TrendingUp, Settings, Users, Sparkles, ArrowRight, CheckCircle, Star } from 'lucide-react';
 
 const AIAutomationPlatformPage = () => {
   const features = [
@@ -56,6 +51,29 @@ const AIAutomationPlatformPage = () => {
       industry: "Manufacturing",
       description: "Quality control, supply chain optimization, and predictive maintenance",
       icon: <Settings className="w-6 h-6" />
+    }
+  ];
+
+  const benefits = [
+    {
+      title: "Increased Efficiency",
+      description: "Reduce manual work by up to 80% with intelligent automation",
+      icon: <TrendingUp className="w-8 h-8" />
+    },
+    {
+      title: "Cost Savings",
+      description: "Lower operational costs through automated processes",
+      icon: <BarChart3 className="w-8 h-8" />
+    },
+    {
+      title: "Scalability",
+      description: "Easily scale your automation as your business grows",
+      icon: <Cloud className="w-8 h-8" />
+    },
+    {
+      title: "Reliability",
+      description: "Consistent, error-free execution of business processes",
+      icon: <CheckCircle className="w-8 h-8" />
     }
   ];
 
@@ -162,8 +180,13 @@ const AIAutomationPlatformPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300 font-medium">{benefit}</span>
+                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                  {benefit.icon}
+                </div>
+                <div>
+                  <h3 className="text-white font-semibold">{benefit.title}</h3>
+                  <p className="text-gray-300 text-sm">{benefit.description}</p>
+                </div>
               </div>
             ))}
           </div>

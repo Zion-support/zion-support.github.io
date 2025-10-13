@@ -1,36 +1,6 @@
 import React, { useState, useCallback, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  Brain, 
-  Shield, 
-  Zap, 
-  Globe, 
-  ArrowRight, 
-  Star, 
-  Users, 
-  Award, 
-  BarChart3, 
-  Cloud, 
-  Sparkles, 
-  Mail, 
-  Smartphone, 
-  Monitor,
-  Phone,
-  MapPin,
-  Code,
-  Database,
-  ChevronDown,
-  Menu,
-  X,
-  Package,
-  Heart,
-  Receipt,
-  TrendingUp,
-  Cpu,
-  Network,
-  FileText,
-  Clock
-} from 'lucide-react';
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Phone, MapPin, Code, Database, ChevronDown, Menu, X, Package, Heart, Receipt, TrendingUp, Cpu, Network, FileText, Clock, Mic } from 'lucide-react';
 
 interface NavigationProps {
   onSidebarToggle: () => void;

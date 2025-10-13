@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Users, Zap, Globe, Clock, CheckCircle } from "lucide-react";
+import { Brain, Users, Zap, Globe, Clock, CheckCircle, Star, Calendar } from 'lucide-react';
 import Layout from "../layout";
 
 export default function AISmartScheduler() {
