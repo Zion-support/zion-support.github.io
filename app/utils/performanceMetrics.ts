@@ -1,13 +1,8 @@
-export const Performancemetrics = {
-  init: () => {
-    },
+// Performancemetrics utility functions
 
-  process: (data: any) => {
-    return data;
-  },
+export function performancemetrics() {
+  // Implementation here
+  return null;
+}
 
-  cleanup: () => {
-    },
-};
-
-export default Performancemetrics;
+export default performancemetrics;

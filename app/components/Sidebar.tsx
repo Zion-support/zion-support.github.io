@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useCallback, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
@@ -165,3 +166,19 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     </div>
   );
 }
+=======
+import React from 'react';
+
+interface SidebarProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Sidebar({ className = '', children, ...props }: SidebarProps) {
+  return (
+    <div className={`sidebar-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b119

@@ -1,10 +1,10 @@
-interface LogLevel {
-  ERROR: 'error';
-  WARN: 'warn';
-  INFO: 'info';
-  DEBUG: 'debug';
+// Logger utility
+
+export function logger(message: string, level: 'info' | 'warn' | 'error' = 'info') {
+  console[level](message);
 }
 
+<<<<<<< HEAD
 const LOG_LEVELS: LogLevel = {
   ERROR: 'error',
   WARN: 'warn',
@@ -96,3 +96,6 @@ class Logger {
 }
 
 const logger = new Logger();
+=======
+export default logger;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b119

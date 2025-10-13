@@ -1,13 +1,17 @@
-import { useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect } from 'react';
 
-interface PerformanceOptimizationOptions {
-  enableLazyLoading?: boolean;
-  enablePreloading?: boolean;
-  enableImageOptimization?: boolean;
-  enableCodeSplitting?: boolean;
-  enableCaching?: boolean;
+export function usePerformanceMonitor() {
+  const [state, setState] = useState(null);
+  
+  useEffect(() => {
+    // Implementation here
+    setState('initialized');
+  }, []);
+  
+  return state;
 }
 
+<<<<<<< HEAD
 export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {
   const {
     enableLazyLoading = true,
@@ -214,3 +218,6 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     registerServiceWorker,
     setupPerformanceMonitoring,
   };
+=======
+export default usePerformanceMonitor;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b119

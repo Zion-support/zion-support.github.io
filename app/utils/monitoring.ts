@@ -1,13 +1,8 @@
-export const Monitoring = {
-  init: () => {
-    },
+// Monitoring utility functions
 
-  process: (data: any) => {
-    return data;
-  },
+export function monitoring() {
+  // Implementation here
+  return null;
+}
 
-  cleanup: () => {
-    },
-};
-
-export default Monitoring;
+export default monitoring;

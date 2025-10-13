@@ -1,13 +1,8 @@
-export const Formvalidation = {
-  init: () => {
-    },
+// Formvalidation utility functions
 
-  process: (data: any) => {
-    return data;
-  },
+export function formvalidation() {
+  // Implementation here
+  return null;
+}
 
-  cleanup: () => {
-    },
-};
-
-export default Formvalidation;
+export default formvalidation;

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -83,8 +84,17 @@ const Footer: React.FC = () => {
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-5 h-5" /> },
     { number: "24/7", label: "Support", icon: <Clock className="w-5 h-5" /> }
   ];
+=======
 
+interface FooterProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b119
+
+export default function Footer({ className = '', children, ...props }: FooterProps) {
   return (
+<<<<<<< HEAD
     <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
@@ -242,3 +252,10 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+=======
+    <div className={`footer-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b119

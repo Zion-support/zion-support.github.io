@@ -1,13 +1,8 @@
-export const Analyticstracker = {
-  init: () => {
-    },
+// Analyticstracker utility functions
 
-  process: (data: any) => {
-    return data;
-  },
+export function analyticstracker() {
+  // Implementation here
+  return null;
+}
 
-  cleanup: () => {
-    },
-};
-
-export default Analyticstracker;
+export default analyticstracker;

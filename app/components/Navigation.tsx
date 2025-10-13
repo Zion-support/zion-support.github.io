@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
@@ -95,8 +96,18 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
       ]
     }
   ];
+=======
+import React from 'react';
 
+interface NavigationProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b119
+
+export default function Navigation({ className = '', children, ...props }: NavigationProps) {
   return (
+<<<<<<< HEAD
     <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-cyan-500/20 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -213,5 +224,10 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
         )}
       </div>
     </nav>
+=======
+    <div className={`navigation-component ${className}`} {...props}>
+      {children}
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-b119
   );
 }
