@@ -1,35 +1,215 @@
-/* Accessibility and Performance Enhancements */
+/* Accessibility Enhancements */
 
-/* Focus management */
-.using-mouse *:focus {
-  outline: none;
-}
-
-.using-mouse *:focus-visible {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-}
-
-/* High contrast mode */
+/* High Contrast Mode */
 .high-contrast {
-  filter: contrast(150%);
+  --bg-primary: #000000;
+  --bg-secondary: #ffffff;
+  --text-primary: #ffffff;
+  --text-secondary: #000000;
+  --accent: #ffff00;
+  --border: #ffffff;
 }
 
 .high-contrast * {
-  border-color: currentColor !important;
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border) !important;
 }
 
-/* Reduced motion */
-.reduce-motion *,
-.reduce-motion *::before,
-.reduce-motion *::after {
+.high-contrast .bg-gradient-to-r,
+.high-contrast .bg-gradient-to-br,
+.high-contrast .bg-gradient-to-l {
+  background: var(--bg-primary) !important;
+}
+
+.high-contrast .text-gray-300,
+.high-contrast .text-gray-400,
+.high-contrast .text-gray-500,
+.high-contrast .text-gray-600 {
+  color: var(--text-primary) !important;
+}
+
+.high-contrast .border-gray-200,
+.high-contrast .border-gray-300,
+.high-contrast .border-gray-400 {
+  border-color: var(--border) !important;
+}
+
+/* Large Text Mode */
+.large-text {
+  font-size: 1.25rem !important;
+}
+
+.large-text h1 {
+  font-size: 3rem !important;
+}
+
+.large-text h2 {
+  font-size: 2.5rem !important;
+}
+
+.large-text h3 {
+  font-size: 2rem !important;
+}
+
+.large-text h4 {
+  font-size: 1.75rem !important;
+}
+
+.large-text h5 {
+  font-size: 1.5rem !important;
+}
+
+.large-text h6 {
+  font-size: 1.25rem !important;
+}
+
+.large-text p,
+.large-text span,
+.large-text div {
+  font-size: 1.125rem !important;
+}
+
+.large-text button {
+  font-size: 1.125rem !important;
+  padding: 0.75rem 1.5rem !important;
+}
+
+.large-text input,
+.large-text textarea,
+.large-text select {
+  font-size: 1.125rem !important;
+  padding: 0.75rem !important;
+}
+
+/* Reduced Motion */
+.reduced-motion *,
+.reduced-motion *::before,
+.reduced-motion *::after {
   animation-duration: 0.01ms !important;
   animation-iteration-count: 1 !important;
   transition-duration: 0.01ms !important;
   scroll-behavior: auto !important;
 }
 
-/* Screen reader only content */
+.reduced-motion .animate-pulse,
+.reduced-motion .animate-bounce,
+.reduced-motion .animate-spin {
+  animation: none !important;
+}
+
+/* Screen Reader Optimized */
+.screen-reader-optimized .sr-only {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: normal !important;
+}
+
+/* Keyboard Navigation */
+.keyboard-navigation *:focus {
+  outline: 3px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+}
+
+.keyboard-navigation button:focus,
+.keyboard-navigation a:focus,
+.keyboard-navigation input:focus,
+.keyboard-navigation textarea:focus,
+.keyboard-navigation select:focus {
+  outline: 3px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3) !important;
+}
+
+/* Focus Indicator */
+.focus-indicator *:focus {
+  outline: 2px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+}
+
+.focus-indicator button:focus,
+.focus-indicator a:focus,
+.focus-indicator input:focus,
+.focus-indicator textarea:focus,
+.focus-indicator select:focus {
+  outline: 2px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+}
+
+/* Color Blind Friendly */
+.color-blind-friendly {
+  /* Use patterns and shapes instead of relying solely on color */
+}
+
+.color-blind-friendly .text-red-500,
+.color-blind-friendly .text-red-600 {
+  color: #dc2626 !important;
+  font-weight: bold !important;
+}
+
+.color-blind-friendly .text-green-500,
+.color-blind-friendly .text-green-600 {
+  color: #16a34a !important;
+  font-weight: bold !important;
+}
+
+.color-blind-friendly .bg-red-500,
+.color-blind-friendly .bg-red-600 {
+  background-color: #dc2626 !important;
+  border: 2px solid #000 !important;
+}
+
+.color-blind-friendly .bg-green-500,
+.color-blind-friendly .bg-green-600 {
+  background-color: #16a34a !important;
+  border: 2px solid #000 !important;
+}
+
+/* Dyslexia Friendly */
+.dyslexia-friendly {
+  font-family: 'OpenDyslexic', 'Comic Sans MS', 'Trebuchet MS', sans-serif !important;
+  letter-spacing: 0.1em !important;
+  line-height: 1.6 !important;
+}
+
+.dyslexia-friendly h1,
+.dyslexia-friendly h2,
+.dyslexia-friendly h3,
+.dyslexia-friendly h4,
+.dyslexia-friendly h5,
+.dyslexia-friendly h6 {
+  font-weight: bold !important;
+  letter-spacing: 0.05em !important;
+}
+
+.dyslexia-friendly p {
+  line-height: 1.8 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* Skip Links */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+  border-radius: 4px;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Screen Reader Only Content */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -46,193 +226,257 @@
   position: static;
   width: auto;
   height: auto;
-  padding: inherit;
-  margin: inherit;
+  padding: 0.5rem 1rem;
+  margin: 0;
   overflow: visible;
   clip: auto;
   white-space: normal;
-}
-
-/* Skip link */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  background: #2563eb;
-  color: white;
-  padding: 8px 16px;
-  text-decoration: none;
-  border-radius: 4px;
   z-index: 1000;
-  transition: top 0.3s;
+  background: #000;
+  color: #fff;
+  border-radius: 4px;
 }
 
-.skip-link:focus {
-  top: 6px;
+/* High Contrast Focus */
+.high-contrast *:focus {
+  outline: 3px solid #ffff00 !important;
+  outline-offset: 2px !important;
+  background-color: #ffff00 !important;
+  color: #000000 !important;
 }
 
-/* Loading states */
-.loading {
-  position: relative;
-  pointer-events: none;
-}
-
-.loading::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  margin: -10px 0 0 -10px;
-  border: 2px solid #f3f3f3;
-  border-top: 2px solid #3498db;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
+/* Reduced Motion Media Query */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
-/* Enhanced focus indicators */
-button:focus-visible,
-a:focus-visible,
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
+/* High Contrast Media Query */
+@media (prefers-contrast: high) {
+  :root {
+    --bg-primary: #000000;
+    --bg-secondary: #ffffff;
+    --text-primary: #ffffff;
+    --text-secondary: #000000;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  
+  thead {
+    display: table-header-group;
+  }
+  
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  
+  img {
+    max-width: 100% !important;
+  }
+  
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/* Dark Mode Enhancements */
+.dark {
+  color-scheme: dark;
+}
+
+.dark .high-contrast {
+  --bg-primary: #ffffff;
+  --bg-secondary: #000000;
+  --text-primary: #000000;
+  --text-secondary: #ffffff;
+  --accent: #0000ff;
+  --border: #000000;
+}
+
+/* Focus Visible */
+.focus-visible:focus {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
-  border-radius: 4px;
 }
 
-/* Improved contrast for interactive elements */
-button:not(:disabled):hover,
-a:hover {
-  opacity: 0.9;
-}
-
+/* Button Accessibility */
 button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
 
-/* Better text contrast */
-.text-low-contrast {
-  color: #6b7280;
+button:disabled:hover {
+  transform: none;
+  box-shadow: none;
 }
 
-/* Responsive typography */
-@media (max-width: 640px) {
-  .text-responsive {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+/* Link Accessibility */
+a:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+a:visited {
+  color: #7c3aed;
+}
+
+/* Form Accessibility */
+input:invalid {
+  border-color: #dc2626;
+}
+
+input:invalid:focus {
+  outline-color: #dc2626;
+}
+
+input:valid {
+  border-color: #16a34a;
+}
+
+/* Table Accessibility */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #d1d5db;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+th {
+  background-color: #f3f4f6;
+  font-weight: bold;
+}
+
+/* List Accessibility */
+ul,
+ol {
+  margin-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+/* Image Accessibility */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+img[alt=""] {
+  border: 2px dashed #dc2626;
+}
+
+/* Video Accessibility */
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Audio Accessibility */
+audio {
+  width: 100%;
+}
+
+/* Responsive Design for Accessibility */
+@media (max-width: 768px) {
+  .large-text {
+    font-size: 1.125rem !important;
+  }
+  
+  .large-text h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  .large-text h2 {
+    font-size: 2rem !important;
+  }
+  
+  .large-text h3 {
+    font-size: 1.75rem !important;
   }
 }
 
-/* Performance optimizations */
-.will-change-transform {
-  will-change: transform;
+/* Custom Scrollbar for Accessibility */
+::-webkit-scrollbar {
+  width: 12px;
 }
 
-.will-change-opacity {
-  will-change: opacity;
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }
 
-/* Smooth scrolling for anchor links */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Improved form accessibility */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="tel"],
-input[type="url"],
-textarea,
-select {
-  border: 2px solid #e5e7eb;
+::-webkit-scrollbar-thumb {
+  background: #888;
   border-radius: 6px;
-  padding: 8px 12px;
-  font-size: 16px; /* Prevents zoom on mobile */
 }
 
-input:focus,
-textarea:focus,
-select:focus {
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
-/* Error states */
-.input-error {
-  border-color: #ef4444;
+/* High contrast scrollbar */
+.high-contrast ::-webkit-scrollbar-thumb {
+  background: #ffff00;
+  border: 2px solid #000;
 }
 
-.input-error:focus {
-  border-color: #ef4444;
-  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
-}
-
-/* Success states */
-.input-success {
-  border-color: #10b981;
-}
-
-.input-success:focus {
-  border-color: #10b981;
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
-}
-
-/* Loading button states */
-.btn-loading {
-  position: relative;
-  color: transparent;
-}
-
-.btn-loading::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 16px;
-  height: 16px;
-  margin: -8px 0 0 -8px;
-  border: 2px solid transparent;
-  border-top: 2px solid currentColor;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-/* Dark mode improvements */
-@media (prefers-color-scheme: dark) {
-  .auto-dark {
-    background-color: #1f2937;
-    color: #f9fafb;
-  }
-}
-
-/* Print styles */
-@media print {
-  .no-print {
-    display: none !important;
-  }
-
-  .print-only {
-    display: block !important;
-  }
-
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-
-  .page-break {
-    page-break-before: always;
-  }
+.high-contrast ::-webkit-scrollbar-track {
+  background: #000;
 }

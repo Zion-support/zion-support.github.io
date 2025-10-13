@@ -1,35 +1,4 @@
-import React, { useState } from "react";
-import { Mail, CheckCircle } from "lucide-react";
 
-interface ContentNewsletterSignupProps {
-  className?: string;
-}
-
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
-  className = "",
-}) => {
-  const [email, setEmail] = useState("");
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-
-    try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setIsSubscribed(true);
-      setEmail("");
-<<<<<<< HEAD
-=======
-
-    } catch (error) {
-      console.error('Failed to subscribe to newsletter:', error);
-
-
-
->>>>>>> cursor/website-audit-and-update-with-deployment-4c61
     } finally {
       setIsLoading(false);
     }

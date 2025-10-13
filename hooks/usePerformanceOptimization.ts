@@ -1,23 +1,4 @@
-import { useEffect, useCallback, useRef } from 'react';
 
-interface PerformanceOptimizationOptions {
-  enableLazyLoading?: boolean;
-  enablePreloading?: boolean;
-  enableImageOptimization?: boolean;
-  enableCodeSplitting?: boolean;
-  enableCaching?: boolean;
-}
-
-export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {
-  const {
-    enableLazyLoading = true,
-    enablePreloading = true,
-    enableImageOptimization = true,
-
-<<<<<<< HEAD
-    // enableCodeSplitting = true,
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-4c61
 
     enableCaching = true,
   } = options;
