@@ -1,10 +1,7 @@
 'use client';
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
 import { Brain, Mail, Phone, MapPin, Twitter, Linkedin, Github } from 'lucide-react';
->>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -58,30 +55,63 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/privacy" className="text-gray-300 hover:text-white text-sm">
-                  Privacy Policy
+                <Link to="/careers" className="text-gray-300 hover:text-white text-sm">
+                  Careers
                 </Link>
               </li>
               <li>
-                <Link to="/terms" className="text-gray-300 hover:text-white text-sm">
-                  Terms of Service
+                <Link to="/blog" className="text-gray-300 hover:text-white text-sm">
+                  Blog
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <h4 className="text-white text-sm font-semibold mb-4">Contact</h4>
-            <div className="space-y-2">
-              <p className="text-gray-300 text-sm">info@ziontechgroup.com</p>
-              <p className="text-gray-300 text-sm">+1 (555) 123-4567</p>
-              <p className="text-gray-300 text-sm">New York, NY</p>
+            <h4 className="text-white text-sm font-semibold mb-4">Contact Info</h4>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-2">
+                <Phone className="w-4 h-4 text-purple-400" />
+                <span className="text-gray-300 text-sm">+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Mail className="w-4 h-4 text-purple-400" />
+                <span className="text-gray-300 text-sm">info@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <MapPin className="w-4 h-4 text-purple-400" />
+                <span className="text-gray-300 text-sm">Global Services</span>
+              </div>
+            </div>
+            <div className="flex space-x-4 mt-4">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Github className="w-5 h-5" />
+              </a>
             </div>
           </div>
         </div>
-        <div className="mt-8 pt-8 border-t border-gray-700">
-          <p className="text-gray-300 text-sm text-center">
-            © {currentYear} Zion Tech Group. All rights reserved.
-          </p>
+        <div className="border-t border-gray-700 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 text-sm">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <Link to="/privacy" className="text-gray-400 hover:text-white text-sm">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="text-gray-400 hover:text-white text-sm">
+                Terms of Service
+              </Link>
+              <Link to="/cookies" className="text-gray-400 hover:text-white text-sm">
+                Cookie Policy
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

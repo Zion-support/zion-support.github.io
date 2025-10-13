@@ -2,89 +2,94 @@
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilitySettings {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
   highContrast: boolean;
   fontSize: number;
   reducedMotion: boolean;
 }
-;
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {;
-const [settings, setSettings] = useState<AccessibilitySettings>({
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+
+const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     fontSize: 16,
     reducedMotion: false
   });
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+
   useEffect(() => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
-    // Apply accessibility settings
-    if (settings.highContrast) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      document.documentElement.classList.add('high-contrast');'
-    } else {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      document.documentElement.classList.remove('high-contrast');'
+    // Load saved settings from localStorage
+    const savedSettings = localStorage.getItem('accessibility-settings');
+    if (savedSettings) {
+      try {
+        const parsed = JSON.parse(savedSettings);
+        setSettings(parsed);
+        applySettings(parsed);
+      } catch (error) {
+        console.error('Error loading accessibility settings:', error);
+      }
     }
+  }, []);
 
-    document.documentElement.style.fontSize = `${settings.fontSize}px`;
-
-    if (settings.reducedMotion) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      document.documentElement.classList.add('reduce-motion');'
+  const applySettings = (newSettings: AccessibilitySettings) => {
+    const root = document.documentElement;
+    
+    // Apply high contrast
+    if (newSettings.highContrast) {
+      root.classList.add('high-contrast');
     } else {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      document.documentElement.classList.remove('reduce-motion');'
+      root.classList.remove('high-contrast');
     }
-  }, [])
+    
+    // Apply font size
+    root.style.fontSize = `${newSettings.fontSize}px`;
+    
+    // Apply reduced motion
+    if (newSettings.reducedMotion) {
+      root.classList.add('reduced-motion');
+    } else {
+      root.classList.remove('reduced-motion');
+    }
+  };
 
-  return <>{children}</>;
-};
-;
-export default EnhancedAccessibility;
+  const updateSettings = (newSettings: AccessibilitySettings) => {
+    setSettings(newSettings);
+    applySettings(newSettings);
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
+  };
 
-=======
-import React from 'react';
-
-interface EnhancedAccessibilityProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function EnhancedAccessibility({ className = '', children }: EnhancedAccessibilityProps) {
   return (
-    <div className={`${className}`}>
+    <div className="accessibility-provider">
       {children}
+      <div className="accessibility-controls fixed bottom-4 right-4 z-50">
+        <button
+          onClick={() => updateSettings({ ...settings, highContrast: !settings.highContrast })}
+          className="bg-blue-600 text-white px-3 py-2 rounded mr-2 text-sm"
+          aria-label="Toggle high contrast"
+        >
+          {settings.highContrast ? 'Normal' : 'High Contrast'}
+        </button>
+        <button
+          onClick={() => updateSettings({ ...settings, fontSize: Math.min(settings.fontSize + 2, 24) })}
+          className="bg-blue-600 text-white px-3 py-2 rounded mr-2 text-sm"
+          aria-label="Increase font size"
+        >
+          A+
+        </button>
+        <button
+          onClick={() => updateSettings({ ...settings, fontSize: Math.max(settings.fontSize - 2, 12) })}
+          className="bg-blue-600 text-white px-3 py-2 rounded mr-2 text-sm"
+          aria-label="Decrease font size"
+        >
+          A-
+        </button>
+        <button
+          onClick={() => updateSettings({ ...settings, reducedMotion: !settings.reducedMotion })}
+          className="bg-blue-600 text-white px-3 py-2 rounded text-sm"
+          aria-label="Toggle reduced motion"
+        >
+          {settings.reducedMotion ? 'Motion On' : 'Motion Off'}
+        </button>
+      </div>
     </div>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-}
+};
+
+export default EnhancedAccessibility;
