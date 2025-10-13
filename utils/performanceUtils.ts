@@ -14,7 +14,6 @@ export class PerformanceUtils {
   };
 
   measureLoadTime() {
-
     if (typeof window !== 'undefined' && window.performance) {
       const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
@@ -28,10 +27,6 @@ export class PerformanceUtils {
       if (fcp) {
         this.metrics.renderTime = fcp.startTime;
       }
-
-    if (typeof window !== 'undefined') {
-      this.metrics.loadTime = performance.now();
-
     }
   }
 
