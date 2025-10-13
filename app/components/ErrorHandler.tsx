@@ -61,9 +61,15 @@ class ErrorHandler extends Component<Props, State> {
       };
       // Send to your error reporting service here
 
+<<<<<<< HEAD
       console.log('Error data prepared for reporting:', errorData);
     } catch (reportingError) {
       console.error('Failed to prepare error data for reporting:', reportingError);
+=======
+      console.log('Error data for reporting:', errorData);
+    } catch (reportingError) {
+      console.warn('Error reporting failed:', reportingError);
+>>>>>>> cursor/fix-errors-and-merge-to-main-6877
 
     }
   }
