@@ -14,10 +14,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       const criticalResources = [
         '/fonts/inter-var.woff2',
         '/images/hero-bg.jpg',
-<<<<<<< HEAD
-=======
         '/icons/sprite.svg'
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
       ];
 
       criticalResources.forEach(resource => {
@@ -25,18 +22,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         link.rel = 'preload';
         link.href = resource;
         link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-<<<<<<< HEAD
-=======
         if (resource.endsWith('.woff2')) {
           link.crossOrigin = 'anonymous';
         }
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
         document.head.appendChild(link);
       });
 
       // Optimize images
-<<<<<<< HEAD
-=======
       const images = document.querySelectorAll('img');
       images.forEach(img => {
         if (!img.loading) {
@@ -79,16 +71,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
           .catch(error => {
             console.log('Service Worker registration failed:', error);
           });
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
       }
 
       setIsOptimized(true);
     };
 
-<<<<<<< HEAD
-=======
     // Run optimization after component mount
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
     const timer = setTimeout(optimizePerformance, 100);
     return () => clearTimeout(timer);
   }, []);
@@ -97,12 +85,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     <div className="performance-optimizer">
       {children}
       {isOptimized && (
-<<<<<<< HEAD
-=======
         <div className="hidden" aria-hidden="true">
           {/* Performance monitoring indicators */}
           <div id="performance-indicator" data-optimized="true" />
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
         </div>
       )}
     </div>
