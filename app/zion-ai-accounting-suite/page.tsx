@@ -4,7 +4,6 @@ import EnhancedSEO from '../components/EnhancedSEO';
 import { Link } from 'react-router-dom';
 import { Brain, ArrowRight, CheckCircle, CheckCircle, ArrowRight } from 'lucide-react';
 
-
 const ZionAIAccountingSuite = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
 
@@ -12,7 +11,6 @@ const ZionAIAccountingSuite = () => {
 
   const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
 
-  
   const pricingPlans = [
     {
       name: "Solo",

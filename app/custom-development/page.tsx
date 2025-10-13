@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Code, Globe, Smartphone, Zap, Database, ArrowRight, ArrowRight, Mail, Smartphone, Globe, ArrowRight } from 'lucide-react';
 
-
 export default function page() {
   const features = [
     { title: "Feature 1", description: "Description 1" },

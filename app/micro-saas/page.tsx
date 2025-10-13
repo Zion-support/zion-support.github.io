@@ -3,7 +3,7 @@ import { ArrowRight, Brain, Shield, Zap, BarChart3, Users, Sparkles, CheckCircle
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-export default function page() {
+export default function Page() {
   const benefits = [
     "Benefit 1",
     "Benefit 2"

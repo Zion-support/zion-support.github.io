@@ -1,5 +1,31 @@
-import React from 'react';
-import { 
+import { Link } from 'react-router-dom';
+const services = [
+    {
+      title: "Cloud Migration",
+      description: "Seamless migration to cloud infrastructure",
+      icon: "Cloud"
+    },
+    {
+      title: "Security Solutions",
+      description: "Advanced security and compliance",
+      icon: "Shield"
+    },
+    {
+      title: "Performance Optimization",
+      description: "Optimize your cloud performance",
+      icon: "Zap"
+    }
+  ];
+const socialLinks = [
+    { name: "Twitter", href: "#", icon: "Twitter" },
+    { name: "LinkedIn", href: "#", icon: "Linkedin" },
+    { name: "GitHub", href: "#", icon: "Github" }
+  ];
+const microSaasServices = [
+    { name: "AI Analytics", href: "/ai-services" },
+    { name: "Cloud Solutions", href: "/cloud-services" },
+    { name: "DevOps", href: "/devops" }
+  ];
   Brain, 
   Mail, 
   Phone, 

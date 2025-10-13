@@ -6,7 +6,6 @@ import { Helmet } from "react-helmet-async";
 import SEOOptimizer from "../components/SEOOptimizer";
 import { Cloud, Shield, Network, Database, Code, Headphones, Smartphone, Monitor, Target, HardDrive, Settings, ArrowRight, Star, ArrowRight, ArrowRight } from 'lucide-react';
 
-
 export default function ITServices() {
   const itServices = [
     {

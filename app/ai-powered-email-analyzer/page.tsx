@@ -5,14 +5,11 @@ import {
   Shield, 
   Zap, 
   BarChart3, 
-  Users, 
-  Clock, 
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Brain,
-  Target,
-  Globe
+  Zap, 
+  Shield, 
+  Target, 
+  Brain, 
+  Sparkles
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -110,11 +107,12 @@ const AIPoweredEmailAnalyzerPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
-        <title>AI-Powered Email Analyzer | Zion Tech Group</title>
-        <meta name="description" content="Revolutionize your email communication with our AI-powered email analyzer. Get sentiment analysis, smart suggestions, and performance insights." />
-        <meta name="keywords" content="AI email analyzer, email sentiment analysis, email automation, business communication, email analytics" />
+        <title>AI Services - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI services with cutting-edge technology and expert solutions." />
+        <meta name="keywords" content="AI services, artificial intelligence, machine learning, automation" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-services" />
       </Helmet>
 
       {/* Hero Section */}
@@ -160,7 +158,23 @@ const AIPoweredEmailAnalyzerPage = () => {
             </div>
           </motion.div>
         </div>
-      </section>
+        
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
+            <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">AI-Powered Solutions</span>
+          </div>
+          
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+              AI Services
+            </span>
+          </h1>
+          
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Transform your business with our comprehensive AI services. From machine learning to automation, 
+            we provide cutting-edge solutions tailored to your needs.
+          </p>
 
       {/* Stats Section */}
       <section className="py-16 px-4">
@@ -187,7 +201,7 @@ const AIPoweredEmailAnalyzerPage = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 20 }}
@@ -199,8 +213,7 @@ const AIPoweredEmailAnalyzerPage = () => {
               Powerful AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our advanced AI technology provides comprehensive email analysis and optimization tools 
-              to enhance your communication effectiveness.
+              Comprehensive AI solutions designed to accelerate your digital transformation
             </p>
           </motion.div>
 
@@ -225,8 +238,6 @@ const AIPoweredEmailAnalyzerPage = () => {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
 
       {/* Pricing Section */}
       <section className="py-20 px-4">
@@ -346,20 +357,17 @@ const AIPoweredEmailAnalyzerPage = () => {
           <p className="text-gray-300 mb-6">
             Contact us today to learn more about our AI-Powered Email Analyzer and how it can transform your business communication.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-gray-300">
-            <div className="flex items-center">
-              <Mail className="w-5 h-5 mr-2 text-cyan-400" />
-              <span>kleber@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center">
-              <Globe className="w-5 h-5 mr-2 text-cyan-400" />
-              <span>https://ziontechgroup.com</span>
-            </div>
-          </div>
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+          >
+            Start Your AI Journey
+            <Zap className="w-5 h-5 ml-2" />
+          </Link>
         </div>
       </section>
     </div>
   );
 };
 
-export default AIPoweredEmailAnalyzerPage;
+export default Page;

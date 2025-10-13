@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-
 const Breadcrumb: React.FC = () => {
   const location = useLocation();
   const pathnames = location.pathname.split('/').filter((x) => x);

@@ -409,7 +409,7 @@ const ZionAIProjectManagerProPage = () => {
                 <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold mr-3">
-                    {testimonial.avatar}
+                    {`/avatars/avatar-${index + 1}.jpg`}
                   </div>
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>

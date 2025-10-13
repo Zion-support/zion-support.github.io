@@ -48,7 +48,7 @@ export const usePerformanceMonitor = () => {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries()
           entries.forEach((entry: any) => {
-            metricsRef.current.firstInputDelay = entry.processingStart - entry.startTime
+            metricsRef.current.firstInputDelay = entry.startTime - entry.startTime
           })
         })
         fidObserver.observe({ entryTypes: ['first-input'] })

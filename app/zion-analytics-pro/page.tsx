@@ -70,6 +70,7 @@ export default function ZionAnalyticsPro() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/zion-analytics-pro" />
       </Helmet>
+      <SEOOptimizer />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
@@ -251,7 +252,7 @@ export default function ZionAnalyticsPro() {
                 >
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
-                      {testimonial.avatar}
+                      {`/avatars/avatar-${index + 1}.jpg`}
                     </div>
                     <div className="ml-4">
                       <div className="font-semibold text-white">{testimonial.name}</div>

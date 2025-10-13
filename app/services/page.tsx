@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Brain, Bot, FileText, Shield, Wifi, Cloud, Code, Target, FileText, Users, TrendingUp, Brain, Globe, FileText, Zap, Database, Monitor, Lock, Server, Settings, HardDrive, Phone, Laptop, Headphones, Network, Cpu, Shield, Server, Settings, ArrowRight, ArrowRight, Mail, Smartphone, Globe, ArrowRight } from 'lucide-react';
 
-
 export default function Services() {
   const services = [
     {

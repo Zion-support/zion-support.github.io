@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Shield, Cloud, Globe, Calendar, Phone, CheckCircle, Sparkles, Heart, Receipt, Package, Code } from 'lucide-react';
 
-export default function page() {
+export default function Page() {
   const stats = [
     { label: "Stat 1", value: "100%" }
   ];

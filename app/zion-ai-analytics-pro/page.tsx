@@ -321,7 +321,7 @@ const ZionAIAnalyticsProPage = () => {
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                    {testimonial.avatar}
+                    {`/avatars/avatar-${index + 1}.jpg`}
                   </div>
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>

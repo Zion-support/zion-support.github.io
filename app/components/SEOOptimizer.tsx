@@ -1,6 +1,21 @@
-import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-
+const services = [
+    {
+      title: "Cloud Migration",
+      description: "Seamless migration to cloud infrastructure",
+      icon: "Cloud"
+    },
+    {
+      title: "Security Solutions",
+      description: "Advanced security and compliance",
+      icon: "Shield"
+    },
+    {
+      title: "Performance Optimization",
+      description: "Optimize your cloud performance",
+      icon: "Zap"
+    }
+  ];
 interface SEOOptimizerProps {
   children: React.ReactNode;
 }

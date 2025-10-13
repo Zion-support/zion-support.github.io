@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Play, Pause, SkipForward, SkipBack, Maximize, ArrowRight, CheckCircle, Star, Calendar } from 'lucide-react';
 
-export default function page() {
+export default function Page() {
   const stats = [
     { label: "Stat 1", value: "100%" }
   ];

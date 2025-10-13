@@ -1,5 +1,3 @@
-// Performancemetrics utility functions
-
 export const Performancemetrics = {
   init: () => {
     },

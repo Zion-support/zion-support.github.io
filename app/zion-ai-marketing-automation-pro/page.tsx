@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Target, Users, MessageSquare, Brain, Zap, Target, ArrowRight, Play, CheckCircle, CheckCircle, ArrowRight, Mail, Phone, Globe, ArrowRight } from 'lucide-react';
 
-
 export default function page() {
   const stats = [
     { label: "Stat 1", value: "100%" }
@@ -356,7 +355,7 @@ export default function page() {
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
-                      {testimonial.avatar}
+                      {`/avatars/avatar-${index + 1}.jpg`}
                     </div>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>

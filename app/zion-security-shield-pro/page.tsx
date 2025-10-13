@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight, Shield, Brain, CheckCircle, Star, Award, Zap, Globe, Mail, Phone, Sparkles, FileText, Eye, Fingerprint, Search } from 'lucide-react';
 
-export default function page() {
+export default function Page() {
   const benefits = [
     "Benefit 1",
     "Benefit 2"
@@ -358,7 +358,7 @@ export default function page() {
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-gradient-to-r from-red-500 to-orange-600 rounded-full flex items-center justify-center text-white font-semibold mr-3">
-                      {testimonial.avatar}
+                      {`/avatars/avatar-${index + 1}.jpg`}
                     </div>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
