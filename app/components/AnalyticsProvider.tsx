@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, ReactNode } from "react";
-=======
-import React, { useEffect } from 'react';
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
 declare global {
   interface Window {
@@ -10,7 +6,6 @@ declare global {
   }
 }
 
-<<<<<<< HEAD
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void;
   trackPageView: (pageName: string) => void;
@@ -26,15 +21,6 @@ export const useAnalytics = () => {
     throw new Error("useAnalytics must be used within an AnalyticsProvider");
   }
   return context;
-=======
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  useEffect(() => {
-    // Initialize analytics
-    console.log('Analytics initialized');
-  }, []);
-
-  return <>{children}</>;
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 };
 
 interface AnalyticsProviderProps {
@@ -48,27 +34,28 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (typeof window !== "undefined") {
       // Google Analytics
       if (process.env.NODE_ENV === "production") {
+        // Initialize Google Analytics
         const script = document.createElement("script");
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`;
         script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`;
         document.head.appendChild(script);
 
-        window.gtag =
-          window.gtag ||
-          function (...args: any[]) {
-            (window.gtag as any).q = (window.gtag as any).q || [];
-            (window.gtag as any).q.push(args);
-          };
-        window.gtag("js", new Date());
-        window.gtag("config", process.env.REACT_APP_GA_MEASUREMENT_ID || "");
+        window.dataLayer = window.dataLayer || [];
+        function gtag(...args: unknown[]) {
+          window.dataLayer.push(args);
+        }
+        window.gtag = gtag;
+
+        gtag("js", new Date());
+        gtag("config", process.env.NEXT_PUBLIC_GA_ID || "", {
+          page_title: document.title,
+          page_location: window.location.href,
+        });
       }
     }
   }, []);
 
-  const trackEvent = (
-    eventName: string,
-    parameters?: Record<string, unknown>,
-  ) => {
+  const trackEvent = (eventName: string, parameters?: Record<string, unknown>) => {
     if (typeof window !== "undefined" && window.gtag) {
       window.gtag("event", eventName, parameters);
     }
@@ -76,14 +63,14 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
 
   const trackPageView = (pageName: string) => {
     if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("config", "GA_MEASUREMENT_ID", {
+      window.gtag("config", process.env.NEXT_PUBLIC_GA_ID || "", {
         page_title: pageName,
         page_location: window.location.href,
       });
     }
   };
 
-  const value: AnalyticsContextType = {
+  const value = {
     trackEvent,
     trackPageView,
   };
