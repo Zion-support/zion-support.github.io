@@ -1,5 +1,25 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  ChevronDown, 
+  X, 
+  Menu, 
+  ArrowRight, 
+  Star,
+  Brain,
+  Shield,
+  Zap,
+  Globe,
+  BarChart3,
+  Cloud,
+  Code,
+  Database,
+  SidebarIcon
+} from 'lucide-react'
+import FuturisticButton from './FuturisticButton'
 
 interface NavigationProps {
   onSidebarToggle?: () => void
@@ -56,6 +76,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     { name: 'AI Services', path: '/ai-services' },
     { name: 'IT Services', path: '/it-services' },
     { name: 'Micro SAAS', path: '/micro-saas' },
+    { name: '5G Solutions', path: '/5g-solutions' },
     { name: 'Pricing', path: '/pricing' },
     { name: 'Case Studies', path: '/case-studies' },
     { name: 'Blog', path: '/blog' },

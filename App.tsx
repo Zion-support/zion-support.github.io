@@ -7,15 +7,6 @@ import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
-<<<<<<< HEAD
-import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
-import AnalyticsProvider from "./app/components/AnalyticsProvider";
-import PerformanceMonitor from "./app/components/PerformanceMonitor";
-import WebVitalsTracker from "./app/components/WebVitalsTracker";
-import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
-import CoreWebVitals from "./app/components/CoreWebVitals";
-import FuturisticBackground from "./app/components/FuturisticBackground";
-=======
 import { LoadingPage } from "./app/components/LoadingStates";
 import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
@@ -24,7 +15,6 @@ import FuturisticBackground from "./app/components/FuturisticBackground";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import EnhancedSEO from "./app/components/EnhancedSEO";
->>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -33,6 +23,8 @@ const ServicesPage = React.lazy(() => import("./app/services/page"));
 const PricingPage = React.lazy(() => import("./app/pricing/page"));
 const BlogPage = React.lazy(() => import("./app/blog/page"));
 const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
+const MicroSaasServicesPage = React.lazy(() => import("./app/micro-saas/page"));
+const ITServicesPage = React.lazy(() => import("./app/it-services/page"));
 const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
 const DemoPage = React.lazy(() => import("./app/demo/page"));
 const SupportPage = React.lazy(() => import("./app/support/page"));
@@ -499,7 +491,6 @@ const MicroSaasServicesAiChatbotBuilderPage = React.lazy(() => import("./app/mic
 const MicroSaasServicesAiContentGeneratorPage = React.lazy(() => import("./app/micro-saas-services/ai-content-generator/page"));
 const MicroSaasServicesAiEmailAssistantPage = React.lazy(() => import("./app/micro-saas-services/ai-email-assistant/page"));
 const MicroSaasServicesAiLeadGenerationPage = React.lazy(() => import("./app/micro-saas-services/ai-lead-generation/page"));
-const MicroSaasServicesPage = React.lazy(() => import("./app/micro-saas-services/page"));
 const MobileAppDevelopmentPage = React.lazy(() => import("./app/mobile-app-development/page"));
 const NetworkDesignPage = React.lazy(() => import("./app/network-design/page"));
 const NetworkSecurityPage = React.lazy(() => import("./app/network-security/page"));
@@ -600,6 +591,8 @@ function App() {
                         <Route path="/pricing" element={<PricingPage />} />
                         <Route path="/blog" element={<BlogPage />} />
                         <Route path="/ai-services" element={<AIServicesPage />} />
+                        <Route path="/micro-saas" element={<MicroSaasServicesPage />} />
+                        <Route path="/it-services" element={<ITServicesPage />} />
                         <Route path="/tutorials" element={<TutorialsPage />} />
                         <Route path="/demo" element={<DemoPage />} />
                         <Route path="/support" element={<SupportPage />} />
@@ -615,15 +608,12 @@ function App() {
                     <div></div>
                   </EnhancedAccessibility>
                 </FuturisticBackground>
-<<<<<<< HEAD
-=======
                 <PerformanceMonitor />
                 <EnhancedSEO 
                   title="Zion Tech Group - Advanced AI and IT Solutions"
                   description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses."
                   keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
                 />
->>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
               </div>
               <EnhancedAccessibility>
                 <div></div>

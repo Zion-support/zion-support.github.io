@@ -353,6 +353,267 @@ export default function AIServices() {
       reviews: 432,
       link: "/ai-supply-chain-optimizer",
       featured: false
+    },
+    {
+      id: "ai-3d-generation",
+      name: "AI 3D Generation Pro",
+      description: "Revolutionary 3D content creation with AI-powered modeling, texturing, and animation generation",
+      price: "From $3,999/month",
+      icon: <Layers className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      features: [
+        "AI 3D model generation",
+        "Automatic texturing & materials",
+        "Animation & rigging automation",
+        "Real-time rendering optimization",
+        "VR/AR content creation",
+        "3D asset library management",
+        "Collaborative design tools",
+        "Export to major 3D formats"
+      ],
+      benefits: [
+        "Create 3D content 10x faster",
+        "Reduce 3D production costs by 60%",
+        "Enable non-technical users",
+        "Accelerate product development"
+      ],
+      category: "3D & Graphics",
+      rating: 4.8,
+      reviews: 567,
+      link: "/ai-3d-generation",
+      featured: true
+    },
+    {
+      id: "ai-quantum-computing",
+      name: "AI Quantum Computing Solutions",
+      description: "Cutting-edge quantum AI for complex optimization, cryptography, and advanced problem solving",
+      price: "From $9,999/month",
+      icon: <Cpu className="w-8 h-8" />,
+      color: "from-indigo-500 to-purple-500",
+      features: [
+        "Quantum machine learning algorithms",
+        "Quantum optimization problems",
+        "Quantum cryptography solutions",
+        "Quantum simulation platforms",
+        "Hybrid classical-quantum systems",
+        "Quantum error correction",
+        "Quantum cloud access",
+        "Expert quantum consulting"
+      ],
+      benefits: [
+        "Solve exponentially complex problems",
+        "Achieve quantum advantage",
+        "Enable breakthrough discoveries",
+        "Future-proof your technology"
+      ],
+      category: "Quantum AI",
+      rating: 4.9,
+      reviews: 234,
+      link: "/ai-quantum-computing",
+      featured: true
+    },
+    {
+      id: "ai-space-technology",
+      name: "AI Space Technology Pro",
+      description: "Advanced AI solutions for space exploration, satellite management, and space mission optimization",
+      price: "From $7,999/month",
+      icon: <Rocket className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500",
+      features: [
+        "Satellite constellation management",
+        "Space mission planning & optimization",
+        "Earth observation data analysis",
+        "Space debris tracking & avoidance",
+        "Autonomous spacecraft control",
+        "Space weather prediction",
+        "Planetary exploration AI",
+        "Space resource optimization"
+      ],
+      benefits: [
+        "Optimize space missions",
+        "Improve satellite operations",
+        "Enable autonomous space systems",
+        "Advance space exploration"
+      ],
+      category: "Space AI",
+      rating: 4.8,
+      reviews: 189,
+      link: "/ai-space-technology",
+      featured: false
+    },
+    {
+      id: "ai-climate-solutions",
+      name: "AI Climate Solutions Pro",
+      description: "AI-powered climate change solutions with environmental monitoring, carbon tracking, and sustainability optimization",
+      price: "From $4,999/month",
+      icon: <CloudRain className="w-8 h-8" />,
+      color: "from-green-500 to-teal-500",
+      features: [
+        "Climate change prediction models",
+        "Carbon footprint tracking & optimization",
+        "Environmental monitoring systems",
+        "Renewable energy optimization",
+        "Sustainable supply chain analysis",
+        "Climate risk assessment",
+        "ESG reporting automation",
+        "Green technology recommendations"
+      ],
+      benefits: [
+        "Reduce carbon footprint by 40%",
+        "Improve sustainability metrics",
+        "Enable climate compliance",
+        "Drive green innovation"
+      ],
+      category: "Climate AI",
+      rating: 4.7,
+      reviews: 345,
+      link: "/ai-climate-solutions",
+      featured: false
+    },
+    {
+      id: "ai-neural-interface",
+      name: "AI Neural Interface",
+      description: "Breakthrough brain-computer interface technology with AI-powered neural signal processing and control",
+      price: "From $12,999/month",
+      icon: <Brain className="w-8 h-8" />,
+      color: "from-violet-500 to-purple-500",
+      features: [
+        "Neural signal processing",
+        "Brain-computer interface control",
+        "Cognitive enhancement algorithms",
+        "Neural pattern recognition",
+        "Real-time brain monitoring",
+        "Assistive technology integration",
+        "Research collaboration tools",
+        "Medical device integration"
+      ],
+      benefits: [
+        "Enable direct brain control",
+        "Assist people with disabilities",
+        "Enhance cognitive abilities",
+        "Advance medical research"
+      ],
+      category: "Neural AI",
+      rating: 4.9,
+      reviews: 156,
+      link: "/ai-neural-interface",
+      featured: true
+    },
+    {
+      id: "ai-holographic-workspace",
+      name: "AI Holographic Workspace",
+      description: "Immersive holographic work environment with AI-powered spatial computing and collaborative tools",
+      price: "From $6,999/month",
+      icon: <Monitor className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500",
+      features: [
+        "Holographic 3D workspace",
+        "AI-powered spatial computing",
+        "Collaborative virtual meetings",
+        "Gesture-based interaction",
+        "Real-time 3D data visualization",
+        "Mixed reality integration",
+        "Remote collaboration tools",
+        "Custom workspace design"
+      ],
+      benefits: [
+        "Revolutionize remote work",
+        "Enhance collaboration",
+        "Improve spatial understanding",
+        "Enable immersive experiences"
+      ],
+      category: "Holographic AI",
+      rating: 4.8,
+      reviews: 278,
+      link: "/ai-holographic-workspace",
+      featured: false
+    },
+    {
+      id: "ai-drug-discovery",
+      name: "AI Drug Discovery Pro",
+      description: "Advanced AI platform for pharmaceutical research with molecular design, drug optimization, and clinical trial prediction",
+      price: "From $8,999/month",
+      icon: <Activity className="w-8 h-8" />,
+      color: "from-emerald-500 to-green-500",
+      features: [
+        "Molecular design & optimization",
+        "Drug-target interaction prediction",
+        "Clinical trial outcome prediction",
+        "Side effect analysis",
+        "Drug repurposing algorithms",
+        "Biomarker discovery",
+        "Regulatory compliance support",
+        "Research collaboration tools"
+      ],
+      benefits: [
+        "Accelerate drug development by 70%",
+        "Reduce research costs by 50%",
+        "Improve success rates",
+        "Enable personalized medicine"
+      ],
+      category: "Pharmaceutical AI",
+      rating: 4.9,
+      reviews: 198,
+      link: "/ai-drug-discovery",
+      featured: true
+    },
+    {
+      id: "ai-robotics-advanced",
+      name: "AI Advanced Robotics",
+      description: "Next-generation robotic systems with AI-powered autonomy, learning, and human-robot collaboration",
+      price: "From $5,999/month",
+      icon: <Settings className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+      features: [
+        "Autonomous robot control",
+        "Machine learning for robotics",
+        "Human-robot collaboration",
+        "Computer vision integration",
+        "Natural language robot control",
+        "Predictive maintenance",
+        "Swarm robotics coordination",
+        "Custom robot development"
+      ],
+      benefits: [
+        "Enable autonomous operations",
+        "Improve robot efficiency",
+        "Enhance human-robot interaction",
+        "Accelerate automation adoption"
+      ],
+      category: "Robotics AI",
+      rating: 4.7,
+      reviews: 312,
+      link: "/ai-robotics-advanced",
+      featured: false
+    },
+    {
+      id: "ai-energy-management",
+      name: "AI Energy Management Pro",
+      description: "Intelligent energy systems with smart grid optimization, renewable energy integration, and consumption prediction",
+      price: "From $3,999/month",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-yellow-500 to-orange-500",
+      features: [
+        "Smart grid optimization",
+        "Renewable energy integration",
+        "Energy consumption prediction",
+        "Load balancing algorithms",
+        "Energy storage optimization",
+        "Carbon footprint tracking",
+        "Real-time energy monitoring",
+        "Demand response management"
+      ],
+      benefits: [
+        "Reduce energy costs by 30%",
+        "Optimize renewable energy usage",
+        "Improve grid stability",
+        "Enable sustainable energy"
+      ],
+      category: "Energy AI",
+      rating: 4.8,
+      reviews: 423,
+      link: "/ai-energy-management",
+      featured: false
     }
   ];
 
@@ -369,12 +630,21 @@ export default function AIServices() {
     { name: "Marketing", count: aiServices.filter(s => s.category === "Marketing").length, active: false },
     { name: "HR & Recruitment", count: aiServices.filter(s => s.category === "HR & Recruitment").length, active: false },
     { name: "Finance", count: aiServices.filter(s => s.category === "Finance").length, active: false },
-    { name: "Supply Chain", count: aiServices.filter(s => s.category === "Supply Chain").length, active: false }
+    { name: "Supply Chain", count: aiServices.filter(s => s.category === "Supply Chain").length, active: false },
+    { name: "3D & Graphics", count: aiServices.filter(s => s.category === "3D & Graphics").length, active: false },
+    { name: "Quantum AI", count: aiServices.filter(s => s.category === "Quantum AI").length, active: false },
+    { name: "Space AI", count: aiServices.filter(s => s.category === "Space AI").length, active: false },
+    { name: "Climate AI", count: aiServices.filter(s => s.category === "Climate AI").length, active: false },
+    { name: "Neural AI", count: aiServices.filter(s => s.category === "Neural AI").length, active: false },
+    { name: "Holographic AI", count: aiServices.filter(s => s.category === "Holographic AI").length, active: false },
+    { name: "Pharmaceutical AI", count: aiServices.filter(s => s.category === "Pharmaceutical AI").length, active: false },
+    { name: "Robotics AI", count: aiServices.filter(s => s.category === "Robotics AI").length, active: false },
+    { name: "Energy AI", count: aiServices.filter(s => s.category === "Energy AI").length, active: false }
   ];
 
   const stats = [
-    { number: "25+", label: "AI Services", icon: <Brain className="w-6 h-6" /> },
-    { number: "15,000+", label: "AI Models Trained", icon: <Cpu className="w-6 h-6" /> },
+    { number: "35+", label: "AI Services", icon: <Brain className="w-6 h-6" /> },
+    { number: "25,000+", label: "AI Models Trained", icon: <Cpu className="w-6 h-6" /> },
     { number: "99.9%", label: "Accuracy Rate", icon: <Award className="w-6 h-6" /> },
     { number: "24/7", label: "AI Monitoring", icon: <Monitor className="w-6 h-6" /> }
   ];
@@ -488,11 +758,11 @@ export default function AIServices() {
               <div className="flex flex-wrap justify-center gap-4 mb-12">
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">25+ AI services</span>
+                  <span className="text-sm">35+ AI services</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">15,000+ models trained</span>
+                  <span className="text-sm">25,000+ models trained</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />

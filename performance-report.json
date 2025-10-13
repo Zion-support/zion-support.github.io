@@ -1,25 +1,5 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-10-13T05:16:27.269Z",
-  "optimizations": [
-    "Icon imports optimized",
-    "Bundle splitting improved",
-    "Lazy loading implemented",
-    "Service worker added",
-    "PWA manifest created",
-    "SEO enhancements applied",
-    "Error boundaries added",
-    "Performance monitoring enabled"
-  ],
-  "recommendations": [
-    "Consider implementing image optimization pipeline",
-    "Add more granular code splitting for large pages",
-    "Implement preloading for critical resources",
-    "Add more comprehensive caching strategies",
-    "Consider implementing CDN for static assets"
-  ]
-=======
-  "timestamp": "2025-10-13T05:19:22.167Z",
+  "timestamp": "2025-10-13T05:39:29.324Z",
   "optimizations": {
     "images": "optimized",
     "criticalCSS": "generated",
@@ -27,9 +7,8 @@
     "compression": "enabled"
   },
   "metrics": {
-    "totalAssets": 5,
+    "totalAssets": 240,
     "estimatedSavings": "15-25%",
     "loadTimeImprovement": "20-30%"
   }
->>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
 }

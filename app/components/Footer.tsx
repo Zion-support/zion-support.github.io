@@ -49,8 +49,8 @@ const Footer = React.memo(() => {
     { name: "IT Services", path: "/it-services", icon: <Shield className="w-4 h-4" /> },
     { name: "Micro SAAS", path: "/micro-saas", icon: <Zap className="w-4 h-4" /> },
     { name: "5G Solutions", path: "/5g-solutions", icon: <Globe className="w-4 h-4" /> },
-    { name: "Cloud Services", path: "/cloud-services", icon: <Cloud className="w-4 h-4" /> },
-    { name: "Cybersecurity", path: "/cybersecurity", icon: <Shield className="w-4 h-4" /> },
+    { name: "Cloud Infrastructure", path: "/cloud-infrastructure", icon: <Cloud className="w-4 h-4" /> },
+    { name: "Cybersecurity Solutions", path: "/cybersecurity-solutions", icon: <Shield className="w-4 h-4" /> },
     { name: "Web Development", path: "/web-development", icon: <Code className="w-4 h-4" /> },
     { name: "Data Analytics", path: "/data-analytics", icon: <BarChart3 className="w-4 h-4" /> }
   ], []);
