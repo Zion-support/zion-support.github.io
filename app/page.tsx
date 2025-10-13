@@ -127,7 +127,7 @@ const HomePage = () => {
       price: "From $299/month",
       icon: <BarChart3 className="w-6 h-6" />,
       link: "/zion-analytics-pro",
-      featured: false
+      featured: true
     },
     {
       name: "Zion Security Shield",
@@ -135,7 +135,39 @@ const HomePage = () => {
       price: "From $499/month",
       icon: <Shield className="w-6 h-6" />,
       link: "/zion-security-shield",
-      featured: false
+      featured: true
+    },
+    {
+      name: "Zion Cloud Vault",
+      description: "Enterprise-grade cloud storage with AI-powered backup and military-grade encryption",
+      price: "From $19/month",
+      icon: <Cloud className="w-6 h-6" />,
+      link: "/zion-cloud-vault",
+      featured: true
+    },
+    {
+      name: "Zion Content Studio",
+      description: "AI-powered content creation platform with multi-media tools and brand consistency",
+      price: "From $49/month",
+      icon: <Monitor className="w-6 h-6" />,
+      link: "/zion-content-studio",
+      featured: true
+    },
+    {
+      name: "Zion Data Sync",
+      description: "Real-time data synchronization across 200+ platforms with AI-powered mapping",
+      price: "From $99/month",
+      icon: <Zap className="w-6 h-6" />,
+      link: "/zion-data-sync",
+      featured: true
+    },
+    {
+      name: "Zion Project Master",
+      description: "AI-powered project management with intelligent planning and team collaboration",
+      price: "From $29/month",
+      icon: <Target className="w-6 h-6" />,
+      link: "/zion-project-master",
+      featured: true
     }
   ];
 
@@ -194,7 +226,7 @@ const HomePage = () => {
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+            <span className="hologram-text">
               Welcome to Zion Tech Group
             </span>
           </h1>
@@ -210,6 +242,7 @@ const HomePage = () => {
               variant="primary"
               size="lg"
               icon={<Sparkles className="w-5 h-5" />}
+              className="futuristic-button-advanced hover-neon"
             >
               Get Started Today
             </FuturisticButton>
@@ -218,6 +251,7 @@ const HomePage = () => {
               variant="outline"
               size="lg"
               icon={<Monitor className="w-5 h-5" />}
+              className="futuristic-button-advanced hover-neon"
             >
               Watch Demo
             </FuturisticButton>
@@ -296,37 +330,37 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
                 to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                className="group futuristic-card-advanced hover-glow relative overflow-hidden"
               >
                 {saas.featured && (
-                  <div className="absolute top-4 right-4">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                  <div className="absolute top-4 right-4 z-10">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold neon-text">
                       Featured
                     </span>
                   </div>
                 )}
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform duration-300">
                     {saas.icon}
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                    <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors duration-300">
                       {saas.name}
                     </h3>
                     <p className="text-cyan-400 font-medium">{saas.price}</p>
                   </div>
                 </div>
-                <p className="text-gray-300 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed mb-4">
                   {saas.description}
                 </p>
-                <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
+                <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors duration-300">
                   Learn More
-                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
                 </div>
               </Link>
             ))}
