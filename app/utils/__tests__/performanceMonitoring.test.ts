@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach } from '@jest/globals';
+import { describe, it, expect, _beforeEach } from '@jest/globals';
 
 describe('Performance Monitoring', () => {
   it('should be implemented', () => {

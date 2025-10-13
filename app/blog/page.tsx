@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Right, User, Calendar } from 'lucide-react';
+import { ArrowRight as Right, User, Calendar } from 'lucide-react';
 
 const BlogPage: React.FC = () => {
   const categories = [

@@ -52,7 +52,6 @@ function fixSyntaxErrors(filePath) {
     return false;
   } catch (error) {
     console.error(`  ❌ Error processing ${filePath}:`, error.message);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     return false;
   }
 }

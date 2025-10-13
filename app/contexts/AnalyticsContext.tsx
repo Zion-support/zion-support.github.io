@@ -1,43 +1,65 @@
-'use client';
-import { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
+
 interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
-  trackPageView: (pageName: string) => void;
+  trackEvent: (event: string, properties?: Record<string, any>) => void;
+  trackPageView: (page: string) => void;
   setUser: (userId: string, properties?: Record<string, any>) => void;
-  isEnabled: boolean;
 }
+
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-const  ({ children }) => {
-  const [isEnabled, setIsEnabled] = useState(false);
-  const [userId, setUserId] = useState<string | null>(null);
+
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (!context) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+};
+
+interface AnalyticsProviderProps {
+  children: React.ReactNode;
+}
+
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  const [isInitialized, setIsInitialized] = useState(false);
+
   useEffect(() => {
-    // if analytics is enabled
-    setIsEnabled(true);
+    // Initialize analytics
+    setIsInitialized(true);
   }, []);
-  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-    if (!isEnabled) return;
+
+  const trackEvent = (event: string, properties?: Record<string, any>) => {
+    if (!isInitialized) return;
+    
     // Track event logic here
-    console.log('Analytics Event:', eventName, properties);
+    console.log('Event tracked:', event, properties);
   };
-  const trackPageView = (pageName: string) => {
-    if (!isEnabled) return;
+
+  const trackPageView = (page: string) => {
+    if (!isInitialized) return;
+    
     // Track page view logic here
-    console.log('Page View:', pageName);
+    console.log('Page view tracked:', page);
   };
-  const setUser = (newUserId: string, properties?: Record<string, any>) => {
-    setUserId(newUserId);
-    console.log('User Set:', newUserId, properties);
+
+  const setUser = (userId: string, properties?: Record<string, any>) => {
+    if (!isInitialized) return;
+    
+    // Set user logic here
+    console.log('User set:', userId, properties);
   };
-  const value: AnalyticsContextType = {
+
+  const value = {
     trackEvent,
     trackPageView,
-    setUser,
-    isEnabled,
+    setUser
   };
+
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
   );
 };
-export { AnalyticsContext };
+
+export default AnalyticsProvider;

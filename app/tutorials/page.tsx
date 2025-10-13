@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Right, Play, User, Star, Circle, Clock } from 'lucide-react';
+import { ArrowRight as Right, User, Star, Play, Clock } from 'lucide-react';
 
 const TutorialsPage: React.FC = () => {
   const tutorials = [
@@ -119,9 +119,9 @@ const TutorialsPage: React.FC = () => {
         <section className="py-10 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category, index) => (
+              {categories.map((category, _index) => (
                 <button
-                  key={index}
+                  key={_index}
                   className="px-6 py-3 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 text-white hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300"
                 >
                   {category.name} ({category.count})

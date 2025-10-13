@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
@@ -48,7 +48,7 @@ const Header: React.FC = () => {
                     onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
                   >
                     {item.name}
-                    {item.submenu && <ChevronDown className="inline w-4 h-4 ml-1" />}
+                    {item.submenu && <ChevronDown className="w-4 h-4 ml-1 inline" />}
                   </Link>
                   
                   {/* Dropdown Menu */}
@@ -70,23 +70,13 @@ const Header: React.FC = () => {
             </div>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-            >
-              Get Started
-            </Link>
-          </div>
-
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white p-2"
+              className="text-gray-300 hover:text-white focus:outline-none focus:text-white"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
@@ -94,23 +84,23 @@ const Header: React.FC = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 rounded-lg mt-2">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 rounded-lg mt-2">
               {navigationItems.map((item) => (
                 <div key={item.name}>
                   <Link
                     to={item.href}
-                    className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
                   </Link>
                   {item.submenu && (
-                    <div className="ml-4 space-y-1">
+                    <div className="pl-4 space-y-1">
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.name}
                           to={subItem.href}
-                          className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm"
+                          className="block px-3 py-2 rounded-md text-sm text-gray-300 hover:text-white hover:bg-slate-700"
                           onClick={() => setIsOpen(false)}
                         >
                           {subItem.name}
@@ -120,15 +110,6 @@ const Header: React.FC = () => {
                   )}
                 </div>
               ))}
-              <div className="pt-4">
-                <Link
-                  to="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Get Started
-                </Link>
-              </div>
             </div>
           </div>
         )}

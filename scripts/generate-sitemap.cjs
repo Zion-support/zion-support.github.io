@@ -180,10 +180,6 @@ const routes = [
 
 // Generate sitemap XML
 const generateSitemap = () => {
-=======
-// Generate comprehensive sitemap
-function generateSitemap() {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
   const baseUrl = 'https://ziontechgroup.com';
   const currentDate = new Date().toISOString();
   

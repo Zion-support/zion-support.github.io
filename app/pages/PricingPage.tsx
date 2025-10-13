@@ -1,15 +1,15 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { 
   CheckCircleIcon,
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon,
+  CogIcon,
   CurrencyDollarIcon,
   ClockIcon,
-  ShieldCheckIcon,
-  CogIcon
+  ShieldCheckIcon
 } from '@heroicons/react/24/outline';
 
 export default function PricingPage() {
@@ -151,7 +151,7 @@ export default function PricingPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map((plan, _index) => (
               <div 
                 key={plan.name}
                 className={`relative bg-gradient-to-br ${plan.color} p-8 rounded-xl border ${
@@ -209,7 +209,7 @@ export default function PricingPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {microSaaSPricing.map((product, index) => (
+            {microSaaSPricing.map((product, _index) => (
               <div 
                 key={product.name}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300"

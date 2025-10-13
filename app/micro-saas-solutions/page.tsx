@@ -1,21 +1,21 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { 
   CpuChipIcon,
-  ShieldCheckIcon,
-  CloudIcon,
-  ChartBarIcon,
-  GlobeAltIcon,
-  RocketLaunchIcon,
   ArrowRightIcon,
-  CheckCircleIcon,
   PhoneIcon,
   EnvelopeIcon,
-  CurrencyDollarIcon,
-  ClockIcon,
+  CogIcon,
+  ChartBarIcon,
+  GlobeAltIcon,
   UserGroupIcon,
-  CogIcon
+  CurrencyDollarIcon,
+  RocketLaunchIcon,
+  CloudIcon,
+  ShieldCheckIcon,
+  CheckCircleIcon,
+  ClockIcon
 } from '@heroicons/react/24/outline';
 
 export default function MicroSaaSSolutionsPage() {
@@ -280,7 +280,7 @@ export default function MicroSaaSSolutionsPage() {
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {microSaaSProducts.map((product, index) => {
+            {microSaaSProducts.map((product, _index) => {
               const Icon = product.icon;
               return (
                 <div 

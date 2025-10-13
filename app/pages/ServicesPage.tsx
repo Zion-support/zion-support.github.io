@@ -1,17 +1,17 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { 
   CpuChipIcon,
+  ArrowRightIcon,
+  PhoneIcon,
+  EnvelopeIcon,
   ShieldCheckIcon,
   CloudIcon,
   ChartBarIcon,
   GlobeAltIcon,
   RocketLaunchIcon,
-  ArrowRightIcon,
-  CheckCircleIcon,
-  PhoneIcon,
-  EnvelopeIcon
+  CheckCircleIcon
 } from '@heroicons/react/24/outline';
 
 export default function ServicesPage() {
@@ -252,7 +252,7 @@ export default function ServicesPage() {
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {services.map((service, index) => {
+            {services.map((service, _index) => {
               const Icon = service.icon;
               return (
                 <div 

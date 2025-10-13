@@ -1,4 +1,5 @@
-import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';
+import React from 'react';
+import { ArrowRight as Right, Workflow, Circle } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
@@ -15,43 +16,19 @@ const AIAutomationPlatform = () => {
     {
       title: "Smart Decision Making",
       description: "AI-driven decision making for automated business processes",
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: <Circle className="w-6 h-6" />,
-=======
-      icon: <Brain className="w-6 h-6" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
-=======
-      icon: <Circle className="w-6 h-6" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-3299
       color: "from-green-500 to-emerald-500"
     },
     {
       title: "Process Optimization",
       description: "Continuously optimize processes using machine learning",
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: <Circle className="w-6 h-6" />,
-=======
-      icon: <Settings className="w-6 h-6" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
-=======
-      icon: <Circle className="w-6 h-6" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-3299
       color: "from-purple-500 to-pink-500"
     },
     {
       title: "Integration Hub",
       description: "Connect and automate across all your business systems",
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: <Circle className="w-6 h-6" />,
-=======
-      icon: <Zap className="w-6 h-6" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
-=======
-      icon: <Circle className="w-6 h-6" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-3299
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -80,15 +57,7 @@ const AIAutomationPlatform = () => {
           <ResponsiveContainer>
             <div className="relative z-10 text-center py-20">
               <div className="flex items-center justify-center mb-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <Circle className="w-4 h-4 text-cyan-400 mr-2" />
-=======
-                <Brain className="w-4 h-4 text-cyan-400 mr-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
-=======
-                <Circle className="w-4 h-4 text-cyan-400 mr-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3299
                 <span className="text-cyan-400 text-sm font-medium">Intelligent Automation</span>
               </div>
               
@@ -109,15 +78,7 @@ const AIAutomationPlatform = () => {
                 </FuturisticButton>
                 <FuturisticButton
                   variant="outline"
-<<<<<<< HEAD
-<<<<<<< HEAD
                   icon={<Right className="w-5 h-5" />}
-=======
-                  icon={<Play className="w-5 h-5" />}
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
-=======
-                  icon={<Circle className="w-5 h-5" />}
->>>>>>> cursor/fix-errors-and-merge-to-main-3299
                 >
                   View Demo
                 </FuturisticButton>
@@ -139,8 +100,8 @@ const AIAutomationPlatform = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <FuturisticCard key={index} className="text-center">
+              {features.map((feature, _index) => (
+                <FuturisticCard key={_index} className="text-center">
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center`}>
                     {feature.icon}
                   </div>
@@ -169,8 +130,8 @@ const AIAutomationPlatform = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg">
+              {benefits.map((benefit, _index) => (
+                <div key={_index} className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg">
                   <Circle className="w-6 h-6 text-green-400 flex-shrink-0" />
                   <span className="text-white font-medium">{benefit}</span>
                 </div>
@@ -191,15 +152,7 @@ const AIAutomationPlatform = () => {
               </p>
               <FuturisticButton
                 size="lg"
-<<<<<<< HEAD
-<<<<<<< HEAD
                 icon={<Right className="w-6 h-6" />}
-=======
-                icon={<Zap className="w-6 h-6" />}
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
-=======
-                icon={<Circle className="w-6 h-6" />}
->>>>>>> cursor/fix-errors-and-merge-to-main-3299
               >
                 Start Your Automation Journey
               </FuturisticButton>

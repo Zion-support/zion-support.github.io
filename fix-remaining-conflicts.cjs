@@ -5,11 +5,7 @@ const path = require('path');
 
 // Function to fix remaining merge conflicts
 function fixRemainingConflicts(content) {
-  // Remove merge conflict markers and keep the content after =======
-  content = content.replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
-  content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
-  
-  // Fix specific syntax issues
+  // Remove merge conflict markers and keep the content after   content = content.replace(/  // Fix specific syntax issues
   content = content.replace(/\}\s*\)\s*}/g, '})}');
   content = content.replace(/\}\s*\)\s*\)/g, '}))');
   content = content.replace(/\}\s*\)\s*\)\s*\)/g, '})))');

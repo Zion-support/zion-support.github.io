@@ -1,57 +1,32 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Right, Circle } from 'lucide-react';
-=======
-import { Right, Circle, MessageCircle, Mail, Phone, BookOpen } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
+import { ArrowRight as Right, MessageCircle, Phone, Mail, BookOpen, Circle } from 'lucide-react';
 
 const SupportPage: React.FC = () => {
   const supportOptions = [
     {
-<<<<<<< HEAD
-      icon: 'Chat',
-=======
       icon: MessageCircle,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'Live Chat',
       description: 'Get instant help from our support team',
       action: 'Start Chat',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-<<<<<<< HEAD
-      icon: 'Phone',
+      icon: Phone,
       title: 'Phone Support',
-=======
-      icon: Mail,
-      title: 'Email Support',
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       description: 'Call us for immediate assistance',
       action: 'Call Now',
       color: 'from-green-500 to-emerald-500'
     },
     {
-<<<<<<< HEAD
-      icon: 'Email',
+      icon: Mail,
       title: 'Email Support',
       description: 'Send us a detailed message',
       action: 'Send Email',
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: 'Book',
-=======
-      icon: Phone,
-      title: 'Phone Support',
-      description: 'Call us for immediate assistance',
-      action: 'Call Now',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
       icon: BookOpen,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'Documentation',
       description: 'Browse our comprehensive guides',
       action: 'View Docs',
@@ -109,10 +84,10 @@ const SupportPage: React.FC = () => {
               How Can We Help You?
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {supportOptions.map((option, index) => {
+              {supportOptions.map((option, _index) => {
                 const Icon = option.icon;
                 return (
-                  <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center group">
+                  <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center group">
                     <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${option.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                       <Icon className="w-8 h-8 text-white" />
                     </div>
@@ -136,8 +111,8 @@ const SupportPage: React.FC = () => {
               Frequently Asked Questions
             </h2>
             <div className="space-y-6">
-              {faqs.map((faq, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
+              {faqs.map((faq, _index) => (
+                <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
                   <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                   <p className="text-gray-300">{faq.answer}</p>
                 </div>
@@ -146,31 +121,23 @@ const SupportPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Contact Info */}
+        {/* Contact Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-white text-center mb-16">
-              Contact Information
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Still Need Help?
             </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 text-center">
-                <Circle className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2"></h3>
-                <p className="text-cyan-400 font-medium">+1 (555) 123-4567</p>
-                <p className="text-gray-400 text-sm">Mon-Fri 9AM-6PM EST</p>
-              </div>
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 text-center">
-                <Circle className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
-                <p className="text-cyan-400 font-medium">support@ziontechgroup.com</p>
-                <p className="text-gray-400 text-sm">24/7 Support</p>
-              </div>
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 text-center">
-                <Circle className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
-                <p className="text-cyan-400 font-medium">123 Tech Street</p>
-                <p className="text-gray-400 text-sm">San Francisco, CA 94105</p>
-              </div>
+            <p className="text-xl text-gray-300 mb-8">
+              Can't find what you're looking for? Our support team is ready to help you with any questions or issues.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
+                Contact Support
+                <Right className="w-5 h-5 ml-2 inline" />
+              </button>
+              <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
+                View Documentation
+              </button>
             </div>
           </div>
         </section>
