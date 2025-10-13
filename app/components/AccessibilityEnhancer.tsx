@@ -1,13 +1,7 @@
-import React, { useEffect, useState } from 'react';';'
-
-=======
+'use client';
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
@@ -15,59 +9,66 @@ interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
+  children,
+  enableKeyboardNavigation = true,
+  enableScreenReaderSupport = true,
+  enableHighContrast = false,
+  enableFocusManagement = true
+}) => {
   useEffect(() => {
     // Add accessibility enhancements
-    const addSkipLinks = () => {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    };
-
-    const enhanceFocusManagement = () => {
-      // Add focus management for better keyboard navigation
-      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-      
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Tab') {
-          const focusable = document.querySelectorAll(focusableElements);
-          const firstFocusable = focusable[0] as HTMLElement;
-          const lastFocusable = focusable[focusable.length - 1] as HTMLElement;
-
-          if (e.shiftKey) {
-            if (document.activeElement === firstFocusable) {
-              lastFocusable?.focus();
-              e.preventDefault();
-            }
-          } else {
-            if (document.activeElement === lastFocusable) {
-              firstFocusable?.focus();
-              e.preventDefault();
-            }
-          }
-        }
-      });
-const links = document.querySelectorAll('a:not([aria-label])')'
-      links.forEach(link => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {'
-          link.setAttribute('aria-label', 'Link')'
-        }
-      })
+    if (enableKeyboardNavigation) {
+      document.addEventListener('keydown', handleKeyboardNavigation);
     }
 
-    addSkipLinks();
-    enhanceFocusManagement();
+    if (enableScreenReaderSupport) {
+      // Add screen reader support
+      document.body.setAttribute('aria-live', 'polite');
+    }
+
+    if (enableHighContrast) {
+      document.body.classList.add('high-contrast');
+    }
+
+    if (enableFocusManagement) {
+      // Manage focus for better accessibility
+      const focusableElements = document.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      
+      focusableElements.forEach((element) => {
+        element.setAttribute('tabindex', '0');
+      });
+    }
 
     return () => {
-      // Cleanup if needed
+      if (enableKeyboardNavigation) {
+        document.removeEventListener('keydown', handleKeyboardNavigation);
+      }
     };
-  }, []);
+  }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement]);
+
+  const handleKeyboardNavigation = (event: KeyboardEvent) => {
+    // Handle keyboard navigation
+    if (event.key === 'Tab') {
+      // Ensure proper tab order
+      const focusableElements = document.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      
+      const firstElement = focusableElements[0] as HTMLElement;
+      const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+      
+      if (event.shiftKey && document.activeElement === firstElement) {
+        event.preventDefault();
+        lastElement.focus();
+      } else if (!event.shiftKey && document.activeElement === lastElement) {
+        event.preventDefault();
+        firstElement.focus();
+      }
+    }
+  };
 
   return <>{children}</>;
 };
