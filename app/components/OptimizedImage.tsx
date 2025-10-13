@@ -1,17 +1,13 @@
-import React, { useState, useCallback } from 'react';
-import { Loader2, AlertCircle } from 'lucide-react';
+import React, { useState, useRef, useEffect } from 'react';
 
 interface OptimizedImageProps {
   src: string;
   alt: string;
+  className?: string;
   width?: number;
   height?: number;
-  className?: string;
   priority?: boolean;
-  placeholder?: 'blur' | 'empty';
-  blurDataURL?: string;
-  sizes?: string;
-  loading?: 'lazy' | 'eager';
+  placeholder?: string;
   onLoad?: () => void;
   onError?: () => void;
 }
@@ -19,88 +15,80 @@ interface OptimizedImageProps {
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
+  className = '',
   width,
   height,
-  className = '',
   priority = false,
-  placeholder = 'empty',
-  blurDataURL = '',
-  // quality = 75, // Currently unused but kept for future implementation
-  sizes = '100vw',
-  loading = 'lazy',
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+',
   onLoad,
-  onError
+  onError,
 }) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
 
-  const handleLoad = useCallback(() => {
-    setIsLoading(false);
-    setImageLoaded(true);
+  useEffect(() => {
+    if (priority) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [priority]);
+
+  const handleLoad = () => {
+    setIsLoaded(true);
     onLoad?.();
-  }, [onLoad]);
+  };
 
-  const handleError = useCallback(() => {
-    setIsLoading(false);
+  const handleError = () => {
     setHasError(true);
     onError?.();
-  }, [onError]);
+  };
 
-  if (hasError) {
-    return (
-      <div 
-        className={`flex items-center justify-center bg-gray-200 text-gray-500 ${className}`}
-        style={{ width, height }}
-        role="img"
-        aria-label={alt}
-      >
-        <div className="text-center">
-          <AlertCircle className="w-8 h-8 mx-auto mb-2" />
-          <p className="text-sm">Failed to load image</p>
-        </div>
-      </div>
-    );
-  }
+  const imageSrc = isInView ? src : placeholder;
 
   return (
-    <div className={`relative overflow-hidden ${className}`} style={{ width, height }}>
-      {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800">
-          {placeholder === 'blur' && blurDataURL ? (
-            <img 
-              src={blurDataURL} 
-              alt="" 
-              className="w-full h-full object-cover filter blur-sm"
-            />
-          ) : (
-            <div className="text-center">
-              <Loader2 className="w-6 h-6 animate-spin text-cyan-500 mx-auto mb-2" />
-              <p className="text-xs text-gray-500">Loading...</p>
-            </div>
-          )}
+    <div
+      ref={imgRef}
+      className={`relative overflow-hidden ${className}`}
+      style={{ width, height }}
+    >
+      {!isLoaded && !hasError && (
+        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
+          <div className="w-8 h-8 border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin"></div>
         </div>
       )}
-
-      <img
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-        loading={priority ? 'eager' : loading}
-        sizes={sizes}
-        className={`transition-opacity duration-300 ${
-          imageLoaded ? 'opacity-100' : 'opacity-0'
-        } ${className}`}
-        onLoad={handleLoad}
-        onError={handleError}
-        style={{
-          width: width ? `${width}px` : '100%',
-          height: height ? `${height}px` : 'auto',
-          objectFit: 'cover'
-        }}
-        decoding="async"
-      />
+      
+      {hasError ? (
+        <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
+          <div className="text-gray-400 text-sm">Failed to load image</div>
+        </div>
+      ) : (
+        <img
+          src={imageSrc}
+          alt={alt}
+          className={`transition-opacity duration-300 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+          onLoad={handleLoad}
+          onError={handleError}
+          loading={priority ? 'eager' : 'lazy'}
+          decoding="async"
+        />
+      )}
     </div>
   );
 };
