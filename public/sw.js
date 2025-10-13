@@ -1,112 +1,123 @@
-const CACHE_NAME = 'zion-tech-cache-v1'
-const STATIC_CACHE_URLS = [
+const CACHE_NAME = 'zion-tech-group-v1';
+const STATIC_CACHE = 'static-v1';
+const DYNAMIC_CACHE = 'dynamic-v1';
+
+// Static assets to cache
+const STATIC_ASSETS = [
   '/',
-  '/about',
-  '/services',
-  '/contact',
-  '/styles/main.css',
-  '/scripts/main.js'
-]
+  '/index.html',
+  '/manifest.json',
+  '/offline.html',
+  '/images/logo.webp',
+  '/images/hero-bg.webp',
+];
 
 // Install event - cache static assets
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME)
+    caches.open(STATIC_CACHE)
       .then((cache) => {
-        console.log('Caching static assets')
-        return cache.addAll(STATIC_CACHE_URLS)
+        console.log('Caching static assets');
+        return cache.addAll(STATIC_ASSETS);
       })
       .then(() => {
-        console.log('Service Worker installed')
-        return self.skipWaiting()
+        console.log('Static assets cached');
+        return self.skipWaiting();
       })
-  )
-})
+  );
+});
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-            console.log('Deleting old cache:', cacheName)
-            return caches.delete(cacheName)
-          }
-        })
-      )
-    }).then(() => {
-      console.log('Service Worker activated')
-      return self.clients.claim()
-    })
-  )
-})
+    caches.keys()
+      .then((cacheNames) => {
+        return Promise.all(
+          cacheNames
+            .filter((cacheName) => {
+              return cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE;
+            })
+            .map((cacheName) => {
+              console.log('Deleting old cache:', cacheName);
+              return caches.delete(cacheName);
+            })
+        );
+      })
+      .then(() => {
+        console.log('Service worker activated');
+        return self.clients.claim();
+      })
+  );
+});
 
 // Fetch event - serve from cache, fallback to network
 self.addEventListener('fetch', (event) => {
+  const { request } = event;
+  const url = new URL(request.url);
+
   // Skip non-GET requests
-  if (event.request.method !== 'GET') {
-    return
+  if (request.method !== 'GET') {
+    return;
   }
 
-  // Skip chrome-extension and other non-http requests
-  if (!event.request.url.startsWith('http')) {
-    return
+  // Skip external requests
+  if (url.origin !== location.origin) {
+    return;
   }
 
   event.respondWith(
-    caches.match(event.request)
+    caches.match(request)
       .then((cachedResponse) => {
         // Return cached version if available
         if (cachedResponse) {
-          return cachedResponse
+          return cachedResponse;
         }
 
-        // Otherwise fetch from network
-        return fetch(event.request)
+        // Otherwise, fetch from network
+        return fetch(request)
           .then((response) => {
             // Don't cache non-successful responses
             if (!response || response.status !== 200 || response.type !== 'basic') {
-              return response
+              return response;
             }
 
             // Clone the response
-            const responseToCache = response.clone()
+            const responseToCache = response.clone();
 
-            // Cache the response for future use
-            caches.open(CACHE_NAME)
+            // Cache dynamic content
+            caches.open(DYNAMIC_CACHE)
               .then((cache) => {
-                cache.put(event.request, responseToCache)
-              })
+                cache.put(request, responseToCache);
+              });
 
-            return response
+            return response;
           })
           .catch(() => {
             // Return offline page for navigation requests
-            if (event.request.mode === 'navigate') {
-              return caches.match('/offline.html')
+            if (request.mode === 'navigate') {
+              return caches.match('/offline.html');
             }
-          })
+          });
       })
-  )
-})
+  );
+});
 
 // Background sync for offline form submissions
 self.addEventListener('sync', (event) => {
   if (event.tag === 'background-sync') {
     event.waitUntil(
-      // Process offline form submissions
-      processOfflineSubmissions()
-    )
+      // Handle offline form submissions
+      handleOfflineSubmissions()
+    );
   }
-})
+});
 
 // Push notifications
 self.addEventListener('push', (event) => {
   const options = {
     body: event.data ? event.data.text() : 'New update available',
-    icon: '/icons/icon-192x192.png',
-    badge: '/icons/badge-72x72.png',
+    icon: '/images/icon-192x192.png',
+    badge: '/images/badge-72x72.png',
     vibrate: [100, 50, 100],
     data: {
       dateOfArrival: Date.now(),
@@ -116,67 +127,68 @@ self.addEventListener('push', (event) => {
       {
         action: 'explore',
         title: 'View Details',
-        icon: '/icons/checkmark.png'
+        icon: '/images/checkmark.png'
       },
       {
         action: 'close',
         title: 'Close',
-        icon: '/icons/xmark.png'
+        icon: '/images/xmark.png'
       }
     ]
-  }
+  };
 
   event.waitUntil(
     self.registration.showNotification('Zion Tech Group', options)
-  )
-})
+  );
+});
 
 // Notification click handler
 self.addEventListener('notificationclick', (event) => {
-  event.notification.close()
+  event.notification.close();
 
   if (event.action === 'explore') {
     event.waitUntil(
       clients.openWindow('/')
-    )
+    );
   }
-})
+});
 
-// Helper function to process offline submissions
-async function processOfflineSubmissions() {
+// Helper function for offline form submissions
+async function handleOfflineSubmissions() {
   try {
-    // Get offline submissions from IndexedDB
-    const submissions = await getOfflineSubmissions()
+    // Get stored form data from IndexedDB
+    const submissions = await getStoredSubmissions();
     
     for (const submission of submissions) {
       try {
-        // Submit to server
-        await fetch('/api/submit', {
+        // Attempt to submit the form
+        const response = await fetch('/api/contact', {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
           },
-          body: JSON.stringify(submission)
-        })
-        
-        // Remove from offline storage
-        await removeOfflineSubmission(submission.id)
+          body: JSON.stringify(submission.data)
+        });
+
+        if (response.ok) {
+          // Remove from storage if successful
+          await removeStoredSubmission(submission.id);
+        }
       } catch (error) {
-        console.log('Failed to submit offline form:', error)
+        console.log('Failed to submit offline form:', error);
       }
     }
   } catch (error) {
-    console.log('Failed to process offline submissions:', error)
+    console.log('Error handling offline submissions:', error);
   }
 }
 
-// Helper functions for IndexedDB operations
-async function getOfflineSubmissions() {
+// IndexedDB helpers (simplified)
+async function getStoredSubmissions() {
   // Implementation would depend on your IndexedDB setup
-  return []
+  return [];
 }
 
-async function removeOfflineSubmission(id) {
+async function removeStoredSubmission(id) {
   // Implementation would depend on your IndexedDB setup
-  console.log('Removing offline submission:', id)
 }

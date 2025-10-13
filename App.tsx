@@ -10,9 +10,10 @@ import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
 import ErrorBoundary from "./app/components/ErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
-import PerformanceOptimizer from "./app/components/EnhancedPerformanceOptimizer";
+import EnhancedPerformanceOptimizer from "./app/components/EnhancedPerformanceOptimizer";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
+import EnhancedSEO from "./app/components/EnhancedSEO";
 import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import FuturisticBackground from "./app/components/FuturisticBackground";
@@ -400,7 +401,7 @@ function App() {
                 </Routes>
               </Suspense>
               <Footer />
-              <PerformanceOptimizer />
+              <EnhancedPerformanceOptimizer />
               <AccessibilityEnhancer />
               <EnhancedAccessibility>
                 <div></div>
@@ -411,6 +412,7 @@ function App() {
                 <PerformanceMonitor />
                 <PerformanceEnhancer />
                 <SEOOptimizer />
+                <EnhancedSEO />
               </div>
             </AnalyticsProvider>
           </div>
