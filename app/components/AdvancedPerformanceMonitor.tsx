@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 'use client'
 import { useEffect, useState } from 'react'
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-c974
 
 
 interface PerformanceMetrics {
@@ -12,14 +15,18 @@ interface PerformanceMetrics {
   loadTime: number | null
 }
 
+<<<<<<< HEAD
 const AdvancedPerformanceMonitor = () => {
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-c974
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
     fid: null,
     cls: null,
     ttfb: null,
+<<<<<<< HEAD
     memoryUsage: null,
     loadTime: null
   })
@@ -58,6 +65,9 @@ const AdvancedPerformanceMonitor = () => {
         console.error('Failed to measure web vitals:', error);
 
 
+=======
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-c974
       }
     }
 
@@ -102,8 +112,11 @@ const AdvancedPerformanceMonitor = () => {
 
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
+<<<<<<< HEAD
         console.log(`Performance Metric: ${name} = ${value}`);
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-c974
 
       }
     }

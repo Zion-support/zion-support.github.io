@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 export default function PartnersZionTechGroup() {
   return (
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>Partners - Zion Tech Group</title>
       </Helmet>
@@ -23,6 +24,8 @@ export default function PartnersZionTechGroup() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-c974
 
       </div>
     </>

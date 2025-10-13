@@ -51,8 +51,11 @@ const ContactForm: React.FC = () => {
         service: "",
       });
     } catch (error) {
+<<<<<<< HEAD
       console.error('Failed to submit contact form:', error);
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-c974
 
     } finally {
       setIsSubmitting(false);

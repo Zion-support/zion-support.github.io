@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ArrowRight } from "lucide-react";
 
 import { Helmet } from "react-helmet-async";
@@ -28,3 +29,6 @@ export default function CommunityZionTechGroup() {
   );
 }
 
+=======
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-c974

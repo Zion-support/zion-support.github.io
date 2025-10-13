@@ -6,6 +6,7 @@ import "./app/styles/futuristic.css";
 import "./app/styles/futuristic-enhanced.css";
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
+import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
@@ -203,6 +204,8 @@ const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 
 // Main App Component
 function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
+
   // Initialize performance optimizations
   usePerformanceOptimization({
     enableLazyLoading: true,
@@ -212,6 +215,10 @@ function App() {
     enableCaching: true,
   });
 
+  const toggleSidebar = React.useCallback(() => {
+    setIsSidebarOpen(prev => !prev);
+  }, []);
+
   return (
     <ErrorHandler>
       <EnhancedErrorBoundary>
@@ -220,7 +227,8 @@ function App() {
             <Router>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                 <FuturisticBackground>
-                  <Navigation />
+                  <Navigation onSidebarToggle={toggleSidebar} />
+                  <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
                   <Breadcrumb />
                   <main id="main-content" role="main">
                     <Suspense fallback={<LoadingPage />}>

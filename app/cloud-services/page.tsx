@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
@@ -28,4 +29,10 @@ export default function GDataAnalyticsZionTechGroupPage() {
     </>
   );
 }
+=======
+
+
+export default function GDataAnalyticsZionTechGroupPage() {
+  return (
+>>>>>>> cursor/website-audit-and-update-with-deployment-c974
 

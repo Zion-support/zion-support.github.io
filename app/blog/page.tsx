@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 
+=======
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-c974
 
 export default function Blog() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -176,7 +180,10 @@ export default function Blog() {
   return (
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>Blog - Zion Tech Group</title>
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-c974
 
         <meta
           name="description"
