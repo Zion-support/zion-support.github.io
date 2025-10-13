@@ -6,7 +6,7 @@ import { Home, ArrowLeft, Search, AlertTriangle, RefreshCw } from 'lucide-react'
 
 const NotFoundPage: React.FC = () => {
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>404 - Page Not Found | Zion Tech Group</title>
         <meta name="description" content="The page you're looking for doesn't exist. Return to Zion Tech Group's homepage or explore our AI and IT solutions." />
@@ -15,7 +15,6 @@ const NotFoundPage: React.FC = () => {
         <meta property="og:description" content="The page you're looking for doesn't exist. Return to our homepage or explore our services." />
         <meta property="og:type" content="website" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
         <div className="max-w-2xl w-full text-center">
           {/* 404 Animation */}
@@ -27,17 +26,14 @@ const NotFoundPage: React.FC = () => {
               <AlertTriangle className="w-6 h-6 text-red-400" />
             </div>
           </div>
-
           {/* Error Message */}
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Page Not Found
           </h1>
-          
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
             Oops! The page you're looking for seems to have vanished into the digital void. 
             Don't worry, even our AI can't predict everything!
           </p>
-
           {/* Search Suggestion */}
           <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 mb-8">
             <div className="flex items-center justify-center mb-4">
@@ -66,7 +62,6 @@ const NotFoundPage: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link
@@ -76,7 +71,6 @@ const NotFoundPage: React.FC = () => {
               <Home className="w-5 h-5 mr-2" />
               Go Home
             </Link>
-            
             <button
               onClick={() => window.history.back()}
               className="flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
@@ -85,7 +79,6 @@ const NotFoundPage: React.FC = () => {
               Go Back
             </button>
           </div>
-
           {/* Help Section */}
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6">
             <h3 className="text-lg font-semibold text-white mb-3">
@@ -110,7 +103,6 @@ const NotFoundPage: React.FC = () => {
               </a>
             </div>
           </div>
-
           {/* Fun Fact */}
           <div className="mt-8 p-4 bg-slate-800/30 rounded-lg">
             <p className="text-sm text-gray-400">
@@ -120,7 +112,7 @@ const NotFoundPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

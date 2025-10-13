@@ -9,6 +9,5 @@ export default function WebVitalsTracker({ className = '', children }: WebVitals
   return (
     <div className={`web-vitals-tracker ${className}`}>
       {children}
-    </div>
   );
 }

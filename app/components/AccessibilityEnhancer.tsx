@@ -148,9 +148,9 @@ export default function AccessibilityEnhancer() {
     const addSkipLinks = () => {
       const skipLinks = document.createElement('div');
       skipLinks.innerHTML = `
-        <a href="#main-content" class="skip-link">Skip to main content</a>
-        <a href="#navigation" class="skip-link">Skip to navigation</a>
-        <a href="#footer" class="skip-link">Skip to footer</a>
+        <a href="#main-content" class="skip-link">Skip to main content
+        <a href="#navigation" class="skip-link">Skip to navigation
+        <a href="#footer" class="skip-link">Skip to footer
       `;
       skipLinks.className = 'skip-links';
       document.body.insertBefore(skipLinks, document.body.firstChild);
@@ -247,7 +247,6 @@ export default function AccessibilityEnhancer() {
     setIsVisible(prev => !prev);
   };
 
-
   const resetSettings = () => {
     const defaultSettings: AccessibilitySettings = {
       highContrast: false,
@@ -261,7 +260,7 @@ export default function AccessibilityEnhancer() {
   };
 
   return (
-    <>
+    <React.Fragment>
       {/* Toggle Button */}
       <button
         onClick={togglePanel}
@@ -271,16 +270,11 @@ export default function AccessibilityEnhancer() {
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
-        </svg>
-      </button>
-
       {/* Settings Panel */}
       {isVisible && (
         <div className="fixed top-16 right-4 z-50 bg-white rounded-lg shadow-xl p-6 w-80 max-w-sm">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">
             Accessibility Settings
-          </h3>
-          
           <div className="space-y-4">
             <label className="flex items-center space-x-3">
               <input
@@ -289,9 +283,7 @@ export default function AccessibilityEnhancer() {
                 onChange={(e) => updateSetting('highContrast', e.target.checked)}
                 className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
               />
-              <span className="text-sm text-gray-700">High Contrast</span>
-            </label>
-
+              <span className="text-sm text-gray-700">High Contrast
             <label className="flex items-center space-x-3">
               <input
                 type="checkbox"
@@ -299,9 +291,7 @@ export default function AccessibilityEnhancer() {
                 onChange={(e) => updateSetting('largeText', e.target.checked)}
                 className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
               />
-              <span className="text-sm text-gray-700">Large Text</span>
-            </label>
-
+              <span className="text-sm text-gray-700">Large Text
             <label className="flex items-center space-x-3">
               <input
                 type="checkbox"
@@ -309,9 +299,7 @@ export default function AccessibilityEnhancer() {
                 onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
                 className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
               />
-              <span className="text-sm text-gray-700">Reduce Motion</span>
-            </label>
-
+              <span className="text-sm text-gray-700">Reduce Motion
             <label className="flex items-center space-x-3">
               <input
                 type="checkbox"
@@ -319,17 +307,12 @@ export default function AccessibilityEnhancer() {
                 onChange={(e) => updateSetting('focusVisible', e.target.checked)}
                 className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
               />
-              <span className="text-sm text-gray-700">Enhanced Focus</span>
-            </label>
-          </div>
-
+              <span className="text-sm text-gray-700">Enhanced Focus
           <button
             onClick={togglePanel}
             className="mt-4 w-full bg-gray-200 text-gray-800 py-2 px-4 rounded hover:bg-gray-300 transition-colors duration-200"
           >
             Close
-          </button>
-        </div>
       )}
 
       {/* CSS for accessibility features */}
@@ -374,7 +357,6 @@ export default function AccessibilityEnhancer() {
         }
         `
       }} />
-    </>
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
@@ -509,7 +491,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     <div className="accessibility-enhanced">
       {/* Accessibility Controls */}
       <div className="accessibility-controls fixed top-4 right-4 z-50 bg-slate-800 p-4 rounded-lg shadow-lg border border-slate-700">
-        <h3 className="text-white text-sm font-semibold mb-3">Accessibility</h3>
+        <h3 className="text-white text-sm font-semibold mb-3">Accessibility
         <div className="space-y-2">
           <button
             onClick={toggleHighContrast}
@@ -517,7 +499,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
             aria-label="Toggle high contrast mode"
           >
             {isHighContrast ? 'Disable' : 'Enable'} High Contrast
-          </button>
           <div className="flex items-center space-x-2">
             <button
               onClick={decreaseFontSize}
@@ -525,21 +506,14 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
               aria-label="Decrease font size"
             >
               A-
-            </button>
-            <span className="text-sm text-gray-300">{fontSize}px</span>
+            <span className="text-sm text-gray-300">{fontSize}px
             <button
               onClick={increaseFontSize}
               className="text-sm text-gray-300 hover:text-white transition-colors"
               aria-label="Increase font size"
             >
               A+
-            </button>
-          </div>
-        </div>
-      </div>
-
       {children}
-    </div>
   );
 }
 'use client';
@@ -611,7 +585,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, [enableScreenReaderSupport]);
 
-  return <>{children}</>;
+  return <React.Fragment>{children}</React.Fragment>;
 };
 
 export default AccessibilityEnhancer;
@@ -817,8 +791,6 @@ export default AccessibilityEnhancer
           aria-label="Open accessibility settings"
         >
           ♿
-        </button>
-        
         <div
           id="accessibility-panel"
           className="absolute bottom-16 right-0 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg border min-w-64"
@@ -826,8 +798,6 @@ export default AccessibilityEnhancer
         >
           <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
             Accessibility Settings
-          </h3>
-          
           <div className="space-y-3">
             <label className="flex items-center space-x-2">
               <input
@@ -836,9 +806,7 @@ export default AccessibilityEnhancer
                 onChange={(e) => updateSetting('highContrast', e.target.checked)}
                 className="rounded"
               />
-              <span className="text-sm text-gray-700 dark:text-gray-300">High Contrast</span>
-            </label>
-            
+              <span className="text-sm text-gray-700 dark:text-gray-300">High Contrast
             <label className="flex items-center space-x-2">
               <input
                 type="checkbox"
@@ -846,9 +814,7 @@ export default AccessibilityEnhancer
                 onChange={(e) => updateSetting('largeText', e.target.checked)}
                 className="rounded"
               />
-              <span className="text-sm text-gray-700 dark:text-gray-300">Large Text</span>
-            </label>
-            
+              <span className="text-sm text-gray-700 dark:text-gray-300">Large Text
             <label className="flex items-center space-x-2">
               <input
                 type="checkbox"
@@ -856,9 +822,7 @@ export default AccessibilityEnhancer
                 onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
                 className="rounded"
               />
-              <span className="text-sm text-gray-700 dark:text-gray-300">Reduce Motion</span>
-            </label>
-            
+              <span className="text-sm text-gray-700 dark:text-gray-300">Reduce Motion
             <label className="flex items-center space-x-2">
               <input
                 type="checkbox"
@@ -866,19 +830,12 @@ export default AccessibilityEnhancer
                 onChange={(e) => updateSetting('focusVisible', e.target.checked)}
                 className="rounded"
               />
-              <span className="text-sm text-gray-700 dark:text-gray-300">Focus Indicators</span>
-            </label>
-          </div>
-          
+              <span className="text-sm text-gray-700 dark:text-gray-300">Focus Indicators
           <button
             onClick={resetSettings}
             className="mt-3 w-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded text-sm hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
           >
             Reset to Defaults
-          </button>
-        </div>
-      </div>
-    </div>
   );
 };
 

@@ -25,7 +25,7 @@ interface AnalyticsProviderProps {
     }
   }, [enableTracking]);
 
-  return <>{children}</>;
+  return <React.Fragment>{children}</React.Fragment>;
   const value: AnalyticsContextType = {
     track,
     identify,

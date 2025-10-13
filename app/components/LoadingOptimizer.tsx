@@ -32,10 +32,10 @@ export default function LoadingOptimizer({
   }, [delay]);
 
   if (isLoading && showFallback) {
-    return <>{fallback}</>;
+    return <React.Fragment>{fallback}</React.Fragment>;
   }
 
-  return <>{children}</>;
+  return <React.Fragment>{children}</React.Fragment>;
 }
 
 function DefaultLoadingSpinner() {
@@ -43,15 +43,11 @@ function DefaultLoadingSpinner() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
         <div className="relative">
-          <div className="w-16 h-16 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mx-auto mb-4"></div>
+          <div className="w-16 h-16 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mx-auto mb-4">
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-8 h-8 bg-blue-600 rounded-full animate-pulse"></div>
-          </div>
-        </div>
-        <h2 className="text-xl font-semibold text-white mb-2">Loading Zion Tech Group</h2>
-        <p className="text-gray-300">Preparing your experience...</p>
-      </div>
-    </div>
+            <div className="w-8 h-8 bg-blue-600 rounded-full animate-pulse">
+        <h2 className="text-xl font-semibold text-white mb-2">Loading Zion Tech Group
+        <p className="text-gray-300">Preparing your experience...
   );
 }
 
@@ -129,7 +125,6 @@ export function LazyImage({
       {!isLoaded && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse rounded">
           <img src={placeholder} alt="" className="w-full h-full object-cover opacity-0" />
-        </div>
       )}
       {isInView && (
         <img
@@ -142,6 +137,5 @@ export function LazyImage({
           loading="lazy"
         />
       )}
-    </div>
   );
 }

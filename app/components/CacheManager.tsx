@@ -223,7 +223,6 @@
         aria-label="Show cache manager"
       >
         📦
-      </button>
     )
   }
 
@@ -232,56 +231,40 @@
       <div className="flex justify-between items-center mb-3">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
           Cache Manager
-        </h3>
         <button
           onClick={() => setIsVisible(false)}
           className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
           aria-label="Close cache manager"
         >
           ✕
-        </button>
-      </div>
-
       <div className="space-y-2 text-sm">
         <div className="flex justify-between">
-          <span className="text-gray-600 dark:text-gray-400">Cache Hits:</span>
-          <span className="text-green-600 dark:text-green-400">{stats.hits}</span>
-        </div>
+          <span className="text-gray-600 dark:text-gray-400">Cache Hits:
+          <span className="text-green-600 dark:text-green-400">{stats.hits}
         <div className="flex justify-between">
-          <span className="text-gray-600 dark:text-gray-400">Cache Misses:</span>
-          <span className="text-red-600 dark:text-red-400">{stats.misses}</span>
-        </div>
+          <span className="text-gray-600 dark:text-gray-400">Cache Misses:
+          <span className="text-red-600 dark:text-red-400">{stats.misses}
         <div className="flex justify-between">
-          <span className="text-gray-600 dark:text-gray-400">Cache Size:</span>
+          <span className="text-gray-600 dark:text-gray-400">Cache Size:
           <span className="text-blue-600 dark:text-blue-400">
             {formatBytes(stats.size)}
-          </span>
-        </div>
         <div className="flex justify-between">
-          <span className="text-gray-600 dark:text-gray-400">Hit Rate:</span>
+          <span className="text-gray-600 dark:text-gray-400">Hit Rate:
           <span className="text-purple-600 dark:text-purple-400">
             {stats.hits + stats.misses > 0 
               ? Math.round((stats.hits / (stats.hits + stats.misses)) * 100) 
               : 0}%
-          </span>
-        </div>
-      </div>
-
       <div className="mt-4 space-y-2">
         <button
           onClick={clearCache}
           className="w-full bg-red-500 text-white px-3 py-2 rounded text-sm hover:bg-red-600 transition-colors"
         >
           Clear All Cache
-        </button>
         <button
           onClick={() => setStats(prev => ({ ...prev, hits: 0, misses: 0 }))}
           className="w-full bg-gray-500 text-white px-3 py-2 rounded text-sm hover:bg-gray-600 transition-colors"
         >
           Reset Stats
-        </button>
-      </div>
-    </div>
   )
 }
 

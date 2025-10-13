@@ -206,9 +206,7 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
     return (
       <div className={`ad-analytics-dashboard ${className}`}>
         <div className="flex items-center justify-center h-64">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-        </div>
-      </div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600">
     );
   }
 
@@ -216,11 +214,9 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
     return (
       <div className={`ad-analytics-dashboard ${className}`}>
         <div className="text-center py-12">
-          <div className="text-6xl mb-4">📊</div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-2">No analytics data available</h3>
-          <p className="text-gray-600">Start running campaigns to see analytics data</p>
-        </div>
-      </div>
+          <div className="text-6xl mb-4">📊
+          <h3 className="text-xl font-semibold text-gray-900 mb-2">No analytics data available
+          <p className="text-gray-600">Start running campaigns to see analytics data
     );
   }
 
@@ -229,36 +225,27 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
       {/* Header */}
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900">Ad Analytics Dashboard</h1>
-            <p className="text-gray-600 mt-1">Track and analyze your advertising performance</p>
-          </div>
+            <h1 className="text-3xl font-bold text-gray-900">Ad Analytics Dashboard
+            <p className="text-gray-600 mt-1">Track and analyze your advertising performance
           <div className="flex items-center gap-3">
             <select
               value={selectedPeriod}
               onChange={(e) => setSelectedPeriod(e.target.value)}
               className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
-              <option value="7d">Last 7 days</option>
-              <option value="30d">Last 30 days</option>
-              <option value="90d">Last 90 days</option>
-              <option value="1y">Last year</option>
-            </select>
+              <option value="7d">Last 7 days
+              <option value="30d">Last 30 days
+              <option value="90d">Last 90 days
+              <option value="1y">Last year
             <button
               onClick={handleRefresh}
               disabled={refreshing}
               className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors disabled:opacity-50"
             >
               <RefreshCw className={`w-4 h-4 ${refreshing ? 'animate-spin' : ''}`} />
-            </button>
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition-colors">
               <Download className="w-4 h-4" />
               Export
-            </button>
-          </div>
-        </div>
-      </div>
-
       {/* Key Metrics */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
         <motion.div
@@ -267,20 +254,13 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
           className="bg-white rounded-lg shadow-sm border border-gray-200 p-6"
         >
           <div className="flex items-center justify-between">
-            <div>
-              <p className="text-sm font-medium text-gray-600">Impressions</p>
-              <p className="text-3xl font-bold text-gray-900">{formatNumber(analyticsData.impressions)}</p>
-            </div>
+              <p className="text-sm font-medium text-gray-600">Impressions
+              <p className="text-3xl font-bold text-gray-900">{formatNumber(analyticsData.impressions)}
             <div className="p-3 bg-blue-100 rounded-lg">
               <Eye className="w-6 h-6 text-blue-600" />
-            </div>
-          </div>
           <div className="flex items-center mt-2">
             <TrendingUp className="w-4 h-4 text-green-500 mr-1" />
-            <span className="text-sm text-green-600">+12.5%</span>
-          </div>
-        </motion.div>
-
+            <span className="text-sm text-green-600">+12.5%
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -288,20 +268,13 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
           className="bg-white rounded-lg shadow-sm border border-gray-200 p-6"
         >
           <div className="flex items-center justify-between">
-            <div>
-              <p className="text-sm font-medium text-gray-600">Clicks</p>
-              <p className="text-3xl font-bold text-gray-900">{formatNumber(analyticsData.clicks)}</p>
-            </div>
+              <p className="text-sm font-medium text-gray-600">Clicks
+              <p className="text-3xl font-bold text-gray-900">{formatNumber(analyticsData.clicks)}
             <div className="p-3 bg-green-100 rounded-lg">
               <MousePointer className="w-6 h-6 text-green-600" />
-            </div>
-          </div>
           <div className="flex items-center mt-2">
             <TrendingUp className="w-4 h-4 text-green-500 mr-1" />
-            <span className="text-sm text-green-600">+8.3%</span>
-          </div>
-        </motion.div>
-
+            <span className="text-sm text-green-600">+8.3%
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -309,20 +282,13 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
           className="bg-white rounded-lg shadow-sm border border-gray-200 p-6"
         >
           <div className="flex items-center justify-between">
-            <div>
-              <p className="text-sm font-medium text-gray-600">Conversions</p>
-              <p className="text-3xl font-bold text-gray-900">{formatNumber(analyticsData.conversions)}</p>
-            </div>
+              <p className="text-sm font-medium text-gray-600">Conversions
+              <p className="text-3xl font-bold text-gray-900">{formatNumber(analyticsData.conversions)}
             <div className="p-3 bg-purple-100 rounded-lg">
               <Target className="w-6 h-6 text-purple-600" />
-            </div>
-          </div>
           <div className="flex items-center mt-2">
             <TrendingUp className="w-4 h-4 text-green-500 mr-1" />
-            <span className="text-sm text-green-600">+15.2%</span>
-          </div>
-        </motion.div>
-
+            <span className="text-sm text-green-600">+15.2%
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -330,21 +296,13 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
           className="bg-white rounded-lg shadow-sm border border-gray-200 p-6"
         >
           <div className="flex items-center justify-between">
-            <div>
-              <p className="text-sm font-medium text-gray-600">Revenue</p>
-              <p className="text-3xl font-bold text-gray-900">{formatCurrency(analyticsData.revenue)}</p>
-            </div>
+              <p className="text-sm font-medium text-gray-600">Revenue
+              <p className="text-3xl font-bold text-gray-900">{formatCurrency(analyticsData.revenue)}
             <div className="p-3 bg-yellow-100 rounded-lg">
               <DollarSign className="w-6 h-6 text-yellow-600" />
-            </div>
-          </div>
           <div className="flex items-center mt-2">
             <TrendingUp className="w-4 h-4 text-green-500 mr-1" />
-            <span className="text-sm text-green-600">+22.1%</span>
-          </div>
-        </motion.div>
-      </div>
-
+            <span className="text-sm text-green-600">+22.1%
       {/* Performance Metrics */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
         <motion.div
@@ -353,55 +311,39 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
           transition={{ delay: 0.4 }}
           className="bg-white rounded-lg shadow-sm border border-gray-200 p-6"
         >
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance Metrics</h3>
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance Metrics
           <div className="space-y-4">
             <div className="flex items-center justify-between">
-              <span className="text-sm text-gray-600">CTR</span>
-              <span className="text-lg font-semibold text-gray-900">{formatPercentage(analyticsData.ctr)}</span>
-            </div>
+              <span className="text-sm text-gray-600">CTR
+              <span className="text-lg font-semibold text-gray-900">{formatPercentage(analyticsData.ctr)}
             <div className="flex items-center justify-between">
-              <span className="text-sm text-gray-600">Conversion Rate</span>
-              <span className="text-lg font-semibold text-gray-900">{formatPercentage(analyticsData.conversionRate)}</span>
-            </div>
+              <span className="text-sm text-gray-600">Conversion Rate
+              <span className="text-lg font-semibold text-gray-900">{formatPercentage(analyticsData.conversionRate)}
             <div className="flex items-center justify-between">
-              <span className="text-sm text-gray-600">ROAS</span>
-              <span className="text-lg font-semibold text-gray-900">{analyticsData.roas.toFixed(2)}x</span>
-            </div>
+              <span className="text-sm text-gray-600">ROAS
+              <span className="text-lg font-semibold text-gray-900">{analyticsData.roas.toFixed(2)}x
             <div className="flex items-center justify-between">
-              <span className="text-sm text-gray-600">CPC</span>
-              <span className="text-lg font-semibold text-gray-900">{formatCurrency(analyticsData.cpc)}</span>
-            </div>
+              <span className="text-sm text-gray-600">CPC
+              <span className="text-lg font-semibold text-gray-900">{formatCurrency(analyticsData.cpc)}
             <div className="flex items-center justify-between">
-              <span className="text-sm text-gray-600">CPM</span>
-              <span className="text-lg font-semibold text-gray-900">{formatCurrency(analyticsData.cpm)}</span>
-            </div>
-          </div>
-        </motion.div>
-
+              <span className="text-sm text-gray-600">CPM
+              <span className="text-lg font-semibold text-gray-900">{formatCurrency(analyticsData.cpm)}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
           className="bg-white rounded-lg shadow-sm border border-gray-200 p-6"
         >
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Campaign Performance</h3>
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Campaign Performance
           <div className="space-y-4">
             {analyticsData.campaignPerformance.map((campaign, index) => (
               <div key={campaign.id} className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm font-medium text-gray-900">{campaign.name}</p>
-                  <p className="text-xs text-gray-600">{formatNumber(campaign.impressions)} impressions</p>
-                </div>
+                  <p className="text-sm font-medium text-gray-900">{campaign.name}
+                  <p className="text-xs text-gray-600">{formatNumber(campaign.impressions)} impressions
                 <div className="text-right">
-                  <p className="text-sm font-semibold text-gray-900">{formatPercentage(campaign.ctr)}</p>
-                  <p className="text-xs text-gray-600">CTR</p>
-                </div>
-              </div>
+                  <p className="text-sm font-semibold text-gray-900">{formatPercentage(campaign.ctr)}
+                  <p className="text-xs text-gray-600">CTR
             ))}
-          </div>
-        </motion.div>
-      </div>
-
       {/* Device and Audience Breakdown */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <motion.div
@@ -410,51 +352,38 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
           transition={{ delay: 0.6 }}
           className="bg-white rounded-lg shadow-sm border border-gray-200 p-6"
         >
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Device Breakdown</h3>
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Device Breakdown
           <div className="space-y-4">
             {analyticsData.deviceBreakdown.map((device, index) => (
               <div key={device.device}>
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium text-gray-900">{device.device}</span>
-                  <span className="text-sm text-gray-600">{device.percentage}%</span>
-                </div>
+                  <span className="text-sm font-medium text-gray-900">{device.device}
+                  <span className="text-sm text-gray-600">{device.percentage}%
                 <div className="w-full bg-gray-200 rounded-full h-2">
                   <div
                     className="bg-blue-600 h-2 rounded-full"
                     style={{ width: `${device.percentage}%` }}
-                  ></div>
-                </div>
-              </div>
+                  >
             ))}
-          </div>
-        </motion.div>
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7 }}
           className="bg-white rounded-lg shadow-sm border border-gray-200 p-6"
         >
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Audience Insights</h3>
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Audience Insights
           <div className="space-y-4">
             {analyticsData.audienceInsights.map((audience, index) => (
               <div key={audience.ageGroup}>
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium text-gray-900">{audience.ageGroup}</span>
-                  <span className="text-sm text-gray-600">{audience.percentage}%</span>
-                </div>
+                  <span className="text-sm font-medium text-gray-900">{audience.ageGroup}
+                  <span className="text-sm text-gray-600">{audience.percentage}%
                 <div className="w-full bg-gray-200 rounded-full h-2">
                   <div
                     className="bg-purple-600 h-2 rounded-full"
                     style={{ width: `${audience.percentage}%` }}
-                  ></div>
-                </div>
-              </div>
+                  >
             ))}
-          </div>
-        </motion.div>
-      </div>
-    </div>
   );
 };
 

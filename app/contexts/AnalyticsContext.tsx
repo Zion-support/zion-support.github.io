@@ -1,9 +1,11 @@
-import React from 'react';
-<<<<<<< HEAD
-import { AnalyticsContext } from './AnalyticsContext';
-=======
-import { AnalyticsContext } from './AnalyticsContextDefinition';
->>>>>>> cursor/fix-errors-and-merge-to-main-3a06
+import React, { createContext, useContext } from 'react';
+
+interface AnalyticsContextType {
+  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
+  trackPageView: (pageName: string) => void;
+}
+
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const trackEvent = (eventName: string, properties?: Record<string, any>) => {
@@ -21,4 +23,12 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
       {children}
     </AnalyticsContext.Provider>
   );
+};
+
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (context === undefined) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
 };

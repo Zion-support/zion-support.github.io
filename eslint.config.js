@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import globals from 'globals';
 import js from '@eslint/js';
 import tseslint from '@typescript-eslint/eslint-plugin';
@@ -81,34 +80,6 @@ export default [
     languageOptions: {
       globals: { ...globals.browser, ...globals.node },
       parser: tsParser,
-=======
-import js from '@eslint/js';
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
-
-export default [
-  {
-    ignores: [
-      'app-broken/**',
-      'app-disabled/**',
-      'dist/**',
-      'build/**',
-      'node_modules/**',
-      '*.config.js',
-      '*.config.ts',
-      'scripts/**',
-      'public/**'
-    ]
-  },
-  js.configs.recommended,
-  {
-    files: ['**/*.{ts,tsx,js,jsx}'],
-    languageOptions: {
-      parser: typescriptParser,
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -118,17 +89,11 @@ export default [
       }
     },
     plugins: {
-<<<<<<< HEAD
       '@typescript-eslint': tseslint,
-=======
-      '@typescript-eslint': typescript,
-      'react': react,
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh
     },
     rules: {
-<<<<<<< HEAD
       ...tseslint.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
@@ -142,21 +107,6 @@ export default [
       '@typescript-eslint/no-non-null-assertion': 'off',
       'no-console': 'off',
       'no-unused-vars': 'off'
-=======
-      ...typescript.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': 'warn',
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off'
-    },
-    settings: {
-      react: {
-        version: 'detect'
-      }
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
     }
   }
 ];

@@ -34,7 +34,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   return (
     <div className="performance-optimizer">
       {children}
-    </div>
   );
 };
 

@@ -19,13 +19,10 @@ export default function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
             {item.href ? (
               <Link to={item.href} className="text-blue-600 hover:text-blue-800">
                 {item.label}
-              </Link>
             ) : (
-              <span className="text-gray-500">{item.label}</span>
+              <span className="text-gray-500">{item.label}
             )}
-          </li>
         ))}
-      </ol>
     const breadcrumbs: BreadcrumbItem[] = [
       { name: 'Home', href: '/ }
 
@@ -91,14 +88,11 @@ const Breadcrumb: React.FC = () => {
                   aria-label="Home
                 >
                   <Home className="w-4 h-4" aria-hidden="true />
-                  <span className="sr-only>Home</span>
-                </Link>
+                  <span className="sr-only>Home
               ) : item.current ? (
 
                 <span className="text-white font-medium" aria-current="page>
                   {item.name}
-
-                </span>
               ) : (
 
                 <Link
@@ -107,8 +101,6 @@ const Breadcrumb: React.FC = () => {
                   className="text-gray-300 hover:text-white transition-colors
                 >
                   {item.name}
-
-                </Link>
 'use client';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -135,8 +127,6 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
             >
               <Home className="w-4 h-4 mr-1" />
               Home
-            </Link>
-          </li>
           {items.map((item, index) => (
             <li key={index} className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-500 mx-2" />
@@ -146,12 +136,10 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
                   className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
                 >
                   {item.label}
-                </Link>
               ) : (
-                <span className="text-cyan-400 font-medium">{item.label}</span>
+                <span className="text-cyan-400 font-medium">{item.label}
               )}
 
-    
     return items;
   };
 
@@ -164,7 +152,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
           {breadcrumbItems.map((item, index) => (
             <li key={item.path} className="flex items-center">
               {index > 0 && <span className="text-gray-400 mx-2">/</span>}
-              <span className="text-gray-300">{item.name}</span>
+              <span className="text-gray-300">{item.name}
 import { useLocation } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
 
@@ -206,13 +194,8 @@ const Breadcrumb: React.FC = () => {
                 }`}
               >
                 {item.icon && <item.icon className="w-4 h-4" />}
-                <span>{item.name}</span>
-              </a>
-            </li>
+                <span>{item.name}
           ))}
-
-        </ol>
-      </div>
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
@@ -276,9 +259,6 @@ export default function Breadcrumb() {
             >
               <Home className="w-4 h-4 mr-1" />
               Home
-            </Link>
-          </li>
-          
           {pathnames.map((path, index) => {
             const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`;
             const isLast = index === pathnames.length - 1;
@@ -288,23 +268,19 @@ export default function Breadcrumb() {
               <li key={routeTo} className="flex items-center">
                 <ChevronRight className="w-4 h-4 text-gray-500 mx-2" />
                 {isLast ? (
-                  <span className="text-cyan-400 font-medium">{name}</span>
+                  <span className="text-cyan-400 font-medium">{name}
                 ) : (
                   <Link
                     to={routeTo}
                     className="text-gray-400 hover:text-cyan-400 transition-colors"
                   >
                     {name}
-                  </Link>
                 )}
-              </li>
             );
           })}
-        </ol>
-      </div>
-    </nav>
   );
 };
 
 export default Breadcrumb;
 export default Breadcrumb;
+</div></div></div></li></li>

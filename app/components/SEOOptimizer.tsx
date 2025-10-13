@@ -85,7 +85,7 @@ export default function SEOOptimizer({
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{title}</title>
+      <title>{title}
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
       <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow'} />
@@ -128,8 +128,6 @@ export default function SEOOptimizer({
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(structuredData || defaultStructuredData)}
-      </script>
-    </Helmet>
   );
 }
       
@@ -137,13 +135,12 @@ export default function SEOOptimizer({
       {structuredData && (
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
-        </script>
       )}
       
       {/* Performance hints */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="dns-prefetch" href="https://ziontechgroup.com" />
-    </Helmet>
   );
 }
+</li></li></li></li></li>

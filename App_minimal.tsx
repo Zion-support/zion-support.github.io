@@ -20,12 +20,7 @@ const App: React.FC = () => {
           <main>
             <Routes>
               <Route path="/ element={<HomePage />} />
-            </Routes>
-          </main>
           <Footer />
-        </div>
-      </Router>
-    </HelmetProvider>
   );
 
 };

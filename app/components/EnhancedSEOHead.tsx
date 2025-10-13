@@ -61,7 +61,7 @@ const SEOHead: React.FC = () => {
     <Helmet>
       {/* Basic Meta Tags */}
 
-      <title>{fullTitle}</title>
+      <title>{fullTitle}
       <meta name="description content={fullDescription} />
       <meta name="keywords" content={fullKeywords.join(', )} />
       <meta name="author content={author} />
@@ -127,8 +127,6 @@ const SEOHead: React.FC = () => {
 
         <script type="application/ld+json>
           {JSON.stringify(structuredData)}
-
-        </script>
       )}
 
       {/* Default Organization Structured Data */}
@@ -164,15 +162,12 @@ const SEOHead: React.FC = () => {
             https://twitter.com/ziontechgroup
           ]
         })}
-
-      </script>
-    </Helmet>
   );
 
 };
 
 export default EnhancedSEOHead;
-      <title>{fullTitle}</title>
+      <title>{fullTitle}
       <meta name="description" content={fullDescription} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
@@ -238,8 +233,6 @@ export default EnhancedSEOHead;
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
-      </script>
-      
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -250,8 +243,8 @@ export default EnhancedSEOHead;
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-    </Helmet>
   );
 };
 
 export default SEOHead;
+</li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>

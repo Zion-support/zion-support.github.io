@@ -29,7 +29,7 @@ useEffect(() => {// UX enhancement logic;
     }
 enhanceUX();
   }, []);
-return <React.Fragment>{children</React.Fragment>}</React.Fragment>
+return <React.Fragment>{children</React.Fragment>}
 };
 
 export default UserExperienceEnhancer;

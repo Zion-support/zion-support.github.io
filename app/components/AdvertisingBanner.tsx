@@ -60,7 +60,6 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
               height: 'auto'
             }}
           />
-        </div>
       )}
 
       <div className="banner-content flex-1">
@@ -72,7 +71,6 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
           }}
         >
           {title}
-        </h2>
         <p 
           className="mb-6 opacity-90"
           style={{ 
@@ -82,7 +80,6 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
           }}
         >
           {description}
-        </p>
         <a
           href={ctaUrl}
           className="inline-block px-6 py-3 rounded-md font-bold transition-all duration-200 hover:opacity-80"
@@ -104,9 +101,6 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
           }}
         >
           {ctaText}
-        </a>
-      </div>
-    </div>
   );
 };
 

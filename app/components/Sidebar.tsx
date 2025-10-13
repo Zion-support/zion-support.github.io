@@ -247,11 +247,11 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   if (!isOpen) return null;
 
   return (
-    <>
+    <React.Fragment>
       {/* Overlay */}
       <div 
         className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
-    <>
+    <React.Fragment>
       {/* Backdrop */}
       <div
         className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
@@ -266,24 +266,18 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
                 <Zap className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
-            </div>
+              <span className="text-xl font-bold text-gray-900">Zion Tech Group
             <button
               onClick={onClose}
               className="p-2 hover:bg-gray-100 rounded-lg transition-colors lg:hidden"
             >
               <X className="w-6 h-6" />
-            </button>
-          </div>
-
           {/* Navigation Content */}
           <div className="flex-1 overflow-y-auto">
             {/* Company Links */}
             <div className="p-4">
               <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
                 Company
-              </h3>
               <ul className="space-y-1">
                 {companyLinks.map((link, index) => (
                   <li key={index}>
@@ -293,18 +287,12 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                       onClick={onClose}
                     >
                       <link.icon className="w-4 h-4" />
-                      <span>{link.name}</span>
-                    </Link>
-                  </li>
+                      <span>{link.name}
                 ))}
-              </ul>
-            </div>
-
             {/* Service Categories */}
             <div className="p-4">
               <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
                 Services
-              </h3>
               <div className="space-y-1">
                 {serviceCategories.map((category, index) => (
                   <div key={index}>
@@ -315,16 +303,12 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                       <div className="flex items-center space-x-3">
                         <div className={`w-6 h-6 ${category.bgColor} rounded flex items-center justify-center`}>
                           <category.icon className={`w-3 h-3 ${category.color}`} />
-                        </div>
-                        <span className="font-medium">{category.title}</span>
-                      </div>
+                        <span className="font-medium">{category.title}
                       {expandedSections.has(category.title) ? (
                         <ChevronDown className="w-4 h-4" />
                       ) : (
                         <ChevronRight className="w-4 h-4" />
                       )}
-                    </button>
-                    
                     {expandedSections.has(category.title) && (
                       <div className="ml-6 mt-1 space-y-1">
                         {category.services.map((service, serviceIndex) => (
@@ -335,20 +319,13 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                             onClick={onClose}
                           >
                             {service.name}
-                          </Link>
                         ))}
-                      </div>
                     )}
-                  </div>
                 ))}
-              </div>
-            </div>
-
             {/* Support Links */}
             <div className="p-4">
               <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
                 Support
-              </h3>
               <ul className="space-y-1">
                 {supportLinks.map((link, index) => (
                   <li key={index}>
@@ -358,31 +335,19 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                       onClick={onClose}
                     >
                       <link.icon className="w-4 h-4" />
-                      <span>{link.name}</span>
-                    </Link>
-                  </li>
+                      <span>{link.name}
                 ))}
-              </ul>
-            </div>
-          </div>
-
           {/* Footer */}
           <div className="p-4 border-t border-gray-200">
             <div className="space-y-3">
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <Phone className="w-4 h-4" />
-                <span>(302) 464-0950</span>
-              </div>
+                <span>(302) 464-0950
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+                <span>kleber@ziontechgroup.com
   );
 };
 
 export default Sidebar;
+</div></div></li>

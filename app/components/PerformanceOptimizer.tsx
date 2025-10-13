@@ -77,7 +77,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       // Cleanup if needed
     };
   }, []);
-  return <>{children}</>;
+  return <React.Fragment>{children}</React.Fragment>;
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
@@ -104,7 +104,7 @@ export default PerformanceOptimizer;
     return () => observer.disconnect();
   }, [optimizeImages]);
 
-  return <>{children}</>;
+  return <React.Fragment>{children}</React.Fragment>;
 };
 
 export default PerformanceOptimizer;
@@ -112,7 +112,7 @@ export default PerformanceOptimizer;
   const runOptimizations = useCallback(async () => {setIsOptimizing(true);
     const newOptimizations: string[] = [],
     // Optimize images;
-  return(<div className="performance-optimizer">)</div>
+  return(<div className="performance-optimizer">)
       {children}{/* Performance Status Indicator (only in development) */}
       {process.env['NODE_ENV'] === 'development' && (
   );
@@ -137,7 +137,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
         '/images/logo.png'
       ]
 
-        
         // Add decoding="async" for better performance
         if (!img.hasAttribute('decoding')) {
           img.setAttribute('decoding', 'async');

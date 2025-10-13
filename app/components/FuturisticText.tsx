@@ -9,6 +9,5 @@ export default function FuturisticText({ className = '', children, ...props }: F
   return (
     <div className={`futuristic-text ${className}`} {...props}>
       {children}
-    </div>
   );
 }

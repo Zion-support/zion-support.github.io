@@ -99,28 +99,20 @@ const NewContentAdvertisingBanner: React.FC = () => {
           className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" 
           style={{ animationDelay: '4s' }} 
         />
-      </div>
-
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-20">
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-fade-in">
             Revolutionary New Content Hub
-          </h2>
-          
           {/* Achievements Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">
             {achievements.map((achievement, index) => (
               <div key={index} className="text-center">
                 <div className="text-indigo-400 mb-2 flex justify-center">
                   {achievement.icon}
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{achievement.value}</div>
-                <div className="text-gray-300 text-sm">{achievement.label}</div>
-              </div>
+                <div className="text-3xl font-bold text-white mb-2">{achievement.value}
+                <div className="text-gray-300 text-sm">{achievement.label}
             ))}
-          </div>
-
           {/* Featured Content Grid */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {featuredContent.map((content, index) => (
@@ -135,40 +127,25 @@ const NewContentAdvertisingBanner: React.FC = () => {
                   <div className="flex items-center gap-2 mb-4">
                     <span className={`px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r ${content.gradient} text-white`}>
                       {content.badge}
-                    </span>
                     <div className="flex items-center gap-1">
                       <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      <span className="text-sm text-gray-300">{content.rating}</span>
-                    </div>
-                  </div>
-                  
+                      <span className="text-sm text-gray-300">{content.rating}
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-indigo-400 transition-colors duration-300 leading-tight">
                     {content.title}
-                  </h3>
-                  
                   <div className="flex items-center gap-2 text-gray-400 mb-6">
-                    <span className="text-sm">{content.category}</span>
-                    <span className="text-sm">•</span>
-                    <span className="text-sm">{content.readTime} read</span>
-                  </div>
-                  
+                    <span className="text-sm">{content.category}
+                    <span className="text-sm">•
+                    <span className="text-sm">{content.readTime} read
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-gray-400">
                       <Users className="w-4 h-4" />
-                      <span className="text-sm">{content.readers} readers</span>
-                    </div>
+                      <span className="text-sm">{content.readers} readers
                     <Link 
                       href={content.link}
                       className="group-hover:translate-x-1 transition-transform duration-300"
                     >
                       <div className="w-4 h-4 text-indigo-400 group-hover:text-white" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
             ))}
-          </div>
-
           {/* Call to Action Section */}
           <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-3xl p-8 md:p-12 border border-indigo-500/20 mb-16">
             <div className="text-center">
@@ -176,31 +153,19 @@ const NewContentAdvertisingBanner: React.FC = () => {
                 <Star className="w-5 h-5 text-yellow-400 fill-current" />
                 <span className="text-yellow-400 font-bold text-sm tracking-wider uppercase">
                   LIMITED TIME OFFER
-                </span>
-              </div>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
                 <Link
                   href="/subscribe"
                   className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 flex items-center justify-center gap-2"
                 >
                   <Sparkles className="w-5 h-5" />
-                  <span>Subscribe Now</span>
-                </Link>
-                
+                  <span>Subscribe Now
                 <Link
                   href="/blog"
                   className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >
-                  <span>Explore Content</span>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+                  <span>Explore Content
   );
 };
 
-export default NewContentAdvertisingBanner;
+export default NewContentAdvertisingBanner;</div></div></div>

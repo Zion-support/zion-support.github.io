@@ -57,13 +57,10 @@ const PerformanceMetrics: React.FC = () => {
   return (
     <div className="fixed bottom-4 right-4 bg-black/80 text-white p-3 rounded-lg text-xs font-mono z-50">
       <div className="space-y-1">
-        <div>Load: {metrics.loadTime.toFixed(0)}ms</div>
-        <div>Memory: {metrics.memoryUsage}MB</div>
+        <div>Load: {metrics.loadTime.toFixed(0)}ms
+        <div>Memory: {metrics.memoryUsage}MB
         <div className={metrics.isOnline ? 'text-green-400' : 'text-red-400'}>
           {metrics.isOnline ? 'Online' : 'Offline'}
-        </div>
-      </div>
-    </div>
   );
 };
 

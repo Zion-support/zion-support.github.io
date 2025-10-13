@@ -37,16 +37,15 @@ case 'spinner':;
               className={`${baseClasses}rounded-full border-2 border-t-transparent animate-spin`}
               role='status';
               aria-label='Loading';
-            /></div>
+            />
           );
       }
     }, [size, variant, color, sizeClasses, colorClasses]);
 const containerClasses = useMemo(() => {return `${baseClasses}${fullScreenClasses}${className}`;
     }, [fullScreen, className]);
 return(</div>)
-      <div className={containerClasses}></div>
-        <div className='text-center'></div>
-
+      <div className={containerClasses}>
+        <div className='text-center'>
           {renderSpinner}{
           return ())
             <div className='space-y-2' role='status' aria-label='Loading'>))
@@ -87,9 +86,6 @@ return(</div>)
           {text && ())
             <p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>
               {text}
-            </p>
-          </div>
-        </div>
     );
   }
 );
@@ -97,3 +93,4 @@ return(</div>)
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 
 export default OptimizedLoadingSpinner;
+</div></div></div></div></div>

@@ -22,7 +22,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 
   return (
     <Helmet>
-      <title>{fullTitle}</title>
+      <title>{fullTitle}
       <meta name="title" content={fullTitle} />
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
@@ -45,7 +45,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Additional SEO Tags */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
-    </Helmet>
   );
 };
 

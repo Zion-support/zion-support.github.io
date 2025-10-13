@@ -103,18 +103,14 @@ export default function PerformanceMonitor() {
 
   return (
     <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg font-mono text-sm z-50">
-      <div className="mb-2 font-bold">Performance Monitor</div>
-      <div>Load Time: {metrics.loadTime}ms</div>
-      <div>Render Time: {metrics.renderTime}ms</div>
-      <div>Memory: {metrics.memoryUsage}%</div>
-      <div>FPS: {metrics.fps}</div>
+      <div className="mb-2 font-bold">Performance Monitor
+      <div>Load Time: {metrics.loadTime}ms
+      <div>Render Time: {metrics.renderTime}ms
+      <div>Memory: {metrics.memoryUsage}%
+      <div>FPS: {metrics.fps}
       <div className="text-xs text-gray-400 mt-2">
-      </div>
-      
       <div className="mt-3 pt-3 border-t border-white/20 text-xs text-gray-400">
         Press Ctrl+Shift+P to toggle
-      </div>
-    </div>
   );
 }
   return null;
@@ -154,11 +150,9 @@ export default PerformanceMonitor
 const PerformanceMonitor: React.FC = () => {
   return (
     <div className="p-4 bg-gray-800 rounded-lg">
-      <h3 className="text-lg font-semibold text-white mb-4">Performance Monitor</h3>
+      <h3 className="text-lg font-semibold text-white mb-4">Performance Monitor
       <div className="text-gray-300">
-        <p>Performance monitoring is active.</p>
-      </div>
-    </div>
+        <p>Performance monitoring is active.
   );
 };
 
@@ -283,41 +277,31 @@ export default PerformanceMonitor;
   // Development mode - show metrics
   return (
     <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs">
-      <h3 className="font-bold mb-2">Performance Metrics</h3>
+      <h3 className="font-bold mb-2">Performance Metrics
       <div className="space-y-1">
         {metrics.lcp && (
           <div className={`${metrics.lcp > 2500 ? 'text-red-400' : metrics.lcp > 1000 ? 'text-yellow-400' : 'text-green-400'}`}>
             LCP: {Math.round(metrics.lcp)}ms
-          </div>
         )}
         {metrics.fid && (
           <div className={`${metrics.fid > 300 ? 'text-red-400' : metrics.fid > 100 ? 'text-yellow-400' : 'text-green-400'}`}>
             FID: {Math.round(metrics.fid)}ms
-          </div>
         )}
         {metrics.cls && (
           <div className={`${metrics.cls > 0.25 ? 'text-red-400' : metrics.cls > 0.1 ? 'text-yellow-400' : 'text-green-400'}`}>
             CLS: {metrics.cls.toFixed(3)}
-          </div>
         )}
         {metrics.fcp && (
           <div className={`${metrics.fcp > 3000 ? 'text-red-400' : metrics.fcp > 1000 ? 'text-yellow-400' : 'text-green-400'}`}>
             FCP: {Math.round(metrics.fcp)}ms
-          </div>
         )}
         {metrics.ttfb && (
           <div className={`${metrics.ttfb > 800 ? 'text-red-400' : metrics.ttfb > 600 ? 'text-yellow-400' : 'text-green-400'}`}>
             TTFB: {Math.round(metrics.ttfb)}ms
-          </div>
         )}
   const [isVisible, setIsVisible] = useState(false);
-
-      </div>
-      
       <div className="mt-3 pt-3 border-t border-cyan-500/20 text-xs text-cyan-400">
         Press Ctrl+Shift+P to toggle
-      </div>
-    </div>
   );
   // Track errors
   useEffect(() => {

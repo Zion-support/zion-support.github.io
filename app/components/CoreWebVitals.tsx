@@ -9,7 +9,6 @@ export default function CoreWebVitals({ className = '', children }: CoreWebVital
   return (
     <div className={`core-web-vitals ${className}`}>
       {children}
-    </div>
   );
 }
 

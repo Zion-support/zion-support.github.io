@@ -65,10 +65,8 @@
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
-      </head>
       <body className='antialiased'>
         {children}
-      </body>
-    </html>
   );
 }
+</li></li></li></li></li></li></li></li></li></li>

@@ -47,7 +47,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
-    </AnalyticsContext.Provider>
 'use client';
 import React, {createContext, useContext, useEffect, ReactNode}from 'react';
 
@@ -158,7 +157,7 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         page_location: window.location.href
       });
     trackPageView,}return(<AnalyticsContext.Provider value={value)}>
-      {children} </AnalyticsContext.Provider>
+      {children}
   );
 };
 export default AnalyticsProvider;

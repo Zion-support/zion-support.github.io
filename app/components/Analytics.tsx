@@ -93,7 +93,7 @@ declare global {interface Window {}
 
 export default Analytics;
 // Analytics Provider for context;
-export const AnalyticsProvider: React.FC<{children: React.ReactNode ,}> = ({children}) => {return(<>)
+export const AnalyticsProvider: React.FC<{children: React.ReactNode ,}> = ({children}) => {return(<React.Fragment>)
       <Analytics />}{children}
       {children}
 
