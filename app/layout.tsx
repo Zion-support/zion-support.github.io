@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { AnalyticsProvider } from "./components/AnalyticsProvider";
@@ -10,13 +10,17 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import MobileNavigation from "./components/MobileNavigation";
-import EnhancedNavigation from "./components/EnhancedNavigation";
+import ImprovedNavigation from "./components/ImprovedNavigation";
+import ImprovedFooter from "./components/ImprovedFooter";
+import ImprovedSidebar from "./components/ImprovedSidebar";
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
       <HelmetProvider>
@@ -40,7 +44,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>
               <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
               
-              <EnhancedNavigation />
+              <ImprovedNavigation />
 
               <main>{children}</main>
 
