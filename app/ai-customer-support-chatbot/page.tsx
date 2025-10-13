@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Brain, Clock, Target, BarChart3, MessageSquare, Zap, Shield, Users, CheckCircle, ArrowRight, Star, Globe } from 'lucide-react';
 
 export default function AiCustomerSupportChatbotPage() {
-  const features = [
+  const mainFeatures = [
     {
       title: "AI-Powered Responses",
       description: "Intelligent chatbot that understands context and provides accurate answers",
