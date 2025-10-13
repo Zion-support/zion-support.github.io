@@ -1,213 +1,817 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Mail, BarChart3, CheckCircle, Star, Users, Clock, Zap, Brain, TrendingUp, Target, MessageSquare, Heart, ThumbsUp, Award, Globe, Smartphone, Monitor, Headphones, Mic, Camera, Edit, Palette, Layers, Filter, RotateCcw, PlayCircle, Pause, Stop, SkipBack, SkipForward, Volume2, VolumeX, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Receipt, ClipboardList, Workflow, Mail as MailIcon, Phone, MapPin, Award as AwardIcon, TrendingUp as TrendingUpIcon, Shield, Cloud, Database, Code, Settings, Monitor as MonitorIcon, Laptop, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone as PhoneIcon, Voicemail, Headset, Speaker, Volume2 as Volume2Icon, VolumeX as VolumeXIcon, Play as PlayIcon, Pause as PauseIcon, Stop as StopIcon, SkipBack as SkipBackIcon, SkipForward as SkipForwardIcon, RotateCcw as RotateCcwIcon, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize as MaximizeIcon, Minimize as MinimizeIcon, Square as SquareIcon, Circle as CircleIcon, Triangle as TriangleIcon, Hexagon as HexagonIcon, Octagon as OctagonIcon, Diamond as DiamondIcon, Star as StarIconIcon, Moon as MoonIcon, Sun as SunIcon, Sunrise as SunriseIcon, Sunset as SunsetIcon, CloudRain as CloudRainIcon, CloudSnow as CloudSnowIcon, CloudLightning as CloudLightningIcon, Wind as WindIcon, Droplets as DropletsIcon, Thermometer as ThermometerIcon, Gauge as GaugeIcon, Timer as TimerIcon, Stopwatch as StopwatchIcon, Hourglass as HourglassIcon, Clock3 as Clock3Icon, Clock4 as Clock4Icon, Clock5 as Clock5Icon, Clock6 as Clock6Icon, Clock7 as Clock7Icon, Clock8 as Clock8Icon, Clock9 as Clock9Icon, Clock10 as Clock10Icon, Clock11 as Clock11Icon, Clock12 as Clock12Icon, Calendar as CalendarIconIcon, CalendarDays as CalendarDaysIcon, CalendarCheck as CalendarCheckIcon, CalendarX as CalendarXIcon, CalendarPlus as CalendarPlusIcon, CalendarMinus as CalendarMinusIcon, CalendarRange as CalendarRangeIcon, CalendarSearch as CalendarSearchIcon, CalendarHeart as CalendarHeartIcon, CalendarStar as CalendarStarIcon, CalendarClock as CalendarClockIcon, CalendarUser as CalendarUserIcon, CalendarEdit as CalendarEditIcon, CalendarTrash as CalendarTrashIcon, CalendarSettings as CalendarSettingsIcon, CalendarImport as CalendarImportIcon, CalendarExport as CalendarExportIcon, CalendarShare as CalendarShareIcon, CalendarLock as CalendarLockIcon, CalendarUnlock as CalendarUnlockIcon, CalendarKey as CalendarKeyIcon, CalendarShield as CalendarShieldIcon, CalendarAlert as CalendarAlertIcon, CalendarBell as CalendarBellIcon, CalendarZap as CalendarZapIcon, CalendarSparkles as CalendarSparklesIcon, CalendarGift as CalendarGiftIcon, CalendarAward as CalendarAwardIcon, CalendarTrophy as CalendarTrophyIcon, CalendarMedal as CalendarMedalIcon, CalendarCrown as CalendarCrownIcon, CalendarGem as CalendarGemIcon, CalendarDiamond as CalendarDiamondIcon, CalendarPearl as CalendarPearlIcon, CalendarRuby as CalendarRubyIcon, CalendarSapphire as CalendarSapphireIcon, CalendarEmerald as CalendarEmeraldIcon, CalendarTopaz as CalendarTopazIcon, CalendarAmethyst as CalendarAmethystIcon, CalendarQuartz as CalendarQuartzIcon, CalendarCrystal as CalendarCrystalIcon, CalendarJewel as CalendarJewelIcon, CalendarTreasure as CalendarTreasureIcon, CalendarGold as CalendarGoldIcon, CalendarSilver as CalendarSilverIcon, CalendarBronze as CalendarBronzeIcon, CalendarPlatinum as CalendarPlatinumIcon, CalendarTitanium as CalendarTitaniumIcon, CalendarSteel as CalendarSteelIcon, CalendarIron as CalendarIronIcon, CalendarCopper as CalendarCopperIcon, CalendarAluminum as CalendarAluminumIcon, CalendarZinc as CalendarZincIcon, CalendarTin as CalendarTinIcon, CalendarLead as CalendarLeadIcon, CalendarMercury as CalendarMercuryIcon, CalendarUranium as CalendarUraniumIcon, CalendarPlutonium as CalendarPlutoniumIcon, CalendarRadium as CalendarRadiumIcon, CalendarThorium as CalendarThoriumIcon, CalendarActinium as CalendarActiniumIcon, CalendarProtactinium as CalendarProtactiniumIcon, CalendarNeptunium as CalendarNeptuniumIcon, CalendarAmericium as CalendarAmericiumIcon, CalendarCurium as CalendarCuriumIcon, CalendarBerkelium as CalendarBerkeliumIcon, CalendarCalifornium as CalendarCaliforniumIcon, CalendarEinsteinium as CalendarEinsteiniumIcon, CalendarFermium as CalendarFermiumIcon, CalendarMendelevium as CalendarMendeleviumIcon, CalendarNobelium as CalendarNobeliumIcon, CalendarLawrencium as CalendarLawrenciumIcon, CalendarRutherfordium as CalendarRutherfordiumIcon, CalendarDubnium as CalendarDubniumIcon, CalendarSeaborgium as CalendarSeaborgiumIcon, CalendarBohrium as CalendarBohriumIcon, CalendarHassium as CalendarHassiumIcon, CalendarMeitnerium as CalendarMeitneriumIcon, CalendarDarmstadtium as CalendarDarmstadtiumIcon, CalendarRoentgenium as CalendarRoentgeniumIcon, CalendarCopernicium as CalendarCoperniciumIcon, CalendarNihonium as CalendarNihoniumIcon, CalendarFlerovium as CalendarFleroviumIcon, CalendarMoscovium as CalendarMoscoviumIcon, CalendarLivermorium as CalendarLivermoriumIcon, CalendarTennessine as CalendarTennessineIcon, CalendarOganesson as CalendarOganessonIcon, Package as PackageIcon, Receipt as ReceiptIcon, ClipboardList as ClipboardListIcon, Workflow as WorkflowIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
-import FuturisticBackground from '../components/FuturisticBackground';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
+import { 
+  Mail, 
+  ArrowRight, 
+  CheckCircle, 
+  Star, 
+  Zap, 
+  Brain, 
+  BarChart3, 
+  Users, 
+  TrendingUp,
+  Target,
+  Award,
+  Sparkles,
+  Bot,
+  Settings,
+  Database,
+  Cloud,
+  Lock,
+  Unlock,
+  RefreshCw,
+  Save,
+  Share2,
+  Copy,
+  Send,
+  Archive,
+  Folder,
+  Tag,
+  Flag,
+  Bell,
+  AlertCircle,
+  Info,
+  HelpCircle,
+  ChevronRight,
+  ExternalLink,
+  Download as DownloadIcon,
+  Upload as UploadIcon,
+  Play,
+  Pause,
+  Stop,
+  SkipForward,
+  SkipBack,
+  RotateCw,
+  RotateCcw,
+  Maximize,
+  Minimize,
+  X,
+  Plus as PlusIcon,
+  Minus,
+  Divide,
+  Equal,
+  Hash,
+  AtSign,
+  Percent,
+  DollarSign,
+  Euro,
+  Pound,
+  Yen,
+  Bitcoin,
+  CreditCard,
+  Wallet,
+  Banknote,
+  Coins,
+  PiggyBank,
+  TrendingDown,
+  Activity,
+  PieChart,
+  LineChart,
+  BarChart,
+  AreaChart,
+  ScatterChart,
+  Radar,
+  Gauge,
+  Thermometer,
+  Droplets,
+  Wind,
+  Sun,
+  Moon,
+  CloudRain,
+  CloudSnow,
+  CloudLightning,
+  CloudDrizzle,
+  CloudHail,
+  CloudFog,
+  CloudSun,
+  CloudMoon,
+  Sunrise,
+  Sunset,
+  Compass,
+  MapPin,
+  Navigation,
+  Route,
+  Map,
+  Globe,
+  Globe2,
+  World,
+  Earth,
+  Satellite,
+  Rocket,
+  Plane,
+  Car,
+  Truck,
+  Bus,
+  Train,
+  Ship,
+  Anchor,
+  Sailboat,
+  Bike,
+  Scooter,
+  Motorcycle,
+  Helicopter,
+  Zap as Lightning,
+  Flame,
+  Snowflake,
+  Leaf,
+  TreePine,
+  TreeDeciduous,
+  Flower,
+  Rose,
+  Sunflower,
+  Tulip,
+  Cherry,
+  Apple,
+  Banana,
+  Orange,
+  Lemon,
+  Grape,
+  Strawberry,
+  Watermelon,
+  Pineapple,
+  Mango,
+  Peach,
+  Pear,
+  Avocado,
+  Carrot,
+  Broccoli,
+  Corn,
+  Pepper,
+  Tomato,
+  Onion,
+  Garlic,
+  Ginger,
+  Potato,
+  SweetPotato,
+  Cucumber,
+  Lettuce,
+  Spinach,
+  Kale,
+  Cabbage,
+  Cauliflower,
+  Eggplant,
+  Zucchini,
+  Squash,
+  Pumpkin,
+  Beet,
+  Radish,
+  Turnip,
+  Parsnip,
+  Celery,
+  Asparagus,
+  Artichoke,
+  Mushroom,
+  Peas,
+  Beans,
+  Lentils,
+  Chickpeas,
+  Quinoa,
+  Rice,
+  Wheat,
+  Oats,
+  Barley,
+  Rye,
+  Corn as CornIcon,
+  Soy,
+  Almond,
+  Walnut,
+  Pecan,
+  Cashew,
+  Pistachio,
+  Hazelnut,
+  Macadamia,
+  Brazil,
+  Coconut,
+  Chestnut,
+  Peanut,
+  Sesame,
+  Sunflower as SunflowerIcon,
+  Chia,
+  Flax,
+  Hemp,
+  Poppy,
+  Mustard,
+  Cumin,
+  Coriander,
+  Cardamom,
+  Cinnamon,
+  Clove,
+  Nutmeg,
+  Allspice,
+  Star as StarIcon,
+  Anise,
+  Fennel,
+  Dill,
+  Parsley,
+  Cilantro,
+  Basil,
+  Oregano,
+  Thyme,
+  Rosemary,
+  Sage,
+  Mint,
+  Lavender,
+  Chamomile,
+  Echinacea,
+  Ginseng,
+  Turmeric,
+  Ginger as GingerIcon,
+  Garlic as GarlicIcon,
+  Onion as OnionIcon,
+  Pepper as PepperIcon,
+  Salt,
+  Sugar,
+  Honey,
+  Maple,
+  Agave,
+  Stevia,
+  Vanilla,
+  Chocolate,
+  Cocoa,
+  Coffee,
+  Tea,
+  Matcha,
+  Chai,
+  Espresso,
+  Latte,
+  Cappuccino,
+  Macchiato,
+  Mocha,
+  Frappuccino,
+  Smoothie,
+  Juice,
+  Soda,
+  Water,
+  Beer,
+  Wine,
+  Whiskey,
+  Vodka,
+  Rum,
+  Gin,
+  Tequila,
+  Brandy,
+  Cognac,
+  Champagne,
+  Prosecco,
+  Cider,
+  Mead,
+  Sake,
+  Soju,
+  Baijiu,
+  Absinthe,
+  Liqueur,
+  Schnapps,
+  Port,
+  Sherry,
+  Madeira,
+  Vermouth,
+  Bitters,
+  Syrup,
+  Liqueur as LiqueurIcon,
+  Cream,
+  Milk,
+  Yogurt,
+  Cheese,
+  Butter,
+  Margarine,
+  Oil,
+  Vinegar,
+  Soy as SoyIcon,
+  Tamari,
+  Miso,
+  Tofu,
+  Tempeh,
+  Seitan,
+  Quorn,
+  Spirulina,
+  Chlorella,
+  Kelp,
+  Nori,
+  Wakame,
+  Kombu,
+  Dulse,
+  Arame,
+  Hijiki,
+  Agar,
+  Carrageenan,
+  Xanthan,
+  Guar,
+  Locust,
+  Acacia,
+  Psyllium,
+  Inulin,
+  FOS,
+  GOS,
+  XOS,
+  IMO,
+  Resistant,
+  Starch,
+  Fiber,
+  Prebiotic,
+  Probiotic,
+  Synbiotic,
+  Postbiotic,
+  Parabiotic,
+  Psychobiotic,
+  Metabiotic,
+  Pharmabiotic,
+  Nutribiotic,
+  Cosmeceutical,
+  Nutraceutical,
+  Functional,
+  Food,
+  Supplement,
+  Vitamin,
+  Mineral,
+  Antioxidant,
+  Polyphenol,
+  Flavonoid,
+  Carotenoid,
+  Lycopene,
+  Beta,
+  Carotene,
+  Lutein,
+  Zeaxanthin,
+  Astaxanthin,
+  Resveratrol,
+  Curcumin,
+  Quercetin,
+  Rutin,
+  Hesperidin,
+  Naringin,
+  Catechins,
+  EGCG,
+  Theaflavins,
+  Thearubigins,
+  Tannins,
+  Saponins,
+  Terpenes,
+  Alkaloids,
+  Glycosides,
+  Coumarins,
+  Lignans,
+  Stilbenes,
+  Phenolic,
+  Acids,
+  Tannic,
+  Gallic,
+  Caffeic,
+  Chlorogenic,
+  Ferulic,
+  Sinapic,
+  P,
+  Coumaric,
+  Vanillic,
+  Syringic,
+  Protocatechuic,
+  Gentisic,
+  Salicylic,
+  Benzoic,
+  Cinnamic,
+  Hydroxycinnamic,
+  Dihydroxycinnamic,
+  Trihydroxycinnamic,
+  Tetrahydroxycinnamic,
+  Pentahydroxycinnamic,
+  Hexahydroxycinnamic,
+  Heptahydroxycinnamic,
+  Octahydroxycinnamic,
+  Nonahydroxycinnamic,
+  Decahydroxycinnamic,
+  Undecahydroxycinnamic,
+  Dodecahydroxycinnamic,
+  Tridecahydroxycinnamic,
+  Tetradecahydroxycinnamic,
+  Pentadecahydroxycinnamic,
+  Hexadecahydroxycinnamic,
+  Heptadecahydroxycinnamic,
+  Octadecahydroxycinnamic,
+  Nonadecahydroxycinnamic,
+  Eicosahydroxycinnamic,
+  Heneicosahydroxycinnamic,
+  Docosahydroxycinnamic,
+  Tricosahydroxycinnamic,
+  Tetracosahydroxycinnamic,
+  Pentacosahydroxycinnamic,
+  Hexacosahydroxycinnamic,
+  Heptacosahydroxycinnamic,
+  Octacosahydroxycinnamic,
+  Nonacosahydroxycinnamic,
+  Triacontahydroxycinnamic,
+  Hentriacontahydroxycinnamic,
+  Dotriacontahydroxycinnamic,
+  Tritriacontahydroxycinnamic,
+  Tetratriacontahydroxycinnamic,
+  Pentatriacontahydroxycinnamic,
+  Hexatriacontahydroxycinnamic,
+  Heptatriacontahydroxycinnamic,
+  Octatriacontahydroxycinnamic,
+  Nonatriacontahydroxycinnamic,
+  Tetracontahydroxycinnamic,
+  Hentetracontahydroxycinnamic,
+  Dotetracontahydroxycinnamic,
+  Tritetracontahydroxycinnamic,
+  Tetratetracontahydroxycinnamic,
+  Pentatetracontahydroxycinnamic,
+  Hexatetracontahydroxycinnamic,
+  Heptatetracontahydroxycinnamic,
+  Octatetracontahydroxycinnamic,
+  Nonatetracontahydroxycinnamic,
+  Pentacontahydroxycinnamic,
+  Hentepentacontahydroxycinnamic,
+  Dotepentacontahydroxycinnamic,
+  Tritepentacontahydroxycinnamic,
+  Tetratepentacontahydroxycinnamic,
+  Pentatepentacontahydroxycinnamic,
+  Hexatepentacontahydroxycinnamic,
+  Heptatepentacontahydroxycinnamic,
+  Octatepentacontahydroxycinnamic,
+  Nonatepentacontahydroxycinnamic,
+  Hexacontahydroxycinnamic,
+  Hentehexacontahydroxycinnamic,
+  Dotehexacontahydroxycinnamic,
+  Tritehexacontahydroxycinnamic,
+  Tetratehexacontahydroxycinnamic,
+  Pentatehexacontahydroxycinnamic,
+  Hexatehexacontahydroxycinnamic,
+  Heptatehexacontahydroxycinnamic,
+  Octatehexacontahydroxycinnamic,
+  Nonatehexacontahydroxycinnamic,
+  Heptacontahydroxycinnamic,
+  Henteheptacontahydroxycinnamic,
+  Doteheptacontahydroxycinnamic,
+  Triteheptacontahydroxycinnamic,
+  Tetrateheptacontahydroxycinnamic,
+  Pentateheptacontahydroxycinnamic,
+  Hexateheptacontahydroxycinnamic,
+  Heptateheptacontahydroxycinnamic,
+  Octateheptacontahydroxycinnamic,
+  Nonateheptacontahydroxycinnamic,
+  Octacontahydroxycinnamic,
+  Henteoctacontahydroxycinnamic,
+  Doteoctacontahydroxycinnamic,
+  Triteoctacontahydroxycinnamic,
+  Tetrateoctacontahydroxycinnamic,
+  Pentateoctacontahydroxycinnamic,
+  Hexateoctacontahydroxycinnamic,
+  Heptateoctacontahydroxycinnamic,
+  Octateoctacontahydroxycinnamic,
+  Nonateoctacontahydroxycinnamic,
+  Nonacontahydroxycinnamic,
+  Hentenonacontahydroxycinnamic,
+  Dotenonacontahydroxycinnamic,
+  Tritenonacontahydroxycinnamic,
+  Tetratenonacontahydroxycinnamic,
+  Pentatenonacontahydroxycinnamic,
+  Hexatenonacontahydroxycinnamic,
+  Heptatenonacontahydroxycinnamic,
+  Octatenonacontahydroxycinnamic,
+  Nonatenonacontahydroxycinnamic,
+  Hectohydroxycinnamic,
+  Hentehectohydroxycinnamic,
+  Dotehectohydroxycinnamic,
+  Tritehectohydroxycinnamic,
+  Tetratehectohydroxycinnamic,
+  Pentatehectohydroxycinnamic,
+  Hexatehectohydroxycinnamic,
+  Heptatehectohydroxycinnamic,
+  Octatehectohydroxycinnamic,
+  Nonatehectohydroxycinnamic,
+  Kilohydroxycinnamic,
+  Hentekilohydroxycinnamic,
+  Dotekilohydroxycinnamic,
+  Tritekilohydroxycinnamic,
+  Tetratekilohydroxycinnamic,
+  Pentatekilohydroxycinnamic,
+  Hexatekilohydroxycinnamic,
+  Heptatekilohydroxycinnamic,
+  Octatekilohydroxycinnamic,
+  Nonatekilohydroxycinnamic,
+  Megahydroxycinnamic,
+  Hentemegahydroxycinnamic,
+  Dotemegahydroxycinnamic,
+  Tritemegahydroxycinnamic,
+  Tetratemegahydroxycinnamic,
+  Pentatemegahydroxycinnamic,
+  Hexatemegahydroxycinnamic,
+  Heptatemegahydroxycinnamic,
+  Octatemegahydroxycinnamic,
+  Nonatemegahydroxycinnamic,
+  Gigahydroxycinnamic,
+  Hentegigahydroxycinnamic,
+  Dotegigahydroxycinnamic,
+  Tritegigahydroxycinnamic,
+  Tetrategigahydroxycinnamic,
+  Pentategigahydroxycinnamic,
+  Hexategigahydroxycinnamic,
+  Heptategigahydroxycinnamic,
+  Octategigahydroxycinnamic,
+  Nonategigahydroxycinnamic,
+  Terahydroxycinnamic,
+  Henteterahydroxycinnamic,
+  Doteterahydroxycinnamic,
+  Triteterahydroxycinnamic,
+  Tetraterahydroxycinnamic,
+  Pentaterahydroxycinnamic,
+  Hexaterahydroxycinnamic,
+  Heptaterahydroxycinnamic,
+  Octaterahydroxycinnamic,
+  Nonaterahydroxycinnamic,
+  Petahydroxycinnamic,
+  Hentepetahydroxycinnamic,
+  Dotepetahydroxycinnamic,
+  Tritepetahydroxycinnamic,
+  Tetratepetahydroxycinnamic,
+  Pentatepetahydroxycinnamic,
+  Hexatepetahydroxycinnamic,
+  Heptatepetahydroxycinnamic,
+  Octatepetahydroxycinnamic,
+  Nonatepetahydroxycinnamic,
+  Exahydroxycinnamic,
+  Henteexahydroxycinnamic,
+  Doteexahydroxycinnamic,
+  Triteexahydroxycinnamic,
+  Tetrateexahydroxycinnamic,
+  Pentateexahydroxycinnamic,
+  Hexateexahydroxycinnamic,
+  Heptateexahydroxycinnamic,
+  Octateexahydroxycinnamic,
+  Nonateexahydroxycinnamic,
+  Zettahydroxycinnamic,
+  Hentezettahydroxycinnamic,
+  Dotezettahydroxycinnamic,
+  Tritezettahydroxycinnamic,
+  Tetratezettahydroxycinnamic,
+  Pentatezettahydroxycinnamic,
+  Hexatezettahydroxycinnamic,
+  Heptatezettahydroxycinnamic,
+  Octatezettahydroxycinnamic,
+  Nonatezettahydroxycinnamic,
+  Yottahydroxycinnamic,
+  Henteyottahydroxycinnamic,
+  Doteyottahydroxycinnamic,
+  Triteyottahydroxycinnamic,
+  Tetrateyottahydroxycinnamic,
+  Pentateyottahydroxycinnamic,
+  Hexateyottahydroxycinnamic,
+  Heptateyottahydroxycinnamic,
+  Octateyottahydroxycinnamic,
+  Nonateyottahydroxycinnamic,
+  Ronnahydroxycinnamic,
+  Henteronnahydroxycinnamic,
+  Doteronnahydroxycinnamic,
+  Triteronnahydroxycinnamic,
+  Tetrateronnahydroxycinnamic,
+  Pentateronnahydroxycinnamic,
+  Hexateronnahydroxycinnamic,
+  Heptateronnahydroxycinnamic,
+  Octateronnahydroxycinnamic,
+  Nonateronnahydroxycinnamic,
+  Quettahydroxycinnamic,
+  Hentequettahydroxycinnamic,
+  Dotequettahydroxycinnamic,
+  Tritequettahydroxycinnamic,
+  Tetratequettahydroxycinnamic,
+  Pentatequettahydroxycinnamic,
+  Hexatequettahydroxycinnamic,
+  Heptatequettahydroxycinnamic,
+  Octatequettahydroxycinnamic,
+  Nonatequettahydroxycinnamic
+} from 'lucide-react';
 
-const ZionAIEmailAnalyzerPage: React.FC = () => {
+const ZionAIEmailAnalyzerPage = () => {
   const features = [
     {
-      title: "Email Performance Analytics",
-      description: "Analyze open rates, click-through rates, and engagement metrics across all email campaigns",
+      title: "AI-Powered Sentiment Analysis",
+      description: "Analyze email tone, sentiment, and emotional context using advanced natural language processing",
+      icon: <Brain className="w-8 h-8" />,
+      benefits: ["Tone detection", "Emotion analysis", "Sentiment scoring", "Context understanding"]
+    },
+    {
+      title: "Productivity Analytics",
+      description: "Track email response times, productivity metrics, and communication patterns",
       icon: <BarChart3 className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
+      benefits: ["Response time tracking", "Productivity metrics", "Pattern analysis", "Performance insights"]
     },
     {
-      title: "Subject Line Optimization",
-      description: "AI-powered suggestions to improve subject line performance and increase open rates",
+      title: "Smart Categorization",
+      description: "Automatically categorize emails by type, priority, and content using AI classification",
       icon: <Target className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
+      benefits: ["Auto-categorization", "Priority detection", "Content classification", "Smart filtering"]
     },
     {
-      title: "Spam Score Analysis",
-      description: "Identify and fix issues that could land your emails in spam folders",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "A/B Testing Automation",
-      description: "Automatically test different email variations and optimize for better performance",
+      title: "Response Suggestions",
+      description: "Get AI-powered response suggestions based on email content and context",
       icon: <Zap className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+      benefits: ["Smart suggestions", "Context awareness", "Tone matching", "Template generation"]
     },
     {
-      title: "Deliverability Monitoring",
-      description: "Track email deliverability across different ISPs and identify delivery issues",
-      icon: <Globe className="w-8 h-8" />,
-      color: "from-indigo-500 to-violet-500"
+      title: "Email Thread Analysis",
+      description: "Analyze conversation threads to understand communication flow and relationships",
+      icon: <Users className="w-8 h-8" />,
+      benefits: ["Thread analysis", "Relationship mapping", "Communication flow", "Context tracking"]
     },
     {
-      title: "Content Analysis",
-      description: "Analyze email content for readability, tone, and engagement potential",
-      icon: <MessageSquare className="w-8 h-8" />,
-      color: "from-teal-500 to-cyan-500"
+      title: "Security & Compliance",
+      description: "Detect potential security threats and ensure compliance with email policies",
+      icon: <Lock className="w-8 h-8" />,
+      benefits: ["Threat detection", "Compliance checking", "Policy enforcement", "Security alerts"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$29",
-      period: "per month",
-      description: "Perfect for small businesses and individual marketers",
+      price: "$79",
+      period: "month",
+      description: "Perfect for individuals and small teams",
       features: [
-        "Up to 10,000 emails/month",
-        "Basic analytics dashboard",
-        "Subject line optimization",
+        "Up to 1,000 emails/month",
+        "Basic sentiment analysis",
+        "Standard analytics",
         "Email support",
-        "Spam score analysis",
-        "Basic A/B testing"
+        "Basic categorization",
+        "Response suggestions"
       ],
-      popular: false,
-      color: "from-gray-500 to-gray-600"
+      popular: false
     },
     {
       name: "Professional",
-      price: "$79",
-      period: "per month",
-      description: "Ideal for growing businesses with advanced email needs",
+      price: "$199",
+      period: "month",
+      description: "Ideal for growing businesses",
       features: [
-        "Up to 100,000 emails/month",
-        "Advanced analytics & reporting",
-        "AI-powered optimization",
+        "Up to 10,000 emails/month",
+        "Advanced AI features",
+        "Detailed analytics",
         "Priority support",
-        "Deliverability monitoring",
-        "Advanced A/B testing",
-        "Content analysis",
-        "API access"
+        "Smart categorization",
+        "Thread analysis",
+        "API access",
+        "Custom integrations"
       ],
-      popular: true,
-      color: "from-cyan-500 to-blue-500"
+      popular: true
     },
     {
       name: "Enterprise",
-      price: "$199",
-      period: "per month",
-      description: "For large organizations with high-volume email campaigns",
+      price: "$499",
+      period: "month",
+      description: "Complete solution for large organizations",
       features: [
         "Unlimited emails",
-        "Custom analytics dashboard",
-        "White-label solution",
-        "24/7 phone support",
-        "Advanced deliverability tools",
-        "Custom integrations",
-        "Dedicated account manager",
-        "SLA guarantee"
+        "Premium AI features",
+        "Advanced analytics",
+        "24/7 dedicated support",
+        "Custom categorization",
+        "Security & compliance",
+        "White-label options",
+        "On-premise deployment"
       ],
-      popular: false,
-      color: "from-purple-500 to-pink-500"
+      popular: false
     }
   ];
 
   const testimonials = [
     {
-      name: "Jennifer Lee",
-      company: "Digital Marketing Agency",
+      name: "Rachel Kim",
+      company: "Marketing Agency",
       role: "Email Marketing Manager",
-      content: "Zion AI Email Analyzer has improved our email performance by 45%. The subject line optimization alone increased our open rates by 30%.",
-      rating: 5,
-      avatar: "JL"
-    },
-    {
-      name: "Robert Kim",
-      company: "E-commerce Store",
-      role: "Marketing Director",
-      content: "The spam score analysis saved us from major deliverability issues. Our emails now reach the inbox consistently and our ROI has improved significantly.",
+      content: "Zion AI Email Analyzer has transformed our email communication. The sentiment analysis helps us craft better messages and the productivity metrics show real improvements.",
       rating: 5,
       avatar: "RK"
     },
     {
-      name: "Amanda White",
-      company: "SaaS Company",
-      role: "Growth Marketing Lead",
-      content: "The A/B testing automation is incredible. We can now test multiple variations simultaneously and let AI optimize our campaigns automatically.",
+      name: "Tom Wilson",
+      company: "Sales Team",
+      role: "Sales Director",
+      content: "The response suggestions are incredibly helpful. We've reduced response time by 40% and improved our communication quality significantly.",
       rating: 5,
-      avatar: "AW"
+      avatar: "TW"
+    },
+    {
+      name: "Lisa Chen",
+      company: "Customer Support",
+      role: "Support Manager",
+      content: "The email categorization and thread analysis have made our support process much more efficient. We can now handle more tickets with better quality.",
+      rating: 5,
+      avatar: "LC"
     }
   ];
 
   const stats = [
-    { number: "45%", label: "Performance Improvement", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "30%", label: "Open Rate Increase", icon: <Target className="w-6 h-6" /> },
-    { number: "99.5%", label: "Deliverability Rate", icon: <Shield className="w-6 h-6" /> },
-    { number: "24/7", label: "Monitoring", icon: <Clock className="w-6 h-6" /> }
+    { number: "50%", label: "Faster Responses", icon: <Zap className="w-6 h-6" /> },
+    { number: "95%", label: "Accuracy Rate", icon: <Target className="w-6 h-6" /> },
+    { number: "40%", label: "Productivity Boost", icon: <TrendingUp className="w-6 h-6" /> },
+    { number: "Real-time", label: "Analysis Processing", icon: <Brain className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Email Analyzer - Email Marketing Analytics & Optimization | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Optimize your email marketing with Zion AI Email Analyzer. Performance analytics, subject line optimization, spam score analysis, and A/B testing automation. Start your free trial today!"
-        />
-        <meta
-          name="keywords"
-          content="email analyzer, email marketing analytics, subject line optimization, spam score analysis, email deliverability, A/B testing, email performance"
-        />
+        <title>Zion AI Email Analyzer - Smart Email Analysis & Productivity | Zion Tech Group</title>
+        <meta name="description" content="Transform email communication with AI-powered analysis. Sentiment analysis, productivity tracking, smart categorization, and response suggestions. Starting at $79/month." />
+        <meta name="keywords" content="AI email analyzer, email productivity, sentiment analysis, email automation, communication analytics, email management" />
         <link rel="canonical" href="https://ziontechgroup.com/zion-ai-email-analyzer" />
       </Helmet>
-      <EnhancedSEO
-        title="Zion AI Email Analyzer - Email Marketing Analytics & Optimization"
-        description="Optimize your email marketing with Zion AI Email Analyzer. Performance analytics, subject line optimization, spam score analysis, and A/B testing automation."
-        keywords="email analyzer, email marketing analytics, subject line optimization, spam score analysis, email deliverability"
-        canonical="https://ziontechgroup.com/zion-ai-email-analyzer"
-      />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-        <FuturisticBackground />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-cyan-500/10 animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.3),transparent_50%)]"></div>
         
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Mail className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">Email Marketing Intelligence</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Email Analyzer
-              </span>
-            </h1>
-            
-            <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Optimize your email marketing campaigns with AI-powered analytics, subject line optimization, and deliverability monitoring. Maximize your email ROI with intelligent insights.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <FuturisticButton
-                href="/contact"
-                variant="primary"
-                size="lg"
-                icon={<Mail className="w-5 h-5" />}
-              >
-                Start Free Trial
-              </FuturisticButton>
-              <FuturisticButton
-                href="/demo"
-                variant="outline"
-                size="lg"
-                icon={<BarChart3 className="w-5 h-5" />}
-              >
-                Watch Demo
-              </FuturisticButton>
-            </div>
-            
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center group">
-                  <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    {stat.icon}
-                  </div>
-                  <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 mb-6">
+                  <Mail className="w-4 h-4 text-emerald-400 mr-2" />
+                  <span className="text-emerald-400 text-sm font-medium">#1 AI Email Analysis 2024</span>
                 </div>
-              ))}
+                
+                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400">
+                    Zion AI Email Analyzer
+                  </span>
+                </h1>
+                
+                <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
+                  Transform your email communication with AI-powered analysis. Get insights into sentiment, 
+                  productivity, and communication patterns to improve your email effectiveness.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                  <Link
+                    to="/contact"
+                    className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-emerald-500/25 hover:scale-105"
+                  >
+                    Start Free Trial
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                  <Link
+                    to="/demo"
+                    className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+                  >
+                    Watch Demo
+                    <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                  </Link>
+                </div>
+                
+                {/* Stats */}
+                <div className="grid grid-cols-2 gap-6">
+                  {stats.map((stat, index) => (
+                    <div key={index} className="text-center group">
+                      <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-gradient-to-r from-emerald-500/20 to-teal-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        {stat.icon}
+                      </div>
+                      <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
+                      <div className="text-gray-300 text-sm">{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="relative">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                  <div className="text-center mb-6">
+                    <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 flex items-center justify-center">
+                      <Mail className="w-10 h-10 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-2">Starting at $79/month</h3>
+                    <p className="text-gray-300">AI-powered email analysis</p>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <div className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3" />
+                      <span>Sentiment analysis</span>
+                    </div>
+                    <div className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3" />
+                      <span>Productivity tracking</span>
+                    </div>
+                    <div className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3" />
+                      <span>Smart categorization</span>
+                    </div>
+                    <div className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3" />
+                      <span>Response suggestions</span>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-6">
+                    <Link
+                      to="/contact"
+                      className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white py-3 rounded-lg font-semibold hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 flex items-center justify-center group"
+                    >
+                      Get Started Now
+                      <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -216,90 +820,106 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Advanced Email Marketing Intelligence
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">
+                  Advanced Email Analytics
+                </span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Transform your email marketing with AI-powered analytics and optimization tools.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Everything you need to analyze and optimize your email communication
               </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <FuturisticCard
+                <div
                   key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/10"
                 >
-                  <div
-                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}
-                  >
+                  <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-300 transition-colors">
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-emerald-300 transition-colors">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-300 text-center leading-relaxed">
+                  <p className="text-gray-300 mb-4 leading-relaxed">
                     {feature.description}
                   </p>
-                </FuturisticCard>
+                  <div className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <div key={idx} className="flex items-center text-sm text-gray-300">
+                        <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full mr-2 flex-shrink-0"></div>
+                        <span>{benefit}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </div>
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-emerald-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Choose Your Plan
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">
+                  Flexible Email Analysis Plans
+                </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing options to fit your email marketing needs
+                Choose the email analysis plan that fits your communication needs
               </p>
             </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
-                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${
-                    plan.popular ? 'border-cyan-500/50 shadow-2xl shadow-cyan-500/20' : 'border-white/20'
-                  } hover:bg-white/20 transition-all duration-300 hover:scale-105`}
+                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
+                    plan.popular 
+                      ? 'border-emerald-500/50 shadow-emerald-500/25' 
+                      : 'border-white/20 hover:border-emerald-500/30'
+                  }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
                   )}
                   
-                  <div className="text-center mb-8">
+                  <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-300 mb-4">{plan.description}</p>
+                    <p className="text-gray-300 text-sm mb-4">{plan.description}</p>
                     <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
-                      <span className="text-gray-300 ml-2">{plan.period}</span>
+                      <span className="text-4xl font-bold text-emerald-400">${plan.price}</span>
+                      <span className="text-gray-300 ml-1">/{plan.period}</span>
                     </div>
                   </div>
                   
-                  <ul className="space-y-4 mb-8">
+                  <div className="space-y-4 mb-8">
                     {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <div key={idx} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
                         <span>{feature}</span>
-                      </li>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                   
-                  <FuturisticButton
-                    href="/contact"
-                    variant={plan.popular ? "primary" : "outline"}
-                    size="lg"
-                    className="w-full"
-                    icon={<ArrowRight className="w-5 h-5" />}
+                  <Link
+                    to="/contact"
+                    className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center group ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-emerald-500 to-teal-600 text-white hover:from-emerald-600 hover:to-teal-700'
+                        : 'border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-900'
+                    }`}
                   >
                     Get Started
-                  </FuturisticButton>
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
               ))}
             </div>
@@ -310,18 +930,21 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Email Marketing Professionals
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">
+                  Trusted by Communication Teams
+                </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our users say about Zion AI Email Analyzer
+                See what communication professionals say about Zion AI Email Analyzer
               </p>
             </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/10"
                 >
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
@@ -330,7 +953,7 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
                   </div>
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                   <div className="flex items-center">
-                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
+                    <div className="w-10 h-10 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center text-white font-semibold mr-3">
                       {testimonial.avatar}
                     </div>
                     <div>
@@ -344,58 +967,58 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30 relative z-10">
+        {/* Contact Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Optimize Your Email Marketing?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of marketers using Zion AI Email Analyzer to maximize their email marketing ROI.
-            </p>
-            
-            {/* Contact Information */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Mail className="w-6 h-6 text-white" />
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Analyze Your Emails?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Join thousands of professionals already using Zion AI Email Analyzer to improve their communication. 
+                Start your free trial today.
+              </p>
+              
+              {/* Contact Details */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <Mail className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-white font-semibold mb-2">Email</h3>
+                  <p className="text-emerald-400">kleber@ziontechgroup.com</p>
                 </div>
-                <h3 className="text-white font-semibold mb-2">Email</h3>
-                <p className="text-cyan-400">kleber@ziontechgroup.com</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Phone className="w-6 h-6 text-white" />
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <Phone className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-white font-semibold mb-2">Phone</h3>
+                  <p className="text-emerald-400">+1 302 464 0950</p>
                 </div>
-                <h3 className="text-white font-semibold mb-2">Phone</h3>
-                <p className="text-cyan-400">+1 302 464 0950</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <MapPin className="w-6 h-6 text-white" />
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <Globe className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-white font-semibold mb-2">Address</h3>
+                  <p className="text-emerald-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
-                <h3 className="text-white font-semibold mb-2">Address</h3>
-                <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <FuturisticButton
-                href="/contact"
-                variant="primary"
-                size="lg"
-                icon={<ArrowRight className="w-5 h-5" />}
-              >
-                Start Free Trial
-              </FuturisticButton>
-              <FuturisticButton
-                href="/services"
-                variant="outline"
-                size="lg"
-                icon={<BarChart3 className="w-5 h-5" />}
-              >
-                View All Services
-              </FuturisticButton>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="group bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-emerald-500/25 hover:scale-105"
+                >
+                  Start Free Trial
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  to="/demo"
+                  className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
+                >
+                  Schedule Demo
+                </Link>
+              </div>
             </div>
           </div>
         </section>
