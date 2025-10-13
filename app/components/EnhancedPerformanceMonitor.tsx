@@ -96,6 +96,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           });
         }
       } catch (error) {
+        console.error('Performance monitoring error:', error);
         setIsLoading(false);
       }
     };

@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, TrendingUp, Brain, Shield, Zap, Globe, Star, Users, Award, CheckCircle, Clock, MessageSquare, Target, BarChart3 } from 'lucide-react';
+import { ArrowRight, TrendingUp, Globe, CheckCircle, MessageSquare, Target, BarChart3} from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';

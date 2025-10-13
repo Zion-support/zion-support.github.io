@@ -1,21 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { 
   Cpu, 
   Zap, 
   Shield, 
   Brain, 
   Target, 
-  CheckCircle, 
-  ArrowRight,
+  CheckCircle,
   Globe,
-  Clock,
-  Users,
-  Award,
-  Star,
   Activity,
-  PieChart,
-  Database,
   Lock,
   Gauge
 } from 'lucide-react';

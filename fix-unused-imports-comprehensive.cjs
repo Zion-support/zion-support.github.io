@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
 // Get all TypeScript/JavaScript files
 const getAllFiles = (dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) => {
@@ -53,9 +52,39 @@ const removeUnusedImports = (filePath) => {
       return match;
     });
     
+    // Also handle unused variables that are assigned but never used
+    const lines = content.split('\n');
+    const newLines = [];
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      // Check for unused variable assignments
+      const unusedVarPattern = /^\s*const\s+(\w+)\s*=\s*[^;]+;?\s*$/;
+      const match = line.match(unusedVarPattern);
+      
+      if (match) {
+        const varName = match[1];
+        // Check if the variable is used anywhere in the file
+        const isUsed = content.includes(varName) && 
+                      content.indexOf(varName) !== content.lastIndexOf(varName);
+        
+        if (!isUsed) {
+          // Comment out the unused variable instead of removing it
+          newLines.push(`// ${line}`);
+          modified = true;
+        } else {
+          newLines.push(line);
+        }
+      } else {
+        newLines.push(line);
+      }
+    }
+    
     if (modified) {
+      content = newLines.join('\n');
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed unused imports in: ${filePath}`);
+      console.log(`Fixed unused imports/variables in: ${filePath}`);
       return true;
     }
     
@@ -79,13 +108,4 @@ for (const file of files) {
   }
 }
 
-console.log(`Fixed unused imports in ${fixedCount} files.`);
-
-// Also run ESLint fix
-try {
-  console.log('Running ESLint fix...');
-  execSync('pnpm run lint:fix', { stdio: 'inherit' });
-  console.log('ESLint fix completed.');
-} catch (error) {
-  console.log('ESLint fix had some issues, but continuing...');
-}
+console.log(`Fixed unused imports/variables in ${fixedCount} files.`);
