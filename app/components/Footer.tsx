@@ -2,22 +2,33 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Right, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-af40
 import { 
   PhoneIcon, 
   EnvelopeIcon, 
   MapPinIcon,
-  ArrowRightIcon
+  ArrowRightIcon,
+  FacebookIcon,
+  TwitterIcon,
+  LinkedinIcon,
+  GithubIcon
 } from '@heroicons/react/24/outline';
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-3299
 =======
 import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
 >>>>>>> cursor/website-audit-and-update-with-deployment-7db2
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-af40
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const footerLinks = {
     services: [
@@ -51,6 +62,8 @@ const Footer: React.FC = () => {
     { name: 'LinkedIn', href: '#', icon: Linkedin },
     { name: 'GitHub', href: '#', icon: Github }
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-af40
   const services = [
     { name: 'AI Solutions', href: '/ai-services' },
     { name: 'Cybersecurity', href: '/cybersecurity' },
@@ -89,7 +102,17 @@ const Footer: React.FC = () => {
     { name: 'GDPR', href: '/gdpr' },
     { name: 'Security', href: '/security' },
     { name: 'Compliance', href: '/compliance' },
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-3299
+=======
+  ];
+
+  const socialLinks = [
+    { name: 'Facebook', href: '#', icon: FacebookIcon },
+    { name: 'Twitter', href: '#', icon: TwitterIcon },
+    { name: 'LinkedIn', href: '#', icon: LinkedinIcon },
+    { name: 'GitHub', href: '#', icon: GithubIcon }
+>>>>>>> cursor/website-audit-and-update-with-deployment-af40
   ];
 
   return (
@@ -100,19 +123,25 @@ const Footer: React.FC = () => {
           <div className="lg:col-span-2">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Link to="/" className="text-2xl font-bold text-white mb-4 block">
               Zion Tech Group
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-af40
             <Link to="/" className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">Z</span>
               </div>
               <span className="text-white font-bold text-2xl">Zion Tech Group</span>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-3299
 =======
             <Link to="/" className="text-2xl font-bold text-white mb-4 block">
               Zion Tech Group
 >>>>>>> cursor/website-audit-and-update-with-deployment-7db2
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-af40
             </Link>
             <p className="text-gray-300 mb-6 max-w-md">
               Transforming businesses through cutting-edge AI and IT solutions. 
@@ -138,6 +167,7 @@ const Footer: React.FC = () => {
           {/* Services */}
           <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h3 className="text-white font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
@@ -148,6 +178,8 @@ const Footer: React.FC = () => {
                   >
                     {link.name}
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-af40
             <h3 className="text-white font-semibold text-lg mb-6">Services</h3>
             <ul className="space-y-3">
               {services.map((service) => (
@@ -158,6 +190,7 @@ const Footer: React.FC = () => {
                   >
                     <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {service.name}
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-3299
 =======
                   <Link
@@ -166,6 +199,8 @@ const Footer: React.FC = () => {
                   >
                     {link.name}
 >>>>>>> cursor/website-audit-and-update-with-deployment-7db2
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-af40
                   </Link>
                 </li>
               ))}
@@ -174,6 +209,7 @@ const Footer: React.FC = () => {
 
           {/* Company */}
           <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <h3 className="text-white font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
@@ -185,6 +221,8 @@ const Footer: React.FC = () => {
                   >
                     {link.name}
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-af40
             <h3 className="text-white font-semibold text-lg mb-6">Company</h3>
             <ul className="space-y-3">
               {company.map((item) => (
@@ -195,6 +233,7 @@ const Footer: React.FC = () => {
                   >
                     <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {item.name}
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-3299
 =======
                   <Link
@@ -203,6 +242,8 @@ const Footer: React.FC = () => {
                   >
                     {link.name}
 >>>>>>> cursor/website-audit-and-update-with-deployment-7db2
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-af40
                   </Link>
                 </li>
               ))}
@@ -211,6 +252,7 @@ const Footer: React.FC = () => {
 
           {/* Support */}
           <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <h3 className="text-white font-semibold mb-4">Support</h3>
             <ul className="space-y-2">
@@ -222,6 +264,8 @@ const Footer: React.FC = () => {
                   >
                     {link.name}
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-af40
             <h3 className="text-white font-semibold text-lg mb-6">Resources</h3>
             <ul className="space-y-3 mb-8">
               {resources.map((resource) => (
@@ -247,6 +291,7 @@ const Footer: React.FC = () => {
                   >
                     <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {item.name}
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-3299
 =======
                   <Link
@@ -255,6 +300,8 @@ const Footer: React.FC = () => {
                   >
                     {link.name}
 >>>>>>> cursor/website-audit-and-update-with-deployment-7db2
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-af40
                   </Link>
                 </li>
               ))}
@@ -283,6 +330,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-slate-700/50 flex flex-col md:flex-row justify-between items-center">
@@ -307,6 +355,8 @@ const Footer: React.FC = () => {
         </div>
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-3299
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-af40
       </div>
     </footer>
   );
