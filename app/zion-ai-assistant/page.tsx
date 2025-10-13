@@ -1,136 +1,136 @@
-import { ArrowRight, Cloud, CheckCircle, Star, Users, TrendingUp, Lock, Zap, Mail, Smartphone, Globe, Play, Download, Award, Clock, Shield } from "lucide-react";
+import { ArrowRight, Brain, CheckCircle, Star, Users, TrendingUp, MessageSquare, Zap, Mail, Smartphone, Globe, Play, Download, Award, Clock, Bot } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ZionCloudVault() {
+export default function ZionAIAssistant() {
   const features = [
     {
-      title: "End-to-End Encryption",
-      description: "Military-grade encryption ensures your data is protected at rest and in transit with AES-256 encryption.",
-      icon: <Lock className="w-6 h-6" />,
-      benefits: ["AES-256 encryption", "Zero-knowledge architecture", "Client-side encryption", "Perfect forward secrecy"]
+      title: "Multi-language Support",
+      description: "Communicate with customers in over 50 languages with natural, context-aware responses.",
+      icon: <MessageSquare className="w-6 h-6" />,
+      benefits: ["50+ languages", "Context awareness", "Cultural adaptation", "Real-time translation"]
     },
     {
-      title: "File Sharing & Collaboration",
-      description: "Secure file sharing with granular permissions, version control, and real-time collaboration features.",
+      title: "Custom Knowledge Base",
+      description: "Train your AI assistant with your specific business knowledge and processes.",
+      icon: <Brain className="w-6 h-6" />,
+      benefits: ["Custom training", "Process automation", "Knowledge management", "Continuous learning"]
+    },
+    {
+      title: "CRM Integration",
+      description: "Seamlessly integrate with popular CRM systems for complete customer management.",
       icon: <Users className="w-6 h-6" />,
-      benefits: ["Secure sharing links", "Permission controls", "Version history", "Real-time sync"]
+      benefits: ["Salesforce integration", "HubSpot support", "Custom CRM", "Data synchronization"]
     },
     {
-      title: "Automated Backup",
-      description: "Intelligent backup scheduling with incremental backups and point-in-time recovery capabilities.",
+      title: "Live Chat Handoff",
+      description: "Intelligently transfer complex queries to human agents when needed.",
       icon: <Zap className="w-6 h-6" />,
-      benefits: ["Automated scheduling", "Incremental backups", "Point-in-time recovery", "Backup verification"]
-    },
-    {
-      title: "Mobile & Desktop Sync",
-      description: "Seamless synchronization across all your devices with offline access and conflict resolution.",
-      icon: <Cloud className="w-6 h-6" />,
-      benefits: ["Cross-platform sync", "Offline access", "Conflict resolution", "Bandwidth optimization"]
+      benefits: ["Smart routing", "Context transfer", "Agent notes", "Seamless transition"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$9",
+      price: "$39",
       period: "/month",
-      description: "Perfect for individuals and small teams",
+      description: "Perfect for small businesses starting with AI",
       features: [
-        "1TB secure storage",
-        "End-to-end encryption",
-        "Basic file sharing",
-        "Mobile & desktop apps",
+        "Up to 1,000 conversations/month",
+        "Basic knowledge base",
         "Email support",
-        "30-day version history"
+        "Standard integrations",
+        "Basic analytics",
+        "Mobile app access"
       ],
       popular: false,
       color: "from-gray-500 to-gray-600"
     },
     {
       name: "Professional",
-      price: "$19",
+      price: "$79",
       period: "/month",
       description: "Advanced features for growing businesses",
       features: [
-        "5TB secure storage",
-        "Advanced encryption",
-        "Team collaboration",
-        "Advanced sharing controls",
+        "Up to 10,000 conversations/month",
+        "Advanced knowledge base",
         "Priority support",
-        "1-year version history",
-        "API access",
-        "Custom branding"
+        "All integrations",
+        "Advanced analytics",
+        "Custom training",
+        "Multi-language support",
+        "API access"
       ],
       popular: true,
-      color: "from-purple-500 to-pink-500"
+      color: "from-green-500 to-emerald-500"
     },
     {
       name: "Enterprise",
-      price: "$49",
+      price: "$199",
       period: "/month",
       description: "Complete solution for large organizations",
       features: [
-        "Unlimited storage",
-        "Enterprise encryption",
-        "Advanced admin controls",
-        "SSO integration",
+        "Unlimited conversations",
+        "Custom knowledge base",
         "24/7 support",
-        "Unlimited version history",
         "Custom integrations",
+        "Advanced analytics",
+        "Dedicated training",
+        "White-label options",
         "On-premise deployment"
       ],
       popular: false,
-      color: "from-cyan-500 to-blue-500"
+      color: "from-purple-500 to-pink-500"
     }
   ];
 
   const testimonials = [
     {
-      name: "Alex Thompson",
-      company: "Creative Agency",
-      role: "Creative Director",
-      content: "Zion Cloud Vault has revolutionized how we manage our creative assets. The security and collaboration features are outstanding.",
+      name: "Jennifer Lee",
+      company: "Customer Support Inc.",
+      role: "Head of Support",
+      content: "Zion AI Assistant has reduced our response time by 80% and improved customer satisfaction significantly. It's like having a super-smart team member.",
       rating: 5,
-      avatar: "AT"
+      avatar: "JL"
     },
     {
-      name: "Maria Garcia",
-      company: "Legal Firm",
-      role: "Managing Partner",
-      content: "The encryption and compliance features give us peace of mind when handling sensitive client documents. Highly recommended.",
+      name: "Mark Wilson",
+      company: "E-commerce Platform",
+      role: "Operations Manager",
+      content: "The multi-language support is incredible. We can now serve customers globally without hiring multilingual staff.",
       rating: 5,
-      avatar: "MG"
+      avatar: "MW"
     },
     {
-      name: "David Kim",
-      company: "Tech Startup",
-      role: "CTO",
-      content: "The API integration and team collaboration features have streamlined our development workflow significantly.",
+      name: "Sarah Davis",
+      company: "SaaS Company",
+      role: "Customer Success",
+      content: "The CRM integration is seamless. Our sales team loves how the AI assistant provides context before they talk to customers.",
       rating: 5,
-      avatar: "DK"
+      avatar: "SD"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion Cloud Vault - Secure Cloud Storage Solution | Zion Tech Group</title>
+        <title>Zion AI Assistant - Intelligent Virtual Assistant | Zion Tech Group</title>
         <meta
           name="description"
-          content="Secure cloud storage with end-to-end encryption, file sharing, collaboration tools, and automated backup. Starting at $9/month with 1TB storage."
+          content="Deploy an intelligent AI assistant for customer support, lead qualification, and business automation. Multi-language support, CRM integration, and custom training. Starting at $39/month."
         />
         <meta
           name="keywords"
-          content="cloud storage, secure file sharing, encrypted storage, file collaboration, cloud backup, data security, file sync, team collaboration"
+          content="AI assistant, virtual assistant, chatbot, customer support, lead qualification, business automation, CRM integration, multi-language support"
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-pink-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
 
         {/* Hero Section */}
@@ -138,34 +138,34 @@ export default function ZionCloudVault() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">
-                  <Cloud className="w-4 h-4 text-purple-400 mr-2" />
-                  <span className="text-purple-400 text-sm font-medium">Secure Cloud Storage</span>
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 mb-6">
+                  <Brain className="w-4 h-4 text-green-400 mr-2" />
+                  <span className="text-green-400 text-sm font-medium">AI-Powered Intelligence</span>
                 </div>
                 
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                  Zion Cloud
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 animate-pulse">
-                    {" "}Vault
+                  Zion AI
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-400 to-cyan-400 animate-pulse">
+                    {" "}Assistant
                   </span>
                 </h1>
                 
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Secure cloud storage solution with advanced encryption, file sharing, collaboration tools, 
-                  and automated backup for businesses of all sizes.
+                  Deploy an intelligent virtual assistant for customer support, lead qualification, and business automation. 
+                  Powered by advanced natural language processing and machine learning.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
                     to="/contact"
-                    className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-purple-500/25 hover:scale-105"
+                    className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-green-500/25 hover:scale-105"
                   >
                     Start Free Trial
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <Link
                     to="#demo"
-                    className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105 flex items-center justify-center"
+                    className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105 flex items-center justify-center"
                   >
                     <Play className="w-5 h-5 mr-2" />
                     Watch Demo
@@ -179,11 +179,11 @@ export default function ZionCloudVault() {
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    <span>1TB free storage</span>
+                    <span>No setup fees</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    <span>End-to-end encryption</span>
+                    <span>24/7 availability</span>
                   </div>
                 </div>
               </div>
@@ -191,42 +191,42 @@ export default function ZionCloudVault() {
               <div className="relative">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                   <div className="text-center mb-6">
-                    <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <Cloud className="w-10 h-10 text-white" />
+                    <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                      <Bot className="w-10 h-10 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">Storage Dashboard</h3>
-                    <p className="text-gray-300">Manage your files securely</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">AI Assistant Demo</h3>
+                    <p className="text-gray-300">Experience intelligent conversations</p>
                   </div>
                   
                   <div className="space-y-4">
-                    <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg p-4">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-white font-semibold">Storage Used</span>
-                        <span className="text-purple-400 text-sm">2.4GB / 1TB</span>
+                    <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-lg p-4">
+                      <div className="flex items-center mb-2">
+                        <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mr-3">
+                          <Bot className="w-4 h-4 text-white" />
+                        </div>
+                        <span className="text-white font-semibold">AI Assistant</span>
                       </div>
-                      <div className="w-full bg-gray-700 rounded-full h-2">
-                        <div className="bg-gradient-to-r from-purple-500 to-pink-600 h-2 rounded-full" style={{width: '24%'}}></div>
-                      </div>
+                      <p className="text-gray-300 text-sm">Hello! How can I help you today? I can assist with product information, support, or connect you with our team.</p>
                     </div>
                     
-                    <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg p-4">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-white font-semibold">Files Synced</span>
-                        <span className="text-cyan-400 text-sm">1,247 files</span>
+                    <div className="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-lg p-4 ml-8">
+                      <div className="flex items-center mb-2">
+                        <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mr-3">
+                          <Users className="w-4 h-4 text-white" />
+                        </div>
+                        <span className="text-white font-semibold">Customer</span>
                       </div>
-                      <div className="w-full bg-gray-700 rounded-full h-2">
-                        <div className="bg-gradient-to-r from-cyan-500 to-blue-600 h-2 rounded-full" style={{width: '85%'}}></div>
-                      </div>
+                      <p className="text-gray-300 text-sm">I need help with my account billing. Can you check my subscription status?</p>
                     </div>
                     
                     <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-lg p-4">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-white font-semibold">Security Status</span>
-                        <span className="text-green-400 text-sm">Encrypted</span>
+                      <div className="flex items-center mb-2">
+                        <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mr-3">
+                          <Bot className="w-4 h-4 text-white" />
+                        </div>
+                        <span className="text-white font-semibold">AI Assistant</span>
                       </div>
-                      <div className="w-full bg-gray-700 rounded-full h-2">
-                        <div className="bg-gradient-to-r from-green-500 to-emerald-600 h-2 rounded-full" style={{width: '100%'}}></div>
-                      </div>
+                      <p className="text-gray-300 text-sm">I'd be happy to help with your billing! Let me check your account status. I can see you're on the Professional plan with a renewal date of March 15th. Is there anything specific about your billing you'd like to know?</p>
                     </div>
                   </div>
                 </div>
@@ -240,10 +240,10 @@ export default function ZionCloudVault() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Secure Cloud Storage Features
+                Intelligent AI Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to store, share, and collaborate on your files securely
+                Everything you need to deploy a powerful AI assistant for your business
               </p>
             </div>
             
@@ -254,11 +254,11 @@ export default function ZionCloudVault() {
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
                 >
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       {feature.icon}
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-300 transition-colors">
+                      <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-green-300 transition-colors">
                         {feature.title}
                       </h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
@@ -281,14 +281,14 @@ export default function ZionCloudVault() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-green-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Choose Your Storage Plan
+                Choose Your AI Assistant Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Start with a free trial and scale as you grow. All plans include our core security features.
+                Start with a free trial and scale as you grow. All plans include our core AI features.
               </p>
             </div>
             
@@ -296,11 +296,11 @@ export default function ZionCloudVault() {
               {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
-                  className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 relative ${plan.popular ? 'ring-2 ring-purple-400/50' : ''}`}
+                  className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 relative ${plan.popular ? 'ring-2 ring-green-400/50' : ''}`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -310,7 +310,7 @@ export default function ZionCloudVault() {
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-300 mb-4">{plan.description}</p>
                     <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-purple-400">{plan.price}</span>
+                      <span className="text-4xl font-bold text-green-400">{plan.price}</span>
                       <span className="text-gray-400 ml-1">{plan.period}</span>
                     </div>
                   </div>
@@ -328,8 +328,8 @@ export default function ZionCloudVault() {
                     to="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center group-hover:scale-105 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700'
-                        : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'
+                        ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700'
+                        : 'border border-green-400 text-green-400 hover:bg-green-400 hover:text-slate-900'
                     }`}
                   >
                     Get Started
@@ -345,10 +345,10 @@ export default function ZionCloudVault() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Trusted by Businesses Worldwide
+                Trusted by Customer Success Teams
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion Cloud Vault
+                See what our customers say about Zion AI Assistant
               </p>
             </div>
             
@@ -365,7 +365,7 @@ export default function ZionCloudVault() {
                   </div>
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                   <div className="flex items-center">
-                    <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-semibold mr-3">
+                    <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center text-white font-semibold mr-3">
                       {testimonial.avatar}
                     </div>
                     <div>
@@ -384,49 +384,49 @@ export default function ZionCloudVault() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Secure Your Data Today
+                Deploy Your AI Assistant Today
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of businesses already using Zion Cloud Vault to protect and manage their data. 
+                Join thousands of businesses already using Zion AI Assistant to improve customer experience and automate support. 
                 Start your free trial today.
               </p>
               
               {/* Contact Details */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Email</h3>
-                  <p className="text-purple-400">kleber@ziontechgroup.com</p>
+                  <p className="text-green-400">kleber@ziontechgroup.com</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Smartphone className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Phone</h3>
-                  <p className="text-purple-400">+1 302 464 0950</p>
+                  <p className="text-green-400">+1 302 464 0950</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Globe className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Address</h3>
-                  <p className="text-purple-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                  <p className="text-green-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="group bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-purple-500/25 hover:scale-105"
+                  className="group bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-green-500/25 hover:scale-105"
                 >
                   Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   to="/consultation"
-                  className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+                  className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
                 >
                   Schedule Demo
                 </Link>
