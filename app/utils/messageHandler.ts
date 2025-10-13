@@ -1,7 +1,22 @@
+// Chrome extension API types
+interface ChromeRuntime {
+  onMessage: {
+    addListener: (callback: (message: unknown, sender: unknown, sendResponse: (response?: unknown) => void) => void) => void;
+  };
+}
+
+interface ChromeAPI {
+  runtime?: ChromeRuntime;
+}
+
+interface WindowWithChrome extends Window {
+  chrome?: ChromeAPI;
+}
+
 // Message handler to prevent async response errors
 export class MessageHandler {
   private static instance: MessageHandler;
-  private pendingMessages: Map<string, any> = new Map();
+  private pendingMessages: Map<string, (event: MessageEvent) => void> = new Map();
 
   static getInstance(): MessageHandler {
     if (!MessageHandler.instance) {
@@ -24,8 +39,9 @@ export class MessageHandler {
     });
 
     // Listen for chrome extension messages
-    if (typeof chrome !== 'undefined' && chrome.runtime) {
-      chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    if (typeof window !== 'undefined' && (window as WindowWithChrome).chrome?.runtime) {
+      const chrome = (window as WindowWithChrome).chrome;
+      chrome.runtime.onMessage.addListener((message: unknown, sender: unknown, sendResponse: (response?: unknown) => void) => {
         // Always send a response to prevent async response errors
         try {
           this.handleChromeMessage(message, sender, sendResponse);
@@ -40,7 +56,7 @@ export class MessageHandler {
   }
 
   private handleMessage(event: MessageEvent): void {
-    const { data, source, origin } = event;
+    const { data } = event;
     
     // Handle specific message types that might cause issues
     if (data.type === 'LAUNCHDARKLY_INIT') {
@@ -55,21 +71,26 @@ export class MessageHandler {
     }
   }
 
-  private handleChromeMessage(message: any, sender: chrome.runtime.MessageSender, sendResponse: (response?: any) => void): void {
+  private handleChromeMessage(message: unknown, sender: unknown, sendResponse: (response?: unknown) => void): void {
     // Handle different message types
-    switch (message.type) {
-      case 'PING':
-        sendResponse({ status: 'pong' });
-        break;
-      case 'GET_DATA':
-        sendResponse({ data: 'No data available' });
-        break;
-      default:
-        sendResponse({ error: 'Unknown message type' });
+    if (typeof message === 'object' && message !== null && 'type' in message) {
+      const messageObj = message as { type: string };
+      switch (messageObj.type) {
+        case 'PING':
+          sendResponse({ status: 'pong' });
+          break;
+        case 'GET_DATA':
+          sendResponse({ data: 'No data available' });
+          break;
+        default:
+          sendResponse({ error: 'Unknown message type' });
+      }
+    } else {
+      sendResponse({ error: 'Invalid message format' });
     }
   }
 
-  public sendMessage(target: Window, message: any, targetOrigin: string = '*'): void {
+  public sendMessage(target: Window, message: unknown, targetOrigin: string = '*'): void {
     try {
       target.postMessage(message, targetOrigin);
     } catch (error) {
@@ -77,7 +98,7 @@ export class MessageHandler {
     }
   }
 
-  public addMessageListener(type: string, handler: (data: any) => void): void {
+  public addMessageListener(type: string, handler: (data: unknown) => void): void {
     const messageHandler = (event: MessageEvent) => {
       if (event.data && event.data.type === type) {
         handler(event.data);
