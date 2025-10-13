@@ -1,1 +1,7 @@
-import React from "react"; export default function CacheManager() { return <div>Cache Manager</div>; }
+import React from 'react';
+
+const CacheManager: React.FC = () => {
+  return null; // This component doesn't need to render anything
+};
+
+export default CacheManager;

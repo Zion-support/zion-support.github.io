@@ -1,1 +1,7 @@
-import React from "react"; export default function AdvancedPerformanceMonitor() { return <div>Performance Monitor</div>; }
+import React from 'react';
+
+const AdvancedPerformanceMonitor: React.FC = () => {
+  return null;
+};
+
+export default AdvancedPerformanceMonitor;

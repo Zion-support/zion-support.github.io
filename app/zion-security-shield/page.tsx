@@ -1,6 +1,6 @@
-import { ArrowRight, Shield, Lock, Eye, AlertTriangle, CheckCircle, Star, Zap, Brain } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { ArrowRight, Shield, Lock, Eye, AlertTriangle, CheckCircle, Star, Zap, Brain } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 export default function ZionSecurityShield() {
   const features = [
@@ -99,30 +99,6 @@ export default function ZionSecurityShield() {
         "Custom integrations"
       ],
       popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "David Martinez",
-      company: "Financial Services Corp",
-      role: "CISO",
-      content: "Zion Security Shield has been a game-changer for our security posture. We've seen a 90% reduction in security incidents since implementation.",
-      rating: 5
-    },
-    {
-      name: "Lisa Thompson",
-      company: "Healthcare Solutions",
-      role: "IT Director",
-      content: "The AI threat detection is incredibly accurate. It caught several sophisticated attacks that other systems missed.",
-      rating: 5
-    },
-    {
-      name: "James Wilson",
-      company: "E-commerce Platform",
-      role: "Security Manager",
-      content: "Outstanding support and comprehensive security features. Our compliance audit passed with flying colors.",
-      rating: 5
     }
   ];
 

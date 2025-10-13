@@ -1,7 +1,4 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Globe, Shield, Zap } from 'lucide-react';
 
 export default function Partners() {
   const partners = [
@@ -49,30 +46,7 @@ export default function Partners() {
     }
   ];
 
-  const benefits = [
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Joint Marketing",
-      description: "Collaborative marketing campaigns and co-branded content"
-    },
-    {
-      icon: <Globe className="w-8 h-8" />,
-      title: "Global Reach",
-      description: "Access to our worldwide network of clients and opportunities"
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Technical Support",
-      description: "Dedicated technical resources and training programs"
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Innovation Labs",
-      description: "Joint innovation initiatives and R&D projects"
-    }
-  ];
-
-  const tiers = [
+  const partnerTiers = [
     {
       name: "Platinum",
       color: "from-gray-400 to-gray-600",
@@ -108,9 +82,50 @@ export default function Partners() {
                 Our Partners
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
               Strategic partnerships that drive innovation and deliver exceptional value to our clients.
             </p>
+          </div>
+
+          {/* Partners Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {partners.map((partner, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="text-center">
+                  <h3 className="text-xl font-semibold text-white mb-2">{partner.name}</h3>
+                  <p className="text-gray-300 text-sm mb-2">{partner.category}</p>
+                  <p className="text-gray-400 text-sm">{partner.description}</p>
+                  <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium mt-3 ${
+                    partner.tier === 'Platinum' ? 'bg-gray-400 text-gray-900' :
+                    partner.tier === 'Gold' ? 'bg-yellow-400 text-yellow-900' :
+                    'bg-gray-300 text-gray-700'
+                  }`}>
+                    {partner.tier}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Partner Tiers */}
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Partnership Tiers</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {partnerTiers.map((tier, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                  <h3 className="text-xl font-semibold text-white mb-4">{tier.name}</h3>
+                  <p className="text-gray-300 text-sm mb-4">{tier.requirements}</p>
+                  <ul className="text-left text-gray-400 text-sm space-y-2">
+                    {tier.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center">
+                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

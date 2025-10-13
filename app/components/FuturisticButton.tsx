@@ -1,32 +1,36 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, ExternalLink } from 'lucide-react';
 
 interface FuturisticButtonProps {
-  children: React.ReactNode;
   href?: string;
-  onClick?: () => void;
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  to?: string;
+  variant?: 'primary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
-  className?: string;
   icon?: React.ReactNode;
+  children: React.ReactNode;
+  className?: string;
+  onClick?: () => void;
+  external?: boolean;
 }
 
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({
-  children,
   href,
-  onClick,
+  to,
   variant = 'primary',
   size = 'md',
+  icon,
+  children,
   className = '',
-  icon
+  onClick,
+  external = false,
 }) => {
-  const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900';
+  const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500';
   
   const variantClasses = {
     primary: 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg hover:shadow-cyan-500/25',
-    secondary: 'bg-slate-700 text-white hover:bg-slate-600 border border-slate-600',
     outline: 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900',
-    ghost: 'text-gray-300 hover:text-white hover:bg-white/10'
+    ghost: 'text-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-300'
   };
   
   const sizeClasses = {
@@ -37,21 +41,47 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
 
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 
+  const content = (
+    <>
+      {icon && <span className="mr-2">{icon}</span>}
+      {children}
+      {external && <ExternalLink className="w-4 h-4 ml-2" />}
+      {!external && !icon && <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />}
+    </>
+  );
+
   if (href) {
     return (
-      <a href={href} className={classes}>
-        {icon && <span className="mr-2">{icon}</span>}
-        {children}
-        {!icon && <ArrowRight className="w-4 h-4 ml-2" />}
+      <a
+        href={href}
+        className={classes}
+        onClick={onClick}
+        target={external ? '_blank' : undefined}
+        rel={external ? 'noopener noreferrer' : undefined}
+      >
+        {content}
       </a>
     );
   }
 
+  if (to) {
+    return (
+      <Link
+        to={to}
+        className={classes}
+        onClick={onClick}
+      >
+        {content}
+      </Link>
+    );
+  }
+
   return (
-    <button onClick={onClick} className={classes}>
-      {icon && <span className="mr-2">{icon}</span>}
-      {children}
-      {!icon && <ArrowRight className="w-4 h-4 ml-2" />}
+    <button
+      className={classes}
+      onClick={onClick}
+    >
+      {content}
     </button>
   );
 };

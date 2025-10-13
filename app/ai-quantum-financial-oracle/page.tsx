@@ -1,6 +1,4 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
+import {
   Brain, 
   TrendingUp, 
   Shield, 
@@ -9,13 +7,8 @@ import {
   DollarSign, 
   Target, 
   CheckCircle, 
-  ArrowRight,
   Cpu,
   Globe,
-  Clock,
-  Users,
-  Award,
-  Star,
   Activity,
   PieChart
 } from 'lucide-react';

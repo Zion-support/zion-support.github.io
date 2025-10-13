@@ -1,26 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Cloud, 
-  Server, 
-  Database, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight,
-  Globe,
-  Users,
-  BarChart3,
-  Settings,
-  Clock,
-  Award,
-  Star,
-  Activity,
-  Lock,
-  Cpu,
-  HardDrive,
-  Network
-} from 'lucide-react';
+import { Cloud, Shield, CheckCircle, ArrowRight, Globe, BarChart3, Settings, Star, Activity, Lock } from 'lucide-react';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
@@ -138,40 +118,6 @@ const CloudInfrastructure = () => {
       icon: <Activity className="w-6 h-6" />,
       stats: "Sub-second response"
     }
-  ];
-
-  const testimonials = [
-    {
-      name: "David Chen",
-      company: "TechStart Solutions",
-      role: "CTO",
-      content: "Zion's cloud infrastructure services transformed our operations. We achieved 99.99% uptime and reduced costs by 35% in the first year.",
-      rating: 5,
-      avatar: "DC"
-    },
-    {
-      name: "Sarah Rodriguez",
-      company: "E-commerce Plus",
-      role: "VP of Engineering",
-      content: "The migration was seamless and the ongoing support is exceptional. Our applications now scale automatically and perform better than ever.",
-      rating: 5,
-      avatar: "SR"
-    },
-    {
-      name: "Michael Johnson",
-      company: "Financial Services Corp",
-      role: "IT Director",
-      content: "Enterprise-grade security and compliance features gave us confidence to move our critical systems to the cloud. Highly recommended.",
-      rating: 5,
-      avatar: "MJ"
-    }
-  ];
-
-  const stats = [
-    { number: "500+", label: "Infrastructure Projects", icon: <Server className="w-6 h-6" /> },
-    { number: "99.99%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "40%", label: "Average Cost Savings", icon: <BarChart3 className="w-6 h-6" /> },
-    { number: "24/7", label: "Monitoring & Support", icon: <Clock className="w-6 h-6" /> }
   ];
 
   return (

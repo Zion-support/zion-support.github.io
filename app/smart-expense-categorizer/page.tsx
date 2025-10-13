@@ -1,24 +1,5 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { 
-  Receipt, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  Clock, 
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Brain,
-  Target,
-  Globe,
-  DollarSign,
-  FileText,
-  CreditCard
-} from 'lucide-react';
 
 const SmartExpenseCategorizerPage = () => {
   const features = [
@@ -102,36 +83,6 @@ const SmartExpenseCategorizerPage = () => {
       ],
       popular: false
     }
-  ];
-
-  const benefits = [
-    {
-      icon: <DollarSign className="w-12 h-12 text-green-400" />,
-      title: "Save Time & Money",
-      description: "Reduce expense processing time by 80% and eliminate manual data entry errors that cost businesses thousands."
-    },
-    {
-      icon: <FileText className="w-12 h-12 text-blue-400" />,
-      title: "Automated Compliance",
-      description: "Ensure tax compliance with automated categorization and detailed expense reports for easy filing and auditing."
-    },
-    {
-      icon: <CreditCard className="w-12 h-12 text-purple-400" />,
-      title: "Better Financial Control",
-      description: "Gain better control over spending with real-time insights and automated budget tracking and alerts."
-    },
-    {
-      icon: <TrendingUp className="w-12 h-12 text-red-400" />,
-      title: "Improved Cash Flow",
-      description: "Optimize cash flow with better expense visibility and automated reimbursement processes."
-    }
-  ];
-
-  const stats = [
-    { number: "80%", label: "Time Saved" },
-    { number: "98%", label: "Accuracy Rate" },
-    { number: "50%", label: "Error Reduction" },
-    { number: "3x", label: "Faster Processing" }
   ];
 
   return (

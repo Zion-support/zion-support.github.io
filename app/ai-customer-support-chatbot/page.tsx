@@ -1,7 +1,7 @@
 "use client";
-import { Brain, Clock, Target, BarChart3 } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Brain, Clock, Target, BarChart3 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 export default function AICustomerSupportChatbot() {
   const chatbotFeatures = [
@@ -58,25 +58,6 @@ export default function AICustomerSupportChatbot() {
       description: "Complete solution for large organizations",
       period: "/month",
       popular: false,
-    },
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechCorp",
-      text: "Amazing chatbot solution!",
-      rating: 5,
-      content:
-        "The AI chatbot has transformed our customer service operations.",
-    },
-    {
-      name: "Mike Chen",
-      company: "StartupXYZ",
-      text: "Increased customer satisfaction by 40%.",
-      rating: 5,
-      content:
-        "Our response times have improved dramatically with this solution.",
     },
   ];
   const features = [
