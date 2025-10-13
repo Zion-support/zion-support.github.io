@@ -40,6 +40,11 @@ const Footer = React.memo(() => {
               Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. 
               We help businesses transform with cutting-edge technology and innovative solutions.
             </p>
+            <div className="mt-4 space-y-2 text-sm text-gray-400">
+              <p><strong>Phone:</strong> +1 302 464 0950</p>
+              <p><strong>Email:</strong> kleber@ziontechgroup.com</p>
+              <p><strong>Address:</strong> 364 E Main St STE 1008, Middletown, DE 19709</p>
+            </div>
             <div className="flex space-x-4">
               {socialLinks.map((link) => (
                 <a
@@ -70,15 +75,31 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/cloud-services"
+                  to="/services"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Cloud Solutions
+                  IT Services
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/cybersecurity"
+                  to="/micro-saas"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Micro SAAS
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-solutions"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  5G Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/cybersecurity-solutions"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Cybersecurity
@@ -86,26 +107,10 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/5g-implementation"
+                  to="/web-development"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  5G Implementation
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/data-analytics"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Data Analytics
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/custom-development"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Custom Development
+                  Web Development
                 </Link>
               </li>
             </ul>
