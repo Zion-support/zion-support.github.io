@@ -73,8 +73,6 @@ export default defineConfig({
           if (id.includes('node_modules')) {
             return 'vendor'
           }
-<<<<<<< HEAD
-=======
           // Performance monitoring - separate chunk
           if (id.includes('web-vitals')) {
             return 'performance'
@@ -131,7 +129,6 @@ export default defineConfig({
           }
           // Default chunk for other modules
           return 'vendor'
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
         },
       },
     },

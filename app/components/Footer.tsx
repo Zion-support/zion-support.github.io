@@ -40,9 +40,6 @@ const Footer: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
-  const mainLinks = [
-=======
   const serviceCategories = [
     {
       title: "AI Solutions",
@@ -88,7 +85,6 @@ const Footer: React.FC = () => {
 
   const quickLinks = [
     { name: "Home", path: "/" },
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
     { name: "AI Services", path: "/ai-services" },
