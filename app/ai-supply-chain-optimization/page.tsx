@@ -1,86 +1,86 @@
-import { ArrowRight, TrendingUp, Shield, Zap, Globe, CheckCircle, Star, Brain, BarChart3, DollarSign, PieChart, Calculator } from "lucide-react";
+import { ArrowRight, Package, TrendingUp, Shield, Zap, Globe, CheckCircle, Star, Brain, BarChart3, Truck, Warehouse } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AiFinancialForecasting() {
+export default function AiSupplyChainOptimization() {
   const features = [
     {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Revenue Forecasting",
-      description: "AI-powered revenue prediction with 98% accuracy using advanced machine learning and market analysis"
+      icon: <Package className="w-6 h-6" />,
+      title: "Demand Forecasting",
+      description: "AI-powered demand prediction with 95% accuracy using machine learning algorithms and historical data analysis"
     },
     {
-      icon: <PieChart className="w-6 h-6" />,
-      title: "Cash Flow Analysis",
-      description: "Predict cash flow patterns and optimize working capital with intelligent financial modeling"
+      icon: <Truck className="w-6 h-6" />,
+      title: "Route Optimization",
+      description: "Dynamic route planning that reduces delivery time by 30% and fuel costs by 25%"
     },
     {
-      icon: <Calculator className="w-6 h-6" />,
-      title: "Budget Optimization",
-      description: "AI-driven budget allocation that maximizes ROI and minimizes financial risks"
+      icon: <Warehouse className="w-6 h-6" />,
+      title: "Inventory Management",
+      description: "Smart inventory optimization that prevents stockouts and reduces carrying costs by 40%"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Market Analysis",
-      description: "Real-time market sentiment analysis and economic indicator tracking for better decisions"
+      title: "Real-time Analytics",
+      description: "Comprehensive supply chain visibility with predictive analytics and performance metrics"
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Risk Assessment",
-      description: "Comprehensive risk analysis with scenario modeling and stress testing capabilities"
+      title: "Risk Management",
+      description: "AI-driven risk assessment and mitigation strategies for supply chain disruptions"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Automated Reporting",
-      description: "Generate comprehensive financial reports and insights automatically with AI"
+      title: "Automated Decision Making",
+      description: "Intelligent automation of procurement, logistics, and distribution decisions"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Startup",
-      price: "$299",
+      name: "Starter",
+      price: "$499",
       period: "/month",
-      description: "Perfect for startups and small businesses",
+      description: "Perfect for small to medium businesses",
       features: [
-        "Basic revenue forecasting",
-        "Cash flow analysis",
-        "Budget planning tools",
-        "Standard reports",
+        "Up to 5 warehouses",
+        "Basic demand forecasting",
+        "Route optimization",
+        "Standard analytics",
         "Email support",
-        "API access"
+        "API integration"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$1,299",
       period: "/month",
-      description: "Most popular for growing companies",
+      description: "Most popular for growing enterprises",
       features: [
-        "Advanced forecasting models",
-        "Multi-currency support",
-        "Risk assessment tools",
-        "Custom reporting",
+        "Up to 25 warehouses",
+        "Advanced demand forecasting",
+        "Multi-modal optimization",
+        "Real-time analytics",
         "Priority support",
-        "Integration with accounting software",
-        "Scenario planning"
+        "Custom integrations",
+        "Risk management tools"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$2,999",
       period: "/month",
-      description: "For large financial institutions",
+      description: "For large global organizations",
       features: [
-        "AI-powered insights",
-        "Real-time market data",
-        "Advanced risk modeling",
-        "White-label solution",
+        "Unlimited warehouses",
+        "AI-powered optimization",
+        "Global supply chain visibility",
+        "Advanced risk management",
         "24/7 dedicated support",
         "Custom AI models",
-        "Compliance reporting"
+        "White-label solution"
       ],
       popular: false
     }
@@ -88,24 +88,24 @@ export default function AiFinancialForecasting() {
 
   const testimonials = [
     {
-      name: "Jennifer Walsh",
-      company: "FinTech Solutions",
-      role: "CFO",
-      content: "Zion's AI financial forecasting helped us achieve 98% accuracy in revenue predictions. Our financial planning has never been more precise.",
+      name: "David Martinez",
+      company: "Global Logistics Corp",
+      role: "Supply Chain Director",
+      content: "Zion's AI supply chain optimization reduced our operational costs by 35% and improved delivery times by 40%. The ROI was achieved in just 2 months.",
       rating: 5
     },
     {
-      name: "Michael Thompson",
-      company: "Investment Group LLC",
-      role: "Portfolio Manager",
-      content: "The risk assessment tools are game-changing. We've reduced portfolio risk by 25% while maintaining returns.",
+      name: "Lisa Chen",
+      company: "Manufacturing Solutions Inc",
+      role: "Operations Manager",
+      content: "The demand forecasting accuracy is incredible. We've eliminated stockouts completely while reducing inventory costs by 30%.",
       rating: 5
     },
     {
-      name: "Sarah Davis",
-      company: "Corporate Finance Inc",
-      role: "Financial Director",
-      content: "This platform transformed our financial planning process. The AI insights help us make better investment decisions.",
+      name: "Robert Johnson",
+      company: "Retail Chain USA",
+      role: "VP of Operations",
+      content: "This platform transformed our entire supply chain. The AI insights help us make better decisions faster than ever before.",
       rating: 5
     }
   ];
@@ -113,14 +113,14 @@ export default function AiFinancialForecasting() {
   return (
     <>
       <Helmet>
-        <title>AI Financial Forecasting - Intelligent Financial Planning & Analysis | Zion Tech Group</title>
+        <title>AI Supply Chain Optimization - Intelligent Logistics & Inventory Management | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform your financial planning with AI-powered forecasting. Revenue prediction, cash flow analysis, budget optimization, and risk assessment for modern businesses."
+          content="Transform your supply chain with AI-powered optimization. Demand forecasting, route optimization, inventory management, and risk assessment for modern enterprises."
         />
         <meta
           name="keywords"
-          content="financial forecasting, revenue prediction, cash flow analysis, budget optimization, financial planning, AI finance"
+          content="supply chain optimization, demand forecasting, inventory management, logistics AI, route optimization, supply chain analytics"
         />
       </Helmet>
 
@@ -130,16 +130,16 @@ export default function AiFinancialForecasting() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Star className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">#1 Financial AI Platform 2024</span>
+              <span className="text-cyan-400 text-sm font-medium">#1 Supply Chain AI Platform 2024</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                AI Financial Forecasting
+                AI Supply Chain Optimization
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your financial planning with AI-powered forecasting. Achieve 98% accuracy in revenue predictions, 
-              optimize cash flow, and make data-driven financial decisions with confidence.
+              Revolutionize your supply chain with AI-powered optimization. Reduce costs by 35%, improve delivery times by 40%, 
+              and eliminate stockouts with intelligent demand forecasting and route optimization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
@@ -160,20 +160,20 @@ export default function AiFinancialForecasting() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">98%</div>
-                <div className="text-gray-300">Forecast Accuracy</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">35%</div>
+                <div className="text-gray-300">Cost Reduction</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-purple-400 mb-2">40%</div>
-                <div className="text-gray-300">Faster Planning</div>
+                <div className="text-gray-300">Faster Delivery</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">25%</div>
-                <div className="text-gray-300">Risk Reduction</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">95%</div>
+                <div className="text-gray-300">Forecast Accuracy</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-400 mb-2">1000+</div>
-                <div className="text-gray-300">Financial Models</div>
+                <div className="text-3xl font-bold text-orange-400 mb-2">500+</div>
+                <div className="text-gray-300">Companies Served</div>
               </div>
             </div>
           </div>
@@ -184,10 +184,10 @@ export default function AiFinancialForecasting() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Financial Intelligence
+                Intelligent Supply Chain Solutions
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Harness the power of AI to transform your financial planning and analysis.
+                Harness the power of AI to optimize every aspect of your supply chain operations.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -216,10 +216,10 @@ export default function AiFinancialForecasting() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Transparent Pricing for Every Business
+                Flexible Pricing for Every Business
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your financial complexity. All plans include 30-day free trial.
+                Choose the plan that fits your supply chain complexity. All plans include 30-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -276,10 +276,10 @@ export default function AiFinancialForecasting() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Financial Leaders
+                Trusted by Global Leaders
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how financial professionals are transforming their planning with AI
+                See how industry leaders are transforming their supply chains with AI
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -308,10 +308,10 @@ export default function AiFinancialForecasting() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Financial Planning?
+              Ready to Optimize Your Supply Chain?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join 1000+ companies already using AI to make smarter financial decisions.
+              Join 500+ companies already using AI to transform their supply chain operations.
             </p>
             
             {/* Contact Information */}
@@ -325,14 +325,14 @@ export default function AiFinancialForecasting() {
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <DollarSign className="w-6 h-6 text-white" />
+                  <Zap className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Phone</h3>
                 <p className="text-cyan-400">+1 302 464 0950</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Calculator className="w-6 h-6 text-white" />
+                  <Package className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Address</h3>
                 <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>

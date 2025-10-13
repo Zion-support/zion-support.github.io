@@ -55,6 +55,9 @@ const AiProjectManagementPage = React.lazy(() => import("./app/ai-project-manage
 const AiRecommendationEnginePage = React.lazy(() => import("./app/ai-recommendation-engine/page"));
 const AiSalesAutomationPage = React.lazy(() => import("./app/ai-sales-automation/page"));
 const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
+const AiSupplyChainOptimizationPage = React.lazy(() => import("./app/ai-supply-chain-optimization/page"));
+const AiFinancialForecastingPage = React.lazy(() => import("./app/ai-financial-forecasting/page"));
+const AiHrAutomationPage = React.lazy(() => import("./app/ai-hr-automation/page"));
 
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(
@@ -174,6 +177,18 @@ const ZionComplianceManagerPage = React.lazy(
 const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
 );
+const ZionSmartSchedulerPage = React.lazy(
+  () => import("./app/zion-smart-scheduler/page"),
+);
+const ZionExpenseTrackerPage = React.lazy(
+  () => import("./app/zion-expense-tracker/page"),
+);
+const ZionSocialMediaManagerPage = React.lazy(
+  () => import("./app/zion-social-media-manager/page"),
+);
+const ZionTaskAutomationPage = React.lazy(
+  () => import("./app/zion-task-automation/page"),
+);
 
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(
@@ -250,6 +265,9 @@ function App() {
                   <Route path="/ai-recommendation-engine" element={<AiRecommendationEnginePage />} />
                   <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
                   <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
+                  <Route path="/ai-supply-chain-optimization" element={<AiSupplyChainOptimizationPage />} />
+                  <Route path="/ai-financial-forecasting" element={<AiFinancialForecastingPage />} />
+                  <Route path="/ai-hr-automation" element={<AiHrAutomationPage />} />
 
                   {/* IT Service Routes */}
                   <Route
@@ -408,6 +426,22 @@ function App() {
                   <Route
                     path="/zion-performance-monitor"
                     element={<ZionPerformanceMonitorPage />}
+                  />
+                  <Route
+                    path="/zion-smart-scheduler"
+                    element={<ZionSmartSchedulerPage />}
+                  />
+                  <Route
+                    path="/zion-expense-tracker"
+                    element={<ZionExpenseTrackerPage />}
+                  />
+                  <Route
+                    path="/zion-social-media-manager"
+                    element={<ZionSocialMediaManagerPage />}
+                  />
+                  <Route
+                    path="/zion-task-automation"
+                    element={<ZionTaskAutomationPage />}
                   />
 
                   {/* 5G Solutions Routes */}

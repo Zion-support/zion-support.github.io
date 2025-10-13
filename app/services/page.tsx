@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail } from "lucide-react";
+import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Package } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -111,6 +111,33 @@ export default function Services() {
       color: "from-amber-500 to-yellow-500",
       price: "Starting at $349/month",
       features: ["Risk Assessment", "Fraud Detection", "Investment Analysis", "Compliance Reporting"]
+    },
+    {
+      title: "AI Supply Chain Optimization",
+      description: "Revolutionize your supply chain with AI-powered optimization. Reduce costs by 35%, improve delivery times by 40%, and eliminate stockouts.",
+      icon: <Package className="w-8 h-8" />,
+      path: "/ai-supply-chain-optimization",
+      color: "from-indigo-500 to-blue-500",
+      price: "Starting at $499/month",
+      features: ["Demand Forecasting", "Route Optimization", "Inventory Management", "Risk Assessment"]
+    },
+    {
+      title: "AI Financial Forecasting",
+      description: "Achieve 98% accuracy in revenue predictions with AI-powered forecasting. Optimize cash flow and make data-driven financial decisions.",
+      icon: <TrendingUp className="w-8 h-8" />,
+      path: "/ai-financial-forecasting",
+      color: "from-green-500 to-teal-500",
+      price: "Starting at $299/month",
+      features: ["Revenue Forecasting", "Cash Flow Analysis", "Budget Optimization", "Market Analysis"]
+    },
+    {
+      title: "AI HR Automation",
+      description: "Reduce hiring time by 60% and improve employee engagement by 40% with AI-powered HR automation and intelligent recruitment.",
+      icon: <Users className="w-8 h-8" />,
+      path: "/ai-hr-automation",
+      color: "from-pink-500 to-rose-500",
+      price: "Starting at $199/month",
+      features: ["Smart Recruitment", "Automated Onboarding", "Performance Analytics", "Employee Engagement"]
     }
   ];
 

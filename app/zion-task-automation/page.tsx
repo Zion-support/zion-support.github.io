@@ -1,86 +1,86 @@
-import { ArrowRight, TrendingUp, Shield, Zap, Globe, CheckCircle, Star, Brain, BarChart3, DollarSign, PieChart, Calculator } from "lucide-react";
+import { ArrowRight, CheckSquare, Zap, Shield, Globe, CheckCircle, Star, Brain, BarChart3, Clock, Settings } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AiFinancialForecasting() {
+export default function ZionTaskAutomation() {
   const features = [
     {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Revenue Forecasting",
-      description: "AI-powered revenue prediction with 98% accuracy using advanced machine learning and market analysis"
-    },
-    {
-      icon: <PieChart className="w-6 h-6" />,
-      title: "Cash Flow Analysis",
-      description: "Predict cash flow patterns and optimize working capital with intelligent financial modeling"
-    },
-    {
-      icon: <Calculator className="w-6 h-6" />,
-      title: "Budget Optimization",
-      description: "AI-driven budget allocation that maximizes ROI and minimizes financial risks"
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Market Analysis",
-      description: "Real-time market sentiment analysis and economic indicator tracking for better decisions"
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Risk Assessment",
-      description: "Comprehensive risk analysis with scenario modeling and stress testing capabilities"
+      icon: <CheckSquare className="w-6 h-6" />,
+      title: "Smart Task Creation",
+      description: "AI-powered task generation from emails, documents, and conversations with automatic prioritization"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Automated Reporting",
-      description: "Generate comprehensive financial reports and insights automatically with AI"
+      title: "Workflow Automation",
+      description: "Create complex automation workflows that connect apps and services to eliminate manual work"
+    },
+    {
+      icon: <Clock className="w-6 h-6" />,
+      title: "Intelligent Scheduling",
+      description: "AI-powered task scheduling that optimizes your time and automatically adjusts to your productivity patterns"
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Productivity Analytics",
+      description: "Detailed insights into your work patterns, time allocation, and productivity trends"
+    },
+    {
+      icon: <Settings className="w-6 h-6" />,
+      title: "Custom Automation Rules",
+      description: "Build custom automation rules and triggers to streamline your specific workflows"
+    },
+    {
+      icon: <Brain className="w-6 h-6" />,
+      title: "AI Task Assistant",
+      description: "Intelligent task recommendations and suggestions to help you work more efficiently"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Startup",
-      price: "$299",
+      name: "Personal",
+      price: "$15",
       period: "/month",
-      description: "Perfect for startups and small businesses",
+      description: "Perfect for individuals and freelancers",
       features: [
-        "Basic revenue forecasting",
-        "Cash flow analysis",
-        "Budget planning tools",
-        "Standard reports",
+        "Unlimited personal tasks",
+        "Basic automation",
+        "Standard analytics",
+        "Mobile app access",
         "Email support",
-        "API access"
+        "Basic integrations"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$799",
+      name: "Team",
+      price: "$39",
       period: "/month",
-      description: "Most popular for growing companies",
+      description: "Most popular for small teams",
       features: [
-        "Advanced forecasting models",
-        "Multi-currency support",
-        "Risk assessment tools",
-        "Custom reporting",
+        "Up to 10 team members",
+        "Advanced automation",
+        "Team collaboration",
         "Priority support",
-        "Integration with accounting software",
-        "Scenario planning"
+        "Advanced analytics",
+        "Custom integrations",
+        "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$79",
       period: "/month",
-      description: "For large financial institutions",
+      description: "For large organizations",
       features: [
-        "AI-powered insights",
-        "Real-time market data",
-        "Advanced risk modeling",
+        "Unlimited team members",
+        "AI-powered automation",
         "White-label solution",
         "24/7 dedicated support",
-        "Custom AI models",
-        "Compliance reporting"
+        "Advanced security",
+        "Custom workflows",
+        "Enterprise integrations"
       ],
       popular: false
     }
@@ -88,24 +88,24 @@ export default function AiFinancialForecasting() {
 
   const testimonials = [
     {
-      name: "Jennifer Walsh",
-      company: "FinTech Solutions",
-      role: "CFO",
-      content: "Zion's AI financial forecasting helped us achieve 98% accuracy in revenue predictions. Our financial planning has never been more precise.",
+      name: "Alex Thompson",
+      company: "Productivity Solutions",
+      role: "Product Manager",
+      content: "Zion Task Automation saved me 8 hours per week by automating repetitive tasks. The AI suggestions are incredibly helpful and accurate.",
       rating: 5
     },
     {
-      name: "Michael Thompson",
-      company: "Investment Group LLC",
-      role: "Portfolio Manager",
-      content: "The risk assessment tools are game-changing. We've reduced portfolio risk by 25% while maintaining returns.",
+      name: "Maria Garcia",
+      company: "Remote Work Co",
+      role: "Operations Director",
+      content: "The workflow automation features are game-changing. We've eliminated 90% of manual processes and our team is much more productive.",
       rating: 5
     },
     {
-      name: "Sarah Davis",
-      company: "Corporate Finance Inc",
-      role: "Financial Director",
-      content: "This platform transformed our financial planning process. The AI insights help us make better investment decisions.",
+      name: "David Kim",
+      company: "Startup Accelerator",
+      role: "CEO",
+      content: "This tool transformed how we manage tasks and projects. The AI insights help us optimize our workflows and improve team efficiency.",
       rating: 5
     }
   ];
@@ -113,14 +113,14 @@ export default function AiFinancialForecasting() {
   return (
     <>
       <Helmet>
-        <title>AI Financial Forecasting - Intelligent Financial Planning & Analysis | Zion Tech Group</title>
+        <title>Zion Task Automation - AI-Powered Task Management & Workflow Automation | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform your financial planning with AI-powered forecasting. Revenue prediction, cash flow analysis, budget optimization, and risk assessment for modern businesses."
+          content="Transform your productivity with AI-powered task automation. Smart task creation, workflow automation, intelligent scheduling, and productivity analytics for individuals and teams."
         />
         <meta
           name="keywords"
-          content="financial forecasting, revenue prediction, cash flow analysis, budget optimization, financial planning, AI finance"
+          content="task automation, workflow automation, productivity tools, task management, AI automation, team collaboration"
         />
       </Helmet>
 
@@ -130,16 +130,16 @@ export default function AiFinancialForecasting() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Star className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">#1 Financial AI Platform 2024</span>
+              <span className="text-cyan-400 text-sm font-medium">#1 Task Automation Tool 2024</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                AI Financial Forecasting
+                Zion Task Automation
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your financial planning with AI-powered forecasting. Achieve 98% accuracy in revenue predictions, 
-              optimize cash flow, and make data-driven financial decisions with confidence.
+              Automate your way to peak productivity. Save 8 hours per week with AI-powered task management, 
+              workflow automation, and intelligent scheduling that adapts to your work style.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
@@ -160,20 +160,20 @@ export default function AiFinancialForecasting() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">98%</div>
-                <div className="text-gray-300">Forecast Accuracy</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">8hrs</div>
+                <div className="text-gray-300">Saved Per Week</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">40%</div>
-                <div className="text-gray-300">Faster Planning</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">90%</div>
+                <div className="text-gray-300">Less Manual Work</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">25%</div>
-                <div className="text-gray-300">Risk Reduction</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">50k+</div>
+                <div className="text-gray-300">Tasks Automated</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-400 mb-2">1000+</div>
-                <div className="text-gray-300">Financial Models</div>
+                <div className="text-3xl font-bold text-orange-400 mb-2">3k+</div>
+                <div className="text-gray-300">Happy Users</div>
               </div>
             </div>
           </div>
@@ -184,10 +184,10 @@ export default function AiFinancialForecasting() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Financial Intelligence
+                Complete Task Automation Suite
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Harness the power of AI to transform your financial planning and analysis.
+                Everything you need to automate tasks and boost productivity with AI intelligence.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -216,10 +216,10 @@ export default function AiFinancialForecasting() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Transparent Pricing for Every Business
+                Simple Pricing for Every Team
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your financial complexity. All plans include 30-day free trial.
+                Choose the plan that fits your automation needs. All plans include 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -276,10 +276,10 @@ export default function AiFinancialForecasting() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Financial Leaders
+                Trusted by Productivity Experts
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how financial professionals are transforming their planning with AI
+                See how professionals are transforming their productivity with automation
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -308,10 +308,10 @@ export default function AiFinancialForecasting() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Financial Planning?
+              Ready to Automate Your Productivity?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join 1000+ companies already using AI to make smarter financial decisions.
+              Join 3,000+ professionals already using AI to transform their productivity.
             </p>
             
             {/* Contact Information */}
@@ -325,14 +325,14 @@ export default function AiFinancialForecasting() {
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <DollarSign className="w-6 h-6 text-white" />
+                  <CheckSquare className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Phone</h3>
                 <p className="text-cyan-400">+1 302 464 0950</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Calculator className="w-6 h-6 text-white" />
+                  <Zap className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Address</h3>
                 <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>

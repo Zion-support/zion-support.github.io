@@ -1,86 +1,86 @@
-import { ArrowRight, TrendingUp, Shield, Zap, Globe, CheckCircle, Star, Brain, BarChart3, DollarSign, PieChart, Calculator } from "lucide-react";
+import { ArrowRight, Users, Shield, Zap, Globe, CheckCircle, Star, Brain, BarChart3, FileText, Clock, Target } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AiFinancialForecasting() {
+export default function AiHrAutomation() {
   const features = [
     {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Revenue Forecasting",
-      description: "AI-powered revenue prediction with 98% accuracy using advanced machine learning and market analysis"
+      icon: <Users className="w-6 h-6" />,
+      title: "Smart Recruitment",
+      description: "AI-powered candidate screening and matching with 90% accuracy using advanced algorithms and behavioral analysis"
     },
     {
-      icon: <PieChart className="w-6 h-6" />,
-      title: "Cash Flow Analysis",
-      description: "Predict cash flow patterns and optimize working capital with intelligent financial modeling"
+      icon: <FileText className="w-6 h-6" />,
+      title: "Automated Onboarding",
+      description: "Streamlined employee onboarding process with digital workflows and automated document processing"
     },
     {
-      icon: <Calculator className="w-6 h-6" />,
-      title: "Budget Optimization",
-      description: "AI-driven budget allocation that maximizes ROI and minimizes financial risks"
+      icon: <Clock className="w-6 h-6" />,
+      title: "Time & Attendance",
+      description: "Intelligent time tracking with facial recognition and automated payroll processing"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Market Analysis",
-      description: "Real-time market sentiment analysis and economic indicator tracking for better decisions"
+      title: "Performance Analytics",
+      description: "AI-driven performance insights and predictive analytics for employee development"
     },
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Risk Assessment",
-      description: "Comprehensive risk analysis with scenario modeling and stress testing capabilities"
+      icon: <Target className="w-6 h-6" />,
+      title: "Goal Management",
+      description: "Smart goal setting and tracking with AI-powered recommendations and progress monitoring"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Automated Reporting",
-      description: "Generate comprehensive financial reports and insights automatically with AI"
+      title: "Employee Engagement",
+      description: "AI-powered engagement surveys and sentiment analysis to improve workplace culture"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Startup",
-      price: "$299",
+      name: "Small Business",
+      price: "$199",
       period: "/month",
-      description: "Perfect for startups and small businesses",
+      description: "Perfect for small teams up to 50 employees",
       features: [
-        "Basic revenue forecasting",
-        "Cash flow analysis",
-        "Budget planning tools",
+        "Basic recruitment tools",
+        "Employee database",
+        "Time tracking",
         "Standard reports",
         "Email support",
-        "API access"
+        "Mobile app access"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$499",
       period: "/month",
       description: "Most popular for growing companies",
       features: [
-        "Advanced forecasting models",
-        "Multi-currency support",
-        "Risk assessment tools",
-        "Custom reporting",
+        "Advanced AI recruitment",
+        "Performance analytics",
+        "Goal management",
+        "Custom workflows",
         "Priority support",
-        "Integration with accounting software",
-        "Scenario planning"
+        "API integrations",
+        "Advanced reporting"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$1,299",
       period: "/month",
-      description: "For large financial institutions",
+      description: "For large organizations",
       features: [
-        "AI-powered insights",
-        "Real-time market data",
-        "Advanced risk modeling",
+        "Full AI automation suite",
+        "Custom AI models",
         "White-label solution",
         "24/7 dedicated support",
-        "Custom AI models",
-        "Compliance reporting"
+        "Advanced security",
+        "Compliance management",
+        "Custom integrations"
       ],
       popular: false
     }
@@ -88,24 +88,24 @@ export default function AiFinancialForecasting() {
 
   const testimonials = [
     {
-      name: "Jennifer Walsh",
-      company: "FinTech Solutions",
-      role: "CFO",
-      content: "Zion's AI financial forecasting helped us achieve 98% accuracy in revenue predictions. Our financial planning has never been more precise.",
+      name: "Rachel Green",
+      company: "Tech Innovations Inc",
+      role: "HR Director",
+      content: "Zion's AI HR automation reduced our hiring time by 60% and improved candidate quality significantly. The AI insights are incredibly valuable.",
       rating: 5
     },
     {
-      name: "Michael Thompson",
-      company: "Investment Group LLC",
-      role: "Portfolio Manager",
-      content: "The risk assessment tools are game-changing. We've reduced portfolio risk by 25% while maintaining returns.",
+      name: "James Wilson",
+      company: "Global Enterprises",
+      role: "VP of Human Resources",
+      content: "The performance analytics feature helped us identify top performers and create better development programs. Employee satisfaction increased by 40%.",
       rating: 5
     },
     {
-      name: "Sarah Davis",
-      company: "Corporate Finance Inc",
-      role: "Financial Director",
-      content: "This platform transformed our financial planning process. The AI insights help us make better investment decisions.",
+      name: "Maria Garcia",
+      company: "Startup Solutions",
+      role: "People Operations Manager",
+      content: "This platform transformed our entire HR process. The automation saves us hours every week and the AI insights are spot-on.",
       rating: 5
     }
   ];
@@ -113,14 +113,14 @@ export default function AiFinancialForecasting() {
   return (
     <>
       <Helmet>
-        <title>AI Financial Forecasting - Intelligent Financial Planning & Analysis | Zion Tech Group</title>
+        <title>AI HR Automation - Intelligent Human Resources Management | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform your financial planning with AI-powered forecasting. Revenue prediction, cash flow analysis, budget optimization, and risk assessment for modern businesses."
+          content="Transform your HR operations with AI-powered automation. Smart recruitment, automated onboarding, performance analytics, and employee engagement tools."
         />
         <meta
           name="keywords"
-          content="financial forecasting, revenue prediction, cash flow analysis, budget optimization, financial planning, AI finance"
+          content="HR automation, AI recruitment, employee management, performance analytics, HR software, human resources AI"
         />
       </Helmet>
 
@@ -130,16 +130,16 @@ export default function AiFinancialForecasting() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Star className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">#1 Financial AI Platform 2024</span>
+              <span className="text-cyan-400 text-sm font-medium">#1 HR AI Platform 2024</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                AI Financial Forecasting
+                AI HR Automation
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your financial planning with AI-powered forecasting. Achieve 98% accuracy in revenue predictions, 
-              optimize cash flow, and make data-driven financial decisions with confidence.
+              Revolutionize your human resources with AI-powered automation. Reduce hiring time by 60%, improve employee engagement by 40%, 
+              and streamline all HR processes with intelligent automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
@@ -160,20 +160,20 @@ export default function AiFinancialForecasting() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">98%</div>
-                <div className="text-gray-300">Forecast Accuracy</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">60%</div>
+                <div className="text-gray-300">Faster Hiring</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-purple-400 mb-2">40%</div>
-                <div className="text-gray-300">Faster Planning</div>
+                <div className="text-gray-300">Higher Engagement</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">25%</div>
-                <div className="text-gray-300">Risk Reduction</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">90%</div>
+                <div className="text-gray-300">Match Accuracy</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-400 mb-2">1000+</div>
-                <div className="text-gray-300">Financial Models</div>
+                <div className="text-3xl font-bold text-orange-400 mb-2">500+</div>
+                <div className="text-gray-300">Companies Served</div>
               </div>
             </div>
           </div>
@@ -184,10 +184,10 @@ export default function AiFinancialForecasting() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Financial Intelligence
+                Complete HR Automation Suite
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Harness the power of AI to transform your financial planning and analysis.
+                Automate every aspect of human resources with AI-powered intelligence.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -216,10 +216,10 @@ export default function AiFinancialForecasting() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Transparent Pricing for Every Business
+                Flexible Pricing for Every Team
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your financial complexity. All plans include 30-day free trial.
+                Choose the plan that fits your organization size. All plans include 30-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -276,10 +276,10 @@ export default function AiFinancialForecasting() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Financial Leaders
+                Trusted by HR Leaders
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how financial professionals are transforming their planning with AI
+                See how HR professionals are transforming their operations with AI
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -308,10 +308,10 @@ export default function AiFinancialForecasting() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Financial Planning?
+              Ready to Transform Your HR Operations?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join 1000+ companies already using AI to make smarter financial decisions.
+              Join 500+ companies already using AI to revolutionize their human resources.
             </p>
             
             {/* Contact Information */}
@@ -325,14 +325,14 @@ export default function AiFinancialForecasting() {
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <DollarSign className="w-6 h-6 text-white" />
+                  <Users className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Phone</h3>
                 <p className="text-cyan-400">+1 302 464 0950</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Calculator className="w-6 h-6 text-white" />
+                  <FileText className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Address</h3>
                 <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
