@@ -527,6 +527,442 @@ export const services: Service[] = [
     },
     href: '/iot-platform-solution',
     glowColor: 'yellow'
+  },
+
+  // Additional Micro SaaS Services
+  {
+    id: 'ai-social-media-scheduler',
+    title: 'AI Social Media Scheduler Pro',
+    description: 'Intelligent social media management with AI-powered content scheduling, optimal posting times, and engagement optimization.',
+    shortDescription: 'AI-powered social media scheduling and optimization',
+    category: 'SaaS',
+    icon: '📱',
+    features: [
+      'AI content scheduling',
+      'Optimal posting times',
+      'Engagement optimization',
+      'Hashtag suggestions',
+      'Multi-platform management',
+      'Performance analytics',
+      'Content calendar',
+      'Team collaboration'
+    ],
+    pricing: {
+      basic: 79,
+      pro: 199,
+      enterprise: 499
+    },
+    benefits: [
+      '300% engagement increase',
+      'Automated posting',
+      'Optimal timing',
+      'Multi-platform sync'
+    ],
+    useCases: [
+      'Social media marketing',
+      'Brand management',
+      'Content planning',
+      'Community building'
+    ],
+    technologies: ['React', 'Node.js', 'MongoDB', 'AI/ML', 'Social APIs', 'AWS'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-social-media-scheduler'
+    },
+    href: '/ai-social-media-scheduler',
+    glowColor: 'pink'
+  },
+  {
+    id: 'ai-email-marketing-automation',
+    title: 'AI Email Marketing Automation',
+    description: 'Advanced email marketing platform with AI-powered personalization, send time optimization, and automated campaign management.',
+    shortDescription: 'AI-powered email marketing automation platform',
+    category: 'SaaS',
+    icon: '📧',
+    features: [
+      'AI personalization',
+      'Send time optimization',
+      'Subject line testing',
+      'Segmentation',
+      'A/B testing',
+      'Performance analytics',
+      'Template library',
+      'Drip campaigns'
+    ],
+    pricing: {
+      basic: 99,
+      pro: 299,
+      enterprise: 799
+    },
+    benefits: [
+      '40% higher open rates',
+      'Personalized content',
+      'Automated campaigns',
+      'Advanced analytics'
+    ],
+    useCases: [
+      'Email campaigns',
+      'Newsletter management',
+      'Lead nurturing',
+      'Customer retention'
+    ],
+    technologies: ['React', 'Node.js', 'PostgreSQL', 'AI/ML', 'SendGrid', 'AWS'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-email-marketing-automation'
+    },
+    href: '/ai-email-marketing-automation',
+    glowColor: 'cyan'
+  },
+  {
+    id: 'ai-customer-feedback-analyzer',
+    title: 'AI Customer Feedback Analyzer',
+    description: 'Intelligent customer feedback analysis platform that processes reviews, surveys, and support tickets to extract actionable insights.',
+    shortDescription: 'AI-powered customer feedback analysis and insights',
+    category: 'SaaS',
+    icon: '💬',
+    features: [
+      'Sentiment analysis',
+      'Topic extraction',
+      'Trend identification',
+      'Actionable insights',
+      'Multi-source integration',
+      'Real-time processing',
+      'Custom dashboards',
+      'Alert system'
+    ],
+    pricing: {
+      basic: 149,
+      pro: 399,
+      enterprise: 999
+    },
+    benefits: [
+      '90% faster analysis',
+      'Actionable insights',
+      'Real-time monitoring',
+      'Improved customer satisfaction'
+    ],
+    useCases: [
+      'Customer feedback analysis',
+      'Product improvement',
+      'Service optimization',
+      'Competitive analysis'
+    ],
+    technologies: ['React', 'Python', 'TensorFlow', 'MongoDB', 'NLP', 'AWS'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-customer-feedback-analyzer'
+    },
+    href: '/ai-customer-feedback-analyzer',
+    glowColor: 'green'
+  },
+  {
+    id: 'ai-expense-tracker-pro',
+    title: 'AI Expense Tracker Pro',
+    description: 'Smart expense tracking with AI-powered categorization, receipt scanning, and automated expense reporting for businesses.',
+    shortDescription: 'AI-powered expense tracking and management',
+    category: 'SaaS',
+    icon: '💰',
+    features: [
+      'Receipt scanning',
+      'AI categorization',
+      'Expense reporting',
+      'Budget tracking',
+      'Tax preparation',
+      'Multi-currency support',
+      'Team management',
+      'Integration with accounting'
+    ],
+    pricing: {
+      basic: 29,
+      pro: 79,
+      enterprise: 199
+    },
+    benefits: [
+      '95% accuracy in categorization',
+      'Time savings',
+      'Automated reporting',
+      'Tax compliance'
+    ],
+    useCases: [
+      'Business expense tracking',
+      'Tax preparation',
+      'Budget management',
+      'Team expense control'
+    ],
+    technologies: ['React', 'Node.js', 'OCR', 'AI/ML', 'PostgreSQL', 'AWS'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-expense-tracker-pro'
+    },
+    href: '/ai-expense-tracker-pro',
+    glowColor: 'yellow'
+  },
+
+  // Additional AI Services
+  {
+    id: 'ai-voice-assistant-platform',
+    title: 'AI Voice Assistant Platform',
+    description: 'Custom voice assistant development with natural language processing, voice recognition, and multi-platform deployment.',
+    shortDescription: 'Custom AI voice assistant development platform',
+    category: 'AI',
+    icon: '🎤',
+    features: [
+      'Voice recognition',
+      'Natural language processing',
+      'Multi-language support',
+      'Custom wake words',
+      'API integration',
+      'Mobile & web deployment',
+      'Analytics dashboard',
+      'Custom training'
+    ],
+    pricing: {
+      basic: 2500,
+      pro: 5000,
+      enterprise: 12000
+    },
+    benefits: [
+      '95% voice accuracy',
+      'Multi-platform support',
+      'Custom training',
+      'Real-time processing'
+    ],
+    useCases: [
+      'Customer service',
+      'Smart home automation',
+      'Healthcare assistance',
+      'Accessibility solutions'
+    ],
+    technologies: ['Python', 'TensorFlow', 'WebRTC', 'React', 'Node.js', 'AWS'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-voice-assistant-platform'
+    },
+    href: '/ai-voice-assistant-platform',
+    glowColor: 'purple'
+  },
+  {
+    id: 'ai-predictive-maintenance',
+    title: 'AI Predictive Maintenance',
+    description: 'AI-powered predictive maintenance system that uses machine learning to predict equipment failures and optimize maintenance schedules.',
+    shortDescription: 'AI-powered predictive maintenance for equipment',
+    category: 'AI',
+    icon: '🔧',
+    features: [
+      'Failure prediction',
+      'Maintenance scheduling',
+      'Sensor data analysis',
+      'Alert system',
+      'Cost optimization',
+      'Performance monitoring',
+      'Custom models',
+      'Integration APIs'
+    ],
+    pricing: {
+      basic: 3500,
+      pro: 7500,
+      enterprise: 20000
+    },
+    benefits: [
+      '30% reduction in downtime',
+      'Cost savings',
+      'Proactive maintenance',
+      'Extended equipment life'
+    ],
+    useCases: [
+      'Manufacturing equipment',
+      'HVAC systems',
+      'Industrial machinery',
+      'Fleet management'
+    ],
+    technologies: ['Python', 'TensorFlow', 'IoT', 'React', 'Node.js', 'AWS'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-predictive-maintenance'
+    },
+    href: '/ai-predictive-maintenance',
+    glowColor: 'blue'
+  },
+  {
+    id: 'ai-medical-image-analysis',
+    title: 'AI Medical Image Analysis',
+    description: 'Advanced AI system for medical image analysis including X-rays, MRIs, and CT scans with high accuracy diagnosis assistance.',
+    shortDescription: 'AI-powered medical image analysis and diagnosis',
+    category: 'AI',
+    icon: '🏥',
+    features: [
+      'Medical image analysis',
+      'Disease detection',
+      'Diagnosis assistance',
+      'Report generation',
+      'HIPAA compliance',
+      'Multi-modality support',
+      'Integration with PACS',
+      'Radiologist workflow'
+    ],
+    pricing: {
+      basic: 5000,
+      pro: 12000,
+      enterprise: 30000
+    },
+    benefits: [
+      '98% diagnostic accuracy',
+      'Faster diagnosis',
+      'Reduced errors',
+      'HIPAA compliant'
+    ],
+    useCases: [
+      'Radiology departments',
+      'Diagnostic centers',
+      'Telemedicine',
+      'Medical research'
+    ],
+    technologies: ['Python', 'TensorFlow', 'DICOM', 'React', 'Node.js', 'AWS'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-medical-image-analysis'
+    },
+    href: '/ai-medical-image-analysis',
+    glowColor: 'green'
+  },
+
+  // Additional IT Services
+  {
+    id: 'devops-automation-suite',
+    title: 'DevOps Automation Suite',
+    description: 'Complete DevOps automation platform with CI/CD pipelines, infrastructure as code, and automated deployment solutions.',
+    shortDescription: 'Comprehensive DevOps automation and deployment',
+    category: 'IT',
+    icon: '⚙️',
+    features: [
+      'CI/CD pipelines',
+      'Infrastructure as code',
+      'Automated testing',
+      'Container orchestration',
+      'Monitoring & alerting',
+      'Security scanning',
+      'Multi-cloud support',
+      'Team collaboration'
+    ],
+    pricing: {
+      basic: 2000,
+      pro: 5000,
+      enterprise: 15000
+    },
+    benefits: [
+      '50% faster deployments',
+      'Reduced errors',
+      'Automated processes',
+      'Scalable infrastructure'
+    ],
+    useCases: [
+      'Software development',
+      'Cloud migration',
+      'Infrastructure management',
+      'Continuous deployment'
+    ],
+    technologies: ['Docker', 'Kubernetes', 'Terraform', 'Jenkins', 'AWS', 'Azure'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/devops-automation-suite'
+    },
+    href: '/devops-automation-suite',
+    glowColor: 'cyan'
+  },
+  {
+    id: 'blockchain-development-services',
+    title: 'Blockchain Development Services',
+    description: 'Comprehensive blockchain development including smart contracts, DeFi applications, NFT platforms, and enterprise blockchain solutions.',
+    shortDescription: 'Complete blockchain development and consulting',
+    category: 'IT',
+    icon: '⛓️',
+    features: [
+      'Smart contract development',
+      'DeFi applications',
+      'NFT platforms',
+      'Blockchain integration',
+      'Security auditing',
+      'Token development',
+      'DApp development',
+      'Consulting services'
+    ],
+    pricing: {
+      basic: 15000,
+      pro: 35000,
+      enterprise: 75000
+    },
+    benefits: [
+      'Decentralized solutions',
+      'Enhanced security',
+      'Transparent transactions',
+      'Future-proof technology'
+    ],
+    useCases: [
+      'Supply chain management',
+      'Digital identity',
+      'Financial services',
+      'Gaming & NFTs'
+    ],
+    technologies: ['Ethereum', 'Solidity', 'Web3.js', 'IPFS', 'React', 'Node.js'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/blockchain-development-services'
+    },
+    href: '/blockchain-development-services',
+    glowColor: 'purple'
+  },
+  {
+    id: 'iot-platform-development',
+    title: 'IoT Platform Development',
+    description: 'Complete IoT platform development including device management, data collection, real-time monitoring, and analytics for connected devices.',
+    shortDescription: 'Comprehensive IoT platform development',
+    category: 'IT',
+    icon: '🌐',
+    features: [
+      'Device management',
+      'Real-time data collection',
+      'Data analytics',
+      'Remote monitoring',
+      'Alert systems',
+      'API development',
+      'Mobile applications',
+      'Cloud integration'
+    ],
+    pricing: {
+      basic: 8000,
+      pro: 20000,
+      enterprise: 50000
+    },
+    benefits: [
+      'Centralized management',
+      'Real-time insights',
+      'Scalable platform',
+      'Cost optimization'
+    ],
+    useCases: [
+      'Smart home automation',
+      'Industrial monitoring',
+      'Asset tracking',
+      'Environmental monitoring'
+    ],
+    technologies: ['MQTT', 'CoAP', 'React', 'Node.js', 'MongoDB', 'AWS'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/iot-platform-development'
+    },
+    href: '/iot-platform-development',
+    glowColor: 'green'
   }
 ];
 

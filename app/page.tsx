@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from './components/SEO';
@@ -191,18 +188,22 @@ export default function HomePage() {
               and achieve unprecedented growth.
             </p>
             
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="grid md:grid-cols-4 gap-8 mb-12">
               <div className="text-center">
-                <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
+                <div className="text-4xl font-bold text-purple-400 mb-2">100+</div>
                 <div className="text-gray-300">Projects Completed</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">25+</div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
                 <div className="text-gray-300">Happy Clients</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-green-400 mb-2">99%</div>
                 <div className="text-gray-300">Success Rate</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-yellow-400 mb-2">24/7</div>
+                <div className="text-gray-300">Support Available</div>
               </div>
             </div>
             
