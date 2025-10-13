@@ -79,11 +79,14 @@ export default [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-3792
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-1911
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-717a
         HTMLElement: 'readonly',
         Event: 'readonly',
         KeyboardEvent: 'readonly',
@@ -95,11 +98,14 @@ export default [
         HTMLSelectElement: 'readonly',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-6c11
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-3792
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-1911
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-717a
         setTimeout: 'readonly',
         clearTimeout: 'readonly',
         setInterval: 'readonly',
@@ -107,6 +113,7 @@ export default [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         HTMLElement: 'readonly',
         HTMLInputElement: 'readonly',
         HTMLTextAreaElement: 'readonly',
@@ -118,11 +125,14 @@ export default [
         PerformanceNavigationTiming: 'readonly',
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-1911
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-717a
         performance: 'readonly',
         require: 'readonly',
         module: 'readonly',
         exports: 'readonly',
         fs: 'readonly'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         performance: 'readonly'
@@ -132,6 +142,8 @@ export default [
 >>>>>>> cursor/fix-errors-and-merge-to-main-3792
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-1911
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-717a
       }
     },
     plugins: {

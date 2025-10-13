@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-3792
@@ -8,6 +9,8 @@ import path from 'path';
 // const withSentry = (handler) => handler;
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-529c
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-717a
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'onsite-requests.json');
 export default function handler(req, res) {
@@ -50,11 +53,14 @@ export default function handler(req, res) {
     res.end(JSON.stringify({ 
       success: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-3792
 =======
       message: 'Onsite request submitted successfully',
 >>>>>>> cursor/fix-errors-and-merge-to-main-529c
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-717a
       id: newRequest.id
     }));
   } catch {

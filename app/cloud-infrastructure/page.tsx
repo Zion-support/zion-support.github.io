@@ -6,6 +6,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -21,6 +22,8 @@ import React from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-529c
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-1911
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-717a
 import { Helmet } from 'react-helmet-async';
 
 export default function CloudInfrastructure() {
@@ -101,6 +104,7 @@ export default function CloudInfrastructure() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -117,3 +121,5 @@ export default function CloudInfrastructure() {
 >>>>>>> cursor/fix-errors-and-merge-to-main-529c
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-1911
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-717a

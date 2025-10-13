@@ -6,6 +6,7 @@ interface AnalyticsContextType {
   setUser: (userId: string, properties?: Record<string, any>) => void;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   isEnabled: boolean;
 <<<<<<< HEAD
   isEnabled: boolean;
@@ -17,6 +18,9 @@ interface AnalyticsContextType {
 >>>>>>> cursor/fix-errors-and-merge-to-main-529c
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-1911
+=======
+  isEnabled: boolean;
+>>>>>>> cursor/fix-errors-and-merge-to-main-717a
 }
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {

@@ -1,6 +1,10 @@
 <<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-717a
 // Type definitions for browser APIs
 declare global {
   interface PerformanceObserver {
@@ -33,12 +37,22 @@ declare global {
   const performance: {
     getEntriesByType(type: string): PerformanceEntry[];
   };
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-529c
 }
 import React, { useEffect, useState } from 'react';
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-1911
+=======
+  interface PerformanceEntry {
+    name: string;
+    entryType: string;
+    startTime: number;
+    duration: number;
+  }
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-717a
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -69,6 +83,7 @@ const PerformanceMonitor: React.FC = () => {
             const inputEntry = entry as any;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (inputEntry.processingStart && inputEntry.startTime) {
               setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
             }
@@ -88,6 +103,11 @@ const PerformanceMonitor: React.FC = () => {
             }
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-529c
+=======
+            if (inputEntry.processingStart && inputEntry.startTime) {
+              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
+            }
+>>>>>>> cursor/fix-errors-and-merge-to-main-717a
           } else if (entry.entryType === 'layout-shift') {
             setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
           }
