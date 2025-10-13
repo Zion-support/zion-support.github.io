@@ -1466,6 +1466,440 @@ export default function MicroSaas() {
       reviews: 567,
       link: "/zion-calendar-sync-pro",
       featured: false
+    },
+    {
+      id: "zion-ai-project-manager-pro",
+      name: "Zion AI Project Manager Pro",
+      description: "Intelligent project management with AI task prioritization, resource allocation, and deadline prediction",
+      price: "From $42/month",
+      originalPrice: "$70/month",
+      discount: "40% OFF",
+      icon: <Calendar className="w-8 h-8" />,
+      color: "from-blue-500 to-indigo-500",
+      features: [
+        "AI task prioritization",
+        "Resource allocation optimization",
+        "Deadline prediction",
+        "Risk assessment",
+        "Team collaboration tools",
+        "Progress tracking",
+        "Budget management",
+        "Integration with popular tools"
+      ],
+      benefits: [
+        "Complete projects 25% faster",
+        "Reduce project overruns by 40%",
+        "Improve team productivity",
+        "Better resource utilization"
+      ],
+      category: "Project Management",
+      rating: 4.8,
+      reviews: 1123,
+      link: "/zion-ai-project-manager-pro",
+      featured: true
+    },
+    {
+      id: "zion-ai-crm-pro",
+      name: "Zion AI CRM Pro",
+      description: "AI-powered customer relationship management with intelligent lead scoring, automated follow-ups, and sales forecasting",
+      price: "From $48/month",
+      originalPrice: "$80/month",
+      discount: "40% OFF",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      features: [
+        "AI lead scoring & qualification",
+        "Automated follow-up sequences",
+        "Sales forecasting & analytics",
+        "Pipeline management",
+        "Email integration",
+        "Call tracking & recording",
+        "Custom reporting",
+        "Mobile app access"
+      ],
+      benefits: [
+        "Increase sales by 35%",
+        "Improve lead conversion",
+        "Reduce manual tasks",
+        "Better customer insights"
+      ],
+      category: "CRM",
+      rating: 4.9,
+      reviews: 1876,
+      link: "/zion-ai-crm-pro",
+      featured: true
+    },
+    {
+      id: "zion-ai-marketing-automation-pro",
+      name: "Zion AI Marketing Automation Pro",
+      description: "Advanced marketing automation with AI personalization, multi-channel campaigns, and predictive analytics",
+      price: "From $52/month",
+      originalPrice: "$87/month",
+      discount: "40% OFF",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+      features: [
+        "AI-powered personalization",
+        "Multi-channel campaign management",
+        "Predictive customer analytics",
+        "A/B testing automation",
+        "Lead nurturing sequences",
+        "Email & SMS marketing",
+        "Social media automation",
+        "ROI tracking & analytics"
+      ],
+      benefits: [
+        "Increase conversion rates by 50%",
+        "Improve customer engagement",
+        "Reduce marketing costs by 30%",
+        "Scale marketing efforts"
+      ],
+      category: "Marketing",
+      rating: 4.7,
+      reviews: 1456,
+      link: "/zion-ai-marketing-automation-pro",
+      featured: true
+    },
+    {
+      id: "zion-ai-accounting-suite",
+      name: "Zion AI Accounting Suite",
+      description: "Intelligent accounting software with automated bookkeeping, expense tracking, and financial reporting",
+      price: "From $38/month",
+      originalPrice: "$63/month",
+      discount: "40% OFF",
+      icon: <Calculator className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      features: [
+        "Automated bookkeeping",
+        "Expense categorization",
+        "Invoice generation & tracking",
+        "Tax preparation assistance",
+        "Financial reporting",
+        "Bank reconciliation",
+        "Multi-currency support",
+        "Compliance monitoring"
+      ],
+      benefits: [
+        "Save 15+ hours monthly",
+        "Reduce accounting errors",
+        "Improve cash flow management",
+        "Ensure tax compliance"
+      ],
+      category: "Accounting",
+      rating: 4.6,
+      reviews: 987,
+      link: "/zion-ai-accounting-suite",
+      featured: false
+    },
+    {
+      id: "zion-ai-ecommerce-optimizer",
+      name: "Zion AI E-commerce Optimizer",
+      description: "AI-powered e-commerce optimization with pricing intelligence, inventory management, and conversion optimization",
+      price: "From $45/month",
+      originalPrice: "$75/month",
+      discount: "40% OFF",
+      icon: <ShoppingCart className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500",
+      features: [
+        "Dynamic pricing optimization",
+        "Inventory demand forecasting",
+        "Conversion rate optimization",
+        "Customer behavior analysis",
+        "Product recommendation engine",
+        "A/B testing tools",
+        "Multi-platform integration",
+        "Performance analytics"
+      ],
+      benefits: [
+        "Increase sales by 40%",
+        "Optimize pricing strategies",
+        "Reduce inventory costs",
+        "Improve customer experience"
+      ],
+      category: "E-commerce",
+      rating: 4.8,
+      reviews: 1234,
+      link: "/zion-ai-ecommerce-optimizer",
+      featured: false
+    },
+    {
+      id: "zion-ai-customer-insights",
+      name: "Zion AI Customer Insights",
+      description: "Advanced customer analytics with behavior prediction, churn analysis, and personalized recommendations",
+      price: "From $35/month",
+      originalPrice: "$58/month",
+      discount: "40% OFF",
+      icon: <Eye className="w-8 h-8" />,
+      color: "from-violet-500 to-purple-500",
+      features: [
+        "Customer behavior analysis",
+        "Churn prediction & prevention",
+        "Personalized recommendations",
+        "Customer segmentation",
+        "Lifetime value prediction",
+        "Sentiment analysis",
+        "Real-time insights",
+        "Custom dashboards"
+      ],
+      benefits: [
+        "Reduce churn by 30%",
+        "Increase customer lifetime value",
+        "Improve personalization",
+        "Better customer understanding"
+      ],
+      category: "Analytics",
+      rating: 4.7,
+      reviews: 876,
+      link: "/zion-ai-customer-insights",
+      featured: false
+    },
+    {
+      id: "zion-ai-hr-management-suite",
+      name: "Zion AI HR Management Suite",
+      description: "Comprehensive HR management with AI recruitment, employee analytics, and performance optimization",
+      price: "From $49/month",
+      originalPrice: "$82/month",
+      discount: "40% OFF",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-pink-500 to-rose-500",
+      features: [
+        "AI resume screening",
+        "Interview scheduling automation",
+        "Employee performance analytics",
+        "Payroll integration",
+        "Benefits administration",
+        "Time & attendance tracking",
+        "Employee self-service portal",
+        "Compliance management"
+      ],
+      benefits: [
+        "Reduce hiring time by 50%",
+        "Improve employee retention",
+        "Streamline HR processes",
+        "Ensure compliance"
+      ],
+      category: "HR Management",
+      rating: 4.8,
+      reviews: 1123,
+      link: "/zion-ai-hr-management-suite",
+      featured: false
+    },
+    {
+      id: "zion-ai-backup-manager",
+      name: "Zion AI Backup Manager",
+      description: "Intelligent backup solution with automated scheduling, data deduplication, and disaster recovery planning",
+      price: "From $29/month",
+      originalPrice: "$48/month",
+      discount: "40% OFF",
+      icon: <HardDrive className="w-8 h-8" />,
+      color: "from-slate-500 to-gray-500",
+      features: [
+        "Automated backup scheduling",
+        "Data deduplication",
+        "Incremental backups",
+        "Cloud & local storage",
+        "Disaster recovery planning",
+        "Data encryption",
+        "Restore testing",
+        "Compliance reporting"
+      ],
+      benefits: [
+        "Protect critical data",
+        "Reduce storage costs",
+        "Ensure business continuity",
+        "Meet compliance requirements"
+      ],
+      category: "Data Protection",
+      rating: 4.6,
+      reviews: 654,
+      link: "/zion-ai-backup-manager",
+      featured: false
+    },
+    {
+      id: "zion-ai-testing-automation",
+      name: "Zion AI Testing Automation",
+      description: "Intelligent test automation with AI test generation, execution, and maintenance for web and mobile applications",
+      price: "From $41/month",
+      originalPrice: "$68/month",
+      discount: "40% OFF",
+      icon: <Settings className="w-8 h-8" />,
+      color: "from-amber-500 to-orange-500",
+      features: [
+        "AI test case generation",
+        "Automated test execution",
+        "Cross-browser testing",
+        "Mobile app testing",
+        "API testing",
+        "Performance testing",
+        "Test maintenance",
+        "CI/CD integration"
+      ],
+      benefits: [
+        "Reduce testing time by 70%",
+        "Improve test coverage",
+        "Catch bugs earlier",
+        "Lower testing costs"
+      ],
+      category: "Quality Assurance",
+      rating: 4.7,
+      reviews: 789,
+      link: "/zion-ai-testing-automation",
+      featured: false
+    },
+    {
+      id: "zion-ai-api-manager",
+      name: "Zion AI API Manager",
+      description: "Intelligent API management with automated documentation, monitoring, and optimization for better performance",
+      price: "From $39/month",
+      originalPrice: "$65/month",
+      discount: "40% OFF",
+      icon: <Code className="w-8 h-8" />,
+      color: "from-teal-500 to-cyan-500",
+      features: [
+        "API documentation generation",
+        "Performance monitoring",
+        "Rate limiting & throttling",
+        "Security management",
+        "Analytics & insights",
+        "Version control",
+        "Developer portal",
+        "Integration testing"
+      ],
+      benefits: [
+        "Improve API performance",
+        "Reduce development time",
+        "Enhance security",
+        "Better developer experience"
+      ],
+      category: "API Management",
+      rating: 4.6,
+      reviews: 567,
+      link: "/zion-ai-api-manager",
+      featured: false
+    },
+    {
+      id: "zion-ai-voice-assistant-pro",
+      name: "Zion AI Voice Assistant Pro",
+      description: "Advanced voice AI with natural language processing, multi-language support, and custom voice training",
+      price: "From $44/month",
+      originalPrice: "$73/month",
+      discount: "40% OFF",
+      icon: <Mic className="w-8 h-8" />,
+      color: "from-indigo-500 to-blue-500",
+      features: [
+        "Natural language processing",
+        "Multi-language support",
+        "Custom voice training",
+        "Voice command recognition",
+        "Text-to-speech synthesis",
+        "Integration capabilities",
+        "Analytics & insights",
+        "Custom wake words"
+      ],
+      benefits: [
+        "Enhance user experience",
+        "Reduce manual interactions",
+        "Improve accessibility",
+        "Scale voice operations"
+      ],
+      category: "Voice AI",
+      rating: 4.8,
+      reviews: 923,
+      link: "/zion-ai-voice-assistant-pro",
+      featured: false
+    },
+    {
+      id: "zion-ai-image-generator-pro",
+      name: "Zion AI Image Generator Pro",
+      description: "Professional AI image creation with advanced editing, style transfer, and high-resolution output",
+      price: "From $36/month",
+      originalPrice: "$60/month",
+      discount: "40% OFF",
+      icon: <Image className="w-8 h-8" />,
+      color: "from-rose-500 to-pink-500",
+      features: [
+        "Text-to-image generation",
+        "Style transfer & manipulation",
+        "High-resolution upscaling",
+        "Background removal",
+        "Object detection & editing",
+        "Batch processing",
+        "Commercial licensing",
+        "API integration"
+      ],
+      benefits: [
+        "Generate images instantly",
+        "Reduce design costs by 60%",
+        "Create unique visual content",
+        "Scale creative production"
+      ],
+      category: "Creative Tools",
+      rating: 4.7,
+      reviews: 1456,
+      link: "/zion-ai-image-generator-pro",
+      featured: false
+    },
+    {
+      id: "zion-ai-video-editor-pro",
+      name: "Zion AI Video Editor Pro",
+      description: "Intelligent video editing with AI assistance, automated editing, and professional effects",
+      price: "From $52/month",
+      originalPrice: "$87/month",
+      discount: "40% OFF",
+      icon: <Video className="w-8 h-8" />,
+      color: "from-purple-500 to-violet-500",
+      features: [
+        "AI-powered editing",
+        "Automated scene detection",
+        "Professional effects",
+        "Color correction",
+        "Audio enhancement",
+        "Multi-format export",
+        "Cloud rendering",
+        "Collaboration tools"
+      ],
+      benefits: [
+        "Edit videos 5x faster",
+        "Reduce production costs",
+        "Professional quality output",
+        "Streamline video workflow"
+      ],
+      category: "Video Production",
+      rating: 4.6,
+      reviews: 789,
+      link: "/zion-ai-video-editor-pro",
+      featured: false
+    },
+    {
+      id: "zion-ai-music-composer",
+      name: "Zion AI Music Composer",
+      description: "AI-powered music composition with genre adaptation, emotional expression, and professional mixing",
+      price: "From $41/month",
+      originalPrice: "$68/month",
+      discount: "40% OFF",
+      icon: <Music className="w-8 h-8" />,
+      color: "from-violet-500 to-purple-500",
+      features: [
+        "AI music composition",
+        "Genre & style adaptation",
+        "Emotional expression control",
+        "Instrument arrangement",
+        "Professional mixing",
+        "Copyright-free music",
+        "Custom model training",
+        "Multi-format export"
+      ],
+      benefits: [
+        "Generate music instantly",
+        "Reduce production costs by 70%",
+        "Create unique compositions",
+        "Scale music production"
+      ],
+      category: "Music Production",
+      rating: 4.5,
+      reviews: 567,
+      link: "/zion-ai-music-composer",
+      featured: false
     }
   ];
 
