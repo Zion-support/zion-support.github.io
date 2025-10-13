@@ -1,49 +1,49 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Users, TrendingUp, Target, BarChart3, CheckCircle, Zap, Mail } from "lucide-react";
+import { ArrowRight, Target, Mail, BarChart3, Users, Zap, TrendingUp, CheckCircle } from "lucide-react";
 
-export default function AICRMAssistantPage() {
+export default function AIMarketingAutomationPage() {
   const features = [
+    {
+      icon: <Mail className="w-6 h-6" />,
+      title: "Email Automation",
+      description: "Automated email campaigns with AI-driven personalization and segmentation"
+    },
     {
       icon: <Target className="w-6 h-6" />,
       title: "Lead Scoring",
       description: "AI-powered lead qualification and scoring for better conversion rates"
     },
     {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Sales Forecasting",
-      description: "Predictive analytics to forecast sales and identify opportunities"
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Automated Follow-ups",
-      description: "Intelligent follow-up sequences based on customer behavior and engagement"
-    },
-    {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "CRM Integration",
-      description: "Seamless integration with major CRM platforms like Salesforce and HubSpot"
+      title: "A/B Testing",
+      description: "Automated A/B testing for campaigns, subject lines, and content optimization"
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Social Media Management",
+      description: "AI-driven social media scheduling and content optimization"
     }
   ];
 
   const benefits = [
-    "Increase sales conversion by 45%",
-    "Reduce follow-up time by 60%",
-    "Improve lead qualification accuracy by 80%",
-    "Save 15+ hours per week on CRM management"
+    "Increase email open rates by 40%",
+    "Reduce manual marketing tasks by 60%",
+    "Improve lead conversion by 35%",
+    "Save 20+ hours per week on marketing"
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI CRM Assistant - Zion Tech Group</title>
+        <title>AI Marketing Automation - Zion Tech Group</title>
         <meta
           name="description"
-          content="Intelligent CRM with AI-powered lead scoring, sales forecasting, and automated follow-ups. Integrate with major CRM platforms for enhanced productivity."
+          content="Transform your marketing with AI-powered automation. Email campaigns, lead scoring, social media management, and A/B testing all automated with intelligent algorithms."
         />
         <meta
           name="keywords"
-          content="AI CRM assistant, lead scoring, sales forecasting, CRM automation, customer relationship management, sales AI, CRM integration"
+          content="AI marketing automation, email automation, lead scoring, social media management, A/B testing, marketing AI, campaign optimization"
         />
       </Helmet>
 
@@ -56,14 +56,14 @@ export default function AICRMAssistantPage() {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI CRM
+              AI Marketing
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                {" "}Assistant
+                {" "}Automation
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Transform your customer relationship management with intelligent AI assistance. 
-              Automate lead scoring, sales forecasting, and follow-ups to maximize your sales performance.
+              Transform your marketing efforts with intelligent automation. Our AI-powered platform handles email campaigns, 
+              lead scoring, social media management, and A/B testing to maximize your marketing ROI.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -89,11 +89,11 @@ export default function AICRMAssistantPage() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Intelligent CRM Features
+                  Key Features
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI capabilities that enhance your CRM with intelligent automation and insights.
+                Powerful AI-driven marketing automation tools designed to streamline your campaigns and boost performance.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -117,56 +117,17 @@ export default function AICRMAssistantPage() {
           </div>
         </section>
 
-        {/* Integration Section */}
+        {/* Benefits Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Seamless Integration
+                  Proven Results
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Works with your existing CRM platform for a smooth transition and enhanced functionality.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Salesforce</h3>
-                <p className="text-gray-300">Full integration with Salesforce CRM for enhanced lead management</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <BarChart3 className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">HubSpot</h3>
-                <p className="text-gray-300">Seamless integration with HubSpot for marketing automation</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Custom CRM</h3>
-                <p className="text-gray-300">API integration with any custom CRM system</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Measurable Results
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform your sales process with proven improvements in efficiency and performance.
+                Our AI marketing automation delivers measurable improvements to your marketing performance.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -182,14 +143,14 @@ export default function AICRMAssistantPage() {
               </div>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
                 <h3 className="text-2xl font-bold text-white mb-4">Pricing</h3>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">$229/month</div>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">$199/month</div>
                 <p className="text-gray-300 mb-6">Starting price for small businesses</p>
                 <ul className="space-y-2 text-gray-300">
-                  <li>• Up to 5,000 contacts</li>
-                  <li>• AI lead scoring</li>
-                  <li>• Sales forecasting</li>
-                  <li>• Automated follow-ups</li>
-                  <li>• CRM integration</li>
+                  <li>• Up to 10,000 contacts</li>
+                  <li>• Unlimited email campaigns</li>
+                  <li>• AI-powered lead scoring</li>
+                  <li>• Social media automation</li>
+                  <li>• A/B testing tools</li>
                   <li>• 24/7 support</li>
                 </ul>
               </div>
@@ -202,24 +163,24 @@ export default function AICRMAssistantPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your CRM?
+                Ready to Automate Your Marketing?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of sales teams using our AI CRM assistant to boost productivity and close more deals.
+                Join thousands of businesses using our AI marketing automation to increase efficiency and drive better results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
                 >
-                  Start Free Trial
+                  Start Your Free Trial
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   to="/consultation"
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
                 >
-                  Schedule Demo
+                  Schedule Consultation
                 </Link>
               </div>
             </div>

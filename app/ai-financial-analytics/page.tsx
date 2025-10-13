@@ -1,49 +1,49 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Users, TrendingUp, Target, BarChart3, CheckCircle, Zap, Mail } from "lucide-react";
+import { ArrowRight, TrendingUp, Shield, BarChart3, CheckCircle, DollarSign, PieChart, AlertTriangle } from "lucide-react";
 
-export default function AICRMAssistantPage() {
+export default function AIFinancialAnalyticsPage() {
   const features = [
     {
-      icon: <Target className="w-6 h-6" />,
-      title: "Lead Scoring",
-      description: "AI-powered lead qualification and scoring for better conversion rates"
-    },
-    {
       icon: <TrendingUp className="w-6 h-6" />,
-      title: "Sales Forecasting",
-      description: "Predictive analytics to forecast sales and identify opportunities"
+      title: "Risk Assessment",
+      description: "AI-powered risk analysis and portfolio optimization for better investment decisions"
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Automated Follow-ups",
-      description: "Intelligent follow-up sequences based on customer behavior and engagement"
+      icon: <Shield className="w-6 h-6" />,
+      title: "Fraud Detection",
+      description: "Advanced fraud detection algorithms to protect against financial crimes"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "CRM Integration",
-      description: "Seamless integration with major CRM platforms like Salesforce and HubSpot"
+      title: "Investment Analysis",
+      description: "Comprehensive investment analysis with predictive modeling and market insights"
+    },
+    {
+      icon: <AlertTriangle className="w-6 h-6" />,
+      title: "Compliance Reporting",
+      description: "Automated compliance reporting and regulatory monitoring for financial institutions"
     }
   ];
 
   const benefits = [
-    "Increase sales conversion by 45%",
-    "Reduce follow-up time by 60%",
-    "Improve lead qualification accuracy by 80%",
-    "Save 15+ hours per week on CRM management"
+    "Reduce financial risk by 40%",
+    "Detect fraud with 99.5% accuracy",
+    "Improve investment returns by 25%",
+    "Automate 90% of compliance reporting"
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI CRM Assistant - Zion Tech Group</title>
+        <title>AI Financial Analytics - Zion Tech Group</title>
         <meta
           name="description"
-          content="Intelligent CRM with AI-powered lead scoring, sales forecasting, and automated follow-ups. Integrate with major CRM platforms for enhanced productivity."
+          content="Advanced AI financial analytics with risk assessment, fraud detection, investment analysis, and compliance reporting. Transform your financial operations with intelligent insights."
         />
         <meta
           name="keywords"
-          content="AI CRM assistant, lead scoring, sales forecasting, CRM automation, customer relationship management, sales AI, CRM integration"
+          content="AI financial analytics, risk assessment, fraud detection, investment analysis, compliance reporting, financial AI, portfolio optimization"
         />
       </Helmet>
 
@@ -56,14 +56,14 @@ export default function AICRMAssistantPage() {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI CRM
+              AI Financial
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                {" "}Assistant
+                {" "}Analytics
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Transform your customer relationship management with intelligent AI assistance. 
-              Automate lead scoring, sales forecasting, and follow-ups to maximize your sales performance.
+              Transform your financial operations with advanced AI analytics. Risk assessment, fraud detection, 
+              investment analysis, and compliance reporting all powered by intelligent algorithms.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -89,11 +89,11 @@ export default function AICRMAssistantPage() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Intelligent CRM Features
+                  Advanced Financial AI
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI capabilities that enhance your CRM with intelligent automation and insights.
+                Comprehensive AI-powered financial analytics designed for modern financial institutions and businesses.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -117,40 +117,40 @@ export default function AICRMAssistantPage() {
           </div>
         </section>
 
-        {/* Integration Section */}
+        {/* Use Cases Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Seamless Integration
+                  Industry Applications
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Works with your existing CRM platform for a smooth transition and enhanced functionality.
+                Our AI financial analytics solutions are trusted by leading financial institutions worldwide.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-white" />
+                  <DollarSign className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Salesforce</h3>
-                <p className="text-gray-300">Full integration with Salesforce CRM for enhanced lead management</p>
+                <h3 className="text-xl font-semibold text-white mb-2">Banks & Credit Unions</h3>
+                <p className="text-gray-300">Fraud detection, risk assessment, and regulatory compliance for financial institutions</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <BarChart3 className="w-8 h-8 text-white" />
+                  <PieChart className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">HubSpot</h3>
-                <p className="text-gray-300">Seamless integration with HubSpot for marketing automation</p>
+                <h3 className="text-xl font-semibold text-white mb-2">Investment Firms</h3>
+                <p className="text-gray-300">Portfolio optimization, market analysis, and investment strategy recommendations</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-8 h-8 text-white" />
+                  <Shield className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Custom CRM</h3>
-                <p className="text-gray-300">API integration with any custom CRM system</p>
+                <h3 className="text-xl font-semibold text-white mb-2">Insurance Companies</h3>
+                <p className="text-gray-300">Risk modeling, claims analysis, and fraud detection for insurance operations</p>
               </div>
             </div>
           </div>
@@ -162,11 +162,11 @@ export default function AICRMAssistantPage() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Measurable Results
+                  Proven Results
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform your sales process with proven improvements in efficiency and performance.
+                Transform your financial operations with measurable improvements in accuracy and efficiency.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -182,14 +182,14 @@ export default function AICRMAssistantPage() {
               </div>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
                 <h3 className="text-2xl font-bold text-white mb-4">Pricing</h3>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">$229/month</div>
-                <p className="text-gray-300 mb-6">Starting price for small businesses</p>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">$349/month</div>
+                <p className="text-gray-300 mb-6">Starting price for small financial institutions</p>
                 <ul className="space-y-2 text-gray-300">
-                  <li>• Up to 5,000 contacts</li>
-                  <li>• AI lead scoring</li>
-                  <li>• Sales forecasting</li>
-                  <li>• Automated follow-ups</li>
-                  <li>• CRM integration</li>
+                  <li>• Real-time risk assessment</li>
+                  <li>• Advanced fraud detection</li>
+                  <li>• Investment analysis tools</li>
+                  <li>• Compliance reporting</li>
+                  <li>• API integration</li>
                   <li>• 24/7 support</li>
                 </ul>
               </div>
@@ -202,10 +202,10 @@ export default function AICRMAssistantPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your CRM?
+                Ready to Transform Financial Analytics?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of sales teams using our AI CRM assistant to boost productivity and close more deals.
+                Join leading financial institutions using our AI analytics to make smarter decisions and reduce risk.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -219,7 +219,7 @@ export default function AICRMAssistantPage() {
                   to="/consultation"
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
                 >
-                  Schedule Demo
+                  Schedule Consultation
                 </Link>
               </div>
             </div>

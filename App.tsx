@@ -61,6 +61,10 @@ const AiProjectManagementPage = React.lazy(() => import("./app/ai-project-manage
 const AiRecommendationEnginePage = React.lazy(() => import("./app/ai-recommendation-engine/page"));
 const AiSalesAutomationPage = React.lazy(() => import("./app/ai-sales-automation/page"));
 const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
+const AiMarketingAutomationPage = React.lazy(() => import("./app/ai-marketing-automation/page"));
+const AiDocumentProcessingPage = React.lazy(() => import("./app/ai-document-processing/page"));
+const AiCRMAssistantPage = React.lazy(() => import("./app/ai-crm-assistant/page"));
+const AiFinancialAnalyticsPage = React.lazy(() => import("./app/ai-financial-analytics/page"));
 
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(
@@ -273,6 +277,10 @@ function App() {
                   <Route path="/ai-recommendation-engine" element={<AiRecommendationEnginePage />} />
                   <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
                   <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
+                  <Route path="/ai-marketing-automation" element={<AiMarketingAutomationPage />} />
+                  <Route path="/ai-document-processing" element={<AiDocumentProcessingPage />} />
+                  <Route path="/ai-crm-assistant" element={<AiCRMAssistantPage />} />
+                  <Route path="/ai-financial-analytics" element={<AiFinancialAnalyticsPage />} />
 
                   {/* IT Service Routes */}
                   <Route
