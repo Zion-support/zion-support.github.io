@@ -93,12 +93,12 @@ function processFile(filePath) {
     const title = generateTitle(fileName);
     const description = `Professional ${title.toLowerCase()} services by Zion Tech Group. Transform your business with our expert solutions.`;
 
-    console.log(`Replacing file: ${filePath} with function name: ${pageName}`);
+    // console.log(`Replacing file: ${filePath} with function name: ${pageName}`);
     const newContent = createProperPageStructure(pageName, title, description);
     fs.writeFileSync(filePath, newContent);
-    console.log(`Fixed: ${filePath}`);
+    // console.log(`Fixed: ${filePath}`);
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    // console.error(`Error processing ${filePath}:`, error.message);
   }
 }
 
@@ -137,7 +137,7 @@ function findTsxFiles(dir) {
 const appDir = path.join(__dirname, "app");
 const tsxFiles = findTsxFiles(appDir);
 
-console.log(`Found ${tsxFiles.length} .tsx files to process`);
+// console.log(`Found ${tsxFiles.length} .tsx files to process`);
 
 let fixedCount = 0;
 for (const file of tsxFiles) {
@@ -145,4 +145,4 @@ for (const file of tsxFiles) {
   fixedCount++;
 }
 
-console.log(`Processed ${fixedCount} files`);
+// console.log(`Processed ${fixedCount} files`);

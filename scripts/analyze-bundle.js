@@ -13,10 +13,10 @@ const ANALYSIS_DIR = path.join(__dirname, '..', 'analysis');
 if (!fs.existsSync(ANALYSIS_DIR)) {
   fs.mkdirSync(ANALYSIS_DIR, { recursive: true });
 function analyzeBundle() {
-  console.log('🔍 Analyzing bundle...\n');
+  // console.log('🔍 Analyzing bundle...\n');
   // Check if dist directory exists;
   if (!fs.existsSync(DIST_DIR)) {
-    console.error('❌ Dist directory not found. Please run "npm run build" first.');
+    // console.error('❌ Dist directory not found. Please run "npm run build" first.');
     process.exit(1);
   // Get all JS files in dist;
   const jsFiles = [];
@@ -56,17 +56,17 @@ const relativePath = path.relative(DIST_DIR, filePath);
   fs.writeFileSync(reportPath, JSON.stringify(analysis, null, 2));
   // Generate HTML report;
   generateHTMLReport(analysis);
-  console.log('📊 Bundle Analysis Complete!\n');
-  console.log(`Total files: ${analysis.totalFiles}`);
-  console.log(`Total size: ${formatBytes(analysis.totalSize)}\n`);
-  console.log('📁 Largest files:');
-    console.log(`  ${file.path}: ${file.sizeFormatted}`);
+  // console.log('📊 Bundle Analysis Complete!\n');
+  // console.log(`Total files: ${analysis.totalFiles}`);
+  // console.log(`Total size: ${formatBytes(analysis.totalSize)}\n`);
+  // console.log('📁 Largest files:');
+    // console.log(`  ${file.path}: ${file.sizeFormatted}`);
   });
-  console.log('\n💡 Recommendations:');
-    console.log(`  • ${rec}`);
+  // console.log('\n💡 Recommendations:');
+    // console.log(`  • ${rec}`);
   });
-  console.log(`\n📄 Detailed report saved to: ${reportPath}`);
-  console.log(`🌐 HTML report saved to: ${path.join(ANALYSIS_DIR, 'bundle-report.html')}`);
+  // console.log(`\n📄 Detailed report saved to: ${reportPath}`);
+  // console.log(`🌐 HTML report saved to: ${path.join(ANALYSIS_DIR, 'bundle-report.html')}`);
 function formatBytes(bytes) {
   if (bytes === 0) return '0 Bytes';
   const k = 1024;

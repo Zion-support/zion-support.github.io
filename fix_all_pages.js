@@ -68,7 +68,7 @@ const config = pageConfigs[page];
   const content = pageTemplate(componentName, config.title, config.description, config.keywords);
   try {
     fs.writeFileSync(pagePath, content);
-    console.log(`Rewrote ${page} page`);
+    // console.log(`Rewrote ${page} page`);
   } catch (error) {
-    console.error(`Error rewriting ${page}:`, error.message);
-console.log('Page rewriting completed');
+    // console.error(`Error rewriting ${page}:`, error.message);
+// console.log('Page rewriting completed');

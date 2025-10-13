@@ -29,10 +29,10 @@ const lastLine = lines[lines.length - 1];
         lines.push('');
         lines.push(`export default ${componentName};`);
         fs.writeFileSync(componentFile, lines.join('\n'));
-        console.log(`Fixed export for: ${componentFile}`);
+        // console.log(`Fixed export for: ${componentFile}`);
   } else {
     // Create component if it doesn't exist;
     fs.writeFileSync(componentFile, componentTemplate(componentName));
-    console.log(`Created: ${componentFile}`);
+    // console.log(`Created: ${componentFile}`);
 });
-console.log('Component fixes completed!');
+// console.log('Component fixes completed!');

@@ -64,7 +64,7 @@ function getAIServiceDirectories() {
       }
     }
   } catch (error) {
-    console.error("Error reading directories:", error.message);
+    // console.error("Error reading directories:", error.message);
   }
 
   return directories;
@@ -78,14 +78,14 @@ function fixAIPage(pageInfo) {
 
   try {
     fs.writeFileSync(pageInfo.path, content, "utf8");
-    console.log(`Fixed: ${pageInfo.path}`);
+    // console.log(`Fixed: ${pageInfo.path}`);
   } catch (error) {
-    console.error(`Error fixing ${pageInfo.path}:`, error.message);
+    // console.error(`Error fixing ${pageInfo.path}:`, error.message);
   }
 }
 
-console.log("Fixing AI service pages...");
+// console.log("Fixing AI service pages...");
 const aiPages = getAIServiceDirectories();
-console.log(`Found ${aiPages.length} AI service pages`);
+// console.log(`Found ${aiPages.length} AI service pages`);
 aiPages.forEach(fixAIPage);
-console.log("Done!");
+// console.log("Done!");

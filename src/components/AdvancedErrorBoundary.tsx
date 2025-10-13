@@ -1,6 +1,6 @@
 export default AdvancedErrorBoundary;
 // Simple logger implementation;
-      console.error(message, context);
+      // console.error(message, context);
 };
   hasError: boolean;
   error: Error | null;
