@@ -2,8 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, FileText } from "lucide-react";
-<<<<<<< HEAD
-=======
 import EnhancedSEO from "./components/EnhancedSEO";
 import StructuredData from "./components/StructuredData";
 import FuturisticBackground from "./components/FuturisticBackground";
@@ -21,7 +19,6 @@ import LazyImage from "./components/LazyImage";
 import EnhancedLoadingSpinner from "./components/EnhancedLoadingSpinner";
 import EnhancedAccessibility from "./components/EnhancedAccessibility";
 import PerformanceOptimizer from "./components/PerformanceOptimizer";
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
 
 const HomePage = () => {
   const structuredData = {
@@ -186,158 +183,9 @@ const HomePage = () => {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
-        </section>
-
-        {/* Services Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Technology Solutions
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive technology services designed to accelerate your digital transformation and drive business growth.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
-                    {service.icon}
-                  </div>
-                  <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    to={service.link}
-                    className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold transition-colors group-hover:gap-3"
-                  >
-                    Learn More
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                What Our Clients Say
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Don't just take our word for it - hear from businesses that have transformed with our solutions.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    "{testimonial.content}"
-                  </p>
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold mr-4">
-                      {testimonial.name.charAt(0)}
-                    </div>
-                    <div>
-                      <h4 className="text-white font-semibold">{testimonial.name}</h4>
-                      <p className="text-gray-400">{testimonial.company}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our technology solutions can drive your business forward.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
-              >
-                <Mail className="w-5 h-5" />
-                Contact Us Today
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-                to="/services"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all duration-300 border border-white/20 hover:scale-105"
-              >
-                <Target className="w-5 h-5" />
-                Explore Services
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
-          </div>
         </section>
       </div>
     </>
-=======
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <FuturisticButtonEnhanced
-              href="/contact"
-              variant="primary"
-              size="lg"
-              icon={ArrowRight}
-              iconPosition="right"
-              glowColor="cyan"
-              neon={true}
-              animated={true}
-            >
-              Start Your Journey
-            </FuturisticButtonEnhanced>
-            <FuturisticButtonEnhanced
-              href="/services"
-              variant="outline"
-              size="lg"
-              icon={Sparkles}
-              iconPosition="right"
-              glowColor="purple"
-              neon={true}
-              animated={true}
-            >
-              Explore Services
-            </FuturisticButtonEnhanced>
-          </div>
-        </div>
-        </section>
-        </main>
-        </FuturisticBackground>
-        </EnhancedAccessibility>
-      </PerformanceOptimizer>
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
   );
 };
 

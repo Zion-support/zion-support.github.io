@@ -4,11 +4,6 @@ import {
   Brain, 
   Mail, 
   Phone, 
-<<<<<<< HEAD
-  MapPin, 
-=======
-  MapPin,
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
   Clock, 
   ArrowRight,
   Shield,
@@ -171,105 +166,6 @@ const Footer: React.FC = () => {
     { name: "GDPR", path: "/gdpr" },
   ];
 
-<<<<<<< HEAD
-  return (
-    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <Brain className="w-8 h-8 text-cyan-400" />
-              <span className="text-2xl font-bold text-white">Zion Tech Group</span>
-            </div>
-            <p className="text-gray-300 mb-6 max-w-md">
-              Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.
-            </p>
-            
-            {/* Contact Info */}
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-cyan-400" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-cyan-400" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-cyan-400" />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
-              </div>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex space-x-4">
-              {socialLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
-                  aria-label={link.name}
-                >
-                  {link.icon}
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Micro SAAS Services */}
-          <div>
-            <h3 className="text-cyan-400 font-semibold mb-4">Micro SAAS</h3>
-            <ul className="space-y-2">
-              {microSaasServices.slice(0, 6).map((service) => (
-                <li key={service.name}>
-                  <Link
-                    to={service.path}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                  >
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <Link
-              to="/micro-saas"
-              className="text-cyan-400 hover:text-cyan-300 text-sm font-medium inline-flex items-center mt-3"
-            >
-              View All Micro SAAS <ArrowRight className="w-4 h-4 ml-1" />
-            </Link>
-=======
-  const stats = [
-    { number: "500+", label: "Projects Completed", icon: <Award className="w-5 h-5" /> },
-    { number: "10,000+", label: "Happy Clients", icon: <Users className="w-5 h-5" /> },
-    { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-5 h-5" /> },
-    { number: "24/7", label: "Support", icon: <Clock className="w-5 h-5" /> }
-  ];
-
-  return (
-    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="relative z-10">
-        {/* Stats Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  {stat.icon}
-                </div>
-                <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
-                <div className="text-gray-300 text-sm">{stat.label}</div>
-              </div>
-            ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
           </div>
 
           {/* AI & IT Services */}
@@ -315,149 +211,10 @@ const Footer: React.FC = () => {
             </Link>
           </div>
 
-<<<<<<< HEAD
-          {/* 5G Solutions */}
-          <div>
-            <h3 className="text-cyan-400 font-semibold mb-4">5G Solutions</h3>
-            <ul className="space-y-2">
-              {fiveGServices.slice(0, 6).map((service) => (
-                <li key={service.name}>
-                  <Link
-                    to={service.path}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                  >
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <Link
-              to="/5g-solutions"
-              className="text-cyan-400 hover:text-cyan-300 text-sm font-medium inline-flex items-center mt-3"
-            >
-              View All 5G Solutions <ArrowRight className="w-4 h-4 ml-1" />
-            </Link>
-          </div>
-
-          {/* Company & Support */}
-          <div>
-            <h3 className="text-cyan-400 font-semibold mb-4">Company</h3>
-            <div className="space-y-4">
-              <div>
-                <h4 className="text-white font-medium mb-2">Company</h4>
-                <ul className="space-y-1">
-                  {companyLinks.map((link) => (
-                    <li key={link.name}>
-                      <Link
-                        to={link.path}
-                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                      >
-                        {link.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-white font-medium mb-2">Support</h4>
-                <ul className="space-y-1">
-                  {supportLinks.map((link) => (
-                    <li key={link.name}>
-                      <Link
-                        to={link.path}
-                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                      >
-                        {link.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-=======
-          {/* Additional Links */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-white/10">
-            <div>
-              <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
-              <ul className="space-y-2">
-                {quickLinks.slice(0, 4).map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      to={link.path}
-                      className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold text-white mb-4">More Links</h4>
-              <ul className="space-y-2">
-                {quickLinks.slice(4).map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      to={link.path}
-                      className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold text-white mb-4">Legal</h4>
-              <ul className="space-y-2">
-                {legalLinks.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      to={link.path}
-                      className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
             </div>
           </div>
         </div>
 
-<<<<<<< HEAD
-        {/* Bottom Section */}
-        <div className="border-t border-gray-700 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </div>
-            <div className="flex flex-wrap gap-6">
-              {legalLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.path}
-                  className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                >
-                  {link.name}
-                </Link>
-              ))}
-=======
-        {/* Bottom Bar */}
-        <div className="border-t border-white/10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <div className="text-gray-400 text-sm mb-4 md:mb-0">
-                © {currentYear} Zion Tech Group. All rights reserved.
-              </div>
-              <div className="flex items-center space-x-6 text-sm text-gray-400">
-                <span>Built with ❤️ for innovation</span>
-                <div className="flex items-center">
-                  <Clock className="w-4 h-4 mr-1" />
-                  <span>24/7 Support Available</span>
-                </div>
-              </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
             </div>
           </div>
         </div>
@@ -466,8 +223,3 @@ const Footer: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default Footer;
-=======
-export default Footer;
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
