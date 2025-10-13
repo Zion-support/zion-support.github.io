@@ -1,8 +1,39 @@
+<<<<<<< HEAD
+=======
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
+=======
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, TrendingUp, Mic, Phone, Code } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
+>>>>>>> 0cc9739f1846a61570a2c68806f6c98f4253bf23
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import ResponsiveContainer from "./components/ResponsiveContainer";
+<<<<<<< HEAD
+=======
+import ResponsiveGrid from "./components/ResponsiveGrid";
+import ResponsiveText from "./components/ResponsiveText";
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Home } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
+import { Mic } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+>>>>>>> 0cc9739f1846a61570a2c68806f6c98f4253bf23
 
 const HomePage = () => {
   const features = [

@@ -1,9 +1,47 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { BarChart3, Package, TrendingUp, AlertTriangle, Clock, Shield, Zap, ArrowRight, CheckCircle, Star, Smartphone, Globe } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
+import { Package } from 'lucide-react';
 
 const ZionAIInventoryManager = () => {
+  const testimonials = [
+    {
+      name: "John Smith",
+      role: "CEO, TechCorp",
+      content: "Zion Tech Group transformed our business with their AI solutions.",
+      avatar: "/images/testimonials/john-smith.jpg"
+    },
+    {
+      name: "Sarah Johnson",
+      role: "CTO, InnovateLabs",
+      content: "The team's expertise in AI and automation is unmatched.",
+      avatar: "/images/testimonials/sarah-johnson.jpg"
+    },
+    {
+      name: "Mike Chen",
+      role: "Founder, StartupXYZ",
+      content: "We saw immediate results after implementing their solutions.",
+      avatar: "/images/testimonials/mike-chen.jpg"
+    }
+  ];
+
+  const stats = [
+    { label: "Projects Completed", value: "500+" },
+    { label: "Happy Clients", value: "200+" },
+    { label: "Years Experience", value: "5+" },
+    { label: "Team Members", value: "50+" }
+  ];
+
   const features = [
     {
       title: "AI-Powered Demand Forecasting",

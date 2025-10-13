@@ -1,6 +1,13 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
+<<<<<<< HEAD
+=======
+import { AlertTriangle, RefreshCw, Home, Mail, Hand } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 import { Link } from 'react-router-dom';
+import { Home } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Hand } from 'lucide-react';
 
 interface Props {
   children: ReactNode;

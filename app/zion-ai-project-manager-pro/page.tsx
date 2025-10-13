@@ -1,12 +1,46 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Calendar, Brain, Users, Zap, CheckCircle, Star, Award, BarChart3, Target, Sparkles, TrendingUp, Monitor, FileText, MessageSquare, Workflow, Shield, Lightbulb, GitBranch, Timer } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
+import { Users } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
+import { FileText } from 'lucide-react';
 
 const ZionAIProjectManagerProPage = () => {
+  const testimonials = [
+    {
+      name: "John Smith",
+      role: "CEO, TechCorp",
+      content: "Zion Tech Group transformed our business with their AI solutions.",
+      avatar: "/images/testimonials/john-smith.jpg"
+    },
+    {
+      name: "Sarah Johnson",
+      role: "CTO, InnovateLabs",
+      content: "The team's expertise in AI and automation is unmatched.",
+      avatar: "/images/testimonials/sarah-johnson.jpg"
+    },
+    {
+      name: "Mike Chen",
+      role: "Founder, StartupXYZ",
+      content: "We saw immediate results after implementing their solutions.",
+      avatar: "/images/testimonials/mike-chen.jpg"
+    }
+  ];
+
   const features = [
     {
       title: "AI-Powered Task Management",

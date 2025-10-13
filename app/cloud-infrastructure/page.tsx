@@ -1,11 +1,60 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { Cloud, Server, Shield, CheckCircle, ArrowRight, Globe, BarChart3, Settings, Clock, Award, Star, Activity, Lock } from 'lucide-react';
+=======
+import { Cloud, Server, Shield, CheckCircle, ArrowRight, Globe, BarChart3, Settings, Clock, Award, Star, Activity, Lock, Network, Code } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
+>>>>>>> 0cc9739f1846a61570a2c68806f6c98f4253bf23
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Network } from 'lucide-react';
+import { Lock } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Activity } from 'lucide-react';
+import { Cloud } from 'lucide-react';
 
 const CloudInfrastructure = () => {
+  const testimonials = [
+    {
+      name: "John Smith",
+      role: "CEO, TechCorp",
+      content: "Zion Tech Group transformed our business with their AI solutions.",
+      avatar: "/images/testimonials/john-smith.jpg"
+    },
+    {
+      name: "Sarah Johnson",
+      role: "CTO, InnovateLabs",
+      content: "The team's expertise in AI and automation is unmatched.",
+      avatar: "/images/testimonials/sarah-johnson.jpg"
+    },
+    {
+      name: "Mike Chen",
+      role: "Founder, StartupXYZ",
+      content: "We saw immediate results after implementing their solutions.",
+      avatar: "/images/testimonials/mike-chen.jpg"
+    }
+  ];
+
+  const stats = [
+    { label: "Projects Completed", value: "500+" },
+    { label: "Happy Clients", value: "200+" },
+    { label: "Years Experience", value: "5+" },
+    { label: "Team Members", value: "50+" }
+  ];
+
   const services = [
     {
       title: "Cloud Migration",

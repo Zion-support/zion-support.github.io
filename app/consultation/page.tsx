@@ -1,6 +1,19 @@
 import React, { useState } from 'react';
+import { CheckCircle, Clock, Star, Globe, Shield, Zap, Brain, Smartphone, Mail, Calendar, MapPin, Phone, Network } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Clock } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Network } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
 
 export default function ConsultationPage() {
   const [formData, setFormData] = useState({
@@ -17,6 +30,29 @@ export default function ConsultationPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const benefits = [
+    {
+      title: "Expert Team",
+      description: "Our team of AI and technology experts delivers exceptional results.",
+      icon: <Users className="w-8 h-8" />
+    },
+    {
+      title: "Proven Results",
+      description: "We have a track record of successful projects and satisfied clients.",
+      icon: <CheckCircle className="w-8 h-8" />
+    },
+    {
+      title: "24/7 Support",
+      description: "Round-the-clock support to ensure your success.",
+      icon: <Clock className="w-8 h-8" />
+    },
+    {
+      title: "Innovation",
+      description: "Cutting-edge solutions that keep you ahead of the competition.",
+      icon: <Zap className="w-8 h-8" />
+    }
+  ];
+
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,

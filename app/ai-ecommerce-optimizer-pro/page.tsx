@@ -1,7 +1,20 @@
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Search } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+
 "use client";
-import { Brain, Zap, CheckCircle, Star, BarChart3, TrendingUp } from 'lucide-react';
+<<<<<<< HEAD
+=======
+import { Brain, Zap, CheckCircle, Star, BarChart3, TrendingUp, Search } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+>>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 
 export default function AIEcommerceOptimizerPro() {
   const features = [

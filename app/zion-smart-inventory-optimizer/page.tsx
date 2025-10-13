@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const ZionSmartInventoryOptimizerPage = () => {
+=======
+import React from "react";
+import { Helmet } from 'react-helmet-async';
+
+const ZionSmartInventoryOptimizer = () => {
+
+>>>>>>> 0cc9739f1846a61570a2c68806f6c98f4253bf23
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <Helmet>
@@ -14,6 +22,11 @@ const ZionSmartInventoryOptimizerPage = () => {
       </div>
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default ZionSmartInventoryOptimizerPage;
+=======
+}
+export default ZionSmartInventoryOptimizer;
+>>>>>>> 0cc9739f1846a61570a2c68806f6c98f4253bf23

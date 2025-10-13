@@ -1,9 +1,43 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Eye, Box, ArrowRight, Sparkles, CheckCircle, Brain, Globe } from 'lucide-react';
+<<<<<<< HEAD
+import { ArrowRight } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Box } from 'lucide-react';
+import { Mic } from 'lucide-react';
+=======
+import { Eye, Box, ArrowRight, Sparkles, CheckCircle, Brain, Globe, Star, Mic } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 
 const ARVRDevelopmentPage = () => {
+  const benefits = [
+    {
+      title: "Expert Team",
+      description: "Our team of AI and technology experts delivers exceptional results.",
+      icon: <Users className="w-8 h-8" />
+    },
+    {
+      title: "Proven Results",
+      description: "We have a track record of successful projects and satisfied clients.",
+      icon: <CheckCircle className="w-8 h-8" />
+    },
+    {
+      title: "24/7 Support",
+      description: "Round-the-clock support to ensure your success.",
+      icon: <Clock className="w-8 h-8" />
+    },
+    {
+      title: "Innovation",
+      description: "Cutting-edge solutions that keep you ahead of the competition.",
+      icon: <Zap className="w-8 h-8" />
+    }
+  ];
+
   const features = [
     {
       title: "Immersive AR Experiences",

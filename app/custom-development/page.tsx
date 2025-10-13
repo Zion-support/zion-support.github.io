@@ -1,6 +1,26 @@
+<<<<<<< HEAD
 import { ArrowRight, Code, Smartphone, Globe, Database, Zap, BarChart3, Mail } from "lucide-react";
+=======
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Database } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
+
+=======
+import { ArrowRight, Code, Smartphone, Globe, Database, Zap, BarChart3, Mail, Smartphone as Phone, Star, Phone } from 'lucide-react';
+>>>>>>> 0cc9739f1846a61570a2c68806f6c98f4253bf23
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+>>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 
 export default function CustomDevelopment() {
   const services = [

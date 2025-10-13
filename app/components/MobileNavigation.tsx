@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
+import { ArrowRight } from 'lucide-react';
+import { Star } from 'lucide-react';
+=======
+import { Menu, X, ArrowRight, Star } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 
 const MobileNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

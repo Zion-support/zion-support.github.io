@@ -1,7 +1,23 @@
-import { ArrowRight, Mail, Smartphone, Globe, Clock, MapPin, Send, CheckCircle } from "lucide-react";
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+
+=======
+import { ArrowRight, Mail, Smartphone, Globe, Clock, MapPin, Send, CheckCircle, Phone, Code } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+>>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 
 export default function Contact() {
   const [formData, setFormData] = useState({

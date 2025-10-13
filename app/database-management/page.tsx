@@ -1,7 +1,13 @@
-import { ArrowRight } from "lucide-react";
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Database } from 'lucide-react';
 
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+=======
+import { ArrowRight, Database } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
+
 
 export default function DatabaseManagementZionTechGroup() {
   return (
