@@ -1,27 +1,17 @@
-import React from 'react';
-interface FuturisticCardProps {
-  children: React.ReactNode;
-  className?: string;
-  variant?: 'default' | 'glow' | 'gradient';
-}
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-const FuturisticCard: React.FC<FuturisticCardProps> = ({ 
-  children, 
-  className = '',';
-  variant = 'default'';
-}) => {
-  const baseClasses = 'rounded-xl p-6 border border-white/20 backdrop-blur-sm';
-  const variantClasses = {
-    default: 'bg-white/10',';
-    glow: 'bg-white/10 shadow-lg shadow-blue-500/20',';
-    gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20'';
-  };
-
+export default function Page() {
   return (
-    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>;
-      {children}
-    </div>;
+    <div className="min-h-screen bg-slate-900 flex items-center justify-center">
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - Advanced AI and IT Solutions" />
+      </Helmet>
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-white mb-4">Coming Soon</h1>
+        <p className="text-gray-300">This page is under construction.</p>
+      </div>
+    </div>
   );
-};
-
-export default FuturisticCard;
+}

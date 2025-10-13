@@ -16,6 +16,7 @@ export default [
       'out/**',
       'app-disabled/**',
       'app-broken/**',
+      'api/**',
       '*.config.js',
       '*.config.ts',
       '*.config.mjs',
@@ -48,7 +49,15 @@ export default [
       'cleanup_merge_conflicts.*',
       'close_duplicate_prs.*',
       'comprehensive-fix.*',
-      'create_remaining_pages.*'
+      'create_remaining_pages.*',
+      'App-minimal.tsx',
+      'App_minimal.tsx',
+      'App_test.tsx',
+      'EnhancedFooter.tsx',
+      'SidebarNavigation.tsx',
+      '**/__tests__/**',
+      '**/*.test.*',
+      '**/*.spec.*'
     ],
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {

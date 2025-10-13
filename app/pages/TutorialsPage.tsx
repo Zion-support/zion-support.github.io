@@ -1,41 +1,17 @@
-import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-const TutorialsPage: React.FC = () => {
+export default function Page() {
   return (
-    <>
+    <div className="min-h-screen bg-slate-900 flex items-center justify-center">
       <Helmet>
-        <title>TutorialsPage - Zion Tech Group</title>
-        <meta name="description" content="TutorialsPage page for Zion Tech Group" />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - Advanced AI and IT Solutions" />
       </Helmet>
-      <div className="min-h-screen bg-slate-900 text-white p-8">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8">TutorialsPage</h1>
-          <p className="text-lg text-gray-300">
-            This is the TutorialsPage page for Zion Tech Group.
-          </p>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default TutorialsPage;
-=======
-
-export default function TutorialsPage() {
-  return (
-    <div className="min-h-screen bg-slate-900 py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-          TutorialsPage
-        </h1>
-        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-          This page is coming soon. Please check back later.
-        </p>
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-white mb-4">Coming Soon</h1>
+        <p className="text-gray-300">This page is under construction.</p>
       </div>
     </div>
   );
 }
->>>>>>> cursor/analyze-improve-and-deploy-application-705a

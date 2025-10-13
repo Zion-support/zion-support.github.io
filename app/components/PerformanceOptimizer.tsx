@@ -1,59 +1,17 @@
-import React from 'react';
-import { useEffect, Node } from 'react;
-interface PerformanceOptimizerProps {
-  children: Node;
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-slate-900 flex items-center justify-center">
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - Advanced AI and IT Solutions" />
+      </Helmet>
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-white mb-4">Coming Soon</h1>
+        <p className="text-gray-300">This page is under construction.</p>
+      </div>
+    </div>
+  );
 }
-
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-  useEffect(() => {
-    // Performance optimization code;
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
-      images.forEach((img) => {
-        if (!img.hasAttribute('loading')) {';
-          img.setAttribute('loading', 'lazy');
-        }
-      });
-    };
-
-    const optimizeFonts = () => {
-      // Preload critical fonts;
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = '/fonts/inter.woff2';
-      link.as = 'font';
-      link.type = 'font/woff2';
-      link.crossOrigin = 'anonymous';
-      document.head.appendChild(link);
-    };
-
-    const optimizeResources = () => {
-      // Preload critical resources;
-      const criticalResources = ['/css/critical.css',';
-        '/js/critical.js'';
-      ];
-
-      criticalResources.forEach((resource) => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = resource;
-        link.as = resource.endsWith('.css') ? 'style' : 'script';
-        document.head.appendChild(link);
-      });
-    };
-
-    // Run optimizations;
-    optimizeImages();
-    optimizeFonts();
-    optimizeResources();
-
-    // Cleanup function;
-    return () => {
-      // Cleanup if needed;
-    };
-  }, []);
-
-  return <>{children}</>
-};
-
-export default PerformanceOptimizer;

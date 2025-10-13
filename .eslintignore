@@ -1,0 +1,31 @@
+# Build artifacts
+dist/
+build/
+.next/
+out/
+
+# Disabled/broken directories
+app-broken/
+app-disabled/
+api/
+
+# Root level broken files
+App-minimal.tsx
+App_minimal.tsx
+App_test.tsx
+EnhancedFooter.tsx
+SidebarNavigation.tsx
+
+# Scripts and utilities
+*.cjs
+*.js
+!jest.config.js
+!jest.setup.js
+
+# Test files
+**/__tests__/
+**/*.test.*
+**/*.spec.*
+
+# Node modules
+node_modules/

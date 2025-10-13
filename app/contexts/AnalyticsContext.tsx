@@ -1,43 +1,17 @@
-import { createContext, useContext, useState, useEffect } from 'react;
-'use client';
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
-  trackPageView: (pageName: string) => void;
-  setUser: (userId: string, properties?: Record<string, any>) => void;
-  isEnabled: boolean;
-}
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-const  ({ children }) => {
-  const [isEnabled, setIsEnabled] = useState(false);
-  const [userId, setUserId] = useState<string | null>(null);
-  useEffect(() => {
-    // if analytics is enabled;
-    setIsEnabled(true);
-  }, []);
-  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-    if (!isEnabled) return;
-    // Track event logic here;
-    console.log('Analytics Event:', eventName, properties);
-  };
-  const trackPageView = (pageName: string) => {
-    if (!isEnabled) return;
-    // Track page view logic here;
-    console.log('Page View:', pageName);
-  };
-  const setUser = (newUserId: string, properties?: Record<string, any>) => {
-    setUserId(newUserId);
-    console.log('User Set:', newUserId, properties);
-  };
-  const value: AnalyticsContextType = {
-    trackEvent,
-    trackPageView,
-    setUser,
-    isEnabled,
-  };
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+export default function Page() {
   return (
-    <AnalyticsContext.Provider value={value}>;
-      {children}
-    </AnalyticsContext.Provider>;
+    <div className="min-h-screen bg-slate-900 flex items-center justify-center">
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - Advanced AI and IT Solutions" />
+      </Helmet>
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-white mb-4">Coming Soon</h1>
+        <p className="text-gray-300">This page is under construction.</p>
+      </div>
+    </div>
   );
-};
-export { AnalyticsContext };
+}

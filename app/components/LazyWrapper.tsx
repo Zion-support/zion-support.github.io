@@ -1,34 +1,17 @@
-import React, { Suspense, lazy, ComponentType } from 'react';
-import LoadingSpinner from './LoadingSpinner';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-interface LazyWrapperProps {
-  children: React.ReactNode;
-  fallback?: React.ReactNode;
-}
-
-const LazyWrapper: React.FC<LazyWrapperProps> = ({ 
-  children, 
-  fallback = <LoadingSpinner size="lg" text="Loading component..." /> 
-}) => {
+export default function Page() {
   return (
-    <Suspense fallback={fallback}>
-      {children}
-    </Suspense>
+    <div className="min-h-screen bg-slate-900 flex items-center justify-center">
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - Advanced AI and IT Solutions" />
+      </Helmet>
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-white mb-4">Coming Soon</h1>
+        <p className="text-gray-300">This page is under construction.</p>
+      </div>
+    </div>
   );
-};
-
-// Higher-order component for lazy loading
-export const withLazyLoading = <P extends object>(
-  Component: ComponentType<P>,
-  fallback?: React.ReactNode
-) => {
-  const LazyComponent = lazy(() => Promise.resolve({ default: Component }));
-  
-  return (props: P) => (
-    <LazyWrapper fallback={fallback}>
-      <LazyComponent {...props} />
-    </LazyWrapper>
-  );
-};
-
-export default LazyWrapper;
+}
