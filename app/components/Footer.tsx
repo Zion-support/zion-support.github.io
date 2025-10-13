@@ -1,27 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
 import { 
   PhoneIcon, 
   EnvelopeIcon, 
   MapPinIcon,
-<<<<<<< HEAD
-  ArrowRightIcon,
-  HeartIcon
-} from '@heroicons/react/24/outline';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
   ArrowRightIcon
 } from '@heroicons/react/24/outline';
 import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -37,24 +22,8 @@ const Footer: React.FC = () => {
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
     { name: 'Digital Transformation', href: '/digital-transformation' },
-<<<<<<< HEAD
-    { name: '5G Solutions', href: '/5g-solutions' },
-  ];
-=======
-
-<<<<<<< HEAD
-    { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
-    { name: '5G Solutions', href: '/5g-solutions' },
-  ];
-
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
->>>>>>> origin/main
-=======
-    { name: 'Micro SaaS', href: '/micro-saas' },
     { name: '5G Solutions', href: '/5g-solutions' }
   ];
-
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   const company = [
     { name: 'About Us', href: '/about' },
     { name: 'Solutions', href: '/solutions' },
@@ -74,33 +43,7 @@ const Footer: React.FC = () => {
 
   const legal = [
     { name: 'Privacy Policy', href: '/privacy' },
-<<<<<<< HEAD
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' },
-    { name: 'GDPR', href: '/gdpr' },
-    { name: 'Security', href: '/security' },
-    { name: 'Compliance', href: '/compliance' },
-<<<<<<< HEAD
-  ];
-
-  const socialLinks = [
-    { name: 'Facebook', href: '#', icon: 'facebook' },
-    { name: 'Twitter', href: '#', icon: 'twitter' },
-    { name: 'LinkedIn', href: '#', icon: 'linkedin' },
-    { name: 'GitHub', href: '#', icon: 'github' }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const socialLinks = [
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'GitHub', href: '#', icon: Github }
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
->>>>>>> origin/main
-=======
     { name: 'Terms of Service', href: '/terms' }
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   ];
 
   return (
@@ -108,23 +51,10 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-<<<<<<< HEAD
-          <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center space-x-3 mb-6 group">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-<<<<<<< HEAD
-=======
-            <Link to="/" className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
->>>>>>> origin/main
-                <span className="text-white font-bold text-xl">Z</span>
-=======
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
               </div>
               <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </div>
