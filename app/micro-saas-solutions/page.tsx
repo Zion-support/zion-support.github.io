@@ -247,6 +247,177 @@ export default function MicroSaaSSolutionsPage() {
       benefits: ["40% open rates", "Personalized content", "Optimized timing"],
       useCases: ["Email campaigns", "Newsletter management", "Lead nurturing"],
       href: "/ai-email-marketing"
+    },
+    {
+      title: "AI Code Review Assistant",
+      description: "Intelligent code review tool that automatically analyzes code quality, security vulnerabilities, and performance issues.",
+      icon: CogIcon,
+      features: [
+        "Automated code analysis",
+        "Security vulnerability detection",
+        "Performance optimization suggestions",
+        "Code quality scoring",
+        "Integration with Git",
+        "Team collaboration tools"
+      ],
+      color: "from-indigo-500 to-purple-500",
+      price: "$199/month",
+      setupFee: "$800",
+      benefits: ["50% faster reviews", "Zero security issues", "Improved code quality"],
+      useCases: ["Software development", "Code quality assurance", "Security auditing"],
+      href: "/ai-code-review"
+    },
+    {
+      title: "AI Meeting Assistant",
+      description: "Smart meeting management with automatic transcription, action item extraction, and follow-up scheduling.",
+      icon: UserGroupIcon,
+      features: [
+        "Real-time transcription",
+        "Action item extraction",
+        "Meeting summaries",
+        "Follow-up scheduling",
+        "Integration with calendars",
+        "Multi-language support"
+      ],
+      color: "from-teal-500 to-cyan-500",
+      price: "$149/month",
+      setupFee: "$600",
+      benefits: ["100% accuracy", "Time savings", "Better follow-ups"],
+      useCases: ["Meeting management", "Team collaboration", "Client meetings"],
+      href: "/ai-meeting-assistant"
+    },
+    {
+      title: "AI Expense Tracker",
+      description: "Intelligent expense management with receipt scanning, categorization, and automated reporting.",
+      icon: CurrencyDollarIcon,
+      features: [
+        "Receipt scanning",
+        "Automatic categorization",
+        "Expense reporting",
+        "Budget tracking",
+        "Tax preparation",
+        "Multi-currency support"
+      ],
+      color: "from-emerald-500 to-green-500",
+      price: "$79/month",
+      setupFee: "$300",
+      benefits: ["90% time savings", "Accurate categorization", "Tax ready"],
+      useCases: ["Business expenses", "Personal finance", "Tax preparation"],
+      href: "/ai-expense-tracker"
+    },
+    {
+      title: "AI Lead Scoring Platform",
+      description: "Advanced lead scoring system that uses AI to identify and prioritize high-value prospects.",
+      icon: ChartBarIcon,
+      features: [
+        "AI lead scoring",
+        "Behavioral analysis",
+        "Predictive analytics",
+        "CRM integration",
+        "Custom scoring models",
+        "Performance tracking"
+      ],
+      color: "from-rose-500 to-pink-500",
+      price: "$249/month",
+      setupFee: "$1,000",
+      benefits: ["300% conversion increase", "Accurate predictions", "Automated prioritization"],
+      useCases: ["Sales optimization", "Lead qualification", "Marketing automation"],
+      href: "/ai-lead-scoring"
+    },
+    {
+      title: "AI Time Tracking & Productivity",
+      description: "Smart time tracking with productivity insights, distraction detection, and work pattern analysis.",
+      icon: ClockIcon,
+      features: [
+        "Automatic time tracking",
+        "Productivity insights",
+        "Distraction detection",
+        "Work pattern analysis",
+        "Team productivity reports",
+        "Focus mode suggestions"
+      ],
+      color: "from-violet-500 to-purple-500",
+      price: "$89/month",
+      setupFee: "$350",
+      benefits: ["25% productivity increase", "Better focus", "Insightful reports"],
+      useCases: ["Time management", "Productivity tracking", "Team optimization"],
+      href: "/ai-time-tracking"
+    },
+    {
+      title: "AI Customer Feedback Analyzer",
+      description: "Comprehensive feedback analysis tool that extracts insights from customer reviews, surveys, and support tickets.",
+      icon: ChartBarIcon,
+      features: [
+        "Sentiment analysis",
+        "Topic extraction",
+        "Trend identification",
+        "Competitor analysis",
+        "Actionable insights",
+        "Real-time monitoring"
+      ],
+      color: "from-orange-500 to-red-500",
+      price: "$179/month",
+      setupFee: "$700",
+      benefits: ["Real-time insights", "Actionable feedback", "Customer satisfaction"],
+      useCases: ["Customer feedback", "Product improvement", "Market research"],
+      href: "/ai-feedback-analyzer"
+    },
+    {
+      title: "AI Invoice Processing",
+      description: "Automated invoice processing with data extraction, validation, and payment scheduling.",
+      icon: DocumentTextIcon,
+      features: [
+        "Invoice data extraction",
+        "Automated validation",
+        "Payment scheduling",
+        "Vendor management",
+        "Compliance checking",
+        "Financial reporting"
+      ],
+      color: "from-blue-500 to-indigo-500",
+      price: "$129/month",
+      setupFee: "$500",
+      benefits: ["80% time savings", "Zero errors", "Faster payments"],
+      useCases: ["Accounts payable", "Invoice management", "Financial automation"],
+      href: "/ai-invoice-processing"
+    },
+    {
+      title: "AI Website Performance Monitor",
+      description: "Intelligent website monitoring with performance optimization suggestions and uptime tracking.",
+      icon: GlobeAltIcon,
+      features: [
+        "Real-time monitoring",
+        "Performance optimization",
+        "Uptime tracking",
+        "Speed analysis",
+        "SEO insights",
+        "Alert system"
+      ],
+      color: "from-cyan-500 to-blue-500",
+      price: "$99/month",
+      setupFee: "$400",
+      benefits: ["99.9% uptime", "Faster websites", "Better SEO"],
+      useCases: ["Website monitoring", "Performance optimization", "SEO improvement"],
+      href: "/ai-website-monitor"
+    },
+    {
+      title: "AI Contract Analyzer",
+      description: "Smart contract analysis tool that identifies risks, clauses, and compliance issues automatically.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Contract analysis",
+        "Risk identification",
+        "Clause extraction",
+        "Compliance checking",
+        "Renewal tracking",
+        "Legal insights"
+      ],
+      color: "from-red-500 to-pink-500",
+      price: "$299/month",
+      setupFee: "$1,200",
+      benefits: ["Risk mitigation", "Time savings", "Legal compliance"],
+      useCases: ["Legal review", "Contract management", "Risk assessment"],
+      href: "/ai-contract-analyzer"
     }
   ];
 

@@ -239,6 +239,168 @@ export default function AISolutionsPage() {
       benefits: ["Strategic insights", "Market intelligence", "ROI optimization"],
       useCases: ["Strategic planning", "Market analysis", "Competitive research"],
       href: "/ai-business-intelligence"
+    },
+    {
+      title: "AI Medical Diagnosis Assistant",
+      description: "Advanced AI-powered medical diagnosis support system for healthcare professionals and institutions.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Medical image analysis",
+        "Symptom assessment",
+        "Diagnosis suggestions",
+        "Treatment recommendations",
+        "Drug interaction checking",
+        "Patient monitoring"
+      ],
+      color: "from-red-500 to-pink-500",
+      price: "Starting at $5,000/month",
+      benefits: ["95% accuracy", "Faster diagnosis", "Reduced errors"],
+      useCases: ["Medical diagnosis", "Healthcare AI", "Patient care"],
+      href: "/ai-medical-diagnosis"
+    },
+    {
+      title: "AI Legal Research Platform",
+      description: "Intelligent legal research and case analysis platform for law firms and legal professionals.",
+      icon: DocumentTextIcon,
+      features: [
+        "Case law research",
+        "Legal document analysis",
+        "Precedent identification",
+        "Contract review",
+        "Compliance checking",
+        "Legal writing assistance"
+      ],
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $3,500/month",
+      benefits: ["90% time savings", "Comprehensive research", "Accurate analysis"],
+      useCases: ["Legal research", "Case analysis", "Document review"],
+      href: "/ai-legal-research"
+    },
+    {
+      title: "AI Supply Chain Optimizer",
+      description: "Smart supply chain management with demand forecasting, inventory optimization, and logistics planning.",
+      icon: CogIcon,
+      features: [
+        "Demand forecasting",
+        "Inventory optimization",
+        "Supplier management",
+        "Logistics planning",
+        "Risk assessment",
+        "Cost optimization"
+      ],
+      color: "from-orange-500 to-red-500",
+      price: "Starting at $4,500/month",
+      benefits: ["30% cost reduction", "Optimized inventory", "Risk mitigation"],
+      useCases: ["Supply chain management", "Inventory optimization", "Logistics planning"],
+      href: "/ai-supply-chain"
+    },
+    {
+      title: "AI Energy Management System",
+      description: "Intelligent energy management platform for optimizing power consumption and reducing costs.",
+      icon: LightBulbIcon,
+      features: [
+        "Energy consumption analysis",
+        "Predictive maintenance",
+        "Cost optimization",
+        "Renewable energy integration",
+        "Real-time monitoring",
+        "Automated controls"
+      ],
+      color: "from-yellow-500 to-orange-500",
+      price: "Starting at $2,800/month",
+      benefits: ["40% energy savings", "Predictive maintenance", "Cost reduction"],
+      useCases: ["Energy management", "Cost optimization", "Sustainability"],
+      href: "/ai-energy-management"
+    },
+    {
+      title: "AI Real Estate Analyzer",
+      description: "Advanced real estate analysis platform with property valuation, market trends, and investment insights.",
+      icon: ChartBarIcon,
+      features: [
+        "Property valuation",
+        "Market trend analysis",
+        "Investment recommendations",
+        "Risk assessment",
+        "Rental yield prediction",
+        "Location analysis"
+      ],
+      color: "from-blue-500 to-indigo-500",
+      price: "Starting at $2,200/month",
+      benefits: ["Accurate valuations", "Market insights", "Investment guidance"],
+      useCases: ["Real estate analysis", "Property investment", "Market research"],
+      href: "/ai-real-estate"
+    },
+    {
+      title: "AI Manufacturing Optimizer",
+      description: "Smart manufacturing optimization platform for production efficiency and quality control.",
+      icon: CogIcon,
+      features: [
+        "Production optimization",
+        "Quality control",
+        "Predictive maintenance",
+        "Supply chain integration",
+        "Performance monitoring",
+        "Automated adjustments"
+      ],
+      color: "from-gray-500 to-slate-500",
+      price: "Starting at $6,000/month",
+      benefits: ["25% efficiency gain", "Quality improvement", "Cost reduction"],
+      useCases: ["Manufacturing optimization", "Quality control", "Production efficiency"],
+      href: "/ai-manufacturing"
+    },
+    {
+      title: "AI Financial Trading Bot",
+      description: "Advanced AI-powered trading system with market analysis, risk management, and automated trading.",
+      icon: CurrencyDollarIcon,
+      features: [
+        "Market analysis",
+        "Automated trading",
+        "Risk management",
+        "Portfolio optimization",
+        "Real-time monitoring",
+        "Performance tracking"
+      ],
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $5,500/month",
+      benefits: ["24/7 trading", "Risk management", "Optimized returns"],
+      useCases: ["Algorithmic trading", "Portfolio management", "Risk assessment"],
+      href: "/ai-trading-bot"
+    },
+    {
+      title: "AI Climate Prediction Engine",
+      description: "Sophisticated climate modeling and prediction system for environmental monitoring and planning.",
+      icon: GlobeAltIcon,
+      features: [
+        "Climate modeling",
+        "Weather prediction",
+        "Environmental monitoring",
+        "Risk assessment",
+        "Data visualization",
+        "Trend analysis"
+      ],
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $7,000/month",
+      benefits: ["Accurate predictions", "Environmental insights", "Risk mitigation"],
+      useCases: ["Climate research", "Environmental planning", "Risk assessment"],
+      href: "/ai-climate-prediction"
+    },
+    {
+      title: "AI Educational Platform",
+      description: "Personalized AI-powered learning platform with adaptive content and performance tracking.",
+      icon: UserGroupIcon,
+      features: [
+        "Personalized learning",
+        "Adaptive content",
+        "Performance tracking",
+        "Skill assessment",
+        "Learning analytics",
+        "Progress monitoring"
+      ],
+      color: "from-purple-500 to-pink-500",
+      price: "Starting at $1,800/month",
+      benefits: ["Personalized learning", "Better outcomes", "Engagement tracking"],
+      useCases: ["Online education", "Corporate training", "Skill development"],
+      href: "/ai-education"
     }
   ];
 

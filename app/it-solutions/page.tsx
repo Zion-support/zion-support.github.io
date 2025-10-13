@@ -241,6 +241,168 @@ export default function ITSolutionsPage() {
       benefits: ["Full compliance", "Risk mitigation", "Audit readiness"],
       useCases: ["SOX compliance", "GDPR compliance", "HIPAA compliance"],
       href: "/it-compliance"
+    },
+    {
+      title: "IT Disaster Recovery",
+      description: "Comprehensive disaster recovery planning and implementation to ensure business continuity.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Disaster recovery planning",
+        "Backup strategies",
+        "Recovery testing",
+        "Business continuity",
+        "Data replication",
+        "Emergency response"
+      ],
+      color: "from-red-500 to-orange-500",
+      price: "Starting at $3,500/month",
+      benefits: ["Zero downtime", "Quick recovery", "Business continuity"],
+      useCases: ["Disaster recovery", "Business continuity", "Data protection"],
+      href: "/it-disaster-recovery"
+    },
+    {
+      title: "IT Performance Monitoring",
+      description: "Advanced IT performance monitoring and optimization services for maximum system efficiency.",
+      icon: ChartBarIcon,
+      features: [
+        "System monitoring",
+        "Performance analysis",
+        "Capacity planning",
+        "Optimization recommendations",
+        "Alert management",
+        "Reporting dashboard"
+      ],
+      color: "from-blue-500 to-indigo-500",
+      price: "Starting at $1,500/month",
+      benefits: ["Optimal performance", "Proactive monitoring", "Cost optimization"],
+      useCases: ["Performance monitoring", "System optimization", "Capacity planning"],
+      href: "/it-performance-monitoring"
+    },
+    {
+      title: "IT Vendor Management",
+      description: "Comprehensive vendor management services for IT procurement, contracts, and relationships.",
+      icon: UserGroupIcon,
+      features: [
+        "Vendor evaluation",
+        "Contract negotiation",
+        "Performance monitoring",
+        "Cost optimization",
+        "Relationship management",
+        "Risk assessment"
+      ],
+      color: "from-purple-500 to-pink-500",
+      price: "Starting at $2,000/month",
+      benefits: ["Cost savings", "Better relationships", "Risk mitigation"],
+      useCases: ["Vendor management", "Procurement", "Contract management"],
+      href: "/it-vendor-management"
+    },
+    {
+      title: "IT Training & Development",
+      description: "Comprehensive IT training programs for staff development and technology adoption.",
+      icon: UserGroupIcon,
+      features: [
+        "Technical training",
+        "Certification programs",
+        "Skill assessment",
+        "Custom curricula",
+        "Online learning",
+        "Progress tracking"
+      ],
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $1,200/month",
+      benefits: ["Skilled workforce", "Certification support", "Custom training"],
+      useCases: ["Staff development", "Technology adoption", "Skill building"],
+      href: "/it-training"
+    },
+    {
+      title: "IT Project Management",
+      description: "Expert IT project management services for successful technology implementations.",
+      icon: CogIcon,
+      features: [
+        "Project planning",
+        "Resource allocation",
+        "Timeline management",
+        "Risk mitigation",
+        "Quality assurance",
+        "Stakeholder communication"
+      ],
+      color: "from-yellow-500 to-orange-500",
+      price: "Starting at $3,000/month",
+      benefits: ["On-time delivery", "Quality results", "Risk mitigation"],
+      useCases: ["Project management", "Implementation", "Quality assurance"],
+      href: "/it-project-management"
+    },
+    {
+      title: "IT Cost Optimization",
+      description: "Strategic IT cost optimization services to reduce expenses while maintaining performance.",
+      icon: CurrencyDollarIcon,
+      features: [
+        "Cost analysis",
+        "Budget optimization",
+        "Resource utilization",
+        "Vendor negotiation",
+        "Technology rationalization",
+        "ROI analysis"
+      ],
+      color: "from-emerald-500 to-teal-500",
+      price: "Starting at $2,500/month",
+      benefits: ["30% cost reduction", "Better ROI", "Optimized spending"],
+      useCases: ["Cost reduction", "Budget optimization", "ROI improvement"],
+      href: "/it-cost-optimization"
+    },
+    {
+      title: "IT Innovation Consulting",
+      description: "Strategic IT innovation consulting to identify and implement cutting-edge technologies.",
+      icon: LightBulbIcon,
+      features: [
+        "Technology assessment",
+        "Innovation strategy",
+        "Proof of concept",
+        "Technology roadmaps",
+        "Digital transformation",
+        "Future planning"
+      ],
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $4,000/month",
+      benefits: ["Innovation leadership", "Competitive advantage", "Future readiness"],
+      useCases: ["Technology innovation", "Digital transformation", "Strategic planning"],
+      href: "/it-innovation"
+    },
+    {
+      title: "IT Health Check & Audit",
+      description: "Comprehensive IT health assessment and audit services for system optimization.",
+      icon: ShieldCheckIcon,
+      features: [
+        "System assessment",
+        "Security audit",
+        "Performance evaluation",
+        "Compliance check",
+        "Recommendations",
+        "Action plan"
+      ],
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $2,200/month",
+      benefits: ["Comprehensive assessment", "Actionable insights", "System optimization"],
+      useCases: ["System audit", "Health check", "Optimization"],
+      href: "/it-health-check"
+    },
+    {
+      title: "IT Managed Services",
+      description: "Complete IT managed services for end-to-end technology management and support.",
+      icon: ServerIcon,
+      features: [
+        "24/7 monitoring",
+        "Proactive maintenance",
+        "Incident management",
+        "Change management",
+        "Performance optimization",
+        "Strategic planning"
+      ],
+      color: "from-slate-500 to-gray-500",
+      price: "Starting at $5,000/month",
+      benefits: ["Complete management", "24/7 support", "Proactive maintenance"],
+      useCases: ["Complete IT management", "Outsourced IT", "Strategic support"],
+      href: "/it-managed-services"
     }
   ];
 
