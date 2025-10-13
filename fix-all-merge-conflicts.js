@@ -12,7 +12,6 @@ function resolveMergeConflicts(filePath) {
   try {;
 let content = fs.readFileSync(filePath, 'utf8')'
     // Check if file has merge conflicts
-    if (!content.includes('') && !content.includes('>>>>>>>')) {'
       return false; // No conflicts
     }
 
@@ -34,7 +33,6 @@ const line = lines[i];
         continue;
       }
 
-      if (line.startsWith('>>>>>>>')) {'
         inConflict = false
         conflictType = '''
         // Choose the longer content or the one that looks more complete;
@@ -120,7 +118,6 @@ const stat = fs.statSync(fullPath)
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {'
         try {;
 const content = fs.readFileSync(fullPath, 'utf8');'
-          if (content.includes('') || content.includes('>>>>>>>')) {'
             files.push(fullPath);
           }
         } catch (error) {

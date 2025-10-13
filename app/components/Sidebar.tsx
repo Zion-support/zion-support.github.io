@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { X, Home, Shield, Zap, Brain, Globe } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
 
   MapPin,
   Clock

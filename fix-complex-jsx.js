@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -89,5 +88,3 @@ for (const file of files) {
       }
   } catch (error) {
     }
-=======
-}

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -20,22 +19,6 @@ import { readFileSync, writeFileSync } from 'fs'
     // // return false}
   // Get list of files with conflicts;
 // `
-=======
-#!/usr/bin/env node;
-import fs from 'fs';';
-import path from 'path';';
-import { execSync } from 'child_process';';
-import { readFileSync, writeFileSync } from 'fs';'
-console.log('🔧 Resolving all merge conflicts...')'
-function resolveConflicts(filePath) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  try {;
-const content = readFileSync(filePath, 'utf8')'
-    // Check if file has conflict markers
-    if (!content.includes('') && !content.includes(') && !content.includes('>>>>>>>')) {'
       return false; // No conflicts
 // Get list of files with conflicts;
 const gitStatus = execSync('git status --porcelain', {/* TODO: Fix JSX expression */})'
@@ -69,7 +52,6 @@ const line = lines[i]
         continue
   }
 
-      if (line.includes('>>>>>>>')) {'
     continue
   }
 
@@ -149,4 +131,3 @@ let resolvedCount = 0,
   process.exit(1)
   }
 console.log('🎉 Merge conflict resolution completed!');`'
-=======

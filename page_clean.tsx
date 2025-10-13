@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface page_cleanProps {
@@ -452,5 +451,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-=======
-

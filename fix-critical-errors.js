@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -42,24 +41,6 @@ import fs from 'fs'
 // Function to find all files that need fixing;
 const filesToFix = findFilesToFix(srcDir);`
 // "`
-=======
-#!/usr/bin/env node;
-import fs from 'fs';';
-import path from 'path';';
-import { fileURLToPath } from 'url';';';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename)
-// Function to fix critical parsing errors
-function fixCriticalErrors(filePath) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  try {;
-let content = fs.readFileSync(filePath, 'utf8');';
-let modified = false
-    // Fix merge conflict markers
-    if (content.includes('<<<<<<<') || content.includes(') || content.includes('>>>>>>>')) {'
       console.log(`Fixing merge conflicts in: ${filePath}`)
 function fixCriticalErrors(filePath) {/* TODO: Fix JSX expression */}
   in: ${filePath}`);
@@ -76,7 +57,6 @@ const line = lines[i]
         } else if (line.startsWith('')) {'
           keepCurrent = false
           continue
-        } else if (line.startsWith('>>>>>>>')) {'
           inConflict = false
           keepCurrent = false
           continue
@@ -162,4 +142,3 @@ for (const file of filesToFix) {/* TODO: Fix JSX expression */}
 }
 `
 console.log(`Fixed ${fixedCount} files`);"`</div></div>
-=======

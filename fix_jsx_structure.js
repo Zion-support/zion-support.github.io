@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -76,5 +75,3 @@ const stat = fs.statSync(fullPath);
   return processedCount;
 // Main execution;
 const processedCount = processDirectory('./app');
-=======
-

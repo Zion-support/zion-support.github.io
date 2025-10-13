@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -142,5 +141,3 @@ class RouteFixer {
     this.missingRoutes.forEach(route => {
       });
   }
-=======
-}

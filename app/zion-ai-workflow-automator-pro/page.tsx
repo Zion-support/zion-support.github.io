@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { 
   Workflow, 
@@ -133,8 +132,6 @@ const ZionAIWorkflowAutomatorProPage: React.FC = () => {
       avatar: "EW",
     }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
 
 export default function ZionAiWorkflowAutomatorPro() {
   return (

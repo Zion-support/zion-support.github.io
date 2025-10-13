@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -98,5 +97,3 @@ async function fixComplexJSXStructure() {
   }
 
 fixComplexJSXStructure().catch(console.error);
-=======
-

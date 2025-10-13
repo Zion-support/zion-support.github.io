@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { 
   Package, 
@@ -144,8 +143,6 @@ const ZionAIInventoryOptimizerProPage: React.FC = () => {
       avatar: "MT",
     }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
 
 export default function ZionAiInventoryOptimizerPro() {
   return (

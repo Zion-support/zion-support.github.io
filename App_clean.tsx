@@ -33,7 +33,6 @@ function App() {
     }
   }, []);
 
-<<<<<<< HEAD
 interface App_cleanProps {
   className?: string;
   children?: React.ReactNode;
@@ -184,43 +183,6 @@ export default function App_clean({ className = '', children }: App_cleanProps) 
         </HelmetProvider>
       </EnhancedErrorBoundary>
     </GlobalErrorBoundary>
-  );
-}
-
-export default App;
-=======
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <EnhancedErrorBoundary>
-        <AnalyticsProvider>
-          <PerformanceMonitor>
-            <WebVitalsTracker>
-              <AccessibilityEnhancer>
-                <CoreWebVitals>
-                  <FuturisticBackground>
-                    <Navigation 
-                      isSidebarOpen={isSidebarOpen}
-                      toggleSidebar={toggleSidebar}
-                    />
-                    <Sidebar 
-                      isOpen={isSidebarOpen}
-                      onClose={closeSidebar}
-                    />
-                    <main className="relative">
-                      <Suspense fallback={<div>Loading...</div>}>
-                        {/* Routes will be handled by the main App.tsx */}
-                      </Suspense>
-                    </main>
-                    <Footer />
-                    <EnhancedAccessibility />
-                  </FuturisticBackground>
-                </CoreWebVitals>
-              </AccessibilityEnhancer>
-            </WebVitalsTracker>
-          </PerformanceMonitor>
-        </AnalyticsProvider>
-      </EnhancedErrorBoundary>
-    </div>
   );
 }
 

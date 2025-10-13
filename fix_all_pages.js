@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -78,5 +77,3 @@ const config = pageConfigs[page];
     fs.writeFileSync(pagePath, content);
     // } catch (error) {
     // //
-=======
-

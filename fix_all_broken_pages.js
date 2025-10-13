@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -91,5 +90,3 @@ const componentName = config.title.replace(/\s+/g, '');
       fs.writeFileSync(file, content);
       fixedCount++;
   } catch (error) {
-=======
-

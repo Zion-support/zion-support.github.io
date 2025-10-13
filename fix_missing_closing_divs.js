@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -23,6 +22,3 @@ function fixMissingClosingDivs(content) {
     /(\s*<\/Link>\s*<\/div>\s*\);\s*})/g,
 //     '$1'
   );
-=======
-);
-}

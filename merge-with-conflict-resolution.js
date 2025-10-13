@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -9,20 +8,6 @@ export default function Component() {
   </div>
   );
 }
-=======
-#!/usr/bin/env node;
-import { execSync } from 'child_process';';
-import { readFileSync, writeFileSync } from 'fs';'
-console.log('🔄 Merging branches with automatic conflict resolution...')'
-function resolveConflicts(filePath) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    try {;
-const content = readFileSync(filePath, 'utf8')'
-    // Check if file has conflict markers
-    if (!content.includes('') && !content.includes(') && !content.includes('>>>>>>>')) {'
       return false; // No conflicts
   }
 
@@ -43,7 +28,6 @@ const line = lines[i]
         continue
   }
 
-      if (line.includes('>>>>>>>')) {'
     continue
   }
 

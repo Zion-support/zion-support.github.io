@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -257,5 +256,3 @@ class SimpleWebsiteAnalyzer {
     fs.writeFileSync('simple-analysis-report.json', JSON.stringify(report, null, 2));
     return report;
   }
-=======
-}

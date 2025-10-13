@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import fs from 'fs';
 import path from 'path';
@@ -77,13 +76,3 @@ const allPages = [
               Contact Us;
   );
 };
-
-=======
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-  </div>
-  );
-}

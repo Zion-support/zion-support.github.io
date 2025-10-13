@@ -19,7 +19,6 @@ let originalContent = content;
     if (content.includes('') || content.includes('      console.log(`🔧 Fixing remaining merge conflicts in: ${filePath}`);'
 
       // Remove merge conflict markers and keep HEAD content
-      content = content.replace(/\n?([\s\S]*?)      content = content.replace(/\n?([\s\S]*?)>>>>>>>[^\n]*\n?/g, '$1');'
       content = content.replace(/      changed = true;
     }
 

@@ -468,10 +468,3 @@ export default function AdvancedPerformanceMonitor({ className = '', children }:
     </div>
   );
 }
-<<<<<<< HEAD
-=======
-// interface AdvancedPerformanceMonitorProps {
-//   className?: string;
-//   children?: React.ReactNode;
-// }
->>>>>>> cursor/fix-errors-and-merge-to-main-c832

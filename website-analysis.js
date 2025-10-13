@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -245,6 +244,3 @@ class WebsiteAnalyzer {
 // Run the analysis
 const analyzer = new WebsiteAnalyzer('https://ziontechgroup.com');
 analyzer.analyzeWebsite().then(report => {
-=======
-  );
-}
