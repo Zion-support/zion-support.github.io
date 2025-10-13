@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Code, Database, FileText } from "lucide-react";
 import SEOOptimizer from "./components/SEOOptimizer";
 
 const HomePage = () => {
@@ -44,28 +44,55 @@ const HomePage = () => {
       description: "AI-powered business intelligence platform",
       price: "From $29/month",
       icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-analytics-pro"
+      link: "/zion-analytics-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Chatbot Builder",
+      description: "No-code AI chatbot creation platform",
+      price: "From $29/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/zion-ai-chatbot-builder",
+      featured: true
+    },
+    {
+      name: "Zion API Manager",
+      description: "Enterprise API management platform",
+      price: "From $49/month",
+      icon: <Code className="w-6 h-6" />,
+      link: "/zion-api-manager",
+      featured: true
+    },
+    {
+      name: "Zion Data Pipeline",
+      description: "Real-time data processing platform",
+      price: "From $99/month",
+      icon: <Database className="w-6 h-6" />,
+      link: "/zion-data-pipeline",
+      featured: true
+    },
+    {
+      name: "Zion AI Content Studio",
+      description: "AI-powered content creation suite",
+      price: "From $39/month",
+      icon: <FileText className="w-6 h-6" />,
+      link: "/zion-ai-content-studio",
+      featured: true
     },
     {
       name: "Zion Security Shield",
       description: "Advanced cybersecurity protection",
       price: "From $49/month",
       icon: <Shield className="w-6 h-6" />,
-      link: "/zion-security-shield"
-    },
-    {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution",
-      price: "From $9/month",
-      icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault"
+      link: "/zion-security-shield",
+      featured: true
     }
   ];
 
   const stats = [
-    { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "25,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "50+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "100+", label: "AI & IT Solutions", icon: <Zap className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
   ];
 
@@ -215,13 +242,24 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
+                className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
+                  saas.featured 
+                    ? 'border-cyan-500/50 hover:border-cyan-400/70 hover:shadow-cyan-500/20' 
+                    : 'border-white/20 hover:border-cyan-500/30'
+                }`}
                 to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
               >
+                {saas.featured && (
+                  <div className="absolute -top-2 -right-2">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                      Featured
+                    </span>
+                  </div>
+                )}
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
                     {saas.icon}

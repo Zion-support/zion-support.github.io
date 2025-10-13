@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Target, 
+  Database, 
   Zap, 
   BarChart3, 
   Globe, 
@@ -22,93 +22,90 @@ import {
   Monitor,
   RefreshCw,
   AlertTriangle,
-  Send,
-  Megaphone,
-  MousePointer,
-  PieChart
+  FileText
 } from 'lucide-react';
 
-export default function ZionAIMarketingAutomation() {
+export default function ZionDataPipeline() {
   const features = [
     {
-      icon: <Target className="w-6 h-6" />,
-      title: "AI-Powered Targeting",
-      description: "Advanced audience segmentation and targeting with machine learning algorithms"
+      icon: <Zap className="w-6 h-6" />,
+      title: "Real-time Processing",
+      description: "Process and transform data in real-time with sub-second latency"
     },
     {
-      icon: <Send className="w-6 h-6" />,
-      title: "Multi-Channel Campaigns",
-      description: "Email, SMS, social media, and push notification campaigns in one platform"
+      icon: <Database className="w-6 h-6" />,
+      title: "Multi-Source Integration",
+      description: "Connect to 100+ data sources including databases, APIs, and files"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Real-time Analytics",
-      description: "Track campaign performance with detailed analytics and insights"
+      title: "Advanced Analytics",
+      description: "Built-in analytics and visualization tools for data insights"
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Automated Workflows",
-      description: "Create complex marketing workflows that trigger based on user behavior"
+      icon: <Shield className="w-6 h-6" />,
+      title: "Enterprise Security",
+      description: "End-to-end encryption and compliance with data regulations"
     },
     {
-      icon: <MousePointer className="w-6 h-6" />,
-      title: "Personalization Engine",
-      description: "Dynamic content personalization based on user preferences and behavior"
+      icon: <Settings className="w-6 h-6" />,
+      title: "No-Code Builder",
+      description: "Visual pipeline builder with drag-and-drop interface"
     },
     {
-      icon: <PieChart className="w-6 h-6" />,
-      title: "ROI Optimization",
-      description: "AI-driven budget allocation and campaign optimization for maximum ROI"
+      icon: <Monitor className="w-6 h-6" />,
+      title: "Monitoring & Alerts",
+      description: "Real-time monitoring with automated alerts and notifications"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$79",
+      price: "$99",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for small teams",
       features: [
-        "Up to 10,000 contacts",
-        "Basic automation",
-        "Email campaigns",
+        "Up to 5 data sources",
+        "1M records/month",
+        "Basic transformations",
         "Email support",
-        "Basic analytics",
-        "Standard templates"
+        "Standard security",
+        "Basic monitoring"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$199",
+      price: "$299",
       period: "/month",
       description: "Ideal for growing businesses",
       features: [
-        "Up to 50,000 contacts",
-        "Advanced automation",
-        "Multi-channel campaigns",
+        "Up to 25 data sources",
+        "10M records/month",
+        "Advanced transformations",
         "Priority support",
-        "Advanced analytics",
-        "A/B testing",
-        "Custom integrations",
-        "Lead scoring"
+        "Advanced security",
+        "Real-time processing",
+        "Custom connectors",
+        "Advanced analytics"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$499",
+      price: "$799",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited contacts",
-        "Advanced AI features",
-        "White-label solution",
+        "Unlimited data sources",
+        "Unlimited records",
+        "Custom transformations",
         "24/7 dedicated support",
+        "Enterprise security",
+        "White-label solution",
         "Custom development",
-        "Advanced integrations",
-        "SLA guarantee",
-        "Dedicated account manager"
+        "SLA guarantee"
       ],
       popular: false
     }
@@ -116,44 +113,44 @@ export default function ZionAIMarketingAutomation() {
 
   const testimonials = [
     {
-      name: "Jennifer Adams",
-      company: "Digital Marketing Agency",
-      role: "Marketing Director",
-      content: "Zion AI Marketing Automation has increased our campaign ROI by 300%. The AI targeting is incredibly accurate.",
+      name: "Maria Santos",
+      company: "DataCorp Analytics",
+      role: "Data Engineer",
+      content: "Zion Data Pipeline has transformed our data processing workflow. The real-time capabilities and ease of use are outstanding.",
       rating: 5,
-      avatar: "JA"
+      avatar: "MS"
     },
     {
-      name: "Robert Kim",
+      name: "Alex Thompson",
+      company: "FinTech Solutions",
+      role: "CTO",
+      content: "The no-code interface made it incredibly easy to set up complex data pipelines. Our team productivity increased by 300%.",
+      rating: 5,
+      avatar: "AT"
+    },
+    {
+      name: "Sarah Chen",
       company: "E-commerce Platform",
-      role: "Growth Manager",
-      content: "The automation workflows have saved us countless hours. Our email open rates increased by 150%.",
+      role: "Head of Data",
+      content: "Best data pipeline solution we've used. The monitoring and alerting features give us complete visibility and control.",
       rating: 5,
-      avatar: "RK"
-    },
-    {
-      name: "Lisa Thompson",
-      company: "SaaS Startup",
-      role: "Head of Marketing",
-      content: "Best marketing automation platform we've used. The personalization features are game-changing.",
-      rating: 5,
-      avatar: "LT"
+      avatar: "SC"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Marketing Automation - AI-Powered Marketing Platform | Zion Tech Group</title>
+        <title>Zion Data Pipeline - Real-time Data Processing Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Automate your marketing with AI. Zion AI Marketing Automation offers multi-channel campaigns, personalization, lead scoring, and advanced analytics. Increase ROI by 300%."
+          content="Build and manage real-time data pipelines with Zion Data Pipeline. No-code data processing, multi-source integration, and enterprise-grade security for modern data workflows."
         />
         <meta
           name="keywords"
-          content="marketing automation, AI marketing, email marketing, campaign automation, lead scoring, personalization, marketing analytics, multi-channel marketing"
+          content="data pipeline, ETL, real-time processing, data integration, data transformation, analytics, data warehouse, data lake, ETL tools, data processing"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-marketing-automation" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-data-pipeline" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -166,20 +163,20 @@ export default function ZionAIMarketingAutomation() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-                <Target className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">AI-Powered Marketing Automation</span>
+                <Database className="w-4 h-4 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 text-sm font-medium">Real-time Data Processing</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                Zion AI
+                Zion
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                  {" "}Marketing Automation
+                  {" "}Data Pipeline
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Automate your marketing with AI-powered campaigns, personalization, and analytics. 
-                Increase ROI by 300% with intelligent targeting and multi-channel automation.
+                Build, manage, and scale real-time data pipelines without coding. Connect any data source, 
+                transform data on-the-fly, and deliver insights instantly with our no-code platform.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -195,27 +192,27 @@ export default function ZionAIMarketingAutomation() {
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
                 >
                   Watch Demo
-                  <Target className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                  <Database className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
                 </Link>
               </div>
 
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">300%</div>
-                  <div className="text-gray-300">ROI Increase</div>
+                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">100+</div>
+                  <div className="text-gray-300">Data Sources</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">150%</div>
-                  <div className="text-gray-300">Email Open Rates</div>
+                  <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">1B+</div>
+                  <div className="text-gray-300">Records Processed</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">50+</div>
-                  <div className="text-gray-300">Integrations</div>
+                  <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">50ms</div>
+                  <div className="text-gray-300">Processing Latency</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">24/7</div>
-                  <div className="text-gray-300">Automation</div>
+                  <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">99.9%</div>
+                  <div className="text-gray-300">Uptime SLA</div>
                 </div>
               </div>
             </div>
@@ -229,12 +226,12 @@ export default function ZionAIMarketingAutomation() {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                 Everything You Need for
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Marketing Success
+                  {" "}Data Processing
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Comprehensive marketing automation platform with AI-powered targeting, 
-                personalization, and analytics for maximum campaign effectiveness.
+                Comprehensive data pipeline platform with real-time processing, multi-source integration, 
+                and advanced analytics capabilities.
               </p>
             </div>
             
@@ -264,13 +261,13 @@ export default function ZionAIMarketingAutomation() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Flexible
+                Simple
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
                   {" "}Pricing Plans
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your marketing automation needs. Scale up as you grow.
+                Choose the perfect plan for your data processing needs. Scale up as you grow.
               </p>
             </div>
             
@@ -334,11 +331,11 @@ export default function ZionAIMarketingAutomation() {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Trusted by
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Marketing Teams
+                  {" "}Data Teams
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Marketing Automation
+                See what our customers say about Zion Data Pipeline
               </p>
             </div>
             
@@ -373,14 +370,14 @@ export default function ZionAIMarketingAutomation() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Automate Your
+              Ready to Transform Your
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                {" "}Marketing?
+                {" "}Data Workflow?
               </span>
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of marketing teams using Zion AI Marketing Automation to increase 
-              ROI and streamline their campaigns. Start your free trial today.
+              Join thousands of data teams using Zion Data Pipeline to process, transform, 
+              and analyze data in real-time. Start your free trial today.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -396,7 +393,7 @@ export default function ZionAIMarketingAutomation() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Schedule Demo
-                <Target className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Database className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
             

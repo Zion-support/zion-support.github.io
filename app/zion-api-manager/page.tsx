@@ -2,7 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Target, 
+  Code, 
+  Shield, 
   Zap, 
   BarChart3, 
   Globe, 
@@ -14,101 +15,97 @@ import {
   Users,
   Clock,
   Settings,
-  Shield,
+  Database,
   Cloud,
   Lock,
   TrendingUp,
   Activity,
   Monitor,
-  RefreshCw,
-  AlertTriangle,
-  Send,
-  Megaphone,
-  MousePointer,
-  PieChart
+  Key,
+  AlertTriangle
 } from 'lucide-react';
 
-export default function ZionAIMarketingAutomation() {
+export default function ZionAPIManager() {
   const features = [
     {
-      icon: <Target className="w-6 h-6" />,
-      title: "AI-Powered Targeting",
-      description: "Advanced audience segmentation and targeting with machine learning algorithms"
-    },
-    {
-      icon: <Send className="w-6 h-6" />,
-      title: "Multi-Channel Campaigns",
-      description: "Email, SMS, social media, and push notification campaigns in one platform"
+      icon: <Shield className="w-6 h-6" />,
+      title: "Advanced Security",
+      description: "OAuth 2.0, JWT, API keys, and rate limiting for maximum security"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
       title: "Real-time Analytics",
-      description: "Track campaign performance with detailed analytics and insights"
+      description: "Monitor API performance, usage patterns, and error rates in real-time"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Automated Workflows",
-      description: "Create complex marketing workflows that trigger based on user behavior"
+      title: "Auto-scaling",
+      description: "Automatically scale your APIs based on traffic and demand"
     },
     {
-      icon: <MousePointer className="w-6 h-6" />,
-      title: "Personalization Engine",
-      description: "Dynamic content personalization based on user preferences and behavior"
+      icon: <Settings className="w-6 h-6" />,
+      title: "Easy Management",
+      description: "Intuitive dashboard for managing all your APIs in one place"
     },
     {
-      icon: <PieChart className="w-6 h-6" />,
-      title: "ROI Optimization",
-      description: "AI-driven budget allocation and campaign optimization for maximum ROI"
+      icon: <Monitor className="w-6 h-6" />,
+      title: "Monitoring & Alerts",
+      description: "24/7 monitoring with instant alerts for issues and anomalies"
+    },
+    {
+      icon: <Key className="w-6 h-6" />,
+      title: "API Gateway",
+      description: "Centralized gateway for routing, load balancing, and caching"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$79",
+      name: "Developer",
+      price: "$49",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for individual developers",
       features: [
-        "Up to 10,000 contacts",
-        "Basic automation",
-        "Email campaigns",
-        "Email support",
+        "Up to 10 APIs",
+        "1M requests/month",
         "Basic analytics",
-        "Standard templates"
+        "Email support",
+        "Standard security",
+        "API documentation"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$199",
+      price: "$149",
       period: "/month",
-      description: "Ideal for growing businesses",
+      description: "Ideal for growing teams",
       features: [
-        "Up to 50,000 contacts",
-        "Advanced automation",
-        "Multi-channel campaigns",
-        "Priority support",
+        "Up to 50 APIs",
+        "10M requests/month",
         "Advanced analytics",
-        "A/B testing",
-        "Custom integrations",
-        "Lead scoring"
+        "Priority support",
+        "Advanced security",
+        "Custom domains",
+        "Rate limiting",
+        "Webhook support"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$499",
+      price: "$399",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited contacts",
-        "Advanced AI features",
-        "White-label solution",
+        "Unlimited APIs",
+        "Unlimited requests",
+        "Real-time analytics",
         "24/7 dedicated support",
-        "Custom development",
-        "Advanced integrations",
-        "SLA guarantee",
-        "Dedicated account manager"
+        "Enterprise security",
+        "White-label solution",
+        "Custom integrations",
+        "SLA guarantee"
       ],
       popular: false
     }
@@ -116,44 +113,44 @@ export default function ZionAIMarketingAutomation() {
 
   const testimonials = [
     {
-      name: "Jennifer Adams",
-      company: "Digital Marketing Agency",
-      role: "Marketing Director",
-      content: "Zion AI Marketing Automation has increased our campaign ROI by 300%. The AI targeting is incredibly accurate.",
+      name: "David Kim",
+      company: "TechCorp Solutions",
+      role: "Lead Developer",
+      content: "Zion API Manager has revolutionized how we handle our microservices. The monitoring and security features are outstanding.",
       rating: 5,
-      avatar: "JA"
+      avatar: "DK"
     },
     {
-      name: "Robert Kim",
-      company: "E-commerce Platform",
-      role: "Growth Manager",
-      content: "The automation workflows have saved us countless hours. Our email open rates increased by 150%.",
+      name: "Lisa Wang",
+      company: "StartupXYZ",
+      role: "CTO",
+      content: "The auto-scaling feature saved us during our traffic spikes. The dashboard is incredibly intuitive and powerful.",
       rating: 5,
-      avatar: "RK"
+      avatar: "LW"
     },
     {
-      name: "Lisa Thompson",
-      company: "SaaS Startup",
-      role: "Head of Marketing",
-      content: "Best marketing automation platform we've used. The personalization features are game-changing.",
+      name: "James Rodriguez",
+      company: "Enterprise Systems",
+      role: "DevOps Manager",
+      content: "Best API management platform we've used. The security features and analytics give us complete visibility and control.",
       rating: 5,
-      avatar: "LT"
+      avatar: "JR"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Marketing Automation - AI-Powered Marketing Platform | Zion Tech Group</title>
+        <title>Zion API Manager - Enterprise API Management Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Automate your marketing with AI. Zion AI Marketing Automation offers multi-channel campaigns, personalization, lead scoring, and advanced analytics. Increase ROI by 300%."
+          content="Manage, secure, and monitor all your APIs with Zion API Manager. Enterprise-grade API management with real-time analytics, auto-scaling, and advanced security features."
         />
         <meta
           name="keywords"
-          content="marketing automation, AI marketing, email marketing, campaign automation, lead scoring, personalization, marketing analytics, multi-channel marketing"
+          content="API management, API gateway, microservices, API security, API monitoring, API analytics, rate limiting, OAuth, JWT, API documentation"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-marketing-automation" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-api-manager" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -166,20 +163,20 @@ export default function ZionAIMarketingAutomation() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-                <Target className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">AI-Powered Marketing Automation</span>
+                <Code className="w-4 h-4 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 text-sm font-medium">Enterprise API Management</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                Zion AI
+                Zion
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                  {" "}Marketing Automation
+                  {" "}API Manager
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Automate your marketing with AI-powered campaigns, personalization, and analytics. 
-                Increase ROI by 300% with intelligent targeting and multi-channel automation.
+                The complete API management platform for modern applications. Secure, monitor, and scale your APIs 
+                with enterprise-grade features and real-time analytics.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -195,27 +192,27 @@ export default function ZionAIMarketingAutomation() {
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
                 >
                   Watch Demo
-                  <Target className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                  <Code className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
                 </Link>
               </div>
 
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">300%</div>
-                  <div className="text-gray-300">ROI Increase</div>
+                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">1B+</div>
+                  <div className="text-gray-300">API Calls Managed</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">150%</div>
-                  <div className="text-gray-300">Email Open Rates</div>
+                  <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">99.99%</div>
+                  <div className="text-gray-300">Uptime SLA</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">50+</div>
-                  <div className="text-gray-300">Integrations</div>
+                  <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">50ms</div>
+                  <div className="text-gray-300">Average Latency</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">24/7</div>
-                  <div className="text-gray-300">Automation</div>
+                  <div className="text-gray-300">Monitoring</div>
                 </div>
               </div>
             </div>
@@ -229,12 +226,12 @@ export default function ZionAIMarketingAutomation() {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                 Everything You Need for
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Marketing Success
+                  {" "}API Management
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Comprehensive marketing automation platform with AI-powered targeting, 
-                personalization, and analytics for maximum campaign effectiveness.
+                Comprehensive API management platform with security, monitoring, analytics, and scaling capabilities 
+                built for modern applications.
               </p>
             </div>
             
@@ -270,7 +267,7 @@ export default function ZionAIMarketingAutomation() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your marketing automation needs. Scale up as you grow.
+                Choose the perfect plan for your API management needs. Scale up as you grow.
               </p>
             </div>
             
@@ -334,11 +331,11 @@ export default function ZionAIMarketingAutomation() {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Trusted by
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Marketing Teams
+                  {" "}Leading Companies
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Marketing Automation
+                See what our customers say about Zion API Manager
               </p>
             </div>
             
@@ -373,14 +370,14 @@ export default function ZionAIMarketingAutomation() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Automate Your
+              Ready to Manage Your
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                {" "}Marketing?
+                {" "}APIs Better?
               </span>
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of marketing teams using Zion AI Marketing Automation to increase 
-              ROI and streamline their campaigns. Start your free trial today.
+              Join thousands of developers and companies using Zion API Manager to secure, monitor, 
+              and scale their APIs. Start your free trial today.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -396,7 +393,7 @@ export default function ZionAIMarketingAutomation() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Schedule Demo
-                <Target className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Code className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
             
