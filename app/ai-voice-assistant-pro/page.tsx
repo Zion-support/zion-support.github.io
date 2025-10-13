@@ -1,20 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Mic, 
-  Brain, 
-  Zap, 
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
-  Volume2,
-  MessageSquare,
-  Settings,
-  Shield,
-  Users,
-  Globe
-} from 'lucide-react';
+import { Mic, ArrowRight, Sparkles, CheckCircle, MessageSquare, Settings, Globe } from 'lucide-react';
 
 const AIVoiceAssistantProPage = () => {
   const features = [
@@ -42,15 +29,6 @@ const AIVoiceAssistantProPage = () => {
       icon: <Settings className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
-  ];
-
-  const benefits = [
-    "Reduce customer service costs by 60%",
-    "Handle 1000+ conversations simultaneously",
-    "Available 24/7 in multiple languages",
-    "Improve customer satisfaction by 40%",
-    "Integrate with any business system",
-    "Scale customer support instantly"
   ];
 
   return (

@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { Brain, Code, Zap, Shield, CheckCircle, ArrowRight, Star, Users, Award, Clock, Globe, Smartphone, Mail } from "lucide-react";
+import { Brain, Code, Zap, Shield, CheckCircle, ArrowRight, Star } from "lucide-react";
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
@@ -113,30 +112,6 @@ const AICodeAssistantProZionTechGroup = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Sarah Chen",
-      company: "TechCorp Solutions",
-      role: "Senior Developer",
-      content: "Zion AI Code Assistant Pro has revolutionized our development process. We've increased productivity by 60% and reduced bugs by 40%.",
-      rating: 5
-    },
-    {
-      name: "Michael Rodriguez",
-      company: "StartupXYZ",
-      role: "CTO",
-      content: "The AI code generation is incredibly accurate and the debugging features have saved us countless hours. Highly recommended!",
-      rating: 5
-    },
-    {
-      name: "Emily Johnson",
-      company: "DevTeam Inc.",
-      role: "Lead Developer",
-      content: "Best AI coding assistant we've used. The multi-language support and optimization features are outstanding.",
-      rating: 5
-    }
-  ];
-
   return (
     <PerformanceOptimizer>
       <EnhancedAccessibility>
@@ -169,11 +144,8 @@ const AICodeAssistantProZionTechGroup = () => {
                   variant="display"
                   size="5xl"
                   gradient={true}
-                  animated={true}
                   glow={true}
-                  neon={true}
-                  className="mb-6 leading-tight"
-                >
+                  className="mb-6 leading-tight">
                   Zion AI Code Assistant Pro
                 </FuturisticTextEnhanced>
                 
@@ -188,11 +160,7 @@ const AICodeAssistantProZionTechGroup = () => {
                     variant="primary"
                     size="lg"
                     icon={Code}
-                    iconPosition="left"
-                    glowColor="blue"
-                    neon={true}
-                    animated={true}
-                  >
+                    iconPosition="left">
                     Start Free Trial
                   </FuturisticButtonEnhanced>
                   <FuturisticButtonEnhanced
@@ -200,11 +168,7 @@ const AICodeAssistantProZionTechGroup = () => {
                     variant="outline"
                     size="lg"
                     icon={ArrowRight}
-                    iconPosition="left"
-                    glowColor="cyan"
-                    neon={true}
-                    animated={true}
-                  >
+                    iconPosition="left">
                     Watch Demo
                   </FuturisticButtonEnhanced>
                 </div>
@@ -227,16 +191,10 @@ const AICodeAssistantProZionTechGroup = () => {
                   {features.map((feature, index) => (
                     <FuturisticCardEnhanced
                       key={index}
-                      glowColor={index % 2 === 0 ? 'blue' : 'purple'}
-                      hoverEffect={true}
-                      animated={true}
-                      neon={true}
-                      className="text-center"
-                    >
+                      className="text-center">
                       <div
                         className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
-                        aria-hidden="true"
-                      >
+                        aria-hidden="true">
                         {feature.icon}
                       </div>
                       <h3 className="text-lg md:text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
@@ -266,12 +224,7 @@ const AICodeAssistantProZionTechGroup = () => {
                   {pricingPlans.map((plan, index) => (
                     <FuturisticCardEnhanced
                       key={index}
-                      glowColor={plan.popular ? 'blue' : 'purple'}
-                      hoverEffect={true}
-                      animated={true}
-                      neon={true}
-                      className={`relative ${plan.popular ? 'ring-2 ring-blue-500' : ''}`}
-                    >
+                      className={`relative ${plan.popular ? 'ring-2 ring-blue-500' : ''}`}>
                       {plan.popular && (
                         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                           <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -300,11 +253,7 @@ const AICodeAssistantProZionTechGroup = () => {
                         size="lg"
                         icon={ArrowRight}
                         iconPosition="right"
-                        glowColor={plan.popular ? "blue" : "purple"}
-                        neon={true}
-                        animated={true}
-                        className="w-full"
-                      >
+                        className="w-full">
                         Get Started
                       </FuturisticButtonEnhanced>
                     </FuturisticCardEnhanced>
@@ -328,8 +277,7 @@ const AICodeAssistantProZionTechGroup = () => {
                   {testimonials.map((testimonial, index) => (
                     <div
                       key={index}
-                      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 relative overflow-hidden"
-                    >
+                      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 relative overflow-hidden">
                       <div className="flex items-center mb-4">
                         {[...Array(testimonial.rating)].map((_, i) => (
                           <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
@@ -363,11 +311,7 @@ const AICodeAssistantProZionTechGroup = () => {
                     variant="primary"
                     size="lg"
                     icon={ArrowRight}
-                    iconPosition="right"
-                    glowColor="blue"
-                    neon={true}
-                    animated={true}
-                  >
+                    iconPosition="right">
                     Start Free Trial
                   </FuturisticButtonEnhanced>
                   <FuturisticButtonEnhanced
@@ -375,11 +319,7 @@ const AICodeAssistantProZionTechGroup = () => {
                     variant="outline"
                     size="lg"
                     icon={Code}
-                    iconPosition="right"
-                    glowColor="cyan"
-                    neon={true}
-                    animated={true}
-                  >
+                    iconPosition="right">
                     Schedule Demo
                   </FuturisticButtonEnhanced>
                 </div>

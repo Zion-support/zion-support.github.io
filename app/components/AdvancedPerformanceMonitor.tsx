@@ -25,31 +25,19 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
 
   const [isVisible, setIsVisible] = useState(false);
   const [isRecording, setIsRecording] = useState(false);
+    }
+
+    // Send to custom analytics
+    if (typeof window !== 'undefined' && (window as any).analytics) {
+      (window as any).analytics.track('Performance Metric', {
+        name,
+        value: Math.round(value),
+        timestamp: Date.now()
+      });
+    }
+  };
 
   useEffect(() => {
-    // Report metrics to analytics
-    const reportMetric = (name: string, value: number) => {
-      console.log(`Metric ${name}: ${value}`);
-      
-      // Send to Google Analytics
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'web_vitals', {
-          metric_name: name,
-          metric_value: Math.round(value),
-          metric_delta: Math.round(value)
-        });
-      }
-
-      // Send to custom analytics
-      if (typeof window !== 'undefined' && (window as any).analytics) {
-        (window as any).analytics.track('Performance Metric', {
-          name,
-          value: Math.round(value),
-          timestamp: Date.now()
-        });
-      }
-    };
-
     const measureWebVitals = () => {
       // Web vitals measurement logic
       if (typeof window !== 'undefined' && 'performance' in window) {

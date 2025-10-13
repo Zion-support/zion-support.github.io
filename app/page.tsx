@@ -209,37 +209,6 @@ const HomePage = () => {
     }
   ];
 
-  const stats = [
-    { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
-    { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "60+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
-    { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechStart Inc.",
-      role: "CEO",
-      content: "Zion Tech Group transformed our entire technology stack. The AI solutions increased our productivity by 60% in just 3 months.",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      company: "E-commerce Solutions",
-      role: "CTO",
-      content: "The micro SAAS solutions are incredibly powerful and easy to implement. We've saved thousands of hours with their automation tools.",
-      rating: 5
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Digital Marketing Agency",
-      role: "Operations Director",
-      content: "Outstanding support and cutting-edge technology. Zion Tech Group is our trusted partner for all digital transformation needs.",
-      rating: 5
-    }
-  ];
-
   return (
     <PerformanceOptimizer>
       <EnhancedAccessibility>
@@ -287,11 +256,8 @@ const HomePage = () => {
             variant="display"
             size="6xl"
             gradient={true}
-            animated={true}
             glow={true}
-            neon={true}
-            className="mb-6 leading-tight"
-          >
+            className="mb-6 leading-tight">
             Welcome to Zion Tech Group
           </FuturisticTextEnhanced>
           
@@ -306,11 +272,7 @@ const HomePage = () => {
               variant="primary"
               size="lg"
               icon={Sparkles}
-              iconPosition="left"
-              glowColor="cyan"
-              neon={true}
-              animated={true}
-            >
+              iconPosition="left">
               Get Started Today
             </FuturisticButtonEnhanced>
             <FuturisticButtonEnhanced
@@ -318,11 +280,7 @@ const HomePage = () => {
               variant="outline"
               size="lg"
               icon={Monitor}
-              iconPosition="left"
-              glowColor="purple"
-              neon={true}
-              animated={true}
-            >
+              iconPosition="left">
               Watch Demo
             </FuturisticButtonEnhanced>
           </div>
@@ -358,21 +316,14 @@ const HomePage = () => {
             {features.map((feature, index) => (
               <FuturisticCard
                 key={index}
-                glowColor={index % 2 === 0 ? 'cyan' : 'purple'}
-                hoverEffect={true}
-                animated={true}
-                neon={true}
-                className="cursor-pointer"
-              >
+                className="cursor-pointer">
                 <Link
                   to={feature.link}
                   className="block"
-                  aria-label={`Learn more about ${feature.title}`}
-                >
+                  aria-label={`Learn more about ${feature.title}`}>
                   <div
                     className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
-                    aria-hidden="true"
-                  >
+                    aria-hidden="true">
                     {feature.icon}
                   </div>
                   <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
@@ -408,16 +359,10 @@ const HomePage = () => {
             {microSaasHighlights.map((saas, index) => (
               <FuturisticCard
                 key={index}
-                glowColor={index % 3 === 0 ? 'cyan' : index % 3 === 1 ? 'purple' : 'pink'}
-                hoverEffect={true}
-                animated={true}
-                neon={true}
-                className="relative overflow-hidden"
-              >
+                className="relative overflow-hidden">
                 <Link
                   to={saas.link}
-                  className="block"
-                >
+                  className="block">
                   {saas.featured && (
                     <div className="absolute top-4 right-4 z-20">
                       <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -450,8 +395,7 @@ const HomePage = () => {
           <div className="text-center mt-12">
             <Link
               to="/micro-saas"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-700 transition-all duration-300 group"
-            >
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-700 transition-all duration-300 group">
               View All Micro SAAS Solutions
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
@@ -474,8 +418,7 @@ const HomePage = () => {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
-              >
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden">
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
@@ -534,11 +477,7 @@ const HomePage = () => {
               variant="primary"
               size="lg"
               icon={ArrowRight}
-              iconPosition="right"
-              glowColor="cyan"
-              neon={true}
-              animated={true}
-            >
+              iconPosition="right">
               Start Your Journey
             </FuturisticButtonEnhanced>
             <FuturisticButtonEnhanced
@@ -546,11 +485,7 @@ const HomePage = () => {
               variant="outline"
               size="lg"
               icon={Sparkles}
-              iconPosition="right"
-              glowColor="purple"
-              neon={true}
-              animated={true}
-            >
+              iconPosition="right">
               Explore Services
             </FuturisticButtonEnhanced>
           </div>

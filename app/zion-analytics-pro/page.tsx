@@ -20,15 +20,6 @@ export default function ZionAnalyticsPro() {
     "Custom metrics & KPIs"
   ];
 
-  const benefits = [
-    "Increase revenue by 25%",
-    "Reduce reporting time by 80%",
-    "Make data-driven decisions",
-    "Scale with your business",
-    "Improve operational efficiency",
-    "Identify growth opportunities"
-  ];
-
   const pricing = [
     {
       name: "Starter",
@@ -53,33 +44,6 @@ export default function ZionAnalyticsPro() {
       description: "For large organizations",
       features: ["Unlimited data sources", "AI insights", "24/7 support", "Unlimited users", "White-label options"],
       popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechStart Inc.",
-      role: "CEO",
-      content: "Zion Analytics Pro transformed our data insights. We increased revenue by 30% in just 2 months with their predictive analytics.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      company: "E-commerce Solutions",
-      role: "CTO",
-      content: "The real-time dashboards and automated reporting have saved us countless hours. The ROI was immediate.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Digital Marketing Agency",
-      role: "Operations Director",
-      content: "The AI-powered insights help us make better decisions faster. Our team productivity has increased significantly.",
-      rating: 5,
-      avatar: "ER"
     }
   ];
 

@@ -2,20 +2,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Zap, 
   BarChart3, 
-  Shield, 
   Cloud, 
-  Users, 
-  Code, 
-  Database, 
   ArrowRight,
   Sparkles,
-  Star,
   CheckCircle,
-  TrendingUp,
-  Settings,
-  Bot,
   Workflow,
   Target
 } from 'lucide-react';
@@ -46,15 +37,6 @@ const AIAutomationPlatformPage = () => {
       icon: <Settings className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
-  ];
-
-  const benefits = [
-    "Reduce manual work by up to 80%",
-    "Improve process efficiency by 60%",
-    "Eliminate human errors in repetitive tasks",
-    "Scale operations without proportional staff increases",
-    "24/7 automated monitoring and execution",
-    "Real-time process optimization"
   ];
 
   const useCases = [

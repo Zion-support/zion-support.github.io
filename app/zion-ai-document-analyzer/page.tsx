@@ -127,33 +127,6 @@ const ZionAIDocumentAnalyzerPage = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "Legal Firm Inc.",
-      role: "Managing Partner",
-      content: "Zion AI Document Analyzer has revolutionized our document processing. We've reduced manual review time by 80% and improved accuracy significantly.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      company: "Financial Services Co.",
-      role: "Operations Director",
-      content: "The compliance monitoring feature has been a game-changer. We catch potential issues before they become problems, saving us thousands in fines.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Healthcare Group",
-      role: "IT Director",
-      content: "Processing medical records has never been easier. The AI understands complex medical terminology and extracts exactly what we need.",
-      rating: 5,
-      avatar: "ER"
-    }
-  ];
-
   const useCases = [
     {
       title: "Legal Document Review",

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { 
 <<<<<<< HEAD
   Zap, 
@@ -113,6 +114,9 @@ import {
   Stopwatch,
   Hourglass
 } from 'lucide-react';
+=======
+import { Zap, Brain, Shield, Globe, ArrowRight, CheckCircle, Star, Users, Award, Clock, Smartphone, Mail, FileText, BarChart3, Database, Target, Activity, LineChart, DollarSign, UserCheck, Calendar, Settings, Cpu, Sparkles, Lock, Search, Filter, Download, Upload, Share, Bell, Heart, ThumbsUp, AwardIcon, Wifi, Battery, Camera, Headphones, Mic, Video, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, note, Coins, Gift, Tag, Percent, Calculator, PieChart, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, watch } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-65aa
 
 const MicroSaasPage: React.FC = () => {
   const microSaasProducts = [
@@ -242,6 +246,7 @@ const MicroSaasPage: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
   const benefits = [
     {
 <<<<<<< HEAD
@@ -286,6 +291,8 @@ const MicroSaasPage: React.FC = () => {
     }
   ];
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-65aa
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}

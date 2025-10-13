@@ -4,12 +4,12 @@ import { glob } from 'glob';
 // Get all TypeScript/JavaScript files
 const files = await glob('app/**/*.{ts,tsx,js,jsx}', { ignore: ['node_modules/**'] });
 
-function fixUnusedImports(filePath) {
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix lucide-react imports
+    // Fix lucide-react imports - remove all unused ones
     const lucideImportMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/);
     if (lucideImportMatch) {
       const imports = lucideImportMatch[1].split(',').map(imp => imp.trim());
@@ -22,7 +22,9 @@ function fixUnusedImports(filePath) {
                content.includes(`${iconName} `) ||
                content.includes(`${iconName}>`) ||
                content.includes(`${iconName},`) ||
-               content.includes(`${iconName};`);
+               content.includes(`${iconName};`) ||
+               content.includes(`${iconName})`) ||
+               content.includes(`${iconName}]`);
       });
 
       if (usedImports.length !== imports.length) {
@@ -43,7 +45,13 @@ function fixUnusedImports(filePath) {
       'Eye', 'BarChart3', 'Cloud', 'ExternalLink', 'HelpCircle', 'Menu', 'Download', 'Share2',
       'Code', 'Volume2', 'VolumeX', 'Smartphone', 'FileText', 'Calendar', 'CalendarDays',
       'CalendarCheck', 'CalendarX', 'CalendarPlus', 'CalendarMinus', 'CalendarRange',
-      'CalendarSearch', 'CalendarHeart', 'CalendarClock', 'MobileNavigation'
+      'CalendarSearch', 'CalendarHeart', 'CalendarClock', 'MobileNavigation', 'Server',
+      'DollarSign', 'MessageSquare', 'Smile', 'AwardIcon', 'Square', 'Circle', 'StarIcon',
+      'Hourglass', 'Play', 'Pause', 'SkipBack', 'SkipForward', 'RotateCcw', 'RotateCw',
+      'Shuffle', 'Repeat', 'Repeat1', 'Maximize', 'Minimize', 'Triangle', 'Hexagon',
+      'Octagon', 'Diamond', 'Moon', 'Sun', 'Sunrise', 'Sunset', 'CloudRain', 'CloudSnow',
+      'CloudLightning', 'Wind', 'Droplets', 'Thermometer', 'Gauge', 'Timer', 'watch',
+      'Voicemail', 'Headset', 'Speaker', 'Usb', 'Printer', 'Wifi', 'Bluetooth'
     ];
 
     otherImports.forEach(importName => {
@@ -57,7 +65,8 @@ function fixUnusedImports(filePath) {
             return name !== importName || content.includes(`<${name}`) || 
                    content.includes(`${name}.`) || content.includes(`${name} `) ||
                    content.includes(`${name}>`) || content.includes(`${name},`) ||
-                   content.includes(`${name};`);
+                   content.includes(`${name};`) || content.includes(`${name})`) ||
+                   content.includes(`${name}]`);
           });
           
           if (usedImports.length !== imports.length) {
@@ -72,7 +81,9 @@ function fixUnusedImports(filePath) {
     });
 
     // Remove unused variables
-    const unusedVars = ['benefits', 'caseStudies', 'stats', 'categories', 'testimonials', 'reportMetric', 'glowColors', 'rippleVariants', 'quality', 'onSidebarToggle'];
+    const unusedVars = ['benefits', 'caseStudies', 'stats', 'categories', 'testimonials', 
+                       'reportMetric', 'glowColors', 'rippleVariants', 'quality', 
+                       'onSidebarToggle', 'useEffect', 'onCLS', 'onINP', 'onFCP', 'onLCP', 'onTTFB'];
     unusedVars.forEach(varName => {
       const regex = new RegExp(`\\s*const\\s+${varName}\\s*=.*?;`, 'gs');
       if (content.includes(`const ${varName}`)) {
@@ -80,6 +91,10 @@ function fixUnusedImports(filePath) {
         modified = true;
       }
     });
+
+    // Fix parsing errors - remove malformed JSX attributes
+    content = content.replace(/key=\{index\}\s*\?\s*['"][^'"]*['"]\s*:\s*['"][^'"]*['"]\}/g, 'key={index}');
+    content = content.replace(/key=\{index\}\s*%\s*\d+\s*===\s*\d+\s*\?\s*['"][^'"]*['"]\s*:\s*['"][^'"]*['"]\}/g, 'key={index}');
 
     // Clean up empty import lines
     content = content.replace(/import\s*{\s*}\s*from\s*['"][^'"]*['"];?\s*\n/g, '');
@@ -96,7 +111,7 @@ function fixUnusedImports(filePath) {
 
 // Fix all files
 for (const file of files) {
-  fixUnusedImports(file);
+  fixFile(file);
 }
 
-console.log('All unused imports fixed!');
+console.log('All remaining issues fixed!');

@@ -44,15 +44,6 @@ const CybersecurityAuditPage = () => {
     }
   ];
 
-  const benefits = [
-    "Identify security gaps before attackers do",
-    "Ensure regulatory compliance",
-    "Reduce risk of data breaches by 90%",
-    "Improve security posture significantly",
-    "Get detailed remediation roadmap",
-    "Protect your business reputation"
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, CheckCircle, Star, Cpu, Brain, Zap, Settings, Sparkles, Users, Award, Clock, DollarSign, Globe, Smartphone, Lock, TrendingUp, Target, Monitor, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award as AwardIcon, Rocket, Wifi, Battery, Camera, Headphones, Mic, Video, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Brain, Zap, Award, DollarSign, Globe, TrendingUp, Monitor, MessageSquare, Eye, Award as AwardIcon, Rocket, Phone, Square, Circle, Star as StarIcon, Hourglass } from 'lucide-react';
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../../components/SEOOptimizer";
 
@@ -18,13 +18,6 @@ export default function AiPoweredDevops() {
     "Automated compliance checking and reporting",
     "Intelligent capacity planning and forecasting",
     "AI-driven continuous integration and deployment"
-  ];
-
-  const benefits = [
-    "Reduce deployment time by 80%",
-    "Eliminate 95% of manual DevOps tasks",
-    "Improve system reliability by 99.9%",
-    "Cut infrastructure costs by 40%"
   ];
 
   const pricingPlans = [
@@ -83,33 +76,6 @@ export default function AiPoweredDevops() {
         "On-premise deployment"
       ],
       popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Jennifer Martinez",
-      company: "Tech Startup",
-      role: "CTO",
-      content: "AI-powered DevOps has transformed our development process. We've reduced deployment time by 85% and our system uptime is now 99.9%. The AI predictions are incredibly accurate.",
-      rating: 5,
-      avatar: "JM"
-    },
-    {
-      name: "David Kim",
-      company: "E-commerce Platform",
-      role: "Head of Engineering",
-      content: "The automated testing and deployment features are game-changing. We can now deploy multiple times per day with confidence, and our bug rate has dropped by 90%.",
-      rating: 5,
-      avatar: "DK"
-    },
-    {
-      name: "Lisa Thompson",
-      company: "Financial Services",
-      role: "DevOps Director",
-      content: "The AI-driven security monitoring and compliance checking have been invaluable. We've achieved 100% compliance and our security incidents have dropped to zero.",
-      rating: 5,
-      avatar: "LT"
     }
   ];
 
