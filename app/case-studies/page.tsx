@@ -1,3 +1,7 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Target, Star, Globe, Shield, CheckCircle } from 'lucide-react';
 
 import { ArrowRight, TrendingUp, Zap, BarChart3, Clock, CheckCircle } from "lucide-react";
 import { Helmet } from "react-helmet-async";

@@ -1,9 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
 
-
-
-
 interface PerformanceMetrics {
   fcp: number | null
   lcp: number | null
@@ -56,6 +53,7 @@ const AdvancedPerformanceMonitor = () => {
       const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigationEntry) {
         setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }))
+        console.warn('Failed to load web-vitals:', error);
       }
 
       // Measure memory usage
@@ -68,6 +66,26 @@ const AdvancedPerformanceMonitor = () => {
       window.addEventListener('load', () => {
         const loadTime = performance.now()
         setMetrics(prev => ({ ...prev, loadTime }))
+      }
+    }
+
+    // Report metrics to analytics
+    const reportMetric = () => {
+      // Analytics reporting would go here
+    }
+
+    measureWebVitals()
+    measureMemory()
+    measureLoadTime()
+
+    // Set up performance observer for additional metrics
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'measure') {
+            console.log('Custom Performance Measure:', entry.name, entry.duration)
+          }
+        }
       })
     }
 

@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { ArrowRight, Calendar, User } from "lucide-react";
+import { ArrowRight, Search, Calendar, Clock, User, Zap } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-
-
 
 export default function Blog() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -62,7 +61,7 @@ export default function Blog() {
     return matchesSearch && matchesCategory;
   });
 
-  const featuredPost = blogPosts.find(post => post.featured);
+  const featuredPost = filteredPosts.find(post => post.featured);
   const regularPosts = filteredPosts.filter(post => !post.featured);
 
   return (
@@ -81,8 +80,8 @@ export default function Blog() {
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Our Blog
               </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Insights, trends, and expertise from the Zion Tech Group team
+              <p className="text-xl md:text-2xl mb-8 text-blue-100">
+                Insights, Innovation, and Industry Trends
               </p>
             </div>
           </div>
@@ -92,7 +91,7 @@ export default function Blog() {
         <section className="py-8 bg-white/10 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-              <div className="flex-1 max-w-md">
+              <div className="relative flex-1 max-w-md">
                 <input
                   type="text"
                   placeholder="Search articles..."
@@ -100,9 +99,10 @@ export default function Blog() {
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full px-4 py-2 border border-cyan-400/30 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white/10 text-white placeholder-gray-300"
                 />
+                <Search className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
               </div>
-              <div className="flex gap-2 flex-wrap">
-                {categories.map(category => (
+              <div className="flex flex-wrap gap-2">
+                {categories.map((category) => (
                   <button
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
@@ -122,7 +122,7 @@ export default function Blog() {
 
         {/* Featured Post */}
         {featuredPost && (
-          <section className="py-16 px-4">
+          <section className="py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-8">Featured Article</h2>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden border border-white/20">
@@ -168,6 +168,13 @@ export default function Blog() {
                         <ArrowRight className="ml-2 w-4 h-4" />
                       </Link>
                     </div>
+                    <Link
+                      to={`/blog/${featuredPost.id}`}
+                      className="inline-flex items-center text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-800 dark:hover:text-blue-300"
+                    >
+                      Read More
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
                   </div>
                 </div>
               </div>
