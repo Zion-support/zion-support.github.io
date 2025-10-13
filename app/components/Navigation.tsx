@@ -136,7 +136,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
             Zion Tech Group
           </Link>
 
-          <div className="hidden lg:flex space-x-8 items-center">
+          <div className="hidden lg:flex space-x-6 xl:space-x-8 items-center">
             {/* Sidebar Toggle Button */}
             <button
               onClick={onSidebarToggle}
@@ -303,7 +303,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="lg:hidden py-4 border-t border-cyan-500/20">
+          <div className="lg:hidden py-4 border-t border-cyan-500/20 max-h-96 overflow-y-auto">
             <div className="flex flex-col space-y-2">
               {mainNavItems.map((item) => (
                 <Link
