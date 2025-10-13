@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, ReactNode } from 'react';
 
 interface PerformanceOptimizerProps {
@@ -59,15 +58,3 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
 };
 
 export default PerformanceOptimizer;
-=======
-'use client';
-import React from 'react';
-
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-}
-
-export default function PerformanceOptimizer({ children }: PerformanceOptimizerProps) {
-  return <>{children}</>;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-fe68
