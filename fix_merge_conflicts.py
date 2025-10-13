@@ -1,130 +1,99 @@
 #!/usr/bin/env python3
 """
-Script to fix merge conflicts by keeping the HEAD version and removing conflict markers.
+Script to automatically resolve merge conflicts in the codebase
 """
-
 import os
 import re
 import glob
 
-def fix_merge_conflicts(file_path):
-<<<<<<< HEAD
-    """Fix merge conflicts by keeping the newer version (after =======)"""
-=======
-    """Fix merge conflicts in a single file."""
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
+def fix_merge_conflict(file_path):
+    """Fix merge conflicts in a single file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-<<<<<<< HEAD
         # Check if file has merge conflicts
         if '<<<<<<< HEAD' not in content:
             return False
-            
+        
+        print(f"Fixing merge conflicts in: {file_path}")
+        
         # Split by merge conflict markers
-        parts = re.split(r'<<<<<<< HEAD.*?=======.*?>>>>>>> .*?\n', content, flags=re.DOTALL)
+        parts = re.split(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+', content, flags=re.DOTALL)
         
-        if len(parts) < 2:
-            return False
+        if len(parts) < 3:
+            # Try alternative pattern
+            parts = re.split(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>>', content, flags=re.DOTALL)
+        
+        if len(parts) >= 3:
+            # Keep the second part (after =======) which is usually the newer version
+            new_content = parts[0] + parts[2] + parts[4] if len(parts) > 4 else parts[0] + parts[2]
             
-        # Keep the first part (before first conflict) and the parts after =======
-        fixed_content = parts[0]
-        
-        # Process each conflict section
-        conflict_sections = re.findall(r'<<<<<<< HEAD(.*?)=======(.*?)>>>>>>> .*?\n', content, flags=re.DOTALL)
-        
-        for i, (head_part, new_part) in enumerate(conflict_sections):
-            # Use the newer version (after =======)
-            fixed_content += new_part
+            # Clean up any remaining conflict markers
+            new_content = re.sub(r'<<<<<<< HEAD.*?>>>>>>> [^\n]+\n?', '', new_content, flags=re.DOTALL)
+            new_content = re.sub(r'=======\n?', '', new_content)
             
-            # Add the part between conflicts if it exists
-            if i + 1 < len(parts):
-                fixed_content += parts[i + 1]
-        
-        # Write the fixed content back
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(fixed_content)
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(new_content)
             
-=======
-        # Remove merge conflict markers and keep HEAD version
-        # Pattern to match: <<<<<<< HEAD ... ======= ... >>>>>>> branch-name
-        pattern = r'<<<<<<< HEAD\n(.*?)\n=======.*?\n>>>>>>> [^\n]+\n?'
-        
-        # Replace with just the HEAD content
-        fixed_content = re.sub(pattern, r'\1\n', content, flags=re.DOTALL)
-        
-        # Also handle cases where there might be multiple conflicts in one file
-        # Remove any remaining conflict markers
-        fixed_content = re.sub(r'<<<<<<< HEAD\n?', '', fixed_content)
-        fixed_content = re.sub(r'=======\n?', '', fixed_content)
-        fixed_content = re.sub(r'>>>>>>> [^\n]+\n?', '', fixed_content)
-        
-        # Clean up any extra newlines
-        fixed_content = re.sub(r'\n\s*\n\s*\n', '\n\n', fixed_content)
-        
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(fixed_content)
-        
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
-        print(f"Fixed merge conflicts in: {file_path}")
-        return True
-        
+            return True
+        else:
+            # If we can't parse it properly, try to remove all conflict markers
+            new_content = re.sub(r'<<<<<<< HEAD.*?>>>>>>> [^\n]+\n?', '', content, flags=re.DOTALL)
+            new_content = re.sub(r'=======\n?', '', new_content)
+            
+            if new_content != content:
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    f.write(new_content)
+                return True
+                
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
+    
+    return False
 
 def main():
-<<<<<<< HEAD
-    # Find all TypeScript/JavaScript files with merge conflicts
-    patterns = [
-        '**/*.tsx',
-        '**/*.ts', 
-        '**/*.jsx',
-        '**/*.js'
-    ]
-    
-    fixed_count = 0
-    for pattern in patterns:
-        for file_path in glob.glob(pattern, recursive=True):
-            if fix_merge_conflicts(file_path):
-                fixed_count += 1
-    
-    print(f"Fixed merge conflicts in {fixed_count} files")
-=======
-    """Main function to fix all merge conflicts."""
-    # Get all TypeScript and JavaScript files
+    """Main function to fix all merge conflicts"""
+    # Find all TypeScript/JavaScript files in the app directory
     patterns = [
         'app/**/*.tsx',
         'app/**/*.ts',
-        'hooks/**/*.ts',
-        'hooks/**/*.tsx',
-        '__tests__/**/*.tsx',
-        '__tests__/**/*.ts'
+        'app/**/*.jsx',
+        'app/**/*.js'
     ]
     
-    files_to_fix = []
+    files_fixed = 0
+    total_files = 0
+    
     for pattern in patterns:
-        files_to_fix.extend(glob.glob(pattern, recursive=True))
+        files = glob.glob(pattern, recursive=True)
+        for file_path in files:
+            total_files += 1
+            if fix_merge_conflict(file_path):
+                files_fixed += 1
     
-    print(f"Found {len(files_to_fix)} files to check for merge conflicts...")
+    print(f"\nFixed merge conflicts in {files_fixed} out of {total_files} files")
     
-    fixed_count = 0
-    for file_path in files_to_fix:
-        if os.path.exists(file_path):
+    # Check for remaining conflicts
+    remaining_conflicts = []
+    for pattern in patterns:
+        files = glob.glob(pattern, recursive=True)
+        for file_path in files:
             try:
                 with open(file_path, 'r', encoding='utf-8') as f:
                     content = f.read()
-                
-                # Check if file has merge conflicts
-                if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>> ' in content:
-                    if fix_merge_conflicts(file_path):
-                        fixed_count += 1
-            except Exception as e:
-                print(f"Error reading {file_path}: {e}")
+                if '<<<<<<< HEAD' in content:
+                    remaining_conflicts.append(file_path)
+            except:
+                pass
     
-    print(f"Fixed merge conflicts in {fixed_count} files.")
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
+    if remaining_conflicts:
+        print(f"\nRemaining conflicts in {len(remaining_conflicts)} files:")
+        for file_path in remaining_conflicts:
+            print(f"  - {file_path}")
+    else:
+        print("\nAll merge conflicts have been resolved!")
 
 if __name__ == "__main__":
     main()
