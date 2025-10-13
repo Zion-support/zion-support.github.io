@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
 import "./app/styles/futuristic-enhanced.css";
+import "./app/styles/accessibility.css";
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import HomePage from "./app/page";
@@ -15,10 +16,14 @@ import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
+import EnhancedPerformanceMonitor from "./app/components/EnhancedPerformanceMonitor";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
 import ErrorHandler from "./app/components/ErrorHandler";
+import CriticalResourcePreloader from "./app/components/CriticalResourcePreloader";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
+import ServiceWorkerRegistration from "./app/components/ServiceWorkerRegistration";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -184,8 +189,11 @@ function App() {
       <ErrorBoundary>
         <HelmetProvider>
         <Router>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            <FuturisticBackground>
+          <ServiceWorkerRegistration />
+          <CriticalResourcePreloader />
+          <AccessibilityEnhancer>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+              <FuturisticBackground>
               <Navigation />
               <Breadcrumb />
               <Suspense fallback={<LoadingPage />}>
@@ -405,15 +413,17 @@ function App() {
               <EnhancedAccessibility>
                 <div></div>
               </EnhancedAccessibility>
-            </FuturisticBackground>
-            <AnalyticsProvider>
-              <div>
-                <PerformanceMonitor />
-                <PerformanceEnhancer />
-                <SEOOptimizer />
-              </div>
-            </AnalyticsProvider>
-          </div>
+              </FuturisticBackground>
+              <AnalyticsProvider>
+                <div>
+                  <PerformanceMonitor />
+                  <EnhancedPerformanceMonitor />
+                  <PerformanceEnhancer />
+                  <SEOOptimizer />
+                </div>
+              </AnalyticsProvider>
+            </div>
+          </AccessibilityEnhancer>
         </Router>
       </HelmetProvider>
     </ErrorBoundary>

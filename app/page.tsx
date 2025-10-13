@@ -1,6 +1,6 @@
-import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight } from "lucide-react";
+import EnhancedSEOHead from "./components/EnhancedSEOHead";
 
 const HomePage = () => {
   const features = [
@@ -33,20 +33,27 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta
-          name="description"
-          content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses."
-        />
-        <meta
-          name="keywords"
-          content="AI solutions, IT services, digital transformation, business automation, technology consulting"
-        />
-      </Helmet>
+      <EnhancedSEOHead
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
+        keywords="AI solutions, IT services, digital transformation, business automation, technology consulting, cybersecurity, cloud computing, 5G solutions"
+        canonicalUrl="/"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Zion Tech Group",
+          "url": "https://ziontechgroup.com",
+          "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://ziontechgroup.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }}
+      />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+      <section id="main-content" className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Welcome to

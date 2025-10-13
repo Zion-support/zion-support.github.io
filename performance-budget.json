@@ -2,22 +2,34 @@
   "budgets": [
     {
       "resourceType": "script",
-      "budget": 300
+      "budget": 250000,
+      "warning": 200000,
+      "error": 300000
     },
     {
-      "resourceType": "total",
-      "budget": 500
+      "resourceType": "stylesheet",
+      "budget": 50000,
+      "warning": 40000,
+      "error": 60000
     },
     {
       "resourceType": "image",
-      "budget": 200
+      "budget": 1000000,
+      "warning": 800000,
+      "error": 1200000
+    },
+    {
+      "resourceType": "font",
+      "budget": 100000,
+      "warning": 80000,
+      "error": 120000
     }
   ],
-  "metrics": {
-    "firstContentfulPaint": 2000,
-    "largestContentfulPaint": 2500,
-    "timeToInteractive": 3500,
-    "totalBlockingTime": 300,
-    "cumulativeLayoutShift": 0.1
+  "thresholds": {
+    "FCP": 1800,
+    "LCP": 2500,
+    "CLS": 0.1,
+    "INP": 200,
+    "TTFB": 800
   }
 }

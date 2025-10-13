@@ -27,7 +27,7 @@ export default defineConfig({
   },
   build: {
     outDir: "dist",
-    sourcemap: false,
+    sourcemap: process.env.NODE_ENV === 'development',
     minify: "esbuild",
     target: "es2020",
     cssCodeSplit: true,
@@ -39,7 +39,9 @@ export default defineConfig({
     assetsInlineLimit: 4096,
     // Enable compression
     reportCompressedSize: true,
-    
+    // Enable tree shaking
+    treeshake: true,
+    // Optimize chunks
     rollupOptions: {
       output: {
         manualChunks: (id) => {
@@ -86,8 +88,6 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
-    // Enable tree shaking
-    treeshake: true,
   },
   server: {
     port: 3000,

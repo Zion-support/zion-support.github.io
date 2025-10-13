@@ -1,184 +1,217 @@
-import React, { useState, useEffect } from "react";
-import { Activity, Zap, Clock, TrendingUp } from "lucide-react";
+import React, { useEffect, useState, useCallback } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  cpuUsage: number;
-  networkLatency: number;
-  errorRate: number;
+  CLS: number | null;
+  INP: number | null;
+  FCP: number | null;
+  LCP: number | null;
+  TTFB: number | null;
 }
 
-interface EnhancedPerformanceMonitorProps {
-  className?: string;
-  showDetails?: boolean;
-  refreshInterval?: number;
+interface PerformanceMonitorProps {
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+  enableReporting?: boolean;
 }
 
-const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({
-  className = "",
-  showDetails = true,
-  refreshInterval = 1000,
+const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+  onMetricsUpdate,
+  enableReporting = process.env.NODE_ENV === 'production'
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    cpuUsage: 0,
-    networkLatency: 0,
-    errorRate: 0,
+    CLS: null,
+    INP: null,
+    FCP: null,
+    LCP: null,
+    TTFB: null,
   });
 
-  const [isMonitoring, setIsMonitoring] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const updateMetric = useCallback((name: keyof PerformanceMetrics, value: number) => {
+    setMetrics(prev => {
+      const updated = { ...prev, [name]: value };
+      onMetricsUpdate?.(updated);
+      return updated;
+    });
+  }, [onMetricsUpdate]);
+
+  const reportMetric = useCallback((name: string, value: number) => {
+    if (!enableReporting) return;
+
+    // Report to analytics service
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', name, {
+        event_category: 'Performance',
+        value: Math.round(value),
+        non_interaction: true,
+      });
+    }
+
+    // Report to custom analytics endpoint
+    if (process.env.NODE_ENV === 'production') {
+      fetch('/api/analytics/performance', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          metric: name,
+          value: value,
+          timestamp: Date.now(),
+          url: window.location.href,
+          userAgent: navigator.userAgent,
+        }),
+      }).catch(() => {
+        // Silently fail if analytics endpoint is not available
+      });
+    }
+  }, [enableReporting]);
 
   useEffect(() => {
-    if (!isMonitoring) return;
+    // Measure Core Web Vitals
+    onCLS((metric) => {
+      updateMetric('CLS', metric.value);
+      reportMetric('CLS', metric.value);
+    });
 
-    const updateMetrics = () => {
-      // Simulate performance metrics collection
-      setMetrics({
-        loadTime: Math.random() * 1000 + 100,
-        renderTime: Math.random() * 50 + 10,
-        memoryUsage: Math.random() * 100,
-        cpuUsage: Math.random() * 100,
-        networkLatency: Math.random() * 200 + 50,
-        errorRate: Math.random() * 5,
+    onINP((metric) => {
+      updateMetric('INP', metric.value);
+      reportMetric('INP', metric.value);
+    });
+
+    onFCP((metric) => {
+      updateMetric('FCP', metric.value);
+      reportMetric('FCP', metric.value);
+    });
+
+    onLCP((metric) => {
+      updateMetric('LCP', metric.value);
+      reportMetric('LCP', metric.value);
+    });
+
+    onTTFB((metric) => {
+      updateMetric('TTFB', metric.value);
+      reportMetric('TTFB', metric.value);
+    });
+
+    // Monitor resource loading performance
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'navigation') {
+          const navEntry = entry as PerformanceNavigationTiming;
+          const domContentLoaded = navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart;
+          const loadComplete = navEntry.loadEventEnd - navEntry.loadEventStart;
+          
+          reportMetric('DOMContentLoaded', domContentLoaded);
+          reportMetric('LoadComplete', loadComplete);
+        }
       });
+    });
+
+    observer.observe({ entryTypes: ['navigation', 'resource'] });
+
+    // Monitor memory usage (if available)
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      const memoryUsage = {
+        used: memory.usedJSHeapSize,
+        total: memory.totalJSHeapSize,
+        limit: memory.jsHeapSizeLimit,
+      };
+      
+      reportMetric('MemoryUsed', memoryUsage.used);
+      reportMetric('MemoryTotal', memoryUsage.total);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [updateMetric, reportMetric]);
+
+  // Toggle visibility for debugging
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
+        setIsVisible(prev => !prev);
+      }
     };
 
-    const interval = setInterval(updateMetrics, refreshInterval);
-    updateMetrics(); // Initial update
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, []);
 
-    return () => clearInterval(interval);
-  }, [isMonitoring, refreshInterval]);
+  if (!isVisible && process.env.NODE_ENV === 'production') {
+    return null;
+  }
 
-  const getPerformanceStatus = (
-    value: number,
-    thresholds: { good: number; warning: number },
-  ) => {
-    if (value <= thresholds.good) return "good";
-    if (value <= thresholds.warning) return "warning";
-    return "poor";
+  const getScoreColor = (value: number | null, thresholds: { good: number; needsImprovement: number }) => {
+    if (value === null) return 'text-gray-400';
+    if (value <= thresholds.good) return 'text-green-400';
+    if (value <= thresholds.needsImprovement) return 'text-yellow-400';
+    return 'text-red-400';
   };
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case "good":
-        return "text-green-400";
-      case "warning":
-        return "text-yellow-400";
-      case "poor":
-        return "text-red-400";
-      default:
-        return "text-gray-400";
-    }
+  const formatValue = (value: number | null, unit: string = 'ms') => {
+    if (value === null) return 'N/A';
+    return `${Math.round(value)}${unit}`;
   };
-
-  const loadTimeStatus = getPerformanceStatus(metrics.loadTime, {
-    good: 200,
-    warning: 500,
-  });
-  const memoryStatus = getPerformanceStatus(metrics.memoryUsage, {
-    good: 50,
-    warning: 80,
-  });
-  const cpuStatus = getPerformanceStatus(metrics.cpuUsage, {
-    good: 30,
-    warning: 70,
-  });
 
   return (
-    <div
-      className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 ${className}`}
-    >
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center space-x-2">
-          <Activity className="w-6 h-6 text-cyan-400" />
-          <h3 className="text-xl font-semibold text-white">
-            Performance Monitor
-          </h3>
-        </div>
+    <div className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-sm text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
+      <div className="flex items-center justify-between mb-2">
+        <h3 className="text-sm font-semibold">Performance Monitor</h3>
         <button
-          onClick={() => setIsMonitoring(!isMonitoring)}
-          className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
-            isMonitoring
-              ? "bg-red-500 hover:bg-red-600 text-white"
-              : "bg-green-500 hover:bg-green-600 text-white"
-          }`}
+          onClick={() => setIsVisible(false)}
+          className="text-gray-400 hover:text-white text-xs"
         >
-          {isMonitoring ? "Stop" : "Start"} Monitoring
+          ×
         </button>
       </div>
-
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-        <div className="text-center">
-          <div className="flex items-center justify-center mb-2">
-            <Clock className="w-5 h-5 text-blue-400 mr-2" />
-            <span className="text-sm text-gray-300">Load Time</span>
-          </div>
-          <div
-            className={`text-2xl font-bold ${getStatusColor(loadTimeStatus)}`}
-          >
-            {metrics.loadTime.toFixed(0)}ms
-          </div>
+      
+      <div className="space-y-1 text-xs">
+        <div className="flex justify-between">
+          <span>LCP:</span>
+          <span className={getScoreColor(metrics.LCP, { good: 2500, needsImprovement: 4000 })}>
+            {formatValue(metrics.LCP)}
+          </span>
         </div>
-
-        <div className="text-center">
-          <div className="flex items-center justify-center mb-2">
-            <Zap className="w-5 h-5 text-yellow-400 mr-2" />
-            <span className="text-sm text-gray-300">Memory</span>
-          </div>
-          <div className={`text-2xl font-bold ${getStatusColor(memoryStatus)}`}>
-            {metrics.memoryUsage.toFixed(1)}%
-          </div>
+        
+        <div className="flex justify-between">
+          <span>INP:</span>
+          <span className={getScoreColor(metrics.INP, { good: 200, needsImprovement: 500 })}>
+            {formatValue(metrics.INP)}
+          </span>
         </div>
-
-        <div className="text-center">
-          <div className="flex items-center justify-center mb-2">
-            <TrendingUp className="w-5 h-5 text-purple-400 mr-2" />
-            <span className="text-sm text-gray-300">CPU</span>
-          </div>
-          <div className={`text-2xl font-bold ${getStatusColor(cpuStatus)}`}>
-            {metrics.cpuUsage.toFixed(1)}%
-          </div>
+        
+        <div className="flex justify-between">
+          <span>CLS:</span>
+          <span className={getScoreColor(metrics.CLS, { good: 0.1, needsImprovement: 0.25 })}>
+            {formatValue(metrics.CLS, '')}
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>FCP:</span>
+          <span className={getScoreColor(metrics.FCP, { good: 1800, needsImprovement: 3000 })}>
+            {formatValue(metrics.FCP)}
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>TTFB:</span>
+          <span className={getScoreColor(metrics.TTFB, { good: 800, needsImprovement: 1800 })}>
+            {formatValue(metrics.TTFB)}
+          </span>
         </div>
       </div>
-
-      {showDetails && (
-        <div className="space-y-4">
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <div className="text-sm text-gray-300 mb-1">Render Time</div>
-              <div className="text-lg font-semibold text-white">
-                {metrics.renderTime.toFixed(1)}ms
-              </div>
-            </div>
-            <div>
-              <div className="text-sm text-gray-300 mb-1">Network Latency</div>
-              <div className="text-lg font-semibold text-white">
-                {metrics.networkLatency.toFixed(0)}ms
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div className="text-sm text-gray-300 mb-1">Error Rate</div>
-            <div className="text-lg font-semibold text-white">
-              {metrics.errorRate.toFixed(2)}%
-            </div>
-          </div>
-        </div>
-      )}
-
-      {isMonitoring && (
-        <div className="mt-4 p-3 bg-green-500/20 border border-green-500/30 rounded-lg">
-          <div className="flex items-center text-green-400 text-sm">
-            <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
-            Live monitoring active
-          </div>
-        </div>
-      )}
+      
+      <div className="mt-2 pt-2 border-t border-gray-600">
+        <p className="text-xs text-gray-400">
+          Press Ctrl+Shift+P to toggle
+        </p>
+      </div>
     </div>
   );
 };
