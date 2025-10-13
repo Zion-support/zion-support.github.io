@@ -21,7 +21,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <HelmetProvider>
         <BrowserRouter>
           <AnalyticsProvider>
-            <EnhancedPerformanceMonitor showInProduction={false} />
+            <EnhancedPerformanceMonitor />
             <Helmet>
               <title>Zion Tech Group - Advanced AI and IT Solutions</title>
               <meta

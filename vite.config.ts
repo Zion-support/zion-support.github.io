@@ -44,8 +44,17 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 2,
+      },
+      mangle: {
+        safari10: true,
       },
     },
+    // Additional optimizations
+    cssMinify: true,
+    minifyInternalExports: true,
+    emptyOutDir: true,
     
     
     rollupOptions: {
@@ -86,13 +95,25 @@ export default defineConfig({
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
+          // AI service pages
+          if (id.includes('/ai-')) {
+            return 'ai-services'
+          }
+          // Micro SAAS pages
+          if (id.includes('/zion-')) {
+            return 'micro-saas'
+          }
+          // 5G solutions pages
+          if (id.includes('/5g-')) {
+            return '5g-solutions'
+          }
+          // IT service pages
+          if (id.includes('/cloud-') || id.includes('/cybersecurity-') || id.includes('/web-development') || id.includes('/mobile-development')) {
+            return 'it-services'
+          }
           // Large page components (lazy load)
           if (id.includes('/app/') && id.includes('/page.tsx')) {
             return 'pages'
-          }
-          // Service pages
-          if (id.includes('/ai-') || id.includes('/zion-')) {
-            return 'services'
           }
           // Default chunk for other modules
           return 'vendor'

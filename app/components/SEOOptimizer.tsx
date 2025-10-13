@@ -174,13 +174,81 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   const finalStructuredData = structuredData || getPageStructuredData();
   const breadcrumbData = generateBreadcrumbData();
 
-  // Track page views
+  // Track page views and performance
   useEffect(() => {
     // Track page view in analytics
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: title,
         page_location: currentUrl,
+      });
+    }
+
+    // Track Core Web Vitals
+    if (typeof window !== 'undefined') {
+      import('web-vitals').then((webVitals: any) => {
+        if (webVitals.getCLS) {
+          webVitals.getCLS((metric: any) => {
+            console.log('CLS:', metric.value);
+            if (window.gtag) {
+              window.gtag('event', 'web_vitals', {
+                event_category: 'Performance',
+                event_label: 'CLS',
+                value: Math.round(metric.value * 1000)
+              });
+            }
+          });
+        }
+        if (webVitals.getFID) {
+          webVitals.getFID((metric: any) => {
+            console.log('FID:', metric.value);
+            if (window.gtag) {
+              window.gtag('event', 'web_vitals', {
+                event_category: 'Performance',
+                event_label: 'FID',
+                value: Math.round(metric.value)
+              });
+            }
+          });
+        }
+        if (webVitals.getFCP) {
+          webVitals.getFCP((metric: any) => {
+            console.log('FCP:', metric.value);
+            if (window.gtag) {
+              window.gtag('event', 'web_vitals', {
+                event_category: 'Performance',
+                event_label: 'FCP',
+                value: Math.round(metric.value)
+              });
+            }
+          });
+        }
+        if (webVitals.getLCP) {
+          webVitals.getLCP((metric: any) => {
+            console.log('LCP:', metric.value);
+            if (window.gtag) {
+              window.gtag('event', 'web_vitals', {
+                event_category: 'Performance',
+                event_label: 'LCP',
+                value: Math.round(metric.value)
+              });
+            }
+          });
+        }
+        if (webVitals.getTTFB) {
+          webVitals.getTTFB((metric: any) => {
+            console.log('TTFB:', metric.value);
+            if (window.gtag) {
+              window.gtag('event', 'web_vitals', {
+                event_category: 'Performance',
+                event_label: 'TTFB',
+                value: Math.round(metric.value)
+              });
+            }
+          });
+        }
+      }).catch((error) => {
+        console.warn('Failed to load web-vitals:', error);
       });
     }
   }, [title, currentUrl]);
@@ -251,11 +319,43 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       
       {/* Preload critical resources */}
       <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      <link rel="preload" href="/js/main.js" as="script" />
+      <link rel="preload" href="/css/main.css" as="style" />
       
       {/* DNS prefetch for performance */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//fonts.gstatic.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+      <link rel="dns-prefetch" href="//cdn.gpteng.co" />
+      
+      {/* Preconnect to critical third parties */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      
+      {/* Resource hints for better performance */}
+      <link rel="prefetch" href="/about" />
+      <link rel="prefetch" href="/contact" />
+      <link rel="prefetch" href="/services" />
+      
+      {/* Additional performance meta tags */}
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      <meta name="application-name" content="Zion Tech Group" />
+      <meta name="msapplication-TileColor" content="#8b5cf6" />
+      <meta name="msapplication-config" content="/browserconfig.xml" />
+      
+      {/* Security headers */}
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+      <meta httpEquiv="X-Frame-Options" content="DENY" />
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+      
+      {/* Cache control */}
+      <meta httpEquiv="Cache-Control" content="public, max-age=31536000" />
     </Helmet>
   );
 };

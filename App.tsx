@@ -13,6 +13,8 @@ import Breadcrumb from "./app/components/Breadcrumb";
 import EnhancedPerformanceOptimizer from "./app/components/EnhancedPerformanceOptimizer";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
+import EnhancedAccessibilityFeatures from "./app/components/EnhancedAccessibilityFeatures";
+import EnhancedPerformanceMonitor from "./app/components/EnhancedPerformanceMonitor";
 import EnhancedSEO from "./app/components/EnhancedSEO";
 import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
@@ -206,13 +208,14 @@ function App() {
       <ErrorBoundary>
         <HelmetProvider>
           <AccessibilityEnhancer>
-            <Router>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                <FuturisticBackground>
-                  <Navigation />
-                  <Breadcrumb />
-                  <main id="main-content" role="main">
-                    <Suspense fallback={<LoadingPage />}>
+            <EnhancedAccessibilityFeatures>
+              <Router>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                  <FuturisticBackground>
+                    <Navigation />
+                    <Breadcrumb />
+                    <main id="main-content" role="main">
+                      <Suspense fallback={<LoadingPage />}>
                       <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
@@ -446,22 +449,24 @@ function App() {
                       </Routes>
                     </Suspense>
                   </main>
-                  <Footer />
-                  <EnhancedPerformanceOptimizer />
-                  <EnhancedAccessibility>
-                    <div></div>
-                  </EnhancedAccessibility>
-                </FuturisticBackground>
-                <AnalyticsProvider>
-                  <div>
-                    <PerformanceMonitor />
-                    <PerformanceEnhancer />
-                    <SEOOptimizer />
-                    <EnhancedSEO />
-                  </div>
-                </AnalyticsProvider>
-              </div>
-            </Router>
+                    <Footer />
+                    <EnhancedPerformanceOptimizer />
+                    <EnhancedAccessibility>
+                      <div></div>
+                    </EnhancedAccessibility>
+                  </FuturisticBackground>
+                  <AnalyticsProvider>
+                    <div>
+                      <PerformanceMonitor />
+                      <EnhancedPerformanceMonitor />
+                      <PerformanceEnhancer />
+                      <SEOOptimizer />
+                      <EnhancedSEO />
+                    </div>
+                  </AnalyticsProvider>
+                </div>
+              </Router>
+            </EnhancedAccessibilityFeatures>
           </AccessibilityEnhancer>
         </HelmetProvider>
       </ErrorBoundary>
