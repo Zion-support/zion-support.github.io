@@ -20,8 +20,8 @@ export default function AIAutomation() {
           <p className="text-gray-300">Coming Soon - AI Automation Solutions</p>
 
   return (</div>
-      benefits: [&apos;Smart recommendations&apos;, &apos;Predictive analytics&apos;, &apos;Automated insights&apos;, &apos;Real-time analysis&apos;]},
-    {icon: benefits: [&apos;Growth strategies&apos;, &apos;Market analysis&apos;, &apos;Competitive insights&apos;, &apos;ROI optimization&apos;]}]
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
+    {icon: benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]
   ]
 return(<>)
       <Helmet />

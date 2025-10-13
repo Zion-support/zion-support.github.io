@@ -6,7 +6,7 @@ import { Circle, Right, } from 'lucide-react';
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
-    &apos;Cost-effective pricing plans&apos;,
+    'Cost-effective pricing plans',
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>Why Choose Our Page?,</h2>

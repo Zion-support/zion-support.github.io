@@ -54,6 +54,7 @@ export default function ContactPage() {
     {
       icon: title: 'Business Hours',
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: &apos;Monday - Friday&apos;,
 =======
       icon: 'Phone',
@@ -102,6 +103,9 @@ export default function ContactPage() {
 =======
       value: 'Monday - Friday',
 >>>>>>> cursor/fix-errors-and-merge-to-main-3299
+=======
+      value: 'Monday - Friday',
+>>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
       description: '9:00 AM - 6:00 PM EST'
     }
   ];

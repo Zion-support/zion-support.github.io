@@ -3,7 +3,7 @@ import ../components/ from '../components/';
 import Footer from '../components/Footer';
 import {Circle, Right, Star, }}from 'lucide-react';
 const AiCloudInfrastructurePage: React.FC = () => {,
-      benefits: [&apos;Growth strategies&apos;, &apos;Market analysis&apos;, &apos;Competitive insights&apos;, &apos;ROI optimization&apos;]
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">

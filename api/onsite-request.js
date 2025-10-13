@@ -11,6 +11,7 @@ export default async function handler(req, res) {
     return;
   }
 
+<<<<<<< HEAD
   const { name, email, phone, company, address, service, details } = req.body;
   
   if (!name || !email || !phone || !address) {
@@ -59,5 +60,31 @@ export default async function handler(req, res) {
     console.error('Error:', error);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to process onsite request' }));
+=======
+  try {
+    const data = fs.readFileSync(file, 'utf8');
+    const requests = JSON.parse(data);
+    
+    const newRequest = {
+      id: Date.now().toString(),
+      ...req.body,
+      status: 'pending',
+      createdAt: new Date().toISOString()
+    };
+    
+    requests.push(newRequest);
+    fs.writeFileSync(file, JSON.stringify(requests, null, 2));
+    
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true,
+      message: 'Onsite request submitted successfully' 
+    }));
+  } catch (error) {
+    console.error('Error:', error);
+    console.error('Error saving onsite request:', error);
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to save request' }));
+>>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
   }
 }

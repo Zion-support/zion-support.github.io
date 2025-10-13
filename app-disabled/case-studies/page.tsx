@@ -3,141 +3,141 @@ import react;
 
 import from  from 'react;
 
-import from 'react&apos;;
+import from 'react';
 import { Helmet } from 'react-helmet-async';
 import { } from 'react-router-dom';
 import { Right, Star, } from 'lucide-react';
     {
-      id: &apos;1,
+      id: '1,
       title: 'AI-Powered Customer Service Transformation,
       client: 'TechCorp Solutions,
-      industry: &apos;Technology,
-      challenge: &apos;High customer service costs and long response times affecting customer satisfaction.,
-      solution: &apos;Implemented AI-powered chatbots and automated ticket routing system.,
+      industry: 'Technology,
+      challenge: 'High customer service costs and long response times affecting customer satisfaction.,
+      solution: 'Implemented AI-powered chatbots and automated ticket routing system.,
       results: [
-        &apos;Reduced response time by 80%,
-        &apos;Cut customer service costs by 60%,
-        &apos;Improved customer satisfaction by 45%,
+        'Reduced response time by 80%,
+        'Cut customer service costs by 60%,
+        'Improved customer satisfaction by 45%,
         Handled 10x more inquiries with same team size
     {
-      id: &apos;2,
+      id: '2,
       title: 'Cybersecurity Infrastructure Overhaul,
       client: 'Financial Services Company,
-      industry: &apos;Finance,
-      challenge: &apos;Outdated security systems vulnerable to modern cyber threats.,
-      solution: &apos;Complete security infrastructure redesign with AI-powered threat detection.,
+      industry: 'Finance,
+      challenge: 'Outdated security systems vulnerable to modern cyber threats.,
+      solution: 'Complete security infrastructure redesign with AI-powered threat detection.,
       results: [
-        &apos;Zero security breaches in 12 months,
-        &apos;99.9% threat detection accuracy,
-        &apos;Reduced false positives by 70%,
+        'Zero security breaches in 12 months,
+        '99.9% threat detection accuracy,
+        'Reduced false positives by 70%,
         Compliance with all regulatory requirements
     {
-      id: &apos;3,
-      title: &apos;Migration & Optimization,
-      client: &apos;Manufacturing Corporation,
-      image: &apos;/images/case-studies/ai-customer-service.jpg,
-      duration: &apos;3 months,
-      team: &apos;8 specialists
+      id: '3,
+      title: 'Migration & Optimization,
+      client: 'Manufacturing Corporation,
+      image: '/images/case-studies/ai-customer-service.jpg,
+      duration: '3 months,
+      team: '8 specialists
       imag,
     e: /api/placeholder/600
-      image: &apos;/images/case-studies/ai-customer-service.jpg&apos;,      challenge: &apos;High customer service costs and long response times,
-      solution: &apos;Implemented AI chatbot and automated ticketing system,
+      image: '/images/case-studies/ai-customer-service.jpg',      challenge: 'High customer service costs and long response times,
+      solution: 'Implemented AI chatbot and automated ticketing system,
       results: [
-        &apos;60% reduction in response time,
-        &apos;40% cost savings,
+        '60% reduction in response time,
+        '40% cost savings,
         95% customer satisfaction rate
-      team: &apos;8 specialists});)},
+      team: '8 specialists});)},
     {
       id: 2,
       title: 'Migration for Financial Services,
       company: 'FinanceFlow Ltd.,
-      industry: &apos;Financial Services,
-      challenge: &apos;Legacy on-premises infrastructure limiting scalability and increasing maintenance costs.,
-      solution: &apos;Complete cloud migration to AWS with microservices architecture and automated scaling.,
-      challenge: &apos;Legacy systems causing performance issues and security concerns,
-      solution: &apos;Complete cloud migration with enhanced security measures,
+      industry: 'Financial Services,
+      challenge: 'Legacy on-premises infrastructure limiting scalability and increasing maintenance costs.,
+      solution: 'Complete cloud migration to AWS with microservices architecture and automated scaling.,
+      challenge: 'Legacy systems causing performance issues and security concerns,
+      solution: 'Complete cloud migration with enhanced security measures,
       results: [
-        &apos;50% improvement in system performance,
-        &apos;99.9% uptime achieved,
+        '50% improvement in system performance,
+        '99.9% uptime achieved,
         30% reduction in operational costs
-      challenge: &apos;Legacy on-premises infrastructure limiting scalability and increasing maintenance costs.&apos;,
-      solution: &apos;Complete cloud migration to AWS with microservices architecture and automated scaling.&apos;,
-      challenge: &apos;Legacy systems causing performance issues and security concerns&apos;,
-      solution: &apos;Complete cloud migration with enhanced security measures&apos;,
+      challenge: 'Legacy on-premises infrastructure limiting scalability and increasing maintenance costs.',
+      solution: 'Complete cloud migration to AWS with microservices architecture and automated scaling.',
+      challenge: 'Legacy systems causing performance issues and security concerns',
+      solution: 'Complete cloud migration with enhanced security measures',
       results: []
-        &apos;50% improvement in system performance&apos;,
-        &apos;99.9% uptime achieved&apos;,
-        &apos;30% reduction in operational costs&apos;
+        '50% improvement in system performance',
+        '99.9% uptime achieved',
+        '30% reduction in operational costs'
       ],
-      image: &apos;/images/case-studies/cloud-migration.jpg,
-      duration: &apos;6 months,
-      team: &apos;12 specialists
-      id: &apos;3,
+      image: '/images/case-studies/cloud-migration.jpg,
+      duration: '6 months,
+      team: '12 specialists
+      id: '3,
       title: 'Cybersecurity Enhancement for Healthcare,
       client: 'MediCare Plus,
-      industry: &apos;Healthcare,
-      challenge: &apos;Increasing cyber threats and need for HIPAA compliance in patient data protection.,
-      solution: &apos;Comprehensive security audit and implementation of zero-trust architecture with advanced threat detection.,
+      industry: 'Healthcare,
+      challenge: 'Increasing cyber threats and need for HIPAA compliance in patient data protection.,
+      solution: 'Comprehensive security audit and implementation of zero-trust architecture with advanced threat detection.,
       results: [
-        &apos;100% HIPAA compliance achieved,
-        &apos;Zero security breaches in 12 months,
-        &apos;Real-time threat detection and response,
+        '100% HIPAA compliance achieved,
+        'Zero security breaches in 12 months,
+        'Real-time threat detection and response,
         Automated compliance reporting
       ],
-      image: &apos;/images/case-studies/cybersecurity-healthcare.jpg,
-      duration: &apos;4 months,
-      team: &apos;10 specialists});)
+      image: '/images/case-studies/cybersecurity-healthcare.jpg,
+      duration: '4 months,
+      team: '10 specialists});)
 },
     {
-      id: &apos;4,
+      id: '4,
       title: 'Machine Learning for Predictive Analytics,
       client: 'RetailMax,
-      industry: &apos;Retail,
-      challenge: &apos;Inventory management inefficiencies leading to stockouts and overstock situations.,
-      solution: &apos;ML-powered demand forecasting system with real-time inventory optimization.,
+      industry: 'Retail,
+      challenge: 'Inventory management inefficiencies leading to stockouts and overstock situations.,
+      solution: 'ML-powered demand forecasting system with real-time inventory optimization.,
       results: [
-        &apos;40% reduction in stockouts,
-        &apos;25% decrease in excess inventory,
-        &apos;15% increase in revenue,
+        '40% reduction in stockouts,
+        '25% decrease in excess inventory,
+        '15% increase in revenue,
         Real-time demand prediction accuracy of 92%
     {
-      id: &apos;5,
+      id: '5,
       title: 'Digital Transformation for Manufacturing,
       client: 'ManufacturingPro,
-      industry: &apos;Manufacturing,
-      challenge: &apos;Legacy systems causing operational inefficiencies and high maintenance costs.,
-      solution: &apos;Complete cloud migration with microservices architecture and AI optimization.,
+      industry: 'Manufacturing,
+      challenge: 'Legacy systems causing operational inefficiencies and high maintenance costs.,
+      solution: 'Complete cloud migration with microservices architecture and AI optimization.,
       results: [
-        &apos;50% reduction in infrastructure costs,
-        &apos;99.9% uptime achieved,
-        &apos;3x faster application deployment,
+        '50% reduction in infrastructure costs,
+        '99.9% uptime achieved,
+        '3x faster application deployment,
         Scalable infrastructure for future growth
       ],
-      image: &apos;/images/case-studies/digital-transformation.jpg,
-      duration: &apos;8 months,
-      team: &apos;15 specialists    },
+      image: '/images/case-studies/digital-transformation.jpg,
+      duration: '8 months,
+      team: '15 specialists    },
     {
-      id: &apos;6,
+      id: '6,
       title: 'Blockchain Integration for Supply Chain,
       client: 'GlobalLogistics,
-      industry: &apos;Logistics,
-      challenge: &apos;Lack of transparency and traceability in complex supply chain operations.,
-      solution: &apos;Blockchain-based supply chain tracking system with smart contracts and real-time verification.,
+      industry: 'Logistics,
+      challenge: 'Lack of transparency and traceability in complex supply chain operations.,
+      solution: 'Blockchain-based supply chain tracking system with smart contracts and real-time verification.,
       results: [
-        &apos;Complete supply chain transparency,
-        &apos;60% reduction in disputes,
-        &apos;Real-time shipment tracking,
-        &apos;Automated compliance verification
+        'Complete supply chain transparency,
+        '60% reduction in disputes,
+        'Real-time shipment tracking,
+        'Automated compliance verification
       ],
-      image: &apos;/images/case-studies/blockchain-supply-chain.jpg,
-      duration: &apos;7 months,
-      team: &apos;11 specialists    }
+      image: '/images/case-studies/blockchain-supply-chain.jpg,
+      duration: '7 months,
+      team: '11 specialists    }
 
   const stats = [;
-    { label: &apos;Projects Completed&apos;, value: &apos;150+, icon: Circle },
-    { label: &apos;Client Satisfaction&apos;, value: &apos;98%, icon: User,
-    { label: &apos;Team Members&apos;, value: &apos;50+, icon: User,
-    { label: &apos;Industry s&apos;, value: &apos;25+, icon: User  ];
+    { label: 'Projects Completed', value: '150+, icon: Circle },
+    { label: 'Client Satisfaction', value: '98%, icon: User,
+    { label: 'Team Members', value: '50+, icon: User,
+    { label: 'Industry s', value: '25+, icon: User  ];
 {/* Stats Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">

@@ -7,8 +7,8 @@ const AiCybersecurityPage: React.FC = () => {,
     {
       icon: title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: [&apos;Smart recommendations&apos;, &apos;Predictive analytics&apos;, &apos;Automated insights&apos;, &apos;Real-time analysis&apos;]},
-    {icon: benefits: [&apos;Growth strategies&apos;, &apos;Market analysis&apos;, &apos;Competitive insights&apos;, &apos;ROI optimization&apos;]}]
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
+    {icon: benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]
   ]
 return(<>)
       <Helmet />
