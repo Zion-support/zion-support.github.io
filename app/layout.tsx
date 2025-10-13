@@ -47,7 +47,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         Zion Tech Group
                       </span>
                     </Link>
-                    <nav className="hidden md:flex space-x-8">
+                    <nav className="hidden lg:flex space-x-8">
                       <Link
                         to="/about"
                         className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
@@ -55,11 +55,48 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         About
                         <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
                       </Link>
+                      <div className="relative group">
+                        <Link
+                          to="/services"
+                          className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group flex items-center"
+                        >
+                          Services
+                          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
+                        </Link>
+                        {/* Services Dropdown */}
+                        <div className="absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-sm border border-white/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                          <div className="p-4">
+                            <div className="grid grid-cols-2 gap-4">
+                              <div>
+                                <h3 className="text-white font-semibold mb-2 text-sm">AI Services</h3>
+                                <div className="space-y-1">
+                                  <Link to="/ai-business-intelligence" className="block text-gray-300 hover:text-cyan-400 text-xs py-1">Business Intelligence</Link>
+                                  <Link to="/ai-customer-support" className="block text-gray-300 hover:text-cyan-400 text-xs py-1">Customer Support</Link>
+                                  <Link to="/ai-content-generation" className="block text-gray-300 hover:text-cyan-400 text-xs py-1">Content Generation</Link>
+                                  <Link to="/ai-cybersecurity" className="block text-gray-300 hover:text-cyan-400 text-xs py-1">Cybersecurity</Link>
+                                </div>
+                              </div>
+                              <div>
+                                <h3 className="text-white font-semibold mb-2 text-sm">IT Services</h3>
+                                <div className="space-y-1">
+                                  <Link to="/5g-solutions" className="block text-gray-300 hover:text-cyan-400 text-xs py-1">5G Solutions</Link>
+                                  <Link to="/cloud-infrastructure" className="block text-gray-300 hover:text-cyan-400 text-xs py-1">Cloud Infrastructure</Link>
+                                  <Link to="/enterprise-security" className="block text-gray-300 hover:text-cyan-400 text-xs py-1">Enterprise Security</Link>
+                                  <Link to="/it-consulting" className="block text-gray-300 hover:text-cyan-400 text-xs py-1">IT Consulting</Link>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="mt-4 pt-4 border-t border-white/10">
+                              <Link to="/micro-saas" className="block text-cyan-400 hover:text-cyan-300 text-sm font-medium">Micro SAAS Solutions</Link>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                       <Link
-                        to="/services"
+                        to="/micro-saas"
                         className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
                       >
-                        Services
+                        Micro SAAS
                         <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
                       </Link>
                       <Link
@@ -88,7 +125,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
               <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 py-12 relative z-10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
                     {/* Company Info */}
                     <div className="space-y-4">
                       <h3 className="text-xl font-bold text-white mb-4">
@@ -125,21 +162,68 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                       </div>
                     </div>
 
-                    {/* Services */}
+                    {/* AI Services */}
                     <div className="space-y-4">
-                      <h4 className="text-lg font-semibold text-white">Services</h4>
+                      <h4 className="text-lg font-semibold text-white">AI Services</h4>
                       <div className="space-y-2">
                         <Link to="/ai-business-intelligence" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          AI Business Intelligence
+                          Business Intelligence
                         </Link>
                         <Link to="/ai-customer-support" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          AI Customer Support
+                          Customer Support
                         </Link>
                         <Link to="/ai-content-generation" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          AI Content Generation
+                          Content Generation
                         </Link>
                         <Link to="/ai-cybersecurity" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          AI Cybersecurity
+                          Cybersecurity
+                        </Link>
+                        <Link to="/ai-marketing-automation" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Marketing Automation
+                        </Link>
+                      </div>
+                    </div>
+
+                    {/* IT Services */}
+                    <div className="space-y-4">
+                      <h4 className="text-lg font-semibold text-white">IT Services</h4>
+                      <div className="space-y-2">
+                        <Link to="/5g-solutions" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          5G Solutions
+                        </Link>
+                        <Link to="/cloud-infrastructure" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Cloud Infrastructure
+                        </Link>
+                        <Link to="/enterprise-security" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Enterprise Security
+                        </Link>
+                        <Link to="/devops-automation" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          DevOps Automation
+                        </Link>
+                        <Link to="/it-consulting" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          IT Consulting
+                        </Link>
+                      </div>
+                    </div>
+
+                    {/* Micro SAAS */}
+                    <div className="space-y-4">
+                      <h4 className="text-lg font-semibold text-white">Micro SAAS</h4>
+                      <div className="space-y-2">
+                        <Link to="/zion-analytics-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Analytics Pro
+                        </Link>
+                        <Link to="/zion-security-shield" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Security Shield
+                        </Link>
+                        <Link to="/zion-cloud-vault" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Cloud Vault
+                        </Link>
+                        <Link to="/zion-ai-assistant" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          AI Assistant
+                        </Link>
+                        <Link to="/zion-marketing-hub" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Marketing Hub
                         </Link>
                       </div>
                     </div>
