@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Right, Play, User, Star, Circle } from 'lucide-react';
+import { Right, Play, User, Star } from 'lucide-react';
 
 const TutorialsPage: React.FC = () => {
   const tutorials = [
@@ -156,7 +156,7 @@ const TutorialsPage: React.FC = () => {
                   <p className="text-gray-300 mb-4 text-sm">{tutorial.description}</p>
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                     <span className="flex items-center">
-                      <className="w-4 h-4 mr-1" />
+                      <div className="w-4 h-4 mr-1" />
                       {tutorial.duration}
                     </span>
                     <span className="flex items-center">

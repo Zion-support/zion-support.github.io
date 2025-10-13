@@ -7,26 +7,43 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-function fixJsxErrors(content) {
+// HTML entities to replace
+const entityMap = {
+  ''': "'",
+  '"': '"',
+  '<': '<',
+  '>': '>',
+  '&': '&',
+  ''': "'",
+  ''': "'",
+  ''': "'",
+  '"': '"',
+  '"': '"',
+  '-': '-',
+  '—': '—',
+  '...': '...',
+  ' ': ' ',
+  '©': '©',
+  '®': '®',
+  '™': '™'
+};
+
+function fixHtmlEntities(content) {
   let fixed = content;
-  
-  // Fix malformed JSX elements like <className="w-6 h-6" />
-  fixed = fixed.replace(/<className="([^"]+)"\s*\/>/g, '<div className="$1" />');
-  
-  // Fix other common JSX issues
-  fixed = fixed.replace(/<className=/g, '<div className=');
-  
+  for (const [entity, replacement] of Object.entries(entityMap)) {
+    fixed = fixed.replace(new RegExp(entity, 'g'), replacement);
+  }
   return fixed;
 }
 
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixJsxErrors(content);
+    const fixed = fixHtmlEntities(content);
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed JSX errors in: ${filePath}`);
+      console.log(`Fixed HTML entities in: ${filePath}`);
       return true;
     }
     return false;
@@ -36,7 +53,7 @@ function processFile(filePath) {
   }
 }
 
-function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx']) {
+function findFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {
   const files = [];
   
   function traverse(currentDir) {
@@ -49,7 +66,7 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx']) {
         
         if (stat.isDirectory()) {
           // Skip node_modules and other common directories
-          if (!['node_modules', '.git', 'dist', 'build', '.next', 'app-broken', 'app-disabled'].includes(item)) {
+          if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
             traverse(fullPath);
           }
         } else if (stat.isFile()) {
@@ -81,4 +98,4 @@ for (const file of files) {
   }
 }
 
-console.log(`Fixed JSX errors in ${fixedCount} files.`);
+console.log(`Fixed HTML entities in ${fixedCount} files.`);

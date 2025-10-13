@@ -1,16 +1,50 @@
-import fs from 'fs'
-import path from 'path'
-const dir = path.join(process.cwd(), 'data'
-const file = path.join(dir, 'shipping-rates.json'
-  if (req.method !== 'POST'
-    res.setHeader('Content-Type', '
-    res.end(JSON.stringify({ error: 'Method not allowed'
-    return res.status(400).json({ error: 'Destination and weight are required'
-      const data = fs.readFileSync(file, 'utf8'
-  console.error('Error:'
-    console.error('Error reading existing rates:'
-  const distanceMultiplier = destination === 'US'
-    res.setHeader('Content-Type', '
-  console.error('Error:'
-    res.setHeader('Content-Type', '
-    res.end(JSON.stringify({ error: 'Failed to save rate'
+import fs from 'fs';
+import path from 'path';
+
+const dir = path.join(process.cwd(), 'data');
+const file = path.join(dir, 'shipping-rates.json');
+
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
+  }
+
+  const { destination, weight } = req.body;
+  
+  if (!destination || !weight) {
+    return res.status(400).json({ error: 'Destination and weight are required' });
+  }
+
+  try {
+    const data = fs.readFileSync(file, 'utf8');
+    const rates = JSON.parse(data);
+    
+    const distanceMultiplier = destination === 'US' ? 1 : 1.5;
+    const baseRate = 10;
+    const rate = baseRate + (weight * 0.5 * distanceMultiplier);
+    
+    const newRate = {
+      id: Date.now().toString(),
+      destination,
+      weight,
+      rate,
+      createdAt: new Date().toISOString()
+    };
+    
+    rates.push(newRate);
+    fs.writeFileSync(file, JSON.stringify(rates, null, 2));
+    
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true, 
+      rate: newRate 
+    }));
+  } catch (error) {
+    console.error('Error:', error);
+    console.error('Error reading existing rates:', error);
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to save rate' }));
+  }
+}

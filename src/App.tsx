@@ -62,7 +62,7 @@ const App: React.FC = () => {
         // Add any initialization logic here
         setIsInitialized(true);
       } catch (error) {
-        console.error(&apos;Failed to initialize app:&apos;, error);
+        console.error('Failed to initialize app:', error);
         setIsInitialized(true); // Still show the app even if initialization fails
       }
     };

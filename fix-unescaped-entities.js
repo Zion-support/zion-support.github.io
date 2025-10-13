@@ -2,7 +2,7 @@
 
 import fs from 'fs'
 import path from 'path'
-  return content.replace(/(?<!&)(?<!&#)(?<!&apos;)(?<!&lsquo;)(?<!&rsquo;)(?<!&quot;)(?<!&lt;)(?<!&gt;)(?<!&amp;)'
+  return content.replace(/(?<!&)(?<!&#)(?<!')(?<!')(?<!')(?<!")(?<!<)(?<!>)(?<!&)'
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules'
     } else if (file.endsWith('.tsx') || file.endsWith('.jsx'
         const content = fs.readFileSync(filePath, 'utf8'

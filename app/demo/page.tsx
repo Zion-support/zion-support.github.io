@@ -1,28 +1,32 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Play, Right, Circle, Star, } from 'lucide-react';
+import { Play, Right, Star, BarChart, Shield, TrendingUp, Users } from 'lucide-react';
 
 const DemoPage: React.FC = () => {
   const features = [
     {
-      icon: title: 'AI-Powered Analytics',
+      icon: BarChart,
+      title: 'AI-Powered Analytics',
       description: 'See how our AI analyzes your data in real-time',
-      demo: &apos;Live Demo&apos;
+      demo: 'Live Demo'
     },
     {
-      icon: title: 'Advanced ',
+      icon: Shield,
+      title: 'Advanced Security',
       description: 'Experience our enterprise-grade security features',
-      demo: &apos;Demo&apos;
+      demo: 'Demo'
     },
     {
-      icon: title: 'Business Intelligence',
+      icon: TrendingUp,
+      title: 'Business Intelligence',
       description: 'Explore our comprehensive BI dashboard',
-      demo: &apos;BI Demo&apos;
+      demo: 'BI Demo'
     },
     {
-      icon: title: 'Team Collaboration',
+      icon: Users,
+      title: 'Team Collaboration',
       description: 'See how teams work together seamlessly',
-      demo: &apos;Collaboration Demo&apos;
+      demo: 'Collaboration Demo'
     }
   ];
 
@@ -143,7 +147,7 @@ const DemoPage: React.FC = () => {
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>
+                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                   <div>
                     <p className="text-white font-semibold">{testimonial.name}</p>
                     <p className="text-cyan-400 text-sm">{testimonial.company}</p>

@@ -35,7 +35,7 @@ const : React.FC = () => {
               <p className="text-xs text-cyan-400">AI & IT Solutions
             <to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About
-                            <to={`/${category.title.toLowerCase().replace(&apos; &apos;, &apos;-&apos;)}`}
+                            <to={`/${category.title.toLowerCase().replace(' ', '-')}`}
                     <to="/services"
               )}
           {/* Contact Info */}
@@ -57,7 +57,7 @@ const : React.FC = () => {
               className="cyber-button inline-flex items-center"
               onClick={closeAllMenus}
             >
-              <className="w-4 h-4 mr-2" />
+              <div className="w-4 h-4 mr-2" />
               (302) 464-0950
               <to="/"
               <to="/about"
@@ -76,7 +76,7 @@ const : React.FC = () => {
                   className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
                   onClick={closeAllMenus}
                 >
-                  <className="w-4 h-4 inline mr-2" />
+                  <div className="w-4 h-4 inline mr-2" />
                   (302) 464-0950
         )}
   );

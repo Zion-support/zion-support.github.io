@@ -71,7 +71,7 @@ const Main: React.FC = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let&apos;s discuss how our main 
+            Let's discuss how our main 
             services can help you achieve your goals.
           </p>
           <a

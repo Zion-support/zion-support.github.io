@@ -11,7 +11,7 @@ interface PerformanceMetrics {
   tbt?: number;
 }
 
-interface PerformanceEntryExtended extends PerformanceEntry {
+interface PerformanceEntryExtended extends globalThis.PerformanceEntry {
   processingStart?: number;
   hadRecentInput?: boolean;
   value?: number;

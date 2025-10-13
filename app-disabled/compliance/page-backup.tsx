@@ -5,14 +5,14 @@ import ../components/ from '../components/';
 import Footer from '../components/Footer';
 import {Circle, Right, Star, }}from 'lucide-react';
 const PageBackupPage: React.FC = () => {,
-      benefits: [&apos;Smart recommendations&apos;, &apos;Predictive analytics&apos;, &apos;Automated insights&apos;, &apos;Real-time analysis&apos;]},
-    {icon: benefits: [&apos;Real-time dashboards&apos;, &apos;Custom reports&apos;, &apos;Data visualization&apos;, &apos;Performance metrics&apos;]},
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
+    {icon: benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
     {icon: title: 'Precision ing',
       description: 'specific goals and objectives with precision and accuracy.',
-      benefits: [&apos;Goal tracking&apos;, &apos;Performance optimization&apos;, &apos;Strategic planning&apos;, &apos;Success metrics&apos;]},
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']},
     {icon: title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
-      benefits: [&apos;Growth strategies&apos;, &apos;Market analysis&apos;, &apos;Competitive insights&apos;, &apos;ROI optimization&apos;]}]
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]
 return(<.Fragment>)
       <Helmet />
         <section className="relative py-20 px-4 overflow-hidden">
