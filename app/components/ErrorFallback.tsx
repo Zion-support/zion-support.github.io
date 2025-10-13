@@ -85,11 +85,17 @@ const ErrorFallback: React.FC = () => {
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-b847
     </div>
   );
+=======
+
+    </div>;
+);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
 };
 
 export default ErrorFallback;

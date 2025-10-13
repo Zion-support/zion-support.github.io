@@ -76,8 +76,8 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children 
 
     // Cleanup
     return () => {
-      // Cleanup if needed
-    };
+      // Cleanup if needed;
+};
   }, []);
 
   return <>{children}</>;

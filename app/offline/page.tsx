@@ -9,6 +9,6 @@ export default function OfflinePage() {
           This page is under development.
         </p>
       </div>
-    </div>
-  );
+    </div>;
+);
 }

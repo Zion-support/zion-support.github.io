@@ -28,13 +28,18 @@ export default function handler(req, res) {
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
     }
-<<<<<<< HEAD
   } catch (_error) {
     // console.error('Error reading existing wallets:', error);
+<<<<<<< HEAD
 =======
   } catch (error) {
     console.error('Error reading existing wallets:', error);
 >>>>>>> cursor/fix-errors-and-merge-to-main-b847
+=======
+;
+} catch (error) {
+    console.error('Error reading existing wallets:', error);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
     existing = [];
   }
   
@@ -63,11 +68,11 @@ export default function handler(req, res) {
     res.end(JSON.stringify({ 
       success: true, 
       message: 'Wallet added successfully',
-      id: newWallet.id
-    }));
-<<<<<<< HEAD
+      id: newWallet.id;
+}));
   } catch (_error) {
     // console.error('Error saving wallet:', error);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }}
@@ -75,6 +80,9 @@ export default function handler(req, res) {
 =======
   } catch (error) {
     console.error('Error saving wallet:', error);
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save wallet' }));

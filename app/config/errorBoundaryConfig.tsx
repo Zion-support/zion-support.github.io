@@ -82,8 +82,8 @@ const ErrorBoundaryConfig: React.FC = () => {
           </a>
         </div>
       </section>
-    </div>
-  );
+    </div>;
+);
 };
 
 export default ErrorBoundaryConfig;

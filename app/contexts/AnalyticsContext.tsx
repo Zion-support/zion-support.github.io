@@ -7,9 +7,14 @@ interface AnalyticsContextType {
   setUser: (userId: string, properties?: Record<string, any>) => void;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-b847
+=======
+  isEnabled: boolean;
+  isEnabled: boolean;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
   isEnabled: boolean;
 }
 
@@ -45,14 +50,19 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     trackEvent,
     trackPageView,
     setUser,
+<<<<<<< HEAD
     isEnabled,
   };
 
+=======
+    isEnabled,;
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
-    </AnalyticsContext.Provider>
-  );
+    </AnalyticsContext.Provider>;
+);
 };
 <<<<<<< HEAD
 export { AnalyticsContext };

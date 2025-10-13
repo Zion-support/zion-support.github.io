@@ -82,8 +82,8 @@ const MicroSaasServices: React.FC = () => {
           </a>
         </div>
       </section>
-    </div>
-  );
+    </div>;
+);
 };
 
 export default MicroSaasServices;

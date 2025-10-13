@@ -82,8 +82,8 @@ const MobileNavigation: React.FC = () => {
           </a>
         </div>
       </section>
-    </div>
-  );
+    </div>;
+);
 };
 
 export default MobileNavigation;

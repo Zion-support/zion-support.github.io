@@ -64,20 +64,20 @@ const ${serviceName}Page: React.FC = () => {
       icon: Zap,
       title: 'Advanced Technology',
       description: 'Cutting-edge technology solutions for modern businesses.',
-      benefits: ['Latest innovations', 'Scalable solutions', 'High performance', 'Future-proof']
-    },
+      benefits: ['Latest innovations', 'Scalable solutions', 'High performance', 'Future-proof'];
+},
     {
       icon: BarChart,
       title: 'Data Analytics',
       description: 'Comprehensive data analysis and insights.',
-      benefits: ['Real-time analytics', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
+      benefits: ['Real-time analytics', 'Custom reports', 'Data visualization', 'Performance metrics'];
+},
     {
       icon: Target,
       title: 'Precision Solutions',
       description: 'Targeted solutions designed for your specific needs.',
-      benefits: ['Custom solutions', 'Expert consultation', 'Proven results', 'Ongoing support']
-    }
+      benefits: ['Custom solutions', 'Expert consultation', 'Proven results', 'Ongoing support'];
+}
   ];
 
   const stats = [
@@ -143,11 +143,11 @@ const ${serviceName}Page: React.FC = () => {
                     <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {benefit}
-                    </li>
-                  ))}
+                    </li>;
+))}
                 </ul>
-              </div>
-            ))}
+              </div>;
+))}
           </div>
         </div>
       </section>
@@ -164,8 +164,8 @@ const ${serviceName}Page: React.FC = () => {
                 <div className="text-gray-300">
                   {stat.label}
                 </div>
-              </div>
-            ))}
+              </div>;
+))}
           </div>
         </div>
       </section>
@@ -184,8 +184,8 @@ const ${serviceName}Page: React.FC = () => {
           </button>
         </div>
       </section>
-    </>
-  );
+    </>;
+);
 };
 
 export default ${serviceName}Page;
@@ -244,8 +244,8 @@ const main = () => {
       
       console.log(`Created: ${pagePath}`);
       createdCount++;
-      
-    } catch (error) {
+      ;
+} catch (error) {
       console.error(`Error creating ${pagePath}:`, error.message);
     }
   }

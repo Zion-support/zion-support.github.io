@@ -11,9 +11,14 @@ function resolveMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
+<<<<<<< HEAD
     if (!content.includes('<<<<<<< HEAD')) {
       return false; // No conflicts
     }
+=======
+    if (!content.includes('      return false; // No conflicts;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
     
     console.log(`Resolving conflicts in: ${filePath}`);
     
@@ -111,8 +116,8 @@ try {
     execSync('git add .', { stdio: 'inherit' });
     console.log('Staged resolved files');
   }
-  
+  ;
 } catch (error) {
   console.error('Error during merge conflict resolution:', error.message);
   process.exit(1);
-}
+}))))

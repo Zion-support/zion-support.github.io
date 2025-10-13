@@ -13,7 +13,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   description,
   keywords,
   canonical,
-  children
+  children;
 }) => {
   return (
     <>
@@ -24,6 +24,6 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
         {canonical && <link rel="canonical" href={canonical} />}
       </Helmet>
       {children}
-    </>
-  );
+    </>;
+);
 };

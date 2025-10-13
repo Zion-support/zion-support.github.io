@@ -28,13 +28,18 @@ export default function handler(req, res) {
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
     }
-<<<<<<< HEAD
   } catch (_error) {
     // console.error('Error reading existing subscribers:', error);
+<<<<<<< HEAD
 =======
   } catch (error) {
     console.error('Error reading existing subscribers:', error);
 >>>>>>> cursor/fix-errors-and-merge-to-main-b847
+=======
+;
+} catch (error) {
+    console.error('Error reading existing subscribers:', error);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
     existing = [];
   }
   
@@ -62,11 +67,11 @@ export default function handler(req, res) {
     res.end(JSON.stringify({ 
       success: true, 
       message: 'Successfully subscribed to newsletter',
-      id: newSubscriber.id
-    }));
-<<<<<<< HEAD
+      id: newSubscriber.id;
+}));
   } catch (_error) {
     // console.error('Error saving subscriber:', error);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }}
@@ -74,6 +79,9 @@ export default function handler(req, res) {
 =======
   } catch (error) {
     console.error('Error saving subscriber:', error);
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save subscription' }));

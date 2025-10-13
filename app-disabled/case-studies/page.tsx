@@ -83,7 +83,7 @@ import { ArrowRight, ExternalLink, Star, TrendingUp, Users, Clock } from 'lucide
       ],
       image: '/images/case-studies/cybersecurity-healthcare.jpg,
       duration: '4 months,
-      team: '10 specialists});)
+      team: '10 specialists}););
 },
     {
       id: '4,
@@ -146,8 +146,8 @@ import { ArrowRight, ExternalLink, Star, TrendingUp, Users, Clock } from 'lucide
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-400">{stat.label}</div>
-              </div>
-            ))}
+              </div>;
+))}
     <>
   </>
     <div className="min-h-screen bg-gray-50">
@@ -185,8 +185,8 @@ import { ArrowRight, ExternalLink, Star, TrendingUp, Users, Clock } from 'lucide
                       {study.technologies.map((tech, index) => (
                         <span key={index} className="bg-white/10 text-gray-300 px-3 py-1 rounded-full text-sm">
                           {tech}
-                        </span>
-                      ))}
+                        </span>;
+))}
                     </div>
                   </div>
 
@@ -281,7 +281,7 @@ import { ArrowRight, ExternalLink, Star, TrendingUp, Users, Clock } from 'lucide
                 </Link>
               </div>
             </div>
-          </div>
-
-  );  ));)
+          </div>;
+);  ));)
 export default CaseStudiesPage;
+}}}}

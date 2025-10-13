@@ -1,9 +1,8 @@
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-b847
+// Simple wrapper function to replace withSentry
+// const withSentry = (handler) => handler;
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'onsite-requests.json');
 
@@ -48,6 +47,7 @@ export default function handler(req, res) {
       success: true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
@@ -56,6 +56,12 @@ export default function handler(req, res) {
       message: 'Onsite request submitted successfully',
       id: newRequest.id
     }));
+=======
+      message: 'Onsite request submitted successfully',
+
+      id: newRequest.id;
+}));
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
   } catch {
     console.error('Error saving onsite request');
     res.statusCode = 500;

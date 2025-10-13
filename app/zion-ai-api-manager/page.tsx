@@ -10,6 +10,6 @@ export default function ZionAiApiManagerPage() {
           This page is under development.
         </p>
       </div>
-    </div>
-  );
+    </div>;
+);
 }

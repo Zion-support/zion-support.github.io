@@ -161,6 +161,7 @@ const Footer: React.FC = memo(() => {
                     to={link.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
+<<<<<<< HEAD
                     {link.name}
                   </Link>
                 </li>
@@ -227,3 +228,22 @@ const Footer: React.FC = memo(() => {
 
 Footer.displayName = 'Footer';
 export default Footer;
+=======
+              <li><Link to="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link>
+              <li><Link to="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</Link>
+              <li><Link to="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</Link>
+              <li><Link to="/consultation" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Free Consultation</Link>
+              <Link to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+                Privacy Policy
+              <Link to="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+                Terms of Service
+              <Link to="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+                Cookie Policy;
+);
+});
+
+Footer.displayName = 'Footer';
+export default Footer;
+
+</div></div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3

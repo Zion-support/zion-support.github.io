@@ -98,8 +98,8 @@ const SupportPage: React.FC = () => {
                       {option.action}
                       <ArrowRight className="w-4 h-4 ml-2 inline" />
                     </button>
-                  </div>
-                );
+                  </div>;
+);
               })}
             </div>
           </div>
@@ -116,8 +116,8 @@ const SupportPage: React.FC = () => {
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
                   <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                   <p className="text-gray-300">{faq.answer}</p>
-                </div>
-              ))}
+                </div>;
+))}
             </div>
           </div>
         </section>
@@ -151,8 +151,8 @@ const SupportPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
+    </>;
+);
 };
 
 export default SupportPage;

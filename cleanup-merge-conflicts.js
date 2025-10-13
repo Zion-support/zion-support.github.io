@@ -2,15 +2,15 @@
 
     // Check if file has merge conflict markers
     if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {
-      return false; // No conflicts to clean
-    }
+      return false; // No conflicts to clean;
+}
     
     // Write cleaned content back to file
     const cleanedContent = cleanedLines.join('\n');
     fs.writeFileSync(filePath, cleanedContent, 'utf8');
     
-    return true; // File was cleaned
-  } catch (error) {
+    return true; // File was cleaned;
+} catch (error) {
     console.error(`Error cleaning ${filePath}:`, error.message);
     return false;
   }

@@ -82,8 +82,8 @@ const FuturisticButtonEnhanced: React.FC = () => {
           </a>
         </div>
       </section>
-    </div>
-  );
+    </div>;
+);
 };
 
 export default FuturisticButtonEnhanced;

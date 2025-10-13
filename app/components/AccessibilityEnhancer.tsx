@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
-=======
 import React, { useEffect, useState } from 'react';
 
 // Type definitions for browser APIs
@@ -19,6 +13,16 @@ declare global {
   }
 }
 
+<<<<<<< HEAD
+=======
+import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+
+// Using built-in DOM types
+import React, { useEffect, useState } from 'react';
+
+import React, { useEffect, useState } from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
@@ -106,8 +110,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   // Focus management
   useEffect(() => {
     const focusableElements = document.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+);
 
     const handleFocus = (e: Event) => {
       const target = e.target as HTMLElement;
@@ -178,9 +182,17 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>
   );
 };
 
 export default AccessibilityEnhancer;
 >>>>>>> cursor/fix-errors-and-merge-to-main-b847
+=======
+    </div>;
+);
+};
+
+export default AccessibilityEnhancer;}}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3

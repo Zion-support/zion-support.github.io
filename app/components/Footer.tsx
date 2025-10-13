@@ -28,8 +28,8 @@ const Footer: React.FC = () => {
       { name: 'Privacy Policy', href: '/privacy' },
       { name: 'Terms of Service', href: '/terms' },
       { name: 'Cookie Policy', href: '/cookies' }
-    ]
-  };
+    ];
+};
 
   const socialLinks = [
     { name: 'Facebook', href: '#', icon: Facebook },
@@ -62,8 +62,8 @@ const Footer: React.FC = () => {
                     aria-label={social.name}
                   >
                     <Icon className="w-6 h-6" />
-                  </a>
-                );
+                  </a>;
+);
               })}
             </div>
           </div>
@@ -80,8 +80,8 @@ const Footer: React.FC = () => {
                   >
                     {link.name}
                   </Link>
-                </li>
-              ))}
+                </li>;
+))}
             </ul>
           </div>
 
@@ -97,8 +97,8 @@ const Footer: React.FC = () => {
                   >
                     {link.name}
                   </Link>
-                </li>
-              ))}
+                </li>;
+))}
             </ul>
           </div>
 
@@ -114,8 +114,8 @@ const Footer: React.FC = () => {
                   >
                     {link.name}
                   </Link>
-                </li>
-              ))}
+                </li>;
+))}
             </ul>
           </div>
         </div>
@@ -151,16 +151,16 @@ const Footer: React.FC = () => {
                 className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
               >
                 {link.name}
-              </Link>
-            ))}
+              </Link>;
+))}
           </div>
           <p className="text-gray-400 text-sm">
             © {currentYear} Zion Tech Group. All rights reserved.
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
+);
 };
 
 export default Footer;

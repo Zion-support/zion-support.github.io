@@ -91,6 +91,7 @@ const Navigation: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-8">
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About
+<<<<<<< HEAD
             </Link>
             
             {/* Services Dropdown */}
@@ -243,6 +244,37 @@ const Navigation: React.FC = () => {
         {isOpen && (
           <div className="lg:hidden bg-slate-900/95 backdrop-blur-sm border-t border-slate-800/50">
             <div className="px-2 pt-2 pb-3 space-y-1">
+=======
+                            <Link
+                              to={`/${category.title.toLowerCase().replace(' ', '-')}`}
+                    <Link
+                      to="/services";
+)}
+          {/* Contact Info */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <Link 
+              to="/case-studies"
+            <Link
+              to="/blog"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              onClick={closeAllMenus}
+            >
+              Blog
+            <Link
+              to="/contact"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              onClick={closeAllMenus}
+            >
+              Contact
+            {/* CTA Button */}
+            <a
+              href="tel:+13024640950"
+              className="cyber-button inline-flex items-center"
+              onClick={closeAllMenus}
+            >
+              <Phone className="w-4 h-4 mr-2" />
+              (302) 464-0950
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
               <Link
                 to="/"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
@@ -292,6 +324,7 @@ const Navigation: React.FC = () => {
                   onClick={closeAllMenus}
                 >
                   <Phone className="w-4 h-4 inline mr-2" />
+<<<<<<< HEAD
                   (302) 464-0950
                 </a>
               </div>
@@ -304,3 +337,13 @@ const Navigation: React.FC = () => {
 };
 
 export default Navigation;
+=======
+                  (302) 464-0950;
+)}
+  );
+};
+
+export default Navigation;
+
+</div></div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3

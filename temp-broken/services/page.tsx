@@ -9,6 +9,11 @@ export default function ServicesPage() {
           This page is under development.
         </p>
       </div>
+<<<<<<< HEAD
     </div>
   );
+=======
+    </div>;
+);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
 }

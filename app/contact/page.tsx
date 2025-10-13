@@ -18,8 +18,8 @@ export default function ContactPage() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
-    });
+      [e.target.name]: e.target.value;
+});
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -111,8 +111,8 @@ export default function ContactPage() {
                   <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
                   <p className="text-cyan-400 font-medium mb-1">{info.value}</p>
                   <p className="text-gray-400 text-sm">{info.description}</p>
-                </div>
-              );
+                </div>;
+);
             })}
           </div>
         </div>
@@ -128,6 +128,7 @@ export default function ContactPage() {
           {isSubmitted ? (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             <div className="bg-green-500/10 border border-green-500/20 rounded-2xl p-8 text-center">
               <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
@@ -136,13 +137,15 @@ export default function ContactPage() {
                 Thank you for your message. We&apos;ll get back to you within 24 hours.
               </p>
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center">
               <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-4">
                 <CheckCircle className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Message Sent!</h3>
               <p className="text-gray-300 mb-6">
-                Thank you for contacting us. We&apos;ll get back to you within 24 hours.
+                Thank you for contacting us. We'll get back to you within 24 hours.
               </p>
               <button
                 onClick={() => {
@@ -157,6 +160,7 @@ export default function ContactPage() {
                   });
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+<<<<<<< HEAD
               >
                 Send Another Message
               </button>
@@ -165,6 +169,34 @@ export default function ContactPage() {
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
+=======
+            <div className="text-center">
+              <div className="bg-green-500/20 border border-green-500/30 rounded-xl p-8 mb-8">
+                <h3 className="text-2xl font-bold text-green-400 mb-4">Message Sent Successfully!</h3>
+                <p className="text-gray-300 mb-6">
+                  Thank you for your message. We'll get back to you within 24 hours.
+                </p>
+                <button
+                  onClick={() => {
+                    setIsSubmitted(false);
+                    setFormData({
+                      name: '',
+                      email: '',
+                      company: '',
+                      phone: '',
+                      subject: '',
+                      message: '';
+});
+                  }}
+                  className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+              >
+                Send Another Message
+              </button>
+            </div>;
+) : (
+            <form onSubmit={handleSubmit} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                     Full Name *
@@ -241,9 +273,17 @@ export default function ContactPage() {
                   className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
                   <option value="">Select a subject</option>
+<<<<<<< HEAD
                   {subjects.map((subject) => (
                     <option key={subject} value={subject}>{subject}</option>
                   ))}
+=======
+                  {subjects.map((subject, index) => (
+                    <option key={index} value={subject}>
+                      {subject}
+                    </option>;
+))}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
                 </select>
               </div>
 
@@ -273,20 +313,32 @@ export default function ContactPage() {
                     <>
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                       Sending...
-                    </>
-                  ) : (
+                    </>;
+) : (
                     <>
                       <Send className="w-5 h-5 mr-2" />
                       Send Message
+<<<<<<< HEAD
                     </>
                   )}
+=======
+                      <Send className="w-5 h-5 ml-2 inline" />
+                    </>;
+)}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
                 </button>
               </div>
-            </form>
-          )}
+            </form>;
+)}
         </div>
       </section>
+<<<<<<< HEAD
     </div>
   );
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
+=======
+    </div>;
+);
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3

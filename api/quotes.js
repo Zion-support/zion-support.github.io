@@ -29,28 +29,33 @@ export default async function handler(req, res) {
       timestamp: new Date().toISOString(),
       status: 'pending'
     };
-<<<<<<< HEAD
     // // console.log('Quote request received:', quoteData);
+<<<<<<< HEAD
 =======
     // console.log('Quote request received:', quoteData);
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-b847
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true, 
       message: 'Quote request submitted successfully',
       quoteId: `quote_${Date.now()}`,
-      data: quoteData
-    }));
-<<<<<<< HEAD
+      data: quoteData;
+}));
   } catch (_error) {
     // console.error('Quote submission error:', error);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }}
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
   } catch (error) {
     console.error('Quote submission error:', error);
     res.statusCode = 500;

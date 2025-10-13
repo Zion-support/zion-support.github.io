@@ -79,7 +79,10 @@ export default [
 =======
         global: 'readonly',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
         HTMLElement: 'readonly',
         Event: 'readonly',
         KeyboardEvent: 'readonly',
@@ -89,19 +92,28 @@ export default [
         HTMLInputElement: 'readonly',
         HTMLTextAreaElement: 'readonly',
         HTMLSelectElement: 'readonly',
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-b847
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
         setTimeout: 'readonly',
         clearTimeout: 'readonly',
         setInterval: 'readonly',
         clearInterval: 'readonly',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
         performance: 'readonly',
         require: 'readonly',
         module: 'readonly',
         exports: 'readonly',
         fs: 'readonly'
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-b847
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
       }
     },
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
@@ -110,7 +122,7 @@ export default [
       'react': react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh
-    },
+},
     rules: {
       ...typescript.configs.recommended.rules,
       ...react.configs.recommended.rules,

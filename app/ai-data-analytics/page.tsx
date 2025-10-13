@@ -10,6 +10,6 @@ export default function AiDataAnalyticsPage() {
           This page is under development.
         </p>
       </div>
-    </div>
-  );
+    </div>;
+);
 }

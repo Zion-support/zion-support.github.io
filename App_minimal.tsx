@@ -8,20 +8,15 @@ const App: React.FC = () => {
   return (
     <HelmetProvider>
       <Router>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-        </Routes>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <Footer />
-=======
-        <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
-=======
-        <Footer />
+        <div className="min-h-screen bg-gray-900">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+          </Routes>
+          <Footer />
+        </div>
       </Router>
     </HelmetProvider>
   );
 };
+
 export default App;
->>>>>>> cursor/fix-errors-and-merge-to-main-b847

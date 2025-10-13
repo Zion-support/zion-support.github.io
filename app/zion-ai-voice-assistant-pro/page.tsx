@@ -3,12 +3,17 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-b847
+=======
+
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
 export default function ZionAIVoiceAssistantPro() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -148,6 +153,7 @@ export default function ZionAIVoiceAssistantPro() {
             <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
               Get Started Today
             </button>
+<<<<<<< HEAD
           </div>
         </div>
       </div>
@@ -156,6 +162,10 @@ export default function ZionAIVoiceAssistantPro() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+          </div>;
+);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
 =======

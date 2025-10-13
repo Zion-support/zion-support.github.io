@@ -16,8 +16,8 @@ import path from 'path';
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-      
-      }
+      ;
+}
     }
   }
   

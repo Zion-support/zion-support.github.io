@@ -25,13 +25,18 @@ export default function handler(req, res) {
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
     }
-<<<<<<< HEAD
   } catch (_error) {
     // console.error('Error reading existing rates:', error);
+<<<<<<< HEAD
 =======
   } catch (error) {
     console.error('Error reading existing rates:', error);
 >>>>>>> cursor/fix-errors-and-merge-to-main-b847
+=======
+;
+} catch (error) {
+    console.error('Error reading existing rates:', error);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
     existing = [];
   }
   
@@ -46,8 +51,8 @@ export default function handler(req, res) {
     weight,
     dimensions,
     rate: totalRate,
-    timestamp: new Date().toISOString()
-  };
+    timestamp: new Date().toISOString();
+};
   existing.push(newRate);
   try {
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
@@ -56,10 +61,10 @@ export default function handler(req, res) {
     res.end(JSON.stringify({ 
       success: true, 
       rate: totalRate,
-      id: newRate.id
-    }));
-<<<<<<< HEAD
+      id: newRate.id;
+}));
   } catch (_error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }}
@@ -67,6 +72,10 @@ export default function handler(req, res) {
 =======
   } catch (error) {
     console.error('Error saving shipping rate:', error);
+=======
+
+    // console.error('Error saving shipping rate:', error);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save rate' }));

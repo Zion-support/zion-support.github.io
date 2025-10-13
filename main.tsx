@@ -13,13 +13,13 @@ if (typeof window !== 'undefined') {
 }
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById('root') as HTMLElement;
 );
 
 root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>;
 );
 
 // Register service worker for PWA functionality
@@ -28,10 +28,10 @@ if (typeof window !== 'undefined' && "serviceWorker" in navigator) {
     navigator.serviceWorker
       .register("/sw.js")
       .then((registration) => {
-        // Service worker registered successfully
-      })
+        // Service worker registered successfully;
+})
       .catch((registrationError) => {
-        // Service worker registration failed
-      });
+        // Service worker registration failed;
+});
   });
 }

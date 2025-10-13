@@ -45,8 +45,8 @@ class ErrorBoundary extends Component<Props, State> {
               Refresh Page
             </button>
           </div>
-        </div>
-      );
+        </div>;
+);
     }
 
     return this.props.children;

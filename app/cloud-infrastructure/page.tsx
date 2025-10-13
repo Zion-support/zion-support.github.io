@@ -70,6 +70,7 @@ export default function CloudInfrastructure() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>
   );
 <<<<<<< HEAD
@@ -80,3 +81,8 @@ export default function CloudInfrastructure() {
 =======
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-b847
+=======
+    </div>;
+);
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3

@@ -48,23 +48,35 @@ const AiServicesPage: React.FC = () => {
       name: "Dr. Sarah Johnson",
       company: "MedTech Solutions",
       role: "CTO",
+<<<<<<< HEAD
       content: "Zion's AI healthcare solutions have revolutionized our diagnostic capabilities. We&apos;ve seen a 40% improvement in accuracy.",
       rating: 5
     },
+=======
+      content: "Zion's AI healthcare solutions have revolutionized our diagnostic capabilities. We've seen a 40% improvement in accuracy.",
+      rating: 5;
+},
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
     {
       name: "Michael Chen",
       company: "E-commerce Plus",
       role: "CEO",
+<<<<<<< HEAD
       content: "The AI automation tools have transformed our operations. We&apos;ve reduced manual work by 80% and increased productivity significantly.",
       rating: 5
     },
+=======
+      content: "The AI automation tools have transformed our operations. We've reduced manual work by 80% and increased productivity significantly.",
+      rating: 5;
+},
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
     {
       name: "Emily Rodriguez",
       company: "FinanceFlow",
       role: "Head of Analytics",
       content: "Their AI analytics platform has given us insights we never had before. Our decision-making process is now data-driven and highly effective.",
-      rating: 5
-    }
+      rating: 5;
+}
   ];
 
   return (
@@ -120,8 +132,8 @@ const AiServicesPage: React.FC = () => {
                     </div>
                     <h3 className="text-lg font-semibold text-white mb-2 text-center">{service.title}</h3>
                     <p className="text-gray-300 text-sm text-center">{service.description}</p>
-                  </div>
-                ))}
+                  </div>;
+))}
               </div>
             </div>
           </section>
@@ -137,16 +149,16 @@ const AiServicesPage: React.FC = () => {
                   <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
                     <div className="flex items-center mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                      ))}
+                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />;
+))}
                     </div>
                     <p className="text-gray-300 mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>
                     <div>
                       <p className="text-white font-semibold">{testimonial.name}</p>
                       <p className="text-cyan-400 text-sm">{testimonial.role}, {testimonial.company}</p>
                     </div>
-                  </div>
-                ))}
+                  </div>;
+))}
               </div>
             </div>
           </section>
@@ -173,8 +185,8 @@ const AiServicesPage: React.FC = () => {
           </section>
         </div>
       </FuturisticBackground>
-    </>
-  );
+    </>;
+);
 };
 
 export default AiServicesPage;

@@ -9,6 +9,16 @@ export default function AboutPage() {
           This page is under development.
         </p>
       </div>
+<<<<<<< HEAD
     </div>
   );
 }
+=======
+    </div>;
+);
+  );
+  );
+};
+
+export default AboutPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3

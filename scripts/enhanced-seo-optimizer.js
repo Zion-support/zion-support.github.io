@@ -13,8 +13,8 @@ class SEOOptimizer {
       pagesAnalyzed: 0,
       metaTagsFixed: 0,
       structuredDataAdded: 0,
-      performanceScore: 0,
-    };
+      performanceScore: 0,;
+};
   }
 
   async optimize() {
@@ -52,8 +52,8 @@ class SEOOptimizer {
           type: 'page',
           file: page,
           issues: analysis.issues,
-          recommendations: analysis.recommendations,
-        });
+          recommendations: analysis.recommendations,;
+});
       }
     });
 
@@ -77,8 +77,8 @@ class SEOOptimizer {
           type: 'meta',
           file: component,
           issues: issues,
-          recommendations: this.generateMetaRecommendations(issues),
-        });
+          recommendations: this.generateMetaRecommendations(issues),;
+});
         metaOptimizations++;
       }
     });
@@ -115,8 +115,8 @@ class SEOOptimizer {
           type: 'image',
           file: image,
           issues: issues,
-          recommendations: this.generateImageRecommendations(issues),
-        });
+          recommendations: this.generateImageRecommendations(issues),;
+});
         imageOptimizations++;
       }
     });
@@ -300,18 +300,18 @@ import React from 'react'
 
 interface StructuredDataProps {
   type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'Article'
-  data?: any
+  data?: any;
 }
 
 const StructuredData: React.FC<StructuredDataProps> = ({ 
   type = 'Organization', 
-  data 
+  data ;
 }) => {
   const getStructuredData = () => {
     const baseData = {
       "@context": "https://schema.org",
-      "@type": type,
-    };
+      "@type": type,;
+};
 
     switch (type) {
       case 'Organization':
@@ -325,20 +325,20 @@ const StructuredData: React.FC<StructuredDataProps> = ({
             "@type": "ContactPoint",
             telephone: "+1-555-123-4567",
             contactType: "customer service",
-            email: "info@ziontechgroup.com"
-          },
+            email: "info@ziontechgroup.com";
+},
           address: {
             "@type": "PostalAddress",
             addressLocality: "San Francisco",
             addressRegion: "CA",
-            addressCountry: "US"
-          },
+            addressCountry: "US";
+},
           sameAs: [
             "https://linkedin.com/company/ziontechgroup",
             "https://twitter.com/ziontechgroup"
           ],
-          ...data
-        };
+          ...data;
+};
 
       case 'WebSite':
         return {
@@ -349,10 +349,10 @@ const StructuredData: React.FC<StructuredDataProps> = ({
           potentialAction: {
             "@type": "SearchAction",
             "target": "https://ziontechgroup.com/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-          },
-          ...data
-        };
+            "query-input": "required name=search_term_string";
+},
+          ...data;
+};
 
       case 'Service':
         return {
@@ -361,11 +361,11 @@ const StructuredData: React.FC<StructuredDataProps> = ({
           description: data?.description || "Advanced artificial intelligence solutions for business automation and optimization.",
           provider: {
             "@type": "Organization",
-            name: "Zion Tech Group"
-          },
+            name: "Zion Tech Group";
+},
           areaServed: "Worldwide",
-          ...data
-        };
+          ...data;
+};
 
       default:
         return { ...baseData, ...data };
@@ -376,10 +376,10 @@ const StructuredData: React.FC<StructuredDataProps> = ({
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(getStructuredData(), null, 2)
-      }}
-    />
-  );
+        __html: JSON.stringify(getStructuredData(), null, 2);
+}}
+    />;
+);
 };
 
 export default StructuredData;
@@ -394,9 +394,9 @@ export default StructuredData;
       summary: {
         totalIssues: this.optimizations.reduce((sum, opt) => sum + (opt.issues?.length || 0), 0),
         pagesWithIssues: this.optimizations.filter(opt => opt.type === 'page').length,
-        seoScore: this.calculateSEOScore(),
-      },
-    };
+        seoScore: this.calculateSEOScore(),;
+},;
+};
 
     const reportPath = path.join(__dirname, '../seo-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

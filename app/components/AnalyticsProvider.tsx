@@ -29,8 +29,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
         user_id: userId,
-        custom_map: traits
-      });
+        custom_map: traits;
+});
     }
   };
 
@@ -41,8 +41,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: name,
         page_location: window.location.href,
-        ...properties
-      });
+        ...properties;
+});
     }
   };
 
@@ -57,14 +57,14 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const value: AnalyticsContextType = {
     track,
     identify,
-    page
-  };
+    page;
+};
 
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
-    </AnalyticsContext.Provider>
-  );
+    </AnalyticsContext.Provider>;
+);
 };
 
 export const useAnalytics = (): AnalyticsContextType => {
