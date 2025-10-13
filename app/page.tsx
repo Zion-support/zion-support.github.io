@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -92,9 +88,48 @@ export default function HomePage() {
               <h3 className="text-2xl font-bold text-white mb-4">AI Solutions</h3>
               <p className="text-gray-300 mb-6">
                 Advanced artificial intelligence services including machine learning, 
-                natural language processing, and predictive analytics.
+                natural language processing, computer vision, and predictive analytics.
               </p>
+              <div className="mb-4">
+                <span className="text-sm text-purple-300 bg-purple-900/30 px-2 py-1 rounded-full">8+ AI Services</span>
+              </div>
               <Link to="/ai-solutions" className="text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                Learn More <ArrowRightIcon className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* Micro SaaS */}
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-pink-500 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <GlobeAltIcon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Micro SaaS</h3>
+              <p className="text-gray-300 mb-6">
+                AI-powered micro SaaS solutions designed to solve specific business 
+                challenges with intelligent automation and optimization.
+              </p>
+              <div className="mb-4">
+                <span className="text-sm text-pink-300 bg-pink-900/30 px-2 py-1 rounded-full">10+ SaaS Apps</span>
+              </div>
+              <Link to="/micro-saas-solutions" className="text-pink-400 hover:text-pink-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                Learn More <ArrowRightIcon className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* IT Solutions */}
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <CpuChipIcon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">IT Solutions</h3>
+              <p className="text-gray-300 mb-6">
+                Comprehensive IT services including cloud migration, DevOps automation, 
+                API management, and modern architecture solutions.
+              </p>
+              <div className="mb-4">
+                <span className="text-sm text-blue-300 bg-blue-900/30 px-2 py-1 rounded-full">8+ IT Services</span>
+              </div>
+              <Link to="/it-solutions" className="text-blue-400 hover:text-blue-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </div>
@@ -109,7 +144,10 @@ export default function HomePage() {
                 Comprehensive security solutions to protect your digital assets, 
                 data, and infrastructure from evolving threats.
               </p>
-              <Link to="/cybersecurity" className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+              <div className="mb-4">
+                <span className="text-sm text-cyan-300 bg-cyan-900/30 px-2 py-1 rounded-full">Enterprise Grade</span>
+              </div>
+              <Link to="/cybersecurity-suite-pro" className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </div>
@@ -124,6 +162,9 @@ export default function HomePage() {
                 Scalable cloud solutions and infrastructure management to optimize 
                 performance and reduce operational costs.
               </p>
+              <div className="mb-4">
+                <span className="text-sm text-green-300 bg-green-900/30 px-2 py-1 rounded-full">Multi-Cloud</span>
+              </div>
               <Link to="/cloud-solutions" className="text-green-400 hover:text-green-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
@@ -139,37 +180,10 @@ export default function HomePage() {
                 Strategic digital transformation services to modernize your business 
                 processes and enhance customer experiences.
               </p>
+              <div className="mb-4">
+                <span className="text-sm text-yellow-300 bg-yellow-900/30 px-2 py-1 rounded-full">End-to-End</span>
+              </div>
               <Link to="/digital-transformation" className="text-yellow-400 hover:text-yellow-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
-                Learn More <ArrowRightIcon className="w-4 h-4" />
-              </Link>
-            </div>
-
-            {/* Micro SaaS */}
-            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-pink-500 transition-all duration-300 hover:transform hover:scale-105">
-              <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <GlobeAltIcon className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Micro SaaS</h3>
-              <p className="text-gray-300 mb-6">
-                Custom micro SaaS solutions designed to solve specific business 
-                challenges with scalable, cost-effective applications.
-              </p>
-              <Link to="/micro-saas" className="text-pink-400 hover:text-pink-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
-                Learn More <ArrowRightIcon className="w-4 h-4" />
-              </Link>
-            </div>
-
-            {/* 5G Solutions */}
-            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-indigo-500 transition-all duration-300 hover:transform hover:scale-105">
-              <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <GlobeAltIcon className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">5G Solutions</h3>
-              <p className="text-gray-300 mb-6">
-                Next-generation 5G technology solutions for enhanced connectivity, 
-                IoT applications, and ultra-low latency services.
-              </p>
-              <Link to="/5g-solutions" className="text-indigo-400 hover:text-indigo-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </div>

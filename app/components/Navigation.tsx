@@ -14,7 +14,10 @@ import {
   ShieldCheckIcon,
   CurrencyDollarIcon,
   CogIcon,
-  ChevronDownIcon
+  ChevronDownIcon,
+  CpuChipIcon,
+  GlobeAltIcon,
+  ServerIcon
 } from '@heroicons/react/24/outline';
 
 const Navigation = () => {
@@ -26,19 +29,62 @@ const Navigation = () => {
     { name: 'Home', href: '/', icon: HomeIcon },
     { name: 'About', href: '/about', icon: InformationCircleIcon },
     { 
+      name: 'AI Solutions', 
+      href: '/ai-solutions', 
+      icon: CpuChipIcon,
+      submenu: [
+        { name: 'AI Chatbots', href: '/ai-chatbot-enterprise' },
+        { name: 'Machine Learning', href: '/ai-machine-learning' },
+        { name: 'Computer Vision', href: '/ai-computer-vision' },
+        { name: 'Predictive Analytics', href: '/ai-predictive-analytics' },
+        { name: 'Voice Assistant', href: '/ai-voice-assistant-pro' },
+        { name: 'Content Generation', href: '/ai-content-generation-pro' },
+        { name: 'Data Analytics', href: '/ai-data-analytics-pro' },
+        { name: 'Personalization Engine', href: '/ai-personalization-engine' }
+      ]
+    },
+    { 
+      name: 'Micro SaaS', 
+      href: '/micro-saas-solutions', 
+      icon: GlobeAltIcon,
+      submenu: [
+        { name: 'AI-Powered CRM', href: '/ai-powered-crm-saas' },
+        { name: 'Smart Inventory', href: '/smart-inventory-optimizer' },
+        { name: 'Social Media Manager', href: '/ai-social-media-scheduler' },
+        { name: 'Email Marketing', href: '/smart-email-marketing-suite' },
+        { name: 'Expense Tracker', href: '/ai-expense-tracker' },
+        { name: 'HR Management', href: '/smart-hr-management' },
+        { name: 'Document Manager', href: '/smart-document-manager' },
+        { name: 'Project Management', href: '/ai-project-management-saas' }
+      ]
+    },
+    { 
+      name: 'IT Solutions', 
+      href: '/it-solutions', 
+      icon: ServerIcon,
+      submenu: [
+        { name: 'Cloud Migration', href: '/cloud-migration-service' },
+        { name: 'DevOps Automation', href: '/devops-automation-suite' },
+        { name: 'API Management', href: '/api-management-platform' },
+        { name: 'Microservices', href: '/microservices-architecture' },
+        { name: 'Data Warehouse', href: '/data-warehouse-solution' },
+        { name: 'Mobile Development', href: '/mobile-app-development' },
+        { name: 'Blockchain', href: '/blockchain-development' },
+        { name: 'IoT Platform', href: '/iot-platform-solution' }
+      ]
+    },
+    { 
       name: 'Services', 
       href: '/services', 
       icon: BriefcaseIcon,
       submenu: [
-        { name: 'AI Solutions', href: '/ai-solutions' },
-        { name: 'Cybersecurity', href: '/cybersecurity' },
+        { name: 'Cybersecurity', href: '/cybersecurity-suite-pro' },
         { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
         { name: 'Digital Transformation', href: '/digital-transformation' },
-        { name: 'Micro SaaS', href: '/micro-saas' },
-        { name: '5G Solutions', href: '/5g-solutions' }
+        { name: '5G Solutions', href: '/5g-solutions' },
+        { name: 'All Services', href: '/services' }
       ]
     },
-    { name: 'Solutions', href: '/solutions', icon: CogIcon },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
     { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
     { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
