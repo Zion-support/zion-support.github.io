@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-ad0b
 import React from 'react';
@@ -1178,6 +1179,9 @@ const MicroSaasPage = () => {
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
                 Discuss Your Needsimport React from 'react';
+=======
+import React from 'react';
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4257
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
@@ -1280,19 +1284,8 @@ import {
   SignalZero,
   SignalHigh,
   SignalMedium,
-  SignalLow as SignalLowIcon,
-  SignalZero as SignalZeroIcon,
-  SignalHigh as SignalHighIcon,
-  SignalMedium as SignalMediumIcon,
-  Wifi as WifiIcon,
-  WifiOff as WifiOffIcon,
-  Battery as BatteryIcon,
-  BatteryLow as BatteryLowIcon,
-  Signal as SignalIcon,
-  SignalLow as SignalLowIcon2,
-  SignalZero as SignalZeroIcon2,
-  SignalHigh as SignalHighIcon2,
-  SignalMedium as SignalMediumIcon2
+  Package,
+  Code
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
@@ -1425,127 +1418,43 @@ const MicroSaasPage = () => {
       color: 'from-violet-500 to-purple-500'
     },
     {
-      id: 'zion-ai-contract-analyzer',
-      name: 'Zion AI Contract Analyzer Pro',
-      description: 'Intelligent contract analysis with risk assessment, clause extraction, and automated compliance checking for legal teams.',
+      id: 'zion-ai-document-analyzer',
+      name: 'Zion AI Document Analyzer',
+      description: 'AI-powered document processing with OCR, data extraction, and compliance monitoring for any document format.',
       icon: <FileText className="w-8 h-8" />,
-      price: 'Starting at $299/month',
-      originalPrice: '$599/month',
-      features: ['Risk Assessment', 'Clause Extraction', 'Compliance Checking', 'Contract Comparison', 'Legal Templates', 'Team Collaboration'],
-      category: 'AI Legal',
-      link: '/zion-ai-contract-analyzer',
-      color: 'from-slate-500 to-gray-500'
-    },
-    {
-      id: 'zion-ai-performance-optimizer',
-      name: 'Zion AI Performance Optimizer',
-      description: 'AI-powered performance monitoring and optimization for websites, applications, and infrastructure with automated recommendations.',
-      icon: <Activity className="w-8 h-8" />,
-      price: 'Starting at $199/month',
-      originalPrice: '$399/month',
-      features: ['Performance Monitoring', 'Automated Optimization', 'Real-time Alerts', 'Performance Reports', 'A/B Testing', 'CDN Integration'],
-      category: 'AI Performance',
-      link: '/zion-ai-performance-optimizer',
-      color: 'from-teal-500 to-cyan-500'
-    },
-    {
-      id: 'zion-ai-customer-churn-predictor',
-      name: 'Zion AI Customer Churn Predictor',
-      description: 'Predict customer churn with machine learning models and automated retention campaigns to improve customer lifetime value.',
-      icon: <TrendingDown className="w-8 h-8" />,
-      price: 'Starting at $249/month',
-      originalPrice: '$499/month',
-      features: ['Churn Prediction', 'Retention Campaigns', 'Customer Scoring', 'Risk Analysis', 'Automated Alerts', 'ROI Tracking'],
-      category: 'AI Analytics',
+      price: 'Starting at $29/month',
+      originalPrice: '$59/month',
+      features: ['OCR Processing', 'Data Extraction', 'Compliance Monitoring', 'Multi-format Support', 'API Integration', 'Automated Reports'],
+      category: 'AI Document',
       popular: true,
-      link: '/zion-ai-customer-churn-predictor',
-      color: 'from-red-500 to-pink-500'
+      link: '/zion-ai-document-analyzer',
+      color: 'from-blue-500 to-cyan-500'
     },
     {
-      id: 'zion-ai-supply-chain-optimizer',
-      name: 'Zion AI Supply Chain Optimizer',
-      description: 'AI-powered supply chain optimization with demand forecasting, route optimization, and supplier risk assessment for logistics.',
-      icon: <Globe className="w-8 h-8" />,
-      price: 'Starting at $349/month',
-      originalPrice: '$699/month',
-      features: ['Demand Forecasting', 'Route Optimization', 'Supplier Risk Assessment', 'Cost Analysis', 'Inventory Management', 'Real-time Tracking'],
-      category: 'AI Supply Chain',
-      link: '/zion-ai-supply-chain-optimizer',
-      color: 'from-indigo-500 to-blue-500'
-    },
-    {
-      id: 'zion-ai-financial-forecaster',
-      name: 'Zion AI Financial Forecaster Pro',
-      description: 'Advanced financial forecasting with machine learning models, scenario planning, and automated financial reporting for CFOs.',
-      icon: <TrendingUp className="w-8 h-8" />,
-      price: 'Starting at $399/month',
-      originalPrice: '$799/month',
-      features: ['Financial Forecasting', 'Scenario Planning', 'Automated Reports', 'Risk Analysis', 'Cash Flow Prediction', 'Investment Analysis'],
-      category: 'AI Finance',
-      popular: true,
-      link: '/zion-ai-financial-forecaster',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      id: 'zion-ai-content-moderator',
-      name: 'Zion AI Content Moderator Pro',
-      description: 'Automated content moderation with AI-powered detection of inappropriate content, spam, and policy violations across platforms.',
-      icon: <Shield className="w-8 h-8" />,
-      price: 'Starting at $179/month',
-      originalPrice: '$359/month',
-      features: ['Content Detection', 'Spam Filtering', 'Policy Violations', 'Automated Actions', 'Custom Rules', 'Analytics Dashboard'],
-      category: 'AI Moderation',
-      link: '/zion-ai-content-moderator',
-      color: 'from-red-500 to-orange-500'
-    },
-    {
-      id: 'zion-ai-translator-pro',
-      name: 'Zion AI Translator Pro',
-      description: 'Advanced AI translation with context awareness, industry-specific terminology, and real-time translation for global businesses.',
-      icon: <Globe className="w-8 h-8" />,
-      price: 'Starting at $149/month',
-      originalPrice: '$299/month',
-      features: ['Context-aware Translation', 'Industry Terminology', 'Real-time Translation', 'Multi-language Support', 'API Integration', 'Quality Assurance'],
-      category: 'AI Translation',
-      link: '/zion-ai-translator-pro',
-      color: 'from-cyan-500 to-teal-500'
-    },
-    {
-      id: 'zion-ai-data-cleaner',
-      name: 'Zion AI Data Cleaner Pro',
-      description: 'Intelligent data cleaning and preprocessing with automated error detection, data validation, and quality improvement for analytics.',
-      icon: <Database className="w-8 h-8" />,
-      price: 'Starting at $199/month',
-      originalPrice: '$399/month',
-      features: ['Automated Data Cleaning', 'Error Detection', 'Data Validation', 'Quality Metrics', 'Data Transformation', 'API Integration'],
-      category: 'AI Data',
-      link: '/zion-ai-data-cleaner',
-      color: 'from-purple-500 to-violet-500'
-    },
-    {
-      id: 'zion-ai-task-scheduler',
-      name: 'Zion AI Task Scheduler Pro',
-      description: 'Intelligent task scheduling and project management with AI-powered resource allocation and deadline optimization for teams.',
+      id: 'zion-ai-project-manager-pro',
+      name: 'Zion AI Project Manager Pro',
+      description: 'AI-powered project management with intelligent task prioritization, resource allocation, and predictive analytics.',
       icon: <Calendar className="w-8 h-8" />,
-      price: 'Starting at $129/month',
-      originalPrice: '$259/month',
-      features: ['AI Task Scheduling', 'Resource Allocation', 'Deadline Optimization', 'Team Collaboration', 'Progress Tracking', 'Automated Reminders'],
-      category: 'AI Productivity',
-      link: '/zion-ai-task-scheduler',
-      color: 'from-orange-500 to-amber-500'
+      price: 'Starting at $49/month',
+      originalPrice: '$99/month',
+      features: ['AI Task Management', 'Resource Allocation', 'Predictive Analytics', 'Team Collaboration', 'Progress Tracking', 'Risk Management'],
+      category: 'AI Project Management',
+      popular: true,
+      link: '/zion-ai-project-manager-pro',
+      color: 'from-purple-500 to-pink-500'
     },
     {
-      id: 'zion-ai-customer-support-pro',
-      name: 'Zion AI Customer Support Pro',
-      description: 'Advanced AI customer support with multi-channel integration, sentiment analysis, and automated ticket routing for support teams.',
-      icon: <Headphones className="w-8 h-8" />,
-      price: 'Starting at $229/month',
-      originalPrice: '$459/month',
-      features: ['Multi-channel Support', 'Sentiment Analysis', 'Automated Routing', 'Knowledge Base', 'Live Chat Integration', 'Performance Analytics'],
-      category: 'AI Support',
+      id: 'zion-ai-cybersecurity-suite-pro',
+      name: 'Zion AI Cybersecurity Suite Pro',
+      description: 'Advanced AI-powered cybersecurity with threat detection, automated incident response, and zero-trust security architecture.',
+      icon: <Shield className="w-8 h-8" />,
+      price: 'Starting at $199/month',
+      originalPrice: '$399/month',
+      features: ['Threat Detection', 'Incident Response', 'Zero-Trust Security', 'Compliance Management', 'Network Monitoring', 'Endpoint Protection'],
+      category: 'AI Cybersecurity',
       popular: true,
-      link: '/zion-ai-customer-support-pro',
-      color: 'from-blue-500 to-indigo-500'
+      link: '/zion-ai-cybersecurity-suite-pro',
+      color: 'from-red-500 to-orange-500'
     }
   ];
 
@@ -1557,14 +1466,9 @@ const MicroSaasPage = () => {
     { name: 'AI Communication', count: microSaasServices.filter(s => s.category.includes('Communication')).length, color: 'from-orange-500 to-red-500' },
     { name: 'AI Development', count: microSaasServices.filter(s => s.category.includes('Development')).length, color: 'from-yellow-500 to-orange-500' },
     { name: 'AI Social Media', count: microSaasServices.filter(s => s.category.includes('Social Media')).length, color: 'from-violet-500 to-purple-500' },
-    { name: 'AI Legal', count: microSaasServices.filter(s => s.category.includes('Legal')).length, color: 'from-slate-500 to-gray-500' },
-    { name: 'AI Performance', count: microSaasServices.filter(s => s.category.includes('Performance')).length, color: 'from-teal-500 to-cyan-500' },
-    { name: 'AI Supply Chain', count: microSaasServices.filter(s => s.category.includes('Supply Chain')).length, color: 'from-indigo-500 to-blue-500' },
-    { name: 'AI Moderation', count: microSaasServices.filter(s => s.category.includes('Moderation')).length, color: 'from-red-500 to-orange-500' },
-    { name: 'AI Translation', count: microSaasServices.filter(s => s.category.includes('Translation')).length, color: 'from-cyan-500 to-teal-500' },
-    { name: 'AI Data', count: microSaasServices.filter(s => s.category.includes('Data')).length, color: 'from-purple-500 to-violet-500' },
-    { name: 'AI Productivity', count: microSaasServices.filter(s => s.category.includes('Productivity')).length, color: 'from-orange-500 to-amber-500' },
-    { name: 'AI Support', count: microSaasServices.filter(s => s.category.includes('Support')).length, color: 'from-blue-500 to-indigo-500' }
+    { name: 'AI Document', count: microSaasServices.filter(s => s.category.includes('Document')).length, color: 'from-blue-500 to-cyan-500' },
+    { name: 'AI Project Management', count: microSaasServices.filter(s => s.category.includes('Project Management')).length, color: 'from-purple-500 to-pink-500' },
+    { name: 'AI Cybersecurity', count: microSaasServices.filter(s => s.category.includes('Cybersecurity')).length, color: 'from-red-500 to-orange-500' }
   ];
 
   const stats = [
@@ -1618,17 +1522,216 @@ const MicroSaasPage = () => {
                 className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
                 Get Started Today
+<<<<<<< HEAD
 =======
                 Start Free Trial
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4257
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
+<<<<<<< HEAD
 =======
 export default MicroSaasPage;
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-ad0b
+=======
+                Watch Demo
+                <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+              </Link>
+            </div>
+            
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center group">
+                  <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    {stat.icon}
+                  </div>
+                  <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Category Filter */}
+        <section className="py-8 px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              {categories.map((category, index) => (
+                <button
+                  key={index}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                    index === 0
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg'
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                  }`}
+                >
+                  {category.name} ({category.count})
+                </button>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                  AI-Powered Business Tools
+                </span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose from our comprehensive suite of micro SAAS solutions designed to automate and optimize your business processes.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {microSaasServices.map((service, index) => (
+                <div
+                  key={index}
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                >
+                  {service.popular && (
+                    <div className="absolute top-4 right-4">
+                      <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-2 py-1 rounded-full">
+                        POPULAR
+                      </span>
+                    </div>
+                  )}
+                  
+                  {/* Animated background effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  
+                  <div className="relative z-10">
+                    <div
+                      className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                    >
+                      {service.icon}
+                    </div>
+                    
+                    <div className="text-center mb-4">
+                      <span className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full border border-cyan-500/30">
+                        {service.category}
+                      </span>
+                    </div>
+                    
+                    <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-300 transition-colors">
+                      {service.name}
+                    </h3>
+                    <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm">
+                      {service.description}
+                    </p>
+                    
+                    {/* Pricing */}
+                    <div className="text-center mb-4">
+                      <div className="flex items-center justify-center space-x-2">
+                        <span className="text-cyan-400 font-bold text-lg">{service.price}</span>
+                        {service.originalPrice && (
+                          <span className="text-gray-500 line-through text-sm">{service.originalPrice}</span>
+                        )}
+                      </div>
+                    </div>
+                    
+                    {/* Features */}
+                    <div className="space-y-2 mb-6">
+                      {service.features.slice(0, 4).map((feature, idx) => (
+                        <div key={idx} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                          <span>{feature}</span>
+                        </div>
+                      ))}
+                      {service.features.length > 4 && (
+                        <div className="text-xs text-cyan-400 text-center">
+                          +{service.features.length - 4} more features
+                        </div>
+                      )}
+                    </div>
+                    
+                    <div className="mt-4 text-center">
+                      <Link
+                        to={service.link}
+                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-all duration-300"
+                      >
+                        Learn More
+                        <ArrowRight className="w-4 h-4 ml-1" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Information Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Join thousands of businesses already using our micro SAAS solutions to drive growth and innovation. 
+                Contact us today for a personalized consultation.
+              </p>
+              
+              {/* Contact Details */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <Mail className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-white font-semibold mb-2">Email</h3>
+                  <p className="text-cyan-400">kleber@ziontechgroup.com</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <Smartphone className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-white font-semibold mb-2">Phone</h3>
+                  <p className="text-cyan-400">+1 302 464 0950</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <Globe className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-white font-semibold mb-2">Address</h3>
+                  <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+                >
+                  Start Your Journey
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  to="/consultation"
+                  className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
+                >
+                  Free Consultation
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default MicroSaasPage;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4257

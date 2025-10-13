@@ -101,6 +101,11 @@ const ZionAIDataCleanerPage = React.lazy(() => import("./app/zion-ai-data-cleane
 const ZionAITaskSchedulerPage = React.lazy(() => import("./app/zion-ai-task-scheduler/page"));
 const ZionAICustomerSupportProPage = React.lazy(() => import("./app/zion-ai-customer-support-pro/page"));
 
+// New Innovative Services
+const ZionAIDocumentAnalyzerPage = React.lazy(() => import("./app/zion-ai-document-analyzer/page"));
+const ZionAIProjectManagerProPage = React.lazy(() => import("./app/zion-ai-project-manager-pro/page"));
+const ZionAICybersecuritySuiteProPage = React.lazy(() => import("./app/zion-ai-cybersecurity-suite-pro/page"));
+
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -225,6 +230,11 @@ function App() {
                             <Route path="/zion-ai-data-cleaner" element={<ZionAIDataCleanerPage />} />
                             <Route path="/zion-ai-task-scheduler" element={<ZionAITaskSchedulerPage />} />
                             <Route path="/zion-ai-customer-support-pro" element={<ZionAICustomerSupportProPage />} />
+
+                            {/* New Innovative Services Routes */}
+                            <Route path="/zion-ai-document-analyzer" element={<ZionAIDocumentAnalyzerPage />} />
+                            <Route path="/zion-ai-project-manager-pro" element={<ZionAIProjectManagerProPage />} />
+                            <Route path="/zion-ai-cybersecurity-suite-pro" element={<ZionAICybersecuritySuiteProPage />} />
                             
                             {/* 404 Route - Must be last */}
                             <Route path="*" element={<NotFoundPage />} />

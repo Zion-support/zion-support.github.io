@@ -6,7 +6,11 @@ import {
   Brain, 
   Shield, 
   Zap, 
+<<<<<<< HEAD
   Globe,
+=======
+  Globe, 
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4257
   ChevronDown,
   ChevronUp
 } from 'lucide-react';
@@ -88,7 +92,10 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
         { name: 'Smart Expense Categorizer', path: '/zion-smart-expense-categorizer' },
         { name: 'AI Voice Assistant Pro', path: '/zion-ai-voice-assistant-pro' },
         { name: 'AI Code Reviewer', path: '/zion-ai-code-reviewer' },
-        { name: 'AI Social Media Manager', path: '/zion-ai-social-media-manager' }
+        { name: 'AI Social Media Manager', path: '/zion-ai-social-media-manager' },
+        { name: 'AI Document Analyzer', path: '/zion-ai-document-analyzer' },
+        { name: 'AI Project Manager Pro', path: '/zion-ai-project-manager-pro' },
+        { name: 'AI Cybersecurity Suite Pro', path: '/zion-ai-cybersecurity-suite-pro' }
       ]
     },
     {
@@ -177,6 +184,7 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                   )}
                 </Link>
                 
+<<<<<<< HEAD
                 {/* Services Dropdown */}
                 {item.hasDropdown && (
                   <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
@@ -215,6 +223,9 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                           View All Services →
                         </Link>
                       </div>                {/* Dropdown Menu */}
+=======
+                {/* Dropdown Menu */}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4257
                 {item.hasDropdown && item.dropdownItems && (
                   <div className="absolute top-full left-0 mt-1 w-64 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                     <div className="py-2">

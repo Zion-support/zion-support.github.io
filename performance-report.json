@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "buildStats": {
     "totalFiles": 18,
     "totalSize": 621614,
@@ -26,10 +27,18 @@
     "jsFiles": 12,
     "jsSize": 561322,
 >>>>>>> cursor/analyze-improve-and-deploy-application-ad0b
+=======
+  "timestamp": "2025-10-13T09:50:05.974Z",
+  "buildStats": {
+    "totalFiles": 17,
+    "totalSize": 700569,
+    "jsFiles": 14,
+    "jsSize": 691687,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4257
     "cssFiles": 1,
     "cssSize": 1811,
-    "imageFiles": 1,
-    "imageSize": 392
+    "imageFiles": 0,
+    "imageSize": 0
   },
   "recommendations": [
     {

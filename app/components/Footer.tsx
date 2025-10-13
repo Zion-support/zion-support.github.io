@@ -51,8 +51,12 @@ const Footer: React.FC = () => {
     { name: "Micro SAAS", path: "/micro-saas" },
     { name: "5G Solutions", path: "/5g-solutions" },
     { name: "Contact", path: "/contact" },
+<<<<<<< HEAD
     { name: "Demo", path: "/demo" },
     { name: "Consultation", path: "/consultation" },    { name: "Blog", path: "/blog" },
+=======
+    { name: "Blog", path: "/blog" },
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4257
     { name: "Tutorials", path: "/tutorials" },
     { name: "Demo", path: "/demo" },
     { name: "Support", path: "/support" },
@@ -60,10 +64,14 @@ const Footer: React.FC = () => {
 
   const aiServices = [
     { name: "AI Analytics", path: "/ai-analytics" },
+<<<<<<< HEAD
     { name: "AI Cybersecurity", path: "/ai-cybersecurity" },
     { name: "AI Content Generation", path: "/ai-content-generation" },
     { name: "AI Customer Support", path: "/ai-customer-support" },
 <<<<<<< HEAD    { name: "AI Content Generation", path: "/ai-content-generation" },
+=======
+    { name: "AI Content Generation", path: "/ai-content-generation" },
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4257
     { name: "AI Customer Support", path: "/ai-customer-support" },
     { name: "AI Cybersecurity", path: "/ai-cybersecurity" },
     { name: "AI Data Analytics", path: "/ai-data-analytics" },
@@ -85,9 +93,13 @@ const Footer: React.FC = () => {
     { name: "AI Voice Assistant Pro", path: "/zion-ai-voice-assistant-pro" },
     { name: "AI Code Reviewer", path: "/zion-ai-code-reviewer" },
     { name: "AI Social Media Manager", path: "/zion-ai-social-media-manager" },
+    { name: "AI Document Analyzer", path: "/zion-ai-document-analyzer" },
+    { name: "AI Project Manager Pro", path: "/zion-ai-project-manager-pro" },
+    { name: "AI Cybersecurity Suite Pro", path: "/zion-ai-cybersecurity-suite-pro" },
   ];
 
   const itServices = [
+<<<<<<< HEAD
 =======
     { name: "AI Data Analytics", path: "/ai-data-analytics" },
     { name: "AI Workflow Automation", path: "/ai-workflow-automation" },
@@ -97,6 +109,8 @@ const Footer: React.FC = () => {
 
   const itServices = [
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4257
     { name: "Cloud Migration", path: "/cloud-migration" },
     { name: "Web Development", path: "/web-development" },
     { name: "DevOps", path: "/devops" },
@@ -120,6 +134,7 @@ const Footer: React.FC = () => {
     { name: "Software Development", path: "/software-development" },
   ];
 
+<<<<<<< HEAD
   const microSaasServices = [
     { name: "Zion Analytics Pro", path: "/zion-ai-analytics-pro" },
     { name: "Zion AI CRM Pro", path: "/zion-ai-crm-pro" },
@@ -140,6 +155,8 @@ const Footer: React.FC = () => {
     { name: "5G Mobile Apps", path: "/5g-mobile-applications" },
   ];
 
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4257
   const stats = [
     { number: "500+", label: "Projects Completed", icon: <Award className="w-5 h-5" /> },
     { number: "10,000+", label: "Happy Clients", icon: <Users className="w-5 h-5" /> },
@@ -163,6 +180,12 @@ const Footer: React.FC = () => {
           ))}
         </div>
 
+<<<<<<< HEAD
+=======
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+          {/* Company Info */}
+          <div className="lg:col-span-2">
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4257
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
@@ -276,6 +299,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD          {/* IT Services */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">IT Services</h3>
@@ -306,6 +330,8 @@ const Footer: React.FC = () => {
                   >
                     <ArrowRight className="w-4 h-4 mr-2" />
 =======
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4257
           {/* 5G Solutions */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">5G Solutions</h3>
@@ -317,11 +343,11 @@ const Footer: React.FC = () => {
                     className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center text-sm"
                   >
                     <ArrowRight className="w-3 h-3 mr-2" />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
                     {service.name}
                   </Link>
                 </li>
               ))}
+<<<<<<< HEAD
             </ul>
           </div>
 
@@ -347,6 +373,9 @@ const Footer: React.FC = () => {
               <div className="flex items-center text-gray-300">
                 <Mail className="w-5 h-5 mr-3 text-cyan-400" />
                 <span>kleber@ziontechgroup.com</span>              <li>
+=======
+              <li>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4257
                 <Link
                   to="/5g-solutions"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
