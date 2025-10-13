@@ -139,7 +139,6 @@ const PerformanceMonitor = () => {
         </button>
       </div>
       
-<<<<<<< HEAD
       {isVisible && (
         <div className="absolute bottom-12 left-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-80">
           <h3 className="text-lg font-semibold mb-4 text-gray-800">Performance Metrics</h3>
@@ -193,14 +192,6 @@ const PerformanceMonitor = () => {
               <p>Green: Good | Yellow: Needs Improvement | Red: Poor</p>
             </div>
           </div>
-=======
-      <div className="space-y-2">
-        <div className="flex justify-between">
-          <span className="text-gray-300">Load Time:</span>
-          <span className={getMetricColor(metrics.loadTime, { good: 2000, needsImprovement: 4000 })}>
-            {formatMetric(metrics.loadTime)}
-          </span>
->>>>>>> cursor/fix-errors-and-merge-to-main-102c
         </div>
         
         <div className="flex justify-between">

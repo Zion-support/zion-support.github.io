@@ -4,7 +4,7 @@ import re
 import glob
 
 def fix_merge_conflicts(file_path):
-    """Fix merge conflicts by keeping the newer version (after =======)"""
+    """Fix merge conflicts in a single file by choosing the HEAD version"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -12,31 +12,25 @@ def fix_merge_conflicts(file_path):
         # Check if file has merge conflicts
         if '<<<<<<< HEAD' not in content:
             return False
-            
-        # Split by merge conflict markers
-        parts = re.split(r'<<<<<<< HEAD.*?=======.*?>>>>>>> .*?\n', content, flags=re.DOTALL)
         
-        if len(parts) < 2:
-            return False
-            
-        # Keep the first part (before first conflict) and the parts after =======
-        fixed_content = parts[0]
+        # Remove merge conflict markers and keep HEAD version
+        # Pattern to match from <<<<<<< HEAD to ======= (keep this part)
+        pattern1 = r'<<<<<<< HEAD\n(.*?)\n=======\n.*?\n>>>>>>> [^\n]+\n'
+        content = re.sub(pattern1, r'\1\n', content, flags=re.DOTALL)
         
-        # Process each conflict section
-        conflict_sections = re.findall(r'<<<<<<< HEAD(.*?)=======(.*?)>>>>>>> .*?\n', content, flags=re.DOTALL)
+        # Pattern to match from ======= to >>>>>>> (remove this part)
+        pattern2 = r'=======\n.*?\n>>>>>>> [^\n]+\n'
+        content = re.sub(pattern2, '', content, flags=re.DOTALL)
         
-        for i, (head_part, new_part) in enumerate(conflict_sections):
-            # Use the newer version (after =======)
-            fixed_content += new_part
-            
-            # Add the part between conflicts if it exists
-            if i + 1 < len(parts):
-                fixed_content += parts[i + 1]
+        # Clean up any remaining merge conflict markers
+        content = re.sub(r'<<<<<<< HEAD\n', '', content)
+        content = re.sub(r'=======\n', '', content)
+        content = re.sub(r'>>>>>>> [^\n]+\n', '', content)
         
-        # Write the fixed content back
+        # Write the cleaned content back
         with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(fixed_content)
-            
+            f.write(content)
+        
         print(f"Fixed merge conflicts in: {file_path}")
         return True
         
@@ -45,12 +39,16 @@ def fix_merge_conflicts(file_path):
         return False
 
 def main():
-    # Find all TypeScript/JavaScript files with merge conflicts
+    # Find all files with merge conflicts
     patterns = [
-        '**/*.tsx',
-        '**/*.ts', 
-        '**/*.jsx',
-        '**/*.js'
+        'app/**/*.tsx',
+        'app/**/*.ts',
+        'app/**/*.js',
+        'app/**/*.jsx',
+        '*.tsx',
+        '*.ts',
+        '*.js',
+        '*.jsx'
     ]
     
     fixed_count = 0

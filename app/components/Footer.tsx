@@ -63,7 +63,7 @@ const Footer = React.memo(() => {
               <li>
                 <Link
                   to="/ai-services"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors font-medium"
                 >
                   AI Services Overview
                 </Link>
@@ -94,10 +94,10 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/ai-customer-service"
+                  to="/ai-customer-support"
                   className="text-gray-400 hover:text-cyan-400 transition-colors"
                 >
-                  AI Customer Service
+                  AI Customer Support
                 </Link>
               </li>
               <li>
@@ -106,6 +106,14 @@ const Footer = React.memo(() => {
                   className="text-gray-400 hover:text-cyan-400 transition-colors"
                 >
                   AI Cybersecurity
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-marketing-automation"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                >
+                  AI Marketing Automation
                 </Link>
               </li>
             </ul>
@@ -166,14 +174,69 @@ const Footer = React.memo(() => {
             </ul>
           </div>
 
+          {/* 5G Solutions */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-purple-400">5G Solutions</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/5g-solutions"
+                  className="text-gray-400 hover:text-purple-400 transition-colors font-medium"
+                >
+                  5G Solutions Overview
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-implementation"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
+                >
+                  5G Implementation
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-edge-computing"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
+                >
+                  5G Edge Computing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-iot-solutions"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
+                >
+                  5G IoT Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-smart-city-solutions"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
+                >
+                  5G Smart Cities
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-private-networks"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
+                >
+                  5G Private Networks
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Micro SAAS */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-purple-400">Micro SAAS</h4>
+            <h4 className="text-lg font-semibold mb-4 text-orange-400">Micro SAAS</h4>
             <ul className="space-y-2">
               <li>
                 <Link
                   to="/zion-analytics-pro"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
                 >
                   Zion Analytics Pro
                 </Link>
@@ -181,7 +244,7 @@ const Footer = React.memo(() => {
               <li>
                 <Link
                   to="/zion-security-shield"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
                 >
                   Zion Security Shield
                 </Link>
@@ -189,7 +252,7 @@ const Footer = React.memo(() => {
               <li>
                 <Link
                   to="/zion-cloud-vault"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
                 >
                   Zion Cloud Vault
                 </Link>
@@ -197,7 +260,7 @@ const Footer = React.memo(() => {
               <li>
                 <Link
                   to="/zion-content-studio"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
                 >
                   Zion Content Studio
                 </Link>
@@ -205,7 +268,7 @@ const Footer = React.memo(() => {
               <li>
                 <Link
                   to="/zion-data-sync"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
                 >
                   Zion Data Sync
                 </Link>
@@ -213,7 +276,7 @@ const Footer = React.memo(() => {
               <li>
                 <Link
                   to="/zion-project-master"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
                 >
                   Zion Project Master
                 </Link>

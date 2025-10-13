@@ -44,7 +44,6 @@ export default function CloudServices() {
   ];
 
   const benefits = [
-<<<<<<< HEAD
     { icon: <TrendingUp className="w-6 h-6" />, title: 'Cost Optimization', description: 'Reduce IT costs by up to 40% with efficient cloud solutions' },
     { icon: <Zap className="w-6 h-6" />, title: 'Scalability', description: 'Scale resources instantly based on demand' },
     { icon: <Globe className="w-6 h-6" />, title: 'Global Reach', description: 'Access your applications from anywhere in the world' },
@@ -76,77 +75,24 @@ export default function CloudServices() {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our comprehensive cloud solutions. From migration to management, 
               we provide end-to-end cloud services that drive growth and efficiency.
-=======
-    {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Scalability",
-      description: "Scale your infrastructure up or down based on demand"
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Security",
-      description: "Enterprise-grade security with advanced threat protection"
-    },
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Reliability",
-      description: "99.9% uptime guarantee with redundant systems"
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Performance",
-      description: "Optimized performance with global content delivery"
-    }
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>Cloud Services - Zion Tech Group | Enterprise Cloud Solutions</title>
-        <meta name="description" content="Comprehensive cloud services including migration, security, storage, and infrastructure management. Transform your business with our enterprise cloud solutions." />
-        <meta name="keywords" content="cloud services, cloud migration, cloud security, cloud infrastructure, AWS, Azure, Google Cloud" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <div className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Enterprise <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Cloud Services</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with comprehensive cloud solutions designed for scalability, security, and performance.
->>>>>>> cursor/fix-errors-and-merge-to-main-102c
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-<<<<<<< HEAD
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-=======
-                className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105"
->>>>>>> cursor/fix-errors-and-merge-to-main-102c
               >
                 Get Started
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
-<<<<<<< HEAD
                 to="/consultation"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >
                 Free Consultation
-=======
-                to="/demo"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all duration-300 border border-white/20"
-              >
-                View Demo
-                <ArrowRight className="w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-102c
               </Link>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Services Section */}
         <div className="py-16 px-4 sm:px-6 lg:px-8">
@@ -213,7 +159,6 @@ export default function CloudServices() {
         {/* CTA Section */}
         <div className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
             <h2 className="text-4xl font-bold mb-6">Ready to Move to the Cloud?</h2>
             <p className="text-xl text-gray-300 mb-8">
               Let our experts help you migrate to the cloud and unlock new possibilities for your business.
@@ -225,30 +170,6 @@ export default function CloudServices() {
               Start Your Cloud Journey
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
-=======
-            <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h3 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h3>
-              <p className="text-xl text-gray-300 mb-8">
-                Let our cloud experts help you migrate, optimize, and secure your infrastructure.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105"
-                >
-                  Start Your Cloud Journey
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-                <Link
-                  to="/pricing"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all duration-300 border border-white/20"
-                >
-                  View Pricing
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </div>
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-102c
           </div>
         </div>
       </div>
