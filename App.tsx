@@ -25,10 +25,7 @@ import SupportPage from './app/pages/SupportPage';
 import PrivacyPage from './app/pages/PrivacyPage';
 import TermsPage from './app/pages/TermsPage';
 import PricingPage from './app/pages/PricingPage';
-<<<<<<< HEAD
-=======
 import SolutionsPage from './app/pages/SolutionsPage';
->>>>>>> cursor/fix-errors-and-merge-to-main-3f37
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
