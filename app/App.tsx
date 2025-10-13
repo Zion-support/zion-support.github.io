@@ -1,5 +1,10 @@
+import React, { lazy, Suspense } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import { ErrorBoundary } from 'react-error-boundary';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Lazy load pages for better performance;
 const HomePage = lazy(() => import('./page'));
@@ -108,9 +113,10 @@ const AppLoadingSpinner = () => (
   <LoadingSpinner />
 );
 
-const App: React.FC = () => {,
-    return(<ErrorBoundary>)
-      <HelmetProvider />
+const App: React.FC = () => {
+  return (
+    <ErrorBoundary>
+      <HelmetProvider>
         <BrowserRouter>
           <div className="App">
             <PerformanceMonitor />
@@ -120,9 +126,6 @@ const App: React.FC = () => {,
                 {/* Main Pages */}
                 <Route path="/" element={<HomePage />} />
 
-  );
-}
-
 
 
 
@@ -130,4 +133,67 @@ const App: React.FC = () => {,
 
                 {/* Micro SaaS */}
                 <Route path="/micro-saas" element={<MicroSaasPage />} />
+                
+                {/* Additional Routes */}
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/pricing" element={<PricingPage />} />
+                <Route path="/case-studies" element={<CaseStudiesPage />} />
+                <Route path="/blog" element={<BlogPage />} />
+                <Route path="/team" element={<TeamPage />} />
+                <Route path="/careers" element={<CareersPage />} />
+                <Route path="/privacy" element={<PrivacyPage />} />
+                <Route path="/terms" element={<TermsPage />} />
+                <Route path="/cookies" element={<CookiesPage />} />
+                
+                {/* AI Services */}
+                <Route path="/ai-services" element={<AiServicesPage />} />
+                <Route path="/ai-marketing" element={<AiMarketingPage />} />
+                <Route path="/ai-automation" element={<AiAutomationPage />} />
+                <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
+                <Route path="/ai-fintech" element={<AiFintechPage />} />
+                <Route path="/ai-content-generation" element={<AiContentGenerationPage />} />
+                <Route path="/ai-data-analytics" element={<AiDataAnalyticsPage />} />
+                <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
+                <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
+                <Route path="/ai-customer-support" element={<AiCustomerSupportPage />} />
+                <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
+                <Route path="/ai-data-visualization" element={<AiDataVisualizationPage />} />
+                
+                {/* IT Services */}
+                <Route path="/it-services" element={<ItServicesPage />} />
+                <Route path="/it-infrastructure" element={<ItInfrastructurePage />} />
+                <Route path="/it-support" element={<ItSupportPage />} />
+                <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                
+                {/* Support Pages */}
+                <Route path="/docs" element={<DocsPage />} />
+                <Route path="/api-docs" element={<ApiDocsPage />} />
+                <Route path="/support" element={<SupportPage />} />
+                <Route path="/status" element={<StatusPage />} />
+                <Route path="/consultation" element={<ConsultationPage />} />
+                
+                {/* Additional Pages */}
+                <Route path="/faq" element={<FaqPage />} />
+                <Route path="/demo" element={<DemoPage />} />
+                <Route path="/partners" element={<PartnersPage />} />
+                <Route path="/community" element={<CommunityPage />} />
+                <Route path="/tutorials" element={<TutorialsPage />} />
+                <Route path="/compliance" element={<CompliancePage />} />
+                <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
+                <Route path="/enterprise" element={<EnterprisePage />} />
+                <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                <Route path="/edge-computing" element={<EdgeComputingPage />} />
+              </Routes>
+            </Suspense>
+          </div>
+        </BrowserRouter>
+      </HelmetProvider>
+    </ErrorBoundary>
+  );
+};
+
+export default App;
 

@@ -1,3 +1,8 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Brain, BarChart3, TrendingUp, Clock, Shield, Zap, CheckCircle, ArrowRight, Star, Users, Award, Target } from 'lucide-react';
+
+const AiAutomatedReportingPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -314,3 +319,7 @@
         </section>
       </div>
     </>
+  );
+};
+
+export default AiAutomatedReportingPage;
