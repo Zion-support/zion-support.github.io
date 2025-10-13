@@ -62,13 +62,8 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       url: window.location.href,
     };
 
-<<<<<<< HEAD
-    // Log to console for now (can be replaced with external service)
-    console.error('Production error:', errorData);
-=======
     // Log the error data for debugging
     console.error('Error data:', errorData);
->>>>>>> cursor/fix-errors-and-merge-to-main-c834
 
     // Example: Send to your error reporting service
     // You could send this to your backend:
