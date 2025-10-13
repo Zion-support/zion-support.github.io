@@ -90,52 +90,112 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
-      name: "Zion AI Neural Interface",
-      description: "Revolutionary brain-computer interface for thought-to-text conversion and mind control",
-      price: "From $199/month",
-      icon: <Brain className="w-6 h-6" />,
-      link: "/zion-ai-neural-interface",
-      featured: true
-    },
-    {
-      name: "AI Voice Cloning Studio",
-      description: "Professional voice synthesis with 95% accuracy and multi-language support",
+      name: "AI Content Writer Pro",
+      description: "Advanced AI-powered content creation with SEO optimization, plagiarism detection, and multi-language support",
       price: "From $29/month",
-      icon: <Mic className="w-6 h-6" />,
-      link: "/ai-voice-cloning-studio",
-      featured: true
+      icon: <Brain className="w-6 h-6" />,
+      link: "/ai-content-writer-pro",
+      featured: true,
+      category: "Content Creation"
     },
     {
-      name: "AI Quantum Financial Oracle",
-      description: "Quantum-powered financial predictions with 99.7% accuracy for market analysis",
-      price: "From $199/month",
+      name: "Smart CRM Assistant",
+      description: "AI-powered customer relationship management with automated follow-ups, lead scoring, and sales forecasting",
+      price: "From $49/month",
+      icon: <Users className="w-6 h-6" />,
+      link: "/smart-crm-assistant",
+      featured: true,
+      category: "Business Management"
+    },
+    {
+      name: "Expense Tracker AI",
+      description: "Intelligent expense management with receipt scanning, categorization, and automated reporting",
+      price: "From $19/month",
       icon: <BarChart3 className="w-6 h-6" />,
-      link: "/ai-quantum-financial-oracle",
-      featured: true
+      link: "/expense-tracker-ai",
+      featured: true,
+      category: "Finance"
     },
     {
-      name: "AI Space Mission Optimizer",
-      description: "Advanced space mission optimization with 99.9% trajectory accuracy",
-      price: "From $499/month",
+      name: "Social Media Scheduler",
+      description: "Multi-platform social media management with AI-optimized posting times and content suggestions",
+      price: "From $39/month",
       icon: <Globe className="w-6 h-6" />,
-      link: "/ai-space-mission-optimizer",
-      featured: true
+      link: "/social-media-scheduler",
+      featured: true,
+      category: "Marketing"
     },
     {
-      name: "Zion Analytics Pro",
-      description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
-      price: "From $299/month",
-      icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-analytics-pro",
-      featured: false
+      name: "Project Management Hub",
+      description: "Comprehensive project tracking with AI-powered resource allocation and deadline predictions",
+      price: "From $59/month",
+      icon: <Monitor className="w-6 h-6" />,
+      link: "/project-management-hub",
+      featured: false,
+      category: "Productivity"
     },
     {
-      name: "Zion Security Shield",
-      description: "Advanced cybersecurity protection with AI-powered threat detection and automated response",
-      price: "From $499/month",
+      name: "Email Marketing Automation",
+      description: "Advanced email campaigns with AI-driven personalization and automated workflows",
+      price: "From $39/month",
+      icon: <Mail className="w-6 h-6" />,
+      link: "/email-marketing-automation",
+      featured: false,
+      category: "Marketing"
+    },
+    {
+      name: "Inventory Management AI",
+      description: "Smart inventory tracking with demand forecasting and automated reorder suggestions",
+      price: "From $49/month",
       icon: <Shield className="w-6 h-6" />,
-      link: "/zion-security-shield",
-      featured: false
+      link: "/inventory-management-ai",
+      featured: false,
+      category: "Operations"
+    },
+    {
+      name: "Customer Support Bot",
+      description: "24/7 AI chatbot with natural language processing and seamless human handoff",
+      price: "From $79/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/customer-support-bot",
+      featured: false,
+      category: "Customer Service"
+    },
+    {
+      name: "Analytics Dashboard Pro",
+      description: "Real-time business analytics with custom reports and predictive insights",
+      price: "From $69/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/analytics-dashboard-pro",
+      featured: false,
+      category: "Analytics"
+    },
+    {
+      name: "Document Processor AI",
+      description: "Automated document processing with OCR, data extraction, and intelligent categorization",
+      price: "From $89/month",
+      icon: <Monitor className="w-6 h-6" />,
+      link: "/document-processor-ai",
+      featured: false,
+      category: "Document Management"
+    },
+    {
+      name: "Time Tracking Assistant",
+      description: "Smart time tracking with productivity insights and automated timesheet generation",
+      price: "From $29/month",
+      icon: <Monitor className="w-6 h-6" />,
+      link: "/time-tracking-assistant",
+      featured: false,
+      category: "Productivity"
+    },
+    {
+      name: "Lead Generation Engine",
+      description: "AI-powered lead identification and qualification with automated outreach sequences",
+      price: "From $99/month",
+      icon: <Users className="w-6 h-6" />,
+      link: "/lead-generation-engine",
+      featured: false,
+      category: "Sales"
     }
   ];
 
@@ -181,10 +241,30 @@ const HomePage = () => {
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        {/* Animated Background Elements */}
+        {/* Enhanced Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+        </div>
+        
+        {/* Cyber Grid Background */}
+        <div className="absolute inset-0 cyber-grid opacity-20"></div>
+        
+        {/* Floating Particles */}
+        <div className="absolute inset-0">
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-pulse"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 3}s`,
+                animationDuration: `${2 + Math.random() * 3}s`
+              }}
+            />
+          ))}
         </div>
         
         <ResponsiveContainer className="text-center relative z-10">
@@ -194,7 +274,7 @@ const HomePage = () => {
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 neon-glow">
               Welcome to Zion Tech Group
             </span>
           </h1>
@@ -254,7 +334,7 @@ const HomePage = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 cursor-pointer"
+                className="group hologram-card p-6 hover:scale-105 transition-all duration-300 cursor-pointer relative"
               >
                 <Link
                   to={feature.link}
@@ -262,19 +342,19 @@ const HomePage = () => {
                   aria-label={`Learn more about ${feature.title}`}
                 >
                   <div
-                    className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 cyber-pulse`}
                     aria-hidden="true"
                   >
                     {feature.icon}
                   </div>
-                  <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
+                  <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors neon-text">
                     {feature.title}
                   </h3>
                   <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base">
                     {feature.description}
                   </p>
                   <div className="text-center">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs md:text-sm font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs md:text-sm font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 neon-glow">
                       {feature.stats}
                     </span>
                   </div>
@@ -301,32 +381,43 @@ const HomePage = () => {
               <Link
                 key={index}
                 to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                className="group cyber-card p-6 hover:scale-105 transition-all duration-300 relative overflow-hidden"
               >
                 {saas.featured && (
-                  <div className="absolute top-4 right-4">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                  <div className="absolute top-4 right-4 z-10">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold neon-glow">
                       Featured
                     </span>
                   </div>
                 )}
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform cyber-pulse">
                     {saas.icon}
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                    <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors neon-text">
                       {saas.name}
                     </h3>
                     <p className="text-cyan-400 font-medium">{saas.price}</p>
+                    <span className="text-xs text-purple-400 bg-purple-500/20 px-2 py-1 rounded-full">
+                      {saas.category}
+                    </span>
                   </div>
                 </div>
-                <p className="text-gray-300 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed mb-4">
                   {saas.description}
                 </p>
-                <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                <div className="mt-4 flex items-center justify-between">
+                  <div className="flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                  <div className="text-xs text-gray-400">
+                    <span className="inline-flex items-center">
+                      <Star className="w-3 h-3 text-yellow-400 fill-current mr-1" />
+                      4.9/5
+                    </span>
+                  </div>
                 </div>
               </Link>
             ))}

@@ -1,57 +1,129 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Zap, ArrowRight, CheckCircle, Star, Cloud, BarChart3, Users, Clock, DollarSign, Shield, Code, Database, Mail, Settings } from 'lucide-react';
+import { Zap, ArrowRight, CheckCircle, Star, Cloud, BarChart3, Users, Clock, DollarSign, Shield, Code, Database, Mail, Settings, Brain, Globe, FileText } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const MicroSaasPage = () => {
   const services = [
     {
-      id: 'project-management-tool',
-      title: 'Project Management Tool',
-      description: 'Streamline your project workflows with our intelligent project management solution.',
-      icon: Settings,
-      features: ['Task Tracking', 'Team Collaboration', 'Progress Analytics'],
-      price: '$29/month'
+      id: 'ai-content-writer-pro',
+      title: 'AI Content Writer Pro',
+      description: 'Advanced AI-powered content creation with SEO optimization, plagiarism detection, and multi-language support.',
+      icon: Brain,
+      features: ['SEO Optimization', 'Plagiarism Detection', 'Multi-Language', '100+ Templates'],
+      price: 'From $29/month',
+      category: 'Content Creation',
+      featured: true
     },
     {
-      id: 'customer-relationship-manager',
-      title: 'Customer Relationship Manager',
-      description: 'Manage your customer relationships with our AI-powered CRM system.',
+      id: 'smart-crm-assistant',
+      title: 'Smart CRM Assistant',
+      description: 'AI-powered customer relationship management with automated follow-ups, lead scoring, and sales forecasting.',
       icon: Users,
-      features: ['Contact Management', 'Sales Pipeline', 'Customer Analytics'],
-      price: '$39/month'
+      features: ['AI Lead Scoring', 'Automated Follow-ups', 'Sales Forecasting', 'Pipeline Management'],
+      price: 'From $49/month',
+      category: 'Business Management',
+      featured: true
     },
     {
-      id: 'inventory-management-system',
-      title: 'Inventory Management System',
-      description: 'Optimize your inventory with smart tracking and automated reordering.',
-      icon: Database,
-      features: ['Stock Tracking', 'Automated Reordering', 'Analytics Dashboard'],
-      price: '$49/month'
-    },
-    {
-      id: 'financial-reporting-tool',
-      title: 'Financial Reporting Tool',
-      description: 'Generate comprehensive financial reports and insights automatically.',
-      icon: BarChart3,
-      features: ['Automated Reports', 'Financial Analytics', 'Budget Tracking'],
-      price: '$59/month'
-    },
-    {
-      id: 'employee-time-tracker',
-      title: 'Employee Time Tracker',
-      description: 'Track employee time and productivity with our advanced time management system.',
-      icon: Clock,
-      features: ['Time Tracking', 'Productivity Analytics', 'Payroll Integration'],
-      price: '$19/month'
+      id: 'expense-tracker-ai',
+      title: 'Expense Tracker AI',
+      description: 'Intelligent expense management with receipt scanning, categorization, and automated reporting.',
+      icon: DollarSign,
+      features: ['Receipt Scanning', 'Smart Categorization', 'Automated Reports', 'Multi-Currency'],
+      price: 'From $19/month',
+      category: 'Finance',
+      featured: true
     },
     {
       id: 'social-media-scheduler',
       title: 'Social Media Scheduler',
-      description: 'Schedule and manage your social media content across all platforms.',
+      description: 'Multi-platform social media management with AI-optimized posting times and content suggestions.',
+      icon: Globe,
+      features: ['Multi-Platform', 'AI Optimization', 'Content Calendar', 'Analytics'],
+      price: 'From $39/month',
+      category: 'Marketing',
+      featured: false
+    },
+    {
+      id: 'project-management-hub',
+      title: 'Project Management Hub',
+      description: 'Comprehensive project tracking with AI-powered resource allocation and deadline predictions.',
+      icon: Settings,
+      features: ['AI Resource Allocation', 'Deadline Predictions', 'Team Collaboration', 'Progress Analytics'],
+      price: 'From $59/month',
+      category: 'Productivity',
+      featured: false
+    },
+    {
+      id: 'email-marketing-automation',
+      title: 'Email Marketing Automation',
+      description: 'Advanced email campaigns with AI-driven personalization and automated workflows.',
       icon: Mail,
-      features: ['Multi-Platform', 'Content Calendar', 'Analytics'],
-      price: '$25/month'
+      features: ['AI Personalization', 'Automated Workflows', 'A/B Testing', 'Analytics'],
+      price: 'From $39/month',
+      category: 'Marketing',
+      featured: false
+    },
+    {
+      id: 'inventory-management-ai',
+      title: 'Inventory Management AI',
+      description: 'Smart inventory tracking with demand forecasting and automated reorder suggestions.',
+      icon: Database,
+      features: ['Demand Forecasting', 'Automated Reordering', 'Smart Analytics', 'Multi-Location'],
+      price: 'From $49/month',
+      category: 'Operations',
+      featured: false
+    },
+    {
+      id: 'customer-support-bot',
+      title: 'Customer Support Bot',
+      description: '24/7 AI chatbot with natural language processing and seamless human handoff.',
+      icon: Brain,
+      features: ['24/7 Support', 'NLP Processing', 'Human Handoff', 'Multi-Language'],
+      price: 'From $79/month',
+      category: 'Customer Service',
+      featured: false
+    },
+    {
+      id: 'analytics-dashboard-pro',
+      title: 'Analytics Dashboard Pro',
+      description: 'Real-time business analytics with custom reports and predictive insights.',
+      icon: BarChart3,
+      features: ['Real-time Analytics', 'Custom Reports', 'Predictive Insights', 'Data Visualization'],
+      price: 'From $69/month',
+      category: 'Analytics',
+      featured: false
+    },
+    {
+      id: 'document-processor-ai',
+      title: 'Document Processor AI',
+      description: 'Automated document processing with OCR, data extraction, and intelligent categorization.',
+      icon: FileText,
+      features: ['OCR Technology', 'Data Extraction', 'Smart Categorization', 'Batch Processing'],
+      price: 'From $89/month',
+      category: 'Document Management',
+      featured: false
+    },
+    {
+      id: 'time-tracking-assistant',
+      title: 'Time Tracking Assistant',
+      description: 'Smart time tracking with productivity insights and automated timesheet generation.',
+      icon: Clock,
+      features: ['Smart Tracking', 'Productivity Insights', 'Automated Timesheets', 'Team Management'],
+      price: 'From $29/month',
+      category: 'Productivity',
+      featured: false
+    },
+    {
+      id: 'lead-generation-engine',
+      title: 'Lead Generation Engine',
+      description: 'AI-powered lead identification and qualification with automated outreach sequences.',
+      icon: Users,
+      features: ['Lead Identification', 'Qualification AI', 'Automated Outreach', 'CRM Integration'],
+      price: 'From $99/month',
+      category: 'Sales',
+      featured: false
     }
   ];
 
