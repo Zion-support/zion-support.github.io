@@ -188,6 +188,15 @@ const ZionSecurityShieldPage = React.lazy(
 const ZionCloudVaultPage = React.lazy(
   () => import("./app/zion-cloud-vault/page"),
 );
+const ZionAiCrmProPage = React.lazy(
+  () => import("./app/zion-ai-crm-pro/page"),
+);
+const ZionAiMarketingAutomationProPage = React.lazy(
+  () => import("./app/zion-ai-marketing-automation-pro/page"),
+);
+const ZionAiProjectManagerProPage = React.lazy(
+  () => import("./app/zion-ai-project-manager-pro/page"),
+);
 const ZionContentStudioPage = React.lazy(
   () => import("./app/zion-content-studio/page"),
 );
