@@ -2,6 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
+// Components
+import Header from './app/components/Header';
+import Footer from './app/components/Footer';
+import FuturisticBackground from './app/components/FuturisticBackground';
+
 // Page Components
 import HomePage from './app/pages/HomePage';
 import AboutPage from './app/pages/AboutPage';
@@ -15,6 +20,7 @@ import PrivacyPage from './app/pages/PrivacyPage';
 import TermsPage from './app/pages/TermsPage';
 import PricingPage from './app/pages/PricingPage';
 import SolutionsPage from './app/pages/SolutionsPage';
+import AiContentGenerator from './app/pages/AiContentGenerator';
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -47,7 +53,9 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
-        <div className="min-h-screen bg-gray-900">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <FuturisticBackground />
+          <Header />
           <main className="relative z-10" id="main-content" role="main">
             <Routes>
               {/* Main Pages */}
@@ -63,6 +71,7 @@ function App() {
               <Route path="/terms" element={<TermsPage />} />
               <Route path="/pricing" element={<PricingPage />} />
               <Route path="/solutions" element={<SolutionsPage />} />
+              <Route path="/ai-content-generator" element={<AiContentGenerator />} />
               
               {/* Catch all route */}
               <Route path="*" element={
@@ -70,7 +79,7 @@ function App() {
                   <div className="text-center">
                     <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
                     <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
-                    <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    <a href="/" className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">
                       Go Home
                     </a>
                   </div>
@@ -78,6 +87,7 @@ function App() {
               } />
             </Routes>
           </main>
+          <Footer />
         </div>
       </Router>
     </HelmetProvider>
