@@ -1,11 +1,7 @@
-
 import React from 'react';
 
 interface EnhancedAccessibilityProps {
-import React from 'react';
 interface EnhancedaccessibilityProps {
-interface EnhancedAccessibilityProps {
-interface EnhancedAccessibilityProps {
   className?: string;
   children?: React.ReactNode;
 
@@ -15,31 +11,19 @@ export default function EnhancedAccessibility({ className = '', children }: Enha
   return (
     <div className={`${className}`}>
 export default function Enhancedaccessibility({ className = '', children, ...props }: EnhancedaccessibilityProps) {
-  return (
     <div className={`enhancedaccessibility-component ${className}`} {...props}>
-export default function EnhancedAccessibility({
   className = '',
   children
 }: EnhancedAccessibilityProps) {
-  return (
     <div className={`enhanced-accessibility ${className}`}>
       {children}
     </div>
   );
-}
 export default function EnhancedAccessibility({ className = '', children, ...props }: EnhancedAccessibilityProps) {
-    return (
         <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
 import React, { useEffect } from 'react';
 
-interface EnhancedAccessibilityProps {
   children: React.ReactNode;
-  className?: string;
-}
 
 export default function EnhancedAccessibility({ children, className = '' }: EnhancedAccessibilityProps) {
   useEffect(() => {
@@ -51,8 +35,6 @@ export default function EnhancedAccessibility({ children, className = '' }: Enha
         if (mainContent) {
           mainContent.focus();
           mainContent.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
     };
 
     // Add focus management
@@ -60,33 +42,23 @@ export default function EnhancedAccessibility({ children, className = '' }: Enha
       const target = event.target as HTMLElement;
       if (target) {
         target.setAttribute('data-focused', 'true');
-      }
-    };
 
     const handleFocusOut = (event: FocusEvent) => {
-      const target = event.target as HTMLElement;
-      if (target) {
         target.removeAttribute('data-focused');
-      }
-    };
 
     // Add ARIA landmarks
     const addLandmarks = () => {
       const main = document.querySelector('main');
       if (main && !main.getAttribute('role')) {
         main.setAttribute('role', 'main');
-      }
 
       const nav = document.querySelector('nav');
       if (nav && !nav.getAttribute('role')) {
         nav.setAttribute('role', 'navigation');
-      }
 
       const footer = document.querySelector('footer');
       if (footer && !footer.getAttribute('role')) {
         footer.setAttribute('role', 'contentinfo');
-      }
-    };
 
     // Add skip links
     const addSkipLinks = () => {
@@ -99,7 +71,6 @@ export default function EnhancedAccessibility({ children, className = '' }: Enha
       skipLink.style.top = '-9999px';
 
       document.body.insertBefore(skipLink, document.body.firstChild);
-    };
 
     // Initialize accessibility features
     addLandmarks();
@@ -115,22 +86,14 @@ export default function EnhancedAccessibility({ children, className = '' }: Enha
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('focusin', handleFocusIn);
       document.removeEventListener('focusout', handleFocusOut);
-    };
   }, []);
 
   return <div className={className}>{children}</div>;
-  return (
-  return (
 
-    <div className={`enhancedaccessibility-component ${className}`} {...props}>
 
-      {children}
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-export default function Page() {
-  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <Helmet>
         <title>Page - Zion Tech Group</title>
@@ -149,99 +112,31 @@ export default function Page() {
         >
           Contact Us
           <ArrowRight className="ml-2 h-5 w-5" />
-        </Link>
-      </div>
-    </div>
-  );
-}
-import React from 'react';
 
 const EnhancedAccessibility = ({ children }: { children: React.ReactNode }) => {
   return <>{children}</>;
-};
 
 export default EnhancedAccessibility;
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-}
 
 const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  useEffect(() => {
     // Add keyboard navigation enhancements;
-    const handleKeyDown = (event: KeyboardEvent) => {
       // Skip to main content;
-      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-        const mainContent = document.querySelector('main');
-        if (mainContent) {
-          mainContent.focus();
-          mainContent.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-    };
 
     // Add focus management;
-    const handleFocusIn = (event: FocusEvent) => {
-      const target = event.target as HTMLElement;
-      if (target) {
-        target.setAttribute('data-focused', 'true');
-      }
-    };
 
-    const handleFocusOut = (event: FocusEvent) => {
-      const target = event.target as HTMLElement;
-      if (target) {
-        target.removeAttribute('data-focused');
-      }
-    };
 
     // Add ARIA landmarks;
-    const addLandmarks = () => {
-      const main = document.querySelector('main');
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main');
-      }
 
-      const nav = document.querySelector('nav');
-      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation');
-      }
 
-      const footer = document.querySelector('footer');
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo');
-      }
-    };
 
     // Add skip links;
-    const addSkipLinks = () => {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-      skipLink.style.position = 'absolute';
-      skipLink.style.left = '-9999px';
-      skipLink.style.top = '-9999px';
 
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    };
 
     // Initialize accessibility features;
-    addLandmarks();
-    addSkipLinks();
 
     // Add event listeners;
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('focusin', handleFocusIn);
-    document.addEventListener('focusout', handleFocusOut);
 
     // Cleanup;
-export default function EnhancedaccessibilityPage() {
-  return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('focusin', handleFocusIn);
-      document.removeEventListener('focusout', handleFocusOut);
-    };
-  }, []);
-}
 
 }}

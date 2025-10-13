@@ -13,14 +13,8 @@ export default function Futuristictext({ className = '', children, ...props }: F
       {children}
     </div>
   );
-}
 export default function FuturisticText({ className = '', children, ...props }: FuturisticTextProps) {
-    return (
         <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
 const FuturisticText: React.FC<FuturisticTextProps> = ({
 //   children,
   variant = 'body',
@@ -41,23 +35,11 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({
   const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;
 
   return <Component className={classes}>{children}</Component>;
-};
 
 export default FuturisticText;
 
-import React from 'react';
 
 interface FuturistictextProps {
-  className?: string;
-  children?: React.ReactNode;
-}
 
-export default function Futuristictext({ className = '', children, ...props }: FuturistictextProps) {
-  return (
     <div className={`futuristictext-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
-}
 
-}

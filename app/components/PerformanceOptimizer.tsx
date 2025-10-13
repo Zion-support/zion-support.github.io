@@ -2,7 +2,6 @@ import React from 'react';
 
 interface PerformanceOptimizerProps {
 interface PerformanceoptimizerProps {
-interface PerformanceOptimizerProps {
   className?: string;
   children?: React.ReactNode;
 }
@@ -11,9 +10,7 @@ export default function PerformanceOptimizer({ className = '', children }: Perfo
 export default function Performanceoptimizer({ className = '', children, ...props }: PerformanceoptimizerProps) {
   return (
     <div className={`${className}`}>
-interface PerformanceOptimizerProps {
   children: React.ReactNode;
-}
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
 
@@ -34,7 +31,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         link.as = resource.endsWith('.woff2') ? 'font' : 'image';
         if (resource.endsWith('.woff2')) {
           link.crossOrigin = 'anonymous';
-        }
         document.head.appendChild(link);
       });
 
@@ -43,11 +39,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       images.forEach(img => {
         if (!img.loading) {
           img.loading = 'lazy';
-        }
         if (!img.decoding) {
           img.decoding = 'async';
-        }
-      });
 
       // Handle lazy loading for data-src images
       const lazyImages = document.querySelectorAll('img[data-src]');
@@ -56,8 +49,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         if (imageElement.dataset.src) {
           imageElement.src = imageElement.dataset.src;
           imageElement.removeAttribute('data-src');
-        }
-      });
 
       // Add performance monitoring
       if ('performance' in window) {
@@ -66,11 +57,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
           entries.forEach(entry => {
             if (entry.entryType === 'navigation') {
               console.log('Navigation timing:', entry);
-            }
-          });
-        });
         observer.observe({ entryTypes: ['navigation', 'paint'] });
-      }
 
       // Enable service worker for caching
       if ('serviceWorker' in navigator) {
@@ -80,27 +67,17 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
           })
           .catch(error => {
             console.log('Service Worker registration failed:', error);
-          });
-      }
 
       setIsOptimized(true);
     };
 
     // Run optimization after component mount
     const timer = setTimeout(optimizePerformance, 100);
-    return () => clearTimeout(timer);
   }, []);
 
-import React from 'react';
 
-interface PerformanceoptimizerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
 
-export default function Performanceoptimizer({ className = '', children, ...props }: PerformanceoptimizerProps) {
 
-  return (
     <div className="performance-optimizer">
       {children}
       {isOptimized && (
@@ -109,21 +86,8 @@ export default function Performanceoptimizer({ className = '', children, ...prop
           <div id="performance-indicator" data-optimized="true" />
         </div>
       )}
-    </div>
   );
-}
 export default function PerformanceOptimizer({ className = '', children, ...props }: PerformanceOptimizerProps) {
-    return (
         <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
-};
 
-export default PerformanceOptimizer;
-  );
-}
-export default PerformanceOptimizer;
-}
 export default PerformanceOptimizer;

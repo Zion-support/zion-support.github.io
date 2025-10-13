@@ -11,23 +11,15 @@ export default function SEOHead({ className = '', children }: SEOHeadProps) {
       {children}
     </div>
   );
-}
 export default function SEOHead({ className = '', children, ...props }: SEOHeadProps) {
-    return (
         <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
 import { Helmet } from 'react-helmet-async';
-interface SEOHeadProps {
   title: string;
   description: string;
   keywords?: string;
   canonical?: string;
   ogImage?: string;
   ogType?: string;
-}
 
 const SEOHead: React.FC<SEOHeadProps> = ({
   title,
@@ -40,7 +32,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullCanonical = canonical || `https://ziontechgroup.com${window.location.pathname}`;
 
-  return (
     <Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
@@ -65,15 +56,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
     </Helmet>
-  );
 };
 
-import React from 'react';
 
 export default SEOHead;
-  );
-}
 
 export default function Seohead({ className = '', children, ...props }: SeoheadProps) {
-}
 export default $1;

@@ -1,13 +1,10 @@
 import React from 'react';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-import React from 'react';
-import React from 'react';
 
 interface ErrorBoundaryProps {
   className?: string;
   children?: React.ReactNode;
-import React from 'react';
 
 interface Props {
 
@@ -19,43 +16,25 @@ export default function ErrorBoundary({ className = '', children }: ErrorBoundar
   return (
     <div className={`${className}`}>
 export default function ErrorBoundary({ className = '', children, ...props }: ErrorBoundaryProps) {
-  return (
     <div className={`error-boundary-component ${className}`} {...props}>
       {children}
     </div>
   );
-}
-export default function ErrorBoundary({ className = '', children, ...props }: ErrorBoundaryProps) {
-    return (
         <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
 import { useState, useEffect } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-interface Props {
-  children: ReactNode;
 
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {,
-    children: ReactNode;
-  fallback?: ReactNode;
-}
 
 interface State {,
     hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
-}
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
-  }
 
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
@@ -63,7 +42,6 @@ class ErrorBoundary extends Component<Props, State> {
     hasError: true,
       error
     };
-  }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
@@ -77,29 +55,22 @@ class ErrorBoundary extends Component<Props, State> {
     // In production, you would send this to your error monitoring service
     if (process.env.NODE_ENV === 'production') {
       // Example: sendErrorToService(error, errorInfo);
-    }
-  }
 
   handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
 
   handleGoHome = () => {
     window.location.href = '/';
-  };
 
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
-      }
 
-      return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-red-500/20 rounded-lg p-8 text-center">
             <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-red-500/20 flex items-center justify-center">
               <AlertTriangle className="w-8 h-8 text-red-400" />
-            </div>
 
             <h1 className="text-2xl font-bold text-white mb-4">
               Oops! Something went wrong
@@ -120,8 +91,6 @@ class ErrorBoundary extends Component<Props, State> {
                     <div className="mb-2">{this.state.error.toString()}</div>
                     <div className="text-red-400 font-bold">Stack Trace:</div>
                     <div>{this.state.error.stack}</div>
-                  </div>
-                </div>
               </details>
             )}
 
@@ -138,69 +107,36 @@ class ErrorBoundary extends Component<Props, State> {
                 Try Again
               </button>
 
-              <button
                 onClick={this.handleGoHome}
                 className="flex items-center justify-center px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition-colors"
-              <button>
   onClick={this.handleGoHome}>
   className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
-              >
                 <Home className="w-4 h-4 mr-2" />
                 Go Home
-              </button>
-            </div>
-import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-interface Props {
-  children: ReactNode;
-}
 
 interface State {
-  hasError: boolean;
-  error?: Error;
-}
 
 export default class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
-  };
 
   public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-  }
 
   public render() {
-    if (this.state.hasError) {
-      return (
         <div className="min-h-screen flex items-center justify-center bg-gray-900">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
             <p className="text-gray-300 mb-8">
               We're sorry, but something unexpected happened. Please try refreshing the page.
-            </p>
-            <button
               onClick={() => window.location.reload()}
               className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            >
               Refresh Page
-            </button>
-          </div>
-        </div>
-      );
-    }
 
     return this.props.children;
-  }
-}
 
 export default ErrorBoundary;
-  );
-}
-}
 export default function Errorboundary({ className = '', children, ...props }: ErrorboundaryProps) {
-}
 export default $1;

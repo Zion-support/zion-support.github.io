@@ -1,4 +1,3 @@
-
 interface FuturisticBackgroundProps {
 import React from 'react';
 
@@ -13,19 +12,11 @@ export default function Futuristicbackground({ className = '', children, ...prop
   return (
     <div className={`${className}`}>
 export default function FuturisticBackground({ className = '', children, ...props }: FuturisticBackgroundProps) {
-  return (
     <div className={`futuristic-background-component ${className}`} {...props}>
       {children}
     </div>
   );
-}
-export default function FuturisticBackground({ className = '', children, ...props }: FuturisticBackgroundProps) {
-    return (
         <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
 const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -46,10 +37,8 @@ const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
-    };
   }, []);
 
-  return (
     <div className="relative">
       <canvas
         ref={canvasRef}
@@ -57,18 +46,7 @@ const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
         style={{ zIndex: 1 }}
       />
       <div className="relative" style={{ zIndex: 2 }}>
-        {children}
-      </div>
-    </div>
-  );
-};
 
 export default FuturisticBackground;
-  );
-}
 
-}
 
-export default FuturisticBackground;
-}
-export default FuturisticBackground;

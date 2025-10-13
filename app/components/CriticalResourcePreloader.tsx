@@ -1,9 +1,6 @@
 'use client'
 import React from 'react';
-import React from 'react';
 
-'use client'
-'use client'
 // Critical resource preloader component
 
 interface CriticalResourcePreloaderProps {
@@ -23,11 +20,9 @@ const CriticalResourcePreloader = () => {
           as: 'style',
           crossorigin: 'anonymous'
         },
-        {
           href: 'https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2',
           as: 'font',
           type: 'font/woff2',
-          crossorigin: 'anonymous'
         }
       ]
 
@@ -35,20 +30,17 @@ const CriticalResourcePreloader = () => {
       const criticalCSS = [
         '/styles/critical.css',
         '/styles/animations.css'
-      ]
 
       // Critical JavaScript
       const criticalJS = [
         '/scripts/performance.js',
         '/scripts/analytics.js'
-      ]
 
       // Critical images
       const criticalImages = [
         '/images/logo.svg',
         '/images/hero-bg.webp',
         '/images/cta-bg.webp'
-      ]
 
       // Preload fonts
       criticalFonts.forEach(font => {
@@ -63,31 +55,18 @@ const CriticalResourcePreloader = () => {
 
       // Preload CSS
       criticalCSS.forEach(css => {
-        const link = document.createElement('link')
-        link.rel = 'preload'
         link.href = css
         link.as = 'style'
-        document.head.appendChild(link)
-      })
 
       // Preload JavaScript
       criticalJS.forEach(js => {
-        const link = document.createElement('link')
-        link.rel = 'preload'
         link.href = js
         link.as = 'script'
-        document.head.appendChild(link)
-      })
 
       // Preload images
       criticalImages.forEach(img => {
-        const link = document.createElement('link')
-        link.rel = 'preload'
         link.href = img
         link.as = 'image'
-        document.head.appendChild(link)
-      })
-    }
 
     // Preconnect to external domains
     const preconnectDomains = () => {
@@ -97,32 +76,19 @@ const CriticalResourcePreloader = () => {
         'https://www.google-analytics.com',
         'https://www.googletagmanager.com',
         'https://cdn.jsdelivr.net'
-      ]
 
       domains.forEach(domain => {
-        const link = document.createElement('link')
         link.rel = 'preconnect'
         link.href = domain
         link.crossOrigin = 'anonymous'
-        document.head.appendChild(link)
-      })
-    }
 
     // DNS prefetch for additional domains
     const dnsPrefetchDomains = () => {
-      const domains = [
         'https://api.ziontechgroup.com',
         'https://cdn.ziontechgroup.com',
         'https://analytics.ziontechgroup.com'
-      ]
 
-      domains.forEach(domain => {
-        const link = document.createElement('link')
         link.rel = 'dns-prefetch'
-        link.href = domain
-        document.head.appendChild(link)
-      })
-    }
 
     // Initialize preloading
     preloadCriticalResources()
@@ -141,20 +107,14 @@ const CriticalResourcePreloader = () => {
             preloadLink.rel = 'prefetch'
             preloadLink.href = href
             document.head.appendChild(preloadLink)
-          }
-        })
-      })
-    }
 
     // Initialize hover preloading after a delay
     setTimeout(preloadOnHover, 2000)
 
-'use client'
 
   }, [])
 
   return null
-}
 
 export default function CriticalResourcePreloader({ className = '', children }: CriticalResourcePreloaderProps) {
   return (
@@ -162,16 +122,9 @@ export default function CriticalResourcePreloader({ className = '', children }: 
       {children}
     </div>
   );
-}
 
 export default function CriticalResourcePreloader({ className = '', children, ...props }: CriticalResourcePreloaderProps) {
-    return (
         <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
 export default CriticalResourcePreloader
 
 export default function Criticalresourcepreloader({ className = '', children, ...props }: CriticalresourcepreloaderProps) {
-}

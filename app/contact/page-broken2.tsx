@@ -9,14 +9,11 @@ export default function pagebroken2({ className = '', children }: pagebroken2Pro
   return (
     <div className={`${className}`}>
       {children}
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 const Pagebroken2Page = () => {
-export default function PageBroken2Page() {
-  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <Helmet>
         <title>Page - Zion Tech Group</title>
@@ -35,20 +32,8 @@ export default function PageBroken2Page() {
         >
           Contact Us
           <ArrowRight className="ml-2 h-5 w-5" />
-        </Link>
       </div>
-    </div>
   );
-}
-export default function Component() {
-  return (
     <div>
       <h1>Component</h1>
-    </div>
-  );
-}
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 
-}

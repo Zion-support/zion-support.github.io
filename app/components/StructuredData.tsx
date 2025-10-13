@@ -1,5 +1,4 @@
 import React from 'react';
-import React from 'react';
 
 interface StructuredDataProps {
   className?: string;
@@ -12,20 +11,12 @@ export default function StructuredData({ className = '', children }: StructuredD
       {children}
     </div>
   );
-}
 export default function StructuredData({ className = '', children, ...props }: StructuredDataProps) {
-    return (
         <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
 import { Helmet } from 'react-helmet-async';
 
-interface StructuredDataProps {
   type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'FAQPage' | 'BreadcrumbList' | 'SoftwareApplication';
   data: any;
-}
 
 const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
   const getStructuredData = () => {
@@ -56,28 +47,18 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
             "telephone": "+1-302-464-0950",
             "contactType": "customer service",
             "email": "kleber@ziontechgroup.com"
-          },
           "sameAs": data.sameAs || [
             "https://twitter.com/ziontechgroup",
             "https://linkedin.com/company/ziontechgroup"
           ]
-        };
 
       case 'WebSite':
-        return {
-          ...baseData,
-          "name": data.name || "Zion Tech Group",
-          "url": data.url || "https://ziontechgroup.com",
           "potentialAction": data.potentialAction || {
             "@type": "SearchAction",
             "target": "https://ziontechgroup.com/search?q={search_term_string}",
             "query-input": "required name=search_term_string"
-          }
-        };
 
       case 'WebPage':
-        return {
-          ...baseData,
           "name": data.name,
           "description": data.description,
           "url": data.url,
@@ -85,157 +66,61 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
             "@type": "WebSite",
             "name": "Zion Tech Group",
             "url": "https://ziontechgroup.com"
-          },
           "breadcrumb": data.breadcrumb
-        };
 
       case 'Service':
-        return {
-          ...baseData,
-          "name": data.name,
-          "description": data.description,
           "provider": data.provider || {
             "@type": "Organization",
             "name": "Zion Tech Group"
-          },
           "areaServed": data.areaServed || "US",
           "hasOfferCatalog": data.hasOfferCatalog
-        };
 
       case 'FAQPage':
-        return {
-          ...baseData,
           "mainEntity": data.mainEntity || []
-        };
 
       case 'BreadcrumbList':
-        return {
-          ...baseData,
           "itemListElement": data.itemListElement || []
-        };
 
       default:
         return baseData;
-    }
-  };
 
-  return (
     <Helmet>
       <script type="application/ld+json">
         {JSON.stringify(getStructuredData(), null, 2)}
       </script>
     </Helmet>
-  );
-};
 
-import React from 'react';
 
 export default StructuredData;
-  );
-}
 
-import React from 'react';
 
-interface StructuredDataProps {
-  type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'FAQPage' | 'BreadcrumbList' | 'SoftwareApplication';
-  data: any;
-}
 
-const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
-  const getStructuredData = () => {
-    const baseData = {
       '@context': 'https://schema.org',
       '@type': type,
-      ...data
-    };
 
-    return baseData;
-  };
 
-  return (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
         __html: JSON.stringify(getStructuredData(), null, 2)
       }}
     />
-  );
-};
 
-export default StructuredData;
-import React from 'react';
 
-interface StructuredDataProps {
-  type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'FAQPage' | 'BreadcrumbList' | 'SoftwareApplication';
-  data: any;
-}
 
 export default function StructuredData({ type, data }: StructuredDataProps) {
   const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': type,
-    ...data
-  };
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
         __html: JSON.stringify(structuredData, null, 2)
-      }}
-    />
-  );
-}
-import React from 'react';
 
-interface StructuredDataProps {
-  type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'FAQPage' | 'BreadcrumbList' | 'SoftwareApplication';
-  data: any;
-}
 
-export default function StructuredData({ type, data }: StructuredDataProps) {
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': type,
-    ...data
-  };
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify(structuredData, null, 2)
-      }}
-    />
-  );
-}
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-interface StructuredDataProps {
-  type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'FAQPage' | 'BreadcrumbList' | 'SoftwareApplication';
-  data: any;
-}
 
-export default function StructuredData({ type, data }: StructuredDataProps) {
-  const getStructuredData = () => {
-    const baseData = {
-      '@context': 'https://schema.org',
-      '@type': type,
-      ...data
-    };
 
     return JSON.stringify(baseData);
-  };
 
-  return (
-    <Helmet>
-      <script type="application/ld+json">
         {getStructuredData()}
-      </script>
-    </Helmet>
-  );
-}
 
 // Predefined structured data templates
 export const organizationSchema = {
@@ -250,30 +135,22 @@ export const organizationSchema = {
     addressRegion: 'CA',
     postalCode: '94105',
     addressCountry: 'US'
-  },
   contactPoint: {
     '@type': 'ContactPoint',
     telephone: '+1-555-0123',
     contactType: 'customer service',
     availableLanguage: 'English'
-  },
   sameAs: [
     'https://twitter.com/ziontechgroup',
     'https://linkedin.com/company/ziontechgroup',
     'https://github.com/ziontechgroup'
-  ]
-};
 
 export const websiteSchema = {
-  name: 'Zion Tech Group',
-  url: 'https://ziontechgroup.com',
   description: 'Advanced AI and IT Solutions',
   potentialAction: {
     '@type': 'SearchAction',
     target: 'https://ziontechgroup.com/search?q={search_term_string}',
     'query-input': 'required name=search_term_string'
-  }
-};
 
 export const serviceSchema = (serviceName: string, description: string) => ({
   name: serviceName,
@@ -281,37 +158,13 @@ export const serviceSchema = (serviceName: string, description: string) => ({
   provider: {
     '@type': 'Organization',
     name: 'Zion Tech Group'
-  },
   areaServed: 'Worldwide',
   availableChannel: {
     '@type': 'ServiceChannel',
     serviceUrl: 'https://ziontechgroup.com/contact'
-  }
 });
-  type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'FAQPage' | 'BreadcrumbList' | 'SoftwareApplication';
-  data: any;
-}
 
 export default function Structureddata({ className = '', children, ...props }: StructureddataProps) {
-}
-  type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'FAQPage' | 'BreadcrumbList' | 'SoftwareApplication';
-  data: any;
-}
 
-export default function StructuredData({ type, data }: StructuredDataProps) {
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': type,
-    ...data
-  };
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify(structuredData, null, 2)
-      }}
-    />
-  );
-}
 export default $1;

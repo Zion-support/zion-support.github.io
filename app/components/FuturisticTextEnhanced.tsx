@@ -2,8 +2,6 @@ import React from 'react';
 
 interface FuturisticTextEnhancedProps {
 interface FuturistictextenhancedProps {
-interface FuturisticTextEnhancedProps {
-interface FuturisticTextEnhancedProps {
   children: React.ReactNode;
   variant?: 'heading' | 'subheading' | 'body' | 'caption' | 'display';
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl';
@@ -19,11 +17,7 @@ interface FuturisticTextEnhancedProps {
 
 export default function FuturisticTextEnhanced({ className = '', children }: FuturisticTextEnhancedProps) {
 export default function Futuristictextenhanced({ className = '', children, ...props }: FuturistictextenhancedProps) {
-interface FuturisticTextEnhancedProps {
-  children: React.ReactNode;
-  className?: string;
   [key: string]: any;
-}
 
 export default function FuturisticTextEnhanced({ children, className = '', ...props }: FuturisticTextEnhancedProps) {
   return (
@@ -31,15 +25,8 @@ export default function FuturisticTextEnhanced({ children, className = '', ...pr
       {children}
     </div>
   );
-}
 export default function FuturisticTextEnhanced({ className = '', children, ...props }: FuturisticTextEnhancedProps) {
-    return (
         <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
-}
 const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
   children,
   variant = 'body',
@@ -72,7 +59,6 @@ const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
     '4xl': 'text-4xl',
     '5xl': 'text-5xl',
     '6xl': 'text-6xl'
-  };
 
   const colorClasses = {
     primary: 'text-white',
@@ -83,26 +69,22 @@ const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
     cyan: 'text-cyan-400',
     purple: 'text-purple-400',
     pink: 'text-pink-400'
-  };
 
   const gradientClasses = {
     primary: 'text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400',
     cyan: 'text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-600',
     purple: 'text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600',
     pink: 'text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-600'
-  };
 
   const glowClasses = {
     cyan: 'drop-shadow-[0_0_10px_rgba(6,182,212,0.5)]',
     purple: 'drop-shadow-[0_0_10px_rgba(139,92,246,0.5)]',
     pink: 'drop-shadow-[0_0_10px_rgba(236,72,153,0.5)]'
-  };
 
   const neonClasses = {
     cyan: 'text-shadow-[0_0_20px_rgba(6,182,212,0.8)]',
     purple: 'text-shadow-[0_0_20px_rgba(139,92,246,0.8)]',
     pink: 'text-shadow-[0_0_20px_rgba(236,72,153,0.8)]'
-  };
 
   const textVariants = {
     hidden: {
@@ -118,34 +100,23 @@ const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
         duration: duration,
         delay: delay,
         ease: "easeOut",
-      }
-    },
     hover: {
       scale: 1.05,
       transition: { duration: 0.2 }
-    }
-  };
 
   const getTextColor = () => {
     if (gradient) {
       return gradientClasses[color as keyof typeof gradientClasses] || gradientClasses.primary;
-    }
     return colorClasses[color];
-  };
 
   const getGlowEffect = () => {
     if (glow) {
       return glowClasses[color as keyof typeof glowClasses] || glowClasses.cyan;
-    }
     return '';
-  };
 
   const getNeonEffect = () => {
     if (neon) {
       return neonClasses[color as keyof typeof neonClasses] || neonClasses.cyan;
-    }
-    return '';
-  };
 
   const textClasses = `
     ${variantClasses[variant]}
@@ -157,7 +128,6 @@ const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
   `;
 
   if (animated) {
-    return (
       <motion.div
         className={textClasses}
         variants={textVariants}
@@ -166,37 +136,19 @@ const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
         whileHover="hover"
         viewport={{ once: true, margin: "-100px" }}
       >
-        {children}
       </motion.div>
-    );
-  }
 
-import React from 'react';
 
-interface FuturistictextenhancedProps {
-  className?: string;
   children?: React.ReactNode;
-}
 
-export default function Futuristictextenhanced({ className = '', children, ...props }: FuturistictextenhancedProps) {
 
-  return (
     <div className={textClasses}>
-      {children}
 
-    </div>
-  );
-};
 
 export default FuturisticTextEnhanced;
-  );
-}
   return (;
     <div className={`futuristictextenhanced-component ${className}`} {...props}></div>;
-      {children}
 ;
 </div>;
-);
 
-}
 export default $1;

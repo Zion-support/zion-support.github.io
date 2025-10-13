@@ -1,9 +1,7 @@
 import React from 'react';
-import React from 'react';
 
 interface EnhancedErrorBoundaryProps {
 interface EnhancederrorboundaryProps {
-interface EnhancedErrorBoundaryProps {
   className?: string;
   children?: React.ReactNode;
 }
@@ -12,19 +10,12 @@ export default function EnhancedErrorBoundary({ className = '', children }: Enha
   return (
     <div className={`${className}`}>
 export default function Enhancederrorboundary({ className = '', children, ...props }: EnhancederrorboundaryProps) {
-  return (
     <div className={`enhancederrorboundary-component ${className}`} {...props}>
       {children}
     </div>
   );
-}
 export default function EnhancedErrorBoundary({ className = '', children, ...props }: EnhancedErrorBoundaryProps) {
-    return (
         <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import React, { Component, ReactNode, ErrorInfo } from 'react';
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
@@ -32,19 +23,16 @@ import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-}
 
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
-}
 
 export class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
-  }
 
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
@@ -53,11 +41,9 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       hasError: true,
       error
     };
-  }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
-  }
 
   render() {
     if (this.state.hasError) {
@@ -70,24 +56,17 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       error,
       errorInfo
     });
-  }
 
   handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
 
   handleGoHome = () => {
     window.location.href = '/';
-  };
 
-  render() {
-    if (this.state.hasError) {
-      return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-2xl w-full bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 p-8 text-center">
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
               <AlertTriangle className="w-8 h-8 text-red-400" />
-            </div>
 
             <h1 className="text-3xl font-bold text-white mb-4">
               Oops! Something went wrong
@@ -107,7 +86,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
-              </div>
             )}
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -119,14 +97,10 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
                 Try Again
               </button>
 
-              <button
                 onClick={this.handleGoHome}
                 className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
-              >
                 <Home className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform duration-300" />
                 Go Home
-              </button>
-            </div>
 
             <div className="mt-8 text-sm text-gray-400">
               <p>If this problem persists, please contact our support team.</p>
@@ -134,34 +108,19 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
                   kleber@ziontechgroup.com
                 </a>
-              </p>
-            </div>
-          </div>
 
-import React from 'react';
 
-export default function Enhancederrorboundary() {
-  return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             Enhancederrorboundary
-          </h1>
           <p className="text-xl text-gray-600 mb-8">
             This page is under development. Please check back later.
-          </p>
 
-        </div>
-      );
-    }
 
     return this.props.children;
-  }
-}
 
 export default EnhancedErrorBoundary;
-}

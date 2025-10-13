@@ -1,7 +1,6 @@
 import React from 'react';
 
 interface FuturisticCardEnhancedProps {
-interface FuturisticCardEnhancedProps {
   children: React.ReactNode;
   className?: string;
   variant?: 'default' | 'gradient' | 'glass';
@@ -13,14 +12,8 @@ export default function FuturisticCardEnhanced({ className = '', children }: Fut
       {children}
     </div>
   );
-}
 export default function FuturisticCardEnhanced({ className = '', children, ...props }: FuturisticCardEnhancedProps) {
-    return (
         <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
 const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = ({
   children,
   className = '',
@@ -34,25 +27,15 @@ const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = ({
     glass: "bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20",
   };
 
-  return (
     <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
       {/* Glow effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
 
       {/* Content */}
       <div className="relative z-10 p-6">
-        {children}
-      </div>
-    </div>
-  );
-};
 
-import React from 'react';
 
 export default FuturisticCardEnhanced;
-  );
-}
 
 export default function Futuristiccardenhanced({ className = '', children, ...props }: FuturisticcardenhancedProps) {
-}
 export default $1;

@@ -19,15 +19,7 @@ export default function Breadcrumb({ className = '', children, ...props }: Bread
       {children}
     </div>
   );
-}
-export default function Breadcrumb({ className = '', children, ...props }: BreadcrumbProps) {
-    return (
         <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
-  return (
     <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-white/10 py-2 px-4">
       <div className="max-w-7xl mx-auto">
         <ol className="flex items-center space-x-2 text-sm">
@@ -42,7 +34,6 @@ export default function Breadcrumb({ className = '', children, ...props }: Bread
             const isLast = index === pathnames.length - 1;
             const displayName = name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, ' ');
 
-            return (
               <li key={name} className="flex items-center">
                 <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
                 {isLast ? (
@@ -50,23 +41,12 @@ export default function Breadcrumb({ className = '', children, ...props }: Bread
                 ) : (
                   <Link to={routeTo} className="text-cyan-400 hover:text-cyan-300">
                     {displayName}
-                  </Link>
                 )}
-              </li>
-            );
           })}
         </ol>
-      </div>
     </nav>
-  );
 };
 
-import React from 'react';
 
 export default Breadcrumb;
-  );
-}
 
-export default Breadcrumb;
-}
-export default Breadcrumb;

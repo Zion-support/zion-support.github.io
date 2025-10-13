@@ -2,8 +2,6 @@ import React from 'react';
 
 interface ResponsiveGridProps {
 interface ResponsivegridProps {
-interface ResponsiveGridProps {
-interface ResponsiveGridProps {
   children: React.ReactNode;
   className?: string;
   cols?: {
@@ -18,11 +16,7 @@ interface ResponsiveGridProps {
 
 export default function ResponsiveGrid({ className = '', children }: ResponsiveGridProps) {
 export default function Responsivegrid({ className = '', children, ...props }: ResponsivegridProps) {
-interface ResponsiveGridProps {
-  children: React.ReactNode;
-  className?: string;
   [key: string]: any;
-}
 
 export default function ResponsiveGrid({ children, className = '', ...props }: ResponsiveGridProps) {
   return (
@@ -30,15 +24,8 @@ export default function ResponsiveGrid({ children, className = '', ...props }: R
       {children}
     </div>
   );
-}
 export default function ResponsiveGrid({ className = '', children, ...props }: ResponsiveGridProps) {
-    return (
         <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
-}
 const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({
   children,
   className = '',
@@ -50,7 +37,6 @@ const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({
     md: 'gap-6',
     lg: 'gap-8',
     xl: 'gap-12'
-  };
 
   const gridCols = `grid-cols-${cols.default || 1} ${
     cols.sm ? `sm:grid-cols-${cols.sm}` : ''
@@ -58,32 +44,17 @@ const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({
     cols.lg ? `lg:grid-cols-${cols.lg}` : ''
   } ${cols.xl ? `xl:grid-cols-${cols.xl}` : ''}`;
 
-import React from 'react';
 
-interface ResponsivegridProps {
-  className?: string;
   children?: React.ReactNode;
-}
 
-export default function Responsivegrid({ className = '', children, ...props }: ResponsivegridProps) {
 
-  return (
     <div className={`grid ${gridCols} ${gapClasses[gap]} ${className}`}>
-      {children}
 
-    </div>
-  );
-};
 
 export default ResponsiveGrid;
-  );
-}
   return (;
     <div className={`responsivegrid-component ${className}`} {...props}></div>;
-      {children}
 ;
 </div>;
-);
 
-}
 export default $1;

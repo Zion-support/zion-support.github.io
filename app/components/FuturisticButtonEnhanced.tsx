@@ -4,7 +4,6 @@ interface FuturisticButtonEnhancedProps {
 import { motion } from 'framer-motion';
 import { Icon, Icon } from 'lucide-react';
 
-interface FuturisticButtonEnhancedProps {
   children: React.ReactNode;
   onClick?: () => void;
   href?: string;
@@ -26,14 +25,8 @@ export default function FuturisticButtonEnhanced({ className = '', children }: F
       {children}
     </div>
   );
-}
 export default function FuturisticButtonEnhanced({ className = '', children, ...props }: FuturisticButtonEnhancedProps) {
-    return (
         <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
 const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
   children,
   onClick,
@@ -65,12 +58,9 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
       bg-gradient-to-r from-slate-700 to-slate-800 text-white
       hover:from-slate-600 hover:to-slate-700
       ${neon ? 'shadow-lg shadow-slate-500/25 hover:shadow-2xl hover:shadow-slate-500/40' : ''}
-    `,
     outline: `
       border-2 border-cyan-400 text-cyan-400 bg-transparent
       hover:bg-cyan-400 hover:text-slate-900
-      ${neon ? 'shadow-lg shadow-cyan-500/25 hover:shadow-2xl hover:shadow-cyan-500/40' : ''}
-    `,
     ghost: `
       text-cyan-400 bg-transparent
       hover:bg-cyan-400/10 hover:text-cyan-300
@@ -86,12 +76,9 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
       scale: 1.05,
       boxShadow: '0 10px 30px rgba(6, 182, 212, 0.4)',
       transition: { duration: 0.2 }
-    },
     tap: {
       scale: 0.95,
       transition: { duration: 0.1 }
-    }
-  };
 
   const _rippleVariants = {
     initial: { scale: 0, opacity: 1 },
@@ -99,8 +86,6 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
       scale: 4,
       opacity: 0,
       transition: { duration: 0.6, ease: "easeOut" }
-    }
-  };
 
   const content = (
     <div>
@@ -115,41 +100,30 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
           absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300
           bg-gradient-to-r from-${glowColor}-500/20 to-${glowColor}-500/10
         `} />
-      )}
 
       {/* Loading spinner */}
       {loading && (
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-        </div>
-      )}
 
       {/* Content */}
       <div className={`relative z-10 flex items-center ${loading ? 'opacity-0' : 'opacity-100'}`}>
         {Icon && iconPosition === 'left' && (
           <Icon className={`w-4 h-4 ${size === 'sm' ? 'w-3 h-3' : size === 'lg' ? 'w-5 h-5' : size === 'xl' ? 'w-6 h-6' : 'w-4 h-4'} mr-2 group-hover:scale-110 transition-transform duration-200`} />
-        )}
-        {children}
         {Icon && iconPosition === 'right' && (
           <Icon className={`w-4 h-4 ${size === 'sm' ? 'w-3 h-3' : size === 'lg' ? 'w-5 h-5' : size === 'xl' ? 'w-6 h-6' : 'w-4 h-4'} ml-2 group-hover:scale-110 transition-transform duration-200`} />
-        )}
-      </div>
 
       {/* Corner accents */}
       <div className="absolute top-1 right-1 w-1 h-1 bg-cyan-400 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
       <div className="absolute bottom-1 left-1 w-1 h-1 bg-purple-400 rounded-full opacity-40 group-hover:opacity-80 transition-opacity duration-300" />
-</div>
-  );
 
   const buttonClasses = `
     ${baseClasses}
     ${sizeClasses[size]}
     ${variantClasses[variant]}
     ${className}
-  `;
 
   if (href) {
-    return (
       <motion.a
         href={href}
         className={buttonClasses}
@@ -161,30 +135,13 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
       >
         {content}
       </motion.a>
-    );
-  }
 
-  return (
     <motion.button
-      className={buttonClasses}
-      variants={animated ? buttonVariants : undefined}
-      initial="initial"
-      whileHover={!disabled ? "hover" : undefined}
-      whileTap={!disabled ? "tap" : undefined}
-      onClick={onClick}
       disabled={disabled || loading}
-    >
-      {content}
     </motion.button>
-  );
-};
 
-import React from 'react';
 
 export default FuturisticButtonEnhanced;
-  );
-}
 
 export default function Futuristicbuttonenhanced({ className = '', children, ...props }: FuturisticbuttonenhancedProps) {
-}
 export default $1;

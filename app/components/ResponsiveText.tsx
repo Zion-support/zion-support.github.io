@@ -2,8 +2,6 @@ import React from 'react';
 
 interface ResponsiveTextProps {
 interface ResponsivetextProps {
-interface ResponsiveTextProps {
-interface ResponsiveTextProps {
   children: React.ReactNode;
   className?: string;
   size?: {
@@ -19,11 +17,7 @@ interface ResponsiveTextProps {
 
 export default function ResponsiveText({ className = '', children }: ResponsiveTextProps) {
 export default function Responsivetext({ className = '', children, ...props }: ResponsivetextProps) {
-interface ResponsiveTextProps {
-  children: React.ReactNode;
-  className?: string;
   [key: string]: any;
-}
 
 export default function ResponsiveText({ children, className = '', ...props }: ResponsiveTextProps) {
   return (
@@ -41,7 +35,6 @@ const ResponsiveText: React.FC<ResponsiveTextProps> = ({
     medium: 'font-medium',
     semibold: 'font-semibold',
     bold: 'font-bold'
-  };
 
   const colorClasses = {
     primary: 'text-cyan-400',
@@ -50,7 +43,6 @@ const ResponsiveText: React.FC<ResponsiveTextProps> = ({
     muted: 'text-gray-400',
     white: 'text-white',
     gray: 'text-gray-300'
-  };
 
   const sizeClasses = `text-${size.default || 'base'} ${
     size.sm ? `sm:text-${size.sm}` : ''
@@ -58,44 +50,23 @@ const ResponsiveText: React.FC<ResponsiveTextProps> = ({
     size.lg ? `lg:text-${size.lg}` : ''
   } ${size.xl ? `xl:text-${size.xl}` : ''}`;
 
-import React from 'react';
 
-interface ResponsivetextProps {
-  className?: string;
   children?: React.ReactNode;
-}
 
-export default function Responsivetext({ className = '', children, ...props }: ResponsivetextProps) {
 
-  return (
     <span className={`${sizeClasses} ${weightClasses[weight]} ${colorClasses[color]} ${className}`}>
       {children}
     </span>
   );
-}
 export default function ResponsiveText({ className = '', children, ...props }: ResponsiveTextProps) {
-    return (
         <div className="component" {...props}>
-          {children}
         </div>
-      );
-}
-}
-};
 
 export default ResponsiveText;
-  );
-}
   return (;
     <div className={`responsivetext-component ${className}`} {...props}></div>;
-      {children}
 ;
 </div>;
-);
 
-    </div>
-  );
-}
 
-}
 export default $1;

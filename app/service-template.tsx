@@ -2,7 +2,6 @@ import React from 'react';
 
 interface servicetemplateProps {
 
-import React from 'react';
 
 const features = [
     {
@@ -10,17 +9,12 @@ const features = [
       description: "Advanced machine learning models for accurate financial forecasting",
       icon: "Brain"
     },
-    {
       title: "Risk Assessment",
       description: "Comprehensive risk analysis and mitigation strategies",
       icon: "Shield"
-    },
-    {
       title: "Real-time Monitoring",
       description: "Continuous monitoring of financial metrics and KPIs",
       icon: "Activity"
-    },
-    {
       title: "Automated Reporting",
       description: "Generate detailed reports automatically",
       icon: "FileText"
@@ -30,7 +24,6 @@ interface ServiceTemplateProps {
 
   className?: string;
   children?: React.ReactNode;
-}
 
 export default function servicetemplate({ className = '', children }: servicetemplateProps) {
   return (
@@ -38,8 +31,6 @@ export default function servicetemplate({ className = '', children }: servicetem
       {children}
 import { Helmet } from 'react-helmet-async';
 
-export default function ServiceTemplate() {
-  return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>ServiceTemplate - Zion Tech Group</title>
@@ -58,42 +49,20 @@ export default function ServiceTemplate() {
               <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
               <p className="text-gray-300">
                 Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
                 We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
                 Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   );
-}
 
-export default function Component() {
-  return (
     <div>
       <h1>Component</h1>
-    </div>
-  );
-}
 import React from "react";
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 interface ServiceTemplateProps {;
-}
 
 export default function ServiceTemplate({ className = '', children, ...props }: ServiceTemplateProps) {
-}

@@ -1,6 +1,5 @@
 import React from 'react';
 
-import React from 'react';
 
 interface WebVitalsTrackerProps {
 import React, { useEffect } from 'react';
@@ -16,14 +15,7 @@ export default function WebVitalsTracker({ className = '', children }: WebVitals
       {children}
     </div>
   );
-}
 export default function WebVitalsTracker({ className = '', children, ...props }: WebVitalsTrackerProps) {
-    return (
         <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
 
 export default function Webvitalstracker({ className = '', children, ...props }: WebvitalstrackerProps) {
-}

@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface CacheManagerProps {
@@ -14,15 +13,8 @@ export default function Cachemanager({ className = '', children, ...props }: Cac
       {children}
     </div>
   );
-}
 export default function CacheManager({ className = '', children, ...props }: CacheManagerProps) {
-    return (
         <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
-import React from 'react';
 
 const CacheManager: React.FC = () => {
   return null; // This component doesn't need to render anything
@@ -30,4 +22,3 @@ const CacheManager: React.FC = () => {
 
 export default CacheManager;
 
-}

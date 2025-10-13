@@ -6,7 +6,6 @@ import { ArrowRight, ExternalLink } from 'lucide-react';
 
 import { ExternalLink } from 'lucide-react';
 
-interface FuturisticButtonProps {
   href?: string;
   to?: string;
   variant?: 'primary' | 'outline' | 'ghost';
@@ -14,7 +13,6 @@ interface FuturisticButtonProps {
   icon?: React.ReactNode;
   children: React.ReactNode;
   icon?: React.ReactNode;,
-    children: React.ReactNode;
   className?: string;
   onClick?: () => void;
   external?: boolean;
@@ -44,7 +42,6 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     sm: 'px-4 py-2 text-sm',
       md: 'px-6 py-3 text-base',
       lg: 'px-8 py-4 text-lg'
-  };
 
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 
@@ -67,81 +64,16 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
       >
         {content}
       </a>
-    );
-  }
 
   if (to) {
-    return (
       <a>
   href={to}>
-  className={classes}>
   onClick={onClick}
-      >
-        {content}
-      </a>
-    );
-  }
 
-  return (
     <div className={`${className}`}>
 
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 
-  const content = (
     <div>
-      {icon && <span className="mr-2">{icon}</span>}
-      {children}
       {external && <ExternalLink className="w-4 h-4 ml-2" />}
       {!external && !icon && <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />}
 </div>
-  );
-}
-export default function FuturisticButton({ className = '', children, ...props }: FuturisticButtonProps) {
-    return (
-        <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
-
-  if (href) {
-    return (
-      <a
-        href={href}
-        className={classes}
-        onClick={onClick}
-        target={external ? '_blank' : undefined}
-        rel={external ? 'noopener noreferrer' : undefined}
-      >
-        {content}
-      </a>
-    );
-  }
-
-  if (to) {
-    return (
-      <Link
-        to={to}
-        className={classes}
-        onClick={onClick}
-      >
-        {content}
-      </Link>
-    );
-  }
-
-  return (
-    <button>
-  className={classes}>
-  onClick={onClick}
-    >
-      {content}
-    </button>
-  );
-};
-
-export default FuturisticButton;
-  );
-}
-}
-export default $1;

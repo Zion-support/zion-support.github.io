@@ -1,5 +1,4 @@
 import React from 'react';
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {
@@ -11,12 +10,9 @@ export default function SEOOptimizer({ className = '', children }: SEOOptimizerP
   return (
     <div className={`${className}`}>
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Cloud } from 'lucide-react';
 
-interface SEOOptimizerProps {
   children: React.ReactNode;
-}
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
   useEffect(() => {
@@ -46,7 +42,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
           "telephone": "+1-302-464-0950",
           "contactType": "customer service",
           "email": "kleber@ziontechgroup.com"
-        },
         "sameAs": [
           "https://twitter.com/ziontechgroup",
           "https://linkedin.com/company/ziontechgroup"
@@ -56,17 +51,10 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
             "@type": "Offer",
             "name": "AI Solutions",
             "description": "Artificial intelligence and machine learning services"
-          },
-          {
-            "@type": "Offer",
             "name": "Cybersecurity",
             "description": "Advanced cybersecurity solutions and protection"
-          },
-          {
-            "@type": "Offer",
             "name": "Cloud Infrastructure",
             "description": "Cloud computing and infrastructure services"
-          }
         ]
       };
 
@@ -74,7 +62,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
       script.type = 'application/ld+json';
       script.textContent = JSON.stringify(structuredData);
       document.head.appendChild(script);
-    };
 
     // Add meta tags for better social sharing
     const addSocialMetaTags = () => {
@@ -99,9 +86,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
           if (tag.property) meta.setAttribute('property', tag.property);
           meta.setAttribute('content', tag.content);
           document.head.appendChild(meta);
-        }
       });
-    };
 
     // Add performance hints
     const addPerformanceHints = () => {
@@ -110,7 +95,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
         { rel: 'dns-prefetch', href: '//fonts.gstatic.com' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com', crossorigin: 'anonymous' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
-      ];
 
       hints.forEach(hint => {
         const existingHint = document.querySelector(`link[rel="${hint.rel}"][href="${hint.href}"]`);
@@ -120,9 +104,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
           link.href = hint.href;
           if (hint.crossorigin) link.crossOrigin = hint.crossorigin;
           document.head.appendChild(link);
-        }
-      });
-    };
 
     // Initialize SEO optimizations
     addStructuredData();
@@ -130,7 +111,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
     addPerformanceHints();
   }, []);
 
-  return (
     <>
       <Helmet>
         {/* Additional meta tags for better SEO */}
@@ -156,16 +136,10 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
       {children}
     </>
   );
-}
 export default function SEOOptimizer({ className = '', children, ...props }: SEOOptimizerProps) {
-    return (
         <div className="component" {...props}>
-          {children}
 
-import React from 'react';
 
-export default function SEOOptimizer() {
-  return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto text-center">
@@ -176,18 +150,10 @@ export default function SEOOptimizer() {
             This component is under development. Please check back later.
           </p>
         </div>
-      );
-}
-};
 
 export default SEOOptimizer;
-  );
-}
 
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-interface SEOOptimizerProps {
   title?: string;
   description?: string;
   keywords?: string;
@@ -200,8 +166,6 @@ interface SEOOptimizerProps {
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
-  children?: React.ReactNode;
-}
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title,
@@ -218,8 +182,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   twitterImage,
   children
 }) => {
-  return (
-    <Helmet>
       {title && <title>{title}</title>}
       {description && <meta name="description" content={description} />}
       {keywords && <meta name="keywords" content={keywords} />}
@@ -238,152 +200,50 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       {twitterDescription && <meta name="twitter:description" content={twitterDescription} />}
       {twitterImage && <meta name="twitter:image" content={twitterImage} />}
 
-      {children}
-    </Helmet>
-  );
-};
 
-export default SEOOptimizer;
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-interface SEOOptimizerProps {
-  title?: string;
-  description?: string;
   keywords?: string[];
-  canonical?: string;
-  ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  children?: React.ReactNode;
-}
 
-export default function SEOOptimizer({
-  title,
-  description,
   keywords = [],
-  canonical,
-  ogImage,
   ogType = 'website',
-  twitterCard = 'summary_large_image',
-  children
 }: SEOOptimizerProps) {
-  return (
-    <>
-      <Helmet>
-        {title && <title>{title}</title>}
-        {description && <meta name="description" content={description} />}
         {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
-        {canonical && <link rel="canonical" href={canonical} />}
 
-        {/* Open Graph */}
         {title && <meta property="og:title" content={title} />}
         {description && <meta property="og:description" content={description} />}
-        {ogImage && <meta property="og:image" content={ogImage} />}
         <meta property="og:type" content={ogType} />
 
-        {/* Twitter */}
-        <meta name="twitter:card" content={twitterCard} />
         {title && <meta name="twitter:title" content={title} />}
         {description && <meta name="twitter:description" content={description} />}
         {ogImage && <meta name="twitter:image" content={ogImage} />}
-      </Helmet>
-      {children}
-    </>
-  );
-}
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-interface SEOOptimizerProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
   canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  children: React.ReactNode;
-}
 
-export default function SEOOptimizer({
-  title,
-  description,
-  keywords = [],
   canonicalUrl,
-  ogImage,
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  children
-}: SEOOptimizerProps) {
-  return (
-    <>
-      <Helmet>
-        {title && <title>{title}</title>}
-        {description && <meta name="description" content={description} />}
-        {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
 
-        {/* Open Graph */}
-        {title && <meta property="og:title" content={title} />}
-        {description && <meta property="og:description" content={description} />}
-        {ogImage && <meta property="og:image" content={ogImage} />}
-        <meta property="og:type" content={ogType} />
 
-        {/* Twitter */}
-        <meta name="twitter:card" content={twitterCard} />
-        {title && <meta name="twitter:title" content={title} />}
-        {description && <meta name="twitter:description" content={description} />}
-        {ogImage && <meta name="twitter:image" content={ogImage} />}
-      </Helmet>
-      {children}
-    </>
-  );
-}
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-interface SEOOptimizerProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  children?: React.ReactNode;
-}
 
-export default function SEOOptimizer({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered solutions, software development, and IT services. Transform your business with cutting-edge technology.',
   keywords = 'AI solutions, software development, IT services, artificial intelligence, machine learning, cloud computing',
-  canonicalUrl,
   ogImage = '/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  children
-}: SEOOptimizerProps) {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} - Zion Tech Group`;
   const fullCanonicalUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
 
-  return (
-    <>
-      <Helmet>
         <title>{fullTitle}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <link rel="canonical" href={fullCanonicalUrl} />
 
-        {/* Open Graph */}
         <meta property="og:title" content={fullTitle} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={ogImage} />
-        <meta property="og:type" content={ogType} />
         <meta property="og:url" content={fullCanonicalUrl} />
 
-        {/* Twitter */}
-        <meta name="twitter:card" content={twitterCard} />
         <meta name="twitter:title" content={fullTitle} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={ogImage} />
@@ -392,75 +252,20 @@ export default function SEOOptimizer({
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Zion Tech Group" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Helmet>
-      {children}
-    </>
-  );
-}
 const services = [
-    {
       title: "Cloud Migration",
       description: "Seamless migration to cloud infrastructure",
       icon: "Cloud"
-    },
-    {
       title: "Security Solutions",
       description: "Advanced security and compliance",
       icon: "Shield"
-    },
-    {
       title: "Performance Optimization",
       description: "Optimize your cloud performance",
       icon: "Zap"
-    }
   ];interface SEOOptimizerProps {
-  children: React.ReactNode;
-}
 
 export default function Seooptimizer({ className = '', children, ...props }: SeooptimizerProps) {
-}
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  children?: React.ReactNode;
-}
 
-export default function SEOOptimizer({
-  title,
-  description,
-  keywords = [],
-  canonical,
-  ogImage,
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  children
-}: SEOOptimizerProps) {
-  return (
-    <>
-      <Helmet>
-        {title && <title>{title}</title>}
-        {description && <meta name="description" content={description} />}
-        {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
-        {canonical && <link rel="canonical" href={canonical} />}
 
-        {/* Open Graph */}
-        {title && <meta property="og:title" content={title} />}
-        {description && <meta property="og:description" content={description} />}
-        {ogImage && <meta property="og:image" content={ogImage} />}
-        <meta property="og:type" content={ogType} />
 
-        {/* Twitter */}
-        <meta name="twitter:card" content={twitterCard} />
-        {title && <meta name="twitter:title" content={title} />}
-        {description && <meta name="twitter:description" content={description} />}
-        {ogImage && <meta name="twitter:image" content={ogImage} />}
-      </Helmet>
-      {children}
-    </>
-  );
-}
 export default $1;

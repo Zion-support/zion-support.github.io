@@ -22,35 +22,18 @@ export default function layout({ className = '', children }: layoutProps) {
       {children}
     </div>
   );
-}
-export default function Component() {
-  return (
     <div>
       <h1>Component</h1>
-    </div>
-  );
-}
-import React, { useState } from "react";
-import AnalyticsProvider from "./components/AnalyticsProvider";
-import EnhancedPerformanceMonitor from "./components/EnhancedPerformanceMonitor";
 // import LoadingSpinner from "./components/LoadingSpinner"; // Removed unused import
-import ErrorFallback from "./components/ErrorFallback";
 
-import MobileNavigation from "./components/MobileNavigation";
-import ImprovedNavigation from "./components/ImprovedNavigation";
-import ImprovedFooter from "./components/ImprovedFooter";
-import ImprovedSidebar from "./components/ImprovedSidebar";
 import { Helmet } from 'react-helmet-async';
-import React from 'react';
 
 interface LayoutProps {
   children: React.ReactNode;
-}
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
       <HelmetProvider>
         <BrowserRouter>
@@ -62,10 +45,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 name="description"
                 content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses."
               />
-              <meta
                 name="keywords"
                 content="AI solutions, IT services, digital transformation, business automation, technology consulting"
-              />
             </Helmet>
 
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -83,19 +64,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <ImprovedSidebar
                 isOpen={isSidebarOpen}
                 onClose={() => setIsSidebarOpen(false)}
-              />
-            </div>
           </AnalyticsProvider>
         </BrowserRouter>
       </HelmetProvider>
     </ErrorBoundary>
-  );
 };
 
-import React from 'react';
 
 export default Layout;
-  );
-}
 
 export default $1;

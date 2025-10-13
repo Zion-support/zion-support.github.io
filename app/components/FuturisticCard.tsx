@@ -2,8 +2,6 @@ import React from 'react';
 
 interface FuturisticCardProps {
 interface FuturisticcardProps {
-interface FuturisticCardProps {
-interface FuturisticCardProps {
   children: React.ReactNode;
   className?: string;
   variant?: 'default' | 'glass' | 'neon' | 'hologram';
@@ -11,11 +9,7 @@ interface FuturisticCardProps {
 
 export default function FuturisticCard({ className = '', children }: FuturisticCardProps) {
 export default function Futuristiccard({ className = '', children, ...props }: FuturisticcardProps) {
-interface FuturisticCardProps {
-  children: React.ReactNode;
-  className?: string;
   [key: string]: any;
-}
 
 export default function FuturisticCard({ children, className = '', ...props }: FuturisticCardProps) {
   return (
@@ -23,15 +17,8 @@ export default function FuturisticCard({ children, className = '', ...props }: F
       {children}
     </div>
   );
-}
 export default function FuturisticCard({ className = '', children, ...props }: FuturisticCardProps) {
-    return (
         <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
-}
 const FuturisticCard: React.FC<FuturisticCardProps> = ({
   children,
   className = '',
@@ -46,32 +33,17 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
     hologram: "bg-gradient-to-br from-cyan-500/10 to-purple-500/10 border border-cyan-400/30 hover:from-cyan-500/20 hover:to-purple-500/20",
   };
 
-import React from 'react';
 
-interface FuturisticcardProps {
-  className?: string;
   children?: React.ReactNode;
-}
 
-export default function Futuristiccard({ className = '', children, ...props }: FuturisticcardProps) {
 
-  return (
     <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
-      {children}
 
-    </div>
-  );
-};
 
 export default FuturisticCard;
-  );
-}
   return (;
     <div className={`futuristiccard-component ${className}`} {...props}></div>;
-      {children}
 ;
 </div>;
-);
 
-}
 export default $1;
