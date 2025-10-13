@@ -1,20 +1,13 @@
 import {
   Mic, 
   Play, 
-  Pause, 
-  Download, 
-  Upload, 
   Settings, 
-  Star, 
   Users, 
   Zap, 
-  Shield, 
   CheckCircle, 
-  ArrowRight,
   Brain,
   Volume2,
   FileAudio,
-  Clock,
   Globe
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';

@@ -46,6 +46,7 @@ export default function Partners() {
     }
   ];
 
+  const partnershipTiers = [
     {
       name: "Platinum",
       color: "from-gray-400 to-gray-600",
@@ -84,6 +85,43 @@ export default function Partners() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Strategic partnerships that drive innovation and deliver exceptional value to our clients.
             </p>
+          </div>
+          
+          {/* Partners Grid */}
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {partners.map((partner, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="text-center">
+                  <h3 className="text-xl font-semibold text-white mb-2">{partner.name}</h3>
+                  <p className="text-gray-300 mb-4">{partner.description}</p>
+                  <div className="text-sm text-cyan-400">{partner.category}</div>
+                  <div className="text-sm text-purple-400 mt-1">{partner.tier}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Partnership Tiers */}
+          <div className="mt-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-8">
+              Partnership Tiers
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {partnershipTiers.map((tier, index) => (
+                <div key={index} className={`bg-gradient-to-br ${tier.color} rounded-lg p-6`}>
+                  <h3 className="text-2xl font-bold text-white mb-4">{tier.name}</h3>
+                  <p className="text-white/90 mb-4">{tier.requirements}</p>
+                  <ul className="space-y-2">
+                    {tier.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="text-white/80 flex items-center">
+                        <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

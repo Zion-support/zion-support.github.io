@@ -1,4 +1,5 @@
-import { Routes, Route } from 'react-router-dom';
+import React, { useState, useCallback, useEffect, Suspense } from 'react';
+import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
@@ -23,7 +24,7 @@ const ContactPage = React.lazy(() => import("./app/contact/page"));
 const ServicesPage = React.lazy(() => import("./app/services/page"));
 const BlogPage = React.lazy(() => import("./app/blog/page"));
 const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
-const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
+const MicroSaasPage = React.lazy(() => import("./app/micro-saas-services/page"));
 const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
 const DemoPage = React.lazy(() => import("./app/demo/page"));
@@ -134,8 +135,8 @@ function App() {
                       <Router>
                         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                         <FuturisticBackground>
-                          <PerformanceOptimizer />
-                          <Navigation onSidebarToggle={toggleSidebar} />
+                          <PerformanceOptimizer>
+                            <Navigation onSidebarToggle={toggleSidebar} />
                           <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
                           <Breadcrumb />
                             
@@ -244,6 +245,7 @@ function App() {
                             </main>
                             
                             <Footer />
+                          </PerformanceOptimizer>
                           </FuturisticBackground>
                         </div>
                       </Router>
