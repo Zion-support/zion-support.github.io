@@ -30,50 +30,7 @@ const AdvancedPerformanceMonitor = () => {
   const [isRecording, setIsRecording] = useState(false)
 
   useEffect(() => {
-<<<<<<< HEAD
-    // Only run in development
-    if (process.env.NODE_ENV !== 'development') return
 
-    const measurePerformance = () => {
-      // Measure Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        entries.forEach((entry) => {
-          if (entry.entryType === 'paint') {
-            if (entry.name === 'first-contentful-paint') {
-              setMetrics(prev => ({ ...prev, fcp: entry.startTime }))
-            }
-          } else if (entry.entryType === 'largest-contentful-paint') {
-            setMetrics(prev => ({ ...prev, lcp: entry.startTime }))
-          } else if (entry.entryType === 'first-input') {
-            setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime }))
-          } else if (entry.entryType === 'layout-shift') {
-            setMetrics(prev => ({ ...prev, cls: (entry as any).value }))
-          }
-        })
-      })
-
-      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] })
-
-      // Measure TTFB
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-      if (navigationEntry) {
-        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }))
-        }
-
-      // Measure memory usage
-      if ('memory' in performance) {
-        const memory = (performance as any).memory
-        setMetrics(prev => ({ ...prev, memoryUsage: memory.usedJSHeapSize / 1024 / 1024 }))
-      }
-
-      // Measure load time
-      window.addEventListener('load', () => {
-        const loadTime = performance.now()
-        setMetrics(prev => ({ ...prev, loadTime }))
-      }
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
     }
 
     // Report metrics to analytics
@@ -84,32 +41,6 @@ const AdvancedPerformanceMonitor = () => {
     measureWebVitals()
     measureMemory()
     measureLoadTime()
-
-<<<<<<< HEAD
-    // Set up performance observer for additional metrics
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'measure') {
-            }
-        }
-      })
-    </div>
-  )
-}
-
-    try {
-        onCLS((metric: any) => {
-          setMetrics(prev => ({ ...prev, cls: metric.value }))
-          reportMetric('CLS', metric.value)
-        })
-
-        onINP((metric: any) => {
-          setMetrics(prev => ({ ...prev, fid: metric.value }))
-          reportMetric('INP', metric.value)
-        })
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
 
         onFCP((metric: any) => {
           setMetrics(prev => ({ ...prev, fcp: metric.value }))
