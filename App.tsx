@@ -4,27 +4,12 @@ import { HelmetProvider } from 'react-helmet-async';
 
 // Components
 import Navigation from './app/components/Navigation';
-<<<<<<< HEAD
-import Footer from './app/components/Footer';
-import ErrorBoundary from './app/components/ErrorBoundary';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-<<<<<<< HEAD
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-=======
 import Header from './app/components/Header';
 import Footer from './app/components/Footer';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
-=======
-import Footer from './app/components/Footer';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
->>>>>>> cursor/analyze-improve-and-deploy-application-59f5
 
 // Page Components
 import HomePage from './app/page';
