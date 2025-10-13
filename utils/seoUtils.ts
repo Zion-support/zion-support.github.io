@@ -2,20 +2,10 @@ export interface SEOConfig {
   title: string;
   description: string;
   keywords: string[];
-
-
   canonicalUrl?: string;
   ogImage?: string;
-
-  canonicalUrl: string;
-  ogImage?: string;
   ogType?: string;
-
   twitterCard?: string;
-
-  canonical?: string;
-  ogImage?: string;
-
 }
 
 export class SEOUtils {
@@ -46,14 +36,6 @@ export class SEOUtils {
     };
   }
 
-  generateStructuredData() {
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      description: this.config.description,
-      url: this.config.canonicalUrl,
-    };
 
   updateTitle(title: string) {
     document.title = title;
@@ -93,7 +75,7 @@ export class SEOUtils {
     const ogTags = [
       { property: 'og:title', content: this.config.title },
       { property: 'og:description', content: this.config.description },
-      { property: 'og:url', content: this.config.canonicalUrl },
+      { property: 'og:url', content: this.config.canonicalUrl || '' },
       { property: 'og:type', content: this.config.ogType || 'website' },
     ];
 
@@ -130,7 +112,7 @@ export class SEOUtils {
       "@type": "Organization",
       "name": "Zion Tech Group",
       "description": this.config.description,
-      "url": this.config.canonicalUrl,
+      "url": this.config.canonicalUrl || '',
     };
 
     const script = document.createElement('script');
@@ -143,20 +125,13 @@ export class SEOUtils {
     this.updateTitle(this.config.title);
     this.updateMetaDescription(this.config.description);
     this.updateMetaKeywords(this.config.keywords);
-    this.updateCanonicalUrl(this.config.canonicalUrl);
+    if (this.config.canonicalUrl) {
+      this.updateCanonicalUrl(this.config.canonicalUrl);
+    }
     this.updateOpenGraphTags();
     this.updateTwitterCard();
     this.generateStructuredData();
-
   }
-
-      canonical: this.config.canonical,
-      'og:title': this.config.title,
-      'og:description': this.config.description,
-      'og:image': this.config.ogImage,
-    };
-  }
-
 }
 
 export default SEOUtils;
