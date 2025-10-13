@@ -24,6 +24,9 @@ import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
+import OptimizedSEO from "./app/components/OptimizedSEO";
+import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import ErrorHandler from "./app/components/ErrorHandler";
 import { usePerformanceOptimization } from "./hooks/usePerformanceOptimization";
 
@@ -491,7 +494,21 @@ function App() {
                     <PerformanceMonitor />
                     <WebVitalsTracker />
                     <PerformanceEnhancer />
+                    <PerformanceOptimizer 
+                      enableLazyLoading={true}
+                      enablePreloading={true}
+                      enableImageOptimization={true}
+                      enableCodeSplitting={true}
+                      enableCaching={true}
+                    />
+                    <AccessibilityEnhancer
+                      enableKeyboardNavigation={true}
+                      enableScreenReader={true}
+                      enableHighContrast={true}
+                      enableFocusManagement={true}
+                    />
                     <SEOOptimizer />
+                    <OptimizedSEO />
                     <EnhancedSEO />
                   </div>
                 </AnalyticsProvider>
