@@ -4,39 +4,45 @@ import { cn } from '../lib/utils';
 interface FuturisticCardProps {
   children: React.ReactNode;
   className?: string;
-  glowColor?: 'cyan' | 'purple' | 'pink' | 'blue' | 'green' | 'orange' | 'red' | 'yellow';
+  variant?: 'default' | 'glow' | 'neon' | 'glass';
   hover?: boolean;
+  animated?: boolean;
 }
 
-const FuturisticCard = ({ 
-  children, 
-  className, 
-  glowColor = 'cyan',
-  hover = true 
-}: FuturisticCardProps) => {
-  const glowColors = {
-    cyan: 'hover:shadow-cyan-500/25',
-    purple: 'hover:shadow-purple-500/25',
-    pink: 'hover:shadow-pink-500/25',
-    blue: 'hover:shadow-blue-500/25',
-    green: 'hover:shadow-green-500/25',
-    orange: 'hover:shadow-orange-500/25',
-    red: 'hover:shadow-red-500/25',
-    yellow: 'hover:shadow-yellow-500/25',
+const FuturisticCard: React.FC<FuturisticCardProps> = ({
+  children,
+  className,
+  variant = 'default',
+  hover = true,
+  animated = true,
+}) => {
+  const baseClasses = "relative rounded-xl overflow-hidden transition-all duration-300";
+  
+  const variantClasses = {
+    default: "bg-white/10 backdrop-blur-sm border border-white/20",
+    glow: "bg-white/10 backdrop-blur-sm border border-cyan-500/30 shadow-lg shadow-cyan-500/10",
+    neon: "bg-white/5 backdrop-blur-sm border border-cyan-500/50 shadow-lg shadow-cyan-500/20",
+    glass: "bg-white/5 backdrop-blur-md border border-white/10 shadow-xl"
   };
 
+  const hoverClasses = hover ? "hover:bg-white/20 hover:border-white/30 hover:shadow-2xl hover:shadow-cyan-500/20 hover:scale-105" : "";
+  const animatedClasses = animated ? "animate-fade-in-up" : "";
+
   return (
-    <div
-      className={cn(
-        'relative bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 transition-all duration-300',
-        hover && 'hover:bg-white/20 hover:scale-105 hover:shadow-2xl',
-        hover && glowColors[glowColor],
-        'before:absolute before:inset-0 before:rounded-xl before:p-[1px] before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300',
-        'after:absolute after:inset-0 after:rounded-xl after:bg-gradient-to-r after:from-transparent after:via-white/5 after:to-transparent after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300',
-        className
+    <div className={cn(
+      baseClasses,
+      variantClasses[variant],
+      hoverClasses,
+      animatedClasses,
+      className
+    )}>
+      {/* Animated border effect */}
+      {variant === 'neon' && (
+        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 hover:opacity-100 transition-opacity duration-300" />
       )}
-    >
-      <div className="relative z-10">
+      
+      {/* Content */}
+      <div className="relative z-10 p-6">
         {children}
       </div>
     </div>

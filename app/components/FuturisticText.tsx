@@ -1,63 +1,59 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { cn } from '../lib/utils';
 
 interface FuturisticTextProps {
-  text: string;
-  delay?: number;
-  speed?: number;
+  children: React.ReactNode;
+  variant?: 'gradient' | 'neon' | 'glow' | 'default';
+  size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl';
   className?: string;
+  animated?: boolean;
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div';
 }
 
-const FuturisticText = ({ 
-  text, 
-  delay = 0, 
-  speed = 100, 
+const FuturisticText: React.FC<FuturisticTextProps> = ({
+  children,
+  variant = 'default',
+  size = 'base',
   className,
-  as: Component = 'span'
-}: FuturisticTextProps) => {
-  const [displayedText, setDisplayedText] = useState('');
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isComplete, setIsComplete] = useState(false);
+  animated = false,
+  as: Component = 'span',
+}) => {
+  const baseClasses = "font-bold";
+  
+  const sizeClasses = {
+    xs: "text-xs",
+    sm: "text-sm",
+    base: "text-base",
+    lg: "text-lg",
+    xl: "text-xl",
+    '2xl': "text-2xl",
+    '3xl': "text-3xl",
+    '4xl': "text-4xl",
+    '5xl': "text-5xl",
+    '6xl': "text-6xl",
+    '7xl': "text-7xl"
+  };
 
-  useEffect(() => {
-    if (currentIndex < text.length) {
-      const timeout = setTimeout(() => {
-        setDisplayedText(prev => prev + text[currentIndex]);
-        setCurrentIndex(prev => prev + 1);
-      }, speed);
+  const variantClasses = {
+    default: "text-white",
+    gradient: "text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400",
+    neon: "text-cyan-400 neon-glow",
+    glow: "text-cyan-400 drop-shadow-lg drop-shadow-cyan-500/50"
+  };
 
-      return () => clearTimeout(timeout);
-    } else {
-      setIsComplete(true);
-    }
-  }, [currentIndex, text, speed]);
+  const animatedClasses = animated ? "animate-pulse" : "";
 
-  useEffect(() => {
-    if (delay > 0) {
-      const timeout = setTimeout(() => {
-        setCurrentIndex(0);
-        setDisplayedText('');
-        setIsComplete(false);
-      }, delay);
-
-      return () => clearTimeout(timeout);
-    }
-  }, [delay]);
+  const textClasses = cn(
+    baseClasses,
+    sizeClasses[size],
+    variantClasses[variant],
+    animatedClasses,
+    className
+  );
 
   return (
-    <Component
-      className={cn(
-        'relative inline-block',
-        'before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300',
-        'after:absolute after:inset-0 after:bg-gradient-to-r after:from-transparent after:via-cyan-500/20 after:to-transparent after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300',
-        className
-      )}
-    >
-      {displayedText}
-      {!isComplete && (
-        <span className="animate-pulse text-cyan-400">|</span>
-      )}
+    <Component className={textClasses}>
+      {children}
     </Component>
   );
 };
