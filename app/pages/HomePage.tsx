@@ -3,11 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
   ArrowRightIcon, 
-  ShieldCheckIcon, 
-  CloudIcon, 
-  CpuChipIcon,
-  ChartBarIcon,
-  GlobeAltIcon,
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon,

@@ -14,46 +14,34 @@ export default async function handler(req, res) {
   }
 
   try {
-<<<<<<< HEAD
-    // Store quote data (in a real app, save to database)
-    console.log('Quote request received:', { name, email, phone, details, country, service });
+    const { name, email, phone, details, country, service } = req.body;
+    
+    if (!name || !email || !phone) {
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Name, email, and phone are required' }));
+      return;
+    }
 
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true, 
-      message: 'Quote request received successfully',
-      quoteId: `QT-${Date.now()}`
-    }));
-  } catch (error) {
-    console.error('Error processing quote request:', error);
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to process quote request' }));
-=======
-    // Process the quote request
     const quote = {
       id: Date.now().toString(),
       name,
       email,
       phone,
-      details,
-      country: country || 'Not specified',
-      service: service || 'General inquiry',
-      status: 'pending',
-      createdAt: new Date().toISOString()
+      details: details || '',
+      country: country || '',
+      service: service || '',
+      timestamp: new Date().toISOString()
     };
-    
-    // Here you would typically save the quote to a database
-    console.log('Quote request processed:', quote.id);
 
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
-      success: true,
-      message: 'Quote request submitted successfully' 
+      success: true, 
+      message: 'Quote request submitted successfully',
+      quoteId: quote.id
     }));
   } catch (error) {
-    console.error('Quote submission error:', error);
+    console.error('Error processing quote request:', error);
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Internal server error' }));
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
+    res.end(JSON.stringify({ error: 'Failed to process quote request' }));
   }
 }

@@ -2,18 +2,14 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  CpuChipIcon,
   ShieldCheckIcon,
-  CloudIcon,
   ChartBarIcon,
   GlobeAltIcon,
   RocketLaunchIcon,
   ArrowRightIcon,
   CheckCircleIcon,
   PhoneIcon,
-  EnvelopeIcon,
-  CurrencyDollarIcon,
-  StarIcon
+  EnvelopeIcon
 } from '@heroicons/react/24/outline';
 import FuturisticBackground from '../components/FuturisticBackground';
 import NeonButton from '../components/NeonButton';

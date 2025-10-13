@@ -1,57 +1,32 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Right, Circle } from 'lucide-react';
-=======
 import { Right, Circle, MessageCircle, Mail, Phone, BookOpen } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
 
 const SupportPage: React.FC = () => {
   const supportOptions = [
     {
-<<<<<<< HEAD
-      icon: 'Chat',
-=======
       icon: MessageCircle,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'Live Chat',
       description: 'Get instant help from our support team',
       action: 'Start Chat',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-<<<<<<< HEAD
-      icon: 'Phone',
+      icon: Phone,
       title: 'Phone Support',
-=======
-      icon: Mail,
-      title: 'Email Support',
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       description: 'Call us for immediate assistance',
       action: 'Call Now',
       color: 'from-green-500 to-emerald-500'
     },
     {
-<<<<<<< HEAD
-      icon: 'Email',
+      icon: Mail,
       title: 'Email Support',
       description: 'Send us a detailed message',
       action: 'Send Email',
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: 'Book',
-=======
-      icon: Phone,
-      title: 'Phone Support',
-      description: 'Call us for immediate assistance',
-      action: 'Call Now',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
       icon: BookOpen,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'Documentation',
       description: 'Browse our comprehensive guides',
       action: 'View Docs',
