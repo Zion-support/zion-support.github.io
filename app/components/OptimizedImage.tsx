@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 interface OptimizedImageProps {
   src: string;
@@ -12,17 +12,17 @@ interface OptimizedImageProps {
   onError?: () => void;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
+const OptimizedImage = ({
   src,
   alt,
   className = '',
   width,
   height,
   priority = false,
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+',
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB2aWV3Qm94PSIwIDAgMSAxIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmM2Y0ZjYiLz48L3N2Zz4=',
   onLoad,
-  onError,
-}) => {
+  onError
+}: OptimizedImageProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
@@ -58,27 +58,35 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     onError?.();
   };
 
-  const imageSrc = isInView ? src : placeholder;
-
   return (
     <div
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
       style={{ width, height }}
     >
+      {/* Placeholder */}
       {!isLoaded && !hasError && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
-          <div className="w-8 h-8 border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin"></div>
-        </div>
+        <div
+          className="absolute inset-0 bg-gray-200 animate-pulse"
+          style={{
+            backgroundImage: `url(${placeholder})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        />
       )}
-      
-      {hasError ? (
-        <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
+
+      {/* Error State */}
+      {hasError && (
+        <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
           <div className="text-gray-400 text-sm">Failed to load image</div>
         </div>
-      ) : (
+      )}
+
+      {/* Actual Image */}
+      {isInView && !hasError && (
         <img
-          src={imageSrc}
+          src={src}
           alt={alt}
           className={`transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
