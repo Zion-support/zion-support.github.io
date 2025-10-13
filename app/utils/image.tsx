@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-// Image utility component
->>>>>>> cursor/fix-errors-and-merge-to-main-31f8
 
 interface ImageProps {
   className?: string;

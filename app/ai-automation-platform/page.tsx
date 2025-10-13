@@ -1,8 +1,5 @@
 import React from 'react';
-import { BarChart3, Cloud, Users, ArrowRight, Sparkles, CheckCircle, TrendingUp, Settings, Workflow, Target } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
 export default function AiAutomationPlatformPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
