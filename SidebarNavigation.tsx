@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, X } from 'lucide-react;
+import { User, X } from 'lucide-react';
 interface SidebarNavigationProps {
   isOpen: boolean;
   onClose: () => void;

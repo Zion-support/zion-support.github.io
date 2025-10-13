@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { } from 'react-router-dom;
-import { User, Right, Filter } from 'lucide-react;
+import { User, Right, Filter } from 'lucide-react';
 import Footer from '../components/Footer;
 export default function Blog() {
 interface BlogPost {

@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 export default function Page() {
   return (
     <div>
@@ -9,7 +8,6 @@ export default function Page() {
     </div>
   );
 }
-=======
 // Mock components
 const AdvancedErrorBoundary = ({ children, enableRetry, onError }: { 
   children: React.ReactNode; 
@@ -108,4 +106,3 @@ describe('Advanced Components', () => {
     expect(document.title).toBe('Test Title');
   });
 });
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79

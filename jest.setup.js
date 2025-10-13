@@ -6,10 +6,7 @@ jest.mock('react-router-dom', () => {
   const actual = jest.requireActual('react-router-dom');
   return {
     ...actual,
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     useLocation: () => ({
       pathname: '/',
       search: '',
@@ -17,12 +14,9 @@ jest.mock('react-router-dom', () => {
       state: null,
       key: 'default'
     }),
-<<<<<<< HEAD
 
     useNavigate: () => jest.fn(),
-=======
 useNavigate: () => jest.fn(),
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     Link: ({ to, children, ...props }) => React.createElement('a', { href: to, ...props }, children),
     NavLink: ({ to, children, ...props }) => React.createElement('a', { href: to, ...props }, children),
     BrowserRouter: ({ children }) => React.createElement('div', { 'data-testid': 'browser-router' }, children),
@@ -31,10 +25,7 @@ useNavigate: () => jest.fn(),
 });
 
 // Suppress console warnings
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
 const originalError = console.error;
 beforeAll(() => {
   console.error = (...args) => {

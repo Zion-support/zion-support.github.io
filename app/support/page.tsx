@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';'react-helmet-async;
 import { Link } from 'react-router-dom;
-import { Right, Circle } from 'lucide-react;
+import { Right, Circle } from 'lucide-react';
 const SupportPage: React.FC = () => {
   const supportOptions = [{
       icon: 'Chat',';
@@ -30,7 +29,6 @@ const SupportPage: React.FC = () => {
       description: 'Browse our comprehensive guides',';
       action: 'View Docs',';
       color: 'from-orange-500 to-red-500'';
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -65,7 +63,6 @@ icon: Phone,
       description: 'Browse our comprehensive guides',
       action: 'View Docs',
       color: 'from-orange-500 to-red-500'
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     }
   ];
 

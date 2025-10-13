@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';'react-helmet-async;
-import { Play, Right, Circle, Star } from 'lucide-react;
+import { Play, Right, Circle, Star } from 'lucide-react';
 const DemoPage: React.FC = () => {
   const features = [{
       icon: 'Analytics',';
@@ -25,7 +24,6 @@ const DemoPage: React.FC = () => {
       title: 'Team Collaboration',';
       description: 'See how teams work together seamlessly',';
       demo: 'Collaboration Demo'';
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Play, Right, Star, BarChart3, Shield } from 'lucide-react';
@@ -55,7 +53,6 @@ icon: Play,
       title: 'Team Collaboration',
       description: 'See how teams work together seamlessly',
       demo: 'Collaboration Demo'
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     }
   ];
 

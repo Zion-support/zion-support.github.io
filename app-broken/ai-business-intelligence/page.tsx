@@ -18,13 +18,10 @@ export default function AiBusinessIntelligence()   {
           </p>
         </div>
         <div className="text-center">
-<<<<<<< HEAD
 
           <p className="text-gray-300">Coming Soon - AI Business Intelligence Solutions</p>
 
-=======
 <p className="text-gray-300">Coming Soon - AI Business Intelligence Solutions</p>
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
         </div>
       </div>
     </div>

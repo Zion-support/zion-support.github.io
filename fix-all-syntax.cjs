@@ -8,16 +8,17 @@ function fixSyntaxErrors(filePath) {
     
     // Fix common syntax errors
     const fixes = [
-      // Fix unterminated strings with semicolon
-      { pattern: /',\s*;$/gm, replacement: ',' },
-      { pattern: /",\s*;$/gm, replacement: '"' },
-      // Fix missing semicolons in imports
+      // Fix missing quotes in imports
+      { pattern: /from 'lucide-react;$/gm, replacement: "from 'lucide-react';" },
       { pattern: /from 'lucide-react';$/gm, replacement: "from 'lucide-react';" },
       // Fix extra semicolons in object properties
-      { pattern: /:\s*'([^']+)',\s*;$/gm, replacement: ": '$1'," },
-      { pattern: /:\s*"([^"]+)",\s*;$/gm, replacement: ': "$1",' },
+      { pattern: /',\s*;$/gm, replacement: "'," },
+      { pattern: /",\s*;$/gm, replacement: '",' },
       // Fix array syntax
       { pattern: /\[\s*'([^']+)',\s*'([^']+)',\s*'([^']+)',\s*'([^']+)'\s*\]\s*;$/gm, replacement: "['$1', '$2', '$3', '$4']" },
+      // Fix object syntax
+      { pattern: /:\s*'([^']+)',\s*;$/gm, replacement: ": '$1'," },
+      { pattern: /:\s*"([^"]+)",\s*;$/gm, replacement: ': "$1",' },
     ];
     
     for (const fix of fixes) {
@@ -60,6 +61,6 @@ function findAndFixSyntaxErrors(dir) {
   return fixedCount;
 }
 
-console.log('Starting syntax error fixes...');
+console.log('Starting comprehensive syntax error fixes...');
 const fixedCount = findAndFixSyntaxErrors('.');
 console.log(`Fixed syntax errors in ${fixedCount} files.`);

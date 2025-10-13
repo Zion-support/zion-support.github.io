@@ -3,7 +3,7 @@ import { }
   3, 
   Circle,
   Right,
-  } from 'lucide-react;
+  } from 'lucide-react';
 
 ;
 

@@ -7,7 +7,7 @@ interface JobPosition {
 }
   id: number;
 
-import { Right, Circle, } from 'lucide-react;
+import { Right, Circle, } from 'lucide-react';
 
 const PagePage: React.FC = () => {}
   title: string;
@@ -283,14 +283,11 @@ import { Right, Circle, Star, } from 'lucide-react';
                 {departments.map((dept) => (
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Work on cutting-edge AI and IT solutions that transform businesses worldwide.
-<<<<<<< HEAD
 
               Be part of a team that&apos;s shaping the future of AI and IT solutions. We&apos;re looking for passionate individuals who want to make a difference.
 
-=======
 Be part of a team that&apos;s shaping the future of AI and IT solutions. We&apos;re looking for passionate individuals who want to make a difference.
 Be part of a team that's shaping the future of AI and IT solutions. We're looking for passionate individuals who want to make a difference.
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
           {/* Why Work With Us */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div>

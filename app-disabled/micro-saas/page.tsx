@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet-async';
 
 import { } from 'react-router-dom;
 
-import { Circle, Right, Star, 3, } from 'lucide-react;
+import { Circle, Right, Star, 3, } from 'lucide-react';
 
 interface MicroSaasProduct {
   // Add properties here

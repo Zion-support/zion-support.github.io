@@ -86,12 +86,7 @@ img {
   // Create service worker for caching
   const serviceWorkerContent = `
 const CACHE_NAME = 'zion-tech-group-v2';
-const urlsToCache = [
-  '/',
-  '/static/css/main.css',
-  '/static/js/main.js',
-  '/manifest.json'
-];
+const urlsToCache = ['/', '/static/css/main.css', '/static/js/main.js', '/manifest.json']
 
 self.addEventListener('install', (event) => {
   event.waitUntil(

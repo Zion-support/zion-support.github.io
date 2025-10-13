@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';'react-helmet-async;
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react;
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react;
+import { Right, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react';
+import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground;
 const AiServicesPage: React.FC = () => {
   const services = [{
@@ -39,7 +38,6 @@ const AiServicesPage: React.FC = () => {
       title: 'AI Security',';
       description: 'AI-powered security solutions to protect your business and data.',';
       color: 'from-cyan-500 to-blue-500'';
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Right, Star, Zap } from 'lucide-react';
@@ -89,7 +87,6 @@ icon: Shield,
       title: 'AI Security',
       description: 'AI-powered security solutions to protect your business and data.',
       color: 'from-cyan-500 to-blue-500'
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     }
   ];
 
