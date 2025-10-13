@@ -251,39 +251,38 @@ const HomePage = () => {
               From AI-powered analytics to enterprise security, we have everything you need.
             </p>
           </div>
-          <ResponsiveGrid cols={{ default: 1, sm: 2, lg: 4 }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-              <FuturisticCard
+              <div
                 key={index}
-                className="group cursor-pointer"
-                glowColor={feature.color.includes('blue') ? 'cyan' : feature.color.includes('green') ? 'green' : feature.color.includes('purple') ? 'purple' : 'pink'}
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 cursor-pointer"
               >
                 <Link
                   to={feature.link}
-                  className="block p-6"
+                  className="block"
                   aria-label={`Learn more about ${feature.title}`}
                 >
                   <div
-                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                     aria-hidden="true"
                   >
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
+                  <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-300 text-center mb-4 leading-relaxed">
+                  <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base">
                     {feature.description}
                   </p>
                   <div className="text-center">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs md:text-sm font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400">
                       {feature.stats}
                     </span>
                   </div>
                 </Link>
-              </FuturisticCard>
+              </div>
             ))}
-          </ResponsiveGrid>
+          </div>
         </ResponsiveContainer>
       </section>
 
