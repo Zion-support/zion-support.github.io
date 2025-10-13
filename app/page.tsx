@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, TrendingUp, Lock, Clock, DollarSign, CheckCircle, Play, Download, ExternalLink } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import StructuredData from "./components/StructuredData";
-import FuturisticBackground from "./components/FuturisticBackground";
+import FuturisticBackgroundEnhanced from "./components/FuturisticBackgroundEnhanced";
 import FuturisticCard from "./components/FuturisticCard";
 import FuturisticButton from "./components/FuturisticButton";
 import FuturisticText from "./components/FuturisticText";
@@ -13,6 +13,8 @@ import LazyImage from "./components/LazyImage";
 import EnhancedLoadingSpinner from "./components/EnhancedLoadingSpinner";
 import EnhancedAccessibility from "./components/EnhancedAccessibility";
 import PerformanceOptimizer from "./components/PerformanceOptimizer";
+import FuturisticNavigation from "./components/FuturisticNavigation";
+import FuturisticFooter from "./components/FuturisticFooter";
 
 const HomePage = () => {
   const structuredData = {
@@ -178,7 +180,9 @@ const HomePage = () => {
   return (
     <PerformanceOptimizer>
       <EnhancedAccessibility>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        <div className="min-h-screen relative overflow-hidden">
+          <FuturisticBackgroundEnhanced />
+          
           <EnhancedSEO
             title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
             description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
@@ -202,39 +206,40 @@ const HomePage = () => {
             }} 
           />
 
+          <FuturisticNavigation />
+
       {/* Main Content */}
       <main id="main-content" role="main" aria-label="Main content">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
+        <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         
         <ResponsiveContainer className="text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-8 backdrop-blur-sm">
+            <Sparkles className="w-5 h-5 text-cyan-400 mr-3 animate-pulse" />
             <span className="text-cyan-400 text-sm font-medium">#1 Technology Solutions Provider 2024</span>
+            <div className="ml-3 w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
           </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
               Welcome to Zion Tech Group
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-            Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. 
-            Transform your operations with cutting-edge technology and innovative solutions.
+          <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed text-center">
+            Leading provider of <span className="text-cyan-400 font-semibold">AI-powered solutions</span>, 
+            <span className="text-purple-400 font-semibold"> IT services</span>, 
+            <span className="text-pink-400 font-semibold"> micro SAAS</span>, and 
+            <span className="text-yellow-400 font-semibold"> digital transformation</span> for modern businesses.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-20">
             <FuturisticButton
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Sparkles className="w-5 h-5" />}
+              icon={<Sparkles className="w-6 h-6" />}
+              className="text-lg px-8 py-4"
             >
               Get Started Today
             </FuturisticButton>
@@ -242,21 +247,31 @@ const HomePage = () => {
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Monitor className="w-5 h-5" />}
+              icon={<Play className="w-6 h-6" />}
+              className="text-lg px-8 py-4"
             >
               Watch Demo
             </FuturisticButton>
+            <FuturisticButton
+              href="/micro-saas"
+              variant="outline"
+              size="lg"
+              icon={<Download className="w-6 h-6" />}
+              className="text-lg px-8 py-4"
+            >
+              Try Micro SAAS
+            </FuturisticButton>
           </div>
           
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+          {/* Enhanced Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div key={index} className="text-center group bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-cyan-500/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-cyan-500/30">
                   {stat.icon}
                 </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
+                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">{stat.number}</div>
+                <div className="text-gray-300 text-sm md:text-base group-hover:text-white transition-colors">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -456,6 +471,8 @@ const HomePage = () => {
         </div>
       </section>
       </main>
+      
+      <FuturisticFooter />
       </div>
       </EnhancedAccessibility>
     </PerformanceOptimizer>
