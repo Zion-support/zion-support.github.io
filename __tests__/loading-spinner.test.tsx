@@ -6,14 +6,9 @@ import LoadingSpinner from '../app/components/LoadingSpinner';
 describe('LoadingSpinner', () => {
   it('renders with default props', () => {
     render(<LoadingSpinner />);
-<<<<<<< HEAD
-=======
-    
-
-    // Should render the spinner icon but no text by default
+// Should render the spinner icon but no text by default
     expect(screen.getByTestId('loading-spinner')).toBeInTheDocument();
     expect(screen.queryByText('Loading...')).not.toBeInTheDocument();
->>>>>>> cursor/website-audit-and-update-with-deployment-4c61
 
   });
 

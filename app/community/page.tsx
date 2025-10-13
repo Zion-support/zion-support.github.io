@@ -210,11 +210,4 @@ export default function Community() {
       </div>
     </>
   );
-<<<<<<< HEAD
 }
-=======
-}
-
-
-
->>>>>>> cursor/website-audit-and-update-with-deployment-4c61

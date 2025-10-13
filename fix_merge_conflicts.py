@@ -1,43 +1,51 @@
 #!/usr/bin/env python3
+"""
+Script to automatically resolve merge conflicts by choosing the newer version (after =======)
+and removing conflict markers.
+"""
+
 import os
 import re
 import glob
+from pathlib import Path
 
 def fix_merge_conflicts(file_path):
-    """Fix merge conflicts by keeping the newer version (after =======)"""
+    """Fix merge conflicts in a single file."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Check if file has merge conflicts
+        # Skip if no merge conflicts
         if '<<<<<<< HEAD' not in content:
             return False
             
-        # Split by merge conflict markers
-        parts = re.split(r'<<<<<<< HEAD.*?=======.*?>>>>>>> .*?\n', content, flags=re.DOTALL)
+        print(f"Fixing merge conflicts in: {file_path}")
         
-        if len(parts) < 2:
-            return False
-            
-        # Keep the first part (before first conflict) and the parts after =======
-        fixed_content = parts[0]
+        # Pattern to match merge conflict blocks
+        conflict_pattern = r'<<<<<<< HEAD.*?=======(.*?)>>>>>>> [^\n]*'
         
-        # Process each conflict section
-        conflict_sections = re.findall(r'<<<<<<< HEAD(.*?)=======(.*?)>>>>>>> .*?\n', content, flags=re.DOTALL)
+        # Replace conflicts with the content after ======= (the newer version)
+        def replace_conflict(match):
+            newer_content = match.group(1)
+            # Clean up any remaining conflict markers
+            newer_content = re.sub(r'<<<<<<< HEAD.*?=======', '', newer_content, flags=re.DOTALL)
+            newer_content = re.sub(r'>>>>>>> [^\n]*', '', newer_content)
+            return newer_content.strip()
         
-        for i, (head_part, new_part) in enumerate(conflict_sections):
-            # Use the newer version (after =======)
-            fixed_content += new_part
-            
-            # Add the part between conflicts if it exists
-            if i + 1 < len(parts):
-                fixed_content += parts[i + 1]
+        # Apply the fix
+        fixed_content = re.sub(conflict_pattern, replace_conflict, content, flags=re.DOTALL)
+        
+        # Additional cleanup for any remaining markers
+        fixed_content = re.sub(r'<<<<<<< HEAD.*?=======', '', fixed_content, flags=re.DOTALL)
+        fixed_content = re.sub(r'>>>>>>> [^\n]*', '', fixed_content)
+        
+        # Clean up multiple newlines
+        fixed_content = re.sub(r'\n\s*\n\s*\n', '\n\n', fixed_content)
         
         # Write the fixed content back
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(fixed_content)
             
-        print(f"Fixed merge conflicts in: {file_path}")
         return True
         
     except Exception as e:
@@ -45,17 +53,30 @@ def fix_merge_conflicts(file_path):
         return False
 
 def main():
-    # Find all TypeScript/JavaScript files with merge conflicts
-    patterns = [
-        '**/*.tsx',
-        '**/*.ts', 
-        '**/*.jsx',
-        '**/*.js'
-    ]
+    """Main function to fix all merge conflicts."""
+    # Get all files with merge conflicts
+    files_with_conflicts = []
+    
+    # Check common file extensions
+    extensions = ['*.tsx', '*.ts', '*.js', '*.jsx', '*.json', '*.md', '*.css', '*.html']
+    
+    for ext in extensions:
+        files_with_conflicts.extend(glob.glob(f'**/{ext}', recursive=True))
+    
+    # Also check specific directories
+    specific_dirs = ['app', '__tests__', 'components', 'hooks', 'utils', 'services']
+    for dir_name in specific_dirs:
+        for ext in extensions:
+            files_with_conflicts.extend(glob.glob(f'{dir_name}/**/{ext}', recursive=True))
+    
+    # Remove duplicates and sort
+    files_with_conflicts = sorted(list(set(files_with_conflicts)))
+    
+    print(f"Found {len(files_with_conflicts)} files to check for merge conflicts")
     
     fixed_count = 0
-    for pattern in patterns:
-        for file_path in glob.glob(pattern, recursive=True):
+    for file_path in files_with_conflicts:
+        if os.path.exists(file_path):
             if fix_merge_conflicts(file_path):
                 fixed_count += 1
     
