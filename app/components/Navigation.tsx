@@ -28,7 +28,13 @@ const Navigation = React.memo(() => {
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
     { name: 'Zion Project Master', path: '/zion-project-master', icon: <Code className="w-4 h-4" /> },
-    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> }
+    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion Social Scheduler', path: '/zion-social-scheduler', icon: <Globe className="w-4 h-4" /> },
+    { name: 'Zion Workflow Automation', path: '/zion-workflow-automation', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion Invoice Genius', path: '/zion-invoice-genius', icon: <Code className="w-4 h-4" /> },
+    { name: 'Zion Inventory Smart', path: '/zion-inventory-smart', icon: <Database className="w-4 h-4" /> },
+    { name: 'Zion Compliance Manager', path: '/zion-compliance-manager', icon: <Shield className="w-4 h-4" /> },
+    { name: 'Zion Performance Monitor', path: '/zion-performance-monitor', icon: <BarChart3 className="w-4 h-4" /> }
   ], [])
 
   const mainNavItems = useMemo(() => [
@@ -52,7 +58,10 @@ const Navigation = React.memo(() => {
         { name: 'AI Content Generation', path: '/ai-content-generation' },
         { name: 'AI Customer Support', path: '/ai-customer-support' },
         { name: 'AI Marketing Automation', path: '/ai-marketing-automation' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' }
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
+        { name: 'AI 3D Generation', path: '/ai-3d-generation' },
+        { name: 'AI Accounting Assistant', path: '/ai-accounting-assistant' },
+        { name: 'AI Agricultural Intelligence', path: '/ai-agricultural-intelligence-pro' }
       ]
     },
     {
