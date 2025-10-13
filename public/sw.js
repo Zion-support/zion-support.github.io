@@ -6,12 +6,15 @@ const DYNAMIC_CACHE = 'dynamic-v1';
 // Assets to cache immediately
 const STATIC_ASSETS = [
   '/',
-<<<<<<< HEAD
   '/index.html',
   '/manifest.json',
   '/favicon.ico',
-  '/images/icon-192x192.png',
-  '/images/icon-512x512.png'
+  '/images/icon-192x192.svg',
+  '/images/icon-512x512.svg',
+  '/images/icon-32x32.svg',
+  '/images/icon-16x16.svg',
+  '/images/hero-bg.svg',
+  '/images/logo.svg'
 ];
 
 // Install event - cache static assets
@@ -21,8 +24,6 @@ self.addEventListener('install', (event) => {
       .then((cache) => {
         console.log('Caching static assets');
         return cache.addAll(STATIC_ASSETS);
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
       })
       .then(() => {
         return self.skipWaiting();
@@ -65,7 +66,6 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-<<<<<<< HEAD
   event.respondWith(
     caches.match(request)
       .then((cachedResponse) => {
@@ -117,8 +117,8 @@ self.addEventListener('sync', (event) => {
 self.addEventListener('push', (event) => {
   const options = {
     body: event.data ? event.data.text() : 'New update from Zion Tech Group',
-    icon: '/images/icon-192x192.png',
-    badge: '/images/icon-192x192.png',
+    icon: '/images/icon-192x192.svg',
+    badge: '/images/icon-192x192.svg',
     vibrate: [100, 50, 100],
     data: {
       dateOfArrival: Date.now(),
@@ -128,12 +128,12 @@ self.addEventListener('push', (event) => {
       {
         action: 'explore',
         title: 'Explore',
-        icon: '/images/icon-192x192.png'
+        icon: '/images/icon-192x192.svg'
       },
       {
         action: 'close',
         title: 'Close',
-        icon: '/images/icon-192x192.png'
+        icon: '/images/icon-192x192.svg'
       }
     ]
   };
@@ -160,5 +160,3 @@ async function handleOfflineFormSubmissions() {
   // and syncing when back online
   console.log('Handling offline form submissions');
 }
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
