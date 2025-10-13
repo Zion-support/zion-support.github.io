@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import React from "react";
 import { Link } from "react-router-dom";
@@ -79,3 +80,6 @@ export function preloadLazyComponent(importFn: () => Promise<any>) {
 }
 
 export default createLazyWrapper;
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

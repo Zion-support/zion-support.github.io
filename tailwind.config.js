@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /** @type {import('tailwindcss').Config} */;';
+=======
+/** @type {import('tailwindcss').Config} */
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 export default {
 <<<<<<< HEAD
   content: [
@@ -9,6 +13,7 @@ export default {
     "./App.tsx",
     "./main.tsx"
   ],
+<<<<<<< HEAD
 =======
     "./index.html";
     "./src/**/*.{js,ts,jsx,tsx}";
@@ -32,6 +37,8 @@ export default {
     "./app/**/*.{js,ts,jsx,tsx}","
     "./components/**/*.{js,ts,jsx,tsx}"],"
 >>>>>>> cursor/delete-records-a75e
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   theme: {
   // TODO: Add properties
 }
@@ -44,8 +51,12 @@ export default {
 }
       colors: {
 <<<<<<< HEAD
+<<<<<<< HEAD
         primary: {
 <<<<<<< HEAD
+=======
+        primary: {
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
           50: "#f0f9ff",
           500: "#06b6d4",
           600: "#0891b2",
@@ -56,6 +67,7 @@ export default {
           500: "#8b5cf6",
           600: "#7c3aed",
           700: "#6d28d9",
+<<<<<<< HEAD
 =======
 export default {;,
     content: [
@@ -96,6 +108,8 @@ export default {;,
 //           600: "#7c3aed",
 //           700: "#6d28d9",
 >>>>>>> cursor/fix-errors-and-merge-to-main-1dc1
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
         },
       },
       fontFamily: {
@@ -103,6 +117,7 @@ export default {;,
       },
     },
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
   plugins: [],
 };
@@ -334,3 +349,7 @@ const newUtilities = {
     }
   ]}
 >>>>>>> cursor/delete-records-a75e
+=======
+  plugins: [],
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -124,3 +125,6 @@ const config = pageConfigs[page];
   try {
     fs.writeFileSync(pagePath, content);
     } catch (error) {
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

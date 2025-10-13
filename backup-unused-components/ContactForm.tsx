@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface ContactFormProps {
@@ -321,12 +322,21 @@ export default function ContactForm({ className = '', children }: ContactFormPro
   onChange={handleChange}>
   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
         >
+=======
+export default function ContactForm({ className = '', children }: ContactFormProps) {
+  return (
+            type="text"
+            type="email"
+            type="tel"
+            type="text"
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
           <option value="">Select a service</option>
           <option value="ai-solutions">AI Solutions</option>
           <option value="it-services">IT Services</option>
           <option value="micro-saas">Micro SAAS</option>
           <option value="consulting">Consulting</option>
           <option value="other">Other</option>
+<<<<<<< HEAD
         </select>
   </div>
       <div></div>
@@ -384,6 +394,11 @@ export default function ContactForm({ className = '', children }: ContactFormPro
   disabled={isSubmitting}>
   className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
       >
+=======
+          id="message"
+  name="message"
+          value={formData.message}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
         {isSubmitting ? "Sending..." : "Send Message"}
 </button>
     </form>

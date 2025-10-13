@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -37,6 +38,8 @@ function removeConsoleLogs(filePath) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 }
 =======
 #!/usr/bin/env node;

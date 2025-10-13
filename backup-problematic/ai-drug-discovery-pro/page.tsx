@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 export default function aiDrugDiscoveryPro() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Ai Drug Discovery Pro - Zion Tech Group</title>
@@ -90,3 +91,5 @@ export default function aiDrugDiscoveryPro() {
                 Contact Our Experts;
                 View All AI Services;
   );
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

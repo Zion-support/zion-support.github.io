@@ -7,6 +7,7 @@ interface LoadingStatesProps {
 
 export default function LoadingStates({ className = '', children }: LoadingStatesProps) {
   return (
+<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -22,5 +23,7 @@ export default function LoadingStates({ className = '', children }: LoadingState
       <div className="text-center">
 </div>
 </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

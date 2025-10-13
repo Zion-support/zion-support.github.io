@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface LoadingSpinnerProps {
@@ -51,3 +52,6 @@ export default LoadingSpinner</div></div>;
 </p>
 >>>>>>> origin/main
 >>>>>>> cursor/delete-records-a75e
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

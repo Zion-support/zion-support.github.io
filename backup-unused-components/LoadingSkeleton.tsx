@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface LoadingSkeletonProps {
@@ -40,3 +41,6 @@ export default function LoadingSkeleton() {
 //     </>
   );
 }
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

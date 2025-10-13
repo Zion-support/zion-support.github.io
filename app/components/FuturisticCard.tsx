@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface FuturisticCardProps {
@@ -12,3 +13,6 @@ export default function FuturisticCard({ className = '', children }: FuturisticC
     </div>
   );
 }
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

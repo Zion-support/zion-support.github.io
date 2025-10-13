@@ -1,5 +1,8 @@
 export default {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
   moduleNameMapper: {
@@ -19,6 +22,7 @@ export default {
     "app/**/*.{ts,tsx}",
     "!app/**/index.{ts,tsx}",
     "!app/**/*.d.ts",
+<<<<<<< HEAD
 =======
   // TODO: Add properties
 }
@@ -93,12 +97,15 @@ export default {
     '<rootDir>/.next/','
     '<rootDir>/out/''
 >>>>>>> cursor/delete-records-a75e
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   ],
   testPathIgnorePatterns: ["<rootDir>/out/", "<rootDir>/node_modules/"],
   transformIgnorePatterns: [
 <<<<<<< HEAD
     "node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))",
   ],
+<<<<<<< HEAD
 =======
   // TODO: Add items
 ]
@@ -118,3 +125,6 @@ export default {
   }
 >>>>>>> cursor/delete-records-a75e
 };
+=======
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

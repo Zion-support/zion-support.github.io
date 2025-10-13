@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface OptimizedLoadingProps {
@@ -33,3 +34,6 @@ export default function OptimizedLoading() {
 </div>
   );
 }
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

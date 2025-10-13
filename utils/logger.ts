@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface LogLevel {
   ERROR: 'error';
   WARN: 'warn';
@@ -105,3 +106,6 @@ class Logger {
 
 export const logger = new Logger();
 export default logger;
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

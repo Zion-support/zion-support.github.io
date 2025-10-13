@@ -1,28 +1,66 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // accessibilityEnhancer utility functions
 
 export interface AccessibilityEnhancerConfig {
+=======
+interface AccessibilityConfig {
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   enabled: boolean;
+  highContrast: boolean;
+  fontSize: 'small' | 'medium' | 'large';
+  screenReader: boolean;
 }
 
+<<<<<<< HEAD
 export class AccessibilityEnhancer {
   private config: AccessibilityEnhancerConfig;
 
   constructor(config: Partial<AccessibilityEnhancerConfig> = {}) {
+=======
+class AccessibilityEnhancer {
+  private config: AccessibilityConfig;
+
+  constructor() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
     this.config = {
       enabled: true,
-      ...config
+      highContrast: false,
+      fontSize: 'medium',
+      screenReader: false
     };
   }
 
   init(): void {
     if (this.config.enabled) {
-      console.log('accessibilityEnhancer initialized');
+      console.log('Accessibility enhancer initialized');
+      this.applyAccessibilitySettings();
     }
+  }
+
+  private applyAccessibilitySettings(): void {
+    // Apply accessibility settings based on configuration
+    if (this.config.highContrast) {
+      document.body.classList.add('high-contrast');
+    }
+    
+    if (this.config.fontSize !== 'medium') {
+      document.body.classList.add(`font-size-${this.config.fontSize}`);
+    }
+  }
+
+  updateConfig(newConfig: Partial<AccessibilityConfig>): void {
+    this.config = { ...this.config, ...newConfig };
+    this.applyAccessibilitySettings();
+  }
+
+  getConfig(): AccessibilityConfig {
+    return { ...this.config };
   }
 }
 
 export const accessibilityEnhancer = new AccessibilityEnhancer();
+<<<<<<< HEAD
 export default accessibilityEnhancer;
 =======
 export class AccessibilityEnhancer {private focusableElements: HTMLElement[] = [],}
@@ -1194,3 +1232,6 @@ export const focusLastElement = () => {
 }
 >>>>>>> origin/main
 >>>>>>> cursor/delete-records-a75e
+=======
+export default accessibilityEnhancer;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

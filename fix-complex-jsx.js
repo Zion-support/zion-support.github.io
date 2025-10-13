@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -88,4 +89,6 @@ for (const file of files) {
       }
   } catch (error) {
     }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 }

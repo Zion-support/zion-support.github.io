@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import React from "react";
 interface ThemeToggleProps;
@@ -29,5 +30,10 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({
       {children}
   </div>
 </div>
+=======
+return (
+    <div className={`${className}`}>
+      {children}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

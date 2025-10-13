@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface NavigationProps {
-  className?: string;
-  children?: React.ReactNode;
+);
 }
+<<<<<<< HEAD
 
 export default function Navigation({ className = '', children }: NavigationProps) {
   return (
@@ -565,3 +561,5 @@ export default Navigation;
 
 })
 >>>>>>> cursor/delete-records-a75e
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

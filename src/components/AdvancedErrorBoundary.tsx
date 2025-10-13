@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface AdvancedErrorBoundaryProps {
-  className?: string;
-  children?: React.ReactNode;
+);
 }
+<<<<<<< HEAD
 
 export default function AdvancedErrorBoundary({ className = '', children }: AdvancedErrorBoundaryProps) {
   return (
@@ -353,3 +349,5 @@ export default AdvancedErrorBoundary</div></div>;
 </p></h3>
 </h4>
 >>>>>>> cursor/delete-records-a75e
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

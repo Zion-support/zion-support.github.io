@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -184,3 +185,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
 ;
 export default PagePage;
 >>>>>>> cursor/delete-records-a75e
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

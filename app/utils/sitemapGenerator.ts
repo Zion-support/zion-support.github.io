@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // sitemapGenerator utility functions
 
 export interface SitemapGeneratorConfig {
@@ -261,3 +262,6 @@ export default sitemapGenerator;
 }`;
 )
 >>>>>>> cursor/delete-records-a75e
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

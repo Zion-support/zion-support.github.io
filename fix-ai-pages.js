@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -75,4 +76,6 @@ function getAIServiceDirectories() {
     // }
 
   return directories;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 }

@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
 
+<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -151,3 +150,5 @@ let resolvedCount = 0,
   }
 console.log('🎉 Merge conflict resolution completed!');`'
 >>>>>>> cursor/delete-records-a75e
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

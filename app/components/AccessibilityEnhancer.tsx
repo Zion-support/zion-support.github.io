@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -16,6 +17,10 @@ export default function AccessibilityEnhancer({ className = '', children }: Acce
 =======
 import React, { useEffect, useState } from 'react';';'
 
+=======
+import React, { useEffect } from 'react';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface AccessibilityEnhancerProps {
   // TODO: Add properties
 }
@@ -27,6 +32,7 @@ interface AccessibilityEnhancerProps {
   enableFocusManagement?: boolean;
   children: React.ReactNode;
 }
+<<<<<<< HEAD
 ;
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   // TODO: Add properties
@@ -138,6 +144,41 @@ const buttons = document.querySelectorAll('button:not([aria-label])')'
 }
         if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {'
           button.setAttribute('aria-label', 'Button')'
+=======
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+  useEffect(() => {
+    // Add accessibility enhancements
+    const addSkipLinks = () => {
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+      document.body.insertBefore(skipLink, document.body.firstChild);
+    };
+
+    const enhanceFocusManagement = () => {
+      // Add focus management for better keyboard navigation
+      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+      
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Tab') {
+          const focusable = document.querySelectorAll(focusableElements);
+          const firstFocusable = focusable[0] as HTMLElement;
+          const lastFocusable = focusable[focusable.length - 1] as HTMLElement;
+
+          if (e.shiftKey) {
+            if (document.activeElement === firstFocusable) {
+              lastFocusable?.focus();
+              e.preventDefault();
+            }
+          } else {
+            if (document.activeElement === lastFocusable) {
+              firstFocusable?.focus();
+              e.preventDefault();
+            }
+          }
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
         }
       });
 const links = document.querySelectorAll('a:not([aria-label])')'
@@ -152,6 +193,7 @@ const links = document.querySelectorAll('a:not([aria-label])')'
       })
     }
 
+<<<<<<< HEAD
     // Add focus management;
 const enhanceFocusManagement = () => {
   // TODO: Implement
@@ -218,3 +260,17 @@ const observer = new MutationObserver(() => {
 ;
 export default AccessibilityEnhancer;
 >>>>>>> cursor/delete-records-a75e
+=======
+    addSkipLinks();
+    enhanceFocusManagement();
+
+    return () => {
+      // Cleanup if needed
+    };
+  }, []);
+
+  return <>{children}</>;
+};
+
+export default AccessibilityEnhancer;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

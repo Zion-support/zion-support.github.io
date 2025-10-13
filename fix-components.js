@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 import React from 'react';
 import fs from 'fs';
@@ -16,6 +17,8 @@ const componentsToFix = [
   );
 };
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 import fs from 'fs';
 import path from 'path';
 
@@ -46,6 +49,7 @@ export default function ${componentName}({
   children
 }: ${componentName}Props) {
   return (
+<<<<<<< HEAD
     <div className={\`${fileName.toLowerCase()} \${className}\`}>
       {children}
     </div>
@@ -53,6 +57,8 @@ export default function ${componentName}({
       <h1>Component</h1>
       <p>This component is under construction.</p>
   </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }`;
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface EnhancedServicesShowcaseProps {
@@ -255,3 +256,7 @@ const EnhancedServicesShowcase: React.FC = () => {
 </div>
   );
 }
+=======
+);
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

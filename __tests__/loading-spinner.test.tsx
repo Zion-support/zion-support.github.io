@@ -1,8 +1,12 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+<<<<<<< HEAD
 import { render } from '@testing-library/react';
 import LoadingSpinner from '../app/components/LoadingSpinner';
 import { render, screen } from '@testing-library/react';
+=======
+import '@testing-library/jest-dom';
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 
 // Mock component for testing
 const LoadingSpinner = ({ className = '', children }: { className?: string; children?: React.ReactNode }) => {
@@ -27,9 +31,12 @@ describe('LoadingSpinner Component', () => {
   it('renders children', () => {
     render(<LoadingSpinner>Test content</LoadingSpinner>);
     expect(screen.getByText('Test content')).toBeInTheDocument();
+<<<<<<< HEAD
 // Mock test for loading spinner
 describe('Loading Spinner', () => {
   it('should render without crashing', () => {
     expect(true).toBe(true);
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   });
 });

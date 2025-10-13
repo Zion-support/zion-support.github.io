@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface IconsProps {
@@ -13,6 +14,9 @@ export const Icon = ({
 }: {
   name: string;
   ...props
+=======
+...props
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 : ,
     name: string;
   className?: string;
@@ -21,6 +25,7 @@ export const Icon = ({
 
 export default function Icons({ className = '', children }: IconsProps) {
   return (
+<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -29,3 +34,5 @@ export default function Icons({ className = '', children }: IconsProps) {
 </span>
   );
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

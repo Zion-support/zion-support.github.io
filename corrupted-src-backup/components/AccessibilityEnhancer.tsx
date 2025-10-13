@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
 
+<<<<<<< HEAD
 interface AccessibilityEnhancerProps {
   className?: string;
   children?: React.ReactNode;
@@ -279,3 +278,5 @@ export default AccessibilityEnhancer;
 </div></div>
 </button></button>
 >>>>>>> cursor/delete-records-a75e
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

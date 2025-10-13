@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-// performanceUtils utility functions
-
-export interface performanceUtilsConfig {
+interface PerformanceUtilsConfig {
   enabled: boolean;
+<<<<<<< HEAD
 // Utility functions;
 export function utilityFunction() {
   // Implementation here;
@@ -11,21 +9,49 @@ export function utilityFunction() {
 
 export class performanceUtils {
   private config: performanceUtilsConfig;
+=======
+  monitoring: boolean;
+  optimization: boolean;
+}
 
-  constructor(config: Partial<performanceUtilsConfig> = {}) {
+export class PerformanceUtils {
+  private config: PerformanceUtilsConfig;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+
+  constructor(config: Partial<PerformanceUtilsConfig> = {}) {
     this.config = {
       enabled: true,
+      monitoring: true,
+      optimization: true,
       ...config
     };
   }
 
   init(): void {
     if (this.config.enabled) {
-      console.log('performanceUtils initialized');
+      console.log('Performance utils initialized');
+    }
+  }
+
+  measurePerformance(name: string, fn: () => void): void {
+    if (this.config.monitoring) {
+      const start = performance.now();
+      fn();
+      const end = performance.now();
+      console.log(`${name} took ${end - start} milliseconds`);
+    } else {
+      fn();
+    }
+  }
+
+  optimizeImages(): void {
+    if (this.config.optimization) {
+      console.log('Optimizing images...');
     }
   }
 }
 
+<<<<<<< HEAD
 export const performanceutils = new performanceUtils();
 export default performanceutils;
 export default utilityFunction;
@@ -193,3 +219,7 @@ export const cacheOptimizer = {
 };
 
 export default performanceOptimizer;
+=======
+export const performanceUtils = new PerformanceUtils();
+export default performanceUtils;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

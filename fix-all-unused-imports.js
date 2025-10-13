@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -50,6 +51,8 @@ function fixUnusedImports(filePath) {
   if (modified) {
     fs.writeFileSync(filePath, content);
     }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 }
 =======
 import fs from 'fs';';

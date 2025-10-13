@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -504,3 +505,19 @@ const _recommendations = getPerformanceRecommendations();
 ;
 export default AdvancedPerformanceMonitor;
 >>>>>>> cursor/delete-records-a75e
+=======
+import React from 'react';
+
+interface AdvancedPerformanceMonitorProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function AdvancedPerformanceMonitor({ className = '', children }: AdvancedPerformanceMonitorProps) {
+  return (
+    <div className={className}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

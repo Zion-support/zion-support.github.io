@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface PWAInstallerProps {
@@ -45,3 +46,6 @@ export default function ComponentsPage() {
 //     </>
   );
 }
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -174,3 +175,6 @@ const WorkflowAutomationPage: React.FC = () => {
 ;
 export default WorkflowAutomationPage;
 >>>>>>> cursor/delete-records-a75e
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

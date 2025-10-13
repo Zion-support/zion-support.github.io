@@ -7,6 +7,7 @@ interface EnhancedErrorFeedbackProps {
 
 export default function EnhancedErrorFeedback({ className = '', children }: EnhancedErrorFeedbackProps) {
   return (
+<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -42,3 +43,6 @@ class GlobalErrorBoundary extends Component<Props, State> {
 
     return this.props.children;
   }
+=======
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

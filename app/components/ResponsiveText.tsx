@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface ResponsiveTextProps {
@@ -12,3 +13,6 @@ export default function ResponsiveText({ className = '', children }: ResponsiveT
     </div>
   );
 }
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface PerformanceDashboardProps {
-  className?: string;
-  children?: React.ReactNode;
+);
 }
+<<<<<<< HEAD
 
 export default function PerformanceDashboard({ className = '', children }: PerformanceDashboardProps) {
   return (
@@ -239,3 +235,5 @@ export default PerformanceDashboard</div></h3>;
 </div></PerformanceMetrics>
 </PerformanceProps>
 >>>>>>> cursor/delete-records-a75e
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

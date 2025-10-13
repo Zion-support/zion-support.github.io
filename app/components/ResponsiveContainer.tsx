@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface ResponsiveContainerProps {
@@ -12,3 +13,6 @@ export default function ResponsiveContainer({ className = '', children }: Respon
     </div>
   );
 }
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

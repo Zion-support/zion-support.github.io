@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import React, { useEffect, useState } from 'react';
 
@@ -101,6 +102,8 @@ const PerformanceEnhancer: React.FC = () => {
     return null;
   }
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface PerformanceEnhancerProps {
   className?: string;
   children?: React.ReactNode;
@@ -108,6 +111,7 @@ interface PerformanceEnhancerProps {
 
 export default function PerformanceEnhancer({ className = '', children }: PerformanceEnhancerProps) {
   return (
+<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -152,5 +156,7 @@ export default function PerformanceEnhancer({ className = '', children }: Perfor
 </div>
       )}
 </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 interface ImprovedSEOProps {
   className?: string;
@@ -165,5 +166,8 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = (
 //         </script>
       )}
 //     </Helmet>
+=======
+  return (
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

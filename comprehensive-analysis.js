@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -298,4 +299,6 @@ class ComprehensiveWebsiteAnalyzer {
     fs.writeFileSync('comprehensive-analysis-report.json', JSON.stringify(report, null, 2));
     return report;
   }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 }

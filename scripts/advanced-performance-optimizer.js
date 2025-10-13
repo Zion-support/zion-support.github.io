@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 export default function Component() {
   return (
@@ -206,3 +207,5 @@ console.log('✓ Enhanced chunking strategy applied');
 console.log('✓ Service worker updated');
 console.log('✓ Performance monitoring added');
 console.log('✓ PWA manifest enhanced');
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface EnhancedHeroProps {
@@ -288,5 +289,11 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = (
 </div>
 </div>
 </div>
+=======
+className?: string;
+  children?: React.ReactNode;
+}
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

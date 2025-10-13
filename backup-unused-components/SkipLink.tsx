@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 import React from 'react';
 import React from "react";
 interface SkipLinkProps;
   children?: React.ReactNode;
   className?: string;
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface SkipLinkProps {
   className?: string;
   children?: React.ReactNode;

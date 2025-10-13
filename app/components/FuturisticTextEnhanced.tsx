@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface FuturisticTextEnhancedProps {
@@ -12,3 +13,6 @@ export default function FuturisticTextEnhanced({ className = '', children }: Fut
     </div>
   );
 }
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

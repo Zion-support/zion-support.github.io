@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
@@ -8,10 +9,17 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
 >>>>>>> cursor/fix-errors-and-merge-to-main-1dc1
+=======
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { resolve } from 'path';
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 
-// https://vitejs.dev/config/
 export default defineConfig({
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   plugins: [react()],
   resolve: {
     alias: {
@@ -43,6 +51,7 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true,
+<<<<<<< HEAD
 =======
   plugins: [
     react({
@@ -233,10 +242,13 @@ export default defineConfig({
       overlay: true,
     },
 >>>>>>> cursor/fix-errors-and-merge-to-main-1dc1
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   },
   preview: {
     port: 4173,
     open: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
   },
   optimizeDeps: {
@@ -500,3 +512,10 @@ const ext = assetInfo.name?.split('.').pop()'
   }
 })
 >>>>>>> cursor/delete-records-a75e
+=======
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom'],
+  },
+});
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

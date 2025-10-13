@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
 
+<<<<<<< HEAD
 interface ProjectDetailsProps {
   className?: string;
   children?: React.ReactNode;
@@ -1963,3 +1962,5 @@ const ProjectDetails = () => {
                 Contact Us
 
 >>>>>>> cursor/delete-records-a75e
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

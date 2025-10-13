@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // performanceMonitoring utility functions
 
 export interface PerformanceMonitoringConfig {
@@ -990,3 +991,6 @@ export const getRecommendations = (): string[] => {/* TODO: Fix JSX expression *
 >>>>>>> origin/main
 `
 >>>>>>> cursor/delete-records-a75e
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

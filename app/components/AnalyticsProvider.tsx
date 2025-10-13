@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -45,6 +46,14 @@ const context = useContext(AnalyticsContext);
   }
   return context;
 };
+=======
+import React, { useEffect, ReactNode } from 'react';
+import { AnalyticsContext } from '../contexts/AnalyticsContext';
+
+
+interface AnalyticsProviderProps {
+  children: ReactNode;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 }
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe;
 const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
@@ -244,6 +253,7 @@ const script = document.createElement('script');'
       script.src = `https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`;
       document.head.appendChild(script);
 
+<<<<<<< HEAD
       window.dataLayer = window.dataLayer || [];
       function gtag(...args: any[]) {
   // TODO: Add properties
@@ -262,6 +272,17 @@ const script = document.createElement('script');'
 
     // Track initial page view
     trackPageView(document.title, window.location.pathname);
+=======
+  const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
+    console.log('Analytics Event:', eventName, properties);
+    // Add your analytics tracking logic here
+  };
+
+  const trackPageView = (pageName: string, properties?: Record<string, unknown>) => {
+    console.log('Page View:', pageName, properties);
+    // Add your page view tracking logic here
+  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 
     // Track performance metrics
     if (typeof window !== 'undefined' && 'performance' in window) {'
@@ -288,6 +309,7 @@ const navigation = performance.getEntriesByType('navigation')[0] as PerformanceN
 >>>>>>> origin/main;
 const value: AnalyticsContextType = {,
     trackEvent,
+<<<<<<< HEAD
   );
 };
 ;
@@ -310,3 +332,16 @@ declare global {
   }
 }
 >>>>>>> cursor/delete-records-a75e
+=======
+    trackPageView,
+  };
+
+  return (
+    <AnalyticsContext.Provider value={value}>
+      {children}
+    </AnalyticsContext.Provider>
+  );
+};
+
+export default AnalyticsProvider;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

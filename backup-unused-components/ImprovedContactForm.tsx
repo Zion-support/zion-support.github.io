@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import React, { useState } from "react";
 import { MessageSquare, Send, CheckCircle, AlertCircle, User, Mail, Phone, Building, FileText, ChevronDown } from "lucide-react";
@@ -182,6 +183,8 @@ const ImprovedContactForm: React.FC = () => {
     );
   }
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface ImprovedContactFormProps {
   className?: string;
   children?: React.ReactNode;
@@ -189,6 +192,7 @@ interface ImprovedContactFormProps {
 
 export default function ImprovedContactForm({ className = '', children }: ImprovedContactFormProps) {
   return (
+<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -436,5 +440,7 @@ export default function ImprovedContactForm({ className = '', children }: Improv
 </button>
       </form>
 </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

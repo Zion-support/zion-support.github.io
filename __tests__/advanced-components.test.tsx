@@ -1,22 +1,18 @@
-<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 // Mock component for testing
-const AdvancedComponents = ({ className = '', children }: { className?: string; children?: React.ReactNode }) => {
-  return (
-    <div className={`${className}`} data-testid="advanced-components">
-      {children}
-    </div>
-  );
+const AdvancedComponent = () => {
+  return <div>Advanced Component</div>;
 };
 
 describe('Advanced Components', () => {
-  it('renders with default props', () => {
-    const { container } = render(<AdvancedComponents />);
-    expect(container.firstChild).toBeInTheDocument();
+  it('renders advanced component', () => {
+    render(<AdvancedComponent />);
+    expect(screen.getByText('Advanced Component')).toBeInTheDocument();
   });
+<<<<<<< HEAD
 
   it('renders with custom className', () => {
     const { container } = render(<AdvancedComponents className="test-class" />);
@@ -97,3 +93,6 @@ const consoleSpy = jest
   })
 })
 >>>>>>> cursor/delete-records-a75e
+=======
+});
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

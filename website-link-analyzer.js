@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -309,4 +310,6 @@ class WebsiteLinkAnalyzer {
       throw error;
     }
   }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 }

@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
+<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -148,6 +149,10 @@ function processFile(filePath) {
 files.forEach(file => {
   const filePath = path.join(__dirname, file);
 
+=======
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
@@ -444,6 +449,7 @@ for (const file of files) {
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log('JSX error fixing completed');
 =======
 console.log(`\nFixed ${fixedCount} files`)
@@ -465,3 +471,6 @@ try {
 }</div></main>
 </section>
 >>>>>>> cursor/delete-records-a75e
+=======
+console.log('JSX error fixing completed');
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

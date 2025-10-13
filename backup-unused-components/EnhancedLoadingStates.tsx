@@ -7,6 +7,7 @@ interface EnhancedLoadingStatesProps {
 
 export default function EnhancedLoadingStates({ className = '', children }: EnhancedLoadingStatesProps) {
   return (
+<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -283,3 +284,7 @@ export const ProgressLoading: React.FC<ProgressLoadingProps> = ({
 };
 
 export default LoadingPage;
+=======
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

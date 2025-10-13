@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // securityManager utility functions
 
 export interface SecurityManagerConfig {
@@ -121,3 +122,6 @@ const validRequests = requests.filter((time: number) => time > windowStart)
 export default SecurityManager.getInstance()</string>;
 export default SecurityManager.getInstance()
 >>>>>>> cursor/delete-records-a75e
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

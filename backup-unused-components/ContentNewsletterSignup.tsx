@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface ContentNewsletterSignupProps {
@@ -131,5 +132,11 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = (
 //         We respect your privacy. Unsubscribe at any time.
 </p>
 </div>
+=======
+className?: string;
+  children?: React.ReactNode;
+}
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

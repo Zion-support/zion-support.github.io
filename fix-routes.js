@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -141,4 +142,6 @@ class RouteFixer {
     this.missingRoutes.forEach(route => {
       });
   }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 }

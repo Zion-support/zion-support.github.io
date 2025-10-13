@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import React, { useState, useEffect, useCallback } from 'react';
 import { Eye, Volume2, VolumeX, Type, MousePointer, Keyboard } from 'lucide-react';
@@ -150,6 +151,8 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
     });
   };
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface ImprovedAccessibilityProps {
   className?: string;
   children?: React.ReactNode;
@@ -157,6 +160,7 @@ interface ImprovedAccessibilityProps {
 
 export default function ImprovedAccessibility({ className = '', children }: ImprovedAccessibilityProps) {
   return (
+<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -395,5 +399,7 @@ export default function ImprovedAccessibility({ className = '', children }: Impr
         }
       `}</style>
 //     </>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

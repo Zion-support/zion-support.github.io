@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface UltimateBusinessIntelligence2025BannerProps {
-  className?: string;
-  children?: React.ReactNode;
+);
 }
+<<<<<<< HEAD
 
 export default function UltimateBusinessIntelligence2025Banner({ className = '', children }: UltimateBusinessIntelligence2025BannerProps) {
   return (
@@ -385,3 +381,5 @@ export default UltimateBusinessIntelligence2025Banner;"";"
 </span></a>
 </p></h1>))))))
 >>>>>>> cursor/delete-records-a75e
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

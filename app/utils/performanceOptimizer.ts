@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // performanceOptimizer utility functions
 
 export interface PerformanceOptimizerConfig {
@@ -442,3 +443,6 @@ export const performanceOptimizer = new PerformanceOptimizer();
 export default PerformanceOptimizer;
 export {PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig}}`;
 >>>>>>> cursor/delete-records-a75e
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

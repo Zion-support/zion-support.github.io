@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import React from "react";
 interface UserExperienceEnhancerProps;
@@ -29,5 +30,10 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
       {children}
   </div>
 </div>
+=======
+return (
+    <div className={`${className}`}>
+      {children}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

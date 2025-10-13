@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // logger utility functions
 
 export interface LoggerConfig {
@@ -476,3 +477,6 @@ export const logger = new Logger();
   private getLevelString(leve);
   l: LogLevel): string {/* TODO: Fix JSX expression */,}}}
 >>>>>>> cursor/delete-records-a75e
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

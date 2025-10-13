@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import React from "react";
 import { Helmet } from "react-helmet-async";
@@ -62,6 +63,8 @@ export default function Header()
 //     </>
   );
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface HeaderProps {
   className?: string;
   children?: React.ReactNode;

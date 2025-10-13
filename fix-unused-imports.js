@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 import fs from 'fs';
@@ -605,3 +606,6 @@ console.log(`Fixed ${fixedCount} files`)
 "`"
 }}}}}}}}}}}}}}}}}}}}}}}}
 >>>>>>> cursor/delete-records-a75e
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

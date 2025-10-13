@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // dataValidator utility functions
 
 export interface DataValidatorConfig {
@@ -589,3 +590,6 @@ export async function validateAsync(validato,;)
 }
 "`
 >>>>>>> cursor/delete-records-a75e
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

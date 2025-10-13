@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
 
+<<<<<<< HEAD
 interface errorBoundaryConfigProps {
   className?: string;
   children?: React.ReactNode;
@@ -456,3 +455,5 @@ export function formatErrorForLogging(error: Error): Record,
 </p></h2>
 </a></a>
 >>>>>>> cursor/delete-records-a75e
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

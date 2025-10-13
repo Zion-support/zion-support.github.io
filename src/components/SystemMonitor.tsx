@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
 
+<<<<<<< HEAD
 interface SystemMonitorProps {
   className?: string;
   children?: React.ReactNode;
@@ -1083,3 +1082,5 @@ export default SystemMonitor</div></div>;
 </h4></h4>
 </h4></h4>))))
 >>>>>>> cursor/delete-records-a75e
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

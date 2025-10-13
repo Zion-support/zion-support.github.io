@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // performanceUtils utility functions
 
 export interface PerformanceUtilsConfig {
@@ -519,3 +520,6 @@ export const preloadImages = (srcs: string[]): Promise<void[]> => {
 }
 >>>>>>> origin/main
 >>>>>>> cursor/delete-records-a75e
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // apiCache utility functions
 
 export interface ApiCacheConfig {
@@ -242,3 +243,6 @@ export default ApiCachePage</span></button>;
 </h2></h2>
 </h2>
 >>>>>>> cursor/delete-records-a75e
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

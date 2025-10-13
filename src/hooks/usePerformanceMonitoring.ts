@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -15,6 +16,9 @@ export default usePerformanceMonitoring;
       // trackPerformance(name, value);
 //     []
   );
+=======
+);
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 }
 =======
 

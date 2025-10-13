@@ -8,6 +8,7 @@ interface EnhancedErrorBoundaryProps {
 
 export default function EnhancedErrorBoundary({ className = '', children }: EnhancedErrorBoundaryProps) {
   return (
+<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -170,3 +171,7 @@ export default EnhancedErrorBoundary;
 </p></h1>
 </h2>
 >>>>>>> cursor/delete-records-a75e
+=======
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

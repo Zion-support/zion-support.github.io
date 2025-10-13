@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare module 'next' {
   export interface NextPageProps {
     params: { [key: string]: string | string[] | undefined };
@@ -398,3 +399,6 @@ export {}
 >>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> cursor/delete-records-a75e
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 export default function fix-merge-conflicts.js() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -434,3 +432,5 @@ try {
   console.log('Linting completed with some remaining issues to fix manually')'
 }
 >>>>>>> cursor/delete-records-a75e
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

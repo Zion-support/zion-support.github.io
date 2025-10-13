@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import React from "react";
 interface PerformanceDashboardProps;
@@ -260,3 +261,6 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ isVisible, 
 };
 
 export default PerformanceDashboard;
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

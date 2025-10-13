@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // apiClient utility functions
 
 export interface ApiClientConfig {
@@ -459,3 +460,6 @@ async delete<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'>
   setBaseURL(baseURL: string): void {,}
 >>>>>>> origin/main
 >>>>>>> cursor/delete-records-a75e
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

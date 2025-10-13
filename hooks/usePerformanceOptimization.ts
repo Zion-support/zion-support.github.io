@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Performance optimization hook
 export default function usePerformanceOptimization() {
   // Hook implementation would go here
@@ -231,3 +232,6 @@ export default function usePerformanceMonitor() {
   // Implementation would go here
   return {};
 }
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

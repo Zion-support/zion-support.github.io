@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
 
+<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -91,3 +90,5 @@ const publicDir = path.join(__dirname, '../public')
   // console.log('Sitemap generated successfully!')
   // console.log(`Found ${routes.length} routes`);
 generateSitemap();
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

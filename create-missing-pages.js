@@ -4,6 +4,7 @@ import path from 'path';
 export default ${title}Page;`;
 // List of pages that need to be created based on App.tsx imports;
 const missingPages = [
+<<<<<<< HEAD
   'pricing', 'blog', 'case-studies', 'careers', 'ai-services', 'it-services', ;
   'micro-saas', 'consultation', 'support', 'privacy', 'terms', 'cookies', ;
   'sitemap', 'ai-analytics', 'ai-automation', 'ai-chatbot-builder', ;
@@ -54,6 +55,8 @@ const missingPages = [
   'performance-optimization', 'disaster-recovery-advanced', 'compliance-automation',
 //   'cloud-cost-optimization', 'security-automation', 'data-visualization',
 //   'workflow-automation', 'cloud-native-security', 'team', 'partners', 'status',
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   'faq', 'docs', 'api-docs', 'community', 'compliance';
 ];
 // Template for page components;

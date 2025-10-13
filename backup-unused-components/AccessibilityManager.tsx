@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import React, { useEffect, useState } from 'react';
 
@@ -108,6 +109,8 @@ const AccessibilityManager: React.FC = () => {
     setSettings(prev => ({ ...prev, [key]: !prev[key] }));
   };
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface AccessibilityManagerProps {
   className?: string;
   children?: React.ReactNode;
@@ -115,6 +118,7 @@ interface AccessibilityManagerProps {
 
 export default function AccessibilityManager({ className = '', children }: AccessibilityManagerProps) {
   return (
+<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -268,5 +272,7 @@ export default function AccessibilityManager({ className = '', children }: Acces
 </button>
 </div>
 </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

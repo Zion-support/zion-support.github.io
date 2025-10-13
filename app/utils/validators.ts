@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // validators utility functions
 
 export interface ValidatorsConfig {
@@ -977,3 +978,6 @@ export async function validateAsync(validator: (val: string) => Promise<Validati
     try {return await validator(value)}}} catch (error) {}return {isValid: false, errors: ['Validation failed'], error: 'Validation failed' ,}}}'
 }
 >>>>>>> cursor/delete-records-a75e
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

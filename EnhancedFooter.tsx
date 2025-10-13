@@ -1,16 +1,18 @@
 <<<<<<< HEAD
 import React from "react";
-// import { Link } from "react-router-dom"; // Unused import
-// import { ArrowRight, Mail, Phone, MapPin } from "lucide-react"; // Unused import
 
+<<<<<<< HEAD
 interface EnhancedFooterProps {
   className?: string;
   children?: React.ReactNode;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 export default function EnhancedFooter() {
   return (
     <footer className="bg-gray-900 text-white py-8">
       <div className="container mx-auto px-4">
         <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+<<<<<<< HEAD
   </div>
     </footer>
   );
@@ -315,3 +317,9 @@ export default EnhancedFooter</div></div>;
 </li></li>
 </footer>
 >>>>>>> cursor/delete-records-a75e
+=======
+      </div>
+    </footer>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

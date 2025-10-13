@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // monitoring utility functions
 
 export interface MonitoringConfig {
@@ -169,3 +170,6 @@ const navigation = performance.getEntriesByType('navigation')[0] as PerformanceN
 const monitoring = new MonitoringService();
 export default monitoring;
 >>>>>>> cursor/delete-records-a75e
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

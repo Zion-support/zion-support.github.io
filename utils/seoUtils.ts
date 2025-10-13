@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // seoUtils utility functions
 // Utility functions
 
@@ -12,21 +13,33 @@ export function utilityFunction() {
 
 export class seoUtils {
   private config: seoUtilsConfig;
+=======
+interface SEOUtilsConfig {
+  enabled: boolean;
+  analytics: boolean;
+  sitemap: boolean;
+}
 
-  constructor(config: Partial<seoUtilsConfig> = {}) {
+export class SEOUtils {
+  private config: SEOUtilsConfig;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+
+  constructor(config: Partial<SEOUtilsConfig> = {}) {
     this.config = {
       enabled: true,
+      analytics: true,
+      sitemap: true,
       ...config
     };
   }
 
   init(): void {
     if (this.config.enabled) {
-      console.log('seoUtils initialized');
+      console.log('SEO utils initialized');
     }
   }
-}
 
+<<<<<<< HEAD
 export const seoutils = new seoUtils();
 export default seoutils;
 export default utilityFunction;
@@ -470,3 +483,24 @@ export const updatePageTitle = (titl)
 "`"
 </li>
 >>>>>>> cursor/delete-records-a75e
+=======
+  generateMetaTags(title: string, description: string): void {
+    if (this.config.enabled) {
+      document.title = title;
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', description);
+      }
+    }
+  }
+
+  generateSitemap(): void {
+    if (this.config.sitemap) {
+      console.log('Generating sitemap...');
+    }
+  }
+}
+
+export const seoUtils = new SEOUtils();
+export default seoUtils;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface page_cleanProps {
@@ -451,3 +452,6 @@ const HomePage = () => {
 };
 
 export default HomePage;
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

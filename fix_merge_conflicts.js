@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 #!/usr/bin/env node
 
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
@@ -65,6 +66,8 @@ export default function Component() {
       <p>This component is under construction.</p>
   </div>
   );
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 }
 
 // Function to find all TypeScript/JavaScript files
@@ -131,6 +134,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
 export { resolveMergeConflicts, findSourceFiles };
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 import fs from 'fs';';
@@ -209,3 +213,5 @@ console.log(`- Files processed: ${conflictFiles.length}`)
 console.log(`- Files fixed: ${fixedCount}`)
 console.log(`- Errors: ${errorCount}`)))
 >>>>>>> cursor/delete-records-a75e
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

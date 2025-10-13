@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // accessibilityChecker utility functions
 
 export interface AccessibilityCheckerConfig {
@@ -136,3 +137,6 @@ export default AccessibilityCheckerPage;
 
 }
 >>>>>>> cursor/delete-records-a75e
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

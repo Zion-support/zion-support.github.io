@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import React from "react";
 import { CheckCircle, Star, ArrowRight, Phone, Mail } from "lucide-react";
@@ -394,3 +395,7 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
 //     </>
   );
 }
+=======
+);
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

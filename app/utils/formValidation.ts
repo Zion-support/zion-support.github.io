@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // formValidation utility functions
 
 export interface FormValidationConfig {
@@ -659,3 +660,6 @@ export default formValidation;
 =======
 "`"
 >>>>>>> cursor/delete-records-a75e
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

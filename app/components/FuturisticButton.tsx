@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { ArrowRight, ExternalLink } from 'lucide-react';
 
 interface FuturisticButtonProps {
@@ -7,12 +8,16 @@ interface FuturisticButtonProps {
   variant?: 'primary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   icon?: React.ReactNode;
+=======
+
+interface FuturisticButtonProps {
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   children?: React.ReactNode;
   className?: string;
   onClick?: () => void;
-  external?: boolean;
 }
 
+<<<<<<< HEAD
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   href,
   to,
@@ -86,3 +91,12 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
 };
 
 export default FuturisticButton;
+=======
+export default function FuturisticButton({ children, className = '', onClick }: FuturisticButtonProps) {
+  return (
+    <button className={className} onClick={onClick}>
+      {children}
+    </button>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

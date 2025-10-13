@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -169,4 +170,7 @@ function generateReport() {
     path.join(__dirname, '..', 'performance-audit-report.json'),
     JSON.stringify(report, null, 2)
   );
+=======
+);
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 }

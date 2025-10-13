@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 export default function Component() {
   return (
@@ -71,3 +72,5 @@ fs.writeFileSync("/workspace/App.tsx", newAppContent);
 .join(", "),
 //   "... and more",
 );
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

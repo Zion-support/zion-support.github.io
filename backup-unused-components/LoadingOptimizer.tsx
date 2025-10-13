@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface LoadingOptimizerProps {
@@ -38,3 +39,6 @@ export default function LoadingOptimizer() {
 //     </>
   );
 }
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

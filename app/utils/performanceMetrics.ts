@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // performanceMetrics utility functions
 
 export interface PerformanceMetricsConfig {
@@ -591,3 +592,6 @@ export const performanceMetrics = PerformanceMetrics.getInstance();
 export default PerformanceMetrics;
 `;
 >>>>>>> cursor/delete-records-a75e
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

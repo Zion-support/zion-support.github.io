@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -17,6 +18,9 @@ export default useErrorMonitoring;
       // trackError(error, context);
 //     []
   );
+=======
+);
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 }
 =======
 ;

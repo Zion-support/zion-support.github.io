@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -547,4 +548,6 @@ const route = item.url.replace(baseUrl, '')'
   fs.writeFileSync('audit-results.json', JSON.stringify(results, null, 2))'
   console.log('\n📄 Results saved to audit-results.json')'
 >>>>>>> cursor/delete-records-a75e
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 }

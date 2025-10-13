@@ -6,6 +6,7 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
+<<<<<<< HEAD
 =======
 import globals from 'globals';';
 import js from '@eslint/js';';
@@ -23,13 +24,34 @@ export default [;
 <<<<<<< HEAD
       "dist",
       ".next",
+=======
+  {
+    ignores: [
+      "dist/**", 
+      "node_modules/**", 
+      "*.config.js", 
+      "*.config.cjs",
+      "add-missing-routes*.jsx",
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
       "backup-problematic/**",
       "backup-unused-components/**",
-      "corrupted-src-backup/**",
-      "src/**",
-      "*.js",
+      "backup/**",
+      "cleanup-*.js",
+      "cleanup-*.cjs",
+      "comprehensive-*.js",
+      "fix-*.js",
+      "fix-*.cjs",
+      "*.cjs",
       "scripts/**",
+      "src/**",
+      "create-*.js",
+      "identify-*.js",
+      "merge-*.js",
+      "remove-*.js",
+      "simple-*.js",
+      "website-*.js",
       "public/sw.js",
+<<<<<<< HEAD
       "identify_missing_pages.js",
       "merge-with-conflict-resolution.js",
       "resolve-all-conflicts.js",
@@ -66,6 +88,20 @@ export default [;
       'jest.setup.js'
 >>>>>>> cursor/delete-records-a75e
     ],
+=======
+      "fix_all_*.js",
+      "fix_broken_*.js",
+      "fix_duplicate_*.js",
+      "fix_final_*.js",
+      "fix_jsx_*.js",
+      "fix_layout_*.js",
+      "fix_merge_*.js",
+      "fix_missing_*.js",
+      "fix_numbered_*.js",
+      "fix_remaining_*.js",
+      "fix_syntax_*.js"
+    ]
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   },
   {
 <<<<<<< HEAD
@@ -74,15 +110,24 @@ export default [;
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
+      parserOptions: {
+        ecmaVersion: "latest",
+        ecmaFeatures: { jsx: true },
+        sourceType: "module"
+      }
     },
     plugins: {
       "react-hooks": reactHooks,
-      "react-refresh": reactRefresh,
+      "react-refresh": reactRefresh
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
-      "react-refresh/only-export-components": "off",
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowConstantExport: true }
+      ],
       "@typescript-eslint/no-unused-vars": "warn",
+<<<<<<< HEAD
       "@typescript-eslint/no-explicit-any": "off",
     },
   },
@@ -164,3 +209,9 @@ export default [;
   }
 ];
 >>>>>>> cursor/delete-records-a75e
+=======
+      "@typescript-eslint/no-explicit-any": "warn"
+    }
+  }
+);
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

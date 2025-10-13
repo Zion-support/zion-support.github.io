@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 
 export function usePerformanceMonitor() {
 <<<<<<< HEAD
@@ -9,13 +13,13 @@ export function usePerformanceMonitor() {
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-1dc1
   useEffect(() => {
-    // Implementation here;
+    // Implementation here
     setState('initialized');
   }, []);
-<<<<<<< HEAD
   
   return { state };
 }
+<<<<<<< HEAD
 
 export default usePerformanceMonitor;
 =======
@@ -43,6 +47,8 @@ export default usePerformanceMonitor;
 //     processData,
   };
 };
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 
 export default usePerformanceMonitor;
 >>>>>>> cursor/fix-errors-and-merge-to-main-1dc1

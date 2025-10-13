@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // advancedCaching utility functions
 
 export interface AdvancedCachingConfig {
@@ -151,3 +152,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
 ;
 export default AdvancedCachingPage;
 >>>>>>> cursor/delete-records-a75e
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

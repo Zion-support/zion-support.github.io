@@ -8,6 +8,7 @@ interface InteractiveAIROICalculatorProps {
 
 export default function InteractiveAIROICalculator({ className = '', children }: InteractiveAIROICalculatorProps) {
   return (
+<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -95,3 +96,7 @@ export default InteractiveAIROICalculator</div></div>;
 </h2></h3>
 </section>
 >>>>>>> cursor/delete-records-a75e
+=======
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

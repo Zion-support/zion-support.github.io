@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 //   '/',
 //   '/about',
@@ -10,6 +11,8 @@ import React from 'react';
   '/manifest.json',
 ];
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 export default function Component() {
   return (
     <div>

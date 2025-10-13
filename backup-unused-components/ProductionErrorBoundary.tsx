@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface ProductionErrorBoundaryProps {
@@ -320,3 +321,6 @@ export default ProductionErrorBoundary;
 export default ProductionErrorBoundary;
 export default ProductionErrorBoundary;
 export default ProductionErrorBoundary;
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

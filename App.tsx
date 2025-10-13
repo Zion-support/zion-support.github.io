@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
@@ -249,6 +252,7 @@ export default function App() {
       </div>
     </Router>
   );
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-1dc1
 }
@@ -300,3 +304,6 @@ function App() {
 
 export default App;
 >>>>>>> cursor/delete-records-a75e
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

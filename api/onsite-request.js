@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // API endpoint for onsite requests;
 // API endpoint for onsite requests
 import fs from 'fs';
 import path from 'path';
 
 // Simple wrapper function to replace withSentry
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 export default function handler(req, res) {
   if (req.method !== "POST") {
     res.statusCode = 405;

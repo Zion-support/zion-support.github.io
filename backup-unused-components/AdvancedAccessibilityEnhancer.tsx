@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import React, { useEffect, useState } from 'react';
 import { Eye, Volume2, MousePointer, Keyboard, Contrast, ZoomIn } from 'lucide-react';
@@ -126,6 +127,8 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
     );
   }
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface AdvancedAccessibilityEnhancerProps {
   className?: string;
   children?: React.ReactNode;
@@ -133,6 +136,7 @@ interface AdvancedAccessibilityEnhancerProps {
 
 export default function AdvancedAccessibilityEnhancer({ className = '', children }: AdvancedAccessibilityEnhancerProps) {
   return (
+<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -212,5 +216,7 @@ export default function AdvancedAccessibilityEnhancer({ className = '', children
 </button>
 </div>
 </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

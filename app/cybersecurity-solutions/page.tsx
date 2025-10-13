@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { 
   ArrowRight, 
   Home, 
@@ -15,11 +16,11 @@ import {
   FileText, 
   Eye 
 } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 import React from 'react';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 
 const CybersecuritySolutions = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
@@ -29,7 +30,11 @@ const CybersecuritySolutions = () => {
   const capabilities: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
 
   const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+=======
+import { Eye, AlertTriangle, Users, Database, Check } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 
+export default function CybersecuritySolutionsPage() {
   const services = [
     {
       title: "Security Assessment",
@@ -76,7 +81,6 @@ const CybersecuritySolutions = () => {
         "Monthly reports"
       ],
       popular: false,
-      cta: "Get Started",
     },
     {
       name: "Professional",
@@ -94,7 +98,6 @@ const CybersecuritySolutions = () => {
         "Security training"
       ],
       popular: true,
-      cta: "Get Started",
     },
     {
       name: "Enterprise",
@@ -113,10 +116,10 @@ const CybersecuritySolutions = () => {
         "Compliance management"
       ],
       popular: false,
-      cta: "Contact Sales",
     }
   ];
 
+<<<<<<< HEAD
 export default function CybersecuritySolutionsPage() {
   const capabilities = [
     {
@@ -145,14 +148,15 @@ export default function CybersecuritySolutionsPage() {
       icon: <FileText className="w-6 h-6" />
     }
   ];
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Cybersecurity Solutions - Advanced Security Services | Zion Tech Group</title>
-        <meta name="description" content="Protect your business with our comprehensive cybersecurity solutions. AI-powered threat detection, zero trust architecture, and 24/7 monitoring. Get started today!" />
-        <meta name="keywords" content="cybersecurity, security solutions, threat detection, zero trust, data protection, compliance, security audit, penetration testing" />
-        <link rel="canonical" href="https://ziontechgroup.com/cybersecurity-solutions" />
+        <title>Cybersecurity Solutions - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive cybersecurity solutions to protect your business from threats and ensure compliance." />
       </Helmet>
+<<<<<<< HEAD
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -196,22 +200,42 @@ export default function CybersecuritySolutionsPage() {
               Explore Solutions
             </FuturisticButton>
           </div>
+=======
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Cybersecurity Solutions
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Protect your business with our comprehensive cybersecurity solutions designed to defend against evolving threats.
+          </p>
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  {stat.icon}
-                </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
+        {/* Services */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          {services.map((service, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mb-6">
+                {service.icon}
               </div>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
+              <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
+              <p className="text-gray-300 mb-6">{service.description}</p>
+              <ul className="space-y-2 mb-6">
+                {service.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-center text-gray-300">
+                    <Check className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <div className="text-cyan-400 font-semibold">{service.price}</div>
+            </div>
+          ))}
+        </div>
 
+<<<<<<< HEAD
       {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -323,22 +347,40 @@ export default function CybersecuritySolutionsPage() {
                 )}
 
                 <div className="text-center mb-6">
+=======
+        {/* Pricing Plans */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Pricing Plans</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${
+                plan.popular ? 'border-cyan-500' : 'border-white/20'
+              }`}>
+                <div className="text-center mb-8">
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-300 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
-                  </div>
+                  <div className="text-4xl font-bold text-cyan-400 mb-2">{plan.price}</div>
+                  <div className="text-gray-300">{plan.period}</div>
+                  <p className="text-gray-300 mt-4">{plan.description}</p>
                 </div>
+<<<<<<< HEAD
 
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+=======
+                
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <Check className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
                       {feature}
                     </li>
                   ))}
                 </ul>
+<<<<<<< HEAD
 
                 <FuturisticButton
                   href={plan.cta === "Contact Sales" ? "/contact" : "#contact"}
@@ -537,3 +579,21 @@ const CybersecuritySolutionsPage: React.FC = () => {,
 ;
 export default CybersecuritySolutionsPage;
 >>>>>>> cursor/delete-records-a75e
+=======
+                
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  plan.popular 
+                    ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
+                    : 'border border-white/20 text-white hover:bg-white/10'
+                }`}>
+                  {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -98,4 +99,19 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 export default EnhancedAccessibility;
 
 >>>>>>> cursor/delete-records-a75e
+=======
+import React from 'react';
+
+interface EnhancedAccessibilityProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function EnhancedAccessibility({ className = '', children }: EnhancedAccessibilityProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 }

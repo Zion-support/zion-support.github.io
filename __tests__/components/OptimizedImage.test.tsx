@@ -1,10 +1,15 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { render, screen } from '@testing-library/react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-1dc1
 import { render, screen, waitFor, act } from '@testing-library/react';
 import OptimizedImage from '../../app/components/OptimizedImage';
+=======
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 
 // Mock component for testing
 const OptimizedImage = ({ className = '', children }: { className?: string; children?: React.ReactNode }) => {
@@ -31,6 +36,7 @@ describe('OptimizedImage Component', () => {
     expect(screen.getByText('Test content')).toBeInTheDocument();
   });
 });
+<<<<<<< HEAD
 
   it('shows loading skeleton initially', () => {
     render(<OptimizedImage {...defaultProps} />);
@@ -96,3 +102,5 @@ describe('OptimizedImage Component', () => {
     expect(img).toHaveAttribute('loading', 'lazy');
   });
 });
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

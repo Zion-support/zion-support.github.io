@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface FuturisticLoaderProps {
@@ -29,3 +30,6 @@ export default function FuturisticLoader() {
 </div>
   );
 }
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

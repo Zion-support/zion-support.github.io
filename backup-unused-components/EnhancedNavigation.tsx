@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface EnhancedNavigationProps {
@@ -420,3 +421,6 @@ const EnhancedNavigation = () => {
 };
 
 export default EnhancedNavigation;
+=======
+);
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

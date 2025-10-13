@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -84,3 +85,26 @@ export default PerformanceMonitor;
 export default PerformanceMonitor;
 >>>>>>> origin/main
 >>>>>>> cursor/delete-records-a75e
+=======
+import React, { useEffect } from 'react';
+
+interface PerformanceMonitorProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ className = '', children }) => {
+  useEffect(() => {
+    // Performance monitoring logic can be added here
+    console.log('Performance Monitor initialized');
+  }, []);
+
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default PerformanceMonitor;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

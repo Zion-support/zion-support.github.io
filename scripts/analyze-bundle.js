@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -195,3 +196,6 @@ function generateHTMLReport(analysis) {
   fs.writeFileSync(htmlPath, html);
 // Run analysis;
 analyzeBundle();
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

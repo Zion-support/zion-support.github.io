@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
@@ -74,6 +75,8 @@ export default function NewsletterSignup()
 //     </>
   );
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface NewsletterSignupProps {
   className?: string;
   children?: React.ReactNode;

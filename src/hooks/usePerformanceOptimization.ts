@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -255,3 +256,6 @@ if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}'
     optimizeImages,
     preloadCriticalResources
 >>>>>>> cursor/delete-records-a75e
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

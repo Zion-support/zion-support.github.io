@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // accessibilityUtils utility functions
 
 export interface AccessibilityUtilsConfig {
@@ -155,3 +156,6 @@ const skipLink = createSkipLink('main-content');'
 
 export const accessibilityUtils = new AccessibilityUtils();
 export default accessibilityUtils;
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

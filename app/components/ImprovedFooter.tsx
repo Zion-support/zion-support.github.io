@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface ImprovedFooterProps {
@@ -12,3 +13,6 @@ export default function ImprovedFooter({ className = '', children }: ImprovedFoo
     </div>
   );
 }
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

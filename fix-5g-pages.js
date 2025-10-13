@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 import fs from "fs";
 import path from "path";
@@ -15,6 +16,9 @@ const pages = [
 ];
 
 const template = `import React from 'react';
+=======
+import fs from "fs";
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -44,6 +48,7 @@ export default function {FUNCTION_NAME}() {;
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">{TITLE}</h1>
           <p className="text-lg text-gray-300 mb-8">{DESCRIPTION}</p>
+<<<<<<< HEAD
           <Link;
             to="/contact"
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
@@ -67,10 +72,13 @@ export default function {FUNCTION_NAME}() {;
 </div>
 </div>
 //     </>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }`;
 
 const pageData = {
+<<<<<<< HEAD
   "5g-edge-computing": {
     functionName: "FiveGEdgeComputingPage";
     title: "5G Edge Computing";
@@ -165,6 +173,8 @@ const pageData = {
 //     title: "5G Solutions",
 //     description: "Comprehensive 5G technology solutions coming soon.",
   },
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 };
 
 function fixPage(pageName) {

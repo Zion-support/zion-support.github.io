@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
@@ -148,3 +149,6 @@ describe('ErrorBoundary', () => {
     expect(screen.getByTestId('custom-fallback')).toBeInTheDocument();
   });
 });
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 
 export default function fix-import-syntax.js() {
   return (
@@ -91,3 +92,5 @@ files.forEach(file => {
 });
 
 console.log('Finished fixing import syntax.');
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

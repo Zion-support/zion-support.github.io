@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import React from "react";
 interface ServiceWorkerRegistrationProps;
@@ -26,3 +27,6 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
 ;
 export default ServiceWorkerRegistration;
 </ServiceWorkerRegistrationProps>
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

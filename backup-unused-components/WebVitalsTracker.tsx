@@ -7,6 +7,7 @@ interface WebVitalsTrackerProps {
 
 export default function WebVitalsTracker({ className = '', children }: WebVitalsTrackerProps) {
   return (
+<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -14,5 +15,7 @@ export default function WebVitalsTracker({ className = '', children }: WebVitals
       <h1>Component</h1>
       <p>This component is under construction.</p>
   </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

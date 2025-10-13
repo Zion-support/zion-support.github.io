@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface EnhancedPerformanceOptimizerProps {
@@ -218,3 +219,6 @@ export default function EnhancedPerformanceOptimizer() {
 
   return null;
 }
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

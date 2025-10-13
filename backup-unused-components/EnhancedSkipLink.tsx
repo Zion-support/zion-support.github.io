@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface EnhancedSkipLinkProps {
@@ -29,3 +30,6 @@ export default function EnhancedSkipLink() {
 </div>
   );
 }
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

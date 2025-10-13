@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 <<<<<<< HEAD
 import fs from 'fs';
@@ -471,6 +472,8 @@ const EnhancedServicesShowcase`,
   if (modified) {
     fs.writeFileSync(filePath, content);
     }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 }
 
 // Function to find all TypeScript/JSX files;

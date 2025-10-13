@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 interface ImprovedLoadingProps {
   className?: string;
@@ -143,3 +144,5 @@ const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({
 </div>
 //   )
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

@@ -7,8 +7,12 @@ interface FuturisticTextProps {
 
 export default function FuturisticText({ className = '', children }: FuturisticTextProps) {
   return (
-    <div className={`${className}`}>
+    <div className={className}>
       {children}
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

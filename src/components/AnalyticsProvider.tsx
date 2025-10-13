@@ -8,6 +8,7 @@ interface AnalyticsProviderProps {
 
 export default function AnalyticsProvider({ className = '', children }: AnalyticsProviderProps) {
   return (
+<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -167,3 +168,7 @@ declare global {
   }
 >>>>>>> cursor/delete-records-a75e
 }
+=======
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 interface FuturisticCardEnhancedProps {
 import { motion } from 'framer-motion';
@@ -230,3 +231,5 @@ export default FuturisticCardEnhanced;
 </FuturisticCardEnhancedProps>
   </div>
   </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

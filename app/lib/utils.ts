@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -170,3 +171,6 @@ export function pick<T extends Record<string, any>, K extends keyof T>(
   });
   return result;
 }
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

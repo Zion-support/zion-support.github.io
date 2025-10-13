@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import React, { useRef, useEffect, useState } from 'react';
 import FuturisticBackground from "../components/FuturisticBackground";
@@ -256,6 +257,8 @@ const FuturisticBackgroundEnhanced = ({ children }: { children: React.ReactNode 
     };
   }, [mousePosition]);
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface FuturisticBackgroundEnhancedProps {
   className?: string;
   children?: React.ReactNode;
@@ -263,6 +266,7 @@ interface FuturisticBackgroundEnhancedProps {
 
 export default function FuturisticBackgroundEnhanced({ className = '', children }: FuturisticBackgroundEnhancedProps) {
   return (
+<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -300,5 +304,7 @@ export default function FuturisticBackgroundEnhanced({ className = '', children 
         {children}
 </div>
 </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

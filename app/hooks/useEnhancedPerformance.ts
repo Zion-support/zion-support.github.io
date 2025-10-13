@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect, useCallback } from 'react';
 
 interface PerformanceData {
@@ -387,3 +388,6 @@ const _duration = performance.now() - startTime
 ;
 >>>>>>> cursor/delete-records-a75e
 export default useEnhancedPerformance;
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

@@ -7,6 +7,7 @@ interface CookieConsentProps {
 
 export default function CookieConsent({ className = '', children }: CookieConsentProps) {
   return (
+<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -90,5 +91,7 @@ export default function CookieConsent({ className = '', children }: CookieConsen
 </div>
 </div>
 </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

@@ -7,6 +7,7 @@ interface EnhancedErrorBoundaryProps {
 
 export default function EnhancedErrorBoundary({ className = '', children }: EnhancedErrorBoundaryProps) {
   return (
+<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -206,3 +207,6 @@ ${JSON.stringify(errorReport, null, 2)}
 }
 
 export default EnhancedErrorBoundary;
+=======
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

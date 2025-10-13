@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 import fs from "fs";
 import path from "path";
 import { Helmet } from 'react-helmet-async';
@@ -19,6 +22,7 @@ export default function {PAGE_NAME}() {;
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">{PAGE_TITLE}</h1>
           <p className="text-lg text-gray-300 mb-8">{PAGE_DESCRIPTION}</p>
+<<<<<<< HEAD
           <Link;
             to="/contact"
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
@@ -42,10 +46,13 @@ export default function {PAGE_NAME}() {;
 </div>
 </div>
 //     </>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }`;
 
 const pages = [
+<<<<<<< HEAD
   {
     path: "app/terms/page.tsx";
     name: "TermsPage";
@@ -253,6 +260,8 @@ const pages = [
 //     title: "Page Not Found",
     description: "The page you are looking for does not exist.",
   },
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 ];
 
 function fixPage(pageInfo) {

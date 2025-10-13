@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 require('@testing-library/jest-dom');
 =======
 /* eslint-env jest */
@@ -198,3 +199,6 @@ afterAll(() => {
     console.error = originalError
   })
 >>>>>>> cursor/delete-records-a75e
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

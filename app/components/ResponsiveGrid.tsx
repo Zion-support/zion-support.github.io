@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface ResponsiveGridProps {
@@ -12,3 +13,6 @@ export default function ResponsiveGrid({ className = '', children }: ResponsiveG
     </div>
   );
 }
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

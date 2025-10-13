@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import React, { useState, useEffect, useCallback } from 'react';
 import { Search, Eye } from 'lucide-react';
@@ -203,6 +204,8 @@ const AdvancedSEOOptimizer: React.FC = () => {
     );
   }
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 interface AdvancedSEOOptimizerProps {
   className?: string;
   children?: React.ReactNode;
@@ -210,6 +213,7 @@ interface AdvancedSEOOptimizerProps {
 
 export default function AdvancedSEOOptimizer({ className = '', children }: AdvancedSEOOptimizerProps) {
   return (
+<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -336,5 +340,7 @@ export default function AdvancedSEOOptimizer({ className = '', children }: Advan
 </button>
 </div>
 </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   );
 }

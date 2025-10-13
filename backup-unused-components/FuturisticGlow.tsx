@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface FuturisticGlowProps {
@@ -35,3 +36,6 @@ export default function FuturisticGlow() {
 //     </>
   );
 }
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1

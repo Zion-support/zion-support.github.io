@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 interface ModernLoadingSpinnerProps {
   className?: string;
@@ -128,3 +129,5 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = (
 ;
 export default ModernLoadingSpinner;
 </LoadingSpinnerProps>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
