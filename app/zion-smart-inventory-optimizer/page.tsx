@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { 
-  FileText, 
+  Package, 
   BarChart3, 
   TrendingUp, 
   Star, 
@@ -52,7 +52,7 @@ import {
   Flag,
   Tag,
   Folder,
-  FileText as FileTextIcon,
+  FileText,
   Lock,
   Unlock,
   Key,
@@ -339,58 +339,58 @@ import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAIContractAnalyzerPage = () => {
+const ZionSmartInventoryOptimizerPage = () => {
   const features = [
     {
-      title: "AI Contract Analysis",
-      description: "Advanced AI analyzes contracts for risks, clauses, and compliance issues",
-      icon: <FileText className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Risk Assessment",
-      description: "Identify potential risks and problematic clauses in legal documents",
-      icon: <AlertTriangle className="w-8 h-8" />,
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      title: "Compliance Checking",
-      description: "Ensure contracts comply with relevant laws and regulations",
-      icon: <Shield className="w-8 h-8" />,
+      title: "AI Demand Forecasting",
+      description: "Predict future demand with 95% accuracy using machine learning and historical data",
+      icon: <TrendingUp className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Clause Extraction",
-      description: "Automatically extract and categorize key clauses and terms",
+      title: "Smart Reorder Points",
+      description: "Automatically calculate optimal reorder points to prevent stockouts and overstock",
       icon: <Target className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Cost Optimization",
+      description: "Minimize inventory costs while maintaining service levels with AI-driven insights",
+      icon: <DollarSign className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Document Comparison",
-      description: "Compare contracts and identify differences between versions",
-      icon: <Eye className="w-8 h-8" />,
+      title: "Real-time Analytics",
+      description: "Monitor inventory performance with live dashboards and predictive analytics",
+      icon: <BarChart3 className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Legal Insights",
-      description: "Get AI-powered insights and recommendations for contract improvements",
-      icon: <Lightbulb className="w-8 h-8" />,
-      color: "from-yellow-500 to-orange-500"
+      title: "Multi-location Management",
+      description: "Optimize inventory across multiple warehouses and distribution centers",
+      icon: <Globe className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500"
+    },
+    {
+      title: "Automated Alerts",
+      description: "Get notified about stock levels, reorder needs, and potential issues instantly",
+      icon: <AlertCircle className="w-8 h-8" />,
+      color: "from-pink-500 to-purple-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Individual",
+      name: "Small Business",
       price: "$49",
       period: "/month",
-      description: "Perfect for freelancers and small businesses",
+      description: "Perfect for small retailers and e-commerce stores",
       features: [
-        "Up to 10 contracts/month",
-        "Basic risk analysis",
-        "Standard compliance checking",
+        "Up to 1,000 SKUs",
+        "Basic demand forecasting",
+        "Reorder point optimization",
         "Email support",
-        "Basic reports",
+        "Standard reports",
         "30-day data retention"
       ],
       popular: false
@@ -399,14 +399,15 @@ const ZionAIContractAnalyzerPage = () => {
       name: "Professional",
       price: "$149",
       period: "/month",
-      description: "Ideal for law firms and growing businesses",
+      description: "Ideal for growing businesses and distributors",
       features: [
-        "Up to 100 contracts/month",
-        "Advanced risk analysis",
-        "Full compliance checking",
+        "Up to 10,000 SKUs",
+        "Advanced AI forecasting",
+        "Multi-location support",
+        "Cost optimization",
         "Priority support",
         "API access",
-        "Advanced reports",
+        "Custom reports",
         "90-day data retention"
       ],
       popular: true
@@ -415,16 +416,18 @@ const ZionAIContractAnalyzerPage = () => {
       name: "Enterprise",
       price: "$399",
       period: "/month",
-      description: "For large organizations and legal departments",
+      description: "For large organizations and supply chain companies",
       features: [
-        "Unlimited contracts",
+        "Unlimited SKUs",
         "Full AI suite",
+        "Real-time optimization",
         "White-label options",
         "Dedicated support",
         "Full API access",
         "Unlimited data retention",
         "Custom integrations",
-        "Team collaboration"
+        "Team collaboration",
+        "Advanced analytics"
       ],
       popular: false
     }
@@ -433,68 +436,68 @@ const ZionAIContractAnalyzerPage = () => {
   const testimonials = [
     {
       name: "David Kim",
-      company: "Law Firm",
-      role: "Partner",
-      content: "Zion AI Contract Analyzer has revolutionized our contract review process. We've reduced review time by 80% and caught risks we would have missed.",
+      company: "E-commerce Retailer",
+      role: "Operations Manager",
+      content: "Zion Smart Inventory Optimizer has reduced our inventory costs by 30% while improving our stock availability. The AI predictions are incredibly accurate.",
       rating: 5,
       avatar: "DK"
     },
     {
       name: "Lisa Martinez",
-      company: "Corporate Legal",
-      role: "General Counsel",
-      content: "The compliance checking feature is incredible. It ensures all our contracts meet regulatory requirements automatically.",
+      company: "Distribution Company",
+      role: "Supply Chain Director",
+      content: "The multi-location optimization feature has streamlined our entire supply chain. We've eliminated stockouts and reduced carrying costs significantly.",
       rating: 5,
       avatar: "LM"
     },
     {
       name: "James Wilson",
-      company: "Legal Tech Company",
-      role: "CEO",
-      content: "The AI insights have helped us improve our contract templates and reduce legal risks significantly.",
+      company: "Manufacturing Company",
+      role: "Inventory Manager",
+      content: "The automated alerts and reorder suggestions have saved us countless hours. Our inventory turnover has improved by 40% since implementing this system.",
       rating: 5,
       avatar: "JW"
     }
   ];
 
   const stats = [
-    { number: "80%", label: "Time Saved", icon: <Clock className="w-6 h-6" /> },
-    { number: "95%", label: "Risk Detection Accuracy", icon: <Shield className="w-6 h-6" /> },
-    { number: "500+", label: "Legal Teams Using", icon: <Building className="w-6 h-6" /> },
+    { number: "30%", label: "Average Cost Reduction", icon: <DollarSign className="w-6 h-6" /> },
+    { number: "95%", label: "Forecasting Accuracy", icon: <TrendingUp className="w-6 h-6" /> },
+    { number: "500+", label: "Businesses Optimized", icon: <Building className="w-6 h-6" /> },
     { number: "4.9/5", label: "User Rating", icon: <Star className="w-6 h-6" /> }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Contract Analyzer - AI-Powered Contract Analysis & Risk Assessment | Zion Tech Group"
-        description="Analyze contracts with AI. Detect risks, check compliance, and extract key clauses. Start your free trial today!"
-        keywords="AI contract analysis, contract review, legal AI, risk assessment, compliance checking, contract automation, legal tech"
-        canonical="https://ziontechgroup.com/zion-ai-contract-analyzer"
+        title="Zion Smart Inventory Optimizer - AI-Powered Inventory Management & Demand Forecasting | Zion Tech Group"
+        description="Optimize inventory with AI. Predict demand, reduce costs, prevent stockouts, and maximize efficiency. Start your free trial today!"
+        keywords="inventory optimization, demand forecasting, inventory management, supply chain optimization, stock management, reorder points, inventory analytics"
+        canonical="https://ziontechgroup.com/zion-smart-inventory-optimizer"
       />
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         
         <ResponsiveContainer className="text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
-            <FileText className="w-4 h-4 text-blue-400 mr-2" />
-            <span className="text-blue-400 text-sm font-medium">#1 AI Contract Analyzer 2024</span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 mb-6">
+            <Zap className="w-4 h-4 text-green-400 mr-2" />
+            <span className="text-green-400 text-sm font-medium">#1 AI Inventory Optimization 2024</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400">
-              AI Contract Analyzer
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-400 to-cyan-400">
+              Smart Inventory Optimizer
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Analyze contracts with AI. Detect risks, check compliance, extract key clauses, 
-            and get intelligent insights to improve your legal processes.
+            Transform your inventory management with AI. Predict demand, optimize stock levels, 
+            reduce costs, and eliminate stockouts with intelligent automation and real-time insights.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -502,7 +505,7 @@ const ZionAIContractAnalyzerPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<FileText className="w-5 h-5" />}
+              icon={<Package className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -510,7 +513,7 @@ const ZionAIContractAnalyzerPage = () => {
               href="#demo"
               variant="outline"
               size="lg"
-              icon={<Eye className="w-5 h-5" />}
+              icon={<BarChart3 className="w-5 h-5" />}
             >
               View Demo
             </FuturisticButton>
@@ -520,7 +523,7 @@ const ZionAIContractAnalyzerPage = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   {stat.icon}
                 </div>
                 <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
@@ -536,10 +539,10 @@ const ZionAIContractAnalyzerPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Advanced Contract Intelligence
+              Intelligent Inventory Management
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Everything you need to analyze and improve your contracts.
+              Everything you need to optimize your inventory and maximize efficiency.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -548,7 +551,7 @@ const ZionAIContractAnalyzerPage = () => {
                 <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}>
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-blue-400 transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-green-400 transition-colors">
                   {feature.title}
                 </h3>
                 <p className="text-gray-300 text-center leading-relaxed">
@@ -561,14 +564,14 @@ const ZionAIContractAnalyzerPage = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-green-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your contract analysis needs.
+              Choose the plan that fits your inventory size and business needs.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -577,13 +580,13 @@ const ZionAIContractAnalyzerPage = () => {
                 key={index}
                 className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular 
-                    ? 'border-blue-500/50 ring-2 ring-blue-500/20' 
+                    ? 'border-green-500/50 ring-2 ring-green-500/20' 
                     : 'border-white/20'
                 } hover:bg-white/20 transition-all duration-300 hover:scale-105`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -623,10 +626,10 @@ const ZionAIContractAnalyzerPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Legal Professionals
+              Trusted by Supply Chain Professionals
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our users say about Zion AI Contract Analyzer
+              See what our users say about Zion Smart Inventory Optimizer
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -642,7 +645,7 @@ const ZionAIContractAnalyzerPage = () => {
                 </div>
                 <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
+                  <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
                     {testimonial.avatar}
                   </div>
                   <div>
@@ -657,21 +660,21 @@ const ZionAIContractAnalyzerPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/30 to-emerald-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Contract Analysis?
+            Ready to Optimize Your Inventory?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join hundreds of legal teams using AI to analyze contracts faster and more accurately. 
-            Start your free trial today and see the difference AI can make.
+            Join hundreds of businesses using AI to optimize their inventory management. 
+            Start your free trial today and reduce costs while improving efficiency.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FuturisticButton
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<FileText className="w-5 h-5" />}
+              icon={<Package className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -679,7 +682,7 @@ const ZionAIContractAnalyzerPage = () => {
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Eye className="w-5 h-5" />}
+              icon={<BarChart3 className="w-5 h-5" />}
             >
               View Demo
             </FuturisticButton>
@@ -690,4 +693,4 @@ const ZionAIContractAnalyzerPage = () => {
   );
 };
 
-export default ZionAIContractAnalyzerPage;
+export default ZionSmartInventoryOptimizerPage;

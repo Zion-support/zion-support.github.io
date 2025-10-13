@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { 
-  FileText, 
+  Receipt, 
   BarChart3, 
   TrendingUp, 
   Star, 
@@ -52,7 +52,7 @@ import {
   Flag,
   Tag,
   Folder,
-  FileText as FileTextIcon,
+  FileText,
   Lock,
   Unlock,
   Key,
@@ -339,92 +339,94 @@ import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAIContractAnalyzerPage = () => {
+const ZionSmartExpenseCategorizerPage = () => {
   const features = [
     {
-      title: "AI Contract Analysis",
-      description: "Advanced AI analyzes contracts for risks, clauses, and compliance issues",
-      icon: <FileText className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Risk Assessment",
-      description: "Identify potential risks and problematic clauses in legal documents",
-      icon: <AlertTriangle className="w-8 h-8" />,
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      title: "Compliance Checking",
-      description: "Ensure contracts comply with relevant laws and regulations",
-      icon: <Shield className="w-8 h-8" />,
+      title: "AI-Powered Categorization",
+      description: "Automatically categorize expenses with 95% accuracy using machine learning",
+      icon: <Receipt className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Clause Extraction",
-      description: "Automatically extract and categorize key clauses and terms",
-      icon: <Target className="w-8 h-8" />,
+      title: "Smart Receipt Scanning",
+      description: "Scan receipts with your phone and automatically extract expense data",
+      icon: <Camera className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Real-time Analytics",
+      description: "Track spending patterns and get insights on your financial habits",
+      icon: <BarChart3 className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Document Comparison",
-      description: "Compare contracts and identify differences between versions",
-      icon: <Eye className="w-8 h-8" />,
+      title: "Multi-Currency Support",
+      description: "Handle expenses in multiple currencies with automatic conversion",
+      icon: <Globe className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Legal Insights",
-      description: "Get AI-powered insights and recommendations for contract improvements",
-      icon: <Lightbulb className="w-8 h-8" />,
-      color: "from-yellow-500 to-orange-500"
+      title: "Tax Preparation",
+      description: "Automatically prepare tax-ready reports and categorize deductible expenses",
+      icon: <FileText className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500"
+    },
+    {
+      title: "Team Collaboration",
+      description: "Share expense data with team members and manage approvals",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-pink-500 to-purple-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Individual",
-      price: "$49",
+      name: "Personal",
+      price: "$9",
       period: "/month",
-      description: "Perfect for freelancers and small businesses",
+      description: "Perfect for individuals and freelancers",
       features: [
-        "Up to 10 contracts/month",
-        "Basic risk analysis",
-        "Standard compliance checking",
+        "Up to 100 expenses/month",
+        "Basic categorization",
+        "Receipt scanning",
         "Email support",
-        "Basic reports",
+        "Standard reports",
         "30-day data retention"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$149",
+      name: "Business",
+      price: "$29",
       period: "/month",
-      description: "Ideal for law firms and growing businesses",
+      description: "Ideal for small businesses and teams",
       features: [
-        "Up to 100 contracts/month",
-        "Advanced risk analysis",
-        "Full compliance checking",
+        "Up to 1,000 expenses/month",
+        "Advanced AI categorization",
+        "Multi-currency support",
+        "Team collaboration",
         "Priority support",
         "API access",
-        "Advanced reports",
+        "Custom reports",
         "90-day data retention"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$399",
+      price: "$99",
       period: "/month",
-      description: "For large organizations and legal departments",
+      description: "For large organizations and accounting firms",
       features: [
-        "Unlimited contracts",
+        "Unlimited expenses",
         "Full AI suite",
+        "Tax preparation",
         "White-label options",
         "Dedicated support",
         "Full API access",
         "Unlimited data retention",
         "Custom integrations",
-        "Team collaboration"
+        "Advanced analytics"
       ],
       popular: false
     }
@@ -433,68 +435,68 @@ const ZionAIContractAnalyzerPage = () => {
   const testimonials = [
     {
       name: "David Kim",
-      company: "Law Firm",
-      role: "Partner",
-      content: "Zion AI Contract Analyzer has revolutionized our contract review process. We've reduced review time by 80% and caught risks we would have missed.",
+      company: "Freelance Designer",
+      role: "Creative Director",
+      content: "Zion Smart Expense Categorizer has saved me hours every week. The AI automatically categorizes my expenses with incredible accuracy.",
       rating: 5,
       avatar: "DK"
     },
     {
       name: "Lisa Martinez",
-      company: "Corporate Legal",
-      role: "General Counsel",
-      content: "The compliance checking feature is incredible. It ensures all our contracts meet regulatory requirements automatically.",
+      company: "Small Business",
+      role: "Owner",
+      content: "The receipt scanning feature is amazing. I just take a photo and everything is automatically categorized and recorded.",
       rating: 5,
       avatar: "LM"
     },
     {
       name: "James Wilson",
-      company: "Legal Tech Company",
-      role: "CEO",
-      content: "The AI insights have helped us improve our contract templates and reduce legal risks significantly.",
+      company: "Accounting Firm",
+      role: "CPA",
+      content: "The tax preparation features have streamlined our entire process. Our clients love the automated categorization.",
       rating: 5,
       avatar: "JW"
     }
   ];
 
   const stats = [
-    { number: "80%", label: "Time Saved", icon: <Clock className="w-6 h-6" /> },
-    { number: "95%", label: "Risk Detection Accuracy", icon: <Shield className="w-6 h-6" /> },
-    { number: "500+", label: "Legal Teams Using", icon: <Building className="w-6 h-6" /> },
-    { number: "4.9/5", label: "User Rating", icon: <Star className="w-6 h-6" /> }
+    { number: "95%", label: "Categorization Accuracy", icon: <Receipt className="w-6 h-6" /> },
+    { number: "50%", label: "Time Saved", icon: <Clock className="w-6 h-6" /> },
+    { number: "1,000+", label: "Businesses Using", icon: <Building className="w-6 h-6" /> },
+    { number: "4.8/5", label: "User Rating", icon: <Star className="w-6 h-6" /> }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Contract Analyzer - AI-Powered Contract Analysis & Risk Assessment | Zion Tech Group"
-        description="Analyze contracts with AI. Detect risks, check compliance, and extract key clauses. Start your free trial today!"
-        keywords="AI contract analysis, contract review, legal AI, risk assessment, compliance checking, contract automation, legal tech"
-        canonical="https://ziontechgroup.com/zion-ai-contract-analyzer"
+        title="Zion Smart Expense Categorizer - AI-Powered Expense Management & Categorization | Zion Tech Group"
+        description="Automate expense categorization with AI. Scan receipts, track spending, and prepare tax reports. Start your free trial today!"
+        keywords="expense categorization, expense management, receipt scanning, expense tracking, tax preparation, AI expense categorization"
+        canonical="https://ziontechgroup.com/zion-smart-expense-categorizer"
       />
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         
         <ResponsiveContainer className="text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
-            <FileText className="w-4 h-4 text-blue-400 mr-2" />
-            <span className="text-blue-400 text-sm font-medium">#1 AI Contract Analyzer 2024</span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 mb-6">
+            <Zap className="w-4 h-4 text-green-400 mr-2" />
+            <span className="text-green-400 text-sm font-medium">#1 AI Expense Categorizer 2024</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400">
-              AI Contract Analyzer
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-400 to-cyan-400">
+              Smart Expense Categorizer
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Analyze contracts with AI. Detect risks, check compliance, extract key clauses, 
-            and get intelligent insights to improve your legal processes.
+            Automate your expense management with AI. Categorize expenses, scan receipts, 
+            and prepare tax reports with intelligent automation and real-time insights.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -502,7 +504,7 @@ const ZionAIContractAnalyzerPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<FileText className="w-5 h-5" />}
+              icon={<Receipt className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -510,7 +512,7 @@ const ZionAIContractAnalyzerPage = () => {
               href="#demo"
               variant="outline"
               size="lg"
-              icon={<Eye className="w-5 h-5" />}
+              icon={<BarChart3 className="w-5 h-5" />}
             >
               View Demo
             </FuturisticButton>
@@ -520,7 +522,7 @@ const ZionAIContractAnalyzerPage = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   {stat.icon}
                 </div>
                 <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
@@ -536,10 +538,10 @@ const ZionAIContractAnalyzerPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Advanced Contract Intelligence
+              Intelligent Expense Management
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Everything you need to analyze and improve your contracts.
+              Everything you need to manage and categorize your expenses efficiently.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -548,7 +550,7 @@ const ZionAIContractAnalyzerPage = () => {
                 <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}>
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-blue-400 transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-green-400 transition-colors">
                   {feature.title}
                 </h3>
                 <p className="text-gray-300 text-center leading-relaxed">
@@ -561,14 +563,14 @@ const ZionAIContractAnalyzerPage = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-green-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your contract analysis needs.
+              Choose the plan that fits your expense management needs.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -577,13 +579,13 @@ const ZionAIContractAnalyzerPage = () => {
                 key={index}
                 className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular 
-                    ? 'border-blue-500/50 ring-2 ring-blue-500/20' 
+                    ? 'border-green-500/50 ring-2 ring-green-500/20' 
                     : 'border-white/20'
                 } hover:bg-white/20 transition-all duration-300 hover:scale-105`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -623,10 +625,10 @@ const ZionAIContractAnalyzerPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Legal Professionals
+              Trusted by Finance Professionals
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our users say about Zion AI Contract Analyzer
+              See what our users say about Zion Smart Expense Categorizer
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -642,7 +644,7 @@ const ZionAIContractAnalyzerPage = () => {
                 </div>
                 <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
+                  <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
                     {testimonial.avatar}
                   </div>
                   <div>
@@ -657,21 +659,21 @@ const ZionAIContractAnalyzerPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/30 to-emerald-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Contract Analysis?
+            Ready to Automate Your Expenses?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join hundreds of legal teams using AI to analyze contracts faster and more accurately. 
-            Start your free trial today and see the difference AI can make.
+            Join thousands of businesses using AI to manage their expenses efficiently. 
+            Start your free trial today and save time on expense management.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FuturisticButton
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<FileText className="w-5 h-5" />}
+              icon={<Receipt className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -679,7 +681,7 @@ const ZionAIContractAnalyzerPage = () => {
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Eye className="w-5 h-5" />}
+              icon={<BarChart3 className="w-5 h-5" />}
             >
               View Demo
             </FuturisticButton>
@@ -690,4 +692,4 @@ const ZionAIContractAnalyzerPage = () => {
   );
 };
 
-export default ZionAIContractAnalyzerPage;
+export default ZionSmartExpenseCategorizerPage;

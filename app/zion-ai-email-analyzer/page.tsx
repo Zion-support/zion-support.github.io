@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { 
-  FileText, 
+  Mail, 
   BarChart3, 
+  Shield, 
   TrendingUp, 
   Star, 
   CheckCircle, 
@@ -12,7 +13,6 @@ import {
   Zap,
   Globe,
   Award,
-  Shield,
   Users,
   Smartphone,
   Settings,
@@ -52,7 +52,7 @@ import {
   Flag,
   Tag,
   Folder,
-  FileText as FileTextIcon,
+  FileText,
   Lock,
   Unlock,
   Key,
@@ -339,86 +339,89 @@ import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAIContractAnalyzerPage = () => {
+const ZionAIEmailAnalyzerPage = () => {
   const features = [
     {
-      title: "AI Contract Analysis",
-      description: "Advanced AI analyzes contracts for risks, clauses, and compliance issues",
-      icon: <FileText className="w-8 h-8" />,
+      title: "AI Email Analysis",
+      description: "Advanced AI analyzes email content, sentiment, and engagement patterns automatically",
+      icon: <Mail className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Risk Assessment",
-      description: "Identify potential risks and problematic clauses in legal documents",
-      icon: <AlertTriangle className="w-8 h-8" />,
+      title: "Spam Detection",
+      description: "Intelligent spam filtering with 99.9% accuracy using machine learning algorithms",
+      icon: <Shield className="w-8 h-8" />,
       color: "from-red-500 to-pink-500"
     },
     {
-      title: "Compliance Checking",
-      description: "Ensure contracts comply with relevant laws and regulations",
-      icon: <Shield className="w-8 h-8" />,
+      title: "Sentiment Analysis",
+      description: "Understand customer emotions and satisfaction levels from email communications",
+      icon: <TrendingUp className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Clause Extraction",
-      description: "Automatically extract and categorize key clauses and terms",
-      icon: <Target className="w-8 h-8" />,
+      title: "Performance Metrics",
+      description: "Track open rates, click-through rates, and engagement metrics in real-time",
+      icon: <BarChart3 className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Document Comparison",
-      description: "Compare contracts and identify differences between versions",
-      icon: <Eye className="w-8 h-8" />,
+      title: "Content Optimization",
+      description: "AI-powered suggestions to improve email subject lines and content effectiveness",
+      icon: <Target className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Legal Insights",
-      description: "Get AI-powered insights and recommendations for contract improvements",
-      icon: <Lightbulb className="w-8 h-8" />,
-      color: "from-yellow-500 to-orange-500"
+      title: "Compliance Monitoring",
+      description: "Ensure GDPR, CAN-SPAM, and other email compliance requirements are met",
+      icon: <CheckCircle className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Individual",
-      price: "$49",
+      name: "Basic",
+      price: "$29",
       period: "/month",
-      description: "Perfect for freelancers and small businesses",
+      description: "Perfect for small businesses and individuals",
       features: [
-        "Up to 10 contracts/month",
-        "Basic risk analysis",
-        "Standard compliance checking",
+        "Up to 10,000 emails/month",
+        "Basic spam detection",
+        "Email analytics dashboard",
         "Email support",
-        "Basic reports",
+        "Standard reports",
         "30-day data retention"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$149",
+      price: "$79",
       period: "/month",
-      description: "Ideal for law firms and growing businesses",
+      description: "Ideal for growing businesses and marketing teams",
       features: [
-        "Up to 100 contracts/month",
-        "Advanced risk analysis",
-        "Full compliance checking",
+        "Up to 100,000 emails/month",
+        "Advanced AI analysis",
+        "Sentiment analysis",
+        "Content optimization",
         "Priority support",
         "API access",
-        "Advanced reports",
+        "Custom reports",
         "90-day data retention"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$399",
+      price: "$199",
       period: "/month",
-      description: "For large organizations and legal departments",
+      description: "For large organizations and email service providers",
       features: [
-        "Unlimited contracts",
+        "Unlimited emails",
         "Full AI suite",
+        "Real-time analysis",
+        "Compliance monitoring",
         "White-label options",
         "Dedicated support",
         "Full API access",
@@ -432,45 +435,45 @@ const ZionAIContractAnalyzerPage = () => {
 
   const testimonials = [
     {
-      name: "David Kim",
-      company: "Law Firm",
-      role: "Partner",
-      content: "Zion AI Contract Analyzer has revolutionized our contract review process. We've reduced review time by 80% and caught risks we would have missed.",
+      name: "Jennifer Lee",
+      company: "Marketing Agency",
+      role: "Email Marketing Manager",
+      content: "Zion AI Email Analyzer has revolutionized our email campaigns. The AI insights helped us improve open rates by 45% and reduce spam complaints by 80%.",
       rating: 5,
-      avatar: "DK"
+      avatar: "JL"
     },
     {
-      name: "Lisa Martinez",
-      company: "Corporate Legal",
-      role: "General Counsel",
-      content: "The compliance checking feature is incredible. It ensures all our contracts meet regulatory requirements automatically.",
+      name: "Robert Smith",
+      company: "E-commerce Store",
+      role: "Digital Marketing Director",
+      content: "The sentiment analysis feature is incredible. We can now understand customer satisfaction levels and respond proactively to issues.",
       rating: 5,
-      avatar: "LM"
+      avatar: "RS"
     },
     {
-      name: "James Wilson",
-      company: "Legal Tech Company",
-      role: "CEO",
-      content: "The AI insights have helped us improve our contract templates and reduce legal risks significantly.",
+      name: "Maria Garcia",
+      company: "SaaS Company",
+      role: "Customer Success Lead",
+      content: "The compliance monitoring has saved us from potential legal issues. The AI automatically flags emails that might violate regulations.",
       rating: 5,
-      avatar: "JW"
+      avatar: "MG"
     }
   ];
 
   const stats = [
-    { number: "80%", label: "Time Saved", icon: <Clock className="w-6 h-6" /> },
-    { number: "95%", label: "Risk Detection Accuracy", icon: <Shield className="w-6 h-6" /> },
-    { number: "500+", label: "Legal Teams Using", icon: <Building className="w-6 h-6" /> },
-    { number: "4.9/5", label: "User Rating", icon: <Star className="w-6 h-6" /> }
+    { number: "1M+", label: "Emails Analyzed Daily", icon: <Mail className="w-6 h-6" /> },
+    { number: "99.9%", label: "Spam Detection Accuracy", icon: <Shield className="w-6 h-6" /> },
+    { number: "45%", label: "Average Open Rate Improvement", icon: <TrendingUp className="w-6 h-6" /> },
+    { number: "4.8/5", label: "User Rating", icon: <Star className="w-6 h-6" /> }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Contract Analyzer - AI-Powered Contract Analysis & Risk Assessment | Zion Tech Group"
-        description="Analyze contracts with AI. Detect risks, check compliance, and extract key clauses. Start your free trial today!"
-        keywords="AI contract analysis, contract review, legal AI, risk assessment, compliance checking, contract automation, legal tech"
-        canonical="https://ziontechgroup.com/zion-ai-contract-analyzer"
+        title="Zion AI Email Analyzer - Advanced Email Analytics & Spam Detection | Zion Tech Group"
+        description="Analyze email performance with AI. Detect spam, analyze sentiment, optimize content, and ensure compliance. Start your free trial today!"
+        keywords="email analyzer, email analytics, spam detection, email sentiment analysis, email optimization, email compliance, email marketing"
+        canonical="https://ziontechgroup.com/zion-ai-email-analyzer"
       />
 
       {/* Hero Section */}
@@ -482,19 +485,19 @@ const ZionAIContractAnalyzerPage = () => {
         
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
-            <FileText className="w-4 h-4 text-blue-400 mr-2" />
-            <span className="text-blue-400 text-sm font-medium">#1 AI Contract Analyzer 2024</span>
+            <Zap className="w-4 h-4 text-blue-400 mr-2" />
+            <span className="text-blue-400 text-sm font-medium">#1 AI Email Analytics 2024</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400">
-              AI Contract Analyzer
+              AI Email Analyzer
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Analyze contracts with AI. Detect risks, check compliance, extract key clauses, 
-            and get intelligent insights to improve your legal processes.
+            Transform your email strategy with AI. Analyze performance, detect spam, understand sentiment, 
+            and optimize your email campaigns for maximum engagement and compliance.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -502,7 +505,7 @@ const ZionAIContractAnalyzerPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<FileText className="w-5 h-5" />}
+              icon={<Mail className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -510,9 +513,9 @@ const ZionAIContractAnalyzerPage = () => {
               href="#demo"
               variant="outline"
               size="lg"
-              icon={<Eye className="w-5 h-5" />}
+              icon={<BarChart3 className="w-5 h-5" />}
             >
-              View Demo
+              View Analytics
             </FuturisticButton>
           </div>
           
@@ -536,10 +539,10 @@ const ZionAIContractAnalyzerPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Advanced Contract Intelligence
+              Advanced Email Intelligence
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Everything you need to analyze and improve your contracts.
+              Everything you need to analyze, optimize, and secure your email communications.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -568,7 +571,7 @@ const ZionAIContractAnalyzerPage = () => {
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your contract analysis needs.
+              Choose the plan that fits your email volume and business needs.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -623,10 +626,10 @@ const ZionAIContractAnalyzerPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Legal Professionals
+              Trusted by Email Marketers Worldwide
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our users say about Zion AI Contract Analyzer
+              See what our users say about Zion AI Email Analyzer
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -660,10 +663,10 @@ const ZionAIContractAnalyzerPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Contract Analysis?
+            Ready to Optimize Your Emails?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join hundreds of legal teams using AI to analyze contracts faster and more accurately. 
+            Join thousands of marketers using AI to improve their email performance. 
             Start your free trial today and see the difference AI can make.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -671,7 +674,7 @@ const ZionAIContractAnalyzerPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<FileText className="w-5 h-5" />}
+              icon={<Mail className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -679,9 +682,9 @@ const ZionAIContractAnalyzerPage = () => {
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Eye className="w-5 h-5" />}
+              icon={<BarChart3 className="w-5 h-5" />}
             >
-              View Demo
+              View Analytics
             </FuturisticButton>
           </div>
         </div>
@@ -690,4 +693,4 @@ const ZionAIContractAnalyzerPage = () => {
   );
 };
 
-export default ZionAIContractAnalyzerPage;
+export default ZionAIEmailAnalyzerPage;

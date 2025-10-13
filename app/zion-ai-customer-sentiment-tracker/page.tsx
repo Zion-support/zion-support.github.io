@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { 
-  FileText, 
+  Heart, 
   BarChart3, 
   TrendingUp, 
   Star, 
@@ -52,7 +52,7 @@ import {
   Flag,
   Tag,
   Folder,
-  FileText as FileTextIcon,
+  FileText,
   Lock,
   Unlock,
   Key,
@@ -89,7 +89,6 @@ import {
   ClipboardX,
   Bookmark,
   BookmarkCheck,
-  Heart,
   HeartHandshake,
   ThumbsUp,
   ThumbsDown,
@@ -339,41 +338,41 @@ import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAIContractAnalyzerPage = () => {
+const ZionAICustomerSentimentTrackerPage = () => {
   const features = [
     {
-      title: "AI Contract Analysis",
-      description: "Advanced AI analyzes contracts for risks, clauses, and compliance issues",
-      icon: <FileText className="w-8 h-8" />,
+      title: "Real-time Sentiment Analysis",
+      description: "Monitor customer sentiment across all channels with AI-powered emotion detection",
+      icon: <Heart className="w-8 h-8" />,
+      color: "from-pink-500 to-red-500"
+    },
+    {
+      title: "Multi-Channel Monitoring",
+      description: "Track sentiment from social media, reviews, support tickets, and surveys",
+      icon: <Globe className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Risk Assessment",
-      description: "Identify potential risks and problematic clauses in legal documents",
-      icon: <AlertTriangle className="w-8 h-8" />,
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      title: "Compliance Checking",
-      description: "Ensure contracts comply with relevant laws and regulations",
-      icon: <Shield className="w-8 h-8" />,
+      title: "Predictive Insights",
+      description: "Predict customer satisfaction trends and identify potential churn risks",
+      icon: <TrendingUp className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Clause Extraction",
-      description: "Automatically extract and categorize key clauses and terms",
-      icon: <Target className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Document Comparison",
-      description: "Compare contracts and identify differences between versions",
-      icon: <Eye className="w-8 h-8" />,
+      title: "Automated Alerts",
+      description: "Get instant notifications when sentiment drops or issues arise",
+      icon: <AlertCircle className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Legal Insights",
-      description: "Get AI-powered insights and recommendations for contract improvements",
+      title: "Custom Dashboards",
+      description: "Create personalized dashboards with sentiment metrics and trends",
+      icon: <BarChart3 className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Actionable Recommendations",
+      description: "Get AI-powered suggestions to improve customer satisfaction",
       icon: <Lightbulb className="w-8 h-8" />,
       color: "from-yellow-500 to-orange-500"
     }
@@ -381,16 +380,16 @@ const ZionAIContractAnalyzerPage = () => {
 
   const pricingPlans = [
     {
-      name: "Individual",
+      name: "Starter",
       price: "$49",
       period: "/month",
-      description: "Perfect for freelancers and small businesses",
+      description: "Perfect for small businesses and startups",
       features: [
-        "Up to 10 contracts/month",
-        "Basic risk analysis",
-        "Standard compliance checking",
+        "Up to 1,000 sentiment analyses/month",
+        "Basic sentiment tracking",
+        "Email alerts",
+        "Standard dashboard",
         "Email support",
-        "Basic reports",
         "30-day data retention"
       ],
       popular: false
@@ -399,14 +398,15 @@ const ZionAIContractAnalyzerPage = () => {
       name: "Professional",
       price: "$149",
       period: "/month",
-      description: "Ideal for law firms and growing businesses",
+      description: "Ideal for growing businesses and agencies",
       features: [
-        "Up to 100 contracts/month",
-        "Advanced risk analysis",
-        "Full compliance checking",
+        "Up to 10,000 sentiment analyses/month",
+        "Advanced sentiment analysis",
+        "Multi-channel monitoring",
+        "Predictive insights",
+        "Custom dashboards",
         "Priority support",
         "API access",
-        "Advanced reports",
         "90-day data retention"
       ],
       popular: true
@@ -415,10 +415,11 @@ const ZionAIContractAnalyzerPage = () => {
       name: "Enterprise",
       price: "$399",
       period: "/month",
-      description: "For large organizations and legal departments",
+      description: "For large organizations and enterprises",
       features: [
-        "Unlimited contracts",
+        "Unlimited sentiment analyses",
         "Full AI suite",
+        "Real-time monitoring",
         "White-label options",
         "Dedicated support",
         "Full API access",
@@ -432,69 +433,69 @@ const ZionAIContractAnalyzerPage = () => {
 
   const testimonials = [
     {
-      name: "David Kim",
-      company: "Law Firm",
-      role: "Partner",
-      content: "Zion AI Contract Analyzer has revolutionized our contract review process. We've reduced review time by 80% and caught risks we would have missed.",
+      name: "Sarah Johnson",
+      company: "E-commerce Platform",
+      role: "Customer Success Manager",
+      content: "Zion AI Customer Sentiment Tracker has transformed how we understand our customers. We've improved our satisfaction scores by 40%.",
       rating: 5,
-      avatar: "DK"
+      avatar: "SJ"
     },
     {
-      name: "Lisa Martinez",
-      company: "Corporate Legal",
-      role: "General Counsel",
-      content: "The compliance checking feature is incredible. It ensures all our contracts meet regulatory requirements automatically.",
+      name: "Michael Chen",
+      company: "SaaS Company",
+      role: "Head of Customer Experience",
+      content: "The predictive insights help us proactively address customer issues before they become problems. Game changer!",
       rating: 5,
-      avatar: "LM"
+      avatar: "MC"
     },
     {
-      name: "James Wilson",
-      company: "Legal Tech Company",
-      role: "CEO",
-      content: "The AI insights have helped us improve our contract templates and reduce legal risks significantly.",
+      name: "Emily Rodriguez",
+      company: "Retail Chain",
+      role: "Customer Experience Director",
+      content: "The multi-channel monitoring gives us complete visibility into customer sentiment across all touchpoints.",
       rating: 5,
-      avatar: "JW"
+      avatar: "ER"
     }
   ];
 
   const stats = [
-    { number: "80%", label: "Time Saved", icon: <Clock className="w-6 h-6" /> },
-    { number: "95%", label: "Risk Detection Accuracy", icon: <Shield className="w-6 h-6" /> },
-    { number: "500+", label: "Legal Teams Using", icon: <Building className="w-6 h-6" /> },
+    { number: "95%", label: "Sentiment Accuracy", icon: <Heart className="w-6 h-6" /> },
+    { number: "40%", label: "Satisfaction Improvement", icon: <TrendingUp className="w-6 h-6" /> },
+    { number: "500+", label: "Businesses Using", icon: <Building className="w-6 h-6" /> },
     { number: "4.9/5", label: "User Rating", icon: <Star className="w-6 h-6" /> }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Contract Analyzer - AI-Powered Contract Analysis & Risk Assessment | Zion Tech Group"
-        description="Analyze contracts with AI. Detect risks, check compliance, and extract key clauses. Start your free trial today!"
-        keywords="AI contract analysis, contract review, legal AI, risk assessment, compliance checking, contract automation, legal tech"
-        canonical="https://ziontechgroup.com/zion-ai-contract-analyzer"
+        title="Zion AI Customer Sentiment Tracker - Real-time Sentiment Analysis & Monitoring | Zion Tech Group"
+        description="Track customer sentiment with AI. Monitor emotions, predict satisfaction, and improve customer experience. Start your free trial today!"
+        keywords="customer sentiment analysis, sentiment tracking, emotion detection, customer satisfaction, sentiment monitoring, AI sentiment analysis"
+        canonical="https://ziontechgroup.com/zion-ai-customer-sentiment-tracker"
       />
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-pink-500/20 to-red-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         
         <ResponsiveContainer className="text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
-            <FileText className="w-4 h-4 text-blue-400 mr-2" />
-            <span className="text-blue-400 text-sm font-medium">#1 AI Contract Analyzer 2024</span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-red-500/20 border border-pink-500/30 mb-6">
+            <Heart className="w-4 h-4 text-pink-400 mr-2" />
+            <span className="text-pink-400 text-sm font-medium">#1 AI Sentiment Tracker 2024</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400">
-              AI Contract Analyzer
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-red-400 to-purple-400">
+              AI Customer Sentiment Tracker
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Analyze contracts with AI. Detect risks, check compliance, extract key clauses, 
-            and get intelligent insights to improve your legal processes.
+            Understand your customers' emotions with AI. Track sentiment in real-time, 
+            predict satisfaction trends, and take action to improve customer experience.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -502,7 +503,7 @@ const ZionAIContractAnalyzerPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<FileText className="w-5 h-5" />}
+              icon={<Heart className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -510,9 +511,9 @@ const ZionAIContractAnalyzerPage = () => {
               href="#demo"
               variant="outline"
               size="lg"
-              icon={<Eye className="w-5 h-5" />}
+              icon={<BarChart3 className="w-5 h-5" />}
             >
-              View Demo
+              View Dashboard
             </FuturisticButton>
           </div>
           
@@ -520,7 +521,7 @@ const ZionAIContractAnalyzerPage = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-pink-500/20 to-red-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   {stat.icon}
                 </div>
                 <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
@@ -536,10 +537,10 @@ const ZionAIContractAnalyzerPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Advanced Contract Intelligence
+              Advanced Sentiment Intelligence
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Everything you need to analyze and improve your contracts.
+              Everything you need to understand and improve customer sentiment.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -548,7 +549,7 @@ const ZionAIContractAnalyzerPage = () => {
                 <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}>
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-blue-400 transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-pink-400 transition-colors">
                   {feature.title}
                 </h3>
                 <p className="text-gray-300 text-center leading-relaxed">
@@ -561,14 +562,14 @@ const ZionAIContractAnalyzerPage = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-pink-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your contract analysis needs.
+              Choose the plan that fits your business needs. All plans include core sentiment tracking features.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -577,13 +578,13 @@ const ZionAIContractAnalyzerPage = () => {
                 key={index}
                 className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular 
-                    ? 'border-blue-500/50 ring-2 ring-blue-500/20' 
+                    ? 'border-pink-500/50 ring-2 ring-pink-500/20' 
                     : 'border-white/20'
                 } hover:bg-white/20 transition-all duration-300 hover:scale-105`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-pink-500 to-red-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -623,10 +624,10 @@ const ZionAIContractAnalyzerPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Legal Professionals
+              Trusted by Customer Experience Teams
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our users say about Zion AI Contract Analyzer
+              See what our users say about Zion AI Customer Sentiment Tracker
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -642,7 +643,7 @@ const ZionAIContractAnalyzerPage = () => {
                 </div>
                 <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
+                  <div className="w-10 h-10 bg-gradient-to-r from-pink-500 to-red-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
                     {testimonial.avatar}
                   </div>
                   <div>
@@ -657,21 +658,21 @@ const ZionAIContractAnalyzerPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-pink-900/30 to-red-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Contract Analysis?
+            Ready to Track Customer Sentiment?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join hundreds of legal teams using AI to analyze contracts faster and more accurately. 
-            Start your free trial today and see the difference AI can make.
+            Join hundreds of businesses using AI to understand their customers better. 
+            Start your free trial today and improve customer satisfaction.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FuturisticButton
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<FileText className="w-5 h-5" />}
+              icon={<Heart className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -679,9 +680,9 @@ const ZionAIContractAnalyzerPage = () => {
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Eye className="w-5 h-5" />}
+              icon={<BarChart3 className="w-5 h-5" />}
             >
-              View Demo
+              View Dashboard
             </FuturisticButton>
           </div>
         </div>
@@ -690,4 +691,4 @@ const ZionAIContractAnalyzerPage = () => {
   );
 };
 
-export default ZionAIContractAnalyzerPage;
+export default ZionAICustomerSentimentTrackerPage;
