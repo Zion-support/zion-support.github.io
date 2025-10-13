@@ -11,11 +11,93 @@ import {
   ArrowRightIcon,
   CheckCircleIcon,
   PhoneIcon,
-  EnvelopeIcon
+  EnvelopeIcon,
+  ShareIcon,
+  ChatBubbleLeftRightIcon
 } from '@heroicons/react/24/outline';
 
 export default function ServicesPage() {
   const services = [
+    {
+      title: "AI Smart Document Processor",
+      description: "Transform your document workflow with intelligent AI-powered processing. Extract, classify, and analyze documents with 99.5% accuracy.",
+      icon: CpuChipIcon,
+      features: [
+        "Intelligent OCR & Text Extraction",
+        "Smart Data Classification",
+        "Real-time Processing",
+        "Enterprise Security",
+        "Multi-format Support",
+        "API Integration"
+      ],
+      color: "from-purple-500 to-pink-500",
+      href: "/ai-smart-document-processor",
+      pricing: "Starting at $29/month"
+    },
+    {
+      title: "AI Social Media Manager",
+      description: "Transform your social media presence with AI-powered content generation, smart scheduling, and comprehensive analytics across all platforms.",
+      icon: ShareIcon,
+      features: [
+        "AI Content Generation",
+        "Smart Scheduling",
+        "Analytics & Insights",
+        "Multi-Platform Management",
+        "Hashtag Optimization",
+        "Engagement Tracking"
+      ],
+      color: "from-blue-500 to-cyan-500",
+      href: "/ai-social-media-manager",
+      pricing: "Starting at $49/month"
+    },
+    {
+      title: "AI Email Marketing Automation",
+      description: "Transform your email marketing with AI-powered automation, personalization, and analytics that increase open rates by 40% and conversions by 35%.",
+      icon: EnvelopeIcon,
+      features: [
+        "AI-Powered Subject Lines",
+        "Smart Segmentation",
+        "Predictive Analytics",
+        "Automated Workflows",
+        "A/B Testing",
+        "Advanced Analytics"
+      ],
+      color: "from-green-500 to-emerald-500",
+      href: "/ai-email-marketing-automation",
+      pricing: "Starting at $39/month"
+    },
+    {
+      title: "AI Customer Support Chatbot",
+      description: "Transform your customer support with intelligent AI chatbots that provide 24/7 assistance, multi-language support, and 95% response accuracy.",
+      icon: ChatBubbleLeftRightIcon,
+      features: [
+        "Natural Language Processing",
+        "24/7 Availability",
+        "Multi-Language Support",
+        "Seamless Handoff",
+        "Sentiment Analysis",
+        "Knowledge Base Integration"
+      ],
+      color: "from-yellow-500 to-orange-500",
+      href: "/ai-customer-support-chatbot",
+      pricing: "Starting at $79/month"
+    },
+    {
+      title: "AI Business Intelligence Dashboard",
+      description: "Transform your business with AI-powered analytics and insights. Make data-driven decisions with real-time dashboards and predictive analytics.",
+      icon: ChartBarIcon,
+      features: [
+        "AI-Powered Insights",
+        "Real-time Analytics",
+        "Predictive Analytics",
+        "Custom Visualizations",
+        "Data Integration",
+        "Mobile Access"
+      ],
+      color: "from-indigo-500 to-purple-500",
+      href: "/ai-business-intelligence-dashboard",
+      pricing: "Starting at $99/month"
+    },
     {
       title: "AI Solutions",
       description: "Advanced artificial intelligence services including machine learning, natural language processing, and predictive analytics.",
@@ -153,6 +235,12 @@ export default function ServicesPage() {
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {service.description}
                   </p>
+                  
+                  {service.pricing && (
+                    <div className="mb-4">
+                      <span className="text-2xl font-bold text-green-400">{service.pricing}</span>
+                    </div>
+                  )}
                   
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (

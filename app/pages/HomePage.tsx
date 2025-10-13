@@ -80,17 +80,34 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* AI Solutions */}
+            {/* AI Smart Document Processor */}
             <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <CpuChipIcon className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">AI Solutions</h3>
-              <p className="text-gray-300 mb-6">
-                Advanced artificial intelligence services including machine learning, 
-                natural language processing, and predictive analytics.
+              <h3 className="text-2xl font-bold text-white mb-4">AI Smart Document Processor</h3>
+              <p className="text-gray-300 mb-4">
+                Transform your document workflow with intelligent AI-powered processing. 
+                Extract, classify, and analyze documents with 99.5% accuracy.
               </p>
-              <Link to="/ai-solutions" className="text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+              <div className="text-green-400 font-bold text-lg mb-4">Starting at $29/month</div>
+              <Link to="/ai-smart-document-processor" className="text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                Learn More <ArrowRightIcon className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* AI Social Media Manager */}
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <GlobeAltIcon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">AI Social Media Manager</h3>
+              <p className="text-gray-300 mb-4">
+                Transform your social media presence with AI-powered content generation, 
+                smart scheduling, and comprehensive analytics across all platforms.
+              </p>
+              <div className="text-green-400 font-bold text-lg mb-4">Starting at $49/month</div>
+              <Link to="/ai-social-media-manager" className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </div>
@@ -140,17 +157,50 @@ export default function HomePage() {
               </Link>
             </div>
 
-            {/* Micro SaaS */}
-            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-pink-500 transition-all duration-300 hover:transform hover:scale-105">
-              <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <GlobeAltIcon className="w-8 h-8 text-white" />
+            {/* AI Email Marketing Automation */}
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-green-500 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <EnvelopeIcon className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Micro SaaS</h3>
-              <p className="text-gray-300 mb-6">
-                Custom micro SaaS solutions designed to solve specific business 
-                challenges with scalable, cost-effective applications.
+              <h3 className="text-2xl font-bold text-white mb-4">AI Email Marketing Automation</h3>
+              <p className="text-gray-300 mb-4">
+                Transform your email marketing with AI-powered automation, personalization, 
+                and analytics that increase open rates by 40% and conversions by 35%.
               </p>
-              <Link to="/micro-saas" className="text-pink-400 hover:text-pink-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+              <div className="text-green-400 font-bold text-lg mb-4">Starting at $39/month</div>
+              <Link to="/ai-email-marketing-automation" className="text-green-400 hover:text-green-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                Learn More <ArrowRightIcon className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* AI Customer Support Chatbot */}
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-yellow-500 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <PhoneIcon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">AI Customer Support Chatbot</h3>
+              <p className="text-gray-300 mb-4">
+                Transform your customer support with intelligent AI chatbots that provide 
+                24/7 assistance, multi-language support, and 95% response accuracy.
+              </p>
+              <div className="text-green-400 font-bold text-lg mb-4">Starting at $79/month</div>
+              <Link to="/ai-customer-support-chatbot" className="text-yellow-400 hover:text-yellow-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                Learn More <ArrowRightIcon className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* AI Business Intelligence Dashboard */}
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-indigo-500 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <ChartBarIcon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">AI Business Intelligence Dashboard</h3>
+              <p className="text-gray-300 mb-4">
+                Transform your business with AI-powered analytics and insights. 
+                Make data-driven decisions with real-time dashboards and predictive analytics.
+              </p>
+              <div className="text-green-400 font-bold text-lg mb-4">Starting at $99/month</div>
+              <Link to="/ai-business-intelligence-dashboard" className="text-indigo-400 hover:text-indigo-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </div>

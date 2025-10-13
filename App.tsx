@@ -44,6 +44,13 @@ function App() {
               <Route path="/pricing" element={<PricingPage />} />
               <Route path="/solutions" element={<SolutionsPage />} />
               
+              {/* AI Micro SAAS Services */}
+              <Route path="/ai-smart-document-processor" element={<React.Suspense fallback={<div className="min-h-screen bg-slate-900 flex items-center justify-center"><div className="text-white">Loading...</div></div>}><React.lazy(() => import('./app/ai-smart-document-processor/page')) /></React.Suspense>} />
+              <Route path="/ai-social-media-manager" element={<React.Suspense fallback={<div className="min-h-screen bg-slate-900 flex items-center justify-center"><div className="text-white">Loading...</div></div>}><React.lazy(() => import('./app/ai-social-media-manager/page')) /></React.Suspense>} />
+              <Route path="/ai-email-marketing-automation" element={<React.Suspense fallback={<div className="min-h-screen bg-slate-900 flex items-center justify-center"><div className="text-white">Loading...</div></div>}><React.lazy(() => import('./app/ai-email-marketing-automation/page')) /></React.Suspense>} />
+              <Route path="/ai-customer-support-chatbot" element={<React.Suspense fallback={<div className="min-h-screen bg-slate-900 flex items-center justify-center"><div className="text-white">Loading...</div></div>}><React.lazy(() => import('./app/ai-customer-support-chatbot/page')) /></React.Suspense>} />
+              <Route path="/ai-business-intelligence-dashboard" element={<React.Suspense fallback={<div className="min-h-screen bg-slate-900 flex items-center justify-center"><div className="text-white">Loading...</div></div>}><React.lazy(() => import('./app/ai-business-intelligence-dashboard/page')) /></React.Suspense>} />
+              
               {/* Catch all route */}
               <Route path="*" element={
                 <div className="min-h-screen flex items-center justify-center bg-slate-900">

@@ -2,56 +2,53 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  EnvelopeIcon, 
+  DocumentTextIcon, 
   CheckCircleIcon, 
   ArrowRightIcon,
   SparklesIcon,
-  ChartBarIcon,
   ClockIcon,
+  ShieldCheckIcon,
   CurrencyDollarIcon,
   PhoneIcon,
-  UserGroupIcon,
-  MegaphoneIcon,
-  CursorArrowRaysIcon
+  EnvelopeIcon
 } from '@heroicons/react/24/outline';
 
-export default function AiEmailMarketingAutomation() {
+export default function AiSmartDocumentProcessor() {
   const features = [
     {
-      title: "AI-Powered Subject Lines",
-      description: "Generate compelling subject lines that increase open rates by up to 40% using advanced AI algorithms",
-      icon: MegaphoneIcon
+      title: "Intelligent OCR & Text Extraction",
+      description: "Advanced AI-powered optical character recognition that extracts text from any document format with 99.5% accuracy",
+      icon: DocumentTextIcon
     },
     {
-      title: "Smart Segmentation",
-      description: "Automatically segment your audience based on behavior, preferences, and engagement patterns",
-      icon: UserGroupIcon
+      title: "Smart Data Classification",
+      description: "Automatically categorizes and tags documents based on content, type, and context using machine learning",
+      icon: SparklesIcon
     },
     {
-      title: "Predictive Analytics",
-      description: "AI-driven insights predict the best send times, content types, and audience preferences",
-      icon: ChartBarIcon
+      title: "Real-time Processing",
+      description: "Process documents in real-time with sub-second response times for instant data extraction",
+      icon: ClockIcon
     },
     {
-      title: "Automated Workflows",
-      description: "Create sophisticated email sequences that nurture leads and convert prospects automatically",
-      icon: CursorArrowRaysIcon
+      title: "Enterprise Security",
+      description: "Bank-level encryption, GDPR compliance, and secure cloud processing for maximum data protection",
+      icon: ShieldCheckIcon
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$39",
+      price: "$29",
       period: "/month",
       description: "Perfect for small businesses",
       features: [
-        "1,000 subscribers",
-        "10,000 emails/month",
-        "AI subject line generator",
-        "Basic automation",
-        "Email templates",
-        "Analytics dashboard"
+        "1,000 documents/month",
+        "Basic OCR processing",
+        "Email support",
+        "Standard templates",
+        "API access"
       ],
       popular: false
     },
@@ -61,13 +58,12 @@ export default function AiEmailMarketingAutomation() {
       period: "/month",
       description: "Ideal for growing companies",
       features: [
-        "10,000 subscribers",
-        "50,000 emails/month",
-        "Advanced AI features",
-        "Complex automation",
-        "A/B testing",
-        "Advanced analytics",
-        "Priority support"
+        "10,000 documents/month",
+        "Advanced AI processing",
+        "Priority support",
+        "Custom templates",
+        "Full API access",
+        "Analytics dashboard"
       ],
       popular: true
     },
@@ -77,67 +73,48 @@ export default function AiEmailMarketingAutomation() {
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited subscribers",
-        "Unlimited emails",
+        "Unlimited documents",
         "Premium AI features",
+        "24/7 dedicated support",
         "Custom integrations",
         "White-label options",
-        "24/7 dedicated support",
-        "API access"
+        "Advanced analytics",
+        "SLA guarantee"
       ],
       popular: false
     }
   ];
 
-  const automationWorkflows = [
+  const useCases = [
     {
-      title: "Welcome Series",
-      description: "Automatically welcome new subscribers with a personalized 5-email sequence",
-      benefits: "Increase engagement by 60%"
+      title: "Invoice Processing",
+      description: "Automatically extract data from invoices, validate information, and integrate with accounting systems",
+      savings: "Save 15 hours/week"
     },
     {
-      title: "Abandoned Cart Recovery",
-      description: "Send targeted emails to recover abandoned shopping carts with AI-optimized timing",
-      benefits: "Recover 25% of lost sales"
+      title: "Contract Analysis",
+      description: "Analyze contracts for key terms, clauses, and potential risks using AI-powered natural language processing",
+      savings: "Reduce review time by 80%"
     },
     {
-      title: "Re-engagement Campaigns",
-      description: "Identify and re-engage inactive subscribers with personalized content",
-      benefits: "Reactivate 30% of dormant users"
+      title: "Receipt Management",
+      description: "Process expense receipts, extract amounts, categories, and automatically populate expense reports",
+      savings: "Eliminate manual data entry"
     },
     {
-      title: "Birthday & Anniversary",
-      description: "Send personalized messages on special occasions to strengthen customer relationships",
-      benefits: "Boost customer loyalty by 45%"
-    }
-  ];
-
-  const results = [
-    {
-      metric: "40% Higher Open Rates",
-      description: "AI-optimized subject lines and send times"
-    },
-    {
-      metric: "60% More Clicks",
-      description: "Personalized content and smart segmentation"
-    },
-    {
-      metric: "35% Better Conversions",
-      description: "Automated workflows and behavioral triggers"
-    },
-    {
-      metric: "50% Time Savings",
-      description: "Automated campaign creation and management"
+      title: "Legal Document Review",
+      description: "Review legal documents for compliance, extract key information, and flag potential issues",
+      savings: "Increase accuracy by 95%"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Email Marketing Automation - Intelligent Email Campaigns | Zion Tech Group</title>
-        <meta name="description" content="Transform your email marketing with AI-powered automation, personalization, and analytics. Increase open rates by 40% and conversions by 35%. Starting at $39/month." />
-        <meta name="keywords" content="AI email marketing, email automation, email personalization, email analytics, marketing automation, AI email campaigns" />
-        <meta name="canonical" content="https://ziontechgroup.com/ai-email-marketing-automation" />
+        <title>AI Smart Document Processor - Intelligent Document Processing | Zion Tech Group</title>
+        <meta name="description" content="Transform your document workflow with our AI-powered document processor. Extract, classify, and analyze documents with 99.5% accuracy. Starting at $29/month." />
+        <meta name="keywords" content="AI document processing, OCR, document automation, intelligent data extraction, document management, AI OCR" />
+        <meta name="canonical" content="https://ziontechgroup.com/ai-smart-document-processor" />
       </Helmet>
 
       {/* Hero Section */}
@@ -145,11 +122,11 @@ export default function AiEmailMarketingAutomation() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Email Marketing Automation
+              AI Smart Document Processor
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Transform your email marketing with AI-powered automation, personalization, 
-              and analytics that increase open rates by 40% and conversions by 35%.
+              Transform your document workflow with intelligent AI-powered processing. 
+              Extract, classify, and analyze documents with 99.5% accuracy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link 
@@ -179,10 +156,10 @@ export default function AiEmailMarketingAutomation() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              AI-Powered Features
+              Powerful AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI email marketing platform combines machine learning with proven marketing strategies
+              Our AI-powered document processor combines cutting-edge technology with user-friendly design
             </p>
           </div>
           
@@ -203,49 +180,26 @@ export default function AiEmailMarketingAutomation() {
         </div>
       </section>
 
-      {/* Results Section */}
+      {/* Use Cases Section */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Proven Results
+              Real-World Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See the measurable impact our AI email marketing automation delivers
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {results.map((result, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-xl border border-slate-700/50 text-center">
-                <div className="text-4xl font-bold text-green-400 mb-4">{result.metric}</div>
-                <p className="text-gray-300">{result.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Automation Workflows Section */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Smart Automation Workflows
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Pre-built automation sequences that nurture leads and convert prospects automatically
+              See how businesses are using our AI document processor to save time and increase accuracy
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {automationWorkflows.map((workflow, index) => (
-              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-green-500 transition-all duration-300">
-                <h3 className="text-2xl font-bold text-white mb-4">{workflow.title}</h3>
-                <p className="text-gray-300 mb-4">{workflow.description}</p>
+            {useCases.map((useCase, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-xl border border-slate-700/50">
+                <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
+                <p className="text-gray-300 mb-4">{useCase.description}</p>
                 <div className="flex items-center text-green-400 font-semibold">
                   <CheckCircleIcon className="w-5 h-5 mr-2" />
-                  {workflow.benefits}
+                  {useCase.savings}
                 </div>
               </div>
             ))}
@@ -254,14 +208,14 @@ export default function AiEmailMarketingAutomation() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
+      <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your email marketing needs. All plans include our core AI features.
+              Choose the plan that fits your business needs. All plans include our core AI features.
             </p>
           </div>
           
@@ -315,14 +269,14 @@ export default function AiEmailMarketingAutomation() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-slate-900">
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Ready to Transform Your Email Marketing?
+              Ready to Transform Your Document Workflow?
             </h2>
             <p className="text-xl text-gray-300 mb-12">
-              Join thousands of businesses already using our AI email marketing automation to increase engagement and drive sales
+              Join thousands of businesses already using our AI document processor to save time and increase accuracy
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

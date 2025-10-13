@@ -2,142 +2,178 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  EnvelopeIcon, 
+  ChartBarIcon, 
   CheckCircleIcon, 
   ArrowRightIcon,
   SparklesIcon,
-  ChartBarIcon,
   ClockIcon,
   CurrencyDollarIcon,
   PhoneIcon,
-  UserGroupIcon,
-  MegaphoneIcon,
-  CursorArrowRaysIcon
+  EnvelopeIcon,
+  CpuChipIcon,
+  EyeIcon,
+  TrendingUpIcon,
+  ShieldCheckIcon
 } from '@heroicons/react/24/outline';
 
-export default function AiEmailMarketingAutomation() {
+export default function AiBusinessIntelligenceDashboard() {
   const features = [
     {
-      title: "AI-Powered Subject Lines",
-      description: "Generate compelling subject lines that increase open rates by up to 40% using advanced AI algorithms",
-      icon: MegaphoneIcon
+      title: "AI-Powered Insights",
+      description: "Advanced machine learning algorithms automatically identify trends, patterns, and opportunities in your data",
+      icon: CpuChipIcon
     },
     {
-      title: "Smart Segmentation",
-      description: "Automatically segment your audience based on behavior, preferences, and engagement patterns",
-      icon: UserGroupIcon
+      title: "Real-time Analytics",
+      description: "Monitor your business performance with live dashboards that update in real-time",
+      icon: ClockIcon
     },
     {
       title: "Predictive Analytics",
-      description: "AI-driven insights predict the best send times, content types, and audience preferences",
-      icon: ChartBarIcon
+      description: "Forecast future trends and outcomes using AI-powered predictive modeling",
+      icon: TrendingUpIcon
     },
     {
-      title: "Automated Workflows",
-      description: "Create sophisticated email sequences that nurture leads and convert prospects automatically",
-      icon: CursorArrowRaysIcon
+      title: "Custom Visualizations",
+      description: "Create stunning, interactive charts and graphs that make complex data easy to understand",
+      icon: EyeIcon
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$39",
+      price: "$99",
       period: "/month",
       description: "Perfect for small businesses",
       features: [
-        "1,000 subscribers",
-        "10,000 emails/month",
-        "AI subject line generator",
-        "Basic automation",
-        "Email templates",
-        "Analytics dashboard"
+        "5 data sources",
+        "Basic AI insights",
+        "10 custom dashboards",
+        "Email support",
+        "Standard reports",
+        "Mobile app access"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$99",
+      price: "$299",
       period: "/month",
       description: "Ideal for growing companies",
       features: [
-        "10,000 subscribers",
-        "50,000 emails/month",
+        "25 data sources",
         "Advanced AI features",
-        "Complex automation",
-        "A/B testing",
-        "Advanced analytics",
-        "Priority support"
+        "Unlimited dashboards",
+        "Priority support",
+        "Custom reports",
+        "API access",
+        "Team collaboration",
+        "Advanced analytics"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$299",
+      price: "$799",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited subscribers",
-        "Unlimited emails",
+        "Unlimited data sources",
         "Premium AI features",
-        "Custom integrations",
         "White-label options",
         "24/7 dedicated support",
-        "API access"
+        "Custom integrations",
+        "Advanced security",
+        "SLA guarantee",
+        "On-premise deployment"
       ],
       popular: false
     }
   ];
 
-  const automationWorkflows = [
+  const dataSources = [
     {
-      title: "Welcome Series",
-      description: "Automatically welcome new subscribers with a personalized 5-email sequence",
-      benefits: "Increase engagement by 60%"
+      name: "Sales & CRM",
+      description: "Connect to Salesforce, HubSpot, Pipedrive, and other CRM systems",
+      icon: "💼"
     },
     {
-      title: "Abandoned Cart Recovery",
-      description: "Send targeted emails to recover abandoned shopping carts with AI-optimized timing",
-      benefits: "Recover 25% of lost sales"
+      name: "Marketing",
+      description: "Integrate with Google Analytics, Facebook Ads, LinkedIn, and marketing tools",
+      icon: "📈"
     },
     {
-      title: "Re-engagement Campaigns",
-      description: "Identify and re-engage inactive subscribers with personalized content",
-      benefits: "Reactivate 30% of dormant users"
+      name: "Financial",
+      description: "Connect to QuickBooks, Xero, Stripe, and other financial platforms",
+      icon: "💰"
     },
     {
-      title: "Birthday & Anniversary",
-      description: "Send personalized messages on special occasions to strengthen customer relationships",
-      benefits: "Boost customer loyalty by 45%"
+      name: "E-commerce",
+      description: "Integrate with Shopify, WooCommerce, Amazon, and e-commerce platforms",
+      icon: "🛒"
+    },
+    {
+      name: "Social Media",
+      description: "Connect to Facebook, Instagram, Twitter, LinkedIn, and social platforms",
+      icon: "📱"
+    },
+    {
+      name: "Databases",
+      description: "Connect to MySQL, PostgreSQL, MongoDB, and other databases",
+      icon: "🗄️"
     }
   ];
 
-  const results = [
+  const dashboardTypes = [
     {
-      metric: "40% Higher Open Rates",
-      description: "AI-optimized subject lines and send times"
+      title: "Executive Dashboard",
+      description: "High-level KPIs and metrics for C-level executives and stakeholders",
+      features: ["Revenue trends", "Customer metrics", "Operational efficiency", "Strategic goals"]
     },
     {
-      metric: "60% More Clicks",
-      description: "Personalized content and smart segmentation"
+      title: "Sales Dashboard",
+      description: "Comprehensive sales performance tracking and forecasting",
+      features: ["Pipeline analysis", "Conversion rates", "Sales forecasting", "Team performance"]
     },
     {
-      metric: "35% Better Conversions",
-      description: "Automated workflows and behavioral triggers"
+      title: "Marketing Dashboard",
+      description: "Marketing campaign performance and ROI analysis",
+      features: ["Campaign metrics", "Lead generation", "Cost per acquisition", "ROI analysis"]
     },
     {
-      metric: "50% Time Savings",
-      description: "Automated campaign creation and management"
+      title: "Financial Dashboard",
+      description: "Financial health monitoring and budget tracking",
+      features: ["Revenue analysis", "Expense tracking", "Profit margins", "Cash flow"]
+    }
+  ];
+
+  const benefits = [
+    {
+      title: "Make Data-Driven Decisions",
+      description: "Access real-time insights that help you make informed business decisions"
+    },
+    {
+      title: "Save 20+ Hours Per Week",
+      description: "Automate report generation and data analysis, freeing up time for strategic work"
+    },
+    {
+      title: "Identify Growth Opportunities",
+      description: "AI-powered insights reveal hidden patterns and growth opportunities in your data"
+    },
+    {
+      title: "Improve Team Collaboration",
+      description: "Share insights across teams with interactive dashboards and automated reports"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Email Marketing Automation - Intelligent Email Campaigns | Zion Tech Group</title>
-        <meta name="description" content="Transform your email marketing with AI-powered automation, personalization, and analytics. Increase open rates by 40% and conversions by 35%. Starting at $39/month." />
-        <meta name="keywords" content="AI email marketing, email automation, email personalization, email analytics, marketing automation, AI email campaigns" />
-        <meta name="canonical" content="https://ziontechgroup.com/ai-email-marketing-automation" />
+        <title>AI Business Intelligence Dashboard - Smart Analytics Platform | Zion Tech Group</title>
+        <meta name="description" content="Transform your business with AI-powered business intelligence dashboards. Real-time analytics, predictive insights, and custom visualizations. Starting at $99/month." />
+        <meta name="keywords" content="AI business intelligence, BI dashboard, data analytics, business intelligence platform, AI analytics, data visualization" />
+        <meta name="canonical" content="https://ziontechgroup.com/ai-business-intelligence-dashboard" />
       </Helmet>
 
       {/* Hero Section */}
@@ -145,11 +181,11 @@ export default function AiEmailMarketingAutomation() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Email Marketing Automation
+              AI Business Intelligence Dashboard
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Transform your email marketing with AI-powered automation, personalization, 
-              and analytics that increase open rates by 40% and conversions by 35%.
+              Transform your business with AI-powered analytics and insights. 
+              Make data-driven decisions with real-time dashboards and predictive analytics.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link 
@@ -179,10 +215,10 @@ export default function AiEmailMarketingAutomation() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              AI-Powered Features
+              Advanced AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI email marketing platform combines machine learning with proven marketing strategies
+              Our AI business intelligence platform combines machine learning with intuitive design
             </p>
           </div>
           
@@ -203,50 +239,78 @@ export default function AiEmailMarketingAutomation() {
         </div>
       </section>
 
-      {/* Results Section */}
+      {/* Data Sources Section */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Proven Results
+              Connect All Your Data Sources
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See the measurable impact our AI email marketing automation delivers
+              Integrate with 100+ popular business tools and platforms to get a complete view of your business
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {results.map((result, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-xl border border-slate-700/50 text-center">
-                <div className="text-4xl font-bold text-green-400 mb-4">{result.metric}</div>
-                <p className="text-gray-300">{result.description}</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {dataSources.map((source, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-xl border border-slate-700/50 text-center hover:border-purple-500/50 transition-all duration-300">
+                <div className="text-4xl mb-4">{source.icon}</div>
+                <h3 className="text-xl font-bold text-white mb-4">{source.name}</h3>
+                <p className="text-gray-300">{source.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Automation Workflows Section */}
+      {/* Dashboard Types Section */}
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Smart Automation Workflows
+              Pre-Built Dashboard Templates
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Pre-built automation sequences that nurture leads and convert prospects automatically
+              Get started quickly with our professionally designed dashboard templates
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {automationWorkflows.map((workflow, index) => (
+            {dashboardTypes.map((dashboard, index) => (
               <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-green-500 transition-all duration-300">
-                <h3 className="text-2xl font-bold text-white mb-4">{workflow.title}</h3>
-                <p className="text-gray-300 mb-4">{workflow.description}</p>
-                <div className="flex items-center text-green-400 font-semibold">
-                  <CheckCircleIcon className="w-5 h-5 mr-2" />
-                  {workflow.benefits}
-                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{dashboard.title}</h3>
+                <p className="text-gray-300 mb-6">{dashboard.description}</p>
+                <ul className="space-y-2">
+                  {dashboard.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Measurable Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See the real impact our AI business intelligence platform brings to your organization
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-xl border border-slate-700/50 text-center">
+                <h3 className="text-2xl font-bold text-green-400 mb-4">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -254,14 +318,14 @@ export default function AiEmailMarketingAutomation() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
+      <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your email marketing needs. All plans include our core AI features.
+              Choose the plan that fits your business intelligence needs. All plans include our core AI features.
             </p>
           </div>
           
@@ -315,14 +379,14 @@ export default function AiEmailMarketingAutomation() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-slate-900">
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Ready to Transform Your Email Marketing?
+              Ready to Transform Your Business Intelligence?
             </h2>
             <p className="text-xl text-gray-300 mb-12">
-              Join thousands of businesses already using our AI email marketing automation to increase engagement and drive sales
+              Join thousands of businesses already using our AI business intelligence platform to make data-driven decisions
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

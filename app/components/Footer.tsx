@@ -7,6 +7,11 @@ const Footer: React.FC = () => {
 
   const footerLinks = {
     services: [
+      { name: 'AI Smart Document Processor', href: '/ai-smart-document-processor' },
+      { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
+      { name: 'AI Email Marketing Automation', href: '/ai-email-marketing-automation' },
+      { name: 'AI Customer Support Chatbot', href: '/ai-customer-support-chatbot' },
+      { name: 'AI Business Intelligence Dashboard', href: '/ai-business-intelligence-dashboard' },
       { name: 'AI Services', href: '/ai-services' },
       { name: 'IT Services', href: '/it-services' },
       { name: 'Solutions', href: '/cloud-infrastructure' },
