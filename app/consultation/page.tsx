@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export default function Consultation() {
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
         <title>Free Consultation - Zion Tech Group | Expert Technology Advisory</title>
         <meta
@@ -38,6 +38,8 @@ export default function Consultation() {
         </div>
 
       </div>
-    </div>
+    </>
   );
-}
+};
+
+export default ConsultationPage;

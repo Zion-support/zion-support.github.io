@@ -18,6 +18,7 @@ export default function CaseStudies() {
         "80% faster response times",
         "35% increase in sales"
       ],
+      image: "/images/case-studies/ecommerce-ai.jpg",
       duration: "6 months",
       services: ["AI Analytics", "AI Customer Support", "Data Analytics"],
       image: "/api/placeholder/600/400",
@@ -125,15 +126,8 @@ export default function CaseStudies() {
   return (
     <>
       <Helmet>
-        <title>Case Studies - Zion Tech Group | Success Stories & Client Results</title>
-        <meta
-          name="description"
-          content="Explore our success stories and case studies. See how Zion Tech Group has helped businesses achieve remarkable results with AI, technology, and digital transformation solutions."
-        />
-        <meta
-          name="keywords"
-          content="case studies, success stories, client results, AI implementation, digital transformation, technology solutions, business outcomes"
-        />
+        <title>Case Studies - Zion Tech Group</title>
+        <meta name="description" content="Explore our successful projects and client transformations across various industries." />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -157,6 +151,7 @@ export default function CaseStudies() {
               Discover how we've helped businesses across industries achieve remarkable results 
               with our AI and technology solutions. Real projects, real outcomes, real success.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -351,17 +346,6 @@ export default function CaseStudies() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-              >
-                Start Your Project
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/consultation"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
-              >
-                Free Consultation
-                <Zap className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>
