@@ -340,7 +340,6 @@ export default function Services() {
     }
   ];
 
-export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -381,6 +380,4 @@ export default function ServicesPage() {
       </div>
     </div>
   );
-}
-
 }

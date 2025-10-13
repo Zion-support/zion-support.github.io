@@ -1,44 +1,32 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-const features = [
+import { Brain, Clock, Target, BarChart3, MessageSquare, Zap, Shield, Users, CheckCircle, ArrowRight, Star, Globe } from 'lucide-react';
+
+export default function AiCustomerSupportChatbotPage() {
+  const features = [
     {
-      title: "Predictive Analytics",
-      description: "Advanced machine learning models for accurate financial forecasting",
-      icon: "Brain"
+      title: "AI-Powered Responses",
+      description: "Intelligent chatbot that understands context and provides accurate answers",
+      icon: <Brain className="w-8 h-8" />
     },
     {
-      title: "Risk Assessment",
-      description: "Comprehensive risk analysis and mitigation strategies",
-      icon: "Shield"
+      title: "24/7 Availability",
+      description: "Round-the-clock customer support without human intervention",
+      icon: <Clock className="w-8 h-8" />
     },
     {
-      title: "Real-time Monitoring",
-      description: "Continuous monitoring of financial metrics and KPIs",
-      icon: "Activity"
+      title: "Multi-language Support",
+      description: "Support customers in multiple languages with real-time translation",
+      icon: <Globe className="w-8 h-8" />
     },
     {
-      title: "Automated Reporting",
-      description: "Generate detailed reports automatically",
-      icon: "FileText"
+      title: "Seamless Handoff",
+      description: "Intelligent escalation to human agents when needed",
+      icon: <Users className="w-8 h-8" />
     }
   ];
-const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "CFO",
-      company: "TechCorp",
-      content: "The AI financial analysis platform has revolutionized our decision-making process.",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      role: "Investment Manager",
-      company: "FinancePro",
-      content: "Incredible accuracy and insights that have improved our portfolio performance.",
-      rating: 5
-    }
-  ];
-export default function AICustomerSupportChatbot() {
+
   const testimonials = [
     {
       name: "Sarah Johnson",
@@ -149,34 +137,6 @@ export default function AICustomerSupportChatbot() {
     },
   ];
 
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "Customer Success Manager",
-      company: "TechCorp",
-      content: "The AI chatbot has reduced our support tickets by 70% while improving customer satisfaction. It's incredibly intelligent and handles complex queries perfectly.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      role: "Operations Director",
-      company: "InnovateLabs",
-      content: "Implementation was seamless and the results were immediate. Our customers love the instant responses and our team can focus on more complex issues.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Head of Support",
-      company: "DataFlow Inc",
-      content: "The analytics and insights provided by the chatbot help us understand our customers better. It's been a game-changer for our support operations.",
-      rating: 5,
-      avatar: "ER"
-    }
-  ];
-
-export default function AiCustomerSupportChatbotPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -217,6 +177,4 @@ export default function AiCustomerSupportChatbotPage() {
       </div>
     </div>
   );
-}
-
 }

@@ -6,13 +6,10 @@ import FuturisticCardEnhanced from "../components/FuturisticCardEnhanced";
 import FuturisticButtonEnhanced from "../components/FuturisticButtonEnhanced";
 import FuturisticTextEnhanced from "../components/FuturisticTextEnhanced";
 import ResponsiveContainer from "../components/ResponsiveContainer";
-import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight } from 'lucide-react';
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
 
-const AICodeAssistantProZionTechGroup = () => {
-
+export default function AiCodeAssistantProPage() {
   const features = [
     {
       title: "AI Code Generation",
@@ -116,7 +113,6 @@ const AICodeAssistantProZionTechGroup = () => {
     }
   ];
 
-export default function AiCodeAssistantProPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -157,6 +153,4 @@ export default function AiCodeAssistantProPage() {
       </div>
     </div>
   );
-}
-
 }
