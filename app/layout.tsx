@@ -53,13 +53,31 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         About
                         <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
                       </Link>
-                      <Link
-                        to="/services"
-                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
-                      >
-                        Services
-                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
-                      </Link>
+                      <div className="relative group">
+                        <Link
+                          to="/services"
+                          className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
+                        >
+                          Services
+                          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
+                        </Link>
+                        <div className="absolute top-full left-0 mt-2 w-64 bg-black/90 backdrop-blur-sm rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                          <div className="py-2">
+                            <Link to="/micro-saas" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors">
+                              Micro SAAS Solutions
+                            </Link>
+                            <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors">
+                              AI Services
+                            </Link>
+                            <Link to="/it-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors">
+                              IT Services
+                            </Link>
+                            <Link to="/5g-solutions" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors">
+                              5G Solutions
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
                       <Link
                         to="/contact"
                         className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
@@ -122,19 +140,22 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
                     {/* Services */}
                     <div className="space-y-4">
-                      <h4 className="text-lg font-semibold text-white">Services</h4>
+                      <h4 className="text-lg font-semibold text-white">Popular Services</h4>
                       <div className="space-y-2">
-                        <Link to="/ai-business-intelligence" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          AI Business Intelligence
+                        <Link to="/zion-analytics-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Zion Analytics Pro
                         </Link>
-                        <Link to="/ai-customer-support" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          AI Customer Support
+                        <Link to="/zion-security-shield" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Zion Security Shield
                         </Link>
-                        <Link to="/ai-content-generation" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          AI Content Generation
+                        <Link to="/ai-voice-assistant" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          AI Voice Assistant
                         </Link>
-                        <Link to="/ai-cybersecurity" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          AI Cybersecurity
+                        <Link to="/ai-predictive-maintenance" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          AI Predictive Maintenance
+                        </Link>
+                        <Link to="/micro-saas" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          View All Micro SAAS
                         </Link>
                       </div>
                     </div>

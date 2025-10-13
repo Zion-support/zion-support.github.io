@@ -61,6 +61,27 @@ const HomePage = () => {
       price: "From $9/month",
       icon: <Cloud className="w-6 h-6" />,
       link: "/zion-cloud-vault"
+    },
+    {
+      name: "AI Voice Assistant",
+      description: "Intelligent voice AI solutions",
+      price: "From $199/month",
+      icon: <Users className="w-6 h-6" />,
+      link: "/ai-voice-assistant"
+    },
+    {
+      name: "AI Predictive Maintenance",
+      description: "Smart equipment monitoring",
+      price: "From $299/month",
+      icon: <Zap className="w-6 h-6" />,
+      link: "/ai-predictive-maintenance"
+    },
+    {
+      name: "AI-Powered DevOps",
+      description: "Intelligent development operations",
+      price: "From $399/month",
+      icon: <Cloud className="w-6 h-6" />,
+      link: "/ai-powered-devops"
     }
   ];
 
