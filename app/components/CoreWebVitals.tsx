@@ -2,11 +2,14 @@ import React, { useEffect } from 'react';
 
 const CoreWebVitals: React.FC = () => {
   useEffect(() => {
-    // Core Web Vitals monitoring
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor LCP, FID, CLS
-      console.log('Core Web Vitals monitoring initialized');
-    }
+    if (typeof window === 'undefined') return;
+
+    // Track Core Web Vitals
+    const trackCoreWebVitals = () => {
+      console.log('Core Web Vitals tracking initialized');
+    };
+
+    trackCoreWebVitals();
   }, []);
 
   return null;

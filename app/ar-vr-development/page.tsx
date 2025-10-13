@@ -1,14 +1,14 @@
 import React from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-const MicroSaasPage: React.FC = () => {
+const ARVRDevelopmentPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
-        title="Micro SAAS - Zion Tech Group | Innovative Software Solutions"
-        description="Discover our innovative micro SAAS solutions designed to streamline business operations and boost productivity."
-        keywords="micro SAAS, software solutions, business tools, productivity, automation"
-        canonical="https://ziontechgroup.com/micro-saas"
+        title="AR/VR Development - Zion Tech Group | Immersive Technology Solutions"
+        description="Professional AR/VR development services including virtual reality applications, augmented reality solutions, and immersive technology experiences."
+        keywords="AR development, VR development, augmented reality, virtual reality, immersive technology, AR/VR solutions"
+        canonical="https://ziontechgroup.com/ar-vr-development"
       />
       
       <div className="relative z-10 pt-20 pb-16">
@@ -16,11 +16,11 @@ const MicroSaasPage: React.FC = () => {
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                Micro SAAS Solutions
+                AR/VR Development
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Innovative software solutions designed to streamline your business operations.
+              Immersive technology solutions for the future of business and entertainment.
             </p>
           </div>
         </div>
@@ -29,4 +29,4 @@ const MicroSaasPage: React.FC = () => {
   );
 };
 
-export default MicroSaasPage;
+export default ARVRDevelopmentPage;
