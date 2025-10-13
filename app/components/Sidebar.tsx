@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { 
@@ -21,10 +20,6 @@ import {
   Mail,
   MapPin
 } from 'lucide-react'
-=======
-import React from 'react';
-import { X } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
 interface SidebarProps {
   isOpen: boolean
@@ -48,14 +43,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   }, [])
 
   const aiServices = useMemo(() => [
-    { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
-    { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Brain className="w-4 h-4" /> },
-    { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> },
-    { name: 'AI Customer Support', path: '/ai-customer-support-chatbot', icon: <Zap className="w-4 h-4" /> },
-    { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> },
-    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> },
-    { name: 'AI Marketing Automation', path: '/ai-marketing', icon: <Zap className="w-4 h-4" /> },
-    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
+    { name: 'AI Analytics', path: '/ai-analytics', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'AI Automation', path: '/ai-automation', icon: <Zap className="w-4 h-4" /> },
+    { name: 'AI Content Generation', path: '/ai-content-generation', icon: <Brain className="w-4 h-4" /> },
+    { name: 'AI Customer Service', path: '/ai-customer-service', icon: <Users className="w-4 h-4" /> },
+    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <Database className="w-4 h-4" /> },
+    { name: 'AI Marketing', path: '/ai-marketing', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', icon: <Brain className="w-4 h-4" /> },
+    { name: 'AI Workflow Automation', path: '/ai-workflow-automation', icon: <Zap className="w-4 h-4" /> }
   ], [])
 
   const itServices = useMemo(() => [
@@ -65,33 +60,36 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Mobile Development', path: '/mobile-development', icon: <Code className="w-4 h-4" /> },
     { name: 'Database Management', path: '/database-management', icon: <Database className="w-4 h-4" /> },
     { name: 'Custom Software', path: '/custom-software', icon: <Code className="w-4 h-4" /> },
-    { name: 'Network Infrastructure', path: '/network-infrastructure', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
+    { name: 'Network Infrastructure', path: '/network-infrastructure', icon: <Cloud className="w-4 h-4" /> }
   ], [])
 
   const microSaasServices = useMemo(() => [
     { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
     { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
     { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },
-    { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> },
-    { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
-    { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
-    { name: 'Zion Project Master', path: '/zion-project-master', icon: <Code className="w-4 h-4" /> },
-    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> }
+    { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> }
+  ], [])
+
+  const fiveGServices = useMemo(() => [
+    { name: '5G Data Analytics', path: '/5g-data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: '5G Edge Computing', path: '/5g-edge-computing', icon: <Zap className="w-4 h-4" /> },
+    { name: '5G Implementation', path: '/5g-implementation', icon: <Zap className="w-4 h-4" /> },
+    { name: '5G Mobile Applications', path: '/5g-mobile-applications', icon: <Code className="w-4 h-4" /> },
+    { name: '5G Network Infrastructure', path: '/5g-network-infrastructure', icon: <Cloud className="w-4 h-4" /> },
+    { name: '5G Private Networks', path: '/5g-private-networks', icon: <Shield className="w-4 h-4" /> },
+    { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions', icon: <Star className="w-4 h-4" /> },
+    { name: '5G IoT Solutions', path: '/5g-iot-solutions', icon: <Database className="w-4 h-4" /> }
   ], [])
 
   const mainNavItems = useMemo(() => [
     { name: 'Home', path: '/', icon: <Home className="w-4 h-4" /> },
     { name: 'About', path: '/about', icon: <Users className="w-4 h-4" /> },
     { name: 'Services', path: '/services', icon: <Settings className="w-4 h-4" /> },
-    { name: 'Pricing', path: '/pricing', icon: <BarChart3 className="w-4 h-4" /> },
-    { name: 'Case Studies', path: '/case-studies', icon: <BarChart3 className="w-4 h-4" /> },
-    { name: 'Blog', path: '/blog', icon: <Brain className="w-4 h-4" /> },
     { name: 'Contact', path: '/contact', icon: <Phone className="w-4 h-4" /> }
   ], [])
 
   const contactInfo = useMemo(() => [
-    { icon: <Mail className="w-4 h-4" />, text: 'kleber@ziontechgroup.com' },
+    { icon: <Mail className="w-4 h-4" />, text: 'info@ziontechgroup.com' },
     { icon: <Phone className="w-4 h-4" />, text: '+1 302 464 0950' },
     { icon: <MapPin className="w-4 h-4" />, text: '364 E Main St STE 1008, Middletown DE 19709' }
   ], [])
@@ -101,7 +99,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null
 
   return (
-<<<<<<< HEAD
     <>
       {/* Overlay */}
       <div 
@@ -116,7 +113,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
+                <Brain className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Zion Tech Group
@@ -129,27 +126,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <X className="w-5 h-5" />
             </button>
           </div>
-=======
-    <div className="fixed inset-0 z-50 md:hidden">
-      <div className="fixed inset-0 bg-black/50" onClick={onClose} />
-      <div className="fixed top-0 right-0 h-full w-80 bg-slate-900/95 backdrop-blur-md border-l border-cyan-500/20">
-        <div className="flex items-center justify-between p-4 border-b border-cyan-500/20">
-          <h2 className="text-lg font-semibold text-white">Menu</h2>
-          <button
-            onClick={onClose}
-            className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10"
-          >
-            <X className="w-6 h-6" />
-          </button>
-        </div>
-        <div className="p-4">
-          <p className="text-gray-300">Sidebar content goes here</p>
-        </div>
-      </div>
-    </div>
-  );
-};
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
           {/* Main Navigation */}
           <div className="space-y-2 mb-8">
@@ -289,6 +265,44 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             )}
           </div>
 
+          {/* 5G Solutions Section */}
+          <div className="mb-6">
+            <button
+              onClick={() => toggleSection('5g-solutions')}
+              className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-blue-500/10 hover:text-blue-400 transition-all duration-300 font-medium text-left"
+            >
+              <div className="flex items-center space-x-3">
+                <Star className="w-4 h-4" />
+                <span>5G Solutions</span>
+              </div>
+              {expandedSections.has('5g-solutions') ? (
+                <ChevronDown className="w-4 h-4" />
+              ) : (
+                <ChevronRight className="w-4 h-4" />
+              )}
+            </button>
+            
+            {expandedSections.has('5g-solutions') && (
+              <div className="ml-6 mt-2 space-y-1">
+                {fiveGServices.map((service) => (
+                  <Link
+                    key={service.name}
+                    to={service.path}
+                    className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${
+                      isActive(service.path)
+                        ? 'bg-blue-500/10 text-blue-400'
+                        : 'text-gray-400 hover:text-blue-400 hover:bg-blue-500/5'
+                    }`}
+                    onClick={onClose}
+                  >
+                    {service.icon}
+                    <span className="text-sm">{service.name}</span>
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
           {/* Contact Info */}
           <div className="border-t border-white/10 pt-6">
             <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Contact Info</h4>
@@ -305,7 +319,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           {/* CTA Button */}
           <div className="mt-6">
             <Link
-              to="/consultation"
+              to="/contact"
               className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 font-semibold shadow-lg hover:shadow-cyan-500/25 group"
               onClick={onClose}
             >
