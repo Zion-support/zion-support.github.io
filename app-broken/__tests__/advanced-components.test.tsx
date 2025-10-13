@@ -80,12 +80,8 @@ describe('Advanced Components', () => {
     
     expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
     expect(screen.getByText('Unexpected Application Error!')).toBeInTheDocument();
-<<<<<<< HEAD
     // The mock error boundary doesn&apos;t actually catch errors, so we just check for the error message
 
-=======
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
     consoleSpy.mockRestore();
   });
 
@@ -97,7 +93,6 @@ describe('Advanced Components', () => {
       </Helmet>
     );
 
-<<<<<<< HEAD
     // Since the mock doesn&apos;t actually catch errors, we just verify it renders
     expect(screen.getByText('Test content')).toBeInTheDocument();
     consoleSpy.mockRestore();
@@ -108,8 +103,6 @@ describe('Advanced Components', () => {
       .spyOn(console, 'error')
       .mockImplementation(() => {});
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
     render(
       <HelmetProvider>
         <SEOEnhancer />
