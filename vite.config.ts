@@ -32,8 +32,6 @@ export default defineConfig({
   build: {
     target: "esnext",
     minify: "terser",
-<<<<<<< HEAD
-    target: "es2020",
     cssCodeSplit: true,
     modulePreload: {
       polyfill: false,
@@ -147,6 +145,7 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
+<<<<<<< HEAD
     // Enable tree shaking
     treeshake: true,
 =======
@@ -172,34 +171,45 @@ export default defineConfig({
       }
     }
 >>>>>>> cursor/fix-errors-and-merge-to-main-c832
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4aee
   },
   server: {
     port: 3000,
     open: true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4aee
     host: true,
     // Enable HMR
     hmr: {
       overlay: true,
     },
-=======
     cors: true,
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-48ac
 =======
     cors: true,
 >>>>>>> cursor/fix-errors-and-merge-to-main-c832
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4aee
   },
   preview: {
     port: 4173,
     open: true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     host: true,
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-48ac
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-c832
+=======
+    host: true,
+>>>>>>> cursor/fix-errors-and-merge-to-main-4aee
   },
   optimizeDeps: {
     include: [
@@ -210,15 +220,17 @@ export default defineConfig({
       "lucide-react",
     ],
   },
-<<<<<<< HEAD
   // CSS optimization
   css: {
     devSourcemap: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+  },
+>>>>>>> cursor/fix-errors-and-merge-to-main-4aee
   define: {
     __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
   },
 });
 =======
