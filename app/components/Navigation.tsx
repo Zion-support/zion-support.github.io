@@ -1,5 +1,21 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
+import { 
+  ChevronDown, 
+  Menu, 
+  X, 
+  ArrowRight, 
+  Star,
+  Brain,
+  Shield,
+  Code,
+  Database,
+  BarChart3,
+  Cloud,
+  Globe,
+  Zap,
+  Layout
+} from 'lucide-react'
 
 interface NavigationProps {
   onSidebarToggle?: () => void
@@ -124,7 +140,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
               className="text-gray-300 hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10"
               aria-label="Toggle sidebar"
             >
-              <SidebarIcon className="w-5 h-5" />
+              <Layout className="w-5 h-5" />
             </button>
             
             {mainNavItems.map((item) => (

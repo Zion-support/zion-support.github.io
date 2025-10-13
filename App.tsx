@@ -14,6 +14,10 @@ import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
+import GlobalErrorBoundary from "./app/components/GlobalErrorBoundary";
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import Breadcrumb from "./app/components/Breadcrumb";
+import LoadingPage from "./app/components/LoadingPage";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -80,13 +84,23 @@ function App() {
                         <Route path="/terms" element={<TermsPage />} />
                         <Route path="/cookies" element={<CookiesPage />} />
                         <Route path="/sitemap" element={<SitemapPage />} />
+                        <Route path="/case-studies" element={<CaseStudiesPage />} />
+                        <Route path="/consultation" element={<ConsultationPage />} />
+                        <Route path="/it-services" element={<ITServicesPage />} />
+                        <Route path="/cloud-services" element={<CloudServicesPage />} />
+                        <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                        <Route path="/custom-development" element={<CustomDevelopmentPage />} />
+                        <Route path="/web-development" element={<WebDevelopmentPage />} />
+                        <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                        <Route path="/database-management" element={<DatabaseManagementPage />} />
+                        <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
+                        <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+                        <Route path="/careers" element={<CareersPage />} />
                       </Routes>
                     </Suspense>
                   </main>
                   <Footer />
                 </FuturisticBackground>
-                  </div>
-                </AnalyticsProvider>
               </div>
             </Router>
           </AccessibilityEnhancer>
