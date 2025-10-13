@@ -21,6 +21,7 @@ import SEOOptimizer from "./app/components/SEOOptimizer";
 import EnhancedSEO from "./app/components/EnhancedSEO";
 import EnhancedSEOOptimizer from "./app/components/EnhancedSEOOptimizer";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
+import SecurityHeaders from "./app/components/SecurityHeaders";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -89,6 +90,7 @@ function App() {
                     <SEOOptimizer />
                     <EnhancedSEO />
                     <EnhancedSEOOptimizer />
+                    <SecurityHeaders />
                   </div>
                 </AnalyticsProvider>
               </div>

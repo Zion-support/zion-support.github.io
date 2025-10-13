@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Sidebar as SidebarIcon, Globe } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Sidebar as SidebarIcon, Globe, Search as SearchIcon } from 'lucide-react'
+import Search from './Search'
 
 interface NavigationProps {
   onSidebarToggle?: () => void
@@ -11,6 +12,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false)
   const [isItServicesOpen, setIsItServicesOpen] = useState(false)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
   
   const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen)
@@ -27,6 +29,10 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
   const toggleItServices = useCallback(() => {
     setIsItServicesOpen(!isItServicesOpen)
   }, [isItServicesOpen])
+
+  const toggleSearch = useCallback(() => {
+    setIsSearchOpen(!isSearchOpen)
+  }, [isSearchOpen])
 
 
   const itServices = useMemo(() => [
@@ -120,6 +126,15 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
           </Link>
 
           <div className="hidden lg:flex space-x-8 items-center">
+            {/* Search Button */}
+            <button
+              onClick={toggleSearch}
+              className="text-gray-300 hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10"
+              aria-label="Open search"
+            >
+              <SearchIcon className="w-5 h-5" />
+            </button>
+            
             {/* Sidebar Toggle Button */}
             <button
               onClick={onSidebarToggle}
@@ -274,7 +289,14 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden">
+          <div className="lg:hidden flex items-center space-x-2">
+            <button
+              onClick={toggleSearch}
+              className="text-white hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10"
+              aria-label="Open search"
+            >
+              <SearchIcon className="w-5 h-5" />
+            </button>
             <button
               onClick={toggleMenu}
               className="text-white hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10"
@@ -423,6 +445,9 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
           </div>
         )}
       </div>
+      
+      {/* Search Modal */}
+      <Search isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </nav>
   )
 })
