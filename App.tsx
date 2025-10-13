@@ -152,6 +152,9 @@ const ZionComplianceManagerPage = React.lazy(
 const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
 );
+const MicroSaasPage = React.lazy(
+  () => import("./app/micro-saas/page"),
+);
 
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(
@@ -200,7 +203,7 @@ function App() {
                   <Route path="/careers" element={<CareersPage />} />
                   <Route path="/ai-services" element={<AIServicesPage />} />
                   <Route path="/it-services" element={<ServicesPage />} />
-                  <Route path="/micro-saas" element={<ServicesPage />} />
+                  <Route path="/micro-saas" element={<MicroSaasPage />} />
                   <Route path="/tutorials" element={<TutorialsPage />} />
                   <Route path="/consultation" element={<ConsultationPage />} />
                   <Route path="/demo" element={<DemoPage />} />

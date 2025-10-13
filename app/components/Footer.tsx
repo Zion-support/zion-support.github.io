@@ -37,9 +37,21 @@ const Footer = React.memo(() => {
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
             <p className="text-gray-400 text-sm max-w-md">
-              Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. 
+              Leading provider of AI-powered solutions, micro SAAS products, 5G implementation, and enterprise IT services. 
               We help businesses transform with cutting-edge technology and innovative solutions.
             </p>
+            <div className="mt-4 space-y-2">
+              <p className="text-gray-400 text-sm">
+                <strong>Phone:</strong> +1 302 464 0950
+              </p>
+              <p className="text-gray-400 text-sm">
+                <strong>Email:</strong> kleber@ziontechgroup.com
+              </p>
+              <p className="text-gray-400 text-sm">
+                <strong>Address:</strong> 364 E Main St STE 1008<br />
+                Middletown DE 19709
+              </p>
+            </div>
             <div className="flex space-x-4">
               {socialLinks.map((link) => (
                 <a
@@ -70,42 +82,42 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/cloud-services"
+                  to="/micro-saas"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Cloud Solutions
+                  Micro SAAS
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/cybersecurity"
+                  to="/it-services"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Cybersecurity
+                  IT Solutions
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/5g-implementation"
+                  to="/5g-solutions"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  5G Implementation
+                  5G Solutions
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/data-analytics"
+                  to="/ai-analytics"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Data Analytics
+                  AI Analytics
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/custom-development"
+                  to="/ai-automation"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Custom Development
+                  AI Automation
                 </Link>
               </li>
             </ul>
@@ -184,6 +196,53 @@ const Footer = React.memo(() => {
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Consultation
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Micro SAAS Products */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Micro SAAS</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/zion-analytics-pro"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  ZionAnalyticsPro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-security-shield"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  ZionSecurityShield
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-cloud-vault"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  ZionCloudVault
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-content-studio"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  ZionContentStudio
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/micro-saas"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  View All Products
                 </Link>
               </li>
             </ul>
