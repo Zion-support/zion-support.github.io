@@ -76,7 +76,7 @@
     "pwa:audit": "lighthouse http://localhost:4173 --only-categories=pwa --output=html --output-path=./pwa-audit-report.html",
     "integration:test": "npm run build && npm run test:comprehensive && npm run security:audit",
     "optimize:assets-script": "node scripts/asset-optimizer.js",
-    "seo:audit": "node scripts/seo-audit.js",
+    "seo:audit": "node scripts/seo-audit.cjs",
     "comprehensive:audit": "pnpm run performance:audit && pnpm run security:audit && pnpm run accessibility:audit && pnpm run seo:audit",
     "perf:lighthouse": "lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html",
     "test:unit": "jest --testPathPattern=src --passWithNoTests",
