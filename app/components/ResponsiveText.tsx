@@ -49,6 +49,4 @@ const ResponsiveText: React.FC<ResponsiveTextProps> = ({
   );
 };
 
-export default ResponsiveText;
-  );
-}
+export default $1;

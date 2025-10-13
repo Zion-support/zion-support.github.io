@@ -146,6 +146,4 @@ export const _useErrorHandler = () => {
   };
 };
 
-export default ImprovedErrorBoundary;
-  );
-}
+export default $1;

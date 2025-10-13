@@ -16,32 +16,32 @@ const ARVRDevelopmentPage = () => {
     {
       icon: <Eye className="w-8 h-8" />,
       title: "AR Development",
-      description: "Create immersive augmented reality experiences for mobile and web platforms."
+      description: "Create immersive augmented reality experiences for mobile and web platforms.",
     },
     {
       icon: <Box className="w-8 h-8" />,
       title: "VR Development",
-      description: "Build virtual reality applications for Oculus, HTC Vive, and other VR headsets."
+      description: "Build virtual reality applications for Oculus, HTC Vive, and other VR headsets.",
     },
     {
       icon: <Target className="w-8 h-8" />,
       title: "Mixed Reality",
-      description: "Develop mixed reality solutions that blend physical and digital worlds."
+      description: "Develop mixed reality solutions that blend physical and digital worlds.",
     },
     {
       icon: <Brain className="w-8 h-8" />,
       title: "AI Integration",
-      description: "Integrate AI and machine learning for intelligent AR/VR experiences."
+      description: "Integrate AI and machine learning for intelligent AR/VR experiences.",
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: "Multi-user Experiences",
-      description: "Create collaborative AR/VR experiences for teams and communities."
+      description: "Create collaborative AR/VR experiences for teams and communities.",
     },
     {
       icon: <Globe className="w-8 h-8" />,
       title: "Cross-platform",
-      description: "Deploy across multiple platforms and devices with consistent performance."
+      description: "Deploy across multiple platforms and devices with consistent performance.",
     }
   ];
 
@@ -214,6 +214,4 @@ const ARVRDevelopmentPage = () => {
 </CheckCircle>
 };
 
-export default ARVRDevelopmentPage;
-  );
-}
+export default $1;

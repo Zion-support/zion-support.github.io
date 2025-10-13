@@ -410,6 +410,4 @@ const ZionAICRMProPage = () => {
   );
 };
 
-export default ZionAICRMProPage;
-  );
-}
+export default $1;

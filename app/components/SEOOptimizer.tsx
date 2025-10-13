@@ -146,6 +146,4 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
   );
 };
 
-export default SEOOptimizer;
-  );
-}
+export default $1;

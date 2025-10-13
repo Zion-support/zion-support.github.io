@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Users, MessageCircle, Calendar, Award, Globe } from 'lucide-react';
 
 export default function Community() {
-  return (
-    <div>
   const stats = [
     { number: "10K+", label: "Active Members", icon: <Users className="w-8 h-8" /> },
     { number: "500+", label: "Events Hosted", icon: <Calendar className="w-8 h-8" /> },
@@ -45,25 +43,25 @@ export default function Community() {
       icon: <Users className="w-8 h-8" />,
       title: "Tech Mentorship Program",
       description: "Connect with experienced professionals and get guidance on your career journey.",
-      participants: "200+ mentees"
+      participants: "200+ mentees",
     },
     {
       icon: <MessageCircle className="w-8 h-8" />,
       title: "Developer Forums",
       description: "Join our active community forums to discuss technology trends and share knowledge.",
-      participants: "1,500+ members"
+      participants: "1,500+ members",
     },
     {
       icon: <Award className="w-8 h-8" />,
       title: "Innovation Challenges",
       description: "Participate in hackathons and coding challenges to showcase your skills.",
-      participants: "500+ participants"
+      participants: "500+ participants",
     },
     {
       icon: <Globe className="w-8 h-8" />,
       title: "Open Source Projects",
       description: "Contribute to our open source initiatives and make a global impact.",
-      participants: "100+ contributors"
+      participants: "100+ contributors",
     }
   ];
 

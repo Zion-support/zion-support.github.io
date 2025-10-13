@@ -1,11 +1,8 @@
 // API endpoint for onsite requests
+import fs from 'fs';
+import path from 'path';
 
-<<<<<<< HEAD
 export default function handler(req, res) {
-  res.status(200).json({ message: 'Onsite request received' });
-=======
-// Simple wrapper function to replace withSentry
-function handler(req, res) {
   if (req.method !== "POST") {
     res.statusCode = 405;
     res.setHeader("Content-Type", "application/json");
@@ -37,12 +34,12 @@ function handler(req, res) {
 
   const newRequest = {
     id: Date.now().toString(),
-//     name,
-//     email,
-//     company,
-//     phone,
-//     message,
-//     location,
+    name,
+    email,
+    company,
+    phone,
+    message,
+    location,
     timestamp: new Date().toISOString(),
   };
 
@@ -54,8 +51,8 @@ function handler(req, res) {
     res.setHeader("Content-Type", "application/json");
     res.end(
       JSON.stringify({
-//         success: true,
-//         id: newRequest.id,
+        success: true,
+        id: newRequest.id,
       }),
     );
   } catch (error) {
@@ -65,5 +62,4 @@ function handler(req, res) {
     res.setHeader("Content-Type", "application/json");
     res.end(JSON.stringify({ error: "Failed to save request" }));
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 }

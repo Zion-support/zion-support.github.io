@@ -7,42 +7,42 @@ export default function Partners() {
       logo: "/images/partners/microsoft.png",
       description: "Leading cloud and productivity solutions",
       category: "Technology Partner",
-      tier: "Platinum"
+      tier: "Platinum",
     },
     {
       name: "Amazon Web Services",
       logo: "/images/partners/aws.png",
       description: "Comprehensive cloud computing platform",
       category: "Cloud Partner",
-      tier: "Platinum"
+      tier: "Platinum",
     },
     {
       name: "Google Cloud",
       logo: "/images/partners/google-cloud.png",
       description: "AI and machine learning cloud services",
       category: "AI Partner",
-      tier: "Gold"
+      tier: "Gold",
     },
     {
       name: "Salesforce",
       logo: "/images/partners/salesforce.png",
       description: "Customer relationship management platform",
       category: "CRM Partner",
-      tier: "Gold"
+      tier: "Gold",
     },
     {
       name: "IBM",
       logo: "/images/partners/ibm.png",
       description: "Enterprise AI and hybrid cloud solutions",
       category: "Enterprise Partner",
-      tier: "Silver"
+      tier: "Silver",
     },
     {
       name: "Oracle",
       logo: "/images/partners/oracle.png",
       description: "Database and enterprise software solutions",
       category: "Database Partner",
-      tier: "Silver"
+      tier: "Silver",
     }
   ];
 

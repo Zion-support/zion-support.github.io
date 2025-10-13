@@ -22,6 +22,4 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   );
 };
 
-export default EnhancedSEO;
-  );
-}
+export default $1;

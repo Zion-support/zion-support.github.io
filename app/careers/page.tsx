@@ -25,6 +25,4 @@ const CareersPage = () => {
   );
 };
 
-export default CareersPage;
-  );
-}
+export default $1;

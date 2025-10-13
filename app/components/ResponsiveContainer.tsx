@@ -14,6 +14,4 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
   );
 };
 
-export default ResponsiveContainer;
-  );
-}
+export default $1;

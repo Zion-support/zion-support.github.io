@@ -413,6 +413,4 @@ const ZionAIAnalyticsProPage = () => {
   );
 };
 
-export default ZionAIAnalyticsProPage;
-  );
-}
+export default $1;

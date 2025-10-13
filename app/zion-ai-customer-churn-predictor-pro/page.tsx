@@ -128,7 +128,7 @@ const ZionAICustomerChurnPredictorProPage: React.FC = () => {
       role: "Customer Success Director",
       content: "Zion AI Churn Predictor Pro helped us reduce churn by 40% and increase customer lifetime value by 60%. The predictions are incredibly accurate!",
       rating: 5,
-      avatar: "JM"
+      avatar: "JM",
     },
     {
       name: "Robert Kim",
@@ -136,7 +136,7 @@ const ZionAICustomerChurnPredictorProPage: React.FC = () => {
       role: "VP of Customer Experience",
       content: "The early warning system is a game-changer. We can now intervene before customers even think about leaving.",
       rating: 5,
-      avatar: "RK"
+      avatar: "RK",
     },
     {
       name: "Sarah Johnson",
@@ -144,7 +144,7 @@ const ZionAICustomerChurnPredictorProPage: React.FC = () => {
       role: "Retention Manager",
       content: "The personalized retention campaigns have increased our retention rate by 35%. The AI recommendations are spot-on.",
       rating: 5,
-      avatar: "SJ"
+      avatar: "SJ",
     }
   ];
 

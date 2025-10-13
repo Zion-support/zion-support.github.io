@@ -135,6 +135,4 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   );
 };
 
-export default ImageOptimizer;
-  );
-}
+export default $1;

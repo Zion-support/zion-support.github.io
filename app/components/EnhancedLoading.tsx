@@ -65,6 +65,4 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
   );
 };
 
-export default EnhancedLoading;
-  );
-}
+export default $1;

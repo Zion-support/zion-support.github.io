@@ -117,7 +117,7 @@ const ZionAIWorkflowAutomatorProPage: React.FC = () => {
       role: "Operations Director",
       content: "Zion AI Workflow Automator Pro reduced our manual processes by 85%. The ROI was evident within the first month.",
       rating: 5,
-      avatar: "SC"
+      avatar: "SC",
     },
     {
       name: "Michael Rodriguez",
@@ -125,7 +125,7 @@ const ZionAIWorkflowAutomatorProPage: React.FC = () => {
       role: "CTO",
       content: "The visual workflow builder is incredibly intuitive. We automated our entire customer onboarding process in just 2 days.",
       rating: 5,
-      avatar: "MR"
+      avatar: "MR",
     },
     {
       name: "Emily Watson",
@@ -133,7 +133,7 @@ const ZionAIWorkflowAutomatorProPage: React.FC = () => {
       role: "VP of Operations",
       content: "The AI decision engine has been a game-changer. It handles complex business logic better than our previous solutions.",
       rating: 5,
-      avatar: "EW"
+      avatar: "EW",
     }
   ];
 

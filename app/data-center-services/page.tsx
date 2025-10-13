@@ -16,25 +16,25 @@ const DataCenterServicesPage = () => {
       title: "Enterprise Data Centers",
       description: "State-of-the-art data centers with 99.99% uptime and enterprise-grade security",
       icon: <Server className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-500 to-cyan-500",
     },
     {
       title: "Cloud Migration",
       description: "Seamless migration to cloud infrastructure with zero downtime and data loss",
       icon: <Globe className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
+      color: "from-green-500 to-emerald-500",
     },
     {
       title: "Disaster Recovery",
       description: "Comprehensive backup and disaster recovery solutions to protect your data",
       icon: <Shield className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-500 to-pink-500",
     },
     {
       title: "24/7 Monitoring",
       description: "Round-the-clock monitoring and support to ensure optimal performance",
       icon: <Settings className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+      color: "from-orange-500 to-red-500",
     }
   ];
 
@@ -186,6 +186,4 @@ const DataCenterServicesPage = () => {
   );
 };
 
-export default DataCenterServicesPage;
-  );
-}
+export default $1;

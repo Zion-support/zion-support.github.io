@@ -17,17 +17,17 @@ const services = [
     {
       title: "Cloud Migration",
       description: "Seamless migration to cloud infrastructure",
-      icon: "Cloud"
+      icon: "Cloud",
     },
     {
       title: "Security Solutions",
       description: "Advanced security and compliance",
-      icon: "Shield"
+      icon: "Shield",
     },
     {
       title: "Performance Optimization",
       description: "Optimize your cloud performance",
-      icon: "Zap"
+      icon: "Zap",
     }
   ];
 const socialLinks = [

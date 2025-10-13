@@ -10,10 +10,8 @@ export default metadata;
 =======
 export const siteMetadata = {
 //   title: "Zion Tech Group - Advanced AI and IT Solutions",
-//   description:
-    "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
-//   keywords:
-    "AI solutions, IT services, digital transformation, business automation, technology consulting",
+//   description: "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
+//   keywords: "AI solutions, IT services, digital transformation, business automation, technology consulting",
 //   author: "Zion Tech Group",
 //   url: "https://ziontechgroup.com",
 //   image: "https://ziontechgroup.com/og-image.jpg",

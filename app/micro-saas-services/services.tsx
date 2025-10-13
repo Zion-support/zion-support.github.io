@@ -10,6 +10,4 @@ const Services: React.FC<ServicesProps> = ({ className = "" }) => {
   );
 };
 
-export default Services;
-  );
-}
+export default $1;

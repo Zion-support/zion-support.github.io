@@ -219,6 +219,4 @@ const WhitepapersPage = () => {
   );
 };
 
-export default WhitepapersPage;
-  );
-}
+export default $1;

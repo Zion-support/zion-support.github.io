@@ -29,7 +29,7 @@ const ZionAiBusinessIntelligencePro = () => {
         "30-day data retention"
       ],
       popular: false,
-      cta: "Start Free Trial"
+      cta: "Start Free Trial",
     },
     {
       name: "Enterprise",
@@ -50,7 +50,7 @@ const ZionAiBusinessIntelligencePro = () => {
         "Dedicated analyst"
       ],
       popular: true,
-      cta: "Start Free Trial"
+      cta: "Start Free Trial",
     },
     {
       name: "Enterprise Plus",
@@ -71,7 +71,7 @@ const ZionAiBusinessIntelligencePro = () => {
         "Dedicated account manager"
       ],
       popular: false,
-      cta: "Contact Sales"
+      cta: "Contact Sales",
     }
   ];
 
@@ -175,8 +175,7 @@ const ZionAiBusinessIntelligencePro = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
+      <section$1>
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -212,10 +211,10 @@ const ZionAiBusinessIntelligencePro = () => {
           </div>
         </ResponsiveContainer>
       </section>
+      </section>
 
       {/* Capabilities Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
-        </section>
+      <section$1>
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -254,10 +253,10 @@ const ZionAiBusinessIntelligencePro = () => {
           </div>
         </ResponsiveContainer>
       </section>
+      </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
+      <section$1>
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -314,10 +313,10 @@ const ZionAiBusinessIntelligencePro = () => {
           </div>
         </ResponsiveContainer>
       </section>
+      </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
-        </section>
+      <section$1>
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -356,10 +355,10 @@ const ZionAiBusinessIntelligencePro = () => {
           </div>
         </ResponsiveContainer>
       </section>
+      </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
-        </section>
+      <section$1>
         <ResponsiveContainer>
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -386,10 +385,9 @@ const ZionAiBusinessIntelligencePro = () => {
           </div>
         </ResponsiveContainer>
       </section>
+      </section>
     </div>
   );
 };
 
-export default ZionAiBusinessIntelligencePro;
-  );
-}
+export default $1;

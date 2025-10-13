@@ -8,25 +8,25 @@ const QuantumDataEncryptionVault = () => {
       title: "Quantum Encryption",
       description: "Unbreakable quantum encryption using quantum key distribution and post-quantum cryptography algorithms.",
       icon: <Shield className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-500 to-cyan-500",
     },
     {
       title: "Zero-Knowledge Architecture",
       description: "Complete data sovereignty with zero-knowledge architecture that ensures even we cannot access your data.",
       icon: <Lock className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-500 to-pink-500",
     },
     {
       title: "Data Sovereignty",
       description: "Full control over your data location and access with quantum-secured data sovereignty guarantees.",
       icon: <Globe className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
+      color: "from-green-500 to-emerald-500",
     },
     {
       title: "Compliance Ready",
       description: "Built-in compliance with GDPR, HIPAA, SOX, and other major regulatory frameworks worldwide.",
       icon: <Award className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+      color: "from-orange-500 to-red-500",
     }
   ];
 
@@ -104,7 +104,7 @@ const QuantumDataEncryptionVault = () => {
       role: "Chief Security Officer",
       content: "The quantum encryption capabilities are truly next-generation. We've never seen this level of security and data sovereignty in a single solution.",
       rating: 5,
-      avatar: "MZ"
+      avatar: "MZ",
     },
     {
       name: "Sarah Johnson",
@@ -112,7 +112,7 @@ const QuantumDataEncryptionVault = () => {
       role: "Compliance Director",
       content: "The compliance features are outstanding. We can now meet all regulatory requirements while maintaining the highest level of data security.",
       rating: 5,
-      avatar: "SJ"
+      avatar: "SJ",
     },
     {
       name: "Robert Chen",
@@ -120,7 +120,7 @@ const QuantumDataEncryptionVault = () => {
       role: "CTO",
       content: "The zero-knowledge architecture gives us complete confidence in our data security. Even the service provider cannot access our sensitive healthcare data.",
       rating: 5,
-      avatar: "RC"
+      avatar: "RC",
     }
   ];
 

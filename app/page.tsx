@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, BarChart3, Cloud, Sparkles, Mail, Monitor, Target } from "lucide-react";
+import FuturisticButton from "./components/FuturisticButton";
 
 const HomePage = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
@@ -205,7 +206,7 @@ const HomePage = () => {
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></div>
-                        {feature.title}
+                        {feature}
                       </li>
                     ))}
                   </ul>
@@ -262,7 +263,6 @@ const HomePage = () => {
 
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
-        </section>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?

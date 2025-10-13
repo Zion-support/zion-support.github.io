@@ -163,6 +163,4 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
   );
 };
 
-export default FuturisticButtonEnhanced;
-  );
-}
+export default $1;

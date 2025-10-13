@@ -10,6 +10,4 @@ const Testrunnerx: React.FC<TestrunnerxProps> = ({ className = "" }) => {
   );
 };
 
-export default Testrunnerx;
-  );
-}
+export default $1;

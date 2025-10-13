@@ -14,6 +14,4 @@ const Microsaasservices: React.FC<MicrosaasservicesProps> = ({
   );
 };
 
-export default Microsaasservices;
-  );
-}
+export default $1;

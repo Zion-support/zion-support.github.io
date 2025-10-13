@@ -10,6 +10,4 @@ const Errorhandlerx: React.FC<ErrorhandlerxProps> = ({ className = "" }) => {
   );
 };
 
-export default Errorhandlerx;
-  );
-}
+export default $1;

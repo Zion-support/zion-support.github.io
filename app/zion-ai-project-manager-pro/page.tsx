@@ -26,7 +26,7 @@ const ZionAIProjectManagerProPage = () => {
         "Mobile app access"
       ],
       popular: false,
-      color: "from-gray-500 to-gray-600"
+      color: "from-gray-500 to-gray-600",
     },
     {
       name: "Professional",
@@ -46,7 +46,7 @@ const ZionAIProjectManagerProPage = () => {
         "Resource management"
       ],
       popular: true,
-      color: "from-cyan-500 to-purple-600"
+      color: "from-cyan-500 to-purple-600",
     },
     {
       name: "Enterprise",
@@ -65,7 +65,7 @@ const ZionAIProjectManagerProPage = () => {
         "SLA guarantees"
       ],
       popular: false,
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-500 to-pink-500",
     }
   ];
 
@@ -74,37 +74,37 @@ const ZionAIProjectManagerProPage = () => {
       title: "Software Development",
       description: "Manage agile sprints, code reviews, and deployment pipelines with AI-powered sprint planning and bug tracking",
       icon: <GitBranch className="w-6 h-6" />,
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-500 to-cyan-500",
     },
     {
       title: "Marketing Campaigns",
       description: "Plan and execute multi-channel marketing campaigns with AI-optimized content scheduling and performance tracking",
       icon: <Target className="w-6 h-6" />,
-      color: "from-green-500 to-emerald-500"
+      color: "from-green-500 to-emerald-500",
     },
     {
       title: "Event Planning",
       description: "Coordinate complex events with AI-powered vendor management, timeline optimization, and resource allocation",
       icon: <Calendar className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-500 to-pink-500",
     },
     {
       title: "Construction Projects",
       description: "Manage construction timelines, resource allocation, and compliance tracking with industry-specific AI models",
       icon: <Workflow className="w-6 h-6" />,
-      color: "from-orange-500 to-red-500"
+      color: "from-orange-500 to-red-500",
     },
     {
       title: "Research & Development",
       description: "Track R&D milestones, manage experiments, and optimize research workflows with AI-powered insights",
       icon: <Lightbulb className="w-6 h-6" />,
-      color: "from-yellow-500 to-orange-500"
+      color: "from-yellow-500 to-orange-500",
     },
     {
       title: "Client Services",
       description: "Deliver exceptional client projects with AI-optimized resource planning and automated progress reporting",
       icon: <Users className="w-6 h-6" />,
-      color: "from-cyan-500 to-blue-500"
+      color: "from-cyan-500 to-blue-500",
     }
   ];
 
@@ -113,37 +113,37 @@ const ZionAIProjectManagerProPage = () => {
       title: "Intelligent Task Prioritization",
       description: "AI analyzes task dependencies, deadlines, and team capacity to automatically prioritize tasks for optimal project flow",
       icon: <Target className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-500 to-cyan-500",
     },
     {
       title: "Predictive Timeline Management",
       description: "Machine learning algorithms predict project completion dates and identify potential delays before they occur",
       icon: <Timer className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
+      color: "from-green-500 to-emerald-500",
     },
     {
       title: "Smart Resource Optimization",
       description: "AI automatically assigns tasks to the most suitable team members based on skills, availability, and workload",
       icon: <Users className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-500 to-pink-500",
     },
     {
       title: "Automated Risk Assessment",
       description: "Continuous monitoring and analysis of project risks with AI-powered early warning systems and mitigation strategies",
       icon: <Shield className="w-8 h-8" />,
-      color: "from-red-500 to-pink-500"
+      color: "from-red-500 to-pink-500",
     },
     {
       title: "Intelligent Reporting",
       description: "Generate comprehensive project reports, stakeholder updates, and performance analytics automatically",
       icon: <BarChart3 className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+      color: "from-orange-500 to-red-500",
     },
     {
       title: "Workflow Automation",
       description: "Automate repetitive tasks, approvals, and notifications to streamline project management processes",
       icon: <Zap className="w-8 h-8" />,
-      color: "from-cyan-500 to-blue-500"
+      color: "from-cyan-500 to-blue-500",
     }
   ];
 
@@ -227,8 +227,7 @@ const ZionAIProjectManagerProPage = () => {
       </section>
 
       {/* AI Capabilities Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
+      <section$1>
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -261,10 +260,10 @@ const ZionAIProjectManagerProPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
+      </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-        </section>
+      <section$1>
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -296,10 +295,10 @@ const ZionAIProjectManagerProPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
+      </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
+      <section$1>
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -331,10 +330,10 @@ const ZionAIProjectManagerProPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
+      </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-        </section>
+      <section$1>
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -388,10 +387,10 @@ const ZionAIProjectManagerProPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
+      </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
+      <section$1>
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -427,10 +426,10 @@ const ZionAIProjectManagerProPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
+      </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
+      <section$1>
         <ResponsiveContainer>
           <div className="text-center bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-2xl p-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -456,10 +455,9 @@ const ZionAIProjectManagerProPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
+      </section>
     </div>
   );
 };
 
-export default ZionAIProjectManagerProPage;
-  );
-}
+export default $1;

@@ -126,6 +126,4 @@ const MobileNavigation: React.FC = () => {
   );
 };
 
-export default MobileNavigation;
-  );
-}
+export default $1;

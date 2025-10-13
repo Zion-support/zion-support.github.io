@@ -23,25 +23,25 @@ const AIQuantumFinancialOraclePage = () => {
       title: "Quantum-Powered Predictions",
       description: "Leverage quantum computing algorithms for ultra-accurate financial market predictions",
       icon: <Cpu className="w-8 h-8" />,
-      color: "from-purple-500 to-indigo-500"
+      color: "from-purple-500 to-indigo-500",
     },
     {
       title: "Real-Time Market Analysis",
       description: "Process millions of data points in real-time for instant market insights",
       icon: <Activity className="w-8 h-8" />,
-      color: "from-cyan-500 to-blue-500"
+      color: "from-cyan-500 to-blue-500",
     },
     {
       title: "Risk Assessment",
       description: "Advanced risk modeling with 99.7% accuracy using quantum algorithms",
       icon: <Shield className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
+      color: "from-green-500 to-emerald-500",
     },
     {
       title: "Portfolio Optimization",
       description: "AI-driven portfolio optimization with quantum-enhanced decision making",
       icon: <PieChart className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+      color: "from-orange-500 to-red-500",
     }
   ];
 
@@ -233,6 +233,7 @@ const AIQuantumFinancialOraclePage = () => {
           </div>
         </ResponsiveContainer>
       </section>
+      </section>
 
       {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
@@ -267,6 +268,7 @@ const AIQuantumFinancialOraclePage = () => {
             ))}
           </div>
         </ResponsiveContainer>
+      </section>
       </section>
 
       {/* Pricing Section */}
@@ -325,6 +327,7 @@ const AIQuantumFinancialOraclePage = () => {
             ))}
           </div>
         </ResponsiveContainer>
+      </section>
       </section>
 
       {/* CTA Section */}

@@ -242,6 +242,4 @@ const WebinarsPage = () => {
   );
 };
 
-export default WebinarsPage;
-  );
-}
+export default $1;

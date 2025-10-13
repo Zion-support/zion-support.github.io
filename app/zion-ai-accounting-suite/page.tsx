@@ -69,25 +69,25 @@ const ZionAIAccountingSuite = () => {
       title: "Invoice Management",
       description: "Automated invoice creation, processing, and payment tracking with AI-powered data extraction",
       icon: <FileText className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-500 to-cyan-500",
     },
     {
       title: "Expense Tracking",
       description: "Smart expense categorization, receipt management, and reimbursement processing",
       icon: <CreditCard className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
+      color: "from-green-500 to-emerald-500",
     },
     {
       title: "Financial Reporting",
       description: "Real-time P&L, balance sheets, cash flow statements, and custom financial reports",
       icon: <BarChart3 className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-500 to-pink-500",
     },
     {
       title: "Tax Compliance",
       description: "Automated tax calculations, filing, and compliance monitoring across all jurisdictions",
       icon: <Calculator className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+      color: "from-orange-500 to-red-500",
     }
   ];
 
@@ -366,6 +366,4 @@ const ZionAIAccountingSuite = () => {
   );
 };
 
-export default ZionAIAccountingSuite;
-  );
-}
+export default $1;

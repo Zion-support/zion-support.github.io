@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, CheckCircle, FileText, Lock, Users, Globe, Award } from 'lucide-react';
 
 export default function page() {
-  return (
-    <div>
   const features = [
     { title: "Feature 1", description: "Description 1" },
     { title: "Feature 2", description: "Description 2" }

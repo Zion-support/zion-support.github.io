@@ -130,7 +130,7 @@ const ZionAISocialSchedulerProPage: React.FC = () => {
       role: "Social Media Manager",
       content: "Zion AI Social Scheduler Pro increased our engagement by 300%. The AI optimization features are incredible!",
       rating: 5,
-      avatar: "JM"
+      avatar: "JM",
     },
     {
       name: "David Kim",
@@ -138,7 +138,7 @@ const ZionAISocialSchedulerProPage: React.FC = () => {
       role: "Marketing Director",
       content: "We manage 20+ social accounts effortlessly. The team collaboration features have streamlined our entire workflow.",
       rating: 5,
-      avatar: "DK"
+      avatar: "DK",
     },
     {
       name: "Lisa Thompson",
@@ -146,7 +146,7 @@ const ZionAISocialSchedulerProPage: React.FC = () => {
       role: "Brand Manager",
       content: "The AI content generation saves us hours every week. Our content quality has improved dramatically.",
       rating: 5,
-      avatar: "LT"
+      avatar: "LT",
     }
   ];
 

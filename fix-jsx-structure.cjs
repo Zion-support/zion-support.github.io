@@ -16,28 +16,25 @@ files.forEach(file => {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Fix common patterns
+    // Fix common JSX structure issues
     const fixes = [
-      // Fix misplaced code inside JSX return
+      // Fix malformed sections with content outside
       {
-        pattern: /return\s*\(\s*<div[^>]*>\s*const\s+/g,
-        replacement: 'const '
+        pattern: /<section[^>]*>\s*<\/section>\s*<ResponsiveContainer>/g,
+        replacement: '<section$1>\n        <ResponsiveContainer>'
       },
-      // Fix missing closing braces in object literals
+      // Fix extra closing braces and parentheses
       {
-        pattern: /(\w+):\s*"([^"]*)"\s*,?\s*$/gm,
-        replacement: (match, key, value) => {
-          if (!match.includes('}')) {
-            return `${key}: "${value}",`;
+        pattern: /export default \w+;\s*\);\s*}/g,
+        replacement: 'export default $1;'
+      },
+      // Fix missing closing section tags
+      {
+        pattern: /<section[^>]*>\s*<ResponsiveContainer>([\s\S]*?)<\/ResponsiveContainer>\s*$/gm,
+        replacement: (match, content) => {
+          if (!match.includes('</section>')) {
+            return match + '\n      </section>';
           }
-          return match;
-        }
-      },
-      // Fix unclosed JSX elements by adding proper structure
-      {
-        pattern: /<section[^>]*>(?![\s\S]*<\/section>)/g,
-        replacement: (match) => {
-          // This needs more sophisticated parsing, so we'll handle it case by case
           return match;
         }
       }

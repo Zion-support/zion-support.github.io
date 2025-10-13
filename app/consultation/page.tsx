@@ -2,8 +2,6 @@ import { Helmet } from 'react-helmet-async';
 import { useState, useEffect } from 'react';
 
 export default function ConsultationPage() {
-  return (
-    <div>
   const benefits = [
     "Benefit 1",
     "Benefit 2"

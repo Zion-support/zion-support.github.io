@@ -169,6 +169,4 @@ const CloudServicesPage: React.FC = () => {
   );
 };
 
-export default CloudServicesPage;
-  );
-}
+export default $1;

@@ -303,6 +303,4 @@ const ZionAIInventoryManager = () => {
   );
 };
 
-export default ZionAIInventoryManager;
-  );
-}
+export default $1;

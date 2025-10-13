@@ -5,8 +5,6 @@ import { Helmet } from "react-helmet-async";
 import { Code, Globe, Smartphone, Zap, Database, ArrowRight, ArrowRight, Mail, Smartphone, Globe, ArrowRight } from 'lucide-react';
 
 export default function page() {
-  return (
-    <div>
   const features = [
     { title: "Feature 1", description: "Description 1" },
     { title: "Feature 2", description: "Description 2" }

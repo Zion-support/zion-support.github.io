@@ -24,22 +24,22 @@ const AIPoweredEmailAnalyzerPage = () => {
     {
       icon: <Brain className="w-8 h-8" />,
       title: "AI-Powered Analysis",
-      description: "Advanced machine learning algorithms analyze email content, sentiment, and intent with 99.5% accuracy."
+      description: "Advanced machine learning algorithms analyze email content, sentiment, and intent with 99.5% accuracy.",
     },
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Security Detection",
-      description: "Automatically detect phishing attempts, spam, and malicious content to protect your organization."
+      description: "Automatically detect phishing attempts, spam, and malicious content to protect your organization.",
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
       title: "Analytics Dashboard",
-      description: "Comprehensive analytics and reporting to track email performance and communication trends."
+      description: "Comprehensive analytics and reporting to track email performance and communication trends.",
     },
     {
       icon: <Zap className="w-8 h-8" />,
       title: "Real-time Processing",
-      description: "Process and analyze emails in real-time with instant notifications and alerts."
+      description: "Process and analyze emails in real-time with instant notifications and alerts.",
     }
   ];
 
@@ -356,6 +356,4 @@ const AIPoweredEmailAnalyzerPage = () => {
   );
 };
 
-export default Page;
-  );
-}
+export default $1;

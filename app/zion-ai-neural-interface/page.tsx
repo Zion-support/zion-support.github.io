@@ -8,25 +8,25 @@ const ZionAINeuralInterface = () => {
       title: "Thought-to-Text Conversion",
       description: "Convert your thoughts directly into text with 99.7% accuracy using advanced neural pattern recognition.",
       icon: <Brain className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-500 to-cyan-500",
     },
     {
       title: "Mind Control Interface",
       description: "Control devices and applications through pure thought with our revolutionary neural interface technology.",
       icon: <Hand className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-500 to-pink-500",
     },
     {
       title: "Neural Pattern Recognition",
       description: "Advanced AI algorithms that learn and adapt to your unique neural patterns for optimal performance.",
       icon: <Cpu className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
+      color: "from-green-500 to-emerald-500",
     },
     {
       title: "Real-time Processing",
       description: "Ultra-low latency processing ensures instant response to your neural commands and thoughts.",
       icon: <Zap className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+      color: "from-orange-500 to-red-500",
     }
   ];
 
@@ -100,7 +100,7 @@ const ZionAINeuralInterface = () => {
       role: "Lead Neuroscientist",
       content: "The Zion AI Neural Interface has revolutionized our research capabilities. The accuracy and speed of thought-to-text conversion is unprecedented.",
       rating: 5,
-      avatar: "SC"
+      avatar: "SC",
     },
     {
       name: "Marcus Rodriguez",
@@ -108,7 +108,7 @@ const ZionAINeuralInterface = () => {
       role: "CEO",
       content: "This technology has given our clients with disabilities incredible new ways to interact with technology. It's truly life-changing.",
       rating: 5,
-      avatar: "MR"
+      avatar: "MR",
     },
     {
       name: "Dr. Emily Watson",
@@ -116,7 +116,7 @@ const ZionAINeuralInterface = () => {
       role: "Research Director",
       content: "The neural pattern recognition capabilities are outstanding. We've seen remarkable improvements in cognitive performance across all test subjects.",
       rating: 5,
-      avatar: "EW"
+      avatar: "EW",
     }
   ];
 
@@ -401,6 +401,4 @@ const ZionAINeuralInterface = () => {
   );
 };
 
-export default ZionAINeuralInterface;
-  );
-}
+export default $1;

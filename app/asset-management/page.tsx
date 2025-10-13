@@ -15,25 +15,25 @@ const AssetManagementPage = () => {
       title: "IT Asset Tracking",
       description: "Comprehensive tracking and management of all IT assets from procurement to disposal",
       icon: <Package className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-500 to-cyan-500",
     },
     {
       title: "Asset Lifecycle Management",
       description: "Complete lifecycle management from planning and procurement to retirement",
       icon: <Target className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
+      color: "from-green-500 to-emerald-500",
     },
     {
       title: "Cost Optimization",
       description: "Reduce costs by optimizing asset utilization and identifying savings opportunities",
       icon: <BarChart3 className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-500 to-pink-500",
     },
     {
       title: "Compliance & Security",
       description: "Ensure compliance with regulations and maintain security across all assets",
       icon: <Shield className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+      color: "from-orange-500 to-red-500",
     }
   ];
 
@@ -189,6 +189,4 @@ const AssetManagementPage = () => {
   );
 };
 
-export default AssetManagementPage;
-  );
-}
+export default $1;

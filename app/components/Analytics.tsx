@@ -199,6 +199,4 @@ const Analytics: React.FC<AnalyticsProps> = ({
   return null; // This component doesn't render anything
 };
 
-export default Analytics;
-  );
-}
+export default $1;

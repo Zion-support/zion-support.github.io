@@ -71,7 +71,7 @@ export default function page() {
       company: "TechCorp",
       content: "Zion's AI analytics platform has revolutionized how we process and understand our data. The insights are incredible!",
       rating: 5,
-      avatar: "SJ"
+      avatar: "SJ",
     },
     {
       name: "Michael Chen",
@@ -79,7 +79,7 @@ export default function page() {
       company: "InnovateLabs",
       content: "The predictive analytics capabilities have helped us make better business decisions and reduce costs significantly.",
       rating: 5,
-      avatar: "MC"
+      avatar: "MC",
     },
     {
       name: "Emily Rodriguez",
@@ -87,7 +87,7 @@ export default function page() {
       company: "DataFlow Inc",
       content: "Outstanding platform with real-time processing and intuitive dashboards. Highly recommended!",
       rating: 5,
-      avatar: "ER"
+      avatar: "ER",
     }
   ];
 

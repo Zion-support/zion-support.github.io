@@ -26,7 +26,7 @@ const ZionAICybersecuritySuiteProPage = () => {
         "Mobile app access"
       ],
       popular: false,
-      color: "from-gray-500 to-gray-600"
+      color: "from-gray-500 to-gray-600",
     },
     {
       name: "Professional",
@@ -46,7 +46,7 @@ const ZionAICybersecuritySuiteProPage = () => {
         "Dedicated security advisor"
       ],
       popular: true,
-      color: "from-cyan-500 to-purple-600"
+      color: "from-cyan-500 to-purple-600",
     },
     {
       name: "Enterprise",
@@ -66,7 +66,7 @@ const ZionAICybersecuritySuiteProPage = () => {
         "Penetration testing"
       ],
       popular: false,
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-500 to-pink-500",
     }
   ];
 
@@ -75,37 +75,37 @@ const ZionAICybersecuritySuiteProPage = () => {
       title: "Threat Intelligence",
       description: "Real-time threat intelligence feeds and AI-powered analysis of global security threats and attack patterns",
       icon: <Eye className="w-6 h-6" />,
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-500 to-cyan-500",
     },
     {
       title: "Vulnerability Management",
       description: "Automated vulnerability scanning, assessment, and remediation with AI-powered prioritization",
       icon: <Bug className="w-6 h-6" />,
-      color: "from-green-500 to-emerald-500"
+      color: "from-green-500 to-emerald-500",
     },
     {
       title: "Identity & Access Management",
       description: "Advanced IAM with multi-factor authentication, single sign-on, and privileged access management",
       icon: <Key className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-500 to-pink-500",
     },
     {
       title: "Data Loss Prevention",
       description: "AI-powered data classification, monitoring, and protection to prevent sensitive data breaches",
       icon: <FileShield className="w-6 h-6" />,
-      color: "from-orange-500 to-red-500"
+      color: "from-orange-500 to-red-500",
     },
     {
       title: "Security Analytics",
       description: "Advanced security analytics with machine learning for threat hunting and forensic analysis",
       icon: <BarChart3 className="w-6 h-6" />,
-      color: "from-red-500 to-pink-500"
+      color: "from-red-500 to-pink-500",
     },
     {
       title: "Cloud Security",
       description: "Comprehensive cloud security monitoring and protection for AWS, Azure, and Google Cloud",
       icon: <Cloud className="w-6 h-6" />,
-      color: "from-cyan-500 to-blue-500"
+      color: "from-cyan-500 to-blue-500",
     }
   ];
 
@@ -114,37 +114,37 @@ const ZionAICybersecuritySuiteProPage = () => {
       title: "Ransomware Protection",
       description: "Advanced behavioral analysis and AI-powered detection to prevent ransomware attacks before they encrypt your data",
       icon: <Lock className="w-8 h-8" />,
-      color: "from-red-500 to-pink-500"
+      color: "from-red-500 to-pink-500",
     },
     {
       title: "Phishing Detection",
       description: "AI-powered email security that identifies and blocks sophisticated phishing attempts with 99.8% accuracy",
       icon: <AlertTriangle className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+      color: "from-orange-500 to-red-500",
     },
     {
       title: "Malware Prevention",
       description: "Next-generation antivirus with machine learning to detect and prevent zero-day malware and advanced persistent threats",
       icon: <Shield className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-500 to-cyan-500",
     },
     {
       title: "Insider Threat Detection",
       description: "Behavioral analytics and AI monitoring to detect and prevent insider threats and data exfiltration",
       icon: <Users className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-500 to-pink-500",
     },
     {
       title: "DDoS Mitigation",
       description: "AI-powered DDoS protection that automatically detects and mitigates distributed denial-of-service attacks",
       icon: <Network className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
+      color: "from-green-500 to-emerald-500",
     },
     {
       title: "Supply Chain Security",
       description: "Comprehensive monitoring and analysis of third-party vendors and supply chain security risks",
       icon: <Globe className="w-8 h-8" />,
-      color: "from-cyan-500 to-blue-500"
+      color: "from-cyan-500 to-blue-500",
     }
   ];
 
@@ -228,8 +228,7 @@ const ZionAICybersecuritySuiteProPage = () => {
       </section>
 
       {/* Threat Protection Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
+      <section$1>
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -262,10 +261,10 @@ const ZionAICybersecuritySuiteProPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
+      </section>
 
       {/* Security Modules Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-        </section>
+      <section$1>
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -297,10 +296,10 @@ const ZionAICybersecuritySuiteProPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
+      </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
+      <section$1>
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -332,10 +331,10 @@ const ZionAICybersecuritySuiteProPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
+      </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-        </section>
+      <section$1>
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -389,10 +388,10 @@ const ZionAICybersecuritySuiteProPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
+      </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
+      <section$1>
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -428,10 +427,10 @@ const ZionAICybersecuritySuiteProPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
+      </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
+      <section$1>
         <ResponsiveContainer>
           <div className="text-center bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-2xl p-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -457,10 +456,9 @@ const ZionAICybersecuritySuiteProPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
+      </section>
     </div>
   );
 };
 
-export default ZionAICybersecuritySuiteProPage;
-  );
-}
+export default $1;

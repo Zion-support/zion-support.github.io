@@ -14,7 +14,7 @@ const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = ({
   const variantClasses = {
     default: "bg-slate-800/50 border border-cyan-500/20 hover:border-cyan-500/40",
     gradient: "bg-gradient-to-br from-slate-800/50 to-purple-900/50 border border-cyan-500/20 hover:border-cyan-500/40",
-    glass: "bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20"
+    glass: "bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20",
   };
 
   return (
@@ -30,6 +30,4 @@ const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = ({
   );
 };
 
-export default FuturisticCardEnhanced;
-  );
-}
+export default $1;

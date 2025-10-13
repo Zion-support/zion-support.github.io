@@ -47,5 +47,3 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 };
 
 export default AnalyticsProvider;
-  );
-}

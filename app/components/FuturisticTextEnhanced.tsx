@@ -91,7 +91,7 @@ const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
       transition: {
         duration: duration,
         delay: delay,
-        ease: "easeOut"
+        ease: "easeOut",
       }
     },
     hover: {
@@ -152,6 +152,4 @@ const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
   );
 };
 
-export default FuturisticTextEnhanced;
-  );
-}
+export default $1;

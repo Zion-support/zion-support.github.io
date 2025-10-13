@@ -37,6 +37,4 @@ const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({
   );
 };
 
-export default ResponsiveGrid;
-  );
-}
+export default $1;

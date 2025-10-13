@@ -360,6 +360,4 @@ const SmartInventoryOptimizerPage = () => {
   );
 };
 
-export default SmartInventoryOptimizerPage;
-  );
-}
+export default $1;

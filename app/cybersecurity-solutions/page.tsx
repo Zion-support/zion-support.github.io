@@ -14,6 +14,7 @@ import { Brain } from 'lucide-react';
 import { Lock } from 'lucide-react';
 import { Activity } from 'lucide-react';
 import { FileText } from 'lucide-react';
+import { Eye } from 'lucide-react';
 
 const CybersecuritySolutions = () => {
   const services = [
@@ -22,28 +23,28 @@ const CybersecuritySolutions = () => {
       description: "Comprehensive security audits to identify vulnerabilities and assess your current security posture",
       icon: <Eye className="w-8 h-8" />,
       features: ["Vulnerability scanning", "Penetration testing", "Risk assessment", "Compliance audit"],
-      price: "From $2,499/assessment"
+      price: "From $2,499/assessment",
     },
     {
       title: "Threat Detection",
       description: "Advanced threat detection and response systems to identify and neutralize security threats in real-time",
       icon: <AlertTriangle className="w-8 h-8" />,
       features: ["AI-powered detection", "Real-time monitoring", "Automated response", "Threat intelligence"],
-      price: "From $1,999/month"
+      price: "From $1,999/month",
     },
     {
       title: "Identity Management",
       description: "Secure identity and access management solutions to control user access and prevent unauthorized access",
       icon: <Users className="w-8 h-8" />,
       features: ["Multi-factor authentication", "Single sign-on", "Access governance", "Privileged access"],
-      price: "From $1,299/month"
+      price: "From $1,299/month",
     },
     {
       title: "Data Protection",
       description: "Comprehensive data protection solutions to secure sensitive information and ensure compliance",
       icon: <Database className="w-8 h-8" />,
       features: ["Data encryption", "Backup security", "Data loss prevention", "Compliance monitoring"],
-      price: "From $1,799/month"
+      price: "From $1,799/month",
     }
   ];
 
@@ -62,7 +63,7 @@ const CybersecuritySolutions = () => {
         "Monthly reports"
       ],
       popular: false,
-      cta: "Get Started"
+      cta: "Get Started",
     },
     {
       name: "Professional",
@@ -80,7 +81,7 @@ const CybersecuritySolutions = () => {
         "Security training"
       ],
       popular: true,
-      cta: "Get Started"
+      cta: "Get Started",
     },
     {
       name: "Enterprise",
@@ -99,7 +100,7 @@ const CybersecuritySolutions = () => {
         "Compliance management"
       ],
       popular: false,
-      cta: "Contact Sales"
+      cta: "Contact Sales",
     }
   ];
 
@@ -108,25 +109,25 @@ const CybersecuritySolutions = () => {
       title: "AI-Powered Security",
       description: "Advanced AI algorithms detect and prevent sophisticated cyber threats before they cause damage",
       icon: <Brain className="w-6 h-6" />,
-      stats: "99.9% threat detection"
+      stats: "99.9% threat detection",
     },
     {
       title: "Zero Trust Architecture",
       description: "Implement zero trust security model with continuous verification and least privilege access",
       icon: <Lock className="w-6 h-6" />,
-      stats: "100% coverage"
+      stats: "100% coverage",
     },
     {
       title: "24/7 Monitoring",
       description: "Round-the-clock security monitoring and incident response to protect your business",
       icon: <Activity className="w-6 h-6" />,
-      stats: "Sub-minute response"
+      stats: "Sub-minute response",
     },
     {
       title: "Compliance Ready",
       description: "Meet industry compliance requirements including GDPR, HIPAA, SOX, and PCI DSS",
       icon: <FileText className="w-6 h-6" />,
-      stats: "50+ frameworks"
+      stats: "50+ frameworks",
     }
   ];
 
@@ -141,7 +142,6 @@ const CybersecuritySolutions = () => {
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        </section>
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -200,7 +200,6 @@ const CybersecuritySolutions = () => {
 
       {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -238,8 +237,7 @@ const CybersecuritySolutions = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-red-800/50">
-        </section>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -284,7 +282,6 @@ const CybersecuritySolutions = () => {
 
       {/* Pricing Section */}
       <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -344,8 +341,7 @@ const CybersecuritySolutions = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-red-800/50">
-        </section>
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -386,8 +382,7 @@ const CybersecuritySolutions = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-900/30 to-orange-900/30">
-        </section>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -427,5 +422,3 @@ const CybersecuritySolutions = () => {
 };
 
 export default CybersecuritySolutions;
-  );
-}
