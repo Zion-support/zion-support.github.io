@@ -10,6 +10,7 @@ interface ImageOptimizerProps {
   placeholder?: string;
 }
 
+
 export default function ImageOptimizer({ 
   src, 
   alt, 
@@ -19,6 +20,16 @@ export default function ImageOptimizer({
   placeholder
 
   lazy = true
+
+
+
+export default function ImageOptimizer({
+  src,
+  alt,
+  className = '',
+  lazy = true,
+  placeholder
+
 
 }: ImageOptimizerProps) {
   return (
@@ -31,6 +42,9 @@ export default function ImageOptimizer({
       style={{
         backgroundColor: placeholder || '#f3f4f6'
       }}
+
+
+
 
 
     />
