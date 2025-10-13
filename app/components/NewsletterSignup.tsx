@@ -42,7 +42,7 @@ export default function NewsletterSignup({
         setMessage('');
       }, 3000);
       
-    } catch (error) {
+    } catch {
       setStatus('error');
       setMessage('Something went wrong. Please try again.');
     }
