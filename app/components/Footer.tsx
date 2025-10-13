@@ -40,6 +40,11 @@ const Footer = React.memo(() => {
               Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. 
               We help businesses transform with cutting-edge technology and innovative solutions.
             </p>
+            <div className="mt-4 space-y-2 text-sm text-gray-400">
+              <p><strong>Mobile:</strong> +1 302 464 0950</p>
+              <p><strong>Email:</strong> kleber@ziontechgroup.com</p>
+              <p><strong>Address:</strong> 364 E Main St STE 1008<br />Middletown DE 19709</p>
+            </div>
             <div className="flex space-x-4">
               {socialLinks.map((link) => (
                 <a
@@ -70,26 +75,26 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/cloud-services"
+                  to="/micro-saas"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Cloud Solutions
+                  Micro SAAS
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/cybersecurity"
+                  to="/it-services"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Cybersecurity
+                  IT Services
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/5g-implementation"
+                  to="/5g-solutions"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  5G Implementation
+                  5G Solutions
                 </Link>
               </li>
               <li>

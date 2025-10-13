@@ -1,125 +1,124 @@
-import { ArrowRight, Brain, CheckCircle, Star, Zap, Shield, Globe, DollarSign, Users, BarChart3, Clock, Award } from "lucide-react";
+import { ArrowRight, Link, BarChart3, Shield, Zap, Globe, CheckCircle, Star, Clock, Users, Target, Award } from "lucide-react";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 
-export default function AIContentGenerator() {
+export default function URLShortener() {
   const features = [
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Writing",
-      description: "Advanced natural language processing generates high-quality, engaging content tailored to your brand voice and audience."
-    },
-    {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Multi-Language Support",
-      description: "Create content in 50+ languages with native-level quality and cultural adaptation for global audiences."
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "SEO Optimization",
-      description: "Automatically optimize content for search engines with keyword integration, meta descriptions, and readability scores."
+      icon: <Link className="w-6 h-6" />,
+      title: "Custom Short URLs",
+      description: "Create memorable, branded short links with your own domain and custom aliases."
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Performance Analytics",
-      description: "Track content performance with detailed analytics, engagement metrics, and conversion tracking."
+      title: "Advanced Analytics",
+      description: "Track clicks, geographic data, device types, and referral sources with detailed reporting."
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Brand Voice Training",
-      description: "Train the AI to match your unique brand voice, tone, and style across all content types."
+      title: "Link Security",
+      description: "Password protection, expiration dates, and malware scanning to keep your links safe."
     },
     {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Content Scheduling",
-      description: "Plan and schedule content across multiple platforms with automated publishing and social media integration."
+      icon: <Zap className="w-6 h-6" />,
+      title: "Bulk Operations",
+      description: "Upload and shorten thousands of URLs at once with our bulk processing feature."
+    },
+    {
+      icon: <Globe className="w-6 h-6" />,
+      title: "QR Code Generation",
+      description: "Automatically generate QR codes for your short links for offline marketing campaigns."
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Team Collaboration",
+      description: "Share and manage links with your team, set permissions, and track team performance."
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$29",
+      name: "Free",
+      price: "$0",
       period: "/month",
-      description: "Perfect for small businesses and individual creators",
+      description: "Perfect for personal use and small projects",
       features: [
-        "10,000 words/month",
-        "5 content templates",
-        "Basic SEO optimization",
-        "Email support",
-        "1 brand voice profile"
+        "100 short links/month",
+        "Basic analytics",
+        "Standard support",
+        "QR code generation",
+        "Link expiration"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$79",
+      name: "Pro",
+      price: "$9",
       period: "/month",
-      description: "Ideal for growing businesses and marketing teams",
+      description: "Ideal for businesses and marketers",
       features: [
-        "50,000 words/month",
-        "20 content templates",
-        "Advanced SEO optimization",
+        "10,000 short links/month",
+        "Advanced analytics",
+        "Custom domains",
+        "Bulk operations",
         "Priority support",
-        "5 brand voice profiles",
-        "Content analytics",
-        "Multi-language support"
+        "Team collaboration",
+        "API access"
       ],
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$199",
+      name: "Business",
+      price: "$29",
       period: "/month",
-      description: "For large organizations with high-volume content needs",
+      description: "For growing businesses with high volume needs",
       features: [
-        "Unlimited words",
-        "Unlimited templates",
-        "Custom AI training",
+        "100,000 short links/month",
+        "White-label solution",
+        "Advanced security",
         "Dedicated support",
-        "Unlimited brand profiles",
-        "Advanced analytics",
-        "API access",
-        "White-label options"
+        "Custom integrations",
+        "SLA guarantee",
+        "Advanced reporting"
       ],
       popular: false
     }
   ];
 
-  const useCases = [
+  const benefits = [
     {
-      title: "Blog Content",
-      description: "Generate engaging blog posts, articles, and long-form content that drives traffic and engagement.",
-      icon: <Brain className="w-8 h-8" />
+      title: "Increase Click-Through Rates",
+      description: "Short, branded URLs are more trustworthy and easier to share, leading to higher engagement.",
+      icon: <Target className="w-8 h-8" />
     },
     {
-      title: "Social Media",
-      description: "Create compelling social media posts, captions, and ad copy for all major platforms.",
-      icon: <Globe className="w-8 h-8" />
+      title: "Track Campaign Performance",
+      description: "Monitor which links perform best and optimize your marketing strategies with detailed analytics.",
+      icon: <BarChart3 className="w-8 h-8" />
     },
     {
-      title: "Marketing Copy",
-      description: "Generate email campaigns, landing pages, product descriptions, and sales copy.",
-      icon: <Zap className="w-8 h-8" />
-    },
-    {
-      title: "Technical Writing",
-      description: "Create documentation, user guides, and technical content with precision and clarity.",
+      title: "Professional Branding",
+      description: "Use your own domain to maintain brand consistency across all your marketing materials.",
       icon: <Award className="w-8 h-8" />
+    },
+    {
+      title: "Save Time & Effort",
+      description: "Bulk operations and API integration help you manage thousands of links efficiently.",
+      icon: <Clock className="w-8 h-8" />
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Content Generator Pro - Zion Tech Group</title>
+        <title>AI-Powered URL Shortener - Zion Tech Group</title>
         <meta
           name="description"
-          content="Advanced AI-powered content generation tool with SEO optimization, multi-language support, and brand voice training. Starting at $29/month."
+          content="Professional URL shortening service with advanced analytics, custom domains, QR codes, and team collaboration. Starting at $9/month."
         />
         <meta
           name="keywords"
-          content="AI content generator, content creation, SEO content, blog writing, social media content, marketing copy, content automation"
+          content="URL shortener, link shortener, custom domains, link analytics, QR codes, bulk URL shortening, link management"
         />
       </Helmet>
 
@@ -132,48 +131,56 @@ export default function AIContentGenerator() {
                 <div className="flex items-center mb-4">
                   <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center">
                     <Star className="w-4 h-4 mr-1" />
-                    Most Popular AI Service
+                    Most Popular Micro SAAS
                   </span>
                 </div>
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                  AI Content Generator
+                  AI-Powered
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                    {" "}Pro
+                    {" "}URL Shortener
                   </span>
                 </h1>
                 <p className="text-xl text-gray-300 mb-8">
-                  Transform your content creation process with our advanced AI-powered writing assistant. 
-                  Generate high-quality, SEO-optimized content in minutes, not hours.
+                  Create, manage, and track short links with advanced analytics, custom domains, 
+                  and AI-powered insights. Perfect for marketers, businesses, and content creators.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link
+                  <RouterLink
                     to="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                   >
-                    Start Free Trial
+                    Try Free Now
                     <ArrowRight className="w-5 h-5 ml-2" />
-                  </Link>
-                  <Link
+                  </RouterLink>
+                  <RouterLink
                     to="/consultation"
                     className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                   >
-                    Watch Demo
-                  </Link>
+                    View Demo
+                  </RouterLink>
                 </div>
               </div>
               <div className="relative">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                      <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <div className="space-y-6">
+                    <div className="text-center">
+                      <h3 className="text-lg font-semibold text-white mb-4">Try Our URL Shortener</h3>
+                      <div className="space-y-4">
+                        <input
+                          type="text"
+                          placeholder="Enter your long URL here..."
+                          className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                        />
+                        <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
+                          Shorten URL
+                        </button>
+                      </div>
                     </div>
-                    <div className="space-y-3">
-                      <div className="h-4 bg-gradient-to-r from-cyan-500 to-purple-600 rounded w-3/4"></div>
-                      <div className="h-4 bg-white/20 rounded w-1/2"></div>
-                      <div className="h-4 bg-white/20 rounded w-5/6"></div>
-                      <div className="h-4 bg-white/20 rounded w-2/3"></div>
+                    <div className="border-t border-white/20 pt-4">
+                      <div className="text-sm text-gray-400 mb-2">Your short link:</div>
+                      <div className="bg-white/5 rounded-lg p-3 text-cyan-400 font-mono text-sm">
+                        zion.tech/abc123
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -187,10 +194,10 @@ export default function AIContentGenerator() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Powerful Features for Content Creation
+                Powerful Features for Link Management
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to create, optimize, and manage content at scale.
+                Everything you need to create, manage, and track your short links effectively.
               </p>
             </div>
             
@@ -211,29 +218,29 @@ export default function AIContentGenerator() {
           </div>
         </section>
 
-        {/* Use Cases Section */}
+        {/* Benefits Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Perfect for Every Content Need
+                Why Choose Our URL Shortener?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                From blog posts to social media, our AI adapts to your content requirements.
+                More than just shortening links - we help you optimize your marketing campaigns.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
+              {benefits.map((benefit, index) => (
                 <div
                   key={index}
                   className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    {useCase.icon}
+                    {benefit.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                  <p className="text-gray-300">{useCase.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                  <p className="text-gray-300">{benefit.description}</p>
                 </div>
               ))}
             </div>
@@ -245,10 +252,10 @@ export default function AIContentGenerator() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Choose Your Plan
+                Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing options to match your content creation needs.
+                Choose the plan that fits your needs. No hidden fees, no surprises.
               </p>
             </div>
             
@@ -287,7 +294,7 @@ export default function AIContentGenerator() {
                     ))}
                   </ul>
                   
-                  <Link
+                  <RouterLink
                     to="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
@@ -295,8 +302,8 @@ export default function AIContentGenerator() {
                         : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                     }`}
                   >
-                    Get Started
-                  </Link>
+                    {plan.name === 'Free' ? 'Get Started' : 'Start Free Trial'}
+                  </RouterLink>
                 </div>
               ))}
             </div>
@@ -307,25 +314,25 @@ export default function AIContentGenerator() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Content Creation?
+              Ready to Shorten Your First Link?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of content creators and businesses already using our AI to produce high-quality content at scale.
+              Join thousands of users who trust our platform for their link management needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <RouterLink
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
-                Start Your Free Trial
+                Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
+              </RouterLink>
+              <RouterLink
                 to="/consultation"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 Schedule Demo
-              </Link>
+              </RouterLink>
             </div>
           </div>
         </section>

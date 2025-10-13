@@ -5,53 +5,52 @@ import { Link } from "react-router-dom";
 export default function Services() {
   const services = [
     {
-      title: "AI & Machine Learning",
-      description: "Cutting-edge artificial intelligence solutions to transform your business operations",
+      title: "AI Services",
+      description: "Comprehensive AI solutions including content generation, chatbots, cybersecurity, and business intelligence",
       icon: <Brain className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500",
-      path: "/ai-services"
+      path: "/ai-services",
+      features: ["Content Generation", "Customer Support Bots", "Cybersecurity AI", "Business Intelligence"]
     },
     {
-      title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure and migration services",
-      icon: <Globe className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500",
-      path: "/cloud-services"
-    },
-    {
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions to protect your digital assets",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-red-500 to-pink-500",
-      path: "/cybersecurity"
-    },
-    {
-      title: "5G Implementation",
-      description: "Next-generation connectivity and infrastructure services",
+      title: "Micro SAAS",
+      description: "Ready-to-use software solutions for productivity, security, marketing, and development",
       icon: <Zap className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      path: "/micro-saas",
+      features: ["URL Shortener", "Password Analyzer", "QR Generator", "API Services"]
+    },
+    {
+      title: "IT Services",
+      description: "Professional IT services including cloud management, cybersecurity, DevOps, and infrastructure",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      path: "/it-services",
+      features: ["Cloud Management", "Cybersecurity", "DevOps", "Network Infrastructure"]
+    },
+    {
+      title: "5G Solutions",
+      description: "Next-generation connectivity and infrastructure services for modern businesses",
+      icon: <Globe className="w-8 h-8" />,
       color: "from-orange-500 to-yellow-500",
-      path: "/5g-implementation"
+      path: "/5g-solutions",
+      features: ["5G Implementation", "Edge Computing", "IoT Solutions", "Smart City Solutions"]
     },
     {
       title: "Data Analytics",
-      description: "Advanced data analysis and business intelligence solutions",
+      description: "Advanced data analysis and business intelligence solutions with real-time insights",
       icon: <Database className="w-8 h-8" />,
       color: "from-purple-500 to-indigo-500",
-      path: "/data-analytics"
+      path: "/data-analytics",
+      features: ["Business Intelligence", "Predictive Analytics", "Data Visualization", "Real-time Reporting"]
     },
     {
       title: "Custom Development",
-      description: "Tailored software solutions for your specific business needs",
+      description: "Tailored software solutions and mobile applications for your specific business needs",
       icon: <Code className="w-8 h-8" />,
       color: "from-teal-500 to-cyan-500",
-      path: "/custom-development"
-    },
-    {
-      title: "Mobile Solutions",
-      description: "Native and cross-platform mobile applications",
-      icon: <Smartphone className="w-8 h-8" />,
-      color: "from-pink-500 to-rose-500",
-      path: "/mobile-development"
+      path: "/custom-development",
+      features: ["Web Applications", "Mobile Apps", "API Development", "System Integration"]
     }
   ];
 
@@ -99,9 +98,19 @@ export default function Services() {
                   <h3 className="text-xl font-semibold text-white mb-3 text-center">
                     {service.title}
                   </h3>
-                  <p className="text-gray-300 text-center">
+                  <p className="text-gray-300 text-center mb-4">
                     {service.description}
                   </p>
+                  <div className="flex flex-wrap justify-center gap-2">
+                    {service.features.map((feature, idx) => (
+                      <span
+                        key={idx}
+                        className="text-xs bg-white/20 text-white px-2 py-1 rounded-full"
+                      >
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
                 </Link>
               ))}
             </div>
