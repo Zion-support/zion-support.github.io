@@ -19,6 +19,22 @@ import {
 } from 'lucide-react';
 
 const AICustomerSentimentTrackerPage = () => {
+  const stats = [
+    { number: "95%", label: "Accuracy Rate" },
+    { number: "10M+", label: "Reviews Analyzed" },
+    { number: "50+", label: "Languages Supported" },
+    { number: "24/7", label: "Real-time Monitoring" }
+  ];
+
+  const benefits = [
+    "Real-time sentiment analysis across all channels",
+    "Automated alert system for negative sentiment spikes",
+    "Comprehensive reporting and trend analysis",
+    "Integration with popular CRM and support tools",
+    "Customizable sentiment scoring and categorization",
+    "Historical data analysis and trend prediction"
+  ];
+
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,

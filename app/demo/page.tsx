@@ -17,6 +17,36 @@ export default function Page() {
   const [currentDemo, setCurrentDemo] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
 
+  const stats = [
+    { number: "500+", label: "Demos Available" },
+    { number: "50K+", label: "Users Trained" },
+    { number: "95%", label: "Success Rate" },
+    { number: "24/7", label: "Support Available" }
+  ];
+
+  const benefits = [
+    {
+      icon: <Play className="w-8 h-8 text-cyan-400" />,
+      title: "Interactive Demos",
+      description: "Hands-on experience with our solutions"
+    },
+    {
+      icon: <Users className="w-8 h-8 text-green-400" />,
+      title: "Expert Guidance",
+      description: "Learn from our experienced team"
+    },
+    {
+      icon: <Award className="w-8 h-8 text-purple-400" />,
+      title: "Proven Results",
+      description: "See real-world success stories"
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8 text-yellow-400" />,
+      title: "Data-Driven",
+      description: "Make informed decisions with data"
+    }
+  ];
+
   const demos = [
     {
       id: 'ai-analytics',

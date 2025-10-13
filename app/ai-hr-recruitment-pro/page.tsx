@@ -3,6 +3,15 @@ import { Link } from 'react-router-dom';
 import { Target, ArrowRight, Sparkles, CheckCircle, FileText, TrendingUp, Shield } from 'lucide-react';
 
 const AIHRRecruitmentProPage = () => {
+  const benefits = [
+    "Reduce hiring time by 70%",
+    "Increase candidate quality by 50%",
+    "Eliminate bias in screening",
+    "Automate 80% of recruitment tasks",
+    "Improve retention rates by 30%",
+    "Scale recruitment processes efficiently"
+  ];
+
   const features = [
     {
       icon: <UserCheck className="w-8 h-8" />,

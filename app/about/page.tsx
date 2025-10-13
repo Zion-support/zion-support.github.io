@@ -92,7 +92,12 @@ export default function AboutPage() {
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
+              {[
+                { number: "500+", label: "Projects Completed" },
+                { number: "50+", label: "Happy Clients" },
+                { number: "5+", label: "Years Experience" },
+                { number: "24/7", label: "Support Available" }
+              ].map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
                     {stat.number}

@@ -38,6 +38,33 @@ const testimonials = [
     }
   ];
 export default function AICustomerSupportChatbot() {
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      company: "TechSupport Solutions",
+      role: "Customer Success Manager",
+      content: "Our AI chatbot has reduced response time by 80% and increased customer satisfaction by 40%. It handles 90% of inquiries automatically.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      company: "E-commerce Plus",
+      role: "Operations Director",
+      content: "The chatbot understands context perfectly and escalates complex issues to humans seamlessly. Our support team can focus on high-value tasks.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      company: "SaaS Platform Inc",
+      role: "Head of Support",
+      content: "24/7 availability with consistent quality responses. Our customers love the instant help and our team loves the reduced workload.",
+      rating: 5,
+      avatar: "ER"
+    }
+  ];
+
   const chatbotFeatures = [
     {
       category: "Core Features",

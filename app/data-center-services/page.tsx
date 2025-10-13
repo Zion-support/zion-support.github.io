@@ -3,6 +3,15 @@ import { Link } from 'react-router-dom';
 import { Server, Shield, ArrowRight, Sparkles, CheckCircle, Globe, Settings } from 'lucide-react';
 
 const DataCenterServicesPage = () => {
+  const benefits = [
+    "99.99% uptime guarantee",
+    "Enterprise-grade security",
+    "24/7 technical support",
+    "Scalable infrastructure",
+    "Global data center network",
+    "Compliance certified"
+  ];
+
   const features = [
     {
       title: "Enterprise Data Centers",

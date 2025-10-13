@@ -3,6 +3,15 @@ import { Link } from 'react-router-dom';
 import { Mic, ArrowRight, Sparkles, CheckCircle, MessageSquare, Settings, Globe } from 'lucide-react';
 
 const AIVoiceAssistantProPage = () => {
+  const benefits = [
+    "Reduce response time by 90%",
+    "Increase customer satisfaction by 60%",
+    "Handle 95% of inquiries automatically",
+    "Support 50+ languages natively",
+    "24/7 availability and consistency",
+    "Seamless integration with existing systems"
+  ];
+
   const features = [
     {
       icon: <Mic className="w-8 h-8" />,
