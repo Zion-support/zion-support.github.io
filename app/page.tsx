@@ -142,7 +142,7 @@ const HomePage = () => {
   const stats = [
     { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "50+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "60+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
   ];
 
@@ -194,32 +194,16 @@ const HomePage = () => {
             <span className="text-cyan-400 text-sm font-medium">#1 Technology Solutions Provider 2024</span>
           </div>
           
-          <ResponsiveText
-            as="h1"
-            size="7xl"
-            weight="bold"
-            color="white"
-            className="mb-6 leading-tight"
-          >
-            <FuturisticText text="Welcome to " delay={0} speed={100} />
-            <FuturisticText 
-              text="Zion Tech Group" 
-              delay={1000} 
-              speed={150} 
-              className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"
-            />
-          </ResponsiveText>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+              Welcome to Zion Tech Group
+            </span>
+          </h1>
           
-          <ResponsiveText
-            as="p"
-            size="2xl"
-            color="gray"
-            align="center"
-            className="mb-8 max-w-4xl mx-auto leading-relaxed"
-          >
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
             Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. 
             Transform your operations with cutting-edge technology and innovative solutions.
-          </ResponsiveText>
+          </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <FuturisticButton
@@ -241,17 +225,17 @@ const HomePage = () => {
           </div>
           
           {/* Stats */}
-          <ResponsiveGrid cols={{ default: 2, md: 4 }} className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   {stat.icon}
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-sm">{stat.label}</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
               </div>
             ))}
-          </ResponsiveGrid>
+          </div>
         </ResponsiveContainer>
       </section>
 

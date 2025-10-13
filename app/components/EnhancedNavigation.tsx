@@ -18,8 +18,9 @@ const EnhancedNavigation = () => {
         { label: 'Cybersecurity', href: '/ai-cybersecurity' },
         { label: 'Data Analytics', href: '/ai-data-analytics' },
         { label: 'Marketing Automation', href: '/ai-marketing' },
-        { label: 'Predictive Analytics', href: '/ai-predictive-analytics' },
-        { label: 'Workflow Automation', href: '/ai-workflow-automation' },
+        { label: 'Voice AI Assistant', href: '/ai-voice-assistant-pro' },
+        { label: 'Image Recognition', href: '/ai-image-recognition-pro' },
+        { label: 'Fraud Detection', href: '/ai-fraud-detection-pro' },
         { label: 'View All AI Services', href: '/ai-services' }
       ]
     },
@@ -32,9 +33,9 @@ const EnhancedNavigation = () => {
         { label: 'Cybersecurity Solutions', href: '/cybersecurity-solutions' },
         { label: 'Web Development', href: '/web-development' },
         { label: 'Mobile Development', href: '/mobile-development' },
-        { label: 'Database Management', href: '/database-management' },
-        { label: 'Custom Software', href: '/custom-software' },
-        { label: 'Network Infrastructure', href: '/network-infrastructure' },
+        { label: 'Blockchain Development', href: '/blockchain-development' },
+        { label: 'IoT Solutions', href: '/iot-solutions' },
+        { label: 'AR/VR Development', href: '/ar-vr-development' },
         { label: 'DevOps Solutions', href: '/devops-solutions' },
         { label: 'View All IT Services', href: '/services' }
       ]
@@ -47,10 +48,10 @@ const EnhancedNavigation = () => {
         { label: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
         { label: 'Zion Security Shield', href: '/zion-security-shield' },
         { label: 'Zion Cloud Vault', href: '/zion-cloud-vault' },
-        { label: 'Zion Content Studio', href: '/zion-content-studio' },
-        { label: 'Zion Data Sync', href: '/zion-data-sync' },
-        { label: 'Zion Lead Magnet', href: '/zion-lead-magnet' },
-        { label: 'Zion Project Master', href: '/zion-project-master' },
+        { label: 'Zion Inventory Manager', href: '/zion-inventory-manager-pro' },
+        { label: 'Zion HR Management', href: '/zion-hr-management-suite' },
+        { label: 'Zion E-commerce Optimizer', href: '/zion-ecommerce-optimizer' },
+        { label: 'Zion AI Chatbot Builder', href: '/zion-ai-chatbot-builder' },
         { label: 'View All Micro SAAS', href: '/micro-saas' }
       ]
     },
