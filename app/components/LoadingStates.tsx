@@ -4,7 +4,6 @@ import { Loader2, Brain, Shield, Zap, Globe } from 'lucide-react';
 interface LoadingPageProps {
   type?: 'loading' | 'ai' | 'security' | 'performance' | 'global';
   message?: string;
-<<<<<<< HEAD
   variant?: 'default' | 'futuristic' | 'minimal';
 }
 
@@ -23,46 +22,6 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({
     );
   }
 
-<<<<<<< HEAD
-export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
-  const getServiceIcon = (serviceName: string) => {
-    switch (serviceName.toLowerCase()) {
-=======
-  size?: 'sm' | 'md' | 'lg';
-}
-
-const LoadingPage: React.FC<LoadingPageProps> = ({ 
-  type = 'loading', 
-  message = 'Loading...', 
-  size = 'md' 
-}) => {
-  const getIcon = () => {
-    switch (type) {
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
-      case 'ai':
-        return <Brain className="animate-pulse" />;
-      case 'security':
-        return <Shield className="animate-pulse" />;
-      case 'performance':
-        return <Zap className="animate-pulse" />;
-      case 'global':
-        return <Globe className="animate-pulse" />;
-      default:
-        return <Loader2 className="animate-spin" />;
-    }
-  };
-
-  const getSizeClasses = () => {
-    switch (size) {
-      case 'sm':
-        return 'w-6 h-6';
-      case 'lg':
-        return 'w-12 h-12';
-      default:
-        return 'w-8 h-8';
-    }
-  };
-=======
   if (variant === 'default') {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -74,17 +33,15 @@ const LoadingPage: React.FC<LoadingPageProps> = ({
       </div>
     );
   }
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
   // Futuristic variant
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center relative overflow-hidden">
-      {/* Optimized animated background elements */}
+      {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse will-change-transform"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000 will-change-transform"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-pink-500/10 rounded-full blur-2xl animate-pulse delay-500 will-change-transform"></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-pink-500/10 rounded-full blur-2xl animate-pulse delay-500"></div>
       </div>
 
       <div className="relative z-10 text-center">
@@ -128,28 +85,11 @@ const LoadingPage: React.FC<LoadingPageProps> = ({
           </div>
           <p className="text-sm text-gray-400">Initializing advanced systems...</p>
         </div>
-=======
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="text-center">
-        <div className={`${getSizeClasses()} text-blue-400 mx-auto mb-4`}>
-          {getIcon()}
-        </div>
-        <p className="text-white text-lg font-medium">{message}</p>
-        <div className="mt-4 flex justify-center">
-          <div className="animate-pulse flex space-x-1">
-            <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-            <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-            <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-          </div>
-        </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
   return (
     <div className="animate-pulse">
@@ -179,9 +119,4 @@ export const CardSkeleton: React.FC = () => {
   );
 };
 
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 export default LoadingPage;
-=======
-export { LoadingPage };
->>>>>>> cursor/website-audit-and-update-with-deployment-4146

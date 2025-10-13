@@ -1,68 +1,38 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, ReactNode } from 'react';
 
-interface WebVitalsData {
-  name: string;
-  value: number;
-  delta: number;
-  id: string;
-  navigationType: string;
+interface CoreWebVitalsProps {
+  children: ReactNode;
 }
 
-const CoreWebVitals: React.FC = () => {
-<<<<<<< HEAD
-  const reportWebVitals = useCallback((data: WebVitalsData) => {
-    // Send to Google Analytics if available
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'web_vitals', {
-        metric_name: data.name,
-        metric_value: Math.round(data.value),
-        metric_delta: Math.round(data.delta),
-        metric_id: data.id,
-        metric_navigation_type: data.navigationType
-      });
-    }
-
-    // Send to custom analytics
-    if (typeof window !== 'undefined' && (window as any).analytics) {
-      (window as any).analytics.track('Web Vitals', {
-        metric: data.name,
-        value: data.value,
-        delta: data.delta,
-        id: data.id
-      });
-    }
-
-    // Log in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Web Vital:', data.name, data.value);
-    }
-=======
+const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
   useEffect(() => {
-    // Core Web Vitals monitoring
-    console.log('Core Web Vitals monitoring initialized');
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-  }, []);
-
-  useEffect(() => {
-    const measureWebVitals = async () => {
-      try {
-        const { onCLS, onFID, onFCP, onLCP, onTTFB, onINP } = await import('web-vitals');
-
-        onCLS(reportWebVitals);
-        onFID(reportWebVitals);
-        onFCP(reportWebVitals);
-        onLCP(reportWebVitals);
-        onTTFB(reportWebVitals);
-        onINP(reportWebVitals);
-      } catch (error) {
-        console.warn('Failed to load web-vitals:', error);
+    // Track Core Web Vitals
+    const trackCoreWebVitals = () => {
+      if ('web-vitals' in window) {
+        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+          getCLS((metric) => {
+            console.log('Core Web Vitals - CLS:', metric);
+          });
+          getFID((metric) => {
+            console.log('Core Web Vitals - FID:', metric);
+          });
+          getFCP((metric) => {
+            console.log('Core Web Vitals - FCP:', metric);
+          });
+          getLCP((metric) => {
+            console.log('Core Web Vitals - LCP:', metric);
+          });
+          getTTFB((metric) => {
+            console.log('Core Web Vitals - TTFB:', metric);
+          });
+        });
       }
     };
 
-    measureWebVitals();
-  }, [reportWebVitals]);
+    trackCoreWebVitals();
+  }, []);
 
-  return null; // This component doesn't render anything
+  return <>{children}</>;
 };
 
 export default CoreWebVitals;
