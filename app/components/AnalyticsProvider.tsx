@@ -1,16 +1,10 @@
-<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, ReactNode } from "react";
-=======
-import React, { useEffect } from 'react';
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
 declare global {
   interface Window {
     gtag: (...args: unknown[]) => void;
   }
 }
-
-<<<<<<< HEAD
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void;
   trackPageView: (pageName: string) => void;
@@ -26,15 +20,6 @@ export const useAnalytics = () => {
     throw new Error("useAnalytics must be used within an AnalyticsProvider");
   }
   return context;
-=======
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  useEffect(() => {
-    // Initialize analytics
-    console.log('Analytics initialized');
-  }, []);
-
-  return <>{children}</>;
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 };
 
 interface AnalyticsProviderProps {

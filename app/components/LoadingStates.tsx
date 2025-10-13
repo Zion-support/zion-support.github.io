@@ -21,7 +21,19 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({
     );
   }
 
-<<<<<<< HEAD
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="text-center">
+        <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center animate-pulse">
+          <Loader2 className="w-8 h-8 text-white animate-spin" />
+        </div>
+        <h2 className="text-2xl font-bold text-white mb-2">{message}</h2>
+        <p className="text-gray-300">Please wait while we load the content...</p>
+      </div>
+    </div>
+  );
+};
+
 export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
   const getServiceIcon = (serviceName: string) => {
     switch (serviceName.toLowerCase()) {
@@ -41,7 +53,6 @@ export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
         return <Brain className="w-8 h-8 text-cyan-400" />;
     }
   };
-=======
   if (variant === 'default') {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

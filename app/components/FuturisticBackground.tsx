@@ -1,6 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-
-<<<<<<< HEAD
 const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -138,14 +136,8 @@ const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
       cancelAnimationFrame(animationId);
     };
   }, []);
-=======
-interface FuturisticBackgroundProps {
-  children?: React.ReactNode;
-}
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
   return (
-<<<<<<< HEAD
     <div className="relative min-h-screen">
       <canvas
         ref={canvasRef}

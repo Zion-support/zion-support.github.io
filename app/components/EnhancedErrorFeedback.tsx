@@ -17,8 +17,6 @@ export class GlobalErrorBoundary extends Component<Props, State> {
     super(props);
     this.state = { hasError: false };
   }
-
-<<<<<<< HEAD
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
@@ -41,8 +39,6 @@ export class GlobalErrorBoundary extends Component<Props, State> {
   handleReset = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
-
-<<<<<<< HEAD
   private handleRetry = () => {
     if (this.state.retryCount < this.maxRetries) {
       this.setState(prevState => ({
