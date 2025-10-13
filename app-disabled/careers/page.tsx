@@ -285,12 +285,7 @@ import { Right, Circle, Star, } from 'lucide-react';
                 {departments.map((dept) => (
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Work on cutting-edge AI and IT solutions that transform businesses worldwide.
-<<<<<<< HEAD
-<<<<<<< HEAD
-              Be part of a team that's shaping the future of AI and IT solutions. We&apos;re looking for passionate individuals who want to make a difference.
-=======
               Be part of a team that&apos;s shaping the future of AI and IT solutions. We&apos;re looking for passionate individuals who want to make a difference.
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
 =======
               Be part of a team that's shaping the future of AI and IT solutions. We're looking for passionate individuals who want to make a difference.
 >>>>>>> cursor/fix-errors-and-merge-to-main-5fc3

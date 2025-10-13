@@ -18,11 +18,7 @@ export default function AiBusinessIntelligence() {
           </p>
         </div>
         <div className="text-center">
-<<<<<<< HEAD
-          <p className="text-gray-300">Coming Soon - AiBusinessIntelligence Solutions</p>
-=======
           <p className="text-gray-300">Coming Soon - AI Business Intelligence Solutions</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
         </div>
       </div>
     </div>

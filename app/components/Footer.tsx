@@ -1,95 +1,39 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { 
-  PhoneIcon, 
-  EnvelopeIcon, 
-  MapPinIcon,
-  ArrowRightIcon,
-  HeartIcon
-} from '@heroicons/react/24/outline';
-=======
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
-=======
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-936a
+import { ArrowRight, Facebook, Twitter, Linkedin, Github, Phone, Mail, MapPin, ArrowRightIcon, Heart } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-<<<<<<< HEAD
   const services = [
     { name: 'AI Solutions', href: '/ai-solutions' },
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
     { name: 'Digital Transformation', href: '/digital-transformation' },
-    { name: 'Micro SaaS', href: '/micro-saas' },
-    { name: '5G Solutions', href: '/5g-solutions' },
+    { name: 'Micro SaaS', href: '/micro-saas-solutions' },
+    { name: '5G Solutions', href: '/5g-solutions' }
   ];
-=======
-  const footerLinks = {
-    services: [
-      { name: 'AI Solutions', href: '/ai-solutions' },
-      { name: 'Cybersecurity', href: '/cybersecurity' },
-      { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
-      { name: 'Digital Transformation', href: '/digital-transformation' },
-      { name: 'Micro SaaS', href: '/micro-saas' },
-      { name: '5G Solutions', href: '/5g-solutions' }
-    ],
-    company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Solutions', href: '/solutions' },
-      { name: 'Pricing', href: '/pricing' },
-      { name: 'Blog', href: '/blog' }
-    ],
-    support: [
-      { name: 'Contact', href: '/contact' },
-      { name: 'Support', href: '/support' },
-      { name: 'Tutorials', href: '/tutorials' },
-      { name: 'Demo', href: '/demo' }
-    ],
-    legal: [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' }
-    ]
-  };
->>>>>>> cursor/website-audit-and-update-with-deployment-936a
 
-<<<<<<< HEAD
   const company = [
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/team' },
     { name: 'Careers', href: '/careers' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Case Studies', href: '/case-studies' },
-    { name: 'News', href: '/news' },
+    { name: 'Contact', href: '/contact' }
   ];
 
   const resources = [
-    { name: 'Documentation', href: '/docs' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Tutorials', href: '/tutorials' },
-    { name: 'API Reference', href: '/api' },
+    { name: 'Documentation', href: '/docs' },
     { name: 'Support', href: '/support' },
-    { name: 'Community', href: '/community' },
-    { name: 'Status', href: '/status' },
+    { name: 'Demo', href: '/demo' }
   ];
 
   const legal = [
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' },
-    { name: 'GDPR', href: '/gdpr' },
-    { name: 'Security', href: '/security' },
-    { name: 'Compliance', href: '/compliance' },
-=======
-  const socialLinks = [
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'GitHub', href: '#', icon: Github }
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
+    { name: 'Cookie Policy', href: '/cookies' }
   ];
 
   return (
@@ -118,15 +62,15 @@ const Footer: React.FC = () => {
             {/* Contact Info */}
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3 text-gray-300">
-                <PhoneIcon className="w-5 h-5 text-purple-400" />
+                <Phone className="w-5 h-5 text-purple-400" />
                 <span>+1-302-464-0950</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
-                <EnvelopeIcon className="w-5 h-5 text-purple-400" />
+                <Mail className="w-5 h-5 text-purple-400" />
                 <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
-                <MapPinIcon className="w-5 h-5 text-purple-400" />
+                <MapPin className="w-5 h-5 text-purple-400" />
                 <span>364 E Main St STE 1008, Middletown, DE 19709</span>
               </div>
             </div>
@@ -227,7 +171,7 @@ const Footer: React.FC = () => {
         <div className="mt-12 pt-8 border-t border-slate-700/50 flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-2 text-gray-400 mb-4 md:mb-0">
             <span>Made with</span>
-            <HeartIcon className="w-4 h-4 text-red-400" />
+            <Heart className="w-4 h-4 text-red-400" />
             <span>by Zion Tech Group</span>
           </div>
           <p className="text-gray-400 text-sm">

@@ -38,22 +38,12 @@ const Navigation = () => {
         { name: '5G Solutions', href: '/5g-solutions' }
       ]
     },
-<<<<<<< HEAD
-    { name: 'Solutions', href: '/solutions', icon: CogIcon },
-    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
-    { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
-    { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
-    { name: 'Demo', href: '/demo', icon: PlayIcon },
-    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
-    { name: 'Contact', href: '/contact', icon: PhoneIcon }
-=======
     { name: 'Solutions', href: '/solutions' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'Blog', href: '/blog' },
     { name: 'Tutorials', href: '/tutorials' },
     { name: 'Support', href: '/support' },
     { name: 'Contact', href: '/contact' }
->>>>>>> cursor/website-audit-and-update-with-deployment-936a
   ];
 
   return (

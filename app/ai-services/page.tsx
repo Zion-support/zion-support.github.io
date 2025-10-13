@@ -1,11 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react';
-=======
 import { Right, Star, Zap } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
 =======
 import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
@@ -14,12 +9,6 @@ import FuturisticBackground from '../components/FuturisticBackground';
 const AiServicesPage: React.FC = () => {
   const services = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: Brain,
-=======
-      icon: Star,
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
 =======
       icon: Brain,
 >>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
@@ -28,12 +17,6 @@ const AiServicesPage: React.FC = () => {
       color: 'from-purple-500 to-pink-500'
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: BarChart3,
-=======
-      icon: Zap,
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
 =======
       icon: BarChart3,
 >>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
@@ -42,12 +25,6 @@ const AiServicesPage: React.FC = () => {
       color: 'from-blue-500 to-cyan-500'
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: Zap,
-=======
-      icon: Star,
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
 =======
       icon: Zap,
 >>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
@@ -56,12 +33,6 @@ const AiServicesPage: React.FC = () => {
       color: 'from-green-500 to-emerald-500'
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: FileText,
-=======
-      icon: Zap,
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
 =======
       icon: FileText,
 >>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
@@ -70,12 +41,6 @@ const AiServicesPage: React.FC = () => {
       color: 'from-orange-500 to-red-500'
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: MessageSquare,
-=======
-      icon: Star,
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
 =======
       icon: MessageCircle,
 >>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
@@ -84,12 +49,6 @@ const AiServicesPage: React.FC = () => {
       color: 'from-indigo-500 to-purple-500'
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: Shield,
-=======
-      icon: Zap,
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
 =======
       icon: Shield,
 >>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
