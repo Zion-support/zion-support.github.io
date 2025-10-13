@@ -622,7 +622,11 @@ return (
             </div>
           </div>
         </section>
+<<<<<<< HEAD
       </main>
+=======
+      </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
       <Footer />
     </div>
   );

@@ -18,12 +18,18 @@ import { Helmet } from 'react-helmet-async'
 =======
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Phone, Mail, MapPin, Clock, CheckCircle, Star, ArrowRight } from 'lucide-react';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
 
+=======
+import Link from 'next/link';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
       color: 'text-purple-600',
@@ -86,7 +92,10 @@ const ServicesPage: React.FC = () => {
       ]
     }
   ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
   const benefits = [
     {
       icon: TrendingUp,
@@ -242,6 +251,7 @@ const ServicesPage: React.FC = () => {
                 <MapPin className="w-5 h-5" />
                 <span className="text-white font-medium">Middletown, DE</span>
       </section>
+<<<<<<< HEAD
 =======
     <>
       <Helmet>
@@ -328,6 +338,8 @@ const ServicesPage: React.FC = () => {
 };
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
       {/* Service Categories */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -409,7 +421,10 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
       {/* Benefits Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -427,7 +442,10 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">

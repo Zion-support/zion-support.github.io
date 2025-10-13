@@ -21,8 +21,11 @@ export default function AICustomerSupportZionTechGroup() {
 =======
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
@@ -107,6 +110,10 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
+<<<<<<< HEAD
+=======
+import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
 const AICustomerSupportPage: React.FC = () => {
   const features = [
     {
@@ -154,6 +161,10 @@ const AICustomerSupportPage: React.FC = () => {
       features: ['Unlimited conversations', 'Custom AI training', '24/7 human support', 'Custom integrations', 'Advanced analytics', 'Dedicated account manager']
     }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
   const stats = [
     { number: '95%', label: 'Customer Satisfaction' },
     { number: '60%', label: 'Faster Resolution' },
@@ -203,6 +214,7 @@ const AICustomerSupportPage: React.FC = () => {
                   Call Now
                 </a>
               </div>
+<<<<<<< HEAD
             </div>
           </section>
           {/* Stats Section */}
@@ -214,6 +226,49 @@ const AICustomerSupportPage: React.FC = () => {
                   <div className="text-gray-300 text-sm md:text-base">{stat.label}</div>
                 </div>
               ))}
+=======
+              {/* Stats */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+                {stats.map((stat, index) => (
+                  <div key={index} className="cyber-card p-6 text-center">
+                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text">
+                      {stat.number}
+                    </div>
+                    <div className="text-gray-300 font-medium">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+      <Navigation />
+      
+      <main className="pt-24 pb-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          {/* Hero Section */}
+          <section className="text-center mb-16">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+              AI Customer Support
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your customer support with intelligent AI solutions that provide 24/7 assistance, 
+              smart ticket routing, and predictive analytics.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="cyber-button inline-flex items-center space-x-2"
+              >
+                <MessageCircle className="w-4 h-4" />
+                <span>Get Started</span>
+              </a>
+              <a
+                href="/contact"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              >
+                Learn More
+              </a>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
             </div>
           </section>
           {/* Features Section */}
@@ -248,12 +303,26 @@ const AICustomerSupportPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Pricing Plans
             </h2>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
                 <div key={index} className={`bg-slate-800/50 rounded-xl p-8 border ${index === 1 ? 'border-cyan-500' : 'border-slate-700'} relative`}>
                   {index === 1 && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+=======
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {pricingPlans.map((plan, index) => (
+                <div
+                  key={index}
+                  className={`cyber-card p-8 relative ${
+                    plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''
+                  }`}
+                >
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
                         Most Popular
                       </span>
                     </div>
@@ -279,12 +348,23 @@ const AICustomerSupportPage: React.FC = () => {
               ))}
             </div>
           </section>
+<<<<<<< HEAD
           {/* Contact Section */}
           <section className="mb-16">
             <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
               <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Customer Support?</h2>
               <p className="text-gray-300 mb-6 text-lg">
                 Contact us today for a free consultation and discover how AI can revolutionize your customer service.
+=======
+          {/* CTA Section */}
+          <section className="container mx-auto px-4 py-16 text-center">
+            <div className="cyber-card p-12 max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+                Ready to Transform Your Customer Support?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Join 500+ companies already using our AI customer support solutions
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
@@ -311,6 +391,7 @@ const AICustomerSupportPage: React.FC = () => {
         </div>
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 }
@@ -526,6 +607,8 @@ export default AiCustomerSupportPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
   );
 };
 export default AICustomerSupportPage;
