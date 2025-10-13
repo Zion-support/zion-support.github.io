@@ -173,14 +173,11 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-<<<<<<< HEAD
-=======
       <FuturisticBackground />
->>>>>>> cursor/analyze-improve-and-deploy-application-da10
       <EnhancedSEO
-        title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
-        description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
-        keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
+        title="Zion Tech Group - Advanced AI & IT Solutions | Transform Your Business"
+        description="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation. Expert technology consulting for modern businesses. Get started today!"
+        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, business automation, technology consulting, micro SAAS, 5G technology, IT services, machine learning"
         canonical="https://ziontechgroup.com"
       />
 
@@ -200,13 +197,13 @@ const HomePage = () => {
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Welcome to Zion Tech Group
+              Transform Your Business with AI
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-            Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. 
-            Transform your operations with cutting-edge technology and innovative solutions.
+            Unlock the power of artificial intelligence, cybersecurity, and cloud solutions. 
+            We help businesses scale, secure, and innovate with cutting-edge technology that drives real results.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -214,17 +211,17 @@ const HomePage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Sparkles className="w-5 h-5" />}
+              icon={<ArrowRight className="w-5 h-5" />}
             >
-              Get Started Today
+              Start Your AI Journey
             </FuturisticButton>
             <FuturisticButton
-              href="/demo"
+              href="/ai-services"
               variant="outline"
               size="lg"
-              icon={<Monitor className="w-5 h-5" />}
+              icon={<Brain className="w-5 h-5" />}
             >
-              Watch Demo
+              Explore AI Solutions
             </FuturisticButton>
           </div>
           
