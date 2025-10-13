@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import { ErrorBoundary } from 'react-error-boundary';
 
 // Page Components
 import HomePage from './app/pages/HomePage';
@@ -46,40 +47,42 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
 function App() {
   return (
     <HelmetProvider>
-      <Router>
-        <div className="min-h-screen bg-gray-900">
-          <main className="relative z-10" id="main-content" role="main">
-            <Routes>
-              {/* Main Pages */}
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/blog" element={<BlogPage />} />
-              <Route path="/tutorials" element={<TutorialsPage />} />
-              <Route path="/demo" element={<DemoPage />} />
-              <Route path="/support" element={<SupportPage />} />
-              <Route path="/privacy" element={<PrivacyPage />} />
-              <Route path="/terms" element={<TermsPage />} />
-              <Route path="/pricing" element={<PricingPage />} />
-              <Route path="/solutions" element={<SolutionsPage />} />
-              
-              {/* Catch all route */}
-              <Route path="*" element={
-                <div className="min-h-screen flex items-center justify-center">
-                  <div className="text-center">
-                    <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
-                    <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
-                    <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                      Go Home
-                    </a>
+      <ErrorBoundary FallbackComponent={ErrorFallback}>
+        <Router>
+          <div className="min-h-screen bg-gray-900">
+            <main className="relative z-10" id="main-content" role="main">
+              <Routes>
+                {/* Main Pages */}
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/blog" element={<BlogPage />} />
+                <Route path="/tutorials" element={<TutorialsPage />} />
+                <Route path="/demo" element={<DemoPage />} />
+                <Route path="/support" element={<SupportPage />} />
+                <Route path="/privacy" element={<PrivacyPage />} />
+                <Route path="/terms" element={<TermsPage />} />
+                <Route path="/pricing" element={<PricingPage />} />
+                <Route path="/solutions" element={<SolutionsPage />} />
+                
+                {/* Catch all route */}
+                <Route path="*" element={
+                  <div className="min-h-screen flex items-center justify-center">
+                    <div className="text-center">
+                      <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
+                      <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
+                      <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        Go Home
+                      </a>
+                    </div>
                   </div>
-                </div>
-              } />
-            </Routes>
-          </main>
-        </div>
-      </Router>
+                } />
+              </Routes>
+            </main>
+          </div>
+        </Router>
+      </ErrorBoundary>
     </HelmetProvider>
   );
 }
