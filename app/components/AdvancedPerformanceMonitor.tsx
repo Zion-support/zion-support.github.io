@@ -1,11 +1,8 @@
 'use client'
 import { useEffect, useState } from 'react'
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> cursor/website-audit-and-update-with-deployment-4c61
 
 interface PerformanceMetrics {
   fcp: number | null
@@ -18,12 +15,9 @@ interface PerformanceMetrics {
 }
 
 const AdvancedPerformanceMonitor = () => {
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> cursor/website-audit-and-update-with-deployment-4c61
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
@@ -40,13 +34,6 @@ const AdvancedPerformanceMonitor = () => {
     // Only run in development
     if (process.env.NODE_ENV !== 'development') return
 
-<<<<<<< HEAD
-    </div>
-  )
-}
-
-export default AdvancedPerformanceMonitor
-=======
         onCLS((metric: any) => {
           setMetrics(prev => ({ ...prev, cls: metric.value }))
           reportMetric('CLS', metric.value)
@@ -205,4 +192,3 @@ export default AdvancedPerformanceMonitor
 export default AdvancedPerformanceMonitor
 
 
->>>>>>> cursor/website-audit-and-update-with-deployment-4c61
