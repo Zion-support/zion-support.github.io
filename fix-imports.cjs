@@ -59,4 +59,7 @@ function fixUnusedImports(filePath) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-085b
