@@ -1,3 +1,5 @@
+import React from 'react';
+
 /**;
  * Security Headers Configuration;
  * Comprehensive security headers for production applications;
@@ -21,14 +23,14 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {,}// Content Secur
   xFrameOptions: 'DENY';,
   // Prevent MIME type sniffing;
   xContentTypeOptions: 'nosniff',
-  // Referrer Policy;
-    'magnetometer=()'].join(', '</div>
+  // Referrer Policy;]
+    'magnetometer=()'].join(', '</div>'
   customConfig?: Partial<SecurityHeadersConfig>
 ): Record<string, string> {}
   const config = { ...defaultSecurityHeaders, ...customConfig }
   const headers: Record<string, string> = {}
-    'X-XSS-Protection': '1; mode=block',
-    'X-DNS-Prefetch-Control': 'on'}
+    'X-XSS-Protection': '1; mode=block','
+    'X-DNS-Prefetch-Control': 'on'}'
   }
   if (config.contentSecurityPolicy) {}
     headers['Content-Security-Policy'] = config.contentSecurityPolicy;}
@@ -45,7 +47,7 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {,}// Content Secur
   if (config.referrerPolicy) {}
     headers['Referrer-Policy'] = config.referrerPolicy;}
   }
-): Record<string, string> {}const config = {...defaultSecurityHeaders, ...customConfig}const headers: Record<string, string> = {}'X-XSS-Protection': '1; mode=block',;
+): Record<string, string> {}const config = {...defaultSecurityHeaders, ...customConfig}const headers: Record<string, string> = {}'X-XSS-Protection': '1; mode=block',;'
   if (config.permissionsPolicy) {}headers['Permissions-Policy'] = config.permissionsPolicy;}
 export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */,}}}
 export const,;

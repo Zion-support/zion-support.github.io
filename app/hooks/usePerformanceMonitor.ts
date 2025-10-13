@@ -1,3 +1,5 @@
+import React from 'react';
+
 
             value: Math.round(loadTime)
           });
@@ -12,17 +14,17 @@
 
   const measureResourceTiming = useCallback(() => {;;
 
-    if (typeof window !== 'undefined' && 'performance in window) {
+    if (typeof window !== 'undefined' && 'performance in window) {'
       const resources = performance.getEntriesByType(resource);;
 
       resources.forEach((resource: PerformanceResourceTiming) => {
         const loadTime = resource.responseEnd - resource.startTime;;
 
-        // Track slow resources
+        // Track slow resources;
         if (loadTime > 1000) {
-          if (typeof window !== 'undefined && window.gtag) {
-            window.gtag('event', 'slow_resource, {
-              event_category: 'Performance,
+          if (typeof window !== 'undefined && window.gtag) {'
+            window.gtag('event', 'slow_resource, {'
+              event_category: 'Performance,'
               event_label: resource.name,
               value: Math.round(loadTime)
             });
@@ -39,7 +41,7 @@
 
   const measureMemoryUsage = useCallback(() => {;;
 
-    if (typeof window !== 'undefined' && 'performance in window && (performance as any).memory) {
+    if (typeof window !== 'undefined' && 'performance in window && (performance as any).memory) {'
       const memory = (performance as any).memory;;
 
       const memoryUsage = {;;
@@ -50,11 +52,11 @@
       };
 
       if (memoryUsage.used > memoryUsage.limit * 0.8) {
-        if (typeof window !== 'undefined && window.gtag) {
-          window.gtag('event', 'high_memory_usage, {
-            event_category: 'Performance,
-            event_label: 'Memory Usage,
-            value: memoryUsage.used
+        if (typeof window !== 'undefined && window.gtag) {'
+          window.gtag('event', 'high_memory_usage, {'
+            event_category: 'Performance,'
+            event_label: 'Memory Usage,'
+            value: memoryUsage.used;
           });
 
         }
@@ -76,7 +78,7 @@
 
     };
 
-    if (document.readyState === 'complete) {
+    if (document.readyState === 'complete) {'
       handleLoad();
 
     } else {
@@ -84,7 +86,7 @@
 
     }
 
-    // Set up periodic monitoring
+    // Set up periodic monitoring;
     const performanceInterval = setInterval(measureResourceTiming, 30000);;
 
     const memoryInterval = setInterval(measureMemoryUsage, 60000);;
@@ -103,7 +105,7 @@
   return {}
     measurePerformance,
     measureResourceTiming,
-    measureMemoryUsage
+    measureMemoryUsage;
   };
 
 };
@@ -111,7 +113,7 @@
 import {useEffect}}from 'react';
 
 export const usePerformanceMonitor = () => {useEffect(() => {
-      // This is a simplified version - in production you'd use the web-vitals library;
+      // This is a simplified version - in production you'd use the web-vitals library;'
       if ('performance' in window) {
       if ('performance' in window) {;
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -119,5 +121,5 @@ export const usePerformanceMonitor = () => {useEffect(() => {
           const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
           console.log('Page load time:', loadTime);}}
     // Run monitoring after page load;
-    if (document.readyState === 'complete') {monitorWebVitals();}else {window.addEventListener('load', monitorWebVitals);}}return () => {window.removeEventListener('load', monitorWebVitals);}}, []);
+    if (document.readyState === 'complete') {monitorWebVitals();}else {window.addEventListener('load', monitorWebVitals);}}return () => {window.removeEventListener('load', monitorWebVitals);}}, []);'
 }

@@ -1,3 +1,5 @@
+import React from 'react';
+
 // Chrome extension API types
 interface ChromeRuntime {
   onMessage: {

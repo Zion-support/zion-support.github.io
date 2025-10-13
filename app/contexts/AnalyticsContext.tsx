@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { createContext, useContext } from 'react';
 
 interface AnalyticsContextType {
@@ -6,6 +7,14 @@ interface AnalyticsContextType {
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+=======
+import React, {  createContext  } from 'react';
+interface AnalyticsContextType {
+  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
+  trackPageView: (pageName: string, properties?: Record<string, unknown>) => void;
+}
+export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706
 
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const trackEvent = (eventName: string, properties?: Record<string, any>) => {
@@ -24,6 +33,7 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     </AnalyticsContext.Provider>
   );
 };
+<<<<<<< HEAD
 
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
@@ -32,3 +42,6 @@ export const useAnalytics = () => {
   }
   return context;
 };
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706

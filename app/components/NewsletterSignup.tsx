@@ -1,17 +1,17 @@
-import React, { useState } from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight, Mail } from "lucide-react";
-
+import React, { useState } from "react".
+import React, { Helmet } from 'react-helmet-async'.
+import React, { Link } from 'react-router-dom'.
+import React, { ArrowRight, Mail } from 'lucide-react'.
 export default function NewsletterSignup() {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("").
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle newsletter signup
+    e.preventDefault().
+    // Handle newsletter signup.
     };
 
   return (
+<<<<<<< HEAD
     <React.Fragment>
       <Helmet>
         <title>Newsletter Signup - Zion Tech Group
@@ -21,13 +21,31 @@ export default function NewsletterSignup() {
           <p>Subscribe to our newsletter for the latest updates
           <form onSubmit={handleSubmit} className="newsletter-form">
             <div className="input-group">
+=======
+    <div>
+  )
+    </div>
+  ).
+  ).
+  )
+    <>
+      <Helmet>
+        <title>Newsletter Signup - Zion Tech Group</title>
+      </Helmet>
+      <div className="newsletter-signup-container">"
+        <div className="newsletter-content">
+          <h2>Stay Updated</h2>
+          <p>Subscribe to our newsletter for the latest updates</p>
+          <form onSubmit={handleSubmit} className="newsletter-form">"
+            <div className="input-group">"
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706
               <Mail className="w-5 h-5" />
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                required
+                required.
               />
               <button type="submit">Subscribe
         <Link
@@ -36,5 +54,12 @@ export default function NewsletterSignup() {
         >
           Contact Us
           <ArrowRight className="w-5 h-5 ml-2" />
+<<<<<<< HEAD
   );
+=======
+        </Link>
+      </div>
+    </>
+  ).
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706
 }

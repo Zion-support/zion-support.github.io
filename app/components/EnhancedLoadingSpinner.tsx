@@ -1,17 +1,17 @@
-import React from 'react';
+import React from 'react'.
 
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'secondary' | 'white';
-  text?: string;
-  fullScreen?: boolean;
+  size?: 'sm' | 'md' | 'lg' | 'xl';'
+  color?: 'primary' | 'secondary' | 'white';'
+  text?: string.
+  fullScreen?: boolean.
 }
 
 const EnhancedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   color = 'primary',
   text,
-  fullScreen = false
+  fullScreen = false.
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
@@ -27,7 +27,7 @@ const EnhancedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   const spinner = (
-    <div className="flex flex-col items-center justify-center space-y-4">
+    <div className="flex flex-col items-center justify-center space-y-4">"
       <div className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`}>
         <svg
           className="w-full h-full"
@@ -51,16 +51,31 @@ const EnhancedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         <p className={`text-sm ${colorClasses[color]} animate-pulse`}>
           {text}
       )}
+<<<<<<< HEAD
   );
+=======
+    </div>
+  ).
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706
 
   if (fullScreen) {
     return (
-      <div className="fixed inset-0 bg-gray-900/80 backdrop-blur-sm flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-gray-900/80 backdrop-blur-sm flex items-center justify-center z-50">
         {spinner}
+<<<<<<< HEAD
     );
+=======
+      </div>
+  ).
+    ).
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706
   }
 
-  return spinner;
+  return spinner.
 };
 
+<<<<<<< HEAD
 export default EnhancedLoadingSpinner;
+=======
+export default EnhancedLoadingSpinner.
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706

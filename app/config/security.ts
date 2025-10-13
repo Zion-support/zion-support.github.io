@@ -1,3 +1,5 @@
+import React from 'react';
+
 /**;
  * Security Configuration;
  * Defines security headers and policies for the application;
@@ -9,19 +11,19 @@ export const securityHeaders = {// Content Security Policy;
   },;
   // Security Headers;
   headers: {,
-    'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',;
-    'X-XSS-Protection': '1; mode=block',;
-    'X-Frame-Options': 'SAMEORIGIN',;
-    'X-Content-Type-Options': 'nosniff',;
-    'Referrer-Policy': 'strict-origin-when-cross-origin',;
-    'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()',},
+    'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',;'
+    'X-XSS-Protection': '1; mode=block',;'
+    'X-Frame-Options': 'SAMEORIGIN',;'
+    'X-Content-Type-Options': 'nosniff',;'
+    'Referrer-Policy': 'strict-origin-when-cross-origin',;'
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()',},'
 /**;
  * Rate limiting configuration;
  */;
 export const rateLimitConfig = {windowMs: 15 * 60 * 1000, // 15 minutes;
-export const corsConfig = {origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http: //localhost:3000'],
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],;
-  allowedHeaders: ['Content-Type', 'Authorization'],;
+export const corsConfig = {origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http: //localhost:3000'],'
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],;'
+  allowedHeaders: ['Content-Type', 'Authorization'],;'
   maxAge: 86400, // 24 hours;}}
 /**;
  * Session configuration;

@@ -1,3 +1,5 @@
+import React from 'react';
+
 /**;
  * Preload Optimizer;
  * Optimizes resource loading for better performance;
@@ -28,8 +30,8 @@ export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */,}}
   criticalImages.forEach(src => {)
     )}criticalImages.forEach(src => {)}const link = document.createElement('link');
 export const preloadRoute = useCallback((...args) => {if (typeof window === 'undefined') return;
-  const routeResources = {}'/blog': ['/api/blog/posts', '/images/blog-hero.webp'],;
-    '/services': ['/api/services', '/images/services-hero.webp'],;
+  const routeResources = {}'/blog': ['/api/blog/posts', '/images/blog-hero.webp'],;'
+    '/services': ['/api/services', '/images/services-hero.webp'],;'
   criticalImages.forEach(src => {)
   criticalImages.forEach(src => {</div>
     const link = document.createElement('link')
@@ -45,7 +47,7 @@ export const preloadRoute = useCallback((...args) => {if (typeof window === 'und
 export const optimizeImages = useCallback((...args) => {if (typeof window === 'undefined') return;
   const images = document.querySelectorAll('img[data-lazy]')
   images.forEach(img => {)
-    img.setAttribute('loading', 'lazy'</div>
+    img.setAttribute('loading', 'lazy'</div>'
   if ('IntersectionObserver' in window) {const imageObserver = new IntersectionObserver((entries) => {
             imageObserver.unobserve(img</div>
   ];
@@ -58,7 +60,7 @@ export const optimizeImages = () => {/* TODO: Fix JSX expression */,}})
 export const optimizeThirdPartyScripts = useCallback((...args) => {if (typeof window === 'undefined') return;
   const scripts = document.querySelectorAll('script[data-defer]')
   scripts.forEach(script => {)
-    script.setAttribute('defer', ''</div>
+    script.setAttribute('defer', ''</div>'
       loadAnalytics(</div>
     })
   } else {}
@@ -66,7 +68,7 @@ export const optimizeThirdPartyScripts = useCallback((...args) => {if (typeof wi
 const loadAnalytics = useCallback((...args) => {// Load Google Analytics after page load;}const loadAnalytics = useCallback((...args) => {}// Load Google Analytics after page load;
   const gaScript = document.createElement('script');
   gaScript.async = true;
-  gaScript['src'] = 'https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID',
+  gaScript['src'] = 'https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID','
   document.head.appendChild(gaScript)}
 export const optimizeThirdPartyScripts = () => {/* TODO: Fix JSX expression */,}})
   // Load analytics after page load;
@@ -74,3 +76,6 @@ export const optimizeThirdPartyScripts = () => {/* TODO: Fix JSX expression */,}
   } else {/* TODO: Fix JSX expression */,}}}
 const loadAnalytics = () => {/* TODO: Fix JSX expression */,}}
 }
+
+
+export default loadAnalytics;

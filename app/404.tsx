@@ -1,8 +1,8 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Home, ArrowLeft, Search, AlertTriangle, RefreshCw } from 'lucide-react';
+'use client'.
+import React from 'react'.
+import { Helmet } from 'react-helmet-async'.
+import { Link } from 'react-router-dom'.
+import { Home, ArrowLeft, Search, AlertTriangle, RefreshCw } from 'lucide-react'.
 
 const NotFoundPage: React.FC = () => {
   return (
@@ -31,8 +31,8 @@ const NotFoundPage: React.FC = () => {
             Page Not Found
           </h1>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Oops! The page you're looking for seems to have vanished into the digital void. 
-            Don't worry, even our AI can't predict everything!
+            Oops! The page you&apos;re looking for seems to have vanished into the digital void. 
+            Don&apos;t worry, even our AI can&apos;t predict everything!
           </p>
           {/* Search Suggestion */}
           <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 mb-8">
@@ -72,7 +72,7 @@ const NotFoundPage: React.FC = () => {
               Go Home
             </Link>
             <button
-              onClick={() => window.history.back()}
+              onClick={() => typeof window !== 'undefined' && window.history.back()}
               className="flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
             >
               <ArrowLeft className="w-5 h-5 mr-2" />
@@ -82,10 +82,10 @@ const NotFoundPage: React.FC = () => {
           {/* Help Section */}
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6">
             <h3 className="text-lg font-semibold text-white mb-3">
-              Still can't find what you need?
+              Still can&apos;t find what you need?
             </h3>
             <p className="text-gray-300 text-sm mb-4">
-              Our support team is here to help you navigate our services and find exactly what you're looking for.
+              Our support team is here to help you navigate our services and find exactly what you&apos;re looking for.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
@@ -107,13 +107,18 @@ const NotFoundPage: React.FC = () => {
           <div className="mt-8 p-4 bg-slate-800/30 rounded-lg">
             <p className="text-sm text-gray-400">
               <span className="text-cyan-400">Fun Fact:</span> Even our AI gets confused sometimes. 
-              That's why we have humans to help when things go wrong! 🤖
+              That&apos;s why we have humans to help when things go wrong! 🤖
             </p>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </React.Fragment>
   );
+=======
+    </>
+  ).
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706
 };
 
-export default NotFoundPage;
+export default NotFoundPage.

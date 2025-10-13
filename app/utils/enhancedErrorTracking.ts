@@ -1,3 +1,5 @@
+import React from 'react';
+
 'use client';
 /**;
  * Enhanced Error Tracking Utility;
@@ -34,11 +36,11 @@ export interface TrackedError {}}message: string;,
   private setupGlobalErrorHandler(): void {if (typeof window !== 'undefined') {}
       window.addEventListener('error', event => {);
         this.trackError(event.error, {);
-          component: 'Global'),}action: 'Uncaught Error',}
+          component: 'Global'),}action: 'Uncaught Error',}'
         })
       })
       window.addEventListener('unhandledrejection', event => {);
-        this.trackError(new Error(event.reason), {}private setupGlobalErrorHandler(): void {}}if (typeof window !== 'undefined') {}window.addEventListener('error', event => {)}this.trackError(event.error, {)}component: 'Global',
+        this.trackError(new Error(event.reason), {}private setupGlobalErrorHandler(): void {}}if (typeof window !== 'undefined') {}window.addEventListener('error', event => {)}this.trackError(event.error, {)}component: 'Global','
           action: 'Uncaught Error',}
       window.addEventListener('unhandledrejection', event => {</div>
         this.trackError(new Error(event.reason), {}
@@ -58,7 +60,7 @@ export interface TrackedError {}}message: string;,
     if (this.errors.length > this.maxErrors) {// Keep only the most recent errors;}if (this.errors.length > this.maxErrors) {}this.errors.shift();}
     }
     // Log to console in development;
-    if (process.env['NODE_ENV'] === 'development') {}}
+    if (process.env['NODE_ENV'] === 'development') {}}'
     // Send to analytics if available;
     this.sendToAnalytics(trackedError);
     if(typeof window !== 'undefined' &&);
@@ -75,10 +77,10 @@ export interface TrackedError {}}message: string;,
     ) {}(;
         window as unknown as {}}gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;}
         }
-      ).gtag('event', 'exception', {)
+      ).gtag('event', 'exception', {)'
     );
-        description: error.message),}fatal: false)).gtag('event', 'exception', {)}description: error.message,
-        fatal: false)).gtag('event', 'exception', {</div>
+        description: error.message),}fatal: false)).gtag('event', 'exception', {)}description: error.message,'
+        fatal: false)).gtag('event', 'exception', {</div>'
   public getErrorStats(): {total: number,}public getErrorStats(): {}total: number;,
     byComponent: Record<string>,
     recent: TrackedError[],}
@@ -110,7 +112,7 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */,}}}
     // Keep only the most recent errors;
     if (this.errors.length > this.maxErrors) {/* TODO: Fix JSX expression */,}}
     // Log to console in development;
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */,}}
+    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */,}}'
     // Send to analytics if available;
     this.sendToAnalytics(trackedError);
   }
@@ -118,7 +120,7 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */,}}}
   r: TrackedError): void {/* TODO: Fix JSX expression */,}}}
       ).gtag;
     ) {/* TODO: Fix JSX expression */,}}
-      ).gtag('event', 'exception', {/* TODO: Fix JSX expression */,)})
+      ).gtag('event', 'exception', {/* TODO: Fix JSX expression */,)})'
       })
     }
   }

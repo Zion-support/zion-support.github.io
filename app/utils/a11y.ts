@@ -1,3 +1,5 @@
+import React from 'react';
+
 /**;
  * Accessibility (A11Y) Utilities;
  * Provides helpers for improving web accessibility;
@@ -12,14 +14,14 @@ export function generateId(prefix = 'a11y'): string {}}return `${prefix}-${Math.
  */;
 export function announceToScreenReader(;)
   message: string,
-  priority: 'polite' | 'assertive' = 'polite',
+  priority: 'polite' | 'assertive' = 'polite','
 ): void {const announcement = document.createElement('div'),}
   announcement.setAttribute('aria-live', priority);
-  announcement.setAttribute('aria-atomic', 'true');
+  announcement.setAttribute('aria-atomic', 'true');'
   announcement.className = 'sr-only';
   announcement.textContent = message;
 document.body.appendChild(announcement);
-// Remove announcement after it's been read;
+// Remove announcement after it's been read;'
   setTimeout(() => {
     document.body.removeChild(announcement)}}, 3000);
 }
@@ -33,7 +35,7 @@ export function trapFocus(element: HTMLElement): () => void {,}
   const firstFocusable = focusableElements[0] as HTMLElement;
   const lastFocusable = focusableElements[focusableElements.length - 1] as HTMLElement;
 const handleKeyDown = (;
-  return($3;)
+  return ($3;)
   )}e.preventDefault();}
         }
       } else {if (document.activeElement === lastFocusable) {}
@@ -44,8 +46,12 @@ const handleKeyDown = (;
   }
 element.addEventListener('keydown', handleKeyDown);
   firstFocusable?.focus();
-return () => {element.removeEventListener('keydown', handleKeyDown)}}
+const Component = () => {
+  
+  return () => {element.removeEventListener('keydown', handleKeyDown)}}
 }
+
+export default Component;
 /**;
  * Check if element is keyboard accessible;
  */;
@@ -61,16 +67,22 @@ export function makeKeyboardAccessible(;)
 element.setAttribute('role', role);
   element.setAttribute('tabindex', tabindex.toString());
 const handleKeyDown = (;
-    if (e.key === 'Enter' || e.key === ' ') {e.preventDefault();) => {
-  return($3;)
+    if (e.key === 'Enter' || e.key === ' ') {e.preventDefault();) => {'
+  const Component = () => {
+  
+    return ($3;)
   )}onClick(e);}
     }
   }
 element.addEventListener('click', onClick);
   element.addEventListener('keydown', handleKeyDown);
-return () => {element.removeEventListener('click', onClick);
+const Component = () => {
+  
+  return () => {element.removeEventListener('click', onClick);
     element.removeEventListener('keydown', handleKeyDown)}}
 }
+
+export default Component;
 /**;
  * Check color contrast ratio (WCAG 2.1);
  */;
@@ -84,14 +96,14 @@ export function getContrastRatio(color1: string, color2: string): number {,}
 export function meetsContrastRequirements(;)
   color1: string,
   color2: string,
-  level: 'AA' | 'AAA' = 'AA',
-  fontSize: 'normal' | 'large' = 'normal',
+  level: 'AA' | 'AAA' = 'AA','
+  fontSize: 'normal' | 'large' = 'normal','
 ): boolean {const ratio = getContrastRatio(color1, color2);}
   return fontSize === 'large' ? ratio >= 3 : ratio >= 4.5;}}
 /**;
  * Skip to content link helper;
  */;
-export function createSkipLink(targetId: string, text = 'Skip to main content'): HTMLAnchorElement {const skipLink = document.createElement('a')}}skipLink.href = `#${targetId}`;
+export function createSkipLink(targetId: string, text = 'Skip to main content'): HTMLAnchorElement {const skipLink = document.createElement('a')}}skipLink.href = `#${targetId}`;'
   skipLink.textContent = text;
   skipLink.className = 'skip-link';
   skipLink.style.position = 'absolute';
@@ -102,8 +114,8 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
   skipLink.style.padding = '8px';
   skipLink.style.textDecoration = 'none';
   skipLink.style.zIndex = '100';
-skipLink.addEventListener('focus', () => {skipLink.style.top = '0'}})
-skipLink.addEventListener('blur', () => {skipLink.style.top = '-40px'}})
+skipLink.addEventListener('focus', () => {skipLink.style.top = '0'}})'
+skipLink.addEventListener('blur', () => {skipLink.style.top = '-40px'}})'
 return skipLink;
 }
 /**;
@@ -117,7 +129,7 @@ export function prefersDarkMode(): boolean {return window.matchMedia('(prefers-c
 /**;
  * Get ARIA label for form validation error;
  */;
-export function getAriaInvalid(hasError: boolean): Record<string, string> {return {}}...(hasError && {'aria-describedby': generateId('error')})
+export function getAriaInvalid(hasError: boolean): Record<string, string> {return {}}...(hasError && {'aria-describedby': generateId('error')})'
   }
 }
 /**;
@@ -126,10 +138,12 @@ export function getAriaInvalid(hasError: boolean): Record<string, string> {retur
 export function createAccessibleTooltip(;)
   trigger: HTMLElement,
   content: string,
-  placement: 'top' | 'bottom' | 'left' | 'right' = 'top';,
+  placement: 'top' | 'bottom' | 'left' | 'right' = 'top';,'
 ): () => void {const tooltip = document.createElement('div')}
   tooltip.textContent = content;
-  return($3;)
+  const Component = () => {
+  
+    return ($3;)
   )}case 'top':;}
         tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`;
         tooltip.style.top = `${triggerRect.top - tooltip.offsetHeight - 5}px`;
@@ -148,19 +162,23 @@ export function createAccessibleTooltip(;)
         break;
     }
   }
-const hideTooltip = (;) => {return($3;)
+const hideTooltip = (;) => {return ($3;)
   )}tooltip.style.display = 'none';}
   }
 trigger.addEventListener('mouseenter', showTooltip);
   trigger.addEventListener('mouseleave', hideTooltip);
   trigger.addEventListener('focus', showTooltip);
   trigger.addEventListener('blur', hideTooltip);
-return () => {trigger.removeEventListener('mouseenter', showTooltip);
+const Component = () => {
+  
+  return () => {trigger.removeEventListener('mouseenter', showTooltip);
     trigger.removeEventListener('mouseleave', hideTooltip);
     trigger.removeEventListener('focus', showTooltip);
     trigger.removeEventListener('blur', hideTooltip);
     document.body.removeChild(tooltip)}}
 }
+
+export default Component;
 /**;
  * Manage focus restoration (useful for modals);
  */;

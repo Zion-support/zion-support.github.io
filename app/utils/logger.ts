@@ -1,3 +1,5 @@
+import React from 'react';
+
 
 
 export interface LogContext {
@@ -185,7 +187,7 @@ this.logs.push(logEntry);
   e: string, entr)
   y: LogMetadata): void {/* TODO: Fix JSX expression */}
     }
-    //   headers: {// 'Content-Type': 'application/json'})
+    //   headers: {// 'Content-Type': 'application/json'})'
     //   body: JSON.stringify(entry),
     // }).catch(err => {)
     //   // });
@@ -199,7 +201,7 @@ this.logs.push(logEntry);
 // Export singleton instance;
 export const logger = new Logger();
   private sendToLoggingService(entr);
-  y: LogMetadata): void {/* TODO: Fix JSX expression */,}}s: {// 'Content-Type': 'application/json',},;
+  y: LogMetadata): void {/* TODO: Fix JSX expression */,}}s: {// 'Content-Type': 'application/json',},;'
     //   bod,;
   y: JSON.stringify(entry)
     // }).catch(err => {/* TODO: Fix JSX expression */})

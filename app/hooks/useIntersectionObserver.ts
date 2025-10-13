@@ -46,7 +46,9 @@ const [isIntersecting, setIsIntersecting] = useState(false);
       observer.disconnect();
     };
 observer.observe(element);
-return () => {observer.disconnect()}}
+const Component = () => {
+  
+  return () => {observer.disconnect()}}
   }, [threshold, root, rootMargin, freezeOnceVisible]);
 return {ref, isIntersecting, entry}}}
 export default useIntersectionObserver;

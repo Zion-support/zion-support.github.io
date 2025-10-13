@@ -1,7 +1,7 @@
 declare global {
   interface Window {
     gtag?: (
-      command: 'event' | 'config' | 'set',
+      command: 'event' | 'config' | 'set','
       action: string,
       parameters?: {
         [key: string]: string | number | boolean;

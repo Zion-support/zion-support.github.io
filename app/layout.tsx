@@ -1,17 +1,24 @@
+import React from 'react'.
+
   return (
+    <div>
+  )
+    </div>
+  ).
+  ).
+  )
     <html lang='en'>
       <head>
-        <meta charSet="UTF-8" />
+        <meta charSet="UTF-8" />"
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         {/* Primary meta tags */}
-        <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence" />
-        <meta name="theme-color" content="#4f46e5" />
-        <meta name="color-scheme" content="dark light" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content="index, follow" />
+        <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." />"
+        <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence" />"
+        <meta name="theme-color" content="#4f46e5" />"
+        <meta name="color-scheme" content="dark light" />"
+        <meta name="author" content="Zion Tech Group" />"
+        <meta name="robots" content="index, follow" />"
         <meta name="googlebot" content="index, follow" />
-        
         {/* Favicons */}
         <link rel='icon' href='/favicon.ico' />
         <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
@@ -36,30 +43,27 @@
         <meta name='msapplication-config' content='/browserconfig.xml' />
         <link rel='canonical' href='https://ziontechgroup.com' />
         <link rel='alternate' hrefLang='en' href='https://ziontechgroup.com' />
-        
         {/* Resource hints for better performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />"
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />"
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />"
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        
         {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta property="og:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
-        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:type" content="website" />"
+        <meta property="og:url" content="https://ziontechgroup.com" />"
+        <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />"
+        <meta property="og:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />"
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />"
+        <meta property="og:image:width" content="1200" />"
+        <meta property="og:image:height" content="630" />"
         <meta property="og:site_name" content="Zion Tech Group" />
-        
         {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://ziontechgroup.com" />
-        <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta name="twitter:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
-        <meta name="twitter:site" content="@ziontechgroup" />
+        <meta name="twitter:card" content="summary_large_image" />"
+        <meta name="twitter:url" content="https://ziontechgroup.com" />"
+        <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />"
+        <meta name="twitter:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services." />"
+        <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />"
+        <meta name="twitter:site" content="@ziontechgroup" />"
         <meta name="twitter:creator" content="@ziontechgroup" />
         <script
           type='application/ld+json'
@@ -67,6 +71,12 @@
         />
       <body className='antialiased'>
         {children}
+<<<<<<< HEAD
   );
+=======
+      </body>
+    </html>
+  ).
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706
 }
 </li></li></li></li></li></li></li></li></li></li>

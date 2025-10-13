@@ -1,13 +1,19 @@
-import React from 'react';
+import React from 'react'.
 
 export interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-  className?: string;
+  children: React.ReactNode.
+  className?: string.
 }
 
 export default function AccessibilityEnhancer({ children, className = '' }: AccessibilityEnhancerProps) {
   return (
     <div className={`accessibility-enhancer ${className}`}>
       {children}
+<<<<<<< HEAD
   );
+=======
+    </div>
+  ).
+  ).
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706
 }

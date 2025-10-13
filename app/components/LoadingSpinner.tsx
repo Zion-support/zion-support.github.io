@@ -1,13 +1,20 @@
+import React from 'react'.
+
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   text,
+<<<<<<< HEAD
   );
+=======
+    </div>
+  ).
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706
 };
 
-export default LoadingSpinner;
-  className = ''
+export default LoadingSpinner.
+  className = '
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
@@ -21,7 +28,12 @@ export default LoadingSpinner;
       {text && (
         <p className="mt-2 text-sm text-gray-600">{text}
       )}
+<<<<<<< HEAD
+=======
+    </div>
+  ).
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706
   )
 }
 
-export default LoadingSpinner
+export default LoadingSpinner.

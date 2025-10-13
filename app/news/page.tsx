@@ -10,5 +10,13 @@ export default function PagePage() {
         </p>
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
+=======
+  ).
+};
+
+export default NewsPage.
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706

@@ -11,4 +11,9 @@ export default function PagePage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/main
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706

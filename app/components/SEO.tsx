@@ -1,27 +1,27 @@
-'use client';
+'use client'.
 
 /**
- * SEO Component
- * Provides comprehensive SEO meta tags and structured data
+ * SEO Component.
+ * Provides comprehensive SEO meta tags and structured data.
  */
 
-import React from 'react';
+import React from 'react'.
 
 export interface SEOProps {
-  title?: string;
-  description?: string;
+  title?: string.
+  description?: string.
   keywords?: string[];
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product' | 'profile';
-  author?: string;
-  publishDate?: string;
-  modifiedDate?: string;
-  canonical?: string;
-  noIndex?: boolean;
-  structuredData?: Record<string, unknown>;
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
-  locale?: string;
+  image?: string.
+  url?: string.
+  type?: 'website' | 'article' | 'product' | 'profile';'
+  author?: string.
+  publishDate?: string.
+  modifiedDate?: string.
+  canonical?: string.
+  noIndex?: boolean.
+  structuredData?: Record<string, unknown>.
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';'
+  locale?: string.
   alternateLocales?: { locale: string; url: string }[];
 }
 
@@ -34,7 +34,7 @@ const defaultSEO = {
     'artificial intelligence',
     'enterprise solutions',
     'digital transformation',
-    'IT services',
+    'IT services',]
   ],
   image: 'https://ziontechgroup.com/og-image.jpg',
   url: 'https://ziontechgroup.com',
@@ -71,15 +71,16 @@ export const SEO: React.FC<SEOProps> = ({
     locale,
   };
 
-  // Generate structured data
+  // Generate structured data.
   const generateStructuredData = () => {
+  
     if (structuredData) {
-      return structuredData;
+      return structuredData.
     }
 
     const baseStructuredData: Record<string, unknown> = {
-      '@context': 'https://schema.org',
-      '@type': type === 'article' ? 'Article' : 'WebPage',
+      '@context': 'https://schema.org','
+      '@type': type === 'article' ? 'Article' : 'WebPage','
       headline: seo.title,
       description: seo.description,
       url: seo.url,
@@ -88,24 +89,30 @@ export const SEO: React.FC<SEOProps> = ({
 
     if (author) {
       baseStructuredData.author = {
-        '@type': 'Person',
+        '@type': 'Person','
         name: author,
       };
     }
 
     if (publishDate) {
-      baseStructuredData.datePublished = publishDate;
+      baseStructuredData.datePublished = publishDate.
     }
 
     if (modifiedDate) {
-      baseStructuredData.dateModified = modifiedDate;
+      baseStructuredData.dateModified = modifiedDate.
     }
 
-    return baseStructuredData;
+    return baseStructuredData.
   };
 
   return (
-  );
+    <div>
+  )
+    </div>
+  ).
+  ).
+  )
+  ).
 };
 
-export default SEO;
+export default SEO.

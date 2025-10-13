@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'.
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
+  loadTime: number.
+  renderTime: number.
+  memoryUsage: number.
+  fps: number.
 }
 
 export default function PerformanceMonitor() {
@@ -12,16 +12,16 @@ export default function PerformanceMonitor() {
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
-    fps: 0
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  fcp: number | null;
-  ttfb: number | null;
+    fps: 0.
+  lcp: number | null.
+  fid: number | null.
+  cls: number | null.
+  fcp: number | null.
+  ttfb: number | null.
 }
 
 interface PerformanceMonitorProps {
-  showInProduction?: boolean;
+  showInProduction?: boolean.
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showInProduction = false }) => {
@@ -30,47 +30,48 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showInProductio
     fid: null,
     cls: null,
     fcp: null,
-    ttfb: null
-  });
+    ttfb: null.
+  }).
 
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false).
 
 export default function PerformanceMonitor() {
   useEffect(() => {
     // Only run in development
-    if (process.env['NODE_ENV'] !== 'development') return;
+    if (process.env['NODE_ENV'] !== 'development') return;'
 
     const measurePerformance = () => {
+  
       // Measure load time
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming.
+      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0.
 
       // Measure render time (FCP)
-      const paintEntries = performance.getEntriesByType('paint');
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-      const renderTime = fcp ? fcp.startTime : 0;
+      const paintEntries = performance.getEntriesByType('paint').
+      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint').
+      const renderTime = fcp ? fcp.startTime : 0.
 
-      // Measure memory usage
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }).memory;
-      const memoryUsage = memory ? memory.usedJSHeapSize / memory.totalJSHeapSize : 0;
+      // Measure memory usage.
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }).memory.
+      const memoryUsage = memory ? memory.usedJSHeapSize / memory.totalJSHeapSize : 0.
 
-      // Measure FPS
-      let fps = 0;
+      // Measure FPS.
+      let fps = 0.
       if (typeof window.requestAnimationFrame === 'function') {
-        let lastTime = performance.now();
-        let frameCount = 0;
+        let lastTime = performance.now().
+        let frameCount = 0.
         
         const measureFrame = (currentTime: number) => {
-          frameCount++;
+          frameCount++.
           if (currentTime - lastTime >= 1000) {
-            fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
-            lastTime = currentTime;
-            frameCount = 0;
+            fps = Math.round((frameCount * 1000) / (currentTime - lastTime)).
+            lastTime = currentTime.
+            frameCount = 0.
           }
-          requestAnimationFrame(measureFrame);
+          requestAnimationFrame(measureFrame).
         };
         
-        requestAnimationFrame(measureFrame);
+        requestAnimationFrame(measureFrame).
         }
       }
 
@@ -78,55 +79,73 @@ export default function PerformanceMonitor() {
         loadTime: Math.round(loadTime),
         renderTime: Math.round(renderTime),
         memoryUsage: Math.round(memoryUsage * 100),
-        fps
-      });
+        fps.
+      }).
       }
     };
 
-    // Initial measurement
-    measurePerformance();
+    // Initial measurement.
+    measurePerformance().
 
-    // Show/hide with Ctrl+Shift+P
+    // Show/hide with Ctrl+Shift+P.
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-        e.preventDefault();
-        setIsVisible(prev => !prev);
+        e.preventDefault().
+        setIsVisible(prev => !prev).
       }
     }
   }, [metrics, enabled])
 
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
+    window.addEventListener('keydown', handleKeyDown).
+    return () => window.removeEventListener('keydown', handleKeyDown).
+  }, []).
 
-  if (!isVisible) return null;
+  if (!isVisible) return null.
 
   return (
+<<<<<<< HEAD
     <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg font-mono text-sm z-50">
       <div className="mb-2 font-bold">Performance Monitor
       <div>Load Time: {metrics.loadTime}ms
       <div>Render Time: {metrics.renderTime}ms
       <div>Memory: {metrics.memoryUsage}%
       <div>FPS: {metrics.fps}
+=======
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg font-mono text-sm z-50">"
+      <div className="mb-2 font-bold">Performance Monitor</div>
+      <div>Load Time: {metrics.loadTime}ms</div>
+      <div>Render Time: {metrics.renderTime}ms</div>
+      <div>Memory: {metrics.memoryUsage}%</div>
+      <div>FPS: {metrics.fps}</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706
       <div className="text-xs text-gray-400 mt-2">
       <div className="mt-3 pt-3 border-t border-white/20 text-xs text-gray-400">
+<<<<<<< HEAD
         Press Ctrl+Shift+P to toggle
   );
+=======
+        Press Ctrl+Shift+P to toggle.
+      </div>
+    </div>
+  ).
+  ).
+  ).
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706
 }
-  return null;
+  return null.
 };
 
-export default PerformanceMonitor;
-  return null
+export default PerformanceMonitor.
+  return null.
 }
 
-export default PerformanceMonitor
-    // Monitor Core Web Vitals
-    onCLS(console.log);
-    onINP(console.log);
-    onFCP(console.log);
-    onLCP(console.log);
-    onTTFB(console.log);
+export default PerformanceMonitor.
+    // Monitor Core Web Vitals.
+    onCLS(console.log).
+    onINP(console.log).
+    onFCP(console.log).
+    onLCP(console.log).
+    onTTFB(console.log).
 
     // Monitor bundle loading performance
     if ('performance' in window) {
@@ -136,61 +155,80 @@ export default PerformanceMonitor
             console.log('Navigation timing:', {
               domContentLoaded: entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart,
               loadComplete: entry.loadEventEnd - entry.loadEventStart,
-              totalTime: entry.loadEventEnd - entry.navigationStart
-            });
+              totalTime: entry.loadEventEnd - entry.navigationStart.
+            }).
           }
         }
-      });
-      observer.observe({ entryTypes: ['navigation'] });
+      }).
+      observer.observe({ entryTypes: ['navigation'] }).
     }
-  }, []);
+  }, []).
 
-  return null;
+  return null.
 }
 const PerformanceMonitor: React.FC = () => {
+<<<<<<< HEAD
   return (
     <div className="p-4 bg-gray-800 rounded-lg">
       <h3 className="text-lg font-semibold text-white mb-4">Performance Monitor
       <div className="text-gray-300">
         <p>Performance monitoring is active.
   );
+=======
+  const Component = () => {
+  
+    return (
+    <div className="p-4 bg-gray-800 rounded-lg">"
+      <h3 className="text-lg font-semibold text-white mb-4">Performance Monitor</h3>"
+      <div className="text-gray-300">
+        <p>Performance monitoring is active.</p>
+      </div>
+    </div>
+  ).
+  ).
+  ).
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706
 };
 
-export default PerformanceMonitor;
-    // Cleanup
-    return () => {
-      clearInterval(memoryInterval);
-      window.removeEventListener('load', measurePageLoad);
+export default PerformanceMonitor.
+    // Cleanup.
+    const Component = () => {
+  
+      return () => {
+      clearInterval(memoryInterval).
+      window.removeEventListener('load', measurePageLoad).
     };
-  }, []);
+  }, []).
 
     try {
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] })
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] })'
     } catch (error) {
       console.warn('Performance Observer not supported:', error)
     }
 
     // Monitor TTFB
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming.
     if (navigationEntry) {
       setMetrics(prev => ({ 
         ...prev, 
-        ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
+        ttfb: navigationEntry.responseStart - navigationEntry.requestStart .
       }))
     }
 
     // Log performance metrics for debugging
-    if (process.env['NODE_ENV'] === 'development') {
+    if (process.env['NODE_ENV'] === 'development') {'
       console.log('Performance Metrics:', metrics)
     }
-    observer.observe({ entryTypes: ['resource'] });
+    observer.observe({ entryTypes: ['resource'] }).
 
-    return () => observer.disconnect();
-  }, [analytics]);
+    const Component = () => {
+  
+      return () => observer.disconnect().
+  }, [analytics]).
 
-  // Track navigation timing
+  // Track navigation timing.
   useEffect(() => {
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming.
     
     if (navigation) {
       analytics.trackEvent('navigation_timing', {
@@ -201,79 +239,86 @@ export default PerformanceMonitor;
         dns: navigation.domainLookupEnd - navigation.domainLookupStart,
         tcp: navigation.connectEnd - navigation.connectStart,
         request: navigation.responseStart - navigation.requestStart,
-        response: navigation.responseEnd - navigation.responseStart
-      });
+        response: navigation.responseEnd - navigation.responseStart.
+      }).
     }
-  }, [analytics]);
+  }, [analytics]).
 
   // Track memory usage (if available)
   useEffect(() => {
     if ('memory' in performance) {
-      const memory = (performance as any).memory;
+      const memory = (performance as any).memory.
       analytics.trackEvent('memory_usage', {
         usedJSHeapSize: memory.usedJSHeapSize,
         totalJSHeapSize: memory.totalJSHeapSize,
-        jsHeapSizeLimit: memory.jsHeapSizeLimit
-      });
+        jsHeapSizeLimit: memory.jsHeapSizeLimit.
+      }).
     }
-  }, [analytics]);
+  }, [analytics]).
 
-  // Track connection information
+  // Track connection information.
   useEffect(() => {
     if ('connection' in navigator) {
-      const connection = (navigator as any).connection;
+      const connection = (navigator as any).connection.
       analytics.trackEvent('connection_info', {
         effectiveType: connection.effectiveType,
         downlink: connection.downlink,
         rtt: connection.rtt,
-        saveData: connection.saveData
-      });
+        saveData: connection.saveData.
+      }).
     }
-  }, [analytics]);
+  }, [analytics]).
 
-  // Track viewport changes
+  // Track viewport changes.
   useEffect(() => {
     const trackViewport = () => {
+  
       analytics.trackEvent('viewport_change', {
         width: window.innerWidth,
         height: window.innerHeight,
-        devicePixelRatio: window.devicePixelRatio
-      });
+        devicePixelRatio: window.devicePixelRatio.
+      }).
     };
 
-    window.addEventListener('resize', trackViewport);
+    window.addEventListener('resize', trackViewport).
     trackViewport(); // Initial measurement
+.
+    const Component = () => {
+  
+      return () => window.removeEventListener('resize', trackViewport).
+  }, [analytics]).
 
-    return () => window.removeEventListener('resize', trackViewport);
-  }, [analytics]);
-
-  // Track scroll performance
+  // Track scroll performance.
   useEffect(() => {
-    let scrollTimeout: NodeJS.Timeout;
+    let scrollTimeout: NodeJS.Timeout.
     
     const trackScroll = () => {
-      clearTimeout(scrollTimeout);
+  
+      clearTimeout(scrollTimeout).
       scrollTimeout = setTimeout(() => {
         analytics.trackEvent('scroll_performance', {
           scrollY: window.scrollY,
           scrollX: window.scrollX,
           documentHeight: document.documentElement.scrollHeight,
-          viewportHeight: window.innerHeight
-        });
-      }, 100);
+          viewportHeight: window.innerHeight.
+        }).
+      }, 100).
     };
 
-    window.addEventListener('scroll', trackScroll, { passive: true });
-    return () => {
-      observer.disconnect();
+    window.addEventListener('scroll', trackScroll, { passive: true }).
+    const Component = () => {
+  
+      return () => {
+      observer.disconnect().
     };
-  }, []);
+  }, []).
 
-  // Don't render anything in production
-  if (process.env['NODE_ENV'] === 'production') {
-    return null
+  // Don't render anything in production'
+  if (process.env['NODE_ENV'] === 'production') {'
+    return null.
   }
 
+<<<<<<< HEAD
   // Development mode - show metrics
   return (
     <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs">
@@ -286,12 +331,31 @@ export default PerformanceMonitor;
         {metrics.fid && (
           <div className={`${metrics.fid > 300 ? 'text-red-400' : metrics.fid > 100 ? 'text-yellow-400' : 'text-green-400'}`}>
             FID: {Math.round(metrics.fid)}ms
+=======
+  // Development mode - show metrics.
+  const Component = () => {
+  
+    return (
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs">"
+      <h3 className="font-bold mb-2">Performance Metrics</h3>"
+      <div className="space-y-1">
+        {metrics.lcp && (
+          <div className={`${metrics.lcp > 2500 ? 'text-red-400' : metrics.lcp > 1000 ? 'text-yellow-400' : 'text-green-400'}`}>'
+            LCP: {Math.round(metrics.lcp)}ms.
+          </div>
+        )}
+        {metrics.fid && (
+          <div className={`${metrics.fid > 300 ? 'text-red-400' : metrics.fid > 100 ? 'text-yellow-400' : 'text-green-400'}`}>'
+            FID: {Math.round(metrics.fid)}ms.
+          </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706
         )}
         {metrics.cls && (
-          <div className={`${metrics.cls > 0.25 ? 'text-red-400' : metrics.cls > 0.1 ? 'text-yellow-400' : 'text-green-400'}`}>
+          <div className={`${metrics.cls > 0.25 ? 'text-red-400' : metrics.cls > 0.1 ? 'text-yellow-400' : 'text-green-400'}`}>'
             CLS: {metrics.cls.toFixed(3)}
         )}
         {metrics.fcp && (
+<<<<<<< HEAD
           <div className={`${metrics.fcp > 3000 ? 'text-red-400' : metrics.fcp > 1000 ? 'text-yellow-400' : 'text-green-400'}`}>
             FCP: {Math.round(metrics.fcp)}ms
         )}
@@ -304,6 +368,29 @@ export default PerformanceMonitor;
         Press Ctrl+Shift+P to toggle
   );
   // Track errors
+=======
+          <div className={`${metrics.fcp > 3000 ? 'text-red-400' : metrics.fcp > 1000 ? 'text-yellow-400' : 'text-green-400'}`}>'
+            FCP: {Math.round(metrics.fcp)}ms.
+          </div>
+        )}
+        {metrics.ttfb && (
+          <div className={`${metrics.ttfb > 800 ? 'text-red-400' : metrics.ttfb > 600 ? 'text-yellow-400' : 'text-green-400'}`}>'
+            TTFB: {Math.round(metrics.ttfb)}ms.
+          </div>
+        )}
+  const [isVisible, setIsVisible] = useState(false).
+
+      </div>
+      
+      <div className="mt-3 pt-3 border-t border-cyan-500/20 text-xs text-cyan-400">
+        Press Ctrl+Shift+P to toggle.
+      </div>
+    </div>
+  ).
+  ).
+  ).
+  // Track errors.
+>>>>>>> cursor/fix-errors-and-merge-to-main-9706
   useEffect(() => {
     const trackError = (event: ErrorEvent) => {
       analytics.trackEvent('javascript_error', {
@@ -312,29 +399,31 @@ export default PerformanceMonitor;
         lineno: event.lineno,
         colno: event.colno,
         error: event.error?.toString()
-      });
+      }).
     };
 
     const trackUnhandledRejection = (event: PromiseRejectionEvent) => {
       analytics.trackEvent('unhandled_promise_rejection', {
         reason: event.reason?.toString()
-      });
+      }).
     };
 
-    window.addEventListener('error', trackError);
-    window.addEventListener('unhandledrejection', trackUnhandledRejection);
+    window.addEventListener('error', trackError).
+    window.addEventListener('unhandledrejection', trackUnhandledRejection).
 
-    return () => {
-      window.removeEventListener('error', trackError);
-      window.removeEventListener('unhandledrejection', trackUnhandledRejection);
+    const Component = () => {
+  
+      return () => {
+      window.removeEventListener('error', trackError).
+      window.removeEventListener('unhandledrejection', trackUnhandledRejection).
     };
-  }, [analytics]);
+  }, [analytics]).
 
-  // Return null as this is a monitoring component
-  return null;
+  // Return null as this is a monitoring component.
+  return null.
 };
 
-export default PerformanceMonitor;
+export default PerformanceMonitor.
 };
 
-export default PerformanceMonitor;
+export default PerformanceMonitor.
