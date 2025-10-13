@@ -24,9 +24,9 @@ const AdvancedPerformanceMonitor = () => {
 
   useEffect(() => {
     // Measure Web Vitals
-    const measureWebVitals = async () => {
+    const measureWebVitals = async (): Promise<void> => {
       try {
-        const { onCLS, onFID, onFCP, onLCP, onTTFB } = await import('web-vitals')
+        const { onCLS, onFCP, onLCP, onTTFB } = await import('web-vitals')
 
         onFCP((metric: any) => {
           setMetrics(prev => ({ ...prev, fcp: metric.value }))
@@ -119,6 +119,9 @@ const AdvancedPerformanceMonitor = () => {
 
       return () => observer.disconnect()
     }
+    
+    // Return undefined if PerformanceObserver is not available
+    return undefined
   }, [])
 
   // Calculate performance score based on metrics
