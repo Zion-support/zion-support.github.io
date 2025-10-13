@@ -1,92 +1,92 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Code, Shield, Zap, CheckCircle, ArrowRight, Star, Smartphone, Mail, Phone, MapPin, FileText, Users, Clock, Brain, BarChart3, GitBranch } from 'lucide-react';
+import { Users, Brain, BarChart3, Zap, CheckCircle, ArrowRight, Star, Smartphone, Mail, Phone, MapPin, Target, TrendingUp, MessageSquare, Eye } from 'lucide-react';
 
-export default function ZionAICodeReviewer() {
+export default function ZionAICustomerInsights() {
   const features = [
     {
-      title: "AI-Powered Code Analysis",
-      description: "Advanced AI analyzes your code for bugs, security vulnerabilities, and performance issues",
+      title: "Behavioral Analysis",
+      description: "AI analyzes customer behavior patterns to predict preferences and buying intent",
       icon: <Brain className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Security Vulnerability Detection",
-      description: "Comprehensive security scanning to identify and fix potential security threats",
-      icon: <Shield className="w-6 h-6" />,
+      title: "Sentiment Analysis",
+      description: "Real-time sentiment analysis of customer feedback, reviews, and social media mentions",
+      icon: <MessageSquare className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Performance Optimization",
-      description: "AI suggestions for code optimization to improve performance and efficiency",
-      icon: <Zap className="w-6 h-6" />,
+      title: "Predictive Analytics",
+      description: "Machine learning models predict customer lifetime value, churn risk, and purchase likelihood",
+      icon: <TrendingUp className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Code Quality Metrics",
-      description: "Detailed metrics and scoring for code quality, maintainability, and best practices",
-      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Customer Segmentation",
+      description: "AI-powered customer segmentation based on behavior, demographics, and preferences",
+      icon: <Users className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Git Integration",
-      description: "Seamless integration with Git repositories for automated code review workflows",
-      icon: <GitBranch className="w-6 h-6" />,
+      title: "Real-time Dashboards",
+      description: "Live dashboards with actionable insights and automated alerts for customer trends",
+      icon: <BarChart3 className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Team Collaboration",
-      description: "Collaborative code review tools with comments, suggestions, and approval workflows",
-      icon: <Users className="w-6 h-6" />,
+      title: "Personalization Engine",
+      description: "AI-driven personalization recommendations for products, content, and experiences",
+      icon: <Target className="w-6 h-6" />,
       color: "from-teal-500 to-cyan-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Developer",
-      price: "$49",
+      name: "Starter",
+      price: "$99",
       period: "/month",
-      description: "Perfect for individual developers",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 5 repositories",
-        "Basic AI analysis",
-        "Security scanning",
-        "Performance suggestions",
+        "Up to 10,000 customers",
+        "Basic AI insights",
         "Email support",
-        "API access"
+        "Standard dashboards",
+        "API access",
+        "Monthly reports"
       ],
       popular: false,
       color: "from-gray-500 to-gray-600"
     },
     {
-      name: "Team",
-      price: "$149",
+      name: "Professional",
+      price: "$299",
       period: "/month",
-      description: "Ideal for development teams",
+      description: "Ideal for growing businesses",
       features: [
-        "Up to 25 repositories",
-        "Advanced AI analysis",
-        "Team collaboration",
-        "Custom rules",
+        "Up to 100,000 customers",
+        "Advanced AI features",
         "Priority support",
-        "CI/CD integration",
-        "Detailed reporting"
+        "Custom dashboards",
+        "Real-time analytics",
+        "Predictive models",
+        "Team collaboration"
       ],
       popular: true,
       color: "from-cyan-500 to-purple-600"
     },
     {
       name: "Enterprise",
-      price: "$399",
+      price: "$799",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited repositories",
+        "Unlimited customers",
         "Enterprise AI features",
-        "Custom integrations",
         "Dedicated support",
+        "Custom integrations",
         "White-label options",
         "SLA guarantee",
         "Custom training"
@@ -98,51 +98,51 @@ export default function ZionAICodeReviewer() {
 
   const testimonials = [
     {
-      name: "Alex Chen",
-      company: "FinTech Startup",
-      role: "Lead Developer",
-      content: "Zion AI Code Reviewer has caught critical security issues that would have been missed in manual reviews. Our code quality has improved dramatically.",
-      rating: 5
-    },
-    {
-      name: "Sarah Johnson",
+      name: "Lisa Chen",
       company: "E-commerce Platform",
-      role: "Engineering Manager",
-      content: "The AI suggestions are incredibly accurate and help our junior developers learn best practices. It's like having a senior developer reviewing every PR.",
+      role: "Head of Marketing",
+      content: "Zion AI Customer Insights has revolutionized our customer understanding. We've increased our conversion rate by 40% and reduced churn by 25% using the predictive analytics.",
       rating: 5
     },
     {
       name: "Michael Rodriguez",
       company: "SaaS Company",
-      role: "CTO",
-      content: "Integration with our CI/CD pipeline was seamless. The automated code reviews have reduced our bug rate by 60% and improved deployment confidence.",
+      role: "VP of Product",
+      content: "The behavioral analysis is incredibly accurate. We can now predict which customers are likely to upgrade or churn, allowing us to take proactive action.",
+      rating: 5
+    },
+    {
+      name: "Sarah Johnson",
+      company: "Retail Chain",
+      role: "Customer Experience Director",
+      content: "The personalization engine has transformed our customer experience. Our customers feel like we truly understand them, and our satisfaction scores have never been higher.",
       rating: 5
     }
   ];
 
   const benefits = [
     {
-      title: "Reduce Bugs by 70%",
-      description: "AI-powered analysis catches bugs before they reach production",
-      icon: <CheckCircle className="w-8 h-8" />,
+      title: "40% Higher Conversion",
+      description: "AI-driven personalization increases conversion rates significantly",
+      icon: <TrendingUp className="w-8 h-8" />,
       color: "from-cyan-500 to-blue-500"
     },
     {
-      title: "Improve Code Quality",
-      description: "Consistent code quality standards across your entire team",
-      icon: <Code className="w-8 h-8" />,
+      title: "25% Churn Reduction",
+      description: "Predictive analytics help identify and retain at-risk customers",
+      icon: <Users className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Faster Reviews",
-      description: "Automated analysis reduces manual review time by 80%",
-      icon: <Clock className="w-8 h-8" />,
+      title: "Real-time Insights",
+      description: "Instant customer insights enable immediate action and optimization",
+      icon: <Eye className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Security First",
-      description: "Proactive security scanning prevents vulnerabilities",
-      icon: <Shield className="w-8 h-8" />,
+      title: "Data-Driven Decisions",
+      description: "AI-powered insights guide strategic business decisions",
+      icon: <BarChart3 className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -150,16 +150,16 @@ export default function ZionAICodeReviewer() {
   return (
     <>
       <Helmet>
-        <title>Zion AI Code Reviewer - Intelligent Code Analysis | Zion Tech Group</title>
+        <title>Zion AI Customer Insights - Advanced Customer Analytics | Zion Tech Group</title>
         <meta
           name="description"
-          content="AI-powered code review platform with security scanning, performance optimization, and quality metrics. Improve code quality and reduce bugs with intelligent analysis."
+          content="AI-powered customer insights platform with behavioral analysis, sentiment tracking, and predictive analytics. Understand your customers better and increase retention."
         />
         <meta
           name="keywords"
-          content="AI code review, code analysis, security scanning, performance optimization, code quality, automated review, Git integration"
+          content="customer insights, behavioral analysis, sentiment analysis, predictive analytics, customer segmentation, personalization, customer retention"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-code-reviewer" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-customer-insights" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -173,19 +173,19 @@ export default function ZionAICodeReviewer() {
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
                 <Zap className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">AI-Powered Code Review</span>
+                <span className="text-cyan-400 text-sm font-medium">AI-Powered Customer Analytics</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                 Zion
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                  {" "}AI Code Reviewer
+                  {" "}AI Customer Insights
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Intelligent code review platform that analyzes your code for bugs, security vulnerabilities, 
-                and performance issues. Improve code quality and reduce bugs with AI-powered analysis.
+                Deep customer insights powered by AI. Analyze behavior patterns, predict customer actions, 
+                and personalize experiences to increase retention and drive growth.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -201,27 +201,27 @@ export default function ZionAICodeReviewer() {
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
                 >
                   Watch Demo
-                  <Code className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                  <Users className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
                 </Link>
               </div>
 
               {/* Key Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">70%</div>
-                  <div className="text-gray-300 text-sm">Bug Reduction</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">40%</div>
+                  <div className="text-gray-300 text-sm">Higher Conversion</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">80%</div>
-                  <div className="text-gray-300 text-sm">Time Saved</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">25%</div>
+                  <div className="text-gray-300 text-sm">Churn Reduction</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">99%</div>
-                  <div className="text-gray-300 text-sm">Accuracy</div>
+                  <div className="text-3xl font-bold text-pink-400 mb-2">95%</div>
+                  <div className="text-gray-300 text-sm">Prediction Accuracy</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
-                  <div className="text-gray-300 text-sm">AI Analysis</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">Real-time</div>
+                  <div className="text-gray-300 text-sm">Insights</div>
                 </div>
               </div>
             </div>
@@ -233,11 +233,11 @@ export default function ZionAICodeReviewer() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Why Choose Zion AI Code Reviewer?
+                Why Choose Zion AI Customer Insights?
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Transform your development process with AI-powered code analysis that catches issues 
-                before they become problems and helps your team write better code.
+                Transform your customer understanding with AI-powered analytics that reveal hidden patterns, 
+                predict behavior, and enable personalized experiences that drive loyalty and growth.
               </p>
             </div>
             
@@ -269,10 +269,10 @@ export default function ZionAICodeReviewer() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Advanced Code Analysis Features
+                Advanced Customer Analytics Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to maintain high code quality and catch issues early in development.
+                Everything you need to understand your customers and create personalized experiences.
               </p>
             </div>
             
@@ -307,7 +307,7 @@ export default function ZionAICodeReviewer() {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your development team. All plans include our core AI analysis features.
+                Choose the perfect plan for your customer analytics needs. All plans include our core AI features.
               </p>
             </div>
             
@@ -370,10 +370,10 @@ export default function ZionAICodeReviewer() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Development Teams
+                Trusted by Customer Success Teams
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Code Reviewer
+                See what our customers say about Zion AI Customer Insights
               </p>
             </div>
             
@@ -405,11 +405,11 @@ export default function ZionAICodeReviewer() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Improve Your Code Quality?
+              Ready to Understand Your Customers Better?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of development teams already using Zion AI Code Reviewer to catch bugs early, 
-              improve code quality, and ship better software. Start your free trial today.
+              Join thousands of businesses already using Zion AI Customer Insights to increase retention, 
+              improve personalization, and drive growth. Start your free trial today.
             </p>
             
             {/* Contact Information */}
@@ -450,7 +450,7 @@ export default function ZionAICodeReviewer() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Code className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Users className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>

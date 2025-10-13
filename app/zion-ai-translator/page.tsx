@@ -1,95 +1,95 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Code, Shield, Zap, CheckCircle, ArrowRight, Star, Smartphone, Mail, Phone, MapPin, FileText, Users, Clock, Brain, BarChart3, GitBranch } from 'lucide-react';
+import { Languages, Globe, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Star, Smartphone, Mail, Phone, MapPin, FileText, Users, Clock, Brain } from 'lucide-react';
 
-export default function ZionAICodeReviewer() {
+export default function ZionAITranslator() {
   const features = [
     {
-      title: "AI-Powered Code Analysis",
-      description: "Advanced AI analyzes your code for bugs, security vulnerabilities, and performance issues",
-      icon: <Brain className="w-6 h-6" />,
+      title: "100+ Language Support",
+      description: "Translate between 100+ languages with industry-leading accuracy and natural language processing",
+      icon: <Languages className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Security Vulnerability Detection",
-      description: "Comprehensive security scanning to identify and fix potential security threats",
-      icon: <Shield className="w-6 h-6" />,
+      title: "Real-time Translation",
+      description: "Instant translation with sub-second response times for live conversations and documents",
+      icon: <Zap className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Performance Optimization",
-      description: "AI suggestions for code optimization to improve performance and efficiency",
-      icon: <Zap className="w-6 h-6" />,
+      title: "Context-Aware AI",
+      description: "Advanced AI that understands context, tone, and cultural nuances for accurate translations",
+      icon: <Brain className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Code Quality Metrics",
-      description: "Detailed metrics and scoring for code quality, maintainability, and best practices",
-      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Document Translation",
+      description: "Translate entire documents while preserving formatting, layout, and structure",
+      icon: <FileText className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Git Integration",
-      description: "Seamless integration with Git repositories for automated code review workflows",
-      icon: <GitBranch className="w-6 h-6" />,
+      title: "Voice Translation",
+      description: "Real-time voice translation with speech recognition and text-to-speech capabilities",
+      icon: <Globe className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Team Collaboration",
-      description: "Collaborative code review tools with comments, suggestions, and approval workflows",
-      icon: <Users className="w-6 h-6" />,
+      title: "API Integration",
+      description: "Seamless integration with your existing applications through our powerful REST API",
+      icon: <Shield className="w-6 h-6" />,
       color: "from-teal-500 to-cyan-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Developer",
-      price: "$49",
+      name: "Starter",
+      price: "$39",
       period: "/month",
-      description: "Perfect for individual developers",
+      description: "Perfect for individuals and small teams",
       features: [
-        "Up to 5 repositories",
-        "Basic AI analysis",
-        "Security scanning",
-        "Performance suggestions",
+        "Up to 100,000 characters/month",
+        "50+ languages",
+        "Basic API access",
         "Email support",
-        "API access"
+        "Mobile app",
+        "Basic analytics"
       ],
       popular: false,
       color: "from-gray-500 to-gray-600"
     },
     {
-      name: "Team",
-      price: "$149",
+      name: "Professional",
+      price: "$99",
       period: "/month",
-      description: "Ideal for development teams",
+      description: "Ideal for growing businesses",
       features: [
-        "Up to 25 repositories",
-        "Advanced AI analysis",
-        "Team collaboration",
-        "Custom rules",
+        "Up to 1M characters/month",
+        "100+ languages",
+        "Advanced API access",
         "Priority support",
-        "CI/CD integration",
-        "Detailed reporting"
+        "Document translation",
+        "Voice translation",
+        "Custom models"
       ],
       popular: true,
       color: "from-cyan-500 to-purple-600"
     },
     {
       name: "Enterprise",
-      price: "$399",
+      price: "$299",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited repositories",
-        "Enterprise AI features",
-        "Custom integrations",
+        "Unlimited characters",
+        "All languages",
+        "Enterprise API",
         "Dedicated support",
+        "Custom integrations",
         "White-label options",
-        "SLA guarantee",
-        "Custom training"
+        "SLA guarantee"
       ],
       popular: false,
       color: "from-purple-500 to-pink-500"
@@ -98,50 +98,50 @@ export default function ZionAICodeReviewer() {
 
   const testimonials = [
     {
-      name: "Alex Chen",
-      company: "FinTech Startup",
-      role: "Lead Developer",
-      content: "Zion AI Code Reviewer has caught critical security issues that would have been missed in manual reviews. Our code quality has improved dramatically.",
+      name: "Maria Santos",
+      company: "Global Marketing Agency",
+      role: "Content Director",
+      content: "Zion AI Translator has revolutionized our multilingual content strategy. The context-aware translations are incredibly accurate and save us thousands of hours.",
       rating: 5
     },
     {
-      name: "Sarah Johnson",
+      name: "Ahmed Hassan",
       company: "E-commerce Platform",
-      role: "Engineering Manager",
-      content: "The AI suggestions are incredibly accurate and help our junior developers learn best practices. It's like having a senior developer reviewing every PR.",
+      role: "Product Manager",
+      content: "The real-time translation feature is perfect for our international customer support. Response times are instant and the quality is outstanding.",
       rating: 5
     },
     {
-      name: "Michael Rodriguez",
-      company: "SaaS Company",
-      role: "CTO",
-      content: "Integration with our CI/CD pipeline was seamless. The automated code reviews have reduced our bug rate by 60% and improved deployment confidence.",
+      name: "Jennifer Lee",
+      company: "Software Development",
+      role: "Technical Writer",
+      content: "Document translation with preserved formatting is a game-changer. We can now localize our technical documentation in 20+ languages effortlessly.",
       rating: 5
     }
   ];
 
-  const benefits = [
+  const useCases = [
     {
-      title: "Reduce Bugs by 70%",
-      description: "AI-powered analysis catches bugs before they reach production",
-      icon: <CheckCircle className="w-8 h-8" />,
+      title: "E-commerce Localization",
+      description: "Translate product descriptions, reviews, and customer support content for global markets",
+      icon: <Globe className="w-8 h-8" />,
       color: "from-cyan-500 to-blue-500"
     },
     {
-      title: "Improve Code Quality",
-      description: "Consistent code quality standards across your entire team",
-      icon: <Code className="w-8 h-8" />,
+      title: "Content Marketing",
+      description: "Localize blog posts, social media content, and marketing materials for international audiences",
+      icon: <FileText className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Faster Reviews",
-      description: "Automated analysis reduces manual review time by 80%",
-      icon: <Clock className="w-8 h-8" />,
+      title: "Customer Support",
+      description: "Provide multilingual support with real-time translation for customer inquiries",
+      icon: <Users className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Security First",
-      description: "Proactive security scanning prevents vulnerabilities",
+      title: "Documentation",
+      description: "Translate technical documentation, user manuals, and legal documents accurately",
       icon: <Shield className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
@@ -150,16 +150,16 @@ export default function ZionAICodeReviewer() {
   return (
     <>
       <Helmet>
-        <title>Zion AI Code Reviewer - Intelligent Code Analysis | Zion Tech Group</title>
+        <title>Zion AI Translator - Advanced Translation Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="AI-powered code review platform with security scanning, performance optimization, and quality metrics. Improve code quality and reduce bugs with intelligent analysis."
+          content="AI-powered translation platform supporting 100+ languages with real-time translation, document processing, and voice translation capabilities."
         />
         <meta
           name="keywords"
-          content="AI code review, code analysis, security scanning, performance optimization, code quality, automated review, Git integration"
+          content="AI translator, real-time translation, document translation, voice translation, multilingual support, translation API, language processing"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-code-reviewer" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-translator" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -173,19 +173,19 @@ export default function ZionAICodeReviewer() {
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
                 <Zap className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">AI-Powered Code Review</span>
+                <span className="text-cyan-400 text-sm font-medium">AI-Powered Translation</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                 Zion
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                  {" "}AI Code Reviewer
+                  {" "}AI Translator
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Intelligent code review platform that analyzes your code for bugs, security vulnerabilities, 
-                and performance issues. Improve code quality and reduce bugs with AI-powered analysis.
+                Break down language barriers with our advanced AI translation platform. Support for 100+ languages 
+                with real-time translation, document processing, and voice translation capabilities.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -201,62 +201,61 @@ export default function ZionAICodeReviewer() {
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
                 >
                   Watch Demo
-                  <Code className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                  <Languages className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
                 </Link>
               </div>
 
               {/* Key Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">70%</div>
-                  <div className="text-gray-300 text-sm">Bug Reduction</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">100+</div>
+                  <div className="text-gray-300 text-sm">Languages</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">80%</div>
-                  <div className="text-gray-300 text-sm">Time Saved</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">99%</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
                   <div className="text-gray-300 text-sm">Accuracy</div>
                 </div>
                 <div className="text-center">
+                  <div className="text-3xl font-bold text-pink-400 mb-2">&lt;1s</div>
+                  <div className="text-gray-300 text-sm">Response Time</div>
+                </div>
+                <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
-                  <div className="text-gray-300 text-sm">AI Analysis</div>
+                  <div className="text-gray-300 text-sm">AI Processing</div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Why Choose Zion AI Code Reviewer?
+                Perfect for Every Use Case
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Transform your development process with AI-powered code analysis that catches issues 
-                before they become problems and helps your team write better code.
+                From e-commerce localization to customer support, our AI translator adapts to your business needs.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+              {useCases.map((useCase, index) => (
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
                 >
                   <div
-                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${benefit.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${useCase.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                   >
-                    {benefit.icon}
+                    {useCase.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {benefit.title}
+                    {useCase.title}
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
-                    {benefit.description}
+                    {useCase.description}
                   </p>
                 </div>
               ))}
@@ -269,10 +268,10 @@ export default function ZionAICodeReviewer() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Advanced Code Analysis Features
+                Advanced Translation Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to maintain high code quality and catch issues early in development.
+                Powered by cutting-edge AI technology for the most accurate and natural translations.
               </p>
             </div>
             
@@ -307,7 +306,7 @@ export default function ZionAICodeReviewer() {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your development team. All plans include our core AI analysis features.
+                Choose the perfect plan for your translation needs. All plans include our core AI features.
               </p>
             </div>
             
@@ -370,10 +369,10 @@ export default function ZionAICodeReviewer() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Development Teams
+                Trusted by Global Companies
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Code Reviewer
+                See what our customers say about Zion AI Translator
               </p>
             </div>
             
@@ -405,11 +404,11 @@ export default function ZionAICodeReviewer() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Improve Your Code Quality?
+              Ready to Break Down Language Barriers?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of development teams already using Zion AI Code Reviewer to catch bugs early, 
-              improve code quality, and ship better software. Start your free trial today.
+              Join thousands of businesses already using Zion AI Translator to reach global audiences 
+              and expand their market reach. Start your free trial today.
             </p>
             
             {/* Contact Information */}
@@ -450,7 +449,7 @@ export default function ZionAICodeReviewer() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Code className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Languages className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>

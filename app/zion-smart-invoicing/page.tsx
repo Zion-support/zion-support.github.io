@@ -1,43 +1,43 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Code, Shield, Zap, CheckCircle, ArrowRight, Star, Smartphone, Mail, Phone, MapPin, FileText, Users, Clock, Brain, BarChart3, GitBranch } from 'lucide-react';
+import { Receipt, DollarSign, Clock, Shield, BarChart3, Zap, CheckCircle, ArrowRight, Star, Smartphone, Globe, Mail, Phone, MapPin, CreditCard, FileText, Users } from 'lucide-react';
 
-export default function ZionAICodeReviewer() {
+export default function ZionSmartInvoicing() {
   const features = [
     {
-      title: "AI-Powered Code Analysis",
-      description: "Advanced AI analyzes your code for bugs, security vulnerabilities, and performance issues",
-      icon: <Brain className="w-6 h-6" />,
+      title: "AI-Powered Invoice Generation",
+      description: "Automatically generate professional invoices from project data, time tracking, and client information",
+      icon: <Receipt className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Security Vulnerability Detection",
-      description: "Comprehensive security scanning to identify and fix potential security threats",
-      icon: <Shield className="w-6 h-6" />,
+      title: "Smart Payment Processing",
+      description: "Accept payments through multiple channels with automated reconciliation and fraud detection",
+      icon: <CreditCard className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Performance Optimization",
-      description: "AI suggestions for code optimization to improve performance and efficiency",
-      icon: <Zap className="w-6 h-6" />,
+      title: "Automated Follow-ups",
+      description: "Intelligent payment reminders and follow-up sequences to improve collection rates",
+      icon: <Clock className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Code Quality Metrics",
-      description: "Detailed metrics and scoring for code quality, maintainability, and best practices",
+      title: "Financial Analytics",
+      description: "Comprehensive insights into cash flow, payment patterns, and business performance metrics",
       icon: <BarChart3 className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Git Integration",
-      description: "Seamless integration with Git repositories for automated code review workflows",
-      icon: <GitBranch className="w-6 h-6" />,
+      title: "Multi-Currency Support",
+      description: "Handle international clients with automatic currency conversion and tax calculations",
+      icon: <Globe className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Team Collaboration",
-      description: "Collaborative code review tools with comments, suggestions, and approval workflows",
+      title: "Client Portal",
+      description: "Self-service portal for clients to view invoices, make payments, and track project status",
       icon: <Users className="w-6 h-6" />,
       color: "from-teal-500 to-cyan-500"
     }
@@ -45,51 +45,51 @@ export default function ZionAICodeReviewer() {
 
   const pricingPlans = [
     {
-      name: "Developer",
-      price: "$49",
+      name: "Solo",
+      price: "$29",
       period: "/month",
-      description: "Perfect for individual developers",
+      description: "Perfect for freelancers and solo entrepreneurs",
       features: [
-        "Up to 5 repositories",
-        "Basic AI analysis",
-        "Security scanning",
-        "Performance suggestions",
-        "Email support",
-        "API access"
+        "Up to 50 invoices/month",
+        "Basic AI generation",
+        "Payment processing",
+        "Client portal",
+        "Mobile app",
+        "Email support"
       ],
       popular: false,
       color: "from-gray-500 to-gray-600"
     },
     {
-      name: "Team",
-      price: "$149",
+      name: "Business",
+      price: "$79",
       period: "/month",
-      description: "Ideal for development teams",
+      description: "Ideal for small to medium businesses",
       features: [
-        "Up to 25 repositories",
-        "Advanced AI analysis",
-        "Team collaboration",
-        "Custom rules",
+        "Unlimited invoices",
+        "Advanced AI features",
+        "Multi-currency support",
+        "Advanced analytics",
+        "Custom branding",
         "Priority support",
-        "CI/CD integration",
-        "Detailed reporting"
+        "API access"
       ],
       popular: true,
       color: "from-cyan-500 to-purple-600"
     },
     {
       name: "Enterprise",
-      price: "$399",
+      price: "$199",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited repositories",
-        "Enterprise AI features",
+        "Everything in Business",
         "Custom integrations",
+        "Advanced security",
         "Dedicated support",
         "White-label options",
-        "SLA guarantee",
-        "Custom training"
+        "Custom reporting",
+        "SLA guarantee"
       ],
       popular: false,
       color: "from-purple-500 to-pink-500"
@@ -98,51 +98,51 @@ export default function ZionAICodeReviewer() {
 
   const testimonials = [
     {
-      name: "Alex Chen",
-      company: "FinTech Startup",
-      role: "Lead Developer",
-      content: "Zion AI Code Reviewer has caught critical security issues that would have been missed in manual reviews. Our code quality has improved dramatically.",
+      name: "David Kim",
+      company: "Creative Agency",
+      role: "Founder",
+      content: "Zion Smart Invoicing has cut our invoicing time by 80%. The AI automatically generates invoices from our project management data, and payments come in faster than ever.",
       rating: 5
     },
     {
-      name: "Sarah Johnson",
-      company: "E-commerce Platform",
-      role: "Engineering Manager",
-      content: "The AI suggestions are incredibly accurate and help our junior developers learn best practices. It's like having a senior developer reviewing every PR.",
+      name: "Lisa Martinez",
+      company: "Consulting Firm",
+      role: "Finance Director",
+      content: "The automated follow-ups are a game-changer. Our collection rate improved from 85% to 98% in just 3 months. The analytics help us understand our cash flow patterns.",
       rating: 5
     },
     {
-      name: "Michael Rodriguez",
-      company: "SaaS Company",
-      role: "CTO",
-      content: "Integration with our CI/CD pipeline was seamless. The automated code reviews have reduced our bug rate by 60% and improved deployment confidence.",
+      name: "James Wilson",
+      company: "Software Development",
+      role: "CEO",
+      content: "The multi-currency support is flawless for our international clients. The client portal has reduced support tickets by 60% and improved client satisfaction significantly.",
       rating: 5
     }
   ];
 
   const benefits = [
     {
-      title: "Reduce Bugs by 70%",
-      description: "AI-powered analysis catches bugs before they reach production",
-      icon: <CheckCircle className="w-8 h-8" />,
+      title: "Save 10+ Hours Per Week",
+      description: "Automated invoice generation and follow-ups eliminate manual work",
+      icon: <Clock className="w-8 h-8" />,
       color: "from-cyan-500 to-blue-500"
     },
     {
-      title: "Improve Code Quality",
-      description: "Consistent code quality standards across your entire team",
-      icon: <Code className="w-8 h-8" />,
+      title: "Improve Collection Rate",
+      description: "Smart follow-ups and payment reminders increase collection rates by 20%",
+      icon: <DollarSign className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Faster Reviews",
-      description: "Automated analysis reduces manual review time by 80%",
-      icon: <Clock className="w-8 h-8" />,
+      title: "Reduce Errors",
+      description: "AI-powered validation and automated calculations eliminate human errors",
+      icon: <Shield className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Security First",
-      description: "Proactive security scanning prevents vulnerabilities",
-      icon: <Shield className="w-8 h-8" />,
+      title: "Better Cash Flow",
+      description: "Faster payments and better tracking improve your business cash flow",
+      icon: <BarChart3 className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -150,16 +150,16 @@ export default function ZionAICodeReviewer() {
   return (
     <>
       <Helmet>
-        <title>Zion AI Code Reviewer - Intelligent Code Analysis | Zion Tech Group</title>
+        <title>Zion Smart Invoicing - AI-Powered Invoice Management | Zion Tech Group</title>
         <meta
           name="description"
-          content="AI-powered code review platform with security scanning, performance optimization, and quality metrics. Improve code quality and reduce bugs with intelligent analysis."
+          content="AI-powered invoicing platform with automated generation, payment processing, and financial analytics. Streamline your billing process and improve cash flow."
         />
         <meta
           name="keywords"
-          content="AI code review, code analysis, security scanning, performance optimization, code quality, automated review, Git integration"
+          content="smart invoicing, AI invoicing, automated billing, payment processing, financial analytics, invoice management, cash flow optimization"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-code-reviewer" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-smart-invoicing" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -173,19 +173,19 @@ export default function ZionAICodeReviewer() {
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
                 <Zap className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">AI-Powered Code Review</span>
+                <span className="text-cyan-400 text-sm font-medium">AI-Powered Invoicing</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                 Zion
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                  {" "}AI Code Reviewer
+                  {" "}Smart Invoicing
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Intelligent code review platform that analyzes your code for bugs, security vulnerabilities, 
-                and performance issues. Improve code quality and reduce bugs with AI-powered analysis.
+                AI-powered invoicing platform that automates your entire billing process. Generate invoices, 
+                process payments, and gain insights to improve your cash flow and business performance.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -201,27 +201,27 @@ export default function ZionAICodeReviewer() {
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
                 >
                   Watch Demo
-                  <Code className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                  <Receipt className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
                 </Link>
               </div>
 
               {/* Key Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">70%</div>
-                  <div className="text-gray-300 text-sm">Bug Reduction</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">80%</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
                   <div className="text-gray-300 text-sm">Time Saved</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">99%</div>
-                  <div className="text-gray-300 text-sm">Accuracy</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">98%</div>
+                  <div className="text-gray-300 text-sm">Collection Rate</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-pink-400 mb-2">50+</div>
+                  <div className="text-gray-300 text-sm">Currencies</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
-                  <div className="text-gray-300 text-sm">AI Analysis</div>
+                  <div className="text-gray-300 text-sm">AI Processing</div>
                 </div>
               </div>
             </div>
@@ -233,11 +233,11 @@ export default function ZionAICodeReviewer() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Why Choose Zion AI Code Reviewer?
+                Why Choose Zion Smart Invoicing?
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Transform your development process with AI-powered code analysis that catches issues 
-                before they become problems and helps your team write better code.
+                Transform your billing process with AI-powered automation and intelligent insights 
+                that help you get paid faster and manage your business better.
               </p>
             </div>
             
@@ -269,10 +269,10 @@ export default function ZionAICodeReviewer() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Advanced Code Analysis Features
+                Powerful Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to maintain high code quality and catch issues early in development.
+                Everything you need to streamline your invoicing process and improve your business performance.
               </p>
             </div>
             
@@ -307,7 +307,7 @@ export default function ZionAICodeReviewer() {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your development team. All plans include our core AI analysis features.
+                Choose the perfect plan for your business. All plans include our core AI invoicing features.
               </p>
             </div>
             
@@ -370,10 +370,10 @@ export default function ZionAICodeReviewer() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Development Teams
+                Trusted by Businesses Worldwide
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Code Reviewer
+                See what our customers say about Zion Smart Invoicing
               </p>
             </div>
             
@@ -405,11 +405,11 @@ export default function ZionAICodeReviewer() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Improve Your Code Quality?
+              Ready to Transform Your Invoicing?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of development teams already using Zion AI Code Reviewer to catch bugs early, 
-              improve code quality, and ship better software. Start your free trial today.
+              Join thousands of businesses already using Zion Smart Invoicing to streamline their billing process 
+              and improve cash flow. Start your free trial today.
             </p>
             
             {/* Contact Information */}
@@ -450,7 +450,7 @@ export default function ZionAICodeReviewer() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Code className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Receipt className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>
