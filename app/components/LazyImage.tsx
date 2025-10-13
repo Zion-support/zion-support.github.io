@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { cn } from '../lib/utils';
+import { ImageIcon } from 'lucide-react';
 
 interface LazyImageProps {
   src: string;
@@ -9,16 +9,20 @@ interface LazyImageProps {
   onLoad?: () => void;
   onError?: () => void;
   priority?: boolean;
+  sizes?: string;
+  quality?: number;
 }
 
 const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
-  className,
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5YTNhZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+',
+  className = '',
+  placeholder,
   onLoad,
   onError,
-  priority = false
+  priority = false,
+  sizes = '100vw',
+  quality = 75
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
@@ -36,8 +40,8 @@ const LazyImage: React.FC<LazyImageProps> = ({
         }
       },
       {
-        threshold: 0.1,
-        rootMargin: '50px'
+        rootMargin: '50px 0px',
+        threshold: 0.1
       }
     );
 
@@ -58,34 +62,48 @@ const LazyImage: React.FC<LazyImageProps> = ({
     onError?.();
   };
 
+  const optimizedSrc = `${src}?w=800&q=${quality}&f=webp`;
+
   return (
-    <div ref={imgRef} className={cn('relative overflow-hidden', className)}>
+    <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
+      {/* Placeholder */}
       {!isLoaded && !hasError && (
-        <img
-          src={placeholder}
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover blur-sm"
-          aria-hidden="true"
-        />
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 flex items-center justify-center">
+          {placeholder ? (
+            <img
+              src={placeholder}
+              alt=""
+              className="w-full h-full object-cover opacity-50"
+            />
+          ) : (
+            <ImageIcon className="w-8 h-8 text-gray-400" />
+          )}
+        </div>
       )}
-      {isInView && (
+
+      {/* Error State */}
+      {hasError && (
+        <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+          <div className="text-center">
+            <ImageIcon className="w-8 h-8 text-gray-400 mx-auto mb-2" />
+            <p className="text-xs text-gray-500">Failed to load image</p>
+          </div>
+        </div>
+      )}
+
+      {/* Actual Image */}
+      {isInView && !hasError && (
         <img
-          src={src}
+          src={optimizedSrc}
           alt={alt}
+          className={`w-full h-full object-cover transition-opacity duration-300 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
           onLoad={handleLoad}
           onError={handleError}
-          className={cn(
-            'w-full h-full object-cover transition-opacity duration-300',
-            isLoaded ? 'opacity-100' : 'opacity-0'
-          )}
           loading={priority ? 'eager' : 'lazy'}
-          decoding="async"
+          sizes={sizes}
         />
-      )}
-      {hasError && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-500">
-          <span>Failed to load image</span>
-        </div>
       )}
     </div>
   );
