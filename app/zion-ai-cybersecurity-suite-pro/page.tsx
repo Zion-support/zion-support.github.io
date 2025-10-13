@@ -1,3 +1,4 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { AlertTriangle } from 'lucide-react';
 import { Users } from 'lucide-react';

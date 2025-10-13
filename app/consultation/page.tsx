@@ -1,3 +1,4 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Clock } from 'lucide-react';
 import { Star } from 'lucide-react';

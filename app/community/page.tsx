@@ -1,3 +1,4 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Users } from 'lucide-react';
 import { Award } from 'lucide-react';
@@ -109,4 +110,6 @@ export default function CommunityPage() {
       </div>
     </div>
   );
+}
+
 }

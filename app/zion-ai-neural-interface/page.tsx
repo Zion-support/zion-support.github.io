@@ -1,3 +1,4 @@
+import React from 'react';
 import { Users } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { Cpu } from 'lucide-react';
@@ -174,4 +175,6 @@ export default function ZionAiNeuralInterfacePage() {
       </div>
     </div>
   );
+}
+
 }

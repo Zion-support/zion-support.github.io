@@ -7,8 +7,8 @@ import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
-import { LoadingPage } from "./app/components/LoadingStates";
-import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
+import LoadingPage from "./app/components/LoadingStates";
+import GlobalErrorBoundary from "./app/components/EnhancedErrorFeedback";
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
@@ -120,11 +120,11 @@ function App() {
 
   return (
     <HelmetProvider>
-      <ImprovedErrorBoundary>
-        <AnalyticsProvider>
-          <ImprovedPerformanceMonitor showDetails={process.env.NODE_ENV === 'development'}>
-            <WebVitalsTracker>
-              <ImprovedAccessibility>
+        <GlobalErrorBoundary>
+          <AnalyticsProvider>
+            <PerformanceMonitor>
+              <WebVitalsTracker>
+                <EnhancedAccessibility>
                 <Router>
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                     <FuturisticBackground>
@@ -233,11 +233,11 @@ function App() {
                       </FuturisticBackground>
                     </div>
                   </Router>
-                </ImprovedAccessibility>
+                </EnhancedAccessibility>
               </WebVitalsTracker>
-            </ImprovedPerformanceMonitor>
+            </PerformanceMonitor>
           </AnalyticsProvider>
-        </ImprovedErrorBoundary>
+        </GlobalErrorBoundary>
       </HelmetProvider>
     );
 }

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Receipt } from 'lucide-react';
 
@@ -99,4 +100,6 @@ export default function SmartExpenseCategorizerPage() {
       </div>
     </div>
   );
+}
+
 }

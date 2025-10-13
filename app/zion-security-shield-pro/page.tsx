@@ -1,3 +1,4 @@
+import React from 'react';
 import { Search } from 'lucide-react';
 import { Award } from 'lucide-react';
 import { Shield } from 'lucide-react';

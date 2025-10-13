@@ -1,3 +1,4 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Star } from 'lucide-react';
 import { Database } from 'lucide-react';
@@ -164,4 +165,6 @@ export default function ZionAiAnalyticsProPage() {
       </div>
     </div>
   );
+}
+
 }

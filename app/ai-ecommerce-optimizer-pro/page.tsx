@@ -1,3 +1,4 @@
+import React from 'react';
 
 export default function AIEcommerceOptimizerPro() {
   const features = [
@@ -166,4 +167,6 @@ export default function AiEcommerceOptimizerProPage() {
       </div>
     </div>
   );
+}
+
 }

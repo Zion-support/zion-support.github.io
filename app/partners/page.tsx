@@ -1,3 +1,4 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Database } from 'lucide-react';
 import { Mic } from 'lucide-react';

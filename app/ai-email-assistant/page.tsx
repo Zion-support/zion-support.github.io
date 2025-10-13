@@ -1,3 +1,4 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Users, Star, Shield, Zap, Brain, Settings, BarChart3, Mail, MessageSquare, Hand, Sparkles, Target } from 'lucide-react';

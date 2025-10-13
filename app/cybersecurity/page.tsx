@@ -1,3 +1,4 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { AlertTriangle } from 'lucide-react';
 import { Users } from 'lucide-react';
@@ -9,7 +10,6 @@ import { Lock } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 
 export default function Cybersecurity() {
-import { Helmet } from 'react-helmet-async';
 const features = [
     {
       title: "Predictive Analytics",
@@ -162,4 +162,5 @@ export default function CybersecurityPage() {
   );
 }
 
+}
 }

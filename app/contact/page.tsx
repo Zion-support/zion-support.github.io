@@ -1,16 +1,8 @@
-import { Helmet } from 'react-helmet-async';
-import { Clock } from 'lucide-react';
-import { MapPin } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { Smartphone } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { Clock, MapPin, Code, Mail, Phone, Smartphone, Cloud } from 'lucide-react';
 
-export default function Contact() {
+export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -131,4 +123,4 @@ export default function ContactPage() {
       </div>
     </div>
   );
-}
+}}

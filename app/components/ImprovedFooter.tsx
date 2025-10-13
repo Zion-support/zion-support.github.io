@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Users } from 'lucide-react';
 import { Award } from 'lucide-react';

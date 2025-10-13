@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Home } from 'lucide-react';
 import { Shield } from 'lucide-react';
@@ -6,7 +7,6 @@ import { Brain } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Network } from 'lucide-react';
 import { Mic } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 interface NavigationProps {
   onSidebarToggle?: () => void;

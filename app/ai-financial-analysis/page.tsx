@@ -1,3 +1,4 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { TrendingUp } from 'lucide-react';
 
@@ -94,4 +95,6 @@ export default function AiFinancialAnalysisPage() {
       </div>
     </div>
   );
+}
+
 }

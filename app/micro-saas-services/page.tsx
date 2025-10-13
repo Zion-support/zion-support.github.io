@@ -1,3 +1,4 @@
+import React from 'react';
 import { Shield } from 'lucide-react';
 import { Calendar } from 'lucide-react';
 import { Code } from 'lucide-react';

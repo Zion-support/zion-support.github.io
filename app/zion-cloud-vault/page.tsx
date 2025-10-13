@@ -1,3 +1,4 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Search } from 'lucide-react';
@@ -9,8 +10,6 @@ import { Lock } from 'lucide-react';
 import { Filter } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 const features = [
     {
       title: "Predictive Analytics",

@@ -1,33 +1,8 @@
-import { Helmet } from 'react-helmet-async';
-import { Search } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Cpu } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Server } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Lock } from 'lucide-react';
-import { Calendar } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Wifi } from 'lucide-react';
-import { Headphones } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { FileText } from 'lucide-react';
-import { Hand } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-
+import React from 'react';
 import { Helmet } from "react-helmet-async";
+import { Search, Users, Star, Cpu, Shield, Database, TrendingUp, Zap, Brain, Settings, Globe, Server, Network, Lock, Calendar, Code, Monitor, Target, BarChart3, Wifi, Headphones, Phone, FileText, Hand, Cloud } from 'lucide-react';
 
-export default function Services() {
+export default function ServicesPage() {
   const services = [
     {
       title: "AI-Powered Business Intelligence Pro",
@@ -405,6 +380,4 @@ export default function ServicesPage() {
       </div>
     </div>
   );
-}
-
-}
+}}

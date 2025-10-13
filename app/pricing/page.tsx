@@ -1,3 +1,4 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Shield } from 'lucide-react';
 import { Zap } from 'lucide-react';
@@ -9,7 +10,6 @@ import { Hand } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
 export default function Pricing() {
-import { Helmet } from 'react-helmet-async';
 
 export default function Pricing() {
   const features = [
@@ -265,4 +265,7 @@ export default function PricingPage() {
       </div>
     </div>
   );
+}
+}
+}
 }

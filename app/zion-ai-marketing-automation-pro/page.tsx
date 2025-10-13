@@ -1,3 +1,4 @@
+import React from 'react';
 import { Users } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { Zap } from 'lucide-react';

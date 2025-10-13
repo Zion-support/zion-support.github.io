@@ -1,3 +1,4 @@
+import React from 'react';
 
 const MobileNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

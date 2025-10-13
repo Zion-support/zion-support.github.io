@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Home } from 'lucide-react';
 import { Users } from 'lucide-react';
@@ -7,7 +8,6 @@ import { Network } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 interface SidebarProps {
   isOpen: boolean;

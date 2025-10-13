@@ -1,3 +1,4 @@
+import React from 'react';
 import { Clock } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -171,4 +172,6 @@ export default function ZionHrAssistantProPage() {
       </div>
     </div>
   );
+}
+
 }

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Clock } from 'lucide-react';
@@ -13,7 +14,8 @@ import { Phone } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
-const services = [
+const Footer = () => {
+  const services = [
     {
       title: "Cloud Migration",
       description: "Seamless migration to cloud infrastructure",
@@ -40,8 +42,6 @@ const microSaasServices = [
     { name: "Cloud Solutions", href: "/cloud-services" },
     { name: "DevOps", href: "/devops" }
   ];
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import { 
   Brain, 
   Mail, 
@@ -285,5 +285,5 @@ export default function Footer({ className = '', children, ...props }: FooterPro
 };
 
 export default Footer;
-
+}
 }

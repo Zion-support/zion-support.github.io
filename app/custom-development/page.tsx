@@ -1,3 +1,4 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Star } from 'lucide-react';
 import { Database } from 'lucide-react';
@@ -68,7 +69,6 @@ export default function page() {
       features: ["RESTful APIs", "GraphQL", "API Documentation", "Rate Limiting"]
     }
   ];
-import { Helmet } from 'react-helmet-async';
 
 export default function CustomDevelopmentPage() {
   return (
@@ -111,4 +111,6 @@ export default function CustomDevelopmentPage() {
       </div>
     </div>
   );
+}
+
 }

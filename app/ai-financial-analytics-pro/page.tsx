@@ -1,3 +1,4 @@
+import React from 'react';
 import { Shield } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Monitor } from 'lucide-react';
@@ -222,4 +223,6 @@ export default function AiFinancialAnalyticsProPage() {
       </div>
     </div>
   );
+}
+
 }

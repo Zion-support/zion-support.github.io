@@ -1,3 +1,4 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Users } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -9,7 +10,6 @@ import { Mail } from 'lucide-react';
 import { Share2 } from 'lucide-react';
 
 export default function AIMarketingAutomation() {
-import { Helmet } from 'react-helmet-async';
 const benefits = [
     "Advanced AI algorithms for accurate predictions",
     "Real-time risk assessment and monitoring",
@@ -180,4 +180,5 @@ export default function AiMarketingAutomationPage() {
   );
 }
 
+}
 }

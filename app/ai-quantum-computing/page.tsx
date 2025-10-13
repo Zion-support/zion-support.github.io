@@ -1,5 +1,5 @@
+import React from 'react';
 import { Helmet } from "react-helmet-async";
-import { Helmet } from 'react-helmet-async';
 import { Helmet } from 'react-helmet-async';
 import { TrendingUp } from 'lucide-react';
 import { Brain } from 'lucide-react';

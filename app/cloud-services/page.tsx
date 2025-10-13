@@ -1,3 +1,4 @@
+import React from 'react';
 import { Shield } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import { Globe } from 'lucide-react';
@@ -95,4 +96,6 @@ export default function CloudServicesPage() {
       </div>
     </div>
   );
+}
+
 }

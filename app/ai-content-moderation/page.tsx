@@ -1,6 +1,6 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-import { Helmet } from 'react-helmet-async';
 export default function AiContentModerationZionTechGroup() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">

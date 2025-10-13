@@ -1,3 +1,4 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Users } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -162,4 +163,6 @@ export default function ZionAiCrmProPage() {
       </div>
     </div>
   );
+}
+
 }

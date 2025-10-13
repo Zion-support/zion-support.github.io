@@ -1,3 +1,4 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { AlertTriangle } from 'lucide-react';
 import { Shield } from 'lucide-react';
@@ -7,7 +8,6 @@ import { Lock } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
-import { Helmet } from 'react-helmet-async';
 const features = [
     {
       title: "Predictive Analytics",
