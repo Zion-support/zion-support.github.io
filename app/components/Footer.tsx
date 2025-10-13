@@ -1,26 +1,22 @@
 import React, { useMemo } from "react";
-import { Link } from "react-router-dom";
-import { 
-  Linkedin, 
-  Twitter, 
-  Github, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
-  ArrowRight,
-  Brain,
-  Shield,
-  Zap,
-  Globe,
-  BarChart3,
-  Cloud,
-  Code,
-  Database,
-  Users,
-  Award,
-  Star
-} from "lucide-react";
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Database } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { Mic } from 'lucide-react';
+import { Cloud } from 'lucide-react';
 
 const Footer = React.memo(() => {
   const currentYear = new Date().getFullYear();

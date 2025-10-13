@@ -1,7 +1,16 @@
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Users } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Receipt } from 'lucide-react';
+
 "use client";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { Receipt, Bot, Brain, Shield, CheckCircle, Star, BarChart3, TrendingUp, DollarSign } from 'lucide-react';
 
 export default function AIExpenseTracker() {
   const features = [

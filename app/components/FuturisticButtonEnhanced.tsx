@@ -1,6 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { LucideIcon } from 'lucide-react';
 
 interface FuturisticButtonEnhancedProps {
   children: React.ReactNode;

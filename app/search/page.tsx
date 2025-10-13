@@ -1,6 +1,9 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Search } from 'lucide-react';
+import { Star } from 'lucide-react';
+
 
 const SearchPage = () => {
   return (

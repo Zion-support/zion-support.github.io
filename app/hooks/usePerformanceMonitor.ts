@@ -1,4 +1,6 @@
-import { useEffect, useRef } from 'react'
+import { Star } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+
 
 interface PerformanceMetrics {
   loadTime: number

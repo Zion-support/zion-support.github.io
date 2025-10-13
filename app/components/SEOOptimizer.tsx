@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Code } from 'lucide-react';
+import { Cloud } from 'lucide-react';
 
 interface SEOOptimizerProps {
   children: React.ReactNode;
