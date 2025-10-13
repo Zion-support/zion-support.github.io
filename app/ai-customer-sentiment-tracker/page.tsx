@@ -1,19 +1,19 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function AiCustomerSentimentTrackerPage() {
+export default function aiCustomerSentimentTracker() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
-        <title>AI Customer Sentiment Tracker - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI Customer Sentiment Tracker solutions by Zion Tech Group" />
+        <title>Ai Customer Sentiment Tracker - Zion Tech Group</title>
+        <meta name="description" content="Ai Customer Sentiment Tracker solutions by Zion Tech Group" />
       </Helmet>
       
       <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">AI Customer Sentiment Tracker</h1>
-        <div className="prose prose-invert max-w-none">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-8">Ai Customer Sentiment Tracker</h1>
           <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive AI Customer Sentiment Tracker solutions designed to meet your business needs.
+            This page is under development. Please check back later.
           </p>
         </div>
       </div>

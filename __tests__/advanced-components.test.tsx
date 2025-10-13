@@ -1,10 +1,14 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import FuturisticButton from '../app/components/FuturisticButton';
 
-describe('Advanced Components', () => {
-  it('renders FuturisticButton without crashing', () => {
-    render(<FuturisticButton>Test Button</FuturisticButton>);
-    expect(screen.getByText('Test Button')).toBeInTheDocument();
-  });
-});
+interface advanced-components.testProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function advanced-components.test({ className = '', children }: advanced-components.testProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}

@@ -1,7 +1,14 @@
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-  }
-}
+import React from 'react';
+
 interface AnalyticsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Analytics({ className = '', children }: AnalyticsProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}

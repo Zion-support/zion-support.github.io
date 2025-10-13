@@ -1,9 +1,25 @@
-// accessibilityEnhancer.ts - Utility functions
-export const accessibilityEnhancer = {
-  // Utility functions will be implemented here
-  init: () => {
-    console.log('accessibilityEnhancer.ts initialized');
-  }
-};
+// accessibilityEnhancer utility functions
 
-export default accessibilityEnhancer;
+export interface accessibilityEnhancerConfig {
+  enabled: boolean;
+}
+
+export class accessibilityEnhancer {
+  private config: accessibilityEnhancerConfig;
+
+  constructor(config: Partial<accessibilityEnhancerConfig> = {}) {
+    this.config = {
+      enabled: true,
+      ...config
+    };
+  }
+
+  init(): void {
+    if (this.config.enabled) {
+      console.log('accessibilityEnhancer initialized');
+    }
+  }
+}
+
+export const accessibilityenhancer = new accessibilityEnhancer();
+export default accessibilityenhancer;

@@ -1,7 +1,14 @@
-'use client'
+import React from 'react';
 
-interface CriticalresourcepreloaderProps {
+interface CriticalResourcePreloaderProps {
   className?: string;
   children?: React.ReactNode;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
+
+export default function CriticalResourcePreloader({ className = '', children }: CriticalResourcePreloaderProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}

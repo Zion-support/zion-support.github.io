@@ -1,13 +1,14 @@
-import React from "react";
-interface ServiceWorkerRegistrationProps 
-  children?: React.ReactNode;
-  className?: string;
+import React from 'react';
 
-const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = (
-  children,
-  className = "",
-) => 
-  return <div className="{className}">{children}</div>;
-;
-export default ServiceWorkerRegistration;
-</ServiceWorkerRegistrationProps>
+interface ServiceWorkerRegistrationProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function ServiceWorkerRegistration({ className = '', children }: ServiceWorkerRegistrationProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}

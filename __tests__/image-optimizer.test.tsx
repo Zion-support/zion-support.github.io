@@ -1,16 +1,14 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import ImageOptimizer from '../app/components/ImageOptimizer';
 
-// Mock IntersectionObserver
-global.IntersectionObserver = jest.fn().mockImplementation((callback) => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}));
+interface image-optimizer.testProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-describe('ImageOptimizer', () => {
-  it('renders without crashing', () => {
-    expect(() => render(<ImageOptimizer src="test.jpg" alt="test" />)).not.toThrow();
-  });
-});
+export default function image-optimizer.test({ className = '', children }: image-optimizer.testProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}

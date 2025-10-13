@@ -1,3 +1,14 @@
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-export default function OptimizedLoading() 
+import React from 'react';
+
+interface OptimizedLoadingProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function OptimizedLoading({ className = '', children }: OptimizedLoadingProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}

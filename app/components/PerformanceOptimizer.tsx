@@ -1,5 +1,13 @@
+import React from 'react';
+
+interface PerformanceOptimizerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function PerformanceOptimizer({ className = '', children }: PerformanceOptimizerProps) {
   return (
-    <div className={`performanceoptimizer-component ${className}`} {...props}>
+    <div className={`${className}`}>
       {children}
     </div>
   );

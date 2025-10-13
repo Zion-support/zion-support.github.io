@@ -1,14 +1,14 @@
+import React from 'react';
 
-interface LazyimageProps {
-className?: string;
+interface LazyImageProps {
+  className?: string;
   children?: React.ReactNode;
 }
 
-export default function Lazyimage({ className = '', children, ...props }: LazyimageProps) {
+export default function LazyImage({ className = '', children }: LazyImageProps) {
   return (
-    <div className={`lazyimage-component ${className}`} {...props}>
+    <div className={`${className}`}>
       {children}
     </div>
   );
 }
->>>>>>> origin/main

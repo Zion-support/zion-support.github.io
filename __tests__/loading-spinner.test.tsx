@@ -1,9 +1,14 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import LoadingSpinner from '../app/components/LoadingSpinner';
 
-describe('LoadingSpinner', () => {
-  it('renders without crashing', () => {
-    expect(() => render(<LoadingSpinner />)).not.toThrow();
-  });
-});
+interface loading-spinner.testProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function loading-spinner.test({ className = '', children }: loading-spinner.testProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}

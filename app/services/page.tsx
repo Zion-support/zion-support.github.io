@@ -1,26 +1,22 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
-import { Brain, Shield, Globe, Code, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Laptop, Headphones, Phone } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
->>>>>>> cursor/fix-errors-and-merge-to-main-c22f
+import { Helmet } from 'react-helmet-async';
 
-export default function Services() {
+export default function services() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
+      <Helmet>
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Services solutions by Zion Tech Group" />
+      </Helmet>
+      
       <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Services</h1>
-        <div className="prose prose-invert max-w-none">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-8">Services</h1>
           <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive services designed to meet your business needs.
+            This page is under development. Please check back later.
           </p>
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-c22f

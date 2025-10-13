@@ -1,3 +1,14 @@
+import React from 'react';
+
+interface ResponsiveGridProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function ResponsiveGrid({ className = '', children }: ResponsiveGridProps) {
   return (
-    <div className={`responsivegrid-component ${className}`} {...props}>
+    <div className={`${className}`}>
       {children}
+    </div>
+  );
+}

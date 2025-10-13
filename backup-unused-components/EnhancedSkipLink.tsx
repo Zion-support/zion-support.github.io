@@ -1,3 +1,14 @@
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-export default function EnhancedSkipLink() 
+import React from 'react';
+
+interface EnhancedSkipLinkProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function EnhancedSkipLink({ className = '', children }: EnhancedSkipLinkProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}

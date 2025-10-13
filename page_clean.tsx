@@ -1,9 +1,14 @@
 import React from 'react';
 
-export default function PageClean() {
+interface page_cleanProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function page_clean({ className = '', children }: page_cleanProps) {
   return (
-    <div>
-      <h1>Clean Page</h1>
+    <div className={`${className}`}>
+      {children}
     </div>
   );
 }

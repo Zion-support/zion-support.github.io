@@ -1,14 +1,14 @@
-interface ErrorfallbackProps {
+import React from 'react';
+
+interface ErrorFallbackProps {
   className?: string;
   children?: React.ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
 }
 
-export default function Errorfallback({ className = '', children, ...props }: ErrorfallbackProps) {
+export default function ErrorFallback({ className = '', children }: ErrorFallbackProps) {
   return (
-    <div className={`errorfallback-component ${className}`} {...props}>
+    <div className={`${className}`}>
       {children}
     </div>
   );
 }
->>>>>>> origin/main
