@@ -79,6 +79,29 @@ const SmartInventoryOptimizerPage = React.lazy(() => import("./app/smart-invento
 const AICustomerSentimentTrackerPage = React.lazy(() => import("./app/ai-customer-sentiment-tracker/page"));
 const SmartExpenseCategorizerPage = React.lazy(() => import("./app/smart-expense-categorizer/page"));
 
+// Additional AI Services Pages
+const AIChatbotBuilderPage = React.lazy(() => import("./app/ai-chatbot-builder/page"));
+const AICodeAssistantPage = React.lazy(() => import("./app/ai-code-assistant/page"));
+const AIDesignStudioPage = React.lazy(() => import("./app/ai-design-studio/page"));
+const AIBusinessIntelligencePage = React.lazy(() => import("./app/ai-business-intelligence/page"));
+const AIAutomationPage = React.lazy(() => import("./app/ai-automation/page"));
+const AIComputerVisionPage = React.lazy(() => import("./app/ai-computer-vision/page"));
+const AIConversationalAIPage = React.lazy(() => import("./app/ai-conversational-ai/page"));
+const AICRMPage = React.lazy(() => import("./app/ai-crm/page"));
+const AICustomerInsightsPage = React.lazy(() => import("./app/ai-customer-insights/page"));
+const AIDataVisualizationPage = React.lazy(() => import("./app/ai-data-visualization/page"));
+const AIDevOpsAutomationPage = React.lazy(() => import("./app/ai-devops-automation/page"));
+const AIDocumentIntelligencePage = React.lazy(() => import("./app/ai-document-intelligence/page"));
+
+// Additional IT Services Pages
+const CloudConsultingPage = React.lazy(() => import("./app/cloud-consulting/page"));
+const DataCenterSolutionsPage = React.lazy(() => import("./app/data-center-solutions/page"));
+const DisasterRecoveryPage = React.lazy(() => import("./app/disaster-recovery/page"));
+const ITSupportPage = React.lazy(() => import("./app/it-support/page"));
+const ManagedServicesPage = React.lazy(() => import("./app/managed-services/page"));
+const SecurityAuditPage = React.lazy(() => import("./app/security-audit/page"));
+const TechnologyConsultingPage = React.lazy(() => import("./app/technology-consulting/page"));
+
 function App() {
   useEffect(() => {
     // Initialize performance monitoring
@@ -167,52 +190,72 @@ function App() {
                               <Route path="/smart-expense-categorizer" element={<SmartExpenseCategorizerPage />} />
 
                               {/* Additional AI Services Routes */}
-                              <Route path="/ai-chatbot-builder" element={<React.lazy(() => import("./app/ai-chatbot-builder/page")) />} />
-                              <Route path="/ai-code-assistant" element={<React.lazy(() => import("./app/ai-code-assistant/page")) />} />
-                              <Route path="/ai-design-studio" element={<React.lazy(() => import("./app/ai-design-studio/page")) />} />
-                              <Route path="/ai-business-intelligence" element={<React.lazy(() => import("./app/ai-business-intelligence/page")) />} />
-                              <Route path="/ai-automation" element={<React.lazy(() => import("./app/ai-automation/page")) />} />
-                              <Route path="/ai-computer-vision" element={<React.lazy(() => import("./app/ai-computer-vision/page")) />} />
-                              <Route path="/ai-conversational-ai" element={<React.lazy(() => import("./app/ai-conversational-ai/page")) />} />
-                              <Route path="/ai-crm" element={<React.lazy(() => import("./app/ai-crm/page")) />} />
-                              <Route path="/ai-customer-insights" element={<React.lazy(() => import("./app/ai-customer-insights/page")) />} />
-                              <Route path="/ai-data-visualization" element={<React.lazy(() => import("./app/ai-data-visualization/page")) />} />
-                              <Route path="/ai-devops-automation" element={<React.lazy(() => import("./app/ai-devops-automation/page")) />} />
-                              <Route path="/ai-document-intelligence" element={<React.lazy(() => import("./app/ai-document-intelligence/page")) />} />
-                              <Route path="/ai-marketing-automation" element={<React.lazy(() => import("./app/ai-marketing-automation/page")) />} />
-                              <Route path="/ai-predictive-analytics" element={<React.lazy(() => import("./app/ai-predictive-analytics/page")) />} />
-                              <Route path="/ai-voice-assistant" element={<React.lazy(() => import("./app/ai-voice-assistant/page")) />} />
-                              <Route path="/ai-workflow-automation" element={<React.lazy(() => import("./app/ai-workflow-automation/page")) />} />
+                              <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
+                              <Route path="/ai-code-assistant" element={<AICodeAssistantPage />} />
+                              <Route path="/ai-design-studio" element={<AIDesignStudioPage />} />
+                              <Route path="/ai-business-intelligence" element={<AIBusinessIntelligencePage />} />
+                              <Route path="/ai-automation" element={<AIAutomationPage />} />
+                              <Route path="/ai-computer-vision" element={<AIComputerVisionPage />} />
+                              <Route path="/ai-conversational-ai" element={<AIConversationalAIPage />} />
+                              <Route path="/ai-crm" element={<AICRMPage />} />
+                              <Route path="/ai-customer-insights" element={<AICustomerInsightsPage />} />
+                              <Route path="/ai-data-visualization" element={<AIDataVisualizationPage />} />
+                              <Route path="/ai-devops-automation" element={<AIDevOpsAutomationPage />} />
+                              <Route path="/ai-document-intelligence" element={<AIDocumentIntelligencePage />} />
 
                               {/* Additional IT Services Routes */}
-                              <Route path="/cloud-consulting" element={<React.lazy(() => import("./app/cloud-consulting/page")) />} />
-                              <Route path="/data-center-solutions" element={<React.lazy(() => import("./app/data-center-solutions/page")) />} />
-                              <Route path="/disaster-recovery" element={<React.lazy(() => import("./app/disaster-recovery/page")) />} />
-                              <Route path="/it-support" element={<React.lazy(() => import("./app/it-support/page")) />} />
-                              <Route path="/managed-services" element={<React.lazy(() => import("./app/managed-services/page")) />} />
-                              <Route path="/security-audit" element={<React.lazy(() => import("./app/security-audit/page")) />} />
-                              <Route path="/technology-consulting" element={<React.lazy(() => import("./app/technology-consulting/page")) />} />
-
-                              {/* Additional 5G Services Routes */}
-                              <Route path="/5g-data-analytics" element={<React.lazy(() => import("./app/5g-data-analytics/page")) />} />
-                              <Route path="/5g-edge-computing" element={<React.lazy(() => import("./app/5g-edge-computing/page")) />} />
-                              <Route path="/5g-implementation" element={<React.lazy(() => import("./app/5g-implementation/page")) />} />
-                              <Route path="/5g-iot-solutions" element={<React.lazy(() => import("./app/5g-iot-solutions/page")) />} />
-                              <Route path="/5g-mobile-applications" element={<React.lazy(() => import("./app/5g-mobile-applications/page")) />} />
-                              <Route path="/5g-network-infrastructure" element={<React.lazy(() => import("./app/5g-network-infrastructure/page")) />} />
-                              <Route path="/5g-private-networks" element={<React.lazy(() => import("./app/5g-private-networks/page")) />} />
-                              <Route path="/5g-smart-city-solutions" element={<React.lazy(() => import("./app/5g-smart-city-solutions/page")) />} />
+                              <Route path="/cloud-consulting" element={<CloudConsultingPage />} />
+                              <Route path="/data-center-solutions" element={<DataCenterSolutionsPage />} />
+                              <Route path="/disaster-recovery" element={<DisasterRecoveryPage />} />
+                              <Route path="/it-support" element={<ITSupportPage />} />
+                              <Route path="/managed-services" element={<ManagedServicesPage />} />
+                              <Route path="/security-audit" element={<SecurityAuditPage />} />
+                              <Route path="/technology-consulting" element={<TechnologyConsultingPage />} />
 
                               {/* Catch all route */}
-                              <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
-                                <div className="text-center">
-                                  <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
-                                  <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
-                                  <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                                    Go Home
-                                  </a>
+                              <Route path="*" element={
+                                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+                                  <div className="text-center max-w-2xl mx-auto px-4">
+                                    <div className="mb-8">
+                                      <h1 className="text-6xl md:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 mb-4">
+                                        404
+                                      </h1>
+                                      <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                                        Page Not Found
+                                      </h2>
+                                      <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+                                        The page you're looking for doesn't exist or has been moved. 
+                                        Let's get you back on track.
+                                      </p>
+                                    </div>
+                                    
+                                    <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                                      <a 
+                                        href="/" 
+                                        className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+                                      >
+                                        <span>Go Home</span>
+                                        <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                        </svg>
+                                      </a>
+                                      <a 
+                                        href="/services" 
+                                        className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+                                      >
+                                        <span>Explore Services</span>
+                                        <svg className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                        </svg>
+                                      </a>
+                                    </div>
+                                    
+                                    <div className="text-sm text-gray-400">
+                                      <p>Need help? <a href="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors">Contact our support team</a></p>
+                                    </div>
+                                  </div>
                                 </div>
-                              </div>} />
+                              } />
                             </Routes>
                           </Suspense>
                         </main>
