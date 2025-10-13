@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, FileText, Share2 } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
@@ -90,6 +90,30 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
+      name: "AI Smart Scheduler",
+      description: "Intelligent calendar management with AI-powered optimization and team collaboration",
+      price: "From $19/month",
+      icon: <Calendar className="w-6 h-6" />,
+      link: "/ai-smart-scheduler",
+      featured: true
+    },
+    {
+      name: "AI Document Intelligence",
+      description: "Smart document processing with OCR, intelligent search, and automated workflows",
+      price: "From $49/month",
+      icon: <FileText className="w-6 h-6" />,
+      link: "/ai-document-intelligence",
+      featured: true
+    },
+    {
+      name: "AI Social Media Manager",
+      description: "AI-powered social media management with content generation and multi-platform posting",
+      price: "From $29/month",
+      icon: <Share2 className="w-6 h-6" />,
+      link: "/ai-social-media-manager",
+      featured: true
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
       price: "From $299/month",
@@ -106,35 +130,11 @@ const HomePage = () => {
       featured: true
     },
     {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution with end-to-end encryption and unlimited scalability",
-      price: "From $99/month",
-      icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault",
-      featured: true
-    },
-    {
       name: "Zion AI CRM Pro",
       description: "AI-powered customer relationship management with intelligent lead scoring and automation",
       price: "From $199/month",
       icon: <Users className="w-6 h-6" />,
       link: "/zion-ai-crm-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Marketing Automation Pro",
-      description: "AI-powered marketing automation with predictive content generation and multi-channel orchestration",
-      price: "From $149/month",
-      icon: <Target className="w-6 h-6" />,
-      link: "/zion-ai-marketing-automation-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Project Manager Pro",
-      description: "AI-powered project management with intelligent task prioritization and resource allocation",
-      price: "From $99/month",
-      icon: <Calendar className="w-6 h-6" />,
-      link: "/zion-ai-project-manager-pro",
       featured: true
     }
   ];
