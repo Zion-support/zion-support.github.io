@@ -73,7 +73,12 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
         return registration.update();
       })
       .catch((error) => {
-        console.error('Service worker registration failed:', error);
+        // Handle service worker registration error silently in production
+        if (process.env.NODE_ENV === 'development' && 
+            typeof window !== 'undefined' && 
+            window.location.hostname === 'localhost') {
+          console.error('Service worker registration failed:', error);
+        }
       });
   }, [enableCaching]);
 
@@ -157,21 +162,19 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
   const setupPerformanceMonitoring = useCallback(() => {
     // Monitor Core Web Vitals
     import('web-vitals').then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
-      onCLS((metric: any) => {
-        console.log('CLS:', metric.value);
-      });
-      onINP((metric: any) => {
-        console.log('INP:', metric.value);
-      });
-      onFCP((metric: any) => {
-        console.log('FCP:', metric.value);
-      });
-      onLCP((metric: any) => {
-        console.log('LCP:', metric.value);
-      });
-      onTTFB((metric: any) => {
-        console.log('TTFB:', metric.value);
-      });
+      const logMetric = (name: string, metric: any) => {
+        if (process.env.NODE_ENV === 'development' && 
+            typeof window !== 'undefined' && 
+            window.location.hostname === 'localhost') {
+          console.log(`${name}:`, metric.value);
+        }
+      };
+      
+      onCLS((metric: any) => logMetric('CLS', metric));
+      onINP((metric: any) => logMetric('INP', metric));
+      onFCP((metric: any) => logMetric('FCP', metric));
+      onLCP((metric: any) => logMetric('LCP', metric));
+      onTTFB((metric: any) => logMetric('TTFB', metric));
     });
 
     // Monitor memory usage

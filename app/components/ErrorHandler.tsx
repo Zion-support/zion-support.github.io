@@ -38,7 +38,9 @@ class ErrorHandler extends Component<Props, State> {
     })
 
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === 'development' && 
+        typeof window !== 'undefined' && 
+        window.location.hostname === 'localhost') {
       console.error('Error caught by handler:', error, errorInfo);
     }
 
@@ -60,9 +62,17 @@ class ErrorHandler extends Component<Props, State> {
         timestamp: new Date().toISOString()
       };
       // Send to your error reporting service here
-      console.log('Error data prepared for reporting:', errorData);
+      if (process.env.NODE_ENV === 'development' && 
+          typeof window !== 'undefined' && 
+          window.location.hostname === 'localhost') {
+        console.log('Error data prepared for reporting:', errorData);
+      }
     } catch (reportingError) {
-      console.warn('Error reporting failed:', reportingError);
+      if (process.env.NODE_ENV === 'development' && 
+          typeof window !== 'undefined' && 
+          window.location.hostname === 'localhost') {
+        console.warn('Error reporting failed:', reportingError);
+      }
 
 
     }

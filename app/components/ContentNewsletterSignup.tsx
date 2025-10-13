@@ -23,7 +23,12 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
       setEmail("");
 
     } catch (error) {
-      console.error('Failed to subscribe to newsletter:', error);
+      // Handle newsletter subscription error silently in production
+      if (process.env.NODE_ENV === 'development' && 
+          typeof window !== 'undefined' && 
+          window.location.hostname === 'localhost') {
+        console.error('Failed to subscribe to newsletter:', error);
+      }
     } finally {
       setIsLoading(false);
     }

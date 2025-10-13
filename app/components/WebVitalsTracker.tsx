@@ -25,7 +25,18 @@ const WebVitalsTracker: React.FC = () => {
 
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
-        console.log(`[Web Vitals] ${metric.name}:`, metric.value);
+        // Use a more structured logging approach
+        const logData = {
+          metric: metric.name,
+          value: metric.value,
+          delta: metric.delta,
+          id: metric.id,
+          navigationType: metric.navigationType
+        };
+        // Only log in development mode
+        if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
+          console.log(`[Web Vitals] ${metric.name}:`, logData);
+        }
       }
     };
 

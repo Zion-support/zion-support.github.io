@@ -31,7 +31,9 @@ class ErrorBoundary extends Component<Props, State> {
     });
 
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === 'development' && 
+        typeof window !== 'undefined' && 
+        window.location.hostname === 'localhost') {
       console.error('Error caught by boundary:', error, errorInfo);
     }
 

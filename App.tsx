@@ -9,20 +9,16 @@ import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
-import AdvancedPerformanceEnhancer from "./app/components/AdvancedPerformanceEnhancer";
-import EnhancedAccessibilityManager from "./app/components/EnhancedAccessibilityManager";
 import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
-import EnhancedPerformanceOptimizer from "./app/components/EnhancedPerformanceOptimizer";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
-import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import EnhancedSEO from "./app/components/EnhancedSEO";
 import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import FuturisticBackground from "./app/components/FuturisticBackground";
-import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
+import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
 import ErrorHandler from "./app/components/ErrorHandler";
 import { usePerformanceOptimization } from "./hooks/usePerformanceOptimization";
@@ -470,28 +466,25 @@ function App() {
                     </Suspense>
                   </main>
                   <Footer />
-                  <EnhancedPerformanceOptimizer />
-                  <AdvancedPerformanceEnhancer 
+                  <PerformanceOptimizer 
                     enableImageOptimization={true}
                     enablePreloading={true}
                     enableCaching={true}
                     enableCompression={true}
+                    enableLazyLoading={true}
                   />
-                  <EnhancedAccessibilityManager
+                  <AccessibilityEnhancer
                     enableKeyboardNavigation={true}
                     enableScreenReader={true}
                     enableHighContrast={true}
                     enableFocusManagement={true}
+                    enableReducedMotion={true}
                   />
-                  <EnhancedAccessibility>
-                    <div></div>
-                  </EnhancedAccessibility>
                 </FuturisticBackground>
                 <AnalyticsProvider>
                   <div>
                     <PerformanceMonitor />
                     <WebVitalsTracker />
-                    <PerformanceEnhancer />
                     <SEOOptimizer />
                     <EnhancedSEO />
                   </div>

@@ -40,7 +40,10 @@ const EnhancedErrorFeedback: React.FC<ErrorFeedbackProps> = ({
       await onRetry();
       setIsVisible(false);
     } catch (retryError) {
-      console.error('Retry failed:', retryError);
+      // Handle retry error silently in production
+      if (process.env.NODE_ENV === 'development') {
+        console.error('Retry failed:', retryError);
+      }
     } finally {
       setIsRetrying(false);
     }
@@ -55,7 +58,10 @@ const EnhancedErrorFeedback: React.FC<ErrorFeedbackProps> = ({
       setFeedback('');
       setIsVisible(false);
     } catch (reportError) {
-      console.error('Error reporting failed:', reportError);
+      // Handle report error silently in production
+      if (process.env.NODE_ENV === 'development') {
+        console.error('Error reporting failed:', reportError);
+      }
     } finally {
       setIsReporting(false);
     }
@@ -170,7 +176,9 @@ export class GlobalErrorBoundary extends React.Component<
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === 'development' && 
+        typeof window !== 'undefined' && 
+        window.location.hostname === 'localhost') {
       console.error('Global error boundary caught an error:', error, errorInfo);
     }
 
@@ -184,7 +192,11 @@ export class GlobalErrorBoundary extends React.Component<
 
   handleReport = async (error: Error) => {
     // In production, you would send this to your error reporting service
-    console.log('Error reported:', error);
+    if (process.env.NODE_ENV === 'development' && 
+        typeof window !== 'undefined' && 
+        window.location.hostname === 'localhost') {
+      console.log('Error reported:', error);
+    }
     
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));

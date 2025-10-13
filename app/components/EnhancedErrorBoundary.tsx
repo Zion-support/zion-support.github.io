@@ -74,7 +74,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
-        console.error('Error Boundary caught an error:', errorData);
+        // Only log in development mode and localhost
+        if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
+          console.error('Error Boundary caught an error:', errorData);
+        }
       }
     } catch (reportingError) {
       console.error('Failed to report error:', reportingError);

@@ -11,7 +11,12 @@ const CacheManager = () => {
 
           // Service Worker registered successfully
         } catch (error) {
-          console.error('Service Worker registration failed:', error);
+          // Handle service worker registration error silently in production
+          if (process.env.NODE_ENV === 'development' && 
+              typeof window !== 'undefined' && 
+              window.location.hostname === 'localhost') {
+            console.error('Service Worker registration failed:', error);
+          }
         }
       }
     }
@@ -36,7 +41,12 @@ const CacheManager = () => {
 
           // Static assets cached successfully
         } catch (error) {
-          console.error('Failed to cache static assets:', error);
+          // Handle cache error silently in production
+          if (process.env.NODE_ENV === 'development' && 
+              typeof window !== 'undefined' && 
+              window.location.hostname === 'localhost') {
+            console.error('Failed to cache static assets:', error);
+          }
         }
       }
 
@@ -53,7 +63,12 @@ const CacheManager = () => {
           return response
 
         } catch (error) {
-          console.error('Cache API error:', error);
+          // Handle cache API error silently in production
+          if (process.env.NODE_ENV === 'development' && 
+              typeof window !== 'undefined' && 
+              window.location.hostname === 'localhost') {
+            console.error('Cache API error:', error);
+          }
           return fetch(request);
         }
       }

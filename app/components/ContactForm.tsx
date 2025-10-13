@@ -52,7 +52,12 @@ const ContactForm: React.FC = () => {
       });
 
     } catch (error) {
-      console.error('Failed to submit contact form:', error);
+      // Handle contact form submission error silently in production
+      if (process.env.NODE_ENV === 'development' && 
+          typeof window !== 'undefined' && 
+          window.location.hostname === 'localhost') {
+        console.error('Failed to submit contact form:', error);
+      }
     } finally {
       setIsSubmitting(false);
     }
