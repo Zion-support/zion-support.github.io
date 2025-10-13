@@ -7,49 +7,49 @@ const PartnersPage: React.FC = () => {
   const partners = [
     {
       name: 'Microsoft',
-      logo: '🏢',
+      logo: &apos;🏢&apos;,
       description: 'Strategic partnership for cloud and AI solutions',
-      category: 'Technology'
+      category: &apos;Technology&apos;
     },
     {
       name: 'Amazon Web Services',
-      logo: '☁️',
+      logo: &apos;☁️&apos;,
       description: 'infrastructure and AI services collaboration',
       category: ''
     },
     {
       name: 'Google ',
-      logo: '🔍',
+      logo: &apos;🔍&apos;,
       description: 'AI and machine learning platform integration',
-      category: 'AI/ML'
+      category: &apos;AI/ML&apos;
     },
     {
       name: 'IBM',
-      logo: '💼',
+      logo: &apos;💼&apos;,
       description: 'Enterprise AI solutions and consulting',
-      category: 'Enterprise'
+      category: &apos;Enterprise&apos;
     },
     {
       name: 'Salesforce',
-      logo: '📊',
+      logo: &apos;📊&apos;,
       description: 'CRM and business intelligence integration',
-      category: 'CRM'
+      category: &apos;CRM&apos;
     },
     {
       name: 'Oracle',
-      logo: '🗄️',
+      logo: &apos;🗄️&apos;,
       description: 'and enterprise application solutions',
       category: ''
     }
   ];
 
   const benefits = [
-    'Access to cutting-edge technology',
-    'Joint go-to-market opportunities',
-    'Technical support and training',
-    'Co-marketing and co-selling programs',
-    'Priority access to new features',
-    'Dedicated partner success manager'
+    &apos;Access to cutting-edge technology&apos;,
+    &apos;Joint go-to-market opportunities&apos;,
+    &apos;Technical support and training&apos;,
+    &apos;Co-marketing and co-selling programs&apos;,
+    &apos;Priority access to new features&apos;,
+    &apos;Dedicated partner success manager&apos;
   ];
 
   return (

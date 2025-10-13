@@ -7,22 +7,22 @@ const DemoPage: React.FC = () => {
     {
       icon: title: 'AI-Powered Analytics',
       description: 'See how our AI analyzes your data in real-time',
-      demo: 'Live Demo'
+      demo: &apos;Live Demo&apos;
     },
     {
       icon: title: 'Advanced ',
       description: 'Experience our enterprise-grade security features',
-      demo: 'Demo'
+      demo: &apos;Demo&apos;
     },
     {
       icon: title: 'Business Intelligence',
       description: 'Explore our comprehensive BI dashboard',
-      demo: 'BI Demo'
+      demo: &apos;BI Demo&apos;
     },
     {
       icon: title: 'Team Collaboration',
       description: 'See how teams work together seamlessly',
-      demo: 'Collaboration Demo'
+      demo: &apos;Collaboration Demo&apos;
     }
   ];
 

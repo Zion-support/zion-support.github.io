@@ -6,14 +6,14 @@ import { Circle, Right, } from 'lucide-react';
   ];
 
   const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
+    &apos;Advanced AI technology integration&apos;,
+    &apos;Real-time processing and analytics&apos;,
+    &apos;Enterprise-grade security and compliance&apos;,
+    &apos;Scalable and flexible solutions&apos;,
+    &apos;24/7 technical support&apos;,
+    &apos;Easy integration with existing systems&apos;,
+    &apos;Cost-effective pricing plans&apos;,
+    &apos;Proven track record of success&apos;
   ];
 
   return (
@@ -22,14 +22,14 @@ import { Circle, Right, } from 'lucide-react';
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
-      benefits: ['Automated execution', 'Transparent transactions', 'Reduced costs', 'Enhanced security']},
-    {icon: benefits: ['Immutable records', 'Cryptographic security', 'Distributed consensus', 'Tamper-proof data']},
+      benefits: [&apos;Automated execution&apos;, &apos;Transparent transactions&apos;, &apos;Reduced costs&apos;, &apos;Enhanced security&apos;]},
+    {icon: benefits: [&apos;Immutable records&apos;, &apos;Cryptographic security&apos;, &apos;Distributed consensus&apos;, &apos;Tamper-proof data&apos;]},
     {icon: title: 'AI Integration',
       description: 'AI-powered blockchain solutions for intelligent automation and optimization.',
-      benefits: ['Smart automation', 'Predictive analytics', 'Optimized transactions', 'Intelligent contracts']},
+      benefits: [&apos;Smart automation&apos;, &apos;Predictive analytics&apos;, &apos;Optimized transactions&apos;, &apos;Intelligent contracts&apos;]},
     {icon: title: 'Global Access',
       description: 'Access blockchain services from anywhere in the world with global connectivity.',
-      benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access']}]
+      benefits: [&apos;24/7 availability&apos;, &apos;Global reach&apos;, &apos;Cross-border transactions&apos;, &apos;Universal access&apos;]}]
 return(<>)
       <Helmet />
       {/* Features Section */}

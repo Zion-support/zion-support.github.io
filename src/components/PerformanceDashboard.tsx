@@ -71,7 +71,7 @@ const PerformanceDashboard: React.FC = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our performance dashboard 
+            Let&apos;s discuss how our performance dashboard 
             services can help you achieve your goals.
           </p>
           <a

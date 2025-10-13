@@ -36,17 +36,17 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   // Generate meta tags
   const metaTags = [
     { name: 'description', content: description },
-    { name: 'keywords', content: keywords.join(', ') },
+    { name: 'keywords', content: keywords.join(&apos;, &apos;) },
     { name: 'author', content: 'Zion Tech Group' },
     { name: 'robots', content: 'index, follow' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
     // Open Graph tags
-    { property: 'og:title', content: title },
-    { property: 'og:description', content: description },
-    { property: 'og:image', content: image },
-    { property: 'og:url', content: url },
-    { property: 'og:type', content: type },
-    { property: 'og:site_name', content: 'Zion Tech Group' },
+    { property: &apos;og:title&apos;, content: title },
+    { property: &apos;og:description&apos;, content: description },
+    { property: &apos;og:image&apos;, content: image },
+    { property: &apos;og:url&apos;, content: url },
+    { property: &apos;og:type&apos;, content: type },
+    { property: &apos;og:site_name&apos;, content: 'Zion Tech Group' },
     // Twitter d tags
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: title },

@@ -1,29 +1,32 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Right, Wifi, Circle } from 'lucide-react';
+import { Right, Wifi, Circle, Zap, Globe, Smartphone } from 'lucide-react';
 
 const FiveGSolutionsPage: React.FC = () => {
   const features = [
     {
-      icon: title: 'Ultra-Fast Speeds',
+      icon: Zap,
+      title: 'Ultra-Fast Speeds',
       description: 'Experience lightning-fast 5G connectivity with speeds up to 10 Gbps',
-      benefits: ['10x faster than 4G', 'Low latency', 'High bandwidth', 'Reliable connection']
+      benefits: [&apos;10x faster than 4G&apos;, &apos;Low latency&apos;, &apos;High bandwidth&apos;, &apos;Reliable connection&apos;]
     },
     {
-      icon: title: 'Global Coverage',
+      icon: Globe,
+      title: 'Global Coverage',
       description: 'Comprehensive 5G network coverage across multiple regions',
-      benefits: ['Wide coverage', 'Seamless roaming', 'International support', 'Network redundancy']
+      benefits: [&apos;Wide coverage&apos;, &apos;Seamless roaming&apos;, &apos;International support&apos;, &apos;Network redundancy&apos;]
     },
     {
-      icon: title: 'Mobile Optimization',
+      icon: Smartphone,
+      title: 'Mobile Optimization',
       description: 'Optimized 5G solutions for mobile devices and applications',
-      benefits: ['Mobile-first design', 'App optimization', 'Battery efficiency', 'Device compatibility']
+      benefits: [&apos;Mobile-first design&apos;, &apos;App optimization&apos;, &apos;Battery efficiency&apos;, &apos;Device compatibility&apos;]
     },
     {
       icon: Wifi,
       title: 'IoT Connectivity',
       description: 'Connect thousands of IoT devices with 5G technology',
-      benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
+      benefits: [&apos;Massive IoT support&apos;, &apos;Low power consumption&apos;, &apos;Real-time monitoring&apos;, &apos;Scalable solutions&apos;]
     }
   ];
 
@@ -31,20 +34,20 @@ const FiveGSolutionsPage: React.FC = () => {
     {
       title: '5G Network Infrastructure',
       description: 'Complete 5G network setup and optimization',
-      price: 'Starting at $50,000',
-      features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']
+      price: &apos;Starting at $50,000&apos;,
+      features: [&apos;Network planning&apos;, &apos;Tower installation&apos;, &apos;Signal optimization&apos;, &apos;Performance monitoring&apos;]
     },
     {
       title: '5G Mobile Applications',
       description: 'Custom mobile apps optimized for 5G networks',
-      price: 'Starting at $25,000',
-      features: ['App development', '5G optimization', 'Testing & QA', 'Deployment support']
+      price: &apos;Starting at $25,000&apos;,
+      features: [&apos;App development&apos;, &apos;5G optimization&apos;, &apos;Testing & QA&apos;, &apos;Deployment support&apos;]
     },
     {
       title: '5G IoT Solutions',
       description: 'IoT device connectivity and management platform',
-      price: 'Starting at $35,000',
-      features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']
+      price: &apos;Starting at $35,000&apos;,
+      features: [&apos;Device management&apos;, &apos;Data analytics&apos;, &apos;Real-time monitoring&apos;, &apos;Scalable architecture&apos;]
     }
   ];
 
