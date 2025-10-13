@@ -15,9 +15,9 @@ export default function ImageOptimizer({
   alt, 
   className = '', 
   lazy = true, 
-  quality = 80,
-  format = 'webp',
-  placeholder 
+  // quality = 80,
+  // format = 'webp',
+  // placeholder 
 }: ImageOptimizerProps) {
   return (
     <img
