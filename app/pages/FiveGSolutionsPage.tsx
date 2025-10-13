@@ -1,20 +1,20 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AboutPage: React.FC = () => {
+const FiveGSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group and our mission to provide cutting-edge AI and IT solutions." />
+        <title>FiveGSolutionsPage - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group FiveGSolutionsPage page" />
       </Helmet>
       <div className="min-h-screen bg-slate-900 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            About Zion Tech Group
+            FiveGSolutionsPage
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            We are a leading technology company specializing in AI and IT solutions.
+            This page is under construction. Please check back later.
           </p>
         </div>
       </div>
@@ -22,4 +22,4 @@ const AboutPage: React.FC = () => {
   );
 };
 
-export default AboutPage;
+export default FiveGSolutionsPage;
