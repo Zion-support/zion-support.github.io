@@ -1,4 +1,4 @@
-import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+import { ArrowRight, Home, Search, AlertTriangle, Brain, Bot, FileText, Shield, Wifi, Cloud, BarChart3, Code, Target, Users, TrendingUp, Globe, Zap, Database, Monitor, Lock, Server, Settings, HardDrive, Phone, Laptop, Headphones, Network, Cpu } from 'lucide-react';
 
 export default function Services() {
   const services = [
@@ -337,4 +337,62 @@ export default function Services() {
     }
   ];
 
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Our Services
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Comprehensive AI and IT solutions designed to transform your business and drive growth
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className={`p-3 rounded-lg bg-gradient-to-r ${service.color} mr-4`}>
+                  {service.icon}
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+                  <p className="text-sm text-gray-400">{service.category}</p>
+                </div>
+              </div>
+              <p className="text-gray-300 mb-4">{service.description}</p>
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <span className="text-2xl font-bold text-white">{service.price}</span>
+                  {service.originalPrice && (
+                    <span className="text-sm text-gray-400 line-through ml-2">{service.originalPrice}</span>
+                  )}
+                </div>
+                {service.popular && (
+                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-2 py-1 rounded-full text-xs font-bold">
+                    Popular
+                  </span>
+                )}
+              </div>
+              <div className="mb-4">
+                <h4 className="text-sm font-semibold text-white mb-2">Features:</h4>
+                <ul className="text-sm text-gray-300 space-y-1">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center">
+                      <ArrowRight className="w-3 h-3 mr-2 text-green-400" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
